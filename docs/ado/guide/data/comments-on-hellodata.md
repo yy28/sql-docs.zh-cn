@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
@@ -78,3 +79,4 @@ HelloData 应用程序步骤通过一个典型的 ADO 应用程序的基本操�
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload**子例程非常重要的原因。 首先，由于这是一个示例应用程序，Form_Unload 清理对应用程序退出之前数据库所做的更改。 其次的代码演示如何直接从打开执行命令**连接**对象使用**执行**方法。 最后，它演示执行不返回行 – 查询 （更新查询） 对数据源的一个示例。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
 ms.openlocfilehash: 189aef1d316d4e8569a48a413ec72cfbc6a6673c
@@ -56,7 +57,7 @@ ms.lasthandoff: 07/29/2017
   
  若要在服务器上手动启用 Stretch Database，请运行 **sp_configure** 并打开 **remote data archive** 选项。 下列示例通过将 **remote data archive** 选项的值设置为 1 来启用它。  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
@@ -84,7 +85,7 @@ GO
   
 3.  若要为 SQL Server 数据库配置 Stretch Database，该数据库必须拥有数据库主密钥。 数据库主密钥能保护 Stretch Database 用来连接到远程数据库的凭据。 下面是创建一个新数据库主密钥的示例。  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +104,7 @@ GO
         
         下面是创建一个新凭据的示例。
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +128,7 @@ GO
   
     2.  提供具有 CREDEMTIAL 参数的现有管理员凭据，或指定 FEDERATED_SERVICE_ACCOUNT = ON。 下面的示例提供现有的凭据。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

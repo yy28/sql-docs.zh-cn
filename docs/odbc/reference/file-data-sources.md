@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  也可以是非共享.dsn 文件。 非共享.dsn 文件位于一台计算机上，指向机数据源。 非共享的文件数据源存在主要是为了允许机器数据源轻松转换为文件数据源，以便应用程序可以设计为仅用于文件数据源。 当驱动程序管理器将信息发送非共享的文件数据源中时，连接根据需要为.dsn 文件指向机器数据源。  
   
  有关文件数据源的详细信息，请参阅[连接使用的文件数据源](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，或[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。
+

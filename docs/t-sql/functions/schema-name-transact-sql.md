@@ -22,11 +22,12 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e507e5a406cb78645489adbab13d16cf513b2448
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: bbc8d08ff59f85544fe3f11712c6780431bc76d7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
@@ -62,27 +63,9 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ```  
 SELECT SCHEMA_NAME();  
-GO  
 ```  
   
 ### <a name="b-returning-the-name-of-a-schema-by-using-an-id"></a>B. 使用 ID 返回架构的名称  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_NAME(5);  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-returning-the-name-of-the-default-schema-of-the-caller"></a>C. 返回调用方的默认架构的名称  
-  
-```  
-SELECT SCHEMA_NAME();  
-```  
-  
-### <a name="d-returning-the-name-of-a-schema-by-using-an-id"></a>D. 使用 ID 返回架构的名称  
   
 ```  
 SELECT SCHEMA_NAME(1);  

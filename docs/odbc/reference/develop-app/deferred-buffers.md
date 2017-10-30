@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
@@ -35,3 +36,4 @@ A*延迟的缓冲区*是在某个时间使用其值*后*函数调用中指定。
 |发送要更新或插入行在结果中的数据设置|延迟的输入|**SQLBindCol**|**SQLSetPos**|  
 |对于输出参数和输入/输出参数返回数据|输出延迟|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |返回结果集数据|输出延迟|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+

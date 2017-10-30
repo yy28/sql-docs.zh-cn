@@ -28,11 +28,10 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-set_customized_logging_level_value [ @level_name = ] level_name  
+```sql  
+catalog.set_customized_logging_level_value [ @level_name = ] level_name  
     , [ @property_name = ] property_name  
     , [ @property_value = ] property_value  
-  
 ```  
   
 ## <a name="arguments"></a>参数  

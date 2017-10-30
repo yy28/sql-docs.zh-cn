@@ -11,17 +11,17 @@ ms.assetid:
 ms.service: sql-database
 ms.custom:
 - security
-ms.workload: 
+ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 09/05/2017
 
 若要确保快速恢复密钥并访问 Azure 外的数据，建议采用以下做法：
 - 在本地 HSM 设备上以本地方式创建加密密钥。 （确保此密钥是一个非对称的 RSA 2048 密钥，以便将其存储在 Azure Key Vault 中。）
-- 将加密密钥文件（.pfx、.byok 或 .backup）导入 Azure Key Vault。 
+- 将加密密钥文件（.pfx、.byok 或 .backup）导入 Azure Key Vault。 考虑使用已启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的密钥保管库，以对意外密钥删除执行恢复保护。
 - 在首次使用 Azure 密钥保管库中的密钥之前，先进行 Azure 密钥保管库密钥备份。 了解有关 [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) 命令的详细信息。
 - 每次更改密钥（例如添加 ACL、添加标记、添加密钥属性）时，务必再进行一次 Azure Key Vault 密钥备份。
 - 在密钥变换期间，在密钥保管库中保留以前版本的密钥，以便可以恢复旧的数据库备份。 

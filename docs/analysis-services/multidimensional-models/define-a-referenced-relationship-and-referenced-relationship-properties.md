@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/01/2017
  在引用维度中，通过标识定义引用维度与对应于该维度主表的度量值组之间的关系的属性来指定粒度。 当多个引用维度相互链接时，这些引用便会定义从最外面的维度到度量值组的关系。  
   
   
+

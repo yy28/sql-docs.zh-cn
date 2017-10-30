@@ -38,11 +38,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 316ccab8ddcaf138f05d713f41093ea7d767339a
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 19145656955431c4aac52a4082a25eb36c957a9b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
@@ -132,70 +133,9 @@ GETUTCDATE()             01:25:01.6930000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例使用返回当前日期和时间，以返回日期、 时间或两者的六个系统函数。 序列; 中返回的值因此，其秒的小数部分可能会有所不同。  
-  
-### <a name="d-getting-the-current-system-date-and-time"></a>D. 获取当前系统日期和时间  
-  
-```  
-SELECT 'SYSDATETIME()      ', SYSDATETIME();  
-SELECT 'SYSDATETIMEOFFSET()', SYSDATETIMEOFFSET();  
-SELECT 'SYSUTCDATETIME()   ', SYSUTCDATETIME();  
-SELECT 'CURRENT_TIMESTAMP  ', CURRENT_TIMESTAMP;  
-SELECT 'GETDATE()          ', GETDATE();  
-SELECT 'GETUTCDATE()       ', GETUTCDATE();  
-/* Returned:  
-SYSDATETIME()            2007-05-03 18:34:11.9351421  
-SYSDATETIMEOFFSET()      2007-05-03 18:34:11.9351421 -07:00  
-SYSUTCDATETIME()         2007-05-04 01:34:11.9351421  
-CURRENT_TIMESTAMP        2007-05-03 18:34:11.933  
-GETDATE()                2007-05-03 18:34:11.933  
-GETUTCDATE()             2007-05-04 01:34:11.933  
-*/  
-```  
-  
-### <a name="e-getting-the-current-system-date"></a>E. 获取当前系统日期  
-  
-```  
-SELECT 'SYSDATETIME()      ', CONVERT (date, SYSDATETIME());  
-SELECT 'SYSDATETIMEOFFSET()', CONVERT (date, SYSDATETIMEOFFSET());  
-SELECT 'SYSUTCDATETIME()   ', CONVERT (date, SYSUTCDATETIME());  
-SELECT 'CURRENT_TIMESTAMP  ', CONVERT (date, CURRENT_TIMESTAMP);  
-SELECT 'GETDATE()          ', CONVERT (date, GETDATE());  
-SELECT 'GETUTCDATE()       ', CONVERT (date, GETUTCDATE());  
-  
-/* Returned:   
-SYSDATETIME()            2007-05-03  
-SYSDATETIMEOFFSET()      2007-05-03  
-SYSUTCDATETIME()         2007-05-04  
-CURRENT_TIMESTAMP        2007-05-03  
-GETDATE()                2007-05-03  
-GETUTCDATE()             2007-05-04  
-*/  
-```  
-  
-### <a name="f-getting-the-current-system-time"></a>F. 获取当前系统时间  
-  
-```  
-SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  
-SELECT 'SYSDATETIMEOFFSET()', CONVERT (time, SYSDATETIMEOFFSET());  
-SELECT 'SYSUTCDATETIME()   ', CONVERT (time, SYSUTCDATETIME());  
-SELECT 'CURRENT_TIMESTAMP  ', CONVERT (time, CURRENT_TIMESTAMP);  
-SELECT 'GETDATE()          ', CONVERT (time, GETDATE());  
-SELECT 'GETUTCDATE()       ', CONVERT (time, GETUTCDATE());  
-/* Returned  
-SYSDATETIME()            18:25:01.6958841  
-SYSDATETIMEOFFSET()      18:25:01.6958841  
-SYSUTCDATETIME()         01:25:01.6958841  
-CURRENT_TIMESTAMP        18:25:01.6930000  
-GETDATE()                18:25:01.6930000  
-GETUTCDATE()             01:25:01.6930000  
-*/  
-```  
-  
 ## <a name="see-also"></a>另请参阅  
  [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [时区 &AMP; #40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

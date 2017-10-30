@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  带引号的标识符用于从相同的名称，如 ROWID Oracle 中的伪列中区分 true 列名称。 如果"ROWID"中的目录函数自变量传递，该函数将使用 ROWID 伪列如果它存在。 如果伪列不存在，则该函数会使用"ROWID"列。 如果目录函数的自变量传入 ROWID，该函数会使用 ROWID 列。  
   
  有关带引号的标识符的详细信息，请参阅[带引号的标识符](../../../odbc/reference/develop-app/quoted-identifiers.md)。
+

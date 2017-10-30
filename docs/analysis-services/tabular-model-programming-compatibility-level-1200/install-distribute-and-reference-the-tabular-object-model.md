@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ AMO 取决于 TOM 因为 AMO 中的某些类从 TOM 引用类。 例如，AMO �
 重新分发的 AMO 和 TOM 是通过**sql_as_amo.msi**安装包。 如果要到 AMO 或 TOM 生成客户端调用的应用程序的安装程序，将添加**sql_as_amo.msi**到可执行文件。 这是用于重新分发的 AMO 和 TOM 客户端库的唯一受支持的机制。  
   
 包是独立的并提供所需的代码中调用 AMO 和 TOM 的所有程序集。 其他包，例如 SQL_AS_OLEDB.msi 或 SQL_AS_ADOMD.msi，不是专门 TOM 编程方案所必需的。
+

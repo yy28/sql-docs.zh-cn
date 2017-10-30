@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos**使用实际上是从前面调用开始的行集大小**SQLFetch**或**SQLFetchScroll**，这是因为**SQLSetPos**进行操作已设置的行集。 **SQLSetPos**还将可以选取最新的行集大小如果**SQLBulkOperations**后已更改的行集大小已调用。  
   
 -   **SQLBulkOperations**使用行集的大小实际上在时调用，因为它执行独立于任何提取的行集表的操作。
+

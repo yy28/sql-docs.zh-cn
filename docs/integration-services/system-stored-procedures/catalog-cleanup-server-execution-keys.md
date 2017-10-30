@@ -28,11 +28,9 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-            cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,  
+```sql
+catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,  
 [ @delete_batch_size = ] delete_batch_size  
-  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -94,7 +92,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>示例  
  下面的示例调用 cleanup_server_execution_keys 存储过程。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   
@@ -107,7 +105,6 @@ EXEC@return_value = [internal].[cleanup_server_execution_keys]
 SELECT'Return Value' = @return_value  
   
 GO  
-  
 ```  
   
   

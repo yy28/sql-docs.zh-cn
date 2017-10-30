@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  可以在三种方式之一中调用函数： 作为仅限 Unicode 的函数调用 (使用*W*后缀)，为仅限 ANSI 的函数调用 (使用*A*后缀)，或作为无后缀 ODBC 函数调用。 三种形式的函数的自变量是相同的。 只有这些函数与 SQLCHAR\*自变量或指向字符串的 SQLPOINTER 参数需要 Unicode 和 ANSI 窗体。 对于具有可以为字符类型，如声明的自变量的函数**SQLBindCol**或**SQLGetData** （其中没有 Unicode 和 ANSI 窗体），该参数可以声明为 Unicode 类型，ANSI 类型，或者在 C 的情况下的类型自变量，SQL_C_TCHAR 宏。 有关详细信息，请参阅[Unicode 数据](../../../odbc/reference/develop-app/unicode-data.md)。  
   
  应用程序可以编写为 Unicode 应用程序，即使没有 Unicode 驱动程序可用于它以使用。 驱动程序管理器将 Unicode 函数和数据类型映射到 ANSI。 有一些限制为可执行的 ANSI 映射到 Unicode。 Unicode 应用程序以使用 Unicode 驱动程序存在将导致更好的性能，并且将删除 ANSI 映射到 Unicode 中固有的限制。
+

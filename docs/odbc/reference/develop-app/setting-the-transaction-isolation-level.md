@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   当速度比准确性和任何错误更重要的可能性很小。 例如，假设，公司可以使许多小型销售和大型销售很少。 估计总销售额值中所有打开的事务可能会安全地使用 Read Uncommitted 隔离级别。 尽管事务将包含订单是正在打开或关闭，随后可以回滚，这些将通常相互抵消和事务会快得多，因为它不会阻止每次它遇到此类订单。  
   
  有关详细信息，请参阅[开放式并发](../../../odbc/reference/develop-app/optimistic-concurrency.md)。
+

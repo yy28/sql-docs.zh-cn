@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
@@ -96,3 +97,4 @@ while (GetPrice(&PartID, &Price)) {
  如果该驱动程序不能模拟语句准备，它会将存储该语句时**SQLPrepare**称为并提交以供执行时**SQLExecute**调用。  
   
  模拟的语句准备不是理想选择，因为**SQLExecute**可以返回通常返回的任何错误**SQLPrepare**。
+

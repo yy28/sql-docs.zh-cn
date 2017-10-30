@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 3.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_ADD。  
   
  后**SQLBulkOperations**返回时，当前行保持不变。 如果绑定书签列 （列 0）， **SQLBulkOperations**返回行集缓冲区中插入的行的书签绑定到该列。
+

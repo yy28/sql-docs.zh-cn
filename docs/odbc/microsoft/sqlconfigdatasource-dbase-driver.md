@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |READONLY|若要使文件成为只读的;如果为 FALSE，以使文件不是只读的。<br /><br /> 这将设置为相同的选项**Read Only**在安装程序对话框中。|  
 |STATISTICS|对于 dBASE 驱动程序，确定是否近似表大小统计信息。 请注意，此选项适用于使用 ODBC 驱动程序的所有数据源。<br /><br /> 这将设置为相同的选项**大致行计数**在安装程序对话框中。|  
 |线程|要使用的引擎的后台线程数。 此值为 3，不能更改。<br /><br /> 这将设置为相同的选项**线程**在安装程序对话框中。|
+

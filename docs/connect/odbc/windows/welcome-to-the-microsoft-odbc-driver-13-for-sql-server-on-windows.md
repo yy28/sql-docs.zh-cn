@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7da07e66203c9bcfb4a690ccb747ff9180df8db
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 Microsoft 已在线提供此产品的文档，以便为我们的客户提供最新信息。 请参阅[SQL Server 驱动程序在 Microsoft Developer Network (MSDN)](https://msdn.microsoft.com/library/mt654049.aspx)有关详细信息。  
   
 © 2016 Microsoft。 保留所有权利。 
+

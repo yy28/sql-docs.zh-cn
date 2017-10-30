@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
@@ -68,3 +69,4 @@ ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心�
 -   [标量函数](../../odbc/microsoft/scalar-functions.md)  
   
 -   [表名称](../../odbc/microsoft/table-names.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 72aeaf6c2b31f6f7933bd64065ab57e23ef7e92b
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  请记住，这些是 ADO 错误： 它们来自 ADO 操作失败。 基础提供程序返回的错误显示为**错误**中的对象**连接**对象的**错误**集合。  
   
  #Import 指令仅创建方法和属性在 ADO.dll 中声明的错误处理例程。 但是，你可以利用此相同的错误处理机制通过编写自己的错误检查宏或内联函数。 请参阅示例的主题 Visual C++® 扩展。
+

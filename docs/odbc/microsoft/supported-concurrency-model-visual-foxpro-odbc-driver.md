@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f3348850a76bb831c236fd1c1ee49fb89b97504
@@ -35,3 +36,4 @@ Visual FoxPro ODBC 驱动程序支持*只读并发*。 你的应用程序可以�
   
 ## <a name="row-versioning"></a>行版本控制 (row versioning)  
  实质上是时间戳的支持，版本在更新时在哪一行的比较。
+

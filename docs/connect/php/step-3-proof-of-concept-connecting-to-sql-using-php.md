@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: f1ea7333aa847916f45d648c582f07de0774eda6
@@ -170,3 +171,4 @@ ms.lasthandoff: 09/27/2017
   
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)  
 [示例应用程序（PDO_SQLSRV 驱动程序）](../../connect/php/example-application-pdo-sqlsrv-driver.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1ecc435a6b62d75527292ab8dc098e8cb121627
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  如果该描述符不 APD，每个绑定的记录会产生绑定的参数。 用于输入参数，应用程序必须将每个动态参数标记的参数绑定之前执行的语句的 SQL 语句中。 对于输出参数，应用程序需要将该参数未绑定。  
   
  如果该描述符不 ARD，其中介绍了数据库数据行，每个绑定的记录会产生绑定的列。
+

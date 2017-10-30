@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  特别要注意的是，源数据库中的语言标识符和排序规则顺序通常对在表格模型列中对值进行排序的方式的影响很小，甚至没有影响。 在源数据库转换或筛选请求的值时是例外情况。  
   
   
+

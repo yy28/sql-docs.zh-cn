@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   若要符合 ISO CLI，ODBC 3*.x*标头文件包含对调用中使用的信息类型的别名**SQLGetInfo**。 符合标准的应用程序可以使用这些别名，而不是 ODBC 3*.x*信息类型。 有关详细信息，请参阅下一主题[标头文件](../../../odbc/reference/develop-app/header-files.md)。  
   
 -   符合标准的应用程序必须验证它将与兼容的驱动程序支持它支持的所有功能。 将 SQL_ATTR_CURSOR_SCROLLABLE 语句属性设置为 SQL_SCROLLABLE 和设置到 SQL_INSENSITIVE 或 SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY 语句属性提供了可用作标准中的可选功能的功能但不是包括在 ODBC 3*.x*核心级别，因此可能不支持由所有 ODBC 3*.x*驱动程序。 如果符合标准的应用程序使用这些功能，它应验证它将与兼容的驱动程序支持它们。
+

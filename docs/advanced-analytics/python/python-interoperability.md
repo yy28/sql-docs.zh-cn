@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
@@ -76,3 +77,4 @@ For Python 的输入的数据必须是表格。 必须在的窗体中返回所�
 ## <a name="see-also"></a>另请参阅
 
 [Python 库和数据类型](python-libraries-and-data-types.md)
+

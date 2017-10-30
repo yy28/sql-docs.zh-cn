@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  因此，有两个选项的语法，用于： SQL 92 语法 （和转义序列 ODBC） 和特定 DBMS 的语法。 这二者当中，仅 SQL 92 语法是可互操作，因此所有的可互操作应用程序应使用它。 不是可互操作的应用程序可以使用的 SQL 92 语法或特定于 DBMS 的语法。 特定于 DBMS 的语法有两大优点： 它们可以利用任何功能不受 SQL 92，而且它们是稍更快，因为该驱动程序不需要对其进行修改。 可以通过设置 SQL_ATTR_NOSCAN 语句属性，它将停止搜索并替换转义序列的驱动程序部分强制执行后一种功能。  
   
  如果使用的 SQL 92 语法时，如何它通过调用修改由驱动程序对应用程序可以发现**SQLNativeSql**。 调试应用程序时，这是通常很有用。 **SQLNativeSql**接受 SQL 语句并将其返回后该驱动程序进行了修改。 由于此函数在核心接口一致性级别，它被支持的所有驱动程序。
+

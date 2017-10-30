@@ -19,6 +19,7 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: c1abf6b65c375b2490a83e3ac278fca56f6189de
@@ -110,3 +111,4 @@ ms.lasthandoff: 07/31/2017
  [导入已注册的服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   
   
+

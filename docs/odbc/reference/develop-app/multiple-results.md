@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  它是特定于驱动程序的任何结果可使用之前是否执行整个批处理语句。 在某些实现中，这种情况;其他情况下，调用**SQLMoreResults**触发的批次中的下一个语句执行。  
   
  如果其中一个批处理中的语句失败， **SQLMoreResults**将返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO。 如果批处理已中止，语句失败或失败的语句的批处理中的最后一个语句时**SQLMoreResults**将返回 SQL_ERROR。 如果批处理没有中止时，语句失败而失败的语句没有批处理中的最后一个语句**SQLMoreResults**将返回 SQL_SUCCESS_WITH_INFO。 SQL_SUCCESS_WITH_INFO 指示生成至少一个结果集或计数，并且没有中止批处理。
+

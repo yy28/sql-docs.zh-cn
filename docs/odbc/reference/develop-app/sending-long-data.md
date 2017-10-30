@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 254
  后**SQLExecute**或**SQLExecDirect**返回 SQL_NEED_DATA，并且数据已完全发送的最后一个的数据在执行参数之前，该语句是否处于需要数据状态。 需要数据状态语句时，应用程序可以调用仅**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函数返回 SQLSTATE HY010 （函数序列错误）。 调用**SQLCancel**取消执行语句，并将其返回到以前的状态。 有关详细信息，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  在执行时发送数据的示例，请参阅[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)函数说明。
+

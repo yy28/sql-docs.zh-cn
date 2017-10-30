@@ -34,6 +34,7 @@ caps.latest.revision: 94
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: cd5caae29a6ec10957c45f755954c9b9e9b7ecda
@@ -100,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   具有 CHECK 约束或启用的规则。  
   
- *column_list*  
+*column_list*  
  INTO 子句目标表上列名的可选列表。 它相当于中允许的列列表[插入](../../t-sql/statements/insert-transact-sql.md)语句。  
   
  *scalar_expression*  

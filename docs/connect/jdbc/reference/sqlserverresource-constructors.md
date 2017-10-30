@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8984adbc33b1d8b2cad8080b536ce116369b2a2e
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   有关的成员信息[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)，请参阅[SQLServerResource 成员](../../../connect/jdbc/reference/sqlserverresource-members.md)。  
   
   
+

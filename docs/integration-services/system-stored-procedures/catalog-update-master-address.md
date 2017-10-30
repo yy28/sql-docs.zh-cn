@@ -27,8 +27,8 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="syntax"></a>语法
 
-```tsql
-update_master_address [@MasterAddress = ] masterAddress
+```sql
+catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>参数

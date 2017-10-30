@@ -29,11 +29,12 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84a8489536783d1a9cb1d97aa95022ca7e952118
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
@@ -253,7 +254,7 @@ WHERE database_id = DB_ID();
  指定承载要分析的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的数据库。 如果该数据库不存在，将生成错误消息。 如果未指定 **-d** ，则默认为登录帐户的默认数据库属性中指定的数据库。  
   
  **-l** *login_timeout*  
- 指定尝试连接到服务器时，等待了多少秒后超时。 如果未指定 **-l** ，则 **ssbdiagnose** 将使用为 SQLCMDLOGINTIMEOUT 环境变量设置的值。 如果 SQLCMDLOGINTIMEOUT 也未设置，则默认的超时值为 30 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 **ssbdiagnose** 将生成错误消息。 该值为 0 时，则允许无限制等待。  
+ 指定尝试连接到服务器时，等待了多少秒后超时。如果未指定 **-l** ，则 **ssbdiagnose** 将使用为 SQLCMDLOGINTIMEOUT 环境变量设置的值。 如果 SQLCMDLOGINTIMEOUT 也未设置，则默认的超时值为 30 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 **ssbdiagnose** 将生成错误消息。 该值为 0 时，则允许无限制等待。  
   
  **-?**  
  显示命令行帮助。  
@@ -468,3 +469,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.conversation_groups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   
+

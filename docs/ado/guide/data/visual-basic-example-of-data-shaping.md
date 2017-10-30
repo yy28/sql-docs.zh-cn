@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7b2716ffe745fcbb9359c34c33317e61ac82602
@@ -107,3 +108,4 @@ End Function
 5.  复制上面的代码并将其粘贴到**代码**页后，可以将任何现有代码。  
   
 6.  选择**启动**从**运行**菜单可执行应用程序。
+

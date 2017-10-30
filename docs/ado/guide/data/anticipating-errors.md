@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  请确保**记录集**对象是否不超出边界**记录集**之前尝试移动记录指针。 如果您尝试对**MoveNext**时**EOF**为 True 或**MovePrev**时**BOF**为 True 时，将会出错。 如果你执行任何**移动**方法时同时**EOF**和**BOF**都为 True，将生成错误。  
   
  此外将发生错误如果你尝试执行操作，如**Seek**和**查找**上一个空**记录集**。
+

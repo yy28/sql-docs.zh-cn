@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  使用**AbsolutePage**属性来标识当前记录所在的页号。 同样，该提供程序必须支持相应的功能，此属性才可用。  
   
  **AbsolutePage**是基于 1 的并且等于 1 时的当前记录是中的第一个记录**记录集**。 设置此属性将移到特定页的第一个记录。 获取从页总数**PageCount**属性。
+

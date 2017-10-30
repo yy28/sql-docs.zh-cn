@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 |创建的池|池处于活动状态，包括活动的和已删除的池数。 此计数器在 Windows 8 中，添加了驱动程序管理连接池中的连接。 有关详细信息，请参阅[识别驱动程序的连接池](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。|  
   
  你必须指定你自己监视参数。 与此版本的 ODBC 包含了用于性能监视的示例。
+

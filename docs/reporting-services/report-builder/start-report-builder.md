@@ -20,7 +20,8 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: zh-cn
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>启动报表生成器
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是独立的报表创作环境。 使用它，可以创建分页报表并将其发布到在本机或 SharePoint 集成模式下安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]独立的报表创作环境。 使用它，可以创建分页报表并将其发布到在本机或 SharePoint 集成模式下安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
  从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web 门户或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中以 SharePoint 集成模式首次启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，系统会提示你从 Microsoft 下载中心下载。 
  
@@ -76,3 +77,4 @@ ms.lasthandoff: 08/09/2017
 [设置报表生成器的默认选项](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

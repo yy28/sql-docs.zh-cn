@@ -18,7 +18,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
 ms.contentlocale: zh-cn
@@ -87,6 +88,7 @@ ms.lasthandoff: 08/09/2017
 7.  单击 **“应用”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [SharePoint 站点和列表权限参考为报表服务器项](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
+

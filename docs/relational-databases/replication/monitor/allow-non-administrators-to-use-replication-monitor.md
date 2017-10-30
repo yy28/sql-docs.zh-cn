@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95a0b865d33d96b740a48971bfccbc1334b37807
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
 2.  如果此用户属于 **replmonitor** 角色，则在分发服务器的分发数据库中执行 [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。 为 **replmonitor** @rolename **@rolename** 并为 **@membername**中允许非管理员使用复制监视器。  
   
   
+

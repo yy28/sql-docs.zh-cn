@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 8.  单击使用。  
   
  你现在可以将表添加到打开的查询。 有关生成查询的详细信息，请参阅[将数据导入到 Microsoft Excel 中，从 Visual FoxPro 数据库](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)。
+

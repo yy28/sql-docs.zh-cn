@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  在单独设置字段，该应用程序应该遵循中定义的序列[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 设置某些字段会导致要设置其他字段的驱动程序。 这可确保描述符始终可供使用后一种数据类型指定应用程序。 当应用程序将设置 SQL_DESC_TYPE 字段时，驱动程序将检查指定的类型的其他字段都有效且一致。  
   
  如果将设置一个描述符字段的函数调用失败，是不确定失败的函数调用后的描述符字段的内容。
+

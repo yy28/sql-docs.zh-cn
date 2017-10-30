@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9ac53209063a1204b57e7183501b5901dc8ea248
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  第五个步骤是调用**SQLEndTran**无法提交或回滚事务。 在应用程序执行此步骤，只有当它设置为手动提交; 的事务提交模式如果事务提交模式是自动提交，这是默认值，，执行语句时，会自动提交事务。 有关详细信息，请参阅[事务](../../../odbc/reference/develop-app/transactions-odbc.md)。  
   
  若要在新的事务中执行语句，在应用程序，返回到步骤 3。 从数据源断开连接、 应用程序将继续到步骤 6。
+

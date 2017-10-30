@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d5926bbe8569ed88f2697d17cd754cf0fd081f05
@@ -74,3 +75,4 @@ ms.lasthandoff: 06/22/2017
 -   如果失去了与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的连接，完成列表可能会停止工作。 请重新连接到该实例。  
   
   
+

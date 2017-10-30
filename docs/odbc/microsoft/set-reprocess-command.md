@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>注释  
  第一次尝试锁定记录或文件并不总是成功。 通常情况下，记录或文件已由网络上的另一个用户锁定。 设置重新处理确定 Visual FoxPro 是否使最初尝试不成功时锁定记录或文件的更多尝试。 你可以指定多少次的更多尝试进行，或对于多长时间尝试将生成。 ON 错误例程会影响如何不成功尝试处理的锁。
+

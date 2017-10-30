@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 769f1659436f4325e25f0898c759d25327a795be
@@ -114,3 +115,4 @@ SQLRETURN SQLCancelHandle(
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 标头文件](../../../odbc/reference/install/odbc-header-files.md)   
  [异步执行 （轮询方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+

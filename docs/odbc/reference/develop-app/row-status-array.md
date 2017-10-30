@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|已删除行，因为上次提取。|  
 |SQL_ROW_ADDED|插入行时发生**SQLBulkOperations**。 如果该行被再次提取，或通过刷新**SQLSetPos**，其状态为 SQL_ROW_SUCCESS。<br /><br /> 未设置此值**SQLFetch**或**SQLFetchScroll**。|  
 |SQL_ROW_NOROW|行集占用该结果集的末尾，并且会不返回任何行，对应于此元素的行状态数组。|
+

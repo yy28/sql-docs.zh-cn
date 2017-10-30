@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd665c63873ba8331290ddeae4ad91137ef1e3c7
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/09/2017
 3.  修改相应的数据源字段，，然后单击确定。  
   
  完成修改此对话框中的信息操作，ODBC 管理器将更新的注册表信息。
+

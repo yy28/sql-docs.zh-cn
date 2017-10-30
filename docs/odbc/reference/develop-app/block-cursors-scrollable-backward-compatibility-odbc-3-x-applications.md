@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3。*x*应用程序不应使用**SQLExtendedFetch**或 SQL_ROWSET_SIZE 语句属性。 相反，它们应使用**SQLFetchScroll**和 SQL_ATTR_ROW_ARRAY_SIZE 语句属性。 ODBC 3。*x*应用程序不应使用**SQLSetPos**与*操作*的 SQL_ADD 但应使用**SQLBulkOperations**与*操作*SQL_ADD。
+

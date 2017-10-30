@@ -25,11 +25,12 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11cbfa6cc0ca35e5bb5e3358bf9d9dc2dfcfb644
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5c3cd713bcbb239c037ff0a43083058de117cb9b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
@@ -100,22 +101,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorseverity-in-a-catch-block"></a>C. 在 CATCH 块中使用 ERROR_SEVERITY  
- 下面的示例演示`SELECT`生成一个由零除错误的语句。 返回错误的严重级别。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_SEVERITY() AS ErrorSeverity;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>D. 使用其他错误处理工具在 CATCH 块中使用 ERROR_SEVERITY  
+### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. 使用其他错误处理工具在 CATCH 块中使用 ERROR_SEVERITY  
  下面的示例显示一个会生成被零除错误的 `SELECT` 语句。 同时与严重级别一起返回与该错误相关的信息。  
   
 ```  

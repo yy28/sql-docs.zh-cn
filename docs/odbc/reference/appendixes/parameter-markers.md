@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c2c8708c18abee3609fc0b01f6ccd2e0362e5706
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   作为的自变量*集的函数参考*  
   
  有关参数标记的详细信息，请参阅 sql-92 规范。 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。
+

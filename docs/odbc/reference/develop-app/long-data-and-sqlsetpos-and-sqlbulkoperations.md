@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 6.  调用**SQLParamData**再次以指示它是否已发送所有列的数据。 如果没有为其数据未发送任何执行中的数据列，该驱动程序返回 SQL_NEED_DATA 和下一步的执行中的数据列; 的唯一值在应用程序返回到步骤 5。 如果已将数据发送所有数据在执行列中，行的数据都发送到数据源。 **SQLParamData** ，然后再返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 和可以返回的任何 SQLSTATE **SQLBulkOperations**或**SQLSetPos**可以返回。  
   
  后**SQLBulkOperations**或**SQLSetPos**返回 SQL_NEED_DATA，并且数据已完全发送的最后一个的执行中的数据列之前，该语句是否处于需要数据状态。 在此状态下，应用程序可以调用仅**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函数返回 SQLSTATE HY010 （函数序列错误）。 调用**SQLCancel**取消执行语句，并将其返回到以前的状态。 有关详细信息，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   加上 1 明示或暗示秒精度。 如果未指定秒精度，则默认值为 6。  
   
  每个间隔数据类型的特定列长度值包含在[列大小](../../../odbc/reference/appendixes/column-size.md)。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   发送数据到和从数据源，包括将转换为指定的应用程序的数据类型中检索数据。  
   
 -   映射到 ODBC SQLSTATEs DBMS 特定错误。
+

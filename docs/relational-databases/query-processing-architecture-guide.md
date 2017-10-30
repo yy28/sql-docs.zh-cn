@@ -1,7 +1,7 @@
 ---
 title: "查询处理体系结构指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,12 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
@@ -64,7 +65,7 @@ ms.lasthandoff: 09/07/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器不只选择资源成本最低的执行计划，还选择能将结果最快地返回给用户且资源成本合理的计划。 例如，与串行处理查询相比，并行处理查询使用的资源一般更多但完成查询的速度更快。 因此如果不对服务器的负荷产生负面影响，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器将使用并行执行计划返回结果。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器在估计用于从表或索引中提取信息的不同方法所需的资源成本时，依赖于分发内容统计信息。 对列和索引保留有分发内容统计。 这些统计信息表明特定索引或列中的值的选择性。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 VIN 索引比制造商索引更具选择性。 如果索引统计信息不是当前的，则查询优化器可能无法对表的当前状态做出最佳选择。 有关使索引统计信息保持最新的详细信息，请参阅“使用统计信息提高查询性能”。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器在估计用于从表或索引中提取信息的不同方法所需的资源成本时，依赖于分发内容统计信息。 对列和索引保留有分发内容统计。 这些统计信息表明特定索引或列中的值的选择性。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 VIN 索引比制造商索引更具选择性。 如果索引统计信息不是当前的，则查询优化器可能无法对表的当前状态做出最佳选择。 有关保持索引统计信息最新的详细信息，请参阅[统计信息](../relational-databases/statistics/statistics.md)。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器很重要，因为它可以使数据库服务器针对数据库内的更改情况进行动态调整，而无需程序员或数据库管理员输入。 这样程序员可以集中精力描述最终的查询结果。 他们可以相信每次运行语句时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器总能针对数据库的状态生成一个有效的执行计划。
 
@@ -384,6 +385,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1039,5 @@ GO
  [扩展事件](../relational-databases/extended-events/extended-events.md)  
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数估计](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)
 

@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   **OdbcCommand**期望位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 (相比之下， **SqlCommand**需要命名的参数。)  
   
- 此示例使用**Person.Address**表中**AdventureWorks**示例数据库。 该示例将第一个和第四个列中， * *int*AddressID** * 和**nvarchar (30) 城市**该数据工作流中此表的列。 在源、 转换和目标示例在主题中，使用此相同的数据[开发特定 Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)。  
+ 此示例使用**Person.Address**表中**AdventureWorks**示例数据库。 该示例将第一个和第四个列中，  **int*AddressID** * 和**nvarchar (30) 城市**该数据工作流中此表的列。 在源、 转换和目标示例在主题中，使用此相同的数据[开发特定 Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  通过在运行以下 TRANSACT-SQL 命令创建的目标表**AdventureWorks**数据库：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

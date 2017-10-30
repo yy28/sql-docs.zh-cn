@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: zh-cn
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  若要下载并安装该外接程序，请访问 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心：  
   
--   **SP1 外接程序：**[Microsoft® SQL Server® 2012 SP1 Reporting Services add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583)。    
+-   **SP1 外接程序：**[用于 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 外接程序](http://www.microsoft.com/download/details.aspx?id=35583) (http://www.microsoft.com/download/details.aspx?id=35583)。  
   
 -   **SP1：**[Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906)。  
 
@@ -70,6 +71,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>后续步骤
 
 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[当卸载 Reporting Services 外接程序之后，您无法在非默认区域中浏览 SharePoint 页](http://support.microsoft.com/kb/2009212)  
+[你不能卸载 Reporting Services 外接程序后浏览非默认区域中的 SharePoint 网页](http://support.microsoft.com/kb/2009212)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

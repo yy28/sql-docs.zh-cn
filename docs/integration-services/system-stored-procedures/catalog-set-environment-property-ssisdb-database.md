@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-set_environment_property [ @folder_name = ] folder_name  
+```sql  
+catalog.set_environment_property [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @property_name = ] property_name  
     , [ @property_value = ] property_value  

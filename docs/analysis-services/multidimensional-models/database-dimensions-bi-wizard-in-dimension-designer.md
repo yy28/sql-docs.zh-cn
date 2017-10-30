@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   打开要添加商业智能的维度，然后单击工具栏上的 **“添加商业智能”** 按钮。 此外，也可以在对象资源管理器或解决方案资源管理器中右键单击维度，再单击“添加商业智能”。  
   
   
+

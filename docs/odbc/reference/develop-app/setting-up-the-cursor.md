@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0e7fda4fa942519384b2837f6f3f70a880dee74f
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  对于游标键集驱动的和混合游标，该应用程序还可以指定的键集大小。 具有 SQL_ATTR_KEYSET_SIZE 语句属性做到这一点。 如果键集大小设置为 0，这是默认设置，键集大小设置为结果集大小，并且使用键集驱动游标。 在打开游标后，可以更改由键集大小。  
   
  应用程序还可以设置大小与行集不同。有关详细信息，请参阅[使用块状游标](../../../odbc/reference/develop-app/using-block-cursors.md)，本部分前面的。
+

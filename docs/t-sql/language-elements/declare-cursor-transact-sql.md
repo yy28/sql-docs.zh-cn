@@ -28,11 +28,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c433b6c78ce1ce62c9d64d7d6dfd7f8ddbe0ff27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -179,7 +180,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. 使用简单的游标和语法  
- 在打开该游标时所生成的结果集包括表中的所有行和所有列。 可以更新该游标，并且所有的更新和删除都会在对该游标所做的提取操作中表现出来。 `FETCH``NEXT` 是唯一可用的提取选项，因为未指定 `SCROLL` 选项。  
+
+在打开该游标时所生成的结果集包括表中的所有行和所有列。 可以更新该游标，并且所有的更新和删除都会在对该游标所做的提取操作中表现出来。 `FETCH NEXT` 是唯一可用的提取选项，因为未指定 `SCROLL` 选项。  
+
   
 ```  
 DECLARE vend_cursor CURSOR  
@@ -261,3 +264,4 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

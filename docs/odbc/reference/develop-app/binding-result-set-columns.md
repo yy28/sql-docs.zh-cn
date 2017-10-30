@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
@@ -46,3 +47,4 @@ SELECT * FROM Lines
 ```  
   
  在相同的语句句柄，第一个结果集的列绑定仍实际上的因为这些语句结构中存储的绑定。 在大多数情况下，这是较差的编程做法，应当避免。 相反，应用程序应调用**SQLFreeStmt** SQL_UNBIND 选项来取消绑定所有旧的列，然后将新的绑定。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 14c1519122484542b57e286c248c25c3fd6c0886
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="transaction-support-in-dbmss"></a>Dbms 中的事务支持
 某些数据库，如 dBASE、 Paradox 和 Btrieve，尤其是桌面数据库不支持事务。 即使在支持事务的数据库，之间没有在类型的 SQL 语句可以是在事务中的变体。 有关详细信息，请参阅中的 SQL_TXN_CAPABLE 选项[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。
+

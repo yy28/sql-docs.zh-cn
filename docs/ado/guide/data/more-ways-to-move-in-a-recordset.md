@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  再举一例，如果您处在之中的特定行上**记录集**并且你调用**删除**，然后调用**MoveNext**，现在，你可以对记录紧跟在已删除的记录。 但调用**MovePrevious**使之前删除了当前的记录，因为已删除的记录不会再计数的活动成员资格方面的记录**记录集**。  
   
  很特别难移动相对于当前记录的方法的所有提供程序定义一致移动语义- **MovePrevious**， **MoveNext**，和**移动** — 在面对变化的当前记录中的数据。 例如，如果你正在使用一个经过排序，筛选**记录集**，和你更改当前记录中的数据，以便它将位于之前所有其他记录，但已更改的数据也不再与筛选器匹配，不清楚的位置**MoveNext**你应执行操作。 最安全的结论也在此相对移动**记录集**是风险比绝对移动 (例如，使用**MoveFirst**或**MoveLast**) 数据时更改时编辑了记录，添加或删除。 排序和筛选应基于的主键或 ID，因为此类型的值不应更改。
+

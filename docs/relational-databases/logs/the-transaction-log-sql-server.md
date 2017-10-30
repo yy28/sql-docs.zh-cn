@@ -1,7 +1,7 @@
 ---
 title: "事务日志 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/01/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,20 +18,24 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 5a9d2a8533e95c275e62071c37ab44d887ac32c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 SQL Server 数据库都有事务日志，用于记录所有事务以及每个事务所做的数据库修改。
   
-事务日志是数据库的一个关键组件。 如果系统出现故障，你将需要依靠该日志将数据库恢复到一致的状态。 永远不要删除或移动此日志，除非你完全了解执行此操作的后果。 
+事务日志是数据库的一个关键组件。 如果系统出现故障，你将需要依靠该日志将数据库恢复到一致的状态。 
 
-  
- > **真有趣！** 检查点会创建一些正常点，在数据库恢复期间将从这些正常点开始应用事务日志。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
+> [!IMPORTANT] 
+> 永远不要删除或移动此日志，除非你完全了解执行此操作的后果。 
+
+> [!TIP]
+> 检查点会创建一些正常点，在数据库恢复期间将从这些正常点开始应用事务日志。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
 ## <a name="operations-supported-by-the-transaction-log"></a>事务日志支持的操作  
  事务日志支持以下操作：  
@@ -73,7 +77,7 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 事务日志的特征： 
--  事务日志是作为数据库中的单独的文件或一组文件实现的。 日志缓存与数据页的缓冲区高速缓存是分开管理的，因此可在数据库引擎中生成简单、快速和功能强大的代码。
+-  事务日志是作为数据库中的单独的文件或一组文件实现的。 日志缓存与数据页的缓冲区高速缓存是分开管理的，因此可在数据库引擎中生成简单、快速和功能强大的代码。 有关详细信息，请参阅[事务日志物理体系结构](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。
 -  日志记录和页的格式不必遵守数据页的格式。
 -  事务日志可以在几个文件上实现。 通过设置日志的 FILEGROWTH 值可以将这些文件定义为自动扩展。 这样可减少事务日志内空间不足的可能性，同时减少管理开销。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。
 -  重用日志文件中空间的机制速度快且对事务吞吐量影响最小。
@@ -91,12 +95,13 @@ ms.lasthandoff: 09/27/2017
   
  有关详细信息，请参阅本主题后面的 [可能延迟日志截断的因素](#FactorsThatDelayTruncation)。  
   
-> **注意！** 日志截断并不减小物理日志文件的大小。 若要减少物理日志文件的物理大小，则必须收缩日志文件。 有关收缩物理日志文件大小的信息，请参阅 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
+> [!NOTE]
+> 日志截断并不减小物理日志文件的大小。 若要减少物理日志文件的物理大小，则必须收缩日志文件。 有关收缩物理日志文件大小的信息，请参阅 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  在日志记录长时间处于活动状态时，事务日志截断将延迟，事务日志可能填满，这一点我们在本主题（很长）前面提到过。  
   
-> **重要说明!!** 有关如何响应已满事务日志的信息，请参阅[解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
+> [!IMPORTANT} 有关如何响应已满事务日志的信息，请参阅[解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
  实际上，日志截断会由于多种原因发生延迟。 查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 **log_reuse_wait** 和 **log_reuse_wait_desc** 列，了解哪些因素（如果存在）阻止日志截断。 下表对这些列的值进行了说明。  
   
@@ -121,9 +126,11 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="MinimallyLogged"></a>可尽量减少日志量的操作  
  最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志[恢复模式](../backup-restore/recovery-models-sql-server.md)下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
-> **注意！！** 内存优化表不支持最小日志记录。  
+> [!NOTE]
+> 内存优化表不支持最小日志记录。  
   
-> **另请注意！** 在完整 [恢复模式](../backup-restore/recovery-models-sql-server.md)下，所有大容量操作都将被完整地记录下来。 但是，可以通过将数据库暂时切换到用于大容量操作的大容量日志恢复模式，最小化一组大容量操作的日志记录。 最小日志记录比完整日志记录更为有效，并在大容量事务期间，降低了大规模大容量操作填满可用的事务日志空间的可能性。 不过，如果在最小日志记录生效时数据库损坏或丢失，则无法将数据库恢复到故障点。  
+> [!NOTE]
+> 在完整 [恢复模式](../backup-restore/recovery-models-sql-server.md)下，所有大容量操作都将被完整地记录下来。 但是，可以通过将数据库暂时切换到用于大容量操作的大容量日志恢复模式，最小化一组大容量操作的日志记录。 最小日志记录比完整日志记录更为有效，并在大容量事务期间，降低了大规模大容量操作填满可用的事务日志空间的可能性。 不过，如果在最小日志记录生效时数据库损坏或丢失，则无法将数据库恢复到故障点。  
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
@@ -139,7 +146,8 @@ ms.lasthandoff: 09/27/2017
   
 -   在[UPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
-    >  **不推荐**使用 WRITETEXT 语句和 UPDATETEXT 语句，应该避免在新的应用程序中使用这些语句。  
+    > [!IMPORTANT]
+    > **不推荐**使用 WRITETEXT 语句和 UPDATETEXT 语句，应该避免在新的应用程序中使用这些语句。  
   
 -   如果数据库设置为简单或大容量日志恢复模式，则无论是脱机还是联机执行操作，都会按最小方式记录一些索引 DDL 操作。 按最小方式记录的索引操作如下：  
   
@@ -147,7 +155,8 @@ ms.lasthandoff: 09/27/2017
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 操作。  
   
-        > **不推荐**使用“DBCC DBREINDEX 语句”；请不要在新的应用程序中使用该语句。  
+        > [!IMPORTANT]
+        > 不推荐使用“DBCC DBREINDEX 语句”；请不要在新的应用程序中使用该语句。  
   
     -   DROP INDEX 新堆重新生成（如果适用）。 （ [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 操作期间将 **始终** 完整记录索引页的释放操作。）
   

@@ -23,6 +23,7 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 591664f329f4c7feeb24fff52b809dba567d0b80
@@ -143,3 +144,4 @@ SQLRETURN SQLGetDiagRec(
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 标头文件](../../../odbc/reference/install/odbc-header-files.md)   
  [示例 ODBC 程序](../../../odbc/reference/sample-odbc-program.md)
+

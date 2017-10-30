@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [c] 这是对应的 C 数据类型的大小。  
   
  当日期 SQL 数据转换为字符 C 数据时，生成的字符串是在"*yyyy*-*mm*-*dd*"格式。 此格式不受 Windows® 国家/地区设置。
+

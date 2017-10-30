@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM。 一个过程是而不是相应的数据缓冲区中的值的过程中使用输入参数的默认值。  
   
 -   SQL_COLUMN_IGNORE。 **SQLBulkOperations**或**SQLSetPos**是忽略数据缓冲区中的值。 通过调用更新数据行时**SQLBulkOperations**或**SQLSetPos，**列值不会更改。 通过调用插入新的数据行时**SQLBulkOperations**，该列的值设置为其默认值或者，如果列不具有默认情况下，为 NULL。
+

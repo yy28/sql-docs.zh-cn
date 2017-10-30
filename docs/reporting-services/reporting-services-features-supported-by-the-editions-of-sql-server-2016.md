@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2016 各个版本支持的 Reporting Services 功能 | Microsoft Docs"
+title: "Reporting Services 的 SQL Server 2016 各个版本支持的功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,7 +15,8 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
 ms.contentlocale: zh-cn
@@ -25,7 +26,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 各个版本支持的 Reporting Services 功能
 
-本主题提供有关不同版本的 SQL Server 2016 所支持的功能的详细信息。  
+本主题提供支持的不同版本的 SQL Server 2016 功能的详细的信息。  
   
  可在 180 天的试用期内使用 SQL Server 评估版。  
   
@@ -33,9 +34,9 @@ ms.lasthandoff: 08/09/2017
     
  **试用 SQL Server 2016！**    
     
- > [![从评估中心下载](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png) **[启动已安装 SQL Server 2016 的虚拟机](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)**启动已安装 SQL Server 2016 的虚拟机[](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 有关评估版和开发人员版支持的功能，请参阅 SQL Server 企业版。
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 08/09/2017
 |警报<sup>2</sup>|是||||||是|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|是||||||是|  
   
- <sup>1</sup> 有关 SQL Server 2016 Reporting Services (SSRS) 支持的数据源的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ <sup>1</sup>支持的数据源中 SQL Server 2016 Reporting Services (SSRS) 的详细信息，请参阅[支持的 Reporting Services &#40; 数据源SSRS &#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> 在 SharePoint 模式下需要 Reporting Services。 有关详细信息，请参阅 [安装 Reporting Services SharePoint 模式](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
@@ -112,4 +113,5 @@ ms.lasthandoff: 08/09/2017
 [SQL Server 2016 的产品规格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [安装 SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

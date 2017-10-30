@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a99ea01cbd5a00ea4aa12e4b1461ca7f1ce9afa5
@@ -41,3 +42,4 @@ SQL 语句可以松散分为以下五种类别：
 -   **管理语句**这些是用于管理目的在数据库中的 SQL 语句。 例如，**授予**和**撤消**。  
   
  前两个类别中的 SQL 语句统称为*结果生成语句*。 后三个类别中的 SQL 语句统称为*无结果的语句*。 ODBC 定义包括仅生成结果的语句的批处理的语义。 这些语义有很大差异，因此数据源 – 特定。 例如，SQL Server 驱动程序不支持删除对象，然后引用或重新创建同一个批处理中的相同对象。 因此，术语*批处理*因为用此手册仅指批处理的结果生成的语句。
+

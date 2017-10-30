@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d3ff080d50545b75a416e459b73ebd8bbb44666
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment（SSISDB 数据库）
@@ -28,20 +28,20 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-create_environment [ @folder_name = ] folder_name  
-     , [ @environment_name = ] environment_name  
-  [  , [ @environment_description = ] environment_description ]  
+```sql  
+catalog.create_environment [@folder_name =] folder_name  
+     , [@environment_name =] environment_name  
+  [  , [@environment_description =] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 将包含环境的文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [@folder_name =] *folder_name*  
+ 要包含环境的文件夹名称。 *Folder_name*是**nvarchar （128)**。  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  环境的名称。 *Environment_name*是**nvarchar （128)**。  
   
- [ @environment_description=] *environment_description*  
+ [@environment_description=] *environment_description*  
  环境的可选说明。 *Environment_description*是**nvarchar(1024)**。  
   
 ## <a name="return-code-value"></a>返回代码值  

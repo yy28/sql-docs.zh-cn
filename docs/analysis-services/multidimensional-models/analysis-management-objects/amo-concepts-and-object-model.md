@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  AMO 不能用于查询数据。 若要查询 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据，包括多维数据集和挖掘模型，请在用户应用程序中使用 ADOMD.NET。 有关详细信息，请参阅[使用 ADOMD.NET 开发](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
   
+

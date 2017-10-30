@@ -17,11 +17,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -76,7 +77,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **统计信息收集间隔：** 定义已收集的运行时统计信息的粒度级别（默认值为 1 小时）。 如果你需要更细的粒度或更短的时间来检测问题和解决问题，则可考虑使用更低的值，但请记住，这会直接影响 Query Store 数据的大小。 使用 SSMS 或 Transact-SQL 为“统计信息收集间隔”设置不同的值：  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **过时查询阈值（天）：** 基于时间的清除策略，用于控制持久化运行时统计信息和非活动查询的保持期。  
@@ -86,7 +87,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **基于大小的清理模式：** 指定在 Query Store 数据大小达到限制时，是否启用自动数据清理功能。  
@@ -323,11 +324,11 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志改善灾难恢复
  
-  全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。
+  全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。 有关详细信息，请参考[跟踪标志](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   跟踪标志 7745 会阻止以下默认行为：在可关闭 SQL Server 之前，查询存储将数据写入磁盘。
   
-  跟踪标志 7752 允许 SQL Server 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
+  跟踪标志 7752 能够异步加载查询存储，并且允许 SQL Server 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
 
 ## <a name="see-also"></a>另请参阅  
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

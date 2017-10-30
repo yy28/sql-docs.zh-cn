@@ -29,11 +29,12 @@ caps.latest.revision: 83
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6e1a96bb64c8cb6a81311f422d370e36d9489ca4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -148,7 +149,7 @@ DROP DATABASE Sales, NewSales;
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 下面的示例删除名为的数据库快照`sales`_`snapshot0600`，而不会影响源数据库。  
+ 下面的示例删除名为的数据库快照`sales_snapshot0600`，而不会影响源数据库。  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

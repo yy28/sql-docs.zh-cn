@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  现在，假设另一个应用程序删除行 11 和 101。 如果光标尝试检索第 11 行，它将遇到一个口，因为它具有此行的键，但没有行存在;这是键集驱动的行为。 如果光标尝试检索第 101，光标将检测不到行是缺少，因为它不具有行的键。 相反，它将检索先前行 102。 这是动态游标行为。  
   
  混合的光标相当于键集驱动游标时的键集大小等同于结果集大小。 混合的光标相当于动态游标键集大小等于 1 时。
+

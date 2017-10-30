@@ -14,11 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用始终加密
@@ -268,34 +269,12 @@ Microsoft JDBC Driver for SQL Server 附带以下内置列主密钥存储提供�
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序
 Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（尤其是当应用程序在 Azure 中托管时）。 Microsoft JDBC Driver for SQL Server 包括内置的提供程序，SQLServerColumnEncryptionAzureKeyVaultProvider，具有 Azure 密钥保管库中存储的密钥的应用程序。 此提供程序的名称是 AZURE_KEY_VAULT。 若要使用 Azure 密钥保管库存储区提供程序，应用程序开发人员需要在 Azure 中创建保管库和密钥，并配置应用程序以访问密钥。 有关如何设置密钥保管库和创建列主密钥的详细信息请参阅[Azure 密钥保管库 – 有关详细信息设置密钥保管库 Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)和[Azure 密钥保管库中创建列主密匙](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-若要使用 Azure 密钥保管库，客户端应用程序需要实例化 SQLServerColumnEncryptionAzureKeyVaultProvider 并将其注册到该驱动程序。 向应用程序通过接口的 JDBC 驱动程序委托身份验证调用 SQLServerKeyVaultAuthenticationCallback 其中具有从密钥保管库检索访问令牌的方法。 若要实例化 Azure 密钥保管库存储提供程序，应用程序开发人员需要提供调用的唯一方法的实现**getAccessToken**检索 Azure 密钥保管库中存储的密钥的访问令牌。  
-  
-下面是初始化 SQLServerKeyVaultAuthenticationCallback 和 SQLServerColumnEncryptionAzureKeyVaultProvider 的示例：  
+若要使用 Azure 密钥保管库，客户端应用程序需要实例化 SQLServerColumnEncryptionAzureKeyVaultProvider 并将其注册到该驱动程序。
+
+此处是初始化 SQLServerColumnEncryptionAzureKeyVaultProvider 的一个示例：  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 应用程序创建的 SQLServerColumnEncryptionAzureKeyVaultProvider 实例后，应用程序需要注册 Microsoft JDBC Driver 内 SQL Server 使用的实例SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法。 强烈建议，使用默认查找名称，AZURE_KEY_VAULT，可以通过调用 SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API 来获取注册实例。 使用默认名称，将允许你使用设置的工具，如 SQL Server Management Studio 或 PowerShell，和管理始终加密密钥 （用于工具的默认名称生成列主密钥的元数据对象）。 以下示例显示了正在注册 Azure 密钥保管库提供程序。 SQLServerConnection.registerColumnEncryptionKeyStoreProviders() 方法的更多详细信息，请参阅[始终加密 API 参考 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。 
@@ -653,3 +632,4 @@ connection.close();
  [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

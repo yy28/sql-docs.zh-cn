@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **添加、 修改或以无提示方式删除数据源。** 管理程序调用**SQLConfigDataSource**中的安装程序 DLL 和传递它 null 窗口处理，要添加、 修改或删除的数据源的名称和注册表值的列表。 安装程序 DLL 调用**ConfigDSN**在驱动程序设置实际添加的 DLL 中，修改或删除数据源。  
   
 -   **添加、 修改或删除默认数据源。** 默认数据源具有与任何其他数据源，相同，只不过其名称是默认值。 它是添加、 修改或删除与任何其他数据源相同的方式。
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a40f679e60f3779acdf2a91b987c1f699420acd9
@@ -25,3 +26,4 @@ ms.lasthandoff: 08/02/2017
   若要配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用的协议，可以在控制台窗格中为所需服务器实例选择“协议”，在详细信息窗格中右键单击相应协议，然后单击“属性”。  
   
   
+

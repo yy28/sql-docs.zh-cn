@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|没有更多数据时可用。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息。 可能返回类 02xxx 中的一个或多个驱动程序定义的状态记录。 **注意：** ODBC 2 中。*x*，这会返回代码名为 SQL_NO_DATA_FOUND。|  
 |SQL_NEED_DATA|需要更多的数据，例如在执行时发送参数数据或其他连接信息是必需的。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息，如果有的话。|  
 |SQL_STILL_EXECUTING|仍在执行已以异步方式启动的函数。 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索其他信息，如果有的话。|
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
@@ -177,3 +178,4 @@ ms.lasthandoff: 08/03/2017
  永远不会存储此用户的凭据。 每当需要这些凭据时 CDC 设计器控制台将请求这些凭据，并且将为其余的用户界面会话保存它们。  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ba89ae47d223ea17f02cb07976510d78ff3660e
@@ -73,3 +74,4 @@ ODBC 使用过程调用中的转义序列。 此转义序列的语法如下所�
  （如果过程参数是空字符串，该过程使用默认值为该参数。）  
   
  若要确定是否数据源支持过程的驱动程序支持 ODBC 过程调用语法，应用程序可以调用**SQLGetInfo** SQL_PROCEDURES 信息类型。
+

@@ -23,11 +23,12 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8696a2cff3589b9b756e2ddd9cc1160b465b70d8
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 86c7d027057c851ae52d3627aa5ff2591f95bf8a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -101,22 +102,6 @@ GO
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
-GO  
-```  
-  
- 以下示例反转变量中的字符。  
-  
-```  
-DECLARE @myvar varchar(10);  
-SET @myvar = 'sdrawkcaB';  
-SELECT REVERSE(@myvar) AS Reversed ;  
-GO  
-```  
-  
- 下面的示例使隐式转换**int**数据类型到**varchar**数据类型，然后反转结果。  
-  
-```  
-SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   

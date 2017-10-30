@@ -18,11 +18,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f62f296fd14cefdeeb0f13b99d03852eaf44850a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>课程 1-2-设置工具选项和布局
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
     -   展开“启动时”列表，查看数据库引擎优化顾问在启动时可显示的内容。 默认情况下，选择“显示新会话”。  
   
-    -   单击“更改字体”，查看在“常规”选项卡中可以为数据库和表的列表选择的字体。 执行优化后，为此选项选择的字体也将用于数据库引擎优化顾问的建议网格和报表中。 默认情况下，数据库引擎优化顾问使用系统字体。  
+    -   单击“更改字体”，查看在“常规”选项卡中可以为数据库和表的列表选择的字体。执行优化后，为此选项选择的字体也将用于数据库引擎优化顾问的建议网格和报表中。 默认情况下，数据库引擎优化顾问使用系统字体。  
   
     -   “最近使用的列表中的项数”可设置为 **1** 到 **10** 之间的数字。 此选项设置在单击“文件”菜单上的“最近使用的会话”或“最近使用的文件”时，列表中可以显示的最大项数。 默认情况下，此选项设置为 **4**。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/02/2017
     -   默认情况下，将选中“在停止会话分析之前询问”，避免在数据库引擎优化顾问完成工作负载分析之前意外停止优化会话。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 2 课： 使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 课：使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

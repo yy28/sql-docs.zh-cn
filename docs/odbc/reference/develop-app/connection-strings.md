@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLBrowseConnect**，这将完成以迭代方式与数据源的连接字符串。  
   
  **SQLConnect**不使用连接字符串; 使用**SQLConnect**类似于连接的连接字符串使用 3 个关键字/值对 (数据源名称和 （可选） 用户 ID 和密码).
+

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3a7ed3786221df01f87a2d424a95a4bd73eb1e55
@@ -25,3 +26,4 @@ ms.lasthandoff: 08/02/2017
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 以 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务的形式实现。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  
   
   
+

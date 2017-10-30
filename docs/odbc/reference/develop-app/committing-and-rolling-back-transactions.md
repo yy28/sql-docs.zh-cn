@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  如果应用程序传递的环境句柄**SQLEndTran**但不是会无法通过连接句柄，驱动程序管理器从概念上讲调用**SQLEndTran**与每个驱动程序的环境句柄，在环境中具有一个或多个活动连接。 该驱动程序然后提交事务对在环境中的每个连接。 但是，务必要意识到该驱动程序和驱动程序管理器都不在环境中; 的连接执行两阶段提交这是只是为了同时调用的编程的方便**SQLEndTran**环境中的所有连接。  
   
  (A*两阶段提交*通常用来提交事务分布在多个数据源。 在其第一个阶段中，数据源会轮询有关它们是否能够提交其包含在事务中。 在第二个阶段中，实际提交事务对所有数据源。 如果任何数据源答复在第一阶段，它们无法提交事务，第二个阶段不会发生。）
+

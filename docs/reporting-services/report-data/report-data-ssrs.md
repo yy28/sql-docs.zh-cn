@@ -15,7 +15,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
 ms.contentlocale: zh-cn
@@ -46,15 +47,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **数据集** 可以独立于数据集所依赖的报表或共享数据源来单独发布和管理数据集。 您或数据库所有者可以提供优化的查询以便报表作者使用。 当您更改查询时，使用共享数据集的所有报表都将使用更新的查询。 您可以启用数据集缓存来提高性能。 您可以安排在特定时间进行查询缓存，或使用共享的计划。  
   
--   **报表部件使用的数据** 报表部件可以包含它们所依赖的数据。 有关报表部件的详细信息，请参阅[报表设计器 &#40; 中的报表部件SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+-   **报表部件使用的数据** 报表部件可以包含它们所依赖的数据。 有关报表部件的详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
 -   **筛选数据** 可以在查询中或报表中筛选报表数据。 您可以使用数据集和查询变量来创建级联参数，并且使用户能够将成千上万种选择缩减为更为可控的数目。 您可以基于参数值或者您指定的其他值来筛选表或图表中的数据。  
   
--   **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以创建具有链接到相同报表定义的不同默认值的报表参数集，或者使用内置的 **UserID** 字段。 有关详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[表达式 &#40; 中的内置集合报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **参数** 包含查询变量的数据集查询命令将自动创建匹配的报表参数。 也可以手动创建参数。 当您查看报表时，报表工具栏将显示这些参数。 用户可以选择值，以便控制报表数据或报表外观。 若要为特定用户自定义报表数据，可以创建具有链接到相同报表定义的不同默认值的报表参数集，或者使用内置的 **UserID** 字段。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 -   **数据警报** 在发布报表后，您可以基于报表数据创建警报，并且在警报满足您指定的规则时接收电子邮件。  
   
--   **对数据进行分组和聚合** 可在查询或报表中对报表数据进行分组和聚合。 如果您聚合查询中的值，则可以继续在有意义的约束内合并报表中的值。  有关详细信息，请参阅[筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[聚合函数 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
+-   **对数据进行分组和聚合** 可在查询或报表中对报表数据进行分组和聚合。 如果您聚合查询中的值，则可以继续在有意义的约束内合并报表中的值。  有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[聚合函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
 -   **对数据排序** 可以在查询中或报表中对报表数据排序。 在表中，您还可以添加交互排序按钮，以便让用户控制排序顺序。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 -   您可以使用的数据源取决于所安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据扩展插件。 对数据源的支持可能会因客户端创作工具、报表服务器版本和报表服务器平台而异。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
--   基于数据源类型以及是在您的客户端还是报表服务器或 SharePoint 站点查看报表的，数据源凭据将会有所不同。 有关详细信息，请参阅[为 SharePoint 站点 &#40; 上的报表服务器项设置权限Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)，[指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)，和凭据信息特定于每个工具中[Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
+-   基于数据源类型以及是在您的客户端还是报表服务器或 SharePoint 站点查看报表的，数据源凭据将会有所不同。 有关详细信息，请参阅[在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式上的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)、[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md) 中特定于每个工具的凭据信息。  
   
 ## <a name="related-tasks"></a>相关任务  
  与创建数据连接以及从外部数据源、数据集和查询添加数据相关的任务。  
@@ -95,3 +96,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>相关内容  
   
+

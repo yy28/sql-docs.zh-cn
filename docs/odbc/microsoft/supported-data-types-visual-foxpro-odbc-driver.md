@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: caf58413946e51ae8575b8d068e4a516316eb090
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="data-types-in-applications-using-microsoft-query"></a>使用 Microsoft 查询的应用程序中的数据类型  
  如果你的应用程序使用 Microsoft Query Visual FoxPro 数据源上创建新表，Microsoft 查询显示**新表定义**对话框。 下**字段说明**、**类型**框中列出[Visual FoxPro 字段数据类型](../../odbc/microsoft/visual-foxpro-field-data-types.md)，表示由单个字符。
+

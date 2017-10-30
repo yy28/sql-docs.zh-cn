@@ -20,7 +20,8 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d0e65c6d190976934fa9c5177585cc88a34df8fa
 ms.contentlocale: zh-cn
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services WMI 提供程序库引用 &#40;SSRS &#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

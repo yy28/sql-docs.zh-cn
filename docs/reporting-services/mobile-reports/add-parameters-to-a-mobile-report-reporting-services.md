@@ -14,7 +14,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6fad62a6549f4b9752bde07e39f53175768a68cb
 ms.contentlocale: zh-cn
@@ -26,17 +27,17 @@ ms.lasthandoff: 08/09/2017
 
 若要创建带参数的移动报表，请以至少有一个参数的共享数据集开始。 阅读有关 [在共享数据集中创建参数](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)的信息。  
 
-向移动报表添加参数后，创建 URL 用于 [打开具有查询字符串参数的报表](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)。
+向移动报表添加参数后，创建 URL 用于[打开具有查询字符串参数的报表](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)。
 
 1. 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] Web 门户的上栏中，选择“新建” > “移动报表”。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 选择**数据**的左上角的选项卡[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]。   
+2. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 的左上角，选择“数据”选项卡。   
   
-3. 在右上角中，选择**添加数据**。  
+3. 在右上角选择“添加数据”。  
   
-4. 选择**报表服务器**，然后选择一个服务器。  
+4. 选择“报表服务器”，然后选择一个服务器。  
   
 5. 导航到服务器上的共享数据集，并选择一个包含参数的数据集。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
      
    ![SSMRP_PforParam](../../reporting-services/mobile-reports/media/ssmrp-pforparam.png)  
   
-6. 选择的选项卡上的小齿轮，然后选择**Param {}**。  
+6. 选择选项卡上的嵌齿，然后选择“Param {}”。  
   
    ![SSMRP_ParamWheel](../../reporting-services/mobile-reports/media/ssmrp-paramwheel.png)  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
    ![SSMRP_SetParam](../../reporting-services/mobile-reports/media/ssmrp-setparam.png)  
      
-8. 选择**预览**若要查看报表的显示效果。 在此报表中，选择列表使用的是 Category 参数。
+8. 选择“预览”查看报表。 在此报表中，选择列表使用的是 Category 参数。
 
    ![sql-server-mobile-report-publisher-Selection-List-View-No-Selection](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-view-no-selection.png) 
    

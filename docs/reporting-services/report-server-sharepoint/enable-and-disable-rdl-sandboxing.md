@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
@@ -186,3 +187,4 @@ RDL （报表定义语言） 沙盒处理功能允许你检测并限制特定类
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

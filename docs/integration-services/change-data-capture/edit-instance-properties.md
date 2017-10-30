@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
@@ -57,3 +58,4 @@ ms.lasthandoff: 08/03/2017
      还可以从 CDC 设计器控制台中心的列表中右键单击该服务，然后选择“属性”。  
   
   
+

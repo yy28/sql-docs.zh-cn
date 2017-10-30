@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  下图显示三个不同配置的基于 DBMS 的驱动程序。 在第一个配置中，驱动程序和数据源位于同一台计算机上。 在第二个的驱动程序和数据源位于不同的计算机上。 在第三个、 驱动程序和数据源位于不同的计算机和网关位于之间它们位于另一个计算机上。  
   
  ![DBMS 的三种配置 &#45; 基于驱动程序](../../odbc/reference/media/pr07.gif "pr07")
+

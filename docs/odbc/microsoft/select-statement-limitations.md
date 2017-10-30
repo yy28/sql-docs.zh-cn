@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 53b3e18a07e14e6059a9d193d8659a09b87e6c65
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  如果 SELECT 语句中输入不正确的列名称，则会返回 SQLSTATE 07001 错误，"参数错误数，"，而不是 SQLSTATE S0022 错误，"列找不到。"  
   
  当使用 Microsoft Excel 驱动程序时，如果列中插入一个空字符串时，将空字符串转换为 NULL;使用空字符串的 WHERE 子句中执行的搜索 SELECT 语句将对该列不会成功。
+

@@ -18,7 +18,8 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09e1655e7945a459cf9d606d24cf7479ee4fc568
 ms.contentlocale: zh-cn
@@ -42,3 +43,4 @@ Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG
  [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
   
   
+

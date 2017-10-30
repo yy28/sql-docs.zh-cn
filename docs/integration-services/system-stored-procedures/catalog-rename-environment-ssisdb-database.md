@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-rename_environment [ @folder_name = ] folder_name  
+```sql  
+catalog.rename_environment [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @new_environment_name= ] new_environment_name  
 ```  

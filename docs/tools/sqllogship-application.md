@@ -16,11 +16,12 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ee9ecbf0af08791636b9ef8920d0f9de0e14f27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 4c712a94883ce48c321a8ccc15b766b709da7648
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/02/2017
   
  ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")语法约定，请参阅[命令提示实用工具参考 &#40; 数据库引擎 &#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -66,10 +67,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|输出所有调试消息和跟踪消息。|  
   
  **–logintimeout** *timeout_value*  
- 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。 默认值为 15 秒。 *timeout_value* 为 **int***.*  
+ 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 *timeout_value* 为 **int***.*  
   
  **-querytimeout** *timeout_value*  
- 指定所分配的在尝试启动指定操作超时之前的尝试时间。 默认情况下不指定超时期限。 *timeout_value* 为 **int***.*  
+ 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int***.*  
   
 ## <a name="remarks"></a>注释  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 存储过程。  
@@ -100,3 +101,4 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  [sp_start_job (Transact-SQL)](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   
+

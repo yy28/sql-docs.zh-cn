@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/09/2017
  不应直接调用访问此信息在添加、 修改或删除数据源时，任何管理注册表被处理由 ODBC 管理器。  
   
  可以使用其中的某些关键字和值中的参数一样[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 函数。
+

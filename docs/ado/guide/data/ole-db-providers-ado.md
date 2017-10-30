@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ef1c85f55928c266fb88f1639d5ccd53450fe59
@@ -48,3 +49,4 @@ OLE DB 定义一组 COM 接口，提供在各种信息源中存储的数据进�
 -   [数据提供程序](../../../ado/guide/data/data-providers.md)  
   
 -   [服务提供商和组件](../../../ado/guide/data/service-providers-and-components.md)
+

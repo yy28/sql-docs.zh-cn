@@ -30,10 +30,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2ca12bf5c6f5cfa3e9a7b44300119d5e55e57da
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0fcf9f37da268e266cb94037995f271c54536cb8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 FILE_NAME ( file_id )   
 ```  
   
@@ -61,10 +60,9 @@ FILE_NAME ( file_id )
  *file_ID*对应于在 sys.master_files 或 sys.database_files 目录视图的 file_id 列。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回的文件名`file`_`ID 1`和`file` \_ `ID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+ 下面的示例返回的文件名`file_ID 1`和`file_ID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
   
 ```tsql  
-  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  
@@ -84,5 +82,4 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
  [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
   

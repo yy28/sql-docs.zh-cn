@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
@@ -118,3 +119,4 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [sp_control_plan_guide (Transact SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)。  
   
   
+

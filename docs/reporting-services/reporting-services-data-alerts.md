@@ -15,7 +15,8 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: zh-cn
@@ -328,3 +329,4 @@ SQL Server Reporting Services 数据警报是一种数据驱动警报解决方�
 [数据警报管理器为 SharePoint 用户](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

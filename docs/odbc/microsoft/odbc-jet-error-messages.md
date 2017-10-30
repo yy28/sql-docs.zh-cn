@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fad2aab1020cb7a56c00a2b78c1d2c46a41c422
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |-------------------|--------------------|  
 |[Microsoft][ODBC 驱动程序管理器]*消息文本*|驱动程序管理器 (所用的 Odbc32.dll)|  
 |[Microsoft][ODBC*驱动程序名称*]*消息文本*|驱动程序 ISAM （请参阅驱动程序 ISAMs）|
+

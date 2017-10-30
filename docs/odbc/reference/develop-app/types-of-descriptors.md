@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  描述符可以执行不同的角色。 不同的语句可以共享任何应用程序显式分配的描述符。 在一个语句中的行描述符可以充当另一个语句中的参数描述符。  
   
  始终是已知的给定的描述符是否是应用程序描述符或实现描述符，即使描述符具有尚未使用在数据库操作。 对于实现隐式分配的描述符，实现记录相对语句句柄于预定义的行。 应用程序将通过调用其分配任何描述符**SQLAllocHandle**不是应用程序描述符。
+

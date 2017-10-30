@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
  [d] 驱动程序必须始终检查此值，以确定它是否是一个特殊的值，如 SQL_NULL_DATA。  
   
  驱动程序使用的参数值在执行时的用途是驱动程序相关的。 如有必要，该驱动程序将值从绑定变量的 C 数据类型和字节长度转换为 SQL 数据类型、 精度和小数位数。 在大多数情况下，该驱动程序然后将值发送到数据源。 在某些情况下，它设置为文本值的格式，并将其插入到 SQL 语句中之前将语句发送到数据源。
+

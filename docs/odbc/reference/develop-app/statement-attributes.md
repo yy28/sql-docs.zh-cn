@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 3 中引入的语句属性均不项。*x* （除外 SQL_ATTR_METADATA_ID) 可以设置在连接级别。  
   
  有关详细信息，请参阅[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数说明。
+

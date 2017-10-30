@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
@@ -102,10 +103,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  如果 SQL Server 或 Sybase 源表包含标识列，你必须使用执行 SQL 任务，来启用 IDENTITY_INSERT 在 ADO NET 目标之前和之后再次禁用。 （标识列属性指定的列的增量值。 集 IDENTITY_INSERT 语句允许源表中的显式值插入到目标表中的标识列）。  
 >   
->   若要运行的 SET IDENTITY_INSERT 语句和成功加载的数据，你必须执行以下操作。
->       1. 针对执行 SQL 任务和 ADO.NET 目标，请使用相同的 ADO.NET 连接管理器。
->       2. 在连接管理器中，将设置**RetainSameConnection**属性和**MultipleActiveResultSets**属性为 True。
->       3. 在 ADO.NET 目标，将设置**UseBulkInsertWhenPossible**属性设置为 False。
+>   若要运行的 SET IDENTITY_INSERT 语句和成功加载的数据，你必须执行以下操作。 
+>       1. 针对执行 SQL 任务和 ADO.NET 目标，请使用相同的 ADO.NET 连接管理器。 
+>       2. 在连接管理器中，将设置**RetainSameConnection**属性和**MultipleActiveResultSets**属性为 True。 
+>       3. 在 ADO.NET 目标，将设置**UseBulkInsertWhenPossible**属性设置为 False。 
 >
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
@@ -172,3 +173,4 @@ ms.lasthandoff: 08/17/2017
  将错误处理选项应用到选定的单元格。  
   
   
+

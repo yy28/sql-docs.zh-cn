@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   **访问特定 DBMS 一次。** 例如，通过调用 ODBC 函数中检索数据的电子表格可能包含**驱动程序**关键字来标识特定的驱动程序。 驱动程序名称为到该驱动程序的任何用户有意义，因为无法在这些用户之间传递电子表格。 如果电子表格包含数据源名称，每个用户将必须创建相同的数据源，以使用电子表格。  
   
 -   **浏览到特定的驱动程序可访问的所有数据库的系统。** 有关详细信息，请参阅[使用 SQLBrowseConnect 连接](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)，本部分中更高版本。
+

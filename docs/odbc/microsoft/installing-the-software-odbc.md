@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c46b87a3d9ea3f30524a261bc81bd37aa03c9aca
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!CAUTION]  
 >  通过 MDAC/Windows DAC 安装 Oracle 软件可能会覆盖当前版本的 MDAC。 如果使用 ODBC 组件出现问题，请重新安装 MDAC。
+

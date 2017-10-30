@@ -19,6 +19,7 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8aa5b0fdf2771d83310e503f2fdd8770bf9cf324
@@ -27,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据
-  本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用数据质量项目清理您的数据。 可以使用已在 DQS 中针对高质量数据集生成的知识库对您的源数据执行数据清理。 有关详细信息，请参阅 [Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md)。  
+  本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用数据质量项目清理您的数据。 可以使用已在 DQS 中针对高质量数据集生成的知识库对您的源数据执行数据清理。 有关详细信息，请参阅 [生成知识库](../data-quality-services/building-a-knowledge-base.md)。  
   
  执行数据清理分为四个阶段：  “映射”阶段：您确定要清理的数据源，并将其映射到知识库中的所需域；  “计算机辅助清理”阶段：DQS 将知识库应用于要清理的数据，然后对源数据建议/进行更改；  “交互式清理”阶段：数据专员可以分析数据更改，然后接受/拒绝数据更改；最后是  “导出”阶段：您可以导出清理的数据。 将在清理活动向导的单独页面上执行上述每个过程，这使您可以在不同页面之间来回移动，重新运行过程，并结束特定的清理过程和返回到过程的相同阶段。 DQS 向您提供有关源数据和清理结果的统计信息，使您能够针对数据清理制定明智的决策。  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
--   您必须已为清理活动指定了适当的阈值。 有关此操作的信息，请参阅 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   您必须已为清理活动指定了适当的阈值。 有关此操作的信息，请参阅 [有关此操作的信息，请参阅](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
 -   在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中必须有您要针对其比较和清理源数据的 DQS 知识库。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果您要清理包含美国地址的数据源，您必须具有一个针对美国地址的“高质量”示例数据创建的知识库。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Create"></a> 创建清理数据质量项目  
  您必须使用数据质量项目来执行数据清理操作。 创建清理数据质量项目：  
   
-1.  按照主题 [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)中的步骤 1-3 执行操作。  
+1.  按照主题 [创建数据质量项目](../data-quality-services/create-a-data-quality-project.md)中的步骤 1-3 执行操作。  
   
 2.  在步骤 3.d 中，选择 **“清理”** 活动。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 09/09/2017
 2.  在 **“映射”**下，将源数据中的数据列映射到知识库中的适当域，操作步骤为：从 **“源列”** 列中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择一个域。 重复此步骤，将源数据中的所有列映射到知识库中的相应域。 如果需要，您可以单击 **“添加列映射”** 图标以将行添加到映射表。  
   
     > [!NOTE]  
-    >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行数据清理。 有关支持的源数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+    >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行数据清理。 有关支持的源数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 3.  单击 **“预览数据源”** 图标可查看您选择的 SQL Server 表或视图中的数据，或查看您所选 Excel 工作表中的数据。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 09/09/2017
     >   
     >      在这两种情况下，单击 **“是”** 将使用最新的知识库来进行计算机辅助清理。 此外，如果当前映射与更新的知识库之间存在任何冲突（如域被删除或更改了域数据类型），则此消息也提示您修复当前映射以使用更新的知识库。 单击 **“是”** 将进入 **“映射”** 页，您可以在其中修复映射，然后继续执行计算机辅助清理。  
   
-2.  在计算机辅助清理阶段，您可以通过单击 **“事件探查器”** 选项卡切换事件探查器，以查看实时数据事件探查和通知。 有关详细信息，请参阅 [Profiler Statistics](#Profiler)。  
+2.  在计算机辅助清理阶段，您可以通过单击 **“事件探查器”** 选项卡切换事件探查器，以查看实时数据事件探查和通知。 有关详细信息，请参阅 [事件探查器统计信息](#Profiler)。  
   
 3.  如果您对结果感到不满意，则单击 **“返回”** 以返回到 **“映射”** 页，根据需要修改一个或多个映射，返回 **“清理”** 页，然后单击 **“重新启动”**。  
   
@@ -99,9 +100,9 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Interactive"></a> 交互式清理阶段  
  在交互式清理阶段中，您可以看到 DQS 所建议的更改，并可以通过批准或拒绝更改来确定是否实现更改。 在 **“管理和查看结果”** 页的左侧窗格中，DQS 显示您在映射阶段的早期映射的所有域的列表，以及源数据中在计算机辅助清理阶段针对每个域分析的值数目。 在 **“管理和查看结果”** 页的右侧窗格中，根据是否遵守域规则、语法错误规则和高级算法，DQS 使用 “置信度”对五个选项卡下的数据进行分类。 置信度指示 DQS 对更正或建议的确信程度，它基于以下域值：  
   
--   **自动更正阈值**：置信度在此阈值之上的所有值都由 DQS 自动更正。 但是，数据专员可以在交互式清理过程中覆盖该更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动更正阈值。 有关详细信息，请参阅 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   **自动更正阈值**：置信度在此阈值之上的所有值都由 DQS 自动更正。 但是，数据专员可以在交互式清理过程中覆盖该更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动更正阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
--   **自动建议阈值**：置信度在此阈值之上但在自动更正阈值之下的所有值都建议为替换值。 DQS 仅在数据专员批准之后才进行更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动建议阈值。 有关详细信息，请参阅 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   **自动建议阈值**：置信度在此阈值之上但在自动更正阈值之下的所有值都建议为替换值。 DQS 仅在数据专员批准之后才进行更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动建议阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
 -   **其他**：对于自动建议域值之下的所有值，DQS 都不进行任何更改。  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  拼写检查器功能仅可用于上部窗格中（域值）。 此外，您不能对复合域启用或禁用拼写检查器。 默认情况下，如果复合域中的子域属于字符串类型并且为其启用了拼写检查器功能，则在交互式清理阶段将启用拼写检查器功能。  
   
-4.  在交互式清理阶段，您可以通过单击 **“事件探查器”** 选项卡切换事件探查器，以查看实时数据探查和通知。 有关详细信息，请参阅 [Profiler Statistics](#Profiler)。  
+4.  在交互式清理阶段，您可以通过单击 **“事件探查器”** 选项卡切换事件探查器，以查看实时数据探查和通知。 有关详细信息，请参阅 [事件探查器统计信息](#Profiler)。  
   
 5.  您检查所有域值后，单击 **“下一步”** 进入导出阶段。  
   
@@ -153,7 +154,7 @@ ms.lasthandoff: 09/09/2017
   
     3.  **Excel 文件**：单击 **“浏览”**，然后指定您要将清理数据导出到其中的 Excel 文件的名称和位置。 您还可以键入 Excel 文件的文件名以及要导出清理数据的完整路径。 例如“c:\ExportedData.xlsx”。 该文件保存在安装了 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的计算机上。  
   
-2.  选中 **“标准化输出”** 复选框，以便基于为域选择的输出格式对输出进行标准化。 例如，将字符串值更改为大写，或使单词的首字母变为大写。 有关指定域的输出格式的信息，请参阅 **Set Domain Properties** 中的 [“将输出格式设置为”](../data-quality-services/set-domain-properties.md)列表。  
+2.  选中 **“标准化输出”** 复选框，以便基于为域选择的输出格式对输出进行标准化。 例如，将字符串值更改为大写，或使单词的首字母变为大写。 有关指定域的输出格式的信息，请参阅 **设置域属性** 中的 [“将输出格式设置为”](../data-quality-services/set-domain-properties.md)列表。  
   
 3.  接下来，选择数据输出：只是导出清理的数据，还是导出清理的数据以及清理信息。  
   
@@ -228,6 +229,7 @@ ms.lasthandoff: 09/09/2017
   
 -   字段的准确性级别很低。 您可能需要验证映射，或考虑先运行知识发现。  
   
- 有关事件探查的详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+ 有关事件探查的详细信息，请参阅 [DQS 中的数据事件探查和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
   
+

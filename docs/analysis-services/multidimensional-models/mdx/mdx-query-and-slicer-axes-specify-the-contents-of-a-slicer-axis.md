@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
@@ -88,3 +89,4 @@ WHERE(
  如上所述，如果使用 WHERE 子句的集，则会 隐式聚合该集中的所有成员的值。 在这种情况下，该查询说明了在每个单元中的美国和英国的聚合的值。  
   
   
+

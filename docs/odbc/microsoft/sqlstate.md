@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fc4385eecdc86c47ae9e0ade82520143ae892e0c
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlstate"></a>SQLSTATE
 对于在数据源中发生的错误，ODBC 驱动程序将返回的本机错误映射到相应的 SQLSTATE。 有错误的检测到由驱动程序或驱动程序管理器，ODBC 驱动程序或驱动程序管理器生成相应的 SQLSTATE。
+

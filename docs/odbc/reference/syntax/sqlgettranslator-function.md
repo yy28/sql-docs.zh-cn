@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 76bc8c85e923c792e87c13c2ca7f490c7273d975
@@ -81,7 +82,7 @@ BOOL SQLGetTranslator(
  如果成功，则 FALSE 如果它出现故障，或者用户取消对话框中，该函数返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetTranslator**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLGetTranslator**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
@@ -111,3 +112,4 @@ BOOL SQLGetTranslator(
 |配置一个转换器|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |获取转换属性|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |设置转换属性|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+

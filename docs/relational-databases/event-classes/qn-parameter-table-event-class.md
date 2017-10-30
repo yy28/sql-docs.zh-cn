@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1a75387fdf24da1eb90c09fd8603b0c67f7b067d
@@ -52,3 +53,4 @@ ms.lasthandoff: 06/22/2017
 |TextData|**ntext**|返回包含特定于此事件的信息的 XML 文档。 此文档符合 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) 页上提供的 XML 架构。|1|是|  
   
   
+

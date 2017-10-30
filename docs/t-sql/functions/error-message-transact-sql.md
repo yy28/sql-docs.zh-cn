@@ -25,11 +25,12 @@ caps.latest.revision: 53
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f15d9d23726f7558f0bf73aff3f8c3c5253cb24d
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: ad4e69ea267af2a9575558737e17e79bbdad684f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
@@ -100,22 +101,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errormessage-in-a-catch-block"></a>C. 在 CATCH 块中使用 ERROR_MESSAGE  
- 下面的代码示例显示生成被零除错误的 `SELECT` 语句。 将返回错误消息。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>D. 在 CATCH 块中将 ERROR_MESSAGE 与其他错误处理工具一起使用  
+### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. 在 CATCH 块中将 ERROR_MESSAGE 与其他错误处理工具一起使用  
  下面的代码示例显示生成被零除错误的 `SELECT` 语句。 同时返回错误消息和有关错误的信息。  
   
 ```  
@@ -134,18 +120,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
-  
-## <a name="see-also"></a>另请参阅  
- [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
-  
   
 
 

@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17df1facd3c4c3f9035017c0156e6e3aed910d33
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/02/2017
  指示此服务是正在运行、已停止还是已禁用。 **“...”**指示状态更改被挂起。  
   
   
+

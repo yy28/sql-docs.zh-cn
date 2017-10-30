@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dad1b34551ae96587fafdf3f232ce96b33a96846
@@ -40,3 +41,4 @@ SQL Server XTP IO 调控器性能对象包含与内存中 OLTP IO 速率调控�
 
 ## <a name="see-also"></a>另请参阅  
 [SQL Server XTP（内存中 OLTP）性能计数器](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  该函数**SQLBindParam**是一种特殊情况。 **SQLBindParam**是重复的功能。 这不是 ODBC 2*.x*函数，但存在 Open Group 和 ISO 标准中的函数。 此函数提供的功能完全归入通过的**SQLBindParameter**。 因此，驱动程序管理器映射调用**SQLBindParam**到**SQLBindParameter**基础驱动程序时 ODBC 3。*x*驱动程序。 但是，当基础驱动程序是 ODBC 2*.x*驱动程序，驱动程序管理器不会执行此映射。
+

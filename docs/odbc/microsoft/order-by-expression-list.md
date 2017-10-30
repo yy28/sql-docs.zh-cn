@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b64ad53abb02d04077548a1b4483d89307b0a5a0
@@ -33,3 +34,4 @@ ORDER BY a+b,c+d,e
 ```  
   
  Set 函数或包含 set 函数的表达式上允许不排序。
+

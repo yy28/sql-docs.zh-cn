@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a799e2c52a7dbb21ed10ed08512e3aad28fab
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  检索有关单个表的索引或标记名称，与该表关联的统计信息列表。 驱动程序返回信息作为结果集。  
   
  有关详细信息，请参阅[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)中*ODBC 程序员参考*。
+

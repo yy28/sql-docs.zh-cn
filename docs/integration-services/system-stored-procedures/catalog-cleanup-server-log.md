@@ -28,10 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-cleanup_server_log  
-  
+```sql
+catalog.cleanup_server_log  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -85,15 +83,14 @@ cleanup_server_log
 ## <a name="example"></a>示例  
  下面的示例调用 cleanup_server_log 存储过程。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   
 DECLARE@return_value int  
 EXEC@return_value = [internal].[cleanup_server_log]  
 SELECT'Return Value' = @return_value  
-GO  
-  
+GO   
 ```  
   
   

@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
@@ -158,3 +159,4 @@ GO
 -   删除已为 FileTable 启用的数据库时，将删除数据库级目录和其下的所有 FileTable 的所有目录结构。  
   
   
+

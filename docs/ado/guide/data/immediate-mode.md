@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  如果在调用时，要添加新行**正在执行**方法，当前行变成之前的当前行**AddNew**调用。  
   
  如果你没有更改当前行或添加新行，则调用**正在执行**方法将生成错误。
+

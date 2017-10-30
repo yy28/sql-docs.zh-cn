@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6c50ea6550e9dfb255c87886e4e0375240bcd2ae
@@ -31,3 +32,4 @@ DBASE 或 Paradox 驱动程序使用时，一旦创建索引并添加一条新�
   
 > [!NOTE]  
 >  当你使用 Paradox 驱动程序而无需实现高数据库引擎时，不支持 ALTER TABLE 语句;仅读取和追加允许语句。
+

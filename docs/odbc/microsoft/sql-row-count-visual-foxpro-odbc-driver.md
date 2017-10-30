@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 21d250dab0dd2407cebdbb0626b914867e35288d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  返回由最后一个受影响的行数[更新](../../odbc/microsoft/update-sql-command.md)，[插入](../../odbc/microsoft/insert-sql-command.md)，或[删除](../../odbc/microsoft/delete-sql-command.md)语句。  
   
  有关详细信息，请参阅[SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md)中*ODBC 程序员参考*。
+

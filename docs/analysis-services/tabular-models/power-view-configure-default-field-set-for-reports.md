@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc0a2fd4178189a072a9b194e502ae1c58de3f92
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  创建默认字段集后，您可以通过指定默认标签、默认图像、默认组行为或是将包含相同值的各个行组合到一个行中还是分别列出这些行，来进一步影响报表设计体验。 有关详细信息，请参阅[为 Power View 报表配置表行为属性（SSAS 表格）](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)。  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b33d262c846d9ef8a41bf9440802664ac7d4b75f
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  当**SQLFreeHandle**调用时，结构用于存储有关语句的信息的驱动程序版本。  
   
  **SQLDisconnect**自动释放连接上的所有语句。
+

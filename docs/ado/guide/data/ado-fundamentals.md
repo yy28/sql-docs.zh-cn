@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
@@ -67,3 +68,4 @@ ADO 提供开发人员的功能强大、 逻辑对象模型来以编程方式访
 -   [OLE DB 提供程序](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [错误](../../../ado/guide/data/errors-ado.md)
+

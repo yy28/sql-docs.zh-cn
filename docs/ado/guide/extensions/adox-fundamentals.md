@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
  [ADOX 属性](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO （多维） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO 程序员指南](../../../ado/guide/ado-programmer-s-guide.md)
+

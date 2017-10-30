@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  将缓冲区中的 SQL 语句的参数标记与相关联。 Visual FoxPro ODBC 驱动程序还支持指定的输入的参数*fParamType*自变量。  
   
  有关详细信息，请参阅[SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md)中*ODBC 程序员参考*。
+

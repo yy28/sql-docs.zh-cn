@@ -107,7 +107,7 @@ ms.lasthandoff: 09/26/2017
  下面的示例演示代码中所需**ScriptMain**类，以便创建目标组件。  
   
 > [!NOTE]  
->  这些示例使用**Person.Address**表中**AdventureWorks**示例数据库并将传递其第一个和第四个列， * *int*AddressID** * 和**nvarchar (30) 城市**列，该数据工作流中的。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
+>  这些示例使用**Person.Address**表中**AdventureWorks**示例数据库并将传递其第一个和第四个列，  **int*AddressID** * 和**nvarchar (30) 城市**列，该数据工作流中的。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目标示例  
  此示例演示了使用现有的目标组件[!INCLUDE[vstecado](../../includes/vstecado-md.md)]连接管理器以将数据从数据流入保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。  
@@ -118,7 +118,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  通过运行以下命令，创建的目标表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**数据库：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

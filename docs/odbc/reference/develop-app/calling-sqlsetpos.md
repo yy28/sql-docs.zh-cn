@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  在应用程序调用**SQLSetStmtAttr**若要设置 SQL_ATTR_ROW_STATUS_PTR，驱动程序管理器设置*fSetPosError*相等设置为 True。  
   
 4.  在应用程序调用**SQLSetPos**，与*fSetPosError*等于 TRUE，驱动程序管理器引发与 SQLSTATE HY011 SQL_ERROR （不能设置属性现在），则指示应用程序尝试调用**SQLSetPos**之后更改行状态指针，但在调用之前**SQLFetchScroll**。
+

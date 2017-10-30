@@ -15,6 +15,7 @@ caps.latest.revision: 36
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
@@ -140,3 +141,4 @@ MicrosoftML 包附带 R 和 Python 接口，，和基于 Microsoft 机器学习 
 + [设置 SQL Server 计算机学习 Services 中的 R](r/set-up-sql-server-r-services-in-database.md)
 
 + [机器学习教程和示例](tutorials/machine-learning-services-tutorials.md)
+

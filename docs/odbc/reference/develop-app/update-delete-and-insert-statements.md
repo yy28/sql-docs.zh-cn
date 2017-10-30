@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b150288c113b1aebf92abedbd6f7eabd0b4b7d24
@@ -55,3 +56,4 @@ INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)
 ```  
   
  传递的参数值的数组可以增加此效率。 有关语句参数和参数值的数组的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。
+

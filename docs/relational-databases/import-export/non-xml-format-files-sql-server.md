@@ -18,11 +18,12 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.workload: On Demand
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
@@ -46,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 -   您可为特定的数据类型（例如字符数据或本机数据）创建格式化文件。  
   
-     还可以创建非 XML 格式化文件，这种文件包含为每个数据字段交互式指定的属性。 有关详细信息，请参阅[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
+-   还可以创建非 XML 格式化文件，这种文件包含为每个数据字段交互式指定的属性。 有关详细信息，请参阅[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
 > [!NOTE]  
 >  XML 格式化文件与非 XML 格式化文件相比具有一些优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  下图显示了一个示例非 XML 格式化文件的格式化文件字段。  
   
- ![标识非 XML 格式化文件的字段](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "标识非 XML 格式化文件的字段")  
+ ![标识非 XML 格式文件的字段](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
   “版本”和  “列数”字段仅出现一次。 下表对其意义进行了说明。  
   
@@ -117,3 +118,4 @@ ms.lasthandoff: 06/22/2017
  [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+

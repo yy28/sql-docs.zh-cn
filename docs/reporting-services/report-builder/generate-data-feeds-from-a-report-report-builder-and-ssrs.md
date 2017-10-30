@@ -15,7 +15,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
 ms.contentlocale: zh-cn
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  Atom 服务文档为每个数据馈送包含一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。  
   
- 有关详细信息，请参阅 [基于报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)中处理数据。  
+ 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
      该报表将运行。  
   
-3.  在工具栏上，单击**将导出到数据馈送**图标。  
+3.  在工具栏上，单击“导出到数据馈送”图标。  
   
      将出现一条消息，询问是要保存还是要打开包含数据馈送的 Atom 文档。  
   
@@ -93,3 +94,4 @@ ms.lasthandoff: 08/09/2017
 [导出报表](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

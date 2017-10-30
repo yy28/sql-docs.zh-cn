@@ -36,7 +36,7 @@ ms.lasthandoff: 09/12/2017
 >   
 >  使用 Integration Services 中的 DQS 数据清除转换，在 Integration Services 打包过程中执行数据清除，并且在您安装 Integration Services 时会自动安装此组件。 有关安装 Integration Services 的信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
 >   
->  在 Master Data Services 中启用 DQS 集成，以使用 Master Data Services Excel 外接程序中与 DQS 相符的功能。 有关详细信息，请参阅 [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。  
+>  在 Master Data Services 中启用 DQS 集成，以使用 Master Data Services Excel 外接程序中与 DQS 相符的功能。 有关详细信息，请参阅 [实现 Data Quality Services 与 Master Data Services 的集成](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。  
   
  DQS 安装过程包括三个部分：  
   
@@ -105,9 +105,9 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS Security](../../data-quality-services/dqs-security.md)。  
+     默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../../data-quality-services/dqs-security.md)。  
   
-     有关详细信息，请参阅 [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
+     有关详细信息，请参阅 [将 DQS 角色授予用户](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
     > [!NOTE]  
     >  这三个 DQS 角色不适用于 DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。  

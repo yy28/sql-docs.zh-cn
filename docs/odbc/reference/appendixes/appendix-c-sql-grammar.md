@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bacae4777fa0b39c7bdbf576d82403fa731d9be5
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC 中的文本](../../../odbc/reference/appendixes/literals-in-odbc.md)  
   
 -   [保留关键字](../../../odbc/reference/appendixes/reserved-keywords.md)
+

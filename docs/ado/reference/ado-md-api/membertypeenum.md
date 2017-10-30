@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a8335dcc0f713859f72971a699438b2535550ac
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |**adMemberMeasure**|2|指示**成员**对象属于度量值维度和表示定量特性。|  
 |**adMemberRegular**|1|默认值。 指示**成员**对象表示业务实体的实例。|  
 |**adMemberUnknown**|0|无法确定成员的类型。|
+

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property （SSISDB 数据库）
@@ -28,22 +28,22 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>语法
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>参数
-[ @WorkerAgentId =] *WorkerAgentId*  
-辅助代理的横向扩展辅助进程的 id。 *WorkerAgentId*是**uniqueidentifier**。
+[@WorkerAgentId =] *WorkerAgentId*  
+辅助代理 ID 的横向扩展辅助中。 *WorkerAgentId*是**uniqueidentifier**。
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 属性的名称。 *PropertyName*是**nvarchar(256)**。
 
-[ @PropertyValue =] *PropertyValue*  
+[@PropertyValue =] *PropertyValue*  
 属性的值。 *PropertyValue*是**nvarchar (max)**。
 
 ## <a name="remarks"></a>注释
-有效的属性名称为**DisplayName**，**说明**，**标记**。
+有效的属性名称是**DisplayName**，**说明**，**标记**。
 
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -58,13 +58,13 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
   
 -   成员资格**sysadmin**服务器角色
 
-## <a name="erros-and-warnings"></a>错误和警告
+## <a name="errors-and-warnings"></a>错误和警告
   下面的列表描述了一些可能引发错误或警告的情况：  
   
 -   用户没有适当的权限 
 
--   辅助代理 id 不是有效的。
+-   辅助代理 ID 不是有效的。
 
 -   属性名称无效。
 
--   属性值不是 vilid。  
+-   属性值不是有效的。  

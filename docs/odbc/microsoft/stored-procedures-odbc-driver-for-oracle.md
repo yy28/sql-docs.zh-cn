@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c52cadf60268dd7272377ad70ace6010381f1c38
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 -   [撤销和授予权限时使用存储的过程](../../odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md)  
   
 -   [从存储过程返回数组参数](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)
+

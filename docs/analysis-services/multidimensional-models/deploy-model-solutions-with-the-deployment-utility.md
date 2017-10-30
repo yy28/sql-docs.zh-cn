@@ -21,6 +21,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
@@ -95,3 +96,4 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
+

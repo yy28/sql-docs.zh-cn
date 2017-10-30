@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: zh-cn
@@ -33,27 +34,28 @@ ms.lasthandoff: 08/09/2017
  本节中的主题可帮助编写报表中的简单表达式。  
   
 ## <a name="in-this-section"></a>本节内容  
- [表达式 &#40; 中的数据类型报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
+ [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
- [表达式 &#40; 中的常量报表生成器和 SSRS &#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
+ [表达式中的常量类型（报表生成器和 SSRS）](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
   
- [表达式 &#40; 中的运算符报表生成器和 SSRS &#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
+ [表达式中的运算符类型（报表生成器和 SSRS）](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
   
- [表达式 &#40; 中的内置集合报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
- [内置的全局和用户引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [参数的集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Parameters 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [数据集字段集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [DataSources 和 DataSets 集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [DataSources 和 DataSets 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [报表和组变量集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [ReportItems 集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
+ [ReportItems 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
+

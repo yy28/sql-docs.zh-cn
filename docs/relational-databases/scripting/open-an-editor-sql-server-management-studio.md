@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3f94b815f18075eb769d4537e8af354aa11a297
@@ -86,3 +87,4 @@ ms.lasthandoff: 06/22/2017
 -   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开“SQL Server 模板”文件夹，再打开“数据库”文件夹，然后双击“创建数据库”。  
   
   
+

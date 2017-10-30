@@ -21,6 +21,7 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 64c6b353bb46dd08f69823e85826fc93553e6e0d
@@ -105,7 +106,7 @@ ms.lasthandoff: 08/02/2017
   
     ```  
     Remove-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb9  
+    -Path SQLSERVER:\Sql\PrimaryComputer\InstanceName\AvailabilityGroups\MyAg\AvailabilityDatabases\MyDb9
     ```  
   
     > [!NOTE]  

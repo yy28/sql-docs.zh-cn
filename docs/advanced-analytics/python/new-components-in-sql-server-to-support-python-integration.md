@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 ## <a name="next-steps"></a>后续步骤
 
 [SQL Server 中的 Python 的体系结构概述](architecture-overview-sql-server-python.md)
+

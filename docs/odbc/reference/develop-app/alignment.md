@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ ODBC 应用程序中的对齐方式问题并通常没有什么区别不是它们
  ![按最大对齐边界绑定](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  尽管此解决方案离开更大的漏洞，来实现它的代码是相对较简单和快速。 在大多数情况下，此偏移量付费中未使用的内存的损失。 使用此方法的示例，请参阅[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。
+

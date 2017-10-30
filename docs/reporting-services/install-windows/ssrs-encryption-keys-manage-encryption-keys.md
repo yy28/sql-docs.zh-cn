@@ -21,7 +21,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1433e2532fc1deeb8abe5ac0ca71de69956730e0
 ms.contentlocale: zh-cn
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 加密密钥-管理加密密钥
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用加密密钥来保护凭据和报表服务器数据库中存储的连接信息。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，通过一组用于保护敏感数据的公钥、私钥和对称密钥支持加密。 安装或配置报表服务器时，在报表服务器初始化期间会创建对称密钥，报表服务器使用此对称密钥对存储在报表服务器中的敏感数据进行加密。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在报表服务器数据库中存储敏感数据的每个报表服务器实例，都要创建一个公钥私钥对。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的凭据和连接信息。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，通过一组用于保护敏感数据的公钥、私钥和对称密钥支持加密。 安装或配置报表服务器时，在报表服务器初始化期间会创建对称密钥，报表服务器使用此对称密钥对存储在报表服务器中的敏感数据进行加密。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在报表服务器数据库中存储敏感数据的每个报表服务器实例，都要创建一个公钥私钥对。  
   
  管理加密密钥包括创建对称密钥的备份副本以及了解密钥的还原、删除或更改的时间和方式。 如果迁移报表服务器安装或配置扩展部署，则必须拥有对称密钥的备份副本，以便可以将其应用于新的安装。  
   
@@ -49,19 +50,19 @@ ms.lasthandoff: 08/09/2017
 -   在报表服务器扩展部署（多个报表服务器同时共享一个报表服务器数据库以及为该数据库提供可逆加密的对称密钥）中添加或删除报表服务器实例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [初始化报表服务器 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
  介绍如何创建加密密钥。  
   
  [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  介绍如何备份加密密钥以及如何还原备份以恢复或迁移报表服务器安装。  
   
- [存储加密的报表服务器数据 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  介绍报表服务器的加密。  
   
- [删除并重新创建加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [删除和重新创建加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  介绍如何用新版本替换对称密钥以及在无法验证对称密钥时如何重新开始。  
   
- [添加和删除的横向扩展部署 &#40; 加密密钥SSRS 配置管理器 &#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  介绍如何添加和删除加密密钥以控制在扩展部署中包括哪些报表服务器。  
   
 ## <a name="see-also"></a>另请参阅  

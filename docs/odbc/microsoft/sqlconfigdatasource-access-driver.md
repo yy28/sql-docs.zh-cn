@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |线程|要使用的引擎的后台线程数。 此值默认为 3，但可以进行更改。<br /><br /> 这将设置为相同的选项**线程**在安装程序对话框中。|  
 |UID|对于 Microsoft Access 驱动程序，用户 ID 名称使用登录名。|  
 |USERCOMMITSYNC|确定 Microsoft Access 驱动程序是否将以异步方式执行用户定义的事务。 此值最初设置为"是"，这意味着，Microsoft Access 驱动程序将等待中用户定义的事务，若要完成的提交。<br /><br /> 此选项的值不应更改而无需仔细考虑后果。 有关选项的详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。<br /><br /> 这将设置为相同的选项**UserCommitSync**在安装程序对话框中。|
+

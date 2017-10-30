@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   *msado20.tlb*，ADO 2.0 类型库  
   
  如果你的应用程序必须使用任何这些 ADO 库的向后兼容性原因，你需要导入类型库的适当版本。 若要执行此操作，请按照上一节中的过程替换*msado15.dll*通过*msadoXX.tlb*，其中*XX*表示需要导入的版本号。
+

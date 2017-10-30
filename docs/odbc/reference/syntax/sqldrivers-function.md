@@ -23,6 +23,7 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d6aee9cf7260d4bc21cc66d39f8845c3d7df97
@@ -76,7 +77,7 @@ SQLRETURN SQLDrivers(
  如果*DriverAttributes*为 NULL， *AttributesLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回在缓冲区中指向*DriverAttributes*。  
   
  *BufferLength2*  
- [输入]长度\* *DriverAttributes*缓冲区，以字符为单位。 如果* \*DriverDescription*值为 Unicode 字符串 (在调用时**SQLDriversW**)，则*BufferLength*参数必须为偶数。  
+ [输入]长度\* *DriverAttributes*缓冲区，以字符为单位。 如果 *\*DriverDescription*值为 Unicode 字符串 (在调用时**SQLDriversW**)，则*BufferLength*参数必须为偶数。  
   
  *AttributesLengthPtr*  
  [输出]指向要返回的 （不包括 null 终止字节） 的字节总数在其中缓冲区的指针可用于返回在\* *DriverAttributes*。 可用于返回的字节数是否大于或等于*BufferLength2*中的属性值对的列表\* *DriverAttributes*截断为*BufferLength2*减去的 null 终止字符的长度。  
@@ -91,7 +92,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|常规警告|(DM) 特定于驱动程序管理器 – 条信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|(DM) 缓冲区\* *DriverDescription*不是否足够大以返回完整的驱动程序说明。 因此，说明已被截断。 在返回完整的驱动程序描述的长度\* *DescriptionLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> (DM) 缓冲区\* *DriverAttributes*不是否足够大以返回属性值对的完整列表。 因此，列表将被截断。 在中返回的属性值对未截断的列表的长度 **AttributesLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|(DM) 驱动程序管理器无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
@@ -128,3 +129,4 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)
+

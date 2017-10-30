@@ -21,7 +21,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d072577828375a08c133bb1a68d93e652e5cf168
 ms.contentlocale: zh-cn
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="verifying-the-deployment"></a>验证部署  
  您可以使用 Web 服务 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法，验证是否已向报表服务器成功地部署了传递扩展插件。 你也可以打开 web 门户，并验证你的扩展包括在订阅可用的传递扩展插件的列表。 有关 web 门户和订阅的详细信息，请参阅[订阅和传递 &#40;Reporting Services &#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

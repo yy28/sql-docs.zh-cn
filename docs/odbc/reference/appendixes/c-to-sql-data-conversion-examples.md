@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  [此列表中 c] 的数字是中的字段 SQL_DATE_STRUCT 结构存储数字。  
   
  [此列表中 d] 的数字是中的字段 SQL_TIMESTAMP_STRUCT 结构存储数字。
+

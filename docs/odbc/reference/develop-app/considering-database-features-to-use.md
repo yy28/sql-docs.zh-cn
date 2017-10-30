@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **仅当驱动程序并支持多个查询。** 连接到驱动程序后，应用程序检查活动语句的次数。 应用程序允许用户启动新语句，当其中一个已处于活动状态，仅当该驱动程序支持多个活动语句。 应用程序具有更高版本的功能和互操作性，但将更难以实现。  
   
 -   **始终支持多个查询和模拟它们在必要时。** 连接到驱动程序后，应用程序检查活动语句的次数。 应用程序始终允许用户在已处于活动状态时启动新语句。 如果该驱动程序支持只有一个活动语句，应用程序打开该驱动程序的其他连接，并在该连接上执行新的语句。 应用程序具有完整功能和高互操作性，但将更难以实现。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  此体系结构的优势之一是有效地进行软件维护和配置。 驱动程序需要仅在一个位置更新： 在服务器上。 通过使用系统数据源，数据源可以使用的服务器上定义的所有客户端。 不需要客户端上定义的数据源。 可以使用连接池来简化依据客户端连接到数据源的过程。  
   
  客户端上的驱动程序通常是非常小的驱动程序传输到服务器的驱动程序管理器调用。 其占用量可以显著小于服务器上完全正常运行的 ODBC 驱动程序。 在此体系结构，如果服务器有更多计算能力可以释放客户端资源。 此外，可以通过安装备份服务器并执行负载平衡来优化服务器，请使用增强的效率和安全性整个系统。
+

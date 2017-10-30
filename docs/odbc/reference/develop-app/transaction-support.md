@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b7b0b2282d287f012272e9d34a4fbf3e23f7e0
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  如果该驱动程序不支持事务，但应用程序 （使用 API 以外 ODBC） 的能力锁定和解锁数据，应用程序可以实现锁定和解锁的记录和表根据需要的事务的支持。 若要实现帐户传输示例，应用程序将锁定这两个帐户的记录、 将复制的当前值、 借方的第一个帐户，信用额度第二个帐户和解锁记录。 如果任何步骤失败，则应用程序将重置使用副本的帐户。  
   
  支持事务的甚至数据源可能不能以支持多个事务在特定环境中一次。 应用程序调用**SQLGetInfo** SQL_MULTIPLE_ACTIVE_TXN 选项，以确定数据源是否可以在同一环境中的多个连接上支持同时进行的活动事务。 因为每个连接的一个事务，这是仅有趣的应用程序有多个连接到同一数据源。
+

@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  在 **“源列”**中，选择包含一元运算符的字符串列。 （该选择将设置父特性的 **UnaryOperatorColumn** 属性。）维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
   
   
+

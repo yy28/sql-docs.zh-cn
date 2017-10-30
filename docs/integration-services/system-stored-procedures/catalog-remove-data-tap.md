@@ -28,9 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-remove_data_tap [ @data_tap_id = ] data_tap_id  
-  
+```sql  
+catalog.remove_data_tap [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## <a name="arguments"></a>参数  

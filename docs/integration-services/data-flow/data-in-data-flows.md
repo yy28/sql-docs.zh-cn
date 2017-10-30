@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  将包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录后，您可以在执行期间对包中的数据流进行分析，以检查性能或查找其他问题。 通过提供的标准报表，您可以查看包状态和历史记录，并查询提供了有关包执行的详细信息的数据库视图。 您还可以在执行期间动态添加和删除分流点以面向包的特定组件。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
   
+

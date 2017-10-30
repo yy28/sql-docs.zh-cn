@@ -15,6 +15,7 @@ caps.latest.revision: 38
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
@@ -46,3 +47,4 @@ Python 是机器的一种语言提供极大的灵活性和各种不同学习任�
 [设置 Python 机器学习服务数据库中](setup-python-machine-learning-services.md)
 
 [Python 教程](../tutorials/sql-server-python-tutorials.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f08ffe2a80f89040dc148543c2b3a3985b76eca
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  分配的结果列的存储空间，并指定结果的类型。 当[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)或[SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md)是调用，该驱动程序在分配的位置放置的所有绑定的列的数据。 请参阅[SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) ODBC 和 Visual FoxPro 数据类型之间的映射。  
   
  有关详细信息，请参阅[SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md)中*ODBC 程序员参考*。
+

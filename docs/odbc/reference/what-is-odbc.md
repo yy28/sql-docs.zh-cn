@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  请务必了解 ODBC 旨在公开数据库功能，不进行补充。 因此，应用程序编写器不应指望，使用 ODBC 会突然将一个简单的数据库转换为完备的关系数据库引擎。 也不驱动程序编写人员应实现基础数据库中找不到的功能。 与此异常是编写直接访问文件数据 （例如 Xbase 文件中的数据） 的驱动程序的开发人员所需编写支持至少最小的 SQL 功能的数据库引擎。 另一种例外是，以前包含在 Microsoft 数据访问组件 (MDAC) SDK 的 Windows sdk 的 ODBC 组件，提供了一个模拟驱动程序实现特定级别的功能的可滚动游标的光标库。  
   
  使用 ODBC 应用程序负责跨数据库的任何功能。 例如，ODBC 不是异类联接引擎，也不是分布式的事务处理器。 但是，因为它是独立于 DBMS 的它可以用于生成此类跨数据库工具。
+

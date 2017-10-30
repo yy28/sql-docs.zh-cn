@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Version3.5 驱动程序旨在使用 ODBC2。*x*。 虽然它们还能配合 ODBC 3.0，它们不支持所有 ODBC 3.0 功能。 有关这些驱动程序与 ODBC 3.0 的工作原理的详细信息，请参阅[向后兼容性和标准合规性](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。
+

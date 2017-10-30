@@ -28,14 +28,13 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-add_data_tap [ @execution_id = ] execution_id  
-[ @task_package_path = ] task_package_path  
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
-OUTPUT  
+```sql  
+catalog.add_data_tap [ @execution_id = ] execution_id  
+, [ @task_package_path = ] task_package_path  
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -70,7 +69,7 @@ OUTPUT
 ## <a name="example"></a>示例  
  在以下示例中，对数据流任务 `'Paths[OLE DB Source.OLE DB Source Output]` 中的数据流路径 `\Package\Data Flow Task` 创建一个数据分流点。 分流的数据存储在`output0.txt`DataDumps 文件夹中的文件 (\<*驱动器*>: files\microsoft SQL Server\130\DTS\DataDumps)。  
   
-```  
+```sql
 Declare @execution_id bigint  
 Exec SSISDB.Catalog.create_execution @folder_name='Packages',@project_name='SSISPackages', @package_name='Package.dtsx',@reference_id=Null, @use32bitruntime=False, @execution_id=@execution_id OUTPUT  
   
@@ -79,7 +78,6 @@ Exec SSISDB.Catalog.set_execution_parameter_value @execution_id,50, 'LOGGING_LEV
 Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[OLE DB Source.OLE DB Source Output]', @data_filename = 'output0.txt'  
   
 Exec SSISDB.Catalog.start_execution @execution_id  
-  
 ```  
   
 ## <a name="remarks"></a>注释  

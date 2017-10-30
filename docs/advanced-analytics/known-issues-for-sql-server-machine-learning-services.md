@@ -2,7 +2,7 @@
 title: "机器学习服务中的已知问题 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/19/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +15,12 @@ caps.latest.revision: 53
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d21756a05e9e51379faa194ec331517e510988d
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
@@ -167,6 +168,19 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 一种解决方法，您可以重新编写 SQL 查询使用强制转换或转换，然后将数据提交给 R 中，通过使用正确的数据类型。 一般情况下，性能是更好地处理时数据通过使用 SQL 中，而不是通过更改在 R 代码中的数据。
 
 **适用于：** SQL Server 2016 R Services
+
+### <a name="limits-on-size-of-serialized-models"></a>序列化模型的大小限制
+
+当模型保存到一个 SQL Server 表中时，你必须序列化模型，并将其保存以二进制格式。 理论上可以使用此方法存储模型的最大大小为 2 GB，这是 SQL Server 中的 varbinary 列的最大大小。
+
+如果你需要使用更大的模型，将用下列解决方法：
+
++ 使用[memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress)基 R，然后再将它传递到 SQL Server 缩短模型中的函数。 接近的 2 GB 限制模型时，此选项是最佳的。
++ 对于更大的模型，而不是使用 varbinary 列来存储模型，你可以使用[FileTable](..\relational-databases\blob\filetables-sql-server.md) SQL Server 中提供的功能。
+
+    若要使用 Filetable，必须添加防火墙例外，因为在 Filetable 中存储的数据由 SQL Server 中的 Filestream 文件系统驱动程序和默认防火墙规则阻止网络文件访问。 有关详细信息，请参阅[启用 FileTable 的先决条件](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)。 
+
+    启用 FileTable 之后，若要编写模型，您获取路径从 SQL 使用 FileTable 的 API，，然后将该模型在 R 代码中写入到该位置。 当你需要进行读取模型时，您获取路径从 SQL，然后调用模型使用从 R 脚本的路径。 有关详细信息，请参阅[访问 Filetable 产品文件输入输出 Api](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)。
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>避免当执行中的 R 代码时，清除工作区[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]计算上下文
 

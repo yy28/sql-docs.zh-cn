@@ -1,6 +1,6 @@
 ---
-title: "表格模型设计器 (SSAS) |Microsoft 文档"
-ms.date: 03/14/2017
+title: "表格模型设计器 |Microsoft 文档"
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,12 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>表格模型设计器 (SSAS)
@@ -32,13 +33,11 @@ ms.lasthandoff: 09/27/2017
   
  除了用于创建专业多维和表格模型解决方案的新模板和工具外， [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境还提供调试和项目生命周期功能，确保您可以为组织创建功能最强大的 BI 解决方案。 有关 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的详细信息，请参阅 [Getting Started with Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389)（Visual Studio 入门）。  
   
-##  <a name="bkmk_proj_temp"></a> 项目模板  
+##  <a name="bkmk_proj_temp"></a>项目模板  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，以下表格模型项目模板将添加到商业智能项目类型中：  
   
  **Analysis Services 表格项目**  
- 此模板可用于创建新的空白表格模型项目。 兼容性级别是在你创建项目时进行指定。 选择默认的“SQL Server 2016 RTM (1200)”，使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的所有内置功能。  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ 此模板可用于创建新的空白表格模型项目。 兼容性级别是在你创建项目时进行指定。
   
  **从服务器导入（表格）**  
  此模板可用于通过从 Analysis Services 中的现有表格模型提取元数据，创建新的表格模型项目。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 09/27/2017
  **数据视图**  
  数据视图以表格网格格式显示表。 您还可以使用度量值网格（仅为“数据视图”中的每个表显示）定义度量值。  
   
- **关系图视图**  
+ **图示视图**  
  关系图视图以图形格式显示表以及表之间的关系。 可以筛选列、度量值、层次结构和 KPI，并且可以选择使用定义的透视查看模型。  
   
  可以在这两个视图中的任何一个执行大多数模型创建任务。  
@@ -87,7 +86,7 @@ ms.lasthandoff: 09/27/2017
 
  表格模型资源管理器还具有方便的搜索功能。 只需在搜索框中键入部分名称，表格模型资源管理器就会将树视图缩小至匹配项范围。 
   
-### <a name="properties-window"></a>“属性”窗口  
+### <a name="properties-window"></a>属性窗口  
  “属性”窗口列出所选对象的属性。 下列对象具有可以在“属性”窗口中查看和编辑的属性：  
   
 -   Model.bim  
@@ -128,7 +127,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="toolbar"></a>工具栏  
  Analysis Services 工具栏提供了快速轻松访问最常用的模型创建命令的方式。  
   
-##  <a name="bkmk_vsint"></a> Visual Studio 集成  
+##  <a name="bkmk_vsint"></a>Visual Studio 集成  
  **源代码管理**  
  Analysis Services 项目与所选的源代码管理插件集成。 如果您将 Visual Studio 配置为使用源代码管理，可以使用解决方案资源管理器中的“签入”/“签出”。 若要配置为使用 Team Foundation Server，请参阅 [为 Visual Studio 配置 Team Foundation 版本控制](http://msdn.microsoft.com/library/ms253064.aspx)。 还支持很多第三方源代码管理插件。  
   
@@ -143,3 +142,4 @@ ms.lasthandoff: 09/27/2017
  [属性（SSAS 表格）](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4d46ec3bdad80879ddc4a931d8668a5298972e58
@@ -70,3 +71,4 @@ ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 事件模型上构建，并提供简
  [事件参数](../../../ado/guide/data/event-parameters.md)   
  [事件处理程序是如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [类型的事件](../../../ado/guide/data/types-of-events.md)
+

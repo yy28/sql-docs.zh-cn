@@ -14,7 +14,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: zh-cn
@@ -67,7 +68,7 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
    > **提示**：请确保 [数据的格式为可用于移动报表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 选择需要的工作表，并选择“导入” 。  
-   你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看到你的数据。  
+   你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中看到你的数据。  
   
 4. 在“数据”视图 >“数据属性”面板 >“键”下面，在左侧的框中选择包含地图数据的表，然后在右侧的框中选择与你的地图中的区域相匹配的键字段。  
   

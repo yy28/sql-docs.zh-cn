@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
@@ -41,3 +42,4 @@ ODBC 定义离散*状态*为每个环境，每个连接和每个语句。 例如
  从应用程序的角度来看，状态转换通常都很简单： 合法状态转换都趋向于手中手工编写良好的应用程序流使用。 状态转换是驱动程序管理器和驱动程序变得更加复杂，因为它们必须跟踪的环境、 每个连接和每个语句的状态。 大部分此工作完成了通过驱动程序管理器中;使用具有挂起结果的语句时出现的大部分工作，必须由驱动程序来完成。  
   
  此手册 1 和 2 部分 ("ODBC 简介"和"开发应用程序和驱动程序") 往往不显式指出状态转换。 相反，这些主题描述必须调用函数的顺序。 例如，"执行的语句"状态，必须使用准备语句**SQLPrepare**可以通过执行之前**SQLExecute**。 完整描述的状态和状态转换，包括的转换会检查由驱动程序管理器，其必须检查由驱动程序，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
+

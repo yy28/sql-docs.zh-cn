@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 定义每个 SQL 和 C 数据类型之间转换数据的方式。 基本上，ODBC 支持所有的合理转换，例如到整数和浮点数的整数的字符，不支持未正确定义的转换，如到日期的浮点数。 它们支持每个 SQL 数据类型支持所有转换所需驱动程序。 SQL 和 C 数据类型之间的转换的完整列表，请参阅[转换数据从 SQL C 数据类型到](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)和[C 中为 SQL 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附录 d： 数据类型中。  
   
  ODBC 还定义了用于将数据从一种 SQL 数据类型转换为另一个标量函数。 **转换**标量函数映射的驱动程序添加到该基础标量函数或函数定义为数据源中执行转换。 因为此函数映射到特定于 DBMS 的功能，ODBC 不定义这些转换的工作方式，或必须支持哪些转换。 应用程序发现哪些转换支持的特定驱动程序和数据源中的 SQL_CONVERT 选项通过**SQLGetInfo**。 有关详细信息**转换**标量函数，请参阅[ODBC 中的转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)和[显式数据类型转换函数](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)。
+

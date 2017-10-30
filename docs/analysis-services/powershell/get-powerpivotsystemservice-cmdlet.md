@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1b1878ab48daa6c13e633daa62deada76512d3bd
@@ -74,3 +75,4 @@ C:\PS>Get-PowerPivotSystemService
  此示例返回父对象的全局属性，并且显示场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的所有实例共享的属性。  
   
   
+

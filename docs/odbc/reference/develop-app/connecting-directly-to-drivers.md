@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bacb659cb6986f86151502998523ade468f7cedd
@@ -37,3 +38,4 @@ DRIVER={Paradox Driver};
 ```  
   
  与第一个字符串，该驱动程序不需要任何附加信息。 替换为第二个字符串，该驱动程序将需要提示输入包含数据文件的目录的名称。
+

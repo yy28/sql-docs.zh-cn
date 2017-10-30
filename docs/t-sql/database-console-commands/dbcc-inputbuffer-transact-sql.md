@@ -1,7 +1,7 @@
 ---
 title: "DBCC INPUTBUFFER (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,11 +27,12 @@ caps.latest.revision: 51
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -49,22 +50,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>参数  
- *session_id*  
- 与各活动主连接关联的会话 ID。  
+*session_id*  
+与各活动主连接关联的会话 ID。  
   
- *request_id*  
- 要在当前会话中搜索的精确请求（批）。  
- 以下查询将返回*request_id*:  
+*request_id*  
+要在当前会话中搜索的精确请求（批）。  
+
+以下查询将返回*request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- 替换为  
- 启用要指定的选项。  
+替换为  
+启用要指定的选项。  
   
- NO_INFOMSGS  
- 取消严重级别从 0 到 10 的所有信息性消息。  
+NO_INFOMSGS  
+取消严重级别从 0 到 10 的所有信息性消息。  
   
 ## <a name="result-sets"></a>结果集  
 DBCC INPUTBUFFER 返回包含如下列的行集。
@@ -77,7 +79,7 @@ DBCC INPUTBUFFER 返回包含如下列的行集。
   
 例如，当缓冲区中的最后一个事件是 DBCC INPUTBUFFER(11) 时，DBCC INPUTBUFFER 将返回以下结果集。
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +88,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> 从开始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)返回有关语句提交到的实例信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+
 ## <a name="permissions"></a>Permissions  
 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要以下项之一：
 -   用户必须是属于**sysadmin**固定的服务器角色。  
@@ -120,7 +125,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[sys.dm_exec_input_buffer &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

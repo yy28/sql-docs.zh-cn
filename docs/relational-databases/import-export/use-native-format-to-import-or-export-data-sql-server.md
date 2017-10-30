@@ -17,11 +17,12 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 889a414674b3b87ca528f1af2a54261c723c4555
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
@@ -84,7 +85,7 @@ ms.lasthandoff: 07/31/2017
      有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
 ## 本机格式的命令选项<a name="command_options"></a>  
-可以使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ... 将本机格式数据导入表中SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。  对于 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句，你可以在语句中指定数据格式。  对于 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句，必须在格式化文件中指定数据格式。  
+可以使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ... 将本机格式数据导入表中SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。对于 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句，你可以在语句中指定数据格式。  对于 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句，必须在格式化文件中指定数据格式。  
 
 下列命令选项支持本机格式：  
 
@@ -106,7 +107,8 @@ ms.lasthandoff: 07/31/2017
 
 ### **示例表**<a name="sample_table"></a>
 以下脚本将创建测试数据库、名为 `myNative` 的表并用一些初始值填充表。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -133,7 +135,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
 SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myNative.fmt`生成非 XML 格式化文件 `myNative`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
 
-```
+```cmd
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
 
 REM Review file
@@ -151,7 +153,8 @@ Notepad D:\BCP\myNative.fmt
 
 ### **使用 bcp 和本机格式导出数据**<a name="bcp_native_export"></a>
 **-n** 切换和 **OUT** 命令。  请注意：此示例中创建的数据文件将用于所有后续示例中。  在命令提示符处输入以下命令：
-```
+
+```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
 REM Review results
@@ -160,7 +163,8 @@ NOTEPAD D:\BCP\myNative.bcp
 
 ### **在不使用格式化文件的情况下使用 bcp 和本机格式导入数据**<a name="bcp_native_import"></a>
 **-n** 切换和 **IN** 命令。  在命令提示符处输入以下命令：
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
 
@@ -173,7 +177,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 
 ### **在使用非 XML 格式化文件的情况下使用 bcp 和本机格式导入数据**<a name="bcp_native_import_fmt"></a>
 **-n** 列之间传输的任何 **-f** 切换以及 **IN** 命令。  在命令提示符处输入以下命令：
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
 
@@ -186,7 +191,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 
 ### **在不使用格式化文件的情况下使用 BULK INSERT 和本机格式**<a name="bulk_native"></a>
 **DATAFILETYPE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
     FROM 'D:\BCP\myNative.bcp'
@@ -200,7 +206,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
 
 ### **在使用非 XML 格式化文件的情况下使用 BULK INSERT 和本机格式**<a name="bulk_native_fmt"></a>
 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
    FROM 'D:\BCP\myNative.bcp'
@@ -214,7 +221,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
 
 ### **在使用非 XML 格式化文件的情况下使用 OPENROWSET 和本机格式**<a name="openrowset_native_fmt"></a>
 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
     SELECT *

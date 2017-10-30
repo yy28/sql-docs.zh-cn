@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9c49f5cf9e9a5082ff8fbdfcefc5b71656c61962
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  应用程序通常使用多个线程，而不是异步处理。 应用程序创建一个单独的线程、 调用 ODBC 函数时，然后在主线程上继续处理。 而不是无需频繁地轮询异步函数中，使用 SQL_ATTR_ASYNC_ENABLE 语句特性时的情况一样，应用程序可以只需让新创建的线程完成。  
   
  接受语句句柄并在一个线程上运行的函数可以取消通过调用**SQLCancel**使用相同的语句从另一个线程处理。 尽管驱动程序不应序列化的使用**SQLCancel**这种方式，就不能保证调用**SQLCancel**实际上将取消另一个线程上运行的函数。
+

@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  **Binding** 内允许使用的另一个元素为 **ParentColumnID**，它不直接存在于 DDL 中，可用于嵌套表的数据挖掘。 在这种情况下，需要标识要为其提供绑定的嵌套表中的父列。  
   
   
+

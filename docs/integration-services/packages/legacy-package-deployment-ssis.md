@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  下面的 SQL 语句说明了包配置向导提供的默认 CREATE TABLE 语句。  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

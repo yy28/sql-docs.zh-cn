@@ -22,7 +22,8 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 219112996b6fd0c2fb1cb6eff5baca29b65e86d2
 ms.contentlocale: zh-cn
@@ -57,14 +58,15 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>注释  
  调用时，报表服务器 SecureConnectionLevel 属性设置为指定的值。 值为 0 表示关闭了 SSL。 值大于或等于 1 标识打开了 SSL。  
   
--   当设置值时，更改报表服务器配置文件中的 SecureConnectionLevel 元素，与**URLRoot**配置文件中的元素设置为使用"https://"，如果指定*级别*大于或等于 1 或"http://"，如果指定*级别*为 0。  
+-   设置该值时，将更改报表服务器配置文件中的 SecureConnectionLevel 元素，并将配置文件中的 **URLRoot** 元素设置为使用 "https://"（如果指定的级别大于或等于 1）或使用 "http://"（如果指定的级别为 0）。  
   
  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中，SecureConnectionLevel 成为一个开关，默认值为 0。 对于任何通过 SetSecureConnectionLevel 方法 API 传递的大于或等于 1 的值，SSL 将被视为打开，并且在 rsreportserver.config 文件中相应地设置配置属性 SecureConnectionLevel。 将仍允许值为 2 和 3，以便向后兼容。  
   
 ## <a name="requirements"></a>要求  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

@@ -14,7 +14,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
 ms.contentlocale: zh-cn
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 
    与大多数图表和简单的数据网格一样，地图和仪表也支持钻取。
    
-2. 在**Visual 属性**窗格中，选择**钻取目标** > **移动报表**。  
+2. 在“视觉对象属性”窗格中，选择“钻取目标” > “移动报表”。  
 3. 选择服务器和目标移动报表。  
 
    >注意：如果目标移动报表与源移动报表不在同一个服务器上，则改为使用自定义 URL 连接到源移动报表，如下一节所述。  
@@ -56,9 +57,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="set-up-a-drillthrough-to-a-custom-url"></a>设置到自定义 URL 的钻取  
   
 1. 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]的“布局”视图中，选择一个支持钻取目标的可视化效果。    
-2. 在**Visual 属性**窗格中，选择**钻取目标** > **自定义 URL**。  这将打开钻取配置对话框。  
+2. 在“视觉对象属性”窗格中，选择“钻取目标” > “自定义 URL”。  这将打开钻取配置对话框。  
   
-3. 在**设置钻取 URL**，输入要单击可视化效果时，请转到的目标 URL 和，然后从选择**可用参数**右侧列出。 面板下方将显示自定义 URL 与示例解析参数（如果包含）的组合预览。  
+3. 在“设置钻取 URL”中，输入在单击可视化效果时要转到的目标 URL，然后从右侧列出的“可用参数”中进行选择。 面板下方将显示自定义 URL 与示例解析参数（如果包含）的组合预览。  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
@@ -74,11 +75,11 @@ ms.lasthandoff: 08/09/2017
 
 1. 在 Web 门户中，选择你要隐藏的目标报表上的省略号 (...)，然后选择“管理”。
 
-2. 在**属性**，选择**在磁贴视图中隐藏**。
+2. 在“属性”中，选择“在磁贴视图中隐藏”。
 
 你可以选择在 Web 门户中查看隐藏的项： 
 
-* 在 web 门户右上角，选择**视图** > **显示隐藏。** 
+* 在 Web 门户的右上角选择“查看” > “显示隐藏项”。 
 
 隐藏的项以较浅的颜色显示。
     
@@ -86,6 +87,6 @@ ms.lasthandoff: 08/09/2017
  
 * [向 Reporting Services 移动报表添加参数](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [使用 SQL Server 移动报表发布服务器创建移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
+* [Web 门户 （SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
 
 

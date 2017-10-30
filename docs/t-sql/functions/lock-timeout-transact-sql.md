@@ -24,6 +24,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
 ms.openlocfilehash: c9e15fae306d313e667aa3c727f96e6fdfb0aa34
@@ -31,7 +32,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>& #x 40; 和 #x 40;LOCK_TIMEOUT (Transact SQL)
+# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回当前会话的当前锁定超时设置（毫秒）。  
@@ -68,7 +69,7 @@ Lock Timeout
 -1  
 ```  
   
- 此示例将 LOCK_TIMEOUT 设置为 1800年毫秒，然后调用@LOCK_TIMEOUT。  
+ 此示例将 LOCK_TIMEOUT 设置为 1800年毫秒，然后调用@LOCK_TIMEOUT 。  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -86,7 +87,7 @@ Lock Timeout
   
 ## <a name="see-also"></a>另请参阅  
  [配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [设置 LOCK_TIMEOUT &#40;Transact SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [设置 LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
 

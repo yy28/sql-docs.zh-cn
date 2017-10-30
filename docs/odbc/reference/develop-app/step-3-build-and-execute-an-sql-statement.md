@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |**选择**或目录函数|[步骤 4a： 提取结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**更新**，**删除**，或**插入**|[步骤 4b： 提取的行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |所有其他 SQL 语句|步骤 3： 生成并执行的 SQL 语句 （本主题） 或[步骤 5： 提交事务](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+

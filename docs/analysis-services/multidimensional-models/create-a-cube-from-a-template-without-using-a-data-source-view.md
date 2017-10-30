@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  在 **“完成向导”** 页中，检查新的多维数据集的结构，并在 **“多维数据集名称”** 框中为其键入名称。 或者，选中 **“立即生成架构”** 复选框，启动架构生成向导。 在大多数情况下，如果计划创建其他对象，则不应选中该复选框。 还可以使用多维数据集设计器稍后再生成该框架。  
   
   
+

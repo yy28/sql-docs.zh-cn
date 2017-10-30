@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
@@ -57,3 +58,4 @@ Query Store 与计划缓存选项之间的差别在于，前者包含已针对�
 [教程：数据库引擎优化顾问](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [查询存储的数据收集方式](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Query Store 最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+

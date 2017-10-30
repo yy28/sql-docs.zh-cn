@@ -23,6 +23,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2eda9fe4e6a5f300f83512f669ad5206f89effe6
@@ -87,7 +88,7 @@ BOOL SQLInstallDriverEx(
  如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLInstallDriverEx**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLInstallDriverEx**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
@@ -103,9 +104,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>注释  
  *LpszDriver*自变量是中的关键字 / 值对形式的属性列表。 每个对终止与 null 字节，并且整个列表因 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）此列表的格式如下所示：  
   
- *驱动程序 desc* ** \\ **0Driver**=***驱动程序 DLL 文件名*** \\ **0 [安装程序**=***安装程序 DLL filename***\\**0]  
+ *驱动程序 desc*  **\\** 0Driver**=***驱动程序 DLL 文件名* **\\** 0 [安装程序**=***安装程序 DLL filename***\\**0]  
   
- [*驱动程序 attr keyword1***=***value1***\\**0] [*驱动程序 attr keyword2* ** = ** *value2***\\**0]...** \\ **0  
+ [*驱动程序 attr keyword1***=***value1***\\**0] [*驱动程序 attr keyword2*  **=**  *value2***\\**0]... **\\** 0  
   
  其中 \0 是 null 字节和*驱动程序 attr keywordn*是任何驱动程序属性关键字。 关键字必须出现在指定的顺序。 例如，假设的驱动程序格式化的文本文件具有单独的驱动程序和安装程序 Dll，并且可以使用具有.txt 和.csv 扩展名的文件。 *LpszDriver*此驱动程序的自变量可能，如下所示：  
   
@@ -147,3 +148,4 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
 |有关信息|请参阅|  
 |---------------------------|---------|  
 |安装驱动程序管理器|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|
+

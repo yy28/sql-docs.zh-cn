@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
@@ -37,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  将序号值与其相应的操作匹配，不像使用操作的助记键那样容易。 例如，D 可以简便地表示删除操作，而 I 则可表示插入操作。 在主题 [创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)中创建的示例查询执行了此转换，即将序号值转换为新列中返回的友好字符串值。 下面的代码段显示了此转换：  
   
-```  
+```sql
 select   
     ...  
     case __$operation  
@@ -78,3 +79,4 @@ select
  [通过使用有条件拆分转换拆分数据集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   
+

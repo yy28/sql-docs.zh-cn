@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
@@ -53,3 +54,4 @@ Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它�
   
 ## <a name="support"></a>支持  
  有关支持选项的信息可在[Microsoft 帮助和支持](http://go.microsoft.com/fwlink?linkid=5521)Web 站点。
+

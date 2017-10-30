@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  通过将它们从表拖动到较低一半设计器中选择你的查询的字段。  
   
 6.  关闭 Microsoft 查询。 你选择的数据导入到 Microsoft Excel 电子表格。
+

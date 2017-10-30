@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_（通配符 - 匹配一个字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用下划线字符`_`如涉及模式匹配的字符串比较操作中任何单个字符相匹配`LIKE`和`PATINDEX`。  
+使用下划线字符 _ 如涉及模式匹配的字符串比较操作中任何单个字符相匹配`LIKE`和`PATINDEX`。  
   
 ## <a name="examples"></a>示例  
 
@@ -62,10 +63,10 @@ msdb
 可以使用多个下划线来表示多个字符。 更改`LIKE`条件以包括两个下划线`'m__%`结果中包括 master 数据库。
 
 ### <a name="b-more-complex-example"></a>B： 更复杂示例
- 以下示例使用 `_` 运算符查找 `Person` 表中的所有人（包含一个以 `an` 结尾的三字母名字）。  
+ 下面的示例使用 _ 运算符查找中的所有人`Person`表中，有三个字母名字以结尾`an`。  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [%（通配符-字符到匹配项）](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91;&#93;（通配符-到匹配项的字符）](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93;（通配符的字符不到匹配项）](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

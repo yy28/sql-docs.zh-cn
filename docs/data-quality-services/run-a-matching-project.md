@@ -18,6 +18,7 @@ caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
@@ -64,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  在 **“映射”**下，为 **“源列”**选择数据源中的一个字段，然后选择对应的域。 对匹配过程中使用的所有域重复此过程。 在匹配策略中定义的每个域都必须映射到适当的源列。 “映射”页显示已在匹配策略中定义的域，并且在右侧窗格中显示匹配策略中的规则。  
   
     > [!NOTE]  
-    >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域。 有关 DQS 中支持的数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+    >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域。 有关 DQS 中支持的数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 4.  单击 **加号 (+)** 控件可向映射表中添加行，单击 **减号 (–)** 控件可删除行。  
   
@@ -241,3 +242,4 @@ ms.lasthandoff: 09/09/2017
 -   群集中重复项的最大数量  
   
   
+

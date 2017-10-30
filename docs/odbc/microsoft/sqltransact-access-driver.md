@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 657d0324132b279300e2a61151c790f066e4a3f5
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  当使用 Microsoft Access 驱动程序时，为支持 SQL_COMMIT 和 SQL_ROLLBACK *fType*对的调用中的自变量**SQLTransact**。  
   
  如果在提交过程中发生故障，受影响的数据库，则可以修复使用修复数据库选项，在 Microsoft Access 驱动程序设置中，或通过使用中的 REPAIR_DB 关键字**SQLConfigDataSource**函数。
+

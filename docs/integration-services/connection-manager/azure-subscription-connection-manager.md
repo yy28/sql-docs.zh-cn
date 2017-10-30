@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f34ac8d5c1b6bd117a83d287db1d46ff6f786aab
@@ -34,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
     ![SSIS-AzureSubscriptionConnectionManager](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
   
-2.  为“Azure 订阅 ID” 输入你的 Azure 订阅 ID，它可以唯一标识 Azure 订阅。  可以在“设置” [](https://manage.windowsazure.com) 页下的 **Azure 管理门户** 上找到这些值：  
+2.  为“Azure 订阅 ID” 输入你的 Azure 订阅 ID，它可以唯一标识 Azure 订阅。  可以在 **设置** 页下的 [Azure 管理门户](https://manage.windowsazure.com) 上找到这些值：  
   
     ![SSIS AzureSettings SubscriptionID](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS AzureSettings SubscriptionID")  
   
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/26/2017
 6.  单击 **“确定”** 关闭对话框。  
   
   
+

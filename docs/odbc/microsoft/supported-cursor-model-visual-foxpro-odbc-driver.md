@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
@@ -46,3 +47,4 @@ Visual FoxPro ODBC 驱动程序同时支持*块*(*行集*) 和*静态*游标。 
   
 ## <a name="rowset"></a>行集 (rowset)  
  游标，表示从数据源检索的行中存储的数据块。
+

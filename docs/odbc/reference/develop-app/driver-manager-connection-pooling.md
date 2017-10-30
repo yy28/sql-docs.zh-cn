@@ -19,6 +19,7 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
@@ -89,3 +90,4 @@ ms.lasthandoff: 09/09/2017
  [连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft 数据访问组件中的池](http://go.microsoft.com/fwlink/?LinkId=120776)
+

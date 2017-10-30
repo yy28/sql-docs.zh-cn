@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
@@ -75,3 +76,4 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  [索引属性](../../../ado/reference/ado-api/index-property.md)   
  [优化属性的动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [查找方法](../../../ado/reference/ado-api/seek-method.md)
+

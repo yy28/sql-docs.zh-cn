@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 72c256f326366d631dada13fbfe002c8d4674eda
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   [驱动程序管理器的用途](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
   
 -   [该驱动程序的用途](../../../odbc/reference/appendixes/what-the-driver-does.md)
+

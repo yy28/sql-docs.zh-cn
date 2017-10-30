@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
@@ -242,3 +243,4 @@ SQL 服务器的优势之一是它能够处理大量并行中的行。 无，这
 [性能优化 R-R 代码和数据优化](../r/r-and-data-optimization-r-services.md)
 
 [性能优化的案例研究结果](../r/performance-case-study-r-services.md)
+

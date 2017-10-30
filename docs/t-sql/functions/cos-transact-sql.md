@@ -22,11 +22,12 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f095bcaf0ad264ef3423221c907f35d9e3290690
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 6b36878b5c26053a18c868baf2ddf8a4741fe724
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
@@ -80,11 +81,11 @@ SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`cosCalc1  cosCalc2`
-  
-`--------  --------`
-  
-`-0.58     0.99`
+```
+cosCalc1  cosCalc2
+--------  --------
+-0.58     0.99
+```
   
 ## <a name="see-also"></a>另请参阅
 [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

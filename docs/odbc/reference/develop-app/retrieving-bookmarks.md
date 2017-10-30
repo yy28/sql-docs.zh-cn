@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   调用**SQLSetPos**以定位到行集中的行，然后调用**SQLGetData**列 0。 如果驱动程序支持书签，它必须始终支持调用的能力**SQLGetData**列 0，即使它不允许应用程序调用**SQLGetData**之前的最后一个绑定的其他列列。  
   
 -   调用**SQLBulkOperations**与*操作*自变量设置为 SQL_ADD，并且绑定列 0。 光标插入行，并返回绑定的缓冲区中的行的书签。
+

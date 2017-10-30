@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 623350b00e7a855a2d394a0e29dc3618ab327f6f
@@ -48,3 +49,4 @@ Microsoft® ActiveX® 数据对象 （多维） (ADO MD) 轻松访问通过提�
  [使用 ADO MD 编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用 ADO 的 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

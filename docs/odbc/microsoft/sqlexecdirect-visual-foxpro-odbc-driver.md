@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3edf8a3bd785d3440af3347d457dd5078e289638
@@ -42,3 +43,4 @@ SELECT `My Table`.`Field1`, `My Table`.`Field2` FROM `My Table`
 ```  
   
  有关详细信息，请参阅[SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md)中*ODBC 程序员参考*。
+

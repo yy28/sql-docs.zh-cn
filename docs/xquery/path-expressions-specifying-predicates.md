@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
@@ -229,3 +230,4 @@ WHERE CatalogDescription.exist('
  谓词可能还会影响表达式的静态推断类型。 整数文本值与**last （)**函数减少到最多一个筛选的步骤表达式的基数。  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
@@ -36,3 +37,4 @@ CREATE INDEX 语句的语法是：
  当使用 Paradox 驱动程序时，CREATE INDEX 语句创建 Paradox 主密钥文件和次要文件。  
   
  此语句不支持的 Microsoft Excel 或文本的驱动程序。
+

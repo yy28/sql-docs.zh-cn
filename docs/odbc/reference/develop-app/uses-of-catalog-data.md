@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
      此外可以使用此类环境**SQLTables**和**SQLColumns**创建程序员无法从中进行选择的列表。 此外可以使用这些环境**SQLPrimaryKeys**和**SQLForeignKeys**自动确定，显示所选表之间的关系并将**SQLStatistics**来确定并突出显示编制索引的字段，因此程序员可以创建高效的查询。  
   
 -   **构造游标。** 可以使用应用程序、 驱动程序或提供了一个可滚动游标引擎的中间件**SQLSpecialColumns**来确定哪些列或多列唯一标识行。 无法生成程序*键集*包含每个已提取的行的这些列中的值。 当应用程序滚动回行时，它将使用这些值提取行的最新数据。 有关可滚动游标和游标的详细信息，请参阅[可滚动游标](../../../odbc/reference/develop-app/scrollable-cursors.md)。
+

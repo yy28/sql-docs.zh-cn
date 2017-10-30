@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef53f3e39116353e1b9f9a033c872b41e8225edf
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC Visual FoxPro 安装程序对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
  若要下载驱动程序，请参阅[Visual FoxPro ODBC 驱动程序下载站点](http://go.microsoft.com/fwlink/?LinkId=121318)。
+

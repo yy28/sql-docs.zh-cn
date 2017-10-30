@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c54b61ec668e9282d723e48f1c50d1005740ac1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  以这种方式传输 （二进制数据除外） 的任何数据的应用程序不在 Dbms 之间的可互操作。  
   
  **SQLCopyDesc**可以用于将行绑定源 DBMS 中复制到目标 DBMS 中的参数绑定。
+

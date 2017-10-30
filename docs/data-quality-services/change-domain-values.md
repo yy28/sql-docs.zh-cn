@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -59,14 +60,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
   
-3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要在其中更改值的域或创建一个新域。 如果您必须创建新域，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。 单击 **“域值”** 选项卡。  
+3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要在其中更改值的域或创建一个新域。 如果您必须创建新域，请参阅 [创建域](../data-quality-services/create-a-domain.md)。 单击 **“域值”** 选项卡。  
   
-4.  在 **“值”** 表中显示需要修改的值。 有关详细信息，请参阅下方的 [How to Display the Appropriate Values](#Display) 。  
+4.  在 **“值”** 表中显示需要修改的值。 有关详细信息，请参阅下方的 [如何显示适当的值](#Display) 。  
   
 5.  若要更改某个值的状态，请继续执行以下操作：  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 09/09/2017
   
  当您在 **“清理”** 活动的 **“管理和查看结果”** 页中执行交互式数据清理时，无效和有错误的值都将包含在 **“管理和查看结果”** 页的 **“无效”** 选项卡上。  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> 如何显示适当的值  
  您可以按如下所示修改显示：  
   
 -   通过在**“筛选器”** 下拉列表中选择状态，基于其状态筛选 **“筛选器”** 要处于表中的结果。  
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  **“域值”** 选项卡中的每个值表都包含一个 DQS_NULL 值。 在值表中，数据源中的 Null 将显示为 SQL_NULL。 您可以将一个或多个 null 等效值设置为 DQS_NULL 的同义词。 这样，所有 Null 和 Null 等效值都将处理为 DQS_NULL。  
   
   
+

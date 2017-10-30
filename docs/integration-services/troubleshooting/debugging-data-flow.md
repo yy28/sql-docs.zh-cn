@@ -80,13 +80,12 @@ ms.lasthandoff: 08/03/2017
   
  以下示例显示在包的组件之间发送的行数。  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  以下示例计算每个组件针对特定的执行每毫秒所发送的行数。 计算的值为：  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>在数据流组件中配置错误输出
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  下面是执行上述方案中所述步骤的示例 SQL 脚本：  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  该 create_execution 存储过程的文件夹名称、项目名称和包名称参数对应于 Integration Services 目录中的文件夹、项目和包名称。 如下图所示，您可以从 SQL Server Management Studio 获取在 create_execution 调用中使用的文件夹、项目和包名称。 如果您在这里没有看到该 SSIS 项目，则可能还未将该项目部署到 SSIS 服务器。 在 Visual Studio 中右键单击 SSIS 项目，然后单击“部署”以将该项目部署到目标 SSIS 服务器。  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>删除数据分流点  
  可使用 [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) 存储过程删除数据分流点，然后再启动执行。 此存储过程将数据分流点 ID 用作参数，此 ID 可作为 add_data_tap 存储过程的输出来获取。  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>列出所有数据分流点  
  您也可以使用 catalog.execution_data_taps 视图列出所有数据分流点。 下面的示例提取一个规范执行实例（ID：54）的数据分流点。  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   

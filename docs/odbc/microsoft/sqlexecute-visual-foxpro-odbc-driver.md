@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 97cdd3b4d205548dd0b35d0aae44e418b7ca9638
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  执行已准备的 SQL 语句 (已准备的语句[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md))。 如果语句中存在任何参数，驱动程序将使用的参数标记变量的当前值。  
   
  有关详细信息，请参阅[SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md)中*ODBC 程序员参考*。
+

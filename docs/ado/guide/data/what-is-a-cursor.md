@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="scrollability"></a>可滚动性  
  你的应用程序所使用的游标类型也会影响结果集; 中的行中向前和向后移动的能力这有时称为可滚动性。 能够向前移动*和*逆向结果集将添加到光标处的复杂性，因此实现成本更高。 为此，你应该使用此功能仅在必要时对于游标要求。
+

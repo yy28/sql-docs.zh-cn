@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cbcbfedbd5b2296da2cb266bf78ca3f7db9760ac
@@ -41,3 +42,4 @@ ms.lasthandoff: 06/22/2017
     -   对插入数据的数据库执行 [sp_addtabletocontents (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md)。 为 **@table_name**。  
   
   
+

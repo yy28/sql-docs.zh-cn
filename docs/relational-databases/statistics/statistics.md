@@ -1,7 +1,7 @@
 ---
 title: "统计信息 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/08/2016
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,34 +27,35 @@ caps.latest.revision: 70
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e098a8f837d216f18bb1310db3164b57f24575ba
+ms.workload: On Demand
+ms.translationtype: HT
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: 59d83fc61c1a595c1ab95515060682269eaf465e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="statistics"></a>统计信息
-  查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
+  查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
   
 ##  <a name="DefinitionQOStatistics"></a> 组件和概念  
- 统计信息  
- 查询优化的统计信息是一些对象，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的 *基数*或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
+### <a name="statistics"></a>统计信息  
+ 查询优化的统计信息是一些对象，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，根据谓词，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
   
  每个统计信息对象都在包含一个或多个表列的列表上创建，并且包括显示值在第一列中的分布的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 有关统计信息对象的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
   
- 筛选的统计信息  
- 筛选统计信息可以提高以下从定义完善的数据子集选择数据的查询的查询性能。 筛选统计信息使用筛选器谓词来选择统计信息中包括的数据子集。 与全表统计信息相比，设计完美的筛选统计信息可以改进查询执行计划。 有关筛选器谓词的详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。 有关何时创建筛选的统计信息的详细信息，请参阅本主题中的 [何时创建统计信息](#UpdateStatistics) 部分。 有关案例研究，请参阅 SQLCAT 网站上的博客文章 [Using Filtered Statistics with Partitioned Tables](http://go.microsoft.com/fwlink/?LinkId=178505)（将筛选的统计信息用于分区表）。  
+### <a name="filtered-statistics"></a>筛选的统计信息  
+ 筛选统计信息可以提高以下从定义完善的数据子集选择数据的查询的查询性能。 筛选统计信息使用筛选器谓词来选择统计信息中包括的数据子集。 与全表统计信息相比，设计完美的筛选统计信息可以改进查询执行计划。 有关筛选器谓词的详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。 有关何时创建筛选的统计信息的详细信息，请参阅本主题中的 [何时创建统计信息](#CreateStatistics) 部分。  
   
- 统计信息选项  
+### <a name="statistics-options"></a>统计信息选项  
  可以设置三个选项来影响何时以及如何创建和更新统计信息。 这些选项仅在数据库级别设置。  
   
- AUTO_CREATE_STATISTICS 选项  
+#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS 选项  
  在自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。 AUTO_CREATE_STATISTICS 选项不确定是否为索引创建了统计信息。 此选项也不生成筛选统计信息。 它严格应用于全表的单列统计信息。  
   
- 查询优化器通过使用 AUTO_CREATE_STATISTICS 选项创建统计信息时，统计信息名称以 `_WA`开头。 可以使用下面的查询来确定查询优化器是否为查询谓词列创建了统计信息。  
+ 查询优化器通过使用 AUTO_CREATE_STATISTICS 选项创建统计信息时，统计信息名称以 `_WA` 开头。 可以使用下面的查询来确定查询优化器是否为查询谓词列创建了统计信息。  
   
-```  
+```tsql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -64,19 +65,26 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
- AUTO_UPDATE_STATISTICS 选项  
+#### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS 选项  
  在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。  
   
--   SQL Server（2014 及更早版本）基于更改行的百分比使用阈值。 这与表中的行数无关。  
+* 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于更改行的百分比使用阈值。 这与表中的行数无关。 阈值是：
+    * 如果在评估时间统计信息时表基数为 500 或更低，则每达到 500 次修改时更新一次。
+    * 如果在评估时间统计信息时表基数大于 500，则每达到 500 + 修改次数的百分之二十时更新一次。
+
+* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果兼容性级别为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 乘以当前的表基数所得结果的平方根。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
   
--   SQL Server（从 2016 开始，130 兼容级别以下）使用可根据表中的行数进行调整的阈值。 进行此更改后，将会更频繁地更新大型表的统计信息。  
+查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
- 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
+AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。 此选项也适用于筛选的统计信息。  
+ 
+有关控制 AUTO_UPDATE_STATISTICS 的详细信息，请参阅[控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171)。
   
- AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。 此选项也适用于筛选的统计信息。  
-  
- AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项被关闭，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
+ 
+ > [!NOTE]
+ > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”窗口的“选项”页中同时将“自动更新统计信息”和“自动异步更新统计信息”选项设置为“True”。
   
  统计信息更新可以是同步（默认设置）或异步的。 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行；在统计信息过期时，查询优化器将在编译和执行查询前等待更新的统计信息。 对于异步统计信息更新，查询将用现有的统计信息编译，即使现有统计信息已过期。如果在查询编译时统计信息过期，查询优化器可以选择非最优查询计划。 在异步更新完成后编译的查询将从使用更新的统计信息中受益。  
   
@@ -84,56 +92,53 @@ ORDER BY s.name;
   
  在以下情况下，考虑使用异步统计信息来实现可预测性更高的查询响应时间：  
   
--   您的应用程序频繁执行相同的查询、类似的查询或类似的缓存查询计划。 与同步统计信息更新相比，使用异步统计信息更新时您的查询响应时间可能具有更高的可预测性，因为查询优化器可以执行传入的查询而不必等待最新的统计信息。 这避免延迟某些查询，而不延迟其他查询。  
+* 您的应用程序频繁执行相同的查询、类似的查询或类似的缓存查询计划。 与同步统计信息更新相比，使用异步统计信息更新时你的查询响应时间可能具有更高的可预测性，因为查询优化器可以执行传入的查询而不必等待最新的统计信息。 这避免延迟某些查询，而不延迟其他查询。  
   
--   您的应用程序遇到了客户端请求超时，这些超时是由于一个或多个查询正在等待更新后的统计信息所导致的。 在某些情况下，等待同步统计信息可能会导致应用程序因过长超时而失败。  
+* 您的应用程序遇到了客户端请求超时，这些超时是由于一个或多个查询正在等待更新后的统计信息所导致的。 在某些情况下，等待同步统计信息可能会导致应用程序因过长超时而失败。  
   
- INCREMENTAL STATS  
+#### <a name="incremental-stats"></a>INCREMENTAL STATS  
  为 ON 时，根据分区统计信息创建统计信息。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息。 默认为 OFF。 此设置覆盖数据库级别 INCREMENTAL 属性。  
   
  在将新分区添加到某个大型表时，应更新统计信息以便包括这些新分区。 但是，浏览整个表（FULLSCAN 或 SAMPLE 选项）所需的时间可能会相当长。 此外，因为可能只需针对新分区的统计信息，所以，扫描整个表不是必需的。 该增量选项将在每个分区的基础上创建和存储统计信息，并且在更新时，只刷新需要新统计信息的那些分区上的统计信息  
   
  如果不支持每个分区统计信息，将忽略该选项并生成警告。 对于以下统计信息类型，不支持增量统计信息：  
   
--   使用未与基表的分区对齐的索引创建的统计信息。  
+* 使用未与基表的分区对齐的索引创建的统计信息。  
   
--   对 Always On 可读辅助数据库创建的统计信息。  
+* 对 Always On 可读辅助数据库创建的统计信息。  
   
--   对只读数据库创建的统计信息。  
+* 对只读数据库创建的统计信息。  
   
--   对筛选的索引创建的统计信息。  
+* 对筛选的索引创建的统计信息。  
   
--   对视图创建的统计信息。  
+* 对视图创建的统计信息。  
   
--   对内部表创建的统计信息。  
+* 对内部表创建的统计信息。  
   
--   使用空间索引或 XML 索引创建的统计信息。  
+* 使用空间索引或 XML 索引创建的统计信息。  
   
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
-  
-##  <a name="CreateStatistics"></a> 何时创建统计信息  
+## <a name="CreateStatistics"></a> 何时创建统计信息  
  查询优化器已通过以下方式创建统计信息：  
   
 1.  在创建索引时，查询优化器为表或视图上的索引创建统计信息。 这些统计信息将创建在索引的键列上。 如果索引是一个筛选索引，则查询优化器将在为该筛选索引指定的行的同一子集上创建筛选统计信息。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 2.  在 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器为查询谓词中的单列创建统计信息。  
   
- 对于大多数查询，用于创建统计信息的这两个方法就可以确保高质量的查询计划；但在很少的情况下，可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建附加的统计信息来改进查询计划。 这些附加的统计信息可以捕获查询优化器在为索引或单列创建统计信息时并未考虑的统计关联。 您的应用程序可能在表数据中具有附加的统计关联，如果在统计信息对象中计入这些关联，可能会令查询优化器改进查询计划。 例如，针对数据行子集的筛选统计信息或针对查询谓词列的多列统计信息可改进查询计划。  
+对于大多数查询，用于创建统计信息的这两个方法就可以确保高质量的查询计划；但在很少的情况下，可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建附加的统计信息来改进查询计划。 这些附加的统计信息可以捕获查询优化器在为索引或单列创建统计信息时并未考虑的统计关联。 应用程序可能在表数据中具有附加的统计关联，如果在统计信息对象中计入这些关联，可能会令查询优化器改进查询计划。 例如，针对数据行子集的筛选统计信息或针对查询谓词列的多列统计信息可改进查询计划。  
   
- 在使用 CREATE STATISTICS 语句创建统计信息时，我们建议保持 AUTO_CREATE_STATISTICS 选项为 ON，以便查询优化器继续为查询谓词列定期创建单列统计信息。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
+在使用 CREATE STATISTICS 语句创建统计信息时，我们建议保持 AUTO_CREATE_STATISTICS 选项为 ON，以便查询优化器继续为查询谓词列定期创建单列统计信息。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- 在以下任何情况适用时，考虑使用 CREATE STATISTICS 语句创建统计信息：  
-  
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议创建统计信息。  
-  
--   查询谓词包含尚不位于相同索引中的多个相关列。  
-  
--   查询从数据的子集中选择数据。  
-  
--   查询缺少统计信息。  
+在以下任何情况适用时，考虑使用 CREATE STATISTICS 语句创建统计信息：  
+
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议创建统计信息。  
+
+* 查询谓词包含尚不位于相同索引中的多个相关列。  
+
+* 查询从数据的子集中选择数据。  
+
+* 查询缺少统计信息。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查询谓词包含多个相关列  
  在某一查询谓词包含具有跨列关系和相关性的多列时，针对多列的统计信息可能会改进查询计划。 针对多列的统计信息包含称作密度的跨列相关统计信息，这些统计信息不可用于单列统计信息。 在查询结果依赖于多列之间的数据关系时，密度可以改进基数估计。  
@@ -144,7 +149,7 @@ ORDER BY s.name;
   
  为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，以下内容在列 `LastName`、 `MiddleName`和 `FirstName`上创建多列统计信息对象。  
   
-```  
+```tsql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -156,12 +161,12 @@ CREATE STATISTICS LastFirst ON Person.Person (LastName, MiddleName, FirstName);
 GO  
 ```  
   
- 在此示例中，统计信息对象 `LastFirst` 具有以下列前缀的密度：(`LastName`)、(`LastName, MiddleName`) 和 (`LastName, MiddleName, FirstName`)。 密度不可用于 (`LastName, FirstName`)。 如果查询使用 `LastName` 和 `FirstName` ，并且没有使用 `MiddleName`，则密度不可用于基数估计。  
+ 在此示例中，统计信息对象 `LastFirst` 具有以下列前缀的密度：`(LastName)`、`(LastName, MiddleName)` 和 `(LastName, MiddleName, FirstName)`。 密度不可用于 `(LastName, FirstName)`。 如果查询使用 `LastName` 和 `FirstName` ，并且没有使用 `MiddleName`，则密度不可用于基数估计。  
   
 ### <a name="query-selects-from-a-subset-of-data"></a>查询从数据的子集中选择数据  
  在查询优化器为单个列和索引创建统计信息时，它为所有行中的值创建统计信息。 在查询从行的某一子集中选择数据时，这一行子集具有唯一的数据分布，筛选统计信息可以改进查询计划。 可以通过使用 CREATE STATISTICS 语句并在此语句中用 WHERE 子句定义筛选器谓词表达式来创建筛选统计信息。  
   
- 例如，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]时，Production.Product 表中的每种产品属于 Production.ProductCategory 表中的以下四种类别之一：Bikes、Components、Clothing 和 Accessories。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
+ 例如，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 时，`Production.Product` 表中的每种产品属于 `Production.ProductCategory` 表中的以下四个类别之一：Bikes（自行车）、Components（部件）、Clothing（服装）和 Accessories（附件）。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
   
  使用自行车为例，针对所有自行车重量的筛选统计信息将向查询优化器提供更精确的统计信息，并且与全表统计信息或者针对 Weight 列的不存在的统计信息相比，可以改进查询计划质量。 该自行车重量列很适合于筛选统计信息，但如果重量查找的数目相对较少，则不见得适合于筛选索引。 筛选索引所提供的在查找方面的性能提升可能抵不上将筛选索引添加到数据库所导致的额外维护和存储成本。  
   
@@ -169,9 +174,9 @@ GO
   
  [!code-sql[StatisticsDDL#FilteredStats2](../../relational-databases/statistics/codesnippet/tsql/statistics_1.sql)]  
   
- 查询优化器可使用 `BikeWeights` 筛选的统计信息来改进下面这个查询的查询计划，此查询选择重量超过 `25`的所有自行车。  
+ 查询优化器可使用 `BikeWeights` 筛选的统计信息来改进下面这个查询的查询计划，此查询选择重量超过 `25` 的所有自行车。  
   
-```  
+```tsql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -188,39 +193,39 @@ GO
   
  如果缺少统计信息，则执行以下步骤：  
   
--   确认 AUTO_CREATE_STATISTICS 和 AUTO_UPDATE_STATISTICS 为 ON。  
+* 确认 AUTO_CREATE_STATISTICS 和 AUTO_UPDATE_STATISTICS 为 ON。  
   
--   请确保数据库不是只读的。 如果数据库是只读的，则查询优化器无法保存统计信息。  
+* 请确保数据库不是只读的。 如果数据库是只读的，则无法保存新统计信息对象。  
   
--   通过使用 CREATE STATISTICS 语句创建缺少的统计信息。  
+* 通过使用 CREATE STATISTICS 语句创建缺少的统计信息。  
   
- 当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
+ 当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
   
--   使用 [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md) 语句创建的统计信息。  
+* 使用 [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md) 语句创建的统计信息。  
   
--   使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
+* 使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
   
-##  <a name="UpdateStatistics"></a> 何时更新统计信息  
+## <a name="UpdateStatistics"></a> 何时更新统计信息  
  查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 AUTO_UPDATE_STATISTICS 设置为 ON 时，可以通过频繁更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
   
  更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。  
   
  在使用 UPDATE STATISTICS 或 sp_updatestats 更新统计信息时，我们建议保持将 AUTO_UPDATE_STATISTICS 设置为 ON，以便查询优化器继续定期更新统计信息。 有关如何更新列、索引、表或索引视图的统计信息的详细信息，请参阅 [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。 有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。  
   
- 若要确定最近一次更新统计信息的时间，请使用 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函数。  
+ 若要确定最近一次更新统计信息的时间，请使用 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 或 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函数。  
   
  在以下情况下考虑更新统计信息：  
   
--   查询执行时间很长。  
+* 查询执行时间很长。  
   
--   在升序或降序键列上发生插入操作。  
+* 在升序或降序键列上发生插入操作。  
   
--   在维护操作后。  
+* 在维护操作后。  
   
 ### <a name="query-execution-times-are-slow"></a>查询执行时间很长  
  如果查询响应时间很长或不可预知，则在执行其他故障排除步骤前，确保查询具有最新的统计信息。  
@@ -233,37 +238,39 @@ GO
 ### <a name="after-maintenance-operations"></a>在维护操作后  
  考虑在执行维护过程（例如截断表或对很大百分比的行执行大容量插入）后更新统计信息。 这可以避免在将来查询等待自动统计信息更新时在查询处理中出现延迟。  
   
- 索引的重新生成、碎片整理或重新组织之类的操作不会更改数据的分布。 因此，在执行 ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，您无需更新统计信息。 查询优化器将在您使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 对表或视图重新生成索引时更新统计信息，但是，此统计信息更新是重新创建索引的副产品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，查询优化器并不更新统计信息。  
-  
+ 索引的重新生成、碎片整理或重新组织之类的操作不会更改数据的分布。 因此，在执行 ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，您无需更新统计信息。 查询优化器将在使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 对表或视图重新生成索引时更新统计信息，但是，此统计信息更新是重新创建索引的副产品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，查询优化器并不更新统计信息。 
+ 
+> [!TIP]
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始，使用 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) 或 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md) 的 PERSIST_SAMPLE_PERCENT 选项设置和保留未显式指定采样百分比的后续统计信息更新的特定采样百分比。
   
 ##  <a name="DesignStatistics"></a> 高效使用统计信息的查询  
  某些查询实现（如查询谓词中的局部变量和复杂的表达式）可能导致查询计划不是最佳的。 遵循有关高效使用统计信息的查询设计指导原则可以避免这种情况。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- 您可以通过应用查询设计指导原则来改进查询计划，这些查询设计指导原则高效地使用统计信息，以便改进在查询谓词中使用的表达式、变量和函数的 *基数估计* 。 在查询优化器不知道表达式、变量或函数的值时，它并不知道在直方图中要查找的值，因此无法从直方图检索最佳的基数估计。 查询优化器而是为直方图中所有取样行，在每个不同值的平均行数的基础上执行基数估计。 这将导致不是最佳的基数估计并且可能影响查询性能。  
+ 您可以通过应用查询设计指导原则来改进查询计划，这些查询设计指导原则高效地使用统计信息，以便改进在查询谓词中使用的表达式、变量和函数的 *基数估计* 。 在查询优化器不知道表达式、变量或函数的值时，它并不知道在直方图中要查找的值，因此无法从直方图检索最佳的基数估计。 查询优化器而是为直方图中所有取样行，在每个不同值的平均行数的基础上执行基数估计。 这将导致不是最佳的基数估计并且可能影响查询性能。 有关直方图的详细信息，请参阅 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。
   
  下面的指导原则描述如何编写查询以便通过改进基数估计来改进查询计划。  
   
 ### <a name="improving-cardinality-estimates-for-expressions"></a>改进表达式的基数估计  
- 要改进表达式的基数估计，请遵循以下指导原则：  
+要改进表达式的基数估计，请遵循以下指导原则：  
   
--   只要可能，应简化其中含常量的表达式。 查询优化器在确定基数估计前并不对包含常量的所有函数和表达式进行求值。 例如，简化表达式 ABS(`-100) to 100`。  
+* 只要可能，应简化其中含常量的表达式。 查询优化器在确定基数估计前并不对包含常量的所有函数和表达式进行求值。 例如，将表达式 `ABS(-100)` 简化为 `100`。  
   
--   如果表达式使用多个变量，则考虑为表达式创建一个计算列，然后对该计算列创建统计信息或索引。 例如，如果您为表达式 `WHERE PRICE + Tax > 100` 创建计算列，则查询谓词 `Price + Tax`可能会具有更好的基数估计。  
+* 如果表达式使用多个变量，则考虑为表达式创建一个计算列，然后对该计算列创建统计信息或索引。 例如，如果您为表达式 `WHERE PRICE + Tax > 100` 创建计算列，则查询谓词 `Price + Tax`可能会具有更好的基数估计。  
   
 ### <a name="improving-cardinality-estimates-for-variables-and-functions"></a>改进变量和函数的基数估计  
- 要改进变量和函数的基数估计，请遵循以下指导原则：  
+要改进变量和函数的基数估计，请遵循以下指导原则：  
   
--   如果查询谓词使用局部变量，则考虑重新编写查询以使用参数，而非局部变量。 在查询优化器创建查询执行计划时，局部变量的值未知。 在查询使用某一参数时，查询优化器将基数估计用于传递到存储过程的第一个实际参数值。  
+* 如果查询谓词使用局部变量，则考虑重新编写查询以使用参数，而非局部变量。 在查询优化器创建查询执行计划时，局部变量的值未知。 在查询使用某一参数时，查询优化器将基数估计用于传递到存储过程的第一个实际参数值。  
   
--   考虑使用标准表或临时表来保存多语句表值函数的结果。 查询优化器并不为多语句表值函数创建统计信息。 使用此方法，查询优化器可对表列创建统计信息并使用它们创建更好的查询计划。  
+* 考虑使用标准表或临时表来保存多语句表值函数 (mstvf) 的结果。 查询优化器并不为多语句表值函数创建统计信息。 使用此方法，查询优化器可对表列创建统计信息并使用它们创建更好的查询计划。  
   
--   考虑使用标准表或临时表来代替表变量。 查询优化器不会为表变量创建统计信息。 使用此方法，查询优化器可对表列创建统计信息并使用它们创建更好的查询计划。 在确定是使用临时表还是表变量时需要进行一些权衡，与临时表相比，在存储过程中使用的表变量会导致更少的存储过程的重新编译。 根据应用程序，使用临时表来代替表变量可能不会改进性能。  
+* 考虑使用标准表或临时表来代替表变量。 查询优化器不会为表变量创建统计信息。 使用此方法，查询优化器可对表列创建统计信息并使用它们创建更好的查询计划。 在确定是使用临时表还是表变量时需要进行一些权衡，与临时表相比，在存储过程中使用的表变量会导致更少的存储过程的重新编译。 根据应用程序，使用临时表来代替表变量可能不会改进性能。  
   
--   如果某一存储过程包含使用某一传入的参数的查询，则在查询中使用该参数值之前，应避免在该存储过程内更改该参数值。 查询的基数估计基于传入的参数值，而非更新的值。 为了避免更改参数值，您可以重新编写查询以使用两个存储过程。  
+* 如果某一存储过程包含使用某一传入的参数的查询，则在查询中使用该参数值之前，应避免在该存储过程内更改该参数值。 查询的基数估计基于传入的参数值，而非更新的值。 为了避免更改参数值，您可以重新编写查询以使用两个存储过程。  
   
-     例如，以下存储过程 `Sales.GetRecentSales` 将在 `@date` 时更改参数 `@date is NULL`的值。  
+     例如，以下存储过程 `Sales.GetRecentSales` 将在 `@date` 为 NULL 时更改参数 `@date` 的值。  
   
-    ```  
+    ```tsql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -271,7 +278,7 @@ GO
     GO  
     CREATE PROCEDURE Sales.GetRecentSales (@date datetime)  
     AS BEGIN  
-        IF @date is NULL  
+        IF @date IS NULL  
             SET @date = DATEADD(MONTH, -3, (SELECT MAX(ORDERDATE) FROM Sales.SalesOrderHeader))  
         SELECT * FROM Sales.SalesOrderHeader h, Sales.SalesOrderDetail d  
         WHERE h.SalesOrderID = d.SalesOrderID  
@@ -282,7 +289,7 @@ GO
   
      如果对存储过程 `Sales.GetRecentSales` 的首次调用为 `@date` 参数传递了 NULL，则查询优化器将使用针对 `@date = NULL` 的基数估计编译存储过程，即使查询谓词不是使用 `@date = NULL`调用的。 此基数估计可能与实际查询结果中的行数差别很大。 因此，查询优化器可能会选择非最佳查询计划。 若要避免此情况发生，您可以按如下所示将存储过程重新编写成两个过程：  
   
-    ```  
+    ```tsql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -308,11 +315,11 @@ GO
     ```  
   
 ### <a name="improving-cardinality-estimates-with-query-hints"></a>使用查询提示改进基数估计  
- 为了改进局部变量的基数估计，您可以将 OPTIMIZE FOR 或 OPTIMIZE FOR UNKNOWN 查询提示与 RECOMPILE 一起使用。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 为了改进局部变量的基数估计，可以将 `OPTIMIZE FOR <value>` 或 `OPTIMIZE FOR UNKNOWN` 查询提示与 RECOMPILE 一起使用。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
- 对于某些应用程序，每次执行查询时都重新编译查询可能会占用过多时间。 OPTIMIZER FOR 查询提示可对此给予帮助，即使您不使用 RECOMPILE 选项。 例如，您可以将 OPTIMIZER FOR 选项添加到存储过程 Sales.GetRecentSales，以便指定一个特定的日期。 以下示例将 OPTIMIZE FOR 选项添加到 Sales.GetRecentSales 过程。  
+ 对于某些应用程序，每次执行查询时都重新编译查询可能会占用过多时间。 `OPTIMIZE FOR` 查询提示可对此给予帮助，即使不使用 `RECOMPILE` 选项。 例如，可以将 `OPTIMIZE FOR` 选项添加到存储过程 Sales.GetRecentSales，以便指定一个特定的日期。 以下示例将 `OPTIMIZE FOR` 选项添加到 Sales.GetRecentSales 过程。  
   
-```  
+```tsql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -343,7 +350,8 @@ GO
  [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
- [创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)  
+ [创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)   
+ [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171)
   
-  
+ 
 

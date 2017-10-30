@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: cd64185b31ad5aba9496e55031eae15ae46d5180
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 33fcf5ceb2481b517844cb5334dd67c97b039b77
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="x40x40language-transact-sql"></a>& #x 40; 和 #x 40;语言 (Transact SQL)
@@ -51,21 +52,6 @@ ms.lasthandoff: 09/19/2017
  若要查看有关语言设置，包括有效的正式语言名称的信息运行**sp_helplanguage**而无需指定的参数。  
   
 ## <a name="examples"></a>示例  
- 以下示例返回当前会话的语言。  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例返回当前会话的语言。  
   
 ```  

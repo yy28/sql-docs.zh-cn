@@ -20,7 +20,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
 ms.contentlocale: zh-cn
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)]提供了可用于授予对 SharePoint 站点和库访问的报表服务器项的访问权限的内置安全功能。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了内置安全功能。使用这些功能，你可以授予对从 SharePoint 站点和库访问的报表服务器项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  
   
  如果您尚未分配权限，或者您对 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]中的安全功能并不熟悉，请遵循以下指南：  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/09/2017
  服务器管理员或网站集管理员可设置确定其他站点所有者是否可以设置权限的选项。 根据您拥有的权限级别，您可能无法创建或自定义 SharePoint 组或权限级别。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用预定义的 SharePoint 组和权限级别  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议你使用标准 SharePoint 组（即 *Site name* **所有者**、*Site name* **成员**和 *Site name* **访问者**）并在站点级分配权限。 为其分配权限的多数用户都应是 *Site name* **访问者**或 *Site name* **成员**组的成员。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 产品文档建议你使用标准 SharePoint 组（即 *Site name* **所有者**、*Site name*** 成员**和 *Site name*** 访问者**）并在站点级分配权限。 为其分配权限的多数用户都应是 *Site name* **访问者**或 *Site name*** 成员**组的成员。 对父站点的权限可在整个站点层次结构中得到继承。 您可以对需要其他限制的特定项中断权限继承。  
   
  下列 SharePoint 组拥有以下预定义的权限级别：  
   
@@ -80,22 +81,23 @@ ms.lasthandoff: 08/09/2017
  若要使用内置安全功能，您必须将 Windows 用户帐户或组帐户分配到 SharePoint 组。 除服务器管理员和门户网站所有者外（他们在安装软件时自动获得对 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 的访问权限），所有其他用户都必须获得授权才能访问服务器。  
   
 ## <a name="in-this-section"></a>本节内容  
- [报表服务器项的 Windows SharePoint Services 中使用内置的安全](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  说明如何使用预定义的 SharePoint 组和权限级别来访问报表服务器项。  
   
- [SharePoint 站点和列表权限参考为报表服务器项](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  提供可用于访问报表服务器操作的所有 SharePoint 产品权限的参考。  
   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  说明特别报告功能的权限要求并提供使功能可用的建议方法。  
   
- [Reporting Services to SharePoint Groups and Permissions 中比较角色和任务](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
- 简要介绍了 SharePoint 组与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的预定义角色定义之间的比较。  
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ 简要介绍了 SharePoint 组与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的预定义角色定义之间的比较。  
   
- [在 SharePoint 站点 &#40; 上设置为报表服务器项的权限Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  提供有关创建有权启动报表生成器和设置模型项安全性的新 SharePoint 组的说明。 此主题还包含有关为任意报表服务器项或操作设置自定义权限的通用原则。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 安全性和保护](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
+

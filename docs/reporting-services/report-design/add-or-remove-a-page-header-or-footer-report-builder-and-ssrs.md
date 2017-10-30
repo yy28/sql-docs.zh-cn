@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: zh-cn
@@ -68,6 +69,7 @@ ms.lasthandoff: 08/09/2017
 >  一旦删除，报表中将不再包含页眉或页脚。 如果随后再次添加页眉或页脚，您之前添加到页眉或页脚中的任何项都将不再显示。  
   
 ## <a name="see-also"></a>另请参阅  
- [页眉和页脚 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
@@ -66,3 +67,4 @@ ODBC 驱动程序可以进行分类，如下所示：
   
 > [!NOTE]  
 >  16 位 ODBC 驱动程序不会直接使用 ODBC 3。*x*驱动程序管理器。 但是，很可能使用 2.0 ODBC 驱动程序管理器，它随后 thunk 最多 3 个 16 位驱动程序。*x*驱动程序管理器。
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcf102ce2fad84931a885dc863ee2764a8a235f5
@@ -38,3 +39,4 @@ ms.lasthandoff: 08/02/2017
  选中此控制选项可允许远程客户端访问此服务器上的此 FILESTREAM 数据。  
   
   
+

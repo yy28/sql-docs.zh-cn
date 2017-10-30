@@ -22,7 +22,8 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6203ad120046f77ab68364f04bd93c56f9bd8cd3
 ms.contentlocale: zh-cn
@@ -56,7 +57,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  指示是以本机模式还是以 SharePoint 模式创建数据库。  
   
 > [!IMPORTANT]  
->  从[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode*=**True**不支持，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是 SharePoint 共享服务，不控制的 WMI 提供程序。 您应始终将此参数设置为 **False**。  
+>  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，将不支持 IsSharePointMode=True，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为 SharePoint 共享服务，且不受 WMI 提供程序的控制。 您应始终将此参数设置为 **False**。  
   
  *脚本*  
  [out] 包含所生成的 SQL 脚本的字符串。  
@@ -79,9 +80,10 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  生成的脚本支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="requirements"></a>要求  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

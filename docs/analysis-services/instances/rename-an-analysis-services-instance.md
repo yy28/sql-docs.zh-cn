@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      正如您所看到的，以前授予“NT Service\ MSOLAP$TABULAR”的数据库和文件权限都不再有效。 为了确保该服务执行的任务和操作还照常运行，您现在需要向“NT Service\ MSOLAP$TAB2”授予新的数据库和文件权限。  
   
   
+

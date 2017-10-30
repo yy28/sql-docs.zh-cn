@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  通用应用程序，尤其是那些支持即席查询，几乎从未知道他们创建的结果集的元数据。 因此，它们必须在运行时使用函数发现元数据**SQLNumResultCols**， **SQLDescribeCol**，和**SQLColAttribute**中, 描述这些下一部分中， [SQLDescribeCol 和 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)。  
   
  所有应用程序，而不考虑其类型，可以通过目录函数返回的结果集的硬编码元数据。 在此手册的参考部分中定义这些结果集。
+

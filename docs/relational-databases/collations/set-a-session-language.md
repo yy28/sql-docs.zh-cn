@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21c986a0f7e0341826697bb50eb26fb93a1031df
@@ -59,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  对于 ADO.NET，请使用 **ConnectionString** 对象的 **Current Language** 参数。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components (MDAC) 软件开发包 (SDK) 文档。  
   
   
+

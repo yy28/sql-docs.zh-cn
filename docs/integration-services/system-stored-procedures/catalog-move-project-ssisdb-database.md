@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-move_project [ @source_folder = ] source_folder  
+```sql  
+catalog.move_project [ @source_folder = ] source_folder  
     , [ @project_name = ] project_name  
     , [ @destination_folder = ] destination_folder  
 ```  

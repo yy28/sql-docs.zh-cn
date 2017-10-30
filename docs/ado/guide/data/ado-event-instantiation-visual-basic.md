@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  **连接**在声明对象**窗体**级别使用**WithEvents**关键字来启用事件处理。 Form_Load 事件处理程序实际通过分配一个新创建对象**连接**对象传递给*connEvent* ，然后打开连接。 当然，实际的应用程序一样在 Form_Load 事件处理程序不是如下所示的更多处理。
+
