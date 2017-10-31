@@ -65,7 +65,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 参数在结果中返回 $NODEID 列。 NODE_ID 是为特定事例而对其执行预测的内容节点。 使用上表中的列的预测时，此参数是可选的。  
   
-  *n* 参数适用于表中的列。 该参数根据预测类型设置返回的行数。 如果基础列是序列，则会调用**PredictSequence**函数。 如果基础列是时序，则会调用**PredictTimeSeries**函数。 对于关联类型的预测，它调用**PredictAssociation**函数。  
+ *n* 参数适用于表中的列。 该参数根据预测类型设置返回的行数。 如果基础列是序列，则会调用**PredictSequence**函数。 如果基础列是时序，则会调用**PredictTimeSeries**函数。 对于关联类型的预测，它调用**PredictAssociation**函数。  
   
  **预测**函数支持多态性。  
   
