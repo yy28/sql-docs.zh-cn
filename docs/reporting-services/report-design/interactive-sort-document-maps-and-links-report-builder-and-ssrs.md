@@ -15,8 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: zh-cn
@@ -42,21 +41,20 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>本节内容  
- [交互式排序（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>本節內容  
+ [交互式排序 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  介绍如何将交互排序按钮添加到列标题。  
   
- [创建文档结构图（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [创建文档结构图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  介绍如何添加目录以支持在大型报表中导航。  
   
- [向报表添加书签（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [将书签添加到报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  说明如何添加书签以在报表内创建链接。  
   
- [向 URL 添加超链接（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [将超链接添加到 URL &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  说明如何添加从报表指向 URL 的链接。  
   
 ## <a name="see-also"></a>另请参阅  
- [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [钻取、 深化、 子报表和嵌套的数据区域和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-
