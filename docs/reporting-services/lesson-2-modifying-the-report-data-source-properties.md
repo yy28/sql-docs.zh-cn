@@ -16,8 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: zh-cn
@@ -34,16 +33,16 @@ ms.lasthandoff: 08/09/2017
 1.  使用管理员权限浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户，例如，右键单击 Internet Explorer 图标，然后单击“以管理员身份运行”。  
  
 2.    浏览到 Web 门户 URL。  例如：   
-    `http://<server name>/reports`。  
+    `http://<server name>/reports`中创建已分区表或索引。  
     `http://localhost/reports`
  **注意：** web*门户*URL 为"Reports"，不报告*服务器*"Reportserver"的 URL。  
 3.  浏览到包含 **Sales Orders** 报表的文件夹，在该报表的上下文菜单中，单击 **“管理”**。  
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
-3.  在左窗格中单击“数据源”。  
+3.  单击**数据源**的左窗格中。  
   
-4.  验证“连接类型”是否为“Microsoft SQL Server”。  
+4.  验证**连接类型**是**Microsoft SQL Server**。  
   
 5.  验证是否连接字符串如下所示并且它假定示例数据库位于本地数据库服务器上：  
   
@@ -51,15 +50,15 @@ ms.lasthandoff: 08/09/2017
     Data source=localhost; initial catalog=AdventureWorks2014  
     ```  
   
-6.  单击“使用下面的凭据”。  
+6.  单击**使用下面的凭据**。  
   
-7. 在“凭据类型”中，选择“Windows 用户名和密码”
-8. 输入用户名（使用 domain\user 格式）和密码。 如果你没有访问 AdventureWorks2014 数据库的权限，请指定具有此权限的登录名。  
+7. 在**的凭据类型**，选择**Windows 用户名和密码**
+8. 键入你的用户名 (使用格式*域 \ 用户*) 和密码。 如果你没有访问 AdventureWorks2014 数据库的权限，请指定具有此权限的登录名。  
     
 9. 若要验证是否能连接到数据源，请单击 **“测试连接”** 。  
   
 10. 单击 **“保存”**。
-11. 单击“取消”  
+11. 单击**取消**  
   
 11. 查看报表以验证报表是否以指定的凭据运行。 报表。  
   
@@ -96,15 +95,15 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  验证“名称”是否为 `OrderNumber`。  
   
-3.  验证“提示”是否为 `OrderNumber`。  
+3.  验证**提示**是`OrderNumber`。  
   
-4.  选择“允许空值("")”。  
+4.  选择**允许空白值 ("")**。  
   
 5.  选择 **“允许 Null 值”**。  
   
 6.  单击 **“确定”**。  
   
-7.  单击“预览”选项卡以运行报表。 请注意报表顶部的参数输入框。 您可以：  
+7.  单击**预览**选项卡以运行报表。 请注意报表顶部的参数输入框。 您可以：  
   
     -   在不使用参数的情况下单击“查看报表”以便看到完整的报表。  
   
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="bkmk_redeploy"></a>重新部署报表  
   
-1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关在表教程中使用的项目属性的详细信息，请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 中的“将报表发布到报表服务器（可选）”部分。  
+1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 有关表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[6 课： 添加分组和总计 &#40;Reporting Services &#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。  
   

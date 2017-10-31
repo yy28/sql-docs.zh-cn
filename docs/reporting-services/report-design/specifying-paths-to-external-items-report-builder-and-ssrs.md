@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ba2c751b7f851fa9be24ca08cb4ab95f4314258
 ms.contentlocale: zh-cn
@@ -55,4 +54,3 @@ ms.lasthandoff: 08/09/2017
  [在报表 &#40; 上添加钻取操作报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   
-

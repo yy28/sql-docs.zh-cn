@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3377e943ddf7d8c7bd06aeab52ee263a754af25c
 ms.contentlocale: zh-cn
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
 -   在参数窗格中，将参数拖到窗格中的新列或新行。 更改参数在窗格中的位置时，  “报表数据”窗格中的参数顺序也会发生变化。 有关移动在窗格中的参数的详细信息，请参阅[自定义报表 &#40; 中的参数窗格报表生成器 &#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [用于对话框、 窗格和向导的报表生成器帮助](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [将级联参数添加到报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
@@ -50,4 +49,3 @@ ms.lasthandoff: 08/09/2017
  [参数的集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   
-

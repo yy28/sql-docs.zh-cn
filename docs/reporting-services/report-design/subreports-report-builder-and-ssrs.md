@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: zh-cn
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  使用数据区域可以在一个数据区域内嵌套来自同一数据源的数据组。 使用子报表可以在一个数据区域内嵌套来自不同数据源的数据组、在多个父报表中重复使用某个子报表，或者在另一个报表中显示独立的报表。 例如，通过在另一个报表的表体内放置多个子报表，可以创建“摘要簿”。  
   
- 数据区域的功能和灵活性与子报表相差无几，但性能更佳。 由于报表服务器将子报表的每个实例作为独立的报表来处理，因此性能可能会受到影响。 有关详细信息，请参阅[嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
+ 数据区域的功能和灵活性与子报表相差无几，但性能更佳。 由于报表服务器将子报表的每个实例作为独立的报表来处理，因此性能可能会受到影响。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
   
 ## <a name="using-parameters-in-subreports"></a>在子报表中使用参数  
  若要将参数从父报表传递给子报表，请在用作子报表的报表中定义报表参数。 在父报表中放入子报表时，您可以选择报表参数以及要从父报表传递给子报表中的报表参数的值。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  可以将子报表放入报表的主体或数据区域中。 如果将子报表放在数据区域中，则子报表将重复数据区域中的组或行的每个实例。 若要将值从组或行传递给子报表，则在子报表值属性中，对于包含要传递给子报表参数的值的字段，请使用字段表达式。  
   
- 有关使用子报表的详细信息，请参阅[添加子报表和参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)。  
+ 有关使用子报表的详细信息，请参阅[添加子报表和参数 （&） #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>指定子报表的名称和位置  
  您可以设计一个主报表，将子报表的位置指定为同一报表服务器上的不同文件夹。  
@@ -61,7 +60,6 @@ ms.lasthandoff: 08/09/2017
  在报表生成器中，若要预览主报表中的子报表，这两个报表必须位于相同报表服务器中，否则必须指定子报表的完整路径。  
   
 ## <a name="see-also"></a>另请参阅  
- [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [钻取、 深化、 子报表和嵌套的数据区域和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

@@ -20,8 +20,7 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
 ms.contentlocale: zh-cn
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="requirements"></a>要求  
 数据驱动订阅通常由报表服务器管理员创建和维护。 创建数据驱动订阅的步骤要求具有生成查询的相关知识、了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
-本教程使用教程[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中创建的销售订单报表和示例数据库 **AdventureWorks2014** 中的数据。  
+本教程使用*销售订单*在本教程创建的报表[创建基本表报表 &#40;SSRS 教程 &#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)和示例数据库中的数据**AdventureWorks2014**。  
   
 您的计算机必须安装以下软件才能使用此教程：  
   
