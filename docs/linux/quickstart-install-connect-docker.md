@@ -1,4 +1,4 @@
----
+﻿---
 title: "要开始使用 Docker 上的 SQL Server 2017 |Microsoft 文档"
 description: "此快速入门教程演示如何使用 Docker 运行 SQL Server 2017 容器映像。 然后创建并查询使用 sqlcmd 数据库。"
 author: rothja
