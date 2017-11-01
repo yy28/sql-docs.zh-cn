@@ -23,6 +23,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 10/13/2017
 
 ---
+
 # <a name="microsoft-machine-learning-services"></a>Microsoft 机器学习服务
 
 Microsoft 机学习服务旨在提供一个可扩展、 可缩放平台，使用机器学习服务的应用程序集成机器学习任务和工具。 平台必须提供所有用户的需求所涉及的数据开发和分析过程中，从数据科学家给架构师和数据库管理员。
@@ -128,4 +129,5 @@ Azure 应用商店包含多个支持数据科学的虚拟机：
 [机器学习 Server 入门](getting-started-with-microsoft-r-server-standalone.md)
 
 [安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)
+
 
