@@ -35,7 +35,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40spid-transact-sql"></a>& #x 40; 和 #x 40;SPID (Transact SQL)
+# <a name="x40x40spid-transact-sql"></a>&#x40;&#x40; SPID (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回当前用户进程的会话 ID。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/19/2017
  **int**  
   
 ## <a name="remarks"></a>注释  
- @@SPID可以用于标识当前用户进程的输出中**sp_who**。  
+ @@SPID可以用于标识当前用户进程的输出中 **sp_who** 。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回当前用户进程的会话 ID、登录名和用户名。  

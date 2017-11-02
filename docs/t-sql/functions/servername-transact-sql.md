@@ -61,7 +61,7 @@ ms.lasthandoff: 09/19/2017
   
  尽管 @@SERVERNAME函数和 SERVERPROPERTY 函数的 SERVERNAME 属性可能会返回类似格式的字符串，信息可能会不同。 SERVERNAME 属性自动报告计算机网络名的更改。  
   
- 与此相反，@@SERVERNAME不会报告此类更改。 @@SERVERNAME报告对本地服务器名称使用所做的更改**sp_addserver**或**sp_dropserver**存储过程。  
+ 与此相反，@@SERVERNAME不会报告此类更改。 @@SERVERNAME报告对本地服务器名称使用所做的更改 **sp_addserver** 或 **sp_dropserver** 存储过程。  
   
 ## <a name="examples"></a>示例  
  下面的示例显示了使用 `@@SERVERNAME`。  
