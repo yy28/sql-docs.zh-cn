@@ -24,7 +24,7 @@ ms.lasthandoff: 10/10/2017
 
 本主题演示如何使用**mssql** Visual Studio Code (VS Code) 要开发 SQL Server 数据库的扩展。
 
-Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码编辑器，支持扩展。 [ **Mssql** VS Code 的扩展]使您能够连接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查询并查看结果。
+Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码编辑器，支持扩展。 [**Mssql** VS Code 的扩展]使您能够连接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查询并查看结果。
 
 ## <a name="install-vs-code"></a>安装 VS Code
 1. 如果尚未安装 VS Code 中，[下载并安装 VS Code]在您的计算机上。
