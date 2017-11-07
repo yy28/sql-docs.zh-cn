@@ -32,7 +32,7 @@ SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若�
 
 在此版本中，让我们看一些重要的新增功能。
 
-## <a name="1400-compatibility-level-for-tabular-models"></a>针对表格模型的&1400; 兼容级别
+## <a name="1400-compatibility-level-for-tabular-models"></a>针对表格模型的 1400 兼容级别
   若要此处充分利用的许多新功能和所述的功能，必须设置新的或现有的表格模型或将其升级到 1400年兼容性级别。 不能将 1400 兼容级别的模型部署到 SQL Server 2016 SP1 或更早版本，也不能降级为较低的兼容级别。 若要了解详细信息，请参阅[Analysis Services 表格模型的兼容性级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。
   
 在 SSDT 中，新建表格模型项目时可以选择新的 1400 兼容级别。 
