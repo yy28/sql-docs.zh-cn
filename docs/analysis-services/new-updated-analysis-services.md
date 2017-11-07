@@ -4,7 +4,7 @@ description: "显示有关最近更改中的文档，Analysis services for Micro
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen
