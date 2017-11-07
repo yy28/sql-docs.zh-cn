@@ -17,10 +17,10 @@ ms.author: maggies
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>呈现数据（报表生成器和 SSRS）
@@ -47,17 +47,17 @@ ms.lasthandoff: 08/09/2017
   
 -   DataElementStyle 属性用于控制在 XML 中是否将报表项呈现为元素或特性。  
   
- CSV 导出选项可将报表数据另存为不带任何格式的以逗号分隔的纯文本文件。 默认情况下，文件使用逗号 (,) 分隔各个字段和行，但可以使用设备信息设置配置此设置。 生成的文件可以用电子表格程序（如 Office SharePoint Server）打开，也可以用作其他程序的导入格式。 .csv 文件可在诸如记事本之类的文本编辑器中打开。 如果以 URL 形式进行访问，则 .csv 文件将返回 **text/csv**的 MIME 类型。 这种 .csv 文件为 MIME 1.0 版文件。 有关以 CSV 文件类型呈现报表的详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
+ CSV 导出选项可将报表数据另存为不带任何格式的以逗号分隔的纯文本文件。 默认情况下，文件使用逗号 (,) 分隔各个字段和行，但可以使用设备信息设置配置此设置。 生成的文件可以用电子表格程序（如 Office SharePoint Server）打开，也可以用作其他程序的导入格式。 .csv 文件可在诸如记事本之类的文本编辑器中打开。 如果以 URL 形式进行访问，则 .csv 文件将返回 **text/csv**的 MIME 类型。 这种 .csv 文件为 MIME 1.0 版文件。 有关呈现在 CSV 文件中键入报表的详细信息，请参阅[将导出到 CSV 文件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- 使用具有报表数据导出选项的 XML 文件可将报表另存为 XML 文件。 报表的 XML 架构特定于报表。 XML 导出选项不保存报表布局信息。 使用此选项生成的 XML 可以导入到数据库、用作 XML 数据消息或发送到自定义应用程序。 有关以 XML 文件类型呈现报表的详细信息，请参阅[导出到 XML（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。  
+ 使用具有报表数据导出选项的 XML 文件可将报表另存为 XML 文件。 报表的 XML 架构特定于报表。 XML 导出选项不保存报表布局信息。 使用此选项生成的 XML 可以导入到数据库、用作 XML 数据消息或发送到自定义应用程序。 有关呈现在 XML 文件中键入报表的详细信息，请参阅[将导出到 XML &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services &#40; 中的分页报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展 &#40; 的交互功能报表生成器和 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services Device Information Settings（Reporting Services 设备信息设置）](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Reporting Services 设备信息设置](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
 

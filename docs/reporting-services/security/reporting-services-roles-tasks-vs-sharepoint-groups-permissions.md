@@ -25,10 +25,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.sourcegitcommit: dfd05ee367b083d2e7a159cbd659a94edd743886
+ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务 vs。SharePoint 组权限
@@ -111,9 +111,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [在 SharePoint Web 应用程序中设置报表服务器操作的权限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [授予对 SharePoint 站点上的报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定义](../../reporting-services/security/role-definitions.md)   
- [预定义的角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
 

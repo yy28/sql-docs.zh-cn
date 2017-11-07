@@ -17,10 +17,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4e010bccf1cee56d0f572c899f81e54f122f050e
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 50ec28d3a5080187c0bd844dcba364295bcdef35
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>创建和修改嵌入的数据源
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  确认选中 **“使用嵌在我的报表中的连接”** 。  
   
-    1.  从“选择连接类型”下拉列表中，选择一个数据源类型，例如 **Microsoft SQL Server** 或 **OLE DB**。  
+    1.  从**选择连接类型**下拉列表中，选择数据源类型; 例如， **Microsoft SQL Server**或**OLE DB**。  
   
     2.  采用以下备选方案之一指定连接字符串：  
   

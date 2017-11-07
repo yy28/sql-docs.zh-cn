@@ -24,10 +24,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>创建、删除或修改文件夹（报表管理器）
@@ -35,13 +35,13 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-folder"></a>创建文件夹  
   
-1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，选择主文件夹，再单击 **“新建文件夹”**。 或者，若要在现有文件夹中创建文件夹，请在 **“内容”** 页中导航到该文件夹，再单击该文件夹将其打开。 然后单击 **“新建文件夹”**。  
   
      此时，将打开 **“新建文件夹”** 页。  
   
-3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : @ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
+3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : @ & = + , $ / * < > |。 : @ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
   
 4.  根据需要，可以键入说明。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击“删除”。  
+3.  在下拉列表菜单中，单击**删除**。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  悬停在该项之上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击“管理”。 此时将打开“常规属性”页。  
+3.  在下拉菜单中，单击 **“管理”**。 此时将打开“常规属性”页。  
   
 4.  若要更改该文件夹位置，请单击 **“移动”**。 键入目标文件夹的位置，或从树中选择目标文件夹，再单击 **“确定”**。  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 08/09/2017
 7.  单击 **“应用”** 以保存更改。  
   
 ## <a name="see-also"></a>另请参阅  
- [新文件夹页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [内容页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [“新建文件夹”页（报表管理器）](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 
