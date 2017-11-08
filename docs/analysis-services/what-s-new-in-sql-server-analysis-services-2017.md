@@ -1,6 +1,6 @@
 ---
 title: "什么是 SQL Server 自 2017 年 Analysis Services 中的新增功能 |Microsoft 文档"
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中的新增功能
@@ -47,9 +47,9 @@ SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若�
 务必要记住，一旦到 1400年升级现有模型，不能将降级。 请务必保留 1200年模型数据库的备份。
 
 ## <a name="modern-get-data-experience"></a>新式获取数据体验
-当涉及到从数据源的数据引入到表格模型时，SQL Server Data Tools (SSDT) 引入了现代**获取数据**体验 1400年兼容性级别的模型。 这一新功能基于 Power BI Desktop 和 Microsoft Excel 2016 中类似的功能。 现代的获取数据体验使用获取数据查询生成器和 M 表达式提供巨大的数据转换和数据混合应用程序功能。
+当涉及到将数据从数据源导入表格模型时，SQL Server Data Tools (SSDT) 引入了现代**获取数据**体验 1400年兼容性级别的模型。 这一新功能基于 Power BI Desktop 和 Microsoft Excel 2016 中类似的功能。 现代的获取数据体验使用获取数据查询生成器和 M 表达式提供巨大的数据转换和数据混合应用程序功能。
 
-现代的获取数据体验以各种其他数据源提供的支持。 将来的更新将支持更多数据源。
+现代的获取数据体验提供对各种数据源的支持。 今后，更新将包括更多的支持。
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

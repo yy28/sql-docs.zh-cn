@@ -1,5 +1,5 @@
 ---
-title: "什么 &#39; s SSMA for SAP ASE (SybaseToSQL) 中的新增功能 |Microsoft 文档"
+title: "SSMA for SAP ASE (SybaseToSQL) 中的新增 |Microsoft 文档"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: 79f9f01b8811f67f252c68192825d17084467da1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>什么 &#39; s SSMA for SAP ASE (SybaseToSQL) 中的新增功能
+# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) 的新增功能
 本主题列出每个版本中的 SAP ASE (以前称为 Sybase 的 SSMA) 更改了 SSMA。 
 
 ## <a name="ssma-v76"></a>SSMA v7.6
