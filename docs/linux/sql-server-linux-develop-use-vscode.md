@@ -257,7 +257,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
 
 使用 VS Code 的详细信息，请参阅[Visual Studio Code 文档](https://code.visualstudio.com/docs)。
 
-[* * 有关 VS Code 扩展 mssql * *]:https://aka.ms/mssql-marketplace
+[**mssql** VS Code 的扩展]:https://aka.ms/mssql-marketplace
 [下载并安装 VS Code]:https://code.visualstudio.com/Download
 [.Net 核心说明]:https://www.microsoft.com/net/core
 [管理连接配置文件]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
