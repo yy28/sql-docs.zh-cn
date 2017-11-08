@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]检查所有页和构成表或索引的视图的结构的完整性。
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 检查所有页和构成表或索引的视图的结构的完整性。
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>语法    
@@ -160,7 +160,7 @@ DBCC CHECKTABLE
 [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部数据库快照    
-DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的事务一致性。 有关详细信息，请参阅[查看数据库快照 &#40; 的稀疏文件的大小Transact SQL &#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)和中的"DBCC 内部数据库快照使用情况"一节[DBCC &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的事务一致性。 有关详细信息，请参阅[查看数据库快照 & #40; 的稀疏文件的大小Transact SQL & #41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)和中的"DBCC 内部数据库快照使用情况"一节[DBCC & #40;Transact SQL & #41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 如果无法创建快照，或指定了 TABLOCK，则 DBCC CHECKTABLE 将获取一个共享表锁来获得所需的一致性。
     
 > [!NOTE]    
