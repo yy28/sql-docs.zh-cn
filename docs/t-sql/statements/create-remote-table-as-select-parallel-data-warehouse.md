@@ -2,7 +2,7 @@
 title: "创建远程 TABLE AS SELECT （并行数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

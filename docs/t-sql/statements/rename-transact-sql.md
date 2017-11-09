@@ -2,7 +2,7 @@
 title: "重命名 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 04/13/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

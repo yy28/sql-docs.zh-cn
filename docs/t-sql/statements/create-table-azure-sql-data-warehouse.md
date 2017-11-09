@@ -2,7 +2,7 @@
 title: "创建表 （Azure SQL 数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
