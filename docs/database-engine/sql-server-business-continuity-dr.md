@@ -1,8 +1,9 @@
 ---
 title: "SQL Server 的灾难恢复 | Microsoft Docs"
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 09/14/2017
 ms.topic: article

@@ -1,8 +1,9 @@
 ---
 title: "在 Linux 上的 SQL Server 的灾难恢复 |Microsoft 文档"
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
