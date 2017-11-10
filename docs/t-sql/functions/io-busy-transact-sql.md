@@ -34,7 +34,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40iobusy-transact-sql"></a>& #x 40; & #x 40; IO_BUSY (Transact SQL)
+# <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最近一次启动以来，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经用于执行输入和输出操作的时间。 其结果是 CPU 时间增量（时钟周期），并且是所有 CPU 的累积值，所以，它可能超过实际消逝的时间。 乘以@TIMETICKS将转换为微秒为单位。  
@@ -74,10 +74,10 @@ IO microseconds as of
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_os_sys_info &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [@@CPU_BUSY (Transact-SQL)](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [系统统计函数 &#40;Transact SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [系统统计函数 &#40;Transact-SQL&#41;1;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 
