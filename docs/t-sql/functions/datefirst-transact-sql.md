@@ -43,7 +43,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & #x 40; DATEFIRST (TRANSACT-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 返回当前值，适用于会话的[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)。
