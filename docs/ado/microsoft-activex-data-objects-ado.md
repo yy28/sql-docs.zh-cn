@@ -3,8 +3,11 @@ title: "Microsoft ActiveX 数据对象 (ADO) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/25/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
