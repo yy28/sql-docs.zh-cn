@@ -1,5 +1,5 @@
 ---
-title: "教程： 引入表达式 |Microsoft 文档"
+title: "教程：表达式简介 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: zh-cn
@@ -48,15 +47,15 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-table-report"></a>创建表报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在在右窗格中，单击“表向导”或“矩阵向导”。  
+3.  在右窗格中，单击“表或矩阵向导”。  
   
 4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。  
   
@@ -65,9 +64,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     > 只要具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-7.  单击“下一步” 。  
+7.  单击 **“下一步”**。  
   
-8.  在“设计查询”页中，单击“编辑为文本”。  
+8.  在“设计查询”页上，单击“编辑为文本”。  
   
 9. 将以下查询粘贴到查询窗格中：  
   
@@ -102,9 +101,9 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. 单击“下一步” 。  
+11. 单击 **“下一步”**。  
   
-12. 在“排列字段”页上，将以下字段按指定的顺序从“可用字段”列表拖到“值”列表中。  
+12. 在“排列字段”页上，将以下字段按指定顺序从“可用字段”列表拖到“值”列表。  
   
     -   StateProvince   
     -   CountryRegionID  
@@ -123,7 +122,7 @@ ms.lasthandoff: 08/09/2017
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. 单击“下一步” 。  
+15. 单击 **“下一步”**。  
   
 16. 在“选择布局”页上，保留所有默认设置，然后单击“下一步”。  
 
@@ -139,13 +138,13 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击“DataSource1”，然后单击“数据源属性”。  
   
-3.  在“名称”框中，键入 **ExpressionsDataSource**  
+3.  在“名称”框中，键入“ExpressionsDataSource”  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-update-the-default-name-of-the-dataset"></a>更新数据集的默认名称  
   
-1.  在“报表数据”窗格中，展开“数据集 ”文件夹。  
+1.  在“报表数据”窗格中，展开“数据集”文件夹。  
   
 2.  右键单击“DataSet1”，然后单击“数据集属性”。  
 
@@ -172,7 +171,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  在“表达式”对话框中，展开“常见函数”，然后单击“文本”。  
   
-5.  在“项”列表中，双击 **Left**。  
+5.  在“项”列表中，双击“左”。  
   
     将 **Left** 函数添加到表达式中。  
     
@@ -186,7 +185,7 @@ ms.lasthandoff: 08/09/2017
   
     此表达式将从 **FirstName** 值提取一个字符，从左侧开始计数。  
   
-9. 键入 **&". "&**  
+9. 键入“&". "&”  
 
     这将在表达式后添加一个句点和一个空格。
   
@@ -207,7 +206,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  选择“Last Purchase”列中的数据单元格，然后在“主页”选项卡上，转至“数字”部分，选择“日期”。  
+2.  选择“Last Purchase”列中的数据单元格，然后在“开始”选项卡上，转至“数字”部分，选择“日期”。  
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
@@ -225,7 +224,7 @@ ms.lasthandoff: 08/09/2017
 
 1. 选择列标题所在行。
 
-2. 在“主页”选项卡上，转至“段落”部分，选择“左”。 
+2. 在“开始”选项卡上，转至“段落”部分，选择“左”。 
 
     ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
@@ -266,7 +265,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  右键单击“M/F”列的数据单元中的矩形，然后单击“矩形属性”。  
   
-2.  在“矩形属性”对话框中，转至“填充”选项卡，单击“填充颜色”旁边的表达式 **fx** 按钮。  
+2.  在“矩形属性”对话框中，转至“填充”选项卡，单击“填充颜色”旁边的表达式“fx”按钮。  
   
 3.  在“表达式”对话框中，展开“常见函数”，然后单击“程序流”。  
   
@@ -276,7 +275,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  在“值”列表中，双击 **Gender**。  
   
-7.  键入 **="Male",**（包括逗号）。
+7.  键入 **="Male",** （包括逗号）。
 
 8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“青蓝色”。
 
@@ -286,17 +285,17 @@ ms.lasthandoff: 08/09/2017
   
 5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“Gender”。  
   
-7.  键入 **="Female",**（包括逗号）。 
+7.  键入 **="Female",** （包括逗号）。 
 
 8. 在“类别”列表中，单击“常量”，然后在“值”框中，单击“番茄色”。
 
-13. 在其后键入一个右括号 **)**。 
+13. 在其后键入一个右括号 **)** 。 
   
     完成的表达式： `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
     ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. 单击“确定”，然后再次单击“确定”以关闭“矩形属性”对话框。  
+12. 单击“确定”，然后再次单击“确定”关闭“矩形属性”对话框。  
   
 14. 单击 **“运行”** 以预览报表。  
 
@@ -314,7 +313,7 @@ ms.lasthandoff: 08/09/2017
     
     ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
-18. 单击“运行”以再次预览报表。 此次，颜色块周围具有空白区域。
+18. 单击“运行”再次预览报表。 此次，颜色块周围具有空白区域。
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
@@ -327,11 +326,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  在“报表数据”窗格中，单击“新建”，然后单击“数据集”。  
   
-3.  在 * * 数据集属性，单击**使用我的报表中嵌入的数据集**。  
+3.  在“数据集”属性中，单击“使用在我的报表中嵌入的数据集”。  
   
 4.  在“数据源”列表中，选择“ExpressionsDataSource”。  
   
-5.  在“名称”框中，键入 **CountryRegion**  
+5.  在“名称”框中，键入“CountryRegion”  
   
 6.  确保已选择“文本”查询类型，然后单击“查询设计器”。  
   
@@ -354,7 +353,7 @@ ms.lasthandoff: 08/09/2017
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. 单击“运行”(**!**) 以运行查询。  
+9. 单击 **“运行”** (**!**) 以运行查询。  
   
     查询结果是国家/地区标识符和名称。  
   
@@ -366,7 +365,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>查找 CountryRegion 数据集中的值  
   
-1.  单击“Country Region ID”列标题并删除文本：**ID**，因此它会读作“Country Region”。  
+1.  单击“Country Region ID”列标题并删除文本：ID，因此它会读作“Country Region”。  
   
 2.  右键单击“Country Region”列的数据单元，然后单击“表达式”。  
   
@@ -397,21 +396,21 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击“Last Purchase”列，指向“插入列”，然后单击“右”。  
   
-    将一个新列添加到“Last Purchase”列的右侧。  
+    一个新列将添加到“Last Purchase”列的右侧。  
   
 3.  在列标题中，键入“Days Ago”  
   
-4.  右键单击“Days Ago”列的数据单元，然后单击“表达式”。  
+4.  右键单击“Days Ago”列的数据单元格，然后单击“表达式”。  
   
 5.  在“表达式”对话框中，展开“常见函数”，然后单击“日期和时间”。  
   
 6.  在“项”列表中，双击 **DateDiff**。  
   
-7.  紧随 `DateDiff(`，键入 **"d",**（包括引号 "" 和逗号）。 
+7.  紧随 `DateDiff(`，键入 **"d",** （包括引号 "" 和逗号）。 
   
 9. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“LastPurchase”。  
   
-11. 紧随 `Fields!LastPurchase.Value`，键入 **,**（逗号）。 
+11. 紧随 `Fields!LastPurchase.Value`，键入 **,** （逗号）。 
   
 13. 在“类别”列表中，再次单击“日期和时间”，然后在“项”列表中，双击“现在”。  
   
@@ -443,7 +442,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-an-indicator"></a>添加指示器  
   
-1.  在“插入”选项卡上，单击“指示器”，然后在 **+ or - AVG Sales** 列的数据单元中单击。  
+1.  在“插入”选项卡上，单击“指示器”，然后单击“+ or - AVG Sales”列中的数据单元格。  
   
     “选择指示器类型”对话框即会打开。  
   
@@ -457,7 +456,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  右键单击指示器，单击“指示器属性”，然后单击“值和状态”。  
   
-2.  单击“值”文本框旁边的表达式 **fx** 按钮。  
+2.  单击“值”文本框旁边的表达式“fx”按钮。  
   
 3.  在“表达式”对话框中，展开“常见函数”，然后单击 **Math**。  
   
@@ -465,7 +464,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”。  
   
-7.  紧随 `Fields!YTDPurchase.Value`，键入 **-**（减号）。 
+7.  紧随 `Fields!YTDPurchase.Value`，键入  **-** （减号）。 
   
 9. 再次展开“常见函数”，单击“聚合”，然后在“项”列表中，双击“Avg”。  
   
@@ -489,7 +488,7 @@ ms.lasthandoff: 08/09/2017
   
 20. 在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“YTDPurchase”。  
   
-22. 紧随 `Fields!YTDPurchase.Value`，键入 **-**（减号）。 
+22. 紧随 `Fields!YTDPurchase.Value`，键入  **-** （减号）。 
   
 24. 再次展开“常见函数”，单击“聚合”，然后在“项”列表中，双击“Avg”。  
   
@@ -513,7 +512,7 @@ ms.lasthandoff: 08/09/2017
   
 34. 单击“结束”值的文本框右侧的 **fx** 按钮。  
   
-35. 在**表达式**对话框中，删除**100**和创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在“表达式”对话框中，删除“100”并创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -536,7 +535,7 @@ ms.lasthandoff: 08/09/2017
   
     此时将打开 **“报表参数属性”** 对话框。  
   
-3.  在“提示符”下，键入 **Choose color**  
+3.  在“提示符”下，键入“选择颜色”  
   
 4.  在“名称”中，键入 **RowColor**  
   
@@ -544,25 +543,25 @@ ms.lasthandoff: 08/09/2017
   
 7.  单击 **“添加”**。  
   
-8.  在“标签”框中，键入 **Yellow**  
+8.  在“标签”框中，键入“黄色”  
   
 9. 在“值”框中，键入 **Yellow**  
   
 10. 单击 **“添加”**。  
   
-11. 在“标签”框中，键入 **Green**  
+11. 在“标签”框中，键入“绿色”  
   
-12. 在“值”框中，键入 **PaleGreen**  
+12. 在“值”框中，键入“淡绿色”  
   
 13. 单击 **“添加”**。  
   
-14. 在“标签”框中，键入 **Blue**  
+14. 在“标签”框中，键入“蓝色”  
   
-15. 在“值”框中，键入 **LightBlue**  
+15. 在“值”框中，键入“浅蓝色”  
   
 16. 单击 **“添加”**。  
   
-17. 在“标签”框中，键入 **Pink**  
+17. 在“标签”框中，键入“粉色”  
   
 18. 在“值”框中，键入 **Pink**  
 
@@ -592,7 +591,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  在“常见函数”下，单击“杂项”，然后在“项”列表中，双击“RowNumber”。  
 
-9. 紧随 **RowNumber(**，键入 **Nothing) MOD 2,**
+9. 紧随 **RowNumber(** ，键入 **Nothing) MOD 2,**
   
 8. 单击“参数”，在“值”列表中，双击“RowColor”。  
   
@@ -606,7 +605,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="run-the-report"></a>运行报表  
   
-1.  在“主页”选项卡上，单击**“运行”**。  
+1.  在“开始”选项卡上，单击“运行”。  
 
     现在运行报表时，在为非白色镶边选择颜色之前无法看到报表。
   
@@ -629,13 +628,13 @@ ms.lasthandoff: 08/09/2017
   
 2.  键入 **Sales Comparison Summary**，然后选择文本。  
   
-3.  在“主页”选项卡上的“字体”框中，设置如下：
+3.  在“开始”选项卡上的“字体”框中，进行如下设置：
 
     -  大小 = 18
     -  颜色 = 灰色
     -  加粗
   
-4.  在“主页”选项卡上，单击**“运行”**。  
+4.  在“开始”选项卡上，单击“运行”。  
   
 3.  为报表中的非白色镶边选择颜色，然后单击“查看报表”。  
   

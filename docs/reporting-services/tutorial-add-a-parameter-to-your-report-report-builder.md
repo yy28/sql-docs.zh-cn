@@ -1,5 +1,5 @@
 ---
-title: "教程： 将参数添加到报表 （报表生成器） |Microsoft 文档"
+title: "教程：向报表添加参数（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: zh-cn
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。 
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：25 分钟。  
   
@@ -47,25 +46,25 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-new-matrix-report"></a>创建新的矩阵报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
   
 2.  在左窗格中，确保已选中“新建报表”。  
   
-3.  在在右窗格中，单击“表向导”或“矩阵向导”。  
+3.  在右窗格中，单击“表或矩阵向导”。  
   
 4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。  
   
-7.  在“选择数据源的连接”页上，从列表中选择一个数据源或浏览到报表服务器进行选择。 选择任何类型为 **SQL Server** 的数据源。  
+7.  在“选择数据源的连接”页上，从列表中选择一个数据源或浏览到报表服务器进行选择。 选择任何类型为 **SQL Server**的数据源。  
       
-8.  单击“下一步” 。  
+8.  单击 **“下一步”**。  
 
     可能需要输入凭据。    
      
-9. 在“设计查询”页中，单击“编辑为文本”。  
+9. 在“设计查询”页上，单击“编辑为文本”。  
   
 10. 将以下查询粘贴到顶部的空窗格中：  
   
@@ -89,13 +88,13 @@ ms.lasthandoff: 08/09/2017
   
     此查询在一个公用表表达式中组合了若干 [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT 语句的结果，以指定基于来自 Contoso 示例数据库的简化相机销售数据的值。 子类别有数码相机、数码单反 (SLR) 相机、摄像机和附件。  
   
-11. 在查询设计器工具栏中，单击“运行”(**!**) 来查看数据。   
+11. 在查询设计器工具栏中，单击“运行(!)”来查看数据。   
   
     结果集由 11 行数据组成，这些数据显示四个商店的每个子类别销售的物品数量，包含以下列：StoreID、Subcategory、Quantity。商店名称不是结果集的一部分。 接下来，您将在本教程中从单独的数据集查找与商店标识符对应的商店名称。  
   
     此查询不包含查询参数。 稍后，您将在本教程中添加查询参数。   
   
-12. 单击“下一步” 。  
+12. 单击 **“下一步”**。  
   
 ## <a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
 该向导提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
@@ -110,13 +109,13 @@ ms.lasthandoff: 08/09/2017
   
     已将销售量值组织到了按子类别分组的行中，一家商店一列。  
   
-4.  单击“下一步” 。  
+4.  单击 **“下一步”**。  
   
 5.  在“选择布局”页的“选项”下，确保已选择“显示小计和总计”。  
   
     当您运行报表时，最后一列将显示所有商店的每个子类别的总数量，而最后一行将显示每个商店的所有子类别的总数量。  
   
-6.  单击“下一步” 。  
+6.  单击 **“下一步”**。  
   
 8.  单击 **“完成”**。  
   
@@ -151,21 +150,21 @@ ms.lasthandoff: 08/09/2017
     WHERE StoreID = (@StoreID)  
     ```  
   
-    **其中**子句限制检索的数据与由查询参数指定的应用商店标识符 *@StoreID* 。  
+    WHERE 子句将检索的数据限制为由查询参数 @StoreID 指定的商店标识符。  
   
-4.  在查询设计器工具栏中，单击“运行”(**!**)。 **定义查询参数**对话框将打开，并提示输入查询参数的值 *@StoreID* 。  
+4.  在查询设计器工具栏中，单击“运行”(**!**)。 此时将打开“定义查询参数”对话框，提示用户为查询参数 @StoreID 输入值。  
   
 5.  在“参数值”中，键入 **200**。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    结果集显示了标识符为 **200** 的商店销售的附件、摄像机和数码 SLR 相机数量。  
+    结果集显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 8.  在“报表数据”窗格中，展开“参数”文件夹。  
   
-注意有现在是一个名为的报表参数 *@StoreID* ，和可以布局报表参数的其中一个参数窗格。   
+请注意，现在有一个名为 @StoreID 的报表参数，一个可在其中排放报表参数的“参数”窗格。   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -178,17 +177,17 @@ ms.lasthandoff: 08/09/2017
   
 默认情况下，创建的参数数据类型为 **Text**。 由于商店标识符是一个整数，因此可将数据类型更改为 Integer。  
   
-1.  下的报表数据窗格中**参数**节点，右键单击 *@StoreID* ，然后单击**参数属性**。  
+1.  在“报表数据”窗格的“参数”节点中，右键单击 @StoreID，然后单击“参数属性”。  
   
 2.  在“提示符”下，键入 **Store identifier?** 当您运行报表时，此文本出现在报表查看器工具栏上。  
   
-3.  在“数据类型”中，从下拉列表选择“Integer”。  
+3.  在“数据类型”的下拉列表中，选择“整数”。  
   
 4.  接受对话框中的其他默认值。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  单击 **“运行”** 以预览报表。 报表查看器显示提示符**商店标识符？**为 *@StoreID* 。  
+6.  单击 **“运行”** 以预览报表。 报表查看器将显示 @StoreID 的提示“Store Identifier?”。  
   
 7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200**，然后单击“查看报表”。  
   
@@ -199,15 +198,15 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>为参数创建有效值数据集  
   
-1.  单击“设计”切换到设计视图。  
+1.  单击“设计”切换到“设计”视图。  
   
 2.  在“报表数据”窗格中，右键单击“数据集”文件夹，然后单击“添加数据集”。  
   
-3.  在“名称”中，键入 **Stores**。  
+3.  在“名称”中，键入“Stores”。  
   
 4.  选择“使用在我的报表中嵌入的数据集” 。  
   
-5.  在“数据源”的下拉列表中，选择在第一个过程中使用的数据源。  
+5.  在“数据源”的下拉列表中，选择在第一步所用的数据源。  
   
 6.  在“查询类型”中，确保已选中“文本”。  
   
@@ -229,19 +228,19 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>为参数提供数据集中的可用值  
   
-1.  在报表数据窗格中，右键单击参数 *@StoreID* ，然后单击**参数属性**。  
+1.  在“报表数据”窗格中，右键单击参数 @StoreID，然后单击“参数属性”。  
   
 2.  单击“可用值”，然后单击“从查询中获取值”。  
   
-3.  在“数据集”中，从下拉列表单击“Stores”。  
+3.  在“数据集”的下拉列表中，单击“Stores”。  
   
-4.  在“值字段”中，从下拉列表单击“StoreID”。  
+4.  在“值字段”的下拉列表中，单击“StoreID”。  
   
-5.  在“标签字段”中，从下拉列表单击“StoreName”。 标签字段指定值的显示名称。  
+5.  在“标签字段”的下拉列表中，单击“StoreName”。 标签字段指定值的显示名称。  
   
 6.  单击 **“常规”**。  
   
-7.  在“提示符”中，将 **Store Identifer?** 更改为 **Store name?**  
+7.  在“提示符”中，将“Store Identifer?”更改为“Store name?”  
   
     报表读者现在将从商店名称列表而非商店标识符列表中进行选择。 请注意，参数数据类型保持为 **Integer** ，因为参数是基于商店标识符而不是商店名称。  
   
@@ -262,35 +261,35 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到“设计”视图。  
   
-2.  在报表数据窗格中，右键单击 *@StoreID* ，然后单击**参数属性**。  
+2.  在“报表数据”窗格中，右键单击 @StoreID，然后单击“参数属性”。  
   
 3.  单击“默认值”，然后单击“从查询中获取值”。  
   
-4.  在“数据集”中，从下拉列表单击“Stores”。  
+4.  在“数据集”的下拉列表中，单击“Stores”。  
   
-5.  在“值字段”中，从下拉列表单击“StoreID”。  
+5.  在“值字段”的下拉列表中，单击“StoreID”。  
   
 6.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)]  
   
 7.  预览报表。  
   
-有关 *@StoreID* ，报表查看器显示的值"Contoso 北部 America 在线商店"，因为它是从结果集中为数据集的第一个值**存储**。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
+对于 @StoreID，报表查看器显示值“Contoso North America Online Store”，因为它是数据集“Stores”的结果集的第一个值。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
   
 ### <a name="to-specify-a-custom-default-value"></a>指定自定义默认值  
   
 1.  切换到“设计”视图。  
   
-2.  在报表数据窗格中，右键单击 *@StoreID* ，然后单击**参数属性**。  
+2.  在“报表数据”窗格中，右键单击 @StoreID，然后单击“参数属性”。  
   
 3.  单击“默认值” > “指定值” > “添加”。 此时将添加一个新的值行。  
   
-4.  在“值”中，键入 **200**。  
+4.  在“值”中，键入“200”。  
   
 5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
 6.  预览报表。  
   
-有关 *@StoreID* ，报表查看器显示"Contoso 目录存储"，因为它是存储标识符的显示名称**200**。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
+对于 @StoreID，报表查看器显示“Contoso Catalog Store”，因为它是标识符为 200 的商店的显示名称。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 ## <a name="NameValue"></a>4d. 查找名称/值对  
 数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
@@ -299,7 +298,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到“设计”视图。  
   
-2.  在设计图面上，在矩阵中的第一行的列标题中，右键单击 `[StoreID]`，然后单击“表达式”。  
+2.  在设计图面上，在矩阵的第一行的列标题中，右键单击 `[StoreID]`，然后单击“表达式”。  
   
 3.  在“表达式”窗格中，删除除开头的 **等号** (=) 之外的所有文本。  
   
@@ -332,7 +331,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击“页脚” > 单击“插入” > “文本框”。 拖动带时间戳的文本框旁边的文本框。 抓住该文本框的侧手柄并扩展宽度。  
   
-3.  从报表数据窗格中，将参数拖 *@StoreID* 到文本框中。 文本框显示 `[@StoreID]`。  
+3.  从“报表数据”窗格中，将参数 @StoreID 拖到文本框。 文本框显示 `[@StoreID]`。  
   
 4.  若要显示参数标签，请在文本框中单击，直到插入游标出现在现有表达式之后，键入一个空格，然后从“报表数据”窗格将参数的另一个副本拖到文本框。 文本框显示 `[@StoreID] [@StoreID]`。  
   
@@ -355,9 +354,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  单击“筛选器”，然后单击“添加”。 此时将显示一个新的筛选器行。  
   
-4.  在“表达式”中，从下拉列表选择数据集字段 StoreID。 数据类型显示 **Integer**。 当表达式值为数据集字段时，将自动设置数据类型。  
+4.  在“表达式”的下拉列表中，选择数据集字段 StoreID。 数据类型显示 **Integer**。 当表达式值为数据集字段时，将自动设置数据类型。  
   
-5.  在“运算符”中，验证选择了“等号 (=)”。  
+5.  在“运算符”中，确认选择了“等于号 (=)”。  
   
 6.  在“值”中，键入 `[@StoreID]`。 
 
@@ -369,7 +368,7 @@ ms.lasthandoff: 08/09/2017
   
     矩阵仅显示“Contoso Catalog Store”的数据。  
   
-9. 在报表查看器工具栏上，对于 **Store name?**，选择“Contoso Asia Online Store”，然后单击“查看报表”。  
+9. 在报表查看器工具栏上，对于“Store name?”，选择“Contoso Asia Online Store”，然后单击“查看报表”。  
   
 矩阵将显示与所选商店对应的数据。  
   
@@ -380,7 +379,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到“设计”视图。  
   
-2.  在报表数据窗格中，右键单击 *@StoreID* ，然后单击**参数属性**。  
+2.  在“报表数据”窗格中，右键单击 @StoreID，然后单击“参数属性”。  
   
 3.  选择“允许多个值”。  
   
@@ -388,7 +387,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  在“报表数据”窗格中，展开“数据集”文件夹，右键单击“DataSet1”，然后单击“查询”。  
   
-6.  在查询最后一行的 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 子句中，将 **equals sign** (=) 更改为 **IN**  
+6.  在查询最后一行的 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE 子句中，将“等于号 (=)”更改为 IN：  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -428,7 +427,7 @@ ms.lasthandoff: 08/09/2017
   
     报表将显示所有商店销售的所有子类别的数量。  
   
-19. 从下拉列表中，单击“全选”以清除列表，再单击“Contoso Catalog Store”和“Contoso Asia Online Store”，然后单击“查看报表”。  
+19. 从下拉列表中，单击“全选”清除列表，再单击“Contoso Catalog Store”和“Contoso Asia Online Store”，然后单击“查看报表”。  
 
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
@@ -437,11 +436,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-boolean-parameter"></a>添加布尔参数  
   
-1.  在设计图面上，在“报表数据”窗格中右键单击“参数”，再单击“添加参数”。  
+1.  在设计图面上的“报表数据”窗格中，右键单击“参数”，再单击“添加参数”。  
   
-2.  在“名称”中，键入 ShowSelections。  
+2.  在“名称”中，键入“ShowSelections”。  
   
-3.  在“提示符”，键入 Show selections?  
+3.  在“提示符”，键入“Show selections?”  
   
 4.  在“数据类型”中，单击“布尔”。  
   
@@ -449,7 +448,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  单击“指定值”，然后单击“添加”。  
   
-7.  在“值”中，键入 **False**。  
+7.  在“值”中，键入“False”。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -473,7 +472,7 @@ ms.lasthandoff: 08/09/2017
   
     在页脚中显示参数选项的文本框未出现。  
   
-8.  在报表查看器工具栏上，单击“显示选项”旁边的“True” > “查看报表”。  
+8.  在报表查看器工具栏上，单击“Show selections”旁边的“True” > “查看报表”。  
   
     页脚中的文本框将出现，显示所选的所有商店名称。  
   

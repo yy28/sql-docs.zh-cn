@@ -1,5 +1,5 @@
 ---
-title: "教程： 将迷你图添加到报表 （报表生成器） |Microsoft 文档"
+title: "教程：向报表添加迷你图（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: zh-cn
@@ -40,24 +39,24 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="CreateTable"></a>1.创建含有表的报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在在右窗格中，单击“表向导”或“矩阵向导”。  
+3.  在右窗格中，单击“表或矩阵向导”。  
   
 4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。 将打开“选择数据源的连接”页面。  
   
     > [!NOTE]  
-    > 本教程不需要特定的数据;它只要求与 SQL Server 数据库的连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 本教程不需要具体数据；只需要与 SQL Server 数据库连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  单击 **“新建”**。 此时将打开 **“数据源属性”** 对话框。  
   
-6.  在“名称”中，为数据源键入名称“Product Sales”。  
+6.  在“名称”中，键入数据源的名称“Product Sales”。  
   
 7.  在“选择连接类型”中，确认已选择“Microsoft SQL Server”。  
   
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. 单击“下一步” 。  
+13. 单击 **“下一步”**。  
   
 ## <a name="Query"></a>2.在表向导中创建查询和表布局  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -130,21 +129,21 @@ ms.lasthandoff: 08/09/2017
   
 4.  在查询设计器工具栏中，单击“运行”(**!**)。  
   
-    该查询运行并显示 **SalesDate**、**Subcategory**、**Product**、**Sales** 和 **Quantity** 字段的结果集。  
+    该查询运行并显示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**字段的结果集。  
   
-5.  单击“下一步” 。  
+5.  单击 **“下一步”**。  
   
-6.  在“排列字段”页上，将“Sales”拖到“值”中。  
+6.  在“排列字段”页上，将 Sales 拖到“值”中。  
   
     **Sales** 由 Sum 函数聚合。 值为 [Sum(Sales)]。  
   
-7.  将“Product”拖到“行组”中。  
+7.  将 Product 拖到“行组”中。  
   
-8.  将“SalesDate”拖到“列组”中。  
+8.  将 SalesDate 拖到“列组”中。  
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 10. 在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
@@ -158,28 +157,28 @@ ms.lasthandoff: 08/09/2017
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. 单击“下一步” 。  
+11. 单击 **“下一步”**。  
   
 12. 单击 **“完成”**。  
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组：**Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组： **Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. 单击 **“运行”** 以预览报表。  
 
 ### <a name="FormatCurrency"></a>2a. 将数据格式设置为货币  
-默认情况下，“Sales”字段的汇总数据显示为常规数字。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”以将格式化的文本框和占位符文本显示为示例值。  
+默认情况下，“Sales”字段的汇总数据显示为常规数字。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值。  
   
 1.  单击 **“设计”** 切换到设计视图。  
   
-2.  单击“SalesDate”列的第二行（位于列标题行下方）中的单元格。 按住 Ctrl 键并选择包含 `[Sum(Sales)]` 的所有单元格。 
+2.  单击“SalesDate”列的第二行（位于列标题行下方）中的单元格。 按住 Ctrl 键并选择包含 `[Sum(Sales)]`的所有单元格。 
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  在“主页”选项卡上的“数字”组中，单击“货币”。 单元会更改为显示已设置好格式的货币。  
+3.  在“开始”选项卡上的“数字”组中，单击“货币”。 单元会更改为显示已设置好格式的货币。  
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
@@ -190,9 +189,9 @@ ms.lasthandoff: 08/09/2017
 ### <a name="FormatDates"></a>2b. （可选）将数据格式设置为日期格式  
 默认情况下，“SalesDate”字段同时显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
   
-1.  单击包含 `[SalesDate]` 的单元格。  
+1.  单击包含 `[SalesDate]`的单元格。  
   
-3.  在“主页”选项卡上，转至“数字”组，再转至“日期”。  
+3.  在“开始”选项卡上，转至“数字”组，再转至“日期”。  
   
     单元格会显示示例日期 **[2000/1/31]**。
      
@@ -206,7 +205,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  选择表中的“Total”列。  
   
-3.  右键单击，指向“插入列”，然后单击“左侧”。  
+3.  右键单击，指向“插入列”，然后单击“左”。  
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
@@ -214,7 +213,7 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   
-5.  在“选择迷你图类型”对话框中，请确保已选择“列”行中的第一个迷你图，然后单击“确定”。  
+5.  在“选择迷你图类型”对话框中，确保已选择“列”行中的第一个迷你图，然后单击“确定”。  
   
 6.  单击要在“图表数据”窗格中显示的迷你图。  
   
@@ -255,7 +254,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  单击 **“确定”**。  
   
-8.  单击“运行”可以再次预览报表。  
+8.  单击“运行”，再次预览报表。  
   
 现在每个迷你图中的所有条形均与其他迷你图中的条形对齐，它们的高度也是相对的。  
   
@@ -289,7 +288,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  选择包含“Product Sales”的文本框。  
   
-4.  在“主页”选项卡上，单击“字体”组 >“颜色”，选择“蓝绿色”。  
+4.  在“开始”选项卡上，单击“字体”组，转至“颜色”，然后选择“蓝绿色”。  
   
 7.  选择“粗体”。  
   
@@ -318,7 +317,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
-2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到想要保存报表的文件夹。  
+2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹。  
   
 3.  在“名称”中，用“Product Sales”替换默认名称。  
   
@@ -331,5 +330,4 @@ ms.lasthandoff: 08/09/2017
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

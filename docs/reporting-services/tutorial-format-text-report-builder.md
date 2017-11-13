@@ -1,5 +1,5 @@
 ---
-title: "教程： 格式文本 （报表生成器） |Microsoft 文档"
+title: "教程：设置文本格式（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: zh-cn
@@ -44,11 +43,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-blank-report"></a>创建空白报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
  
 2.  在 **“入门”** 对话框的左窗格中，确保已选择 **“新建报表”** 。  
   
@@ -60,14 +59,14 @@ ms.lasthandoff: 08/09/2017
 
     如果未出现“报表数据”窗格，请在“视图”选项卡上选中“报表数据”。
   
-2.  在“名称”框中，键入：**TextDataSource**  
+2.  在“名称”框中，键入：TextDataSource  
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
-4.  验证连接类型是 Microsoft SQL Server，然后在**连接字符串**框中，键入：`Data Source = <servername>`  
+4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：`Data Source = <servername>`  
   
     > [!NOTE]  
-    > 表达式 `<servername>`（例如 Report001）指定安装了 SQL Server 数据库引擎实例的计算机。 本教程不需要特定的数据;它只要求与 SQL Server 数据库的连接。 如果你已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 表达式 `<servername>`（例如 Report001）指定安装了 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 SQL Server 数据库的连接。 如果你已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  确保数据源为 **TextDataSource**。  
   
-3.  在“名称”框中，键入：**TextDataset**。  
+3.  在“名称”框中，键入：TextDataset。  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”**。  
   
@@ -144,9 +143,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  单击 **“设计”** 返回设计视图。  
   
-4.  在文本框中选择表达式 `<Expr>`。  
+4.  在文本框中选择表达式 `<Expr>` 。  
   
-5.  在“属性”窗格中，对于“值”属性，你将看到以下内容（如果没有看到“属性”窗格，则在“视图”选项卡上，选中“属性”）：  
+5.  在“属性”窗格中，对于“值”属性，将看到以下内容（如果没有看到“属性”窗格，则在“视图”选项卡上，选中“属性”）：  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -174,7 +173,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  在文本框中选择该表达式。  
   
-6.  在“属性”窗格中，对于“值”属性，你将看到以下内容：  
+6.  在“属性”窗格中，对于“值”属性，将看到以下内容：  
   
     ```  
     =Fields!FullName.Value  
@@ -189,9 +188,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  在“插入”选项卡上，转至“表” > “表向导”。  
   
-2.  在新建表或矩阵向导的“选择数据集”页上，单击“选择此报表中的现有数据集或共享数据集” > “TextDataset（在此报表中）” > “下一步”。  
+2.  在“新建表或矩阵”向导的“选择数据集”页上，单击“选择此报表中的现有数据集或共享数据集” > “TextDataset(在此报表中)” > “下一步”。  
   
-3.  在“排列字段”页上，将 **Territory**、**LinkText** 和 **Product** 字段拖到“行组”上，将 **Sales** 字段拖到“值”上，然后单击“下一步”。  
+3.  在“排列字段”页上，将“Territory”、“LinkText”和“Product”字段拖到“行组”上，将“Sales”字段拖到“值”上，然后单击“下一步”。  
 
     ![报表生成器文本排列字段](../reporting-services/media/report-builder-text-arrange-fields.png)
   
@@ -207,9 +206,9 @@ ms.lasthandoff: 08/09/2017
   
 8.  单击 **“设计”** 返回设计视图。  
   
-9. 选择 **LinkText** 列中的“总计”单元格，然后按住 SHIFT 键并选择其右侧的两个单元格以及“产品”列中的空单元格和“销售”列中的 `[Sum(Sales)]` 单元格。  
+9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择其右侧的两个单元格以及“Product”列中的空单元格和“Sales”列中的 `[Sum(Sales)]` 单元格。  
   
-11. 选中这三个单元格后，右键单击其中一个单元，然后单击“删除行”。  
+11. 选中这三个单元格后，右键单击其中一个单元格，然后单击“删除行”。  
 
     ![报表生成器格式删除行](../reporting-services/media/report-builder-format-delete-rows.png)
   
@@ -224,17 +223,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  右键单击包含 `[LinkText]` 的单元，并单击“文本框属性”。  
+2.  右键单击包含 `[LinkText]` 的单元格，然后单击“文本框属性”。  
   
 3.  在“操作”选项卡上，单击“转到 URL”。  
   
-5.  在“选择 URL”框中，单击 **[URL]**，然后单击“确定”。  
+5.  在“选择 URL”框中，单击“[URL]”，然后单击“确定”。  
   
 6.  请注意，文本在外观上看不出任何区别。 您需要使其看起来像链接文本。  
   
 7.  选择 `[LinkText]`。  
   
-8.  在“主页”选项卡上，转至“字体”，选择“下划线”，并将“颜色”更改为“蓝色”。  
+8.  在“开始”选项卡上，转至“字体”，选择“下划线”，然后将“颜色”更改为“蓝色”。  
   
 9. 单击 **“运行”**。  
   
@@ -253,16 +252,16 @@ ms.lasthandoff: 08/09/2017
   
 3.  在“开始”选项卡上的“字体”部分中，单击“加粗”按钮。  
   
-4.  如果“属性”窗格未打开，则在“视图”选项卡上，选中“属性”复选框。  
+4.  如果“属性”窗格未打开，请在“视图”选项卡上选中“属性”复选框。  
   
-5.  在“属性”窗格中，找到 WritingMode 属性，并将其值从“默认”更改为 **Rotate270**。  
+5.  在“属性”窗格中，找到 WritingMode 属性，并将其值从“默认”更改为“Rotate270”。  
  
     > [!NOTE]  
-    > 对“属性”窗格中的属性分类时，WritingMode 位于“本地化”类别中。 请确保您选择的是单元，而非文本。 WritingMode 是文本框的属性，而非文本的属性。  
+    > 对“属性”窗格中的属性进行分类时，WritingMode 位于“本地化”类别中。 请确保您选择的是单元，而非文本。 WritingMode 是文本框的属性，而非文本的属性。  
 
     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  在“主页”选项卡上的“段落”部分中，选择“垂直居中”和“水平居中”，以便从垂直和水平方向上都将文本定位于单元格的中心。  
+6.  在“开始”选项卡上的“段落”部分中，选择“垂直居中”和“水平居中”，以便从垂直和水平方向上都将文本定位于单元格的中心。  
   
 8.  单击“运行”(**!**)。  
   
@@ -274,15 +273,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 切换到设计视图。  
   
-2.  单击包含 `[Sum(Sales)]` 的顶部表单元，按住 Shift 键，然后单击包含 `[Sum(Sales)]` 的底部表单元。  
+2.  单击包含 `[Sum(Sales)]`的顶部表单元，按住 Shift 键，然后单击包含 `[Sum(Sales)]`的底部表单元。  
   
-3.  在“主页”选项卡上，转至“数字”组，再转至“货币”按钮。  
+3.  在“开始”选项卡上，转至“数字”组，然后单击“货币”按钮。  
   
 4.  （可选）如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
-5.  （可选）在“主页”选项卡上的“数字”组中，单击两次“减少小数位数”按钮，以显示不带美分的美元数字。  
+5.  （可选）在“开始”选项卡上的“数字”组中，单击两次“减少小数位数”按钮，显示不带美分的美元数字。  
   
 6.  单击“运行” (**!**) 以预览报表。  
   
@@ -318,7 +317,7 @@ ms.lasthandoff: 08/09/2017
 
 5. 选择文本框中的所有文本。  
   
-5.  右键单击全部所选文本，然后单击“文本属性”。  
+5.  右键单击所有选定文本，然后单击“文本属性”。  
   
     这是文本的属性，而非文本框的属性，因此，在一个文本框中，你可以混用纯文本和使用 HTML 标记作为样式的文本。  
   
@@ -365,11 +364,10 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>后续步骤
 
-有许多方式可以在报表生成器中设置文本的格式。 [教程： 创建自由格式的报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多示例。  
+有许多方式可以在报表生成器中设置文本的格式。 [教程：创建自由格式的报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)中提供了更多示例。  
 
-[报表生成器教程](../reporting-services/report-builder-tutorials.md)  
-[报表项进行格式设置](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[报表生成器教程](../reporting-services/report-builder-tutorials.md) 
+[设置报表项的格式](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "更改指示器图标和指示器集 （报表生成器和 SSRS） |Microsoft 文档"
+title: "更改指示器图标和指示器集（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
 ms.contentlocale: zh-cn
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  单击您要更改的图标旁的 **“颜色”** 列中的向下箭头，单击要使用的颜色、 **“无颜色”**或 **“其他颜色”**。  
   
-     根据需要，可以单击“表达式”(*fx*) 按钮以编辑设置该“颜色”选项的值的表达式。  
+     根据需要，可以单击“表达式”(fx) 按钮以编辑设置该“颜色”选项的值的表达式。  
   
      如果您单击了 **“其他颜色”**，则 **“选择颜色”** 对话框将打开，从中可以选择多种不同的颜色。 有关其选项的详细信息，请参阅[选择颜色对话框（报表生成器和 SSRS）](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 单击 **“确定”** 关闭 **“选择颜色”** 对话框。  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  单击您要更改的图标旁的向下箭头，然后选择其他图标。  
   
-     根据需要，可以单击“表达式”(*fx*) 按钮以编辑设置该“图标”选项的值的表达式。  
+     根据需要，可以单击“表达式”(fx) 按钮以编辑设置该“图标”选项的值的表达式。  
   
 4.  单击 **“确定”**。  
   
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/09/2017
  [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-
