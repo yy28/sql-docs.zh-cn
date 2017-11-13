@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件类参考
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 记录的事件是跟踪定义中事件类的实例。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，事件类以及它们的事件类别位于 **“跟踪文件属性”** 对话框的 **“事件选择”** 选项卡中。  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以将事件记录为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例。 记录的事件是跟踪定义中事件类的实例。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，事件类以及它们的事件类别位于 **“跟踪文件属性”** 对话框的 **“事件选择”** 选项卡中。  
   
  下表介绍了事件类别并列出了与它们相关的事件类。  
   
