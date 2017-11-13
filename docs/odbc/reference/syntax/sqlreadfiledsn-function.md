@@ -53,30 +53,30 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>参数  
  *lpszFileName*  
- [输入]指向包含.dsn 文件的名称的数据缓冲区的指针。 .Dsn 扩展追加到还没有.dsn 扩展的所有文件名。 中的值* \*lpszFileName*必须是以 null 结尾的字符串。  
+ [输入]指向包含.dsn 文件的名称的数据缓冲区的指针。 .Dsn 扩展追加到还没有.dsn 扩展的所有文件名。 中的值 *\*lpszFileName*必须是以 null 结尾的字符串。  
   
  *lpszAppName*  
- [输入]指向包含应用程序的名称的数据缓冲区的指针。 ODBC 部分为"ODBC"。 中的值* \*lpszAppName*必须是以 null 结尾的字符串。  
+ [输入]指向包含应用程序的名称的数据缓冲区的指针。 ODBC 部分为"ODBC"。 中的值 *\*lpszAppName*必须是以 null 结尾的字符串。  
   
  *lpszKeyName*  
- [输入]指向包含要读取的密钥名称的数据缓冲区的指针。 有关保留关键字，请参见"注释"。 中的值* \*lpszAppName*必须是以 null 结尾的字符串。  
+ [输入]指向包含要读取的密钥名称的数据缓冲区的指针。 有关保留关键字，请参见"注释"。 中的值 *\*lpszAppName*必须是以 null 结尾的字符串。  
   
  *lpszString*  
  [输出]指向包含与要读取的键关联的字符串的数据缓冲区的指针。  
   
- 如果* \*lpszFileName*是有效的.dsn 文件名称但*lpszAppName*参数为 null 指针和*lpszKeyName*参数是 null 指针，则* \*lpszString*包含有效的应用程序的列表。 如果* \*lpszFileName*有效.dsn 文件的文件名和* \*lpszAppName*是有效的应用程序名称，但*lpszKeyName*自变量为 null指针，然后* \*lpszString*包含有效的 DSN 文件，以分号分隔的相应部分中的保留关键字的列表。 如果* \*lpszFileName*是有效的.dsn 文件名称，但* \*lpszAppName*是 null 指针和*lpszKeyName*参数为 null 指针，然后* \*lpszString*包含文件的部分内容 DSN，以分号分隔的列表。  
+ 如果 *\*lpszFileName*是有效的.dsn 文件名称但*lpszAppName*参数为 null 指针和*lpszKeyName*参数是 null 指针，则 *\*lpszString*包含有效的应用程序的列表。 如果 *\*lpszFileName*有效.dsn 文件的文件名和 *\*lpszAppName*是有效的应用程序名称，但*lpszKeyName*自变量为 null指针，然后 *\*lpszString*包含有效的 DSN 文件，以分号分隔的相应部分中的保留关键字的列表。 如果 *\*lpszFileName*是有效的.dsn 文件名称，但 *\*lpszAppName*是 null 指针和*lpszKeyName*参数为 null 指针，然后 *\*lpszString*包含文件的部分内容 DSN，以分号分隔的列表。  
   
  *cbString*  
- [输入]长度* \*lpszString*缓冲区。  
+ [输入]长度 *\*lpszString*缓冲区。  
   
  *pcbString*  
- [输出]可用于在中返回的字节总数* \*lpszString*。 可用于返回的字节数是否大于或等于*cbString*中的输出字符串* \*lpszString*截断为*cbString*减null 终止字符中。 *PcbString*参数可以是 null 指针。  
+ [输出]可用于在中返回的字节总数 *\*lpszString*。 可用于返回的字节数是否大于或等于*cbString*中的输出字符串 *\*lpszString*截断为*cbString*减null 终止字符中。 *PcbString*参数可以是 null 指针。  
   
 ## <a name="returns"></a>返回  
  如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLReadFileDSN**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLReadFileDSN**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
@@ -85,7 +85,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_INVALID_PATH|无效的安装路径|中指定的文件名称的路径*lpszFileName*自变量无效。|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*LpszAppName*自变量为 NULL，而*lpszKeyName*自变量无效。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|输出字符串截断|在返回的字符串* \*lpszString*被截断，因为中的值*cbString*小于或等于中的值* \*pcbString*.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|输出字符串截断|在返回的字符串 *\*lpszString*被截断，因为中的值*cbString*小于或等于中的值 *\*pcbString*.|  
 |ODBC_ERROR_REQUEST_FAILED|请求失败|关键字文件 DSN 中不存在。|  
   
 ## <a name="comments"></a>注释  

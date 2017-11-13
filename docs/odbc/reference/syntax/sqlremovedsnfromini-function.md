@@ -54,7 +54,7 @@ BOOL SQLRemoveDSNFromIni(
  如果它会删除数据源或数据源未处于 Odbc.ini 文件，该函数返回 TRUE。 如果它无法删除数据源，则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLRemoveDSNFromIni**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLRemoveDSNFromIni**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  

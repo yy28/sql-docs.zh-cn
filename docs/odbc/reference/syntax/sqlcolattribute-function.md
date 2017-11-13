@@ -73,7 +73,7 @@ SQLRETURN SQLColAttribute (
  如果*CharacterAttributePtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回在缓冲区中指向*CharacterAttributePtr*。  
   
  *BufferLength*  
- [输入]如果*FieldIdentifier*是一个 ODBC 定义的字段和*CharacterAttributePtr*指向的字符串或二进制缓冲区时，此参数应为的长度\* *CharacterAttributePtr*。 如果*FieldIdentifier*是一个 ODBC 定义的字段和\* *CharacterAttribute*Ptr 是一个整数，则会忽略此字段。 如果* \*CharacterAttributePtr*为 Unicode 字符串 (在调用时**SQLColAttributeW**)，则*BufferLength*参数必须为偶数。 如果*FieldIdentifier*是驱动程序定义的字段，该应用程序通过设置来指明字段到驱动程序管理器的性质*BufferLength*自变量。 *BufferLength*可以具有下列值：  
+ [输入]如果*FieldIdentifier*是一个 ODBC 定义的字段和*CharacterAttributePtr*指向的字符串或二进制缓冲区时，此参数应为的长度\* *CharacterAttributePtr*。 如果*FieldIdentifier*是一个 ODBC 定义的字段和\* *CharacterAttribute*Ptr 是一个整数，则会忽略此字段。 如果 *\*CharacterAttributePtr*为 Unicode 字符串 (在调用时**SQLColAttributeW**)，则*BufferLength*参数必须为偶数。 如果*FieldIdentifier*是驱动程序定义的字段，该应用程序通过设置来指明字段到驱动程序管理器的性质*BufferLength*自变量。 *BufferLength*可以具有下列值：  
   
 -   如果*CharacterAttributePtr*是一个指针，指向*BufferLength*应具有 SQL_IS_POINTER 的值。  
   
@@ -110,7 +110,7 @@ SQLRETURN SQLColAttribute (
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 调用 SQLColAttribute 时仍在执行此 aynchronous 函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 在调用之前调用该函数**SQLPrepare**， **SQLExecDirect**，或为目录函数*StatementHandle*。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) * \*CharacterAttributePtr*是一个字符串，和*BufferLength*小于 0，但与 sql_nts 以不相等。|  
+|HY090|字符串或缓冲区长度无效|(DM)  *\*CharacterAttributePtr*是一个字符串，和*BufferLength*小于 0，但与 sql_nts 以不相等。|  
 |HY091|描述符字段标识符无效|为参数指定的值*FieldIdentifier*未定义的值之一，且未实现定义的值。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|驱动程序不可用|为参数指定的值*FieldIdentifier*驱动程序不支持。|  
@@ -148,7 +148,7 @@ SQLRETURN SQLColAttribute (
   
 -   如果*FieldIdentifier*是 ODBC 3 中的新值。*x*，为其时 ODBC 2 没有相应的值。*x*，它将不映射时 ODBC 3。*x*对的调用中的应用程序使用它**SQLColAttribute** ODBC 2 中。*x*驱动程序，并调用将返回 SQLSTATE HY091 （描述符字段标识符无效）。  
   
- 下表列出了通过返回的描述符类型**SQLColAttribute**。 类型*NumericAttributePtr*值是**SQLLEN \* **。  
+ 下表列出了通过返回的描述符类型**SQLColAttribute**。 类型*NumericAttributePtr*值是**SQLLEN \*** 。  
   
 |*FieldIdentifier*|信息<br /><br /> 在中返回|Description|  
 |-----------------------|---------------------------------|-----------------|  

@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  以下的长度，则作为长度/指示器值无效：  
   
--   *n*其中* n * > 0。  
+-   *n*其中 *n*  > 0。  
   
 -   0.  
   

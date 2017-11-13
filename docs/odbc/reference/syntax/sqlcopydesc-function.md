@@ -68,14 +68,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY007|未准备关联的语句|*SourceDescHandle* IRD，与关联和关联的语句句柄当时不处于已准备或执行状态。|  
 |HY010|函数序列错误|在中处理的 (DM) 描述符*SourceDescHandle*或*TargetDescHandle*与关联*StatementHandle*为其以异步方式执行的函数 （非此一个） 调用时，仍在执行时调用此函数。<br /><br /> 在中处理的 (DM) 描述符*SourceDescHandle*或*TargetDescHandle*与关联*StatementHandle*为其**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**成功调用并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 为与关联的连接句柄调用以异步方式执行的函数*SourceDescHandle*或*TargetDescHandle*。 此异步函数仍在执行时**SQLCopyDesc**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**与关联的语句句柄之一调用*SourceDescHandle*或*TargetDescHandle*并返回 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY016|无法修改实现行描述符|*TargetDescHandle* IRD 与相关联。|  
 |HY021|描述符信息不一致|在一致性检查过程中检查的描述符信息不是一致的。 有关详细信息，请参阅"一致性检查" **SQLSetDescField**。|  
-|HY092|属性/选项标识符无效|调用**SQLCopyDesc**提示调用**SQLSetDescField**，但* \*ValuePtr*对无效*FieldIdentifier*参数*TargetDescHandle*。|  
+|HY092|属性/选项标识符无效|调用**SQLCopyDesc**提示调用**SQLSetDescField**，但 *\*ValuePtr*对无效*FieldIdentifier*参数*TargetDescHandle*。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与*SourceDescHandle*或*TargetDescHandle*不支持该函数。|  

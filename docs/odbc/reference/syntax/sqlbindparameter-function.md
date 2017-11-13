@@ -210,7 +210,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
  如果*ParameterType*是 SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP、 SQL_INTERVAL_SECOND、 SQL_INTERVAL_DAY_TO_SECOND、 SQL_INTERVAL_HOUR_TO_SECOND 或 SQL_INTERVAL_MINUTE_TO_SECOND，IPD SQL_DESC_PRECISION 字段设置到*DecimalDigits*。 如果*ParameterType* SQL_NUMERIC 或 SQL_DECIMAL，IPD SQL_DESC_SCALE 字段设置为*DecimalDigits*。 对于所有其他数据类型， *DecimalDigits*忽略自变量。  
   
 ## <a name="parametervalueptr-argument"></a>ParameterValuePtr 自变量  
- *ParameterValuePtr*参数指向缓冲区的当**SQLExecute**或**SQLExecDirect**被调用时，包含参数的实际数据。 数据必须在指定的窗体*ValueType*自变量。 此参数设置为 APD SQL_DESC_DATA_PTR 字段。 应用程序可以设置*ParameterValuePtr*自变量为 null 指针，只要* \*StrLen_or_IndPtr* SQL_NULL_DATA 或 SQL_DATA_AT_EXEC。 （这适用仅为输入参数或输入/输出参数。）  
+ *ParameterValuePtr*参数指向缓冲区的当**SQLExecute**或**SQLExecDirect**被调用时，包含参数的实际数据。 数据必须在指定的窗体*ValueType*自变量。 此参数设置为 APD SQL_DESC_DATA_PTR 字段。 应用程序可以设置*ParameterValuePtr*自变量为 null 指针，只要 *\*StrLen_or_IndPtr* SQL_NULL_DATA 或 SQL_DATA_AT_EXEC。 （这适用仅为输入参数或输入/输出参数。）  
   
  如果\* *StrLen_or_IndPtr* SQL_LEN_DATA_AT_EXEC 结果 (*长度*) 宏或 SQL_DATA_AT_EXEC，然后*ParameterValuePtr*是与参数相关联的应用程序定义的指针值。 它将返回到应用程序通过**SQLParamData**。 例如， *ParameterValuePtr*可能如参数数目、 一个指向数据或指向应用程序用于将输入的参数绑定的结构的指针的非零令牌。 但是，请注意，如果参数是输入/输出参数， *ParameterValuePtr*必须是指向将存储的输出值的缓冲区的指针。 如果 SQL_ATTR_PARAMSET_SIZE 语句属性中的值大于 1，应用程序可以使用指向由 SQL_ATTR_PARAMS_PROCESSED_PTR 语句属性一起使用的值*ParameterValuePtr*自变量。 例如， *ParameterValuePtr*可能指向的值的数组和应用程序可能会使用通过 SQL_ATTR_PARAMS_PROCESSED_PTR 指向的值从数组中检索正确的值。 有关详细信息，请参阅本节后面的"传递参数值"。  
   

@@ -86,7 +86,7 @@ SQLRETURN SQLPutData(
 |22012|被零除|输出参数导致被零的除法或算术表达式计算的输入/输出。|  
 |22015|间隔字段溢出|为精确数字或间隔列发送的数据或为间隔 SQL 数据类型参数导致重要数字丢失。<br /><br /> 数据发送间隔列或参数与多个字段，已转换为数值数据类型，并且拥有的数值数据类型中的没有表示形式。<br /><br /> 发送列的数据或参数数据已分配给间隔 SQL 类型，并且没有任何值的表示形式的 C 类型在时间间隔内 SQL 类型。<br /><br /> 发送精确数字或间隔 C 列或参数间隔 C 类型的数据导致重要数字丢失。<br /><br /> 发送有关列的数据或参数数据已分配给间隔 C 结构，并且没有没有间隔数据结构中的数据的表示形式。|  
 |22018|转换指定的的无效字符值|C 类型已准确或近似数字、 日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;并且中的列或参数的值不是有效的文本的绑定的 C 类型。<br /><br /> SQL 类型已准确或近似数字、 日期时间或间隔数据类型;C 类型为 SQL_C_CHAR;并且中的列或参数的值不是有效的文本的绑定的 SQL 类型。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY009|不允许使用 null 指针|(DM) 自变量*DataPtr*是 null 指针和的自变量*StrLen_or_Ind*不是 0、 SQL_DEFAULT_PARAM 或 SQL_NULL_DATA。|  
@@ -108,7 +108,7 @@ SQLRETURN SQLPutData(
   
  在应用程序调用**SQLParamData**以便确定哪些数据应发送，该驱动程序返回应用程序可用于确定要发送的参数数据或可找到列数据的位置的指示器。 它还返回 SQL_NEED_DATA，是对应用程序应调用指示器**SQLPutData**发送数据。 在*DataPtr*参数**SQLPutData**，应用程序将指针传递到包含的参数或列的实际数据的缓冲区。  
   
- 驱动程序时返回有关 SQL_SUCCESS **SQLPutData**，应用程序调用**SQLParamData**试。 **SQLParamData**返回 SQL_NEED_DATA 更多的数据需要发送，如果在此情况下应用程序调用**SQLPutData**试。 如果已发送所有数据在执行数据，则返回 SQL_SUCCESS。 然后，应用程序调用**SQLParamData**试。 如果该驱动程序返回 SQL_NEED_DATA 和中的另一个指示器* \*ValuePtrPtr*，它需要进行另一个参数或列的数据和**SQLPutData**会再次调用。 如果该驱动程序的返回 SQL_SUCCESS，则所有数据在执行发送数据，并且可以执行的 SQL 语句或**SQLBulkOperations**或**SQLSetPos**可处理调用。  
+ 驱动程序时返回有关 SQL_SUCCESS **SQLPutData**，应用程序调用**SQLParamData**试。 **SQLParamData**返回 SQL_NEED_DATA 更多的数据需要发送，如果在此情况下应用程序调用**SQLPutData**试。 如果已发送所有数据在执行数据，则返回 SQL_SUCCESS。 然后，应用程序调用**SQLParamData**试。 如果该驱动程序返回 SQL_NEED_DATA 和中的另一个指示器 *\*ValuePtrPtr*，它需要进行另一个参数或列的数据和**SQLPutData**会再次调用。 如果该驱动程序的返回 SQL_SUCCESS，则所有数据在执行发送数据，并且可以执行的 SQL 语句或**SQLBulkOperations**或**SQLSetPos**可处理调用。  
   
  在语句执行时传递数据在执行参数数据的详细信息，请参阅"将传递参数值"中[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)和[发送长整型数据](../../../odbc/reference/develop-app/sending-long-data.md)。 更新或添加对数据在执行的列数据的详细信息，请参阅"使用 SQLSetPos"一节中[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)，"执行大容量更新使用中的书签" [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，和[长数据、 SQLSetPos 和 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   

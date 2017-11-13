@@ -108,14 +108,14 @@ SQLRETURN SQLDriverConnect(
 |01004|字符串数据，右截断|缓冲区\* *OutConnectionString*不是否足够大以返回整个连接字符串，因此连接字符串已被截断。 在中返回未截断的连接字符串的长度 **StringLength2Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S00|无效的连接字符串属性|连接字符串中指定了无效的属性关键字 (*InConnectionString*)，但该驱动程序时能够是否仍要连接到数据源。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S02 的警告|选项值已更改|该驱动程序不支持指定的值的指向*ValuePtr*中的参数**SQLSetConnectAttr**和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S08|保存文件 DSN 时出错|中的字符串* \*InConnectionString*包含**FILEDSN**关键字，但.dsn 文件未保存。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S09|无效的关键字|(DM) 中的字符串* \*InConnectionString*包含**SAVEFILE**关键字而不是**驱动程序**或**FILEDSN**关键字。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S08|保存文件 DSN 时出错|中的字符串 *\*InConnectionString*包含**FILEDSN**关键字，但.dsn 文件未保存。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S09|无效的关键字|(DM) 中的字符串 *\*InConnectionString*包含**SAVEFILE**关键字而不是**驱动程序**或**FILEDSN**关键字。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08001|客户端无法建立连接|该驱动程序无法建立与数据源的连接。|  
 |08002|连接名称已在使用|(DM) 指定*ConnectionHandle*已用于建立与数据源的连接，并且连接已仍处于打开状态。|  
 |08004|服务器拒绝连接|数据源实现定义的原因拒绝建立连接。|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已尝试连接到的数据源之间的通信链接失败之前**SQLDriverConnect**函数完成处理。|  
 |28000|无效的授权说明|用户标识符或授权字符串中，或是两者，作为连接字符串中指定 (*InConnectionString*)，违反数据源定义的限制。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*szMessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*szMessageText*缓冲区描述错误以及其可能的原因。|  
 |HY000|常规错误： 无效的文件 dsn|(DM) 中的字符串 **InConnectionString*包含 FILEDSN 关键字，但找不到.dsn 文件的名称。|  
 |HY000|常规错误： 无法创建文件缓冲区|(DM) 中的字符串 **InConnectionString*包含 FILEDSN 关键字，但不可读.dsn 文件。|  
 |HY001|内存分配错误|驱动程序管理器无法分配内存支持执行或完成所需**SQLDriverConnect**函数。<br /><br /> 该驱动程序无法分配支持执行或函数完成所需的内存。|  
@@ -139,7 +139,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|无法加载转换 DLL|该驱动程序无法加载转换为数据源或目标的连接指定的 DLL。|  
 |IM010|数据源名称太长|(DM) DSN 关键字的特性值长于 SQL_MAX_DSN_LENGTH 字符。|  
 |IM011|驱动程序名称太长|该属性值 (DM)**驱动程序**关键字长于 255 个字符。|  
-|IM012|驱动程序关键字语法错误|(DM) 的关键字值的配对**驱动程序**关键字包含语法错误。<br /><br /> (DM) 中的字符串* \*InConnectionString*包含**FILEDSN**关键字，但.dsn 文件不包含**驱动程序**关键字或**DSN**关键字。|  
+|IM012|驱动程序关键字语法错误|(DM) 的关键字值的配对**驱动程序**关键字包含语法错误。<br /><br /> (DM) 中的字符串 *\*InConnectionString*包含**FILEDSN**关键字，但.dsn 文件不包含**驱动程序**关键字或**DSN**关键字。|  
 |IM014|指定的 DSN 包含的驱动程序和应用程序体系结构不匹配|(DM) 32 位应用程序使用连接到 64 位驱动程序; DSN反之亦然。|  
 |IM015|驱动程序的 SQLDriverConnect SQL_HANDLE_DBC_INFO_HANDLE 上失败|如果驱动程序返回 SQL_ERROR，驱动程序管理器将返回 SQL_ERROR 到应用程序，则连接将失败。<br /><br /> 有关 SQL_HANDLE_DBC_INFO_TOKEN 的详细信息，请参阅[开发中使用 ODBC 驱动程序的连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。|  
 |IM017|在异步通知模式中禁用轮询|使用通知模型，则每当轮询处于禁用状态。|  

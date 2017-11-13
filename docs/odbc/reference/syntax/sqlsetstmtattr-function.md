@@ -105,7 +105,7 @@ SQLRETURN SQLSetStmtAttr(
 |01S02 的警告|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*，或在指定的值*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值。)替换值可用于*StatementHandle*直到游标关闭，此时语句属性将恢复为以前的值。 可以更改这些语句属性包括：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |24000|无效的游标状态|*属性*SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR 或 SQL_ATTR_USE_BOOKMARKS，并且光标处于打开状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY009|不允许使用 null 指针|*属性*自变量标识所需的字符串属性，一个语句属性和*ValuePtr*自变量是空指针。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLSetStmtAttr**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  
@@ -113,7 +113,7 @@ SQLRETURN SQLSetStmtAttr(
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY017|使用自动分配的描述符句柄无效|(DM)*属性*参数为 SQL_ATTR_IMP_ROW_DESC 或 SQL_ATTR_IMP_PARAM_DESC。<br /><br /> (DM)*属性*自变量为 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC 和中的值*ValuePtr*最初以外句柄的隐式分配的描述符句柄分配给 ARD 或 APD。|  
 |HY024|无效属性值|给出指定*属性*中值，指定无效的值是*ValuePtr*。 （驱动程序管理器返回仅适用于连接和语句属性接受一组离散的值，如 SQL_ATTR_ACCESS_MODE 或 SQL_ ATTR_ASYNC_ENABLE 此 SQLSTATE。 对于所有其他连接和语句属性，该驱动程序必须验证中指定的值*ValuePtr*。)<br /><br /> *属性*参数为 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，和*ValuePtr*已为同一连接不是一个显式分配的描述符句柄*StatementHandle*自变量。|  
-|HY090|字符串或缓冲区长度无效|(DM) * \*ValuePtr*是一个字符串，与*StringLength*自变量为小于 0，但未 sql_nts 以。|  
+|HY090|字符串或缓冲区长度无效|(DM)  *\*ValuePtr*是一个字符串，与*StringLength*自变量为小于 0，但未 sql_nts 以。|  
 |HY092|属性/选项标识符无效|(DM) 值的参数的指定*属性*对 ODBC 驱动程序支持的版本无效。<br /><br /> (DM) 值的参数的指定*属性*只读属性。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未实现的可选功能|为参数指定的值*属性*的 ODBC 版本所支持的驱动程序，但不支持驱动程序是有效的 ODBC 语句属性。<br /><br /> *属性*自变量为 SQL_ATTR_ASYNC_ENABLE，并调用**SQLGetInfo**与*信息类型*SQL_ASYNC_MODE 返回 SQL_AM_CONNECTION。<br /><br /> *属性*参数 SQL_ATTR_ENABLE_AUTO_IPD，且连接属性 SQL_ATTR_AUTO_IPD 的值为 SQL_FALSE。|  

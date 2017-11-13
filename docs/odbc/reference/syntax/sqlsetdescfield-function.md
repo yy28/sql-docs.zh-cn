@@ -87,19 +87,19 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01S02 的警告|选项值已更改|该驱动程序不支持在指定的值* \*ValuePtr* (如果*ValuePtr*是一个指针) 或值在*ValuePtr* (如果*ValuePtr*是一个整数值)，或* \*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07009|无效的描述符索引|*FieldIdentifier*自变量为记录字段中， *RecNumber*自变量为 0，和*DescriptorHandle*自变量引用 IPD 句柄。<br /><br /> *RecNumber*自变量为 0，小于和*DescriptorHandle* ARD 或 APD 引用自变量。<br /><br /> *RecNumber*参数为大于最大列数或数据源可以支持的参数和*DescriptorHandle*到 APD 或 ARD 引用自变量。<br /><br /> (DM) *FieldIdentifier*自变量为 SQL_DESC_COUNT，和* \*ValuePtr*自变量为小于 0。<br /><br /> *RecNumber*自变量为等于 0，和*DescriptorHandle*隐式分配 APD 引用自变量。 （具有显式分配应用程序描述符，不会出现此错误因为并不知道显式分配应用程序描述符是 APD 或直到 ARD 执行时间。）|  
+|01S02 的警告|选项值已更改|该驱动程序不支持在指定的值 *\*ValuePtr* (如果*ValuePtr*是一个指针) 或值在*ValuePtr* (如果*ValuePtr*是一个整数值)，或 *\*ValuePtr*无效由于实现工作条件，因此驱动程序替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|07009|无效的描述符索引|*FieldIdentifier*自变量为记录字段中， *RecNumber*自变量为 0，和*DescriptorHandle*自变量引用 IPD 句柄。<br /><br /> *RecNumber*自变量为 0，小于和*DescriptorHandle* ARD 或 APD 引用自变量。<br /><br /> *RecNumber*参数为大于最大列数或数据源可以支持的参数和*DescriptorHandle*到 APD 或 ARD 引用自变量。<br /><br /> (DM) *FieldIdentifier*自变量为 SQL_DESC_COUNT，和 *\*ValuePtr*自变量为小于 0。<br /><br /> *RecNumber*自变量为等于 0，和*DescriptorHandle*隐式分配 APD 引用自变量。 （具有显式分配应用程序描述符，不会出现此错误因为并不知道显式分配应用程序描述符是 APD 或直到 ARD 执行时间。）|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |22001|字符串数据，右截断|*FieldIdentifier*自变量为 SQL_DESC_NAME，和*BufferLength*参数为大于 SQL_MAX_IDENTIFIER_LEN 的值。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) *DescriptorHandle*与关联*StatementHandle*其中一个以异步方式执行的函数 （而不此是） 调用和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*与其*DescriptorHandle*成功关联并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 为与关联的连接句柄调用以异步方式执行的函数*DescriptorHandle*。 此异步函数仍在执行时**SQLSetDescField**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**与关联的语句句柄之一调用*DescriptorHandle*并返回 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY016|无法修改实现行描述符|*DescriptorHandle*自变量为与 IRD 关联和*FieldIdentifier*参数不为 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。|  
 |HY021|描述符信息不一致|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段不构成有效的 ODBC SQL 类型或特定于驱动程序的 SQL 类型 （对于无效 IPDs) 或有效的 ODBC C 类型 （对于 APDs 或 ARDs）。<br /><br /> 在一致性检查过程中检查的描述符信息未一致。 (请参阅中的"一致性检查" **SQLSetDescRec**。)|  
-|HY090|字符串或缓冲区长度无效|(DM) * \*ValuePtr*是一个字符串，和*BufferLength*而小于零，但不是等于 sql_nts 以。<br /><br /> (DM) 驱动程序是 ODBC 2*.x*驱动程序，该描述符已 ARD *ColumnNumber*参数已设置为 0，并为参数指定的值*BufferLength*已不等于 4。|  
+|HY090|字符串或缓冲区长度无效|(DM)  *\*ValuePtr*是一个字符串，和*BufferLength*而小于零，但不是等于 sql_nts 以。<br /><br /> (DM) 驱动程序是 ODBC 2*.x*驱动程序，该描述符已 ARD *ColumnNumber*参数已设置为 0，并为参数指定的值*BufferLength*已不等于 4。|  
 |HY091|描述符字段标识符无效|为指定的值*FieldIdentifier*自变量不是一个 ODBC 定义的字段，且未实现定义的值。<br /><br /> *FieldIdentifier*自变量无效的*DescriptorHandle*自变量。<br /><br /> *FieldIdentifier*自变量为只读的、 ODBC 定义字段。|  
-|HY092|属性/选项标识符无效|中的值* \*ValuePtr*对无效*FieldIdentifier*自变量。<br /><br /> *FieldIdentifier*自变量为 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
+|HY092|属性/选项标识符无效|中的值 *\*ValuePtr*对无效*FieldIdentifier*自变量。<br /><br /> *FieldIdentifier*自变量为 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
 |HY105|无效的参数类型|(DM) 指定为 SQL_DESC_PARAMETER_TYPE 字段的值无效。 (有关详细信息，请参阅"*InputOutputType*自变量"部分中**SQLBindParameter**。)|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  

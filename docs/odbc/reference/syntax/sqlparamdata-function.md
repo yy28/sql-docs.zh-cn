@@ -68,7 +68,7 @@ SQLRETURN SQLParamData(
 |22026|字符串数据，长度不匹配|中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**被"Y"，并更少的数据已发送 （数据类型不 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源 – 特定数据类型） 的长参数不是指定与*StrLen_or_IndPtr*中的参数**SQLBindParameter**。<br /><br /> 中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**被"Y"，并不是中已指定，较少的数据已发送长列 （数据类型不 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源 – 特定数据类型）对应于已添加或更新的数据的行中的列的长度缓冲区**SQLBulkOperations**或更新与**SQLSetPos**。|  
 |40001|序列化失败|事务已回滚，由于资源死锁与另一个事务。|  
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*; 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 前面的函数调用不是调用**SQLExecDirect**， **SQLExecute**， **SQLBulkOperations**，或**SQLSetPos**其中返回代码为 SQL_NEED_DATA，或以前的函数调用已调用**SQLPutData**。<br /><br /> 以前的函数调用已调用**SQLParamData**。<br /><br /> (DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLParamData**调用函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*和返回的 SQL_NEED_DATA。 **SQLCancel**之前的所有数据在执行参数或列已发送数据时调用。|  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
 ## <a name="comments"></a>注释  
  **SQLParamData**可以调用以进行提供两种用法的数据在执行数据： 将对的调用中使用的参数数据**SQLExecute**或**SQLExecDirect**，或将使用的列数据当更新或通过调用添加某行**SQLBulkOperations**或通过调用更新**SQLSetPos**。 在执行时， **SQLParamData**将返回到应用程序驱动程序需要使用哪些数据的指示符。  
   
- 在应用程序调用**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驱动程序返回 SQL_NEED_如果它需要数据在执行数据的数据。 应用程序然后调用**SQLParamData**来确定要发送的数据。 如果驱动程序需要参数的数据，该驱动程序将返回在* \*ValuePtrPtr*输出缓冲区的应用程序放置在行集的缓冲区中的值。 应用程序可以使用此值以确定该驱动程序正在请求的参数数据。 如果该驱动程序需要列数据，该驱动程序返回中* \*ValuePtrPtr*缓冲列最初已，如下所示绑定到的地址：  
+ 在应用程序调用**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驱动程序返回 SQL_NEED_如果它需要数据在执行数据的数据。 应用程序然后调用**SQLParamData**来确定要发送的数据。 如果驱动程序需要参数的数据，该驱动程序将返回在 *\*ValuePtrPtr*输出缓冲区的应用程序放置在行集的缓冲区中的值。 应用程序可以使用此值以确定该驱动程序正在请求的参数数据。 如果该驱动程序需要列数据，该驱动程序返回中 *\*ValuePtrPtr*缓冲列最初已，如下所示绑定到的地址：  
   
  *绑定地址* + *绑定偏移量*+ ((*行号*– 1) x*元素大小*)  
   
@@ -99,7 +99,7 @@ SQLRETURN SQLParamData(
   
  它还返回 SQL_NEED_DATA，是对应用程序应调用指示器**SQLPutData**发送数据。  
   
- 应用程序调用**SQLPutData**进行发送的列或参数的数据在执行数据所需的多次。 所有数据均已都发送的列或参数后，应用程序会调用**SQLParamData**试。 如果**SQLParamData**再次返回 SQL_NEED_DATA，必须将数据发送另一个参数或列。 因此，再次将应用程序调用**SQLPutData**。 如果所有数据在执行数据均已都发送的所有参数或列，然后**SQLParamData**返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 中的值* \*ValuePtrPtr*未定义，并可执行 SQL 语句或**SQLBulkOperations**或**SQLSetPos**可处理调用。  
+ 应用程序调用**SQLPutData**进行发送的列或参数的数据在执行数据所需的多次。 所有数据均已都发送的列或参数后，应用程序会调用**SQLParamData**试。 如果**SQLParamData**再次返回 SQL_NEED_DATA，必须将数据发送另一个参数或列。 因此，再次将应用程序调用**SQLPutData**。 如果所有数据在执行数据均已都发送的所有参数或列，然后**SQLParamData**返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 中的值 *\*ValuePtrPtr*未定义，并可执行 SQL 语句或**SQLBulkOperations**或**SQLSetPos**可处理调用。  
   
  如果**SQLParamData**提供参数的数据搜索更新或删除语句，但不影响数据源，对的调用中的任何行**SQLParamData**返回 SQL_NO_DATA。  
   

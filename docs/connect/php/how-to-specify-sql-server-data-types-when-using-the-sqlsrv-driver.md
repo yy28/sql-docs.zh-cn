@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  构建要在准备或执行查询时使用的 *$params* 数组。 请注意，在指定 SQL Server 数据类型时， *$params* 数组的每个元素必须也是一个数组。  
   
-4.  指定所需的 SQL Server 数据类型，方法是使用相应**SQLSRV_SQLTYPE_\* **常量中的每个子数组的第四个参数用作*$params*数组。 有关完整列表**SQLSRV_SQLTYPE_\* **常量，请参阅的 Sqltype 部分[常量 &#40;Microsoft Drivers for PHP for SQL server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
+4.  指定所需的 SQL Server 数据类型，方法是使用相应**SQLSRV_SQLTYPE_\*** 常量中的每个子数组的第四个参数用作*$params*数组。 有关完整列表**SQLSRV_SQLTYPE_\*** 常量，请参阅的 Sqltype 部分[常量 &#40;Microsoft Drivers for PHP for SQL server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
   
     ```  
     $employeeId = 5;  

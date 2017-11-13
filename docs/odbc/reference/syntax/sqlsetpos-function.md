@@ -106,7 +106,7 @@ SQLRETURN SQLSetPos(
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
 |42000|语法错误或访问冲突|该驱动程序无法锁定行，如执行参数中请求的操作所需*操作*。<br /><br /> 该驱动程序无法按请求自变量中锁定该行*LockType*。|  
 |44000|WITH CHECK OPTION 冲突|*操作*自变量为 SQL_UPDATE，和上查看的表执行已更新或通过指定已创建的查看表中派生表**WITH CHECK OPTION**，这样，一个或多个行受此更新将不再存在于查看的表。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数已在上再次*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 调用 SQLSetPos 函数时仍在执行此异步函数。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 第一个调用已调用函数**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序，和**SQLSetPos**曾为*StatementHandle*后**SQLFetch**调用。|  
@@ -226,9 +226,9 @@ SQLRETURN SQLSetPos(
   
 1.  通过绑定数据和长度/指示器缓冲区中的位置值**SQLBindCol**:  
   
-    -   对于正常列，应用程序将放在新的列值* \*TargetValuePtr*缓冲区和中的该值的长度* \*StrLen_or_IndPtr*缓冲区。 如果行不会更新，应用程序会将 SQL_ROW_IGNORE 放置在该行的行操作数组元素中。  
+    -   对于正常列，应用程序将放在新的列值 *\*TargetValuePtr*缓冲区和中的该值的长度 *\*StrLen_or_IndPtr*缓冲区。 如果行不会更新，应用程序会将 SQL_ROW_IGNORE 放置在该行的行操作数组元素中。  
   
-    -   对于执行中的数据列，应用程序将应用程序定义的值，如列数，放在* \*TargetValuePtr*缓冲区。 值可以在稍后用于标识的列。  
+    -   对于执行中的数据列，应用程序将应用程序定义的值，如列数，放在 *\*TargetValuePtr*缓冲区。 值可以在稍后用于标识的列。  
   
          将 SQL_LEN_DATA_AT_EXEC 结果放置于应用程序 (*长度*) 中的宏 **StrLen_or_IndPtr*缓冲区。 如果 SQL 数据类型的列是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR、 或的长整型数据源 – 特定数据类型和驱动程序返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是参数; 发送数据的字节数否则为必须为非负值，将被忽略。  
   
@@ -238,7 +238,7 @@ SQLRETURN SQLSetPos(
   
     -   如果没有任何执行中的数据列，该函数将返回 SQL_NEED_DATA，并将继续到步骤 3。  
   
-3.  调用**SQLParamData**来检索的地址* \*TargetValuePtr*要处理的第一个执行中的数据列的缓冲区。 **SQLParamData**返回 SQL_NEED_DATA。 应用程序检索应用程序定义的值从* \*TargetValuePtr*缓冲区。  
+3.  调用**SQLParamData**来检索的地址 *\*TargetValuePtr*要处理的第一个执行中的数据列的缓冲区。 **SQLParamData**返回 SQL_NEED_DATA。 应用程序检索应用程序定义的值从 *\*TargetValuePtr*缓冲区。  
   
     > [!NOTE]  
     >  虽然执行中的数据参数类似于执行中的数据列，但返回的值**SQLParamData**每个不同。  
@@ -249,7 +249,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  执行中的数据列是包含在行集数据将发送与**SQLPutData**行使用的更新时**SQLSetPos**。 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*正在处理的缓冲区。  
   
-4.  调用**SQLPutData**一个或多个时间来发送数据的列。 如果不能在中返回所有数据值，则需要多个调用* \*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**仅当将字符 C 数据发送到具有字符、 binary 或数据源 – 特定数据类型的列或将二进制 C 数据发送到列，但字符，二进制文件，允许相同的列或数据源 – 特定的数据类型。  
+4.  调用**SQLPutData**一个或多个时间来发送数据的列。 如果不能在中返回所有数据值，则需要多个调用 *\*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**仅当将字符 C 数据发送到具有字符、 binary 或数据源 – 特定数据类型的列或将二进制 C 数据发送到列，但字符，二进制文件，允许相同的列或数据源 – 特定的数据类型。  
   
 5.  调用**SQLParamData**以指示所有数据均已都发送的列。  
   

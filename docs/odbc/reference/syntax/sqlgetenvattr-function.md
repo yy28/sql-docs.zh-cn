@@ -63,10 +63,10 @@ SQLRETURN SQLGetEnvAttr(
  如果*ValuePtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回指向由的缓冲区中*ValuePtr*。  
   
  *BufferLength*  
- [输入]如果*ValuePtr*指向字符字符串，该参数应为的长度\* *ValuePtr*。 如果\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果* \*ValuePtr*为 Unicode 字符串 (在调用时**SQLGetEnvAttrW**)，则*BufferLength*参数必须为偶数。 如果属性值不是字符串， *BufferLength*未使用。  
+ [输入]如果*ValuePtr*指向字符字符串，该参数应为的长度\* *ValuePtr*。 如果\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果 *\*ValuePtr*为 Unicode 字符串 (在调用时**SQLGetEnvAttrW**)，则*BufferLength*参数必须为偶数。 如果属性值不是字符串， *BufferLength*未使用。  
   
  *StringLengthPtr*  
- [输出]指向要返回的 （不包括 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在* \*ValuePtr*。 如果*ValuePtr*是 null 指针，返回没有长度。 如果属性值为字符串，可用于返回的字节数为大于或等于*BufferLength*中的数据\* *ValuePtr*截断为*BufferLength* null 终止字符的长度减和是由驱动程序以 null 结尾。  
+ [输出]指向要返回的 （不包括 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在 *\*ValuePtr*。 如果*ValuePtr*是 null 指针，返回没有长度。 如果属性值为字符串，可用于返回的字节数为大于或等于*BufferLength*中的数据\* *ValuePtr*截断为*BufferLength* null 终止字符的长度减和是由驱动程序以 null 结尾。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|中返回的数据\* *ValuePtr*被截断为*BufferLength*减去的 null 终止字符。 在中返回未截断的字符串值的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) **SQL_ATTR_ODBC_VERSION**尚未设置通过**SQLSetEnvAttr**。 不需要设置**SQL_ATTR_ODBC_VERSION**显式如果你使用**SQLAllocHandleStd**。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  

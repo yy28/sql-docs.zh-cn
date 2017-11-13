@@ -88,7 +88,7 @@ SQLRETURN SQLExecute(
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
 |42000|语法错误或访问冲突|用户没有执行已准备的语句与关联的权限*StatementHandle*。|  
 |44000|WITH CHECK OPTION 冲突|已准备的语句与关联*StatementHandle*包含**插入**上查看的表执行的语句或派生自创建通过指定查看表的表**WITH CHECK OPTION**，以便影响的一个或多个行**插入**语句将不再存在于查看的表。<br /><br /> 已准备的语句与关联*StatementHandle*包含**更新**上查看的表执行的语句或派生自创建通过指定查看表的表**WITH CHECK OPTION**，以便影响的一个或多个行**更新**语句将不再存在于查看的表。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLExecute**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) *StatementHandle*未准备好。|  
@@ -119,7 +119,7 @@ SQLRETURN SQLExecute(
   
  如果**SQLExecute**执行搜索的 update、 insert 或 delete 语句，但不影响数据源，对的调用中的任何行**SQLExecute**返回 SQL_NO_DATA。  
   
- 如果 SQL_ATTR_PARAMSET_SIZE 语句属性的值大于 1，并且 SQL 语句包含至少一个参数标记， **SQLExecute**数组中执行的每组参数值一次的 SQL 语句指向* \*ParameterValuePtr*调用中的自变量**SQLBindParameter**。 有关详细信息，请参阅[参数值的数组](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
+ 如果 SQL_ATTR_PARAMSET_SIZE 语句属性的值大于 1，并且 SQL 语句包含至少一个参数标记， **SQLExecute**数组中执行的每组参数值一次的 SQL 语句指向 *\*ParameterValuePtr*调用中的自变量**SQLBindParameter**。 有关详细信息，请参阅[参数值的数组](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
   
  如果启用了书签并执行一个查询时，无法支持书签，驱动程序应尝试强制转换为支持通过更改属性值并返回 SQLSTATE 01s02 的警告的书签的环境 （选项值已更改）。 如果该属性不能更改，该驱动程序应返回 SQLSTATE HY024 （无效的属性值）。  
   

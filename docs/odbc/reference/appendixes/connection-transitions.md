@@ -58,7 +58,7 @@ ODBC 连接具有以下状态。
   
  [4] 该行显示转换时*HandleType*已 SQL_HANDLE_DESC。  
   
- [5] 调用**SQLAllocHandle**与*OutputHandlePtr*指向有效的句柄将覆盖该句柄而不考虑以前的内容 ofthat 句柄，并可能会导致 ODBC 驱动程序的问题。 它是不正确的 ODBC 应用程序编程调用**SQLAllocHandle**两次是使用相同的应用程序变量为定义* \*OutputHandlePtr*而不调用**SQLFreeHandle**重新分配它之前释放句柄。 覆盖 ODBC 以此方式的句柄可能导致不一致的行为或部分 ODBC 驱动程序的错误。  
+ [5] 调用**SQLAllocHandle**与*OutputHandlePtr*指向有效的句柄将覆盖该句柄而不考虑以前的内容 ofthat 句柄，并可能会导致 ODBC 驱动程序的问题。 它是不正确的 ODBC 应用程序编程调用**SQLAllocHandle**两次是使用相同的应用程序变量为定义 *\*OutputHandlePtr*而不调用**SQLFreeHandle**重新分配它之前释放句柄。 覆盖 ODBC 以此方式的句柄可能导致不一致的行为或部分 ODBC 驱动程序的错误。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

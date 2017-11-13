@@ -69,17 +69,17 @@ SQLRETURN SQLGetDescField(
  如果*ValuePtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回指向由的缓冲区中*ValuePtr*。  
   
  *BufferLength*  
- [输入]如果*FieldIdentifier*是一个 ODBC 定义的字段和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*FieldIdentifier*是一个 ODBC 定义的字段和\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果中的值* \*ValuePtr* Unicode 数据类型 (在调用时**SQLGetDescFieldW**)，则*BufferLength*参数必须为偶数。  
+ [输入]如果*FieldIdentifier*是一个 ODBC 定义的字段和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*FieldIdentifier*是一个 ODBC 定义的字段和\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果中的值 *\*ValuePtr* Unicode 数据类型 (在调用时**SQLGetDescFieldW**)，则*BufferLength*参数必须为偶数。  
   
  如果*FieldIdentifier*是驱动程序定义的字段，该应用程序通过设置来指明字段到驱动程序管理器的性质*BufferLength*自变量。 *BufferLength*可以具有下列值：  
   
--   如果* \*ValuePtr*然后是指向字符串， *BufferLength*是字符串或 sql_nts 以的长度。  
+-   如果 *\*ValuePtr*然后是指向字符串， *BufferLength*是字符串或 sql_nts 以的长度。  
   
--   如果* \*ValuePtr*为指向二进制缓冲区的指针，则将 SQL_LEN_BINARY_ATTR 结果放置于应用程序 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
+-   如果 *\*ValuePtr*为指向二进制缓冲区的指针，则将 SQL_LEN_BINARY_ATTR 结果放置于应用程序 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
   
--   如果* \*ValuePtr*然后是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
+-   如果 *\*ValuePtr*然后是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
   
--   如果* \*ValuePtr*是包含固定长度的数据类型，则*BufferLength*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，根据需要。  
+-   如果 *\*ValuePtr*是包含固定长度的数据类型，则*BufferLength*是 SQL_IS_INTEGER、 SQL_IS_UINTEGER、 SQL_IS_SMALLINT 或 SQL_IS_USMALLINT，根据需要。  
   
  *StringLengthPtr*  
  [输出]指向要返回的 （不包括所需的 null 终止字符的字节数） 的字节总数在其中缓冲区指针可用于返回在 **ValuePtr*。  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDescField(
 |01004|字符串数据，右截断|缓冲区\* *ValuePtr*不是否足够大以返回整个描述符字段中，因此该字段已被截断。 在中返回未截断的描述符字段的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07009|无效的描述符索引|(DM) *RecNumber*参数已等于 0、 SQL_ATTR_USE_BOOKMARK 语句属性 SQL_UB_OFF，和*DescriptorHandle*自变量为 IRD 句柄。 （此错误可以显式分配的描述符仅当才能返回的描述符与语句句柄关联。）<br /><br /> *FieldIdentifier*自变量为记录字段中， *RecNumber*自变量为 0，和*DescriptorHandle*自变量为 IPD 句柄。<br /><br /> *RecNumber*自变量为小于 0。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY007|未准备关联的语句|*DescriptorHandle*与关联*StatementHandle* IRD，以及相关联的语句句柄具有尚未准备或执行。|  
 |HY010|函数序列错误|(DM) *DescriptorHandle*与关联*StatementHandle*其中一个以异步方式执行的函数 （而不此是） 调用和仍在执行时调用此函数。<br /><br /> (DM) *DescriptorHandle*与关联*StatementHandle*为其**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**成功调用并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 为与关联的连接句柄调用以异步方式执行的函数*DescriptorHandle*。 此异步函数仍在执行时**SQLGetDescField**调用函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY021|描述符信息不一致|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段不构成有效的 ODBC SQL 类型、 有效的特定于驱动程序的 SQL 类型 （用于 IPDs) 或有效的 ODBC C 类型 （对于 APDs 或 ARDs）。|  
-|HY090|字符串或缓冲区长度无效|(DM) * \*ValuePtr*为字符字符串，和*BufferLength*小于零。|  
+|HY090|字符串或缓冲区长度无效|(DM)  *\*ValuePtr*为字符字符串，和*BufferLength*小于零。|  
 |HY091|描述符字段标识符无效|*FieldIdentifier*不 ODBC 定义的字段，且不为实现定义的值。<br /><br /> *FieldIdentifier*未定义为*DescriptorHandle*。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|连接超时过期|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  

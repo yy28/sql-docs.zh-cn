@@ -89,7 +89,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|服务器拒绝连接|数据源实现定义的原因拒绝建立连接。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已尝试连接到数据源之间的通信链接。|  
 |28000|无效的授权说明|用户标识符或授权字符串或是两者，指定在中，浏览请求连接字符串 (*InConnectionString*)，违反数据源定义的限制。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|(DM) 驱动程序管理器无法分配支持执行或函数完成所需的内存。<br /><br /> 该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|异步操作已取消通过调用[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)。 然后，原始函数上调用了再次*ConnectionHandle*。<br /><br /> 操作被取消通过调用**SQLCancelHandle**上*ConnectionHandle*从多线程应用程序中的不同线程。|  
 |HY010|函数序列错误|(DM) 以异步方式执行的函数 （而不是此的一个） 曾为*ConnectionHandle*和仍在执行时调用此函数。|  

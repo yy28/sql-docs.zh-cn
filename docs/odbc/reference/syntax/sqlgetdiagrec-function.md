@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [输入]长度 **MessageText*以字符为单位的缓冲区。 没有诊断消息文本无最大长度。  
   
  *TextLengthPtr*  
- [输出]指向要返回的字符 （不包括所需的 null 终止字符的字符数） 总数在其中缓冲区的指针可用于返回在* \*MessageText*。 如果可用于返回的字符数大于*BufferLength*中的诊断消息文本* \*MessageText*截断为*BufferLength*减 null 终止字符的长度。  
+ [输出]指向要返回的字符 （不包括所需的 null 终止字符的字符数） 总数在其中缓冲区的指针可用于返回在 *\*MessageText*。 如果可用于返回的字符数大于*BufferLength*中的诊断消息文本 *\*MessageText*截断为*BufferLength*减 null 终止字符的长度。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

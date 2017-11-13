@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将作为自变量的数值列，并返回列中的每个值的绝对值的数值。 调用标量函数的转义序列是  
   
- **{fn***标量函数* **}  **  
+ **{fn***标量函数* **}**   
   
  其中*标量函数*是中列出的函数之一[附录 e： 标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 有关标量函数转义序列的详细信息，请参阅[标量函数转义序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附录 c: SQL 语法中。  
   

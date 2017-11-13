@@ -86,7 +86,7 @@ BOOL ConfigDriver(
  如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**ConfigDriver**返回 FALSE，一个关联* \*pfErrorCode*值发布到安装程序错误缓冲区调用**SQLPostInstallerError**可以通过调用获取和**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**ConfigDriver**返回 FALSE，一个关联 *\*pfErrorCode*值发布到安装程序错误缓冲区调用**SQLPostInstallerError**可以通过调用获取和**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  

@@ -74,7 +74,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S02 的警告|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY009|不允许使用 null 指针|特性自变量标识所需的字符串值，环境属性和*ValuePtr*自变量是空指针。|  
 |HY010|函数序列错误|(DM) 上分配了连接句柄*EnvironmentHandle*。<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION**尚未设置与**SQLSetEnvAttr**和*属性*是否不等于**SQL_ATTR_ODBC_VERSION**。 不需要设置**SQL_ATTR_ODBC_VERSION**显式如果你使用**SQLAllocHandleStd**。|  

@@ -71,7 +71,7 @@ SQLRETURN SQLSetCursorName(
 |24000|无效的游标状态|语句对应于*StatementHandle*本来就处于或者位于光标位置上执行的状态。|  
 |34000|无效的临时表名称|中指定的游标名称 **CursorName*无效，因为它超出了最大长度定义由驱动程序，或它入门"SQLCUR"或"SQL_CUR。"|  
 |3C000|游标名称重复|中指定的游标名称 **CursorName*已存在。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY009|不允许使用 null 指针|(DM) 自变量*CursorName*是空指针。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此 aynchronous 函数仍在执行时**SQLSetCursorName**调用函数。<br /><br /> (DM) 以异步方式执行的函数曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  

@@ -66,20 +66,20 @@ SQLRETURN SQLGetStmtAttr(
  如果*ValuePtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回指向由的缓冲区中*ValuePtr*。  
   
  *BufferLength*  
- [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*属性*是 ODBC 定义的属性和\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果在返回的值* \*ValuePtr*为 Unicode 字符串 (在调用时**SQLGetStmtAttrW**)，则*BufferLength*参数必须为偶数。  
+ [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*属性*是 ODBC 定义的属性和\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果在返回的值 *\*ValuePtr*为 Unicode 字符串 (在调用时**SQLGetStmtAttrW**)，则*BufferLength*参数必须为偶数。  
   
  如果*属性*是驱动程序定义的属性，应用程序通过设置指示属性到驱动程序管理器的性质*BufferLength*自变量。 *BufferLength*可以具有下列值：  
   
--   如果* \*ValuePtr*然后是指向字符串， *BufferLength*是字符串或 sql_nts 以的长度。  
+-   如果 *\*ValuePtr*然后是指向字符串， *BufferLength*是字符串或 sql_nts 以的长度。  
   
--   如果* \*ValuePtr*为指向二进制缓冲区的指针，则将 SQL_LEN_BINARY_ATTR 结果放置于应用程序 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
+-   如果 *\*ValuePtr*为指向二进制缓冲区的指针，则将 SQL_LEN_BINARY_ATTR 结果放置于应用程序 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
   
--   如果* \*ValuePtr*然后是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
+-   如果 *\*ValuePtr*然后是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
   
--   如果* \*ValuePtr*是包含固定长度的数据类型，则*BufferLength*为 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，与相应。  
+-   如果 *\*ValuePtr*是包含固定长度的数据类型，则*BufferLength*为 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，与相应。  
   
  *StringLengthPtr*  
- [输出]指向要返回的 （不包括 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在* \*ValuePtr*。 如果*ValuePtr*是 null 指针，返回没有长度。 如果属性值是一个字符串，并且可用于返回的字节数大于或等于*BufferLength*中的数据* \*ValuePtr*截断为*BufferLength* null 终止字符的长度减和是由驱动程序以 null 结尾。  
+ [输出]指向要返回的 （不包括 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在 *\*ValuePtr*。 如果*ValuePtr*是 null 指针，返回没有长度。 如果属性值是一个字符串，并且可用于返回的字节数大于或等于*BufferLength*中的数据 *\*ValuePtr*截断为*BufferLength* null 终止字符的长度减和是由驱动程序以 null 结尾。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetStmtAttr(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01004|字符串数据，右截断|中返回的数据* \*ValuePtr*被截断为*BufferLength*减 null 终止字符的长度。 在中返回未截断的字符串值的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01004|字符串数据，右截断|中返回的数据 *\*ValuePtr*被截断为*BufferLength*减 null 终止字符的长度。 在中返回未截断的字符串值的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |24000|无效的游标状态|自变量*属性*已 SQL_ATTR_ROW_NUMBER 和游标未打开，或早于开始日期的结果集或结果集的末尾之后已定位光标。|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**参数中*MessageText*描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
@@ -107,7 +107,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="comments"></a>注释  
  有关语句特性的常规信息，请参阅[语句特性](../../../odbc/reference/develop-app/statement-attributes.md)。  
   
- 调用**SQLGetStmtAttr**中返回* \*ValuePtr*中指定的语句属性的值*属性*。 该值可以是 SQLULEN 值或以 null 结尾的字符串。 如果值为 SQLULEN 值，某些驱动程序可能仅编写较低的 32 位或 16 位的缓冲区，并保留较高顺序位保持不变。 因此，应用程序应使用 SQLULEN 的缓冲区，并调用此函数之前初始化为 0 的值。 此外， *BufferLength*和*StringLengthPtr*不使用参数。 如果值为以 null 结尾的字符串，应用程序将指定在该字符串的最大长度*BufferLength*自变量和驱动程序返回在该字符串的长度* \*StringLengthPtr*缓冲区。  
+ 调用**SQLGetStmtAttr**中返回 *\*ValuePtr*中指定的语句属性的值*属性*。 该值可以是 SQLULEN 值或以 null 结尾的字符串。 如果值为 SQLULEN 值，某些驱动程序可能仅编写较低的 32 位或 16 位的缓冲区，并保留较高顺序位保持不变。 因此，应用程序应使用 SQLULEN 的缓冲区，并调用此函数之前初始化为 0 的值。 此外， *BufferLength*和*StringLengthPtr*不使用参数。 如果值为以 null 结尾的字符串，应用程序将指定在该字符串的最大长度*BufferLength*自变量和驱动程序返回在该字符串的长度 *\*StringLengthPtr*缓冲区。  
   
  若要允许应用程序调用**SQLGetStmtAttr**用于 ODBC 2。*x*驱动程序，调用**SQLGetStmtAttr**映射在驱动程序管理器到**SQLGetStmtOption**。  
   

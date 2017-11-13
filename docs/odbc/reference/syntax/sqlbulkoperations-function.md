@@ -87,7 +87,7 @@ SQLRETURN SQLBulkOperations(
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
 |42000|语法错误或访问冲突|该驱动程序无法锁定行所需执行请求中的操作*操作*自变量。|  
 |44000|WITH CHECK OPTION 冲突|*操作*自变量为 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK 和插入或查看的表上执行更新 （或派生自查看表的表） 创建通过指定**WITH CHECK OPTION**，一个或多个行受插入或更新不再将在查看的表中显示的方式。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLBulkOperations**调用函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 第一个调用已调用函数**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序，和**SQLBulkOperations**曾为*StatementHandle*之前**SQLFetchScroll**或**SQLFetch**调用。<br /><br /> (DM) **SQLBulkOperations**之后调用**SQLExtendedFetch**上调用了*StatementHandle*。|  
@@ -234,20 +234,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>对于大容量插入和更新提供的长整型数据  
  Long 数据可提供用于大容量插入和更新通过调用执行**SQLBulkOperations**。 若要插入或更新的长整型数据，应用程序，请执行以下步骤，除了本主题前面的"执行大容量插入"和"执行大容量更新使用书签"部分中所述的步骤。  
   
-1.  当将数据绑定通过**SQLBindCol**，应用程序将应用程序定义的值，如列数，放在* \*TargetValuePtr*执行中的数据的缓冲区列。 值可以在稍后用于标识的列。  
+1.  当将数据绑定通过**SQLBindCol**，应用程序将应用程序定义的值，如列数，放在 *\*TargetValuePtr*执行中的数据的缓冲区列。 值可以在稍后用于标识的列。  
   
-     将 SQL_LEN_DATA_AT_EXEC 结果放置于应用程序 (*长度*) 中的宏* \*StrLen_or_IndPtr*缓冲区。 如果 SQL 数据类型的列是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR、 或的长整型数据源 – 特定数据类型和驱动程序返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是参数; 发送数据的字节数否则为它必须是一个非负的值，且将被忽略。  
+     将 SQL_LEN_DATA_AT_EXEC 结果放置于应用程序 (*长度*) 中的宏 *\*StrLen_or_IndPtr*缓冲区。 如果 SQL 数据类型的列是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR、 或的长整型数据源 – 特定数据类型和驱动程序返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是参数; 发送数据的字节数否则为它必须是一个非负的值，且将被忽略。  
   
 2.  当**SQLBulkOperations**调用时，如果没有执行中的数据列，函数将返回 SQL_NEED_DATA 并转到步骤 3，该过程。 （如果没有执行中的数据列，该过程已完成。）  
   
-3.  应用程序调用**SQLParamData**来检索的地址* \*TargetValuePtr*要处理的第一个执行中的数据列的缓冲区。 **SQLParamData**返回 SQL_NEED_DATA。 应用程序检索应用程序定义的值从* \*TargetValuePtr*缓冲区。  
+3.  应用程序调用**SQLParamData**来检索的地址 *\*TargetValuePtr*要处理的第一个执行中的数据列的缓冲区。 **SQLParamData**返回 SQL_NEED_DATA。 应用程序检索应用程序定义的值从 *\*TargetValuePtr*缓冲区。  
   
     > [!NOTE]  
     >  尽管执行中的数据参数类似于执行中的数据列，返回的值**SQLParamData**每个不同。  
   
      执行中的数据列是包含在行集数据将发送与**SQLPutData**更新或插入与某行时**SQLBulkOperations**。 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*正在处理的缓冲区。  
   
-4.  应用程序调用**SQLPutData**一个或多个时间来发送数据的列。 如果不能在中返回所有数据值，则需要多个调用* \*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**仅当将字符 C 数据发送到具有字符、 binary 或数据源 – 特定数据类型的列或将二进制 C 数据发送到列，但字符，二进制文件，允许相同的列或数据源 – 特定的数据类型。  
+4.  应用程序调用**SQLPutData**一个或多个时间来发送数据的列。 如果不能在中返回所有数据值，则需要多个调用 *\*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**仅当将字符 C 数据发送到具有字符、 binary 或数据源 – 特定数据类型的列或将二进制 C 数据发送到列，但字符，二进制文件，允许相同的列或数据源 – 特定的数据类型。  
   
 5.  应用程序调用**SQLParamData**以指示所有数据均已都发送的列。  
   

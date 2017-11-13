@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- 语法**Col** * n *是：  
+ 语法**Col**  *n* 是：  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>注释  
- 下表介绍每个部分的**Col** * n *条目。  
+ 下表介绍每个部分的**Col**  *n* 条目。  
   
 |参数|Description|  
 |---------------|-----------------|  

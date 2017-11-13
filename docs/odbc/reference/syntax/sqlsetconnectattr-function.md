@@ -95,7 +95,7 @@ SQLRETURN SQLSetConnectAttr(
 |24000|无效的游标状态|*属性*参数 SQL_ATTR_CURRENT_CATALOG，且结果集为挂起。|  
 |25000|本地事务中的非法操作|连接正在尝试通过设置连接属性 SQL_ATTR_ENLIST_IN_DTC 登记分布式的事务连接 (DTC) 中时的一个本地事务。<br /><br /> 已在 DTC 中登记连接。<br /><br /> 已经在分布式的事务的连接中登记连接，通过将 SQL_ATTR_AUTOCOMMIT 设置为 SQL_AUTOCOMMIT_OFF 启动本地事务。|  
 |3D000|无效的目录名称|*属性*参数 SQL_CURRENT_CATALOG，且指定的目录名称为无效。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*ConnectionHandle*。 **SQLSetConnectAttr**调用函数，并且它之前完成执行， [SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*，，然后**SQLSetConnectAttr**函数上调用了再次*ConnectionHandle*。<br /><br /> 或者， **SQLSetConnectAttr**调用函数，并且它之前完成执行， **SQLCancelHandle**上调用了*ConnectionHandle*来自中的不同线程一个多线程应用程序。|  
 |HY009|不允许使用 null 指针|*属性*自变量标识所需的字符串值，连接属性和*ValuePtr*自变量是空指针。|  

@@ -66,20 +66,20 @@ SQLRETURN SQLGetConnectAttr(
  如果*ValuePtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回指向由的缓冲区中*ValuePtr*。  
   
  *BufferLength*  
- [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*属性*是 ODBC 定义的属性和\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果中的值* \*ValuePtr*为 Unicode 字符串 (在调用时**SQLGetConnectAttrW**)，则*BufferLength*参数必须为偶数。  
+ [输入]如果*属性*是 ODBC 定义的属性和*ValuePtr*指向字符字符串或二进制缓冲区时，此参数应为的长度\* *ValuePtr*. 如果*属性*是 ODBC 定义的属性和\* *ValuePtr*是一个整数， *BufferLength*将被忽略。 如果中的值 *\*ValuePtr*为 Unicode 字符串 (在调用时**SQLGetConnectAttrW**)，则*BufferLength*参数必须为偶数。  
   
  如果*属性*是驱动程序定义的属性，应用程序通过设置指示属性到驱动程序管理器的性质*BufferLength*自变量。 *BufferLength*可以具有下列值：  
   
--   如果* \*ValuePtr*是指向字符串， *BufferLength*是字符串的长度。  
+-   如果 *\*ValuePtr*是指向字符串， *BufferLength*是字符串的长度。  
   
--   如果* \*ValuePtr* SQL_LEN_BINARY_ATTR 的结果是指向二进制缓冲区中，应用程序位置的指针 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
+-   如果 *\*ValuePtr* SQL_LEN_BINARY_ATTR 的结果是指向二进制缓冲区中，应用程序位置的指针 (*长度*) 中的宏*BufferLength*。 这会在负值*BufferLength*。  
   
--   如果* \*ValuePtr*是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
+-   如果 *\*ValuePtr*是指向字符字符串或二进制字符串以外的值的*BufferLength*应具有 SQL_IS_POINTER 的值。  
   
--   如果* \*ValuePtr*包含固定长度的数据类型， *BufferLength*为 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，与相应。  
+-   如果 *\*ValuePtr*包含固定长度的数据类型， *BufferLength*为 SQL_IS_INTEGER 或 SQL_IS_UINTEGER，与相应。  
   
  *StringLengthPtr*  
- [输出]指向要返回的 （不包括 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在\* *ValuePtr*。 如果\* *ValuePtr*是 null 指针，返回没有长度。 如果属性值是一个字符串，并且可用于返回的字节数大于*BufferLength* null 终止字符中的数据的长度减* \*ValuePtr*截断为*BufferLength* null 终止字符的长度减和是由驱动程序以 null 结尾。  
+ [输出]指向要返回的 （不包括 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在\* *ValuePtr*。 如果\* *ValuePtr*是 null 指针，返回没有长度。 如果属性值是一个字符串，并且可用于返回的字节数大于*BufferLength* null 终止字符中的数据的长度减 *\*ValuePtr*截断为*BufferLength* null 终止字符的长度减和是由驱动程序以 null 结尾。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NO_DATA、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) **SQLBrowseConnect**曾为*ConnectionHandle*并返回 SQL_NEED_DATA。 此函数调用之前**SQLBrowseConnect** SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS 返回。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*ConnectionHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) * \*ValuePtr*是一个字符串，BufferLength 小于零，但与 sql_nts 以不相等。|  
+|HY090|字符串或缓冲区长度无效|(DM)  *\*ValuePtr*是一个字符串，BufferLength 小于零，但与 sql_nts 以不相等。|  
 |HY092|属性/选项标识符无效|为参数指定的值*属性*对 ODBC 驱动程序支持的版本无效。|  
 |HY114|驱动程序不支持连接级别异步函数执行|(DM) 应用程序尝试以启用 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 与驱动程序不支持异步连接操作的异步函数执行。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  

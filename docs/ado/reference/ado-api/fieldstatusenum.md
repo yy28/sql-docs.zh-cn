@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[状态](../../../ado/reference/ado-api/status-property-ado-field.md)的[字段对象](../../../ado/reference/ado-api/field-object.md)。  
   
- **AdFieldPending\* **值指示导致状态是一组，并可配合其他状态的值的操作。  
+ **AdFieldPending\*** 值指示导致状态是一组，并可配合其他状态的值的操作。  
   
 |常量|值|Description|  
 |--------------|-----------|-----------------|  

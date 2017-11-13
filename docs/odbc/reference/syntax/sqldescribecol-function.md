@@ -75,9 +75,9 @@ SQLRETURN SQLDescribeCol(
  *DataTypePtr*  
  [输出]指向在其返回列的 SQL 数据类型的缓冲区的指针。 从 IRD SQL_DESC_CONCISE_TYPE 字段读取此值。 这将是中的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)，或特定于驱动程序的 SQL 数据类型。 如果不确定的数据类型，该驱动程序将返回 SQL_UNKNOWN_TYPE。  
   
- 在 ODBC 3。*x*，在中返回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP * \*DataTypePtr*有关日期、 时间或时间戳数据分别; 在 ODBC 2。*x*，SQL_DATE、 SQL_TIME 或 SQL_TIMESTAMP 返回。 驱动程序管理器执行的所需的映射时 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序或当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序。  
+ 在 ODBC 3。*x*，在中返回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP  *\*DataTypePtr*有关日期、 时间或时间戳数据分别; 在 ODBC 2。*x*，SQL_DATE、 SQL_TIME 或 SQL_TIMESTAMP 返回。 驱动程序管理器执行的所需的映射时 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序或当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序。  
   
- 当*ColumnNumber*等于 SQL_BINARY 中为 0 （对于书签列），则返回* \*DataTypePtr*用于长度可变的书签。 （如果由 ODBC 3 使用书签，则返回 SQL_INTEGER。*x*应用程序使用 ODBC 2。*x*驱动程序或通过 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序。)  
+ 当*ColumnNumber*等于 SQL_BINARY 中为 0 （对于书签列），则返回 *\*DataTypePtr*用于长度可变的书签。 （如果由 ODBC 3 使用书签，则返回 SQL_INTEGER。*x*应用程序使用 ODBC 2。*x*驱动程序或通过 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序。)  
   
  对这些数据类型的详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型中。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
   
@@ -109,7 +109,7 @@ SQLRETURN SQLDescribeCol(
 |07005|不准备语句*光标规范*|与相关的语句*StatementHandle*未返回结果集。 未描述的列。|  
 |07009|无效的描述符索引|(DM) 值的参数的指定*ColumnNumber*等于 0，且 SQL_ATTR_USE_BOOKMARKS 语句选项为 SQL_UB_OFF。<br /><br /> 为参数指定的值*ColumnNumber*大于结果集中的列数。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配失败|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLDescribeCol**调用。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*StatementHandle*和仍在执行时调用此函数。<br /><br /> (DM) 在调用之前调用该函数**SQLPrepare**， **SQLExecute**，或该语句句柄上的目录函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  

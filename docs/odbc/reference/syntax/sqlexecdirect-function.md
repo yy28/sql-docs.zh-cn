@@ -106,7 +106,7 @@ SQLRETURN SQLExecDirect(
 |42S21|已存在的列|\**StatementText*包含**ALTER TABLE**语句，并在指定的列**添加**子句不是唯一的或标识基表中的现有列。|  
 |42S22|找不到列|\**StatementText*包含**CREATE INDEX**语句，和一个或多个指定列列表中的名称不存在的列。<br /><br /> \**StatementText*包含**授予**或**撤消**语句，并指定的列名称不存在。<br /><br /> \**StatementText*包含**选择**，**删除**，**插入**，或**更新**语句，并指定的列名称不存在。<br /><br /> \**StatementText*包含**CREATE TABLE**语句，并指定约束 （引用的表而不正在创建） 中的列不存在。<br /><br /> \**StatementText*包含**CREATE SCHEMA**语句，并指定的列名称不存在。|  
 |44000|WITH CHECK OPTION 冲突|自变量*StatementText*包含**插入**上查看的表执行的语句或派生自查看通过指定已创建的表的表**WITH CHECK OPTION**，以便影响的一个或多个行**插入**语句将不再存在于查看的表。<br /><br /> 自变量*StatementText*包含**更新**上查看的表执行的语句或派生自查看通过指定已创建的表的表**WITH CHECK OPTION**，以便影响的一个或多个行**更新**语句将不再存在于查看的表。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY009|不允许使用 null 指针|(DM) **StatementText*是空指针。|  

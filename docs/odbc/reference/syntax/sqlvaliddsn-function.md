@@ -54,7 +54,7 @@ BOOL SQLValidDSN(
  如果数据源名称有效，该函数将返回 TRUE。 如果数据源名称无效或函数调用失败，则返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLValidDSN**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 A * \*pfErrorCode*如果，则返回仅在函数调用失败时，不返回 FALSE，因为数据源名称无效。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLValidDSN**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 A  *\*pfErrorCode*如果，则返回仅在函数调用失败时，不返回 FALSE，因为数据源名称无效。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  

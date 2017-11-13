@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources**如果返回 FALSE *hwnd*不是有效的窗口句柄。 否则，它将返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLManageDataSources**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLManageDataSources**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  

@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  在最后一个步骤中，应用程序安装程序向导创建一个.htm 文件和.cab 文件。 然后可以将这两个文件复制到目标计算机，并双击要加载页，并正确注册服务器的.htm 文件。  
   
- 因为默认情况下，将在 Windows\System32\Occache 目录中安装的业务对象，将其移到 Windows\System32 目录和更改**HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32**注册表项以匹配的正确路径。
+ 因为默认情况下，将在 Windows\System32\Occache 目录中安装的业务对象，将其移到 Windows\System32 目录和更改**HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32**注册表项以匹配的正确路径。
 
 
 

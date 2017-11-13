@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|指示只读权限。|  
 |**adModeReadWrite**|3|指示读/写权限。|  
-|**adModeRecursive**|0x400000|与其他结合使用* \*ShareDeny\* *值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 传播到所有子记录的当前的共享限制**记录**。 它没有任何影响，如果**记录**没有任何子级。 如果与一起使用，则会生成运行时错误**adModeShareDenyNone**仅。 但是，它可以用于**adModeShareDenyNone**时与其他值组合。 例如，你可以使用"**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|与其他结合使用 *\*ShareDeny\** 值 (**adModeShareDenyNone**， **adModeShareDenyWrite**，或**adModeShareDenyRead**) 传播到所有子记录的当前的共享限制**记录**。 它没有任何影响，如果**记录**没有任何子级。 如果与一起使用，则会生成运行时错误**adModeShareDenyNone**仅。 但是，它可以用于**adModeShareDenyNone**时与其他值组合。 例如，你可以使用"**adModeRead**或者**adModeShareDenyNone**或者**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|允许其他人具有任何权限打开的连接。 读取和写入访问权限都不可能向其他用户被拒绝。|  
 |**adModeShareDenyRead**|4|防止其他人打开具有读取权限的连接。|  
 |**adModeShareDenyWrite**|8|防止其他人打开具有写权限的连接。|  

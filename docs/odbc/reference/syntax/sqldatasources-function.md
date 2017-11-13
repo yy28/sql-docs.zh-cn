@@ -96,7 +96,7 @@ SQLRETURN SQLDataSources(
 |--------------|-----------|-----------------|  
 |01000|常规警告|(DM) 特定于驱动程序管理器 – 条信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|(DM) 缓冲区\* *ServerName*不是否足够大以返回完整的数据源名称。 因此，名称被截断。 在中返回整个数据源名称的长度\* *NameLength1Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> (DM) 缓冲区\**说明*不是否足够大以返回完整的驱动程序说明。 因此，说明已被截断。 在中返回未截断的数据源说明的长度 **NameLength2Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|(DM) 发生了错误，其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|(DM) 发生了错误，其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|(DM) 驱动程序管理器无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  

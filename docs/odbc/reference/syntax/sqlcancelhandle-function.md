@@ -66,7 +66,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)参数中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)参数中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|以异步方式执行的语句相关的函数调用与关联的语句句柄之一*处理*，和*HandleType*已设置为 SQL_HANDLE_DBC。 异步函数仍在执行时**SQLCancelHandle**调用。<br /><br /> (DM) *HandleType*自变量为 SQL_HANDLE_STMT; 关联的连接句柄，则调用的异步执行的函数和函数仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**与关联的语句句柄之一调用*处理*和*HandleType*成功设置为 SQL_HANDLE_DBC，并返回 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> **SQLBrowseConnect**曾为*ConnectionHandle*，并返回 SQL_NEED_DATA。 浏览过程完成之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  

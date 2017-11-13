@@ -81,7 +81,7 @@ SQLRETURN SQLFreeHandle(
   
 |SQLSTATE|错误|Description|  
 |--------------|-----------|-----------------|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) *HandleType*参数 SQL_HANDLE_ENV，且至少一个连接为已分配或已连接状态。 **SQLDisconnect**和**SQLFreeHandle**与*HandleType*的 SQL_HANDLE_DBC 必须为调用之前调用每个连接**SQLFreeHandle**与*HandleType* SQL_HANDLE_ENV。<br /><br /> (DM) *HandleType*自变量为 SQL_HANDLE_DBC，并在调用之前调用该函数**SQLDisconnect**连接。<br /><br /> (DM) *HandleType*自变量为 SQL_HANDLE_DBC。 以异步方式执行的函数调用时使用*处理*和函数仍在执行时调用此函数。<br /><br /> (DM) *HandleType*自变量为 SQL_HANDLE_STMT。 **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**成功使用语句句柄调用并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) *HandleType*自变量为 SQL_HANDLE_STMT。 语句句柄上或关联的连接句柄上调用了异步执行的函数和函数仍在执行时调用此函数。<br /><br /> (DM) *HandleType*自变量为 SQL_HANDLE_DESC。 以异步方式执行的函数调用关联的连接句柄;和函数仍在执行时调用此函数。<br /><br /> (DM) 所有附属句柄和其他资源未释放之前**SQLFreeHandle**调用。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**与关联的语句句柄之一调用*处理*和*HandleType*已设置为 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 返回 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|*HandleType*参数为 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC，和未处理的函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  

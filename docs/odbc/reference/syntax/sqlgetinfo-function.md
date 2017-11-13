@@ -65,7 +65,7 @@ SQLRETURN SQLGetInfo(
  如果*InfoValuePtr*为 NULL， *StringLengthPtr*仍将返回的 （不包括字符数据的 null 终止字符） 的字节总数可用于返回指向的缓冲区中*InfoValuePtr*。  
   
  *BufferLength*  
- [输入]长度\* *InfoValuePtr*缓冲区。 如果中的值* \*InfoValuePtr*不是字符串或如果*InfoValuePtr*是 null 指针， *BufferLength*忽略自变量。 该驱动程序假定的大小* \*InfoValuePtr* SQLUSMALLINT 或 SQLUINTEGER，基于*信息类型*。 如果* \*InfoValuePtr*为 Unicode 字符串 (在调用时**SQLGetInfoW**)，则*BufferLength*参数必须为偶数; 如果不是，SQLSTATE HY090 （返回字符串或缓冲区长度无效）。  
+ [输入]长度\* *InfoValuePtr*缓冲区。 如果中的值 *\*InfoValuePtr*不是字符串或如果*InfoValuePtr*是 null 指针， *BufferLength*忽略自变量。 该驱动程序假定的大小 *\*InfoValuePtr* SQLUSMALLINT 或 SQLUINTEGER，基于*信息类型*。 如果 *\*InfoValuePtr*为 Unicode 字符串 (在调用时**SQLGetInfoW**)，则*BufferLength*参数必须为偶数; 如果不是，SQLSTATE HY090 （返回字符串或缓冲区长度无效）。  
   
  *StringLengthPtr*  
  [输出]指向要返回的 （不包括字符数据的 null 终止字符） 的字节总数在其中缓冲区的指针可用于返回在 **InfoValuePtr*。  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetInfo(
 |01004|字符串数据，右截断|缓冲区\* *InfoValuePtr*不是否足够大以返回所有请求的信息。 因此，信息已被截断。 在中返回其未截断的窗体中的请求信息的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08003|连接未打开|(DM) 中请求的信息类型*信息类型*需要打开的连接。 通过 ODBC 保留的信息类型，可以打开连接的情况下返回仅 SQL_ODBC_VER。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY010|函数序列错误|(DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*并返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY024|无效属性值|(DM)*信息类型*自变量为 SQL_DRIVER_HSTMT，和指向的值*InfoValuePtr*不是有效的语句句柄。<br /><br /> (DM)*信息类型*自变量为 SQL_DRIVER_HDESC，和指向的值*InfoValuePtr*不是有效的描述符句柄。|  
-|HY090|字符串或缓冲区长度无效|(DM) 参数指定的值*BufferLength*小于 0。<br /><br /> (DM) 为指定的值*BufferLength*为奇数，和* \*InfoValuePtr*属于 Unicode 数据类型。|  
+|HY090|字符串或缓冲区长度无效|(DM) 参数指定的值*BufferLength*小于 0。<br /><br /> (DM) 为指定的值*BufferLength*为奇数，和 *\*InfoValuePtr*属于 Unicode 数据类型。|  
 |HY096|超出范围的信息类型|为参数指定的值*信息类型*对 ODBC 驱动程序支持的版本无效。|  
 |HY117|连接是由于未知的事务状态挂起。 仅断开连接，允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未实现的可选字段|为参数指定的值*信息类型*是驱动程序不支持一个特定于驱动程序的值。|  

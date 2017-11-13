@@ -62,7 +62,7 @@ SQLRETURN SQLDisconnect(
 |01002|断开连接错误|断开连接期间出错。 但是，已成功断开连接。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08003|连接未打开|(DM) 参数中指定的连接*ConnectionHandle*未打开。|  
 |25000|无效的事务状态|没有在自变量所指定的连接上的进程中的事务*ConnectionHandle*。 事务保持活动状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*ConnectionHandle*。 已调用函数，并在它之前完成执行[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*。 然后在再次调用该函数*ConnectionHandle*。<br /><br /> 已调用函数，和之前完成执行**SQLCancelHandle**上调用了*ConnectionHandle*从多线程应用程序中的不同线程。|  
 |HY010|函数序列错误|(DM) 以异步方式执行的函数曾为*StatementHandle*与关联*ConnectionHandle*和仍在执行时**SQLDisconnect**已调用。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*ConnectionHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**曾为*StatementHandle*与关联*ConnectionHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。|  

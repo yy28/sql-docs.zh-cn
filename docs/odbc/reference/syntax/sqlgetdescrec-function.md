@@ -108,7 +108,7 @@ SQLRETURN SQLGetDescRec(
 |01004|字符串数据，右截断|缓冲区\**名称*不是否足够大以返回整个描述符字段。 因此，该字段已被截断。 在中返回未截断的描述符字段的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07009|无效的描述符索引|*FieldIdentifier*自变量为记录字段中， *RecNumber*参数已设置为 0，和*DescriptorHandle*自变量为 IPD 句柄。<br /><br /> (DM) *RecNumber*参数已设置为 0，且 SQL_ATTR_USE_BOOKMARKS 语句属性被设置为 SQL_UB_OFF，和*DescriptorHandle*自变量为 IRD 句柄。<br /><br /> *RecNumber*自变量为小于 0。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY007|未准备关联的语句|*DescriptorHandle* IRD，与关联和关联的语句句柄当时不处于已准备或执行状态。|  
 |HY010|函数序列错误|(DM) *DescriptorHandle*与关联*StatementHandle*其中一个以异步方式执行的函数 （而不此是） 调用和仍在执行时调用此函数。<br /><br /> (DM) *DescriptorHandle*与关联*StatementHandle*为其**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**成功调用并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 为与关联的连接句柄调用以异步方式执行的函数*DescriptorHandle*。 此异步函数仍在执行时**SQLGetDescRec**调用。|  

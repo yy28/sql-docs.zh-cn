@@ -181,7 +181,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  执行典型日志备份后，如果没有指定 WITH NO_TRUNCATE 或 COPY_ONLY，某些事务日志记录将变为不活动状态。 一个或多个虚拟日志文件中的所有记录变为不活动状态后，日志将被截断。 如果日志在常规日志备份后未被截断，则可能是某些操作延迟了日志截断。 有关详细信息，请参阅  
   
  { *database_name* | **@**database_name_var *}   
- 备份事务日志、部分数据库或完整的数据库时所用的源数据库。 如果为变量提供 (**@***database_name_var*)，此名称可以是指定为字符串常量 (** @ ** *database_name_var***=***数据库名称*) 或作为变量的字符字符串数据类型，除**ntext**或**文本**数据类型。  
+ 备份事务日志、部分数据库或完整的数据库时所用的源数据库。 如果为变量提供 (**@***database_name_var*)，此名称可以是指定为字符串常量 ( **@**  *database_name_var***=***数据库名称*) 或作为变量的字符字符串数据类型，除**ntext**或**文本**数据类型。  
   
 > [!NOTE]  
 >  不能备份数据库镜像伙伴关系中的镜像数据库。  
@@ -189,10 +189,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup > [ **，**...*n* ]  
  只能与 BACKUP DATABASE 一起使用，用于指定某个数据库文件或文件组包含在文件备份中，或指定某个只读文件或文件组包含在部分备份中。  
   
- 文件** = ** { *logical_file_name*| **@***logical_file_name_var* }  
+ 文件 **=**  { *logical_file_name*| **@***logical_file_name_var* }  
  文件或变量的逻辑名称，其值等于要包含在备份中的文件的逻辑名称。  
   
- 文件组** = ** { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ 文件组 **=**  { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
  文件组或变量的逻辑名称，其值等于要包含在备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。  
   
 > [!NOTE]  
@@ -220,14 +220,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  有关部分备份的详细信息，请参阅[部分备份 &#40;SQL server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-到\<backup_device > [ **，**...* n * ] 随附的设置的指示[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)是未镜像的介质集或第一个镜像介质集 （适用于的一个或多个镜像到内的镜像子句声明）。  
+到\<backup_device > [ **，**... *n*  ] 随附的设置的指示[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)是未镜像的介质集或第一个镜像介质集 （适用于的一个或多个镜像到内的镜像子句声明）。  
   
 \<backup_device > 指定要用于备份操作的逻辑或物理备份设备。  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果为变量提供 (@*logical_device_name_var*)，备份设备名称可以是指定为字符串常量 (@*logical_device_name_var* ** = **逻辑备份设备名称) 或为除任何字符字符串数据类型的变量的**ntext**或**文本**数据类型。  
+ 要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果为变量提供 (@*logical_device_name_var*)，备份设备名称可以是指定为字符串常量 (@*logical_device_name_var*  **=** 逻辑备份设备名称) 或为除任何字符字符串数据类型的变量的**ntext**或**文本**数据类型。  
   
- {磁盘 |磁带 |URL} ** = ** { *physical_device_name*  |  ** @ ***physical_device_name_var* }  
+ {磁盘 |磁带 |URL}  **=**  { *physical_device_name*  |   **@** *physical_device_name_var* }  
  指定磁盘文件或磁带设备，或者 Windows Azure 存储服务。 该 URL 的格式用于创建备份到 Windows Azure 存储服务。 有关详细信息和示例，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 本教程，请参阅[教程： SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
   
 > [!IMPORTANT]  
@@ -245,7 +245,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  *n*  
  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。  
   
-MIRROR TO \<backup_device > [ **，**...* n * ] 指定一组最多三个辅助的备份设备，备份设备的 TO 子句中指定的每个的镜像。 MIRROR TO 子句必须指定相同的类型和数量的备份设备作为的 TO 子句。 最多可以使用三个 MIRROR TO 子句。  
+MIRROR TO \<backup_device > [ **，**... *n*  ] 指定一组最多三个辅助的备份设备，备份设备的 TO 子句中指定的每个的镜像。 MIRROR TO 子句必须指定相同的类型和数量的备份设备作为的 TO 子句。 最多可以使用三个 MIRROR TO 子句。  
   
  此选项仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版中可用。  
   
@@ -310,7 +310,7 @@ MIRROR TO \<backup_device > [ **，**...* n * ] 指定一组最多三个辅助�
 这些选项对此备份操作创建的备份集进行操作。  
   
 > [!NOTE]  
->  若要指定备份集还原操作，使用文件** = ** * \<backup_set_file_number >*选项。 有关如何指定备份集的详细信息，请参阅"指定备份集"中[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  若要指定备份集还原操作，使用文件 **=**   *\<backup_set_file_number >*选项。 有关如何指定备份集的详细信息，请参阅"指定备份集"中[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  指定备份为*仅复制备份*，这不会影响常规备份的序列。 仅复制备份是独立于定期计划的常规备份而创建的。 仅复制备份不会影响数据库的总体备份和还原过程。  
@@ -340,10 +340,10 @@ NO_COMPRESSION
 DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
-名称** = ** { *backup_set_name*| **@***backup_set_var* }  
+名称 **=**  { *backup_set_name*| **@***backup_set_var* }  
 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。  
   
-{EXPIREDATE **=***日期*|RETAINDAYS ** = ** *天*}  
+{EXPIREDATE **=***日期*|RETAINDAYS  **=**  *天*}  
 指定允许覆盖该备份的备份集的日期。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。  
   
 如果两个选项指定，到期日期将由**mediaretention**配置设置。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
@@ -351,10 +351,10 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 > [!IMPORTANT]  
 >  这些选项仅仅阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆盖文件。 用其他方法仍可擦除磁带，而通过操作系统也可以删除磁盘文件。 有关过期验证的详细信息，请参阅本主题中的 SKIP 和 FORMAT。  
   
-EXPIREDATE ** = ** { *日期* |  ** @ ***date_var* }  
+EXPIREDATE  **=**  { *日期* |   **@** *date_var* }  
  指定备份集到期和允许被覆盖的日期。 如果为变量提供 (@*date_var*)，此日期必须按照配置的系统**datetime**格式化，并指定为以下项之一：  
   
--   字符串常量 (@*date_var* ** = **日期)  
+-   字符串常量 (@*date_var*  **=** 日期)  
 -   字符字符串数据类型的变量 (除**ntext**或**文本**数据类型)  
 -   A **smalldatetime**  
 -   A **datetime**变量  
@@ -369,7 +369,7 @@ EXPIREDATE ** = ** { *日期* |  ** @ ***date_var* }
 > [!NOTE]  
 >  若要忽略过期日期，请使用 SKIP 选项。  
   
-RETAINDAYS ** = ** {*天*| **@***days_var* }  
+RETAINDAYS  **=**  {*天*| **@***days_var* }  
  指定必须经过多少天才可以覆盖该备份介质集。 如果为变量提供 (**@***days_var*)，必须将它指定为一个整数。  
   
 **媒体集选项**  
@@ -424,13 +424,13 @@ FORMAT
   
 指定 FORMAT 即表示 SKIP；SKIP 无需显式声明。  
   
-MEDIADESCRIPTION ** = ** {*文本* | **@***text_variable* }  
+MEDIADESCRIPTION  **=**  {*文本* | **@***text_variable* }  
 指定介质集的自由格式文本说明，最多为 255 个字符。  
   
-MEDIANAME ** = ** { *media_name* | **@***media_name_variable* }  
+MEDIANAME  **=**  { *media_name* | **@***media_name_variable* }  
 指定整个备份介质集的介质名称。 介质名称的长度不能多于 128 个字符，如果指定了 MEDIANAME，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。  
   
-BLOCKSIZE ** = ** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
 用字节数来指定物理块的大小。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。  
   
 如果要建立一个计划在 CD-ROM 上进行复制和还原的备份，请指定 BLOCKSIZE=2048。  
@@ -440,7 +440,7 @@ BLOCKSIZE ** = ** { *blocksize* | **@***blocksize_variable* }
   
 **数据传输选项**  
   
-BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。  
   
 所使用的缓冲区的总空间由： *buffercount***\****maxtransfersize*。  
@@ -448,7 +448,7 @@ BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 >  有关使用 BUFFERCOUNT 选项的重要信息，请参阅[不正确 BufferCount 数据传输选项可能会导致 OOM 情况](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。  
   
-MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
  指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。  
 > [!NOTE]  
 >  如果数据库具有配置 FILESTREAM，包括内存中 OLTP 文件组，使用 SQL 编写器服务，创建备份时则`MAXTRANSFERSIZE`在还原时应大于或等于`MAXTRANSFERSIZE`了时使用创建备份。 
@@ -490,7 +490,7 @@ RESTART
   
 **监视选项**  
   
-统计信息 [ ** = ***百分比*]  
+统计信息 [  **=** *百分比*]  
  显示每次另一条消息*百分比*完成，并用于仪表进度。 如果*百分比*省略，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完成每个 10%后显示一条消息。  
   
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。  
@@ -531,13 +531,13 @@ NOUNLOAD
 > [!NOTE]  
 >  如果不想进行日志备份，则请使用简单恢复模式。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
-{NORECOVERY |备用** = ** *undo_file_name* }  
+{NORECOVERY |备用 **=**  *undo_file_name* }  
   NORECOVERY  
   备份日志的尾部并使数据库处于 RESTORING 状态。 当将故障转移到辅助数据库或在执行 RESTORE 操作前保存日志尾部时，NORECOVERY 很有用。  
   
   若要执行最大程度的日志备份（跳过日志截断）并自动将数据库置于 RESTORING 状态，请同时使用 NO_TRUNCATE 和 NORECOVERY 选项。  
   
-  备用** = ** *standby_file_name*  
+  备用 **=**  *standby_file_name*  
   备份日志的尾部并使数据库处于只读和 STANDBY 状态。 将 STANDBY 子句写入备用数据（执行回滚，但需带进一步还原选项）。 使用 STANDBY 选项等同于 BACKUP LOG WITH NORECOVERY 后跟 RESTORE WITH STANDBY。  
   
   使用备用服务器模式需要由指定的备用文件*standby_file_name*，其位置存储在数据库的日志。 如果指定的文件已经存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会覆盖该文件；如果指定的文件不存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将创建它。 备用文件将成为数据库的一部分。  
