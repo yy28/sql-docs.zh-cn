@@ -22,8 +22,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: zh-cn
@@ -224,4 +223,3 @@ ms.lasthandoff: 08/09/2017
 [管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

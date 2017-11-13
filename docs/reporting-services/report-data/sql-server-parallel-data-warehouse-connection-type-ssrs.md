@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
 ms.contentlocale: zh-cn
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  有关详细信息，请参阅网站 [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)类型的报表数据源的数据集。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="Connection"></a> 连接字符串  
  连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定 **工具中的**CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 示例数据库：  
@@ -78,7 +77,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  基于文本的查询设计器支持 [文本](#QueryText) 模式，在此模式下，可以键入 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令，选择来自数据源的数据。  
   
--   [Text](#QueryText)  
+-   [文本](#QueryText)  
   
  你使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]与[!INCLUDE[ssDW](../../includes/ssdw-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]与 SQL Server。 SQL 语言的这两种方言非常相似。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源连接类型编写的查询通常可以用于 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 数据源连接类型。  
   
@@ -142,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [将筛选器添加到数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 相关章节  
@@ -151,13 +150,13 @@ WHERE EmployeeID = (@EmpID)
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [数据连接、 数据源和报表生成器中的连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供有关嵌入数据集和共享数据集的信息。  
   
- [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
@@ -166,8 +165,7 @@ WHERE EmployeeID = (@EmpID)
 ## <a name="next-steps"></a>后续步骤
 
 [报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[筛选器、 组和数据进行排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[对数据进行筛选、分组和排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [表达式](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

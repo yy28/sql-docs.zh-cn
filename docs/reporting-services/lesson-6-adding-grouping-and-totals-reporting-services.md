@@ -16,8 +16,7 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
 ms.contentlocale: zh-cn
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 选项卡。  
   
-2.  如果看不到“行组”窗格，则右键单击设计图面，然后单击“查看”，再单击“分组”。  
+2.  如果看不到**行组**窗格中，右击设计图面，然后单击**视图**，然后单击**分组**。  
   
 3.  从 **“报表数据”** 窗格将 **Date** 字段拖到 **“行组”** 窗格， 并将其放置到名为 **(Details)**的行上面。
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  若要设置新的日期列的格式，右键单击带有 `[Date]` 字段表达式的单元，然后单击“文本框属性”。  
   
-7.  单击“数字”，然后在“类别”字段中，单击“日期”。  
+7.  单击**数**，然后在**类别**字段中，单击**日期**。  
   
 8.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”**。  
   
@@ -65,11 +64,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到“设计”视图。  
   
-2.  右键单击包含 `[LineTotal]` 字段的数据区域单元，并单击“添加总计”。  
+2.  右键单击包含该字段的数据区域单元格`[LineTotal]`，然后单击**添加总计**。  
   
     这将添加一个带有每个订单的美元总金额的行。  
   
-3.  右键单击包含 `[Qty]` 字段的单元，并单击“添加总计”。  
+3.  右键单击包含该字段的单元格`[Qty]`，然后单击**添加总计**。  
   
     这将向总计行添加每个订单的总数量。  
   
@@ -119,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  一个可选步骤是将已完成的报表发送到本机模式报表服务器上，以便您可以从报表管理器查看该报表。  
   
-2.  单击“项目”菜单，然后单击“教程属性...”  
+2.  单击**项目**菜单，然后单击**教程属性...**  
   
 3.  在 **TargetServerURL** 中，键入报表服务器的名称，例如   
 - `http:/<servername>/reportserver`  
@@ -130,7 +129,7 @@ ms.lasthandoff: 08/09/2017
 4. 请注意，“TargetReportFolder”是教程，是项目的名称。  这是在下一步骤中将报表部署到其中的文件夹的名称。  
 5. 单击 **“确定”**。  
   
-6.  单击“生成”菜单，然后单击“部署教程”。  
+6.  在单击**生成**菜单，然后单击**部署教程**。  
   
     如果您在输出窗口中看到如下消息，则指示成功部署。  
   
@@ -148,15 +147,15 @@ ms.lasthandoff: 08/09/2017
   
     > “为用户‘XXXXXXXX\\[你的用户名]’授予的权限不足，无法执行此操作”  
   
-7.  使用管理员权限浏览到 Web 门户，例如，右键单击 Internet Explorer 图标，然后单击“以管理员身份运行”。  
+7.  浏览到 web 门户，使用管理员权限，例如，Internet explorer，右键单击图标，单击**以管理员身份运行**。  
   
     浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户 URL。   
-    **注意：**门户 URL 为“Reports”，而不是“Reportserver”的报表服务器 URL。  例如：   
+    **注意：** *门户*URL 为"Reports"，不报告*服务器*"Reportserver"的 URL。  例如：   
     - `http://<server name>/reports`的行上面。  
      - `http://localhost/reports` 如果你的设计报表在报表服务器上，则使用。  
   
-8.  浏览到包含该报表的文件夹。 默认名称是教程，是项目的名称或在项目属性中的“TargetReportFolder fiedl”中键入的名称。   
-单击报表“Sales Orders”的名称以在浏览器中查看呈现的报表。  
+8.  浏览到包含该报表的文件夹。 默认名称是*教程*，到在项目属性 TargetReportFolder fiedl 键入的名称或项目的名称。   
+单击报表名称**Sales Orders**以在浏览器中查看呈现的报表。  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  

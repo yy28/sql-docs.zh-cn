@@ -19,8 +19,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: zh-cn
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  如果不熟悉 .odc 文件，可以使用以下说明来创建并导出文件。 为 OLE DB 数据源创建 .odc 文件的一种简便方法就是使用 Excel 2007 和数据连接向导。 注意：向导不会创建数据源，您必须拥有已定义的外部数据源。  
   
- 只有在现有 .odc 文件与报表和查询完全兼容的情况下，才能使用现有 .odc 文件。 如果遇到需要对报表或 .odc 文件进行重大修改的错误，则应为报表创建新的 .rsds 文件。 有关如何创建使用 .rsds 文件的共享数据源的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 只有在现有 .odc 文件与报表和查询完全兼容的情况下，才能使用现有 .odc 文件。 如果遇到需要对报表或 .odc 文件进行重大修改的错误，则应为报表创建新的 .rsds 文件。 有关如何创建使用.rsds 文件的共享的数据源的详细信息，请参阅[创建和管理共享数据源 &#40;Reporting Services SharePoint 集成模式 &#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>创建并导出 .odc 文件  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 **“数据”** 选项卡上的 **“获取外部数据”** 组中，单击 **“从其他来源”**，然后单击 **“从数据连接向导”**。  
   
-3.  选择“其他/高级”，然后单击“下一步”。  
+3.  选择**其他/高级**，然后单击**下一步**。  
   
 4.  选择 **“Microsoft OLE DB Provider for SQL Server”**，然后单击 **“下一步”**。  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 08/09/2017
   
 10. 如果报表使用自定义数据源信息，请单击 **“共享”**。  
   
-11. 在“数据源链接”中，单击浏览 (**...**) 按钮。  
+11. 在**数据源链接**，单击浏览 (**...**) 按钮。  
   
 12. 选择刚上载的 .odc 文件。  
   
@@ -110,4 +109,3 @@ ms.lasthandoff: 08/09/2017
  [创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   
-

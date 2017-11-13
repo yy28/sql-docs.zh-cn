@@ -20,8 +20,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
 ms.contentlocale: zh-cn
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“开始”**，依次指向 **“程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-2.  在左窗格中，展开 **“SQL Server 网络配置”**，然后针对  实例单击“协议” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+2.  在左窗格中，展开**SQL Server 网络配置**，然后单击**协议**的实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  打开“服务和应用程序”文件夹。  
   
-3.  右键单击“WMI 控件”，然后选择“属性”。  
+3.  右键单击**WMI 控制**，然后选择**属性**。  
   
 4.  单击 **“安全性”**。  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 08/09/2017
 13. 在 **“允许”** 列中，选择 **“启用帐户”**、 **“远程启用”**和 **“读取安全”**，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services 配置管理器 &#40;本机模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
 
