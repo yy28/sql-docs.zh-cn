@@ -102,7 +102,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  在文本编辑器中打开 .odc 文件。  
   
-6.  在** \<odc:ConnectionString >**元素，滚动到末尾的行和删除**嵌入的数据 = False**，然后删除**编辑模式 = 0**。 如果字符串中的最后一个字符为分号，则立即删除它。  
+6.  在 **\<odc:ConnectionString >**元素，滚动到末尾的行和删除**嵌入的数据 = False**，然后删除**编辑模式 = 0**。 如果字符串中的最后一个字符为分号，则立即删除它。  
   
 7.  保存文件。 其余步骤取决于你使用的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 和 Excel 的版本。  
   
