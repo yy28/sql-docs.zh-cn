@@ -1,5 +1,5 @@
 ---
-title: "业务规则操作 (Master Data Services) | Microsoft Docs"
+title: "业务规则操作 (Master Data Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,15 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e95b13ecedad9aaaacb948bc907a9c8950e136de
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="business-rule-actions-master-data-services"></a>业务规则操作 (Master Data Services)
@@ -74,9 +73,8 @@ ms.lasthandoff: 09/07/2017
 |**启动工作流**|启动外部工作流。 导致此操作发生的数据传递到工作流。 有关详细信息，请参阅 [SharePoint Workflow Integration with Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx)（SharePoint 工作流与 Master Data Services 集成）。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
   
 ## <a name="see-also"></a>另请参阅  
- [业务规则条件 (Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
- [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
- [创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [业务规则条件 &#40;Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [业务规则 &#40;Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [创建和发布业务规则 &#40;Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   
-

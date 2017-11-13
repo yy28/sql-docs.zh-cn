@@ -1,5 +1,5 @@
 ---
-title: "了解 SQL Server Master Data Services | Microsoft Docs"
+title: "了解 SQL Server Master Data Services |Microsoft 文档"
 ms.custom: 
 ms.date: 02/14/2017
 ms.prod: sql-server-2016
@@ -13,15 +13,14 @@ keywords:
 - "了解 SQL"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 caps.latest.revision: 19
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 9139c9faeb4d38fe43300d6b97c019ae845567ec
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0a3198e7cc00f01d31b7951e0d1298bee9b8dec2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="learn-sql-server-master-data-services"></a>了解 SQL Server Master Data Services
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/07/2017
 ## <a name="samples"></a>示例  
 * 了解有关如何使用模型、实体和层次结构在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中构造数据的详细信息，请尝试安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]时附带的示例模型。 有关部署示例的说明，请参阅 [部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。   
   
-    有关示例模型的 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新的信息，请参阅 [SQL Server 示例：模型部署包](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+    璝惠[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]更新示例模型，请参阅[SQL Server 示例： 模型部署包](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 * 有关如何自定义你和你的用户与 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的交互方式的演示，请尝试使用 SQL Server 示例附带的 MDS C# 控制台应用程序示例。 可以从此 [GitHub 存储库](https://github.com/Microsoft/sql-server-samples)以 .zip 文件格式下载 SQL Server 示例。  
   

@@ -1,5 +1,5 @@
 ---
-title: "升级数据库向导（Master Data Services 配置管理器）| Microsoft Docs"
+title: "升级数据库向导 （Master Data Services 配置管理器） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,15 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 1b43487f640dea05d9d29c195cd660db8bd24574
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7823eb8d6b5b4a591f38e0e6dae1a4f8fdbadb80
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升级数据库向导（Master Data Services 配置管理器）
@@ -33,7 +32,7 @@ ms.lasthandoff: 09/07/2017
   
 |控件名称|Description|  
 |------------------|-----------------|  
-|**SQL Server 实例**|当前选择的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。|  
+|**SQL Server 实例**|当前所选的名称[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]实例。|  
 |**Master Data Services 数据库**|当前选择的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。|  
   
 ## <a name="progress-and-finish"></a>进度和完成  
@@ -41,8 +40,7 @@ ms.lasthandoff: 09/07/2017
   
 ## <a name="see-also"></a>另请参阅  
  [“数据库配置”页（Master Data Services 配置管理器）](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)  
+[Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)  
  [升级 Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   
-
