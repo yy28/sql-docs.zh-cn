@@ -2,9 +2,12 @@
 title: "表格模型 (SSAS 表格) 中的 DAX |Microsoft 文档"
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

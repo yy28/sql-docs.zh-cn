@@ -2,9 +2,12 @@
 title: "通过使用本机查询 (Analysis Services) 导入数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/26/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
