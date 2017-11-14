@@ -1,12 +1,15 @@
 ---
 title: "游标类型、 LockType 和 EditMode 属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:

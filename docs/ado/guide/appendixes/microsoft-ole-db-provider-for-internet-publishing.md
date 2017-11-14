@@ -1,12 +1,15 @@
 ---
 title: "用于 Internet 发布的 Microsoft OLE DB 提供程序 |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
