@@ -1,5 +1,5 @@
 ---
-title: "Linux 上的 SQL Server 概述 |Microsoft 文档"
+title: "Linux 上的 SQL Server 概述 |Microsoft Docs"
 description: "本主题介绍了 SQL Server 如何在 Linux 上运行，并提供了深入学习所需要的信息。"
 author: rothja
 ms.author: jroth
@@ -19,11 +19,11 @@ ms.lasthandoff: 10/05/2017
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
-SQL Server 2017 现在可以在 Linux 上运行。 它具有相同的 SQL Server 数据库引擎，以及许多相似的功能和服务，且不受操作系统的影响。
+SQL Server 2017 现在可以在 Linux 上运行。 它使用相同的 SQL Server 数据库引擎，具有许多相似的功能和服务，且不受操作系统的影响。
 
 ## <a name="install"></a>Install
 
-若要开始，请使用以下快速入门教程在 Linux 上安装 SQL Server:
+若要开始，请使用以下快速入门教程之一在 Linux 上安装 SQL Server：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
@@ -46,7 +46,7 @@ SQL Server 2017 现在可以在 Linux 上运行。 它具有相同的 SQL Server
 
 ## <a name="explore"></a>浏览
 
-SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的底层数据库引擎。 因此，在 Linux 上，许多现有功能和特性的运行方式相同。 该部分的文档包含了从 Linux 角度展示的一些功能。 同时还包含了 Linux 上的一些独特需求。
+SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的底层数据库引擎。 因此，在 Linux 上，许多现有功能的运行方式相同。 该部分的文档包含了从 Linux 角度展示的一些功能。 同时还介绍了 Linux 上的一些独特需求。
 
 如果你已熟悉 SQL Server，请查看[发行说明](sql-server-linux-release-notes.md)了解常规使用说明和此版本的已知问题。 然后查看[Linux 上的 SQL Server 的新功能](sql-server-linux-whats-new.md)以及[SQL Server 2017 更新概览](../sql-server/what-s-new-in-sql-server-2017.md)。
 
