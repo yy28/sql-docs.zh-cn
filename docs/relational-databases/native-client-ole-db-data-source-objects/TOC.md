@@ -1,0 +1,7 @@
+# [数据源对象 (OLE DB)](data-source-objects-ole-db.md)
+# [数据源信息属性](data-source-information-properties.md)
+# [数据源属性 (OLE DB)](data-source-properties-ole-db.md)
+# [初始化和授权属性](initialization-and-authorization-properties.md)
+# [持久的数据源对象](persisted-data-source-objects.md)
+# [会话属性-SQL Server Native Client OLE DB 提供程序](session-properties-sql-server-native-client-ole-db-provider.md)
+# [会话](sessions.md)

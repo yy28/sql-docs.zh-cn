@@ -1,0 +1,5 @@
+# [AliasName 属性 （SqlServerAlias 类）](aliasname-property-sqlserveralias-class.md)
+# [ConnectionString 属性 （SqlServerAlias 类）](connectionstring-property-sqlserveralias-class.md)
+# [ProtocolName 属性 （SqlServerAlias 类）](protocolname-property-sqlserveralias-class.md)
+# [ServerName 属性 （SqlServerAlias 类）](servername-property-sqlserveralias-class.md)
+# [SqlServerAlias 类](sqlserveralias-class.md)
