@@ -1,0 +1,6 @@
+# [CLR 用户定义函数](clr-user-defined-functions.md)
+# [CLR 标量值函数](clr-scalar-valued-functions.md)
+# [CLR 表值函数](clr-table-valued-functions.md)
+# [CLR 用户定义聚合的调用函数](clr-user-defined-aggregate-invoking-functions.md)
+# [CLR 用户定义聚合要求](clr-user-defined-aggregates-requirements.md)
+# [CLR 用户定义聚合](clr-user-defined-aggregates.md)
