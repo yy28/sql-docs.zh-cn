@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptions.FontsAndColors.ColorPicker
+f1_keywords: VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 70ef9472487b447e87b29cb1af4b4d80cb2b7693
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b81457423c340118548bcc22b66504469ad5fa4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>“颜色”对话框（可视化数据库工具）
 “颜色对话框”返回用户选定的颜色的 RGB 值。 用户可以从显示器驱动程序确定的一组基本颜色或者从一组自定义颜色中进行选择。 从基本颜色中进行选择，或创建自定义颜色。 单击颜色矩阵或在“色调”、“饱和度”、“亮度”、“红色”、“绿色”以及“蓝色”框中执行键入操作可定义颜色。  
@@ -67,4 +64,3 @@ ms.lasthandoff: 06/22/2017
 **添加到自定义颜色**  
 单击此项可以将颜色添加到自定义颜色区域。  
   
-

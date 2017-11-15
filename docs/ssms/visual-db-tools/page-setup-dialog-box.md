@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.PageSetup
+f1_keywords: vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3545691459ecb808bbf67fce41235a6335e4d85f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 857a8a1331b49273ff82dd459c65da983c60dc4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
 可通过选择“页面设置”对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  
@@ -61,4 +58,3 @@ Right
 **页眉**  
 将文件名和路径作为页眉打印。  
   
-

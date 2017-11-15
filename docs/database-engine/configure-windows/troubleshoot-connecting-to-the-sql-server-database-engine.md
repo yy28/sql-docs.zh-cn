@@ -5,25 +5,23 @@ ms.date: 02/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,5 +155,4 @@ ms.lasthandoff: 09/27/2017
     1. 在客户端计算机上，在 SQL Server 配置管理器的左窗格中展开“SQL Native Client 版本配置”，然后选择“客户端协议”。
     2. 在右窗格中，确保 TCP/IP 已启用。 如果 TCP/IP 处于禁用状态，请右键单击“TCP/IP”，然后单击“启用”。
     3. 确保 TCP/IP 的协议顺序编号小于命名管道（或较低版本上的 VIA）协议。 通常，应该将共享内存保留为顺序 1，TCP/IP 保留为顺序 2。 仅当客户端和 SQL Server 在同一台计算机上运行时，才使用共享内存。 将按顺序尝试所有已启用的协议，直到其中一个成功为止，只不过当连接不属于同一台计算机时，将跳过共享内存。 
-
 

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.lookin
+f1_keywords: vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>“选择搜索文件夹”对话框 (Visual Studio)
 使用该对话框，您可以组合、保存和修改自己命名的搜索文件夹集，并指定文件夹的搜索顺序。 若要显示此对话框，请在“在文件中查找”、“在文件中替换”或“查找和替换”窗口上，选择“查找范围”下拉列表旁的“浏览(...)”按钮。  
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 **应用**  
 将在“选择的文件夹”列表中列出的搜索文件夹集另存为命名文件夹集。 然后，可以在“查找和替换”窗口的所有选项卡上的“查找范围”字段中选择此文件夹集。 关闭“选择搜索文件夹”对话框。  
   
-

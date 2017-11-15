@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,19 @@ helpviewer_keywords:
 - Replication Monitor, thresholds and warnings
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8f7ff9819526f700afc3b466b26ff32277a3c8b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. 默认情况下，复制监视器只为未初始化的订阅显示警告，但是，您可以为其他情况启用警告。 建议您对拓扑启用警告，以便及时获悉有关状态和性能的信息。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息。 默认情况下，复制监视器只为未初始化的订阅显示警告，但是，您可以为其他情况启用警告。 建议您对拓扑启用警告，以便及时获悉有关状态和性能的信息。  
   
  启用警告时，需要指定阈值。 达到或超过该阈值时，将显示警告（除非需要显示更高优先级的问题）。 除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 您可以为下列情况启用警告：  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。  
   
-2.  单击 **“警告”** 选项卡。 若要查看有关此选项卡上的选项的详细信息，请在菜单栏上单击 **“帮助”** 。  
+2.  单击 **“警告”** 选项卡。若要查看有关此选项卡上的选项的详细信息，请在菜单栏上单击 **“帮助”** 。  
   
 3.  通过选中相应的复选框来启用警告： **“如果订阅将在阈值内过期，则发出警告”** 或 **“如果滞后时间超出阈值，则发出警告”**。  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。  
   
-2.  单击 **“警告”** 选项卡。 若要查看有关此选项卡上的选项的详细信息，请在菜单栏上单击 **“帮助”** 。  
+2.  单击 **“警告”** 选项卡。若要查看有关此选项卡上的选项的详细信息，请在菜单栏上单击 **“帮助”** 。  
   
 3.  通过选中相应的复选框来启用警告：  
   
@@ -137,7 +136,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。  
   
-2.  单击 **“警告”** 选项卡。 若要查看有关此选项卡上的选项的详细信息，请在顶部菜单上单击 **“帮助”** 。  
+2.  单击 **“警告”** 选项卡。若要查看有关此选项卡上的选项的详细信息，请在顶部菜单上单击 **“帮助”** 。  
   
 3.  通过选中 **“如果订阅将在阈值内过期，则发出警告”**复选框来启用警告。  
   

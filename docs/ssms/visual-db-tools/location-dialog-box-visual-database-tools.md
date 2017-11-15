@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.getdirectoryname
+f1_keywords: vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c55d02a0ccdfd22d1d0b817e362e1faf661c4265
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>“位置”对话框（可视化数据库工具）
 使用此对话框可以找到并选择包含所需文件的文件夹。 此对话框将选定文件夹的路径返回到调用对话框。 可通过以下方式访问此对话框：  
@@ -62,4 +59,3 @@ ms.lasthandoff: 06/22/2017
 **创建新文件夹**  
 显示“新建文件夹”对话框。 使用此选项可以在“查找范围”列表中选定的文件夹下创建新的子文件夹。  
   
-
