@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c1203723b10d31e7f34aa163fdc3f478070405f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: ec10103d7282d00ba0b6631eb12d552d639a4916
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
   若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
         -   [安装 SQL Server 的安全注意事项](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
-    -   必须在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序之前完成这些配置步骤，可使用 Windows 群集管理器来执行操作。 必须为要配置的各个故障转移群集实例设置一个 WSFC 组。  
+    -   必须在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序之前完成这些配置步骤，可使用 Windows 群集管理器来执行操作。必须为要配置的各个故障转移群集实例设置一个 WSFC 组。  
   
     -   您必须确保您的系统满足最低要求。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的具体要求的详细信息，请参阅 [安装故障转移群集前的准备工作](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
   

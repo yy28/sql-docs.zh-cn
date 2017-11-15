@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - viewing Publisher information
 - Publishers [SQL Server replication], viewing information
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4d592cc39ec10a3f56275e177edd0b3e12b8b5d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d48572a51365d913beec4951787e4058877a9eed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>查看发布服务器的信息和执行其任务（复制监视器）
   复制监视器提供了下列选项卡，以显示有关选定发布服务器的信息：  
@@ -48,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  若要查看所有发布的信息，请单击 **“发布”** 选项卡。  
   
-3.  若要查看有关订阅的信息，请单击 **“订阅监视列表”** 选项卡。 还可以从此访问更详细的信息以及执行任务：  
+3.  若要查看有关订阅的信息，请单击 **“订阅监视列表”** 选项卡。还可以从此访问更详细的信息以及执行任务：  
   
     -   若要查看与订阅相关联的代理的详细信息，请右键单击该订阅，再单击 **“查看详细信息”**。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
     -   若要重新初始化订阅，请右键单击该订阅，然后单击 **“重新初始化订阅”**。  
   
-4.  若要查看有关代理的信息，请单击 **“代理”** 选项卡。 您还可以通过此选项卡访问更详细的信息并执行任务：  
+4.  若要查看有关代理的信息，请单击 **“代理”** 选项卡。您还可以通过此选项卡访问更详细的信息并执行任务：  
   
     -   若要查看有关代理的详细信息（如信息性消息以及任何错误消息），请右键单击代理，然后单击 **“查看详细信息”**。  
   

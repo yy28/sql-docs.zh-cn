@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdtsql.chm:100644
+f1_keywords: vdtsql.chm:100644
 helpviewer_keywords:
 - verifying queries
 - queries [SQL Server], verifying
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3673b8eee9b40215877fc7b0058bd5bd6f51981f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2aa0172a18bb1b01297caa9dcf4db07888ce083
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="verify-queries-visual-database-tools"></a>验证查询 (Visual Database Tools)
 为了避免问题，可以对所生成的查询进行检查以确保其语法正确。 在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中输入语句时，此选项尤其有用。  
@@ -47,4 +44,3 @@ ms.lasthandoff: 08/18/2017
 [运行查询 (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

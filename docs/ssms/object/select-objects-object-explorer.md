@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.selectobjects.f1
+f1_keywords: sql13.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bf429c56ec1c00a62c747869a8bfe4aca2ef0355
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-objects-object-explorer"></a>选择对象（对象资源管理器）
 使用“选择对象”对话框可以向另一个对话框的列表中添加对象。 对话框的标题以及对话框中可用的选项取决于该对话框的打开方式。 只显示可用的选项，例如，当您为新对象选择所有者时，只有登录名选项可用。  
@@ -43,4 +40,3 @@ ms.lasthandoff: 06/22/2017
 **浏览**  
 显示“查找对象”对话框。 该对话框包含“选择这些对象类型”框中所列类型的对象的列表。 通过选中相应的复选框可以从该列表中选择对象。  
   
-

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca441cd00d9626914117e2f2e60d4786332ba1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9a60e5e072a0c6b5d9d769aa07b57a921f678c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-locks-object"></a>SQL Server Locks 对象
   Microsoft **中的** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了有关各种资源类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁的信息。 锁加在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源上（如在一个事务中读取或修改的行），以防止各种事务并发使用资源。 例如，如果一个排它 (X) 锁被一个事务加在某一表的某一行上，在这个锁被释放前，其他事务都不可以修改这一行。 尽可能少使用锁可提高并发性，从而改善性能。 可以同时监视 **Locks** 对象的多个实例，每个实例代表一个资源类型上的一个锁。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 |**Average Wait Time (ms)**|每个导致等待的锁请求的平均等待时间（毫秒）。|  
 |**Average Wait Time Base**|仅限内部使用。|
 |**Lock Requests/sec**|锁管理器每秒请求的新锁和锁转换数。|  
-|**Lock Timeouts (timeout &gt; 0)/sec**|每秒超时的锁请求数，但不包括对 NOWAIT 锁的请求。|  
+|**Lock Timeouts (timeout > 0)/sec**|每秒超时的锁请求数，但不包括对 NOWAIT 锁的请求。|  
 |**Lock Timeouts/sec**|每秒超时的锁请求数，包括对 NOWAIT 锁的请求。|  
 |**Lock Wait Time (ms)**|锁在最后一秒内的总等待时间（毫秒）。|  
 |**Lock Waits/sec**|每秒要求调用者等待的锁请求数。|  
@@ -62,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

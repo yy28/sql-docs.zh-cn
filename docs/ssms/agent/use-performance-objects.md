@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5197a38da57e041039dab93d037064bba79db7ff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 58d3b31d1ef01c500446187cd3ad1aa71d3dca22
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-performance-objects"></a>使用性能对象
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理包括用于监视服务执行情况的性能对象和计数器。 这些性能对象使您可以使用性能监视器（一个 Windows 工具）来识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务在后台的运行情况。 例如，您可以通过识别 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务当前运行的活动作业数量来找出那些锁定的作业。  
@@ -41,8 +39,8 @@ ms.lasthandoff: 06/22/2017
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|默认|**SQLAgent：**对象：计数器**|  
-|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：**对象：计数器**|  
+|默认|**SQLAgent：**对象：计数器|  
+|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：**对象：计数器|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的下列性能对象。  
   
@@ -57,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 [监视和优化性能](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [如何启动系统监视器 (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e10105d7589cfeeb3f0fc7cd3a57bd23f396704a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e9e34fcbb4dde3f61350653ac07a3abb2ca70c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>更改与查询关联的连接
 通过更改查询所用的连接，可以对多个不同的服务器或数据库执行该查询。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 06/22/2017
 [将查询与项目中的连接关联](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [查看或更改项目中的连接属性](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
-

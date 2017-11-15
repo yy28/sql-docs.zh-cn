@@ -5,21 +5,19 @@ ms.date: 10/04/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标数据的高级查看功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -314,10 +312,9 @@ SSMS 显示筛选器如下所示：
 ### <a name="d5-view-run-time-query-plan"></a>D.5 查看运行时查询计划
 
 
-使用 **Query_post_execution_showplan** 事件可以查看 SSMS UI 中的实际查询计划。 当显示“详细信息”窗格时，可以在“查询计划”选项卡中看到查询计划图。 将鼠标悬停在查询计划的一个节点上方时，可以看到该节点的属性名称及其值的列表。
+使用 **Query_post_execution_showplan** 事件可以查看 SSMS UI 中的实际查询计划。 当显示“详细信息”窗格时，可以在“查询计划”选项卡中看到查询计划图。将鼠标悬停在查询计划的一个节点上方时，可以看到该节点的属性名称及其值的列表。
 
 
 ![查询计划及一个节点的属性列表](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

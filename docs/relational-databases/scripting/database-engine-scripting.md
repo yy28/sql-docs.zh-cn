@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bb56046f675b73ee5c37803490b8f62355447b7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2c1335f0fd0a97feba334ebffc5864b314c09350
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 脚本环境，以管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例和这些实例中的对象。 还可以在与脚本环境非常类似的环境中生成并运行包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 Xquery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了用于运行 PowerShell 的以下功能：  
   
--   可导入到 PowerShell 会话中的 **sqlps** PowerShell 模块，该模块之后将加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理单元。 可以交互方式运行即席 PowerShell 命令。 可以使用诸如 .\MyFolder\MyScript.ps1 这样的命令来运行脚本文件。  
+-   可导入到 PowerShell 会话中的 **sqlps** PowerShell 模块，该模块之后将加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理单元。可以交互方式运行即席 PowerShell 命令。 可以使用诸如 .\MyFolder\MyScript.ps1 这样的命令来运行脚本文件。  
   
 -   PowerShell 脚本文件可用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 PowerShell 作业步骤的输入，这些步骤按预订的时间间隔或者作为对系统事件的响应来运行脚本。  
   

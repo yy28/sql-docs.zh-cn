@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: bb78ad6f8de0b4f0fa37199a9d70bf31ef67fba7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 162c688c587e0d9277f713e3fe7f9ee35e88bfcc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/02/2017
 ##  <a name="SessionTimeoutPerios"></a> 会话超时期限  
  会话超时期限是一个可用性副本属性，它决定在连接关闭前与另一个可用性副本的连接可处于不活动状态多长时间。 主副本和辅助副本相互 ping 以表示它们还处于活动状态。 在超时期限内从其他副本收到 ping 指示连接仍是打开的，且服务器实例正在进行通信。 收到 ping 后，可用性副本将重置此连接的会话超时计数器。  
   
- 会话超时期限防止副本无限制等待接收来自另一个副本的 ping。 如果在会话超时期限内没有收到来自另一个副本的 ping，该副本将超时。 连接将关闭，超时的副本进入 DISCONNECTED 状态。 即使为同步提交模式配置了断开连接的副本，事务也将不等待该副本重新连接和重新同步。  
+ 会话超时期限防止副本无限制等待接收来自另一个副本的 ping。 如果在会话超时期限内没有收到来自另一个副本的 ping，该副本将超时。连接将关闭，超时的副本进入 DISCONNECTED 状态。 即使为同步提交模式配置了断开连接的副本，事务也将不等待该副本重新连接和重新同步。  
   
  每个可用性副本的默认会话超时期限为 10 秒。 用户可配置此值，最小值为 5 秒。 通常我们建议您将超时期限保持为 10 秒或更长。 如果将值设置为低于 10 秒，则可能使高负荷系统声明虚假故障。  
   
@@ -194,4 +193,3 @@ ms.lasthandoff: 08/02/2017
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    
-

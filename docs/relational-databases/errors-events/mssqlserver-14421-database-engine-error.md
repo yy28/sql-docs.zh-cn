@@ -5,23 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 14421 (Database Engine error)
+helpviewer_keywords: 14421 (Database Engine error)
 ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cc4a06f7b9b27884ac0a5998d43ef056368dcc73
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 5c1997078811628f8a7088f59f0d7d0fe7a414cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver14421"></a>MSSQLSERVER_14421
   
@@ -34,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLErrorNum14421|  
-|消息正文|日志传送辅助数据库 %s.%s 的还原阈值为 %d 分钟，并且现在不同步。 在过去的 %d 分钟之内未执行任何还原操作。 还原操作滞后了 %d 分钟。 请查看代理日志和日志传送监视器信息。|  
+|消息正文|日志传送辅助数据库 %s.%s 的还原阈值为 %d 分钟，并且现在不同步。在过去的 %d 分钟之内未执行任何还原操作。 还原操作滞后了 %d 分钟。 请查看代理日志和日志传送监视器信息。|  
   
 ## <a name="explanation"></a>解释  
 此消息指出日志传送在超出还原阈值的情况下不同步。 还原阈值是生成消息之前在还原操作之间允许等待的分钟数。  
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
 [sp_refresh_log_shipping_monitor (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)  
 [关于日志传送 (SQL Server)](~/database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
-

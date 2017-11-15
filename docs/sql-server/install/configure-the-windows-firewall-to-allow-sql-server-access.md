@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-若要通过防火墙访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙。 防火墙是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的一个组件。 也可以安装其他公司的防火墙。 本主题讨论如何配置 Windows 防火墙，不过所述基本原理也适用于其他防火墙程序。  
+若要通过防火墙访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 防火墙是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的一个组件。 也可以安装其他公司的防火墙。 本主题讨论如何配置 Windows 防火墙，不过所述基本原理也适用于其他防火墙程序。  
   
 > [!NOTE]  
 >  本主题概述了防火墙配置并汇总了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员所需的信息。 有关防火墙的详细信息以及权威防火墙信息，请参阅防火墙文档，例如[高级安全 Windows 防火墙和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 06/22/2017
 
 -  **Microsoft 管理控制台 (MMC)**  
   
-     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。  
+     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  
   
 -   **netsh**  
   
@@ -139,7 +138,7 @@ ms.lasthandoff: 06/22/2017
 
 1. 在左窗格中，单击“入站规则”。
 
-1. 在右窗格的“操作”下，单击“新建规则...”。 “新建入站规则向导”随即打开。
+1. 在右窗格的“操作”下，单击“新建规则...”。“新建入站规则向导”随即打开。
 
 1. 在“规则类型”中，单击“程序”。 单击“下一步” 。
 
@@ -310,7 +309,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  在命令提示符下，键入 **netstat -n -a**。  
   
-         **-n** 开关指示 netstat 以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示 **netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
+         可以从“控制面板”打开 **-n** 开关指示 **netstat** 以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示 **netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
   
 -   **PortQry** 实用工具可用于报告 TCP/IP 端口的状态（正在侦听、未在侦听或已筛选）。 （对于已筛选状态，端口可能正在侦听，也可能未在侦听；此状态指示实用工具没有收到端口的响应。）**PortQry** 实用工具可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=28590)下载。  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 06/22/2017
  [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

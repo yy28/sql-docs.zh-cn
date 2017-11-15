@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +13,16 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: daabab1d4122ce132579f399a4ea6c923477da35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
   本主题介绍 **“指定副本”** 页的选项。 本页适用于 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 的 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
@@ -102,7 +101,7 @@ ms.lasthandoff: 08/02/2017
   
 -   如果每个服务器实例都基于域服务帐户运行，也就是说，如果 **“SQL Server 服务帐户”** 列显示每个服务器实例的域服务帐户，则单击 **“下一步”**。  
   
--   如果任何服务器实例基于非域服务帐户运行，则您需要首先对您的服务器实例进行手动更改，然后才能在向导中继续执行。 在此情况下，单击 **“下一步”** 将会显示一个警告对话框；您应该单击 **“否”**，从而返回到**“端点”** 选项卡。 在 **“指定副本”** 页离开向导时，对 **“SQL Server 服务帐户”** 列显示非域服务帐户的每个服务器实例进行以下更改之一：  
+-   如果任何服务器实例基于非域服务帐户运行，则您需要首先对您的服务器实例进行手动更改，然后才能在向导中继续执行。 在此情况下，单击 **“下一步”** 将会显示一个警告对话框；您应该单击 **“否”**，从而返回到**“端点”** 选项卡。在 **“指定副本”** 页离开向导时，对 **“SQL Server 服务帐户”** 列显示非域服务帐户的每个服务器实例进行以下更改之一：  
   
     -   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户更改为某一域帐户。 有关详细信息，请参阅[为 SQL Server 更改服务启动帐户（SQL Server 配置管理器）](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)  
   
@@ -218,4 +217,3 @@ ms.lasthandoff: 08/02/2017
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

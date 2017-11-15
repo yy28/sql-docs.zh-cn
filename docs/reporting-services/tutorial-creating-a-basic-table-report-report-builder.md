@@ -1,27 +1,25 @@
 ---
-title: "教程： 创建基本表报表 （报表生成器） |Microsoft 文档"
+title: "教程：创建基本表报表（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 2e4cb3264e001fb07119e4c16a274dd38d80887c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
@@ -39,11 +37,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-report"></a>创建报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  单击 **“新建”**。 此时将打开 **“数据源属性”** 对话框。  
   
-3.  在“名称”中，为数据源键入名称 **Product_Sales**。  
+3.  在“名称”中，为数据源键入名称 Product_Sales。  
   
 4.  在“选择连接类型”中，确认已选择“Microsoft SQL Server”。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
     由于您将使用的查询会包含数据而不是从数据库检索数据，因此连接字符串不包含数据库名称。 有关详细信息，请参阅[教程先决条件&#40;报表生成器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-6.  单击“凭据”选项卡。 输入访问外部数据源所需的凭据。  
+6.  单击“凭据”选项卡。输入访问外部数据源所需的凭据。  
   
 7. 再次单击“常规”选项卡。 若要验证是否能连接到数据源，请单击“测试连接”。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
     这将返回“选择数据源的连接”页，且在此页中选择了新数据源。  
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 ## <a name="Query"></a>1b. 在表向导中创建查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在这一报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -138,7 +136,7 @@ ms.lasthandoff: 08/09/2017
   
     在结果集中，列标题基于查询中的名称。 在数据集中，列标题会成为字段名称并保存在报表中。 完成向导后，可以使用“报表数据”窗格查看数据集字段集合。  
   
-4.  单击“下一步” 。  
+4.  单击 **“下一步”**。  
   
 ## <a name="Groups"></a>1c. 在表向导中将数据组织到组中  
 在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
@@ -165,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
     步骤 4 和 5 首先按日期组织字段的值，然后按照该日期的产品子类别组织字段的值。  
   
-6.  单击“下一步” 。  
+6.  单击 **“下一步”**。  
   
 ## <a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
@@ -199,13 +197,13 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-format-a-currency-field"></a>设置货币字段格式  
   
-1.  若要在设计视图中将格式化文本框和占位符文本视为示例值，请在“主文件夹”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头 >“示例值”。  
+1.  若要在“设计”视图中将格式化文本框和占位符文本视为示例值，请在“开始”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头，然后选择“示例值”。  
   
-2.   单击第二行（位于列标题行下）Sales 列的单元，然后向下拖动以选定包含 `[Sum(Sales)]` 的所有单元。  
+2.   单击第二行（位于列标题行下）Sales 列的单元，然后向下拖动以选定包含 `[Sum(Sales)]`的所有单元。  
   
-3.  在“主文件夹”选项卡上的“数字”组中，单击“货币”按钮。 单元会更改为显示已设置好格式的货币。  
+3.  在“开始”选项卡上的“数字”组中，单击“货币”按钮。 单元会更改为显示已设置好格式的货币。  
   
-    如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果未看到示例货币值，在“主文件夹”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头 >“示例值”。  
+    如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果未看到示例货币值，请在“开始”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头，然后选择“示例值”。  
   
 4.  单击 **“运行”** 以预览报表。  
   
@@ -218,11 +216,11 @@ Sales 的汇总值会以货币形式显示。
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  单击包含 `[SalesDate]` 的单元格。  
+2.  单击包含 `[SalesDate]`的单元格。  
   
-3.  在功能区的“主文件夹”选项卡上的“数字”组中，单击箭头并选择“日期”。  
+3.  在功能区的“开始”选项卡上的“数字”组中，单击箭头并选择“日期”。  
   
-    单元格会显示示例日期 **[2000/1/31]**。 如果未看到示例日期，在“主文件夹”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头 >“示例值”。  
+    单元格会显示示例日期 **[2000/1/31]**。 如果未看到示例日期，请在“开始”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头，然后选择“示例值”。  
   
 4.  单击 **“运行”** 以预览报表。  
   
@@ -232,9 +230,9 @@ SalesDate 值将以默认日期格式显示。
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  选择包含 `[SalesDate]` 的单元格。  
+2.  选择包含 `[SalesDate]`的单元格。  
   
-3.  在“主文件夹”选项卡上的“数字”组中，单击右下角的箭头以打开对话框。  
+3.  在“开始”选项卡上的“数字”组中，单击右下角的箭头，打开对话框。  
   
     将打开“文本框属性”对话框。  
   
@@ -278,7 +276,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 2.  键入 **Product Sales**，然后在文本框外部单击。  
   
-3.  右键单击包含 **Product Sales** 的文本框，然后单击“文本框属性”。  
+3.  右键单击包含 Product Sales 的文本框，然后单击“文本框属性”。  
   
 4.  在“文本框属性”对话框中，单击“字体”。  
   
@@ -313,7 +311,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 1.  单击“文件” > “另存为”。  
   
-2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到想要保存报表的文件夹。  
+2.  依次单击“桌面”、“我的文档”或“我的电脑”，并浏览到要保存该报表的文件夹。  
   
 3.  在“名称”中，将“无标题”替换为“Product Sales”。  
   
@@ -346,9 +344,9 @@ SalesDate 值将显示月份名而非月份数字。
   
 3.  在“另存为”对话框中，浏览到要保存该文件的位置。  
   
-4.  在“文件名”文本框中，键入 **Product_Sales_Excel**。  
+4.  在“文件名”文本框中，键入“Product_Sales_Excel”。  
   
-5.  确认文件类型为 **Excel (\*.xlsx)**。  
+5.  确认文件类型为 Excel (\*.xlsx)。  
   
 6.  单击 **“保存”**。  
   
@@ -365,5 +363,4 @@ SalesDate 值将显示月份名而非月份数字。
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

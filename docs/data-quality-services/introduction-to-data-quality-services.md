@@ -5,24 +5,21 @@ ms.date: 03/05/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domains
+helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 396ce09be4ec6cf853d79c4ab1798476d04f097c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
   使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的数据质量解决方案，数据专员或 IT 专业人员可以维护数据的质量并确保数据满足业务使用的要求。 DQS 是一种知识驱动型解决方案，该解决方案通过计算机辅助方式和交互方式来管理数据源的完整性和质量。 使用 DQS 可以发现、生成和管理有关您数据的知识。 然后可以使用该知识执行数据清理、匹配和事件探查。 还可以在 DQS 数据质量项目中利用引用数据访问接口的基于云的服务。  
@@ -91,4 +88,3 @@ ms.lasthandoff: 09/09/2017
  Data Quality Services 功能已集成到 Master Data Services (MDS)，因此您可以在 Microsoft SQL Server 2014 Master Data Services Microsoft Excel 外接程序中对源数据和主数据执行消除重复操作。 要执行匹配，请将 MDS 管理的数据加载到 Excel 工作表，将它与不受 MDS 管理的数据合并，然后在 Excel 内执行匹配。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 组件必须随 MDS 一起安装。 有关详细信息，请参阅  [用于 Excel 的 MDS 外接程序中的数据质量匹配](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)。  
   
   
-

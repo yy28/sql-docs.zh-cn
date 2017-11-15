@@ -5,24 +5,23 @@ ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.connecttoce.connectionproperties.f1
 - sql13.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 92c974ad90689a01d4155610b71babc7df7765d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
 使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例或在“已注册的服务器”中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例时，此对话框中才显示“连接”和“选项”。 注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，此对话框中仅显示“测试”和“保存”。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/15/2017
 **连接到数据库**  
 从列表中选择要连接到的数据库。 如果选择“<default>”，则将连接到服务器的默认数据库。 如果选择 **<Browse server>**，则可以浏览要连接的数据库的服务器。  
   
-在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。 请确保选中“加密连接”复选框。  
+在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将连接到 **master**。 连接到 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 时，如果指定用户数据库，则对象资源管理器中仅显示该数据库及其对象。 如果连接到 master，则会显示所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/15/2017
 输入要发送的网络数据包的大小。 默认值为 4096 字节。  
   
 **连接超时值**  
-输入在超时之前等待建立连接的秒数。 默认值为 15 秒。  
+输入在超时之前等待建立连接的秒数。默认值为 15 秒。  
   
 **执行超时值**  
 输入在服务器上完成任务执行之前等待的时间（秒）。 默认值为零秒，指示无超时。  
@@ -79,4 +78,3 @@ ms.lasthandoff: 08/15/2017
 ## <a name="see-also"></a>另请参阅  
 [“连接属性”对话框](../../ssms/f1-help/connection-properties-dialog-box.md)  
   
-

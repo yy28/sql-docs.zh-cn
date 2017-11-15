@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
   从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可通过 Oracle 提供的 Oracle OLE DB 访问接口支持到 Oracle 的推送订阅。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
     |选择网络协议|选择要支持的相应协议。 大多数应用程序使用 TCP。|  
     |指定主机信息以标识数据库侦听器|主机是正在运行 Oracle 侦听器的计算机的名称或 DNS 别名，该计算机通常是该数据库所驻留的计算机。 对于某些协议，必须提供其他信息。 例如，如果选择 TCP，则必须提供相应的端口，以便侦听器侦听针对目标数据库的连接请求。 默认 TCP 配置使用 1521 端口。|  
   
-3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [为非 SQL Server 订阅服务器创建订阅](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
 ### <a name="setting-directory-permissions"></a>设置目录权限  
  分发服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务运行所用的帐户必须具有对 Oracle 客户端网络软件安装目录（以及所有子目录）的读取和执行权限。  

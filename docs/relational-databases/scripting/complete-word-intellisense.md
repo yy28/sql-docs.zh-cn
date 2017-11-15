@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - text completion [IntelliSense]
 - Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ae1001b60f61120999ef61b7385464ca7af0fc5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c1fbc08fbc46e0518c32ef048db34237016e0417
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="complete-word-intellisense"></a>完成单词 (IntelliSense)
   在您输入足够多的字符来唯一标识变量、命令或函数名后， [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 完成单词选项可以键入该术语的其余部分。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  如果键入的内容具有多个可能的匹配项，则调用“完成单词”可以显示可能的匹配项的列表，然后您可以使用该列表来查找术语并将其插入代码中。  
   
   
-

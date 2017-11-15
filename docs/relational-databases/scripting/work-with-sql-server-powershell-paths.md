@@ -5,35 +5,34 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
   在您导航到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径中的某一节点后，可通过使用与该节点相关联的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理对象中的方法和属性，执行工作或检索信息。  
   
 1.  [开始之前](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **使用路径节点：**  [列出方法和属性](#ListPropMeth)， [使用方法和属性](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在导航到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径中的节点之后，可以执行两种类型的操作：  
   
 -   可以运行作用于节点的 Windows PowerShell cmdlet，如 **Rename-Item**。  
   
--   可以调用相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型中的方法，如 SMO。 例如，如果导航到路径中的 Databases 节点，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类的方法和属性。  
+-   可以调用相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型中的方法，如 SMO。 例如，如果你导航到路径中的 Databases 节点，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类的方法和属性。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序用于管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的对象， 而不能用于处理数据库中的数据。 如果您已经导航到表或视图，则不能使用该提供程序选择、插入、更新或删除数据。 可以使用 **Invoke-Sqlcmd** cmdlet 来查询或更改 Windows PowerShell 环境内表和视图中的数据。 有关详细信息，请参阅 [Invoke-Sqlcmd cmdlet](../../powershell/invoke-sqlcmd-cmdlet.md)。  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  若要查看可供特定对象或对象类使用的方法和属性，请使用 **Get-Member** cmdlet。  
   
 ### <a name="examples-listing-methods-and-properties"></a>示例：列出方法和属性  
- 此示例将 Windows PowerShell 变量设置为 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 类并列出其方法和属性：  
+ 下面的示例将 Windows PowerShell 变量设置为 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 类并列出其方法和属性：  
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  

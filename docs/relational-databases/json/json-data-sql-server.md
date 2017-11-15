@@ -1,29 +1,27 @@
 ---
 title: "JSON 数据 (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 3c6b9e4b98863b230c46304c7c8026230c0372ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 数据 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -173,7 +171,7 @@ FOR JSON PATH
 ## <a name="combine-relational-and-json-data"></a>合并关系数据和 JSON 数据
  SQL Server 提供混合模型，用于通过标准 Transact-SQL 语言存储和处理关系数据与 JSON 数据。 可以将 JSON 文档的集合组织到表中，在它们之间建立关系，将表中存储的强类型标量列与 JSON 列中存储的灵活键/值对合并，以及使用完整 Transact SQL 查询一个或多个表中的标量值和 JSON 值。
  
-JSON 文本通常存储在 varchar 或 nvarchar 列中，并编制了纯文本形式的索引。 任何支持文本的 SQL Server 功能或组件均支持 JSON，因此 JSON 和其他 SQL Server 功能之间的交互几乎没有任何约束。 你可以将 JSON 存储在内存中或时态表中、对 JSON 文本应用行级别安全性谓词等。
+JSON 文本通常存储在 varchar 或 nvarchar 列中，并编制了纯文本形式的索引。 任何支持文本的 SQL Server 功能或组件均支持 JSON，因此 JSON 和其他 SQL Server 功能之间的交互几乎没有任何约束。 你可以将 JSON 存储在内存中或临时表中、对 JSON 文本应用行级别安全性谓词等。
 
 如果在单纯的 JSON 工作负载中，你想要使用专用于处理 JSON 文档的自定义查询语言，可以考虑 Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/)。  
   
@@ -199,7 +197,7 @@ WHERE ProductID = 1
 FOR JSON AUTO  
 ```  
   
-此查询的输出是完全符合 OData 规范的 JSON 文本。 格式设置和转义由 SQL Server 处理。 SQL Server 还可将查询结果的格式设置为任何格式，如 OData JSON 或 GeoJSON - 有关详细信息，请参阅 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)（以 GeoJSON 格式返回空间数据）。  
+此查询的输出是完全符合 OData 规范的 JSON 文本。格式设置和转义由 SQL Server 处理。 SQL Server 还可将查询结果的格式设置为任何格式，如 OData JSON 或 GeoJSON - 有关详细信息，请参阅 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)（以 GeoJSON 格式返回空间数据）。  
   
 ## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查询分析 JSON 数据  
  如果必须筛选或聚合 JSON 数据以用于报告，可以使用 **OPENJSON** 将 JSON 转换为关系格式。 然后，使用标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和内置函数来准备报告。  
@@ -340,4 +338,3 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
     -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
   
   
-
