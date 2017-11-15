@@ -5,25 +5,23 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
-ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 08c5ebad818f4a3f3c29396e6a60b84d36c86c00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-defined-functions"></a>用户定义函数
   与编程语言中的函数类似，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的例程。 返回值可以是单个标量值或结果集。  
@@ -95,10 +93,10 @@ ms.lasthandoff: 07/31/2017
 |GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
 |GETDATE|@@PACK_SENT|  
 |GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
+|@@CONNECTIONS |@@TIMETICKS |  
+|@@CPU_BUSY |@@TOTAL_ERRORS |  
+|@@DBTS |@@TOTAL_READ |  
+|@@IDLE |@@TOTAL_WRITE |  
 |@@IO_BUSY||  
   
  下列不确定性内置函数**不能**在 Transact-SQL 用户定义函数中使用。  
@@ -141,4 +139,3 @@ ms.lasthandoff: 07/31/2017
 |介绍如何查看用户定义函数的定义。|[查看用户定义的函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-

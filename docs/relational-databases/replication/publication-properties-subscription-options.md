@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8de57644d66112352b48a88a5ce80bb15bc24dd6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
   可以使用 **“发布属性”** 对话框的 **“订阅选项”** 页，查看和设置与订阅关联的发布级别属性。 属性分为以下类别：  
@@ -52,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="schema-replication"></a>架构复制  
  **复制架构更改**  
-仅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定是否将架构更改（例如向表中添加列或者更改列的数据类型）复制到已发布的对象。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 仅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定是否将架构更改（例如向表中添加列或者更改列的数据类型）复制到已发布的对象。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>适用于快照发布和事务发布的选项  
   
@@ -64,10 +62,10 @@ ms.lasthandoff: 06/22/2017
  确定是否在每次运行快照代理时创建快照文件（需要 **“独立的分发代理”**）。 此选项是只读选项；如果在新建发布向导的 **“快照代理”** 页上选择了 **“立即创建快照并使快照保持可用状态，以初始化订阅”** ，此选项将设置为 **True** （默认值）。 有关详细信息，请参阅[创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
   
  **允许从备份文件初始化**  
-仅限 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否允许使用备份文件来初始化订阅。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
  **允许非 SQL Server 订阅服务器**  
-仅限 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 **True** 可将其他发布属性设置为支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”**或 **“允许对等订阅”**设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定发布是否支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 将此选项设置为 **True** 可将其他发布属性设置为支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果存在订阅，则此选项是只读的；如果 **“允许立即更新订阅”** 、 **“允许排队更新订阅”**或 **“允许对等订阅”**设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>数据转换  
  **允许数据转换**  
@@ -81,7 +79,7 @@ ms.lasthandoff: 06/22/2017
  仅适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定发布是否支持对等复制。 将此选项设置为 **True** 可将其他发布属性设置为支持对等复制。 如果存在订阅，此选项为只读。 如果“允许立即更新订阅”  、“允许排队更新订阅”  或“允许非 SQL Server 订阅服务器” 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  **允许对等冲突检测**  
- 仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定是否为此发布启用冲突检测。 若要使用冲突检测，所有节点都必须运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本；且必须为所有节点启用检测。 若要使用冲突检测，还必须为“对等发起方 ID” 指定一个值。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
+ 仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定是否为此发布启用冲突检测。 若要使用冲突检测，所有节点都必须运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本；且必须为所有节点启用检测。 若要使用冲突检测，还必须为“对等发起方 ID” 指定一个值。有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
  **对等发起方 ID**  
  仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定对等拓扑中某个节点的 ID。 如果 **“允许对等冲突检测”** 设置为 **True**，此 ID 将用于冲突检测。 请指定拓扑中从未使用过的非零、正值 ID。 有关已经使用过的 ID 的列表，请查询 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系统表。  
@@ -116,7 +114,7 @@ ms.lasthandoff: 06/22/2017
  确定在验证订阅服务器是否具有正确的数据分区时，将使用哪些函数。 用逗号分隔多个值。 有关详细信息，请参阅[验证合并订阅服务器的分区信息](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)。  
   
  **预计算分区**  
-仅限 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否通过预先计算哪些数据行属于哪个分区来优化同步。 如果发布满足预计算分区的条件，则此设置在默认情况下为 **True** 。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 确定是否通过预先计算哪些数据行属于哪个分区来优化同步。 如果发布满足预计算分区的条件，则此设置在默认情况下为 **True** 。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  **优化同步**  
  确定是否通过在每个订阅服务器上存储其他元数据来优化合并处理。 此优化功能已被预计算分区取代；只有在 **“预计算分区”** 设置为 **False** 时，才需要使用 **“优化同步”**选项。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  

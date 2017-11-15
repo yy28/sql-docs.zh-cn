@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd4ea4d94bb9986127e4d5ffd2b8801f73528b93
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: cd7a911a8828bf4738df967c8af14a0ee52d2272
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置发布和分发。  
@@ -97,27 +96,27 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。  
   
-4.  将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 属性设置为数据库名称，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+4.  将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 属性设置为数据库名称，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-5.  通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分发服务器。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。  
+5.  通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分布服务器。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。  
   
 6.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。  
   
-7.  设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 的以下属性：  
+7.  设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 发布服务器的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 步骤 5 中创建的数据库的名称。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 在步骤 5 中创建的数据库的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享目录。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 方法。  
   
@@ -125,35 +124,35 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与远程分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。  
   
-4.  将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 属性设置为数据库名称，将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+4.  将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> 属性设置为数据库名称，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-5.  通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分发服务器。 指定安全密码（在连接到远程分发服务器时由发布服务器使用）和步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。 有关详细信息，请参阅[保护分发服务器的安全](../../relational-databases/replication/security/secure-the-distributor.md)。  
+5.  通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分布服务器。 指定安全密码（在连接到远程分发服务器时由发布服务器使用）和步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。 有关详细信息，请参阅[保护分发服务器的安全](../../relational-databases/replication/security/secure-the-distributor.md)。  
   
     > **重要说明!!** 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
   
 6.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。  
   
-7.  设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 的以下属性：  
+7.  设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 本地发布服务器的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 步骤 5 中创建的数据库的名称。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 在步骤 5 中创建的数据库的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享目录。  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 方法。  
   
 9. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与本地发布服务器的连接。  
   
-10. 创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递来自步骤 9 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+10. 创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 9 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 11. 调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 传递远程分发服务器的名称和在步骤 5 中指定的远程分发服务器的密码。  
   
@@ -174,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [为 AlwaysOn 可用性组配置复制 (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   
-

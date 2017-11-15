@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
   
 -   无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
-- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 此功能为 SQL Server 2017 和 Azure SQL 数据库的公共预览版。
+- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -95,7 +94,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="resumable-index-rebuild-considerations"></a>可恢复索引重新生成注意事项
 
 > [!NOTE]
-> 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 此功能为 SQL Server 2017 和 Azure SQL 数据库的公共预览版。
+> 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
 >
 
 执行可恢复的联机索引重新生成操作时，请参考下列准则：
@@ -126,4 +125,3 @@ ms.lasthandoff: 07/31/2017
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

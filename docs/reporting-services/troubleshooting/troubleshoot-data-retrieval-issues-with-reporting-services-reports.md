@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>排查与 Reporting Services 报表相关的数据检索问题
 报表处理的第一步是通过运行数据集查询检索每个数据集的报表数据。 本地预览报表时，数据源连接和凭据必须使用足够的权限才能检索计算机上的数据。 在报表服务器上运行报表时，数据源连接和凭据必须使用足够的权限才能检索报表服务器上的数据。 使用本主题可帮助解决有关报表数据检索的问题。   
@@ -72,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

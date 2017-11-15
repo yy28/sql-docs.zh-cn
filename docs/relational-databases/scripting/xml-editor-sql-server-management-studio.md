@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,19 +13,18 @@ f1_keywords:
 - sql13.swb.editorxml.f1
 - vs.xmleditor
 - sql13.swb.xmleditor.f1
-helpviewer_keywords:
-- XML Designer [SQL Server Management Studio]
+helpviewer_keywords: XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b241ee1d04df5845899810d5f4e839e9f6d22860
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: bc3cfd22e1bff42f4ea4730337d01da0c2d5f6a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
   提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
@@ -111,4 +109,3 @@ ms.lasthandoff: 06/22/2017
  [以 XML 格式保存执行计划](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

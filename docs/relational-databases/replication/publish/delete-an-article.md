@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
 - sp_droparticle
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - removing articles
 - dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b63af3439c13f16071b4db8124ad6d5668240cd8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2b1314c33141851d3defd6e7688b8c7ac27647a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-an-article"></a>删除项目
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中删除项目。 有关删除项目时使用的条件以及删除项目是否需要新的快照或重新初始化订阅的信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -106,9 +104,9 @@ GO
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.TransArticle> 类的实例。  
   
-3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、<xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> 和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
+3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   
-4.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为来自步骤 1 的连接。  
+4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
 5.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证该项目是否存在。 如果此属性的值为 **false**，则步骤 3 中的项目属性定义不正确或此项目不存在。  
   
@@ -122,9 +120,9 @@ GO
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
   
-3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、<xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> 和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
+3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   
-4.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为来自步骤 1 的连接。  
+4.  为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置步骤 1 中的连接。  
   
 5.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证该项目是否存在。 如果此属性的值为 **false**，则步骤 3 中的项目属性定义不正确或此项目不存在。  
   

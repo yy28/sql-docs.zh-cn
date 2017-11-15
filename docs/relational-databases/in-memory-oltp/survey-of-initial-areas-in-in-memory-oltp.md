@@ -5,22 +5,20 @@ ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: fdc7648ab70e2f636f610e26191c753130a26dc0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -90,7 +88,7 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 
 ### <a name="columnstore"></a>columnstore
 
-一系列精彩的博客文章从多个视角完美地介绍了列存储索引。 大部分文章都在深入介绍列存储支持的实时运行分析的概念。  这些文章由 Microsoft 项目经理 Sunil Agarwal 于 2016年 3 月创作。
+一系列精彩的博客文章从多个视角完美地介绍了列存储索引。 大部分文章都在深入介绍列存储支持的实时运营分析的概念。  这些文章由 Microsoft 项目经理 Sunil Agarwal 于 2016年 3 月创作。
 
 #### <a name="real-time-operational-analytics"></a>实时运行分析
 
@@ -519,4 +517,3 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
   
 - [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
 - [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  
-

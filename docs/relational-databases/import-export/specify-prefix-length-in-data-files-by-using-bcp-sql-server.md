@@ -5,8 +5,7 @@ ms.date: 07/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,22 +14,22 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62007ed26bf44480b40af09b40dbb8636de4a242
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ca1efc1c50be62f0be6fb0d75cfa585f127940f3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 的前缀长度提示  
- 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
+ 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-n**或 **-N**或 **in**或 **-N**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -102,4 +101,3 @@ ms.lasthandoff: 06/22/2017
  [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
-

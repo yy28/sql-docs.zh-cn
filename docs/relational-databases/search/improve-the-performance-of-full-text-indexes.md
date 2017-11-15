@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: b90d942aa6c056a6a656b1bc2c835e51f468f676
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 本主题介绍全文索引和查询性能不佳的常见原因。 此外，还提供了有关缓解这些问题和提高性能的一些建议。
@@ -222,4 +220,3 @@ GO
  [排除全文索引故障](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
   
   
-

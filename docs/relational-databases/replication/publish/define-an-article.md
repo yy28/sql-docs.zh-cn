@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - articles [SQL Server replication], defining
 - sp_addmergearticle
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - sp_addarticle
 - articles [SQL Server replication], adding
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3e37e75379dc4fd1722dd660b2c6145c9540732e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 965b8780e4c8f0ae1321170995127670bc0949b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-an-article"></a>定义项目
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义项目。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 06/22/2017
   
          如果指定另一台服务器作为分发服务器，则必须在 **“管理密码”** 页上输入密码来连接发布服务器和分发服务器。 此密码必须与在远程分发服务器上启用发布服务器时所指定的密码相匹配。  
   
-         有关详细信息，请参阅[配置分发](../../../relational-databases/replication/configure-distribution.md)。  
+         有关详细信息，请参阅 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)。  
   
     -   选择发布数据库。  
   
@@ -96,22 +94,22 @@ ms.lasthandoff: 06/22/2017
   
          \- 用于允许更新订阅的事务发布的队列读取器代理。  
   
-         有关详细信息，请参阅 [复制代理安全性模式](../../../relational-databases/replication/security/replication-agent-security-model.md) 和 [复制安全最佳实践](../../../relational-databases/replication/security/replication-security-best-practices.md)。  
+         有关详细信息，请参阅 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 和 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)。  
   
-    -   （可选）编写发布脚本。 有关详细信息，请参阅 [脚本复制](../../../relational-databases/replication/scripting-replication.md)。  
+    -   （可选）编写发布脚本。 有关详细信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
     -   指定发布的名称。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。  
+ 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义项目  
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 **@publication**、 **@article**和 **@source_object**的值分别指定为项目所属发布的名称、项目的名称以及要发布的数据库对象，同时指定任何其他可选参数。 使用 **@source_owner** 指定对象的架构所有权（如果不是 **dbo**。 如果该项目不是基于日志的表项目，可将 **@type** 指定为该项目类型；有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-3.  若要垂直筛选表中的列或查看项目，请使用 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 有关详细信息，请参阅 [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+3.  若要垂直筛选表中的列或查看项目，请使用 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
 4.  如果已经筛选出了项目，请执行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。  
   
@@ -124,11 +122,11 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>为合并发布定义项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 将 **@publication**、 **@article**和 **@source_object**。 若要水平筛选表行，请为 **@subset_filterclause**。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果相应项目不是表项目，请将 **@type**。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 将 **@publication**、 **@article**和 **@source_object**。 若要水平筛选表行，请为 **@subset_filterclause**。 有关详细信息，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果相应项目不是表项目，请将 **@type**。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  （可选）在发布服务器上，对发布数据库执行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 以在两个项目之间定义一个联接筛选器。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+2.  （可选）在发布服务器上，对发布数据库执行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 以在两个项目之间定义一个联接筛选器。 有关详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-3.  （可选）在发布服务器上的发布数据库中，执行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 可筛选表列。 有关详细信息，请参阅 [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+3.  （可选）在发布服务器上的发布数据库中，执行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 可筛选表列。 有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本例为某个事务发布定义了一个基于 `Product` 表的项目，其中项目在水平和垂直两个方向上进行了筛选。  
@@ -164,4 +162,3 @@ ms.lasthandoff: 06/22/2017
  [复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   
-

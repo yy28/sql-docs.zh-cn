@@ -5,28 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 58dd67c03b3df116914c4f03cbb336136b251e3f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>复制监视器界面概述
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor presents a Publisher-focused view or Distributor-focused view of all replication activity in a two pane format. 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供一个以发布服务器为主或以分发服务器为主的视图，以两个窗格的形式显示所有复制活动。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>查看整个拓扑的信息  
  复制监视器的左窗格显示  
@@ -197,7 +195,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>查看与订阅相关的信息并执行与订阅相关的任务  
  复制监视器在多个不同的选项卡上显示订阅的相关信息。 双击复制监视器中的订阅，可以访问详细信息窗口中的这些选项卡。 对于解答“为什么代理不运行”这个问题，所有选项卡都很有用。 可用的错误消息提供代理不运行的详细原因，并为解决与订阅关联的代理的问题提供一个起点。  
   
--   **All Subscriptions tab** and **Subscription Watch List tab.**  
+-   **“所有订阅”** 和 **“订阅监视列表”**  
   
      本主题的前面已对这两个选项卡进行了说明。  
   
@@ -242,4 +240,3 @@ ms.lasthandoff: 06/22/2017
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

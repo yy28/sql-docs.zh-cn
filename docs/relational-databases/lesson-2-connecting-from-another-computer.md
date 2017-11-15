@@ -5,23 +5,21 @@ ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 3e860fc71d2f9e5efcf68324040d267d9de6fce9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
 为了增强安全性， [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在初始安装时不能从其他计算机对其进行访问。 本课介绍如何启用协议，配置端口以及配置 Windows 防火墙，以便从其他计算机进行连接。  
@@ -73,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 为了增强安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 均打开了 Windows 防火墙。 在您从其他计算机连接到此实例时，必须打开防火墙中的通信端口。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的默认实例侦听端口 1433；因此，您不需要配置固定端口。 不过，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 的命令实例会侦听动态端口。 打开防火墙的端口之前，必须首先将 [!INCLUDE[ssDE](../includes/ssde-md.md)] 配置为侦听特定端口（称为固定端口或静态端口）；否则， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能会在每次启动时侦听不同的端口。 有关防火墙、默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!NOTE]  
-> Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)上列出这些端口号。 应分配的端口号的范围是从 49152 到 65535。  
+> Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)上列出这些端口号。应分配的端口号的范围是从 49152 到 65535。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>配置 SQL Server 以侦听特定端口  
   
@@ -145,5 +143,4 @@ ms.lasthandoff: 06/22/2017
 ## <a name="return-to-tutorials-portal"></a>返回到教程入门  
 [教程：数据库引擎入门](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
-
 

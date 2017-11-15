@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- snapshots [SQL Server replication], security
+helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 43c9603e1f3a30ed558d264edb81d81c6d4c1297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-the-snapshot-folder"></a>保护快照文件夹的安全
   快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
