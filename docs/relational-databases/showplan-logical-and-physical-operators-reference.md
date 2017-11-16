@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -135,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
   运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
@@ -288,7 +286,7 @@ ms.lasthandoff: 10/13/2017
 |![Table Spool 运算符图标](../relational-databases/media/table-spool-32x.gif "Table Spool 运算符图标")|**Table Spool**|**Table Spool** 运算符扫描输入，并将各行的一个副本放入隐藏的假脱机表中，此表存储在 [tempdb](../relational-databases/databases/tempdb-database.md) 数据库中并且仅在查询的生存期内存在。 如果重绕该运算符（例如通过 **Nested Loops** 运算符重绕），但不需要任何重新绑定，则将使用假脱机数据，而不用重新扫描输入。 **Table Spool** 是一个物理运算符。|  
 |![Table Update 运算符图标](../relational-databases/media/table-update-32x.gif "Table Update 运算符图标")|**Table Update**|**Table Update** 物理运算符更新查询执行计划的 **Argument** 列中所指定表中的输入行。 SET:() 谓词确定每个更新列的值。 可以在 SET 子句中、此运算符内的其他位置以及此查询内的其他位置引用这些值。|  
 |![Table-valued Function 运算符图标](../relational-databases/media/table-valued-function-32x.gif "Table-valued Function 运算符图标")|**Table-valued Function**|**Table-valued Function** 运算符计算表值函数（ [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR）并将结果行存储在 [tempdb](../relational-databases/databases/tempdb-database.md) 数据库中。 当父迭代器请求这些行时， **Table-valued Function** 将返回 **tempdb**中的行。<br /><br /> 调用表值函数的查询生成具有 **Table-valued Function** 迭代器的查询计划。 可以使用不同的参数值计算**Table-valued Function** ：<br /><br /> -<br />                    **Table-valued Function XML Reader** 输入 XML BLOB 作为参数，并生成一个按 XML 文档顺序表示 XML 节点的行集。 其他输入参数可能会将返回的 XML 节点限于 XML 文档的子集。<br /><br /> -**Table Valued Function XML Reader with XPath filter** 是一种特殊类型的 **XML Reader Table-valued Function** ，它将输出限于满足 XPath 表达式的 XML 节点。<br /><br /> **Table-valued Function** 既是一个逻辑运算符，也是一个物理运算符。|  
-|![Top 运算符图标](../relational-databases/media/top-32x.gif "Top 运算符图标")|**Top**|**Top** 运算符扫描输入，但仅基于排序顺序返回最前面的指定行数或行百分比。 **Argument** 列可以包含要检查重复值的列的列表。 在更新计划中， **Top** 运算符用于强制实施行计数限制。 **Top** 既是一个逻辑运算符，也是一个物理运算符。 **Top** 既是一个逻辑运算符，也是一个物理运算符。|  
+|![Top 运算符图标](../relational-databases/media/top-32x.gif "Top 运算符图标")|**Top**|**Top** 运算符扫描输入，但仅基于排序顺序返回最前面的指定行数或行百分比。 **Argument** 列可以包含要检查重复值的列的列表。 在更新计划中， **Top** 运算符用于强制实施行计数限制。 **Top** 既是一个逻辑运算符，也是一个物理运算符。|  
 |无|**Top N Sort**|**Top N Sort** 与 **Sort** 迭代器类似，差别仅在于前者需要前 *N* 行，而不是整个结果集。 如果 *N*的值较小， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询执行引擎将尝试在内存中执行整个排序操作。 如果 *N*的值较大，查询执行引擎将使用更通用的排序方法（该方法不采用 *N* 作为参数）重新排序。|  
 |![扩展运算符 (UDX) 图标](../relational-databases/media/udx-32x.gif "扩展运算符 (UDX) 图标")|**UDX**|扩展运算符 (UDX) 可以实现 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的一种 XQuery 或 XPath 操作。 所有 UDX 运算符既是逻辑运算符，又是物理运算符。<br /><br /> 扩展运算符 (UDX) **FOR XML** 用于将其输入的关系行集序列化为 XML 表示形式，并以单个输出行、单个 BLOB 列的形式存储。 它是区分顺序的 XML 聚合运算符。<br /><br /> 扩展运算符 (UDX) **XML SERIALIZER** 是区分顺序的一种 XML 聚合运算符。 它以 XML 文档顺序输入表示 XML 节点或 XQuery 标量的行，并在单个输出行、单个 XML 列中生成序列化的 XML BLOB。<br /><br /> 扩展运算符 (UDX) **XML FRAGMENT SERIALIZER** 是一种特殊类型的 **XML SERIALIZER** ，用于处理表示在 XQuery 插入数据修改扩展中插入的 XML 片断的输入行。<br /><br /> 扩展运算符 (UDX) **XQUERY STRING** 计算表示 XML 节点的输入行的 XQuery 字符串值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含输入字符串值的 XQuery 标量。<br /><br /> 扩展运算符 (UDX) **XQUERY LIST DECOMPOSER** 是一个 XQuery 列表分解运算符。 对于表示 XML 节点的每个输入行，它至少生成表示 XQuery 标量的一个行，如果输入的是 XSD 列表类型的行，则每个行都包含一个列表元素值。<br /><br /> 扩展运算符 (UDX) **XQUERY DATA** 在表示 XML 节点的输入行上计算 XQuery fn:data() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:data()**结果的 XQuery 标量。<br /><br /> 扩展运算符 **XQUERY CONTAINS** 在表示 XML 节点的输入行上计算 XQuery fn:contains() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:contains()**结果的 XQuery 标量。<br /><br /> 扩展运算符 **UPDATE XML NODE** 更新 XML 类型上的 **modify()** 方法中 XQuery 替换数据修改扩展中的 XML 节点。|  
 |无|**Union**|**Union** 运算符扫描多个输入，输出扫描的每一行并删除重复项。 **Union** 是一个逻辑运算符。|  
@@ -297,4 +295,3 @@ ms.lasthandoff: 10/13/2017
 |![Table Spool 运算符图标](../relational-databases/media/table-spool-32x.gif "Table Spool 运算符图标")|**Window Spool**|**Window Spool** 运算符将每个行扩展为表示与行关联的窗口的行集。 在查询中，OVER 子句定义查询结果集内的窗口和窗口函数，然后计算窗口中的每个行的值。 **Window Spool** 既是一个逻辑运算符，也是一个物理运算符。|  
   
   
-

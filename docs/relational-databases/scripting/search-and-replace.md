@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,16 +27,16 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d590c437733827916e41e9299ed7a6d3df48574
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6a63f867c56f4801f44d497e7f3271a86f724870
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-and-replace"></a>搜索和替换
   您可以采用几种不同的方法来查找和替换文本。 在 **“编辑”** 菜单上， **“查找和替换”** 提供了四个选项： **“快速查找”**、 **“快速替换”**、 **“在文件中查找”**或 **“在文件中替换”**。 每个选项均可以打开不同版本的 **“查找和替换”** 对话框。 您还可以通过使用渐进式搜索键盘快捷键在没有对话框的情况下进行搜索。 通过这些技术，您可以控制查找和替换的范围，并选择查看搜索匹配项和替换项的方法。  

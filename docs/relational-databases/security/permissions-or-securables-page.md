@@ -5,8 +5,7 @@ ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +15,19 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
-  使用 **“权限”** 或 **“安全对象”** 页可以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。 若要查看聚合权限，请使用 **“有效”** 选项卡。  
+  使用 **“权限”** 或 **“安全对象”** 页可以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  
   
  若要了解安全对象和主体的可能组合，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md) 主题中特定于安全对象的语法链接。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   
@@ -79,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

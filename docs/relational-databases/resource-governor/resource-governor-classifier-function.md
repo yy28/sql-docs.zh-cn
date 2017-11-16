@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resource-governor-classifier-function"></a>资源调控器分类器函数
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器分类过程会根据传入会话的特征将其分配给工作负荷组。 您可以通过编写用户定义函数（称为分类器函数）来定制分类逻辑。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  创建此函数并应用配置更改后，资源调控器分类器将使用此函数返回的工作负荷组名称将新请求发送到相应的工作负荷组。  
   
 > [!IMPORTANT]  
->  如果分类函数没有在指定的登录超时内完成，则客户端会话将超时。 登录超时是客户端属性，因此服务器意识不到超时。 长时间运行的分类器函数可使服务器长期保留孤立连接。 创建在连接超时之前完成其执行的分类器函数非常重要。  
+>  如果分类函数没有在指定的登录超时内完成，则客户端会话将超时。 登录超时是客户端属性，因此服务器意识不到超时。长时间运行的分类器函数可使服务器长期保留孤立连接。 创建在连接超时之前完成其执行的分类器函数非常重要。  
   
  用户定义的函数具有以下特征和行为：  
   

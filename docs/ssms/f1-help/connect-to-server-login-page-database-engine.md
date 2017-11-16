@@ -1,28 +1,25 @@
 ---
 title: "连接到服务器（“登录”页）数据库引擎 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.connecttosqlserver.login.f1
+f1_keywords: sql13.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: a5d251082f7a98a075593274d34d600556dca1f3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 9c2ff0db7548aac98efa15c701bd283368512ea4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>连接到服务器（“登录”页）数据库引擎
 连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]时，使用此选项卡可查看或指定选项。 大多数情况下，可以通过在“服务器名称”框中输入数据库服务器的计算机名称并单击“连接”来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如， `mycomputer\myinstance`。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress**的计算机名称。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 08/15/2017
 **服务器类型**  
 从对象资源管理器进行服务器注册时，请选择要连接到何种类型的服务器： [!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择[!INCLUDE[ssDE](../../includes/ssde_md.md)]、Analysis Services、Reporting Services 或 Integration Services。  
   
-在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。 请确保选中“加密连接”复选框。  
+在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将连接到 **master**。 如果指定用户数据库，则对象资源管理器中仅显示该数据库及其对象。 如果连接到 master，则会显示所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/15/2017
 **身份验证**  
 当前版本的 SSMS 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的实例时提供五种身份验证模式。 如果你的“身份验证”对话框中与以下列表中的不匹配，请从 [下载 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 下载最新版本的 SSMS。     
   
-在通过 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。 请确保选中“加密连接”复选框。  
+在通过 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将连接到 **master**。 如果在连接到 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 时指定用户数据库，则对象资源管理器中仅显示该数据库及其对象。 如果连接到 master，则会显示所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
@@ -87,4 +84,3 @@ Azure Active Directory 身份验证是一种使用 Azure Active Directory (Azure
 单击以显示“连接属性”和“其他连接参数”选项卡。  
    
   
-

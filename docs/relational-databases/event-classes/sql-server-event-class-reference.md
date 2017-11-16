@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server event classes, listed
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d88dcea1aee43bc8603bfe25b73a8c5b09cb31ad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b3ffd0d188f72e949a520b72562f0b82694970ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件类参考
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以将事件记录为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例。 记录的事件是跟踪定义中事件类的实例。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，事件类以及它们的事件类别位于 **“跟踪文件属性”** 对话框的 **“事件选择”** 选项卡中。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 |[Deprecation Event Category](../../relational-databases/event-classes/deprecation-event-category.md) 包括与不推荐使用的情况相关的事件。|[Deprecation Announcement 事件类](../../relational-databases/event-classes/deprecation-announcement-event-class.md)<br /><br /> [Deprecation Final Support 事件类](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|  
 |[错误和警告事件类别（数据库引擎）](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)包括返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误或警告时产生的事件类。例如，编译存储过程时发生的错误或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的异常错误。|[Attention 事件类](../../relational-databases/event-classes/attention-event-class.md)<br /><br /> [Background Job Error 事件类](../../relational-databases/event-classes/background-job-error-event-class.md)<br /><br /> [Blocked Process Report 事件类](../../relational-databases/event-classes/blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded 事件类](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog 事件类](../../relational-databases/event-classes/errorlog-event-class.md)<br /><br /> [EventLog 事件类](../../relational-databases/event-classes/eventlog-event-class.md)<br /><br /> [Exception 事件类](../../relational-databases/event-classes/exception-event-class.md)<br /><br /> [Exchange Spill 事件类](../../relational-databases/event-classes/exchange-spill-event-class.md)<br /><br /> [Execution Warnings 事件类](../../relational-databases/event-classes/execution-warnings-event-class.md)<br /><br /> [Hash Warning 事件类](../../relational-databases/event-classes/hash-warning-event-class.md)<br /><br /> [Missing Column Statistics 事件类](../../relational-databases/event-classes/missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate 事件类](../../relational-databases/event-classes/missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings 事件类](../../relational-databases/event-classes/sort-warnings-event-class.md)<br /><br /> [User Error Message 事件类](../../relational-databases/event-classes/user-error-message-event-class.md)|  
 |[Full Text 事件类别](../../relational-databases/event-classes/full-text-event-category.md) 包括启动、中断或停止全文搜索时生成的事件类。|[FT:Crawl Aborted 事件类](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)<br /><br /> [FT:Crawl Started 事件类](../../relational-databases/event-classes/ft-crawl-started-event-class.md)<br /><br /> [FT:Crawl Stopped 事件类](../../relational-databases/event-classes/ft-crawl-stopped-event-class.md)|  
-|[Locks Event Category](../../relational-databases/event-classes/locks-event-category.md) 包括在获取、取消、释放锁时或者在对锁执行一些其他操作时生成的事件类。|[Deadlock Graph 事件类](../../relational-databases/event-classes/deadlock-graph-event-class.md)<br /><br /> [Lock:Acquired 事件类](../../relational-databases/event-classes/lock-acquired-event-class.md)<br /><br /> [Lock:Cancel 事件类](../../relational-databases/event-classes/lock-cancel-event-class.md)<br /><br /> [Lock:Deadlock Chain 事件类](../../relational-databases/event-classes/lock-deadlock-chain-event-class.md)<br /><br /> [Lock:Deadlock 事件类](../../relational-databases/event-classes/lock-deadlock-event-class.md)<br /><br /> [Lock:Escalation 事件类](../../relational-databases/event-classes/lock-escalation-event-class.md)<br /><br /> [Lock:Released 事件类](../../relational-databases/event-classes/lock-released-event-class.md)<br /><br /> [Lock:Timeout (timeout &gt; 0) 事件类](../../relational-databases/event-classes/lock-timeout-timeout-0-event-class.md)<br /><br /> [Lock:Timeout 事件类](../../relational-databases/event-classes/lock-timeout-event-class.md)|  
+|[Locks Event Category](../../relational-databases/event-classes/locks-event-category.md) 包括在获取、取消、释放锁时或者在对锁执行一些其他操作时生成的事件类。|[Deadlock Graph 事件类](../../relational-databases/event-classes/deadlock-graph-event-class.md)<br /><br /> [Lock:Acquired 事件类](../../relational-databases/event-classes/lock-acquired-event-class.md)<br /><br /> [Lock:Cancel 事件类](../../relational-databases/event-classes/lock-cancel-event-class.md)<br /><br /> [Lock:Deadlock Chain 事件类](../../relational-databases/event-classes/lock-deadlock-chain-event-class.md)<br /><br /> [Lock:Deadlock 事件类](../../relational-databases/event-classes/lock-deadlock-event-class.md)<br /><br /> [Lock:Escalation 事件类](../../relational-databases/event-classes/lock-escalation-event-class.md)<br /><br /> [Lock:Released 事件类](../../relational-databases/event-classes/lock-released-event-class.md)<br /><br /> [Lock:Timeout (timeout > 0) 事件类](../../relational-databases/event-classes/lock-timeout-timeout-0-event-class.md)<br /><br /> [Lock:Timeout 事件类](../../relational-databases/event-classes/lock-timeout-event-class.md)|  
 |[Objects Event Category](../../relational-databases/event-classes/objects-event-category.md) 包括在创建、打开、关闭或删除数据库对象时生成的事件类。|[Auto Stats 事件类](../../relational-databases/event-classes/auto-stats-event-class.md)<br /><br /> [Object:Altered 事件类](../../relational-databases/event-classes/object-altered-event-class.md)<br /><br /> [Object:Created 事件类](../../relational-databases/event-classes/object-created-event-class.md)<br /><br /> [Object:Deleted 事件类](../../relational-databases/event-classes/object-deleted-event-class.md)|  
 |[OLEDB Event Category](../../relational-databases/event-classes/oledb-event-category.md) 包括由 OLE DB 调用生成的事件类。|[OLEDB Call 事件类](../../relational-databases/event-classes/oledb-call-event-class.md)<br /><br /> [OLEDB DataRead 事件类](../../relational-databases/event-classes/oledb-dataread-event-class.md)<br /><br /> [OLEDB Errors 事件类](../../relational-databases/event-classes/oledb-errors-event-class.md)<br /><br /> [OLEDB Provider Information 事件类](../../relational-databases/event-classes/oledb-provider-information-event-class.md)<br /><br /> [OLEDB QueryInterface 事件类](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|  
 |[Performance 事件类别](../../relational-databases/event-classes/performance-event-category.md) 包括在执行 SQL 数据操作语言 (DML) 运算符时生成的事件类。|[Degree of Parallelism (7.0 Insert) 事件类](../../relational-databases/event-classes/degree-of-parallelism-7-0-insert-event-class.md)<br /><br /> [Performance Statistics 事件类](../../relational-databases/event-classes/performance-statistics-event-class.md)<br /><br /> [Showplan All 事件类](../../relational-databases/event-classes/showplan-all-event-class.md)<br /><br /> [Showplan All for Query Compile 事件类](../../relational-databases/event-classes/showplan-all-for-query-compile-event-class.md)<br /><br /> [Showplan Statistics Profile 事件类](../../relational-databases/event-classes/showplan-statistics-profile-event-class.md)<br /><br /> [Showplan Text 事件类](../../relational-databases/event-classes/showplan-text-event-class.md)<br /><br /> [Showplan Text (Unencoded) 事件类](../../relational-databases/event-classes/showplan-text-unencoded-event-class.md)<br /><br /> [Showplan XML 事件类](../../relational-databases/event-classes/showplan-xml-event-class.md)<br /><br /> [Showplan XML For Query Compile 事件类](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)<br /><br /> [Showplan XML Statistics Profile 事件类](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)<br /><br /> [SQL:FullTextQuery 事件类](../../relational-databases/event-classes/sql-fulltextquery-event-class.md)|  
@@ -60,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

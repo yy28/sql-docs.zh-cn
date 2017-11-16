@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sp_replmonitorhelppublisher
 - sp_replmonitorhelpmergesessiondetail
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - merge replication monitoring [SQL Server replication]
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b05b9c5af4ff9ed8626773fc6714c2c05f1605b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
   复制监视器是一种可用于监视复制拓扑的图形化工具。 可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 复制存储过程或复制管理对象 (RMO) 以编程方式访问相同的监视数据。 您可以利用这些对象对以下任务进行编程：  
@@ -115,27 +112,27 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> 类的实例，设置订阅的 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>、<xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>、<xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> 类的实例，为订阅设置 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>和 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> 属性并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  调用以下方法之一返回有关该订阅的合并代理会话的信息：  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - 返回 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象的数组，其中包含有关最后最多五个“合并代理”会话的信息。 请注意任何相关会话的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> 值。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - 返回一组 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象，其中包含最后五个合并代理会话的相关信息。 请注意任何相关会话的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> 值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - 返回 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象的数组，其中包含有关在最后几个小时内，作为 *hours* 参数传入的“合并代理”会话（最后最多五个会话）的信息。 请注意任何相关会话的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> 值。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - 返回一组 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象，其中包含过去几个小时（作为 *hours* 参数传入）中发生的合并代理会话（最多是最后五个会话）的相关信息。 请注意任何相关会话的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> 值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummary%2A> - 返回 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象，其中包含有关最后一个“合并代理”会话的信息。 请注意此会话的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> 值。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummary%2A> - 返回 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象，该对象具有最后一个合并代理会话的相关信息。 请注意此会话的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> 值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummaryDataSet%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关最后最多五个“合并代理”会话的信息，每行返回一个会话的信息。 请注意任何相关会话的 **Session_id** 列的值。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummaryDataSet%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含最多最后五个合并代理会话的相关信息，每个合并代理会话占一行。 请注意任何相关会话的 **Session_id** 列的值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> - 返回 <xref:System.Data.DataRow> 对象，其中包含有关最后一个“合并代理”会话的信息。 请注意此会话的 **Session_id** 列的值。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetLastSessionSummaryDataRow%2A> - 返回 <xref:System.Data.DataRow> 对象，该对象具有最后一个合并代理会话的相关信息。 请注意此会话的 **Session_id** 列的值。  
   
-4.  （可选）调用 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> 刷新作为 *mss* 传递的 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 对象的数据，或者调用 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> 刷新作为 *drRefresh* 传递的 <xref:System.Data.DataRow> 对象中的数据。  
+4.  （可选）调用 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> 刷新作为 <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> 传递的 *T:Microsoft.SqlServer.Replication.MergeSessionSummary* 对象的数据，或调用 <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.RefreshSessionSummary%2A> 刷新作为 <xref:System.Data.DataRow> 传递的 *T:System.Data.DataRow*。  
   
 5.  使用步骤 3 中获取的会话 ID 调用以下方法之一，以返回有关特定会话的详细信息：  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 返回提供的 *SessionId* 的 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> 对象的数组。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> - 返回一组 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> 返回一组 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的 *SessionId* 的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象具有关于指定的 *T:Microsoft.SqlServer.Replication.MergeSessionDetail*。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>监视分发服务器上所有发布的复制属性  
   
@@ -143,135 +140,135 @@ ms.lasthandoff: 06/22/2017
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 类的实例。  
   
-3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
 5.  执行以下一种或多种方法返回使用该分发服务器的所有发布服务器的复制信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumDistributionAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此分发服务器中所有分发代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumDistributionAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此分发服务器上所有分发代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumErrorRecords%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关分发服务器中存储的错误的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumErrorRecords%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关存储在分发服务器上的错误的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumLogReaderAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关分发服务器中所有日志读取器代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumLogReaderAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关分发服务器上的所有日志读取器代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMergeAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关分发服务器中所有合并代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMergeAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含分发服务器上的所有合并代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMiscellaneousAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关分发服务器中其他所有复制代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumMiscellaneousAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关分发服务器上的所有其他复制代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此分发服务器中所有发布服务器的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此分发服务器上的所有发布服务器的信息。  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumPublishers2%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象返回使用此分发服务器的发布服务器。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关分发服务器中所有队列读取器代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关分发服务器上的所有队列读取器代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的队列读取器代理和会话的详细信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的队列读取器代理和会话的详细信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的队列读取器代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumQueueReaderAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的队列读取器代理的会话信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumSnapshotAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关分发服务器中所有快照代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.EnumSnapshotAgents%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关分发服务器上的所有快照代理的信息。  
   
 #### <a name="to-monitor-publication-properties-for-a-specific-publisher-at-the-distributor"></a>监视分发服务器上特定发布服务器的发布属性  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  通过以下方法之一获取 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象。  
+2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 类的实例。 设置发布服务器的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布服务器名称定义不正确或表示该发布不存在。  
+    -   创建 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 类的实例。 为发布服务器设置 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布服务器名称定义不正确或表示该发布不存在。  
   
-    -   从通过现有 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 中获取。  
+    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 中获取。  
   
 3.  执行以下一种或多种方法返回有关属于该发布服务器的所有发布的复制信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的分发代理和会话的详细信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的分发代理和会话的详细信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的分发代理的会话信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumDistributionAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的分发代理的会话信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumErrorRecords%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的错误的错误记录信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumErrorRecords%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象有关指定的错误的错误记录信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的日志读取器代理和会话的详细信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含指定的日志读取器代理和会话的详细信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的日志读取器代理的会话信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumLogReaderAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含指定的日志读取器代理的会话信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的合并代理和会话的详细信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含指定的合并代理和会话的详细信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails2%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的合并代理和会话的其他详细信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessionDetails2%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的合并代理和会话的其他详细信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的合并代理的会话信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含指定的合并代理的会话信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions2%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的合并代理的其他会话信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumMergeAgentSessions2%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含指定的合并代理的其他会话信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此分发服务器中所有发布内容的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此分发服务器上的所有发布的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications2%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此分发服务器中所有发布内容的其他信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumPublications2%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此分发服务器上的所有发布的其他信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的快照代理和会话的详细信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessionDetails%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的快照代理和会话的详细信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的快照代理的会话信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSnapshotAgentSessions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含指定的快照代理的会话信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSubscriptions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此分发服务器中所有发布订阅的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor.EnumSubscriptions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关对此分发服务器上的发布的所有订阅的信息。  
   
 #### <a name="to-monitor-properties-for-a-specific-publication-at-the-distributor"></a>监视分发服务器上的特定发布的属性  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  通过以下方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
+2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 设置发布内容的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布属性定义不正确，或表示该发布不存在。  
+    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布属性定义不正确，或表示该发布不存在。  
   
-    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 中获取。  
+    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 中获取。  
   
 3.  执行以下一种或多种方法返回有关此发布的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumErrorRecords%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关指定的错误的错误记录。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumErrorRecords%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定的错误的错误记录。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumLogReaderAgent%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此发布内容的日志读取器代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumLogReaderAgent%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此发布的日志读取器代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关针对此发布内容设置的监视警告阈值的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关为此发布设置的监视器警告阈值的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumQueueReaderAgent%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此发布内容使用的队列读取器代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumQueueReaderAgent%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此发布使用的队列读取器代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSnapshotAgent%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此发布内容的快照代理的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSnapshotAgent%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关此发布的快照代理的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.EnumSubscriptions%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关此发布内容的订阅的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.EnumSubscriptions%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关对此发布的订阅的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSubscriptions2%2A> - 返回 <xref:System.Data.DataSet> 对象，其中根据提供的 <xref:Microsoft.SqlServer.Replication.SubscriptionResultOption> 包含有关此发布内容的订阅的其他信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumSubscriptions2%2A> - 基于提供的 <xref:System.Data.DataSet> 返回 <xref:Microsoft.SqlServer.Replication.SubscriptionResultOption>对象，该对象包含有关对此发布的订阅的其他信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含指定的跟踪令牌的延迟信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关指定跟踪令牌的滞后时间的信息。  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> - 返回 <xref:System.Data.DataSet> 对象，其中包含有关已插入此发布内容的所有跟踪令牌的信息。  
+    -   <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> - 返回 <xref:System.Data.DataSet> 对象，该对象包含有关插入到此发布的所有跟踪令牌的信息。  
   
 #### <a name="to-monitor-transactional-commands-that-are-waiting-to-be-applied-at-the-subscriber"></a>监视正等待在订阅服务器上应用的事务处理命令  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  通过以下方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
+2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 设置发布内容的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布属性定义不正确，或表示该发布不存在。  
+    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布属性定义不正确，或表示该发布不存在。  
   
-    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 中获取。  
+    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 中获取。  
   
-3.  执行返回 <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> 对象的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.TransPendingCommandInfo%2A> 方法。  
+3.  执行 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.TransPendingCommandInfo%2A> 方法，这种方法可返回 <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> 对象。  
   
-4.  使用此 <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> 对象的属性可估算挂起命令的数目以及完成这些命令的传递所需的时间。  
+4.  使用该 <xref:Microsoft.SqlServer.Replication.PendingCommandInfo> 对象的属性可估算挂起命令的数目以及完成这些命令的传递所需的时间。  
   
 #### <a name="to-set-the-monitor-warning-thresholds-for-a-publication"></a>为发布设置监视器警告阈值  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  通过以下方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
+2.  通过下列方法之一获取 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 对象。  
   
-    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 设置发布内容的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布属性定义不正确，或表示该发布不存在。  
+    -   创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。 为发布设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果该方法返回 **false**，则表示发布属性定义不正确，或表示该发布不存在。  
   
-    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 中获取。  
+    -   从通过现有 <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> 对象的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> 属性访问的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 中获取。  
   
-3.  执行 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> 方法。 请注意返回的 <xref:Microsoft.SqlServer.Replication.MonitorThreshold> 对象 <xref:System.Collections.ArrayList> 中的当前阈值设置。  
+3.  执行 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumMonitorThresholds%2A> 方法。 请注意 <xref:System.Collections.ArrayList> 对象已返回的 <xref:Microsoft.SqlServer.Replication.MonitorThreshold> 中的当前阈值设置。  
   
 4.  执行 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.ChangeMonitorThreshold%2A> 方法。 传递以下参数：  
   
-    -   *metricID* - 一个 <xref:System.Int32> 值，表示下表中的监视阈值指标：  
+    -   *metricID* - <xref:System.Int32> 值，它表示下表中的监视阈值指标：  
   
-        |“值”|说明|  
+        |值|说明|  
         |-----------|-----------------|  
         |@shouldalert|**expiration** - 监视对事务发布的订阅是否即将过期。|  
         |2|**latency** - 监视对事务发布的订阅的性能。|  
@@ -281,11 +278,10 @@ ms.lasthandoff: 06/22/2017
         |7|**mergefastrunspeed** - 监视通过高带宽 (LAN) 连接进行的合并同步的同步速率。|  
         |8|**mergeslowrunspeed** - 监视通过低带宽（拨号）连接进行的合并同步的同步速率。|  
   
-    -   *enable* - 用于指示是否为发布启用指标的 <xref:System.Boolean> 值。  
+    -   *enable* - <xref:System.Boolean> 值。  
   
     -   *thresholdValue* - 用于设置阈值的整数值。  
   
     -   *shouldAlert* - 用于指示在此阈值是否应生成警报的整数。  
   
   
-

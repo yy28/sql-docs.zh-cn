@@ -1,31 +1,29 @@
 ---
 title: "开始使用列存储适进行实时运行分析 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储适进行实时运行分析
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 引入了实时运行分析，可以同时对同一个数据库表运行分析和 OLTP 工作负载。 除了实时运行分析以外，你还不需要使用 ETL 和数据仓库。  
+  SQL Server 2016 引入了实时运营分析，可以同时对同一个数据库表运行分析和 OLTP 工作负载。 除了实时运行分析以外，你还不需要使用 ETL 和数据仓库。  
   
 ## <a name="real-time-operational-analytics-explained"></a>实时运行分析介绍  
  在传统上，企业为操作工作负载（例如OLTP）和分析工作负载使用不同的系统。 对于此类系统，提取、转换和加载 (ETL) 作业会定期将数据从操作存储转移到分析存储。 分析数据通常存储在专用于运行分析查询的数据仓库或数据市场中。 尽管这种解决方案已成为标准，但在以下三个方面存在很大问题：  
@@ -36,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **数据滞后时间。** 实施 ETL 会增大运行分析的时间延迟。 例如，如果在每个工作日结束时运行 ETL 作业，则分析查询至少需要针对一天的数据运行。 对于许多企业来说，这种延迟不可接受，因为企业依赖于实时分析数据。 例如，欺诈检测需要实时分析操作数据。  
   
- ![实时运行分析概述](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "实时运行分析概述")  
+ ![实时运营分析概述](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "实时运营分析概述")  
   
  实时运行分析为这些难题提供了解决方案。   
         对同一个基础表运行分析和 OLTP 工作负载时不会出现时间延迟。   对于使用实时分析的方案，成本和复杂性将大大降低，因为不需要使用 ETL，并且不需要采购和维护独立的数据仓库。  
@@ -88,14 +86,14 @@ ms.lasthandoff: 06/22/2017
   
 3.  这就是要执行的所有操作！  
   
- 现在，你无需对应用程序进行任何更改，就能运行实时操作分析。  分析查询将针对列存储索引运行，OLTP 操作将针对 OLTP btree 索引不断运行。 OLTP 工作负载将继续执行，但维护列存储索引会产生更多的开销。 请参阅下一部分中有关性能优化的信息。  
+ 现在，无需对应用程序进行任何更改，就能运行实时运营分析。  分析查询将针对列存储索引运行，OLTP 操作将针对 OLTP btree 索引不断运行。 OLTP 工作负载将继续执行，但维护列存储索引会产生更多的开销。 请参阅下一部分中有关性能优化的信息。  
   
 ## <a name="blog-posts"></a>博客文章  
- 若要了解有关实时运行分析的详细信息，请阅读 Sunil Agarwal 的博客文章。  如果你先阅读这些博客文章，则可以更容易理解性能提示部分。  
+ 若要了解有关实时运营分析的详细信息，请阅读 Sunil Agarwal 的博客文章。  如果你先阅读这些博客文章，则可以更容易理解性能提示部分。  
   
--   [实时运行分析的企业用例](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
+-   [实时运营分析的企业用例](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [使用非聚集列存储索引进行实时运行分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [使用非聚集列存储索引进行实时运营分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
   
 -   [使用非聚集列存储索引的简单示例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
   
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
 -   [列存储索引和行组的合并策略](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>性能提示 #1：使用筛选索引提高查询性能  
- 运行实时运行分析可能会影响 OLTP 工作负载的性能。  这种影响应该很小。 以下示例演示如何使用筛选索引来最大程度地降低事务工作负载上非聚集列存储索引的影响，同时仍能提供实时分析。  
+ 运行实时运营分析可能会影响 OLTP 工作负载的性能。  这种影响应该很小。 以下示例演示如何使用筛选索引来最大程度地降低事务工作负载上非聚集列存储索引的影响，同时仍能提供实时分析。  
   
  为了尽量减少维护操作工作负载上非聚集列存储索引的开销，你可以使用筛选条件，以便只对 *暖* 数据或缓慢变化的数据创建非聚集列存储索引。 例如，在订单管理应用程序中，可以针对已发货的订单创建非聚集列存储索引。 订单在发货后，就很少会发生变化，因此被视为暖数据。 使用筛选索引时，非聚集列存储索引中的数据只需少量的更新，因此可降低对事务工作负载的影响。  
   
@@ -231,4 +229,3 @@ ORDER BY created_time DESC
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

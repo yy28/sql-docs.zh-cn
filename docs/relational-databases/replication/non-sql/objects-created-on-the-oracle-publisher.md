@@ -5,26 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], objects created
+helpviewer_keywords: Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 308ed6419bdda59b9b97ae0093634646d5972a7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 发布服务器上创建的对象
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication installs database objects on the Oracle Publisher to enable change tracking and forwarding ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not install any binary files on the Oracle Publisher). 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪和转发（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
   
 |Object Name|对象类型|说明|  
 |-----------------|-----------------|-----------------|  

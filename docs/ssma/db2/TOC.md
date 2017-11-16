@@ -35,7 +35,7 @@
 # [将 DB2 数据迁移到 SQL Server](migrating-db2-data-into-sql-server-db2tosql.md)
 
 # [转换 DB2 架构](converting-db2-schemas-db2tosql.md)
-# [SQL Server 迁移助手](sql-server-migration-assistant-for-db2-db2tosql.md)
+# [SQL Server Migration Assistant](sql-server-migration-assistant-for-db2-db2tosql.md)
 # [生成报告](generating-reports-db2tosql.md)
 # [创建服务器连接文件](creating-the-server-connection-files-db2tosql.md)
 # [新建项目](new-project-db2tosql.md)

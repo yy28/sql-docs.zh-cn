@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fb34918a06fe49195766fbcdd22e8f762c9e4faf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
   
-3.  在新的优化会话完成之后或者工具加载了现有会话之后，单击 **“进度”** 选项卡。 **“优化日志”** 窗格将显示日志的内容。 日志包含有关数据库引擎优化顾问无法分析的工作负荷事件的信息。  
+3.  在新的优化会话完成之后或者工具加载了现有会话之后，单击 **“进度”** 选项卡。**“优化日志”** 窗格将显示日志的内容。 日志包含有关数据库引擎优化顾问无法分析的工作负荷事件的信息。  
   
      如果优化会话中的所有事件均被数据库引擎优化顾问分析，将显示消息指示此会话的优化日志为空。 如果在最初运行优化会话时未选中 **“常规”** 选项卡上的 **“保存优化日志”** ，将显示一条消息来指出这一点。  
   
@@ -214,7 +213,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  单击 **“进度”** 选项卡查看优化日志，该日志包含有关数据库引擎优化顾问不能优化的工作负荷中的所有事件的错误信息。 这些信息可以帮助您评估工作负荷的影响。  
   
-3.  如果想进一步查看此会话的优化结果，请单击 **“报表”** 选项卡。 您可以在其中查看优化摘要或从 **“选择报表”** 列表中选择优化报表。  
+3.  如果想进一步查看此会话的优化结果，请单击 **“报表”** 选项卡。您可以在其中查看优化摘要或从 **“选择报表”** 列表中选择优化报表。  
   
 4.  单击 **“建议”** 选项卡查看优化建议。  
   

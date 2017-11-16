@@ -1,29 +1,25 @@
 ---
 title: "PolyBase 安装 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- PolyBase, installation
+helpviewer_keywords: PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 977c5e57bb572c8e68ceb8e2bdab561b8b1aea1f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="polybase-installation"></a>PolyBase 安装
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,23 +62,23 @@ ms.lasthandoff: 07/31/2017
   
 4.  在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一帐户下运行。  
   
-    > **重要说明！** 在 PolyBase 扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。  
+    > **重要说明！** 在 PolyBase 横向扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。  
     > 请参阅“扩展 PolyBase”。  
   
-5.  在“PolyBase 配置页” 上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)（PolyBase 扩展组）。  
+5.  在“PolyBase 配置页” 上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
     -   将 SQL Server 实例用作已启用 PolyBase 的独立实例。  
   
          选择此选项可将 SQL Server 实例用作独立的头节点。  
   
-    -   将 SQL Server 实例作为 PolyBase 扩展组的一部分使用。  选择此选项将打开防火墙，以允许与 SQL Server 数据库引擎、SQL Server PolyBase 引擎、SQL Server PolyBase 数据移动服务和 SQL Browser 建立传入连接。 打开防火墙，以允许来自 PolyBase 扩展组中其他节点的传入连接。  
+    -   将 SQL Server 实例作为 PolyBase 横向扩展组的一部分使用。  选择此选项将打开防火墙，以允许与 SQL Server 数据库引擎、SQL Server PolyBase 引擎、SQL Server PolyBase 数据移动服务和 SQL Browser 建立传入连接。 打开防火墙，以允许来自 PolyBase 横向扩展组中其他节点的传入连接。  
   
          选择此选项还将启用 Microsoft 分布式事务处理协调器 (MSDTC) 防火墙连接并修改 MSDTC 注册表设置。  
   
 6.  在“PolyBase 配置页” 上，指定具有至少六个端口的端口范围。 SQL Server 安装程序将分配该范围中的前六个可用端口。  
   
 ##  <a name="installing"></a> 使用命令提示符进行安装  
- 使用此表中的值来创建安装脚本。 **SQL Server PolyBase 引擎** 和 **SQL Server PolyBase 数据移动服务** 这两项服务必须在同一帐户下运行。 在 PolyBase 扩展组中，所有节点上的 PolyBase 服务必须在同一个域帐户下运行。  
+ 使用此表中的值来创建安装脚本。 **SQL Server PolyBase 引擎** 和 **SQL Server PolyBase 数据移动服务** 这两项服务必须在同一帐户下运行。 在 PolyBase 横向扩展组中，所有节点上的 PolyBase 服务必须在同一个域帐户下运行。  
   
 |SQL Server 组件 (SQL Server component)|参数和值|说明|  
 |--------------------------|--------------------------|-----------------|  
@@ -149,4 +145,3 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  请参阅 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)。  
   
   
-

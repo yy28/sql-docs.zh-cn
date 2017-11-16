@@ -1,13 +1,11 @@
 ---
-title: "PolyBase 扩展组 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "PolyBase 横向扩展组 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,25 +13,25 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d297ff12aedfdbdf4e5e50c6656c3d208ecb260d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 989b6a52d4a0e26b32f292fad44a5ad1caf0b71b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="polybase-scale-out-groups"></a>PolyBase 扩展组
+# <a name="polybase-scale-out-groups"></a>PolyBase 横向扩展组
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在处理 Hadoop 或 Azure Blob 存储中的大型数据集时，具有 PolyBase 的独立 SQL Server 实例可能成为性能瓶颈。 PolyBase 组功能允许你创建 SQL Server 实例的群集来处理来自外部数据源的大型数据集（如 Hadoop 或 Azure Blob 存储），从而通过一种扩展的方式提高查询性能。  
   
  请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。  
   
- ![PolyBase 扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 扩展组")  
+ ![PolyBase 横向扩展组](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase 横向扩展组")  
   
 ## <a name="overview"></a>概述  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  在“服务器配置”页上，对 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务使用**域账户** PQTH4A\PolybaseUser。  
   
-4.  在 PolyBase 配置页中，选择“将 SQL Server 实例用作 PolyBase 扩展组的一部分”选项。 这将打开防火墙以允许 PolyBase 服务的传入连接。  
+4.  在“PolyBase 配置”页中，选择“将 SQL Server 实例用作 PolyBase 横向扩展组的一部分”选项。 这将打开防火墙以允许 PolyBase 服务的传入连接。  
   
 5.  安装完成后，运行“services.msc” 。 验证 SQL Server、PolyBase 引擎和 PolyBase 数据移动服务是否在运行。  
   
@@ -144,4 +142,3 @@ ms.lasthandoff: 06/22/2017
  [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  
   
   
-

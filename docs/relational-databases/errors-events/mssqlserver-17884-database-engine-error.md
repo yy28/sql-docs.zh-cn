@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17884 (Database Engine error)
+helpviewer_keywords: 17884 (Database Engine error)
 ms.assetid: 8d05ba05-3f71-4dc3-bd81-2ea5ac9fe843
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c175dbfa68647d892c70a0d60f453c626d8d914e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0809cba2c3c48822d21c181e0e0cb482fc7aa169
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17884"></a>MSSQLSERVER_17884
   
@@ -43,4 +40,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>用户操作  
 确定发生阻塞而无法向前运行的原因，并相应地解决这些问题。 如果进程使用率较低，请检查系统上其他进程产生的负载。  
   
-

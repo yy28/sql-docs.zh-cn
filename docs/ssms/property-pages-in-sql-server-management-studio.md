@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- property pages [SQL Server Management Studio]
+helpviewer_keywords: property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 32da2911fb4daf39e6086beb6e10c7ff5922bace
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 94c531a2fa9fd1c654329c6120906dda1abe7c46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的属性页
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中的属性页对话框均使用可展开和折叠类别的通用格式显示信息。 显示的字段取决于具体的属性。 显示为灰色的属性为只读属性。 “按分类顺序”和“字母顺序”按钮位于每个属性页的顶部附近。  
@@ -37,4 +34,3 @@ ms.lasthandoff: 06/22/2017
 |属性|网格中的第二列列出属性值。|  
 |说明窗格|说明窗格显示在属性页的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”命令打开或关闭属性的说明。|  
   
-

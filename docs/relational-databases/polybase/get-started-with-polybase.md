@@ -1,13 +1,11 @@
 ---
 title: "PolyBase 入门 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b177dbb77ab41646584c0bd97065fda91f90c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: b107ea3ebabbf959ee12b900885612df364dfc12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 入门
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +154,7 @@ Hadoop 遵循其新版本的“Major.Minor.Version”模式。 支持的主要�
   
 4.  在计算节点上重启 PolyBase 数据移动服务。  
   
- 有关详细信息，请参阅 [PolyBase 扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
+ 有关详细信息，请参阅 [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
 ## <a name="create-t-sql-objects"></a>创建 T-SQL 对象  
  根据外部数据源（Hadoop 或 Azure 存储）创建对象。  
@@ -363,15 +360,14 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  从 SQL Server 2016 RC1 升级到 RC2 或 RC3 之后，查询可能会失败。 有关详细信息和补救措施，请参阅 [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md) 并搜索“PolyBase”。  
   
 ## <a name="next-steps"></a>后续步骤  
- 若要了解扩展功能，请参阅 [PolyBase 扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  若要监视 PolyBase，请参阅 [PolyBase 故障排除](../../relational-databases/polybase/polybase-troubleshooting.md)。 若要对 PolyBase 性能进行故障排除，请参阅[使用动态管理视图对 PolyBase 进行故障排除](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。  
+ 若要了解横向扩展功能，请参阅 [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  若要监视 PolyBase，请参阅 [PolyBase 故障排除](../../relational-databases/polybase/polybase-troubleshooting.md)。 若要对 PolyBase 性能进行故障排除，请参阅[使用动态管理视图对 PolyBase 进行故障排除](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。  
   
 ## <a name="see-also"></a>另请参阅  
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)   
- [PolyBase 扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)   
+ [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)   
  [PolyBase 存储过程](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
-

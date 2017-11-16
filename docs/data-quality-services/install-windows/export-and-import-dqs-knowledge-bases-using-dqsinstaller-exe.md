@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f7c1890684cc2ae54c8e6a00946736c65140bed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e85b9553a3300f51f52fab300642f15f3f08617f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 导出和导入 DQS 知识库
-  对于现有的 DQS 安装，您可以从命令提示符运行 DQSInstaller.exe 文件，以便一次性将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，并在稍后使用 .dqsb 文件一次性将所有知识库导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 有关从命令提示符运行 DQSInstaller.exe 的详细信息，请参阅 [从命令提示符运行 DQSInstaller.exe](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 中的 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
+  对于现有的 DQS 安装，您可以从命令提示符运行 DQSInstaller.exe 文件，以便一次性将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，并在稍后使用 .dqsb 文件一次性将所有知识库导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 有关从命令提示符运行 DQSInstaller.exe 的详细信息，请参阅 [Run DQSInstaller.exe from Command Prompt](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 中的 [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
  利用此功能，您可以一次性对 *中的* 所有 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 知识库进行备份，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]单独将每个知识库导出到 .dqs 文件。 同样，您可以一次性将 *所有* 知识库从备份文件导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，而不必使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]从 .dqs 文件单独导入每个知识库。 当在计算机上卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后将其重新安装到其他计算机上时，此功能对于备份和还原知识库特别有用。 您可以轻松地将现有 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装中的所有知识库导出到 DQS 备份文件 (.dqsb)，然后再在其他计算机上安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之后从该备份文件导入所有知识库。  
   
@@ -66,4 +64,3 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  [从 .dqs 文件导入知识库](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   
-

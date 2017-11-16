@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-database-mirroring"></a>数据库镜像期间可能出现的故障
   物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/02/2017
   
  为了使连接保持开放，服务器实例必须能够在超时期限内在该连接上接收到 ping，此期限为定义的镜像超时时间再加上再发送一个 ping 所需的时间。 在超时期限内收到 ping 指示连接仍是开放的，且服务器实例正在通过此连接进行通信。 接收到 ping 后，服务器实例将重置此连接上的超时计数器。  
   
- 如果未在超时期限内从此连接上收到 ping，则服务器实例认为此连接已超时。 服务器实例将关闭超时连接，然后根据会话的状态和运行模式处理超时事件。  
+ 如果未在超时期限内从此连接上收到 ping，则服务器实例认为此连接已超时。服务器实例将关闭超时连接，然后根据会话的状态和运行模式处理超时事件。  
   
  即使其他服务器实际工作正常，超时也被认为是一个故障。 如果会话的超时值太短而不能使任一伙伴做出正常响应，则会产生虚假故障。 如果一个服务器实例成功地与另一个服务器实例实现通信，但后者的响应时间太短，以致于无法在超时期限过期之前接收到 ping，则会产生错误故障。  
   

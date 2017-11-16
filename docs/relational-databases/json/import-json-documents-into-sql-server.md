@@ -5,27 +5,25 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: dfd93090f4cec421d57ab993fc4e0d6f587ab426
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>将 JSON 文档导入 SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-本主题介绍如何将 JSON 文件导入 SQL Server。 目前有许多 JSON 文档存储在文件中。 应用程序在 JSON 文件中记录信息，传感器生成存储在 JSON 文件中的信息等。 必须能够读取文件中存储的 JSON 数据、将数据载入 SQL Server 和分析数据。
+本主题介绍如何将 JSON 文件导入 SQL Server。 目前有许多 JSON 文档存储在文件中。 例如 JSON 文件中的应用程序日志信息、JSON 文件中存储的传感器生成信息等。 必须能够读取文件中存储的 JSON 数据、将数据载入 SQL Server 和分析数据。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>将 JSON 文档导入单个列
 **OPENROWSET(BULK)** 是一个表值函数，如果 SQL Server 对本地驱动器或网络中的任一文件拥有读取访问权限，则该函数可从该文件中读取数据。 该函数返回包含单个列的表，该列包含文件的内容。 可以结合 OPENROWSET(BULK) 函数使用各种选项，例如分隔符。 但是，最简单的用法是将整个文件内容作为文本值加载。 （这单个大型值称为单字符大型对象或 SINGLE_CLOB。） 
@@ -128,7 +126,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 有关详细信息和使用 OPENROWSET 的示例，请参阅 [Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)（将文件从 Azure Blob 存储载入 Azure SQL 数据库）。
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>在行和列中分析 JSON 文档
-你可能不希望以单个值的形式读取整个 JSON 文件，而是希望分析该文件，并将文件中的书籍及其属性以行和列的形式返回。 以下示例使用[此站点](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)中的一个 JSON 文件，该文件包含书籍列表。
+你可能不希望以单个值的形式读取整个 JSON 文件，而是希望在行和列中分析该文件，并返回其中的书籍及其属性。 以下示例使用[此站点](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)中的一个 JSON 文件，该文件包含书籍列表。
 
 ### <a name="example-1"></a>示例 1
 在最简单的示例中，可以只从文件中加载整个列表。 
@@ -177,5 +175,4 @@ SELECT book.*
   
 ## <a name="see-also"></a>另请参阅
 [使用 OPENJSON 将 JSON 数据转换为行和列](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
-
 

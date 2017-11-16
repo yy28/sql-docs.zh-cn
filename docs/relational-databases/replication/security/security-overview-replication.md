@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - security [SQL Server replication], about security
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d459a80eb15947743a846ce64cfe0013f718320d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8961944101604f399291a84f6966167c8a1ac8aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-overview-replication"></a>安全性概述（复制）
   基本上，要保护复制环境的安全，您需要了解身份验证和授权选项，了解如何正确使用复制筛选功能以及了解保护复制环境的各个部分的具体措施。 复制环境包括分发服务器、发布服务器、订阅服务器和快照文件夹。 本章介绍复制安全性，但复制安全性是建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性和 Windows 安全性基础上的。 因此应了解复制安全性的基础以及具体内容。 有关安全性的详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)（安装 SQL Server 的安全注意事项）。 有关 Oracle 发布的安全注意事项的详细信息，请参阅主题 [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)中的“复制安全模式”部分。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 06/22/2017
  [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   
-

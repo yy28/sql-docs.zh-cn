@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - disabling replication
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80f107b2855a1e3f2ca4821354021e94c76269d7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: f52f0f8dc8ff90b1aed18bc603e5e3055800df15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用发布和分发。  
@@ -118,7 +117,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 如果发布服务器和分发服务器在不同的服务器上，并且应在分发服务器上卸载发布服务器而没有首先验证发布服务器上是否不再存在发布时，将值 **true** 传递给 *force* 。  
   
-7.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递来自步骤 3 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+7.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 在没有首先验证所有本地发布数据库是否已禁用以及分发数据库是否已卸载的情况下，将 **true** 值传递给 *force* 以删除分发服务器上的所有复制对象。  
   

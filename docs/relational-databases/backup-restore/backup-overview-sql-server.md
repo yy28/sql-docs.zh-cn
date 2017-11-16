@@ -5,8 +5,7 @@ ms.date: 07/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4889445404ebce0a1d3ac74a4e8f49d9fe73f980
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
@@ -39,10 +38,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="terms"></a>术语
  
- 备份 [动词]\(back up)  
+ **备份 [动词] (back up)**  
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库或其事务日志中将数据或日志记录复制到备份设备（如磁盘），以创建数据备份或日志备份。  
   
-备份 [名词]\(backup)  
+**备份 [名词] (backup)**  
  可用于在失败后还原或恢复数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据副本。 在数据库级别以及针对数据库的一个或多个文件或文件组创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的备份。 不能创建表级备份。 除了数据备份之外，完整恢复模式要求创建事务日志的备份。  
   
 **[恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md)**  
@@ -129,7 +128,7 @@ ms.lasthandoff: 06/22/2017
   
 -   如果在进行备份操作时尝试创建或删除数据库文件，则创建或删除操作将失败。  
   
- 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作总会等待第一个操作设置的锁超时。 （超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
+ 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作总会等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **备份设备和备份媒体**  
@@ -152,7 +151,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [从设备还原备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **创建备份**  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>以及更多！ 
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
@@ -185,4 +184,3 @@ ms.lasthandoff: 06/22/2017
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

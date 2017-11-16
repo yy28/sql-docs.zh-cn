@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- replication [SQL Server], security
+helpviewer_keywords: replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c1371474b3919b5587e2d5f5ca8fc899b13f12c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3c7637dd9fb2e9f827c1d0d0f5d222ce8b7bbf5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-a-replication-topology"></a>保护复制拓扑的安全
   复制所需的安全帐户、登录名和密码是在配置复制和创建发布和订阅时提供的。 使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、复制存储过程以及复制管理对象 (RMO) 可以更改这些安全设置。 下面的主题介绍如何修改复制安全设置。  

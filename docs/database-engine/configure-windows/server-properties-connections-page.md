@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.connections.f1
+f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 906e8e7e92d847e8e440303188197dfcf3942d31
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---connections-page"></a>服务器属性 -“连接”页
   使用此页可以查看或修改连接选项。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/02/2017
  从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的远程服务器控制存储过程的执行。 选中此复选框与将 **sp_configureremote access** 选项设置为 1 具有相同的作用。 清除此复选框可阻止从远程服务器执行存储过程。  
   
  **远程查询超时值(秒，0 = 无超时)**  
- 指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以执行的时间（秒）。 默认为 600 秒，或等待 10 分钟。  
+ 指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以执行的时间（秒）。默认为 600 秒，或等待 10 分钟。  
   
  **需要将分布式事务用于服务器到服务器的通信**  
  通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器过程的操作。 有关详细信息，请参阅 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  

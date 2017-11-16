@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1f7fb4d386936f39a471bae4746fecb42057ee2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6be5e63eebd7c9a403ac3bb1330552d474d919b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新初始化订阅。 可以将各个订阅标记为重新初始化，以便在下次同步期间应用新快照。  
@@ -172,9 +171,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 设置为步骤 1 中的连接。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例，并设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>以及步骤 1 中 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法来获取该对象的属性。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
     >  如果此方法返回 **false**，则步骤 2 中对订阅属性的定义不正确，或者请求订阅不存在。  
@@ -187,9 +186,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例，设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 设置为步骤 1 中的连接。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例，并设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>以及步骤 1 中 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法来获取该对象的属性。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
     >  如果此方法返回 **false**，则步骤 2 中对订阅属性的定义不正确，或者推送订阅不存在。  
@@ -202,9 +201,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 设置为步骤 1 中的连接。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例，并设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>以及步骤 1 中 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法来获取该对象的属性。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
     >  如果此方法返回 **false**，则步骤 2 中对订阅属性的定义不正确，或者请求订阅不存在。  
@@ -220,9 +219,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例，设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、<xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 设置为步骤 1 中的连接。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例，并设置 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>以及步骤 1 中 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法来获取该对象的属性。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。  
   
     > [!NOTE]  
     >  如果此方法返回 **false**，则步骤 2 中对订阅属性的定义不正确，或者推送订阅不存在。  

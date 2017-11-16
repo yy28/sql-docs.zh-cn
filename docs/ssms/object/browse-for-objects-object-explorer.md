@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.matchingobjects.f1
 - sql13.swb.common.browseobjects.f1
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 343cdc53d15a8a1729053029f6650d7799c345f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7e6e65cd3b8a6f9120f2e20872eacb8fd40f2b7e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browse-for-objects-object-explorer"></a>查找对象（对象资源管理器）
 显示所选类型的对象的列表。 通过选中相应的复选框可以从该列表中选择一个或多个对象。 “查找对象”框只显示适用于操作的项，并且只显示用户有权查看的项。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 06/22/2017
 **类型**  
 数据库对象的类型。  
   
-

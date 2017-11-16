@@ -5,12 +5,10 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.conc.subtopubs.f1
+f1_keywords: sql13.rep.conc.subtopubs.f1
 helpviewer_keywords:
 - subscriptions [SQL Server replication], about subscriptions
 - pull subscriptions [SQL Server replication]
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c662e63ac48ad1ae3b64fdc8de428bc5090abba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
   订阅是对发布中的数据和数据库对象的副本的请求。 订阅定义将接收哪个发布以及接收的时间和位置。 在计划订阅时，请考虑代理处理发生的位置。 所选择的订阅类型将控制代理运行的位置。 对于推送订阅，合并代理或分发代理在分发服务器上运行；对于请求订阅，代理在订阅服务器上运行。 创建订阅后，将无法更改其类型。  
@@ -99,4 +96,3 @@ ms.lasthandoff: 07/31/2017
  [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   
-

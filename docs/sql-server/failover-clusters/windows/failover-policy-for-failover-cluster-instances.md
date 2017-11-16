@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- flexible failover policy
+helpviewer_keywords: flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 44a3b05bea5c8962566c766662f99f5d430abfd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>故障转移群集实例的故障转移策略
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
@@ -117,4 +114,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
-

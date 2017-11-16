@@ -5,8 +5,7 @@ ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
-ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
 服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务选择一个帐户，可选帐户如下：  
@@ -127,4 +125,3 @@ ms.lasthandoff: 07/31/2017
 [使用 SQL 计算机管理器管理服务](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
-

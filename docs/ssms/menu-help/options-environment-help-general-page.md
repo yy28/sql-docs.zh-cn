@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.General
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c81d9fefe5e4e7b8bc41f1a3df26d43a79f8226b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---help---general-page"></a>选项（“环境”-“帮助”-“常规”页）
 使用“选项”对话框可以选择文档集，并确定是在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中以内部方式显示主题还是在单独窗口中以外部方式显示主题。 若要访问此对话框，请单击“工具”菜单上的“选项”，展开“环境”节点中的“帮助”，再单击“常规”。  
@@ -52,4 +49,3 @@ ms.lasthandoff: 06/22/2017
 **同时显示英语主题**  
 指定除返回在“主题语言首选项”框中所选语言的主题外，还返回英语主题。  
   
-

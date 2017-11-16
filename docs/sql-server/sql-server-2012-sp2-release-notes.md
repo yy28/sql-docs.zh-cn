@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: ed00031d1f55fc6fda2ee1c37fe76f7637e8e891
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
 这些发行说明介绍了在安装 SQL Server 2012 Service Pack 2 或者解决其相关问题之前需要了解的问题。 发行说明仅在线提供，不提供相关安装介质。 发行说明会在发现问题时定期更新。 有关详细信息，请查阅 [SQL Server 2012 Service Pack 2 中修复的 Bug](http://support.microsoft.com/KB/2958429) 。  
@@ -44,4 +43,3 @@ ms.lasthandoff: 09/02/2017
 |SQL Server 2012 Management Studio Express 的 64 位版|升级到 SQL Server 2012 SP2 Management Studio Express 的 64 位版|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
 |[Microsoft SQL Server 2012 RTM 功能包](http://www.microsoft.com/download/details.aspx?id=29065) (#microsoft-sql-server-2012-rtm-功能包) 或 [Microsoft SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)(#microsoft-sql-server-2012-sp1-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP2 功能包的 64 位版|Microsoft [SQL Server 2012 SP2 功能包下载页](http://go.microsoft.com/fwlink/?LinkID=401008)中的一种或多种工具|  
   
-

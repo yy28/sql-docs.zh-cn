@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3aecc41-4d79-49b2-a11c-7b2203fa79bc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d08fcde17bb33268af8f2dbd62c14fcae1a9bafb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: a4fda42588aae64cb1fbac44b8bf3ef1e7e1006e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-4---display-the-query-window"></a>课程 1-4 - 显示查询窗口
 打开多个查询窗口时，它们显示为选项卡式文档窗口。  
@@ -36,4 +34,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

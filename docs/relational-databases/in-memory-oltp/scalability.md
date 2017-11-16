@@ -5,22 +5,20 @@ ms.date: 08/27/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ab43ba6b6a27fa46b5214a60063c5df3f5496f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cce854918d96a50f032b9e858f6f58519878358b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scalability"></a>可伸缩性
   SQL Server 2016 包含内存优化表磁盘存储的可伸缩性增强功能。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 06/22/2017
  内存中 OLTP 引擎将基于文件流继续使用内存优化文件组，但该文件组中的单个文件脱离文件流。 这些文件完全由内存中 OLTP 引擎管理（例如对于创建、删除和垃圾回收）。 不支持 [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)。  
   
   
-

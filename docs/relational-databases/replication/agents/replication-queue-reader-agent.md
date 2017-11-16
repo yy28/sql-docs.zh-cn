@@ -5,8 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d592322676ddae7d6cc0ef145fcb0210d0dbe3cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 9a0c0fcae1a5f2a63a40da76bfb3e676f03d96fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
   复制队列读取器代理是一个可执行文件，该文件读取存储在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 消息队列中的消息，然后将这些消息应用于发布服务器。 队列读取器代理与允许排队更新的快照发布和事务发布一起使用。  
@@ -103,7 +102,7 @@ qrdrsvc [-?]
 |**3**|插入包括了可能对排除故障有用的其他详细信息的新历史记录。|  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 登录超时前等待的秒数。 默认值为 15 秒。  
+ 登录超时前等待的秒数。默认值为 15 秒。  
   
  **-Output** *output_path_and_file_name*  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
@@ -121,7 +120,7 @@ qrdrsvc [-?]
  用于向代理提供一组默认值的代理配置文件的名称。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
- 查询超时前等待的秒数。 默认值为 1800 秒。  
+ 查询超时前等待的秒数。默认值为 1800 秒。  
   
  **-ResolverState** [ **1**| **2**| **3**]  
  指定解决排队更新冲突的方式。 值为 **1** ，表示发布服务器赢得冲突且当前发生冲突的排队事务将在发布服务器和发起更新的订阅服务器上回滚，后续排队事务的处理过程将继续进行。 值为 **2** 表示订阅服务器赢得冲突且排队事务将覆盖发布服务器上的值。 值为 **3** 表示任何冲突都将导致订阅服务器重新初始化；发布服务器赢得冲突，后续排队事务的处理过程将终止且订阅将重新初始化。 事务发布的默认设置为 **1** ，快照发布的默认设置为 **3** 。  
@@ -133,4 +132,3 @@ qrdrsvc [-?]
  [复制代理管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

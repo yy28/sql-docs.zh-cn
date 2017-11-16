@@ -1,13 +1,11 @@
 ---
 title: "列存储索引 - 概述 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 33a0dbca3c96a38466c560487965c8825ff5328d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 8c7238da1e8c0ad3fa46805c73f57bc2ae8e4c1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---overview"></a>列存储索引 - 概述
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -87,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
  非聚集索引包含基础表中部分或全部行与列的副本。 索引将定义为表的一个或多个列，并具有一个用于筛选行的可选条件。  
   
- 非聚集列存储索引支持实时运行分析，其中，OLTP 工作负载使用基础聚集索引，同时对列存储索引并发运行分析。 有关详细信息，请参阅 [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
+ 非聚集列存储索引支持实时运营分析，其中，OLTP 工作负载使用基础聚集索引，同时对列存储索引并发运行分析。 有关详细信息，请参阅 [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
  批处理执行  
  “批处理执行”是一种查询处理方法，其中查询将统一处理多个行。 对列存储索引的查询使用批处理模式执行，这通常可将查询性能提高 2-4 倍。 批处理执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批处理模式执行有时候称作基于向量或向量化的执行。  
@@ -183,7 +181,6 @@ ms.lasthandoff: 06/22/2017
  [列存储索引碎片整理](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-
 
 
 

@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 07a9b670a58f8ec0d6fcc0159b6237b7fc32dcbd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c3521e36d5001823c0700e2b13a17d20898f2049
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
   从 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例中卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或者完全删除具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例并不删除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象，包括 DQS 数据库。 这意味着，如果您使用 SQL Server 安装程序卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，并不会丢失您的 DQS 数据。 在卸载过程完成后，您必须手动删除这些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  

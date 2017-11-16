@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d83a336ea3d35d22ea14d6a4a66698f99890650d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# 启用或禁用服务器网络协议
+# <a name="enable-or-disable-a-server-network-protocol"></a>启用或禁用服务器网络协议
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，更改才能生效。  
   
 > [!IMPORTANT]  
@@ -51,7 +49,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   
-#### 启用服务器网络协议  
+#### <a name="to-enable-a-server-network-protocol"></a>启用服务器网络协议  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
-#### 使用 PowerShell 启用服务器网络协议  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>使用 PowerShell 启用服务器网络协议  
   
 1.  使用管理员权限打开一个命令提示符。  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### 为本地计算机配置协议  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>为本地计算机配置协议  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当脚本在本地运行并配置本地计算机时， PowerShell 可以通过动态确定本地计算机的名称使脚本更为灵活。 `$uri` 若要检索本地计算机的名称，请将设置  变量的行替换为以下行。  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### 使用 SQL Server PowerShell 重新启动数据库引擎  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>使用 SQL Server PowerShell 重新启动数据库引擎  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 启用或禁用了协议后，必须停止并重新启动才能使更改生效。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行以下语句，通过使用  PowerShell 来停止和启动默认实例。 `'MSSQLSERVER'` 若要停止和启动命名实例，请将 `'MSSQL$<instance_name>'`替换为 。  
   
@@ -134,4 +132,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

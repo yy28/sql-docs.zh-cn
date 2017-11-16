@@ -1,27 +1,24 @@
 ---
 title: "列存储索引 - 新增功能 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 919cdbcd48d8773b906ad7e410cb18627fddd8bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
-ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -64,7 +61,7 @@ ms.lasthandoff: 07/31/2017
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引中不支持持久化列。无法创建关于具有计算列的列存储索引的非聚集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并启用实时运行分析。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并实现实时运营分析。  
   
 ### <a name="functional"></a>功能  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 07/31/2017
   
 -   支持主键和外键，即可通过使用 b 树索引在聚集列存储索引上强制实施这些约束。  
   
--   列存储索引有一个压缩延迟选项，该选项可以最大限度地减少事务工作负荷对实时运行分析的影响。  此选项允许通过频繁地更改行来保持稳定，然后再将这些行压缩到列存储中。 有关详细信息，请参阅[创建列存储索引 (Transact SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 和[开始使用列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
+-   列存储索引有一个压缩延迟选项，该选项可以最大限度地减少事务工作负荷对实时运营分析的影响。  此选项允许通过频繁地更改行来保持稳定，然后再将这些行压缩到列存储中。 有关详细信息，请参阅[创建列存储索引 (Transact SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 和[开始使用列存储索引进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
 ### <a name="performance-for-database-compatibility-level-120-or-130"></a>数据库兼容级别 120 或 130 的性能  
   
@@ -177,9 +174,8 @@ ms.lasthandoff: 07/31/2017
  列存储索引指南   
  列存储索引数据加载   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  针对数据仓库的列存储索引   
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

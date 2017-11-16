@@ -5,22 +5,19 @@ ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: douglasl
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b19a4d0d4c2e15081b6a890aea4a4f2a9226e9bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 > 有关导入和导出向导的相关内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
@@ -94,5 +91,4 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 - **了解有关导入其他数据源的详细信息。** 如果要导入除平面文件外的其他内容，请参阅 [SQL Server 导入和导出向导](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 - **了解有关连接平面文件数据源的详细信息。** 如果想要寻找有关连接平面文件数据源的详细信息，请参阅[连接到平面文件数据源](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)。
 - **了解有关 PROSE 的详细信息。** 如果想要寻找向导使用的智能框架的概述，请参阅 [PROSE SDK](https://microsoft.github.io/prose/)。
-
 

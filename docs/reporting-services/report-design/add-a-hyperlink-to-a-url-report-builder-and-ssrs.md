@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 5dd771760822004cf75dfb602882bb739b2e396d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
 了解如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分页报表向文本框、图像、图表和仪表添加超链接操作。 链接可以转到其他报表、报表中的书签或是静态或动态 URL。 
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在报表设计视图中，右键单击要添加链接的文本框、图像或图表，然后单击 **“属性”**。  
   
-2.  在“属性”对话框中，单击“操作”选项卡。 阅读有关选项的信息。  
+2.  在“属性”对话框中，单击“操作”选项卡。阅读有关选项的信息。  
 
 ## <a name="-add-drillthrough-to-another-report"></a>...向其他报表添加钻取
 
@@ -93,8 +93,7 @@ ms.lasthandoff: 08/09/2017
 7.  若要测试该链接，请单击 **“运行”** 以预览报表，然后单击对其设置此链接的报表项。  
   
 ## <a name="see-also"></a>另请参阅  
- [交互式排序、 文档结构图和链接 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [创建文档结构图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [创建文档结构图（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
-

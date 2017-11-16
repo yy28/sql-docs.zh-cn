@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b22b667a679c2dee3a87b0348170c793af0c9e1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定义合并表项目间的逻辑记录关系
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义合并表项目间的逻辑记录关系。  
@@ -170,9 +169,9 @@ ms.lasthandoff: 06/22/2017
   
 5.  如果要构成逻辑记录的项目不存在，请创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的一个实例，然后设置以下属性：  
   
-    -   将 <xref:Microsoft.SqlServer.Replication.Article.Name%2A> 设置为项目的名称。  
+    -   将 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>设置为项目的名称。  
   
-    -   将 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> 设置为发布的名称。  
+    -   将 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>设置为发布的名称。  
   
     -   （可选）如果对项目进行水平筛选，则将 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 属性指定为行筛选器子句。 使用此属性可指定静态行筛选器或参数化行筛选器。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
@@ -192,9 +191,9 @@ ms.lasthandoff: 06/22/2017
   
     -   将 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> 属性设置为定义关系的表达式。  
   
-    -   将 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> 属性的值设置为 <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink>。 如果此逻辑记录关系同时也是一个联接筛选器，请将此属性的值指定为 <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink>。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
+    -   将 <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> 属性的值设置为 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> 。 如果此逻辑记录关系同时也是一个联接筛选器，请将此属性的值指定为 <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> 。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
-9. 针对某个对象调用 <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> 方法，该对象代表关系中的子项目。 传递步骤 8 中的 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 对象以定义此关系。  
+9. 对表示此关系中的子项目的对象调用 <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> 方法。 传递步骤 8 中的 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 对象以定义此关系。  
   
 10. 对发布中的其余每个逻辑记录关系重复执行步骤 8 和 9。  
   
@@ -203,7 +202,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-cs[HowTo#rmo_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createlogicalrecord)]  
   
- [!code-vb[HowTo#rmo_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
+ [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## <a name="see-also"></a>另请参阅  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
