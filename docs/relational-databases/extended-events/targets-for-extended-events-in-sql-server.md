@@ -2,28 +2,32 @@
 title: "SQL Server 中扩展事件的目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895e4ae07df2c265eeb64532282be51933a5f932
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 本文介绍何时以及如何使用 SQL Server 中扩展事件的 package0 目标。 对于每个目标，本文介绍：
@@ -786,6 +790,7 @@ Package0 还有两个其他目标，但它们不能在 Transact-SQL 中使用：
 - [Microsoft.SqlServer.Management.XEvent 命名空间](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq 命名空间](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
 
 
 

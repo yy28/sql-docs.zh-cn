@@ -2,26 +2,33 @@
 title: MSSQLSERVER_3619 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 3619 (Database Engine error)
+helpviewer_keywords:
+- 3619 (Database Engine error)
 ms.assetid: 7d94f8d9-65ca-4fde-9c17-7b83e94a3779
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 9beb90089cee58f0e70c5d7320fd19cb9df27445
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f487685e727f9f5ccf3862ac62cf0f1e21fb78ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver3619"></a>MSSQLSERVER_3619
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
   
@@ -40,3 +47,4 @@ ms.lasthandoff: 11/09/2017
 ## <a name="user-action"></a>用户操作  
 截断日志以释放一些空间，或者为日志分配更多的空间。 有关详细信息，请参阅 Server SQL 联机丛书中的“解决事务日志已满的问题（错误 9002）”。  
   
+

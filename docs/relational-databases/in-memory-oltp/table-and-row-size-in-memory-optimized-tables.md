@@ -2,26 +2,31 @@
 title: "内存优化表中的表和行大小 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: caa1851ca33c49b0199cfa76589d278ec8974a95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，内存优化表的行内数据大小不得长于 [8,060 字节](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 但是，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在 Azure SQL 数据库中，现在可以创建具有多个大型列（例如，多个 varbinary(8000) 列）和 LOB 列（即 varbinary(max)、 varchar(max) 和 nvarchar(max)）的内存优化表，并使用本机编译的 T-SQL 模块和表类型对其进行操作。 
   
@@ -41,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 
   内存优化表由行和索引的集合组成，其中包含行的指针。 下图是一个包含索引和行的表，因而也就有行标题和正文：  
   
- ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "内存优化表。")  
 内存优化表，由索引和行组成。  
 
 ##  <a name="bkmk_TableSize"></a> 计算表的大小
@@ -249,3 +254,4 @@ where object_id = object_id('dbo.Orders')
  [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

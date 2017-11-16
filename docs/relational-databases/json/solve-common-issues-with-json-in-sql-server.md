@@ -1,28 +1,34 @@
 ---
 title: "解决 SQL Server 中 JSON 的常见问题 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-json
+ms.suite: sql
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: JSON, FAQ
+helpviewer_keywords:
+- JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 40408a6c0a42882fb2c268d70ddd2959b2d627b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解决 SQL Server 中 JSON 的常见问题
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  此处可找到关于 SQL Server 中内置 JSON 支持的常见问题解答。  
  
@@ -34,7 +40,7 @@ ms.lasthandoff: 11/09/2017
  **答案。** 请使用 FOR JSON PATH。 尽管 JSON 输出没有任何区别，但 AUTO 模式采用一些其他的逻辑，可检查是否应嵌套列。 请将 PATH 作为默认选项。  
 
 ### <a name="create-a-nested-json-structure"></a>创建一个嵌套的 JSON 结构  
- **问题。** 我希望在同一级别上生成具有多个数组的复杂 JSON。 FOR JSON PATH 可以使用路径创建嵌套对象，FOR JSON AUTO 为每个表创建其他的嵌套级别。 这两个选项都不能够让我生成所需的输出。 我如何才能自定义现有选项不直接支持的 JSON 格式？  
+ **问题。** 我希望生成具有多个同级别数组的复杂 JSON。 FOR JSON PATH 可以使用路径创建嵌套对象，FOR JSON AUTO 为每个表创建其他的嵌套级别。 这两个选项都不能够让我生成所需的输出。 我如何才能自定义现有选项不直接支持的 JSON 格式？  
   
  **答案。** 通过将 FOR JSON 查询添加为返回 JSON 文本的列表达式，可创建任何数据结构。 还可以使用 JSON_QUERY 函数手动创建 JSON。 下面的示例演示了这些方法。  
   
@@ -66,7 +72,7 @@ FOR JSON PATH
   
  我如何才能防止此行为？ 我想让 `{"day":23}` 作为 JSON 对象而不是转义文本返回。  
   
- **答案。** 存储在文本列中的 JSON 或文字被当做文本处理。 也就是说，它会括在双引号内并进行转义。 如果想返回未转义的 JSON 对象，请将此列作为参数传递给 JSON_QUERY 函数，如下例所示。  
+ **答案。** 存储在文本列中的 JSON 或文字被当做文本处理。 也就是说，它会括在双引号内并进行转义。 如果想返回未转义的 JSON 对象，请将 JSON 列作为参数传递给 JSON_QUERY 函数，如下例所示。  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -147,3 +153,4 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
 若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+

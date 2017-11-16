@@ -2,29 +2,34 @@
 title: "控制事务持久性 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-transaction-log
+ms.suite: sql
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 70f830b3e94781733cf18ea638912e5813ffeb90
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。    
     
@@ -92,7 +97,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="how-to-control-transaction-durability"></a>如何控制事务持续性    
     
-###  <a name="bkmk_DbControl"></a> 数据库级别控制    
+###  <a name="bkmk_DbControl"></a> Database level control    
  您作为 DBA，可以控制用户是否可通过以下语句对数据库使用延迟事务持续性。 您必须使用 ALTER DATABASE 来设置延迟持续性设置。    
     
 ```tsql    
@@ -108,7 +113,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  使用此设置，对数据库提交的每个事务都是延迟持久事务。 无论事务指定完全持久 (DELAYED_DURABILITY = OFF) 还是不进行任何指定，事务都是延迟持久事务。 当数据库适合使用延迟事务持续性，并且您不希望更改任何应用程序代码时，此设置很有用。    
     
-###  <a name="CompiledProcControl"></a> 原子块级别控制 - 本机编译存储过程    
+###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
  下面的代码面向原子块内部。    
     
 ```tsql    
@@ -143,7 +148,7 @@ END
 |**DELAYED_DURABILITY = OFF**|原子块启动新的完全持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|    
 |**DELAYED_DURABILITY = ON**|原子块启动新的延迟持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|    
     
-###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 语法已扩展，您可以强制实施延迟事务持续性。 如果 DELAYED_DURABILITY 在数据库级别设置为 DISABLED 或 FORCED（请参阅上文），则忽略此 COMMIT 选项。    
     
 ```tsql    
@@ -199,7 +204,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **日志备份**    
  备份中仅包含已成为持久事务的事务。    
     
-##  <a name="bkmk_DataLoss"></a> 在什么情况下会丢失数据？    
+##  <a name="bkmk_DataLoss"></a> When can I lose data?    
  如果你对表实施延迟持续性，则应了解某些情况会导致数据丢失。 如果无法容忍任何数据丢失，则不要对表使用延迟持续性。    
     
 ### <a name="catastrophic-events"></a>灾难性事件    
@@ -212,3 +217,4 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  [具有内存优化表的事务](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
+
