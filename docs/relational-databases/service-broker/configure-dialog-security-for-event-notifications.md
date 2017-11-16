@@ -5,23 +5,21 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event notifications [SQL Server], security
+helpviewer_keywords: event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473e5873e7a522c691f39c5fa8b68d5eb17ab2ce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fa4b332294fb821ea623b0b0bacd46db33dc676f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话安全模式。 必须按照 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话完全安全模式手动配置对话安全模式。 完全安全模式可以为在远程服务器之间发送的消息启用加密和解密功能。 虽然事件通知单向发送，但其他消息（例如错误）也会从相反的方向返回。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------|  
 |选择或创建一个数据库以包含事件通知和主密钥。|选择或创建一个数据库以包含主密钥。|  
 |如果没有用于源数据库的主密钥，则 [创建主密钥](../../t-sql/statements/create-master-key-transact-sql.md)。 源数据库和目标数据库都需要主密钥来保护它们各自的证书。|如果没有用于目标数据库的主密钥，则创建主密钥。|  
-|为源数据库[创建登录名](../../t-sql/statements/create-login-transact-sql.md) 和相应的 [用户](../../t-sql/statements/create-user-transact-sql.md) 。|为目标数据库创建登录名和相应的用户。|  
+|为源数据库[创建登录名](../../t-sql/statements/create-login-transact-sql.md) 和相应的 [用户](../../t-sql/statements/create-user-transact-sql.md)。|为目标数据库创建登录名和相应的用户。|  
 |为源数据库的用户[创建证书](../../t-sql/statements/create-certificate-transact-sql.md) 。|创建属于目标数据库的用户的证书。|  
 |在目标服务器可以访问的文件中[备份证书](../../t-sql/statements/backup-certificate-transact-sql.md) 。|将证书备份到可以由源服务器访问的文件。|  
 |[创建用户](../../t-sql/statements/create-user-transact-sql.md)，指定目标数据库的用户和 WITHOUT LOGIN。 此用户将拥有要通过备份文件创建的目标数据库证书。 用户不必映射到登录名，因为此用户的唯一目的是拥有在下面的步骤 3 中创建的目标数据库证书。|创建用户，指定源数据库的用户和 WITHOUT LOGIN。 此用户将拥有要通过备份文件创建的源数据库证书。 用户不必映射到登录名，因为此用户的唯一目的是拥有在下面的步骤 3 中创建的源数据库证书。|  

@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8b9672e89d5bd0dc1d570aa30d214cda63dbf61
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
   在使用向导向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加地图或地图层之后，可能希望更改地图在报表中的显示方式。 可以考虑以下构思来进行改进：  
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/09/2017
   
 -   分辨率和简化。 对于线条和多边形，在绘制时间与轮廓详细程度之间选择平衡。  
   
- 若要更改这些选项，请右键单击地图视区，然后使用“地图视区属性”对话框 -&gt;“常规”页和相关页。 [](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)  
+ 若要更改这些选项，请右键单击地图视区，然后使用[“地图视区属性”对话框 -&gt;“常规”](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)页和相关页。  
   
 ##  <a name="Legends"></a> 更改图例的选项  
  图例可帮助用户解释地图上的数据。  
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
 -   若要更改图例的内容或内容格式，请对层更改对应规则的图例选项。  
   
- 有关详细信息，请参阅[更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Layer"></a> 更改层的选项  
  若要显示地图的层，请单击地图以选择对应的层。 “地图”窗格将出现。 若要更改层的选项，请右键单击该层并使用快捷方式菜单。  
@@ -168,8 +167,7 @@ ms.lasthandoff: 08/09/2017
  有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [地图向导和地图层向导 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
-

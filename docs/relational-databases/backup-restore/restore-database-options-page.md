@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restoredb.options.f1
+f1_keywords: sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9b4290a3e3a3a43e09dc4837542185e7256962ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
   使用 **“还原数据库”** 对话框的 **“选项”** 页可修改还原操作的行为和结果。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 06/22/2017
  若要在完成存储操作后确定数据库的状态，则必须选择 **“恢复状态”** 面板中的选项之一。  
   
  **RESTORE WITH RECOVERY**  
- 在还原了在“常规”[](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
+ 在还原了在[“常规”](../../relational-databases/backup-restore/restore-database-general-page.md)页的**“用于还原的备份集”**网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
   
 > [!NOTE]  
 >  在完整恢复模式或大容量日志恢复模式下，只有在需要还原所有日志文件时才选择此选项。  
@@ -91,7 +89,7 @@ ms.lasthandoff: 06/22/2017
  选中此复选框可以指定应执行结尾日志备份。  
   
 > [!NOTE]  
->  如果你在“[备份时间线](../../relational-databases/backup-restore/backup-timeline.md)”对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
+>  如果你在[“备份时间线”](../../relational-databases/backup-restore/backup-timeline.md) 对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
   
  **备份文件**  
  为日志的结尾指定备份文件。 您可以浏览备份文件，也可以在文本框中直接输入其名称。  

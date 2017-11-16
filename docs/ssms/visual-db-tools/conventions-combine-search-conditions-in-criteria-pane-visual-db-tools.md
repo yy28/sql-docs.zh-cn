@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
 您可以创建包含用任意多个 AND 和 OR 运算符链接的任意多个搜索条件的查询。 具有 AND 和 OR 子句组合的查询会变得非常复杂。因此，了解在执行此类查询时如何对其进行解释，以及在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)和 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中如何表示此类查询，是非常有用的。  
@@ -173,4 +171,3 @@ WHERE (hire_date < '01/01/95' ) AND
 ## <a name="see-also"></a>另请参阅  
 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-
