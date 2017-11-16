@@ -1,13 +1,11 @@
 ---
 title: "实时查询统计信息 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/28/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5381ceb39baa1e81001d9d80c9171545038a09b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: 32ce19a31e38ce457ae8b3ea37fa863a74a8902b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个查询计划操作员到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 配合使用。  
@@ -88,4 +85,3 @@ ms.lasthandoff: 10/21/2017
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
  [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-

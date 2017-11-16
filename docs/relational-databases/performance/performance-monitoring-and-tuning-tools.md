@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 589cda4cb202a14cb4633a4126e8fa4680894d34
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d7063b1fdbcec713bea65b0e5e68f0ea40a683fd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一套综合的工具，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件和优化物理数据库的设计。 工具的选择取决于要执行的监视或优化类型和要监视的具体事件。  
@@ -76,4 +74,3 @@ ms.lasthandoff: 06/22/2017
  有关 Windows 操作系统或 Windows Server 工具的详细信息，请参阅 Windows 文档。  
   
   
-

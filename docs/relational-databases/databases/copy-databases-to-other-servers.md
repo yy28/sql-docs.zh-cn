@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - copying databases
 - bulk importing [SQL Server], between servers
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 260a9d1ecce08f3fd12b4dd71780a27170144e79
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="copy-databases-to-other-servers"></a>将数据库复制到其他服务器
   有时候将数据库从一台计算机复制到另一台计算机会很有用，无论是用于测试、检查一致性、开发软件、运行报表、创建镜像数据库还是将数据库用于远程分支操作。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 06/22/2017
      可以使用生成脚本向导将数据库从本地计算机传输到 Web 宿主提供程序。 有关详细信息，请参阅 [生成和发布脚本向导](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
   
   
-

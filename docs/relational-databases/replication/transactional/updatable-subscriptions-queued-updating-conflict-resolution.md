@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>可更新订阅 - 排队更新冲突的解决
   由于排队更新订阅允许对多个位置上的相同数据进行修改，因此，在发布服务器中同步数据时可能会发生冲突。 复制在将更改与发布服务器同步时检测冲突，并使用在创建发布时所选择的解决策略来解决那些冲突。 可能会发生下列冲突：  
@@ -86,4 +84,3 @@ ms.lasthandoff: 07/31/2017
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
-

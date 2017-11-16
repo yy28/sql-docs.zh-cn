@@ -5,23 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.addreplicawizard.azurereplica.f1
+f1_keywords: sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 7aa33a5adbf14beb92175e030df68fad5227d09b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
   通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Windows Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  首先，为您的 Windows Azure 订阅下载管理证书。 单击“下载”打开登录页面。  
   
-2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
+2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
   
 3.  然后单击 **“连接”**连接到您的订阅。 连接后，下拉列表用 Windows Azure 参数进行填充，例如 **“虚拟网络”** 和 **“虚拟网络子网”**。  
   
@@ -119,4 +117,3 @@ ms.lasthandoff: 08/02/2017
  [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
-

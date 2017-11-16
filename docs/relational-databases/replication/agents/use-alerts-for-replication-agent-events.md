@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67c68cfcba51bcd9bd2dfb8512108766fe1240e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
@@ -97,4 +95,3 @@ deallocate hc
  [监视（复制）](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
-

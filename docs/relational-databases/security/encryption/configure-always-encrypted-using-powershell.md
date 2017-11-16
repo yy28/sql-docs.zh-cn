@@ -5,22 +5,20 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 591f48405009951f3f8e956e3a2aa40364a58e44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -156,6 +154,5 @@ $database | Get-SqlColumnMasterKey
 - [Always Encrypted 密钥管理概述](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
 
 

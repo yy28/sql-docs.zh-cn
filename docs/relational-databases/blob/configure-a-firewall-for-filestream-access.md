@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Windows Firewall [Database Engine], FILESTREAM
 - FILESTREAM [SQL Server], Windows Firewall
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbaaa631770966cff9cafa15fffb60b24dcd2767
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ab37459be1cfbffbe8737bd6489f6670049b5dd4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-firewall-for-filestream-access"></a>将防火墙配置为进行 FILESTREAM 访问
   若要在防火墙保护的环境中使用 FILESTREAM，客户端和服务器都必须能够将 DNS 名称解析为包含 FILESTREAM 文件的服务器。 FILESTREAM 要求 Windows 文件共享端口 139 和 445 处于打开状态。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
 6.  关闭 **“高级安全 Windows 防火墙”** 对话框。  
   
   
-

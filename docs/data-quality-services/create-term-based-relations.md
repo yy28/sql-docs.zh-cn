@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.kbtermsbased.f1
+f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: bdb1f4375ca80534e5b574d9b298fe053f2d4ec2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，你可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
@@ -69,12 +66,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
   
     > [!NOTE]  
     >  域管理在 Data Quality Service 客户端页面中执行，该页面包含用于单独域管理操作的五个选项卡。 它不是一个向导驱动的过程；任何管理操作都可以单独执行。  
   
-3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要为其创建域规则的域，或者创建一个新的域。 如果您必须创建新域，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。  
+3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要为其创建域规则的域，或者创建一个新的域。 如果您必须创建新域，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
   
 4.  单击 **“基于字词的关系”** 选项卡。  
   
@@ -108,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  在创建基于字词的关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   
-

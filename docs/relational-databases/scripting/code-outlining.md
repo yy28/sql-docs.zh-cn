@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ff78745f8bede935b07a5affcfd5bf1f5f1e6e21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-outlining"></a>代码大纲显示
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中的大纲显示功能可在编辑查询时有选择地隐藏代码， 从而可以更加方便地查看您正在处理的代码，尤其是大型查询文件中的代码。  
@@ -89,4 +87,3 @@ GO
  若仅折叠该 `SELECT *` 语句，请单击 `SELECT` 行上的减号。 若要折叠整个 `BEGIN - END` 块，请单击 `BEGIN` 行上的减号。 若要将整个批处理折叠到 `GO` 命令，请单击 `CREATE PROCEDURE` 行上的减号。 由于 `SELECT GETDATE()` 或 `SELECT @@VERSION` 行为单行语句且不具有大纲区域，因此不能将这两行分别单独折叠起来。  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ec8294a92b9c6bb3da761b84a2bae702bd85dfdd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b8ceebad6ec1dfaf4427864b97cd8c2076e1a2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
   若要将 Kerberos 身份验证用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则以下两个条件都必须得到满足：  
@@ -186,4 +184,3 @@ WHERE session_id = @@SPID;
  [管理 Reporting Services 环境中的 Kerberos 身份验证问题](http://technet.microsoft.com/library/ff679930.aspx)  
   
   
-

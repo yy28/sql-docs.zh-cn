@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.namenotfound.f1
-helpviewer_keywords:
-- Name Not Found dialog box
+f1_keywords: sql13.swb.common.namenotfound.f1
+helpviewer_keywords: Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e9dfa22d44a1aae2a3d87c85b6520ad52ab22b7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0739f7cecd65a4cfec914c0531af070535582829
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="name-not-found-dialog-box"></a>“找不到名称”对话框
 找不到该对话框中的一个或多个对象名称。 请选择一个选项继续。  
@@ -45,4 +41,3 @@ ms.lasthandoff: 06/22/2017
 “从选择中删除 <object name>”  
 选中该选项可以关闭“找不到名称”对话框，并从“选择对象”对话框中删除该项。  
   
-

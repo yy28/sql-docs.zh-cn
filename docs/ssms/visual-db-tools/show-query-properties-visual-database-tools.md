@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - showing query properties
 - queries [SQL Server], properties
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4e0fc1013d807d6b0ab6c6c2f32867b86a9fb8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cd6dd3a8b04134ea6b2d08252429eac2b80299
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="show-query-properties-visual-database-tools"></a>显示查询属性 (Visual Database Tools)
 可以在查询和视图设计器的“属性”窗口中显示查询的属性。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

@@ -1,28 +1,27 @@
 ---
-title: "立即应用成员权限 (Master Data Services) |Microsoft 文档"
+title: "立即应用成员权限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "6"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f6e82b2c9a6553ac2fd9eaa15b63834511c4232e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1549958a5c84045eccbb52c5fac2f2f2b09d316e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>立即应用成员权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以立即应用成员权限，而不必等待定期应用的成员安全性。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 4.  运行查询。  
   
 ## <a name="see-also"></a>另请参阅  
- [分配层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

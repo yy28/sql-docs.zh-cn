@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b57f94d20f03f7d6d9ec0b71bba122548808c24
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6e9a2e3f6ddba5ab3e6250d09b8f814eed1d2aad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
   复制快照代理是一个可执行文件，用于准备快照文件（其中包含已发布表和数据库对象的架构及数据），然后将这些文件存储在快照文件夹中，并在分发数据库中记录同步作业。  
@@ -172,7 +171,7 @@ snapshot [ -?]
  快照代理在向 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 表中记录“waiting for backend message”之前等待的时间（以秒为单位）。 默认值为 300 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 登录超时前等待的秒数。  默认值为 15 秒。  
+ 登录超时前等待的秒数。 默认值为 15 秒。  
   
  **-MaxBcpThreads** *number_of_threads*  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值为 **1**。  
@@ -229,7 +228,7 @@ snapshot [ -?]
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
- 查询超时前等待的秒数。 默认值为 1800 秒。  
+ 查询超时前等待的秒数。默认值为 1800 秒。  
   
  **-ReplicationType** [ **1**| **2**]  
  指定复制的类型。 值 **1** 指示事务复制，值 **2** 指示合并复制。  

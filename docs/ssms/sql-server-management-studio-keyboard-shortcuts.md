@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
+caps.latest.revision: "82"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b42d5ff8c209d4df06abbf8c85b0edee8883a868
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 599b4967bce7c87eda5be0509ed1f9145d39ac92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”**下的 **“键盘”** 页中选择所需的键盘方案。  
@@ -468,4 +466,3 @@ ms.lasthandoff: 07/31/2017
  [自定义菜单和快捷键](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 06/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69f9e085f5eb6acb749c64a7fb370deabb975e6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
   必须重新生成系统数据库才能修复 [master](../../relational-databases/databases/master-database.md)、 [mode](../../relational-databases/databases/model-database.md)l、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
@@ -207,4 +205,3 @@ ms.lasthandoff: 06/22/2017
  [系统数据库](../../relational-databases/databases/system-databases.md)  
   
   
-

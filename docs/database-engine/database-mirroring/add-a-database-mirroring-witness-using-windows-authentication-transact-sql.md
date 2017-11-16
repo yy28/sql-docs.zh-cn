@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8257ba0c95d4c0eadb1230902a6674086352c7dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
   为了给数据库设置见证服务器，数据库所有者为见证服务器的角色分配数据库引擎实例。 见证服务器实例可以与主体服务器实例或镜像服务器实例运行于同一台计算机上，但这样会明显降低自动故障转移的可靠性。  
@@ -140,4 +138,3 @@ ms.lasthandoff: 08/02/2017
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

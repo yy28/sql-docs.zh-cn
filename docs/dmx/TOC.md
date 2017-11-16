@@ -92,7 +92,7 @@
 ### [>=（大于或等于）](greater-than-or-equal-to-dmx.md)  
 ### [AND](and-dmx.md)  
 ### [NOT](not-dmx.md)  
-### [OR](or-dmx.md)  
+### [或](or-dmx.md)  
 ### [+（正）](positive-dmx.md)  
 ### [-（负）](negative-dmx.md)  
 ### [//（注释）](double-slash-comment-dmx.md)  

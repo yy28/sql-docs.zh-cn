@@ -9,19 +9,17 @@ ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 335077eef51f479d55526ae47fe9b7bff3144f4e
+ms.sourcegitcommit: 284a64817d5641b5245bc70ddebef2dc51d2e558
 ms.translationtype: HT
-ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
-ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/20/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/13/2017
 ---
-
 # <a name="configure-distributed-availability-group"></a>配置分布式可用性组  
 
 若要创建分布式可用性组，必须在每个 Windows Server 故障转移群集 (WSFC) 上创建可用性组和侦听程序。 然后将这些可用性组合并到分布式可用性组中。 以下步骤提供了在 Transact-SQL 中实现此操作的基本示例。 此示例不涵盖创建可用性组和侦听程序的所有详细信息，相反，它着重于突出显示关键要求。 
@@ -344,4 +342,3 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
-

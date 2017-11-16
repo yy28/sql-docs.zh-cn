@@ -5,8 +5,7 @@ ms.date: 10/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - views [SQL Server], modifying data through
 - modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a7ffd77db6d7d3d68e52ce423b206d84d002d0c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改基础基表的数据。  
@@ -98,4 +96,3 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
   
   
-

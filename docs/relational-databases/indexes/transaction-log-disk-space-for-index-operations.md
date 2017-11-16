@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - disk space [SQL Server], transaction logs
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 79660939000858a97f6af5fa9c69ce041a010878
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引操作的事务日志磁盘空间
   大规模索引操作可以产生大量数据负载，从而导致事务日志的空间很快被占满。 若要确保索引操作能够回滚，不能在完成索引操作之前截断事务日志，但可以在索引操作期间备份日志。 因此，事务日志必须具有足够的空间，以存储索引操作期间的索引操作事务和任何并发用户事务。 这对脱机索引操作和联机索引操作都适用。 因为在脱机索引操作期间不能访问基础表，所以用户事务可能很少，日志的增长速度不快。 联机索引操作不能防止并发用户活动，因此，大规模联机索引操作与大量的并发用户事务相结合可能会导致事务日志不断增长，而不会提供截断日志的选项。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 06/22/2017
  [索引磁盘空间示例](../../relational-databases/indexes/index-disk-space-example.md)  
   
   
-

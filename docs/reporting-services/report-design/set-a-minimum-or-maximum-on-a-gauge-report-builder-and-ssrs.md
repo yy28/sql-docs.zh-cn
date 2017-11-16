@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d94f902d6183eacd623eaf0f08ee9525ca441ae6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>设置仪表的最小值或最大值（报表生成器和 SSRS）
   与 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中定义了多个组的图表不同，仪表仅显示一个值。 由于报表生成器和报表设计器确定要在仪表上显示的一个值的上下文或相对重要性，因此必须定义刻度的最小值和最大值。   
@@ -36,16 +35,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  右键单击刻度并选择“刻度属性”。 此时将显示 **“刻度属性”** 对话框。  
   
-2.  在 **“常规”**中，为 **“最小值”**指定一个值。 默认情况下，此值为 0。 根据需要，可以单击“表达式” (fx) 按钮以编辑设置该选项值的表达式。  
+2.  在 **“常规”**中，为 **“最小值”**指定一个值。 默认情况下，此值为 0。 或者，单击“表达式”(fx) 按钮，编辑设置该选项值的表达式。  
   
-3.  为 **“最大值”**指定一个值。 默认情况下，此值为 100。 根据需要，可以单击“表达式” (fx) 按钮以编辑设置该选项值的表达式。  
+3.  为 **“最大值”**指定一个值。 默认情况下，此值为 100。 或者，单击“表达式”(fx) 按钮，编辑设置该选项值的表达式。  
   
 4.  （可选）如果最大值和最小值较大，请为“刻度标签乘以”选项指定一个值。 若要指定可减小刻度的乘数，请使用小数。 例如，如果刻度范围为 0 到 1000，则可指定乘数值 0.01，以将刻度范围减少到只显示 0 到 10。  
   
 ## <a name="see-also"></a>另请参阅  
- [在仪表 &#40; 的格式设置刻度报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [在仪表 &#40; 的格式设置指针报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [设置仪表上指针的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

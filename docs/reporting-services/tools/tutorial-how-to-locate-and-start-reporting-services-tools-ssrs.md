@@ -1,5 +1,5 @@
 ---
-title: "教程： 如何查找并启动 Reporting Services 工具 (SSRS) |Microsoft 文档"
+title: "教程：如何查找并启动 Reporting Services 工具 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -21,19 +21,17 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e25bb9ad2ff8136d4a5ff1a234092ec730ecae37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
   本教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建并发布分页和移动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表的工具。 如果你已经熟悉了这些工具，你可以转到其他教程学习有关使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的技能。 有关其他教程，请参阅 [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)的技能。  
@@ -49,13 +47,13 @@ ms.lasthandoff: 08/09/2017
 -   管理加密密钥。  
 -   配置无人参与的报表处理和电子邮件报表传递。  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
+ **安装：** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时会安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>启动 Reporting Services 配置管理器  
   
 1.  在 Windows“开始”屏幕上，键入 **reporting** ，然后在“应用”  搜索结果中，单击“Reporting Services 配置管理器” 。  
   
-     ![reporting services 配置管理器在启动](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services 配置管理器在启动")  
+     ![正在启动的 Reporting Services 配置管理器](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "正在启动的 Reporting Services 配置管理器")  
   
      **Or**  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
      如果指定远程计算机，请单击 **“查找”** 以建立一个连接。 必须事先配置报表服务器，以便进行远程管理。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
-3.  在 **在stance Name**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 仅 SQL Server 2008 和更高版本的报表服务器实例出现在列表中。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+3.  在 **在stance Name**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示 SQL Server 2008 及更高版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 4.  单击 **“连接”**。  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="web-portal-native-mode"></a>Web 门户（本机模式）  
  使用 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) 可设置权限、管理订阅和计划以及处理报表。 还可以使用 Web 门户查看报表。  
   
- **安装：**Web 门户在安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时进行安装：[安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **安装：** Web 门户在安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式时进行安装： [安装 Reporting Services 本机模式报表服务器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  必须拥有足够的权限才能打开 Web 门户（最初，只有本地 Administrators 组的成员拥有访问 Web 门户功能的权限）。 Web 门户根据当前用户的角色分配提供不同的页和选项。 没有权限的用户将得到一个空页。 拥有查看报表权限的用户将获得链接，用户点击这些链接可以打开报表。 若要了解有关权限的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  打开浏览器。 有关支持的浏览器和浏览器版本的信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
-2.  在 Web 浏览器的地址栏中，输入 Web 门户 URL。 默认情况下，URL 为 `http://<serverName>/reports`。 可以使用 Reporting Services 配置工具确认服务器名称和 URL。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用的 URL 的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
+2.  在 Web 浏览器的地址栏中，输入 Web 门户 URL。 默认情况下，该 URL 为 `http://<serverName>/reports`的技能。 可以使用 Reporting Services 配置工具确认服务器名称和 URL。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用的 URL 的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
   
 3.  Web 门户将在浏览器窗口中打开。 引导页为主文件夹。 根据权限，您可能看到引导页中的其他文件夹、指向报表的超链接和资源文件。 也可能在工具栏上看到其他按钮和命令。  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 Windows“开始”屏幕上，键入 **sql server** ，然后在“应用”  搜索结果中，单击“SQL Server Management Studio” 。  
   
-     ![从 windows management studio 启动屏幕](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "从 windows management studio 启动屏幕")  
+     ![Windows“开始”屏幕中的 Managment Studio](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Windows“开始”屏幕中的 Managment Studio")  
   
      **Or**  
   
@@ -132,7 +130,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  在 **“模板”** 列表中，单击 **“报表服务器项目”**。 下图显示了对话框中显示的项目模板的外观：  
   
-     ![新建项目模板对话框](../../reporting-services/tools/media/rs-ui-newrsproject.gif "新建项目模板对话框")  
+     ![“新建项目模板”对话框](../../reporting-services/tools/media/rs-ui-newrsproject.gif "“新建项目模板”对话框")  
   
 5.  为项目键入名称和位置，或单击 **“浏览”** 并选择位置。  
   
@@ -188,5 +186,4 @@ ms.lasthandoff: 08/09/2017
 [查询设计工具](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services 教程](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

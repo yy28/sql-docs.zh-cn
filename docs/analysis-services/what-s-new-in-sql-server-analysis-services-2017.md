@@ -1,9 +1,13 @@
 ---
 title: "什么是 SQL Server 自 2017 年 Analysis Services 中的新增功能 |Microsoft 文档"
 ms.date: 10/27/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 ms.topic: article

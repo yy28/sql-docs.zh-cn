@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6db65c242dc6dd9fd1c6c910d583d026f45422c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d975f8d04025f3bcfc07b72a1437d6337f2a0bb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>连接到 Microsoft Azure 订阅
 使用 **连接到 Microsoft 订阅** 向你的 SQL Server 实例注册现有的 Azure Blob 容器。  对话框将在 Azure Blob 容器中创建共享访问签名和存储访问策略，然后创建 SQL Server 凭据。  使用 SQL Server Management Studio 的备份或还原任务时，将出现该对话框，且此操作涉及到 URL 设备。
@@ -49,4 +47,3 @@ RTF 文本框中将显示已生成的共享访问签名。
 
 **创建凭据**   
 按钮将生成存储访问策略和共享访问签名，然后创建一个 SQL Server 凭据。
-

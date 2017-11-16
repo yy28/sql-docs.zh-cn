@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - logical record-level conflict tracking [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50605b8e66ddf484aae391d7dedaf66b6dcd7c0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
   当发布服务器与订阅服务器连接并进行同步时，合并代理将检测是否存在任何冲突。 如果检测到冲突，合并代理将使用冲突解决程序（将项目添加到发布时指定的）来确定接受哪些数据并将其传播到其他站点。  
@@ -140,4 +138,3 @@ ms.lasthandoff: 08/03/2017
  [同步数据](../../../relational-databases/replication/synchronize-data.md)  
   
   
-

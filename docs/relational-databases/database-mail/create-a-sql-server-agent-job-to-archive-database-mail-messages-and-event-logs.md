@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cace8601462fd2469d7cdbfb4cce168111d42d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
   数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
@@ -221,4 +219,3 @@ ms.lasthandoff: 06/22/2017
  [概述](#Process_Overview)  
   
   
-

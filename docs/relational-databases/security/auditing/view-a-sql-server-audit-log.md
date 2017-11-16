@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - viewing audit logs
 - logs [SQL Server], audit
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: caff5bab9e303b299a31005b1add0f0c807f6ef5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "12"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 17285d9493a8ad4507d973f2df218915f67e63e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-a-sql-server-audit-log"></a>查看 SQL Server 审核日志
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中查看 SQL Server 审核日志。  
@@ -49,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-a-sql-server-audit-log"></a>查看 SQL Server 审核日志  
   
-1.  在对象资源管理器中，展开“安全性”文件夹。****  
+1.  在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  展开“审核”文件夹。****  
+2.  展开“审核”文件夹。  
   
-3.  右键单击要查看的审核日志，然后选择“查看审核日志”。**** 这将打开“日志文件查看器” *server_name* 对话框。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+3.  右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器” *server_name* 对话框。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 4.  完成后，单击 **“关闭”**。  
   

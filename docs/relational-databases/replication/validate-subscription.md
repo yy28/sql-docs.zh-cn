@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.validate.validateandresynch.f1
-helpviewer_keywords:
-- Validate Subscription dialog box
+f1_keywords: sql13.rep.validate.validateandresynch.f1
+helpviewer_keywords: Validate Subscription dialog box
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ec35a68110b658b505cb47324118af557b95d6c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 29d6839f09ba70f2da9b228712755ed3dff05f14
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validate-subscription"></a>验证单个订阅
   可以使用 **“验证单个订阅”** 对话框，指定在下次运行订阅的合并代理时应对针对合并发布的订阅进行验证。 验证的结果显示在复制监视器中。 有关详细信息，请参阅 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
@@ -48,4 +44,3 @@ ms.lasthandoff: 06/22/2017
  [验证已复制的数据](../../relational-databases/replication/validate-replicated-data.md)  
   
   
-

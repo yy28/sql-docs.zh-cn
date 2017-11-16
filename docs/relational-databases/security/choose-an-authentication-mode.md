@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL authentication mode
 - Password Expired dialog box
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c13fbf9ffbe2337c1766d7a089c1d8072a17f77
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 9431f2d00cdaa5ef7389fad71a68095b3cf1147f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-an-authentication-mode"></a>选择身份验证模式
   在安装过程中，必须为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]选择身份验证模式。 可供选择的模式有两种：Windows 身份验证模式和混合模式。 Windows 身份验证模式会启用 Windows 身份验证并禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 混合模式会同时启用 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 Windows 身份验证始终可用，并且无法禁用。  
@@ -109,4 +107,3 @@ ms.lasthandoff: 04/11/2017
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   
-

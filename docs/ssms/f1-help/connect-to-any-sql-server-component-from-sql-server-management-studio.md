@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,28 +14,27 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 567cb988769e738f414f1c2a37971a792f8a41ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7d870ebdb27bcb83de08db14653b022aaba002de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>从 SQL Server Management Studio 连接到任何 SQL Server 组件
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供了管理每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]组件的功能。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 可以连接到：  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]实例。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]组件的功能。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]组件的功能。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]组件的功能。  
   
 虽然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 允许您在使用查询时无需先建立与数据源的连接，但其他多数任务需要一个连接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 提供了“连接到服务器”对话框，可用于配置到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 组件的连接属性。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 启动时，将打开“连接到服务器”对话框，并提示你连接到服务器。 “连接到服务器”对话框会保留上次使用的连接设置。  
   
@@ -56,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 [使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [对象资源管理器](../../ssms/object/object-explorer.md)  
   
-

@@ -5,24 +5,23 @@ ms.date: 08/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使你的数据库可移植
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="traditional-login-and-user-model"></a>传统的登录名和用户模型  
  在传统的连接模型中，通过提供由 Windows 进行身份验证的用户或组凭据，Windows 用户或 Windows 组成员可连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 也可以同时提供名称和密码，并通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接。 在这两种情况下，master 数据库必须拥有匹配连接凭据的登录名。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认了 Windows 身份验证凭据或验证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证凭据之后，该连接通常会尝试连接到用户数据库。 若要连接到某个用户数据库，登录名必须能够映射到（即关联）用户数据库中的某个数据库用户。 连接字符串还可以指定连接到特定数据库，该数据库在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为可选但在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中为必需。  
   
- 重要原则是登录名（在 master 数据库中）和用户（在用户数据库中）必须存在，并且彼此相关。 这意味着到用户数据库的连接依赖于 master 数据库中的登录名，并且这限制了将数据库移动到其他托管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器的功能。 而且，如果由于任何原因，到 master 数据库的连接不可用（例如，进程中出现故障），整个连接时间将会增加，或者连接可能超时。 因此，这可能会降低连接可伸缩性。  
+ 重要原则是登录名（在 master 数据库中）和用户（在用户数据库中）必须存在，并且彼此相关。 这意味着到用户数据库的连接依赖于 master 数据库中的登录名，并且这限制了将数据库移动到其他托管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器的功能。 而且，如果由于任何原因，到 master 数据库的连接不可用（例如，进程中出现故障），整个连接时间将会增加，或者连接可能超时。因此，这可能会降低连接可伸缩性。  
   
 ## <a name="contained-database-user-model"></a>包含的数据库用户模型  
  在包含的数据库用户模型中，master 数据库中不存在登录名。 相反，身份验证过程发生在用户数据库中，并且用户数据库中的数据库用户在 master 数据库中没有关联的登录名。 包含的数据库用户模型支持 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用。 若要作为包含的数据库用户进行连接，连接字符串必须始终包含用户数据库的参数，以便 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 知道哪个数据库负责管理身份验证过程。 包含的数据库用户的活动仅限于验证数据库，因此当作为包含的数据库用户进行连接时，必须在用户将需要的每个数据库中独立创建数据库用户帐户。 若要更改数据库， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 用户必须创建一个新的连接。 如果另一个数据库中存在相同的用户， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的包含的数据库用户可以更改数据库。  
@@ -98,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
-

@@ -5,27 +5,24 @@ ms.date: 2017-04-21
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- instance configuration, Setup
+f1_keywords: instance configuration, Setup
 helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
+caps.latest.revision: "62"
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: bf24705838daf5ed120fa279a9b5742d3b8d0ed0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 
@@ -130,7 +127,7 @@ ms.lasthandoff: 07/31/2017
  [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
-  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予本地管理员和安装过程中创建并预配的 SQLServerMSASUser$\< 实例 > 安全组成员。  
+  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 ### <a name="uielement-list"></a>UIElement 列表  
   
@@ -220,7 +217,7 @@ ms.lasthandoff: 07/31/2017
   
 ### <a name="see-also"></a>另请参阅  
 ### <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
-  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予本地管理员和安装过程中创建并预配的 SQLServerMSASUser$\< 实例 > 安全组成员。  
+  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 #### <a name="uielement-list"></a>UIElement 列表  
   
@@ -356,7 +353,7 @@ ms.lasthandoff: 07/31/2017
  此页上输入的密码必须符合强密码策略要求。 如果存在任何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的自动化过程，请确保该密码符合强密码策略要求。  
   
 ### <a name="related-content"></a>相关内容  
- 有关选择 Windows 身份验证和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的信息，请参阅[选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
+ 有关选择 Windows 身份验证和有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的信息，请参阅[选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
  若要深入了解如何选择帐户来运行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
   
@@ -457,4 +454,3 @@ ms.lasthandoff: 07/31/2017
  若要在完成选择后实现这些更改， [!INCLUDE[clickOK](../../includes/clickok-md.md)]。 若要在不进行更改的情况下结束使用此工具，请单击 **“取消”**。  
   
   
-

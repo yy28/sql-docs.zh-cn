@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- master database [SQL Server], restoring
+helpviewer_keywords: master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 36558a8f79b9ad229a90970b5df514a399b68c66
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: c5a3c1c5987ac5e5a59ea858b970a3f9ec42ef01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-the-master-database-transact-sql"></a>还原 master 数据库 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  若要还原 **master**的完整数据库备份，请使用以下 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-     `RESTORE DATABASE master FROM`  *&lt;backup_device&gt;*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
      REPLACE 选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使已经存在同名数据库也要还原指定的数据库。 现有的数据库（如果存在）被删除。 在单用户模式下，建议在 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)中输入 RESTORE DATABASE 语句。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
   

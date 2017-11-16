@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], compressed snapshots
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fceb41e32cbc4a2dbf779cb95827fef639341bea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 13f3bde8699bb77fd733604d81ddf65000cc55ca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="compressed-snapshots"></a>压缩的快照
   如果要在慢速网络上传输快照，或者将快照存储到可移动介质上而未压缩的快照太大而不适于存储在介质上，则应该压缩快照文件。 在这些情况下，压缩快照文件很有用，但压缩增加了生成和应用快照的时间。  
@@ -43,6 +42,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [使用快照初始化订阅](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [快照选项](../../relational-databases/replication/snapshot-options.md)  
   
   

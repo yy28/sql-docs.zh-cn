@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
 - merge replication [SQL Server replication]
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5eaf827f2da31a125dbfad5831553c0f15894e21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 124940d2506986fb9e14f6508d159b2d861cf7ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="merge-replication"></a>合并复制
   与事务复制相同，合并复制通常也是从发布数据库对象和数据的快照开始， 并且用触发器跟踪在发布服务器和订阅服务器上所做的后续数据更改和架构修改。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 06/22/2017
  ![合并复制组件和数据流](../../../relational-databases/replication/merge/media/merge.gif "合并复制组件和数据流")  
   
   
-

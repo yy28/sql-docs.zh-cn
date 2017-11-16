@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 77d880d77a10c5082f3818674876c5ac0336bcc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  也可以将共享数据集和共享数据源与报表一起部署。 对于每种类型的项，使用“项目属性”可以指定指向报表服务器或 SharePoint 站点上的文件夹的路径。  
   
- 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  在查询设计器中，指定要包含在数据集中的字段。  
   
-5.  单击“运行”(**!**) 以运行查询。  
+5.  单击 **“运行”** (**!**) 以运行查询。  
   
 6.  在 **“报表生成器”** 按钮上，单击 **“保存”** 或 **“另存为”** 将共享数据集保存到报表服务器。  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  浏览到报表服务器，为共享数据源选择文件夹。  
   
-4.  在“项类型”中，单击下拉列表中的“数据集(*.rsd)”。  
+4.  在 **“项类型”**的下拉列表中单击“数据集 (*.rsd)”。  
   
 5.  选中共享数据集，然后单击 **“打开”**。 将打开关联的查询设计器。  
   
@@ -89,7 +88,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>从 SQL Server 关系数据库创建数据集  
   
-1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击“添加数据集”。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
+1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击 **“添加数据集”**。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
   
 2.  在 **“名称”**中，键入数据集的名称，或接受默认名称。  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/09/2017
   
     -   选择 **StoredProcedure** 可以按名称运行存储过程。  
   
-5.  在 **“查询”**中，键入查询、存储过程或表名。 此外，也可以单击“查询设计器”打开图形查询设计器或基于文本的查询设计器工具，或单击“导入”从现有报表中导入查询。  
+5.  在 **“查询”**中，键入查询、存储过程或表名。 此外，也可以单击 **“查询设计器”** 打开图形查询设计器或基于文本的查询设计器工具，或单击 **“导入”** 从现有报表中导入查询。  
   
      在少数情况下，查询指定的字段集合只能通过在数据源中运行查询来确定。 例如，存储过程可能在结果集中返回可变字段集。 单击 **“刷新字段”** 可以在数据源中运行查询，并检索填充“报表数据”窗格中的数据集字段集合时所需的字段名称。 关闭 **“数据集属性”** 对话框后，将在数据集节点下显示字段集合。  
   
@@ -117,11 +116,10 @@ ms.lasthandoff: 08/09/2017
      数据集及其字段集合显示在“报表数据”窗格的数据源节点下。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

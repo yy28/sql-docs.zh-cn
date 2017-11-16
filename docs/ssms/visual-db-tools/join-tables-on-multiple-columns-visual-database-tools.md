@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - multiple column joins
 - joins [SQL Server], multiple columns
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6c2a8e7220e89c8abb0b5f44509159b83e3ea7d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 906e92dee8d00b2c63463a5aa09234bafc92b102
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>在多个列上联接表 (Visual Database Tools)
 您可以使用多个列来联接表。 即可以创建这样的一个查询，仅当来自两个表中的行都满足多个条件时才与该查询匹配。 如果数据库包含的关系将一个表中的多个外键列与另一个表中的多列主键匹配，则可使用此关系创建多列联接。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
-

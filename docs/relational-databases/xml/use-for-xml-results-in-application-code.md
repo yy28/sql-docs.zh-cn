@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cd445a69bef84ba8d6ed5e030f4cc02082f32982
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
@@ -301,4 +299,3 @@ SqlConnection closed.
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   
-

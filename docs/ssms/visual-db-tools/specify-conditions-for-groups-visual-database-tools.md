@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - HAVING clause, query groups
 - group query conditions [SQL Server]
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb01fbc4f3824fa8f064e5b99b22fc7c82ba1e1d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 017e0e7937cd076da1cd700da7db298a1f289035
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>为组指定条件 (Visual Database Tools)
 可以通过指定应用于整个组的条件（HAVING 子句）来限制查询中出现的组。 对数据进行分组和聚合后，将应用 HAVING 子句中的条件。 只有满足条件的组才会出现在查询中。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [对查询结果进行排序和分组 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
-

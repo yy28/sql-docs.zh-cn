@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.configdbmsecurwiz.witnsrvr.f1
+f1_keywords: sql13.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7621d1de85446491dadd25b044d3733d23fbc767
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6b73051639099ca66c3991a4b4faaef2d2ef60ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>见证服务器实例（配置数据库镜像安全向导）
   对于作为会话的见证服务器的服务器实例，使用此页可以指定有关该服务器实例的信息。  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/02/2017
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

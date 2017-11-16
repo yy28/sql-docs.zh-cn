@@ -5,22 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 334a4e5426f501db9987ef0106a3e4f04952a544
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: c78c8fe6100febcfc4d88928971de3a5a7e65501
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>配置数据库引擎实例 (SQL Server)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的每个实例都必须经过配置，以符合为该实例所承载的数据库所定义的性能和可用性要求。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包括一些配置选项，这些选项控制资源使用情况等行为和诸如审核或触发器递归等功能的可用性。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 08/02/2017
  [数据库引擎实例 (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   
-

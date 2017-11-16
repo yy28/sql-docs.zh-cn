@@ -16,15 +16,12 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 35c94a39989fda76ea023588b2d7a3aa4e463262
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ac3ea91dc2db3d1cfb22dca2fdc341650c74b95b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
-
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>用于 Azure SQL 数据库和数据仓库的透明数据加密
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -138,4 +135,3 @@ TDE 主密钥，也称为 TDE 保护程序，设置为服务器级别。 若要�
 - 若要通过 BYOK 支持开始使用 TDE，请访问操作指南[通过 PowerShell 使用 Key Vault 的自有密钥启用透明数据加密](transparent-data-encryption-byok-azure-sql-configure.md)。
 
 - 有关 Key Vault 的详细信息，请参阅 [Key Vault 文档页](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
-

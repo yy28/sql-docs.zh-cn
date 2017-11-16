@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 33fea037e80f2baf12d3b4ded38b1d9e989a4403
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82c974b0a34c99af677eb783b12809e6d185072b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
 使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 **(…)**。  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/18/2017
 [使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

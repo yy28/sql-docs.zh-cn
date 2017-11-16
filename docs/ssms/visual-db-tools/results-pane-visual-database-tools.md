@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d363fd63a32e338558e67ca86d5ed155e48a72c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0712854db6e1b4b85a58b4d72264ea51e1162b06
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="results-pane-visual-database-tools"></a>“结果”窗格 (Visual Database Tools)
 “结果”窗格显示最近执行的 SELECT 查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”**，再单击 **“结果”**。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 08/18/2017
 [“条件”窗格 (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
 [使用“结果”窗格中的数据 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
-

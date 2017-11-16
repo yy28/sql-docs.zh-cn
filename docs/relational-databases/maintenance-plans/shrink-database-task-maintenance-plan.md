@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - Shrink Database Task
 - Shrink Database(s) Task
 - sql13.swb.maint.shrink.f1
-helpviewer_keywords:
-- Shrink Database Task dialog box
+helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2dc6184a59756901c55bc15177914e9e08767da2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>“收缩数据库”任务（维护计划）
   使用 **“‘收缩数据库’任务”** 对话框可以创建一个任务，尝试减小所选数据库的大小。 使用下面的选项可以确定数据库收缩后在数据库中保留的未使用空间量（该百分比越大，数据库可收缩的量越小）。 该数值取决于数据库中实际数据的百分比。 例如，某个 100 MB 数据库包含 60 MB 的数据和 40 MB 的可用空间，当可用空间百分比为 50% 时，则将保留 60 MB 的数据和 30 MB 的可用空间（因为 60 MB 的 50% 是 30 MB）。 只会去除数据库中的多余空间。 有效值为 0 到 100。  
@@ -108,4 +105,3 @@ ms.lasthandoff: 06/22/2017
  [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   
-

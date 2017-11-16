@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4e250f5818a65d60ef9de326d144003f72c0e569
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5390f83dc72ef7c5113589735706d8a9e3340661
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多语言和全球部署 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的所有语言的组件和工具部署。 有关详细信息，请参阅 [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/07/2017
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

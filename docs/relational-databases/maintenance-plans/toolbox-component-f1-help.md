@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vs.toolbox
-helpviewer_keywords:
-- Toolbox [SQL Server Management Studio]
+f1_keywords: vs.toolbox
+helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
   **“工具箱”** 中显示有许多可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中使用的项。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  

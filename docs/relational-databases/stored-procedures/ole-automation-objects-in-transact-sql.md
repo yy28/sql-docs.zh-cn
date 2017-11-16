@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ole
+ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - OLE Automation [SQL Server]
 - OLE Automation [SQL Server], about OLE Automation
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b598d764afe92eee8375eb6881ed8821acdde82
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d7946a30f2d87cbbee4dd1f71e7fac192469052f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL 中的 OLE 自动化对象
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 包括一些系统存储过程，这些存储过程允许在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器中引用 OLE 自动化对象。 这些系统存储过程作为扩展存储过程运行，而且通过存储过程执行的 OLE 自动化对象在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的地址空间中的运行方式与扩展存储过程的运行方式相同。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 06/22/2017
  [sp_OADestroy (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md)  
   
   
-

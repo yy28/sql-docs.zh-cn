@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b19b72a2359af1a08ddaa3d2d01715483fd29533
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---keyboard-page"></a>选项（“环境”-“键盘”页）
 使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
   
 有关每个方案中键盘快捷键的列表，请参阅 [SQL Server Management Studio 键盘快捷键](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8)。  
   
-

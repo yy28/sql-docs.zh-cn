@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Replication Monitor, starting
+helpviewer_keywords: Replication Monitor, starting
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93a7c9657f3847f9c1bd345de8ed106be2454ef2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9e5dd8b31bcc833c878b0ef277daad97bcc1ecd0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-the-replication-monitor"></a>启动复制监视器
   可以从任何 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中启动复制监视器，也可以在命令提示符下启动复制监视器。 启动复制监视器后，将发布服务器添加至监视器。 有关详细信息，请参阅 [从复制监视器中添加和删除发布服务器](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
@@ -43,4 +40,3 @@ ms.lasthandoff: 06/22/2017
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

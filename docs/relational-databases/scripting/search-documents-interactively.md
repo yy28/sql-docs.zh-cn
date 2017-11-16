@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a87a33ea63725ae2db48d61d557ff4bf91704490
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ba56e643a7f6cec61bc6ad5d9797b55de7cb23ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
   使用 **“查找和替换”** 对话框，可以搜索一个或多个打开的文件或窗口，并逐个移动到每个搜索匹配项。 该技术允许您在匹配项周围的文本上下文中检查每个单独的搜索匹配项。 **“查找和替换”** 对话框还提供了执行大容量查找操作和在报表格式中检查搜索匹配项的选项。  

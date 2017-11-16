@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CursorClose event class
+helpviewer_keywords: CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b76e4b9cf7734011725d519ecb961fa15619bb2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7fa3d628acdf6665c102b0315d1fc532e02fd6d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 事件类
   当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 关闭并释放游标时，便会发生游标关闭事件。 **CursorClose** 事件类描述发生在应用程序编程接口 (API) 游标中的游标关闭事件。 此事件类发生在由 ODBC、OLE DB 或 DB-Library 打开的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标语句关闭时。  
@@ -59,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 08/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eff98b4bac895c945e48b19be9ef40131d829662
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
 在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
@@ -555,5 +553,4 @@ ms.lasthandoff: 08/09/2017
 [地图向导和地图层向导（报表生成器和 SSRS）](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
-
 

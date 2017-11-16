@@ -2,9 +2,12 @@
 title: "将示例数据添加到设计模式中的 DirectQuery 模型 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 

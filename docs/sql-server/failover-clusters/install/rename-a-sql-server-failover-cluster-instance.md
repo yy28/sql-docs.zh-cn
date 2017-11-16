@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d98bc0762d800a4fc86c56c37ee815fd189a4cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4b8a0363fef8e795b44ce122a8e0e8c15868e5ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   
-

@@ -51,7 +51,7 @@
 # [高级对象选择](advanced-object-selection-accesstosql.md)
 # [项目设置（迁移）](project-settings-migration-accesstosql.md)
 # [SQL Server 迁移助手入门](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)
-# [SQL Server 迁移助手](sql-server-migration-assistant-for-access-accesstosql.md)
+# [SQL Server Migration Assistant](sql-server-migration-assistant-for-access-accesstosql.md)
 # [从数据库刷新](refresh-from-database-accesstosql.md)
 # [查找数据库向导（选择文件）](find-databases-wizard-select-files-accesstosql.md)
 # [快捷键](shortcut-keys-accesstosql.md)

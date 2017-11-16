@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - transactional replication, tracer tokens
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f3ba3c3a7fa30209c1777bcc7ddd5b1754924fa9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
   本主题说明如何使用复制监视器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务复制测量滞后时间和验证连接。 事务复制提供了跟踪令牌功能，可以方便地测量事务复制拓扑中的滞后时间和验证发布服务器、分发服务器及订阅服务器之间的连接。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  

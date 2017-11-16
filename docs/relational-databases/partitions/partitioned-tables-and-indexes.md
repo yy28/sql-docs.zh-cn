@@ -5,8 +5,7 @@ ms.date: 01/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-partition
+ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 85ad3feb00088d3a0d8fa6095b241cc9f07c1c13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -129,4 +127,3 @@ ms.lasthandoff: 09/13/2017
 -   [生成大型关系数据仓库的前 10 大最佳做法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   
-

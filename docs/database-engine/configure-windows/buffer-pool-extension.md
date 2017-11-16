@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9bd32bd87a5cc458e1054555b8616db78957e27f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b4c2b33ef0dcdee0ac79340760790ba8938b431
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中引入的缓冲池扩展提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 缓冲池的非易失性随机存取内存（即固态硬盘）扩展的无缝集成，从而显著提高 I/O 吞吐量。 并非每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本均提供了缓冲池扩展。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -110,4 +108,3 @@ ms.lasthandoff: 08/02/2017
 |监视缓冲池扩展|[sys.dm_os_buffer_descriptors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [性能计数器](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   
-

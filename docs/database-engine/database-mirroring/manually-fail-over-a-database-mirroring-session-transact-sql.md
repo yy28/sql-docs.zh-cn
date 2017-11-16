@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - manual failover [SQL Server]
 - database mirroring [SQL Server], failover
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b0cd1d03e2c3a6378e0573167e0d5be9c19fcc95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 085c7690a8185608e5e4af6253b53b726f53471e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>手动故障转移数据库镜像会话 (Transact-SQL)
   同步镜像数据库时（即数据库处于 SYNCHRONIZED 状态时），数据库所有者可以启动到镜像服务器的手动故障转移。 手动故障转移只能从主体服务器启动。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 08/02/2017
  [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- database mirroring [SQL Server], operating modes
+helpviewer_keywords: database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b16df777853d2485643d066a040a2fc4521e4b66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
   本主题说明数据库镜像会话的同步和异步运行模式。  
@@ -292,4 +289,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

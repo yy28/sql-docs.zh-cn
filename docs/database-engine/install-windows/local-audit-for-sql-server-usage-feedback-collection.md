@@ -10,19 +10,18 @@ ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Local Audit
+helpviewer_keywords: Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用反馈收集的本地审核
 ## <a name="introduction"></a>简介
@@ -65,7 +64,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集关�
 
 3. 右键单击服务，然后选择“属性”。 
 
-4. 单击“登录”选项卡。 登录帐户会在“此帐户”中列出。 
+4. 单击“登录”选项卡。登录帐户会在“此帐户”中列出。 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>为本地审核文件配置新文件夹。    
 
@@ -389,5 +388,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 
 ## <a name="see-also"></a>另请参阅
 [SSMS 使用反馈收集的本地审核](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
-
 

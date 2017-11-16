@@ -5,8 +5,7 @@ ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7ca4efe4610487f96b0092cac9a9c070dd3eebb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6d832a7928f8f39b810cfd87a29a10c8c503dad9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支持的版本和版本升级
   你可以从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]进行升级。 本主题列出了支持的从这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本进行升级的途径以及支持的 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]版本升级。  
@@ -70,7 +68,7 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
 > [!NOTE]  
 >  若要在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 上升级数据库，请参阅 [2005 版本支持](#SupportFor2005)。  
   
- 下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]的支持方案。  
+ 下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的支持方案。  
   
 |升级前的版本|支持的升级途径|  
 |------------------|----------------------------|  
@@ -110,7 +108,7 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
 
    
 ###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- 此节讨论针对 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支持。 在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]中，您能够执行以下操作：  
+ 此节讨论针对 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支持。 在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中，您能够执行以下操作：  
   
 -   将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库（mdf/ldf 文件）附加到数据库引擎的 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 实例。  
   
@@ -122,7 +120,7 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
   
  不支持以上列表中未指定的任何方案，包括但不限于以下情况：  
   
--   在相同计算机上安装 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] （并行）。  
+-   在相同计算机上安装 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]（并行）。  
   
 -   使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例作为涉及 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 实例的复制拓扑的成员。  
   
@@ -171,9 +169,9 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 从 Developer 更改为 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard 或 Evaluation。  
   
--   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 从 Standard 更改为 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation。  
+-   从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard 更改为 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation。  
   
--   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 从 Evaluation 更改为 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard。  
+-   从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation 更改为 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard。  
   
 ## <a name="see-also"></a>另请参阅  
 
@@ -184,4 +182,3 @@ SQL Server 2016 支持从下列 SQL Server 版本升级：
  [升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的用户帮助
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 通过“帮助”菜单和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 联机丛书提供用户帮助。 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中的“帮助”菜单以几种不同的途径提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的信息。 它还提供了对以前无法在“帮助”环境中使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 社区和 MSDN 在线资源的访问。 此外，现在可以将“帮助”环境配置为在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 环境中启动或在其自身的关联外部窗口中启动。  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
   
 2.  在“使用下列选项显示帮助”框中，单击“集成帮助查看器”。  
   
-

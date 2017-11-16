@@ -1,13 +1,11 @@
 ---
 title: "用于数据库管理员的诊断连接 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/16/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8bc6b057722a9fd864225f74ac58739953b071a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 68bdec09d782634723b2136757a62ea60cc3d66d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为管理员提供了一种特殊的诊断连接，以供在无法与服务器建立标准连接时使用。 即使在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不响应标准连接请求时，管理员也可以使用此诊断连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便执行诊断查询并解决问题。  
@@ -149,5 +146,4 @@ ms.lasthandoff: 08/02/2017
  [跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
-
 

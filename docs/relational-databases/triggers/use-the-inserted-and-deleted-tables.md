@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-dml
+ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 4b9d0889e9e42fc76e1293fe011edbb118be055c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
   DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  

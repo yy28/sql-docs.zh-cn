@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - transactional replication, performance
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2bbb3a620616514a91b96d96178dc969b2431ea9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
   在考虑 [增强常规复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于事务复制的其他几个方面。  
@@ -108,4 +106,3 @@ ms.lasthandoff: 07/31/2017
 -   [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   
-

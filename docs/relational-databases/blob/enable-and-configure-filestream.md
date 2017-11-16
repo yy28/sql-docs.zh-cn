@@ -5,24 +5,21 @@ ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], enabling
+helpviewer_keywords: FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 6839f11d9375fad6c2672b760bec3d5edee031d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/24/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
   在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
@@ -98,4 +95,3 @@ ms.lasthandoff: 08/24/2017
 -   FILESTREAM 不直接支持空间管理和策略。 但是，您可以通过将每个 FILESTREAM 文件组分配到独立的卷并使用该卷的管理功能来间接地管理空间和应用策略。  
   
   
-

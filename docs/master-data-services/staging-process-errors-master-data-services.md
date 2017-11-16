@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- staging process [Master Data Services], error messages
+helpviewer_keywords: staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8328c57fe3d4ad81262fd49e42b0305d7edd1d26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a870a044e3687e4d75b3a48ea44ed11119b3b5e2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
   当临时过程完成后，临时表中的所有已处理记录在 ErrorCode 列中都对应一个值。 下表中列出了这些值。  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/07/2017
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
-

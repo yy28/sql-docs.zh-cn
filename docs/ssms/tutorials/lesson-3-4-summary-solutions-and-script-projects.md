@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 177eadc3c4be5c2708384c97ab4e5396bfd17a07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 8cd6ab8e3a5c73d7e7500916c6a22c6c2896f8b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-4---summary---solutions-and-script-projects"></a>课程 3-4 - 摘要 - 解决方案和脚本项目
 利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的各种开发人员功能， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可提供开发人员进行企业级代码管理所需的功能。 您可以创建自定义模板来支持重复执行的任务，保存和管理协作集中环境中的复杂脚本项目。  
@@ -37,4 +34,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter queries [SQL Server]
+helpviewer_keywords: parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e27bce5dd7beddbe1ed41881c311be47aaff4c78
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1d7b5cf2ad2bd8c96f98892334e76b076dbb16a7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>参数查询 (Visual Database Tools)
 在某些情况下，您需要创建可以使用多次但每次使用不同值的查询。 例如，可能经常运行一个查询以查找某位作者编写的所有 `title_ids` 。 可以为每次请求运行相同的查询，只是每次使用的作者 ID 或姓名不同。  
@@ -74,4 +71,3 @@ WHERE au_fname = %first name% AND
 [支持的查询类型 (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

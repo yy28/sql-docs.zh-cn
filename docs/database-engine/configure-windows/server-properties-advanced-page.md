@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.advanced.f1
+f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 75f872cc60f59224bf874e9821348efa4bd22729
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties---advanced-page"></a>服务器属性 -“高级”页
   使用此页可以查看或修改高级服务器设置。  
@@ -129,7 +127,7 @@ ms.lasthandoff: 08/02/2017
  限制执行并行计划时所使用的处理器数（最多为 64 个）。 如果默认值为 0，则使用所有可用的处理器。 如果该值为 1，则取消生成并行计划。 如果该值大于 1，则将限制执行的单个查询所使用的最大处理器数。 如果指定的值比可用的处理器数大，则使用实际可用数量的处理器。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
  **查询等待值**  
- 指定在超时之前查询等待资源的秒数（0 到 2147483647）。 如果使用默认值 -1，则按估计查询开销的 25 倍计算超时值。 有关详细信息，请参阅 [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
+ 指定在超时之前查询等待资源的秒数（0 到 2147483647）。如果使用默认值 -1，则按估计查询开销的 25 倍计算超时值。 有关详细信息，请参阅 [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  

@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42470737e5c3221766f425d5c7a721fa20e90e17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 453eb45dcefe48397911039ab075b4bb301774a9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  
@@ -102,4 +100,3 @@ ms.lasthandoff: 09/09/2017
     >  如果您使用的是 64 位版本的 Excel，则无法将已清理的数据导出到 Excel 文件；只能导出到 SQL Server 数据库或 .csv 文件。  
   
   
-

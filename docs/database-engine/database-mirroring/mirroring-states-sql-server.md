@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SUSPENDED state
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 62690acf5d9e89f1d89aece14514385193057c1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ba32ea70f2a3d04753dd3860a798f8673fad032a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
   数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/02/2017
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-dml
+ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a6cbad16ee3ca0db8c5506810e62ac869b518823
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dml-triggers"></a>DML 触发器
   DML 触发器为特殊类型的存储过程，可在发生数据操作语言 (DML) 事件时自动生效，以便影响触发器中定义的表或视图。 DML 事件包括 INSERT、UPDATE 或 DELETE 语句。 DML 触发器可用于强制业务规则和数据完整性、查询其他表并包括复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将触发器和触发它的语句作为可在触发器内回滚的单个事务对待。 如果检测到错误（例如，磁盘空间不足），则整个事务即自动回滚。  

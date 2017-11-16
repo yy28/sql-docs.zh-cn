@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae4adc315932a7632077913866b648cba4947a9d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 08c813576d6dcc9291c80ccacd95caae5c75a0b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
   本主题说明如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将域从 .dqs 文件导入到现有知识库。 通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序导出域或知识库可创建 .dqs 数据文件。 .dqs 数据文件已加密，因此无法查看。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  在从 .dqs 文件导入域之后，可以将知识添加到域中或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  
   
   
-

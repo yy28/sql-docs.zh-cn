@@ -5,20 +5,18 @@ ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 3541efebe50e19ce56e528dc575084c2c5bb1d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: ab792aed71ab2e7837da9cf0073d4ff191ce5184
-ms.openlocfilehash: ce462c238c81a4a9fc82869a856ac13e9f112aee
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 将 Excel 文件中的数据导入 SQL Server 或 Azure SQL 数据库的方法有多种。 本文总结了每个选项，并提供了更为详细说明的链接。
@@ -209,4 +207,3 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ## <a name="next-steps"></a>后续步骤
 
 若要详细了解感兴趣的解决方案，请单击所提供的链接查看详细信息。
-

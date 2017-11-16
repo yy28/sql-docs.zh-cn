@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business logic [XML]
+helpviewer_keywords: business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e52d06ca37277d2c81d0e83710fcf8da07189b20
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
@@ -69,4 +66,3 @@ WHERE  xCol.exist('/book/title/text()[contains(.,"custom")]') =1;
  集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 CLR 扩展了这样一些可能性：将 XML 数据分解到多个表或属性提升，以及通过使用 System.Xml 命名空间中的托管类查询 XML 数据。 有关详细信息，请参阅 [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)。  
   
   
-

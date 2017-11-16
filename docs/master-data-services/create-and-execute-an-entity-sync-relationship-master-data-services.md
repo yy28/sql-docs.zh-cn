@@ -1,27 +1,24 @@
 ---
 title: "创建和执行实体同步关系 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 122540d8858f1ede6a1855921f5e2125c062cf6e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。  
@@ -127,4 +124,3 @@ ms.lasthandoff: 09/07/2017
  [编辑和删除实体同步关系 (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   
-

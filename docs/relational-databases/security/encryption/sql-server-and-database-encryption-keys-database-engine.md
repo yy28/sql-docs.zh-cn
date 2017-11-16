@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- keys [SQL Server], database encryption
+helpviewer_keywords: keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 467e7f36ce088db78184858888070206c8bc1e28
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: ee3fe7a3feeaf400fea2a982d1813f0c9296e0ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
@@ -105,4 +102,3 @@ ms.lasthandoff: 08/28/2017
  [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
-

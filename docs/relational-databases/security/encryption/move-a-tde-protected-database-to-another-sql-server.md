@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: e1a93b4289204390fbf269e10ad2f49f0af353d8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
   本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
@@ -311,4 +309,3 @@ ms.lasthandoff: 08/28/2017
  [借助 Azure SQL 数据库实现透明数据加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   
-

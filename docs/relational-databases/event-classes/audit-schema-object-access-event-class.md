@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Schema Object Access event class
+helpviewer_keywords: Audit Schema Object Access event class
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0732ab9a89588cd5bfd2b67efe894d12e2836f07
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 50f501d1b1bb707d7fdbd74cd80189164a204023
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 事件类
   当使用对象权限（例如 SELECT）时，将发生 **Audit Schema Object Access** 事件类。  
@@ -64,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

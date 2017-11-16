@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Query Designer [SQL Server], opening
 - opening Query Designer
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6d4b09ac45528392c55f47ab7b62ed7881a1ebc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: a884c10eb96fbab9a9202427643cb3d1262e6477
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>打开查询和视图设计器 (Visual Database Tools)
 当您打开视图的定义、显示查询或视图的结果或者创建或打开查询时，查询和视图设计器将会打开。 它由四个不同的窗格组成：  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/18/2017
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [查询和视图设计器工具 (Visual Database Tools)](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   
-

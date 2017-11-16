@@ -5,8 +5,7 @@ ms.date: 09/21/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4eaed7f393eaf022482ae585cd5691834fa39881
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2a20a9d0b7b8cc5aa32863bc687f7095ce33623a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>批量导入数据时保留标识值 (SQL Server)
 可以将包含标识值的数据文件批量导入到 Microsoft SQL Server 的实例中。  默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。  这些唯一值基于在表创建期间指定的种子和增量值。
@@ -333,4 +331,3 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
  [表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
-

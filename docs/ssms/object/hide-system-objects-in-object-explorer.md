@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - objects [SQL Server], hiding
 - Object Explorer, hiding objects
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bdfc1a61fe7602f3883ac0e0aea1f89a23eb4893
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e39ea0c77ba9d38a891eef5b3b88d5c8096c55ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>在对象资源管理器中隐藏系统对象
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的对象资源管理器中隐藏系统对象。 对象资源管理器的“数据库”节点包含系统对象，如系统数据库。 使用“工具”/“选项”页可以隐藏系统对象。 某些系统对象（如系统函数和系统数据类型）并不受此设置的影响。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 06/22/2017
   
 4.  关闭并重新打开 SQL Server Management Studio。  
   
-

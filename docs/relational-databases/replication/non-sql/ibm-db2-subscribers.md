@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 订阅服务器
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      字符串中的大多数选项都特定于正在配置的 DB2 服务器，但 `Process Binary as Character` 和 `Derive Parameters` 选项应始终设置为 `False`。 需要为 `Initial Catalog` 选项指定值以标识订阅数据库。 创建订阅时将在新建订阅向导中输入该连接字符串。  
   
-3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [为非 SQL Server 订阅服务器创建订阅](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
 4.  （可选）为一个或多个项目指定自定义创建脚本。 在发布表时，会为该表创建一个 `CREATE TABLE` 脚本。 对于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，该脚本采用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 方言创建，然后由分发代理翻译成较通用的 SQL 方言后应用于订阅服务器。 若要指定自定义创建脚本，请修改现有的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本或创建使用 DB2 SQL 方言的完整脚本；如果创建 DB2 脚本，请使用 **bypass_translation** 指令，这样分发代理无需转换脚本即可将其应用于订阅服务器。  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

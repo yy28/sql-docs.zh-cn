@@ -5,8 +5,7 @@ ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - fast file initialization (SQL Server)
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
   初始化数据和日志文件以覆盖之前删除的文件遗留在磁盘上的任何现有数据。 执行以下其中一项操作时，应首先通过用零填充数据和日志文件来初始化这些文件：  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/16/2017
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
-

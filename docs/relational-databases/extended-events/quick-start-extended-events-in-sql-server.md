@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 
     ![新建会话 > 事件 > 配置 > 筛选器(谓词) > 字段](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. 单击“筛选器(谓词)”选项卡。 接下来，单击“单击此处可添加子句”，以便捕获所有具有 HAVING 子句的 SQL SELECT 语句。
+7. 单击“筛选器(谓词)”选项卡。接下来，单击“单击此处可添加子句”，以便捕获所有具有 HAVING 子句的 SQL SELECT 语句。
 
 8. 在“字段”下拉列表中，选择“sqlserver.sql_text”。
    - 在“运算符”中，选择 LIKE 运算符。
@@ -661,6 +661,5 @@ SELECT HAS_PERMS_BY_NAME(
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

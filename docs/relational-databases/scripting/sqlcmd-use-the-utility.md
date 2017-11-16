@@ -5,29 +5,26 @@ ms.date: 06/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Transact-SQL statements, executing
 - command prompt utilities [SQL Server], sqlcmd
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
-ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
   **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
@@ -566,4 +563,3 @@ SQLCMD –E –N –C
  [创建 CmdExec 作业步骤](http://msdn.microsoft.com/library/b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c)  
   
   
-

@@ -5,31 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.configdistwizard.distproperties.publishers.f1
-helpviewer_keywords:
-- Distributor Properties dialog box
+f1_keywords: sql13.rep.configdistwizard.distproperties.publishers.f1
+helpviewer_keywords: Distributor Properties dialog box
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93e8e7f09e6aa75b0ad1b9248a7a0c004695cfeb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 610b3b1baabfa6aee0df956c44f834298cf6b6ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distributor-properties-publishers"></a>分发服务器属性，发布服务器
   可以使用 **“分发服务器属性”** 对话框的 **“发布服务器”** 页，允许发布服务器使用此分发服务器。 还可以设置与这些发布服务器关联的属性。 请注意，允许发布服务器将此服务器用作其远程分发服务器的同时，并不会使该服务器成为发布服务器。 必须连接到发布服务器，对其进行配置以用于发布，并选择此服务器作为分发服务器。 您可以通过新建发布向导配置发布服务器并选择分发服务器。  
   
 ## <a name="options"></a>选项  
- **“分发服务器属性”**  
+ **发布服务器**  
  选择允许使用此分发服务器的服务器。 单击发布服务器旁边的属性按钮 **(...)** 可以查看和设置其他属性。  
   
  **添加**  

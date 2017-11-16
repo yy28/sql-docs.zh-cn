@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], changing properties
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4d4c3677959b074a2c3b30c6fc6abc31ccda7a43
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5afcb14260648ba416360d26e94466e730b13c64
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
   在创建发布后，可以更改大多数发布和项目属性，但有些发布和项目属性要求重新生成快照和/或重新初始化订阅。 本主题提供有关更改时需要以上一种或两种操作的所有属性的信息。  

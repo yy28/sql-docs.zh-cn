@@ -5,8 +5,7 @@ ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - Migrate database
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4226b33bd805aca7e38781d5a55eb990f61e4e69
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a919d864464b02da417add79139d532689d43e92
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
   导入数据层应用程序 (DAC) 文件（.bacpac 文件），以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
@@ -152,4 +151,3 @@ ms.lasthandoff: 06/22/2017
  [导出数据层应用程序](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   
-

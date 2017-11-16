@@ -1,27 +1,24 @@
 ---
 title: "确认或提交变更集 (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 46a706ff9d56831e3c1f0febd8a5f43a8e82c2c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: b7226c00334b0213f417c55dc836f9aabc5db830
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>确认提交变更集 (Master Data Services)
   变更集是主数据的挂起更改的集合。 如果实体的更改不需要管理员审批，则你可以确认变更集。 如果实体的更改需要管理员审批，则你可以提交变更集以供审批。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/07/2017
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   
-

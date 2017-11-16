@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 18ee84388c584423bc7f5b416d1540d1a287a0ba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a3862d6f6b622ddd0496b23234287443e179810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---general-page"></a>选项（“环境”-“常规”页）
 使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。  
@@ -64,4 +62,3 @@ ms.lasthandoff: 06/22/2017
 **显示 n 个文件(在最近使用的列表中)**  
 自定义“文件”菜单上显示的最近所使用项目和文件的数量。 键入一个介于 1 和 24 之间的数字。 默认值为 4。 通过此方法可以轻松地检索最近使用的脚本项目和文件。  
   
-

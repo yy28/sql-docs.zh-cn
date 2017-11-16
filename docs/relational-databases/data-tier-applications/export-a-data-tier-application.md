@@ -1,13 +1,11 @@
 ---
 title: "导出数据层应用程序 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - export DAC
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6beea9c0d1803ea930cc8880412ec1a5fb89aa8a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
   导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个存档，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  

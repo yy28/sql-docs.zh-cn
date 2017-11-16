@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f9ecad6fcec2596f26351839311cc8b647e094e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9fa9aa96e05bdc08fa8f981c25db544d3ae7e5a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
 作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
@@ -105,7 +104,7 @@ ms.lasthandoff: 06/22/2017
   
 -   要打开的现有 PowerShell 脚本文件。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理 PowerShell 子系统打开一个 PowerShell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元。 用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理 PowerShell 子系统打开一个 PowerShell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 脚本作业步骤  
   
@@ -218,4 +217,3 @@ Set oServer = nothing
 [创建作业](../../ssms/agent/create-jobs.md)  
 [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   
-

@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c0bd256010111e00e31b50776a0034e0066d53b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>使用 Azure 密钥保管库的可扩展密钥管理的设置步骤
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +216,7 @@ SQL Server 版本  |可再发行组件安装链接
     ### <a name="create-a-new-key"></a>创建新密钥
 
     ##### <a name="example"></a>例如：  
-    如有需要，可以直接在 Azure 密钥保管库中创建新的加密密钥，并使其受软件保护或受 HSM 保护。 在此示例中，让我们使用 `Add-AzureKeyVaultKey cmdlet` 创建软件保护的密钥：  
+    如有需要，可以直接在 Azure 密钥保管库中创建新的加密密钥，并使其受软件保护或受 HSM 保护。 在此示例中，让我们使用 `Add-AzureKeyVaultKey cmdlet`创建软件保护的密钥：  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -317,7 +315,7 @@ SQL Server 版本  |可再发行组件安装链接
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
         - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
@@ -365,4 +363,3 @@ SQL Server 版本  |可再发行组件安装链接
 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
-

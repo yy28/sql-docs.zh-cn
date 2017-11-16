@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
 - static member calls
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: afada6b079a94cff38d50307a16978f5346a19dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 01eb198f668834c9c8cc6782f8352465cbc1eec2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>通过表达式访问自定义程序集
   在创建自定义程序集、使其可用于报表设计器或报表服务器、添加适当的安全策略以及在报表定义中添加对自定义程序集的引用之后，您就可以使用报表表达式访问程序集中类的成员。 若要在表达式中引用自定义代码，您必须调用程序集中某个类的成员。 调用方式取决于该方法是静态方法还是基于实例的方法。  

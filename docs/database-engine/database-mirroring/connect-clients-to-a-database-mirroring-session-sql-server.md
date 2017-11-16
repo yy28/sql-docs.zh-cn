@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
+caps.latest.revision: "95"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b9bfcbc289a42960fdcb47db43a09014c37ddd4b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6fa71b2a2dfa009bae1614942873d45309348223
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅[孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
@@ -163,7 +162,7 @@ Server=123.34.45.56,4724;
 > [!NOTE]  
 >  打开连接所用的时间可能会超过重试时间，这是由于下列外部因素所致：DNS 查找速度缓慢、域控制器/Kerberos 密钥发行中心 (KDC) 速度缓慢、联系 SQL Server Browser 需要时间、网络阻塞等。 此类外部因素可能会阻止客户端连接到镜像数据库。 此外，外部因素还可能会导致打开连接所用的时间长于分配的重试时间。 有关跳过 DNS 和 SQL Server Browser 以尝试连接到初始伙伴的信息，请参阅本主题前面的 [建立到数据库镜像会话的初始连接](#InitialConnection)。  
   
- 如果连接尝试失败或者重试时间过期而未成功重试，则数据访问接口将尝试使用另一个伙伴。 如果此时未打开连接，则数据访问接口还会尝试使用初始伙伴名称和故障转移伙伴名称，直到连接打开或登录期限超时。 默认的登录超时期限为 15 秒。 建议登录超时期限至少为 5 秒。 如果指定较短的超时期限，则可能导致连接尝试失败。  
+ 如果连接尝试失败或者重试时间过期而未成功重试，则数据访问接口将尝试使用另一个伙伴。 如果此时未打开连接，则数据访问接口还会尝试使用初始伙伴名称和故障转移伙伴名称，直到连接打开或登录期限超时。默认的登录超时期限为 15 秒。 建议登录超时期限至少为 5 秒。 如果指定较短的超时期限，则可能导致连接尝试失败。  
   
  重试时间为登录期限的某个百分比数。 在后续的每轮中，连接尝试的重试时间会逐渐变大。 在第一轮中，两次尝试的每次重试时间都是总登录时间的 8%。 在后续的每轮中，重试算法会按相同的百分比增加最大重试时间。 因此，前八次连接尝试的重试时间如下：  
   
@@ -188,7 +187,7 @@ Server=123.34.45.56,4724;
   
  ![15 秒登录超时的最长重试延迟时间](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "15 秒登录超时的最长重试延迟时间")  
   
- 对于默认的登录超时期限，分配给前三轮连接尝试的最长时间为 14.4 秒。 如果每次尝试都使用了它的全部分配时间，则在登录期限超时之前仅剩下 0.6 秒的时间。 在这种情况下，第四轮的时间会缩短，仅允许使用初始伙伴名称进行最后的快速连接尝试。 但是，连接尝试可能会在其分配的重试时间内失败，尤其是在稍后的轮次中。 例如，接收网络错误可能会导致在重试时间到期之前尝试便已结束。 如果较早的尝试因网络错误而失败，则可以为第四轮（还可能包括更多轮）提供更多的时间。  
+ 对于默认的登录超时期限，分配给前三轮连接尝试的最长时间为 14.4 秒。 如果每次尝试都使用了它的全部分配时间，则在登录期限超时之前仅剩下 0.6 秒的时间。在这种情况下，第四轮的时间会缩短，仅允许使用初始伙伴名称进行最后的快速连接尝试。 但是，连接尝试可能会在其分配的重试时间内失败，尤其是在稍后的轮次中。 例如，接收网络错误可能会导致在重试时间到期之前尝试便已结束。 如果较早的尝试因网络错误而失败，则可以为第四轮（还可能包括更多轮）提供更多的时间。  
   
  尝试失败的另一个原因是服务器实例处于不活动状态，如同服务器实例执行数据库故障转移时发生的情况。 在这种情况下，可以利用重试延迟时间来防止客户端因快速进行后续连接尝试而导致伙伴重载。  
   
@@ -197,7 +196,7 @@ Server=123.34.45.56,4724;
   
   
 ### <a name="retry-delays-during-failover"></a>故障转移期间的重试延迟时间  
- 如果客户端尝试连接到进行故障转移的伙伴，则此伙伴会立即做出响应表明它处于不活动状态。 在这种情况下，每轮连接尝试都会比分配的重试时间更短暂。 也就是说，在登录期限超时之前会发生多轮连接尝试。 为了避免在故障转移期间因一系列快速的连接尝试而导致伙伴重载，数据访问接口在每次重试循环之后增加了短暂的重试延迟时间。 给定重试延迟时间的长度由重试延迟时间算法确定。 在第一轮之后，延迟时间为 100 毫秒。 在接下来三轮的每轮之后，重试延迟时间加倍，分别达到 200、400 和 800。 对于所有的稍后轮次，重试延迟时间为 1 秒，直到连接尝试成功或超时。  
+ 如果客户端尝试连接到进行故障转移的伙伴，则此伙伴会立即做出响应表明它处于不活动状态。 在这种情况下，每轮连接尝试都会比分配的重试时间更短暂。 也就是说，在登录期限超时之前会发生多轮连接尝试。为了避免在故障转移期间因一系列快速的连接尝试而导致伙伴重载，数据访问接口在每次重试循环之后增加了短暂的重试延迟时间。 给定重试延迟时间的长度由重试延迟时间算法确定。 在第一轮之后，延迟时间为 100 毫秒。 在接下来三轮的每轮之后，重试延迟时间加倍，分别达到 200、400 和 800。 对于所有的稍后轮次，重试延迟时间为 1 秒，直到连接尝试成功或超时。  
   
 > [!NOTE]  
 >  如果服务器实例停止，则连接请求会立即失败。  

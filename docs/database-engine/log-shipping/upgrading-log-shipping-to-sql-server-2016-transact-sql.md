@@ -5,24 +5,21 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- log shipping [SQL Server], upgrading
+helpviewer_keywords: log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4a13d848603205d4f43180d1a6f6cfb0e28d734b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>将日志传送升级至 SQL Server 2016 (Transact-SQL)
   当从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置升级至新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务包，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]累积更新时，以适当顺序升级日志传送服务器将保留日志传送灾难恢复解决方案。  
@@ -99,4 +96,3 @@ ms.lasthandoff: 08/02/2017
  [日志传送表和存储过程](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

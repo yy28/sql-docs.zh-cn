@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7f82c1bfe30401d60de557c79ad7fd95be78496c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
   [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  
@@ -212,4 +210,3 @@ qtf is the frequency of the term in the query.
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)  
   
   
-

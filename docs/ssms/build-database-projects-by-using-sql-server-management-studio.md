@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a3487f9048571511460bc22b5c0b605592ba74f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 826f23ca1ccf0445465e5549f2bb149899a891c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 生成数据库项目
 数据库脚本项目是与数据库或数据库的某一部分关联的一组经过整理的脚本、连接信息和模板。 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 提供了 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 用于在脚本项目上下文中管理和设计 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 数据库。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 包含设计器、编辑器、指南和向导，可帮助用户开发、部署和维护数据库。  
@@ -73,4 +71,3 @@ ms.lasthandoff: 08/18/2017
 [使用 SQL Server Management Studio 编写、分析和编辑查询](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [解决方案 (SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
   
-

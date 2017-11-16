@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7ed79dcb5c61626c229f4d4c361764be1b1193e2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用联接进行查询 (Visual Database Tools)
 查询结果可包含来自多个表或表值对象的数据。 若要组合来自多个表值对象的数据，可使用 SQL 的 JOIN 操作。  
@@ -76,4 +74,3 @@ ms.lasthandoff: 08/18/2017
 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 提供指向介绍各种搜索条件以及如何使用这些搜索条件的主题的链接。  
   
-

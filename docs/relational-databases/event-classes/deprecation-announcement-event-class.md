@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deprecation [SQL Server], events announced stage
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f937e252123265ac28d215a751fc6419b5fe8dcc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2ab108ddb69d1de2859d80ba0c158d11c9ddb991
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件类
   当使用的功能将从 **的未来版本中删除、但不会从下一主版本中删除时，将发生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件类。 为了使您的应用程序使用得最久，应避免使用会导致 **Deprecation Announcement** 事件类或 **Deprecation Final Support** 事件类的功能。  

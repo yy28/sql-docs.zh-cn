@@ -14,17 +14,16 @@ f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a87f586dfc1846f3224d2e24f566a5575e35965f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
   添加交互式排序按钮可以让用户能够更改表和矩阵中行和列的排序顺序。 只有支持用户交互的呈现格式（例如 HTML）才支持此功能。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>将交互式排序按钮添加到列标题以按值对表进行排序  
   
-1.  在报表设计视图中，在不具有组的表中，右键单击要向其添加交互式排序按钮的列标题中的文本框，再单击“文本框属性”。  
+1.  在报表设计视图内不具有组的表中，右键单击要向其添加交互式排序按钮的列标题中的文本框，再单击“文本框属性”。  
   
 2.  单击 **“交互式排序”**。  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>将交互式排序按钮添加到列标题以对组进行排序  
   
-1.  在报表设计视图中的表或矩阵中，右键单击要向其添加交互式排序按钮的组的列标题中的文本框，再单击“文本框属性”。  
+1.  在报表设计视图内的表或矩阵中，右键单击要向其添加交互式排序按钮的组的列标题中的文本框，再单击“文本框属性”。  
   
 2.  单击 **“交互式排序”**。  
   
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  在 **“名称”**中，用一个名称替换默认名称，该名称应指定要按其分组的多个组。  
   
-6.  在“组表达式”的“分组方式”中，单击表达式 (**fx**) 按钮，以打开“表达式”对话框。  
+6.  在“组表达式”的“分组方式”中，单击表达式 (fx) 按钮，打开“表达式”对话框。  
   
 7.  键入用于指定要按其分组的所有字段的表达式。 例如，以下组表达式将名为 Color 和 Size 的字段组合在一起： `=Fields!Color.Value & Fields!Size.Value`。  
   
@@ -224,10 +223,9 @@ ms.lasthandoff: 08/09/2017
  ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ## <a name="see-also"></a>另请参阅  
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [交互式排序 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [在数据区域 &#40; 中的数据进行排序报表生成器和 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [利用 Tablix 数据区域 &#40; 的灵活性报表生成器和 SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [交互式排序（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
+ [对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

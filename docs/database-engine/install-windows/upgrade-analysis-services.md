@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/12/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-analysis-services"></a>升级 Analysis Services
   可以将 Analysis Services 实例升级到具有相同服务器模式的 SQL Server 版本，以充分利用当前版本中引入的功能，如 [Analysis Services 中的新增功能](../../analysis-services/what-s-new-in-analysis-services.md)中所述。  
@@ -95,4 +93,3 @@ ms.lasthandoff: 09/12/2017
  [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   
   
-

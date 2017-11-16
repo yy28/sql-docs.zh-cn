@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.approle.general.f1
-helpviewer_keywords:
-- application roles [SQL Server], creating
+f1_keywords: sql13.swb.approle.general.f1
+helpviewer_keywords: application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 88977240a59120424d656706a3bff6dbf280166b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建应用程序角色。 应用程序角色可限制用户通过除特定应用程序之外的其他方式访问数据库。 应用程序角色不包含任何用户，因此，在选择 **“应用程序角色”** 时不会显示 **“角色成员”** 列表。  
@@ -102,4 +98,3 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [CREATE APPLICATION ROLE (Transact-SQL) ](../../../t-sql/statements/create-application-role-transact-sql.md)。  
   
   
-

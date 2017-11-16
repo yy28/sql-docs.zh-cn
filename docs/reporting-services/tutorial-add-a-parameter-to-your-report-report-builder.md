@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 1ff5bdd03bd725d393d50464ae7df396276b71d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
@@ -511,4 +509,3 @@ ms.lasthandoff: 08/09/2017
 * [报表生成器教程](../reporting-services/report-builder-tutorials.md)
 * [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup 函数](../reporting-services/report-design/report-builder-functions-lookup-function.md)   
-

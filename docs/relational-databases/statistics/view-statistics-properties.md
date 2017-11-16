@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-statistics
+ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.statistics.details.f1
+f1_keywords: sql13.swb.statistics.details.f1
 helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0418da029159564c125fb89eaed39fdb1d673c65
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9fe7b9e53632ab7d0bdc020e0c333ffcd12305c4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)]中表或索引视图的当前查询优化统计信息。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度向量。 有关直方图和密度向量的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL) ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
@@ -188,4 +185,3 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。  
   
   
-

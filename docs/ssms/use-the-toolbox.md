@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f63a3a6b06e0b76e603e1cce094e5fb17ae32db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
 您可以选择工具箱中的项、文本和控件并将其拖至窗体、页和设计器，也可以将这些项从上述源位置拖回到工具箱中，以备将来再次使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，可以将任务拖到“维护计划”上。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 |隐藏工具箱|在“窗口”菜单上，选择“隐藏”。 （若要重新打开工具箱，请单击“视图”菜单上的“工具箱”。）|  
 |展开工具箱选项卡|单击工具箱中的目标选项卡。|  
 |依次展开工具箱选项卡|按 Ctrl+ 向下键可以展开下一个工具箱选项卡；按 Ctrl+ 向上键则可展开上一个选项卡。|  
-|创建一个新的工具箱选项卡|在工具箱中的任意位置单击右键，再单击“添加选项卡”。 键入新选项卡的名称，再按 Enter。|  
+|创建一个新的工具箱选项卡|在工具箱中的任意位置单击右键，再单击“添加选项卡”。键入新选项卡的名称，再按 Enter。|  
 |在设计器上的选定位置插入工具箱项|将项从工具箱拖动到设计器，或在展开的工具箱选项卡上双击该项。|  
 |更改工具箱中选项卡的位置|将工具箱选项卡拖至首选的新位置，再释放鼠标按钮。|  
 |更改展开的工具箱选项卡上项的位置|将项拖至新位置，再释放鼠标按钮。|  
@@ -49,4 +48,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
 [常规用户界面元素](../ssms/general-user-interface-elements.md)  
   
-

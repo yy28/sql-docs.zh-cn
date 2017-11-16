@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 642a22206b25ec2963fae4fa04e6b10a5329f0e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
   Microsoft **中的** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中处于活动状态的事务的数量，以及这些事务对资源（如 **tempdb**中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 06/22/2017
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

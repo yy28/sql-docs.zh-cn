@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.policycategories.f1
+f1_keywords: sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1ec36fc06a5245ff1f4910016e3af2d60db7b4fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-policy-categories"></a>管理策略类别
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将某类别的任意或所有可用策略应用到整个 [!INCLUDE[tsql](../../includes/tsql-md.md)]实例。  
@@ -99,4 +96,3 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [sp_syspolicy_add_policy_category_subscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)。  
   
   
-

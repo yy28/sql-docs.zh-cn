@@ -1,4 +1,4 @@
-# [SQL Server 迁移助手](sql-server-migration-assistant.md)
+# [SQL Server Migration Assistant](sql-server-migration-assistant.md)
 # [新的和最近更新的文章](new-updated-ssma.md)
 
 # [Access +](../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)

@@ -5,23 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Resource Governor, enabling
+helpviewer_keywords: Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4bcec1331a7878bf261aea8923fa8f8e66e7299
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2361915a9bcf9f038909a8ae9a35390259427670
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-resource-governor"></a>启用资源调控器
   默认情况下，资源调控器处于关闭状态。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 启用资源调控器。  

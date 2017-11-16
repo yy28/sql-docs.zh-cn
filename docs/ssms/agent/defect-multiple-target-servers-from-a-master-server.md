@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - defecting target servers
 - multiple target server defections
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d24f986e0274592b8984c9bf5d493261781b8f77
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e2c38be3173c025c9d4afccffe7660de8194a22
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>使多台目标服务器脱离主服务器
 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中使多台目标服务器脱离多服务器管理配置。 从主服务器运行此过程。  
@@ -53,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)  
 [Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  
   
-

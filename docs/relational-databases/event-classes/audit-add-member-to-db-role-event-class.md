@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Add Member to DB Role event class
+helpviewer_keywords: Audit Add Member to DB Role event class
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db2c58f9158cbaef5e2f5625c696d6783021765d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5b200100d9a53087a4329883054e9b549e1561f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 事件类
   在数据库角色中添加或删除登录名时，会发生 **Audit Add Member to DB Role** 事件类。 此事件类和 **sp_addrolemember**、 **sp_changegroup**以及 **sp_droprolemember** 存储过程一起使用。  

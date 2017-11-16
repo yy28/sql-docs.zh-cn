@@ -5,8 +5,7 @@ ms.date: 10/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 43a0926518f6a5f1f8751389db274f27c9da6993
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>运行 TSQL 调试器之前配置防火墙规则
   必须配置 Windows 防火墙规则，以便在连接到[!INCLUDE[tsql](../../includes/tsql-md.md)]实例（运行该实例的计算机不同于运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。  
@@ -170,4 +169,3 @@ ms.lasthandoff: 06/22/2017
  [数据库引擎查询编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
-

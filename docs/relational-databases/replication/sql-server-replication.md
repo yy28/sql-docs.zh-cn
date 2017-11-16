@@ -5,25 +5,23 @@ ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], about
 - replication [SQL Server]
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 79ab66681162e4f65d9a994f9dcd5c80b8589b52
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 72c2bfc9ab2a6726a7378c42d18f6e05edeef664
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
   复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。 使用复制，可以通过局域网和广域网、拨号连接、无线连接和 Internet 将数据分配到不同位置以及分配给远程或移动用户。  
@@ -34,9 +32,8 @@ ms.lasthandoff: 06/22/2017
   
  **按区域浏览**  
  - [新增功能](../../relational-databases/replication/what-s-new-replication.md)  
- - [后向兼容性](../../relational-databases/replication/replication-backward-compatibility.md)  
+ - [向后兼容性](../../relational-databases/replication/replication-backward-compatibility.md)  
  - [复制功能和任务](../../relational-databases/replication/replication-features-and-tasks.md)  
  - [技术参考](../../relational-databases/replication/technical-reference-replication.md)  
   
   
-

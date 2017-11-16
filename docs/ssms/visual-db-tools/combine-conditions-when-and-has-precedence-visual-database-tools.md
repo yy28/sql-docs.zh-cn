@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - combining search conditions
 - AND, Criteria pane
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c8d08365ac129d8b43e49d166ffccd866396c37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a84b1997c18d5e23554dbb9f85e2c6baad4e9b58
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 优先时组合条件 (Visual Database Tools)
 若要使用 AND 组合条件，应向查询中添加两次列，一个条件一次。 若要使用 OR 组合条件，可将第一个条件放在“筛选器”列中，并将其他条件放在“或...”列中。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 06/22/2017
 [输入搜索值的规则 (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

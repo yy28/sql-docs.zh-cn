@@ -5,24 +5,23 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1aff08fa0edd0f2376114478499a6ac8bec7df8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
   如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
      [安全性](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **将数据库恢复到数据库快照，使用：**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

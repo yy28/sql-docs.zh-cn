@@ -5,25 +5,23 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - forced service [SQL Server]
 - database mirroring [SQL Server], forcing service
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d2fa7ed295d0c44fefd19e53754acbdcbe541ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41aad1711fe5fb6743cfc6c1527f8c175fbf1d0c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在数据库镜像会话中强制服务 (Transact-SQL)
   在高性能模式和不带自动故障转移功能的高安全性模式下，如果主体服务器失败而镜像服务器可用，则数据库所有者可以强制将服务故障转移到镜像数据库（可能造成数据丢失），从而使数据库可用。 此选项仅在以下情况中可用：  
@@ -54,4 +52,3 @@ ms.lasthandoff: 08/02/2017
  [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

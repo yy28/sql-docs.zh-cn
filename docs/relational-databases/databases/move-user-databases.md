@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 823a1ea2916f8a1fddac35ed8741b3ac503aa493
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2818e3c3008d6c10190d55278feeeb90cef598e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-user-databases"></a>移动用户数据库
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，通过在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 FILENAME 子句中指定新的文件位置，可以将用户数据库中的数据、日志和全文目录文件移动到新位置。 此方法适用于在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中移动数据库文件。 若要将数据库移动到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或另一台服务器上，请使用 [备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [分离和附加操作](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
@@ -191,4 +189,3 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
-

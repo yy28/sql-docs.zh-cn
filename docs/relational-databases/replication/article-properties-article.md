@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords:
-- Article Properties dialog box
+f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
   可通过新建发布向导和 **“发布属性”** 对话框访问 **“项目属性”** 对话框。 使用该对话框可以查看和设置所有类型项目的属性。 对于某些属性来说，只有在创建了发布时才能设置；而对于其他属性，只有在发布没有活动订阅时才能设置。 无法设置的属性将显示为只读。  

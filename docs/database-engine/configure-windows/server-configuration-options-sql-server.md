@@ -1,17 +1,14 @@
 ---
 title: "服务器配置选项 (SQL Server) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "服务器配置 (SQL Server)"
+keywords: "服务器配置 (SQL Server)"
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
 - configuration options [SQL Server], when take effect
@@ -30,17 +27,16 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
+caps.latest.revision: "128"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5fd7bae9ba05669af1b21a931b39aba3132e25e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: b10c043d409063226646a48a84cd5d9907745529
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -159,4 +155,3 @@ ms.lasthandoff: 08/02/2017
  [DBCC FREEPROCCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
   
   
-

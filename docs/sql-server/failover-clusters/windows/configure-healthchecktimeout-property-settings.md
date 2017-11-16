@@ -5,22 +5,20 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fe45e057f3e8a9a4cd105cad16ef773c2aed0928
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 075c608b758d7551b4e6ef8c07ae90395cdc9f03
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定以毫秒表示的一段时间，在这段时间内 SQL Server 资源 DLL 应等待 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 存储过程返回的信息，之后才能将 Always On 故障转移群集实例 (FCI) 报告为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
@@ -97,4 +95,3 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
  [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3210a4c6a69d85eded77017c044f33c9a83dd397
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d07665d3efb0e44d7d8314bc9be01276dbebb6e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="properties-window-management-studio"></a>属性窗口 (Management Studio)
 使用此窗口可查看选定元素的属性。 还可以使用“属性”窗口查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
@@ -45,4 +43,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
 [常规用户界面元素](../ssms/general-user-interface-elements.md)  
   
-

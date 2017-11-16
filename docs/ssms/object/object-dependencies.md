@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.objectdependencies.f1
+f1_keywords: sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a8a21c9fc7ade45f13e055a30f4649af13677af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 184e5862361d61e00bd56a639ae4c2687f29e3a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="object-dependencies"></a>对象依赖关系
 一些数据库对象与其他数据库对象存在依赖关系。 例如，视图和存储过程依赖于包含视图或过程返回的数据的表是否存在。 当前对象的“对象依赖关系（‘常规’页）”列出了该对象正常运行所需的数据库对象和依赖于所选对象的对象。 在其定义中引用了另一个对象并且该定义存储在系统目录中的对象称为“引用实体”。 被另一对象引用的对象称为“被引用实体”。  
@@ -71,4 +68,3 @@ ms.lasthandoff: 06/22/2017
   
     指示无法确定依赖关系的类型。 只有所选对象位于早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]实例上时才会出现这种情况。  
   
-

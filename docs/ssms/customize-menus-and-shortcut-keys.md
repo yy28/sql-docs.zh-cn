@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3bcf61e149e5e2a9460709330d72d7ba23023c62
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
 借助于键盘快捷键，可以通过按 Alt+*<single letter>* 来选择菜单命令或按钮。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
@@ -168,4 +166,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
 [SQL Server Management Studio 中的功能](../ssms/features-in-sql-server-management-studio.md)  
   
-

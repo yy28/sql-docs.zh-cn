@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - tablediff utility
 - comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f53c21103cf05d606ab9a8543606577df097a353
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9cc4dc8f164896f5fd1331374de4f268e34b0b7e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>比较所复制表的差异（复制编程）
   项目验证用于确定发布服务器和订阅服务器上的表项目的已发布数据是否不同，这可能表明无法收敛。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)。 但是，验证仅返回通过或失败信息，而不会提供任何有关源表和目标表之间存在哪些差异的信息。 **tablediff** 命令提示实用工具返回两个表之间存在的详细差异信息，甚至可生成 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本，以使订阅与发布服务器上的数据实现收敛。  
@@ -81,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [验证订阅服务器上的数据](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   
-

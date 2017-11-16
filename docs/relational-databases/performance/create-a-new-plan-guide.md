@@ -5,27 +5,24 @@ ms.date: 08/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.designer.newplanguide.f1
+f1_keywords: sql13.swb.designer.newplanguide.f1
 helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea94e6214729ba4bf5c5e39c25cdd8119d261a3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
 计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，需要指定要优化的语句以及包含要使用的查询提示的 OPTION 子句。 或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 06/22/2017
  
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击 **“计划指南”**文件夹，然后选择 **“新建计划指南…”**。
+2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。
 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  在 **“新建计划指南”** 对话框的 **“名称”** 框中，输入计划指南的名称。  
@@ -64,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  在 **“作用域批处理”** 列表中，输入其中包含该对象的架构的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域架构名称”** 框才可用。  
   
-8.  在 **“作用域对象名称”**框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的名称、用户定义的标量函数的名称、多语句表值函数的名称或其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 DML 触发器的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域对象名称”** 框才可用。  
+8.  在“作用域对象名称”框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的名称、用户定义的标量函数的名称、多语句表值函数的名称或其中出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 DML 触发器的名称。 只有在 **“对象”** 选择为作用域类型时， **“作用域对象名称”** 框才可用。  
   
 9. 在 **“参数”** 框中，输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中嵌入的所有参数的参数名称和数据类型。  
   
@@ -106,4 +103,3 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)。  
   
   
-

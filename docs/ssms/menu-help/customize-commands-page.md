@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 - vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e85facb982aa8d7bea852051bbe4e9b37811c4c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: adcb678da9ce46a261aa288085339e820137d616
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-commands-page"></a>自定义（“命令”页）
 使用此对话框，您可以在工具栏和菜单上添加和删除命令，以及更改用于工具栏按钮或菜单命令的图像。 可以通过在“工具”菜单上单击“自定义”，再单击“命令”，来访问“命令”页。  
@@ -47,4 +45,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
 [自定义菜单和快捷键](../../ssms/customize-menus-and-shortcut-keys.md)  
   
-

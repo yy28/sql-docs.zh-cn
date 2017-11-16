@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- semantic search [SQL Server], document similarity queries
+helpviewer_keywords: semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 947b4905c97a2c286cefc6baed8d1456276e1a10
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用语义搜索来查找相似和相关文档
   说明在为统计语义索引配置的列上如何查找相似或相关的文档或文本值，以及如何查找其相似或相关程度的信息。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="HowToIdentifySimilar"></a> 示例：查找与另一个文档最相似的文档  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  以下示例从 AdventureWorks2012 示例数据库的 HumanResources.JobCandidate 表中检索与按 *@CandidateID* 指定的候选人最相似的 10 个候选人。  
   
 ```scr  
@@ -64,7 +61,7 @@ GO
 > [!IMPORTANT]  
 >  针对的列必须启用了全文索引和语义索引。  
   
-###  <a name="HowToSimilarPhrases"></a> 示例：查找在文档间最相似的关键短语  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  以下示例检索 5 个关键短语，它们在 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表中的两个指定候选人间具有最高的相似性得分。  
   
 ```tsql  
@@ -80,4 +77,3 @@ GO
 ```  
   
   
-

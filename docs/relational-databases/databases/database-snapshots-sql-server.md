@@ -5,8 +5,7 @@ ms.date: 08/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69680a68ba3656f3bbbaa0515da33cd602d1473f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
   数据库快照是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（源数据库）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 当源数据库更新时，数据库快照也将更新。 因此，数据库快照存在的时间越长，就越有可能用完其可用磁盘空间。  
@@ -244,5 +242,4 @@ ms.lasthandoff: 06/22/2017
  [数据库镜像和数据库快照 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
-
 

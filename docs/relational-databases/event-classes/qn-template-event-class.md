@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event classes [SQL Server], QN:Template
+helpviewer_keywords: event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65d04a6b62876481360a1c529363df811d5726e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3c8cb69f8146567bb93fd1892d165422b78a9bea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件类
   QN:Template 事件报告有关查询模板的内部使用情况的信息。 查询模板是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用于针对通知共享查询定义的机制。 这些模板是与参数表一起创建的。 当创建、使用或销毁查询模板时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会创建此类型的事件。  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 |TextData|**ntext**|返回包含特定于此事件的信息的 XML 文档。 此文档符合 [SQL Server Query Notification Profiler Event Schema](http://go.microsoft.com/fwlink/?LinkId=63331) 页上提供的 XML 架构。|1|是|  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], configuring
+helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 66977f7eeb747d77d8f0db82b76b307e1aff2cca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
   Oracle 发布服务器中的发布的创建方法与典型快照和事务发布相同，但在创建 Oracle 发布服务器中的发布之前，必须先完成下列步骤（本主题详细介绍步骤 1、步骤 3 和步骤 4）：  
@@ -153,4 +150,3 @@ ms.lasthandoff: 09/05/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
-

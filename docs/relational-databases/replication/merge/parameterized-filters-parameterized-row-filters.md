@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
   参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  参数化筛选器在单个表中使用，通常与联接筛选器配合使用来将筛选扩展到相关表。 有关详细信息，请参阅 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
- 若要定义或修改参数化行筛选器，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+ 若要定义或修改参数化行筛选器，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 ## <a name="how-parameterized-filters-work"></a>参数化筛选器的工作机制  
  参数化行筛选器使用 WHERE 子句来选择要发布的适当数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数：SUSER_SNAME() 和 HOST_NAME()。 也可以使用用户定义函数，但是函数主体中必须包含 SUSER_SNAME() 或 HOST_NAME()，或者计算这些系统函数之一（如 `MyUDF(SUSER_SNAME()`）。 如果用户定义函数的主体中包含 SUSER_SNAME() 或 HOST_NAME()，则无法向该函数传递参数。  

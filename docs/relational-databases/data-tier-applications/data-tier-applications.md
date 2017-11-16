@@ -1,13 +1,11 @@
 ---
 title: "数据层应用程序 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ab8a8fded3daac09e9d7b90ba3a734a46fd4cce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如表、视图和实例对象（包括登录名）。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署的一个自包含单元，它使数据层开发人员和数据库管理员能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象打包到一个名为“DAC 包”（也称作 DACPAC）的可移植项目中。  
@@ -139,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  [DAC 对 SQL Server 对象和版本的支持](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
-

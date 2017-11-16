@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 807e2b855264f77959faa4699d761739af3e5137
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a3c87d0c21d7f9a818f4780fc72c271d1c6009df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。  
   
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。****  
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
   
  快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  右键单击要为其生成快照的发布，再单击 **“生成快照”**。  
   
-3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。 有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”**。  
+3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”**。  
   
 #### <a name="to-apply-a-snapshot"></a>应用快照  
   
@@ -171,17 +170,17 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法加载该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以加载该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
 4.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值为 **false**，请调用 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 为此发布创建快照代理作业。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法以启动为此发布生成快照的代理作业。  
   
-6.  （可选）<xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 的值为 **true** 时，订阅服务器具有快照。  
+6.  （可选） <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 的值为 **true**时，订阅服务器具有快照。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>通过运行快照代理（同步）为快照发布或事务发布生成初始快照  
   
-1.  创建 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 类的实例，并设置以下所需属性：  
+1.  创建 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 类的实例，并设置下列所需属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 发布服务器的名称  
   
@@ -191,11 +190,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 分发服务器的名称  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示在连接到发布服务器时使用 Windows 身份验证；值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 表示在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示连接到发布服务器时使用 Windows 身份验证，值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 以及值为 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 表示连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示在连接到分发服务器时使用 Windows 身份验证；值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 表示在连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示连接到分发服务器时使用 Windows 身份验证，值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 以及值为 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 表示连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
   
-2.  将 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> 的值设置为 <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 或 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot>。  
+2.  将 <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 的值设置为 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 或 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 方法。  
   
@@ -205,17 +204,17 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法加载该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以加载该对象的其余属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
 4.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值为 **false**，请调用 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 为此发布创建快照代理作业。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法以启动为此发布生成快照的代理作业。  
   
-6.  （可选）<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值为 **true** 时，订阅服务器具有快照。  
+6.  （可选） <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值为 **true**时，订阅服务器具有快照。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>通过运行快照代理（同步）为合并发布生成初始快照  
   
-1.  创建 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 类的实例，并设置以下所需属性：  
+1.  创建 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 类的实例，并设置下列所需属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 发布服务器的名称  
   
@@ -225,11 +224,11 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
     -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 分发服务器的名称  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示在连接到发布服务器时使用 Windows 身份验证；值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 表示在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示连接到发布服务器时使用 Windows 身份验证，值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 以及值为 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 表示连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示在连接到分发服务器时使用 Windows 身份验证；值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>、<xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 表示在连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 表示连接到分发服务器时使用 Windows 身份验证，值为 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 以及值为 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 表示连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 建议使用 Windows 身份验证。  
   
-2.  将 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A> 的值设置为 <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge>。  
+2.  将 <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 的值设置为 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 方法。  
   

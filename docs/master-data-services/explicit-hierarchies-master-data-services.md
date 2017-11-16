@@ -1,12 +1,11 @@
 ---
-title: "显式层次结构 (Master Data Services) |Microsoft 文档"
+title: "显式层次结构 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: "10"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: cab8d24ba8b634850f700dd15e71a81c006c8562
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，显式层次结构以您指定的任意方式组织一个实体中的成员。 显式层次结构可以是不规则的，并且与派生层次结构不同，该结构不依据基于域的属性关系。  
@@ -80,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  若要在特定的合并点汇总这些叶成员，您可以在 Product 实体中创建合并成员。 在要汇总叶成员的层次结构树的级别中插入合并成员。 对插入合并成员的位置没有限制，但是每个成员（叶成员或合并成员）只能使用一次。  
   
- ![山地自行车显式层次结构示例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "山地自行车显式层次结构示例")  
+ ![山地车显式层次结构示例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike Explicit Hierarchy Example")  
   
  合并成员可用于将任何级别的成员分组，叶成员和合并成员按您确定的顺序排序。  
   
@@ -88,16 +87,15 @@ ms.lasthandoff: 09/01/2017
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的显式层次结构。|[创建显式层次结构 &#40;Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|更改现有显式层次结构的名称。|[更改显式层次结构名称 &#40;Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|删除现有显式层次结构。|[删除显式层次结构 &#40;Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|创建新的显式层次结构。|[创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|更改现有显式层次结构的名称。|[更改显式层次结构名称 (Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|删除现有显式层次结构。|[删除显式层次结构 (Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>相关内容  
   
--   [派生层次结构 &#40;Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   
-

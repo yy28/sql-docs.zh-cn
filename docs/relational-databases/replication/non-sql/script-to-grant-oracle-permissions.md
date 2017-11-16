@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Oracle publishing [SQL Server replication], script to grant permissions
+helpviewer_keywords: Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 847fc8a563be78e9dd354d2a1d255945a014fa2c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授予 Oracle 权限的脚本
   本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<实例名称>*\MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
@@ -133,4 +130,3 @@ GRANT CREATE ANY TRIGGER TO &&ReplLogin;
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   
-

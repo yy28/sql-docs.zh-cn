@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 85bfda015ac159cad16deb1e2e2bac20f304b6df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d918c018425f0778b729a2a348400b7fbeaa07e7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>数据库镜像和 SQL Server 故障转移群集实例
   故障转移群集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集服务 (MSCS) 群集组（称为资源组）中的一个或多个物理磁盘的组合，这些磁盘是群集的节点。 资源组配置为承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的故障转移群集实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例就好像是网络上的一台计算机，但是它可以提供故障转移服务，当一个节点不可用时，可以从该节点故障转移到另一个节点。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
@@ -74,4 +72,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
-

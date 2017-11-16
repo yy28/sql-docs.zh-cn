@@ -5,12 +5,10 @@ ms.date: 04/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 795c6bfbf7052d5747c6924b706907406c099ac0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 
@@ -123,7 +120,7 @@ name  |  db_failover
 >
 >2016-04-25 12:20:21.15 spid79      错误: 41653，严重性: 21，状态: 1。
 >
->2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
+>2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。**
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >
@@ -197,7 +194,6 @@ GO
 * [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/)（增强 AlwaysOn 故障转移策略以测试 SQL Server 数据库数据和日志驱动器）
 
 * [扩展事件](../../../relational-databases/extended-events/extended-events.md)
-
 
 
 

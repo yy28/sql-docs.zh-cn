@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -39,16 +38,16 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: e6ae8ba71d1e424c4e295655d76ddfc0084a1a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
@@ -157,7 +156,7 @@ ms.lasthandoff: 06/22/2017
  键入电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户的回信可能会发送给数据库管理员 danw@Adventure-Works.com。  
   
  **服务器名称**  
- 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 **smtp.***<your_company>***.com**。 如需相关帮助，请询问您的邮件管理员。  
+ 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 **smtp.***<your_company>***.com**。如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  键入此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  
@@ -207,7 +206,7 @@ ms.lasthandoff: 06/22/2017
  查看或更新电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 SQL Server 代理的帐户的回信可能会发送给数据库管理员 **danw@Adventure-Works.com**的计算机上的用户对应。  
   
  **服务器名称**  
- 查看或更新该帐户发送电子邮件所用的 SMTP 服务器的名称。 通常此格式类似于 **smtp.<your_company>.com**。 如需相关帮助，请询问您的邮件管理员。  
+ 查看或更新该帐户发送电子邮件所用的 SMTP 服务器的名称。 通常此格式类似于 **smtp.<your_company>.com**。如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  查看或更新此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  

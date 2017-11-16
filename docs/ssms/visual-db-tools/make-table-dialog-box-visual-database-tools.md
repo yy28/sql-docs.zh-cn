@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55372985e2d5ae739e2e03fd07c3c02e5cbeb97f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>“生成表”对话框 (Visual Database Tools)
 使用此对话框可以命名通过复制行而创建的表。 当您将查询类型更改为“生成表”查询时，将显示此对话框。 若要更改查询类型，请在“查询设计器”菜单中指向“更改类型”，再单击“生成表”。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/18/2017
 [创建“生成表”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 [查询类型 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

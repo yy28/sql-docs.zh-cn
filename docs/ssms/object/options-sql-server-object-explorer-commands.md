@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
+f1_keywords: VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: da27431ddc8718e711bc4c4a0d0ced4fca1106c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e32d7fe35d1a6322e902e07c866d952cdccb1411
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>选项（“SQL Server 对象资源管理器”-“命令”）
 在对象资源管理器中右键单击表或视图时，将显示以下两个用于显示表中的行的选项：  
@@ -50,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 审核（数据库引擎）](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   
-

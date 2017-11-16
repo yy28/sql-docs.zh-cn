@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +15,19 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: b5b583181f44f919fc155413ef3ff9c0f97ad550
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc454960a271c4fdfeb5e04337b2fb8ab1790127
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
-  “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。 用户定义的数据类型将按其基类型导出。  
+  “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。用户定义的数据类型将按其基类型导出。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>用于文件存储类型的 bcp 提示符  
  如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-n**或 **-N**或 **in**或 **-N**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  

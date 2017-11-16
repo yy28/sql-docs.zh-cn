@@ -2,9 +2,12 @@
 title: "了解通过 1103年表格对象模型在级别 1050年 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - docset-sql-devref

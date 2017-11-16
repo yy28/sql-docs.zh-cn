@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - event classes [SQL Server], Locks event category
 - lock escalation [SQL Server], locks event category
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d1e11870107c27084efc54d0c9901f5f1be0f1a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8887c507a61246c7ec12a6974402fe3576e9d1d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="locks-event-category"></a>Locks 事件类别
   使用 **Locks** 事件类别中的事件类可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中的锁定活动。 这些事件类有助于调查由于多个用户同时读取和修改数据而引起的锁定问题。  
@@ -43,8 +41,7 @@ ms.lasthandoff: 06/22/2017
 |[Lock:Deadlock 事件类](../../relational-databases/event-classes/lock-deadlock-event-class.md)|跟踪事务何时针对已由另一个事务锁定（导致死锁）的资源请求锁。|  
 |[Lock:Escalation 事件类](../../relational-databases/event-classes/lock-escalation-event-class.md)|指示较细粒度的锁已转换为较粗粒度的锁。|  
 |[Lock:Released 事件类](../../relational-databases/event-classes/lock-released-event-class.md)|跟踪何时释放锁。|  
-|[Lock:Timeout (timeout &gt; 0) 事件类](../../relational-databases/event-classes/lock-timeout-timeout-0-event-class.md)|由于另一个事务持有所需资源的阻塞锁而使锁请求无法完成时，跟踪该锁请求。 仅在锁超时值大于零的情况下才会发生此类事件。|  
+|[Lock:Timeout (timeout > 0) 事件类](../../relational-databases/event-classes/lock-timeout-timeout-0-event-class.md)|由于另一个事务持有所需资源的阻塞锁而使锁请求无法完成时，跟踪该锁请求。 仅在锁超时值大于零的情况下才会发生此类事件。|  
 |[Lock:Timeout 事件类](../../relational-databases/event-classes/lock-timeout-event-class.md)|由于另一个事务持有所需资源的阻塞锁而使锁请求无法完成时，跟踪该锁请求。|  
   
   
-

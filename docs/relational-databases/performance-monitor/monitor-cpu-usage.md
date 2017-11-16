@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
   定期监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以确定 CPU 使用率是否在正常范围内。 持续的高 CPU 使用率可能表明需要升级 CPU 或需要增加多个处理器。 或者，高 CPU 使用率也可能表明应用程序的调整或设计不良。 优化应用程序可以降低 CPU 的使用率。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  若使用率为 100% 左右（表示在处理大量的客户端请求），可能表示进程正在排队，等待处理器时间，并因而导致出现瓶颈。 可以通过增加速度更快的处理器来解决这一问题。  
   
   
-

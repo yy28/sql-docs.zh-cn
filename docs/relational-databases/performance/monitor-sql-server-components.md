@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c31b1ebaa449c650edfcac6e045770652d7989be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-sql-server-components"></a>监视 SQL Server 组件
   监视操作非常重要，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在动态环境中提供服务。 应用程序中的数据在变化。 用户需要的访问类型在变化。 用户连接的方式在变化。 甚至，访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序的类型也可能在变化，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动管理系统级资源（如内存和磁盘空间），以便最小化对广泛系统级手动优化的需要。 管理员可以通过监视来标识性能趋势以确定是否有必要进行更改。  
@@ -142,4 +140,3 @@ ms.lasthandoff: 08/03/2017
      事件重播使您可以建立捕获数据时的数据库环境的测试副本，然后可以重复捕获的事件，就像最初在真实系统上捕获事件一样。 此功能仅适用于分布式重播实用工具或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 可以按事件最初发生时的速度重播它们，尽可能快地重播（增加系统的压力），或者尽可能一次重播一步（每个事件发生后对系统进行分析）。 通过在测试环境中分析确切事件，可以防止对生产系统产生有害影响。 有关详细信息，请参阅 [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)。  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a98f6dac943e9383be789a82e9e6e1e656f03a2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a7b140acf1b00f31df0d8c948cdeca8ff6703726
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>为同一列指定多个搜索条件 (Visual Database Tools)
 在某些情况下，可能希望对同一数据列应用多个搜索条件。 例如，您可能希望：  
@@ -91,4 +89,3 @@ WHERE (title LIKE '%Cook%') AND
 [在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

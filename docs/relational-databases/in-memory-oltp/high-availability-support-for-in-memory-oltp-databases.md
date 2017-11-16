@@ -5,21 +5,20 @@ ms.date: 08/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1ac85ca1f9e073a7c9b9577601fcc982e7249ab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 14e2a3d68d922c4e78ee154a380fc6ddd4721526
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>对内存中 OLTP 数据库的高可用性支持
   包含内存优化表的数据库（无论是否使用本机编译的存储过程）完全支持用于 AlwaysOn 可用性组。  对于包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象的数据库和不包含这些对象的数据库，在配置和支持上没有任何区别。  
@@ -57,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [复制到内存优化表订阅服务器](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   
-

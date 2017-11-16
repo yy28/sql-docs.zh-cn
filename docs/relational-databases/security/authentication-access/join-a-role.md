@@ -5,26 +5,24 @@ ms.date: 07/14/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+f1_keywords: SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 569eea78d5270e680caa81557585bfb817d3bd13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="join-a-role"></a>加入角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
@@ -146,4 +144,3 @@ ms.lasthandoff: 06/22/2017
  [应用程序角色](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
-

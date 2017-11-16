@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6e1d52d52ca029e7643634442c5d87446e0c410
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ac7e0e7080ac55f1c871499b7c43b8e0a3d0d3d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
   数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
@@ -175,4 +173,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

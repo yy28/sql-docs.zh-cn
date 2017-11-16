@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.debug.breakpt.location.file
-helpviewer_keywords:
-- Transact-SQL debugger, breakpoint location
+f1_keywords: vs.debug.breakpt.location.file
+helpviewer_keywords: Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9c5d21e7d9aef00e7c096a4759e3f53afe24cae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 66fbf306c95331693b9042d782f7e2371efa986e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-a-breakpoint-location"></a>编辑断点位置
   断点位置指定断点在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件中所处的行和字符位置。 您可以编辑断点位置以将断点移至脚本的其他位置，或移至其他脚本。  

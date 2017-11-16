@@ -10,19 +10,17 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Secure Sockets Layer (SSL)
+helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留项，以支持通过加密通道建立报表服务器连接。  

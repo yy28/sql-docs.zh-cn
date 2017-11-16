@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Bitmap Warning event class
+helpviewer_keywords: Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac451108447cd57642deed94ea2f18bfbeaa293b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1e7272051a221476822c4d3d92c2f7b4ceaaeaa2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning 事件类
   **Bitmap Warning** 事件类可用于监视查询中位图筛选器的使用情况。 该事件子类可用于报告何时禁用了查询中的位图筛选器。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 |**LoginSid**|**image**|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  
-|**Exchange Spill**|**int**|重新分区所涉及的哈希组的根节点 ID。 与 Showplan 中的节点 ID 对应。|22|是|  
+|**ObjectID**|**int**|重新分区所涉及的哈希组的根节点 ID。 与 Showplan 中的节点 ID 对应。|22|是|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|是|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|是|  
   
   
-

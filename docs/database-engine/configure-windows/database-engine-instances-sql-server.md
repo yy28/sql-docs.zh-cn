@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 629b0c63a6dfe888b64c665fe02de93134acb320
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例是作为操作系统服务运行的 **sqlservr.exe** 可执行程序的副本。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  [数据库引擎跨实例功能](../../relational-databases/database-engine-cross-instance-features.md)  
   
   
-

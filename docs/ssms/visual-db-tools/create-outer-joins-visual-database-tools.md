@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - outer joins
 - joins [SQL Server], outer
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1fba920f03220f261b62c37cb6d95e9a5710975f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9098896a6389489eac2c2d5adae26e82e863df9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>创建外部联接 (Visual Database Tools)
 默认情况下， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 在表之间创建内部联接。 内部联接消除了与其他表中的行不匹配的行。 但是，外部联接可以从 FROM 子句中提到的至少一个表或视图中返回所有行，只要这些行符合任何 WHERE 或 HAVING 搜索条件。 若要在结果集中包含在联接表无匹配项的数据行，可以创建外部联接。  
@@ -66,4 +64,3 @@ WHERE (jobs.job_id IS NULL)
 [使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [“联接”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   
-

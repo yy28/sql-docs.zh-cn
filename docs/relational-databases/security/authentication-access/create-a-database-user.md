@@ -5,8 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +22,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
----   
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
+---
 # <a name="create-a-database-user"></a>创建数据库用户
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -43,14 +41,14 @@ ms.lasthandoff: 06/22/2017
  可以通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来创建数据库用户。  
   
 ##  <a name="Understanding"></a> 了解用户类型  
- [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 在创建数据库用户时提供了 6 个选项。 下图在绿框中显示了这 6 个选项，并展示了选项所代表的含义。  
+ [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 提供了创建数据库用户时的 6 个选项。 下图在绿框中显示了这 6 个选项，并展示了选项所代表的含义。  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>选择用户类型  
  **登录名或没有映射到登录名的用户**  
   
- 如果对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不熟悉，可能很难决定要创建哪种类型的用户。 首先问问自己，需要访问数据库的用户或组是否有登录名？ 管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户和需要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的多个或者全部数据库的用户通常拥有主数据库中的登录名。 在这种情况下，你需要创建一个“带登录名的 SQL 用户” 。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中已存在登录名。 有关如何创建登录名的信息，请参阅[创建登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
+ 如果对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不熟悉，可能很难决定要创建哪种类型的用户。 首先问问自己，需要访问数据库的用户或组是否有登录名？ 管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户和需要访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的多个或者全部数据库的用户通常拥有主数据库中的登录名。 在这种情况下，你需要创建一个“带登录名的 SQL 用户” 。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅 [创建登录名](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
  如果需要访问数据库的用户和组没有登录名，并且他们只需要访问一个或少数几个数据库，则创建 **Windows 用户** 或者 **带密码的 SQL 用户**。 也称为包含的数据库用户，它与主数据库的登录名不相关。 当你想在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例间轻松地移动数据库时，这是一个理想的选择。 若要对 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]使用此选项，管理员必须首先对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用包含的数据库，然后对包含启用数据库。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
@@ -171,4 +169,3 @@ ms.lasthandoff: 06/22/2017
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
-

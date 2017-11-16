@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1d9dd0036b46e806ea6aaacf41d9bf9683ebc233
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5a326a2e59509e4c8cd6d07ca78027d7d17cdf46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="copy-queries-visual-database-tools"></a>复制查询 (Visual Database Tools)
 可以将查询的正文复制到新的查询中作为起点。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/18/2017
 [保存查询 (Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

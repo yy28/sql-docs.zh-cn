@@ -5,8 +5,7 @@ ms.date: 07/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +20,18 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 - default protocols, client
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5cb93e598d20ad1622836579118d664c0e6da279
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57e27a735c982ab8ed561c7ae8a3d6c875d7e721
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# 配置客户端协议
+# <a name="configure-client-protocols"></a>配置客户端协议
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置客户端应用程序使用的客户端协议。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持使用 TCP/IP 网络协议和 Named Pipes 协议的客户端通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。  
   
 -   通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中设置协议顺序，将所有的客户端应用程序配置为使用相同的网络协议。  
@@ -69,8 +67,7 @@ ms.lasthandoff: 08/02/2017
   
  通过选中 **“启用的共享内存协议”** 复选框，单独启用共享内存协议。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置“远程登录超时值”服务器配置选项](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
   
   
-

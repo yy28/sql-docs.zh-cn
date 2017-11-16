@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, starting
 - autostart SQL Server Agent
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d04f69be267c374559c65638d09d24ac6ef4822d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fe3ae63126da1688da81bc59855faf8dfd8a1fa4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
 本主题将介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中将 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理配置为在其意外停止时自动重启。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 06/22/2017
   
 3.  在 **“常规”** 页上，选中 **“SQL Server 代理意外停止时自动重新启动”**。  
   
-

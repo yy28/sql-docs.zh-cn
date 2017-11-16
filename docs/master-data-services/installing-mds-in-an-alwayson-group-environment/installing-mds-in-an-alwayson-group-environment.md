@@ -1,13 +1,11 @@
 ---
 title: "Master Data Services 的高可用性和灾难恢复 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -16,16 +14,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fe2bcae7a0f5694cf744df9c7d44b6fd2253c4b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
 **摘要：** 本文介绍了一种解决方案，该解决方案适用于 AlwaysOn 可用性组配置上托管的 Master Data Service (MDS)。 本文介绍了如何在 SQL 2016 AlwaysOn 可用性组 (AG) 上安装和配置 SQL 2016 Master Data Services。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
@@ -408,5 +402,4 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 此白皮书对您有帮助吗？ 请单击文章顶部的“评论”向我们提供反馈。 
 
 你的反馈将帮助我们改进所发布的白皮书质量。 
-
 

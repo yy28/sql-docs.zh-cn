@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a4c523c915ec236189f9b97104fcd78c725b4fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f617973f041218de7b77b64350b8953dbaa0d149
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
 在许多情况下，都可以更新显示在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

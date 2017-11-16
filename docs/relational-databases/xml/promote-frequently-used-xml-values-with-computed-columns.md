@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc333316c144154f0f06d4f8f9ae0a2887660700
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 790650397525811dd3be71edb28f233f25bf9ab8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
   如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  
@@ -262,4 +260,3 @@ as
  [在计算列中使用 XML](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ee5522ce1d173dfd979b64d428be2e6e05ded00
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 97c76061aac16fa1f0f71e2f2f68fa06d56cdc0d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="surface-area-configuration"></a>外围应用配置器
   在新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认配置中，许多功能并未启用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只是有选择地安装和启动关键服务和功能，以最大限度地减少可能受到恶意用户攻击的功能数。 系统管理员可以在安装时更改这些设置，也可以有选择地启用或禁用运行中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的功能。 此外，如果从其他计算机进行连接，则在配置协议之前某些组件可能不可用。  
@@ -81,4 +79,3 @@ ms.lasthandoff: 06/22/2017
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

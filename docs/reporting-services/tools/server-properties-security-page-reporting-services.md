@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.security.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8da36c90d2eb22600ad6560a37367e68de933971
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 29d302f7f04d2d4058d73d9a24b61bbc0235f440
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-properties-security-page---reporting-services"></a>服务器属性（“安全性”页）- Reporting Services
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的此 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 页可以关闭有可能会危及报表服务器安全的功能。 关闭这些功能将限制某个功能，但是可以通过缓解特定的威胁来改进报表服务器的总体安全性。  
@@ -48,10 +46,9 @@ ms.lasthandoff: 08/09/2017
  如果关闭此选项，则会缓解恶意用户通过用 **LoadReportDefinition** 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置报表服务器属性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
-

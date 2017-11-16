@@ -5,26 +5,22 @@ ms.date: 07/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "数据收集"
-helpviewer_keywords:
-- data collection [SQL Server]
+keywords: "数据收集"
+helpviewer_keywords: data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d554a001c8375a6ad619f4ed00e362a64fa279b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-collection"></a>数据收集
   数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
@@ -124,5 +120,4 @@ ms.lasthandoff: 06/22/2017
 |可以利用 SQL Server Profiler 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用通用 SQL 跟踪收集器类型的收集组| [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
-
 

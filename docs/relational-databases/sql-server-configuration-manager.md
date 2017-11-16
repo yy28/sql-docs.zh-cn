@@ -1,13 +1,11 @@
 ---
 title: "SQL Server 配置管理器 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - tools [SQL Server], SQL Server Configuration Manager
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a962700e3522a2482817d6e4c64c4dde925f8fb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
 
@@ -51,7 +48,7 @@ ms.lasthandoff: 07/31/2017
 >  因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
 >   
 >  -   **Windows 10**：  
->          若要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“起始页”中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置” 。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏” 。  
+>          要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“起始页” 中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置” 。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏” 。  
 > -   **Windows 8**：  
 >          若要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如SQLServerManager13.msc），然后按“Enter”。  
   
@@ -102,4 +99,3 @@ ms.lasthandoff: 07/31/2017
  [防止 SQL Server 实例自动启动（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fa54c411376a66d133834dc726eb2e25fa885fc8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性副本之间的会话期间的可能故障 (SQL Server)
 物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障都可能导致两个可用性副本之间的会话失败。 可用性副本不会定期检查 Sqlservr.exe 所依赖的组件来验证这些组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能忽略的其他故障，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实施了自己的会话超时机制。 以秒为单位指定会话超时期限。 此超时期限是一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。 两个可用性副本之间发生会话超时时，可用性副本将假定已发生故障并声明一个“软错误 ”。  
@@ -90,7 +89,7 @@ ms.lasthandoff: 08/02/2017
   
  主副本和辅助副本相互 ping 以指示它们仍处于活动状态，会话超时限制防止一个副本无限期等待接收另一个副本的 ping。 会话超时限制是用户可配置的副本属性，默认值为 10 秒。 在超时期限内收到 ping 指示连接仍是开放的，且服务器实例正在通过此连接进行通信。 收到 ping 后，可用性副本将重置此连接的超时计数器。  
   
- 如果在会话超时期限内没有收到来自另一个副本的 ping，该连接将超时。 连接将关闭，超时的副本进入 DISCONNECTED 状态。 即使为同步提交模式配置了断开连接的副本，事务也将不等待该副本重新连接和重新同步。  
+ 如果在会话超时期限内没有收到来自另一个副本的 ping，该连接将超时。连接将关闭，超时的副本进入 DISCONNECTED 状态。 即使为同步提交模式配置了断开连接的副本，事务也将不等待该副本重新连接和重新同步。  
   
 ## <a name="responding-to-an-error"></a>响应错误  
  无论出现何种错误类型，检测到错误的服务器都会根据实例的角色、会话可用性模式以及会话中任何其他连接的状态做出相应的响应。 有关丢失伙伴后会发生的情况的信息，请参阅[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
@@ -108,4 +107,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

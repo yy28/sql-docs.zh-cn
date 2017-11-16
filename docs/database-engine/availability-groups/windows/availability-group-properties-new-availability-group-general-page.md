@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroupproperties.general.f1
+f1_keywords: sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9d2fa593bc36151226c5f345c8e8ac0f9b731dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性组属性：新建可用性组（“常规”页）
   本主题同时适用于 **“新建可用性组”** 对话框和 **“可用性组属性”** 对话框的 **“常规”** 选项卡。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

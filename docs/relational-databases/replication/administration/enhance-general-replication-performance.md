@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], general considerations
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 23abb406368b5a5a038af7542f36ae9f2a2f8c42
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
@@ -172,4 +170,3 @@ ms.lasthandoff: 06/22/2017
 -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)的最小和最大内存量。  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 041d9a3c2a204d8413d755ec69946859195b5c0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d97db8a777c9ba47f4b986033ee583dfb89a3abc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
 通过在搜索条件中包括多个数据列，可以扩大或缩小查询范围。 例如，您可能希望：  
@@ -86,4 +84,3 @@ ms.lasthandoff: 06/22/2017
 [在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

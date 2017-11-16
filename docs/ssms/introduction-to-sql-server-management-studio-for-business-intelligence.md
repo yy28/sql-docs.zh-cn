@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +13,19 @@ helpviewer_keywords:
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a94d889f59d03adf7ece002e02e54f56704d437c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 626db0505010dc75499f1b14a4d5708e47c33550
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio for Business Intelligence 简介
-若要访问、配置和管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]，请使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]。 虽然这三种商业智能技术均依赖于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]，但与每种技术关联的管理任务却略有不同。  
+若要访问、配置和管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)]和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]，请使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]。 虽然这三种商业智能技术均依赖于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]，但与每种技术关联的管理任务却略有不同。  
   
 > [!NOTE]  
 > 若要创建和修改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] 解决方案，请使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)]，而不是 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] 是一个基于 [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs_md.md)]的开发环境。  
@@ -65,4 +63,3 @@ ms.lasthandoff: 06/22/2017
 [使用 SQL Server Data Tools 进行开发和实现](http://msdn.microsoft.com/en-us/132ed779-3ec8-4734-9698-802116d1b017)  
 [SQL Server Data Tools 中的 Reporting Services](http://msdn.microsoft.com/en-us/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
   
-

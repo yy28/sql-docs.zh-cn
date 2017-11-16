@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 4fdcc353e4dc1d29a2411b5ec846f2d8e415a849
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 支持的版本和版本升级
   可以从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 升级。 本主题列出了支持的从这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本进行升级的途径以及支持的 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]版本升级。  
@@ -114,7 +112,7 @@ ms.lasthandoff: 08/02/2017
  \* 从候选发布升级的 Microsof 支持专门针对参与了技术采用计划 (TAP) 的客户。 
 
    
-###  <a name="SupportFor2005"></a> 对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 支持  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  此节讨论针对 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支持。 在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 中，您能够执行以下操作：  
   
 -   将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库（mdf/ldf 文件）附加到数据库引擎的 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 实例。  
@@ -172,9 +170,9 @@ ms.lasthandoff: 08/02/2017
   
  ** 对 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 故障转移群集版本的更改受到限制。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 故障转移群集不支持以下方案：  
   
--   从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise 更改为 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer、Standard 或 Evaluation。  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 从 Enterprise 更改为 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer、Standard 或 Evaluation。  
   
--   从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer 更改为 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard 或 Evaluation。  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 从 Developer 更改为 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard 或 Evaluation。  
   
 -   从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard 更改为 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation。  
   
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/02/2017
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

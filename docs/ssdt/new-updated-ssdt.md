@@ -15,12 +15,11 @@ ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 3051fd04a8e3377ff93ad560e9bb600d80527d23
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新的和最近更新的文章：SQL Server Data Tools (SSDT)
 
@@ -123,6 +122,5 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
-
 
 

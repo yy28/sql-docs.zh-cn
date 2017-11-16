@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
@@ -90,14 +88,14 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 -   不能在运行 Windows Server 2008 R2 Server Core SP1 的计算机上并行安装 Microsoft SQL Server 2012 和早期版本的 SQL Server。  
   
--   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx)。  
+-   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx)(#在-server-core-上安装-sql-server-2012)。  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 语义搜索要求您安装其他依赖项  
 **问题：** 统计语义搜索要求其他的必备组件，即语义语言统计数据库，而 SQL Server 安装程序并不安装此组件。  
   
 **解决方法：** 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下任务：  
   
-1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
+1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (#microsoft-下载中心) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
   
 2.  将数据库移到相应的数据文件夹。 如果您要使数据库保持在其默认位置，必须首先更改权限，然后才能成功附加该数据库。  
   
@@ -325,7 +323,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 在群集中不支持 DQS  
 **问题：** 在 SQL Server 群集安装中不支持 DQS。 如果你在安装 SQL Server 的某一群集实例，则不得在“ **功能选择** ”页上选中“ **Data Quality Services** ”和“ **数据质量客户端** ”复选框。 如果在群集实例安装过程中选中了这些复选框（并且通过运行 DQSInstaller.exe 文件完成了数据质量服务器安装），则 DQS 将安装在此节点上，但在将更多节点添加到群集时不可用于附加节点，因此在附加节点上将不起作用。  
   
-**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
+**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)(#http://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
 **问题：** 如果卸载数据质量服务器，则 DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
@@ -505,13 +503,13 @@ A semantic language statistics database is not registered. Full-text indexes usi
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|是|是|是|“否”|是|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|是|是|是|是|是|  
-|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|是|是|是|是|是|  
-|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|用户帐户控制|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|用户帐户控制|是|是|是|是|  
+|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|用户帐户控制|  
   
-**\&#42;** 下载 ADO.NET（结合使用 .NET Framework 4.0）的连接性修补程序： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
+**\&#42;** 下载 ADO.NET（结合使用 .NET Framework 4.0）的连接性修补程序： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)(#http://support.microsoft.com/kb/2600211)。  
   
-**\&#42;\&#42;** 下载 ADO.NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
+**\&#42;\&#42;** 下载 ADO.NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)(#http://support.microsoft.com/kb/2654347)。  
   
 **MultiSubnetFailover 关键字和相关功能**  
   
@@ -609,10 +607,10 @@ Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日�
   
 3.  在主群集节点上安装包含 MDS 功能的 SQL Server 2012，然后在任何附加群集节点上安装包含 MDS 功能的 SQL Server 2012。  
   
-有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)。  
+有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)(#http://support.microsoft.com/kb/2683467)。  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 需要 Microsoft Silverlight 5  
-在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
+在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)(#http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -637,4 +635,3 @@ SQL Server 2012 包含 StreamInsight 2.0。 StreamInsight 2.0 要求 Microsoft S
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

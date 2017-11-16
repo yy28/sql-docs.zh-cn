@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - combining search conditions
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c56714e86553346cc53125ad90d2140df502179e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 01acb8eb71b820655cb6c77df1495099cd0e7f81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 优先时组合条件 (Visual Database Tools)
 若要用 OR 链接条件，并使其优先级高于用 AND 链接的条件，则必须为每个 OR 条件重复 AND 条件。  
@@ -79,4 +77,3 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 [在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [指定搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8cac116f89d0cf1fde83a00dfd42c02e1fc5e2f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2cb970b15ae4d310f5fb835da67886a0200108a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
   Nearest Neighbor 查询是用于空间数据的常用查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  
@@ -112,4 +110,3 @@ ORDER BY SpatialLocation.STDistance(@g);
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

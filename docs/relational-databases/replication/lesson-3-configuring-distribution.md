@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- replication [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e582c5fb7853c69a083755a944bd3922d0d4c5af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7c6d21ac167392960d315ea495acc5fe1385640c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 课：配置分发
 在本课中，将在发布服务器中配置分发，并设置所需的发布数据库和分发数据库权限。 如果已经配置了分发服务器，则必须在开始本课之前先禁用发布和分发。 如果必须保留现有复制拓扑，请不要执行该操作。  
@@ -76,4 +72,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

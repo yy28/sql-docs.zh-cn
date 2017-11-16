@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - adding external tools
 - Tools menu
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 21d1bab1ac1db414e761dbeba72f3f3db71408ef
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: abb0f69280d9a841ff8374d4e1792546acb4a453
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>在“工具”菜单中添加外部工具 (SQL Server Management Studio)
 可以从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 启动任何 [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows 或 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] 应用程序。 可以在“工具”菜单中添加和运行外部应用程序。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 06/22/2017
   
 6.  若要向“菜单内容”列表添加工具，请单击“添加”，再单击“确定”。  
   
-

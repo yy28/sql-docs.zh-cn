@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - joins [SQL Server], manual
 - joins [SQL Server], creating
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 57821cd36a4684de594df52b0722b7e043097b46
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: b73ed044ca4610040bfb31e6108ebd2b51a47c67
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手动联接表 (Visual Database Tools)
 向查询中添加两个或多个表时，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将尝试根据公共数据或数据库中存储的关于这些表如何相关的信息来联接这些表。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)。 但是，如果查询和视图设计器未自动联接这些表，或者您希望在这些表之间创建其他联接条件，则可手动联接这些表。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
-

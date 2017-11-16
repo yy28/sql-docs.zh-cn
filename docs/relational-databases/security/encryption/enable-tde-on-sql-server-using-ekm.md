@@ -5,8 +5,7 @@ ms.date: 04/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
+ms.openlocfilehash: 2185924293d02b3333f4dd76e1070455a8845470
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 1c1b00aae2e697e0c9de039d64db6875de15c5be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上启用 TDE
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中启用透明数据加密 (TDE)，以便通过结合使用存储在可扩展密钥管理 (EKM) 模块中的非对称密钥和 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来保护数据库加密密钥。  
@@ -165,4 +163,3 @@ ms.lasthandoff: 08/28/2017
  [借助 Azure SQL 数据库实现透明数据加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   
-

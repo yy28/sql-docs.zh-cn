@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3107bcd2f7490c9583c0c8e9355ecc9ff9e20bd7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1d78b8bd802b407d6bc4dc75a63ed06a9e00c7ab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
   复制日志读取器代理是一个可执行文件，用于监视为事务复制配置的每个数据库的事务日志，以及将标记为进行复制的事务从事务日志复制到分发数据库中。  
@@ -123,7 +122,7 @@ logread [-?]
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将日志读取器代理标记为可疑。 默认值为 300 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 登录超时前等待的秒数。 默认值为 15 秒。  
+ 登录超时前等待的秒数。默认值为 15 秒。  
   
  **-LogScanThreshold** *scan_threshold*  
  仅限内部使用。  
@@ -177,7 +176,7 @@ logread [-?]
  发布服务器密码。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
- 查询超时前等待的秒数。 默认值为 1800 秒。  
+ 查询超时前等待的秒数。默认值为 1800 秒。  
   
  **-ReadBatchSize** *number_of_transactions*  
  每个处理周期从发布数据库的事务日志中读取的最大事务数目，默认值为 500。 代理不断读取批次中的事务，直到从该日志中读取所有事务为止。 Oracle 发布服务器不支持该参数。  

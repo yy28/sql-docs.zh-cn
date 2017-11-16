@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 037db169bd49c589ca039546dcf13d322e1f1a41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 66334fc6134a84c8d9a8e707f48e14f32a0034d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-trace"></a>SQL 跟踪
   在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
@@ -91,7 +90,7 @@ ms.lasthandoff: 06/22/2017
 |**错误**|31|给定事件的错误号。 通常是 **sysmessages**中存储的错误号。|  
 |**EventClass***|27|捕获的事件类的类型。|  
 |**EventSequence**|51|此事件的序列号。|  
-|**EventSubClass***|21|事件子类的类型，提供有关每个事件类的详细信息。 例如， **Execution Warning** 事件类的事件子类值代表执行警告的类型：<br /><br /> **1** = 查询等候。 查询执行之前必须等待资源；例如，内存。<br /><br /> **2** = 查询超时。 查询等待执行所需资源时超时。 所有事件类都不填充此数据列。|  
+|**EventSubClass***|21|事件子类的类型，提供有关每个事件类的详细信息。 例如， **Execution Warning** 事件类的事件子类值代表执行警告的类型：<br /><br /> **1** = 查询等候。 查询执行之前必须等待资源；例如，内存。<br /><br /> **2** = 查询超时。查询等待执行所需资源时超时。 所有事件类都不填充此数据列。|  
 |**GUID**|54|依赖于跟踪中指定的事件类的 GUID 值。|  
 |**FileName**|36|所修改的文件的逻辑名称。|  
 |**Handle**|33|一个整数，ODBC、OLE DB 或 DB-Library 使用它来协调服务器的执行情况。|  

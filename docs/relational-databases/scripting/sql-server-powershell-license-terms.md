@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>SQL Server PowerShell 许可条款
 **MICROSOFT 软件许可条款**
@@ -108,4 +106,3 @@ ms.lasthandoff: 06/22/2017
     - 在适用法律允许的范围内，因违约、违反担保、保证或条件、严格责任、过失或其他侵权行为引起的索赔。
 
     即使 Microsoft 知道或应该知道出现损害的可能性，该限制也同样适用。 由于您所在国家/地区可能不允许排除或限制附带的、后果性的或其他损害赔偿责任，上述限制和排除可能不适用于您。
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: a823730915fb185a1978a4c49924c3bbabe4d86b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
@@ -113,7 +112,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此实例向数据库添加由两个文件组成的文件组。 此示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ，然后将两个 5MB 的文件添加到该文件组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此实例向数据库添加由两个文件组成的文件组。 此示例在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5MB 的文件添加到该文件组。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

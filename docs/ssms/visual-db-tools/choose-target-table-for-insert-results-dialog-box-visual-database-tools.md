@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ca30f09731a84855aeb7d2857d13f6a6a06cf886
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ad966d13867ed658a9c264cece4a0346b35184e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>“选择插入结果的目标表”对话框 (Visual Database Tools)
 使用此对话框可以指定作为“插入结果”查询结果的数据行要添加到其中的表。 当您启动“插入结果”查询时，将显示此对话框。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [创建“插入结果”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
   
-

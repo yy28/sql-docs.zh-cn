@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 01e16ed7ef2a64f4a04af9d683247d09c8942fe2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drop-xml-indexes"></a>删除 XML 索引
   [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可用于删除现有的主（或辅助）XML 索引和非 XML 索引。 但是，任何 DROP INDEX 选项都不会应用于 XML 索引。 如果删除主 XML 索引，则会删除任何现有的辅助索引。  
@@ -105,4 +103,3 @@ AND    si.object_id=object_id('T')
  [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
-

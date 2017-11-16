@@ -5,30 +5,28 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Resource Governor, templates
+helpviewer_keywords: Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37a30ac49e0b7af05e0c7fb8e2ac1a32824186f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bb31cc4264a29160ce392d2056ff6f01918c2742
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的模板配置资源调控器。  
   
--   **Before you begin:**  [Permissions](#Permissions)  
+-   **开始之前：**  [权限](#Permissions)  
   
--   **To create a workload group, using:**  [a template](#ConfRGTemplate)  
+-   **若要创建工作负荷组，使用：**  [模板](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  使用下列步骤可打开和修改创建资源池和资源池的工作负荷组的模板。 此外，该模板还可以创建分类器用户定义函数，以将新的连接传送到默认组或用户创建的工作负荷组。  

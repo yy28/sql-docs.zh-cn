@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - wizard [DAC], delete
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a6c69a8bbd4fa63a427658ddc7b8fdbd79b0af3b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 334e2674b9ccb720af74435d521c350984063f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
@@ -245,4 +244,3 @@ $dacName  = "MyApplication"
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
-

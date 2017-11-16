@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-views
+ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - views [SQL Server], renaming
 - renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1ca02551cedc64db57c833f57b428c715bf83fb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rename-views"></a>重命名视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名视图。  
@@ -78,4 +76,3 @@ ms.lasthandoff: 06/22/2017
  确保引用视图的旧名称的所有对象、脚本和应用程序现在都使用新名称。  
   
   
-

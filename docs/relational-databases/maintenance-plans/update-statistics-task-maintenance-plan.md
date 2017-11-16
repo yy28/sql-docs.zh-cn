@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.statistics.f1
-helpviewer_keywords:
-- Updates Statistics Task dialog box
+f1_keywords: sql13.swb.maint.statistics.f1
+helpviewer_keywords: Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 774fe7654f9a67ae7e149b80b05e047ac958c10b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f8f8e5ff41a47d8c0b09e570f69e0d8a3532c3c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>“更新统计信息”任务（维护计划）
   使用 **“‘更新统计信息’任务”** 对话框可以更新与表和索引中的数据有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 此任务实现对数据库中的用户表创建的每个索引的分发统计信息进行重新抽样。 分发统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，以便在处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句期间优化在各表之间的导航。 为了自动生成分布统计信息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期从每个索引所对应的表中抽样数据。 此样本的大小取决于表中的行数和数据修改的频率。 使用此选项可以利用表中指定的数据百分比执行另一次抽样。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此信息来创建更好的查询计划。  
@@ -118,4 +114,3 @@ ms.lasthandoff: 06/22/2017
  [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   
-

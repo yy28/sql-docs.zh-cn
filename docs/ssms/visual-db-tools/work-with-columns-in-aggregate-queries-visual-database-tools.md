@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed7d22169cafdc01fc129191bf2a0fffac4a8ec3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
 创建聚合查询时， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
@@ -75,4 +73,3 @@ ms.lasthandoff: 08/18/2017
 [汇总查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [对查询结果进行排序和分组 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Server Object GDR event class
+helpviewer_keywords: Audit Server Object GDR event class
 ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc3f7250a1a81bd87bf39c47f506711a95b56d9f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b3958fa43152d2d9e75cbb095df992b1841c31ca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR 事件类
   只要 Microsoft SQL Server 中的任何用户针对服务器对象权限发出 GRANT、REVOKE 或 DENY， **Audit Server Object GDR** 事件类就会出现。  

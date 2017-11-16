@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 81bbc3925d2330f7578e31854d8024377ae1fac8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bae6798ce7212ece23767ab31884c1ccabb568fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>查看日志传送报告 (SQL Server Management Studio)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看事务日志传送状态报告。 您可以在监视服务器、主服务器或辅助服务器中运行状态报告。 若要查看有关日志传送配置的最完整的信息，请在监视服务器实例上查看此报告。  
@@ -56,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [监视日志传送 (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   
-

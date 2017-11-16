@@ -1,5 +1,5 @@
 ---
-title: "查看和浏览本机模式报表使用的 SharePoint Web 部件 (SSRS) |Microsoft 文档"
+title: "使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0db727d8356811f6db1544d6abc4c8fbe385bbe3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
 
 > [!IMPORTANT]  
->  SQL Server Reporting Services 不再支持在从本机模式报表服务器的 SharePoint 站点上使用本机模式 (RSWebParts.cab) 以访问报表服务器内容的 web 部件。 而是使用 [SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) 。  
+>  SQL Server Reporting Services 不再支持从本机模式报表服务器上使用本机模式 (RSWebParts.cab) Web 部件访问 SharePoint 站点上的报表服务器内容。 而是使用 [SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) 。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了多个 Web 部件，可用于特定版本的报表服务器，特别是部署模式。  
   
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 -   **SharePoint 模式：** 如果希望访问在 SharePoint 模式下运行的报表服务器，请使用用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件。 有关外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 > [!NOTE]  
->  用于本机模式的报表查看器 Web 部件 (SPViewer.dwp) 是一种与用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件 (ReportViewer.dwp) 不同的 Web 部件。 这两种 Web 部件具有不同的架构和实现方式，但它们可以一起安装在同一个 SharePoint 场中。 可以通过以下特征直观地区分这两种 Web 部件：通过外接程序安装的报表查看器 Web 部件在工具栏上有一个“操作”菜单。  
+>  用于本机模式的报表查看器 Web 部件 (SPViewer.dwp) 是一种与用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件 (ReportViewer.dwp) 不同的 Web 部件。 这两种 Web 部件具有不同的架构和实现方式，但它们可以一起安装在同一个 SharePoint 场中。 可以通过以下特征直观地区分这两种 Web 部件：通过加载项安装的报表查看器 Web 部件在工具栏上有一个“操作”菜单。  
   
  有关报表服务器模式的详细信息，请参阅 [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 -   支持的 SharePoint 产品和技术版本包括：  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007。  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
   
@@ -143,13 +141,13 @@ ms.lasthandoff: 08/09/2017
 4.  选择 **“报表查看器”**。  
   
     > [!WARNING]  
-    >  不要选择“SQL Server Reporting Services 报表查看器”。在安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序时注册该 Web 部件，并且用于在 SharePoint 模式下运行报表服务器。 它不能用于查看在本机模式下运行的报表服务器上的报表。  
+    >  不要选择“SQL Server Reporting Services 报表查看器”。安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加载项时会注册该 Web 部件，此部件用于在 SharePoint 模式下运行报表服务器。 它不能用于查看在本机模式下运行的报表服务器上的报表。  
   
 5.  单击 **“添加”**。  
   
 6.  当页面处于编辑模式时，在报表查看器 Web 部件中单击 **“编辑 Web 部件”** 。  
   
-7.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法： **http://\<服务器名 > / 报表**。  
+7.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法：http://\<servername>/reports。  
   
 8.  在 **“报表路径”**中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
   
@@ -175,5 +173,4 @@ ms.lasthandoff: 08/09/2017
   
     3.  单击 **“报表查看器”**。  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

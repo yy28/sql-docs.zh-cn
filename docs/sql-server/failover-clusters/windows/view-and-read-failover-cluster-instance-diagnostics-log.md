@@ -5,31 +5,29 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 71fdb740e3951004e32d85708e89de956844a4d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
   将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
 -   **开始之前：**  [建议](#Recommendations)、 [安全性](#Security)  
   
--   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **若要查看诊断日志，请使用：**  [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
   
--   **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)  
+-   **若要配置诊断日志设置，请使用：** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -139,4 +137,3 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
  [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   
-

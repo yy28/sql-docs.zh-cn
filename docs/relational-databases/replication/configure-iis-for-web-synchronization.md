@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
@@ -366,4 +364,3 @@ ms.lasthandoff: 06/22/2017
  [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4604a9d4da9360607e31d31b3f160bc0bff2eac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 44b5b7f84c10f52ea9ab535f46a31d2008401203
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](../../relational-databases/databases/move-user-databases.md)。  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 09/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 44f3402f2ba874e741c3d191a96535e8204ec368
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: b38f5585ffa79fbfa5ba702d4fdc8acee9924c7c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
 使用包含扩展/DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用 Unicode 字符格式。 从服务器导出数据时，Unicode 字符数据格式允许使用与执行该操作的客户端不同的代码页。 在这种情况下，使用 Unicode 字符格式有下列优点：  
@@ -248,4 +246,3 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-

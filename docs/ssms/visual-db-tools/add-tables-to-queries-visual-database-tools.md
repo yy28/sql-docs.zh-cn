@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - adding tables
 - queries [SQL Server], tables
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ffa0dc48650d116f76df704ceae1d10f96b2b5be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 13a295918558358f9da9ebad8bef80d5315101d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>向查询中添加表 (Visual Database Tools)
 创建查询时，实际是在从表或其他表结构对象（视图和某些用户定义的函数）中检索数据。 若要在查询中使用这些对象中的任何对象，可将其添加到“关系图”窗格中。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 08/18/2017
 [汇总查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-
