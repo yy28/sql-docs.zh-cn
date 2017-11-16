@@ -2,26 +2,33 @@
 title: MSSQLSERVER_847 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 847 (Database Engine error)
+helpviewer_keywords:
+- 847 (Database Engine error)
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 4fe5400f1a997865f7431e4a6c2e0ca3e2fa0b24
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 16faf8a17c540e25650ce35b298895dc5704e45f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
   
@@ -67,3 +74,4 @@ ms.lasthandoff: 11/09/2017
   
 -   确保将 FILEGROWTH 选项设置为足够大的增量，以便减少文件增长的频率。 制定一个检查数据库中可用空间的作业计划，然后在非高峰时间内增加数据库大小。  
   
+

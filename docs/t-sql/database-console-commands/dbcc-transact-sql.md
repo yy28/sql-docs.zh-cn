@@ -1,7 +1,7 @@
 ---
 title: "DBCC (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程语言提供 DBCC 语句以作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据库控制台命令。
   

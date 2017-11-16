@@ -2,26 +2,31 @@
 title: "内存中 OLTP 不支持的 Transact-SQL 构造 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 986ad79967b8b8f4a83e11c271cf350033409f0d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   内存优化表、本机编译的存储过程和用户定义函数不支持由基于磁盘的表、解释 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和用户定义函数所支持的完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外围应用。 尝试使用某个不支持的功能时，服务器返回错误。  
   
@@ -69,7 +74,7 @@ ms.lasthandoff: 11/09/2017
 |运算|更新主键列|无法更新内存优化的表和表类型中的主键列。 如果需要更新主键，请删除旧的行并插入包含更新的主键的新行。|  
 |运算|CREATE INDEX|必须使用 **CREATE TABLE** 语句或 **ALTER TABLE** 语句以内联方式指定内存优化表的索引。|  
 |运算|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
-|运算|架构更改|内存优化表和本机编译存储过程不支持架构更改，例如， **sp_rename**。<br /><br /> 尝试更改某些架构将生成错误 12320。 内存优化表不支持要求对架构版本进行更改的操作，例如重命名。<br /><br /> 允许使用 ALTER TABLE 和 ALTER PROCEDURE 对架构进行某些更改。<br/><br/>**适用于：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>支持以 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 开头的 sp_rename。| 
+|运算|架构更改|内存优化表和本机编译存储过程不支持架构更改，例如， **sp_rename**。<br /><br /> 尝试更改某些架构将生成错误 12320。 内存优化表不支持要求对架构版本进行更改的操作，例如重命名。<br /><br /> 允许使用 ALTER TABLE 和 ALTER PROCEDURE 对架构进行某些更改。<br/><br/>**适用于：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>从 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 开始支持 sp_rename。| 
 |运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table 删除所有行，或删除并重新创建该表。|  
 |运算|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |运算|ALTER SCHEMA|在架构之间传输安全对象。|  
@@ -191,3 +196,4 @@ ms.lasthandoff: 11/09/2017
  [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

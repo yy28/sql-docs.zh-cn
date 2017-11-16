@@ -1,7 +1,7 @@
 ---
 title: "DBCC SHRINKFILE (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 收缩当前数据库的指定数据或日志文件的大小，或通过将数据从指定的文件移动到相同文件组中的其他文件来清空文件，以允许从数据库中删除该文件。 文件大小可以收缩到比创建该文件时所指定的大小更小。 这样会将最小文件大小重置为新值。
   

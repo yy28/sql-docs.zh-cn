@@ -3,28 +3,33 @@ title: "线程和任务体系结构指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f2ded3d40a1f17980507fdf92d05e3517f0bc54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 线程是操作系统功能，允许将应用程序逻辑分到几个并发的执行路径中。 当复杂应用程序包含可同时执行的多个任务时，此功能非常有用。 
 
@@ -128,5 +133,6 @@ SQL Server 不会在添加 CPU 后自动开始使用它们。 这可以防止 SQ
 |SQL Server 代理   |Sqlagent.exe   |“否” |  
 |SQL Server Management Studio   |Ssms.exe   |“否” |  
 |SQL Server 安装程序   |Setup.exe  |“否” |  
+
 
 

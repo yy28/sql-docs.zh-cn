@@ -3,28 +3,33 @@ title: "页和区体系结构指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc9b8e32bc6848547b8833841876b74ca25cc27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/20/2017
+
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 页是 SQL Server 中数据存储的基本单位。 区是由八个物理上连续的页构成的集合。 区有助于有效管理页。 本指南介绍用于管理所有版本的 SQL Server 中的页和区的数据结构。 要设计和开发高效执行的数据库，了解页和区的体系结构是很重要的。
 
@@ -164,3 +169,4 @@ DCM 页和 BCM 页的间隔与 GAM 和 SGAM 页的间隔相同，都是 64,000 �
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

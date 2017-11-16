@@ -1,27 +1,32 @@
 ---
 title: "更改内存优化表 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb499975e6429ac0a54f60cbfca6e72b0290f946
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   可以使用 ALTER TABLE 语句来更改内存优化表的架构和索引。 在 SQL Server 2016 和 Azure SQL 数据库中，对内存优化表的 ALTER TABLE 操作属于 OFFLINE，表示操作正在进行时，表格不能用于查询。 数据库应用程序可以继续运行，并且访问该表的任何操作都将被阻止，直到更改过程完成。 可以将多个 ADD、DROP 或 ALTER 操作合并为单个 ALTER TABLE 语句。
   
@@ -172,4 +177,5 @@ GO
 
 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
 

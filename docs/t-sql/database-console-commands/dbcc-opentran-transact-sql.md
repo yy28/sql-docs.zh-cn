@@ -1,7 +1,7 @@
 ---
 title: "DBCC OPENTRAN (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN 可帮助识别可能阻止日志截断的活动事务。 如果在指定数据库的事务日志中存在最早的活动事务以及最早的分布式和非分布式复制事务，DBCC OPENTRAN 将显示与之相关的信息。 仅当日志中存在活动事务或数据库包含复制信息时，才显示结果。 如果日志中没有活动事务，则显示信息性消息。
   

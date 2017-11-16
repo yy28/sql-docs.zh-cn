@@ -1,7 +1,7 @@
 ---
 title: "DBCC UPDATEUSAGE (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 报告目录视图中的页数和行数错误并进行更正。 这些错误可能导致 sp_spaceused 系统存储过程返回不正确的空间使用报告。
   

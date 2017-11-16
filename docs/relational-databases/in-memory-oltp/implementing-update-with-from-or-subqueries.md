@@ -1,27 +1,32 @@
 ---
 title: "实现包含 FROM 或子查询的 UPDATE | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 337a85dddb52869d8ec54d13bb8231164b98f4e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>实现包含 FROM 或子查询的 UPDATE
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本机编译的 T-SQL 模块不支持 UPDATE 语句中的 FROM 子句和子查询（它们在 SELECT 中受支持）。 包含 FROM 子句的 UPDATE 语句通常用于基于表值参数 (TVP) 更新表格中的信息，或用于更新 AFTER 触发器的表格中的列。 
 
@@ -160,3 +165,4 @@ ms.lasthandoff: 11/09/2017
   
   
   
+

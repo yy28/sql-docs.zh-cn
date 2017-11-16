@@ -2,26 +2,31 @@
 title: "列存储索引 - 设计指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81a9002844d81421e7e82a7540ae6895364218d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/30/2017
+
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 有关设计列存储索引的概要建议。 做出少量明智的决策，就能帮助实现较高的数据压缩率和查询性能，列存储索引的目标就在于此。 
 
@@ -36,7 +41,7 @@ ms.lasthandoff: 11/09/2017
 - 查询主要执行的分析是否要扫描大范围的值？  列存储索引的设计目的是合理处理大范围扫描，而不是查找特定的值。
 - 工作负荷是否要执行大量的更新和删除操作？ 当数据稳定时，列存储索引可以正常工作。 查询应该更新和删除少于 10% 的行。
 - 是否拥有数据仓库的事实表和维度表？
-- 是否需要针对事务工作负荷执行分析？ 如果是，请参阅有关实时运营分析的列存储设计指南。
+- 是否需要针对事务工作负荷执行分析？ 如果是，请参阅有关实时运行分析的列存储设计指南。
 
 你可能不需要列存储索引。 包含堆或聚集索引的行存储表最适合用于查找数据、搜索特定值的查询，或者针对较小范围的值执行查询。 可对事务工作负载使用行存储索引，因为这些工作负载往往需要进行表查找而不是大范围表扫描。  
 
@@ -100,7 +105,7 @@ ms.lasthandoff: 11/09/2017
 
 若要添加更多的处理资源，可以针对可读的辅助副本运行分析。 使用可读的辅助副本可将事务工作负荷与分析工作负荷的处理分隔开来。 
 
-有关详细信息，请参阅[开始使用列存储索引进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
+有关详细信息，请参阅[开始使用列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
 有关选择最佳列存储索引的详细信息，请参阅 Sunil Agarwal 的博客 [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload)（哪种列存储索引适合我的工作负荷？）。
 
@@ -207,4 +212,5 @@ ms.lasthandoff: 11/09/2017
 
 
   
+
 

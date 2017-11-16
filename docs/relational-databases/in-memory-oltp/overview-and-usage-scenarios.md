@@ -2,26 +2,31 @@
 title: "概述和使用方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33804f220a760d2959f5e3feb1a629b07d1b0296
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 内存中 OLTP 是 SQL Server 和 Azure SQL 数据库中用于优化事务处理、数据引入、数据加载和瞬态数据方案性能的核心技术。 本主题概述了技术和内存中 OLTP 的使用方案。 使用该信息可确定内存中 OLTP 是否适合你的应用程序。 本主题末尾部分给出的示例介绍了内存中 OLTP 对象、性能演示引用以及资源引用，以供后续步骤使用。
 
@@ -233,3 +238,4 @@ ETL 工作流通常包括将数据加载到临时表、转换数据和将数据�
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [系统版本控制临时表与内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [内存中 OLTP – 常见工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。 
+

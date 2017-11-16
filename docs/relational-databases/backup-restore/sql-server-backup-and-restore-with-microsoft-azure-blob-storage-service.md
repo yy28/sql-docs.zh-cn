@@ -2,26 +2,31 @@
 title: "使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 531ce97e4da5b580139a6c0de557b3c99becc170
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![“备份到 Azure blob”图](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "“备份到 Azure blob”图")  
   
@@ -55,12 +60,12 @@ ms.lasthandoff: 11/09/2017
   
 -   成本优势：仅对使用的服务付费。 可以作为经济合算的站点外备份存档方案。 有关详细信息和链接，请参阅 [Microsoft Azure 计费注意事项](#Billing) 一节。  
   
-##  <a name="Billing"></a> Microsoft Azure 计费注意事项：  
+##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
  了解 Microsoft Azure 存储成本使你能够预测在 Microsoft Azure 中创建和存储备份的成本。  
   
  [Microsoft Azure 价格计算器](http://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  
   
- **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅 **定价详细信息** 文章中的[“数据管理”](http://go.microsoft.com/fwlink/?LinkId=277059) 一节。  
+ **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅[定价详细信息](http://go.microsoft.com/fwlink/?LinkId=277059)文章中的“数据管理”  一节。  
   
  **数据传输：** 传输到 Microsoft Azure 的入站数据是免费的。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](http://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
   
@@ -75,3 +80,4 @@ ms.lasthandoff: 11/09/2017
 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
+
