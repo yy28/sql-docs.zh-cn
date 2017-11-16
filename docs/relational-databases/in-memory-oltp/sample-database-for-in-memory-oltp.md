@@ -5,22 +5,20 @@ ms.date: 12/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e133c38f2944735282d8a8eca76dbab481538105
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
     
@@ -36,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
  此示例的文档的结构如下：  
   
--   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)   
+-   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)  
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> 先决条件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  若要查看示例脚本和工作负荷，请将文件 SQLServer2016CTP3Samples.zip 解压到本地文件夹。 有关运行工作负荷的说明，请查阅 In-Memory OLTP\readme.txt。  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> 示例表和过程的说明  
  示例基于 AdventureWorks 中的现有表为产品和销售订单创建新表。 新表的架构类似于现有表，不过有几个区别，如下所述。  
   
  新的内存优化表带有后缀“_inmem”。 示例还包括带有后缀“_ondisk”的对应表 – 这些表可以用于在系统上进行内存优化表与基于磁盘的表性能之间的一对一比较。  
@@ -150,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
 
   
@@ -433,7 +431,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  我们建议在每次演示运行之后重置。 因为此工作负荷仅涉及插入，所以每次运行将占用更多内存，因而需要重置来防止内存不足。 运行之后占用的内存量在 [运行工作负荷之后的内存利用率](#Memoryutilizationafterrunningtheworkload)一节中进行了讨论。  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
+###  <a name="Troubleshootingslow-runningtests"></a> 解决测试运行缓慢的问题  
  测试结果通常因硬件而异，也因测试运行中使用的并发级别而异。 结果与预期不符时要了解的几个方面有：  
   
 -   并发事务数：对单个线程运行工作负荷时，通过内存中 OLTP 获得的性能提升可能小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
@@ -449,7 +447,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 示例中的内存和磁盘空间利用率  
  下面我们讨论示例数据库的内存和磁盘空间利用率方面的情况。 我们还会介绍在有 16 个逻辑核心的测试服务器上看到的结果。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 内存优化表的内存利用率  
   
 #### <a name="overall-utilization-of-the-database"></a>数据库的总体利用率  
  以下查询可用于获取系统中内存中 OLTP 的总体内存利用率。  
@@ -502,7 +500,7 @@ WHERE t.type='U'
   
  此处比较显著的是为索引分配的内存大小（与表数据大小相比）。 这是因为示例中的哈希索引针对较大数据大小预设了大小。 请注意，哈希索引有固定大小，因而其大小不会随表中的数据大小而增大。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> 运行工作负荷之后的内存利用率  
  插入 1000 万个销售订单之后，总体内存利用率类似于下面这样：  
   
 ```  
@@ -775,5 +773,4 @@ ORDER BY state, file_type
  [内存中 OLTP（内存中优化）](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-
 

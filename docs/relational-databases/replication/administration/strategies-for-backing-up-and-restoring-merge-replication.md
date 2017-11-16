@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
   对于合并复制，请定期备份下列数据库：  
@@ -65,16 +64,16 @@ ms.lasthandoff: 06/22/2017
   
  如果要与运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 早期版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的订阅服务器同步，则订阅不可匿名；它必须是客户端订阅或服务器订阅（在早期版本中分别称为本地订阅和全局订阅）。  
   
- 若要同步订阅，请参阅 [同步推送订阅](../../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [同步请求订阅](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+ 若要同步订阅，请参阅 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 ### <a name="reinitializing-all-subscriptions"></a>重新初始化所有订阅  
  重新初始化所有订阅可确保所有订阅服务器都处于与已还原发布数据库一致的状态。 若要将完整的拓扑返回到给定发布数据库备份表示的先前状态，应使用此方法。 例如，如果作为从错误执行的批处理操作中还原的一种机制将发布数据库还原到某个较早的时间点，就可能需要重新初始化所有订阅。  
   
  如果选择此选项，请生成一个新的快照，用以在还原发布数据库后立即向重新初始化的订阅服务器传递。  
   
- 若要重新初始化订阅，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-a-subscription.md)。  
+ 若要重新初始化订阅，请参阅 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)。  
   
- 若要创建并应用快照，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 和 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+ 若要创建并应用快照，请参阅 [Create 和 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 和 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>备份和还原分发数据库  
  对于合并复制，应定期备份分发数据库，而且，只要所用备份的时间不超过使用分发服务器的所有发布的最短保持期，则无须考虑任何特殊事项即可还原分发数据库。 例如，如果三个发布的保持期分别为 10 天、20 天和 30 天，则用于还原数据库的备份的保持时间不应超过 10 天。 分发数据库在合并复制中的作用有限：它不存储更改跟踪中使用的任何数据，也不对将要转发到订阅数据库的合并复制更改提供临时存储（而事务复制中提供）。  
