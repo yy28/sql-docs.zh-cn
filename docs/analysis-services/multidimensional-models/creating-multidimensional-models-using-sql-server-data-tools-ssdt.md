@@ -2,9 +2,12 @@
 title: "创建多维模型使用 SQL Server Data Tools (SSDT) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: multidimensional-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
