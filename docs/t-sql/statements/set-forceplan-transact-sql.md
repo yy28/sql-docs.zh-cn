@@ -3,8 +3,11 @@ title: "集 FORCEPLAN (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   当 FORCEPLAN 设置为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器处理联接的顺序与表在查询的 FROM 子句中出现的顺序相同。 此外，在将 FORCEPLAN 设置为 ON 的情况下，如果不需要其他类型的联接来构造查询计划，或者使用联接提示或查询提示请求了其他联接类型，则会强制使用嵌套循环联接。  
   

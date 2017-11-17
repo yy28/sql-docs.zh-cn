@@ -1,11 +1,13 @@
 ---
 title: "OPENJSON (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -31,7 +33,7 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON**是用于分析 JSON 文本，并返回对象和属性 JSON 输入中的行和列作为表值函数。 换而言之， **OPENJSON**对 JSON 文档中提供的行集视图。 行集和用于填充列的 JSON 属性路径中，可以显式指定的列。 由于**OPENJSON**返回一组行，您可以使用**OPENJSON**中`FROM`子句[!INCLUDE[tsql](../../includes/tsql-md.md)]就像你可以使用任何其他表、 视图或表值函数的语句。  
   

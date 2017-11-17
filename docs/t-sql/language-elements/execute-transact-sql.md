@@ -3,8 +3,11 @@ title: "执行 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>执行的 TRANSACT-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 执行的命令字符串或字符字符串在[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或下列模块之一： 系统存储过程、 用户定义存储的过程、 CLR 存储过程、 标量值用户定义函数，或扩展存储的过程。 EXECUTE 语句可用于向链接服务器发送传递命令。 此外，还可以显式设置执行字符串或命令的上下文。 可以使用 WITH RESULT SETS 选项定义结果集的元数据。
   

@@ -3,8 +3,11 @@ title: "CUME_DIST (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 计算某个值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一组值内的累积分布。 也即，CUME_DIST 计算某指定值在一组值中的相对位置。 行*r*，那么升序排序的 CUME_DIST *r*低于或等于的值是具有值的行数*r*、 除以的行数计算分区或查询结果集。 CUME_DIST 类似于 PERCENT_RANK 函数。
   

@@ -3,8 +3,11 @@ title: "STNumCurves (geometry 数据类型) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此方法返回中的曲线数目**几何图形**实例的一维空间数据类型实例时。 一维空间数据类型包括**LineString**， **CircularString**，和**CompoundCurve**。 `STNumCurves`（） 仅适用于简单类型;它并不适用于**几何图形**集合喜欢**MultiLineString**。
   

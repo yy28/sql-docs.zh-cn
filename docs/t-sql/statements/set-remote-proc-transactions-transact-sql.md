@@ -3,8 +3,11 @@ title: "集 REMOTE_PROC_TRANSACTIONS (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定当本地事务处于活动状态时，如果执行远程存储过程，将启动由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务处理协调器 (MS DTC) 管理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务。  
   

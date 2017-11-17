@@ -3,8 +3,11 @@ title: "ALTER DATABASE SET HADR (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本主题包含设置的 ALTER DATABASE 语法[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]辅助数据库上的选项。 只有一个 SET HADR 选项允许每个 ALTER DATABASE 语句。 只有辅助副本支持这些选项。  
   

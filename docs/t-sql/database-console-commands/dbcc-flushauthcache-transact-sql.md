@@ -1,12 +1,13 @@
 ---
 title: "DBCC FLUSHAUTHCACHE (Transact SQL) |Microsoft 文档"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 清空数据库身份验证缓存包含登录名和防火墙规则中的当前用户数据库有关的信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 此语句不适用于的逻辑 master 数据库，因为 master 数据库包含登录名和防火墙规则有关的信息的物理存储。 执行该语句的用户和其他当前连接的用户保持连接状态。 (有关当前不支持 DBCC FLUSHAUTHCACHE [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。)
  

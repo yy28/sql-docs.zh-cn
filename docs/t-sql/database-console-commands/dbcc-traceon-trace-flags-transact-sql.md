@@ -3,8 +3,11 @@ title: "跟踪标志 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-跟踪标志 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 跟踪标志用于临时设置特定服务器的特征或关闭特定行为。 例如，如果启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个实例时设置了跟踪标志 3205，将禁用磁带机的硬件压缩。 跟踪标志经常用于诊断性能问题，或调试存储过程或复杂的计算机系统。
   

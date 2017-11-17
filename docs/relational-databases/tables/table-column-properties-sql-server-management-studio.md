@@ -2,10 +2,14 @@
 title: "表列属性 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,19 +17,20 @@ f1_keywords:
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eaf12a0ac440affa5fe6009431d7c90ce7f47c53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>表列属性 (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   这些属性显示在表设计器的底部窗格中。 除非另行说明，否则在选定列后可以在“属性”窗口中编辑这些属性。 **“列属性”** 可以按类别或字母顺序显示。 许多属性仅针对特定的数据类型显示或有所更改。  
   
@@ -140,3 +145,4 @@ ms.lasthandoff: 11/09/2017
 >  **(max)** 数据类型的长度对于每一行都会有所不同。 **sp_help** 返回 (-1) 作为 **(max)** 列的长度。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 -1 作为列大小。  
   
   
+

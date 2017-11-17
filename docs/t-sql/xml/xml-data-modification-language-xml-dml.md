@@ -3,8 +3,11 @@ title: "XML 数据修改语言 (XML DML) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML 数据修改语言 (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XML 数据修改语言 (XML DML) 是 XQuery 语言的扩展。 根据 W3C 的定义，XQuery 语言缺少数据操作 (DML) 部分。 在本主题中，以及 XQuery 语言中，引入 XML DML 提供完全正常运行的查询和数据修改语言，你可以使用针对**xml**数据类型。  
   

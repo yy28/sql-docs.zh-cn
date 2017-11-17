@@ -3,8 +3,11 @@ title: "创建过程 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -58,7 +61,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   创建[!INCLUDE[tsql](../../includes/tsql-md.md)]或公共语言运行时 (CLR) 存储中的过程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，Azure SQL 数据仓库和并行数据仓库。 存储过程与其他编程语言中的过程类似，这是因为存储过程可以：  
   

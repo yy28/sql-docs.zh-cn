@@ -3,8 +3,11 @@ title: "创建类型 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的当前数据库中创建别名数据类型或用户定义类型。 别名数据类型的实现基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机系统类型。 通过中的程序集的类实现的用户定义的类型[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR)。 若要绑定到其实现的用户定义的类型，包含该类型实现的 CLR 程序集必须首先注册中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)。  
   

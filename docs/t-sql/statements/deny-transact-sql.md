@@ -3,8 +3,11 @@ title: "拒绝 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 的优先于所有权限，但拒绝不适用于对象所有者或 sysadmin 固定的服务器角色的成员。
   **安全说明**Sysadmin 固定服务器角色和对象所有者不能拒绝权限。"

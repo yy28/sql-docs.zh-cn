@@ -3,8 +3,11 @@ title: "GRANT 数据库主体权限 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 

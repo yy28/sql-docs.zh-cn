@@ -3,8 +3,11 @@ title: "创建外部文件格式 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-file-format-transact-sql"></a>创建外部文件格式 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   创建存储在 Hadoop、 Azure blob 存储或 Azure 数据湖存储的外部数据的 PolyBase 外部文件格式定义。 创建外部文件格式是用于创建 PolyBase 外部表的先决条件。 通过创建外部文件格式，你可以指定所引用的外部表数据的实际布局。  
   

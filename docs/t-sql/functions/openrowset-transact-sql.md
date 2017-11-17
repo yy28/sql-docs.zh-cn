@@ -3,8 +3,11 @@ title: "OPENROWSET (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含访问 OLE DB 数据源中的远程数据所需的所有连接信息。 当访问链接服务器中的表时，这种方法是一种替代方法，并且是一种使用 OLE DB 连接并访问远程数据的一次性的临时方法。 对于较频繁引用 OLE DB 数据源的情况，请改为使用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。 `OPENROWSET`可以查询的 FROM 子句中引用函数，就像它是表名称。 `OPENROWSET`函数也可以引用的目标表作为`INSERT`， `UPDATE`，或`DELETE`语句，受制于 OLE DB 访问接口的功能。 虽然查询可能返回多个结果集，`OPENROWSET`返回只有第一个。  
   

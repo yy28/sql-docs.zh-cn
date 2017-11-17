@@ -3,8 +3,11 @@ title: "（除等于）(Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="divide-equals-transact-sql"></a>（除等于）(Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   将一个数除以另一个数并将值设置为运算的结果。 例如，如果变量@x然后等于 34，`@x /= 2`采用的原始值@x、 除以 2 并将设置@x为该新值 (17)。  
   

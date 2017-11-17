@@ -3,8 +3,11 @@ title: "DBCC FREESYSTEMCACHE (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 从所有缓存中释放所有未使用的缓存条目。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会事先在后台清理未使用的缓存条目，以使内存可用于当前条目。 但是，可以使用此命令从所有缓存中或者从指定的资源调控器池缓存中手动删除未使用的条目。
   

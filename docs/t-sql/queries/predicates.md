@@ -3,8 +3,11 @@ title: "谓词 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="predicates"></a>谓词
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   取值为 TRUE、FALSE 或 UNKNOWN 的表达式。 谓词使用的搜索条件中[其中](../../t-sql/queries/where-transact-sql.md)子句和[HAVING](../../t-sql/queries/select-having-transact-sql.md)子句、 的联接条件[FROM](../../t-sql/queries/from-transact-sql.md)子句，并且其中一个布尔值是其他构造必填。  
   

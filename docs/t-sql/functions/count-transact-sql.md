@@ -3,8 +3,11 @@ title: "计数 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 返回组中的项数。 计数工作方式类似于[COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)函数。 两个函数唯一的差别是它们的返回值。 COUNT 始终返回**int**数据类型值。 始终返回 COUNT_BIG **bigint**数据类型值。
   

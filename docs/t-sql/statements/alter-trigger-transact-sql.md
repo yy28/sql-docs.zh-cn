@@ -1,11 +1,13 @@
 ---
 title: "ALTER TRIGGER (TRANSACT-SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   修改 CREATE TRIGGER 语句以前创建的 DML、DDL 或登录触发器的定义。 触发器是通过使用 CREATE TRIGGER 创建的。 它们可直接从创建[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或从方法中创建的程序集[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 并上载到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 ALTER TRIGGER 语句中使用的参数的详细信息，请参阅[CREATE TRIGGER &#40;Transact SQL &#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   

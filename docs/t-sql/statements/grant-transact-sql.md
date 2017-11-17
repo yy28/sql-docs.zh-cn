@@ -3,8 +3,11 @@ title: "GRANT (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为主体授予安全对象的权限。  常规的概念是授予\<某些权限 > ON\<某个对象 > 收件人\<某些用户、 登录名或组 >。 有关权限的一般讨论，请参阅[权限 &#40; 数据库引擎 &#41;](../../relational-databases/security/permissions-database-engine.md)。  
   

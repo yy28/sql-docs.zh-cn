@@ -3,8 +3,11 @@ title: "创建数据库 （并行数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-database-parallel-data-warehouse"></a>创建数据库 （并行数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   创建一个新数据库上[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 若要创建与设备数据库相关联的所有文件，并设置最大大小和数据库表和事务日志的自动增长选项，请使用此语句。  
   

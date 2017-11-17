@@ -3,8 +3,11 @@ title: "其他 (IF...其他） (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行条件。 [!INCLUDE[tsql](../../includes/tsql-md.md)]语句 (*sql_statement*) 以下*Boolean_expression*如果执行*Boolean_expression*计算结果为 TRUE。 可选的 ELSE 关键字是一个备选[!INCLUDE[tsql](../../includes/tsql-md.md)]语句时执行*Boolean_expression*计算结果为 FALSE 或 NULL。  
   

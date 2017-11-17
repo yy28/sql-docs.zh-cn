@@ -1,11 +1,13 @@
 ---
 title: "从 (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 DELETE、SELECT 和 UPDATE 语句中使用的表、视图、派生表和联接表。 在 SELECT 语句中，FROM 子句是必需的，除非选择列表只包含常量、变量和算术表达式（没有列名）。  
   

@@ -3,8 +3,11 @@ title: "表值构造函数 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>表值构造函数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定要构建到某一表中的一组行值表达式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数允许在单个 DML 语句中指定多行数据。 可以在 VALUES 子句中使用 INSERT 语句中指定表值构造函数\<源表 > 子句的 MERGE 语句中，和的派生表中的 FROM 子句中的定义中。  
   

@@ -3,8 +3,11 @@ title: "ALTER ASSEMBLY (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 刷新一次到的最新副本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]保存其实现和添加或删除与之关联的文件的模块。 程序集通过使用创建[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)。  
 

@@ -1,11 +1,13 @@
 ---
 title: "创建列主密钥 (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在数据库中创建列主密钥元数据对象。 表示一个密钥，列主密钥元数据条目存储在外部存储，用于保护 （加密） 列加密密钥时使用[始终加密 &#40; 数据库引擎 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 密钥轮换; 的允许多个列主密钥定期更改密钥以增强安全性。 你可以通过对象资源管理器中创建的密钥存储和数据库中其相应的元数据对象中列主密匙[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell。 有关详细信息，请参阅[密钥管理概述 Always encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   

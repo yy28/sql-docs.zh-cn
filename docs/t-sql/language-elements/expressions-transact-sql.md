@@ -3,8 +3,11 @@ title: "表达式 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   符号和运算符的一种组合，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将处理该组合以获得单个数据值。 简单表达式可以是一个常量、变量、列或标量函数。 可以用运算符将两个或更多的简单表达式联接起来组成复杂表达式。  
   

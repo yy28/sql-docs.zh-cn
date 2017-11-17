@@ -3,8 +3,11 @@ title: "TRANSACT-SQL 参考 （数据库引擎） |Microsoft 文档"
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 引用（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 本主题提供有关如何查找和使用 Microsoft TRANSACT-SQL (T-SQL) 参考主题的基础知识。 T-SQL 的是使用 Microsoft SQL 产品和服务的核心。 所有工具和应用程序与 SQL 数据库通信都做到这一点发送 T-SQL 命令。  
 

@@ -3,8 +3,11 @@ title: "写入 （数据库引擎） |Microsoft 文档"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="write-database-engine"></a>Write（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 编写出的二进制表示形式写入**SqlHierarchyId**到传入的**BinaryWriter**。 不能通过使用调用写入[!INCLUDE[tsql](../../includes/tsql-md.md)]。 请改为使用 CAST 或 CONVERT。
   

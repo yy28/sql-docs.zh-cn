@@ -3,8 +3,11 @@ title: "联接提示 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---join"></a>提示 (TRANSACT-SQL)-加入
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   联接提示用于指定查询优化器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的两个表之间强制执行联接策略。 有关联接和联接语法的常规信息，请参阅[FROM &#40;Transact SQL &#41;](../../t-sql/queries/from-transact-sql.md).  
   

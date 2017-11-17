@@ -3,8 +3,11 @@ title: "KILL (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -46,7 +49,7 @@ ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   终止基于会话 ID 或工作单元 (UOW) 的用户进程。 如果指定的会话 ID 或 UOW 具有极大的工作撤消，KILL 语句可能需要一些时间才能完成，特别是在涉及回滚长事务。  
   
