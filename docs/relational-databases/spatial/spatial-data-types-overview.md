@@ -3,9 +3,13 @@ title: "空间数据类型概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +18,20 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36d70ddc89e96b1b07804d429e08722370092806
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2163fd7b37b211d9cf272fda03781d831ad43da0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
-
-  [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
  -  有两种类型的空间数据。 **geometry** 数据类型支持平面或欧几里得（平面球）数据。 **geometry** 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。  
  -  
@@ -220,3 +224,4 @@ ms.lasthandoff: 11/09/2017
  -- [STNumCurves（geography 数据类型）](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
  -- [STGeomFromText（geometry 数据类型）](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
  -- [STGeomFromText（geography 数据类型）](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+

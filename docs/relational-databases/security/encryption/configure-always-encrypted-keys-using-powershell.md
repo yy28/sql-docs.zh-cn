@@ -2,26 +2,31 @@
 title: "使用 PowerShell 配置 Always Encrypted 密钥 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fd7e5c31b5a89795ba4f359641c53847031d504
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 0d112912b35e05e5e96ec43cf6bc5f7caee21bf4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 配置 Always Encrypted 密钥
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
     
 本文提供使用 [SqlServer PowerShell 模块](../../../relational-databases/scripting/sql-server-powershell-provider.md)来预配 Always Encrypted 密钥的步骤。 你可在 [使用或不使用角色分隔的情况下](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#KeyManagementRoles)使用 PowerShell 预配 Always Encrypted 密钥，控制可访问密钥存储中实际加密密钥的人员和可访问该数据库的人员。 
@@ -289,4 +294,5 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 - [始终加密（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [始终加密（客户端开发）](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Always Encrypted 博客](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
 
