@@ -3,8 +3,11 @@ title: "分析 (geometry 数据类型) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-geometry-data-type"></a>Parse（geometry 数据类型）
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返回**几何图形**开放地理空间联盟 (OGC) 熟知文本 (WKT) 表示形式的实例。 `Parse()`等效于[STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md)，出现异常，假定空间引用标识符 (SRID) 为 0 作为参数。 输入值可以根据需要包含 Z（标高）和 M（度量）值。
   

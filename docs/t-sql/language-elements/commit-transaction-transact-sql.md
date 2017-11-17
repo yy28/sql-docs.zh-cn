@@ -3,8 +3,11 @@ title: "提交事务 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   标志一个成功的隐性事务或显式事务的结束。 如果 @@TRANCOUNT为 1，所有的数据修改执行，因为事务的数据库的永久部分开始释放由事务和 @ 递减持有的资源的 COMMIT TRANSACTION 使@TRANCOUNT为 0。 如果 @@TRANCOUNT大于 1，COMMIT TRANSACTION 递减 @@TRANCOUNT只能由 1 和事务将保持活动状态。  
   

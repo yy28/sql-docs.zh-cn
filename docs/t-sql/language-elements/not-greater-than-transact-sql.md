@@ -3,8 +3,11 @@ title: "!&gt;（不大于）(Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;（不大于）(Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   比较两个表达式（比较运算符）。 当比较非空表达式时，如果左侧操作数的值不大于右侧的操作数，则结果为 TRUE；否则结果为 FALSE。 与 =（等于）比较运算符不同，使用 !> 比较两个 NULL 值的结果不依赖于 ANSI_NULLS 设置。  
   

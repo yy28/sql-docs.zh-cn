@@ -3,8 +3,11 @@ title: "创建函数 （SQL 数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>创建函数 （SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中创建用户定义函数。 用户定义函数是[!INCLUDE[tsql](../../includes/tsql-md.md)]接受参数，例程执行的操作，例如复杂计算，并返回一个值作为该操作的结果。 返回值必须是标量 （单个） 值。 使用此语句可以创建可通过以下方式使用的重复使用的例程：  
   

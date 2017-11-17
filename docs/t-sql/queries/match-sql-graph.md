@@ -2,9 +2,12 @@
 title: "匹配 （SQL 图形） |Microsoft 文档"
 ms.custom: 
 ms.date: 05/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,9 +33,8 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="match-transact-sql"></a>匹配 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   指定关系图的搜索条件。 只能与图形节点和边缘表，请在 SELECT 语句作为 WHERE 子句的一部分，可以使用匹配。 
   

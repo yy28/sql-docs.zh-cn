@@ -3,8 +3,11 @@ title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回表示会话的当前事务上下文的标记。 应用程序使用令牌将 FILESTREAM 文件系统流式处理操作绑定到该事务。 有关 FILESTREAM 主题的列表，请参阅[二进制大型对象 &#40;Blob &#41;数据 &#40;SQL server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   

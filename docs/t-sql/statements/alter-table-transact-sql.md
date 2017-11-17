@@ -1,11 +1,13 @@
 ---
 title: "ALTER TABLE (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -72,7 +74,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   通过更改、添加或删除列和约束，重新分配和重新生成分区，或者启用或禁用约束和触发器，可以修改表的定义。  
   

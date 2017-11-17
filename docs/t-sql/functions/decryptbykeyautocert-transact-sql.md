@@ -3,8 +3,11 @@ title: "DECRYPTBYKEYAUTOCERT (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,14 +32,14 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/01/2017
 
 ---
-# DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用通过证书自动解密的对称密钥进行解密。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -46,7 +49,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *cert_ID*  
  用于保护对称密钥的证书的 ID。 *cert_ID*是**int**。  
   
@@ -71,16 +74,16 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
  @authenticator  
  包含用于生成验证器的数据的变量。 必须与提供给 EncryptByKey 的值相匹配。  
   
-## 返回类型  
+## <a name="return-types"></a>返回类型  
  **varbinary** 8000 个字节的最大大小。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  DecryptByKeyAutoCert 组合了 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 在单个操作中，它可以解密对称密钥，并使用该密钥解密密码文本。  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  需要对对称密钥拥有 VIEW DEFINITION 权限以及对证书拥有 CONTROL 权限。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下例显示如何用 `DecryptByKeyAutoCert` 来简化执行解密的代码。 应在还没有数据库主密钥的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库上运行此代码。  
   
 ```  
@@ -130,7 +133,7 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   

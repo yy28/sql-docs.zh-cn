@@ -3,8 +3,11 @@ title: "RESTORE VERIFYONLY (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>还原语句的 VERIFYONLY (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   验证备份但不还原备份，检查备份集是否完整以及整个备份是否可读。 但是，RESTORE VERIFYONLY 不尝试验证备份卷中的数据结构。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RESTORE VERIFYONLY 已得到增强，以执行其他检查数据，以增加检测错误的概率。 其目标是尽可能接近实际的还原操作。 有关详细信息，请参阅“备注”部分。  
   

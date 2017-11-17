@@ -3,8 +3,11 @@ title: "表提示 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL) 的表
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   通过指定锁定方法、一个或多个索引、查询处理操作（如表扫描或索引查找）或其他选项，表提示在数据操作语言 (DML) 语句执行期间覆盖查询优化器的默认行为。 表提示在 DML 语句的 FROM 子句中指定，仅影响在该子句中引用的表或视图。  
   

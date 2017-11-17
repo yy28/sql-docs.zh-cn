@@ -3,8 +3,11 @@ title: "table (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 一种特殊的数据类型，可用于存储结果集以进行后续处理。 **表**主要用于临时存储的一组作为表值函数的结果集返回的行。 声明函数和变量的类型为**表**。 **表**变量可在函数、 存储的过程和批处理。 若要声明类型的变量**表**，使用[DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   

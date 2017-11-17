@@ -3,8 +3,11 @@ title: "NULLIF (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   如果两个指定的表达式相等，则返回空值。 例如， `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` （4 和 4） 的第一列返回 NULL，因为两个输入的值都是相同。 因为两个输入的值不同，第二列将返回第一个值 (5)。 
   

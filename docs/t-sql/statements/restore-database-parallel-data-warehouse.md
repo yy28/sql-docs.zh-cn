@@ -3,8 +3,11 @@ title: "还原数据库 （并行数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>还原数据库 （并行数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   还原[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]从数据库备份到的用户数据库[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 从以前创建的备份中还原数据库[!INCLUDE[ssPDW](../../includes/sspdw-md.md)][备份数据库 &#40;并行数据仓库 &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)命令。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移到另一个。  
   

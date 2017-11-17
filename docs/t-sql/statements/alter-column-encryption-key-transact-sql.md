@@ -1,11 +1,13 @@
 ---
 title: "更改列加密密钥 (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   更改列加密密钥在数据库中，添加或删除加密的值。 CEK 可以具有最多两个值用于进行相应的列主密钥的轮换。 加密使用的列时使用 CEK[始终加密 &#40; 数据库引擎 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 在添加之前 CEK 值，必须定义列主密钥用于加密值，通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)语句。  
   

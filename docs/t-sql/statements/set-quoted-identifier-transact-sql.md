@@ -3,8 +3,11 @@ title: "集 QUOTED_IDENTIFIER (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 02/03/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵从关于引号分隔标识符和文字字符串的 ISO 规则。 由双引号分隔的标识符可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留关键字，也可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符语法约定通常不允许的字符。  
   

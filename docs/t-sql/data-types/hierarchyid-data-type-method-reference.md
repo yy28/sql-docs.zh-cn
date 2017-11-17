@@ -3,8 +3,11 @@ title: "hierarchyid (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 数据类型方法引用
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 **Hierarchyid**数据类型是长度可变，系统数据类型。 使用**hierarchyid**来表示层次结构中的位置。 类型为 **hierarchyid** 的列不会自动表示树。 由应用程序来生成和分配 **hierarchyid** 值，使行与行之间的所需关系反映在这些值中。
   

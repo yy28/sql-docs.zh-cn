@@ -1,11 +1,13 @@
 ---
 title: "创建列加密密钥 (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   使用指定的列主密钥加密的值的初始集创建列加密密钥。 这是元数据操作。 CEK 可以具有最多两个值这样的列主密钥轮替。 创建 CEK 之前需要可以使用加密数据库中的任何列[始终加密 &#40; 数据库引擎 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 此外可以通过使用创建 CEK 的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在创建之前 CEK 中,，你必须定义 CMK 使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)语句。  
   

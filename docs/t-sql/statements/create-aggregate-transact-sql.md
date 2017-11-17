@@ -3,8 +3,11 @@ title: "创建聚合 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   创建用户定义聚合函数，其实现是在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的程序集类中定义的。 对于要将聚合函数绑定到其实现的[!INCLUDE[ssDE](../../includes/ssde-md.md)]，必须首先使用 CREATE ASSEMBLY 语句将包含该实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   

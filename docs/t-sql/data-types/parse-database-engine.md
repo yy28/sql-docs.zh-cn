@@ -3,8 +3,11 @@ title: "分析 （数据库引擎） |Microsoft 文档"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-database-engine"></a>Parse（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 分析的规范字符串表示形式转换**hierarchyid**到**hierarchyid**值。 当从到的字符串类型的转换时，隐式调用分析**hierarchyid**时发生。 充当相反[ToString](../../t-sql/data-types/tostring-database-engine.md)。 Parse （） 是一种静态方法。
   

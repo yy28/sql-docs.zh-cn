@@ -2,29 +2,34 @@
 title: "使用列集 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33ffb3b6bce237503e40fc5609f5cc0334d62167
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="use-column-sets"></a>使用列集
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   使用稀疏列的表可以指定一个列集以返回表中的所有稀疏列。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列组合成为一种结构化的输出。 列集与计算列的相似之处在于，列集并不是物理地存储在表中。 列集与计算列的不同之处在于，列集可直接更新。  
   
@@ -264,3 +269,4 @@ GO
  [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

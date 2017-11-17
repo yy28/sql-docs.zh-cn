@@ -3,8 +3,11 @@ title: "备份数据库 （并行数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>备份数据库 （并行数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   创建的备份[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库并将关闭该设备的备份存储在用户指定网络位置。 使用与此语句[RESTORE DATABASE &#40;并行数据仓库 &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)用于灾难恢复操作或将数据库从一个设备复制到另一个。  
   

@@ -3,8 +3,11 @@ title: "@@SERVERNAME (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40servername-transact-sql"></a>& #x 40; 和 #x 40;SERVERNAME (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回正在运行的本地服务器的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

@@ -3,8 +3,11 @@ title: "使用透视和逆透视 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="from---using-pivot-and-unpivot"></a>从-使用数据透视和逆透视
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   你可以使用`PIVOT`和`UNPIVOT`关系运算符，若要更改到另一个表的表值的表达式。 `PIVOT`将表值的表达式旋转到多个列在输出中，表达式中打开某一列中的唯一值，并执行聚合中需要的任何想最终输出中的剩余列值。 `UNPIVOT`通过旋转列到列的值的表值表达式中执行相反操作为透视。  
   

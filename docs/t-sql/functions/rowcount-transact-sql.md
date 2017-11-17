@@ -3,8 +3,11 @@ title: "@@ROWCOUNT (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="x40x40rowcount-transact-sql"></a>& #x 40; 和 #x 40;行计数 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回受上一语句影响的行数。 如果多个 20 亿行数，则使用[ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)。  
   

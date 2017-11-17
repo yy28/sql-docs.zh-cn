@@ -3,8 +3,11 @@ title: "说明 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="explain-transact-sql"></a>说明 (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   返回的查询计划[!INCLUDE[ssDW](../../includes/ssdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]而无需运行该语句的语句。 使用**说明**对哪些操作需要数据移动的预览并查看查询操作的估计的成本。  
   

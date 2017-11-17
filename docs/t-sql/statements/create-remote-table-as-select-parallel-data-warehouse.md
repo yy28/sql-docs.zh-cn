@@ -3,9 +3,11 @@ title: "创建远程 TABLE AS SELECT （并行数据仓库） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>创建远程 TABLE AS SELECT （并行数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   选择从数据[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库并将该数据复制到的新表中 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]远程服务器上的数据库。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备上，使用 MPP 查询处理，若要选择的远程副本的数据的所有好处。 对方案需要使用此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能。  
   

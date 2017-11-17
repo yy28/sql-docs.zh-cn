@@ -2,9 +2,12 @@
 title: "创建表 （SQL 图形） |Microsoft 文档"
 ms.custom: 
 ms.date: 05/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,9 +46,8 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="create-table-sql-graph"></a>创建表 （SQL 图形）
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 创建新的 SQL graph 表为`NODE`或`EDGE`表。 
   
