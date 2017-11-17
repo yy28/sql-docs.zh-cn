@@ -2,10 +2,14 @@
 title: "主体（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,19 +31,20 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 5359588c62f7100b17641201d27b07cc8d8241f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/13/2017
+
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   “主体” 是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。 本主题适用于所有版本的 SQL Server，但在 SQL 数据库或 SQL 数据仓库的服务器级别主体上有一些限制。 
   
@@ -112,3 +117,4 @@ ms.lasthandoff: 11/09/2017
  [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   
+

@@ -2,10 +2,14 @@
 title: "非 SQL Server 发布服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - heterogeneous data sources, non-SQL Server Publishers
 - Publishers [SQL Server replication], Oracle
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95c9750c86cfe5bb82d37948c24c5e140b2c3187
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: 4e65d8ec7c2e9e00955238e44e27be20f6bb3c74
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/30/2017
+
 ---
 # <a name="non-sql-server-publishers"></a>非 SQL Server 发布服务器  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 通过从非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 源发布数据，您可以将数据合并到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以订阅从 Oracle 数据库发布的快照或事务数据。 有关从 Oracle 发布的详细信息，请参阅 [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
   
@@ -59,3 +64,4 @@ ms.lasthandoff: 11/09/2017
  [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

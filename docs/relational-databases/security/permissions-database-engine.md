@@ -1,11 +1,15 @@
 ---
 title: "权限（数据库引擎）| Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.openlocfilehash: 5e40b4e9abfe5ce59e17c77bab5505978cc62f6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的权限在分配给登录名和服务器角色的服务器级别，以及分配给数据库用户和数据库角色的数据库级别进行管理。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的模型拥有与数据库权限相同的系统，但服务器级别权限不可用。 本主题包含权限的完整列表。 有关典型的权限实现，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
@@ -467,3 +472,4 @@ GO
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

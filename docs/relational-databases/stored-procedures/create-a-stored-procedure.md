@@ -2,10 +2,14 @@
 title: "创建存储过程 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b22866ca7bba2d8e39765febe76183a81e2f3831
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx)（创建存储过程）。
 
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。  
@@ -139,3 +144,4 @@ ms.lasthandoff: 11/09/2017
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+

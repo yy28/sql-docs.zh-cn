@@ -2,26 +2,31 @@
 title: "使用 PowerShell 配置列加密 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: powershell
+ms.suite: sql
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ac535e20c2782c81b34e33e2f1ba1afe325e821
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 配置列加密
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文提供使用 [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet（在 *SqlServer* PowerShell 模块中）来设置数据库列的目标 Always Encrypted 配置的步骤。 **Set-SqlColumnEncryption** cmdlet 修改目标数据库的架构和存储在选定列中的数据。 可对存储在列中的数据进行加密、重新加密或解密，具体取决于列和当前加密配置的指定目标加密设置。
 若要深入了解 SqlServer PowerShell 模块中的 Always Encrypted 支持，请参阅 [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
@@ -154,6 +159,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>其他资源
 - [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
 
 
 

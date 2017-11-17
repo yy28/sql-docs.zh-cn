@@ -2,27 +2,33 @@
 title: "数据库引擎权限入门 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: permissions [SQL Server], getting started
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 21d6f4a4434b90561216edc72fb25d5f305fa43d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/11/2017
+
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中的权限通过登录名和服务器角色在服务器级别进行管理，以及通过数据库用户和数据库角色在数据库级别进行管理。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的模型在每个数据库中公开同一系统，但服务器级别权限不可用。 本主题复习一些基本的安全概念，然后介绍典型的权限实现。  
   
@@ -244,3 +250,4 @@ JOIN sys.database_principals AS dRole
  [确定有效的数据库引擎权限](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

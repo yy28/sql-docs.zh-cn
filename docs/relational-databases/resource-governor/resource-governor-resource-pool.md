@@ -2,10 +2,14 @@
 title: "资源调控器资源池 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89158a35ab3d535f7530cfb832f99a4a6df9395c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/23/2017
+
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器中，资源池表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的部分物理资源。 通过资源调控器，您可以指定针对传入应用程序请求可在资源池内使用的 CPU、物理 IO 和内存的使用量的限制。 每个资源池均可包含一个或多个工作负荷组。 在某个会话启动时，资源调控器分类器会将此会话分配给一个特定的工作负荷组，并且此会话必须使用分配给该工作负荷组的资源运行。  
   
@@ -134,3 +139,4 @@ ms.lasthandoff: 11/09/2017
  [查看资源调控器属性](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

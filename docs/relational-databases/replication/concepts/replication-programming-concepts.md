@@ -2,31 +2,37 @@
 title: "复制编程概念 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f160c520566cc0e860f295cedb4c19fefffd78cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 12b8b87460c4cb21776780af955eeecad3b5cda3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="replication-programming-concepts"></a>复制编程概念
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在开发使用复制功能的应用程序之前，应该先完成以下常规计划步骤：  
   
@@ -135,3 +141,4 @@ ms.lasthandoff: 11/09/2017
  在可下载的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 AdventureWorks 示例应用程序中已实现此示例方案。  
   
   
+
