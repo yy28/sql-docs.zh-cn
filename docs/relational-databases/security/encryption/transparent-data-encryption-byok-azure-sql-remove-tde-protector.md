@@ -16,15 +16,15 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 5756f318196967169dfbd0272b3ea9af365cdb5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 861a24ef2f0bc26adece27b2612d4bf2d4640a63
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/05/2017
+
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 删除透明数据加密 (TDE) 保护程序
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 ## <a name="prerequisites"></a>先决条件
 - 必须具有 Azure 订阅，并且是该订阅的管理员
@@ -111,3 +111,4 @@ ms.lasthandoff: 11/09/2017
 - 了解如何轮换服务器的 TDE 保护程序以符合安全要求：[使用 PowerShell 轮换透明数据加密保护程序](transparent-data-encryption-byok-azure-sql-key-rotation.md)
 
 - 开始使用 TDE 的自带密钥支持：[通过 PowerShell 使用 Key Vault 的自有密钥启用 TDE](transparent-data-encryption-byok-azure-sql-configure.md)
+

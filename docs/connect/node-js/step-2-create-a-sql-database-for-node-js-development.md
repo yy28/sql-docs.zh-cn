@@ -3,8 +3,11 @@ title: "步骤 2： 创建 Node.js 开发 SQL 数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: node-js
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

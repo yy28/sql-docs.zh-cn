@@ -3,8 +3,11 @@ title: "始终加密的 JDBC 驱动程序的 API 参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

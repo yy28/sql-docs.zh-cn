@@ -3,8 +3,11 @@ title: "步骤 3： 连接到使用 PHP 的 SQL 的概念证明 |Microsoft 文�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

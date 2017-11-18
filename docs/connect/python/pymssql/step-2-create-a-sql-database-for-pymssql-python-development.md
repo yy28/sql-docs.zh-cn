@@ -3,8 +3,11 @@ title: "步骤 2： 创建 pymssql Python 开发 SQL 数据库 |Microsoft 文档
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: python
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

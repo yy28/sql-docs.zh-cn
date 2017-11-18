@@ -3,8 +3,11 @@ title: "步骤 3： 连接到 SQL 使用 Ruby 的概念证明 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ruby
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
