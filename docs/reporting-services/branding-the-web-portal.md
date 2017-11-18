@@ -1,7 +1,7 @@
 ---
 title: "Web 门户的品牌 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/02/2017
+ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,11 +9,9 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>创建品牌包  
+## <a name="creating-the-brand-package"></a>创建品牌包
   
 Reporting Services 的品牌包由三项组成，被打包为一个 zip 文件。   
   
@@ -41,7 +39,7 @@ Reporting Services 的品牌包由三项组成，被打包为一个 zip 文件�
   
 文件必须采用上述名称。 zip 文件可以根据你的喜好进行命名。  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 metadata.xml 文件可以设置品牌包的名称，并且含有 colors.json 和 logo.png 文件的引用项。  
   
@@ -64,7 +62,7 @@ metadata.xml 文件可以设置品牌包的名称，并且含有 colors.json 和
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 上传品牌包时，服务器会从 colors.json 文件中提取相应的名称/值对，并使用主 LESS 样式表 brand.less 将其合并。 然后对此 LESS 文件进行处理，并且将生成的 CSS 文件提供给客户端。 样式表中的所有颜色都遵循六个字符的颜色十六进制表示形式。  
   
@@ -115,13 +113,13 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
   
 然后你就可以对所创建的任何移动报表使用该主题，即使报表不适用于已在其上部署主题的同一服务器。   
   
-### <a name="using-a-logo"></a>使用徽标  
+### <a name="using-a-logo"></a>使用徽标
   
 如果包含了带品牌包的徽标，徽标将显示在 Web 门户中，并替代你在“站点设置”菜单中为 Web 门户设置的名称。  
   
 包含徽标的文件必须使用 PNG 文件格式。 上传到服务器后文件大小会增大。 应该增大到大约 290px x 60px。  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>将品牌包应用于 Web 门户  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>将品牌包应用于 Web 门户
   
 若要添加、下载或删除品牌包，可以执行以下操作。  
   
@@ -141,9 +139,9 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
   
 你还可以 **下载** 或 **删除** 包。 删除包后，Web 门户会立即重置为默认品牌。  
   
-## <a name="metadataxml-example"></a>metadata.xml 示例  
+## <a name="metadataxml-example"></a>metadata.xml 示例
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +153,7 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>colors.json 示例  
+## <a name="colorsjson-example"></a>colors.json 示例
   
     {  
         "name":"Multicolored example brand",  

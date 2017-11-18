@@ -4,6 +4,11 @@ description: "使用带批注的链接下载和文档的语言和操作系统，
 author: MightyPen
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - drivers
 ms.topic: article

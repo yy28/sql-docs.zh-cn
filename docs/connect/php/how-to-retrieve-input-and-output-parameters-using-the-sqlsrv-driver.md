@@ -3,8 +3,11 @@ title: "如何： 检索使用 SQLSRV 驱动程序的 I/O 参数 |Microsoft 文�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

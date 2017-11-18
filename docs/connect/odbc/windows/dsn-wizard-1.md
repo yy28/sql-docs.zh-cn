@@ -3,8 +3,11 @@ title: "数据源向导屏幕 1 (ODBC Driver for SQL Server) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
