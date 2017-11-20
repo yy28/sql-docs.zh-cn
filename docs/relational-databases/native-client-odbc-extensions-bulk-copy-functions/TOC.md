@@ -1,4 +1,4 @@
-# [SQL Server 驱动程序扩展的大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)
+# [SQL Server 驱动程序扩展 - 大容量复制函数](sql-server-driver-extensions-bulk-copy-functions.md)
 
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)
@@ -11,7 +11,7 @@
 # [bcp_exec](bcp-exec.md)
 # [bcp_getcolfmt](bcp-getcolfmt.md)
 # [bcp_gettypename](bcp-gettypename.md)
-# [在 bcp_init](bcp-init.md)
+# [bcp_init](bcp-init.md)
 # [bcp_moretext](bcp-moretext.md)
 # [bcp_readfmt](bcp-readfmt.md)
 # [bcp_sendrow](bcp-sendrow.md)

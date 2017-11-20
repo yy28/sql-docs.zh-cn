@@ -15,7 +15,7 @@
 ### [通过命令提示符部署](./ssis-quickstart-deploy-cmdline.md)
 ### [使用 PowerShell 部署](ssis-quickstart-deploy-powershell.md)
 ### [使用 C# 部署](./ssis-quickstart-deploy-dotnet.md) 
-## 运行
+## “运行”
 ### [使用 SSMS 运行](./ssis-quickstart-run-ssms.md)
 ### [使用 Transact-SQL (SSMS) 运行](./ssis-quickstart-run-tsql-ssms.md)
 ### [使用 Transact-SQL (VS Code) 运行](ssis-quickstart-run-tsql-vscode.md)
@@ -28,6 +28,8 @@
 ## [连接到 Azure 上的 SSIS 目录](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [计划在 Azure 上执行包](lift-shift/ssis-azure-schedule-packages.md)
 ## [使用 Windows 身份验证连接到数据源](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [连接到文件和文件共享](lift-shift/ssis-azure-files-file-shares.md)
+
 # [安装或升级](../integration-services/install-windows/install-integration-services.md)
 
 # [开发和管理工具](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [第 3-1 课 - 复制部署捆绑](lesson-3-1-copying-the-deployment-bundle.md)
 #### [第 3-2 课 - 运行包安装向导](lesson-3-2-running-the-package-installation-wizard.md)
 #### [第 3-3 课 - 测试已部署的包](lesson-3-3-testing-the-deployed-packages.md)
+
+# Resources
+## 请关注博客
+### [SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)
+## 获取帮助
+### [MSDN 上的 SSIS 论坛](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Stack Overflow 上的 SSIS 标记](http://stackoverflow.com/questions/tagged/ssis)  
+## 提供反馈
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [获取电脑上的文档](../sql-server/sql-server-help-installation.md)

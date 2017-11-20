@@ -5,7 +5,7 @@
 # [OLE DB +](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)
 # [ODBC +](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)
 
-# [查找 SQL Server 本机客户端的详细信息](finding-more-sql-server-native-client-information.md)
+# [查找更多 SQL Server Native Client 信息](finding-more-sql-server-native-client-information.md)
 # [SQL Server 本机客户端错误 MSSQLSERVER_50000](sql-server-native-client-error-mssqlserver-50000.md)
 # [SQL Server Native Client](sql-server-native-client.md)
 # [SQL Server Native Client 的系统要求](system-requirements-for-sql-server-native-client.md)

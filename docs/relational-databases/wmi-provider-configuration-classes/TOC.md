@@ -1,4 +1,4 @@
-# [配置管理类的 WMI 提供程序](wmi-provider-for-configuration-management-classes.md)
+# [用于配置管理的 WMI 提供程序类](wmi-provider-for-configuration-management-classes.md)
 
 # 特定区域
 ## [ClientNetLibInfo 类 +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
@@ -16,11 +16,11 @@
 ## [SqlService 类 +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [SqlServiceAdvancedProperty 类 +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
 
-# [CInstance Class-InstanceName 属性](cinstance-class-instancename-property.md)
-# [CInstance Class-SetDefaults 方法](cinstance-class-setdefaults-method.md)
-# [CInstance Class](cinstance-class.md)
-# [ClientSettings 类-InstanceName 属性](clientsettings-class-instancename-property.md)
-# [ClientSettings 类-SetDefaults 方法](clientsettings-class-setdefaults-method.md)
+# [CInstance 类 - InstanceName 属性](cinstance-class-instancename-property.md)
+# [CInstance 类 - SetDefaults 方法](cinstance-class-setdefaults-method.md)
+# [CInstance 类](cinstance-class.md)
+# [ClientSettings 类 - InstanceName 属性](clientsettings-class-instancename-property.md)
+# [ClientSettings 类 - SetDefaults 方法](clientsettings-class-setdefaults-method.md)
 # [ClientSettings 类](clientsettings-class.md)
 # [SqlErrorLogEvent 类](sqlerrorlogevent-class.md)
 # [SqlErrorLogFile 类](sqlerrorlogfile-class.md)

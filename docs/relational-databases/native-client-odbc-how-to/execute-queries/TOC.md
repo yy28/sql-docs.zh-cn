@@ -1,5 +1,5 @@
 # [执行查询操作指南主题 (ODBC)](executing-queries-how-to-topics-odbc.md)
-# [执行语句直接 (ODBC)](execute-a-statement-directly-odbc.md)
+# [直接执行语句 (ODBC)](execute-a-statement-directly-odbc.md)
 # [准备和执行语句 (ODBC)](prepare-and-execute-a-statement-odbc.md)
-# [设置光标选项 (ODBC)](set-cursor-options-odbc.md)
+# [设置游标选项 (ODBC)](set-cursor-options-odbc.md)
 # [使用语句 (ODBC)](use-a-statement-odbc.md)

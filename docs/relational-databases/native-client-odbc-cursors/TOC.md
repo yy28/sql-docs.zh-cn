@@ -7,6 +7,6 @@
 
 # [游标行为](cursor-behaviors.md)
 # [游标类型](cursor-types.md)
-# [定位的更新 (ODBC)](positioned-updates-odbc.md)
-# [滚动和提取 ODBC 中的书签的行的行数-](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)
+# [定位更新 (ODBC)](positioned-updates-odbc.md)
+# [滚动和提取行 - 在 ODBC 中为行加书签](scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)
 # [滚动和提取行](scrolling-and-fetching-rows.md)

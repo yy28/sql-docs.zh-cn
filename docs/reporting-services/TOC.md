@@ -3,6 +3,7 @@
 # 概述
 ## [Reporting Services 中的新增功能](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [新的和最近更新的文章](new-updated-reporting-services.md)
+## [更改日志](change-log-sql-server-reporting-services.md)
 ## [Reporting Services 概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 功能和任务](reporting-services-features-and-tasks-ssrs.md)   
 ## [后向兼容性](reporting-services-backward-compatibility.md)  
@@ -87,7 +88,8 @@
 ### [CSV 设备信息设置](csv-device-information-settings.md)  
 ### [Excel 设备信息设置](excel-device-information-settings.md)  
 ### [HTML 设备信息设置](html-device-information-settings.md)  
-### [图像设备信息设置](image-device-information-settings.md)  ### [MHTML 设备信息设置](mhtml-device-information-settings.md)  
+### [图像设备信息设置](image-device-information-settings.md)  
+### [MHTML 设备信息设置](mhtml-device-information-settings.md)  
 ### [PDF 设备信息设置](pdf-device-information-settings.md)  
 ### [PPTX 设备信息设置](pptx-device-information-settings.md)  
 ### [XML 设备信息设置](xml-device-information-settings.md)  

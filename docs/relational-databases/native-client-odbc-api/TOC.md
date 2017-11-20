@@ -1,6 +1,6 @@
-# [ODBC API 实现详细信息](odbc-api-implementation-details.md)
+# [ODBC API 实现细节](odbc-api-implementation-details.md)
 
-# 用于本机客户端的 SQL * ODBC Api
+# 适用于本机客户端的 SQL* ODBC API
 ## [SQLBindCol](sqlbindcol.md)
 ## [SQLBindParameter](sqlbindparameter.md)
 ## [SQLBrowseConnect](sqlbrowseconnect.md)
