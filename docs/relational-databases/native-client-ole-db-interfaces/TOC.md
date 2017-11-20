@@ -1,4 +1,4 @@
-# [SQL Server Native Client (OLE DB) 接口](sql-server-native-client-ole-db-interfaces.md)
+# [SQL Server Native Client OLE DB 接口](sql-server-native-client-ole-db-interfaces.md)
 
 # [IBCPSession (OLE DB)](ibcpsession-ole-db.md)
 # [IBCPSession::BCPColFmt (OLE DB)](ibcpsession-bcpcolfmt-ole-db.md)

@@ -1,6 +1,6 @@
-# [SQL Server Express LocalDB 参考-实例 Api](sql-server-express-localdb-reference-instance-apis.md)
-# [命令行管理工具： SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
-# [SQL Server Express LocalDB 标头和版本信息](sql-server-express-localdb-header-and-version-information.md)
+# [SQL Server Express LocalDB 参考 - 实例 API](sql-server-express-localdb-reference-instance-apis.md)
+# [命令行管理工具：SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
+# [SQL Server Express LocalDB 标头信息和版本信息](sql-server-express-localdb-header-and-version-information.md)
 
 # LocalDB 函数
 ## [LocalDBCreateInstance 函数](localdbcreateinstance-function.md)

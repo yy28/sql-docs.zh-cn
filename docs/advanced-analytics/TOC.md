@@ -153,12 +153,11 @@
 ### [机器学习服务的高级配置选项](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [SQL Server 中 R 运行时的安全注意事项](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [修改 SQL Server 机器学习服务的用户帐户池](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [配置和管理机器学习扩展](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [通过 Web 服务部署和使用模型](operationalization-with-mrsdeploy.md)
 ### [管理和监视机器学习解决方案](r/managing-and-monitoring-r-solutions.md)
 ### [机器学习服务的资源调控](r/resource-governance-for-r-services.md)
-### [为 R 创建资源池](r/how-to-create-a-resource-pool-for-r.md)
+### [为机器学习创建资源池](r/how-to-create-a-resource-pool-for-r.md)
 ### [机器学习服务的扩展事件](r/extended-events-for-sql-server-r-services.md)
 
 ### [机器学习服务的 DMV](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [将 R 添加到现有的 Azure 虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [使用 sqlBindR.exe 升级实例](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [从命令行安装 R Server](r/install-microsoft-r-server-from-the-command-line.md)
-### [预配数据科学虚拟机](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [预配企业数据科学虚拟机](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [设置数据科学工具](r/setup-or-configure-r-tools.md)
 ### [设置数据科学客户端](r/set-up-a-data-science-client.md)
 

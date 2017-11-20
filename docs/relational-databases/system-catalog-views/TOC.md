@@ -1,19 +1,19 @@
 # [概述](catalog-views-transact-sql.md)
 
-# [查询的 SQL Server 系统目录常见问题](querying-the-sql-server-system-catalog-faq.md)  
-# [架构-sys.schemas](schemas-catalog-views-sys-schemas.md)  
-# [消息 （错误）-sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
-# [扩展属性-sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
+# [查询 SQL Server 系统目录常见问题解答](querying-the-sql-server-system-catalog-faq.md)  
+# [架构 - sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [消息（错误）- sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [扩展属性 - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
 # 更改跟踪
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
 # 数据库镜像
-## [数据库镜像见证服务器-sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+## [数据库镜像见证 - sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
 # 数据层应用程序
-## [数据层应用程序视图-dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
+## [数据层应用程序视图 - dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [可用性组](always-on-availability-groups-catalog-views-transact-sql.md)  
 ## [监视可用性数据库](sys-availability-databases-cluster-transact-sql.md)  
@@ -87,11 +87,11 @@
 ## [sys.tcp_endpoints](sys-tcp-endpoints-transact-sql.md)  
 
 # [扩展事件](extended-events-catalog-views-transact-sql.md)  
-## [sys.database_event_session_targets （Azure SQL 数据库）](sys-database-event-session-targets-azure-sql-database.md)  
-## [sys.database_event_session_fields （Azure SQL 数据库）](sys-database-event-session-fields-azure-sql-database.md)  
-## [sys.database_event_session_events （Azure SQL 数据库）](sys-database-event-session-events-azure-sql-database.md)  
-## [sys.database_event_session_actions （Azure SQL 数据库）](sys-database-event-session-actions-azure-sql-database.md)  
-## [sys.database_event_sessions （Azure SQL 数据库）](sys-database-event-sessions-azure-sql-database.md)  
+## [sys.database_event_session_targets（Azure SQL 数据库）](sys-database-event-session-targets-azure-sql-database.md)  
+## [sys.database_event_session_fields（Azure SQL 数据库）](sys-database-event-session-fields-azure-sql-database.md)  
+## [sys.database_event_session_events（Azure SQL 数据库）](sys-database-event-session-events-azure-sql-database.md)  
+## [sys.database_event_session_actions（Azure SQL 数据库）](sys-database-event-session-actions-azure-sql-database.md)  
+## [sys.database_event_sessions（Azure SQL 数据库）](sys-database-event-sessions-azure-sql-database.md)  
 ## [sys.server_event_sessions](sys-server-event-sessions-transact-sql.md)  
 ## [sys.server_event_session_actions](sys-server-event-session-actions-transact-sql.md)  
 ## [sys.server_event_session_events](sys-server-event-session-events-transact-sql.md)  
@@ -103,7 +103,7 @@
 ## [sys.external_data_sources](sys-external-data-sources-transact-sql.md)  
 ## [sys.external_file_formats](sys-external-file-formats-transact-sql.md)  
 
-# [Filestream 和 FileTable](filestream-and-filetable-catalog-views-transact-sql.md)  
+# [文件流和 FileTable](filestream-and-filetable-catalog-views-transact-sql.md)  
 ## [sys.database_filestream_options](sys-database-filestream-options-transact-sql.md)  
 ## [sys.filetable_system_defined_objects](sys-filetable-system-defined-objects-transact-sql.md)  
 ## [sys.filetables](sys-filetables-transact-sql.md)  
@@ -124,7 +124,7 @@
 ## [sys.registered_search_properties](sys-registered-search-properties-transact-sql.md)  
 ## [sys.registered_search_property_lists](sys-registered-search-property-lists-transact-sql.md)  
 
-# [链接的服务器](linked-servers-catalog-views-transact-sql.md)  
+# [链接服务器](linked-servers-catalog-views-transact-sql.md)  
 ## [sys.linked_logins](sys-linked-logins-transact-sql.md)  
 ## [sys.remote_logins](sys-remote-logins-transact-sql.md)  
 ## [sys.servers](sys-servers-transact-sql.md)  
@@ -171,7 +171,7 @@
 ## [sys.partitions](sys-partitions-transact-sql.md)  
 ## [sys.periods](sys-periods-transact-sql.md)  
 ## [sys.plan_guides](sys-plan-guides-transact-sql.md)  
-## [与 sys.procedures](sys-procedures-transact-sql.md)  
+## [sys.procedures](sys-procedures-transact-sql.md)  
 ## [sys.sequences](sys-sequences-transact-sql.md)  
 ## [sys.server_assembly_modules](sys-server-assembly-modules-transact-sql.md)  
 ## [sys.server_events](sys-server-events-transact-sql.md)  
@@ -197,7 +197,7 @@
 ## [sys.triggers](sys-triggers-transact-sql.md)  
 ## [sys.views](sys-views-transact-sql.md)  
 
-# [分区函数](partition-function-catalog-views-transact-sql.md)  
+# [分区功能](partition-function-catalog-views-transact-sql.md)  
 ## [sys.partition_functions](sys-partition-functions-transact-sql.md)  
 ## [sys.partition_parameters](sys-partition-parameters-transact-sql.md)  
 ## [sys.partition_range_values](sys-partition-range-values-transact-sql.md)  
@@ -237,7 +237,7 @@
 # [安全性](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
 ## [sys.certificates](sys-certificates-transact-sql.md)  
-## [sys.column_encryption_keys](sys-column-encryption-keys-transact-sql.md)  
+## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
 ## [sys.column_encryption_key_values](sys-column-encryption-key-values-transact-sql.md)  
 ## [sys.column_master_keys](sys-column-master-keys-transact-sql.md)  
 ## [sys.credentials](sys-credentials-transact-sql.md)  
@@ -285,7 +285,7 @@
 ## [sys.services](sys-services-transact-sql.md)  
 ## [sys.transmission_queue](sys-transmission-queue-transact-sql.md)  
 
-# [服务器范围的配置](server-wide-configuration-catalog-views-transact-sql.md)  
+# [Server-wide Configuration](server-wide-configuration-catalog-views-transact-sql.md)  
 ## [sys.configurations](sys-configurations-transact-sql.md)  
 ## [sys.time_zone_info](sys-time-zone-info-transact-sql.md)  
 ## [sys.traces](sys-traces-transact-sql.md)  
@@ -333,7 +333,7 @@
 ## [sys.remote_data_archive_tables](stretch-database-catalog-views-sys-remote-data-archive-tables.md)
 
 
-# [XML 架构 （XML 类型系统）](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+# [XML 架构（XML 类型系统）](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
 ## [sys.column_xml_schema_collection_usages](sys-column-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.parameter_xml_schema_collection_usages](sys-parameter-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.selective_xml_index_paths](sys-selective-xml-index-paths-transact-sql.md)  

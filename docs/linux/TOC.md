@@ -12,6 +12,7 @@
 ## [安装和连接 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [运行和连接 - Docker](quickstart-install-connect-docker.md)
 ## [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [运行和连接 - 云](quickstart-install-connect-clouds.md)
 
 # 教程
 ## [1_从 Windows 迁移](sql-server-linux-migrate-restore-database.md)
@@ -77,7 +78,7 @@
 ##### [在 SUSE 上配置](sql-server-linux-availability-group-cluster-sles.md)
 ##### [在 Ubuntu 上配置](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
-#### [仅为读取扩展创建]()
+#### [仅为读取缩放创建]()
 ##### [配置 AG](sql-server-linux-availability-group-configure-rs.md)
 
 ## [安全性](sql-server-linux-security-overview.md)
