@@ -2,9 +2,12 @@
 title: "Integration Services 语言参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 语言参考
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本节介绍用于管理已部署到 [!INCLUDE[tsql](../includes/tsql-md.md)] 实例的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] API。  
   

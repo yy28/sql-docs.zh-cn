@@ -2,9 +2,12 @@
 title: "数据挖掘扩展插件 (DMX) 函数引用 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>数据挖掘扩展插件 (DMX) 函数参考
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持一些使用数据挖掘扩展插件 (DMX) 语言的函数。 这些函数扩展了预测查询的结果，在结果中包括了可进一步说明预测的信息。 通过使用这些函数，还可对预测结果的返回方式进行更好的控制。 下表提供了指向资源的链接，有助于您了解如何在 DMX 中使用函数。  
   

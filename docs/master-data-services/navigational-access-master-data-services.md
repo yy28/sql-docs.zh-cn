@@ -2,26 +2,31 @@
 title: "导航访问权限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9e9fb18eb030deaee1bc7e8bcfa7d5afa1a7139
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7a26c6e03d53fcd619446a82b2d2196476d159dc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="navigational-access-master-data-services"></a>导航访问权限 (Master Data Services)
   导航访问权限适用于在 **“模型”** 选项卡上分配的模型对象安全性。  
@@ -48,3 +53,4 @@ ms.lasthandoff: 11/09/2017
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   
+

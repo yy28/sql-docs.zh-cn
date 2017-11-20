@@ -1,11 +1,15 @@
 ---
 title: "SQL Server 2017 中弃用的数据库引擎功能 | Microsoft Docs"
-ms.custom: SQL2017_New_Updated
+ms.custom: 
 ms.date: 06/09/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +22,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32f79ae305b50c6d50c2c4505622752417ee83eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e52b9300c764e99fb3f4bd54ed5b50f9f3ba686f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
@@ -51,7 +56,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |数据库对象|从触发器返回结果集的功能|无|从触发器返回结果|12|  
 |加密|不推荐使用通过 RC4 或 RC4_128 进行加密，并计划在下一个版本中删除这种加密方法。 不推荐使用 RC4 和 RC4_128 解密。|请使用其他加密算法，例如 AES。|不推荐使用的加密算法|253|  
 |远程服务器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|用链接服务器替代远程服务器。 sp_addserver 仅可与本地选项一起使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|远程服务器|@@remserver|用链接服务器替代远程服务器。|无|无|  
+|远程服务器|@@remserver |用链接服务器替代远程服务器。|无|无|  
 |远程服务器|SET REMOTE_PROC_TRANSACTIONS|用链接服务器替代远程服务器。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE** |TOP 关键字|SET ROWCOUNT|109|  
 |表提示|不带括号的 HOLDLOCK 表提示。|使用 HOLDLOCK 以及括号。|不带括号的 HOLDLOCK 表提示|167|  
@@ -155,7 +160,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL 在 DML 语句中用作列名。|请使用 $rowguid。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL 在 DML 语句中用作列名。|请使用 $identity。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|将 #、## 用作临时表和临时存储过程名称。|请至少使用一个其他字符。|“#”和“##”作为临时表和存储过程的名称|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|将 @、@@ 或 @@ 用作 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符。|请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。|“@”和以“@@”开头的名称作为 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|将 @、@@ 或 @@ 用作 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符。|请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。|“@”和以“@@”开头的名称作为 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符 |186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|将 DEFAULT 关键字用作默认值。|不要将单词 DEFAULT 用作默认值。|DEFAULT 关键字作为默认值|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|将空格用作表提示之间的分隔符。|使用逗号分隔各个表提示。|没有逗号的多个表提示|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|聚集索引视图的选择列表在 90 兼容模式下必须包含 COUNT_BIG (*)|请使用 COUNT_BIG (*)。|不包含 COUNT_BIG(*) 的索引视图选择列表|2|  
@@ -174,4 +179,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
 

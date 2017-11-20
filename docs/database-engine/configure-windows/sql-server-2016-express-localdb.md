@@ -2,10 +2,14 @@
 title: SQL Server 2016 Express LocalDB | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c7e7ce18d60b766251f171a6f671a679d93990
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64d008b25aacd5ad76b711662f9b6ffd3e5e5926
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx)。
 
 Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) 功能。 它在具有高级服务的 SQL Server 2016 Express 上可用。  
@@ -134,3 +139,4 @@ REM Gather information about the instance of LocalDB
  [SqlLocalDB 实用工具](../../tools/sqllocaldb-utility.md)  
   
   
+

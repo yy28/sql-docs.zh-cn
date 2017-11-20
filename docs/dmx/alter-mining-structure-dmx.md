@@ -2,9 +2,12 @@
 title: "更改挖掘结构 (DMX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   创建基于现有挖掘结构的新挖掘模型。  当你使用**ALTER 挖掘结构**语句以创建新的挖掘模型结构必须已存在。 与此相反，当使用此语句， [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md)，创建模型并自动在同一时间生成其基础挖掘结构。  
   

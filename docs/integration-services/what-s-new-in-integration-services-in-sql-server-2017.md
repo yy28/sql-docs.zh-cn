@@ -2,9 +2,12 @@
 title: "什么 &#39; s 在 SQL Server 自 2017 年中的 Integration Services 中的新增功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 

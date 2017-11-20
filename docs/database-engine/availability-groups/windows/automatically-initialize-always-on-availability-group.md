@@ -2,27 +2,30 @@
 title: "自动初始化 AlwaysOn 可用性组 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
-ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自动初始化 Always On 可用性组
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016 推出了可用性组的自动种子设定。 创建具有自动种子设定的可用性组时，SQL Server 将自动为该组中每个数据库创建次要副本。 你不再需要手动备份和还原次要副本。 若要启用自动种子设定，请使用 T-SQL 创建可用性组，或使用最新版的 SQL Server Management Studio。
 
@@ -285,4 +288,5 @@ SQL Server 使用固定数目的线程进行自动种子设定。 在主实例�
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)（创建可用性组 (Transact-SQL)）
 
 [AlwaysOn 可用性组故障排除和监视指南](http://technet.microsoft.com/library/dn135328.aspx)
+
 

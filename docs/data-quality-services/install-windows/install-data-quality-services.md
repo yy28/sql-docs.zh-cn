@@ -2,24 +2,27 @@
 title: "安装 Data Quality Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
@@ -103,9 +106,9 @@ ms.lasthandoff: 11/09/2017
   
     -   **dqs_kb_operator**  
   
-     默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS Security](../../data-quality-services/dqs-security.md)。  
+     默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../../data-quality-services/dqs-security.md)。  
   
-     有关详细信息，请参阅 [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
+     有关详细信息，请参阅 [将 DQS 角色授予用户](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
     > [!NOTE]  
     >  这三个 DQS 角色不适用于 DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。  
@@ -127,3 +130,4 @@ ms.lasthandoff: 11/09/2017
  [解决 DQS 中的安装和配置问题](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
+

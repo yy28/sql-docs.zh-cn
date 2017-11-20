@@ -2,26 +2,31 @@
 title: "添加用户 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 167adebd6eef42b6eb860dfaa44c5f8997b4deed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1d1a040d33857ffa267a59c446d1990fd6e95058
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="add-a-user-master-data-services"></a>添加用户 (Master Data Services)
   在 **中将某一用户添加到** “用户” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 列表中，以便开始向 Web 应用程序分配权限。 在该列表中的某一用户可以访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，必须为该用户提供针对一个或多个功能区域和模型对象的权限。  
@@ -51,3 +56,4 @@ ms.lasthandoff: 11/09/2017
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   
+

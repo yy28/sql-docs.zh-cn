@@ -1,28 +1,34 @@
 ---
 title: "Master Data Services 概述 (MDS) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: what is master data
+keywords:
+- what is master data
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 023472f0c047e244f1e4a60fa519a9dc41046743
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的关键数据组织和管理功能。 
@@ -76,4 +82,5 @@ ms.lasthandoff: 11/09/2017
  在就绪后，您可以将模型（具有或不具有有关数据）部署到您的生产环境中。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)。  
   
   
+
 

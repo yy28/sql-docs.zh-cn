@@ -2,9 +2,12 @@
 title: "常规预测函数 (DMX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="general-prediction-functions-dmx"></a>通用预测函数 (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   你可以使用**选择**语句中数据挖掘扩展插件 (DMX) 来创建不同类型的查询。 查询可用于返回挖掘模型本身的信息，创建新预测，或者通过使用新数据对模型进行定型来改变模型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了各种专用控制查询中返回的信息的类型的函数。 通过将这些函数添加到 DMX 查询中，可以检索更多统计信息或数据列。 但是，每个查询类型和每个模型类型都仅仅支持某些函数。  
   

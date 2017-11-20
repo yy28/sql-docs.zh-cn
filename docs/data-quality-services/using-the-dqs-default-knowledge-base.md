@@ -2,23 +2,28 @@
 title: "使用 DQS 默认知识库 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5396faa2addfb70555759e903b886f878b4c3128
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bbd80ca8bdeb9412646409eb08ba1955b31b75c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 默认知识库
   本主题介绍随 **(DQS) 一起安装的默认知识库**DQS 数据 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 。 这是包含以下域的预先生成的默认知识库：  
@@ -54,3 +59,4 @@ ms.lasthandoff: 11/09/2017
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
+
