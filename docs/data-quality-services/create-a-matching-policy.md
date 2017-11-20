@@ -2,10 +2,14 @@
 title: "创建匹配策略 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a1f1379effcdfe728dae0f3a74f1a014876b9d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中生成匹配策略。 您可以通过对示例数据运行“匹配策略”活动在 DQS 中准备匹配过程。 在此活动中，您在策略中创建和测试一个或多个匹配规则，然后发布知识库以使匹配的规则可供公开使用。 知识库中只能有一个匹配策略，但该策略可以包含多个匹配规则。  
@@ -56,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
  创建匹配规则是一个迭代过程，因为你可能需要更改规则中域的相对权重、域的相似性或先决条件属性或规则的最小匹配分数才能实现你需要的结果。 您还可能发现您需要创建多个规则，将运行其中的每条规则来创建匹配分数。 只用一条规则就要获得您所需的结果可能有点困难。 多个规则将提供所需匹配的不同视图。 如果有多条规则，则您可能能够在每条规则中包括更少的域，对每个域使用更高权重并获得更好的结果。 如果数据不太准确和不太完整，您可能需要更多的规则以找到所需的匹配项。 如果数据比较准确和完整，您需要较少的规则。  
   
- 通过事件探查，您可以全面了解完整性和唯一性。 同时考虑完整性和唯一性。 使用完整性和唯一性数据来确定应给匹配过程中的字段什么权重。 如果字段具有很高的唯一性，则在匹配策略中使用此字段可能会减少匹配结果，这样，您可能需要将该字段的权重设置为相对小的值。 如果某列的唯一性较低，但完整性也低，则您可能不希望对该列加入某个域。 如果唯一性较低，但完整性较高，则您可能希望包括该域。 某些列（如性别）在本质上唯一性就低。 有关详细信息，请参阅 [Profiler and Results Tabs](#Tabs)。  
+ 通过事件探查，您可以全面了解完整性和唯一性。 同时考虑完整性和唯一性。 使用完整性和唯一性数据来确定应给匹配过程中的字段什么权重。 如果字段具有很高的唯一性，则在匹配策略中使用此字段可能会减少匹配结果，这样，您可能需要将该字段的权重设置为相对小的值。 如果某列的唯一性较低，但完整性也低，则您可能不希望对该列加入某个域。 如果唯一性较低，但完整性较高，则您可能希望包括该域。 某些列（如性别）在本质上唯一性就低。 有关详细信息，请参阅 [“事件探查器”和“结果”选项卡](#Tabs)。  
   
 ##  <a name="Starting"></a> 第一步：启动匹配策略  
  您在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序的知识库管理区域中执行匹配策略活动。  
@@ -135,7 +140,7 @@ ms.lasthandoff: 11/09/2017
   
     -   如果您在匹配结果表中双击某个记录，DQS 将显示 **“匹配分数详细信息”** 弹出菜单，其中显示透视记录和源记录（及其所有字段中的值）、它们之间的分数以及记录匹配的深化信息。 深化信息显示透视记录和源记录的每个字段中的值，以便您可以比较它们，并显示每个字段对这两个字段的总体匹配分数所贡献的匹配分数。  
   
-14. 在 **“事件探查器”** 和 **“匹配结果”** 选项卡上查看统计信息，以确保您获得所需的结果。 有关详细信息，请参阅 [Profiler and Results Tabs](#Tabs)。  
+14. 在 **“事件探查器”** 和 **“匹配结果”** 选项卡上查看统计信息，以确保您获得所需的结果。 有关详细信息，请参阅 [“事件探查器”和“结果”选项卡](#Tabs)。  
   
 15. 如果需要更改规则，则在规则编辑器中进行更改，然后单击 **“重新启动”**。  
   
@@ -167,7 +172,7 @@ ms.lasthandoff: 11/09/2017
   
     -   如果您在匹配结果表中双击某个记录，DQS 将显示 **“匹配分数详细信息”** 弹出菜单，其中显示透视记录和源记录（及其所有字段中的值）、它们之间的分数以及记录匹配的深化信息。 深化信息显示透视记录和源记录的每个字段中的值，以便您可以比较它们，并显示每个字段对这两个字段的总体匹配分数所贡献的匹配分数。  
   
-5.  在 **“事件探查器”** 和 **“匹配结果”** 选项卡上查看统计信息，以确保您获得所需的结果。 单击 **“匹配规则”** 选项卡以查看每个规则的域设置是什么。 有关详细信息，请参阅 [Profiler and Results Tabs](#Tabs)。  
+5.  在 **“事件探查器”** 和 **“匹配结果”** 选项卡上查看统计信息，以确保您获得所需的结果。 单击 **“匹配规则”** 选项卡以查看每个规则的域设置是什么。 有关详细信息，请参阅 [“事件探查器”和“结果”选项卡](#Tabs)。  
   
 6.  如果您并非对所有规则的结果感到满意，则单击 **“返回”** 以返回到 **“匹配策略”** 页，根据需要修改一个或多个规则，返回 **“匹配结果”** 页，然后单击 **“重新启动”**。  
   
@@ -192,7 +197,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="FollowUp"></a> 跟进：创建匹配策略之后  
  在创建匹配策略后，可以基于包含匹配策略的知识库运行匹配项目。 有关详细信息，请参阅 [运行匹配项目](../data-quality-services/run-a-matching-project.md)。  
   
-##  <a name="Tabs"></a> Profiler and Results Tabs  
+##  <a name="Tabs"></a> “事件探查器”和“结果”选项卡  
  “事件探查器”和“结果”选项卡包含针对“匹配策略”页和“匹配结果”页的统计信息。  
   
 ###  <a name="Profiler"></a> “事件探查器”选项卡  
@@ -257,3 +262,4 @@ ms.lasthandoff: 11/09/2017
 -   群集中重复项的最大数量  
   
   
+

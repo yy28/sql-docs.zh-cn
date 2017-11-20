@@ -2,9 +2,12 @@
 title: "catalog.executions （SSISDB 数据库） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -26,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions（SSISDB 数据库）
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中显示包执行的实例。 通过“执行包”任务执行的包在同一个执行实例中作为父包运行。  
   

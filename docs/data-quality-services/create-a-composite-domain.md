@@ -2,26 +2,31 @@
 title: "创建复合域 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/22/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../data-quality-services/managing-a-composite-domain.md)。  
@@ -52,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 确保源列包含由两个现有单一域组成的复合域。 如果相应的单一域不存在，请单击 **“创建域”** 图标。  
   
-6.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 确保源列包含由两个现有单一域表示的复合域的一部分。 如果相应的单一域不存在，请单击 **“创建域”** 图标以创建单一域。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
+6.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 确保源列包含由两个现有单一域表示的复合域的一部分。 如果相应的单一域不存在，请单击 **“创建域”** 图标以创建单一域。 有关详细信息，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。  
   
 7.  单击 **“创建复合域”** 图标。  
   
@@ -62,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  选择 **“域管理”** 作为活动，然后单击 **“创建”** 以创建新知识库；或单击 **“打开”** 以打开现有知识库。  
   
-3.  确保复合域所需的两个或多个单一域存在。 否则，请单击 **“创建域”** 图标并创建它们。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
+3.  确保复合域所需的两个或多个单一域存在。 否则，请单击 **“创建域”** 图标并创建它们。 有关详细信息，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。  
   
 4.  在 **“域管理”** 页上，单击域列表上方的 **“创建复合域”** 图标。  
   
@@ -105,3 +110,4 @@ ms.lasthandoff: 11/09/2017
  当您使用基于知识的分析时，如果源数据中的值少于复合域中的域，则 DQS 将在缺失的域中放入 Null。 如果源数据中的值多于复合域中的域，则 DQS 将向其中一列添加额外的数据。 如果两个或多个域包含相同的值，数据源将被分析为第一个匹配的域。  
   
   
+

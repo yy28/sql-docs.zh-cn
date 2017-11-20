@@ -2,7 +2,12 @@
 title: "使用 TRANSACT-SQL (VS Code) 运行 SSIS 包 |Microsoft 文档"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS

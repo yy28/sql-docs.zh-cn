@@ -2,12 +2,14 @@
 title: "查看和读取 SQL Server 安装程序日志文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +21,20 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: a11f6a1f0169cabe904cb179bbe7871fbfe63e11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: a11f6a1f0169cabe904cb179bbe7871fbfe63e11
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>查看和读取 SQL Server 安装程序日志文件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 每次执行安装程序时，都会在一个带有时间戳的新日志文件夹 (%programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\nnn\Setup Bootstrap\Log\\) 中创建日志文件。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下运行安装程序时，将在 % temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
   
  一个典型的安装请求将经历以下三个执行阶段：  
@@ -176,3 +181,4 @@ ms.lasthandoff: 11/09/2017
  [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

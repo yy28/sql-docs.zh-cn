@@ -2,23 +2,28 @@
 title: "筛选器运算符 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b634ce55f0ba70614432e6d2b38fe1a08ab66d11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
   筛选成员列表时，可以使用下列运算符。  
@@ -46,3 +51,4 @@ ms.lasthandoff: 11/09/2017
 |**不为 NULL**|返回不为 Null 的属性值。 如果选择 **“不为 NULL”** 运算符，则禁用 **“条件”** 字段。|  
   
   
+

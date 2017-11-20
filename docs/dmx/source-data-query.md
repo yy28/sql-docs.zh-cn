@@ -2,9 +2,12 @@
 title: "&lt;源数据查询&gt;|Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="ltsource-data-querygt"></a>&lt;源数据查询&gt;
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   若要训练数据挖掘模型，并从挖掘模型创建预测，你必须访问外部的数据[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 你使用\<源数据查询 > 子句在数据挖掘扩展插件 (DMX) 来定义此外部数据。 [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md)， [SELECT FROM #60; 模型 &#62;预测联接 &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)，和[选择从 NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)语句所有使用**\<源数据查询 >**。  
   

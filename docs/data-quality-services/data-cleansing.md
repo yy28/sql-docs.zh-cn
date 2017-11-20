@@ -2,23 +2,28 @@
 title: "数据清理 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-cleansing"></a>数据清理
   数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  
@@ -57,9 +62,9 @@ ms.lasthandoff: 11/09/2017
   
  计算机辅助过程在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中显示要用于交互式清理过程的数据质量信息。 除了遵守语法错误规则，DQS 还使用引用数据和高级算法通过“置信度”对数据分类。 置信度指示 DQS 对更正或建议的确信程度。 置信度基于以下阈值：  
   
--   *自动更正阈值* ，超出该阈值后 DQS 将建议并执行更改，除非数据专员拒绝更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动更正阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   *自动更正阈值* ，超出该阈值后 DQS 将建议并执行更改，除非数据专员拒绝更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动更正阈值。 有关详细信息，请参阅 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
--   自动更正阈值之下的 *自动建议阈值* ，超出该阈值后 DQS 将建议更改，并在经过数据专员批准后执行更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动建议阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   自动更正阈值之下的 *自动建议阈值* ，超出该阈值后 DQS 将建议更改，并在经过数据专员批准后执行更改。 可以在 **“配置”** 屏幕的 **“常规设置”** 选项卡中指定自动建议阈值。 有关详细信息，请参阅 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
  对于置信度低于自动建议阈值的任何值，DQS 会原样保留，除非数据专员指定进行更改。  
   
@@ -111,3 +116,4 @@ ms.lasthandoff: 11/09/2017
  [数据匹配](../data-quality-services/data-matching.md)  
   
   
+
