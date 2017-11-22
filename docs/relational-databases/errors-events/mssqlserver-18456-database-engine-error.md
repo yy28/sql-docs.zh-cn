@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 18456 (Database Engine error)
+helpviewer_keywords: 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
-ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,4 +122,3 @@ ms.lasthandoff: 07/31/2017
   
 在本地连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在 **NT AUTHORITY\NETWORK SERVICE** 下运行的服务的连接必须使用计算机完全限定域名进行身份验证。 有关详细信息，请参阅[如何在 ASP.NET 中使用 Network Service 帐户访问资源](http://msdn.microsoft.com/library/ff647402.aspx)  
   
-

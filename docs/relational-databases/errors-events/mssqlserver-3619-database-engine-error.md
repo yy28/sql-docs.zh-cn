@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3619 (Database Engine error)
+helpviewer_keywords: 3619 (Database Engine error)
 ms.assetid: 7d94f8d9-65ca-4fde-9c17-7b83e94a3779
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f487685e727f9f5ccf3862ac62cf0f1e21fb78ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8e38ff7b2f54048dc1408774df5e6b82837709b4
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver3619"></a>MSSQLSERVER_3619
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>用户操作  
 截断日志以释放一些空间，或者为日志分配更多的空间。 有关详细信息，请参阅 Server SQL 联机丛书中的“解决事务日志已满的问题（错误 9002）”。  
   
-

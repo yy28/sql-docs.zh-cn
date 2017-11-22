@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 902db63e79472afb65f81ee3d15f1fbfa87cbb8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8cdc3a878c24f53cbadefdee49dc300ce616c009
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-report-accesstosql"></a>数据迁移报告 (AccessToSQL)
 **数据迁移报告**对话框中将显示在您迁移到的数据后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
 **状态**  
 显示从迁移数据源到目标数据库的状态。  
   
-**从**  
+**From**  
 源表。  
   
 **若要**  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/02/2017
 **保存报表**  
 保存到报表。CSV （逗号分隔值） 文件，可以使用 Microsoft Excel 进行检查。  
   
-

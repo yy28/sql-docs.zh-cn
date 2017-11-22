@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- OPENINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- OpeningPeriod function
+f1_keywords: OPENINGPERIOD
+dev_langs: kbMDX
+helpviewer_keywords: OpeningPeriod function
 ms.assetid: bebf55cf-e5c6-42b1-98f2-1d6e54093d4c
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 338ca8f96edd6204e07786c1b4d10195ce180326
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30100b2762d3365c1599e665db54e2446e392fb3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回指定级别（也可以是指定成员）的后代中的第一个同级。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -47,7 +42,7 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  该函数主要用于时间维度，但是也可以用于任何维度。  
   
 -   如果指定一个级别表达式，则**OpeningPeriod**函数使用的层次结构，包含指定的级别，并返回在指定的级别的默认成员的后代的第一个同级。  
@@ -98,4 +93,3 @@ FROM [Adventure Works]
  [FirstSibling &#40;MDX &#41;](../mdx/firstsibling-mdx.md)  
   
   
-

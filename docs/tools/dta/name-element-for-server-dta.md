@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Name element
+dev_langs: XML
+helpviewer_keywords: Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9a5db241528d6fbb75a30af055b6a7682d3e465e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98b9748db2c405491ed94568de25525e208c2ff4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="name-element-for-server-dta"></a>服务器的名称元素 (DTA)
   包含要优化的数据库所在服务器的名称。  
@@ -50,14 +46,13 @@ ms.lasthandoff: 08/02/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[服务器元素 &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
+|**父元素**|[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  
- 有关如何使用该 **Name** 元素的示例，请参阅[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)。  
+ 有关如何使用该 **Name** 元素的示例，请参阅 [服务器元素 (DTA)](../../tools/dta/server-element-dta.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

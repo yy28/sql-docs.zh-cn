@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL)
 下列各节描述 SSMA 在导出到的访问架构时创建的表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -103,9 +101,9 @@ ms.lasthandoff: 08/02/2017
 |**ColumnId**|**int**|一个递增整数，用于标识列。 **ColumnId**是表的主键。|  
 |**ColumnName**|**nvarchar(4000)**|列的名称。|  
 |**IsNullable**|**bit**|指定是否此列可以包含 null 值。 如果值为 1，列可以包含 null 值。 如果值为 0，则列不能包含 null 值。 请注意，验证规则还可用来防止 null 值。|  
-|**数据类型**|**nvarchar(4000)**|访问数据的列，如键入**文本**或**长**。|  
+|**DataType**|**nvarchar(4000)**|访问数据的列，如键入**文本**或**长**。|  
 |**IsAutoIncrement**|**bit**|指定是否该列自动递增整数值。 如果值为 1，将自动递增整数。|  
-|**序号**|**int**|在表中，从零开始的列的顺序。|  
+|**Ordinal**|**int**|在表中，从零开始的列的顺序。|  
 |**默认值**|**nvarchar(4000)**|列的默认值。|  
 |**ValidationRule**|**nvarchar(4000)**|用于验证数据的规则添加到或更新列中。|  
   
@@ -189,6 +187,5 @@ ms.lasthandoff: 08/02/2017
 |**ModuleName**|**nvarchar(4000)**|模块的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
-[导出访问清单](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[导出 Access 清单](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

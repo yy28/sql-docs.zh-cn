@@ -8,24 +8,21 @@ ms.service:
 ms.component: develop
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bf661093a0c0851bb0c8663251bf56f273038013
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 开发人员文档
   查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何操作：  
@@ -67,4 +64,3 @@ ms.lasthandoff: 09/07/2017
 |<xref:Microsoft.MasterDataServices.Services.ServiceContracts>|包含用来定义可通过[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务调用的操作的接口。|  
   
   
-

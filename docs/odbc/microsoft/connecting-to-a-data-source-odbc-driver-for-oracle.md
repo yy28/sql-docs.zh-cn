@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connecting to data source [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connecting to data sources
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b06651615b2e7578b277984c278d680ae9077f2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 054c274bc65c0f4ecf149607216f62e9e15df225
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>连接到数据源 （适用于 Oracle 的 ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 2.  中的相应信息来连接对话框中，填写，然后单击确定。  
   
  连接后信息进行验证，你的应用程序可以使用用于 Oracle 的 ODBC 驱动程序来访问数据源包含的信息。
-

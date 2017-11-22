@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: afc6d26c27c1f18d7455d054443c60fb41971f14
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b1800689474a5ae525dedfff24bab2e60459caba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-settings-db2tosql"></a>数据迁移设置 (DB2ToSQL)
   
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
 [将 DB2 数据迁移到 SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   
-

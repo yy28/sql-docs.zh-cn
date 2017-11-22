@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c0eabc75736667c2b56440baccc85c78fd5271e1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 593a8b87f555a5d76d748dedd5388ff989090236
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下载 Microsoft JDBC Driver for SQL Server
 
@@ -50,4 +48,3 @@ JDBC 驱动程序可以通过将其添加为依赖项在 POM.xml 文件中替换
 不受支持的驱动程序版本不可以从此处下载。 我们正在不断改善我们的 Java 连接支持。 这种情况下我们强烈建议你使用我们的 JDBC 驱动程序的最新版本。  
   
   
-

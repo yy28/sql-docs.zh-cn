@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f0f2cdfcd925a67e2544084748bfd5f42a41c6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed31beae92c3453917a2fbcfd8ea1643c26a114c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>编辑类型映射 (MySQLToSQL)
 **编辑类型映射**对话框中，可以指定类型的源和目标的数据库对象对象之间的映射方式。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/02/2017
 ##### <a name="replace-with"></a>替换为  
 指定此映射的目标长度。 例如，对于**nvarchar**数据类型，你可以输入 20 指定指定的源数据类型应映射到**nvarchar (20)。**  
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d9ce0412a76f34f653273d294e7f8add031a9d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
 **WillChangeField**挂起的操作更改一个或多个值之前，将调用事件[字段](../../../ado/reference/ado-api/field-object.md)中的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **FieldChangeComplete**事件时调用一个或多个值后**字段**对象已更改。  
@@ -75,4 +73,3 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ## <a name="see-also"></a>另请参阅  
  [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)
-

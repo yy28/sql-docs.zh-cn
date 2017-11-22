@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ba29d731c46e8c27ce26006ae259d02a7b059b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6831b370359b7540621eb8d69bdf070689edd9a2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Status 选项（分布式重播管理工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是一个命令行工具，可与分布式重播控制器一起用来进行通信。 本主题介绍 **status** 命令行选项和相应的语法。  
@@ -37,7 +35,7 @@ dreplay status [-m controller] [-f status_interval]
 ```  
   
 #### <a name="parameters"></a>Parameters  
- **-m** *controller*  
+ **-m** *控制器*  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
@@ -60,8 +58,7 @@ dreplay status –m localhost -f 60
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   
-

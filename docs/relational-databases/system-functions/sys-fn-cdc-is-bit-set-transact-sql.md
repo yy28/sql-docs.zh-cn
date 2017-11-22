@@ -1,0 +1,97 @@
+---
+title: "sys.fn_cdc_is_bit_set (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-functions
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to: SQL Server (starting with 2008)
+f1_keywords:
+- fn_cdc_is_bit_set
+- sys.fn_cdc_is_bit_set_TSQL
+- sys.fn_cdc_is_bit_set
+- fn_cdc_is_bit_set_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- sys.fn_cdc_is_bit_set
+- fn_cdc_is_bit_set
+ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
+caps.latest.revision: "15"
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 57fc10656685b753a7e3f2f21224aa3f94615309
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  指示捕获的列是否已更新，采用的方法是检查是否在提供的位掩码内设置了其序号位置。  
+  
+||  
+|-|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+sys.fn_cdc_is_bit_set ( position , update_mask )  
+```  
+  
+## <a name="arguments"></a>参数  
+ *position*  
+ 掩码中要检查的序号位置。 *位置*是**int**。  
+  
+ *update_mask*  
+ 标识已更新列的掩码。 *update_mask*是**varbinary(128)**。  
+  
+## <a name="return-type"></a>返回类型  
+ **bit**  
+  
+## <a name="remarks"></a>注释  
+ 此函数通常用在变更数据查询中，指示列是否已更改。 在此方案中，该函数[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)之前查询中使用以获取所需的列序号。 **sys.fn_cdc_is_bit_set**随后会应用于返回，提供特定于列的信息作为返回的结果集的一部分的变更数据的每一行。  
+  
+ 我们建议使用此函数而不函数[sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)时确定列是否已更改适用于返回的结果集的所有行。  
+  
+## <a name="permissions"></a>Permissions  
+ 要求 **公共** 角色具有成员身份。  
+  
+## <a name="examples"></a>示例  
+ 下例使用 `sys.fn_cdc_is_bit_set` 将“`cdc.fn_cdc_get_all_changes_HR_Department`”列置于查询函数 `IsGroupNmUpdated` 生成的结果集之前，调用此函数时使用预先计算好的列序号和 `__$update_mask` 的值作为参数。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+DECLARE @from_lsn binary(10), @to_lsn binary(10), @GroupNm_ordinal int;  
+SET @from_lsn = sys.fn_cdc_get_min_lsn('HR_Department');  
+SET @to_lsn = sys.fn_cdc_get_max_lsn();  
+SET @GroupNm_ordinal = sys.fn_cdc_get_column_ordinal('HR_Department','GroupName');  
+  
+SELECT sys.fn_cdc_is_bit_set(@GroupNm_ordinal,__$update_mask) as 'IsGroupNmUpdated', *  
+FROM cdc.fn_cdc_get_all_changes_HR_Department( @from_lsn, @to_lsn, 'all')  
+WHERE __$operation = 4;  
+GO  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [sys.fn_cdc_get_column_ordinal &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
+ [sys.fn_cdc_has_column_changed &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60; capture_instance &#62; &#40;Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60; capture_instance &#62;&#40;Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+  
+  

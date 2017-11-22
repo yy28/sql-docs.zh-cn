@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cea7c02271cdf7acabb585e4be51f404f658a62
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a060c0c1890a007ad14e21f526f436d03bb6c481
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>设置转换和迁移选项 (AccessToSQL)
 对于每个 SSMA 项目，你可以设置项目级别选项。 这些选项用于指定如何转换对象、 如何迁移数据，以及如何源数据类型映射到目标数据类型。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，验证是否适用于项目的配置选项。  
@@ -40,13 +38,13 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
   
 本文档的"用户界面参考"部分中介绍了设置。 有关设置以及如何在每个模式下应用的设置的详细信息，请参阅以下主题：  
   
--   [项目设置 （转换）](http://msdn.microsoft.com/en-us/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [项目设置（转换）](http://msdn.microsoft.com/en-us/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [项目设置 （迁移）](http://msdn.microsoft.com/en-us/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [项目设置（迁移）](http://msdn.microsoft.com/en-us/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
 -   [项目设置 (GUI)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [项目设置 （类型映射）](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [项目设置（类型映射）](http://msdn.microsoft.com/en-us/b87b9683-abed-4677-8c50-18bdba704655)  
   
 -   [项目设置 (SQL Azure)](http://msdn.microsoft.com/en-us/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
@@ -68,7 +66,7 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
   
     -   若要指定自定义模式，请选择**自定义**中**模式**框中，在左窗格中选择一个选项，单击设置或在右窗格中，值，然后选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 你还可以自定义当前项目的设置。 这些设置将保存到当前的项目文件。  
   
@@ -82,7 +80,7 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
   
     -   若要指定自定义模式，请选择**自定义**中**模式**框中，在左窗格中选择一个选项，单击设置或在右窗格中，值，然后选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于您的项目需求：  
@@ -96,4 +94,3 @@ SSMA 有四个集的配置设置和配置这些设置的四种模式： 默认�
 ## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

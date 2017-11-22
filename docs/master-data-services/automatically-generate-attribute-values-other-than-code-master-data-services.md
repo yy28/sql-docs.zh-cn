@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c4cfeed1ff845c3abd7e539b8c71173fab03004a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自动生成 Code 之外的属性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您希望在每次应用业务规则时自动分配一个整数作为值时，自动为实体的属性值生成值。  
@@ -85,4 +83,3 @@ ms.lasthandoff: 09/07/2017
  [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
   
-

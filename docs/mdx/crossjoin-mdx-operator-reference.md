@@ -5,29 +5,25 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '*'
-dev_langs:
-- kbMDX
+f1_keywords: '*'
+dev_langs: kbMDX
 helpviewer_keywords:
 - '* (crossjoin operator)'
 - crossjoin operator (*)
 ms.assetid: e00cb260-0189-4c4e-b3d2-088f4421337b
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e9b5310618070d999d66c83114b6d8a9ae9c1299
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c6ee7ba4c5b3bce471bd0fa1bc11cad448bbff63
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>叉积的 MDX 运算符参考
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ Set_Expression * Set_Expression
  一个包含两个指定参数的叉积的集。  
   
 ## <a name="remarks"></a>注释  
-  **\* （叉积）**运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
+ **\* （叉积）**运算符在功能上等效于[叉积](../mdx/crossjoin-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示了此运算符的用法。  
@@ -71,4 +67,3 @@ WHERE
  [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

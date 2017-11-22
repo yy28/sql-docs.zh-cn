@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a04787fdf99c804a7ec304ae4f022583a192508f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
 变量的值文件是 XML 文件包含频繁更改跨服务器迁移的命令 （例如源或目标服务器名称） 的参数值。 大量的数据库迁移发生时，多个变量的文件，用于存储每个源服务器的值都是创建，并且在主脚本文件与引用**– v**切换在命令行。 此行为有助于维护几个脚本文件中的多个变量的文件中的变量值的静态值。  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/17/2017
 ## <a name="see-also"></a>另请参阅  
 [创建服务器连接文件 (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
-

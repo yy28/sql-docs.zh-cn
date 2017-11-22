@@ -5,30 +5,28 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b630c95516370e4c0352e18d1259f05649c106d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 669901a865788be20096ddedb05d15f4448a2a4b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>用户界面参考 (MySQLToSQL)
 本部分包括帮助主题的 SQL Server 迁移助手 (SSMA) 的 MySQL。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 下表列出 SSMA 对话框：  
   
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 |[编辑类型映射 &#40;MySQLToSQL &#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用**编辑类型映射**对话框中，若要创建或修改的源和目标数据库和数据库对象之间的数据类型的映射。|  
 |[全局设置 &#40;编辑器 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|使用的编辑器页**全局设置**对话框中，以配置代码编辑器选项。|  
 |[全局设置 &#40; 对话框 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|使用的对话框页**全局设置**对话框中配置默认对话框中和警告设置。|  
-|[全局设置 （日志记录）](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|使用的日志记录页**全局设置**对话框中配置日志记录。|  
+|[全局设置（日志记录）](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|使用的日志记录页**全局设置**对话框中配置日志记录。|  
 |[全局设置 &#40; 输出窗口 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|使用**全局设置**对话框中，设置有关 MySQL 用户界面的 SSMA 首选项。|  
 |[新项目 &#40;SSMA &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|使用**新项目**对话框创建新的 SSMA for MySQL 项目。|  
 |[项目设置 &#40;转换 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|使用转换页的**项目设置**对话框可以指定如何为 MySQL 的 SSMA 将转换函数和全局变量。|  
@@ -57,8 +55,7 @@ ms.lasthandoff: 08/02/2017
 |[刷新从数据库 &#40;MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|使用**从数据库刷新**对话框中选择要刷新从 MySQL 数据库的对象。|  
 |[保存元数据 &#40;MySQLToSQL &#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**保存元数据**对话框中将显示当你保存缺少元数据的项目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [Getting Started with SSMA for MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

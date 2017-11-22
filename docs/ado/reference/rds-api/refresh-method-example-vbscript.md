@@ -1,30 +1,26 @@
 ---
 title: "刷新方法示例 (VBScript) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Refresh method [ADO], VBScript example
+dev_langs: VB
+helpviewer_keywords: Refresh method [ADO], VBScript example
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29cf95b27d07d97b8372bcb7a9a4366a031d79c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1aae3098a51ed56dcdc6af1a6c4faebe997f970
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-method-example-vbscript"></a>刷新方法示例 (VBScript)
 > [!IMPORTANT]
@@ -184,7 +180,6 @@ End Sub
  [ExecuteOptions 属性 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions 属性 (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [刷新方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-
+ [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.createdbwiz.f1
+f1_keywords: sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d45ff186cd3bbd51c135e3a3cbcfb77401cb3b96
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 6676657dba08f5d24b7b60c6f4150effecf12119
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>创建数据库向导（主数据服务配置管理器）
   使用 **“创建数据库”** 向导可以创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
@@ -67,4 +64,3 @@ ms.lasthandoff: 09/07/2017
 [Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)[数据库要求 &#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   
-

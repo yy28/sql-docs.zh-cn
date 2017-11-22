@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- COVARIANCEN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Covariancen function
+f1_keywords: COVARIANCEN
+dev_langs: kbMDX
+helpviewer_keywords: Covariancen function
 ms.assetid: 1cc621cd-ffa0-40aa-91f0-bc5cb57f692b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1dddff289640ae140f1e4e083487ced339fbd96c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2eeee4c108965c00e847a8c3acdd60334e39000f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   通过使用无偏差总体公式（除以 x-y 对的数目），返回对集求得的 x-y 值对的样本协方差。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -62,4 +57,3 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

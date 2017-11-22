@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINKMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinkMember function
+f1_keywords: LINKMEMBER
+dev_langs: kbMDX
+helpviewer_keywords: LinkMember function
 ms.assetid: b9106f07-8ea2-4933-aed3-ee9c63acf7ac
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b9122e0ae4aec51fe2e554f4e5d667fb9225e4d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c87723c4d7db370b46b2e41cf2d67064f1978f91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回相当于指定层次结构中的指定成员的成员。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -47,7 +42,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  *Hierarchy_Expression*  
  返回层次结构的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **LinkMember**函数返回指定层次结构中与每个级别的相关的层次结构中指定的成员键值匹配的成员。 每个级别上的属性必须具有相同的键基数和数据类型。 在非自然层次结构中，如果某属性的键值有多个匹配项，结果将是错误的或不确定。  
   
 ## <a name="examples"></a>示例  
@@ -70,4 +65,3 @@ FROM [Adventure Works]
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

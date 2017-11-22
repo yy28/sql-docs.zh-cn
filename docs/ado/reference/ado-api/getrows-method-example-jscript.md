@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-helpviewer_keywords:
-- Getrows method [ADO], JScript example
+dev_langs: JScript
+helpviewer_keywords: Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a81c58c0a9f131993b5b41c130ddd599d42c0d91
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3309dde1d1d69ceb1f5cd720f3e97037fd3068a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法示例 (JScript)
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索所有行的*Custiomers*表从[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并使用生成的数据来填充数组。 **GetRows**方法将返回所需的行数少于在两种情况： 任一如果[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**只有第二种情况发生时。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**GetRowsJS.asp**。  
@@ -169,4 +165,3 @@ BODY {
 ## <a name="see-also"></a>另请参阅  
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

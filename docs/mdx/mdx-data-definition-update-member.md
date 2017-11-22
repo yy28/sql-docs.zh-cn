@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,24 +17,23 @@ helpviewer_keywords:
 - calculated members [MDX]
 - UPDATE MEMBER statement
 ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a08e79f52452f69cd755f0cd1345a894bd6017a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c1f8cea1bd0bf2e93fa52072676fccc972ad2076
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX 数据定义的更新成员
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新现有的计算成员。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -61,7 +59,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  指定计算成员属性值的有效标量表达式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  UPDATE MEMBER 语句在保留此成员相对于其他计算的优先的同时，更新现有计算成员。 因此，您不能使用 UPDATE MEMBER 语句来更改 SOLVEORDER。  
   
  UPDATE MEMBER 语句不能在多维数据集的 MDX 脚本中指定。  
@@ -88,4 +86,3 @@ UPDATE MEMBER Cube_Name.Member_Name
  [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

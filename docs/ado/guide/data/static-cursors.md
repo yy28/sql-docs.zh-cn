@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4442e8fe5464f1eb8c7e79fe4df347ae10959b36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标总是显示结果集和第一次打开游标时。 具体取决于实现，静态游标是只读或读/写和提供向前和向后滚动。 静态游标通常不会检测到成员资格、 顺序或值的结果集打开光标后所做的更改。 静态游标可能检测其自己的更新、 删除和插入，虽然不需要它们来这样做。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
  [键集游标](../../../ado/guide/data/keyset-cursors.md)   
  [动态游标](../../../ado/guide/data/dynamic-cursors.md)
-

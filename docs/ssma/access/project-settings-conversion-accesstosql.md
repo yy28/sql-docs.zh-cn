@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6b634d67ca4136f36f57f1f7dd5aa94af8744346
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c9a9c7fb027bfd8f90d5310bb096eaef706aa353
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-accesstosql"></a>项目设置 （转换） (AccessToSQL)
 转换项目设置允许你配置如何将对象转换到的访问数据库对象从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。  
@@ -119,7 +117,6 @@ SSMA 更改对象标识符名称时，在评估的报表并在输出窗格中显
   
 -   **完整模式**: True  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [用户界面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

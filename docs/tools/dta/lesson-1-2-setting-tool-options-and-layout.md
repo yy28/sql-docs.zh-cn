@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>课程 1-2-设置工具选项和布局
 您可以设置用于配置数据库引擎优化顾问图形用户界面 (GUI) 在启动时的显示内容、使用的字体以及其他工具功能的选项，从而为您的使用方式提供最佳支持。 通过本页的练习将让您熟悉可设置的各选项及其设置方式。  
@@ -54,4 +50,3 @@ ms.lasthandoff: 10/24/2017
   
   
   
-

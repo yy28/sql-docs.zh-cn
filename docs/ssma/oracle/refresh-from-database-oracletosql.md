@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 380d2dbc9646eb4c48729524bb7fc5c31430e989
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 536fa920910c56698be8b161f59294f555747917
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-from-database-oracletosql"></a>刷新从数据库 (OracleToSQL)
 **从数据库刷新**对话框中，可以选择要从 Oracle 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  
@@ -58,4 +56,3 @@ X 按钮用于指定应在 SSMA 更新所选对象的元数据。
   
 若要保留**图例**对话框的顶部**从数据库刷新**对话框中，选择**在顶部显示**复选框。  
   
-

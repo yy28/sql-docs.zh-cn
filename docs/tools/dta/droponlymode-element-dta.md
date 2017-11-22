@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DropOnlyMode element
+dev_langs: XML
+helpviewer_keywords: DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ac3f3b750a5c2c5e9395900163a1db4e07c3691
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fac9ba968a7288b7bb7b9a31f93aeb1b597b7ba7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
   指定数据库引擎优化顾问在优化会话过程中只应考虑删除现有的索引、索引视图或分区。 如果指定了此优化选项，则不考虑任何新物理设计结构。  
@@ -48,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [FeatureSet 元素 (DTA)](../../tools/dta/featureset-element-dta.md)  
   
--   [分区元素 &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [分区元素 (DTA)](../../tools/dta/partitioning-element-dta.md)  
   
 -   将 [KeepExisting 元素 (DTA)](../../tools/dta/keepexisting-element-dta.md) 设置为 **ALL**  
   
@@ -72,4 +68,3 @@ ms.lasthandoff: 08/02/2017
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

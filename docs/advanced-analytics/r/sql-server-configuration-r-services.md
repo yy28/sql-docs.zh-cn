@@ -5,22 +5,20 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>与 R 一起使用的 SQL Server 配置
 
@@ -243,4 +241,3 @@ SQL 服务器的优势之一是它能够处理大量并行中的行。 无，这
 [性能优化 R-R 代码和数据优化](../r/r-and-data-optimization-r-services.md)
 
 [性能优化的案例研究结果](../r/performance-case-study-r-services.md)
-

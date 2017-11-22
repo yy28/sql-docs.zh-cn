@@ -8,8 +8,7 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 38835ec5dd79b28f009c4471f5723ea3e2cae7a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 903701b43e16fb36637d778dd468b553fd9357e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
   在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能的默认安装路径，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安装路径为驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/07/2017
  [安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

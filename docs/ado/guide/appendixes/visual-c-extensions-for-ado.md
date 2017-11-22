@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a51272e2fba20b4c336cf4a21cce0cf4a83f4726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fbc17b15d552f9b7afeeb4841febdd7d08e54808
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 编程 Visual c + + 的 ADO 的首选的方法使用**#import**指令中, 所述[Microsoft Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 附带使用 Visual c + + 编程的另一种方法： Visual c + + 扩展。 本部分介绍此功能的用户的用户必须维护 Visual c + + 扩展代码，但应使用 # 编写新的 ADO 代码**导入**。
@@ -43,10 +40,9 @@ ms.lasthandoff: 09/09/2017
 
 -   [使用 ADO 的 Visual c + + 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
--   [Visual c + + 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+-   [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
 -   [ADO 与 Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>另请参阅
  [有关 COM 的 Visual c + + 语法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用 Visual c + + 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual c + + 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>ADO 枚举常量
 若要帮助调试，ADO 枚举列出每个常量的值。 但是，此值是纯粹是参考性的并且可以从一个版本的 ADO 更改为另一个。 你的代码应仅依赖于的名称，而不是实际值，每个枚举常量。  
@@ -95,4 +92,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 对象和接口](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO 属性](../../../ado/reference/ado-api/ado-properties.md)
-

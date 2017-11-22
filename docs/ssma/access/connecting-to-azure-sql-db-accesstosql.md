@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aeba0333b93f1649673268cd35e535cb766fd076
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd42d05f0a5521b9e64742222147f584a2aaf518
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB (AccessToSQL)
 若要将 Access 数据库迁移到 SQL Azure，必须连接到 SQL Azure 的目标实例。 连接时，SSMA 获取有关 SQL Azure 实例中的所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储有关哪些实例的 SQL Azure 连接到，但不会存储密码的信息。  
@@ -115,7 +113,6 @@ ms.lasthandoff: 08/02/2017
   
 -   如果不需要执行任何这些任务，你可以将访问数据库对象定义转换为 SQL Azure 对象定义。 有关详细信息，请参阅[转换 Access 数据库](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

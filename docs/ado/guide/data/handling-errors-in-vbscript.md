@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0f80fa93733c9e9fc4541617d45bd1f266434ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 909721266982cdfbaf6a3a58b00b120c47cf736e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-errors-in-vbscript"></a>在 VBScript 中处理错误
 很少之间没有区别 Visual Basic 中使用的方法和与 VBScript 一起使用。 主要区别是错误的 VBScript 不支持通过在一个标签位置继续执行处理的概念。 换而言之，你不能使用`On Error GoTo`在 VBScript 中。 请改用`On Error Resume Next`，然后检查同时**Err.Number**和**计数**属性**错误**集合，如下面的示例中所示：  
@@ -86,4 +83,3 @@ ms.lasthandoff: 09/09/2017
 </HTML>  
 <!-- EndErrorExampleVBS -->  
 ```
-

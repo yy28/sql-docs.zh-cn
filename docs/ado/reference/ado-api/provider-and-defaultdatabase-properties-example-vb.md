@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - DefaultDatabase property [ADO], Visual Basic example
 - provider property [ADO], Visual Basic example
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ac4121e3679489e3f0886520212b1541c463bfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 286b6fa05080d911215e53834a06407147046fcf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>提供程序和 DefaultDatabase 属性示例 (VB)
 此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性来设置 Microsoft ODBC 访问接口的默认数据库。  
@@ -115,5 +112,4 @@ End Sub
 ## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 属性](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
-
+ [Provider 属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

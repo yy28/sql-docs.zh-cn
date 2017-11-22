@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f26e8ea69db09f6eedd1af6682fbc5cbca558bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc89d40afd125aef5c874c4578bb153cdfcf6993
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目 (AccessToSQL)
 若要访问将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个文件，包含有关你想要迁移到 Access 数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，元数据的目标实例的有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]连接信息和项目设置。  
@@ -124,4 +122,3 @@ SSMA 创建项目文件。 现在，你可以执行的下一步[添加一个或�
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [添加和删除访问数据库文件](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b9bc26477c4b43e47588280e2cce74096b810c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>项目设置 （类型映射） (DB2ToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 请参阅下一部分对于 DB2 类型映射的默认 SSMA 中的表。  
   
-**“添加”**  
+**添加**  
 单击此项可将数据类型添加到映射列表。  
   
 **编辑**  
@@ -67,7 +65,7 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
   
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -95,24 +93,24 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |不同的国家/地区字符<sup>**</sup>|nvarchar(max)|  
 |不同的国家/地区字符<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xml 类型|xml|  
+|Xml 类型|xml|  
   
 <sup>*</sup>适用于返回值类型映射仅。  
   
@@ -123,7 +121,7 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
   
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
@@ -162,7 +160,7 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |国家/地区字符 [*...\*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数字 [*...\*]|数字 [*]|  
 |数字 [*...\*][\*..\*]|数字 [*] [\*]|  
@@ -172,7 +170,7 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |nvarchar2 [*...\*]|nvarchar [*]|  
 |原始 [*...\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
@@ -273,7 +271,6 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |varchar2 [8001..*]|varcha(max)|  
 |Xml 类型|xml|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [用户界面参考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

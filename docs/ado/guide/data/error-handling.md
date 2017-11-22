@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8434e598deba57bf72dfdb8df1c31990113b304c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-handling"></a>错误处理
 ADO 使用多种不同方法来通知出现的错误的应用程序。 本部分讨论使用 ADO 和如何通知你的应用程序时可能发生的错误的类型。 则可以确定通过进行有关如何处理这些错误的建议。  
@@ -53,11 +51,10 @@ ADO 使用多种不同方法来通知出现的错误的应用程序。 本部分
   
 -   [提供程序错误](../../../ado/guide/data/provider-errors.md)  
   
--   [与字段相关的错误的信息](../../../ado/guide/data/field-related-error-information.md)  
+-   [字段相关错误信息](../../../ado/guide/data/field-related-error-information.md)  
   
--   [记录集相关的错误信息](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [记录集相关错误信息](../../../ado/guide/data/recordset-related-error-information.md)  
   
--   [在其他语言中处理错误](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [处理其他语言中的处理错误](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [预测错误](../../../ado/guide/data/anticipating-errors.md)
-

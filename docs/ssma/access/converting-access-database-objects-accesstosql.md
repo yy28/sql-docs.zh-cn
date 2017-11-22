@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9b2240361d87aed6817f2bd5e1b0398ea7fc7894
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5fd1535f35afdfa53895816da2e3e32f539c04b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换访问数据库对象 (AccessToSQL)
 在已添加访问数据库并连接到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 用于访问显示元数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。 你可以现在选择访问数据库对象，然后将转换到的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 架构。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 08/02/2017
 |column|column|  
 |索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  
-|Query|视图<br /><br />最 SELECT 查询将转换为视图中。 其他查询，如更新查询，不会迁移。<br /><br />采用参数的 SELECT 查询不会转换，也不会交叉表查询。|  
+|Query|view<br /><br />最 SELECT 查询将转换为视图中。 其他查询，如更新查询，不会迁移。<br /><br />采用参数的 SELECT 查询不会转换，也不会交叉表查询。|  
 |报表|不转换|  
 |窗体|不转换|  
 |宏|不转换|  
@@ -129,4 +127,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

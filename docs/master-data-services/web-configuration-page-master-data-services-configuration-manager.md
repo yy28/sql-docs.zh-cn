@@ -8,24 +8,21 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.webconfigpg.f1
+f1_keywords: sql13.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 422b1a28f91bb33705f0cb6592f4a19bb6341e76
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: b382066dbac55174763e4c32ff4360de9a5026fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
   使用“Web 配置”  页配置网站和 Web 应用程序。 也可启用 Data Quality Services。  
@@ -50,11 +47,10 @@ ms.lasthandoff: 09/07/2017
   
 |控件名称|Description|  
 |------------------|-----------------|  
-|**启用与 Data Quality Services 的集成**|选择此选项可启用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中提供的数据质量功能。 有关详细信息，请参阅 [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。|  
+|**启用与 Data Quality Services 的集成**|选择此选项可启用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中提供的数据质量功能。 有关详细信息，请参阅 [实现 Data Quality Services 与 Master Data Services 的集成](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
 [Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)[Web 应用程序要求 &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
  [创建主数据管理器 Web 应用程序 &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
-

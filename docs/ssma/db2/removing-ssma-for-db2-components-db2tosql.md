@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a7b78b858bc4af9820dd919d46d38e283920c1f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b26a45f1f8592de1650e3c7ee03c710ff8e3aea0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>为 DB2 组件 (DB2ToSQL) 删除 SSMA
 完成后将数据库迁移到 DB2 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可能想要卸载 SSMA 组件。 你可以随时卸载客户端组件。 但是，你不应卸载来自的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]除非你已迁移的数据库不再使用中的函数**ssma_DB2**架构**sysdb**数据库。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 08/02/2017
 [安装适用于 DB2 客户端 &#40; DB2ToSQL &#41; SSMA](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
 [在 SQL Server &#40; DB2ToSQL &#41; 上安装 SSMA 组件](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   
-

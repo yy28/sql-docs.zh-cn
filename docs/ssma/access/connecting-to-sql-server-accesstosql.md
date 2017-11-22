@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f282c03b5492ea05fefe3d65b968d42ce146333c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9f2633151345d57fbba2fe7c40b3ca52b492e68
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL)
 若要访问将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你必须连接到的目标实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 连接时，获取有关中的实例的数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]并显示在数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 SSMA 存储的哪个实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你连接到，但不会存储密码。  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
     -   如果你要连接到命名实例，输入计算机名称、 反斜杠和实例名称。 例如： MyServer\MyInstance。  
   
-    -   若要连接到的活动用户实例[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用命名管道连接协议和指定的管道名称，例如\\ \\.\pipe\sql\query。 有关详细信息，请参阅[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]文档。  
+    -   若要连接到的活动用户实例[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用命名管道连接协议和指定的管道名称，例如\\ \\.\pipe\sql\query。 有关详细信息，请参阅 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 文档。  
   
 3.  如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]配置为接受非默认端口上的连接，请输入端口号用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中的连接**服务器端口**框。 对于默认实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，默认端口号为 1433年。 对于命名实例，SSMA 将尝试获取中的端口号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]浏览器服务。  
   
@@ -106,9 +104,9 @@ ms.lasthandoff: 08/02/2017
 ||||||||
 |-|-|-|-|-|-|-|
 |**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 (版本： 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008 (版本： 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|是|用户帐户控制|用户帐户控制|用户帐户控制|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||是|用户帐户控制|用户帐户控制|是||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||是|用户帐户控制|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||是|是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||是||
 |SQL Azure||||||是|
@@ -131,7 +129,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-steps"></a>后续步骤  
 如果你想要自定义数据库源和目标数据库之间的映射，请参阅[映射源和目标数据库](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)否则下, 一步是将转换到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法使用[转换数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e36f73bd8f62bed52ef13acd4e1491b0d3e894fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 175e135f99f8ed96754ff255cbad7f32cc202479
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 SSMA for MySQL 可以在不同的 SQL 模式下运行和可以适用于这些模式以不同的方式不同的客户端。  
@@ -85,4 +83,3 @@ SSMA for MySQL 可以在不同的 SQL 模式下运行和可以适用于这些模
   
     3.  显式设置的有效 SQL 模式将不反映与继承 SQL 模式，并且最后应用于对象。  
   
-

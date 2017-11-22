@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e1b11fde38d4a7dce1a7a3f2f1ccdd47091c440
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6d013e80b5c6ac4c6e7b74edce576442d732f54e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>编辑类型映射 (SybaseToSQL)
 **编辑类型映射**对话框中，可以指定类型的源和目标的数据库对象对象之间的映射方式。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/02/2017
   
 以下字段的可变长度数据类型时，将出现在**源类型**:  
   
-**从**  
+**From**  
 指定此映射的最短长度。 例如，对于**nchar**数据类型，你可以输入 10 来指定此映射的范围开始**nchar(10)**。  
   
 **若要**  
@@ -56,4 +54,3 @@ ms.lasthandoff: 08/02/2017
 **Replace with**  
 指定此映射的目标长度。 例如，对于**nvarchar**数据类型，你可以输入 20 指定指定的源数据类型应映射到**nvarchar(20)**。  
   
-

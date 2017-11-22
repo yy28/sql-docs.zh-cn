@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46ef9db34ecfc7ee0ba3fbd41a052658a065a010
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1be2cc9528e62e548feb242b06686ad50a1753c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-streams"></a>命令流
 ADO 已始终支持指定的字符串格式的命令输入**CommandText**属性。 作为替代方法，用 ADO 2.7 或更高版本，你还可以使用信息的流用于命令输入通过分配到流**CommandStream**属性。 你可以分配 ADO**流**对象或任何支持 COM 的对象**IStream**接口。  
@@ -82,4 +80,3 @@ adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"
 ```  
 Set objRS = adoCmd.Execute  
 ```
-

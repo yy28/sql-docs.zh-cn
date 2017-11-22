@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50bbc2bc214fd0ad8c7e997ea36c1edd0b764421
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95783265e2e89df6aeafbbe0d74e6d999cbdcff3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型 (AccessToSQL)
 访问数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 当转换到的访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你必须指定如何将访问的数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受默认数据类型映射，也可以自定义映射，如以下过程中所示。  
@@ -102,4 +100,3 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
 ## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

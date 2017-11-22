@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 72c831ce1209aafecee171431b3d022f7587051f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ad25369dc4a9d9cc7a26795320050dcb583e92b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>入门 Oracle (OracleToSQL) SSMA
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 的 Oracle 使你能够快速地转换到的 Oracle 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构，上载生成架构转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和将数据迁移到的 Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -115,8 +113,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
   
 -   错误列表窗格可排序的列表中显示错误、 警告和信息性消息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将 Oracle 数据迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
 [用户界面参考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-
