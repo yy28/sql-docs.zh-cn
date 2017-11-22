@@ -1,12 +1,14 @@
 ---
 title: "创建可用性组 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +18,26 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能启用了 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的实例，将创建新的可用性组。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +73,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -188,10 +188,10 @@ CREATE AVAILABILITY GROUP group_name
  用于创建分布式的可用性组。 此选项使用可用性组 ON 参数用于连接两个单独的 Windows Server 故障转移群集中的可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)。 从支持分布式的可用性组[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- SQL Server 自 2017 年 1 CTP 2.2 中引入。 用于设置最小同步提交主提交事务之前所需的辅助副本数。 保证 SQL Server 事务等待，直到事务日志更新辅助副本的最小数量。 默认值为 0，这将使 SQL Server 2016 相同的行为。 最小值为 0。 最大值为减 1 的副本数目。 此选项与在同步提交模式下的副本。 当副本在同步提交模式下时，写入主副本上的等待，直到同步辅助副本上的写入都将提交到副本数据库事务日志。 如果承载辅助同步副本的 SQL 服务器停止响应，则将该辅助副本承载主副本的 SQL 服务器标记为未同步，并且继续。 无响应的数据库重新联机它是处于"未同步"状态，直到主可以使其同步再次，副本将标记为不正常。 此设置可保证主副本等待的最小副本数已提交的每个事务。 如果不可用的最小副本数，则在主计算机上的提交失败。 群集类型，此设置适用于可用性组`WSFC`和`EXTERNAL`。 对于群集类型`EXTERNAL`可用性组添加到群集资源时更改的设置。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
+ SQL Server 自 2017 年 1 中引入。 用于设置最小同步提交主提交事务之前所需的辅助副本数。 保证 SQL Server 事务等待，直到事务日志更新辅助副本的最小数量。 默认值为 0，这将使 SQL Server 2016 相同的行为。 最小值为 0。 最大值为减 1 的副本数目。 此选项与在同步提交模式下的副本。 当副本在同步提交模式下时，写入主副本上的等待，直到同步辅助副本上的写入都将提交到副本数据库事务日志。 如果承载辅助同步副本的 SQL 服务器停止响应，则将该辅助副本承载主副本的 SQL 服务器标记为未同步，并且继续。 无响应的数据库重新联机它是处于"未同步"状态，直到主可以使其同步再次，副本将标记为不正常。 此设置可保证主副本等待的最小副本数已提交的每个事务。 如果不可用的最小副本数，则在主计算机上的提交失败。 对于群集类型`EXTERNAL`可用性组添加到群集资源时更改的设置。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
 
  CLUSTER_TYPE  
- SQL Server 自 2017 年 1 CTP 2.2 中引入。 用于标识可用性组是否在 Windows Server 故障转移群集 (WSFC)。  Windows Server 故障转移群集上的故障转移群集实例上可用性组时，将设置为 WSFC。 群集管理的群集管理器不是 Windows Server 故障转移群集，如 Linux Pacemaker 时设置为外部。 可用性组未使用 WSFC 群集协调时，则设置为无。 例如，当某一可用性组包括 Linux 服务器。 
+ SQL Server 自 2017 年 1 中引入。 用于标识可用性组是否在 Windows Server 故障转移群集 (WSFC)。  Windows Server 故障转移群集上的故障转移群集实例上可用性组时，将设置为 WSFC。 群集管理的群集管理器不是 Windows Server 故障转移群集，如 Linux Pacemaker 时设置为外部。 可用性组未使用 WSFC 群集协调时，则设置为无。 例如，当某一可用性组包括 Linux 服务器与任何群集管理器。 
 
  数据库*database_name*  
  指定本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（也就是您正在其上创建可用性组的服务器实例）上的一个或多个用户数据库的列表。 您可以为一个可用性组指定多个数据库，但每个数据库只能属于一个可用性组。 有关类型的可用性组都可以支持的数据库的信息，请参阅[先决条件、 限制和建议 Always On 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). 若要了解哪些本地数据库已属于某一可用性组，请参阅**replica_id**中的列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
@@ -245,14 +245,23 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  是与伙伴服务器实例的镜像端点关联的端口号（对于 ENDPOINT_URL 选项）或服务器实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用的端口号（对于 READ_ONLY_ROUTING_URL 选项）。  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT 的情况下 |ASYNCHRONOUS_COMMIT}  
- Synchronous_commit 的情况下或 ASYNCHRONOUS_COMMIT 指定是主副本等待辅助副本确认磁盘之前的主副本可以提交事务给定主计算机上的日志记录强化 （写入）数据库。 针对同一主副本上不同数据库的事务可以单独提交。
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT 的情况下 |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
+ Synchronous_commit 的情况下或 ASYNCHRONOUS_COMMIT 指定是主副本等待辅助副本确认磁盘之前的主副本可以提交事务给定主计算机上的日志记录强化 （写入）数据库。 针对同一主副本上不同数据库的事务可以单独提交。 SQL Server 自 2017 年 CU 1 引入了 CONFIGURATION_ONLY。 CONFIGURATION_ONLY 副本仅适用于可用性组用于 CLUSTER_TYPE = 外部或 CLUSTER_TYPE = NONE。 
   
  SYNCHRONOUS_COMMIT  
  指定主副本等待提交事务，直到它们已进行强化此辅助副本 （同步提交模式）。 您可以为最多三个副本（包括主副本）指定 SYNCHRONOUS_COMMIT。  
   
  ASYNCHRONOUS_COMMIT  
  指定主副本无需等待此辅助副本对日志进行硬编码（同步提交可用性模式）即可提交事务。 您可以为最多五个可用性副本（包括主副本）指定 ASYNCHRONOUS_COMMIT。  
+
+ CONFIGURATION_ONLY 指定主副本同步到此副本上的主数据库提交可用性组配置元数据。 副本将不包含用户数据。 此选项：
+
+- 可以在任何版本的 SQL Server，包括 Express Edition 上承载。
+- 需要镜像端点的 CONFIGURATION_ONLY 副本类型的数据`WITNESS`。
+- 不能更改。
+- 不是有效时`CLUSTER_TYPE = WSFC`。 
+
+   有关详细信息，请参阅[配置唯一副本](../../linux/sql-server-linux-availability-group-ha.md)。
   
  AVAILABILITY_MODE 子句是必需的。 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
@@ -380,7 +389,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  是与可用性组的镜像终结点相关联的端口号。 请注意，这不是侦听器的端口。  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT 的情况下 |ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT 的情况下 |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
  指定是否要等待的时间要确认磁盘之前的主副本可以提交事务在给定的主数据库上的日志记录强化 （写入） 的次要可用性组主副本。  
   
  SYNCHRONOUS_COMMIT  
@@ -498,7 +507,7 @@ CREATE AVAILABILITY GROUP group_name
   
  最后，该示例指定可选的 LISTENER 子句，以便为新的可用性组创建可用性组侦听器。 将为此侦听器指定唯一的 DNS 名称 `MyAgListenerIvP6`。 两个副本位于不同的子网，因此侦听器必须使用静态 IP 地址。 对于这两个可用性副本中的每一个，WITH IP 子句都指定一个将使用 IPv6 格式的静态 IP 地址 `2001:4898:f0:f00f::cf3c` 和 `2001:4898:e0:f213::4ce2`。 此示例还指定使用可选的 PORT 参数来将端口 `60173` 指定为侦听器端口。  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -572,5 +581,4 @@ GO
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

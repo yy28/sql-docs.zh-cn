@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, programming
+helpviewer_keywords: ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17fb13aafe00ce39d18ea52c3a2240f4bebf14d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概述和优势
 ActiveX 数据对象 (ADO) 是 OLE DB 的高级别，能够轻松使用接口。 OLE DB 是很多数据存储区的低级别、 高性能界面。 ADO 和 OLE DB 可以用来处理关系型 （表格） 和非关系 (分层或流) 数据。
@@ -44,4 +42,3 @@ ActiveX 数据对象 (ADO) 是 OLE DB 的高级别，能够轻松使用接口。
 -   [ADO 技术表](../../ado/guide/ado-technology-table.md)
 
 -   [ADO 安全设计问题](../../ado/guide/ado-security-design-issues.md)
-

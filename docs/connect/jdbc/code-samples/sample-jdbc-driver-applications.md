@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 29439d8929fc7eee4c74ef29fac5260986728a43
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a13ba744c93f08d47a98219c0ab2d0dc0ec7a3ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sample-jdbc-driver-applications"></a>示例 JDBC 驱动程序应用程序
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +43,6 @@ ms.lasthandoff: 09/09/2017
 |[处理大型数据](../../../connect/jdbc/working-with-large-data.md)|这些示例应用程序演示如何使用自适应缓冲检索大型值数据从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]而无需服务器游标开销的数据库。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

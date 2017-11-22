@@ -1,11 +1,14 @@
 ---
 title: "DBCC CHECKTABLE (Transact SQL) |Microsoft 文档"
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKTABLE_TSQL
 - DBCC CHECKTABLE
 - CHECKTABLE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], DBCC CHECKTABLE
 - page integrity checks [SQL Server]
@@ -25,20 +27,22 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9d6ef6adb1d9a10b93e938842de2661eb9202d16
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af19e042e9e40bd92352a175394c442431959b0e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 检查所有页和构成表或索引的视图的结构的完整性。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+检查组成表或索引视图的所有页和结构的完整性。
+
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>语法    
@@ -160,7 +164,7 @@ DBCC CHECKTABLE
 [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部数据库快照    
-DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的事务一致性。 有关详细信息，请参阅[查看数据库快照 & #40; 的稀疏文件的大小Transact SQL & #41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)和中的"DBCC 内部数据库快照使用情况"一节[DBCC & #40;Transact SQL & #41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的事务一致性。 有关详细信息，请参阅[查看数据库快照 &#40; 的稀疏文件的大小Transact SQL &#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)和中的"DBCC 内部数据库快照使用情况"一节[DBCC &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 如果无法创建快照，或指定了 TABLOCK，则 DBCC CHECKTABLE 将获取一个共享表锁来获得所需的一致性。
     
 > [!NOTE]    
@@ -254,4 +258,3 @@ DBCC CHECKTABLE ('Production.Product',@indid);
  [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
   
-

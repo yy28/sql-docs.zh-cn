@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - ADORecordConstruction::GetRowPosition
 - ADORecordConstruction::RowPosition
 - ADORecordConstruction::get_RowPosition
-helpviewer_keywords:
-- RowPosition property [ADO]
+helpviewer_keywords: RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3e20769e324400357ea65acc21d338749987ae4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00206531bf8154d509f79e7229b1a2da319fa5fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 属性 (ADO)
 获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。 当你使用**put_RowPosition**设置**RowPosition**对象，生成**记录集**对象使用**RowPosition**对象传递给确定当前行。  
@@ -61,4 +58,3 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
   
 ## <a name="applies-to"></a>适用范围  
  [ADORecordsetConstruction 接口](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
-

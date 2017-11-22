@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Optimize property [ADO]
+helpviewer_keywords: Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ad1ecfc8b29a5b2ca22ef4673ee2d55b3a3c988
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4aeae41d865e585c4c8b93c86bd6f8e9753eaea1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-property-dynamic-ado"></a>优化属性的动态 (ADO)
 指定是否应在创建索引[字段](../../../ado/reference/ado-api/field-object.md)。  
@@ -62,5 +59,4 @@ fld.Properties("Optimize") = False   'Delete an index
  [优化属性示例 （VC + +）](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [排序属性](../../../ado/reference/ado-api/sort-property.md)
-
+ [Sort 属性](../../../ado/reference/ado-api/sort-property.md)

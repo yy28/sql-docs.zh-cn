@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 89fa77ec8e95bfc1f6ea2b796e07a1a2266bbab4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,4 +170,3 @@ SSMS 不会收集其自身的故障转储。 与 SSMS 相关的任何故障转�
 可以将服务配置为不发送使用情况数据，如“在服务器上设置注册表子项”部分所述。 但是，执行此操作不会删除服务帐户。 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

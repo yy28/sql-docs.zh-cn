@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，在 SQL 中使用它
 
@@ -72,7 +68,7 @@ ms.lasthandoff: 10/07/2017
 
     + 使用 SELECT 语句调用从 SQL 表的存储的模型。 从作为表中检索模型**varbinary （max)** SQL 变量中存储的数据 _@lmodel2_ ，作为参数传递和*mod*到存储的系统过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 计分已定义为 SQL 查询，存储作为 SQL 变量中的字符串用作输入的数据 _@input_ 。 从数据库检索数据时，它存储在数据帧调用*InputDataSet*，这就是默认名称为输入数据传送到[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程; 你可以定义如果需要使用参数的其他变量名 _@input\_数据\_1\_名称_。
+    + 计分已定义为 SQL 查询，存储作为 SQL 变量中的字符串用作输入的数据 _@input_ 。 从数据库检索数据时，它存储在数据帧调用*InputDataSet*，这就是默认名称为输入数据传送到[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程; 你可以定义如果需要使用参数的其他变量名  *_@input_data_1_name_*  。
 
     + 为了生成分数，存储过程会从 `rxPredict` RevoScaleR **库调用** 函数。
 
@@ -229,4 +225,3 @@ ms.lasthandoff: 10/07/2017
 [SQL Server R 教程](sql-server-r-tutorials.md)
 
 [如何创建存储的过程，请使用 sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

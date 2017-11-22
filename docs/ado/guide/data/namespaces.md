@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- namespaces in ADO
+helpviewer_keywords: namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d32b2d51454f48d4ef164058abbf08d06859a281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2d9dd5aab887a7df42fd1f6661c276be6cc73d6a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="namespaces"></a>命名空间
 ADO 中的 XML 持久性格式使用以下四个命名空间。  
@@ -54,5 +51,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  用户可以定义为任何名称，只要整个 XML 文档一致地使用此名称。 ADO 始终写出"s、"rs、"dt，"并"z，"但这些前缀名称不是硬编码到加载组件。  
   
 ## <a name="see-also"></a>另请参阅  
- [保留记录采用 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

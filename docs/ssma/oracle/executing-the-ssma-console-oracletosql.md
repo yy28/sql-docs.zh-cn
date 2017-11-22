@@ -5,28 +5,25 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 16f646303766e8e249e2bd76a336bc5c3ee59049
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>执行 SSMA 控制台 (OracleToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 控制台应用程序在此部分中使用作为枚举的某些标准脚本文件命令。  
@@ -761,4 +758,3 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 -   有关故障排除控制台中的问题，请参阅[故障排除 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
   
-

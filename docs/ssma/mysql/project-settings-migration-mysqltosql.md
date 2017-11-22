@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e46fb86489ca7e2a1fed33e85f638f99e47770eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>项目设置 （迁移） (MySQLToSQL)
 迁移页的**项目设置**对话框中包含自定义如何 SSMA 将数据迁移从 MySQL 到 SQL Server 的设置。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/02/2017
 |**处理错误**|指定如何处理的值的空间数据类型的迁移中的错误。 如果指定将替换为 NULL，则会导致错误的所有空间值将替换为 NULL。 没有替代是在否则完成的。<br /><br />**默认模式**： 生成错误<br /><br />**开放式模式**： 生成错误<br /><br />**完整模式**： 生成错误|  
 |**值验证**|指定如何处理无效空间值。 如果指定了重做有效，正在尝试修改无效的值，使其有效。<br /><br />**默认模式**： 使生效<br /><br />**开放式模式**： 不会更改<br /><br />**完整模式**： 使生效|  
   
-

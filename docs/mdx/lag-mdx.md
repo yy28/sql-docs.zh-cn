@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LAG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Lag function
+f1_keywords: LAG
+dev_langs: kbMDX
+helpviewer_keywords: Lag function
 ms.assetid: 08c704ea-35d8-44ee-abe5-93bd24b99906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f46f78006d42f43ee543348d18609382f306f75b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eedeae82c5b7566f0c59a6876fc6743c61794de0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +39,10 @@ Member_Expression.Lag(Index)
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
- *索引*  
+ *Index*  
  指定成员位置滞后位数的有效数值表达式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  级别内的成员位置由属性层次结构的自然顺序决定。 位置的编号从零开始。  
   
  如果指定的滞后为零，**延隔时间**函数将返回指定的成员本身。  
@@ -79,4 +74,3 @@ FROM [Adventure Works]
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

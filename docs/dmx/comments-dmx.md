@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - comments [DMX]
 - Data Mining Extensions [Analysis Services], comments
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - // (comment)
 - -- (comment character)
 ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d393e3b0b9c98252722bb5cf0fc72454f3f7212c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 012feb6b830b18151708a85259a0d52ba195788f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="comments-dmx"></a>（注释）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **/\*...\*/ （正斜杠星号字符对）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释，甚至还可以在可执行代码中编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]计算开始注释对中的所有内容 (/ *) 到结束注释对 (\*/) 作为注释的一部分。 若要创建多行注释，以打开注释字符对开头的注释 (/\*)，日期和结束的结束注释字符对，对注释 (\*/)。 该类注释的任何行中都不应包含其他注释字符。 有关此注释字符的详细信息，请参阅[正斜杠星型 &#40;注释 &#41;&#40; DMX &#41;](../dmx/slash-star-comment-dmx.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40; DMX &#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -74,4 +72,3 @@ ms.lasthandoff: 08/02/2017
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b06de61335e318438f4e75e694de7c0eb3521bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 是一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，它用于报告 SQL Server 对象的目标集是否符合一个或多个基于策略的管理策略中指定的条件。  
@@ -92,9 +90,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>指定目标集  
  使用三个参数指定目标对象集：  
   
--   **-TargetServerName** 指定包含目标对象的 SQL Server 实例。 可在一个字符串中指定这些信息，该字符串应使用为 <xref:System.Data.SqlClient.SqlConnection> 类的 ConnectionString 属性定义的格式。 可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类生成格式正确的连接字符串。 还可以创建 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection>对象，并将其传递给 **-TargetServer**。 如果提供只有服务器名称的字符串， **Invoke-PolicyEvaluation** 会使用 Windows 身份验证来连接服务器。  
+-   **-TargetServerName** 指定包含目标对象的 SQL Server 实例。 可在一个字符串中指定这些信息，该字符串应使用为 <xref:System.Data.SqlClient.SqlConnection> 类的 ConnectionString 属性定义的格式。 可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类来生成格式正确的连接字符串。 还可以创建 <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> 对象并将其传递到 **-TargetServer**使用。 如果提供只有服务器名称的字符串， **Invoke-PolicyEvaluation** 会使用 Windows 身份验证来连接服务器。  
   
--   **-TargetObjects** 的取值为一个对象或对象数组，它们表示目标集中的 SQL Server 对象。 例如，可以创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 类对象的数组，并将其传入 **-TargetObjects**。  
+-   **-TargetObjects** 的取值为一个对象或对象数组，它们表示目标集中的 SQL Server 对象。 例如，你可以创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 类对象数组，并将其传递到 **-TargetObjects**使用。  
   
 -   **-TargetExpressions** 的取值为一个字符串，其中包含一个指定目标集中对象的查询表达式。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 ObjectType 是 SQL Server 管理对象 (SMO) 层次结构中的一个对象。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
@@ -148,4 +146,3 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [使用数据库引擎 cmdlet](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
-

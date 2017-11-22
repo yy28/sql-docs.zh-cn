@@ -5,35 +5,32 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [MDX], statements
 - Multidimensional Expressions [Analysis Services], scripts
 ms.assetid: a4e5f377-6f06-4888-9663-91105b205ac1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 76d57e87a24f034ee1898b0c610b23b3479c48b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aee6950e5892644b7cc53fc21b751b0b9d5bdaa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 脚本编写语句 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在多维表达式 (MDX) 中，下列语句用于管理 MDX 脚本中的上下文、作用域和流控制。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -44,11 +41,10 @@ ms.lasthandoff: 08/02/2017
 |[如果语句 &#40;MDX &#41;](../mdx/mdx-scripting-if.md)|如果条件为真，则执行语句。|  
 |[SCOPE 语句 &#40;MDX &#41;](../mdx/mdx-scripting-scope.md)|将指定 MDX 语句的作用域限制于指定的子多维数据集。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [MDX 语句引用 &#40;MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX 数据操作语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   
-

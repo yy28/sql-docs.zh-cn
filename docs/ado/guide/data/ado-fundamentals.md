@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6abb3fe852de5158f68df086768f776da3efd5c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 提供开发人员的功能强大、 逻辑对象模型来以编程方式访问、 编辑和更新数据的各种通过 OLE DB 系统接口的数据源。 ADO 的最常见用法是查询表或关系数据库中的表、 检索和显示结果的应用程序，并可能使用户能够进行和将更改保存到数据。 其他任务包括：  
@@ -66,9 +64,8 @@ ADO 提供开发人员的功能强大、 逻辑对象模型来以编程方式访
   
 -   [ADO 对象和集合](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData： 一个简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData：简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [OLE DB 提供程序](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [错误](../../../ado/guide/data/errors-ado.md)
-

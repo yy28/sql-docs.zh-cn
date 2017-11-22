@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Sample Console Script Files, SqlStatementConversionSample.xml
 - Sample Console Script Files,VariableValueFileSample.xml
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 0f5b0bf819c5e4097e14bddedaee2efb8ce63c6e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aa5a59b9638c83fd99f6d330561e4b0a7b5f4cc6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用示例控制台脚本文件 (OracleToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -85,7 +83,7 @@ ms.lasthandoff: 08/02/2017
   
     架构映射到目标架构的源数据库。  
   
-    **属性**  
+    **Attribute**  
   
     -   `source-schema:`指定需要要转换的源数据库。  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 08/02/2017
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`示例控制台脚本文件的命令的示例 4。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name`： 指定源数据库/对象需要要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
   
@@ -111,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name:`指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 08/02/2017
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`示例控制台脚本文件的命令的示例 2。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name:`指定的源数据库/表需要要迁移的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/02/2017
 [创建服务器连接文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
 [生成报表 &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   
-
