@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 269c901b4242ae199f6d83fc7f678c29be39e5e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置 （类型映射） (MySQLToSQL)
 类型映射的项目设置，可以设置 SSMA 项目的默认类型映射。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/02/2017
 ##### <a name="target-type"></a>目标类型  
 目标数据库数据类型指定的 MySQL 数据类型。  
   
-##### <a name="add"></a>“添加”  
+##### <a name="add"></a>添加  
 单击此项可将数据类型添加到映射列表。  
   
 ##### <a name="edit"></a>编辑  
@@ -203,7 +201,7 @@ ms.lasthandoff: 08/02/2017
 |年份 [2..2]|smallint|  
 |年份 [4..4]|smallint|  
   
-##### <a name="add"></a>“添加”  
+##### <a name="add"></a>添加  
 单击此项可将数据类型添加到映射列表。  
   
 ##### <a name="edit"></a>编辑  
@@ -215,4 +213,3 @@ ms.lasthandoff: 08/02/2017
 ##### <a name="reset-to-default"></a>重置为默认值  
 单击以将所有数据类型映射重都置为 SSMA 默认值。  
   
-

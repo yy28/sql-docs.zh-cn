@@ -5,27 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8fedc613289421e51967890e0508c44812e73b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8951624c19b03c7630698fe08aa7987e780dc35d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unknown-service-log-on-tab"></a>未知服务（“登录”选项卡）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器是无法识别此服务。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器无法识别此服务。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 从运行该服务的计算机上的 WMI 提供程序接收服务信息。 读取服务属性时出错，或者服务属性不完整。 若要解决此问题，请尝试关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器并将其重新打开，或者检查运行此服务的计算机上的 WMI 提供程序。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器从运行此服务的计算机上的 WMI 提供程序接收服务信息。 读取服务属性时出错，或者服务属性不完整。 若要解决此问题，请尝试关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器并将其重新打开，或者检查运行此服务的计算机上的 WMI 提供程序。  
   
  WMI 提供程序是 Windows 组件。 有关如何检查对 WMI 提供程序的权限的信息，请参阅 SQL Server 联机丛书中的“如何在 SQL Server 工具中将 WMI 配置为显示服务器状态”。  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  恢复暂停的服务。  
   
   
-

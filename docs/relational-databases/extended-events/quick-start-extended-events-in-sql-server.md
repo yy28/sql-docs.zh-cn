@@ -2,9 +2,12 @@
 title: "快速入门：SQL Server 中的扩展事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -16,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 本文旨在为不熟悉扩展事件以及想在几分钟内创建一个事件会话的 SQL 开发人员提供帮助。 通过使用扩展事件，你可以查看有关 SQL 系统和应用程序的内部操作的详细信息。 创建扩展事件会话时，需要告诉系统：

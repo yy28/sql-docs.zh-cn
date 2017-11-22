@@ -5,22 +5,20 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 196b8e8e49ceae58054eae3d1b74480a9f438b75
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函数引用  
   
-|函数名称|Supported|说明|  
+|函数名称|是否支持|说明|  
 |-------------------|---------------|-----------|  
 |[Abs](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007544&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[数组](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007545&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持||  
@@ -74,7 +72,7 @@ ms.lasthandoff: 08/02/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持||  
-|[筛选](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持|**\*\*警告\* \***  MDX 实现不同的函数具有相同的名称; 筛选器 （值赋，Logical_Expression） 函数返回筛选基于搜索条件从给定的自变量的指定的集后得到的集<br /><br /> **\*\*警告\* \***  DAX 实现不同的函数具有相同名称; 筛选器 (\<表 >，\<筛选器 >) 函数返回表示另一个表或从给定的自变量的表达式的一个子集的表|  
+|[Filter](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持|**\*\*警告\* \***  MDX 实现不同的函数具有相同的名称; 筛选器 （值赋，Logical_Expression） 函数返回筛选基于搜索条件从给定的自变量的指定的集后得到的集<br /><br /> **\*\*警告\* \***  DAX 实现不同的函数具有相同名称; 筛选器 (\<表 >，\<筛选器 >) 函数返回表示另一个表或从给定的自变量的表达式的一个子集的表|  
 |[修复](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|仅 MDX||  
 |[格式 (Visual Basic for Applications)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|不支持||  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/02/2017
 |[年](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX、MDX||  
   
   
-

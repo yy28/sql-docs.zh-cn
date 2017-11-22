@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.values.f1
+f1_keywords: sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ebf88408f523594fc9a74f49d5d613a2d059b36
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-domain-values"></a>更改域值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中更改和增加知识库中的元数据。 通过知识发现生成知识，将知识导入到知识库或域中，或者使知识基于其他知识库之后，您可以通过交互方式更改数据值。 知识库生成不仅利用计算机辅助过程，而且向您提供了一种方法，供您使用您的知识来验证数据值和按以下方式更改数据值：  
@@ -70,7 +67,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要在其中更改值的域或创建一个新域。 如果您必须创建新域，请参阅 [创建域](../data-quality-services/create-a-domain.md)。 单击 **“域值”** 选项卡。  
   
-4.  在 **“值”** 表中显示需要修改的值。 有关详细信息，请参阅下方的 [如何显示适当的值](#Display) 。  
+4.  在 **“值”** 表中显示需要修改的值。 有关详细信息，请参阅下方的 [How to Display the Appropriate Values](#Display) 。  
   
 5.  若要更改某个值的状态，请继续执行以下操作：  
   
@@ -93,20 +90,20 @@ ms.lasthandoff: 09/09/2017
   
     -   **将所选域值设为其组的前导值**：若要更改该组的前导值，请在组中选择未指定为前导值的一个值，然后单击 **“将所选域值设为其组的前导值”** 按钮。 这会将前导值设置为另一个值的替代值。 只有将两个或更多属于组的值设置为同义词，并且您要更改 DQS 所指定的主导值时，此操作才有效。 请注意，前导值由蓝色行且值由粗体显示来指示。  
   
-7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../data-quality-services/set-domain-properties.md)。  
+7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“域值”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  
   
 8.  **添加新的域值**：单击以在行尾添加一行。 在输入值后，该行将以字母顺序重新定位，并将通过在前面加上星号字符定义为新条目。  
   
-9. **从 Excel 导入域值**：若要从 Excel 电子表格添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入域值”**，。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
+9. **从 Excel 导入域值**：若要从 Excel 电子表格添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入域值”**，。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
 10. **从 Excel 导入项目值**：若要从数据质量项目添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击 **“完成”**。 有关详细信息，请参阅“将项目值导入到域中”。  
   
 11. **删除所选域值**：若要从域中删除一个或多个现有值，请在“值”表中选择值，然后单击 **“删除所选域值”** 图标。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   
-12. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+12. 单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：更改域值后  
  在更改域值后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
@@ -124,7 +121,7 @@ ms.lasthandoff: 09/09/2017
   
  当您在 **“清理”** 活动的 **“管理和查看结果”** 页中执行交互式数据清理时，无效和有错误的值都将包含在 **“管理和查看结果”** 页的 **“无效”** 选项卡上。  
   
-##  <a name="Display"></a> 如何显示适当的值  
+##  <a name="Display"></a> How to Display the Appropriate Values  
  您可以按如下所示修改显示：  
   
 -   通过在**“筛选器”** 下拉列表中选择状态，基于其状态筛选 **“筛选器”** 要处于表中的结果。  
@@ -143,4 +140,3 @@ ms.lasthandoff: 09/09/2017
  **“域值”** 选项卡中的每个值表都包含一个 DQS_NULL 值。 在值表中，数据源中的 Null 将显示为 SQL_NULL。 您可以将一个或多个 null 等效值设置为 DQS_NULL 的同义词。 这样，所有 Null 和 Null 等效值都将处理为 DQS_NULL。  
   
   
-

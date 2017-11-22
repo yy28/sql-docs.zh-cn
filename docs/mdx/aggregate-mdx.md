@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- AGGREGATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Aggregate function
+f1_keywords: AGGREGATE
+dev_langs: kbMDX
+helpviewer_keywords: Aggregate function
 ms.assetid: 9d5e0966-74d1-4cc8-b9f9-47e4dc65d165
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 109d8dc31ba0847cd7c1d0ff605e56d18ae13d52
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 894891e8341cc66253e9d4e5b952551b8b91071c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回一个数字，该数字是通过对集表达式返回的单元进行聚合而算出的。 如果未提供数值表达式，此函数将使用为每个度量值指定的默认聚合运算符来聚合当前查询上下文中的每个度量值。 如果指定了数值表达式，此函数将先计算指定集中的每个单元的数值表达式，然后再求和。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -47,14 +42,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  如果指定了一组空元组或一个空集，则此函数返回一个空值。  
   
  下表描述了如何**聚合**函数的行为与不同的聚合函数。  
   
 |聚合运算符|结果|  
 |--------------------------|------------|  
-|SUM|返回对集求得的值之和。|  
+|Sum|返回对集求得的值之和。|  
 |Count|返回对集求得的值数。|  
 |Max|返回对集求得的最大值。|  
 |Min|返回对集求得的最小值。|  
@@ -147,4 +142,3 @@ WHERE ([Geography].[State-Province].x,
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

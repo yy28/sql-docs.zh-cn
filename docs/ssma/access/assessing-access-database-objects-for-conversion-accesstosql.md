@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4930467d9753005a0f11faaa4397d7ae455bd5eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61e0ad607f242d6d96f81326621f46df9602c023
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估转换 (AccessToSQL) 访问数据库对象
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你应确定多少的迁移将会成功，并转换可能需要多长时间。 SSMA 可以创建显示已成功将转换为对象的百分比评估报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法和时间估计执行的迁移。 SSMA 还允许你查看特定的问题导致转换失败。  
@@ -66,9 +64,8 @@ SSMA 当它创建评估报表时，将转换到所选的访问数据库对象[!I
 你应更正错误，然后再次运行评估报表或转换架构。 若要找到错误，请单击**错误**中消息窗格中，按钮，然后展开每个错误，若要查看的对象发生错误的列表。 如果单击消息窗格中的某个对象时，所有错误和警告为该对象将都显示在细节窗格中。  
   
 ## <a name="next-step"></a>下一步  
-[转换访问数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[转换 Access 数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

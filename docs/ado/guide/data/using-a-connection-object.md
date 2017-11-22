@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [ADO]
+helpviewer_keywords: connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 38454d8edc91715f5a3e3d5ee55f045d0e55e581
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da71dc67a1fd6a17f75c5aceaf7a88dce7d328ab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
 在打开之前**连接**对象，你必须定义有关的数据源和连接的类型的某些信息。 大部分此信息由持有*ConnectionString*参数[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**连接**对象，或通过[ConnectionString属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**连接**对象。 连接字符串包含用分号分隔括在单引号内的值的参数/值对的列表。 例如：  
@@ -72,4 +69,3 @@ oRs.MarshalOptions = adMarshalModifiedOnly
 ' Disconnect the Recordset.  
 Set oRs.ActiveConnection = Nothing  
 ```
-

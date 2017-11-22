@@ -2,9 +2,12 @@
 title: "排除全文索引故障 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,13 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4bfb66adb0537edcb173e4b741db058369b0003
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshoot-full-text-indexing"></a>排除全文索引故障
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
 ##  <a name="failure"></a> 排除全文索引故障  
  填充或维护全文索引时，由于下面描述的原因，全文索引器可能无法对一个或多个行编制索引。 这些行级别的错误不会干扰填充的进行。 索引器会跳过这些行，这意味着您无法查询这些行中包含的内容。  

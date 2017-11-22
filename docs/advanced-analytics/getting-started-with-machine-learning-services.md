@@ -1,24 +1,22 @@
 ---
 title: "开始使用 SQL Server 中的机器学习 |Microsoft 文档"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: b61de3dcbe239ec1bffdabc734e8e5d624519df6
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09d6e887a8c64c98a1c3f68c78b07c26da6ffb76
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>开始使用 SQL Server 中的机器学习
 
@@ -33,9 +31,9 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
 + SQL Server 2017
 
-  开始使用 SQL Server 自 2017 年 1 CTP 2.0，支持 Python 现已添加，并且名称更改为机器学习服务 （数据库中） 以反映支持广泛的计算机学习解决方案。 现在您可以通过使用 SQL 工具运行 R 或 Python 代码来自动化机器学习任务。 或者，使用 SQL Server 计算机作为_计算上下文_从远程开发环境中启动的作业。
+  从 SQL Server 自 2017 年开始，你现在可以使用 Python 代码在 SQL Server 中。 以反映多种语言 （的更多内容 ！），和名称的解决方案更广泛的支持已更改为[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 现在您可以通过使用 SQL 工具运行 R 或 Python 代码来自动化机器学习任务。 或者，使用 SQL Server 计算机作为_计算上下文_从远程开发环境中启动的作业。
 
-    + [SQL Server 中的 Python 的体系结构概述](python/architecture-overview-sql-server-python.md)
+    + [SQL Server 中的 Python 的体系结构概述](/python/architecture-overview-sql-server-python.md)
     + [设置 SQL Server R Services 或机器学习服务](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -49,20 +47,20 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft 机器学习服务器 (Microsoft R Server)
 
-在 SQL Server 2017 支持人员想要运行分布式、 可缩放的机器学习作业，但他们不需要使用 SQL Server 数据库引擎时，如使用集成的企业客户提供安装 Microsoft 机器学习服务器选项SQL 计算上下文。
+此选项以安装[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]SQL Server 2017 支持企业客户想要运行分布式、 可缩放的机器学习作业，但他们不需要使用 SQL Server 数据库引擎时，例如使用 SQL 计算的集成中提供上下文。
 
-SQL Server 2016 中，使用选项来安装 Microsoft R Server。
+在 SQL Server 2016 中，使用选项来安装[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]。
   
-  + [Microsoft R Server 简介](https://msdn.microsoft.com/microsoft-r/rserver)
+  + [欢迎使用机器学习服务器](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
   
-你还可以通过特定于平台的安装程序可从 MSDN 安装 R Server:
+你还可以安装[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]或[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]通过特定于平台的安装程序：
 
-  + [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-  + [R Server for Linux](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
-  + [R Server for Hadoop](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
+  + [在 Windows 上安装](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+  + [在 Linux 上安装](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-linux-install)
+  + [在 Hadoop 上安装](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-hadoop-install)
 
 > [!IMPORTANT]
-> 如果你想要运行使用 R Server 的 Python，请务必安装最新版本，**机器学习服务器**，即仅可通过提供自 2017 年 SQL Server 安装程序：
+> 如果你想要运行使用 R Server 的 Python，请务必安装最新版本， [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]，即仅可通过提供[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]安装程序：
 > 
 >    + [设置 Microsoft R Server 或机器学习服务器](../advanced-analytics/r/create-a-standalone-r-server.md)
 
@@ -82,7 +80,7 @@ SQL Server 2016 中，使用选项来安装 Microsoft R Server。
 
 + [机器学习教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  从此处开始用于了解与使用 SQL Server 2017 和 SQL Server 自 2017 年的计算机学习解决方案中找到的所有资源的列表。
+  从此处开始查找可用于了解计算机学习解决方案使用的所有资源列表[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]或[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]。
 
 ### <a name="r-tutorials"></a>R 教程
 
@@ -100,7 +98,7 @@ SQL Server 2016 中，使用选项来安装 Microsoft R Server。
 
 + [SQL Server Python 教程](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
-  了解如何在 SQL Server 中运行 Python。 使用 Python 生成一个模型，并使用它来评分 SQL Server 数据。
+  了解如何在中运行 Python [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]。 使用 Python 生成一个模型，并使用它来评分 SQL Server 数据。
 
    SQL 开发人员的端到端解决方案提供了你需要从 SQL Server Management Studio 中运行 Python 的所有代码。
 
@@ -127,4 +125,3 @@ SQL Server 开发团队的这些解决方案中 R 或 Python，运行，并演�
 [SQL Server 机器学习服务入门](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 
 [要开始使用 Microsoft 机器学习服务器](../advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md)
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainlist.f1
+f1_keywords: sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f77595ccf1426d3b1d076f3d6cb7a8b456827ee4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
   本主题介绍 **(DQS) 中** “域管理” [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 页的域列表中的控件。 使用此窗格可以选择要对其执行管理操作的域。 将对 **“域管理”** 页中的所有选项卡式页使用此同一窗格。  
@@ -63,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  将域导出为 .dqs 文件。 此命令将显示 **“导出到数据文件”** 对话框。 页面顶部菜单栏的 **“导出”** 菜单中提供了此命令，也可通过右键单击域列表窗格来使用此命令。 有关详细信息，请参阅 [将域导出到 .dqs 文件](../data-quality-services/export-a-domain-to-a-dqs-file.md)。  
   
   
-

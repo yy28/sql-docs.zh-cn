@@ -5,8 +5,7 @@ ms.date: 10/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7d17e24ef7a815a77a4a7cfc338a8d87369d7e81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-profiler"></a>SQL Server 事件探查器
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是一个接口来创建和管理跟踪和分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播一系列特定的步骤。  
@@ -205,4 +203,3 @@ ms.lasthandoff: 09/27/2017
  [服务器性能和活动监视](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd64725eab5760c0cce7d2ecf33b320d94b3a283
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33d1ee3fe4e24695deccd0615f17868bfdfd988c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
 就像该命令的结果作为传递*出*变量命名的命令中，参数来参数化的命令可以被传入的作为*中*命名命令的变量。  
@@ -102,4 +100,3 @@ objConn.GetOrdersOf "12345", objRs
   
 ## <a name="see-also"></a>另请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-

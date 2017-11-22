@@ -1,35 +1,29 @@
 ---
 title: "创建关系图和使用 SQL 和 R （演练） 的图形 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>创建关系图和使用 SQL 和 R （演练） 的图形
 
-在演练本部分，你将了解用于生成图形和 R 使用 SQL Server 数据的地图的技术。 你将创建简单的直方图以进行一些练习，然后开发更复杂的地图绘图。
+在演练本部分，你了解用于生成图形和 R 使用 SQL Server 数据的地图的技术。 你创建简单的直方图，若要获取一些练习中，且无需开发更复杂的映射绘图。
 
 ### <a name="create-a-histogram"></a>创建直方图
 
@@ -56,8 +50,6 @@ ms.lasthandoff: 09/01/2017
 ### <a name="create-a-map-plot"></a>创建映射绘图
 
 通常情况下，数据库服务器阻止 Internet 访问。 使用需要下载地图或其他映像，以生成图形的 R 包时，这可能是很不方便。 但是，没有在开发自己的应用程序时你可能发现有用的解决方法。 基本上，你将生成客户端上的映射表示，然后覆盖在地图上为 SQL Server 表中的特性存储的点。
-
-我们将通过它指导你在本课程中。
 
 1. 定义创建 R 绘图对象的函数。 自定义函数*mapPlot*创建散点图，它使用 taxi 拾取位置，并绘制的数目会从每个位置启动。 它使用应已安装并加载的 **ggplot2** 和  **ggmap** 包。
 
@@ -117,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>上一课
 
 [使用 R 汇总数据](/walkthrough-view-and-summarize-data-using-r.md)
-

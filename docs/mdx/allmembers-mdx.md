@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ALLMEMBERS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- AllMembers function
+f1_keywords: ALLMEMBERS
+dev_langs: kbMDX
+helpviewer_keywords: AllMembers function
 ms.assetid: 202e81d4-d2ee-4ec1-a019-4835eb19f446
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 847164ae4678389597932bd4f89d9af306e9deaa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c677d421c70b6e05273db6ec437e7fe9667d638
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +46,7 @@ Level_Expression.AllMembers
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **AllMembers**函数将返回一组包含所有的成员，其中包括计算的成员、 指定层次结构或级别。 **AllMembers**函数返回计算的成员，即使指定层次结构或级别不包含任何可见的成员。  
   
 > [!IMPORTANT]  
@@ -87,4 +82,3 @@ FROM
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

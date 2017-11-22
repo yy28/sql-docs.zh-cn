@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -26,22 +25,21 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ade7040ed4736ea0ee451154c3eed19582adcce8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e93611af32e1317096fc2ea95f8b4d2147a88bcc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装访问 (AccessToSQL) 的 SQL Server 迁移的助手
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用基于 Windows Installer 的向导安装 migration Assistant (SSMA) 的访问。 本主题提供有关安装、 许可、 卸载和升级 SSMA 有关安装先决条件的信息到 SSMA，最新版本的链接和说明。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 在安装 SSMA 之前，请确保你的系统满足以下要求：  
   
 -   Windows 7 或更高版本，或 Windows Server 2008 或更高版本。  
@@ -101,4 +99,3 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Mig
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [链接到 SQL Server 访问应用程序](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
   
-

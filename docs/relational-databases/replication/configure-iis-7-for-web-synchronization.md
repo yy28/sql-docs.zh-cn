@@ -8,30 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fd94ea47cdc9d65e2461bd9b2c1f12deacb67d38
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
+  本主题介绍手动配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本的完整过程，以便与用于合并复制的 Web 同步一起使用。 
   
  配置 IIS 7 或更高版本是启用 Web 同步所需的三个步骤中的第一步。  
   
@@ -332,4 +330,3 @@ ms.lasthandoff: 07/31/2017
  [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

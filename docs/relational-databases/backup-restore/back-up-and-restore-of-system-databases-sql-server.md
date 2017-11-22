@@ -2,9 +2,12 @@
 title: "系统数据库的备份和还原 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b395a8d3a828b107d9b3ba2f1c41e449a8b7a67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2732f2074bb144c5ae0357ef23127e6eba454bc1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系统数据库的备份和还原 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master**和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
   

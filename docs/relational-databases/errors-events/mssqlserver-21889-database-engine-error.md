@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21889 (Database Engine error)
+helpviewer_keywords: 21889 (Database Engine error)
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2080e4caf4fd027ff448166cea6015ea2b29d5f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 44c79bc99f26399ec6494deb249342ce3037123a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>用户操作  
 在承载发布服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行 **sp_adddistributor**。 在运行 **sp_adddistributor** 时，指定正确的分发服务器。 为 *@password* 参数使用与最初在分发服务器上运行 **sp_adddistributor** 时使用的值相同的值。  
   
-

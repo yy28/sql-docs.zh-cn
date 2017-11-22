@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: e4deba6c238773322eddd9d01676e36579addf4d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d84fc757b72e702736eab9aec2a7930474497a87
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>安装适用于 Oracle (OracleToSQL) SSMA
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 适用于 Oracle 包含的客户端应用程序用于执行迁移到的 Oracle 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和 Azure SQL 数据库。 它还包含已迁移数据库中支持数据迁移和 Oracle 系统函数的使用的扩展包。  
@@ -38,7 +36,6 @@ ms.lasthandoff: 08/02/2017
 |[在 SQL Server &#40; OracleToSQL &#41; 上安装 SSMA 组件](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|提供有关的信息和说明的实例上安装的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |[为 Oracle 组件 &#40; OracleToSQL &#41; 删除 SSMA](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|提供用于卸载客户端的说明程序和扩展包。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

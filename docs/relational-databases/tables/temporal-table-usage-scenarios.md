@@ -1,5 +1,5 @@
 ---
-title: "时态表使用方案 | Microsoft Docs"
+title: "临时表使用方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/16/2017
 ms.prod: sql-non-specified
@@ -8,40 +8,38 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 881cdb2e9fc9d7faf8423574efa944c4149ded22
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="temporal-table-usage-scenarios"></a>时态表使用方案
+# <a name="temporal-table-usage-scenarios"></a>临时表使用方案
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  时态表通常适用于需要跟踪数据更改历史记录的方案。    
-建议在以下用例中考虑使用时态表，以获得巨大的生产效率优势。  
+  临时表通常适用于需要跟踪数据更改历史记录的方案。    
+建议在以下用例中考虑使用临时表以获得巨大的生产效率优势。  
   
 ## <a name="data-audit"></a>数据审核  
- 对存储关键信息的表使用时态系统版本控制，你需要跟踪对这些信息所做的更改和更改发生的时间，以及在任何时间点进行数据取证。    
-时态系统版本控制表允许你在开发周期的早期阶段进行数据审核方案的计划，或者根据需要将数据审核添加到现有应用程序或解决方案。  
+ 对存储关键信息的表使用临时系统版本控制，你需要跟踪对这些信息所做的更改和更改发生的时间，以及在任何时间点进行数据取证。    
+临时系统版本控制表允许你在开发周期的早期阶段进行数据审核方案的计划，或者根据需要将数据审核添加到现有应用程序或解决方案。  
   
  下图显示了一个 Employee 表方案，其数据样本包括当前行版本（标记为蓝色）以及历史行版本（标记为灰色）。   
-图的右侧部分在时间轴上显示了行版本，以及在使用或不使用 SYSTEM_TIME 子句的情况下，你针对不同类型的基于时态表的查询选择了哪些行。  
+图的右侧部分在时间轴上显示了行版本，以及在使用或不使用 SYSTEM_TIME 子句的情况下，你针对不同类型的基于临时表的查询选择了哪些行。  
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>对新表启用系统版本控制，以便进行数据审核  
- 如果你确定了需要进行数据审核的信息，则请将数据库表创建为时态系统版本控制型的。 以下简单示例演示了在虚构 HR 数据库中包含员工信息的方案：  
+ 如果你确定了需要进行数据审核的信息，则请将数据库表创建为临时系统版本控制型的。 以下简单示例演示了在虚构 HR 数据库中包含员工信息的方案：  
   
 ```  
 CREATE TABLE Employee   
@@ -59,10 +57,10 @@ CREATE TABLE Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- [创建由系统控制版本的时态表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)中对创建时态系统版本控制型表所需的各种选项进行了说明。  
+ [创建由系统控制版本的临时表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)中对创建临时系统版本控制型表所需的各种选项进行了说明。  
   
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>对现有表启用系统版本控制，以便进行数据审核  
- 若需在现有数据库中执行数据审核，可使用 ALTER TABLE 扩展非时态表，使之成为系统版本控制型的。 为了避免在应用程序中进行重大更改，可以 HIDDEN 方式添加时间段列，详见 [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)（将非时态表更改为系统版本控制型时态表）中的说明。 以下示例说明了如何在虚构 HR 数据库中针对现有 Employee 表启用系统版本控制。  
+ 若需在现有数据库中执行数据审核，可使用 ALTER TABLE 扩展非临时表，使之成为系统版本控制型的。 为了避免在应用程序中进行重大更改，可以 HIDDEN 方式添加时间段列，详见 [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)（将非临时表更改为系统版本控制型临时表）中的说明。 以下示例说明了如何在虚构 HR 数据库中针对现有 Employee 表启用系统版本控制。  
   
 ```  
 /*   
@@ -117,7 +115,7 @@ SELECT * FROM Employee FOR SYSTEM_TIME
 SELECT * FROM Employee FOR SYSTEM_TIME AS OF '2014-01-01 00:00:00.0000000' ;  
 ```  
   
- 系统版本控制型时态表在存储时间段列的值时使用 UTC 时区，而筛选数据和显示结果时，使用本地时区总是更方便。 以下代码示例演示了如何应用筛选条件。该筛选条件最初使用本地时区指定，然后使用在 SQL Server 2016 中引入的 AT TIME ZONE 转换成了 UTC：  
+ 系统版本控制型临时表在存储时间段列的值时使用 UTC 时区，而筛选数据和显示结果时，使用本地时区总是更方便。 以下代码示例演示了如何应用筛选条件。该筛选条件最初使用本地时区指定，然后使用在 SQL Server 2016 中引入的 AT TIME ZONE 转换成了 UTC：  
   
 ```  
 /*Add offset of the local time zone to current time*/  
@@ -142,15 +140,15 @@ FROM Employee
  所有其他使用系统版本控制型表的方案均可使用 AT TIME ZONE。  
   
 > [!TIP]  
->  在带有 FOR SYSTEM_TIME 的时态子句中指定的筛选条件为 SARG 型（即 SQL Server 可以利用基础聚集索引以执行搜索而不是扫描操作。   
+>  在带有 FOR SYSTEM_TIME 的临时子句中指定的筛选条件为 SARG 型（即 SQL Server 可以利用基础聚集索引以执行搜索而不是扫描操作。   
 > 如果直接查询历史记录表，请确保筛选条件也是 SARG 型的，即在指定筛选器时采用 \<period column>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 格式。  
 > 如果将 AT TIME ZONE 应用到时间段列，SQL Server 会执行开销可能很大的表/索引扫描。 在查询中要避免这种类型的条件：  
 > \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {< | > | =, …} date_condition。  
   
- 另请参见：[在系统版本控制的时态表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
+ 另请参见： [在系统版本控制的临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
   
 ## <a name="point-in-time-analysis-time-travel"></a>时间点分析（时程）  
- 在时程方案中，用户需要了解整个数据集在一定时段内的变化情况，这与关注点通常在单个记录的更改的数据审核不一样。 有时候，时程包括多个相关的时态表，每个表的变化模式都是独立的，而这也是你需要进行针对性分析的：  
+ 在时程方案中，用户需要了解整个数据集在一定时段内的变化情况，这与关注点通常在单个记录的更改的数据审核不一样。 有时候，时程包括多个相关的临时表，每个表的变化模式都是独立的，而这也是你需要进行针对性分析的：  
   
 -   历史数据和当前数据中重要指标所指示的趋势  
   
@@ -161,8 +159,8 @@ FROM Employee
  许多实际方案都需要时程分析。 为了说明此类使用方案，让我们看看带有自动生成的历史记录的 OLTP。  
   
 ### <a name="oltp-with-auto-generated-data-history"></a>带有自动生成的数据历史记录的 OLTP  
- 在事务处理系统中，经常需分析重要度量值在一定时段内的变化情况。 理想情况下，分析历史记录不会损害 OLTP 应用程序的性能，但前提是访问数据的最新状态时，必须尽量降低延迟并进行数据锁定。  设计系统版本控制型时态表的目的是让用户能够以透明方式保留所做更改的完整历史记录，以便以后进行分析。这些历史记录独立于当前数据，将对主 OLTP 工作负荷的影响降到最低。  
-对于需要进行高强度事务处理的工作负荷，建议你使用 [系统版本控制的时态表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，使你能够以具有成本效益的方法将当前数据存储在内存中，并且将所做更改的完整历史记录存储在磁盘上。  
+ 在事务处理系统中，经常需分析重要度量值在一定时段内的变化情况。 理想情况下，分析历史记录不会损害 OLTP 应用程序的性能，但前提是访问数据的最新状态时，必须尽量降低延迟并进行数据锁定。  设计系统版本控制型临时表的目的是让用户能够以透明方式保留所做更改的完整历史记录，以便以后进行分析。这些历史记录独立于当前数据，将对主 OLTP 工作负荷的影响降到最低。  
+对于需要进行高强度事务处理的工作负荷，建议你使用 [系统版本控制的临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，使你能够以具有成本效益的方法将当前数据存储在内存中，并且将所做更改的完整历史记录存储在磁盘上。  
   
  对于历史记录表，建议你使用聚集列存储索引，原因如下：  
   
@@ -172,14 +170,14 @@ FROM Employee
   
 -   聚集列存储索引的压缩效果很好，尤其是在并非所有列的更改都同时发生的情况下。  
   
- 将时态表与内存中 OLTP 一起使用，则不需总是将整个数据集保留在内存中，因此可轻松地辨识热数据和冷数据。  
+ 将临时表与内存中 OLTP 一起使用，则不需总是将整个数据集保留在内存中，因此可轻松地辨识热数据和冷数据。  
 现实中此类情况的示例包括库存管理、货币贸易等。  
   
  下图显示了用于库存管理的简化数据模型：  
   
  ![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")  
   
- 以下代码示例创建 ProductInventory 作为内存中系统版本控制型时态表，所使用的聚集列存储索引基于历史记录表（此表实际上是替换了默认创建的行存储索引）：  
+ 以下代码示例创建 ProductInventory 作为内存中系统版本控制型临时表，所使用的聚集列存储索引基于历史记录表（此表实际上是替换了默认创建的行存储索引）：  
   
 > [!NOTE]  
 >  请确保你的数据库允许创建内存优化表。 请参阅 [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
@@ -299,9 +297,9 @@ SELECT * FROM vw_GetProductInventoryHistory
   
  ![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")  
   
- 这种情况下可以使用时态表进行其他类型的时程分析，例如通过 AS OF 子句重新构造库存在过去任意时间点的状态，或者对属于不同时刻的快照进行比较。  
+ 这种情况下可以使用临时表进行其他类型的时程分析，例如通过 AS OF 子句重新构造库存在过去任意时间点的状态，或者对属于不同时刻的快照进行比较。  
   
- 就这种使用方案来说，你还可以将 Product 表和 Location 表扩展成为时态表，以便以后对 UnitPrice 和 NumberOfEmployee 的更改历史记录进行分析。  
+ 就这种使用方案来说，你还可以将 Product 表和 Location 表扩展成为临时表，以便以后对 UnitPrice 和 NumberOfEmployee 的更改历史记录进行分析。  
   
 ```  
 ALTER TABLE Product   
@@ -327,7 +325,7 @@ ALTER TABLE [Location]
     SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.LocationHistory));  
 ```  
   
- 由于数据模型现在涉及多个时态表，因此进行 AS OF 分析时最好是创建一个可从相关表中提取必需数据的视图，然后将 FOR SYSTEM_TIME AS OF 应用到该视图，这样可以大大简化完整数据模型状态的重新构造过程：  
+ 由于数据模型现在涉及多个临时表，因此进行 AS OF 分析时最好是创建一个可从相关表中提取必需数据的视图，然后将 FOR SYSTEM_TIME AS OF 应用到该视图，这样可以大大简化完整数据模型状态的重新构造过程：  
   
 ```  
 DROP VIEW IF EXISTS vw_ProductInventoryDetails;  
@@ -348,7 +346,7 @@ SELECT * FROM vw_ProductInventoryDetails
     FOR SYSTEM_TIME AS OF '2015.01.01';   
 ```  
   
- 下图显示了为 SELECT 查询生成的执行计划。 这表明，在处理时态关系时，不管过程怎么复杂，都可以通过 SQL Server 引擎来妥善处理：  
+ 下图显示了为 SELECT 查询生成的执行计划。 这表明，在处理临时关系时，不管过程怎么复杂，都可以通过 SQL Server 引擎来妥善处理：  
   
  ![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")  
   
@@ -372,10 +370,10 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
   
 ## <a name="anomaly-detection"></a>异常检测  
  异常检测（或离群值检测）是指确定哪些项目不符合期望的模式或者不同于数据集中的其他项目。   
-可以使用系统版本控制型时态表来检测定期或不定期发生的异常，因为你可以利用时态查询来快速查找特定模式。  
+可以使用系统版本控制型临时表来检测定期或不定期发生的异常，因为你可以利用临时查询来快速查找特定模式。  
 具体异常取决于所收集数据的类型以及业务逻辑。  
   
- 以下示例显示了在销售数字中检测“峰值”所需的简化逻辑。 假定你要处理一个时态表，该表收集所购产品的历史记录：  
+ 以下示例显示了在销售数字中检测“峰值”所需的简化逻辑。 假定你要处理一个临时表，该表收集所购产品的历史记录：  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -446,9 +444,9 @@ FROM CTE
   
  选择 SCD 策略时，由 ETL（提取-转换-加载）层确保维度表的准确性，通常这需要编写大量的代码并完成复杂的维护工作。  
   
- 使用 SQL Server 2016 中的系统版本控制型时态表可以大幅降低代码的复杂性，因为会自动保留数据的历史记录。 由于是使用两个表来实施的，SQL Server 2016 中的时态表最接近于类型 4 SCD。 但是，由于时态查询只允许你引用当前表，因此也可以考虑在计划使用类型 2 SCD 的环境中使用时态表。  
+ 使用 SQL Server 2016 中的系统版本控制型临时表可以大幅降低代码的复杂性，因为会自动保留数据的历史记录。 由于是使用两个表来实施的，SQL Server 2016 中的临时表最接近于类型 4 SCD。 但是，由于临时查询只允许你引用当前表，因此也可以考虑在计划使用类型 2 SCD 的环境中使用临时表。  
   
- 若要将常规维度转换为 SCD，可以直接创建一个新的，也可以将现有的更改为系统版本控制型时态表。 如果现有维度表包含历史数据，可创建一个单独的表，将历史数据移到其中，并将当前（实际）的维度版本保留在原始维度表中。 然后，使用 ALTER TABLE 语法通过预定义历史记录表将维度表转换为系统版本控制型时态表。  
+ 若要将常规维度转换为 SCD，可以直接创建一个新的，也可以将现有的更改为系统版本控制型临时表。 如果现有维度表包含历史数据，可创建一个单独的表，将历史数据移到其中，并将当前（实际）的维度版本保留在原始维度表中。 然后，使用 ALTER TABLE 语法通过预定义历史记录表将维度表转换为系统版本控制型临时表。  
   
  以下示例演示了该过程，并假定 DimLocation 维度表已经有 ValidFrom 和 ValidTo 作为 datetime2 非空列，通过 ETL 过程对这些列进行填充：  
   
@@ -471,7 +469,7 @@ ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLoca
   
  请注意，创建以后，就不需要在数据仓库加载过程中使用额外的代码来维护 SCD。  
   
- 下图演示了如何在涉及 2 个 SCD（DimLocation 和 DimProduct）和 1 个事实数据表的简单方案中使用时态表。  
+ 下图演示了如何在涉及 2 个 SCD（DimLocation 和 DimProduct）和 1 个事实数据表的简单方案中使用临时表。  
   
  ![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")  
   
@@ -501,16 +499,16 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
  **注意事项：**  
   
--   对 SCD 使用系统版本控制型时态表是可以接受的，前提是根据数据库事务时间计算的有效期适用于你的业务逻辑。 如果加载数据时的延迟很严重，则事务时间可能是不可接受的。  
+-   对 SCD 使用系统版本控制型临时表是可以接受的，前提是根据数据库事务时间计算的有效期适用于你的业务逻辑。 如果加载数据时的延迟很严重，则事务时间可能是不可接受的。  
   
--   默认情况下，系统版本控制型时态表不允许在加载后更改历史数据（将 SYSTEM_VERSIONING 设置为 OFF 后可以修改历史记录）。 在频繁更改历史数据的情况下，这可能导致功能受限。  
+-   默认情况下，系统版本控制型临时表不允许在加载后更改历史数据（将 SYSTEM_VERSIONING 设置为 OFF 后可以修改历史记录）。 在频繁更改历史数据的情况下，这可能导致功能受限。  
   
--   只要列发生更改，系统版本控制型时态表就会生成行版本。 如果你想要在进行特定的列更改时禁止显示新版本，则需在 ETL 逻辑中纳入该限制。  
+-   只要列发生更改，系统版本控制型临时表就会生成行版本。 如果你想要在进行特定的列更改时禁止显示新版本，则需在 ETL 逻辑中纳入该限制。  
   
 -   如果你预计 SCD 表中会有大量的历史行，则可考虑使用聚集列存储索引作为历史记录表的主要存储选项。 这样会减少历史记录表占用的空间，加快分析查询速度。  
   
 ## <a name="repairing-row-level-data-corruption"></a>修复行级数据损坏  
- 你可以依赖系统版本控制型时态表中的历史数据，将各个行快速修复到以前捕获的任何状态。 如果能够找到受影响的行并且/或者知道在何时进行了不需要的数据更改，则可利用时态表的这种属性来高效地执行修复，不需使用备份。  
+ 你可以依赖系统版本控制型临时表中的历史数据，将各个行快速修复到以前捕获的任何状态。 如果能够找到受影响的行并且/或者知道在何时进行了不需要的数据更改，则可利用临时表的这种属性来高效地执行修复，不需使用备份。  
   
  此方法有多种优点：  
   
@@ -588,14 +586,13 @@ UPDATE Employee
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
 ## <a name="see-also"></a>另请参阅  
- [时态表](../../relational-databases/tables/temporal-tables.md)   
- [系统版本控制时态表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
- [时态表系统一致性检查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
- [时态表分区](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
- [时态表注意事项和限制](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
- [时态表安全性](../../relational-databases/tables/temporal-table-security.md)   
- [系统版本控制的时态表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
- [时态表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
+ [临时表](../../relational-databases/tables/temporal-tables.md)   
+ [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [临时表系统一致性检查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
+ [临时表分区](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
+ [临时表注意事项和限制](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
+ [临时表安全性](../../relational-databases/tables/temporal-table-security.md)   
+ [系统版本控制的临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

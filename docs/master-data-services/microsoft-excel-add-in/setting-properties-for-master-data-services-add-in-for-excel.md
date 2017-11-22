@@ -8,22 +8,20 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 404c939db56bfee93b0db53850bf4cb519e873e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c5055942c39ff3805fcdbdbd47f0b3d8e9e2489d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>设置用于 Excel 的 Master Data Services 外接程序的属性
   用于 Excel 的 Master Data Services 外接程序设置确定将 MDS 中的数据加载到 Excel 外接程序的方式和将 Excel 外接程序中的数据发布到 MDS 的方式。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/07/2017
 |数据：单元格格式|显示格式|选择首选格式，以便显示基于域的属性的值。 选项包括：Code {Name}、Code 和 Name {Code}。|  
   
   
-

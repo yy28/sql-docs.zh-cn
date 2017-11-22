@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: aad4ec39a2c228e747c16bae740c7018f8184d36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -238,4 +236,3 @@ ETL 工作流通常包括将数据加载到临时表、转换数据和将数据�
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [系统版本控制临时表与内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [内存中 OLTP – 常见工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。 
-

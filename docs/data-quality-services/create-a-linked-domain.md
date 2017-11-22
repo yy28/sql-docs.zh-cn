@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 898177d27b1c580d8cf40f6d2966ab91c7b01733
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建链接域。 链接域可以从先前存在的另一个域创建，并且继承它所链接到的域的所有值、规则和属性，但名称和说明除外。 您可以将一组链接域作为一个链接域进行管理。 通过将一个域链接到另一个域，您可以创建从另一个域继承其内容的域。  
@@ -55,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [创建知识库](../data-quality-services/create-a-knowledge-base.md) 或 [打开知识库](../data-quality-services/open-a-knowledge-base.md)。  
   
 3.  从 **“域管理”** 页上的 **“域列表”** 中，右键单击您要将新域链接到的域，然后单击 **“创建链接域”**。  
   
@@ -88,7 +85,7 @@ ms.lasthandoff: 09/09/2017
   
 -   您可以更改链接域的名称和说明。  
   
--   若要更改 **“数据类型”**、 **“使用前导值”**或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。  
+-   若要更改 **“数据类型”**、 **“使用前导值”**或 **“将输出格式设置为”** 属性，请选择链接到的域，然后在该域的 **“域属性”** 选项卡中更改这些设置。 您不能在链接域的属性中更改这些设置。 有关详细信息，请参阅 [创建域](../data-quality-services/create-a-domain.md)。  
   
 -   可以针对链接域或它链接到的域更改“域管理”页的 **“引用数据”**、 **“域规则”**、 **“域值”**和 **“基于字词的关系”** 选项卡中的设置，并且这些更改将被另一个域继承。  
   
@@ -107,4 +104,3 @@ ms.lasthandoff: 09/09/2017
 -   当在任意一个“域管理”选项卡上双击链接域时，将打开该域以供编辑，并且名称字符串中指示该域为链接域。  
   
   
-

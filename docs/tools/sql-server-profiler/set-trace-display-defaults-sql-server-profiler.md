@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- traces [SQL Server], defaults
+helpviewer_keywords: traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 94a063f38e24c06e2b07b4a41fd094e3407df490
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66d51901d14ab5455f4b74a9782aa9ddd7947f0c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>设置跟踪显示默认值 (SQL Server Profiler)
   本主题说明如何设置工具选项来指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于在跟踪窗口中显示跟踪的字体类型、大小和字形。 还可以指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用为操作系统配置的区域设置来显示所有日期和时间。  
@@ -45,4 +42,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

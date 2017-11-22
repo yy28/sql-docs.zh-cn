@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bb6df050cb73edb9de9b898fe4d8e5458981c67
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1a7de1095387d52d2d7675f1d8b04cc739121636
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessment-report-sybasetosql"></a>评估报表 (SybaseToSQL)
 评估报表窗口中显示的数据库的对象添加到转换的结果[!INCLUDE[tsql](../../includes/tsql_md.md)]语法，并且还可以帮助您评估的复杂性和成本的迁移项目。  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/02/2017
 **消息窗格**  
 显示错误、 警告和信息性消息时创建评估报表生成。 消息按数字进行分组。 若要查看导致错误的代码，请单击**错误**，**警告**，或**信息**，展开的消息，类别，然后单击一条消息。  
   
-

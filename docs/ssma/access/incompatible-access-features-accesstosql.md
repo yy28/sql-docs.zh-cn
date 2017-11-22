@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22120bdb847408e9701b87a46b21b78c5f0499ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b60bab1d71142a74c8558ce05a6ca96451e7cfc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="incompatible-access-features-accesstosql"></a>不兼容的访问功能 (AccessToSQL)
 并非所有访问数据库功能都都与兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]以及具有不同的保留关键字集的访问权限。 问题如这些可能会阻止成功迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 使用下表来了解可能的迁移问题，有关它们的信息可以执行什么操作。  
@@ -61,8 +59,7 @@ ms.lasthandoff: 08/02/2017
 |访问表具有超链接列。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不支持**超链接**列。 相反，列一样访问 memo 列。 默认情况下，这些列将转换为**nvarchar (max)**中的列[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 你可以自定义映射。 有关详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。|  
 |默认值或验证规则表达式包含访问函数，不能转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。|访问默认表达式或验证规则可能包括访问系统函数或未映射到的用户定义函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 使用不映射到的函数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 将阻止你从加载默认表达式或验证规则到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [为迁移准备的 Access 数据库](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

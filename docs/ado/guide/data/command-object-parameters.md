@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], parameters
+helpviewer_keywords: Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e72e3f17a661d64602c1ede26e8fbaf77d4d6b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-object-parameters"></a>命令对象参数
 上一个主题中讨论[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 一个更有趣用于[命令](../../../ado/reference/ado-api/command-object-ado.md)对象显示在下一步的示例中，已在其中参数化 SQL 命令。 此修改，使可以再次使用该命令，将传递不同的值为参数每次。 因为[准备属性](../../../ado/reference/ado-api/prepared-property-ado.md)属性**命令**对象设置为**true**，ADO 将需要提供商联系以编译中指定的命令[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)之前执行第一次。 它还将保留在内存中编译后的命令。 这会稍稍命令的执行第一次执行由于准备，但导致的性能有所提高每次之后调用该命令所需的开销。 因此，仅当它们将使用不止一次，则应准备命令。  
@@ -127,4 +124,3 @@ End Function
 ```  
   
  并非所有提供程序支持已准备的命令。 如果提供程序不支持命令准备，它会返回一个错误，此属性设置为时，就会立即**True**。 如果它不返回错误，它将忽略请求后，若要准备的命令和集**已准备**属性**false**。
-
