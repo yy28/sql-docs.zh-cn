@@ -2,9 +2,12 @@
 title: "计划和执行还原顺序（完整恢复模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da3e2c8873fbc1b44ab45698d08c27edfdaf27a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>计划和执行还原顺序（完整恢复模式）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何为通常使用完整恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库计划和执行一个还原顺序。 “还原顺序”  是一个或多个 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句的顺序。 通常，还原顺序会初始化要还原的数据库、文件和/或页的内容（数据复制阶段），前滚记录的事务（重做阶段）以及回滚未提交的事务（撤消阶段）。  
   
