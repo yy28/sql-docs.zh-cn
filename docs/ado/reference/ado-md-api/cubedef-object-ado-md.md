@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- CubeDef
-helpviewer_keywords:
-- CubeDef object [ADO MD]
+f1_keywords: CubeDef
+helpviewer_keywords: CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: acf8f7ad28f56e8eee7dc1a78fb05d6cac99dd39
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 从包含一组相关的维度的多维架构表示多维数据集。  
@@ -51,7 +47,7 @@ ms.lasthandoff: 09/09/2017
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |CreatedOn|日期和时间的多维数据集创建。|  
 |CubeGUID|多维数据集 GUID。|  
-|多维数据集名称|多维数据集的名称。|  
+|CubeName|多维数据集的名称。|  
 |CubeType|多维数据集的类型。|  
 |DataUpdatedBy|用户 ID 进行的最后一个的数据更新的人员。|  
 |Description|多维数据集有意义的描述。|  
@@ -69,4 +65,3 @@ ms.lasthandoff: 09/09/2017
  [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
  [维度集合 (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

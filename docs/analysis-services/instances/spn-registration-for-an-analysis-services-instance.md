@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 53dd8aa711b2d9ba4a565f86ee66572e523fa78a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d0d90aea6725bd45cded022791699cf910b7bdd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>针对 Analysis Services 实例的 SPN 注册
   在使用 Kerberos 对客户端和服务标识进行相互身份验证时，服务主体名称 (SPN) 唯一标识 Active Directory 域中的某一服务实例。 SPN 与服务实例运行所基于的登录帐户相关联。  
@@ -186,4 +185,3 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [配置 Kerberos 身份验证用于 SharePoint 2010 产品 （白皮书）](http://technet.microsoft.com/library/ff829837.aspx)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO]
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **记录集**对象具有的内置功能，可让您重新排列结果集中的数据的顺序，来搜索特定记录根据你提供的条件并甚至优化使用索引这些搜索操作。 这些功能是否可供使用取决于提供程序以及在某些情况下 — 例如[索引](../../../ado/reference/ado-api/index-property.md)属性-数据源本身的结构。  
@@ -174,4 +171,3 @@ Loop
  关闭原始**记录集**不会关闭其副本，也不会关闭副本关闭原始对象或任何其他副本。  
   
  您可以克隆**记录集**仅对象是否支持书签。 书签值是可互换;即，从一个的书签引用**记录集**对象是指任何个克隆中的同一记录。
-

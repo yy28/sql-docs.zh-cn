@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>引入 revoscalepy
 
@@ -125,7 +123,7 @@ For Python MicrosoftML 还包括各种转换和帮助器函数，如：
 
 本地运行，通常要从命令行中，或 Python 开发环境中，从运行的 Python 脚本并指定 SQL Server 计算上下文使用之一**revoscalepy**函数。 你可以使用远程计算上下文，对于整个代码中，或各个函数。 例如，你可能想要卸载到服务器以用最新数据，以避免数据移动的模型定型。
 
-如果您想要放置在存储过程中，一个完整的 Python 脚本[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，我们建议你重新作为单个函数清楚地定义输入和输出中编写代码。 输入和输出必须**pandas**数据帧。 完成此操作后，可以从支持 T-SQL 的任何客户端调用存储的过程、 轻松地将 SQL 查询传递作为输入，并将结果保存到 SQL 表。 有关示例，请参阅[L 开发人员的数据库中 Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
+如果您想要放置在存储过程中，一个完整的 Python 脚本[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，我们建议你重新作为单个函数清楚地定义输入和输出中编写代码。 输入和输出必须**pandas**数据帧。 完成此操作后，可以从支持 T-SQL 的任何客户端调用存储的过程、 轻松地将 SQL 查询传递作为输入，并将结果保存到 SQL 表。 有关示例，请参阅[数据库中的 SQL 开发人员的 Python 分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
 
 ### <a name="using-remote-compute-contexts"></a>使用远程计算上下文
 

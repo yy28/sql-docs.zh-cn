@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO], members
+helpviewer_keywords: Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6917146077060e7ca9d11aeb034479dff6901e32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d35cf15880ae2dfa902acaccca04cb204a6d77
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>记录集对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
@@ -55,9 +52,9 @@ ms.lasthandoff: 09/09/2017
   
  [字段集合](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [筛选器属性](../../../ado/reference/ado-api/filter-property.md)  
+ [Filter 属性](../../../ado/reference/ado-api/filter-property.md)  
   
- [索引属性](../../../ado/reference/ado-api/index-property.md)  
+ [Index 属性](../../../ado/reference/ado-api/index-property.md)  
   
  [LockType 属性](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
@@ -73,13 +70,13 @@ ms.lasthandoff: 09/09/2017
   
  [RecordCount 属性](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
- [排序属性](../../../ado/reference/ado-api/sort-property.md)  
+ [Sort 属性](../../../ado/reference/ado-api/sort-property.md)  
   
- [源属性 （ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Source 属性（ADO 记录集）](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
  [State 属性](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [状态属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [StayInSync 属性](../../../ado/reference/ado-api/stayinsync-property.md)  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 09/09/2017
   
  [CompareBookmarks 方法](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
- [Delete 方法 （ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Delete 方法（ADO 记录集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
  [Find 方法](../../../ado/reference/ado-api/find-method-ado.md)  
   
@@ -112,7 +109,7 @@ ms.lasthandoff: 09/09/2017
   
  [方法签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)  
   
@@ -120,9 +117,9 @@ ms.lasthandoff: 09/09/2017
   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)  
   
- [查找方法](../../../ado/reference/ado-api/seek-method.md)  
+ [Seek 方法](../../../ado/reference/ado-api/seek-method.md)  
   
- [支持方法](../../../ado/reference/ado-api/supports-method.md)  
+ [Supports 方法](../../../ado/reference/ado-api/supports-method.md)  
   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)  
   
@@ -145,4 +142,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e295cce9f15d1ea0dc12f4402807996e44b3fe09
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，“分区”  提供加载到度量值组中的事实数据的物理存储。 对于每个度量值组都会自动创建一个分区，但是，常见的情况是创建更多分区以进一步对数据进行分段，从而使处理更高效，查询性能更佳。  
@@ -64,4 +63,3 @@ ms.lasthandoff: 09/01/2017
 |[创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
   
   
-

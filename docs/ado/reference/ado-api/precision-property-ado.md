@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Parameter::Precision
 - Field20::Precision
-helpviewer_keywords:
-- Precision property [ADO]
+helpviewer_keywords: Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 866d9db49e2aeb487d38ebde085ca4ae9da197dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce6c07fa24f146664ffe5433869e4edf45abdd69
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="precision-property-ado"></a>精度属性 (ADO)
 表示的数字值在精度程度[参数](../../../ado/reference/ado-api/parameter-object.md)对象或对数值[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/09/2017
  [NumericScale 和精度属性示例 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale 和精度属性示例 （VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale 属性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)
-

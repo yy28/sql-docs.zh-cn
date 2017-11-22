@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5d1cf7f3dd89fa9629881fcee9b133fac70ca409
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则是您用于确保主数据的质量和准确性的规则。 可以使用业务规则自动更新数据、发送邮件或启用业务流程或工作流。  
@@ -103,4 +101,3 @@ ms.lasthandoff: 09/07/2017
 -   [更改跟踪 &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   
-

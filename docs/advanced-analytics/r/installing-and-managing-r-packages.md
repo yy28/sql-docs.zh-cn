@@ -5,24 +5,21 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 41fb66e7b2155b75d05ce9eab8dc0df3782e4030
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0e96334850554ab642e3372c3631f3ab672109d6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-packages-installed-with-sql-server"></a>与 SQL Server 安装的 R 包
 
@@ -97,4 +94,3 @@ GO
 ## <a name="managing-or-viewing-installed-packages"></a>管理或查看已安装的程序包
 
 有多种方法，你可以获取当前安装的包的完整列表。 有关详细信息，请参阅[确定哪些包安装在 SQL Server 上](determine-which-packages-are-installed-on-sql-server.md)。
-

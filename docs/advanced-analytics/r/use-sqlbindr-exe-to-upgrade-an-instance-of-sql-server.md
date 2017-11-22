@@ -1,35 +1,34 @@
 ---
 title: "升级 SQL Server 实例中的机器学习组件 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
+applies_to: SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升级 SQL Server 实例中的机器学习组件
 
-本文介绍的过程_绑定_，可以用于升级机器学习在 SQL Server 中使用的组件。 绑定的过程将锁定服务器到基于机器学习服务器而不是 SQL Server 的版本更新频率。
+本文介绍的过程_绑定_，可以用于升级机器学习在 SQL Server 中使用的组件。 绑定的进程锁定服务器到基于在版本的机器学习服务器上的更新频率、 而不是使用 SQL Server 版本和更新计划。
 
 > [!IMPORTANT]
-> 不需要使用此升级过程，如果你想要作为 SQL Server 更新的一部分中获取的升级。 每当你安装新的 service pack 或服务版本，机器学习组件将始终自动升级到最新版本。 如果你想要升级以更快的速度比 SQL Server 服务版本提供的组件，请使用此过程。
+> 不需要使用此升级过程，如果你想要作为 SQL Server 更新的一部分中获取的升级。 每当你安装新的 service pack 或服务版本，机器学习组件将始终自动升级到最新版本。 仅使用_绑定_处理如果你想要升级以更快的速度比 SQL Server 服务版本提供的组件。
 
 如果在任何你想要停止在机器学习服务器计划的升级的时，你必须_取消绑定_实例中所述[本节](#bkmk_Unbind)，卸载机器学习服务器。
 
@@ -39,22 +38,22 @@ ms.lasthandoff: 10/13/2017
 
 升级机器学习组件的过程中被称为**绑定**，因为它将更改要使用新的现代软件生命周期策略的 SQL Server 计算机学习组件支持模型。 
 
-一般情况下，切换到新的授权模型可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support)。
+一般情况下，切换到新的授权模型可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
 
 > [!NOTE]
 > 升级不会更改 SQL Server 数据库的支持模型，并不会更改 SQL Server 的版本。
 
-当你将绑定实例时，将发生下列情况，其中包括升级到机器学习组件：
+绑定实例时，会发生几件事情：
 
 + 支持模型已更改。 而不是依赖于 SQL Server 服务版本，支持基于新的现代生命周期策略。
 + 自动升级与实例相关联的机器学习组件，每个版本中，锁定的步骤是最新的现代生命周期策略下的版本中。 
-+ 可能会添加新的 R 或 Python 包。 例如，从 Microsoft R Server 以前的更新添加新的 R 包，如[MicrosoftML](../using-the-microsoftml-package.md)， [olapR](../r/how-to-create-mdx-queries-using-olapr.md)，和[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
++ 可能会添加新的 R 或 Python 包。 例如，以前的更新基于 Microsoft R Server 9.1 添加新的 R 包，如[MicrosoftML](../using-the-microsoftml-package.md)， [olapR](../r/how-to-create-mdx-queries-using-olapr.md)，和[sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
 + 不能再手动更新实例，除非要添加新的包。
-+ 你可以添加预先训练的模型由 Microsoft 提供的选项。
++ 获取安装预先训练的模型由 Microsoft 提供的选项。
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-首先确定要升级的候选的实例。 如果你运行安装程序，并选择绑定选项，则返回与升级兼容的实例的列表。 
+首先确定要升级的候选的实例。 如果你运行安装程序，并选择绑定选项，则返回与升级兼容的实例的列表。
 
 请参阅下表获取受支持的升级和要求的列表。
 
@@ -65,7 +64,7 @@ ms.lasthandoff: 10/13/2017
 
 ## <a name="bind-or-upgrade-an-instance"></a>将绑定或升级实例
 
-Microsoft 机器学习用于 Windows 的服务器包含一个可用于升级机器学习语言和工具与 SQL Server 的实例关联的工具。 有两个版本的工具： 向导和命令行实用工具。
+机器学习用于 Windows 的服务器包含一个可用于升级机器学习语言和工具与 SQL Server 的实例关联的工具。 有两个版本的工具： 向导和命令行实用工具。
 
 在可以运行向导或命令行工具之前，必须下载机器学习组件的独立安装的最新版本。
 
@@ -89,13 +88,13 @@ Microsoft 机器学习用于 Windows 的服务器包含一个可用于升级机�
 
 4. 在后续页上，提供以选择，如 Microsoft R Open 或 Python Anaconda 分发任何开放源组件的其他许可条件的同意。
 
-5. 上**几乎存在**页上，记下的安装文件夹。 默认文件夹是`~\Program Files\Microsoft\ML Server`。 
+5. 上**几乎存在**页上，记下的安装文件夹。 默认文件夹是`~\Program Files\Microsoft\ML Server`。
 
-    如果你想要更改安装文件夹，请单击**高级**以返回到向导的第一页。 但是，你必须重复所有以前的选择。 
+    如果你想要更改安装文件夹，请单击**高级**以返回到向导的第一页。 但是，你必须重复所有以前的选择。
 
 6. 如果你要安装的组件脱机，你可能会提示您为所需的计算机学习组件，如 Microsoft R Open、 Python 服务器和 Python 打开的位置。
-    
-在安装期间，会替换 SQL Server 使用的任何 R 或 Python 库和快速启动板更新为使用较新的组件。 也就是说，如果实例以前使用的默认 R_SERVICES 文件夹中的库，升级后这些库会移除并且快速启动板服务的属性发生更改，以在你指定的位置使用的库。
+
+在安装过程中，替换为 SQL Server 使用的任何 R 或 Python 库和快速启动板更新为使用较新的组件。 因此，如果实例以前使用的默认 R_SERVICES 文件夹中的库，升级后这些库已删除并快速启动板服务的属性发生更改，以在新位置中使用的库。
 
 ### <a name="bkmk_BindCmd"></a>升级使用命令行
 
@@ -219,4 +218,3 @@ Microsoft 机器学习用于 Windows 的服务器包含一个可用于升级机�
 + [从以前的版本中的 R Server 的功能公告](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [已弃用，不再使用或更改的特性](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-

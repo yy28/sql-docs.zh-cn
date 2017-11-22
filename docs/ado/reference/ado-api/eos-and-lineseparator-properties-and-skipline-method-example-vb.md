@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - LineSeparator property [ADO], Visual Basic example
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2672b5d41683313c36d95adac68f33367396864
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af08ca92b0f9a6f20e7b1aa0544ea41361945c9d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 属性 SkipLine 方法示例 (VB)
 此示例演示如何操作一次一行文本流。 从默认回车/换行更改的行分隔符的效果 (**adCRLF**) 到只需换行符 (**adLF**) 或回车符 (**adCR**) 显示。  
@@ -124,4 +121,3 @@ End Sub
  [EOS 属性](../../../ado/reference/ado-api/eos-property.md)   
  [LineSeparator 属性 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine 方法](../../../ado/reference/ado-api/skipline-method.md)
-

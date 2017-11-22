@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中的 R 性能调整
 
@@ -92,7 +90,7 @@ SQL server 以支持 R 脚本执行的 SQL Server 2016 中引入了 R Services �
 
 + [SQL Server 的硬件中的 R 性能调整](..\r\sql-server-configuration-r-services.md)
 
-    提供配置硬件的指南， [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] ，以及用于配置要更好地支持外部脚本的 SQL Server 实例安装。 它很适合用于**数据库管理员**。
+    提供配置硬件的指南， [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] ，以及用于配置要更好地支持外部脚本的 SQL Server 实例安装。 它很适合用于**数据库管理员**。
 
 + [SQL Server 的代码和数据中的 R 性能调整优化](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +102,3 @@ SQL server 以支持 R 脚本执行的 SQL Server 2016 中引入了 R Services �
 + [SQL Server 的方法和结果中的 R 性能调整](..\r\performance-case-study-r-services.md)
 
     总结了哪些数据是使用两个用例研究、 如何性能进行了测试，和优化如何影响结果。
-

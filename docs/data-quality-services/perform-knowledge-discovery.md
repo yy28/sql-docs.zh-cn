@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
   本主题描述如何通过知识发现生成知识库。 在发现过程中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 将通过计算机辅助进程对示例数据源中的数据进行分析，并且将获取的知识添加到知识库中。 可以在知识发现活动的 **“管理域值”** 步骤中或在域管理活动中修改和增强此知识。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/09/2017
   
 4.  在 **“映射”** 表中，按如下所示将您要对其执行知识发现的每个源列映射到知识库中的某个域：  
   
-    1.  若要创建映射，首先从空行的 **“源列”** 中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择某一个域（如果域存在）。 如果域不存在，则单击 **“创建域”** 或 **“创建复合域”** 来创建一个域。 有关详细信息，请参阅 [创建域规则](../data-quality-services/create-a-domain-rule.md) 或 [创建复合域](../data-quality-services/create-a-composite-domain.md)。  
+    1.  若要创建映射，首先从空行的 **“源列”** 中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择某一个域（如果域存在）。 如果域不存在，则单击 **“创建域”** 或 **“创建复合域”** 来创建一个域。 有关详细信息，请参阅 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 或 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)。  
   
     2.  为每个映射都重复前面的步骤。 若要更改表中的行数，请单击 **“添加列映射”**，或者选择一行，然后单击 **“删除所选列映射”**。 如果在选定某一填充行时单击 **“删除所选列映射”** ，即便存在未填充的行也会删除选定的行。  
   
@@ -294,7 +292,6 @@ ms.lasthandoff: 09/09/2017
   
 -   字段中的有效值为低级别；您应该验证映射以及域规则与字段内容的相关性。  
   
- 有关事件探查的详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+ 有关事件探查的详细信息，请参阅 [DQS 中的数据事件探查和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
   Analyze in Excel 功能，在 SSDT 中，为表格模型作者提供了一种方法可以在开发期间快速分析模型项目。 使用“在 Excel 中分析”功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接以及自动将数据透视表添加到工作表。 工作区数据库对象（表、列和度量值）作为数据透视表字段列表中的字段包含。 然后可以在有效用户或角色的上下文以及透视中查看对象和数据。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 |**主题**|**Description**|  
 |---------------|---------------------|  
-|[分析在 Excel 中的表格模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|本主题说明如何使用模型设计器中的“在 Excel 中分析”功能打开 Excel、创建到模型工作区数据库的数据源连接以及将数据透视表添加到工作表。|  
+|[分析 Excel 中的表格模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|本主题说明如何使用模型设计器中的“在 Excel 中分析”功能打开 Excel、创建到模型工作区数据库的数据源连接以及将数据透视表添加到工作表。|  
   
 ## <a name="see-also"></a>另请参阅  
  [分析在 Excel 中的表格模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

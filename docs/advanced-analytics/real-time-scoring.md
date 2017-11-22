@@ -1,26 +1,23 @@
 ---
 title: "实时评分 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="realtime-scoring"></a>实时评分
 
 本主题介绍在 SQL Server 2016 和支持以近实时的机器学习模型评分的 SQL Server 2017 中可用的功能。
@@ -54,56 +51,56 @@ ms.lasthandoff: 09/01/2017
 
 在这些平台上支持实时评分：
 
-+ SQL Server 自 2017 年 1 机器学习服务 （包括 Microsoft R Server 9.1.0）
++ SQL Server 2017 机器学习服务
 + SQL Server R Services 2016，与 Microsoft R Server 9.1.0 到的 R Services 实例的升级或更高版本
-+ Microsoft 机器学习 Server （独立）
++ 机器学习服务器（独立）
 
 SQL Server 上必须启用实时提前评分功能。 这是因为此功能要求的基于 CLR 的库安装到 SQL Server。
 
-有关实时信息评分在分布式环境中基于 Microsoft R Server，请参阅[publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice)函数中提供[mrsDeploy 包](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy)，支持作为新评分 R Server 上运行的 web 服务的实时的发布模型。
+有关实时信息评分在分布式环境中基于 Microsoft R Server，请参阅[publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)函数中提供[mrsDeploy 包](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)，支持作为新评分 R Server 上运行的 web 服务的实时的发布模型。
 
 ### <a name="restrictions"></a>限制
 
-+ 必须事先使用支持之一定型模型**rx**算法。 有关详细信息，请参阅[支持算法](#bkmk_rt_supported_algos)。 实时计分 sp_rxPredict 支持 RevoScaleR 和 MicrosoftML 算法。
++ 必须事先使用支持之一定型模型**rx**算法。 有关详细信息，请参阅[支持算法](#bkmk_rt_supported_algos)。 实时评分与`sp_rxPredict`支持 RevoScaleR 和 MicrosoftML 算法。
 
-+ 必须使用新的序列化函数提供 Microsoft R Server 9.1.0 中保存模型。 序列化方法已经过优化，以支持快速评分。
++ 必须使用新的序列化函数保存模型： [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) ，和[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python。 已优化这些序列化函数以支持快速评分。
 
-+ 实时评分不使用 R 解释器;因此，可能需要 R 解释程序的任何功能不支持在评分的步骤。  这些情况可能包括：
++ 实时评分不使用解释器解释器;因此，可能需要解释器的任何功能不支持在评分的步骤。  这些情况可能包括：
 
   + 模型使用`rxGlm`或`rxNaiveBayes`算法当前不支持
 
   + 使用一个 R 的转换函数或包含一个转换，如公式的 RevoScaleR 模型<code>A ~ log(B)</code>中实时评分不支持。 若要使用此类型的模型，我们建议在上执行转换，然后再将数据传递到实时计分输入数据。
 
-+ 针对较小的数据集，范围从少量的行到数百个上千个行上的快速预测当前优化实时评分。 对超大型数据集，R 使用 rxPredict 的计分方法可能更快。
++ 针对较小的数据集，范围从少量的行到数百个上千个行上的快速预测当前优化实时评分。 对超大型数据集，使用[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)可能更快。
 
 ### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">支持实时评分的算法
 
 + RevoScaleR 模型
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
   
   模型标记为\*还支持使用预测函数的本机评分。
 
 + MicrosoftML 模型
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + 提供的 MicrosoftML 的转换
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + [分类](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [分类](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>不受支持的模型类型
 
@@ -122,4 +119,3 @@ SQL Server 上必须启用实时提前评分功能。 这是因为此功能要�
 ## <a name="next-steps"></a>后续步骤
 
 [如何执行实时评分](r/how-to-do-realtime-scoring.md)
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], creating
+helpviewer_keywords: cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 241ff4df1733939b5e63e5e7bd28d9fa8d644ff4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>使用多维数据集向导创建多维数据集
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的多维数据集向导来创建新的多维数据集。  
@@ -74,4 +72,3 @@ ms.lasthandoff: 09/01/2017
     >  完成多维数据集向导后，可以使用多维数据集设计器来配置多维数据集。 还可以使用维度设计器来添加、删除和配置所创建维度中的属性和层次结构。  
   
   
-

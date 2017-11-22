@@ -5,22 +5,19 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="troubleshoot-machine-learning"></a>解决机器学习
 
 本文提供了与 SQL Server 中的机器学习功能的设置和配置相关的疑难解答信息。 这些信息包括设置指南、 已知的问题和发行说明的链接。 其他文章链接这篇文章中提供有关 SQL Server 中的计算机学习解决方案的性能优化建议。
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/08/2017
 
 如果你需要安装机器学习功能在无 Internet 连接的计算机上，使用本文中的链接以运行安装程序之前下载的 R 和 Python 组件：
 
-+ [安装没有 Internet 访问权限的机器学习组件](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [在没有连接到 Internet 的情况下安装机器学习组件](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>配置
 
@@ -78,4 +75,3 @@ ms.lasthandoff: 09/08/2017
 + [设置 Azure VM 上的 R 服务器](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [安装 R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [获取 R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)
-

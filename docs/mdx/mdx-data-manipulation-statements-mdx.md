@@ -5,35 +5,32 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 320fbb16-f502-4ff8-a768-20851764a66d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 81d4e10f24ef6a7b10f011b6f545b46dde5facf2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ff5233d3d31ec27bcb49aa702efc591c99d4333
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 数据操作语句 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在多维表达式 (MDX) 中，数据操作语句用于检索和操作来自多维对象的数据。 下表列出了 MDX 中的数据操作语句。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -43,10 +40,9 @@ ms.lasthandoff: 08/02/2017
 |[SELECT 语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-select.md)|从指定多维数据集中检索数据。|  
 |[UPDATE CUBE 语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-update-cube.md)|更新多维数据集中的指定叶单元或非叶单元的值，并且可以根据需要跨依赖的叶单元为指定非叶单元分配值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [MDX 语句引用 &#40;MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX 脚本语句 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

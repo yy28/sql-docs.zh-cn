@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Remote Data Service (RDS)
 - RDS
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4fcaa4455373ac30a39b114dc3adbe3c13fe840a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f828952d89e6d93023f891a27150d38d44ef81e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-data-service-rds"></a>远程数据服务 (RDS)
 远程数据服务 (RDS) 是一项功能的 ADO，这可以用于将数据从一台服务器移到客户端应用程序或网页，操作客户端上的数据并返回到单个往返过程中的服务器的更新。  
@@ -41,7 +39,6 @@ ms.lasthandoff: 09/09/2017
 -   [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)  
   
 -   [RDS 使用情况和安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 
 

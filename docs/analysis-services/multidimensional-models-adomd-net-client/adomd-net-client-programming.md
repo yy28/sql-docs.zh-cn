@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8a7debab516c8f48b4184c66028c42f44d5bdd2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 客户端编程
   ADOMD.NET 客户端组件驻留在**Microsoft.AnalysisServices.AdomdClient** （中 microsoft.analysisservices.adomdclient.dll) 命名空间。 这些客户端组件提供的功能的客户端和中间层应用程序轻松地查询数据和元数据来自分析数据存储区，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 |任务|Description|  
 |----------|-----------------|  
 |[建立 Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|在 ADOMD.NET 中，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象建立与分析数据源（例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）的连接。 可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象从分析数据源运行命令、检索数据和元数据。|  
-|[从分析的数据源中检索元数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|建立连接后，可以使用各种对象检索有关基础数据源的信息。 此功能允许应用程序适应它所连接到的数据源。|  
+|[从分析数据源检索元数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|建立连接后，可以使用各种对象检索有关基础数据源的信息。 此功能允许应用程序适应它所连接到的数据源。|  
 |[对分析数据源执行命令](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 对象提供针对基础分析数据源运行命令所必需的接口。|  
 |[从分析数据源检索数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)|命令运行后，无法检索和分析使用数据<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，或**System.XmlReader**对象。|  
 |[In ADOMD.NET 执行事务](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions.md)|本表的前面几行中列出的所有操作都可以在已提交读事务中发生，在该事务中读取数据时保持共享锁以避免脏读。 但在事务结束之前仍可更改数据，从而产生不可重复的读取或虚拟数据。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 对象在 ADOMD.NET 中提供事务功能。|  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   
-
