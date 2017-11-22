@@ -5,24 +5,21 @@ ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 08d8d3e6a13066aa79c96ba161e1c9d8f230e60f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c93fc378a7255c5a4f4b8f4833794cc0817c9996
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>用于使用 SQL Server 数据的 RevoScaleR 函数
 
@@ -75,4 +72,3 @@ ScaleR 函数以及如何使用它们的完整列表，请参阅[Microsoft R Ser
 + [rxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) -XDF 文件中的数据读入数据帧
 
 有关使用这些函数的详细信息中, 包括使用数据源而非[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，请参阅[操作方法指南 Microsoft R 中的数据分析](https://docs.microsoft.com/r-server/r/how-to-introduction)。
-

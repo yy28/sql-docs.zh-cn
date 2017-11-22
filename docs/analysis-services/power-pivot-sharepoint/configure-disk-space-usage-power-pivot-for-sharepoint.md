@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>配置磁盘空间使用情况 (Power Pivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用主机上的磁盘空间来缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库以便更快地重新加载。 在内存中加载的每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningStructure Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningStructure Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructure
-helpviewer_keywords:
-- MiningStructure element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningStructure
+helpviewer_keywords: MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3aed46d59cc828600651c0c23bbd97d8eeafb3f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0f0ce9ca930e54c1cf8ac989330e00f298a06a28
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningstructure-element-assl"></a>MiningStructure 元素 (ASSL)
   定义一组挖掘模型的结构。  
@@ -93,16 +87,15 @@ ms.lasthandoff: 09/01/2017
 >  维持属性中， **HoldoutMaxCases**， **HoldoutMaxPercent**， **HoldoutSeed**，和**HoldoutActualSize**中, 引入了[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. 这些属性使您可以对挖掘结构定义分区，这些分区将用作与该结构关联的所有挖掘模型的测试集。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 不支持这些属性。 因此，如果您试图对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的实例使用这些属性，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将返回错误。  
   
 ## <a name="drillthrough-to-structure-columns"></a>钻取到结构列  
- 在[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]，已将一个新的权限元素添加到[添加元素 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)集合。 如果你添加**AllowDrillthrough**同时向权限[添加](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)和[MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md)集合，从启用钻取功能挖掘模型，以这种方式中的结构，具有的角色的成员**AllowDrillthrough**对模型的权限可以查询数据挖掘模型，并将返回未包含在模型中的结构列。  
+ 在[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]，已将一个新的权限元素添加到[添加元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)集合。 如果你添加**AllowDrillthrough**同时向权限[添加](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)和[MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md)集合，从启用钻取功能挖掘模型，以这种方式中的结构，具有的角色的成员**AllowDrillthrough**对模型的权限可以查询数据挖掘模型，并将返回未包含在模型中的结构列。  
   
- 因此，为了保护敏感数据或个人信息，你应该构建你的数据源视图来屏蔽敏感信息，并且授予**AllowDrillthrough**仅在必要时的挖掘结构权限。 有关详细信息，请参阅[AllowDrillThrough 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md).  
+ 因此，为了保护敏感数据或个人信息，你应该构建你的数据源视图来屏蔽敏感信息，并且授予**AllowDrillthrough**仅在必要时的挖掘结构权限。 有关详细信息，请参阅[AllowDrillThrough 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md).  
   
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructure>。  
   
 ## <a name="see-also"></a>另请参阅  
- [MiningModel 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)   
- [对象 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)   
- [选择 & #40; DMX & #41;](../../../dmx/select-dmx.md)  
+ [MiningModel 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)   
+ [对象 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)   
+ [选择 &#40; DMX &#41;](../../../dmx/select-dmx.md)  
   
   
-

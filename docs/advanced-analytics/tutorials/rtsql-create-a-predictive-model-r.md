@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bf9c1aec8ef4f065ac56e4439cbfbf0c2248727a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d957b05c9bc964a3da1c7e177d9413e0c73aa9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>创建预测模型 (SQL 快速入门中的 R)
 
@@ -159,7 +157,6 @@ VALUES (' latest model', @model)
 
 现已创建一个模型。最后一个步骤将说明如何通过该模型生成预测并绘制结果。
 
-[预测和从模型中绘制](../tutorials/rtsql-predict-and-plot-from-model.md)
-
+[通过模型预测和绘图](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

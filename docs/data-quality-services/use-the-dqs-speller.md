@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼写检查器会检查域中字符串值的语法、拼写和句子结构。 拼写检查器是独立的客户端功能，不与服务器端引擎集成并且对当前流或状态没有影响。 拼写检查器会标识它认为可能是错误的那些字符串值，然后在对域值进行其他手动更改的相同位置用红色的下划线标记这些字符串值。 这些位置包括：  
@@ -81,4 +79,3 @@ ms.lasthandoff: 09/09/2017
  DQS 将在 **“值”** 表的 **“值”** 列和 **“更正为”** 列中的值提出建议。 当您在 **“值”** 列中选择一项建议时，值类型设置为 **“错误”**，并且建议复制到 **“更正为”** 列，就像是您手动插入的一样。 如果有现有的更正，它将成为一项建议。 在 **“清理”** 活动的 **“管理和查看结果”** 页中，当您在 **“更正为”** 列中选择一项建议时，DQS 将用所做选择替换当前选择的值，并且当前选择的值将成为一项建议。 在 **“清理”** 活动的 **“管理和查看结果”** 页中，在记录级别（下部网格）中将提供建议。  
   
   
-

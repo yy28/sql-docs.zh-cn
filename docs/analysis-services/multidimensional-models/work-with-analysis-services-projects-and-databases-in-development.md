@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services, projects
+helpviewer_keywords: Analysis Services, projects
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 26ffb60b07dad8af5d76304b7b58359e11bee8b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c46155050b4772414f2f5e0d706cbca7dd1740db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-development"></a>使用 Analysis Services 项目和在开发过程中的数据库
   可以在项目模式或联机模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/01/2017
  例如，假设一个开发人员在项目模式下工作，并且对所选对象进行更改。 在该开发人员进行这些更改时，假设另一个开发人员在联机模式下对已部署的数据库进行更改。 当第一个开发人员尝试部署他或她的已修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，将出现问题。 也就是说， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将检测到，在已部署的数据库中这些对象已被更改，并提示此开发人员覆盖整个数据库，从而覆盖第二个开发人员所做的更改。 因为 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 无法解决 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象之间即将覆盖的更改，所以，第一个开发人员唯一的实际选择就是必须放弃他或她的所有更改，并基于当前版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库重新开始新的项目。  
   
   
-

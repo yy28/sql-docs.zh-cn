@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6916b4808fb115ed0e41ed378b77e6649608e2d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a677617feb9ade819df897e2ca2418bfce8d2a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
   本主题介绍了一些处理数据挖掘对象时要记住的技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

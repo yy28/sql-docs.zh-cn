@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- ADO code examples, Visual C++
+dev_langs: C++
+helpviewer_keywords: ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a9dc2f4f129ae14efbc2b2ca23f0af7cc619107c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92465db3866a5af2ba40ee48cbf92e42794fc587
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual c + + 中的 ADO 代码示例
 使用下面的代码示例以了解如何使用 ADO 方法、 属性和事件时在 Microsoft Visual c + + 中写入。  
@@ -156,5 +152,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另请参阅  
  [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [附录 d: ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-
+ [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

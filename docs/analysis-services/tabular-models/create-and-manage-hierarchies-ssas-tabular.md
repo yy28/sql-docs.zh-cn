@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 813d48fcb964fc82c3dd9b1b72a70d0f1385f35c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63c10ca6e8486e67db96d7fe4d1e6afe76133ef8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>创建和管理层次结构（SSAS 表格）
   可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
@@ -109,4 +108,3 @@ ms.lasthandoff: 09/01/2017
  [度量值（SSAS 表格）](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   
-

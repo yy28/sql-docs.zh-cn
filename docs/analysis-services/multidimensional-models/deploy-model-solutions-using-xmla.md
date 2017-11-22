@@ -20,17 +20,16 @@ helpviewer_keywords:
 - deploying [Analysis Services], XML scripts
 - Analysis Services deployments, XML scripts
 ms.assetid: a8cb1837-fcac-4730-bea4-a72cf94d9f7c
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cb6e34a647d2c241e1a968077c989d17ad5c4e19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8315642255f95211c8e9bc2fd7e540351cdd3fb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>使用 XMLA 部署模型解决方案
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中， **“编写数据库脚本为”** 命令的 **“CREATE 到”** 选项用于创建整个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库或其中一个构成对象的 XML 脚本。 然后，生成的脚本可以在另一台计算机上运行来重新创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的架构（元数据）。 脚本生成整个数据库，而且当使用脚本时，没有用于增量更新已部署对象的机制。 运行脚本并部署数据库之后，必须对新创建的数据库进行处理，然后用户才能浏览该数据库。  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
   
-

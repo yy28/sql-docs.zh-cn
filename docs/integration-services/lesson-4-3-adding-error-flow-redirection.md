@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc919793ccb694f5cb6bfc8da4b69cc3528c5ee0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 1538ad973644dfa38fbed083327528a1973bcc4e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>第 4-3 课 - 添加错误流重定向
 如上一个任务中所示，当 Lookup Currency Key 转换尝试对产生错误的已损坏示例平面文件进行处理时，该转换无法生成匹配。 由于转换针对错误输出使用了默认设置，因此，任何错误都将导致该转换失败。 当转换失败时，该包的其余部分也将失败。  
@@ -110,4 +107,3 @@ ms.lasthandoff: 09/21/2017
   
   
   
-

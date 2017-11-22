@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 648fca1de8f4c98bce4e778a2d4d26fb44246267
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>在服务器组中注册 Analysis Services 实例
   如果有大量 Analysis Services 服务器实例，可以在 Management Studio 中创建服务器组来方便管理服务器。 服务器组的作用是在管理工作区内提供一组相关服务器的近似性。 例如，假定您负责管理 10 个单独的 Analysis Services 实例。 通过按服务器模式、运行时间条件或部门/区域将它们分组，您可以更易于查看并连接到共享相同特征的实例。 您还可以添加描述性信息，帮助您记住如何使用服务器。  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  右键单击该服务器组，然后选择“新建服务器注册”。 输入本地或远程服务器的网络名称，包括实例名称（如果服务器作为命名实例安装）。 或者，您可以提供在“已注册的服务器”中显示的已注册的服务器名称。 此名称仅在“已注册的服务器”中使用。 您不能使用它来重命名服务器，也不能在连接字符串中使用它。 已注册的服务器名称可以比实际服务器名称更具描述性，或包括其他有助于区分此服务器与其他服务器的标识特征。  
   
   
-

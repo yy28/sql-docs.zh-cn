@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ac8fc262775d11c08cb2e30a750549fe3b0ec96b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理您组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/07/2017
 -   [Master Data Services 开发人员文档](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
   
-

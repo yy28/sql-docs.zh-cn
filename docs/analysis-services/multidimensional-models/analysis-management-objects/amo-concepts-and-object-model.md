@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 概念和对象模型
   本主题提供的分析管理对象 (AMO) 的定义如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主对象的概念说明。  
@@ -83,9 +81,9 @@ ms.lasthandoff: 09/01/2017
   
 |类集|用途|  
 |---------------|-------------|  
-|[AMO 基础类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|使用任何其他类集所必需的类。|  
+|[AMO Fundamental 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|使用任何其他类集所必需的类。|  
 |[AMO OLAP 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的 OLAP 对象的类。|  
-|[AMO 数据挖掘类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的数据挖掘对象的类。|  
+|[AMO Data Mining 类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的数据挖掘对象的类。|  
 |[AMO 安全类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|用于控制对其他对象的访问权限以及维护安全性的类。|  
 |[AMO 其他类和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|用于帮助 OLAP 或数据挖掘管理员完成其日常任务的类。|  
   
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  AMO 不能用于查询数据。 若要查询 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据，包括多维数据集和挖掘模型，请在用户应用程序中使用 ADOMD.NET。 有关详细信息，请参阅[使用 ADOMD.NET 开发](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - Connection15::put_Provider
 - Connection15::GetProvider
 - Connection15::Provider
-helpviewer_keywords:
-- Provider property [ADO]
+helpviewer_keywords: Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ead9a90e3788efd420251912612de520279b43e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1839d8bc9c954d3f5ceeafca2b604304801f643f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-property-ado"></a>提供程序属性 (ADO)
 指示提供程序名称[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -52,5 +49,4 @@ ms.lasthandoff: 09/09/2017
  [提供程序和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [提供程序和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

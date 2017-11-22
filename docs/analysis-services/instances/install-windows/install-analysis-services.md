@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: a8d39f0b940aaec84b7b731a7f764b2e2e3d72ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
   SQL Server Analysis Services 是托管表格模型、多维数据集以及数据挖掘模型的分析数据库服务器，可从报表、电子表格和仪表板进行访问。  
@@ -86,4 +84,3 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
  [表格建模 (SSAS 表格)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   
-

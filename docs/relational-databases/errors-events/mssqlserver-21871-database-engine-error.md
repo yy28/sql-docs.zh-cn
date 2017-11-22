@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21871 (Database Engine error)
+helpviewer_keywords: 21871 (Database Engine error)
 ms.assetid: d3215378-9282-444f-a18b-00b96fd0133d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1538eba494fcad374dd0454ed519777466317b0f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1b1cebee8612d36c10891391fea3a9ce639d3bd2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver21871"></a>MSSQLSERVER_21871
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,4 +44,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>用户操作  
 **sp_validate_replica_hosts_as_publishers** 仅适用于重定向的发布服务器。 如果发布服务器数据库为可用性组的成员，则使用存储过程 **sp_redirect_publisher** 将发布服务器和发布服务器数据库与可用性组的可用性组侦听器名称相关联。  
   
-

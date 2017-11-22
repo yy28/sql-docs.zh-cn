@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-errors"></a>ADO 错误
 **ErrorValueEnum**常量介绍 ADO 错误值。 有关包括值，这些枚举常量的完整列表请参阅[附录 b: ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将检查的一些更有趣的错误，并解释某些特定情况下可引发，或若要解决此问题的解决方案。 这两个**ErrorValueEnum**列出常量和短正的十进制数。
@@ -88,4 +86,3 @@ ms.lasthandoff: 09/09/2017
 |**3749**|**adErrFieldsUpdateFailed**|字段更新失败。 有关详细信息，请检查**状态**单个字段对象的属性。 在两种情况下可能出现此错误： 更改时**字段**过程中更改或添加记录到数据库; 和更改的属性时的对象的值**字段**对象本身。<br /><br /> **记录**或**记录集**由于中当前记录的字段之一出现问题而失败的更新。 枚举**字段**集合并检查**状态**属性的每个字段，以确定问题的原因。|
 |**3750**|**adErrDenyNotSupported**|提供程序不支持共享限制。 尝试限制文件共享和你的提供程序不支持这一概念。|
 |**3751**|**adErrDenyTypeNotSupported**|提供程序不支持的共享限制请求的类型。 尝试建立特定类型的文件共享你的提供程序不支持的限制。 请参阅提供程序的文档，以确定支持哪些文件共享限制。|
-

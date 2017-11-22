@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Connect property [ADO], VBScript example
+dev_langs: VB
+helpviewer_keywords: Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0b5fca2056ec558897a2df4462f793300787efb0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3b1e74725758186cc29be811c80b6d405929dd5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-property-example-vbscript"></a>连接属性示例 (VBScript)
 > [!IMPORTANT]
@@ -134,8 +130,7 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [连接属性 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
-
+ [Connect 属性 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
 
 
 

@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 851ad331-aefd-4277-a5e5-e32a8f5c5e22
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 214c648fa61d283c748638eaf8ee0cb9d6cd25fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e72d34abbe3291010d568d6a7fa7d4bfb23e774d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defaultdetailsposition-element-xml"></a>DefaultDetailsPosition 元素 (XML)
   包含与元素在元素集合中的位置有关的信息。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  有关**RelationshipEndVisualizationProperties**元素， **DefaultDetailsPosition**元素包含默认的详细信息元素的集合中的详细信息的位置。 默认值**false**指示没有要使用没有默认详细信息。  
   
   
-

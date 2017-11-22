@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4803dcc8225400232e52890a2ce55edc80af5e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="receiving-results"></a>接收结果
 在 ADO 大多数命令会返回到调用方的一些信息。 返回行集的命令，请在收到的结果**记录集**对象，它是可能最常用的 ADO 对象。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  若要接收多个结果集意味着你将需要进行多次往返通过网络，另一个用于封装在每个数据集**记录集**对象。 对于缓慢或堵塞的网络，减少往返次数可能有助于提高应用程序的性能。 因此，某些提供商提供支持，以获得多个**记录集**在单个往返过程。 以下主题中讨论了这是：  
   
 -   [接收多个记录集](../../../ado/guide/data/receiving-multiple-recordsets.md)
-

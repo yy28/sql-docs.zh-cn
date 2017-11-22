@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65f8a1caba2f709e4583613ced4d6aa03b2d6bf1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果你正在使用大子**记录集**，尤其是与父级的大小相比**记录集**，但需访问仅在几个子的章节中，你可能会发现使用更加高效参数化的命令。  
@@ -99,5 +97,4 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 ## <a name="see-also"></a>另请参阅  
  [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [在常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

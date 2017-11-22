@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Member
-helpviewer_keywords:
-- Member object [ADO MD], members
+f1_keywords: Member
+helpviewer_keywords: Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d8e27f47e871b54aa8e7456956fc18100a5f59e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ca510493f83f7cfcc97b37586c1e26aee7c3ab24
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示多维数据集中，某一级别的成员级别的成员或沿 x 轴的单元集的位置的成员的子级。  
@@ -80,7 +76,7 @@ ms.lasthandoff: 09/09/2017
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |ChildrenCardinality|成员具有的子级的个数。|  
-|多维数据集名称|多维数据集的名称。|  
+|CubeName|多维数据集的名称。|  
 |Description|成员有意义的描述。|  
 |DimensionUniqueName|明确名称[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)。|  
 |HierarchyUniqueName|层次结构的明确名称。|  
@@ -105,4 +101,3 @@ ms.lasthandoff: 09/09/2017
  [目录 (VB) 示例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

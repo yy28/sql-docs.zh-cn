@@ -1,10 +1,13 @@
 ---
 title: "在系统版本控制临时表中查询数据 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9b9e126587a2c3a6beb34b74f234375de5a4469b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制临时表中查询数据
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将 **PERIOD** 列指定为隐藏，其值将不会出现在 SELECT \* 查询中。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。  
   

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Type property [property] [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ed5cb366292f87e294576ec880947888631e7a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9d97025218856d56b291fe50e67f69b7e4202b9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-property-vb"></a>类型属性示例 （属性） (VB)
 此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。 它是一个用于列出的名称和类型的一个集合，如实用程序的模型[属性](../../../ado/reference/ado-api/properties-collection-ado.md)，[字段](../../../ado/reference/ado-api/fields-collection-ado.md)等。  
@@ -157,5 +153,4 @@ End Sub
   
 ## <a name="see-also"></a>另请参阅  
  [属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [类型属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-
+ [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

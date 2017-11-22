@@ -1,8 +1,7 @@
 ---
 title: "SortColumn 属性 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- SortColumn property [RDS]
+helpviewer_keywords: SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8cdd4d854a4328613ab0fd98e8e107e207f2e12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c2cf7afef8435343b9b3c7362940e29fc448056
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 属性 (RDS)
 表示要对记录进行排序的列。  
@@ -57,7 +54,6 @@ DataControl.SortColumn = String
  [FilterColumn、 FilterCriterion、 FilterValue、 SortColumn，和 SortDirection 属性和重置方法示例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [排序属性](../../../ado/reference/ado-api/sort-property.md)   
  [SortDirection 属性 (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
 
 
 

@@ -1,27 +1,24 @@
 ---
-title: "体系结构和概述 |Microsoft 文档"
+title: "对 SQL Server 机器学习服务的体系结构概述 |Microsoft 文档"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>体系结构和机器学习服务概述
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的体系结构概述 
 
 本主题介绍在 SQL Server 中支持的 Python 和 R 脚本执行的 extensibility framework 的目标。
 
@@ -70,7 +67,6 @@ SQL Server 2016 数据库引擎，以支持使用 SQL Server 的 R 脚本执行�
 
   性能优化依赖于平台的两个同样功能强大的方面： 资源调控和并行处理使用 SQL Server 和分布式计算算法提供**RevoScaleR**和**revoscalepy**。
 
-
 ## <a name="solution-development-and-deployment"></a>解决方案开发和部署
 
 除了扩展性平台这些核心目标，SQL Server 中的机器学习服务旨在提供强集成与数据库引擎的 BI 堆栈，这些优势：
@@ -93,7 +89,7 @@ SQL Server 2016 数据库引擎，以支持使用 SQL Server 的 R 脚本执行�
 
 无法确定哪台计算机学习解决方案满足你的需求？ 除了 SQL Server 2016 和 SQL Server 自 2017 年中的嵌入分析，Microsoft 提供以下机器学习平台和服务：
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R Server 和机器学习服务器](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   用于开发、 分发和管理机器学习作业的多平台环境
 + [数据科学虚拟机](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,6 +97,7 @@ SQL Server 2016 数据库引擎，以支持使用 SQL Server 的 R 脚本执行�
   需要机学习、 预装的所有工具。 使用 Jupyter 笔记本、 Python 或。
   
   尝试新[Windows 2016 预览版本](http://aka.ms/dsvm/win2016)，其中包括常用深入学习框架，例如 CNTK 和 mxNet，以及为 Windows 容器支持的 GPU 版本 ！
+
 + [Azure 的认知服务](https://azure.microsoft.com/services/cognitive-services/)
 
   各种云服务集成到应用程序，包括视频、 面部识别的自然语言索引添加 AI 和 ML 表情检测，文本分析计算机转换过程中，和很多，更
@@ -110,5 +107,4 @@ SQL Server 2016 数据库引擎，以支持使用 SQL Server 的 R 脚本执行�
 
 ## <a name="see-also"></a>另请参阅
 
-[R Server 独立](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[比较机器学习服务器和 Microsoft R 产品](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

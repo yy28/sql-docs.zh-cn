@@ -2,23 +2,21 @@
 title: "安装和配置 Python 机学习服务 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e3142bcf06fa2ed88ead730d0cc127cf41cfde56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>设置 Python 机器学习服务 （数据库）
 
@@ -50,13 +48,15 @@ ms.lasthandoff: 09/08/2017
 
 ### <a name="unattended-installation"></a>无人参与的安装
 
-若要执行无人参与的安装，使用 SQL Server 安装程序和特定于 Python 的自变量的命令行选项。 有关详细信息，请参阅[无人参与安装的 SQL Server 的 Python 机器学习服务](./unattended-installs-of-sql-server-python-services.md)。
+若要执行无人参与的安装，使用 SQL Server 安装程序和特定于 Python 的自变量的命令行选项。 有关详细信息，请参阅[无人参与安装的 SQL Server 的 Python 机器学习服务](unattended-installs-of-sql-server-python-services.md)。
 
 ##  <a name="bkmk_installPythonInDatabase"></a>步骤 1： 安装机器学习 SQL 服务器上的服务 （数据库）
 
 1. 运行 SQL Server 2017 年 1 安装向导。
   
 2. 上**安装**选项卡上，选择**新的 SQL Server 独立安装或向现有安装添加功能**。
+
+    ![安装 Python 数据库中](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. 在“功能选择”  页上，选择以下选项：
   
@@ -69,11 +69,12 @@ ms.lasthandoff: 09/08/2017
          此选项将安装支持 Python 脚本执行的数据库服务。
 
     -   **Python**选中此选项以获取 Python 3.5 可执行文件并选择从 Anaconda 分发的库。 安装每个实例只有一个语言。
+        
+        ![功能用于 Python](media/ml-svcs-features-python-highlight.png "的设置选项 Python")
 
         > [!NOTE]
-        > 不要选择中的选项**共享功能**为**Microsoft R Server （独立）**。 如果你需要添加机器学习到其他计算机用于 R 开发的组件，请使用此选项在单独的安装。 例如，这可能适用于数据科研人员的便携式计算机。
-        
-        ![设置选项 Python](media/ml-svcs-features-python-highlight.png "的设置选项 Python")
+        > 
+        > 未选择的选项**机器学习 Server （独立）**。 此选项以安装下的机器学习服务器**共享功能**适用于在单独的计算机上使用。 例如，你可能想要安装相同版本的机器学习用于项目开发，例如数据科研人员的便携式计算机的其他计算机上的组件。
 
 4. 上**同意安装 Python**页上，选择**接受**。
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 09/08/2017
      + 机器学习服务（数据库内）
      + Python
   
-    这些选择表示将 Python 用于 SQL Server 所需的最低配置。
+    这些选择代表使用 Python 与所需的最小配置[!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]。
     
     ![准备好安装 Python](media/ready-to-install-python.png "Python 安装所需组件")
 
@@ -118,7 +119,8 @@ ms.lasthandoff: 09/08/2017
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
-    这是完全用来启用 R，因为基础扩展性功能支持这两种语言的相同的过程。
+    
+    如果你已启用 R 语言功能，你无需运行第二次重新配置 Python。 基础的扩展性平台支持这两种语言。
 
 4. 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例重启 SQL Server 服务。 此外会自动重新启动 SQL Server 服务重启相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服务。
 
@@ -140,13 +142,13 @@ ms.lasthandoff: 09/08/2017
   
     如果已安装多个 SQL Server 实例，具有 R 或 Python 启用任何实例都有其自己的快速启动板服务。
 
-    但是，如果你的单个实例上安装 R 和 Python，只有一个快速启动板安装。 为每种语言添加单独的、 特定于语言的启动器 DLL。 有关详细信息，请参阅[组件来支持 Python 集成](new-components-in-sql-server-to-support-python-integration.md)。 
+    如果你安装 R 和 Python 的单个实例上，安装只有一个快速启动板。 为每种语言添加单独的、 特定于语言的启动器 DLL。 有关详细信息，请参阅[组件来支持 Python 集成](new-components-in-sql-server-to-support-python-integration.md)。 
    
 3. 如果正在快速启动板，你应能够运行类似中的以下简单的 Python 脚本[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'OutputDataSet=InputDataSet',
+    @script=N'OutputDataSet = InputDataSet',
     @input_data_1 = N'SELECT 1 AS col'
     ```
     
@@ -156,6 +158,7 @@ ms.lasthandoff: 09/08/2017
 
 > [!NOTE]
 > 列或 Python 脚本中使用的标题将不返回，设计使然。 若要添加你的输出的列名称，必须指定返回的数据集的架构。 执行此操作使用存储的过程中，命名列和指定的 SQL 数据类型的与结果参数。
+> 
 > 例如，你可以添加以下行以生成任意列名称：`WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>步骤 4： 其他配置
@@ -177,26 +180,26 @@ ms.lasthandoff: 09/08/2017
 可以在 Windows 用户组“SQLRUserGroup” 中查看这些账户。 默认情况下，被创建 20 工作人员帐户，这通常是绰绰有余用于运行外部脚本的作业。
 
 > [!IMPORTANT]
-> 辅助角色组名为 SQLRUserGroup 而不考虑正在运行的脚本的类型。 没有为每个实例的单个组。
+> 名为辅助角色组**SQLRUserGroup**无论你安装 R 或 Python。 没有为每个实例的单个组。
 
-如果你需要从远程数据科学客户端，运行 R 脚本，且正在使用 Windows 身份验证，有一些其他注意事项。 这些辅助帐户必须有权登录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。
+如果你需要从远程数据科学客户端，运行脚本，且正在使用 Windows 身份验证，有一些其他注意事项。 这些辅助帐户必须有权登录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。
 
 1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，展开**安全**。 然后右键单击**登录名**，然后选择**新登录名**。
 2. 在**登录名-新建**对话框中，选择**搜索**。
 3. 选择**对象类型**，然后选择**组**。 清除其他所有内容。
 4. 在**输入要选择的对象名称**，类型*SQLRUserGroup*，然后选择**检查名称**。
 5. 解析与实例的 Launchpad 服务关联的本地组名称，它应类似于 *instancename\SQLRUserGroup*。 选择“确定”。
-6. 默认情况下，在登录分配给**公共**角色，并且有权连接到数据库引擎。
+6. 默认情况下，组分配给**公共**角色，并且有权连接到数据库引擎。
 7. 选择“确定”。
 
 > [!NOTE]
-> 如果你使用在 SQL Server 计算上下文中运行脚本的 SQL 登录，则不需要此额外步骤。
+> 如果你使用**SQL 登录名**对于在 SQL Server 计算上下文中运行脚本，不需要此额外步骤。
 
 ### <a name="give-users-permission-to-run-external-scripts"></a>授予用户运行外部脚本的权限
 
 如果你安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你自己，以及你自己的实例中运行 Python 脚本，你通常以管理员身份执行脚本。 这样，你便可以隐式权限通过各种操作和数据库中的所有数据。
 
-大多数用户来说，但是，没有此类提升的权限。 例如，使用 SQL 登录来访问数据库通常在组织中的用户不具有提升的权限。 因此，对于每个用户都使用 Python，你必须授予机器学习服务的用户权限来使用 Python 的位置在每个数据库运行外部脚本。 以下是操作方法：
+大多数用户来说，但是，没有此类提升的权限。 例如，使用 SQL 登录名来访问数据库通常在组织中的用户不具有提升的权限。 因此，对于每个用户都使用 Python，你必须授予机器学习服务的用户权限来使用 Python 的位置在每个数据库运行外部脚本。 以下是操作方法：
 
 ```SQL
 USE <database_name>
@@ -209,12 +212,12 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>对其授予用户读取、 写入或数据定义语言 (DDL) 权限数据库
 
-在用户运行脚本时，可能需要的用户帐户或 SQL 登录来从其他数据库中读取数据。 用户帐户或 SQL 登录可能还需要创建新表以存储结果，并将数据写入表。
+在用户运行脚本时，用户可能需要从其他数据库中读取数据。 用户可能还需要创建新表以存储结果，并将数据写入表。
 
-对于每个用户帐户或 SQL 登录运行 R 或 Python 脚本，确保它有`db_datareader`， `db_datawriter`，或`db_ddladmin`特定数据库的权限。
+对于每个 Windows 用户帐户或 R 或 Python 脚本运行的 SQL 登录名中，确保它具有特定的数据库的适当的权限： `db_datareader`， `db_datawriter`，或`db_ddladmin`。
 
-例如，以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，为提供的 SQL 登录*MySQLLogin*中运行 T-SQL 查询的权限*ML_Samples*数据库。 若要运行此语句，在 SQL 登录必须已存在的服务器的安全上下文中。
-  
+例如，以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，为提供的 SQL 登录名*MySQLLogin*中运行 T-SQL 查询的权限*ML_Samples*数据库。 若要运行此语句，SQL 登录名必须已经存在于服务器的安全上下文中。
+
 ```SQL
 USE ML_Samples
 GO
@@ -229,12 +232,11 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>为数据科学客户端上的实例创建 ODBC 数据源
 
-你可以创建机器学习数据科学客户端计算机上的解决方案。 如果你需要通过使用 SQL Server 计算机作为计算上下文来运行代码，你将具有两个选项。 你可以使用在 SQL 登录或集成的 Windows 身份验证。
+你可以创建机器学习数据科学客户端计算机上的解决方案。 如果你需要通过使用 SQL Server 计算机作为计算上下文来运行代码，则有两个选项： 通过使用 SQL 登录名，访问实例或通过使用 Windows 帐户。
 
-+ SQL 登录： 确保该登录具有适当权限在其中您正在读取数据的数据库上。 你可以执行此操作通过添加*连接到*和*选择*权限，或通过添加在登录到`db_datareader`角色。 创建对象的登录需要`DDL_admin`权限。 必须将数据保存到表中的登录应添加到`db_datawriter`角色。
++ 为 SQL 登录名： 确保该登录名在其中您正在读取数据的数据库上具有适当权限。 你可以执行此操作通过添加*连接到*和*选择*权限，或通过添加登录到`db_datareader`角色。 若要创建对象，将分配`DDL_admin`权限。 如果必须将数据保存到表中，将添加到`db_datawriter`角色。
 
 + 对于 Windows 身份验证： 你可能需要在指定实例名称和其他连接信息的数据科学客户端上创建 ODBC 数据源。 有关详细信息，请参阅[ODBC 数据源管理器](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)。
-
 
 ## <a name="additional-optimizations"></a>额外的优化
 
@@ -242,7 +244,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>添加更多的辅助角色帐户
 
-如果希望多个用户以会同时运行脚本，则可以增加分配给快速启动板服务的工作帐户数。 有关详细信息，请参阅[适用于 SQL Server R Services 中修改用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+如果希望多个用户以会同时运行脚本，则可以增加分配给快速启动板服务的工作帐户数。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
 ### <a name="optimize-the-server-for-script-execution"></a>优化的服务器脚本执行
 
@@ -280,10 +282,6 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 有关如何升级实例的信息，请参阅[升级 R 组件通过绑定](..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
-> [!NOTE]
-> 
-> 当前的发行版本包含所有机学习组件的最新版本。 因此，尽管升级通过 Microsoft 机器学习服务器支持的 SQL Server 自 2017 年，当前可用升级仅适用于 SQL Server 2016 实例。
-
 ### <a name="tutorials"></a>教程
 
 请参阅以下教程： 你可以如何使用 Python 与 SQL Server 以生成并部署计算机学习解决方案的一些示例：
@@ -291,4 +289,3 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 [在 T-SQL 中使用 Python](../tutorials/run-python-using-t-sql.md)
 
 [创建使用 revoscalepy 的 Python 模型](../tutorials/use-python-revoscalepy-to-create-model.md)
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Optimize property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9c42c39a9d91b78bb57fc9ae1731c3d61513088
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6137ef4be778a659107458ba9fe6f1a7f3000cfa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-property-example-vb"></a>优化属性示例 (VB)
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象的动态**优化**属性。 ***Zip***字段***作者***表中***Pubs***数据库未被索引。 设置[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性**True**上***zip***字段授权 ADO 建立索引，可改进的性能[查找](../../../ado/reference/ado-api/find-method-ado.md)方法。  
@@ -96,5 +92,4 @@ End Sub
   
 ## <a name="see-also"></a>另请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [优化属性的动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Optimize 属性 - 动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

@@ -16,15 +16,14 @@ ms.devlang: na
 ms.topic: hero-article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: c0751b8bfca5bbcae4a4802fecb3cf06e8182d05
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 轮换透明数据加密 (TDE) 保护程序 
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 本操作指南介绍如何使用 Azure Key Vault 中的 TDE 保护程序对 Azure SQL 服务器的执行密钥轮换。 轮换 Azure SQL 服务器的 TDE 保护程序意味着切换到保护服务器上的数据库的新非对称密钥。 密钥轮换是一个联机操作，完成应只需几秒钟，因为该操作仅解密和重新加密数据库的数据加密密钥，而不是整个数据库。
 

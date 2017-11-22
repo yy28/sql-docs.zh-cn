@@ -2,9 +2,12 @@
 title: "SQL Server 使用反馈收集的本地审核 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - dbe-security
@@ -17,13 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用反馈收集的本地审核
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ## <a name="introduction"></a>简介
 
 Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集关于计算机或设备的信息（“标准计算机信息”）并发送到 Microsoft。 [SQL Server 使用反馈收集](http://support.microsoft.com/kb/3153756) 的本地审核组件将服务收集的数据写入指定文件夹（表示将发送给 Microsoft 的数据（日志））。 本地审核的用途是使客户可以出于合规性、监管或隐私验证原因而查看 Microsoft 使用此功能收集的所有数据。  

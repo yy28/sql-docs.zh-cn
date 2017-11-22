@@ -28,17 +28,16 @@ helpviewer_keywords:
 - time hierarchies [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d40605d85444307073de84d7fb8c8e4bbeea163d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac568a96c856f9334b30597dfd9c9555fc54ded2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
   时间智能增强功能是一项多维数据集增强功能，它可以将时间计算（或时间视图）添加到所选层次结构中。 此增强功能支持以下计算类别：  
@@ -86,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [创建计算成员](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4f19e7ee6c46ff06cbfc8005252bab2ec1115eb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 341d41fd9930562173fe56c343d3edeb7041b89a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>特性属性-将属性绑定到键列
   此过程说明如何更改维度中的特性的 **Name** 属性设置。  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
     >  还可在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“属性”窗口中设置所选特性的“名称”属性。  
   
   
-

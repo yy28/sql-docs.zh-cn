@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Delete method [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c5f6cc17defabc0c8f3232e4ca091ada8df6ff38
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83322007d526d1efa8fa72c5a982882dba52ef12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="procedures-delete-method-example-vb"></a>过程删除方法示例 (VB)
 下面的代码演示如何通过删除过程[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  
@@ -68,4 +64,3 @@ End Sub
  [Delete 方法 （ADOX 集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
-

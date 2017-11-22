@@ -13,38 +13,33 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProtocolCapabilities Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProtocolCapabilities Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.protocolcapabilities
 - http://schemas.microsoft.com/analysisservices/2003/engine#ProtocolCapabilities
 - urn:schemas-microsoft-com:xml-analysis#ProtocolCapabilities
-helpviewer_keywords:
-- ProtocolCapabilities element
+helpviewer_keywords: ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ff93dce6b71f7cfd69ed85d92c4c4f7912faee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d2ff72b1fdc3a3e3a4b09a046933d3ead88fc78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
-# ProtocolCapabilities 元素 (XMLA)
+# <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 元素 (XMLA)
   使用在 SOAP 请求消息的 SOAP 标头来标识的实例之间的协议功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和客户端应用程序。  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```xml  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 </soap:Envelope>  
 ```  
   
-## 元素特征  
+## <a name="element-characteristics"></a>元素特征  
   
 |特征|说明|  
 |--------------------|-----------------|  
@@ -70,14 +65,14 @@ ms.lasthandoff: 09/01/2017
 |默认值|无|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
-## 元素关系  
+## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
 |父元素|无|  
 |子元素|[功能](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## 注释  
+## <a name="remarks"></a>注释  
  **ProtocolCapabilities**元素使客户端应用程序可以与协商协议功能，如二进制 XML 或压缩支持[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在任何时候的实例。 协议协商包括以下步骤：  
   
 1.  客户端应用程序通过发送在 SOAP 标头中包含 **ProtocolCapabilities** 元素的 SOAP 请求来标识其协议功能。  
@@ -94,9 +89,8 @@ ms.lasthandoff: 09/01/2017
   
  协议功能可以不显式协商。 即客户端应用程序不必在 SOAP 请求中包含 **ProtocolCapabilities** 元素。 如果 SOAP 请求不包括**ProtocolCapabilities**元素，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例响应 SOAP 请求为使用相同的格式。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理连接和会话 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [标头 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

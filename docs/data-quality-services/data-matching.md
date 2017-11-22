@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a688b5d0da43f4c49e22c70bf1faf3bc1773097d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-matching"></a>数据匹配
   借助 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据匹配过程，您可以减少数据源中的数据重复并改善数据准确性。 匹配可分析单个数据源的所有记录中的重复程度，同时返回所比较的每组记录之间的加权概率。 然后，您可以决定哪些记录匹配，并对源数据采取适当的措施。  
@@ -85,4 +83,3 @@ ms.lasthandoff: 09/09/2017
 |在数据质量项目中运行匹配|[运行匹配项目](../data-quality-services/run-a-matching-project.md)|  
   
   
-

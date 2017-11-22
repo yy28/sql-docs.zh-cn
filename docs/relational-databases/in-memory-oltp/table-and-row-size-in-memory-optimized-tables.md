@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed01c6cc36fac642856ef74bbb6a73f15d433228
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 07/31/2017
 
   内存优化表由行和索引的集合组成，其中包含行的指针。 下图是一个包含索引和行的表，因而也就有行标题和正文：  
   
- ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "内存优化表。")  
+ ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 内存优化表，由索引和行组成。  
 
 ##  <a name="bkmk_TableSize"></a> 计算表的大小
@@ -254,4 +252,3 @@ where object_id = object_id('dbo.Orders')
  [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

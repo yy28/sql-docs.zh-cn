@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Handler property [ADO]
+helpviewer_keywords: Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 25ac7c676fbab1e8b5899a3502fab2199b0afd22
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handler-property-rds"></a>处理程序属性 (RDS)
 指示扩展的功能的服务器端自定义程序 （处理程序） 名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，和使用的任何参数*处理程序*。  
@@ -66,6 +63,5 @@ DataControl.Handler = String
  [处理程序属性示例 (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

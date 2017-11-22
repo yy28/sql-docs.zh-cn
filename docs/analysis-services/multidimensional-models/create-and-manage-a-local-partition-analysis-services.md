@@ -19,17 +19,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebc3093a0e030aca329338359be2a6f256c24fe7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>创建和管理本地分区 (Analysis Services)
   您可以为度量值组创建更多分区以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。  
@@ -137,4 +136,3 @@ ms.lasthandoff: 09/01/2017
  [在 Analysis Services 中合并分区（SSAS - 多维）](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

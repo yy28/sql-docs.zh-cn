@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2579c75a4d99e04d5cae60870632c45b52a56cac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db44423f71f1808d99a9611062bdc8291640ece
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-data-between-sql-server-and-xdf-file"></a>在 SQL Server 和 XDF 文件之间移动数据
 
@@ -126,7 +122,6 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
 ## <a name="previous-step"></a>上一步
 
 [分析本地计算上下文中的数据](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-
 
 
 

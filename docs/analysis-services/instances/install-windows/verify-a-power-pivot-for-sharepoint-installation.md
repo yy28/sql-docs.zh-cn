@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>验证 Power Pivot for SharePoint 安装
   在 SharePoint 场中安装的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 实例可通过 SharePoint 管理中心进行管理。 至少，你可以检查管理中心和 SharePoint 网站上的页面以便确认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器组件和功能可用。 但是，若要完全验证某一安装，你必须具有可发布到 SharePoint 并从库中访问的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。 出于测试目的，你可以发布已包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
@@ -109,4 +107,3 @@ ms.lasthandoff: 09/01/2017
 11. 在计算机文件系统上，检查以下文件夹以便确定文件是否已缓存到磁盘。 存在缓存文件将进一步证实您的部署正常工作。 若要查看文件缓存，请转到 [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序文件夹。 每个缓存数据库均存储在自己的文件夹中，可使用基于 GUID 的命名约定来确保唯一名称。  
   
   
-

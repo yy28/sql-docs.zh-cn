@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec99b8511d512c068130ed7bc521f447b57d20d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication cmdlet
 
@@ -115,4 +113,3 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  该示例创建一个新的服务应用程序。 该服务应用程序数据库是在名为 AdvWorks-SRV01 的一个数据库服务器上创建的，该数据库服务器已作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装，它具有许多 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装所共有的配置。 您必须对该 SQL Server 实例具有 dbcreator 权限，才能创建该数据库。 您必须是 SharePoint 配置数据库上的 db_owner。 因为这是场中的第一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，所以它必须是默认代理组的成员。  
   
   
-

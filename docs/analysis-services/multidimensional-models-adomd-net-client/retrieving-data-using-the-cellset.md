@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 60ed3598bd03977ae56eb159afd01955e109275e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 3f379624159ec776d591c70569db2e696b19c9ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-data-using-the-cellset"></a>使用 CellSet 检索数据
   在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象提供了最大的交互功能和灵活性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象是分层数据和元数据的内存缓存，用于保留数据的原始维数。 还可以在连接或断开连接状态中对 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象进行遍历。 由于此断开连接的功能，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象还可用于以任何顺序查看数据和元数据，并为数据检索提供最全面的对象模型。 此断开连接的功能还会导致 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象有最大的开销，并成为要填充的最慢的 ADOMD.NET 数据检索对象模型。  
@@ -76,4 +74,3 @@ ms.lasthandoff: 10/24/2017
  [使用 XmlReader 检索数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   
-
