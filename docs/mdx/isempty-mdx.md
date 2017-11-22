@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ISEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsEmpty function
+f1_keywords: ISEMPTY
+dev_langs: kbMDX
+helpviewer_keywords: IsEmpty function
 ms.assetid: b4a50996-61d1-4e23-8003-7d530195ea72
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 9fca4c0f2e4d7cb08a5eeb999ba6a320c538d775
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 09475a39c4f83044b0f169f99c894801392cba7e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回表达式的计算结果是否为空单元值。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -44,7 +39,7 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  有效 MDX（多维表达式）表达式，通常返回成员或元组的单元坐标。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **IsEmpty**函数返回**true**如果计算的表达式是空单元值。 否则，此函数返回**false**。  
   
 > [!NOTE]  
@@ -75,4 +70,3 @@ IsEmpty(Value_Expression)
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

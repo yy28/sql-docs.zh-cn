@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cfe5f8e48eb88233949102e988f3a2296cf373b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11617fc364b3ce9f2c4f5b37623f4c74f968517
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="records-and-streams"></a>记录和流
 当前提供的 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象作为访问数据源，例如关系数据库中的信息的主要方式。 但是，某些提供程序支持[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)作为可与其操作提供程序的数据的替代或补充对象的对象。 有关详细信息上**记录**行为，请参阅提供程序的文档。  
@@ -70,11 +68,10 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [流和持久性](../../../ado/guide/data/streams-and-persistence.md)  
+-   [流和暂留](../../../ado/guide/data/streams-and-persistence.md)  
   
 -   [命令流](../../../ado/guide/data/command-streams.md)  
   
--   [到流中检索结果集](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
+-   [检索流中的结果集](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
--   [ADO 用于 Internet 发布](../../../ado/guide/data/using-ado-for-internet-publishing.md)
-
+-   [使用 ADO 进行 Internet 发布](../../../ado/guide/data/using-ado-for-internet-publishing.md)

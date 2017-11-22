@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f387bee9f8e83568bb463ae0e07c4f614a725b15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4cefe036943dd986cbc6b1cd9cab2b44c9e0f9fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置 （类型映射） (OracleToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 请参阅下一部分对于 Oracle 类型映射的默认 SSMA 中的表。  
   
-**“添加”**  
+**添加**  
 单击此项可将数据类型添加到映射列表。  
   
 **编辑**  
@@ -64,7 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
@@ -92,24 +90,24 @@ ms.lasthandoff: 08/02/2017
 |不同的国家/地区字符<sup>**</sup>|nvarchar(max)|  
 |不同的国家/地区字符<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
-|urowid|uniqueidentifier|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xml 类型|xml|  
+|Xml 类型|xml|  
   
 <sup>*</sup>适用于返回值类型映射仅。  
   
@@ -120,7 +118,7 @@ ms.lasthandoff: 08/02/2017
   
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
-|bfile|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
@@ -159,7 +157,7 @@ ms.lasthandoff: 08/02/2017
 |国家/地区字符 [*...\*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
-|nclob|nvarchar(max)|  
+|Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数字 [*...\*]|数字 [*]|  
 |数字 [*...\*][\*..\*]|数字 [*] [\*]|  
@@ -169,7 +167,7 @@ ms.lasthandoff: 08/02/2017
 |nvarchar2 [*...\*]|nvarchar [*]|  
 |原始 [*...\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
@@ -273,4 +271,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
 [用户界面参考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

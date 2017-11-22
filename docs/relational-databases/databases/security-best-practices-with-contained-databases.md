@@ -2,9 +2,12 @@
 title: "针对包含数据库的安全最佳做法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fda4715f323f4183fdbc601f47cbf8c24b7a6623
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与 **USER WITH PASSWORD** 身份验证过程相关，该过程会将身份验证的范围从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 级别转到数据库级别。  
   

@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Execution Steps
+helpviewer_keywords: Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80c335253aef5dd676ece990cb34feb5d67da829
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -43,7 +40,7 @@ SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
 SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有先决条件。 如果未满足某些条件，则将显示一条错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -53,7 +50,7 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 以下对象创建在 Sybase SSMATESTER2005db 或 SSMATESTER2008db 数据库中和在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb_syb 数据库中。  
   
-|名称|类型|Description|  
+|Name|类型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
 |USER_TABLE$ Aud|表|保存已删除并覆盖的行的表。|  
@@ -65,7 +62,7 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 以下对象创建的数据库中的已验证表 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-|名称|类型|Description|  
+|Name|类型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
   
@@ -83,4 +80,3 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
 [选择并配置受影响的对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [测试迁移数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

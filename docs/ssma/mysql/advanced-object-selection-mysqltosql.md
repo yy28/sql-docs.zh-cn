@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5fc817e35da894972d1af0490dc9e219eb3bdafb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85f7c1dffbc5e21f9b6a2cbeae7ffd6f256b77b4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>高级的对象选择 (MySQLToSQL)
 **高级对象部分**对话框可以通过使用中的对象名称，字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 **显示仅加载的项**  
 切换类别或项的显示。 当选择此按钮时，SSMA 显示匹配的筛选器条件以及那些以前加载的所有项。 如果未选择此按钮，SSMA 显示类别文件夹。  
   
-**筛选**  
+**Filter**  
 输入你想要用于筛选项的字符串。 例如，若要查找包含字符串的所有可用项"ID"中的项名称，输入字符串"ID"中**筛选器**框。  
   
 如果项匹配的筛选条件，则将显示的类别或项为 string 类型。 若要查看的匹配项，我们建议你单击**仅显示加载项**按钮。  
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/02/2017
 **清除筛选器**  
 清除**筛选器**框。  
   
-

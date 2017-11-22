@@ -1,10 +1,13 @@
 ---
 title: "在系统版本控制的临时表中修改数据 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1ed023d0892262a8491cc434048e8932510e0e3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 23e504dd3b54b7cd2c2f2eced0cc9056b009e377
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制的临时表中修改数据
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   系统版本控制的临时表中的数据使用常规的 DML 语句进行修改，但有一个重要的区别：无法直接修改时间段列数据。 当数据更新时，它就是版本控制的，每个已更新行的以前版本都将插入到历史记录表中。 当删除数据时，删除是逻辑的，行将从当前表格移动到历史记录表中 - 不会被永久删除。  
   

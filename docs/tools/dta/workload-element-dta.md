@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Workload element
+dev_langs: XML
+helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2ff19d6a4044a6a3e29cb59592cdd7dd653e79
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cacc7a628f0682938b7db6821e08106a3eeaac3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="workload-element-dta"></a>工作负荷元素 (DTA)
   指定要用于优化会话的工作负荷。  
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**子元素**|[文件元素 &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [工作负荷 &#40; DTA &#41; 的数据库元素](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 元素 &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**子元素**|[文件元素 (DTA)](../../tools/dta/file-element-dta.md)<br /><br /> [工作负荷的数据库元素 (DTA)](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 元素 (DTA)](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>注释  
  工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 数据库引擎优化顾问可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、跟踪文件和跟踪表用作工作负荷。  
@@ -90,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

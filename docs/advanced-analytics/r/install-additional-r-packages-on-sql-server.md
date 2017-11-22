@@ -1,27 +1,25 @@
 ---
 title: "在 SQL Server 上安装其他 R 包 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 8c8e95bf2f0715684bb656d2b2de4dd94aea14f8
+ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: a7afdf4230bd27505afff271a6b4782214eedfb3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>在 SQL Server 上安装其他 R 包
 
@@ -30,7 +28,8 @@ ms.lasthandoff: 10/10/2017
 > [!IMPORTANT]
 > 添加新的程序包的过程取决于 SQL Server 正在运行和你使用的工具的版本。 
 
-**适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
+**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="overview-of-package-installation-process"></a>包安装过程的概述
 
@@ -40,7 +39,9 @@ ms.lasthandoff: 10/10/2017
 
     请务必检查包依赖关系并获取任何相关的包可能需要在安装过程。 若要准备包和其依赖项的集合，我们建议[miniCRAN 包](#bkmk_packageDependencies)。
 
-3.  包安装方法的行为有所不同具体取决于，服务器具有 internet 访问权限，并在你的 SQL Server 版本上。 建议的流程如下所示：
+    如果出现下载或安装错误，请尝试不同的镜像站点。
+
+3.  安装包的方式取决于是否在服务器具有 internet 访问权限，并在你的 SQL Server 版本上。 建议的流程如下所示：
 
     **SQL Server 2016 的软件包安装**
     
@@ -62,13 +63,13 @@ ms.lasthandoff: 10/10/2017
 
 ## <a name="install-new-packages"></a>安装新的包
 
-本部分提供有关以下密钥包安装方案的详细的过程。 供你使用的最佳方法取决于这些 factores:
+本部分提供了用于密钥包安装方案的详细的过程。 选择最佳的方法，具体取决于：
 
 - 你使用的 SQL Server 的版本
 
-- 您是唯一的实例，所有者还是 mamaneg 包为使用数据库角色的多人尝试。
+- 是否是唯一的实例，所有者，或尝试为使用数据库角色的多人管理包。
 
-- 具有依赖项安装的一个包或多个包
+- 具有依赖项安装的一个包中或多个包
 
 **使用 SQL Server 包管理**
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/10/2017
 
     [从 miniCRAN 存储库安装多个程序包](#bkmk_minicran)
 
-**使用传统的 R rools**
+**使用传统的 R 工具**
 
 如果你使用的 SQL Server R services 的早期版本，请按照这些说明使用传统的 R 工具安装包。 （可选） 使用 miniCRAN 要准备进行安装的包的集合。
 
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/10/2017
 
 4.  从你想要使用的包的数据库，运行[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句。
 
-    对于此示例中，我们假定你的帐户有权将新包上载到服务器并将它们安装到数据库中的共享作用域。
+    对于此示例中，我们假定你的帐户有权将新包上载到服务器并安装到**共享**数据库中的作用域。
 
     以下语句将添加的发行版[zoo](https://cran.r-project.org/web/packages/zoo/index.html)到当前数据库上下文中，从本地文件共享的包。
 
@@ -136,7 +137,7 @@ ms.lasthandoff: 10/10/2017
     library(zoo)'
     ```
 
-    如果成功，**消息**窗口应报告一条消息，如"包 zoo 已成功解压缩和 MD5 总和检查"。 如果已安装所需的程序包，则安装过程将附加并加载所需的程序包。
+    如果成功，**消息**窗口应报告一条消息，如"包 zoo 已成功解压缩和 MD5 总和检查"。 如果已安装所需的程序包，则安装进程然后附加并加载所需的程序包。
 
     > [!NOTE]
     > 未提供所需的程序包时，返回错误:"没有调用程序包\<required_package\>"。 
@@ -149,7 +150,7 @@ ms.lasthandoff: 10/10/2017
 
 1. 在开始之前，确保满足这些条件：
 
-    + R 客户端具有 RevoScale 的最新版本。 预发行版本不包括某些包管理功能。
+    + 使用最新版本的 Microsoft R 客户端，其中包含对 RevoScale 的更新。
     + 管理包已启用，该实例和数据库。
     + 具有对数据库管理角色之一的权限。
 
@@ -219,7 +220,7 @@ R 工具可用于在 SQL Server 2016 和 SQL Server 2017 上安装新包。 但�
 
     当系统询问的镜像站点，选择适用于你的位置的任何站点。
 
-    如果目标包依赖于其他包，R 安装程序会自动下载并安装这些包。
+    如果目标包依赖于其他包，R 安装程序将自动下载依赖项，并为你安装它们。
 
     **包手动安装或的计算机上没有 Internet 访问权限**
 
@@ -235,7 +236,7 @@ R 工具可用于在 SQL Server 2016 和 SQL Server 2017 上安装新包。 但�
 
 ### <a name="bkmk_minicran"></a>从 miniCRAN 存储库安装多个程序包
 
-如果要从 miniCRAN 存储库安装包，整个过程是非常类似于从单个 zip 文件安装的包。 但是，而不是上载 zip 格式中的单个包，miniCRAN 储存库中包含目标包，以及任何相关的所需的包。
+从 miniCRAN 存储库安装包的整个过程是类似于从单个 zip 文件安装的包。 但是，而不是上载 zip 格式中的单个包，miniCRAN 储存库中包含目标包，以及任何相关的所需的包。
 
 1.  准备 miniCRAN 存储库，然后将 zip 的文件复制到服务器上的本地文件夹。
 
@@ -259,7 +260,7 @@ R 工具可用于在 SQL Server 2016 和 SQL Server 2017 上安装新包。 但�
     library(randomForest)'
     ```
 
-    如果成功，**消息**窗口应报告一条消息，如"包 randomForest 已成功解压缩和 MD5 总和检查"，并且还"已完成链接执行"。
+    如果成功，**消息**窗口应报告一条消息，如"包 randomForest 已成功解压缩和 MD5 总和检查"和"已完成链接执行"。
 
 ## <a name="package-installation-tips"></a>包安装提示
 
@@ -267,11 +268,11 @@ R 工具可用于在 SQL Server 2016 和 SQL Server 2017 上安装新包。 但�
 
 ###  <a name="packageVersion"></a>获取正确的包版本和格式
 
-可以从多个来源获取 R 包，最广为人知的是 CRAN 和 Bioconductor。 R 语言的官方站点 (<https://www.r-project.org/>) 列出了许多这样的资源。 许多包也发布到 GitHub，你可以从其获取源代码。 不过，你也可能已经从本公司的开发人员处获得了 R 包。
+可以从多个来源获取 R 包，最广为人知的是 CRAN 和 Bioconductor。 R 语言的官方站点 (<https://www.r-project.org/>) 列出了许多这样的资源。 很多包发布到 GitHub，从何处可以获取源代码。 但是，您可能提供了通过你的公司中的某个人开发的 R 包。
 
 而不考虑源，必须确保你想要安装的程序包具有适用于 Windows 平台的二进制格式。 否则，无法在 SQL Server 环境中运行下载的包。
 
-您还应确定包是否与在 SQL Server 中运行的 R 版本兼容。
+在下载之前，你还应检查包是否与在 SQL Server 中运行的 R 版本兼容。
 
 ### <a name="bkmk_zipPreparation"></a>下载包为压缩文件
 
@@ -287,7 +288,7 @@ R 工具可用于在 SQL Server 2016 和 SQL Server 2017 上安装新包。 但�
 
 此过程将创建包的本地副本。 然后可以安装包，也可将压缩的包复制到的服务器，不能访问 internet。
 
-有关 zip 文件格式内容以及如何创建 R 包的详细信息，我们建议阅读以下教程（可以从 R 项目站点下载 PDF 格式的教程）：[Freidrich Leisch: Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)（Freidrich Leisch：创建 R 包）。
+有关的 zip 文件格式，以及如何创建 R 包内容的详细信息，我们建议本教程中，你可以从 R 项目站点的 PDF 格式下载该：[创建 R 包](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)。
 
 ### <a name="bkmk_packageDependencies"></a>获取包的依赖项
 
@@ -365,4 +366,3 @@ R 包经常依赖于多个其他包，其中一些可能不可用的实例所使
 > 安装到 R_SERVER 库的包只由 Microsoft R Server 和 SQL Server 无法访问。
 > 
 > 请务必使用`R_SERVICES`库安装你想要使用 SQL Server 中的包时。
-

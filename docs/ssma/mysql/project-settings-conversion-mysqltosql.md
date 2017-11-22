@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 19c450dbb2f30c4cb7dd571305c25084e964d02f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 68b16e7263c08c4941f6ad7c1f037de5a4fc0f30
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>项目设置 （转换） (MySQLToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 语法的设置。  
@@ -40,14 +38,14 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**COLLATE 子句的显式转换**|显式 COLLATE 子句转换选项指定如何将转换 MySQL 代码中的显式 COLLATE 子句。 可能的选项： 忽略，但出现警告标记/生成错误<br /><br />**默认模式**： 忽略和警告标记<br /><br />**开放式模式**： 忽略和警告标记<br /><br />**完整模式**： 忽略和警告标记|  
   
 ### <a name="column-constraints"></a>列约束  
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**为枚举数据类型的列生成约束**|如果不存在的 MySQL 表中，将在 SQL Server 或 SQL Azure 表中，生成枚举数据类型的列的约束。 如果是，枚举数据类型的所有转换后的列将伴随控制值的 CHECK 约束。<br /><br />**默认模式**： 否<br /><br />**开放式模式**： 否<br /><br />**完整模式**: 是|  
 |**为组数据类型的列生成约束**|如果不存在的 MySQL 表中，请在 SQL Server 或 SQL Azure 表中，生成一组数据类型的列的约束。 如果是，都将转换后的所有列，将数据类型设置的都伴随具有控制值的 CHECK 约束。<br /><br />**默认模式**： 否<br /><br />**开放式模式**： 否<br /><br />**完整模式**: 是|  
 |**为无符号的数值数据类型列的列生成约束**|将非负值检查添加到无符号的数值数据类型的列中。<br /><br />**默认模式**： 否<br /><br />**开放式模式**： 否<br /><br />**完整模式**: 是|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**枚举数据类型转换**|指定作为转换为 NVARCHAR 或转换为数字应当如何转换 MySQL 枚举数据类型<br /><br />**默认模式**： 将转换为 NVARCHAR<br /><br />**开放式模式**： 将转换为 NVARCHAR<br /><br />**完整模式**： 将转换为 NVARCHAR|  
 |**组的数据类型转换**|指定如何应为 MySQL 设置数据类型转换，转换为 NVARCHAR (L) 将转换为 BINARY(L) /<br /><br />**默认模式**： 将转换为 NVARCHAR(L)<br /><br />**开放式模式**： 将转换为 NVARCHAR(L)<br /><br />**完整模式**： 将转换为 NVARCHAR(L)|  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**无中插入和替换默认值的列**|如果是，引用表使用 MyISAM 和 InnoDb 以外的存储的引擎的所有语句应都标记为警告转换消息。<br /><br />**默认模式**： 将添加到列列表<br /><br />**开放式模式**： 将添加到列列表<br /><br />**完整模式**： 将添加到列列表|  
 |**除数为零转换生成**|指定没有任何 ERROR_FOR_DIVISION_BY_ZERO 行为模拟 MySQL。<br /><br />**默认模式**： 错误<br /><br />**开放式模式**： 错误<br /><br />**完整模式**: NULL|  
 |**IN 运算符**|指定如何将转换 MySQL IN 运算符。<br /><br />**默认模式**： 始终将转换为在<br /><br />**开放式模式**： 始终将转换为在<br /><br />**完整模式**： 根据需要展开|  
@@ -78,14 +76,14 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**默认架构映射**|指定如何将 MySQL 数据库映射到 SQL Server 架构。<br /><br />**默认模式**： 数据库到数据库<br /><br />**开放式模式**： 数据库到数据库<br /><br />**完整模式**： 数据库到数据库|  
   
 ### <a name="procedures-and-functions"></a>过程和功能  
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**默认函数转换**|指定是否函数都将默认情况下会转换到 T-SQL 的函数或存储过程。<br /><br />**默认模式**： 将转换为函数<br /><br />**开放式模式**： 将转换为函数<br /><br />**完整模式**： 将转换为函数|  
 |**在生成集 XACT_ABORT**|指定需要添加到转换后的过程或触发器的开头 SET XACT_ABORT ON。<br /><br />**默认模式**: 是<br /><br />**开放式模式**: 是<br /><br />**完整模式**: 是|  
 |**在生成集 NOCOUNT**|指定需要添加到转换后的过程或触发器的开头 SET NOCOUNT ON。<br /><br />**默认模式**: 是<br /><br />**开放式模式**: 是<br /><br />**完整模式**: 是|  
@@ -94,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**默认 {XMAX &#124; 边界框XMIN &#124;YMAX &#124;YMIN} 用于空间索引**|定义默认值为 {XMAX &#124;XMIN &#124;YMAX &#124;边界框用于空间索引 YMIN} 参数。<br /><br />**默认模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**开放式模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**完整模式**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**空间索引的默认网格密度**|定义 LEVEL_1、 LEVEL_2、 LEVEL_3 和用于空间索引的网格密度 LEVEL_4 的默认值。<br /><br />**默认模式**<br /><br />LEVEL_1： 默认<br /><br />LEVEL_2： 默认<br /><br />LEVEL_3： 默认<br /><br />LEVEL_4： 默认<br /><br />**开放式模式**<br /><br />LEVEL_1： 默认<br /><br />LEVEL_2： 默认<br /><br />LEVEL_3： 默认<br /><br />LEVEL_4： 默认<br /><br />**完整模式**<br /><br />LEVEL_1： 默认<br /><br />LEVEL_2： 默认<br /><br />LEVEL_3： 默认<br /><br />LEVEL_4： 默认|  
   
@@ -102,7 +100,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**非事务性表**|指定对表不支持事务的所有引用应都标记为警告转换消息。<br /><br />**默认模式**： 否<br /><br />**开放式模式**： 否<br /><br />**完整模式**: 是|  
 |**事务隔离级别**|指定事务隔离级别应使用的新事务。<br /><br />**默认模式**： 默认<br /><br />**开放式模式**： 默认<br /><br />**完整模式**: Repeatable read|  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**术语**|**“定义”**|  
+|**术语**|**定义**|  
 |**到数值转换的字符**|指定如何处理隐式和显式从字符数据类型转换为数值数据类型。<br /><br />**默认模式**： 乐观<br /><br />**开放式模式**： 乐观<br /><br />**完整模式**： 精确|  
 |**控制无符号的数字值**|将值分配到无符号的数值变量和参数的控件。<br /><br />**默认模式**： 否<br /><br />**开放式模式**： 否<br /><br />**完整模式**: 是|  
 |**控件的无符号的减法**|修改插入到无符号数据类型的表列的负值。<br /><br />**默认模式**： 转换作为-是 '<br /><br />**开放式模式**： 转换作为-是 '<br /><br />**完整模式**： 带有警告标记|  
@@ -122,4 +120,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
 [用户界面参考 &#40;MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   
-

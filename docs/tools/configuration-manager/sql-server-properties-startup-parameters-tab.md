@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
   使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
  若要删除某一参数，请选择该参数，然后单击 **“删除”**。  
   
 ## <a name="parameter-format"></a>参数格式  
- 不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器将强制以下参数要求。  
+ 不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器将强制以下参数要求。  
   
 -   前导空格和尾随空格将会从任何启动参数中删除。  
   
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何配置服务器启动选项（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
   
   
-

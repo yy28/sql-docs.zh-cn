@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ffd350a1f77f6e61585c97286fc7e2f86f7a85c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5cb5bdd526addeb11acf0553bbf022ff75415e70
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>项目设置 （加载系统对象） (OracleToSQL)
 加载系统对象页**项目设置**对话框中，可以指定哪些 Oracle 系统对象 SSMA 将转换并向其中加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/02/2017
   
 如果 Oracle 对象引用其他系统对象，则应选择这些对象。 如果不选择引用的 Oracle 数据库对象的系统对象，SSMA 将报告转换错误。 如果你收到引起缺少系统对象的转换错误，请在此对话框中选择所缺少的对象。 然后，可以重复根据需要转换。  
   
-

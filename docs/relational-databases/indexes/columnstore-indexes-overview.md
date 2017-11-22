@@ -1,10 +1,13 @@
 ---
 title: "列存储索引 - 概述 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8c7238da1e8c0ad3fa46805c73f57bc2ae8e4c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-indexes---overview"></a>列存储索引 - 概述
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *列存储索引* 是存储和查询大型数据仓库事实数据表的标准。 它使用基于列的数据存储和查询处理，与传统的面向行的存储相比，可对数据仓库最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **10 倍数据压缩率** 。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，列存储索引支持操作分析，这是一种针对事务工作负荷运行高性能实时分析的功能。  
   

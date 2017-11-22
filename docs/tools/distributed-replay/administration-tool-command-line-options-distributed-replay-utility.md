@@ -5,22 +5,20 @@ ms.date: 08/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ea715d618afdd48dc24b05753f2b5dd23477f76
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 652600de9d777f13332509fcaae3985daf9c26fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令行选项（分布式重播实用工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe**是一个命令行工具，可与分布式重播控制器进行通信。 可使用此管理工具在控制器上启动、监视和取消操作。  
@@ -64,13 +62,13 @@ Usage:
   
  对于包含命令参数和示例的详细语法信息，请参阅下列主题：  
   
--   [预处理选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [预处理选项（分布式重播管理工具）](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [重播选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [重播选项（分布式重播管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [状态选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [状态选项（分布式重播管理工具）](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [取消选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [取消选项（分布式重播管理工具）](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 将作为 RPC 而非语言事件进行重播。  
   
@@ -83,4 +81,3 @@ Usage:
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   
-

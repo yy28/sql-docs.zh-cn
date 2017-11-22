@@ -19,12 +19,11 @@ ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
 ms.author: genemi
 ms.workload: data-quality-services
+ms.openlocfilehash: 40c98b58bb5caf5f59aace35724bbef5b14f07cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>新增内容和最近更新内容：SQL Server Data Quality Services
 
@@ -39,7 +38,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 - 更新日期范围：从 2017-09-11 到 2017-09-27&nbsp;&nbsp;&nbsp;
-- 主题区域：SQL Server Data Quality Services。
+- 主题区域：SQL Server Data Quality Services&nbsp;。
 
 
 
@@ -127,6 +126,5 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
-
 
 

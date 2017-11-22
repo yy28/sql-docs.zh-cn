@@ -2,9 +2,12 @@
 title: "使用资源调控器限制备份压缩的 CPU 使用率 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3b254dd4fa4b664a0787898a61cc94ca050a097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   默认情况下，使用压缩进行备份会显著增加 CPU 的使用，并且压缩进程所消耗的额外 CPU 会对并发操作产生不利影响。 因此，你可能需要在会话中创建低优先级的压缩备份，当发生 CPU 争用时，此备份的 CPU 使用率受[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 限制。 本主题介绍了这样一种方案：通过将特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的会话映射到限制 CPU 使用的资源调控器工作负荷组，来对这些会话进行分类。  
   

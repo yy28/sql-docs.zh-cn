@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f006e161323a8f86147a63e2dde9ae4eebbcbb5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# MSSQLSERVER 属性的协议（“高级”选项卡）
-  使用 **“MSSQLSERVER 属性的协议”** 对话框上的 **“高级”** 选项卡为   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 **扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 提供**扩展保护** ，旧操作系统的 Service Pack 中也包括此功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用建立连接时更安全**扩展保护**。 **扩展保护** 功能的一些好处需要选定 **“标志”** 选项卡上的 **“强行加密”** 后才能获得。  
+# <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 属性的协议（“高级”选项卡）
+  使用 **“MSSQLSERVER 属性的协议”** 对话框上的 **“高级”** 选项卡为   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 **扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 提供**扩展保护** ，旧操作系统的 Service Pack 中也包括此功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。 **扩展保护** 功能的一些好处需要选定 **“标志”** 选项卡上的 **“强行加密”** 后才能获得。  
   
 > [!IMPORTANT]  
 >  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅知识库文章 [针对验证的扩展保护](http://go.microsoft.com/fwlink/?LinkId=178431)。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
  从 开始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完全支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 目前不支持将 **扩展保护** 用于其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端提供程序。  
   
-## 选项  
+## <a name="options"></a>选项  
  **扩展保护**  
  有三种可能的值：  
   
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/02/2017
  **接受的 NTLM SPN**  
  当多个 NTLM 服务主体名称 (SPN) 标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，在此以字符串系列形式列出 SPN，字符串之间用分号分隔。 例如，值 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**指示允许客户端尝试连接到名为 **MSSQLSvc/HOST1.Contoso.com** 和 **MSSQLSvc/HOST2.Contoso.com** 的 SPN。 变量的最大长度为 2048 个字符。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 针对验证的扩展保护](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
-

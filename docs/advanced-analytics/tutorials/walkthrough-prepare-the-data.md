@@ -1,30 +1,26 @@
 ---
 title: "准备使用 PowerShell （演练） 的数据 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>准备使用 PowerShell （演练） 的数据
 
@@ -111,7 +107,7 @@ GitHub 存储库中提供了所需的所有代码。 可使用 PowerShell 脚本
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 此示例使用 R grep 函数搜索可用路径的向量，并在“Program Files”中找到一个。 有关详细信息，请参阅 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 此示例使用 R grep 函数搜索所向量的可用路径，并查找包括"Program Files"路径。 有关详细信息，请参阅 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)。
 
     - 如果您认为程序包都已安装，请通过运行检查安装程序包的列表`installed.packages()`。
 
@@ -129,7 +125,7 @@ GitHub 存储库中提供了所需的所有代码。 可使用 PowerShell 脚本
 
 - 重写 R 脚本文件中的参数，以使用指定的数据库名称。
 
-你应运行此脚本的计算机上生成解决方案的位置： 例如，便携式计算机开发和测试 R 代码。 此计算机（称为数据科学客户端）必须能够使用命名管道协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机。
+生成解决方案的位置的计算机上运行此脚本： 例如，便携式计算机开发和测试 R 代码。 此计算机（称为数据科学客户端）必须能够使用命名管道协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机。
 
 1. 打开 PowerShell 命令行**以管理员身份**。
   
@@ -156,7 +152,7 @@ GitHub 存储库中提供了所需的所有代码。 可使用 PowerShell 脚本
       > [!WARNING]
       > 时使用 PowerShell 脚本中的提示，提供你的凭据，则会将密码写入纯文本中的更新的脚本文件。 创建所需的 R 对象后，请立即编辑该文件以删除凭据。
       
-    **csv 文件的路径**：提供数据文件的完整路径。 默认路径和文件名为 `C:\tempR\nyctaxi1pct.csv1`。
+    **csv 文件的路径**：提供数据文件的完整路径。 默认路径和文件名为 `C:\tempR\nyctaxi1pct.csv`。
   
 4.  按 Enter 运行该脚本。
 
@@ -260,7 +256,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 如果你的数据库包含现有表的相同的名称和相同的架构， **bcp**插入的数据而不是覆盖现有数据的新副本。
 
-若要避免重复数据，请截断所有现有的表，然后重新运行脚本。
+若要避免重复数据，请再次运行该脚本之前截断任何现有表。
 
 ## <a name="whats-included-in-the-sample"></a>在此示例中包含的内容
 
@@ -274,7 +270,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ### <a name="bkmk_data"></a>定型集和评分的数据
 
-该数据是纽约市出租车数据集的一个代表样本，其包含 2013 年逾 1.73 亿次单个行程的记录，包括每次行程支付的车费和小费。 为更轻松地使用数据，Microsoft 数据科学团队进行了缩小取样，仅获取 1% 的数据。  此数据已以 CSV 格式共享在 Azure 中的公共 Blob 存储容器中。 源数据是未压缩的文件，低于 350 MB。
+该数据是纽约市出租车数据集的一个代表样本，其包含 2013 年逾 1.73 亿次单个行程的记录，包括每次行程支付的车费和小费。 为更轻松地使用数据，Microsoft 数据科学团队进行了缩小取样，仅获取 1% 的数据。  此数据已以 CSV 格式共享在 Azure 中的公共 Blob 存储容器中。 源数据是一个未压缩的文件，正下方 350 MB。
 
 + 公共数据集: [NYC Taxi 和 Limousine 佣金] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 |SQL 脚本文件名|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|创建数据库和两个表：<br /><br /> ：存储定型数据（即纽约市出租车数据集 1% 样本）的表。 将在表中添加一个聚集列存储索引，改善存储和查询性能。<br /><br /> ：稍后会用于保存已定型的分类模型的空表。|
+|create-db-tb-upload-data.sql|创建数据库和两个表：<br /><br /> ：存储定型数据（即纽约市出租车数据集 1% 样本）的表。 将在表中添加一个聚集列存储索引，改善存储和查询性能。<br /><br /> *nyc_taxi_models*： 用于将训练的模型存储在二进制格式的表。|
 |PredictTipBatchMode.sql|创建一个存储过程，用于调用已定型的模型预测新观测值的标签。 该存储过程接受查询作为其输入参数。|
 |PredictTipSingleMode.sql|创建一个存储过程，用于调用已定型的分类模型预测新观测值的标签。 传入的新观测值的变量作为嵌入式参数。|
 |PersistModel.sql|创建一个存储过程，用于帮助在数据库的表中存储分类模型的二进制表示形式。|
@@ -315,4 +311,3 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 [R 和 SQL Server 的端到端数据科学演练](/walkthrough-data-science-end-to-end-walkthrough.md)
 
 [数据科学演练的先决条件](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-

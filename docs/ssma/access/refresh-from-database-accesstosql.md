@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a6de6ca5b3eba19675376131ef338a2759e1dc09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 820ed13c81d13d0b80450d9ad8bd08359c8c0d3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-from-database-accesstosql"></a>刷新从数据库 (AccessToSQL)
 **从数据库刷新**对话框中，可以选择要从 Access 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  
@@ -40,4 +38,3 @@ ms.lasthandoff: 08/02/2017
   
 访问**从数据库刷新**对话框框中，右键单击任何**数据库**访问元数据资源管理器中单击节点**从数据库刷新**。  
   
-

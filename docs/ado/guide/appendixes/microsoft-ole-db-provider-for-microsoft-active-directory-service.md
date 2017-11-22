@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 提供程序允许 ADO 连接到通过 ADSI 异类目录服务。 这可以让 ADO 应用程序只读访问的 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 的目录服务，除了任何 LDAP 兼容目录服务和 Novell 目录服务。 ADSI 本身基于一个提供程序模型，以便如果没有另一个目录到新的提供程序给定访问，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程和启用 Unicode。  
@@ -153,5 +151,4 @@ objectClass='user' AND objectCategory='Person'"
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [支持方法](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports 方法](../../../ado/reference/ado-api/supports-method.md)
