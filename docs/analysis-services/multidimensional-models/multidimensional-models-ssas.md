@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 31c115688a0c29b61ce6eb3a9daf783b1fe9e248
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>多维建模 (SSAS)
   Analysis Services 多维解决方案使用多维数据集结构来分析多个维度之间的业务数据。 多维模式是 Analysis Services 的默认服务器模式。 它包括针对 OLAP 数据的查询和计算引擎，并且具有 MOLAP、ROLAP 和 HOLAP 存储模式以便在性能和数据可伸缩性要求之间进行权衡。 Analysis Services OLAP 引擎是行业领先的 OLAP 服务器，能够与多种 BI 工具很好地配合使用。 大多数 Analysis Services 部署都作为典型的 OLAP 服务器进行安装。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型程序集管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   
-

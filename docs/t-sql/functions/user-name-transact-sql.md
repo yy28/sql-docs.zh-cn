@@ -3,17 +3,18 @@ title: "USER_NAME (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_NAME
 - USER_NAME_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - usernames [SQL Server]
 - IDs [SQL Server], databases
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   根据指定的标识号返回数据库用户名。  
   
@@ -56,7 +56,7 @@ USER_NAME ( [ id ] )
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>注释  
- 当*id*是省略，则假定为当前用户的当前上下文中。 如果参数包含的单词 NULL 将返回 NULL。当 USER_NAME 调用而无需指定*id*后 EXECUTE 语句中 USER_NAME 返回模拟的用户的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
+ 当*id*是省略，则假定为当前用户的当前上下文中。 如果此参数包含词 NULL，将返回 NULL。 当 USER_NAME 调用而无需指定*id*后 EXECUTE 语句中 USER_NAME 返回模拟的用户的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
   
 ## <a name="examples"></a>示例  
   
@@ -168,5 +168,4 @@ User7
  [SYSTEM_USER &#40;Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

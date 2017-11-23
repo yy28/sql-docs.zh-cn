@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- User
-helpviewer_keywords:
-- User object [ADOX]
+f1_keywords: User
+helpviewer_keywords: User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a34d35adf84e32738733184430160613ef8eca45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3565b06fa33ddf0990b89724639d9538da37e9b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-object-adox"></a>用户对象 (ADOX)
 表示具有受保护的数据库内的访问权限的用户帐户。  
@@ -52,10 +48,9 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [用户对象属性、 方法和事件](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
+-   [用户对象属性、方法和事件](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [GetPermissions 和 SetPermissions 方法示例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

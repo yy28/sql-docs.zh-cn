@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - locking [XML for Analysis]
 - XML for Analysis, locking
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7c47c9c9b1b875cd7290df53ab27c59251a56783
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8924b6a21a0bb815ec377072615db2efb4fa2f07
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>锁定数据库和解除数据库锁定 (XMLA)
   你可以锁定和解锁分别使用的数据库，则[锁](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解锁](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML Analysis (XMLA) 中的命令。 通常，其他 XMLA 命令会在执行期间根据需要自动锁定对象和解除对象锁定，从而完成命令。 你可以显式锁定或解锁数据库执行多个命令在单个事务中，如[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，同时防止从提交到数据库写入事务的其他应用程序。  
@@ -57,7 +55,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另请参阅  
  [锁定元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
  [解锁元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

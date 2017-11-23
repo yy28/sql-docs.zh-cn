@@ -23,17 +23,16 @@ helpviewer_keywords:
 - deploying [Analysis Services], installation targets
 - modifying installation targets
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 26398b7fe94f9e96f34e811764104e2109d72f11
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e284ed2df95c56c19ed25cad79f4cf11099902f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-script-files---specifying-the-installation-target"></a>部署脚本文件-指定安装目标
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取安装目标信息\<*项目名称*>.deploymenttargets 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用的数据库和服务器上指定**部署**页*\<项目名称 >* **属性页**对话框创建\<*项目名称*>.targets 文件。  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [指定处理选项](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   
-

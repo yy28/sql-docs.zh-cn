@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- guest privileges in RDS [ADO]
+helpviewer_keywords: guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3935d66bdd1dfb412f5410b245231036ae025823
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9027a8e8adead5801a27465bda36a347472e383
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>来宾特权授予 Web 服务器计算机
 匿名的 Web 服务器帐户 (IUSR_*ComputerName*) 必须添加到来宾本地 Web 服务器计算机上要使用的组 rds.  
@@ -46,6 +43,5 @@ ms.lasthandoff: 09/09/2017
 5.  如果在列表中不显示匿名的 Web 服务器帐户**选择用户或组**对话框框中，键入其名称 (IUSR_*ComputerName*) 到底部空白框中，然后单击**添加**.  
   
 6.  单击 **“确定”**。
-
 
 

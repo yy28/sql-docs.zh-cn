@@ -25,17 +25,16 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85f1333bc1f9674dcdb5274e0b2768c401fd2d7c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
   数据挖掘（或机器学习）中的算法是根据数据创建模型的一组试探法和计算。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析在许多次迭代中的结果来查找用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

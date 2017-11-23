@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="state-transitions"></a>状态转换
 ODBC 定义离散*状态*为每个环境，每个连接和每个语句。 例如，环境有三个可能的状态： 未分配的 （中都没有环境将分配），已分配 （在其中分配环境，但没有连接被分配） 和连接 （在其环境和一个或多个连接都是已分配）。 连接具有七个可能的状态;语句具有 13 可能的状态。  
@@ -45,4 +43,3 @@ ODBC 定义离散*状态*为每个环境，每个连接和每个语句。 例如
  从应用程序的角度来看，状态转换通常都很简单： 合法状态转换都趋向于手中手工编写良好的应用程序流使用。 状态转换是驱动程序管理器和驱动程序变得更加复杂，因为它们必须跟踪的环境、 每个连接和每个语句的状态。 大部分此工作完成了通过驱动程序管理器中;使用具有挂起结果的语句时出现的大部分工作，必须由驱动程序来完成。  
   
  此手册 1 和 2 部分 ("ODBC 简介"和"开发应用程序和驱动程序") 往往不显式指出状态转换。 相反，这些主题描述必须调用函数的顺序。 例如，"执行的语句"状态，必须使用准备语句**SQLPrepare**可以通过执行之前**SQLExecute**。 完整描述的状态和状态转换，包括的转换会检查由驱动程序管理器，其必须检查由驱动程序，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。
-

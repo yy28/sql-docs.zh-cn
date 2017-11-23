@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetDescField function [ODBC], Cursor Library
 - SQLGetDescRec function [ODBC], Cursor Library
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 468c77ce4d49108c66602e32bdf87d970783b696
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff32edcc14799980c1d8ec9e05bd27456d71a132
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField 和 SQLGetDescRec （光标库）
 > [!IMPORTANT]  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  游标库执行**SQLGetDescField**时调用它可返回 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_BIND_TYPE、 SQL_DESC_ROW_ARRAY_SIZE 或 SQL_DESC_ROW_STATUS_PTR 字段的值。 对于任何行，而不仅仅是书签行，可以返回这些字段。  
   
  如果应用程序调用**SQLGetDescField**若要返回的值之外，前面提到的任何字段，光标库，将传递到该驱动程序的调用。
-

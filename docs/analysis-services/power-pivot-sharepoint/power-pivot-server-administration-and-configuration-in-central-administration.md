@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a414e1d07c7a8789ed0c91db91cc3af4009c417b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3dd5476281506f84282fb8b6b6a534820ebea078
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>在管理中心中管理和配置 Power Pivot 服务器
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务器管理和配置由 SharePoint 服务应用程序管理员使用 SharePoint 管理中心来执行。  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [针对 Power Pivot for SharePoint 灾难恢复](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
-

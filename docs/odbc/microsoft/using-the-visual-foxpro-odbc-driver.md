@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 - FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f114b4b7f597857d0831210faa9dfcf0e95ba9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9392f5ccc17497b6f2c185b22d7cdd9c4873120
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>使用 Visual FoxPro ODBC 驱动程序
 在本部分中，以下主题讨论如何使用 Microsoft® Visual FoxPro® ODBC 驱动程序：  
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [删除 Visual FoxPro 数据源](../../odbc/microsoft/deleting-a-visual-foxpro-data-source.md)  
   
--   [连接到 Visual FoxPro 数据源](../../odbc/microsoft/connecting-to-a-visual-foxpro-data-source.md)  
+-   [连接 Visual FoxPro 数据源](../../odbc/microsoft/connecting-to-a-visual-foxpro-data-source.md)  
   
 -   [使用连接字符串](../../odbc/microsoft/using-connection-strings.md)  
   
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   [Visual FoxPro ODBC 驱动程序使用 C 或 c + + 应用程序](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [从 Microsoft Office 访问 Visual FoxPro 数据](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)
-

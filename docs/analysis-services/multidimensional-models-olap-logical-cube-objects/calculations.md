@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - calculations [Analysis Services]
 - OLAP objects [Analysis Services], calculations
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0771e03eaa12e37cce685309fa776fe7f7c31443
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fa38369b12c07a47a2501bc906535b0263db2e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations"></a>计算
   计算结果的多维表达式 (MDX) 表达式或用于在多维数据集中定义的计算的成员、 命名的集或指定了作用域的分配的脚本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用计算，您可以添加不是由多维数据集的数据而是由特定表达式（这些表达式可以引用多维数据集的其他部分、其他多维数据集，或者甚至引用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的信息）所定义的对象。 使用计算，您还可以扩展多维数据集的功能，提高商业智能应用程序的灵活性和能力。 有关脚本计算的详细信息，请参阅[简介 Microsoft SQL Server 2005 中的 MDX 脚本编写](http://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)。  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 778e0ea8664cce55473c8cbd9963f4c25f32c4e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
   您可以将筛选与关联模型一起使用来限制结果，使其仅包含您感兴趣的关联。 例如，您可以筛选规则，以便仅显示包含特定产品的规则。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [第 3 课： 生成市场篮方案 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   
-

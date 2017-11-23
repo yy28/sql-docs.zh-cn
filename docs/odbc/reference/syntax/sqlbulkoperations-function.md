@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBulkOperations
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBulkOperations
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBulkOperations
-helpviewer_keywords:
-- SQLBulkOperations function [ODBC]
+f1_keywords: SQLBulkOperations
+helpviewer_keywords: SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 74934fb9edbcea316b4acb09f4b8e63c08236b1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea439a41a6a3d42c9266bbccfe53aace1c0f37f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函数
 **一致性**  
@@ -471,4 +465,3 @@ int main() {
 ## <a name="see-also"></a>另请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)
-

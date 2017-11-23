@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51d9961583e0e4cb9f0f50e0b5555e33680e2e51
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 40959b132660dc028741682333b506a0429f876d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>借助 JDBC 驱动程序提高性能和可靠性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,14 +34,13 @@ ms.lasthandoff: 09/09/2017
   
 |主题|Description|  
 |-----------|-----------------|  
-|[关闭在不使用时的对象](../../connect/jdbc/closing-objects-when-not-in-use.md)|说明不再需要 JDBC 驱动程序对象时将其关闭的重要性。|  
+|[不使用时关闭对象](../../connect/jdbc/closing-objects-when-not-in-use.md)|说明不再需要 JDBC 驱动程序对象时将其关闭的重要性。|  
 |[管理事务大小](../../connect/jdbc/managing-transaction-size.md)|说明用于提高事务性能的技术。|  
 |[使用语句和结果集](../../connect/jdbc/working-with-statements-and-result-sets.md)|描述用于使用的语句或结果集的对象时提高性能的技术。|  
 |[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)|介绍自适应缓冲功能，其作用是在无需服务器游标开销的情况下检索任何类型的大值数据。|  
 |[稀疏列](../../connect/jdbc/sparse-columns.md)|讨论对适用的 JDBC 驱动程序的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]稀疏列。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

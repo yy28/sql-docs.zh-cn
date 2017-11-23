@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1cf73843e742254e9fcbc71299fa1494a669164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9b26261c83932005ba0852b67e4f246cea47b8e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-for-internet-publishing"></a>ADO 用于 Internet 发布
 [OLE DB Provider for Internet 发布](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)显示访问用 ADO 异类数据的特定示例。 尽管此部分中的示例将特定于使用 Internet 发布提供程序，与其他提供程序与异类数据，如到电子邮件存储区提供程序一起使用 ADO 时应类似演示的原则。  
@@ -52,11 +50,11 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [OLE DB Provider for Internet 发布](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
+-   [用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   
 -   [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)  
   
--   [绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)  
+-   [绝对和相对 URL](../../../ado/guide/data/absolute-and-relative-urls.md)  
   
 -   [记录和提供程序提供的字段](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/09/2017
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)
-

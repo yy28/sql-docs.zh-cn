@@ -4,17 +4,22 @@ description: "安装、 更新和卸载 Linux 上的 SQL Server。 本主题介�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: Active
+ms.openlocfilehash: 8d61ba8334d81c46643d15b38173b6b2dd2e1a93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
@@ -57,7 +62,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 
 ## <a id="platforms"></a> 安装 SQL Server
 
-从命令行中，可以在 Linux 上安装 SQL Server。 有关说明，请参阅以下快速入门教程之一：
+从命令行，可以在 Linux 上安装 SQL Server。 有关说明，请参阅以下快速入门教程之一：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
@@ -94,31 +99,82 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 > [!NOTE]
 > 它仅支持降级的相同的主版本，如 SQL Server 自 2017 年中的发行版。
 
-> [!IMPORTANT]
-> 仅支持 RTM、 RC2 和 RC1 之间此时进行降级。
+## <a id="versioncheck"></a>检查安装的 SQL Server 版本
+
+若要验证你的当前版本和版本的 Linux 上的 SQL Server，请使用以下过程：
+
+1. 如果尚未安装，安装[SQL Server 命令行工具](sql-server-linux-setup-tools.md)。
+
+1. 使用**sqlcmd**运行 TRANSACT-SQL 命令以显示 SQL Server 版本和版本。
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
+## <a id="uninstall"></a>卸载 SQL Server
+
+若要删除**mssql server**打包在 Linux 上，请使用以下命令基于你的平台之一：
+
+| 平台 | 包删除命令 |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+删除包不会删除生成的数据库文件。 如果你想要删除的数据库文件，使用以下命令：
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
 
 ## <a id="repositories"></a>配置源存储库
 
-当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server。 请务必请注意，有两种主要类型的每个分布的存储库：
+当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server。
+
+### <a name="repository-options"></a>存储库选项
+
+有两种主要类型的每个分布的存储库：
 
 - **累积更新 (CU)**: 累积更新 (CU) 存储库包含自该版本为基的 SQL Server 版本和任何 bug 修复或改进的包。 累积更新是特定于发行版中，如 SQL Server 自 2017 年。 正则的频率发布它们。
 
 - **GDR**: GDR 储存库自该版本中包含的基本 SQL Server 版本和仅关键的修复程序和安全更新的包。 这些更新也会添加到下一步 CU 发行版。
 
-每个 CU 和 GDR 版本包含完整的 SQL Server 程序包和所有以前的更新，该存储库。 从 GDR 版本更新到 CU 版本受更改 SQL Server 配置的存储库。 你还可以[降级](#rollback)到在主要版本中的任何版本 (ex： 自 2017 年)。
+每个 CU 和 GDR 版本包含完整的 SQL Server 程序包和所有以前的更新，该存储库。 从 GDR 版本更新到 CU 版本受更改 SQL Server 配置的存储库。 你还可以[降级](#rollback)到在主要版本中的任何版本 (ex： 自 2017 年)。 更新从 CU 的 GDR 发行版的版本不支持。
 
-> [!NOTE]
-> 更新从 CU 的 GDR 发行版的版本不支持。
+### <a name="check-your-configured-repository"></a>检查你配置的存储库
+
+如果你想要验证配置了哪些存储库，使用以下依赖于平台的方法。
+
+| 平台 | 过程 |
+|-----|-----|
+| RHEL | 1.查看中的文件**/etc/yum.repos.d**目录：`sudo ls /etc/yum.repos.d`<br/>2.查找配置 SQL Server 目录中，如文件**mssql server.repo**。<br/>3.输出文件的内容：`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4.**名称**属性是配置的存储库。|
+| SLES | 1.运行以下命令：`sudo zypper info mssql-server`<br/>2.**存储库**属性是配置的存储库。 |
+| Ubuntu | 1.运行以下命令：`sudo cat /etc/apt/sources.list`<br/>2.检查 mssql 服务器的程序包 URL。 |
+
+存储库 URL 的末尾确认存储库类型：
+
+- **mssql server**： 预览存储库。
+- **mssql server 2017**: CU 存储库。
+- **mssql server 2017 gdr**: GDR 存储库。
+
+### <a name="change-the-source-repository"></a>更改源存储库
 
 若要配置的 CU 或 GDR 存储库，请使用以下步骤：
 
+> [!NOTE]
+> [快速入门教程](#platforms)配置 CU 存储库。 如果你按照这些教程，你不需要使用以下步骤以继续使用 CU 存储库。 这些步骤才需要更改你配置的存储库。
+
 1. 如有必要，删除以前配置的存储库。
 
-   | 平台 | 存储库删除命令 |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | 平台 | 存储库 | 存储库删除命令 |
+   |---|---|---|
+   | RHEL | **全部** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. 有关**Ubuntu 仅**，导入公共存储库 GPG 密钥。
 
@@ -137,26 +193,10 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [安装](#platforms)或[更新](#upgrade)从新的存储库的 SQL Server。
+1. [安装](#platforms)或[更新](#upgrade)SQL Server 和任何相关包从新的存储库。
 
    > [!IMPORTANT]
-   > 此时，如果你选择执行完全安装使用[快速入门教程](#platforms)，请记住您刚配置的目标存储库。 不在本教程中重复该步骤。 这是如果你配置 GDR 存储库，尤其如此，因为快速入门教程使用 CU 存储库。
-
-## <a id="uninstall"></a>卸载 SQL Server
-
-若要删除**mssql server**打包在 Linux 上，请使用以下命令基于你的平台之一：
-
-| 平台 | 包删除命令 |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-删除包不会删除生成的数据库文件。 如果你想要删除的数据库文件，使用以下命令：
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
+   > 此时，如果你选择使用安装教程之一，如[快速入门教程](#platforms)，请记住您刚配置的目标存储库。 不在本教程中重复该步骤。 这是如果你配置 GDR 存储库，尤其如此，因为快速入门教程使用 CU 存储库。
 
 ## <a id="unattended"></a>无人参与的安装
 
@@ -232,4 +272,3 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上运行](quickstart-install-connect-ubuntu.md)
-

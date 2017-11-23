@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], how-to topics
+helpviewer_keywords: mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91ae26748640ae6fbcafe12ae1545fadc2adbde6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>数据挖掘查询任务和操作指南
   创建查询的功能对于使用您的数据挖掘模型十分重要。 本节提供一些示例链接，这些示例演示如何通过使用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中提供的工具创建针对数据挖掘模型的查询。 有关数据挖掘查询的涵义或可创建的不同类型查询的详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘存储过程（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   
-

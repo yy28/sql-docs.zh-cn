@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a6115941051862c9979db90b1aa8a58ac3c9b220
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [使用用 Java SQL Azure](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
 
--   [使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+-   [使用 Azure Active Directory 身份验证连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>详细信息  
  连接到时[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，你应连接到 master 数据库才能调用**SQLServerDatabaseMetaData.getCatalogs**。  
@@ -94,7 +92,6 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;passwor
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到 SQL Server 使用 JDBC 驱动程序](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

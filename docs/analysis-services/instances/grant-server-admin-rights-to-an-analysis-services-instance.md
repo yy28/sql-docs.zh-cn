@@ -18,17 +18,16 @@ helpviewer_keywords:
 - administrator rights [Analysis Services]
 - server-wide administrative permissions [Analysis Services]
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7ef11a6892b681d46f34b84c45a49162efcb3b5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7d564225ff95de938df836f1fd49b85892e8ba3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>向 Analysis Services 实例授予服务器管理员权限
   对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中的所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象和数据，该实例中的服务器管理员角色的成员具有无限访问权限。 用户必须是服务器管理员角色的成员才能执行任何服务器范围内的任务，如创建或处理数据库、修改服务器属性或启动跟踪（处理事件除外）。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [安全角色（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   
-

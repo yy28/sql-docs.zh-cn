@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [MDX], named sets
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 382c4f44f40ad89266a26695109111a185719b2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9239f7ee621cec3032c42d10b70c75702b58db6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-named-sets---building-named-sets"></a>MDX 命名集的生成命名集
   集表达式可能是较长且非常复杂的声明，因此很难理解。 或者，可能非常频繁地使用集表达式，以致于重复定义集成为一种负担。 为了使长而复杂的表达式或常用的表达式更易于使用，多维表达式 (MDX) 允许使用“命名集”表达式。  
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

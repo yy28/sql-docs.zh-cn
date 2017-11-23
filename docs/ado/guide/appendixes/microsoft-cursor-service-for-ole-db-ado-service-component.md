@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7a1f8568b633417196c6c9dda3e8a3615146603
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概述的 Microsoft 光标服务
 OLE DB Microsoft 游标服务将补充数据提供程序的光标支持函数。 因此，用户可以体验相对统一的功能，从所有数据提供程序。
@@ -98,4 +96,3 @@ rs.Properties("Optimize") = True
 
 ## <a name="method-behavior"></a>方法行为
  OLE DB 游标服务启用或会影响的行为[字段](../../../ado/reference/ado-api/field-object.md)对象的[追加](../../../ado/reference/ado-api/append-method-ado.md)方法; 与**记录集**对象的[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)，[重新同步](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[保存](../../../ado/reference/ado-api/save-method.md)方法。
-

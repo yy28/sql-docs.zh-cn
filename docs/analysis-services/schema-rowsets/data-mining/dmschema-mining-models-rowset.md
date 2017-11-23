@@ -13,25 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODELS
+apiname: DMSCHEMA_MINING_MODELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae35f0d1de25ed1551b4368009c4be28e2ea3ea5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f857cf206932ad8048768c2c65f047670ec9d1e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 行集
   枚举当前目录中的数据挖掘模型。 **DMSCHEMA_MINING_MODELS**行集包括以下信息： 模型名称、 处理日期和与每个挖掘模型的挖掘算法。  
@@ -83,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘架构行集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

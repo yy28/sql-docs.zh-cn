@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-status-array"></a>行状态数组
 除了数据之外， **SQLFetch**和**SQLFetchScroll**可以返回一个数组，在行集中的每个行的状态。 此数组是通过的 SQL_ATTR_ROW_STATUS_PTR 语句属性指定。 此数组由应用程序分配的和必须都由 SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定的所有元素。 数组中的值设置**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值描述的行和自上次提取后是否该状态已更改的状态。  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|已删除行，因为上次提取。|  
 |SQL_ROW_ADDED|插入行时发生**SQLBulkOperations**。 如果该行被再次提取，或通过刷新**SQLSetPos**，其状态为 SQL_ROW_SUCCESS。<br /><br /> 未设置此值**SQLFetch**或**SQLFetchScroll**。|  
 |SQL_ROW_NOROW|行集占用该结果集的末尾，并且会不返回任何行，对应于此元素的行状态数组。|
-

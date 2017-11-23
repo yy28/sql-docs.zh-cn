@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e1524da1a8ac617e20f47ec6b3949a19b5691113
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74410e39c16c2239471f3f2d328bf29a39dc7cec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetcursorname-visual-foxpro-odbc-driver"></a>SQLSetCursorName （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  将游标名称相关联与活动语句句柄， *hstmt*。 **SQLSetCursorName** Visual FoxPro ODBC 驱动程序 API 中包括，因为它是核心级别 ODBC API 功能的一部分; 它不能与使用其他 API 函数因为驱动程序不支持定位的更新。  
   
  有关详细信息，请参阅[SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md)中*ODBC 程序员参考*。
-

@@ -1,30 +1,31 @@
 ---
 title: "概述 |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: ff91724bead3e6b1aa96962bd5bb801afe3af950
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-overview"></a>宽 World 导入程序概述
-这是虚构的公司 Wide World importers 计划和 SQL Server 和 Azure SQL 数据库进行寻址 WideWorldImporters 示例数据库中的工作流的概述。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]这是虚构的公司 Wide World importers 计划和 SQL Server 和 Azure SQL 数据库进行寻址 WideWorldImporters 示例数据库中的工作流的概述。  
 
 Wide World Importers (WWI) 是批发新奇货物导入程序和从旧金山托架区域运行的分发服务器。
 
@@ -71,4 +72,3 @@ SQL Server Analysis Services 用于创建从维空间数据模型中的数据的
 此处所述的示例数据库和示例代码的许可证： [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 示例数据库包括从 data.gov 和自然 EarthData 已加载的公共数据。 使用条款目前： [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

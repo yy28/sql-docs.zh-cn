@@ -8,8 +8,7 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -98,17 +97,16 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c0efd9b01acb4b10a8863719a8d08c43cea4401d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="olap-properties"></a>OLAP 属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
@@ -490,4 +488,3 @@ ms.lasthandoff: 09/01/2017
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

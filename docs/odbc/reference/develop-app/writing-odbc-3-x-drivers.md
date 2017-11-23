@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>编写 ODBC 3.x 驱动程序
 下表显示了 ODBC 3 中的函数的支持。*x*驱动程序和 ODBC 应用程序，以及针对 ODBC 3 调用函数时执行的驱动程序管理器中的映射。*x*驱动程序。  
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/09/2017
  [5] 在某些情况下，驱动程序可能需要支持此函数。 有关详细信息，请参阅此函数的引用页。  
   
  [6] 上，驱动程序可以选择支持**SQLGetFunctions**如果的一套驱动程序支持的函数会连接到连接发生变化。
-

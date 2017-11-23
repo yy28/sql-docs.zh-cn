@@ -1,5 +1,5 @@
 ---
-title: "- （减）(Transact SQL) |Microsoft 文档"
+title: "- （减法）(Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,36 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - subtract
 - '-'
 - -_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 519f3455fd264cbbed7b826a8c90b03039250589
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6f3013e03ddc1d7481c36be6ed8cce4cf4572c04
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="--subtract-transact-sql"></a>-（减）(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="--subtraction-transact-sql"></a>-（减） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   将两个数相减（减法算术运算符）。 还可以从日期中减去以天为单位的数字。  
   
@@ -110,16 +107,15 @@ FROM DimEmployee;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
+ [-= &#40;减法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [算术运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
  [-&#40;负 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [-= &#40;减去等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

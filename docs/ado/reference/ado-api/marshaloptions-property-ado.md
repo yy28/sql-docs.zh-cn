@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::MarshalOptions
-helpviewer_keywords:
-- MarshalOptions property [ADO]
+f1_keywords: Recordset15::MarshalOptions
+helpviewer_keywords: MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 48c9e36d9f20f1b9885526471d429a60be0f05bb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01ea12405f6b00ba834b624403891d4ddf66d066
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 属性 (ADO)
 指示的哪些记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)要封送回服务器。  
@@ -47,5 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [MarshalOptions 属性示例 (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
- [MarshalOptions 属性示例 （VC + +）](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   
-
+ [MarshalOptions 属性示例 (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

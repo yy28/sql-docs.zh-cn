@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e73a559545a870d83e3d8e2e94dd20f6731f72eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-drivers"></a>Unicode 驱动程序
 驱动程序是否应为 Unicode 驱动程序或 ANSI 驱动程序完全取决于数据源的特性。 如果数据源支持 Unicode 数据，该驱动程序应为 Unicode 驱动程序。 如果数据源仅支持 ANSI 数据，该驱动程序应保留 ANSI 驱动程序。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  驱动程序管理器在确定驱动程序类型时，将调用**SQLSetConnectAttr**并将 SQL_ATTR_ANSI_APP 属性设置在连接时。 SQL_ATTR_ANSI_APP 如果应用程序使用的 ANSI Api，将设置为 SQL_AA_TRUE，并且如果正在使用 Unicode，它将设置为 SQL_AA_FALSE 一个值。 使用此属性，以便该驱动程序会表现出不同的应用程序类型所基于的行为。 该属性不能直接，由应用程序设置和不支持通过**SQLGetConnectAttr**。 如果驱动程序的行为为 ANSI 和 Unicode 应用程序，则应为此属性返回 SQL_ERROR。 如果该驱动程序返回 SQL_SUCCESS，驱动程序管理器将使用连接池时分离 ANSI 和 Unicode 的连接。
-

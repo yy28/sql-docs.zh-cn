@@ -20,8 +20,7 @@ f1_keywords:
 - join
 - FROM
 - PREDICTION JOIN
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - PREDICTION JOIN statement
@@ -30,24 +29,23 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - SELECT FROM <model> PREDICTION JOIN statement
 ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 2d8f5e26541b8d2062174f5e64eb226a4bc6843a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7caf239374a174cc26c2bee349c1a52c805f4de4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;预测联接 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   使用挖掘模型来预测外部数据源中的列状态。 **PREDICTION JOIN**语句与匹配的源查询从每个用例与该模型。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -60,7 +58,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *选择的表达式列表*  
  从挖掘模型中派生的一组以逗号分隔的列标识符和表达式。  
@@ -75,13 +73,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  源查询。  
   
  *联接映射列表*  
- 選擇性。 一种逻辑表达式，可以将模型中的列与源查询中的列进行比较。  
+ 可选。 一种逻辑表达式，可以将模型中的列与源查询中的列进行比较。  
   
  *条件表达式*  
- 選擇性。 一个限制条件，用于限制从列列表返回的值。  
+ 可选。 一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>注释  
  ON 子句定义了源查询中的列与挖掘模型中的列之间的映射。 该映射用于将源查询中的列定向到挖掘模型中的列，这样便可将这些列用作输入以便创建预测。 中的列\<*联接映射列表*> 相关使用等号 （=），如下面的示例中所示：  
@@ -212,11 +210,10 @@ NATURAL PREDICTION JOIN
   
  由于包含可预测属性 `[v Assoc Seq Line Items]` 的列是一个表列，因此查询将返回一个包含嵌套表的列。 默认情况下，嵌套表列名为 `Expression`。 如果你的提供程序不支持分层行集，则可以使用**FLATTENED**关键字，如要使结果更轻松地查看在此示例中所示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [选择 &#40; DMX &#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

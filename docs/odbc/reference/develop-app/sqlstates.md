@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c45bbcbf03c4377e8ff162c3cd28ddf7128810b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs 提供有关原因的警告或错误的详细的信息。 本手册中的 SQLSTATEs 基于这些在 ISO/IEF CLI 规范中，找到特定于 ODBC 开头 IM 这些 SQLSTATEs 虽然。  
@@ -56,4 +54,3 @@ SQLSTATEs 提供有关原因的警告或错误的详细的信息。 本手册中
  SQLSTATE HYC00 （未实现的可选功能） 很特别重要，因为它是在其中应用程序可以确定驱动程序是否支持特定语句或连接属性的唯一方法。  
   
  SQLSTATEs 和哪些函数都返回它们的完整列表，请参阅[附录 a: ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 每个函数可能会在其下返回特定 SQLSTATE 的条件的详细说明，请参阅该函数。
-

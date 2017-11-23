@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关模型中存储的信息的详细信息，预测查询使用模型中的模式并基于您提供的新数据进行预测。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
@@ -287,4 +286,3 @@ AS t
  [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

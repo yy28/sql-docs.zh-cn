@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>考虑到使用的数据库功能
 基本级别的互操作性知道后，必须考虑应用程序使用的数据库功能。 例如，哪些 SQL 语句将应用程序执行？ 将应用程序使用可滚动游标？ 事务？ 过程？ Long 数据？ 有关哪些功能的建议可能不支持所有的 Dbms，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数描述，以及[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可以消除一些 Dbms 从目标 Dbms 的列表。 它们还可能会显示应用程序可以轻松地针对许多 Dbms。  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 -   **仅当驱动程序并支持多个查询。** 连接到驱动程序后，应用程序检查活动语句的次数。 应用程序允许用户启动新语句，当其中一个已处于活动状态，仅当该驱动程序支持多个活动语句。 应用程序具有更高版本的功能和互操作性，但将更难以实现。  
   
 -   **始终支持多个查询和模拟它们在必要时。** 连接到驱动程序后，应用程序检查活动语句的次数。 应用程序始终允许用户在已处于活动状态时启动新语句。 如果该驱动程序支持只有一个活动语句，应用程序打开该驱动程序的其他连接，并在该连接上执行新的语句。 应用程序具有完整功能和高互操作性，但将更难以实现。
-

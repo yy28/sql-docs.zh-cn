@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件 （文本文件驱动程序）
 当使用文本驱动程序时，使用的架构信息文件来确定文本文件的格式。 架构信息文件始终名为 Schema.ini，会始终保留在文本数据源所在的目录。 架构信息文件提供了有关的一般格式的文件、 列名称和数据类型信息和若干其他数据特性的信息 IISAM。 Schema.ini 文件始终是必需的访问固定长度的数据。 当文本表包含日期时间、 货币或小数数据或随时根据需要更好地控制的表中的数据的处理时，应使用 Schema.ini 文件。  
@@ -136,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  如果省略一个条目，使用 Windows 控制面板中的默认值。
-

@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomSum function
+f1_keywords: BOTTOMSUM
+dev_langs: DMX
+helpviewer_keywords: BottomSum function
 ms.assetid: fd4b0418-f814-4d83-b2fe-850117e1beb7
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 49ae28646f7fbe2c2374915d5139ef9f1daef884
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f6d13ccce9bc25f08e1f0f86b026b24ea75d375
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +46,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **BottomSum**函数返回的最底部行按升序排列的级别。 级别基于的计算值\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值至少是指定的给定的总数\<总和 > 自变量。 **BottomSum**返回可能最少数量的元素，同时仍满足指定的和值。  
   
 ## <a name="examples"></a>示例  
@@ -120,4 +116,3 @@ NATURAL PREDICTION JOIN
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)  
   
   
-

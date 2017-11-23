@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
   在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  在 **“完成向导”** 页中，检查新的多维数据集的结构，并在 **“多维数据集名称”** 框中为其键入名称。 或者，选中 **“立即生成架构”** 复选框，启动架构生成向导。 在大多数情况下，如果计划创建其他对象，则不应选中该复选框。 还可以使用多维数据集设计器稍后再生成该框架。  
   
   
-

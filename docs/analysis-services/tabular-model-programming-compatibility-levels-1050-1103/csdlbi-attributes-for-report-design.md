@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>用于报表设计的 CSDLBI 属性
 
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/01/2017
 |**Hidden**|Boolean|指示是否应显示字段。 默认值是**false**，这意味着该字段将显示。|  
 |**DisplayFolder**|Text|在其中显示此字段的文件夹的名称（完整路径）。 如果省略，则字段显示在模型根中。|  
 |**ContextualNameRule**|Enum|一个值，该值指示是否以及如何基于使用其属性的上下文来修改属性名称。 可能的值为：**无**，**角色**，**合并**。|  
-|**对齐方式**|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值为**默认**， **Center**，**左**，**右**。 如果省略，则默认值将基于字段的数据类型确定对齐方式。|  
+|**对齐**|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值为**默认**， **Center**，**左**，**右**。 如果省略，则默认值将基于字段的数据类型确定对齐方式。|  
 |**FormatString**|Text|一个 .NET 格式字符串，指示默认应该如何设置字段值的格式。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域的短日期或"d"<br /><br /> 的浮点字段和整数字段的默认聚合函数： 区域数或"n"<br /><br /> 的无默认值为整数聚合函数： 区域的十进制数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
 |**单位**|Text|适用于字段值以便表示单位的符号。 如果省略，则假定单位未知。|  
 |**宽度**|Integer|应为在表格显示中显示字段值而保留的字符的首选宽度。 如果省略，则默认宽度将基于字段的数据类型。|  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|子元素|指示度量值元素要用作 KPI。 该 KPI 子元素使用 KpiGoal 和 KpiStauts 元素定义关联的显示图像和目标范围。|  
   
   
-

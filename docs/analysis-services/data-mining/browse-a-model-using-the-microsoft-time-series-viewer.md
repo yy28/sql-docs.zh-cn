@@ -22,17 +22,16 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e68da2956ad2b507b3212569c32e33dcb876de9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 时序查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 时序查看器显示由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

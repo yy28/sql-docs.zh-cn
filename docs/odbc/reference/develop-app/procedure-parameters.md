@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- procedure parameters [ODBC]
+helpviewer_keywords: procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: faafa85cf85fd538fbc8efa92ba18a520d7562d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="procedure-parameters"></a>过程参数
 在过程调用中的参数可作为输入、 输入/输出，或输出参数。 这是在所有其他 SQL 语句中，后者始终是输入的参数的参数不同。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  执行该语句后，驱动程序绑定到这些参数的变量中存储的返回的值的输入/输出和输出参数。 这些返回值没有保证之后已提取过程返回的所有结果之前设置和**SQLMoreResults**已返回 SQL_NO_DATA。 如果执行的语句会导致出现错误，将不确定的输入/输出参数缓冲区或输出参数缓冲区的内容。  
   
  应用程序调用**SQLProcedure**以确定过程是否具有一个返回值。 它调用**SQLProcedureColumns**以确定每个过程参数的类型 （返回值，输入、 输入/输出，或输出）。
-

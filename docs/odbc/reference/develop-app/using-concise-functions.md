@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f58efc6ca7f6587ce7d7070bc02ad935efe06bff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-concise-functions"></a>使用简洁的函数
 某些 ODBC 函数向描述符隐式访问。 应用程序编写器可能会发现它们比调用更方便**SQLSetDescField**或**SQLGetDescField**。 调用这些函数的*简洁*函数因为它们执行的许多功能，包括设置或获取描述符字段。 某些简洁函数允许应用程序设置或检索单个函数调用中的多个相关的描述符字段。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  **SQLSetDescRec**和**SQLGetDescRec**是简洁的函数，使用一次调用，设置或获取影响的数据类型和列或参数的数据的存储的多个描述符字段。 **SQLSetDescRec**是一种有效的方法来更改的一个步骤中的列或参数的数据绑定。  
   
  **SQLSetStmtAttr**和**SQLGetStmtAttr**用作简洁函数在某些情况下。 (请参阅[描述符字段](../../../odbc/reference/develop-app/descriptor-fields.md)。)
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed8e041cef62cb1782d0f00a90fe5c09986c7d81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
   您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 09/01/2017
         > [!NOTE]  
         >  专有操作将不返回到服务器，除非客户端应用程序显式将架构行级限制为仅返回与“应用程序”中指定的名称匹配的操作。  
   
-    -   在“操作内容”中，如果你在使用 URL 类型，则用引号括上 Internet 地址，例如 "http://www.adventure-works.com" 。  
+    -   在“操作内容”中，如果你在使用 URL 类型，则用引号括上 Internet 地址，例如 "http://www.adventure-works.com"。  
   
     -   在 **“说明”**中，键入操作的说明。  
   
@@ -91,4 +90,3 @@ ms.lasthandoff: 09/01/2017
     -   从“标题是 MDX”下拉列表中，指定标题是否为 MDX。 此字段指示服务器是否将 **“标题”** 的内容计算为 MDX 表达式。  
   
   
-

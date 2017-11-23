@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining structures [DMX], exporting
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38e6bf21897abd9d53fad57003e7f166e8605463
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>导出和导入数据挖掘对象
   除了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的用于备份、还原和迁移解决方案的功能外，SQL Server 数据挖掘还提供了可通过使用数据挖掘扩展插件 (DMX)，在不同的服务器之间快速传输数据挖掘结构和模型的功能。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [管理数据挖掘解决方案和对象](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
-

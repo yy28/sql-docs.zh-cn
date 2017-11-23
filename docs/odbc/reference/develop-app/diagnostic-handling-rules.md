@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 154261b999911bcc02050634901b199d0ae49be1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-handling-rules"></a>诊断处理规则
 以下规则将管理中的诊断处理**SQLGetDiagRec**和**SQLGetDiagField**。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  一个 ODBC 组件以外驱动程序管理器：  
   
 -   必须设置 SQLSTATE 基于本机错误。 对于基于文件的驱动程序和基于 DBMS 的驱动程序不使用网关，该驱动程序必须设置 SQLSTATE。 对于基于 DBMS 的驱动程序使用网关，驱动程序或支持 ODBC 的网关可以设置 SQLSTATE。
-

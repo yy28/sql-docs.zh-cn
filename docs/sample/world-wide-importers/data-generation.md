@@ -3,28 +3,29 @@ title: "数据生成 |Microsoft 文档"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 数据生成
-WideWorldImporters 和 WideWorldImportersDW 数据库的已发布的版本包含数据开始 2013 年 1 月 1 日，最多天生成这些数据库。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 和 WideWorldImportersDW 数据库的已发布的版本包含数据开始 2013 年 1 月 1 日，最多天生成这些数据库。
 
 如果示例数据库上使用的更高版本的日期，用于演示或图目的，它可能有益包括数据库中的最新示例数据。
 
@@ -85,4 +86,3 @@ WideWorldImportersDW 具有任意增加数据大小，为了性能测试，例�
 大约所需的行数插入到`Fact.Sale`2012 年中的表。 该过程人为地限制为 50000 每天的行数。 这可能会更改，但存在是为了避免意外 overinflations 的表。
 
 此外，过程所适用聚集列存储索引，如果未已应用。
-

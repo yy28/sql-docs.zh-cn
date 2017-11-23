@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-an-interoperable-application"></a>编写可互操作的应用程序
 每当应用程序使用针对多个驱动程序相同的代码，该代码必须在这些驱动程序之间的可互操作。 在大多数情况下，这是一个简单的任务。 例如，代码以提取与只进游标的行是相同的所有驱动程序。 在某些情况下，这可能更困难。 例如，用于构造 SQL 语句中使用的标识符的代码需要考虑标识符的大小写，用引号括起来，和一个部分、 两个部分构成和由三部分的命名约定。  
@@ -43,7 +41,6 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [检查支持的功能和变化参数](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [检查功能支持和可变性](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [监视的功能](../../../odbc/reference/develop-app/features-to-watch-for.md)
-
+-   [要监视的功能](../../../odbc/reference/develop-app/features-to-watch-for.md)

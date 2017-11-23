@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 126a0f1c261cc13f5a3673a67c87d12aac5faece
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6390df460f9a1ec495f7201d2d715d85d3999846
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 行集
   在列级提供有关在 SharePoint 或表格模式下运行的 Analysis Services 数据库使用的存储表的信息。  
@@ -77,4 +75,3 @@ ORDER BY TABLE_ID DESC
  [Analysis Services 架构行集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

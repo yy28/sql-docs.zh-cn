@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - CONTAINS_FILESTREAM_TSQL
 - CONTAINS FILESTREAM
 - CONTAINMENT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], creating
 - databases [SQL Server], creating
@@ -38,17 +36,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 212
+caps.latest.revision: "212"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -542,7 +539,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 创建指定数据和事务日志文件的数据库  
- 下面的示例创建数据库`Sales`。 由于使用的不是主关键字，第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
+ 下面的示例创建数据库`Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
   
 ```tsql  
 USE master;  
@@ -850,5 +847,4 @@ GO
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)   
  [数据库](../../relational-databases/databases/databases.md)   
  [二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-
 

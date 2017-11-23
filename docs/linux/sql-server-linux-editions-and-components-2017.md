@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支持的功能在 Linux 上的 SQL Server 2017
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/25/2017
 根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
 
 有关最新的发布说明和新增功能的信息，请参阅以下内容：
-- [SQL Server 上 Linux 发行说明](sql-server-linux-release-notes.md)
+- [SQL Server on Linux 发行说明](sql-server-linux-release-notes.md)
 - [什么是在 Linux 上的 SQL Server 中的新增功能](sql-server-linux-whats-new.md)
 
 有关在 Linux 上不可用的 SQL Server 功能的列表，请参阅[不受支持的功能和服务](sql-server-linux-release-notes.md#Unsupported)。
@@ -121,11 +120,11 @@ ms.lasthandoff: 09/25/2017
 |加密备份|是|是|“否”|是|
 |Microsoft Azure 的混合备份（URL 的备份）|是|是|“否”|是|
   
-<sup>1</sup> Enterprise edition 上的节点数是最大的操作系统。 标准版上没有对两个节点的支持。 
+<sup>1</sup> Enterprise edition 上的节点数是最大的操作系统。 Standard 版本中支持两个节点。 
 
 <sup>2</sup>上 Enterprise edition 中，提供对最多 8 个次要副本-包括 2 个同步辅助副本的支持。 
 
-<sup>3</sup> standard edition 支持基本可用性组。 基本可用性组支持两个副本，与一个数据库。 有关基本可用性组的详细信息，请参阅[基本可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。    
+<sup>3</sup> standard edition 支持基本可用性组。 基本可用性组支持两个副本，一个数据库。 有关基本可用性组的详细信息，请参阅 [可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。    
 
 ##  <a name="RDBMSSP"></a>RDBMS 可伸缩性和性能  
   
@@ -229,4 +228,3 @@ ms.lasthandoff: 09/25/2017
 
   
   
-

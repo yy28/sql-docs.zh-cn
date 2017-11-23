@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AllowedSet Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AllowedSet Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AllowedSet
-helpviewer_keywords:
-- AllowedSet element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AllowedSet
+helpviewer_keywords: AllowedSet element
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec0b7b19d3673a6893362a291c4417f2ff1f0691
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c5b58d9c23ac6305997ff491a9f76371ebd7179
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="allowedset-element-assl"></a>AllowedSet 元素 (ASSL)
   包含定义的允许权限集是集表达式[角色](../../../analysis-services/scripting/objects/role-element-assl.md)特性的元素。  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

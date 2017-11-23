@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - BOF property [ADO], Visual Basic example
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e4b81966672200f4ab7a01b6a6bc3f0022a8d26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3e94fd93b5988ea7fb95e1276e31819575a5abd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、 EOF，以及书签属性示例 (VB)
 此示例使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性，以显示一条消息，如果用户尝试移过的第一个或最后一个记录会将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性以使用户能够标志中的记录**记录集**并稍后返回到它。  
@@ -147,4 +144,3 @@ Attribute VB_Name = "BOF"
  [BOF，EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [书签属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

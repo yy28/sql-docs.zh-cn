@@ -20,17 +20,16 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉验证报表中的度量值
   在交叉验证过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

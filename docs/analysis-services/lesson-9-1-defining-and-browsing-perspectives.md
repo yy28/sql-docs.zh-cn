@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 07e244c89cc130619f1464427a0f8e31dbafa162
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ad52f9a99b7f68e8d416c3df1dfa9690faa161d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lesson 9-1-定义和浏览透视
 透视可以出于特定目的简化多维数据集的视图。 默认情况下，用户可以查看多维数据集内对其具有查看权限的所有元素。 用户查看整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集时所看到的内容是该多维数据集的默认透视。 对于导航视图的用户，尤其对于只需与多维数据集的一小部分交互就能满足其商业智能和报表需求的用户来说，整个多维数据集的视图将是非常复杂的。  
@@ -209,4 +206,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

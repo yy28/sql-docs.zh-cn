@@ -25,17 +25,16 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
   挖掘结构定义生成挖掘模型时依据的数据：它指定源数据视图、列数量和类型以及分为定型集和测试集的可选分区。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

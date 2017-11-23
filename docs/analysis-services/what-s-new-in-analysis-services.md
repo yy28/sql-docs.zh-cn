@@ -8,22 +8,20 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 97
+caps.latest.revision: "97"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 212fbb3618bbccc58ea077d59f15dca3c31ca71f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么 &#39; s Analysis Services 中的新增功能
 SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
@@ -212,5 +210,4 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
 [Analysis Services 团队博客](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)    
      
-
 

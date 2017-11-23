@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c17aa3e6662d37dfb3863756597dd95022f7f02
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b71d8acb6016e425d62c49caa536fafaed8404c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
   您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [创建两个表之间的关系（SSAS 表格）](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   
-

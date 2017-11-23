@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea6c45c362047d45275b6895d58faafe0250d26f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3db2f795910c0ee331ad77903b12201f365784e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>疑难解答 （Visual FoxPro ODBC 驱动程序）
 以下各节讨论如何提高性能，并解决在使用 Visual FoxPro ODBC 驱动程序时可能遇到的问题。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="using-the-set-ansi-command"></a>使用 SET ANSI 命令  
  如果你是 Visual FoxPro 开发人员，应该注意设置 ANSI 的默认设置对于该驱动程序，与 Visual FoxPro 的 OFF 的默认设置是 ON。 设置 ANSI 设置上的默认值允许 Visual FoxPro 数据源，以与其他 ODBC 数据源，通常可以执行精确比较的行为保持一致。 你可以更改默认设置。 有关详细信息，请参阅[设置 ANSI](../../odbc/microsoft/set-ansi-command.md)。
-

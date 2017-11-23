@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - archiving remote partitions [Analysis Services]
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - MasterDataSourceID property
 - remote partitions [Analysis Services]
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4c726e8bb5c29ee5bf53b7fc26ff7ae737fee219
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b01c6fbe8bb2e6fda98da468bf4e313f5610cee3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---remote-partitions"></a>分区的远程分区
   远程分区的数据存储在 Microsoft 的不同实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]比包含分区和其父多维数据集的定义 （元数据） 的实例。 远程分区在对其以及其父多维数据集进行定义的同一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中进行管理。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [处理 Analysis Services 对象](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)  
   
   
-

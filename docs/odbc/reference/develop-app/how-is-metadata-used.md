@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6cb8bb35eb0e53415465b3ea003341d74e248bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-is-metadata-used"></a>是如何使用元数据？
 应用程序需要大多数结果集操作的元数据。 例如，应用程序使用某列的数据类型来确定要将哪一种变量绑定到该列； 它使用的字节长度的字符列来确定需要显示该列中的数据的空间量。 应用程序确定列的元数据的方式取决于应用程序的类型。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  通用应用程序，尤其是那些支持即席查询，几乎从未知道他们创建的结果集的元数据。 因此，它们必须在运行时使用函数发现元数据**SQLNumResultCols**， **SQLDescribeCol**，和**SQLColAttribute**中, 描述这些下一部分中， [SQLDescribeCol 和 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)。  
   
  所有应用程序，而不考虑其类型，可以通过目录函数返回的结果集的硬编码元数据。 在此手册的参考部分中定义这些结果集。
-

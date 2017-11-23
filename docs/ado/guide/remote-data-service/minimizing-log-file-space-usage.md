@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- log file space in RDS [ADO]
+helpviewer_keywords: log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddb41dbe5a2d76bb26d1830d1b659dbd99ca1c21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae88338987beece602691060d79ec44bad93309e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="minimizing-log-file-space-usage"></a>最小化日志文件空间使用情况
 日志文件可能很快用完 （从而停止服务器） 是否有大量的 SQL Server 数据库上的活动。 你可以将日志文件设置为**在检查点截断**以显著延长的数据库的日志文件的生存期。  
@@ -55,6 +52,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [RDS 基础知识](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

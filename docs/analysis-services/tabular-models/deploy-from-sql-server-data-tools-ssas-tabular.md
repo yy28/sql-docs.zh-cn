@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.deploystatus.f1
+f1_keywords: sql13.asvs.bidtoolset.deploystatus.f1
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fb6f353bfe4cb3d116da7fa9cab5edaad3d4f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: adb50d35f60359d6bd1e18cacff6e80722665d59
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>从 SQL Server Data Tools 进行部署
   使用本主题中的任务在 SSDT 中使用部署命令部署表格模型解决方案。  
@@ -77,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   
-

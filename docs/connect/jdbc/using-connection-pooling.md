@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b0125330ff44030e354423b105710fc6806f337
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47a65bf1c9ce6afdedd1f68c0431912af4aea402
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-connection-pooling"></a>使用连接池
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +45,6 @@ ms.lasthandoff: 09/09/2017
 >  JDBC 驱动程序在将连接返回池中时，不会立即调用 sp_reset_connection 存储过程。 但是，驱动程序将依靠第三方 Java 应用程序服务器使连接返回其原始状态。  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到 SQL Server 使用 JDBC 驱动程序](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

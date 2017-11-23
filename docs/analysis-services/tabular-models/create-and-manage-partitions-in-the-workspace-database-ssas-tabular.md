@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.partitionmgr.f1
+f1_keywords: sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13beb940c74b269a15fcae447e144a4767288848
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>创建和管理工作区数据库中的分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，可单独处理（刷新）每个分区，也可与其他分区并行处理每个分区。 分区可以提高大型数据库的可扩展性和可管理性。 默认情况下，每个表都具有一个包含所有列的分区。 本主题中的任务描述如何使用 **中的** “分区管理器” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [在工作区数据库中处理分区（SSAS 表格）](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   
-

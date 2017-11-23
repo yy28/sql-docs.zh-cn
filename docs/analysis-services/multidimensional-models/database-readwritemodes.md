@@ -18,17 +18,16 @@ helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f91af75c3ecd493ec781e7c5a8e0e45cca075202
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 917f9e3802cdf0c003a956b464c7df8d8b10ca5e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将读/写数据库更改为只读数据库，或者恰好相反。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 对于上述情况，通过 **ReadWriteMode** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地更改数据库运行模式。  
@@ -60,7 +59,6 @@ ms.lasthandoff: 09/01/2017
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [分离元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Attach 元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8caea228dd0ddd646c90b7e5661a8d4fd2b4a722
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建挖掘模型或挖掘结构时，必须为挖掘结构中的每一列定义数据类型。 数据类型告知分析引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

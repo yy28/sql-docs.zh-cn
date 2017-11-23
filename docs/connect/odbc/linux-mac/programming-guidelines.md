@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: zh-cn
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -34,7 +32,7 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 ## <a name="available-features"></a>可用功能  
 以下各节从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]适用于 ODBC 的本机客户端文档 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 时在 macOS 和 Linux 上使用的 ODBC 驱动程序都有效：  
 
--   [与 SQL Server (ODBC) 通信](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [与 SQL Server 通信 (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [连接和查询的超时支持](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [游标](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [日期/时间改进 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
@@ -44,7 +42,7 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 -   [大型 CLR 用户定义类型 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [（除外分布式事务） 中执行事务 (ODBC)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [处理结果 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [运行存储的过程](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [运行存储过程](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [稀疏列支持 (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL 加密](http://msdn.microsoft.com/library/ms131691.aspx)
 -   [表值的参数](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
@@ -118,4 +116,3 @@ SQLCHAR 数据必须是支持的字符集。 SQLWCHAR 数据必须是 UTF-16LE (
 [此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [发行说明](../../../connect/odbc/linux-mac/release-notes.md)
-

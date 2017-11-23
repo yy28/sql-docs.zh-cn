@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a94fc69a43737a4a59c7e82d39d4e6d6dda6b77a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 08933503415698a73fe61ee598e5ce37e2bc2c0d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo excel 返回值
 下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
@@ -176,4 +174,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|多个值|  
 |SQL_USER_NAME|""|
-

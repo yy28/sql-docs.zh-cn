@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLConfigDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLConfigDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLConfigDataSource
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC]
+f1_keywords: SQLConfigDataSource
+helpviewer_keywords: SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e98f86c95e79effc45afdbc800f8e4eefaac3cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d1fddaf67cfbdb8f8c8df7e66b86a681ca2e23d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource Function
 **一致性**  
@@ -121,4 +115,3 @@ BOOL SQLConfigDataSource(
 |添加、 修改或删除数据源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) （在安装程序 DLL）|  
 |从系统信息中删除数据源名称|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |将数据源名称添加到的系统信息|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
-

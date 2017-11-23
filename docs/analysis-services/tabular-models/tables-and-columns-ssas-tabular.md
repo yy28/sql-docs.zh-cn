@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>表和列（SSAS 表格）
   在您通过使用表导入向导将表和数据添加到某一模型后，可通过添加新的数据列、创建表之间的关系、定义对数据进行扩展的计算以及对表中的数据进行筛选和排序以便于查看，开始使用这些表。  
@@ -82,4 +81,3 @@ ms.lasthandoff: 09/01/2017
 |[对数据进行筛选和排序（SSAS 表格）](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
   
   
-

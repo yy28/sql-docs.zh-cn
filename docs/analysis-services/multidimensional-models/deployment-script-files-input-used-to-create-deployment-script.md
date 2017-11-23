@@ -23,17 +23,16 @@ helpviewer_keywords:
 - Analysis Services deployments, input files
 - modifying input files
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 84106e3dcb54700770d8441d78634767feb5b9da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6dcf9b0c4869542727ed8e29699cddaada4c60e8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-script-files---input-used-to-create-deployment-script"></a>部署脚本文件-输入用于创建部署脚本
   当生成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成的项目文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将这些文件放入的输出文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 默认情况下，输出将输出到 \Bin 文件夹之中。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建的 XML 文件。  
@@ -66,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [了解 Analysis Services 部署脚本](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)  
   
   
-

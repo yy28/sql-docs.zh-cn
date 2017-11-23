@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72ef02bfcf8e5392d23cd90f0ad0d49fe4d87122
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**属性控制将在一次检索到从提供程序的本地内存的记录数。 例如，如果**CacheSize**后第一个左为 10，**记录集**对象，该提供程序检索前 10 条记录到本地内存。 当你移动通过**记录集**对象，该提供程序从本地内存缓冲区中返回数据。 一旦移过缓存中的最后一个记录，即会将提供程序会将从数据源的接下来的 10 的记录检索到缓存中。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  从缓存中检索的记录不能反映其他用户对源数据所做的并发更改。 若要强制执行更新的所有缓存的数据，使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。  
   
  如果**CacheSize**设置为值大于 1，浏览方法 ([移动](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能会导致导航到已删除如果已检索的记录后，将发生删除，记录。 后初始提取，后续的删除将不会反映在你的数据缓存之前尝试访问从已删除的行的数据值。 但是，将设置**CacheSize**由于无法提取已删除的行，则为 1 消除此问题。
-

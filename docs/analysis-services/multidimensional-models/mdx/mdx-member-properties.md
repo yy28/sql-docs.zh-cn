@@ -20,17 +20,16 @@ helpviewer_keywords:
 - member properties [MDX]
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4a587ba090f15293bed42bff0d37afa874c7223
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1c3f560f0be83b17b31db8cfd46bc0b7939ee05d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-member-properties"></a>MDX 成员属性
   成员属性提供有关各个元组中的每个成员的基本信息。 此基本信息包括成员名、父级别、子成员数目等等。 成员属性适用于给定级别的所有成员。 就组织结构而言，成员属性可视为存储在单个维度上按维度组织的数据。  
@@ -87,4 +86,3 @@ SELECT [<axis_specification>
  [创建和使用属性值 (MDX)](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)  
   
   
-

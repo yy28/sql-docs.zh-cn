@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Create method [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c74713ec876df04d7f36a0bf27a8ea6f7545bfef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5211692bd7bcaf7d2fc008e1c801d8346f5ea432
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-method-example-vb"></a>创建方法示例 (VB)
 下面的代码演示如何创建与新的 Microsoft Jet 数据库[创建](../../../ado/reference/adox-api/create-method-adox.md)方法。  
@@ -60,4 +56,3 @@ End Sub
 ## <a name="see-also"></a>另请参阅  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create 方法 (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-

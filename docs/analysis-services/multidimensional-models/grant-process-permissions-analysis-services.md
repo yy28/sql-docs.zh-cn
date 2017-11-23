@@ -18,17 +18,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1542d477a10e6a77e67e24d607b7086da1bb55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
   作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [授予对象元数据的读取定义权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   
-

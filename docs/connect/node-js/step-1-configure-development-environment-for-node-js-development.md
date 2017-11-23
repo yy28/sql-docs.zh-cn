@@ -8,22 +8,20 @@ ms.service:
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4e41033ffb30801fd388f7816c34c8a7751daa9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步骤 1： 配置用于 Node.js 开发的开发环境
 你将需要配置你的开发环境满足先决条件，以便开发应用程序使用的 SQL Server Node.js 驱动程序。  最常见方法是使用 node 程序包管理器 (npm) 安装需要很长时间的模块，但你可以下载此模块需要很长时间直接在[Github](https://github.com/pekim/tedious)如果你愿意。  
@@ -107,4 +105,3 @@ c. 下载完成后，运行 dmg 安装 Node.js
 > npm install tedious  
 ```  
   
-

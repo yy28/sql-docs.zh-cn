@@ -1,33 +1,30 @@
 ---
 title: "ALTER DATABASE （Azure SQL 数据仓库） |Microsoft 文档"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5e328da952c853409437f7c3a4993f17022de22
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE （Azure SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 修改名称、 最大大小或数据库的服务目标。  
   
@@ -42,8 +39,18 @@ ALTER DATABASE database_name
 | MODIFY ( <edition_option> [, ... n] )  
   
 <edition_option> ::=   
-      MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB  
-    | SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'}  
+      MAXSIZE = { 
+            250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 
+          | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 
+          | 92160 | 102400 | 153600 | 204800 | 245760 
+      } GB  
+      | SERVICE_OBJECTIVE = { 
+            'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' 
+          | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' 
+          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c' 
+          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
+          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+      }  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -54,10 +61,18 @@ MODIFY NAME = *new_database_name*
 重命名数据库名称指定为*new_database_name*。  
   
 MAXSIZE  
-数据库可能会增长到最大大小。 设置此值禁止除大小组以外的数据库大小的增长。 默认值*MAXSIZE*时未指定为 10240 GB (10 TB)。 其他可能的值范围为 250 GB 达 240 TB。  
+默认值为 10240 GB (10 TB)。  
+
+**适用于：**针对弹性性能层优化
+
+数据库最大允许大小。 数据库不能超出 MAXSIZE 不断增长。 
+
+**适用于：**针对计算性能层优化
+
+数据库中的行存储数据最大允许大小。 超出了最大大小增长不能存储在行存储表、 列存储索引的增量存储或非聚集索引在聚集列存储索引上的数据。  压缩到列存储格式的数据没有大小限制，并且不受最大大小。 
   
 SERVICE_OBJECTIVE  
-指定性能级别。 有关服务目标的详细信息[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，请参阅[SQL 数据仓库上的缩放性能](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/)。  
+指定性能级别。 有关服务目标的详细信息[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，请参阅[性能层](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
 ## <a name="permissions"></a>Permissions  
 需要以下权限：  

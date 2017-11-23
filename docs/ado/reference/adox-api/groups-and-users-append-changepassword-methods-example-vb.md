@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - ChangePassword method [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 103941f17c583a7e9245e2195e63ee4e29e94db4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79fb5b6efc94187fb0da48a532a150216a18c5ca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>组和用户追加，ChangePassword 方法示例 (VB)
 此示例演示[追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法[组](../../../ado/reference/adox-api/groups-collection-adox.md)，以及[追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法[用户](../../../ado/reference/adox-api/users-collection-adox.md)通过添加新[组](../../../ado/reference/adox-api/group-object-adox.md)和新[用户](../../../ado/reference/adox-api/user-object-adox.md)到系统。 新**组**追加到**组**的新集合**用户**。 因此，新**用户**添加到**组**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用于指定**用户**密码。  
@@ -139,4 +136,3 @@ End Sub
  [组集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [用户集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-

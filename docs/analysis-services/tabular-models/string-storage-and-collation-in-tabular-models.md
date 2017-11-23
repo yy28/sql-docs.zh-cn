@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 421606292e30977064f96bf5e77efca396b90032
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
   字符串（文本值）以高度压缩的格式存储于表格模型中；由于这一压缩，您在检索整个或部分字符串时可能会得到意外结果。 此外，因为字符串区域设置和排序规则在层次结构上继承自最接近的父对象，所以，如果未显式定义字符串语言，父对象的区域设置和排序规则可能会影响存储各字符串的方式以及字符串是唯一的还是与父排序规则定义的相似字符串合并。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  特别要注意的是，源数据库中的语言标识符和排序规则顺序通常对在表格模型列中对值进行排序的方式的影响很小，甚至没有影响。 在源数据库转换或筛选请求的值时是例外情况。  
   
   
-

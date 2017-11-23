@@ -1,5 +1,5 @@
 ---
-title: "取模等于 (Transact SQL) |Microsoft 文档"
+title: "%= （取模赋值） (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '%=_TSQL'
 - '%='
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '%= (modulo equals)'
+- '%= (modulus assignment)'
 - compound operators, %=
+- assignment operators, %=
+- augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06b2992236f5d1705c10249ca07793e5fe01dff6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d425882e4d0e6b16334bcd0ec7dc5af0487a5c0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="modulo-equals-transact-sql"></a>取模等于 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-modulus-assignment-transact-sql"></a>%= （取模赋值） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   将一个数除以另一个数并将值设置为运算的结果。 例如，如果变量@x然后等于 38， @x %= 5 采用的原始值@x、 除以 5，并将设置@x到 (3) 该除法运算的余数。  
   
@@ -54,7 +54,7 @@ expression %= expression
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ## <a name="remarks"></a>注释  
- 有关详细信息，请参阅[取模 &#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-transact-sql.md).  
+ 有关详细信息，请参阅[%&#40;取模 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-transact-sql.md).  
   
 ## <a name="see-also"></a>另请参阅  
  [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
@@ -62,4 +62,3 @@ expression %= expression
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

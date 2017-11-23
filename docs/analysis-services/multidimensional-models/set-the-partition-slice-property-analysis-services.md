@@ -18,17 +18,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 265163014794d57fd663472206798aa24f224e8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0dc6d3620e26186c57a78ddb88e44548384c7b7d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>设置分区切片属性 (Analysis Services)
   数据切片是一种很重要的优化功能，可以帮助将查询指向相应分区的数据。 通过覆盖为 MOLAP 和 HOLAP 分区生成的默认切片来显式设置 Slice 属性可提高查询性能。 此外，Slice 属性还在处理分区时提供额外的验证检查。  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   
-

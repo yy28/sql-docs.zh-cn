@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 48f7a518f02cd37d1f41a539fc70750c834a3a57
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d158cd0646f276d278b66427e3f44b661493e695
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 数据类型
 下表显示 Microsoft Access 数据类型、 用于创建表的数据类型和 ODBC SQL 数据类型。  
@@ -78,4 +76,3 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |NUMERIC|限制为 Microsoft 访问 4.0 的数据类型。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
-

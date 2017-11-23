@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 38dfc79dcb6d12917368a3566522f7ff86edff66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-index-statement-limitations"></a>创建索引语句的限制
 Microsoft Excel 或文本驱动程序不支持 CREATE INDEX 语句。  
@@ -40,4 +38,3 @@ Microsoft Excel 或文本驱动程序不支持 CREATE INDEX 语句。
  当使用 dBASE 驱动程序时，CREATE UNIQUE INDEX 语句创建的索引是实际是非唯一的并重复的值可以插入到索引的列。 只有一条记录从具有相同键值的一组可以添加到索引。  
   
  当使用 Paradox 驱动程序时，必须时连续中包括的第一列的表的列的子集定义唯一索引。 表不能通过 Paradox 驱动程序更新，如果对表或 Paradox 驱动程序使用不高数据库引擎的实现时，未定义唯一索引。
-

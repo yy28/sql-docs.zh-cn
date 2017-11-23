@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
+ms.openlocfilehash: 950a02b20e2a99565c235e6be477827a580b142f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c5c7e602ac1beedb028072b4c82578e9948af43d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>适用于 Linux 上的 SQL Server 的可用性组
 
@@ -107,4 +106,3 @@ Use `required_synchronized_secondaries_to_commit`with `CREATE AVAILABILITY GROUP
 [添加可用性组群集资源在 SLES](sql-server-linux-availability-group-cluster-sles.md)
 
 [在 Ubuntu 上添加可用性组群集资源](sql-server-linux-availability-group-cluster-ubuntu.md)
-

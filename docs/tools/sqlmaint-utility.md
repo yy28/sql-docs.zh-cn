@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87b232709f63a1a4041a057cb5a6c275bc9835b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fbc02b1b8d89972cfd25739f4055842e303450c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
   如果成功运行，则**sqlmaint** 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
@@ -279,4 +277,3 @@ sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir
  [更新统计信息 (Transact-SQL)](../t-sql/statements/update-statistics-transact-sql.md)  
   
   
-

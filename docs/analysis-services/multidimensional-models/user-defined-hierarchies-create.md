@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- user-defined hierarchies [Analysis Services]
+helpviewer_keywords: user-defined hierarchies [Analysis Services]
 ms.assetid: 16715b85-0630-4a8e-99b0-c0d213cade26
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 28210f8ed93af087c1eb4bdf20c54fbdf842139e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51e4bcb074da0b11587d8783008fd250fa8867fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-defined-hierarchies---create"></a>用户定义的层次结构的创建
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以创建用户定义的层次结构。 层次结构是基于属性的级别集合。 例如，时间层次结构可能包含年、季、月、周和日级别。 在某些层次结构中，每个成员属性唯一对应于它上面的成员属性。 这有时也称为自然层次结构。 最终用户可使用层次结构来浏览多维数据集数据。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，可使用维度设计器的“层次结构”窗格定义层次结构。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/01/2017
  [父-子维度](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   
-

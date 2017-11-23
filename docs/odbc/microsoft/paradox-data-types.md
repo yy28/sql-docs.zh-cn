@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e63f642f7a1921f9d65cd6f8fe665b9e83c9404c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="paradox-data-types"></a>Paradox 数据类型
 ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型。 下表列出了所有 Paradox 数据类型，并显示它们映射到的数据类型的 ODBC SQL。  
@@ -69,4 +67,3 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型
 |timestamp|当值插入时间戳列 Paradox 驱动程序，则随后从该列检索时，检索到的值可能不同于插入的值由多达 1 秒由于舍入。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
-
