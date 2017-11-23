@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMANDS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 759228adb8cdd02f6d9f4573cf4c1225709487d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49d95852f838c67a34e175ed160c6abdad93bd61
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 行集
   在服务器上提供有关中打开的连接的当前正在执行或最后一个的执行命令的资源使用情况和活动信息。  
@@ -68,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis 架构行集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

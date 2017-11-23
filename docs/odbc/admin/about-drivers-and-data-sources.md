@@ -8,24 +8,21 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC data source administrator [ODBC], concepts
+helpviewer_keywords: ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f62308694c54a62d2cc83669e49e9983bcec4a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-drivers-and-data-sources"></a>有关驱动程序和数据源
 *驱动程序*是处理 ODBC 请求并将数据返回到应用程序的组件。 如有必要，驱动程序将修改到理解数据源的窗体的应用程序的请求。 必须使用驱动程序的安装程序以添加或删除驱动程序从你的计算机。  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  用户和系统数据源统称为*机*数据源，因为它们是计算机的本地。  
   
  每个这些数据源有一个选项卡**ODBC 数据源管理器**对话框。 有关数据源的详细信息，请参阅 [数据源](../../odbc/reference/data-sources.md)。
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b319e0fe0972b236c03694899c5d4361dbcc473
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驱动程序的国际功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -71,7 +69,6 @@ ms.lasthandoff: 09/09/2017
 >  为非 Windows 平台编写的大多数解析程序软件基于 Internet DSN 标准，因此很可能为 IDN 使用 Punycode 格式，而专用网络上的基于 Windows 的 DNS 服务器可以配置为允许针对每个服务器使用 UTF-8 字符。  有关更多详细信息，请参阅[Unicode 字符支持](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

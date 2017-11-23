@@ -1,5 +1,5 @@
 ---
-title: "取模 (Transact SQL) |Microsoft 文档"
+title: "%（取模） (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,36 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - modulo
+- modulus
 - '% (Modulo)'
+- '% (Modulus)'
 - MOD_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '% (modulo operator)'
+- '% (modulus operator)'
 - remainder of division operation
 - modulo operator (%)
+- modulus operator (%)
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7cad6195291f7e8c2dc420f38f5d3e19bf2a8475
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b417bbca6135db2f4ca6279bb9aac75d9d6f328
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="modulo-transact-sql"></a>取模 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-modulus-transact-sql"></a>%（取模） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回两数相除后的余数。  
   
@@ -106,10 +107,9 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
  [如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [取模等于 &#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [%= &#40;取模赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
  [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

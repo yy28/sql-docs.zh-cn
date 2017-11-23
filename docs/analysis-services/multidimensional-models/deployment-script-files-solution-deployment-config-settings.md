@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Analysis Services deployments, configuration settings
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 01012bd3fe63789ed1a6d6f12c6d734884559333
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24861b3e40c12d28c0bdbf25772fabad9f6c1107
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>部署脚本文件的解决方案部署配置设置
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取的分区和角色的部署选项，使用部署脚本从中\<*项目名称*>.configsettings 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用当前项目的配置设置创建\<*项目名称*>.configsettings 文件。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [指定处理选项](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   
-

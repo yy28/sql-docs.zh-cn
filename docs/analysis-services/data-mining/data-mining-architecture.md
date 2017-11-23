@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-architecture"></a>数据挖掘体系结构
   本节介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中托管的数据挖掘解决方案的体系结构。 本节中的主题介绍支持数据挖掘的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的逻辑和物理体系结构，并提供可用于与数据挖掘服务器通信以及通过本地或远程方式处理数据挖掘对象的客户端、访问接口和协议的相关信息。  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘编程](../../analysis-services/data-mining-programming.md)  
   
   
-

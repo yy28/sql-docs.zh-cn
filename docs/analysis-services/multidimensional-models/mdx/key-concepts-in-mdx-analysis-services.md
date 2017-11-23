@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], dimensional modeling
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8d474afc6fb339265ff58a6af4204d7d3677cff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
   在使用多维表达式 (MDX) 查询多维数据或创建多维数据集中的 MDX 表达式之前，有必要了解多维的概念和术语。  
@@ -160,10 +159,9 @@ ms.lasthandoff: 09/01/2017
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [使用成员、元组和集 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 脚本编写基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX 语言参考 (MDX)](../../../mdx/mdx-language-reference-mdx.md)   
  [多维表达式 (MDX) 参考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

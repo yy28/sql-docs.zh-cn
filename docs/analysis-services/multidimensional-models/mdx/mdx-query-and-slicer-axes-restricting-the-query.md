@@ -20,17 +20,16 @@ helpviewer_keywords:
 - axes [MDX]
 - MDX [Analysis Services], axes
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eae3ee8aa4ea2c47aafbf4f6a881395fa24a5484
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4da2bc11823704012491552c077534f3348c779
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---restricting-the-query"></a>MDX 查询轴和切片器轴-限定查询
   在设计多维表达式 (MDX) SELECT 语句时，应用程序通常检查多维数据集并将层次结构集分为两个子集：  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- relational schema [Analysis Services]
+helpviewer_keywords: relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f4c43ae5e0b38aab494f21237986b958286d7b9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>架构生成向导 (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目或数据库中定义 OLAP 对象时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持两种使用关系架构的方法。 通常，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，将基于在数据源视图中构造的逻辑数据模型来定义 OLAP 对象。 此数据源视图将基于一个或多个关系数据源中的架构元素定义，如在数据源视图中自定义那样。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

@@ -4,28 +4,32 @@ description: "了解如何备份和还原在 Linux 上的 SQL Server 数据库�
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
+ms.openlocfilehash: 4693d53a8318a4d8ac5ecfa696203688737dad25
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-使用相同的工具，作为其他平台，可能需要在 Linux 上的 SQL Server 2017 的数据库的备份。 在 Linux 服务器上，你可以使用`sqlcmd`连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，你可以备份数据库，本地、 到远程驱动器或[Microsoft Azure Blob 存储服务](http://msdn.microsoft.com/library/dn435916.aspx)。 
+使用相同的工具，作为其他平台，可能需要在 Linux 上的 SQL Server 2017 的数据库的备份。 在 Linux 服务器上，你可以使用**sqlcmd**连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，你可以备份数据库，本地、 到远程驱动器或[Microsoft Azure Blob 存储服务](../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
-## <a name="backup-with-sqlcmd"></a>使用 sqlcmd 备份
+## <a name="backup-a-database"></a>备份数据库
 
-在下面的示例`sqlcmd`连接到本地 SQL Server 实例，并采用完整备份的名为的用户数据库`demodb`。
+在下面的示例**sqlcmd**连接到本地 SQL Server 实例，并采用完整备份的名为的用户数据库`demodb`。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -50,28 +54,39 @@ Processed 2 pages for database 'demodb', file 'demodb_log' on file 1.
 BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec).
 ```
 
-### <a name="backup-log-with-sqlcmd"></a>使用 sqlcmd 备份日志
+### <a name="backup-the-transaction-log"></a>备份事务日志
 
-在下面的示例中，`sqlcmd`连接到本地 SQL Server 实例，并采用结尾日志备份。 完成结尾日志备份后，数据库将处于“正在还原”状态。 
+如果你的数据库在完整恢复模式，你还可以进行更精细的还原选项的事务日志备份。 在下面的示例中， **sqlcmd**连接到本地 SQL Server 实例，并将事务日志备份。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
-## <a name="restore-with-sqlcmd"></a>使用 sqlcmd 还原
+## <a name="restore-a-database"></a>还原数据库
 
-在下面的示例`sqlcmd`连接到 SQL Server 的本地实例，并将数据库还原。
+在下面的示例**sqlcmd**连接到 SQL Server 的本地实例，还原了 demodb 数据库。 请注意，`NORECOVERY`选项用于允许其他日志文件备份还原。 如果你不打算还原额外的日志文件，删除`NORECOVERY`选项。
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+```
+
+> [!TIP]
+> 如果你意外使用 NORECOVERY，但没有其他日志文件备份，运行命令`RESTORE DATABASE demodb`不带任何其他参数。 这将完成还原，并使数据库处于操作状态。
+
+### <a name="restore-the-transaction-log"></a>还原事务日志
+
+以下命令将还原以前的事务日志备份。
+
+```bash
+sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak'"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 备份和还原
 
-从 Windows 计算机中，可以使用 SSMS 连接到 Linux 数据库并执行通过用户界面备份。 
+从 Windows 计算机中，可以使用 SSMS 连接到 Linux 数据库并执行通过用户界面备份。
 
 >[!NOTE] 
-> 使用最新版本 SSMS 连接到 SQL Server。 若要下载并安装最新版本，请参阅[下载 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)。 
+> 使用最新版本 SSMS 连接到 SQL Server。 若要下载并安装最新版本，请参阅[下载 SSMS](../ssms/download-sql-server-management-studio-ssms.md)。 有关如何使用 SSMS 的详细信息，请参阅[使用 SSMS 管理 SQL Server on Linux](sql-server-linux-manage-ssms.md)。
 
 下列步骤将引导通过 SSMS 完成备份。 
 
@@ -82,8 +97,6 @@ sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/
 1. 在**数据库备份**对话框中，验证参数和选项，然后单击**确定**。
  
 SQL Server 将完成数据库备份。
-
-有关详细信息，请参阅[使用 SSMS 管理 SQL Server on Linux](sql-server-linux-manage-ssms.md)。
 
 ### <a name="restore-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 还原 
 
@@ -101,8 +114,7 @@ SQL Server 将完成数据库备份。
 
 ## <a name="see-also"></a>另请参阅
 
-* [创建完整数据库备份 (SQL Server)](http://msdn.microsoft.com/library/ms187510.aspx)
-* [备份事务日志 (SQL Server)](http://msdn.microsoft.com/library/ms179478.aspx)
-* [BACKUP (Transact-SQL)](http://msdn.microsoft.com/library/ms186865.aspx)
-* [SQL Server 备份到 URL](http://msdn.microsoft.com/library/dn435916.aspx)
-
+* [创建完整数据库备份 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+* [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+* [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
+* [SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)

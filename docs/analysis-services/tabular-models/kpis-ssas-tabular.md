@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kpis"></a>KPI
   在表格模型中，KPI（关键绩效指标）用于根据目标值（由度量值或绝对值定义）度量某一值（由基础度量值定义）的性能。 本主题帮助表格模型作者对表格模型中的 KPI 有一个基本的了解。  
@@ -83,11 +82,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建和管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
+|[创建和管理 KPI](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
   
 ## <a name="see-also"></a>另请参阅  
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

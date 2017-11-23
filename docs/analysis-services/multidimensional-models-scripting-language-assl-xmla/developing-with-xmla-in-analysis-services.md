@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, data mining
 - commands [XML for Analysis]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 71df2a16685019e6b1117dee995d5499711625eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e66b7b47c25412bf52fe296461c4993d2a533632
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 开发
   XML for Analysis (XMLA) 是一种基于 SOAP 的 XML 协议，它专门设计用于可通过 HTTP 连接访问的任何标准多维数据源的通用数据访问。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 XMLA 作为与客户端应用程序通信的唯一协议。 从根本上说，Analysis Services 支持的所有客户端库都可以采用 XMLA 来表示请求和响应。  
@@ -94,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [了解 Microsoft OLAP 体系结构](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   
-

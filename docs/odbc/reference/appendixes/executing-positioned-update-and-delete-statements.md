@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 757def8025702d5ca7c867b2d8009c7a1d5cb9a2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>正在执行的定位的 Update 和 Delete 语句
 > [!IMPORTANT]  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 |定位的删除|SQL_ROW_DELETED|旧值|旧值|  
   
  [1] 应用程序必须在执行定位的更新语句中; 前更新的行集缓冲区中的值在执行的定位的 update 语句之后, 的是光标库将的值复制行集缓冲区中到其缓存。
-

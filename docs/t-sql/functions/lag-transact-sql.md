@@ -1,39 +1,39 @@
 ---
 title: "延隔时间 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 10/20/2015
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LAG_TSQL
 - LAG
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77598feb87f6766f6c24c454dace2c138315e69b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  访问相同结果集中先前行的数据，而用不使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的自联接。 LAG 以当前行之前的给定物理偏移量来提供对行的访问。 在 SELECT 语句中使用此分析函数可将当前行中的值与先前行中的值进行比较。  
+  在相同结果集中，而不使用自联接起点与上一行从访问数据[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 LAG 以当前行之前的给定物理偏移量来提供对行的访问。 在 SELECT 语句中使用此分析函数可将当前行中的值与先前行中的值进行比较。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. 比较年度之间的值  
  以下示例使用 LAG 函数返回特定员工前几年的销售配额差异。 请注意，因为第一行没有提供滞后值，所以将返回默认值零 (0)。  
   
-```  
+```t-sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -79,8 +79,7 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 BusinessEntityID SalesYear   CurrentQuota          PreviousQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             0.00  
@@ -95,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. 比较分区中的值  
  下面的示例使用 LAG 函数比较员工之间年初至今的销售额。 指定 PARTITION BY 子句来按销售地区对结果集中的行进行划分。 LAG 函数分别应用于每个分区，并为每个分区重新启动计算。 OVER 子句中的 ORDER BY 子句对每个分区中的行进行排序。 SELECT 语句中的 ORDER BY 子句对整个结果集中的行进行排序。 请注意，因为每个分区的第一行没有提供滞后值，所以将返回默认值零 (0)。  
   
-```  
+```t-sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -107,8 +106,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 TerritoryName            BusinessEntityID SalesYTD              PrevRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          0.00  
@@ -122,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. 指定任意表达式  
  下面的示例演示如何在 LAG 函数语法中指定各种任意表达式。  
   
-```  
+```t-sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -150,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D： 比较季度之间的值  
  下面的示例演示 LAG 函数。 查询使用 LAG 函数返回的特定员工在以前的日历季度销售配额中的差异。 请注意，因为第一行没有提供滞后值，所以将返回默认值零 (0)。  
   
-```  
+```t-sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -178,6 +176,5 @@ Year Quarter  SalesQuota  PrevQuota  Diff
  [主管 &#40;Transact SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
-
 
 

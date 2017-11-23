@@ -17,17 +17,16 @@ helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8d0cc7b52ecffbc7a85be31047a8db97e7a1922b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c14ab5147125207eb63ad9e97ba2a94876d4ddce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>顺序分析和聚类分析模型的挖掘模型内容
   本主题介绍使用 Microsoft 顺序分析和聚类分析算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -275,4 +274,3 @@ ORDER BY Count(*) DESC
  [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   
-

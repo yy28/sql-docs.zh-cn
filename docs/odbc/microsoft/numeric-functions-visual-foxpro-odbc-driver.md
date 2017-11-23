@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - numeric functions [ODBC]
 - FoxPro ODBC driver [ODBC], numeric functions
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fa1e5111769f3c30b969e7a9176d7d92e9c870db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af884148535018c19a2a7375f3bfc90d73aa5f78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数值函数 （Visual FoxPro ODBC 驱动程序）
 下表描述了 Visual FoxPro ODBC 驱动程序; 支持的 ODBC 数值函数当相同的功能的 Visual FoxPro 语法不同于 ODBC 语法，将列等效 Visual FoxPro。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
  POWER *(numeric_exp，integer_exp)*  
   
  截断*(numeric_exp，integer_exp)*
-

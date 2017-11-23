@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1c49ae086aba41c6b023a1cbd395e6ddd8fc8f29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a57348fa7e83daeb4c9df2bc8d17cd34689c4a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>逻辑回归模型的挖掘模型内容
   本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -199,4 +198,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   
-

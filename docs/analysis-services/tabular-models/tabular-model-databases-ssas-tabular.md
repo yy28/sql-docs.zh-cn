@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d77d1cc5f03ac2d6894cefa6458f9096b47b3a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>管理已部署的表格模型数据库
   表格模型数据库是您使用 Analysis Services 表格模型项目模板在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建的 Analysis Services 数据库，其中，表和关系是用于表示数据的主要结构。  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
-

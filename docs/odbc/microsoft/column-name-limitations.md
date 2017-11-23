@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 06726f6d0d7b5b49cd9f6a89402db80a4d2543b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-name-limitations"></a>列名称限制
 列名称可以包含任何有效字符 （例如，空格）。 如果列名包含除字母、 数字和下划线的任何字符，必须由将其括起来后引号 （'） 中分隔名称。  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  管道字符 (&#124;) 不能在列名称，是否名称用引号括起来后与否。  
   
  当使用文本驱动程序时，该驱动程序将提供一个默认名称，如果未指定列名称。 例如，该驱动程序调用的第一列 F1，第二列 F2，依次类推。
-

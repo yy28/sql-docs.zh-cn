@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 54c9be66075ebbc9614de0b007b5b718e976121b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>对 Linux 上的 SQL Server 运行 HA 可用性组
 
@@ -298,4 +297,3 @@ ms.lasthandoff: 08/28/2017
 [为 SQL Server 可用性组群集资源配置 SUSE Linux Enterprise Server 群集](sql-server-linux-availability-group-cluster-sles.md)
 
 [配置 SQL Server 可用性组群集资源的 Ubuntu 群集](sql-server-linux-availability-group-cluster-ubuntu.md)
-

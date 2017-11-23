@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a65c11a0f6c623162049661a11cbc392a3d8b178
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-cursor-types"></a>了解游标类型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -120,7 +118,6 @@ ms.lasthandoff: 09/09/2017
 >  SQL Server 将服务器游标限制到单一结果集中。 如果批处理或存储过程包含多条语句，则必须使用只进只读客户端游标。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 JDBC 驱动程序管理结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序管理结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

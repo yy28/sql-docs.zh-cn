@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopSum function
+f1_keywords: TOPSUM
+dev_langs: DMX
+helpviewer_keywords: TopSum function
 ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8b5d8c3ffd9f857fb90039c180ab99d564204bb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7151f28a59f7020cd71388a4236ce2198ff4cbc4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +46,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **TopSum**函数返回的最顶层的行的排名基于的计算值的按降序\<排名表达式 > 自变量对于每一行，以便的总和\<排名表达式 > 值至少是指定的给定的总数\<总和 > 自变量。 **TopSum**返回可能最少数量的元素，同时仍满足指定的和值。  
   
 ## <a name="examples"></a>示例  
@@ -121,4 +117,3 @@ NATURAL PREDICTION JOIN
  [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)  
   
   
-

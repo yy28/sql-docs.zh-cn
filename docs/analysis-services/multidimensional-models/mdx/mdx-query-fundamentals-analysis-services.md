@@ -23,17 +23,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], queries
 - queries [MDX]
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 280033210c597c611ce1af8ff98c4ea94e1852f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cefad04fdadd4475863dccca5cba5f3e9cf4f48c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 查询基础知识 (Analysis Services)
   通过使用多维表达式 (MDX)，您可以查询多维对象（如多维数据集）并返回包含多维数据集数据的多维单元集。 本主题及其子主题提供 MDX 查询的概述。  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [多维表达式 (MDX) 参考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

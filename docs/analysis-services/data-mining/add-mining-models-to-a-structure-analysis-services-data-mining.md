@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>向结构中添加挖掘模型（Analysis Services - 数据挖掘）
   挖掘结构旨在支持多个挖掘模型。 因此，在完成向导后，您可以打开结构并添加新的挖掘模型。 每当您创建模型时，可以使用一个不同的算法、更改参数或应用筛选器，以使用不同的数据子集。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

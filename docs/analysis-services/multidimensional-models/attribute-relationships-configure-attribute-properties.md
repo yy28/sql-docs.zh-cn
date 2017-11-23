@@ -21,17 +21,16 @@ helpviewer_keywords:
 - properties [Analysis Services], attribute relationships
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d925529956009a97832235808466c16598a1d344
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---configure-attribute-properties"></a>属性关系-配置特性属性
   下表列出了特性关系的属性并对这些属性进行了说明。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
 |Visible|确定属性关系的可见性。 值为 True 或 False。 默认值为 True。|  
   
   
-

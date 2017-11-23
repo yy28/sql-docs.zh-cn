@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9061ad8221537eaa00eb40fab56fa10d3357198d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>处理定位 Update 和 Delete 语句
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   如果该驱动程序支持只有一个活动语句，光标库提取的结果的其余部分设置，然后 refetches 从其缓存的当前行集之前执行的定位更新或删除语句。 如果应用程序然后调用一个返回结果集中的元数据函数 (例如， **SQLNumResultCols**或**SQLDescribeCol**)，游标库返回错误。  
   
 -   如果定位的更新或删除语句执行包含每次执行更新时不自动更新的时间戳列的表的列，则所有后续定位的 update 或 delete 语句将失败的时间戳列是否绑定。 这是因为搜索更新或删除的是光标库创建的语句将不会准确地识别要更新的行。 时间戳列的搜索语句中的值将不匹配的时间戳列自动更新后的值。
-

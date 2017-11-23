@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
 - storage [Analysis Services], dimensions
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - storing data [Analysis Services], dimensions
 - storage [Analysis Services]
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: bb0acf4e658ca1184cfb7a019454b89e72221e46
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9320eebfc25964e5e751e2d93ffc8cb7503861e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions---introduction"></a>维度-简介
   所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是基于从表或视图中的数据源视图的列的属性的组合。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [启用写操作的维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

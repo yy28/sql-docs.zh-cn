@@ -18,17 +18,16 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在依赖关系网络中查找特定节点
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 挖掘模型中的依赖关系网络可包含许多节点，因此很难找到您感兴趣的数据。 若要解决此问题，请使用数据挖掘设计器的 **“依赖关系网络”** 选项卡上的 **“查找节点”** 对话框来搜索特定节点。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

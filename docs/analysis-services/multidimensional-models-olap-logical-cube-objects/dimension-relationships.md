@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - relationships [Analysis Services]
 - member groups [Analysis Services]
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - fact dimensions [Analysis Services]
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: af8f55c0f3794f06873da3811642a75a590977c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c3c2a4d5104b95b1742c4e45d9f881fe81ffbc6d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-relationships"></a>维度关系
   维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 当你将数据库维度或度量值组添加到多维数据集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试通过检查多维数据集的数据源视图中的事实数据表与维度表之间的关系和通过检查确定维度用法维度中的属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
@@ -98,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [维度（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

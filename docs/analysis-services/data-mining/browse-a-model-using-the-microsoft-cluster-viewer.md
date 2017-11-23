@@ -26,17 +26,16 @@ helpviewer_keywords:
 - Cluster Viewer [Analysis Services]
 - mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a5db95754cf9f6286e56f68a370ddc34b6e0436f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 561b0d339a7de446e6c96f3848998dba44409769
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>使用 Microsoft 分类查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分类查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种分段算法，用于浏览数据以标识数据中的变体并创建预测。 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

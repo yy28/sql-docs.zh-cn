@@ -22,17 +22,16 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
   架构生成向导为基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的维度和度量值组的主题区域数据库生成一个非规范化的关系架构。 该向导为每个维度生成一个用于存储维度数据的关系表（该表称为维度表）；为每个度量值组生成一个用于存储事实数据的关系表（该表称为事实数据表）。 该向导在生成这些关系表时，会忽略链接维度、链接度量值组以及服务器时间维度。  
@@ -106,7 +105,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>另请参阅  
  [了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [管理对数据源视图和数据源更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [管理对数据源视图和数据源所做的更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   
-

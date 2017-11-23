@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新书签的行
 书签，在更新某一行时**SQLBulkOperations**使更新的表的一个或多个行的数据源。 由绑定的书签列中的书签标识行。 使用数据的应用程序缓冲区 （除非列的长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE） 每个绑定列中的更新行。 未绑定的列将不会更新。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 6.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_UPDATE_BY_BOOKMARK。  
   
  对于发送到数据源作为更新每一行，应用程序缓冲区应具有有效的行数据。 如果应用程序缓冲区已填写的提取，如果已保留的行状态数组，并且行的状态值是 SQL_ROW_DELETED、 SQL_ROW_ERROR 或 SQL_ROW_NOROW，无效的数据可能无意中发送到数据源中。
-

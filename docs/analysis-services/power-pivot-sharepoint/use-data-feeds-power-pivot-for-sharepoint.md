@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb5bc547eead5e8dc2d765f56861dacbd8af64e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用数据馈送 (Power Pivot for SharePoint)
   数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，数据馈送可帮助你将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [使用数据馈送库共享数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
-

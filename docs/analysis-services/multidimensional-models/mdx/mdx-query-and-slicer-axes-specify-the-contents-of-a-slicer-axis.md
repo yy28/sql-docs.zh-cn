@@ -18,17 +18,16 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX 查询轴和切片器轴-指定切片器轴的内容
   切片器轴将对多维表达式 (MDX) SELECT 语句返回的数据进行筛选，限定返回的数据，从而只返回与指定成员相关的数据。 可以将其看成是在查询中不可见的多余的轴。 切片器轴是在 MDX 中 SELECT 语句的 WHERE 子句中定义的。  
@@ -92,4 +91,3 @@ WHERE(
  如上所述，如果使用 WHERE 子句的集，则会 隐式聚合该集中的所有成员的值。 在这种情况下，该查询说明了在每个单元中的美国和英国的聚合的值。  
   
   
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - GetChunk method [ADO], VC++ example
 - AppendChunk method [ADO], VC++ example
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a7707c5c699c704afe80e6998ab58b1e70cec597
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79eafb56215f2384579689220354231d791be7ae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 和 GetChunk 方法示例 （VC + +）
 此示例使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法以用从另一条记录的数据填充某一图像字段。  
@@ -277,4 +274,3 @@ void PrintProviderError(_ConnectionPtr pConnection) {
  [AppendChunk 方法 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
-

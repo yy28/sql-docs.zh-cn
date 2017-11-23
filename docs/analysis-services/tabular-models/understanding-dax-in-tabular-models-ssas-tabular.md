@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>表格模型 (SSAS 表格) 中的 DAX
   数据分析表达式 (DAX) 是用于在 Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中创建自定义计算公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -407,4 +406,3 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
-

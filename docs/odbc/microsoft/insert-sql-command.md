@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- INSERT [ODBC]
+helpviewer_keywords: INSERT [ODBC]
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4256908ef2b62fb75ff28f381d036caf2a72cdcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6862ff2ec4d95ce6a2149bbcd7647cdf8ea6819f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="insert---sql-command"></a>插入的 SQL 命令
 到包含的指定的字段值的表的末尾追加一条记录。  
@@ -62,5 +59,4 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
 ## <a name="see-also"></a>另请参阅  
  [创建表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
- [选择的 SQL 命令](../../odbc/microsoft/select-sql-command.md)
-
+ [SELECT - SQL 命令](../../odbc/microsoft/select-sql-command.md)

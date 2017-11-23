@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ccaa11e1ee00511456572d51f6b905b2914e0c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e6b9a2ebb13ee4e17e5eb329432818bff54818c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>每次重播一个事件 (SQL Server Profiler)
   本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]每次重播跟踪文件或表中的一个事件。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

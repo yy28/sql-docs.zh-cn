@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ae72ba798703fcbb54553b05a1cfa5109f99505b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa8e17ee877f8bd7346ca3cf50dcc49c0acc51a7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>查找 JDBC 驱动程序的其他信息
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +39,6 @@ ms.lasthandoff: 09/09/2017
 |[Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=116905)|通过该站点可以搜索客户提交的驱动程序问题，也可以提交自己的问题。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

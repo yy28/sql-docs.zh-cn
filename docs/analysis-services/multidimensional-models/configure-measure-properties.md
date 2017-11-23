@@ -46,17 +46,16 @@ helpviewer_keywords:
 - Type property
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d470010e8f4f5fecef9584abcfa0ad56096ccd75
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 576efdd0bac4b8298e3d204b065bbbd55ba6fff3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-measure-properties"></a>配置度量值属性
   通过使用度量值的属性，您可以定义度量值的工作方式并控制如何向用户显示度量值。  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [修改度量值](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   
-

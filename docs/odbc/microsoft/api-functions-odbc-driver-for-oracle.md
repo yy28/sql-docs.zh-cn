@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], functions
 - API functions [ODBC]
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f9508c1c2b6d366e9180a86563c9fa5c45a4b47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 函数 （适用于 Oracle 的 ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [级别 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)一致性提供核心级别接口功能也为其他功能，例如事务。  
   
 -   [级别 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)一致性提供级别 1 功能也为其他功能，例如书签、 动态参数和 ODBC 函数的异步执行。
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ce770ce3ac600e086ea0b6d1ed03ed1b26b4ee3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c514356aeabd59525fdab80e6e1c03f93d9ae34f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lesson 3-4-修改日期维度
 在本主题的各任务中，将创建用户定义的层次结构，并更改为“日期”、“月份”、“日历季度”以及“日历半期”等属性显示的成员名称。 还将为属性定义组合键，控制维度成员的排序顺序以及定义属性关系。  
@@ -312,4 +309,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另请参阅  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
-

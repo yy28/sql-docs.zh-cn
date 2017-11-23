@@ -1,37 +1,37 @@
 ---
 title: "COLLATIONPROPERTY (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATIONPROPERTY_TSQL
 - COLLATIONPROPERTY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - collations [SQL Server], properties
 - COLLATIONPROPERTY function
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f47c45f892618120b06a17f45f5d3155e092987a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 166a85e5fe33a95cd8a36f221c2a774e4a0a9fb2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>排序规则函数-COLLATIONPROPERTY (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定排序规则的属性。
   
@@ -53,8 +53,8 @@ COLLATIONPROPERTY( collation_name , property )
 |属性名称|Description|  
 |---|---|
 |**CodePage**|排序规则的非 Unicode 代码页。 请参阅[附录 G DBCS/Unicode 映射表](https://msdn.microsoft.com/en-us/library/cc194886.aspx)和[附录 H 代码页](https://msdn.microsoft.com/en-us/library/cc195051.aspx)转换这些值，并查看其字符映射。|  
-|**LCID**|排序规则的 Windows LCID。 请参阅[LCID 结构](https://msdn.microsoft.com/en-us/library/cc233968.aspx)转换这些值 (将需要将转换为`VARBINARY`第一个)。|  
-|**ComparisonStyle**|排序规则的 Windows 比较样式。 对于所有的二进制排序规则，则返回 0 (同时`_BIN`和`_BIN2`) 以及当所有属性都是敏感。 位掩码值：<br /><br /> 忽略大小写： 1<br /><br /> 忽略重音： 2<br /><br /> 忽略假名： 65536<br /><br /> 忽略宽度： 131072|  
+|**LCID**|排序规则的 Windows LCID。 请参阅[LCID 结构](https://msdn.microsoft.com/en-us/library/cc233968.aspx)转换这些值 (将需要将转换为**varbinary**第一个)。|  
+|**ComparisonStyle**|排序规则的 Windows 比较样式。 对于所有的二进制排序规则，则返回 0 同时 (\_BIN) 和 (\_BIN2)，以及当所有属性都是敏感。 位掩码值：<br /><br /> 忽略大小写： 1<br /><br /> 忽略重音： 2<br /><br /> 忽略假名： 65536<br /><br /> 忽略宽度： 131072<br /><br /> 注意： 尽管它会影响比较行为，变体选择器区分 (\_VSS) 选项不会显示此值中。|  
 |**版本**|从排序规则 ID 的版本字段派生的排序规则版本。 返回一个整数值 0 到 3 之间。<br /><br /> 使用"140"名称中的排序规则返回 3。<br /><br /> 排序规则与名称中的"100"返回 2。<br /><br /> 排序规则与名称中的"90"返回 1。<br /><br /> 所有其他排序规则均返回 0。|  
   
 ## <a name="return-types"></a>返回类型
@@ -88,5 +88,4 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
   
-
 

@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ADOMD.NET
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ADOMD.NET
 ms.assetid: abaf33aa-db55-43bf-8f30-15547559be1d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 445f0aaef60f44f7dcf7f1b08676fa4c0956a65d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e0c9a2e2e2bc0b5900beeb65d4b80fdfc61fafb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="developing-with-adomdnet"></a>使用 ADOMD.NET 进行开发
   ADOMD.NET 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)]旨在与进行通信的.NET Framework 数据提供程序[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 ADOMD.NET 可使用 XML for Analysis 协议与分析数据源通信，方法为使用 TCP/IP 或 HTTP 连接传输和接收符合 XML for Analysis 规范的 SOAP 请求和响应。 命令可通过多维表达式 (MDX)、数据挖掘扩展插件 (DMX)、Analysis Services 脚本语言 (ASSL) 或者甚至是有限 SQL 语法来发送，并且可能不返回结果。 可以使用 ADOMD.NET 对象模型来查询和操作分析数据、关键绩效指标 (KPI) 和挖掘模型。 使用 ADOMD.NET 时，还可通过检索与 OLE DB 兼容的架构行集或者使用 ADOMD.NET 对象模型来查看和使用元数据。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 |主题|Description|  
 |-----------|-----------------|  
 |[ADOMD.NET 客户端编程](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)|介绍如何使用 ADOMD.NET 客户端对象从分析数据源检索数据和元数据。|  
-|[ADOMD.NET Server 编程](../../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)|介绍如何使用 ADOMD.NET 服务器对象创建存储过程和用户定义函数。|  
+|[ADOMD.NET 服务器编程](../../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)|介绍如何使用 ADOMD.NET 服务器对象创建存储过程和用户定义函数。|  
 |[重新分发 ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/redistributing-adomd-net.md)|介绍重新发布 ADOMD.NET 的过程。|  
 |<xref:Microsoft.AnalysisServices.AdomdClient>|详细信息中包含的对象**Microsoft.AnalysisServices.AdomdClient**命名空间。|  
   
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型数据访问 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8235d77975a4daae11de47da22dc37ff9be36c6b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8247f7f81e70aafac8d109abe7f8303c8e13f487
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用带有返回状态的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -67,7 +65,6 @@ END
  [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]  
   
 ## <a name="see-also"></a>另请参阅  
- [使用存储过程的语句](../../connect/jdbc/using-statements-with-stored-procedures.md)  
+ [在存储过程中使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
-

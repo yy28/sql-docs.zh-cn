@@ -3,24 +3,25 @@ title: "步骤 1： 配置 pyodbc Python 开发环境 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: python
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 886cf420228b622fb9c269423ce9a71c2c25ecaa
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3910f1f3053e0dee053b16575e5447474c75bf40
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步骤 1： 配置 pyodbc Python 开发的开发环境
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 通过使用 Python-在 Windows 上的 pyodbc 连接到 SQL 数据库：
   
 1. **下载 Python 安装程序**  
-  如果您的计算机不具有 Python 请安装它。 请转到 [Python 下载页](https://www.python.org/downloads/windows/) 并下载适当的安装程序。 例如，如果您是在 64 位计算机上，下载 Python 2.7 或 3.5 (x64) 安装程序。  
+  如果您的计算机不具有 Python 请安装它。 请转到[Python 下载页](https://www.python.org/downloads/windows/)并下载适当的安装程序。 例如，如果您是在 64 位计算机上，下载 Python 2.7 或 3.5 (x64) 安装程序。  
   
 2. **安装 Python**安装在下载之后，执行以下操作：。 双击文件以启动安装程序。 b. 选择你的语言，并同意这些条款。 c. 按照屏幕上的说明和 Python 应安装在你的计算机上。 d. 可以通过转到 C:\Python27 或 C:\Python35 安装了 Python，运行 python-v 或 py v （针对 3.x)，它是验证 
       
@@ -51,14 +52,14 @@ ms.lasthandoff: 09/09/2017
 2. **安装适用于 Linux 的 Microsoft ODBC Driver 13**适用于 Ubuntu 15.04 + 
 ``` 
 > sudo su  
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
+> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
 > sh installodbc.sh  
 ```   
 
   对于 RedHat 6，7 
 ``` 
 > sudo su 
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
+> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
 > sh install.sh 
 ```  
   
@@ -66,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 > sudo -H pip install pyodbc
 ```
-

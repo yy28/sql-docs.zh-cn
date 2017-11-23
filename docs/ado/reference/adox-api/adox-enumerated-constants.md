@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADOX]
+helpviewer_keywords: enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a43048c4ea1dff730c6be4d1f755bfa96bec34dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
 若要帮助调试，ADOX 枚举常量，请列出每个常量的值。 但是，此值是纯粹是参考性的并且可以将不同的 ADOX 版本更改为另一个。 你的代码应仅依赖于的名称，而不是实际值的枚举常数。  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

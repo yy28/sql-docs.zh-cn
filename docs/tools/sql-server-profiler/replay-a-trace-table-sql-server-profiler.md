@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62c42d15040ef8377af16c03d6ce0e1f1b80a962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d3873687f408fa0a29ab338318c80e6572f0746
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重播跟踪表 (SQL Server Profiler)
   重播是指打开已保存的跟踪并对其重播的功能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多线程播放引擎，能模拟用户连接和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 重播对于解决应用程序或进程问题是很有用的。 在您确定问题并进行更正后，请对更正后的应用程序或进程运行发现该潜在问题的跟踪。 然后，重播原始跟踪并比较结果。  
@@ -64,10 +62,9 @@ ms.lasthandoff: 08/02/2017
     -   若要控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在重播期间管理进程的方式，请配置 **“Health Monitor 选项”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行 SQL Server 事件探查器所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
+ [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)   
  [打开跟踪表 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

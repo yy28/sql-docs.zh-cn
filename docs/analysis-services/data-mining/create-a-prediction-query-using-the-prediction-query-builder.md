@@ -17,17 +17,16 @@ helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
   可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”选项以创建预测查询。  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

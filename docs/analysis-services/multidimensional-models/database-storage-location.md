@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- databases [Analysis Services], storage location
+helpviewer_keywords: databases [Analysis Services], storage location
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c6e5e0399f0025b434ff2a972b47ca3a7608fb1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb6c9aa4728cf355d0c974501fc36fd71a233a83
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-storage-location"></a>数据库存储位置
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于上述情况，通过 **DbStorageLocation** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以在本地磁盘或网络设备中指定数据库的位置。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [同步元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
   
   
-

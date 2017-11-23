@@ -1,30 +1,31 @@
 ---
 title: "使用 SQL Server 特性和功能 |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 功能和功能
-WideWorldImportersDW 旨在展示许多适用于数据仓库和分析 SQL Server 的主要功能。 下面是 SQL Server 功能和功能，以及如何在 WideWorldImportersDW 中使用的说明的列表。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW 旨在展示许多适用于数据仓库和分析 SQL Server 的主要功能。 下面是 SQL Server 功能和功能，以及如何在 WideWorldImportersDW 中使用的说明的列表。
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ PolyBase 用于将从 WideWorldImportersDW 的销售信息与有关人口统计�
 WideWorldImportersDW SCHEMA_ONLY 内存优化表用于临时表。 所有`Integration.` * `_Staging`表是 SCHEMA_ONLY 内存优化表。
 
 SCHEMA_ONLY 表的优点是它们不作记录，并且不需要任何磁盘访问。 这提高了 ETL 过程的性能。 由于这些表不作记录，其内容都将丢失故障时。 但是，数据源仍然可用，因此 ETL 过程可以只需重新启动如果发生故障。
-

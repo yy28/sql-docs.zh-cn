@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 数据类型
 下表显示如何将 Microsoft Excel 驱动程序数据类型映射到 ODBC SQL 数据类型。 Microsoft Excel 驱动程序将这些数据类型分配给基于列中的数据的 Microsoft Excel 表中的列。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |TEXT|如果一列的行包含多个 Microsoft Excel 数据类型，ODBC Microsoft Excel 驱动程序会将 SQL_VARCHAR 数据类型分配给列。 没有一个例外： 如果列包含仅两个或三个日期时间数据类型 （日期、 时间和日期时间），ODBC Microsoft Excel 驱动程序将 SQL_TIMESTAMP 数据类型分配给列。<br /><br /> 创建文本列的零或未指定的长度实际返回 255 字节的列。<br /><br /> 字符的字符串文本可以包含任何 ANSI 字符 （1-255 个十进制）。 使用两个连续单引号 （'） 来表示一个单引号 （'）。<br /><br /> 将 NULL 插入列与数据类型不是 SQL_VARCHAR 将导致要将更改为 SQL_VARCHAR 的列的数据类型。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
-

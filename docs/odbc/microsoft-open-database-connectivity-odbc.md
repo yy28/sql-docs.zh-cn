@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 17ae2b4d9ceb1518a0c2e455c93c124df6954f3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 打开数据库连接 (ODBC)
 Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它使应用程序使用不同的数据库管理系统 (Dbms) 访问数据。 ODBC 是专门针对关系数据存储设计一个低级别、 高性能接口。  
@@ -57,4 +55,3 @@ Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它�
   
 ## <a name="support"></a>支持  
  有关支持选项的信息可在[Microsoft 帮助和支持](http://go.microsoft.com/fwlink?linkid=5521)Web 站点。
-

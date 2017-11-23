@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables 对象 (TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  isHidden  
  一个布尔值，该值指示是否处理表，由客户端的可视化工具为隐藏。  
-如果将表视为 true 隐藏;否则为 false。  
+如果将表视为隐藏，则为 true；否则为 false。  
   
  列  
  表示表中的列。 它是表对象的子级。 每列均具有多个定义的属性影响客户端应用程序如何直观显示列中的数据。  
@@ -825,4 +824,3 @@ ms.lasthandoff: 09/01/2017
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

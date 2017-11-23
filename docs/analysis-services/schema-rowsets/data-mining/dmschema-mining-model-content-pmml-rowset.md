@@ -13,25 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT_PMML
+apiname: DMSCHEMA_MINING_MODEL_CONTENT_PMML
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
 ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13d97ebfcd56a0ccfe1d51b4297b75932a156a82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 960abf852fb3cf548b5f00203521e8440b04cae2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dmschemaminingmodelcontentpmml-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT_PMML 行集
   返回挖掘模型的 XML 结构。 该 XML 字符串的格式遵循预测模型标记语言 (PMML 2.1) 标准。  
@@ -66,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘架构行集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

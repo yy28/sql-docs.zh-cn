@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - ird [ODBC]
 - application row descriptor [ODBC]
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44f8593c55579c40854190c8710fdfde0b753d0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-handles"></a>描述符句柄
 A*描述符*是描述 SQL 语句的参数或结果集的列的元数据的集合，如所示的应用程序或驱动程序 (也称为*实现*)。 因此，描述符可填充所有四个角色：  
@@ -54,4 +52,3 @@ A*描述符*是描述 SQL 语句的参数或结果集的列的元数据的集合
  ODBC 中的大多数操作可以由应用程序执行无需显式使用描述符。 但是，描述符对于某些操作提供的方便快捷方式。 例如，假设应用程序要将数据从两组不同的缓冲区。 若要使用的缓冲区的第一组，它重复应该调用**SQLBindParameter**以将其绑定到中的参数**插入**语句，然后执行该语句。 若要使用的缓冲区的第二个集，它将重复此过程。 或者，它无法设置绑定到一个描述符中的缓冲区的第一个集和第二个集的另一个描述符中的缓冲区。 若要切换的绑定的集，应用程序将只调用**SQLSetStmtAttr**并作为 APD 语句关联的正确的描述符。  
   
  有关描述符的详细信息，请参阅[类型的描述符](../../../odbc/reference/develop-app/types-of-descriptors.md)。
-

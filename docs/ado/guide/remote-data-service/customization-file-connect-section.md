@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6ec65ea217935e007427a087f2a05162649f226
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-connect-section"></a>自定义文件连接部分
 处理程序的默认行为是拒绝所有连接。 **连接**节指定该行为的例外情况。 例如，如果所有**连接**节都不存在或为空，则默认情况下无法不建立任何连接。  
@@ -78,7 +76,6 @@ connectionString
  [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

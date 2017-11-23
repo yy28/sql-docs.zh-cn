@@ -2,11 +2,13 @@
 title: "教程： 编写 TRANSACT-SQL 语句 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 509334a16689e2aa8fda308fcb7ca20b24badb93
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教程：编写 Transact-SQL 语句
-欢迎学习“编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句”教程。 本教程适用于对编写 SQL 语句不熟悉的用户。 本教程通过回顾一些用于创建表和插入数据的基本语句，帮助新用户入门。 本教程使用 [!INCLUDE[tsql](../includes/tsql-md.md)]，后者是 SQL 标准的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实现。 本教程旨在简介 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言，但不是要取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 课程。 本教程特意选用了简单的语句，因此它们不能代表标准生产数据库中存在的语句的复杂程度。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]欢迎使用写入[!INCLUDE[tsql](../includes/tsql-md.md)]语句教程。 本教程适用于对编写 SQL 语句不熟悉的用户。 本教程通过回顾一些用于创建表和插入数据的基本语句，帮助新用户入门。 本教程使用 [!INCLUDE[tsql](../includes/tsql-md.md)]，后者是 SQL 标准的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实现。 本教程旨在简介 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言，但不是要取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 课程。 本教程特意选用了简单的语句，因此它们不能代表标准生产数据库中存在的语句的复杂程度。  
   
 >**注意：** 如果你是初学者，可能会发现使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 比编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句更容易。  
   
@@ -62,5 +63,4 @@ ms.lasthandoff: 09/27/2017
   
   
   
-
 

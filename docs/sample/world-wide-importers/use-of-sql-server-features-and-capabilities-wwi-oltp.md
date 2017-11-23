@@ -1,30 +1,31 @@
 ---
 title: "使用 SQL Server 特性和功能 |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: f2feaaa999a6010ab493e9f4f73f6ffdef576e82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 功能和功能
-WideWorldImporters 使用 SQL Server 特性和 OLTP 数据库中的功能。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 使用 SQL Server 特性和 OLTP 数据库中的功能。
 
 WideWorldImporters 旨在展示许多 SQL Server，包括 SQL Server 2016 中引入的最新功能的主要功能。 下面是 SQL Server 功能和功能，以及如何在 WideWorldImporters 中使用的说明的列表。
 
@@ -51,4 +52,3 @@ WideWorldImporters 旨在展示许多 SQL Server，包括 SQL Server 2016 中引
 |查询存储|Query Store 在数据库上启用。 运行几个查询之后, 在 Management Studio 中打开数据库，打开节点 Query Store，这是该数据库下，并打开报表顶部资源使用的查询以查看查询执行和查询的计划，只需运行。|
 |STRING_SPLIT|列`DeliveryInstructions`表中`Sales.Invoices`具有可以用于演示 STRING_SPLIT 的以逗号分隔的值。|
 |审核|可以在数据库中运行以下语句，为此示例数据库启用 SQL Server Audit:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>通过启用了 Azure SQL 数据库审核[Azure 门户](https://portal.azure.com/)。<br/><br/>角色和权限涉及登录名的安全操作，登录审核 （包括标准版的系统） 的启用其中的所有系统。 审核定向到应用程序日志中，因为这是适用于所有系统，不需要其他权限。 警告由于是为了提高安全性，它应可重定向到安全日志或一个安全的文件夹中的文件。 提供的链接来描述所需的其他配置。<br/><br/>对于评估/开发人员/企业版系统，审核对所有财务事务数据的访问。|
-

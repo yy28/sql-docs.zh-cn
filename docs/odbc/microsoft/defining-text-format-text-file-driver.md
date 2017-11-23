@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>定义文本格式 （文本文件驱动程序）
 当使用文本驱动程序时，你可以使用**定义文本格式**对话框可以定义在所选文件中的列的格式。 此对话框中，你可以指定每个数据表的架构。 此信息写入到中的数据源目录的 Schema.ini 文件。 为每个文本数据源目录创建单独的 Schema.ini 文件。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |**扫描的行数**|在设置列和列数据类型取决于现有数据时，安装程序或驱动程序将扫描的行数。<br /><br /> 你可以输入一个介于 1 到 32767 之间的要扫描的行数。 这将默认为 25 如果中选定的项的格式**表**列表不以前定义过通过此对话框。 （限制以外的数字将返回错误。）|  
 |**表**|包含列表中选择的目录中的所有文件**文本安装**对话框中指定的扩展名的列表相匹配。<br /><br /> 当\<默认 > 选择后，并且以下其中一个是 true，表中的属性的值**表**组写入的 Schema.ini （接触 Schema.ini 中的没有其他项）：<br /><br /> -没有任何 Schema.ini 指定目录中。<br />-该 Schema.ini 文件存在，但在目录中的文本文件 （具有指定的扩展） 之一的 Schema.ini 没有节。<br />的文本文件部分存在于 Schema.ini，但响应正文为空。<br /><br /> 当\<默认 > 选择，则**列**组处于禁用状态。|  
 |**宽度**|可以为 CHAR 或 LONGCHAR 列更改列的宽度。 默认为 1 如果中选定的项的格式的宽度**表**列表不以前定义过通过此对话框。<br /><br /> 对于其他数据类型，禁用了宽度控件并不显示任何值。|
-

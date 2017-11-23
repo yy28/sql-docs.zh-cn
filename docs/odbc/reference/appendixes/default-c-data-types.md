@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ff8e2e111db13f67c80189d225dad5084bfdb6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="default-c-data-types"></a>默认 C 数据类型
 如果应用程序指定在 SQL_C_DEFAULT **SQLBindCol**， **SQLGetData**，或**SQLBindParameter**，驱动程序假定的 C 数据类型的输出或输入的缓冲区对应于 SQL 数据类型的列或缓冲区绑定到的参数。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
      因为 SQL_C_DEFAULT 是提供仅作为编程方便起见，应用程序不会丢失任何功能时它指定实际的 C 数据类型。  
   
  显示每个 SQL 数据类型的默认 C 数据类型的表包含在[转换数据从 SQL C 数据类型到](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)、 本附录内容更高版本。
-

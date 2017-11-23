@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - keywords [SQL Server], control-of-flow language
 - control-of-flow language [SQL Server], keywords listed
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 27c7874fbdd1ed29e60b32a8dba1f4acbb84566d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efcad0edec6f90bffaa72f1bb6ac42e2e12872b8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="control-of-flow"></a>控制流
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +34,15 @@ ms.lasthandoff: 09/01/2017
   
 |||  
 |-|-|  
-|[开始...结束](../../t-sql/language-elements/begin-end-transact-sql.md)|[返回](../../t-sql/language-elements/return-transact-sql.md)|  
-|[中断](../../t-sql/language-elements/break-transact-sql.md)|[引发](../../t-sql/language-elements/throw-transact-sql.md)|  
-|[继续](../../t-sql/language-elements/continue-transact-sql.md)|[重试...捕获](../../t-sql/language-elements/try-catch-transact-sql.md)|  
+|[BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)|[RETURN](../../t-sql/language-elements/return-transact-sql.md)|  
+|[BREAK](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
+|[CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
 |[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *标签*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
-|[如果...其他](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
+|[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [斜杠星型注释 &#40;Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [斜杠星型 &#40;块注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
  [-&#40;注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
@@ -53,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  [RAISERROR &#40;Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-

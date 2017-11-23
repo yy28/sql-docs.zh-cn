@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tools"></a>数据挖掘查询工具
   所有数据挖掘查询都使用数据挖掘扩展插件 (DMX) 语言。 DMX 可以用于为所有种类的机器学习任务创建模型，包括分类、风险分析、建议生成和线性回归。 还可以编写 DMX 查询以获取有关在处理模型时生成的模式和统计信息的信息。  
@@ -90,7 +89,6 @@ ms.lasthandoff: 09/01/2017
  [了解 DMX Select 语句](../../dmx/understanding-the-dmx-select-statement.md)   
  [结构和使用情况的 DMX 预测查询](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [创建预测查询使用预测查询生成器](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
- [在 SQL Server Management Studio 中创建一个 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ [在 SQL Server Management Studio 中创建 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
-

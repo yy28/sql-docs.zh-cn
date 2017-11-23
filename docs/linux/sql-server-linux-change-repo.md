@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: bf4eecc1e72f1eadcb0feeab5ca046e75155a66d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>从预览版存储库的存储库更改到 GA 存储库
 
@@ -78,4 +77,3 @@ ms.lasthandoff: 10/06/2017
 ## <a name="next-steps"></a>后续步骤
 
 有关如何在 Linux 上安装 SQL Server 自 2017 年的详细信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
-

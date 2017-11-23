@@ -25,17 +25,16 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b659b4fd581742270fe5d38e5791ef215002757b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
   使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  
@@ -112,4 +111,3 @@ ms.lasthandoff: 09/01/2017
  [表格模型数据访问](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a8583c514ecaef5d85971c0c981427547574c4a7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a74f6e1b212f570ba9aa47a09310b63b13ee0e42
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-architecture"></a>驱动程序体系结构
 驱动程序体系结构划分为两个类别，具体取决于哪些软件进程 SQL 语句：  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   [网络示例](../../odbc/reference/network-example.md)  
   
 -   [其他驱动程序体系结构](../../odbc/reference/other-driver-architectures.md)
-

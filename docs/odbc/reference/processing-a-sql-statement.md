@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-a-sql-statement"></a>处理 SQL 语句
 在讨论之前用于以编程方式使用 SQL 的技术，则需要讨论如何处理的 SQL 语句。 尽管每个方法在不同时间中执行它们，所涉及的步骤是通用的所有这三种技术。 下图演示的步骤中处理的 SQL 语句，详见本节的其余涉及。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  DBMS 执行语句，通过运行访问计划。  
   
  用于处理 SQL 语句的步骤有所不同量它们需要的数据库访问和它们所花的时间量。 分析 SQL 语句不需要对数据库的访问，并且可以非常快速地完成。 优化，另一方面，是非常大量占用 CPU 的处理，并且需要在系统目录的访问。 对于复杂、 多表的查询，则优化器可能浏览数千个不同的方法来执行相同的查询。 但是，执行查询效率低下的成本通常是多个使用提高的查询执行速度重新获得中优化所用的时间过高的。 这是如果可以反复使用相同的优化的访问计划来执行重复性查询甚至更重要。
-

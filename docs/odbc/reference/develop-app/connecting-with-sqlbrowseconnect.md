@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQLBrowseConnect function [ODBC], connecting
 - connecting to data source [ODBC], SQLBrowseConnect
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 95e44aef6839d219dd06523baef8d0d0be3ebe41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f2f1f3b183810e52f59945b7bc1888421cf48fc6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>使用 SQLBrowseConnect 连接
 **SQLBrowseConnect**、 like **SQLDriverConnect**，使用的连接字符串。 但是，通过使用**SQLBrowseConnect**，应用程序可以在运行时构造完整连接字符串。 这允许应用程序执行以下两种操作：  
@@ -44,5 +42,4 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [SQL 服务器浏览示例](../../../odbc/reference/develop-app/sql-server-browsing-example.md)
-
+-   [SQL Server 浏览示例](../../../odbc/reference/develop-app/sql-server-browsing-example.md)

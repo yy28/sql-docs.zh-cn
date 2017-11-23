@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_LOCKS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c65b85a3a9d48afea4db7993bdc31699fe573996
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d50a6cb0bdc6bfdb27fdbfff4c79b25c43e27e58
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 行集
   提供有关服务器上的当前持续锁定的信息。  
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis 架构行集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

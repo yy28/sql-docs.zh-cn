@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLFetchScroll function [ODBC], Cursor Library
+helpviewer_keywords: SQLFetchScroll function [ODBC], Cursor Library
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7e864cf48e199f414d4cb012c5513be0fc844820
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 85647e81245e8e5e76e79cd285bc73b8ff6fb364
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll （光标库）
 > [!IMPORTANT]  
@@ -91,4 +88,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="interaction-with-other-functions"></a>与其他函数之间的交互  
  应用程序必须调用**SQLFetch**或**SQLFetchScroll**它准备或执行之前任何定位更新或删除语句。
-

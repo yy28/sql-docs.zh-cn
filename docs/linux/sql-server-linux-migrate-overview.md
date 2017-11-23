@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: 
 ms.workload: Inactive
+ms.openlocfilehash: dc3182262a297df176e8c8ca28b2e8273cb809ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>将数据库和结构化数据迁移到 Linux 上的 SQL Server 
 
@@ -53,4 +52,3 @@ ms.lasthandoff: 10/02/2017
 
 - [使用 bcp 大容量复制数据](sql-server-linux-migrate-bcp.md)
 - [提取、 转换和加载数据使用 SSIS 的 Linux 上的 SQL Server](sql-server-linux-migrate-ssis.md) 
-

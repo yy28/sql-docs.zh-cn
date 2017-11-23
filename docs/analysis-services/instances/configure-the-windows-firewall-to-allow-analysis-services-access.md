@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>将 Windows 防火墙配置为允许 Analysis Services 访问
   使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 可在网络上使用的至关重要的第一步是确定您是否需要在防火墙中取消阻止端口。 大多数安装都要求您至少创建一个允许连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站防火墙规则。  
@@ -247,4 +246,3 @@ ms.lasthandoff: 09/01/2017
  [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   
-

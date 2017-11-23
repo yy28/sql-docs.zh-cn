@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 811735d222f76b910d75e87505f075c83bba902c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
   Analysis Services 通过缓存数据来提高查询性能。 本主题提供关于使用 XMLA ClearCache 命令来清除为响应 MDX 查询而创建的缓存的建议。 根据您使用的表格模型还是多维模型，运行 ClearCache 的影响有所不同。  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

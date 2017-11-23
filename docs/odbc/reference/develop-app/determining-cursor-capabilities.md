@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], capabilities
 - cursors [ODBC], scrollable
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 490369663aaaee6f9dbb70504b61087ad96191d8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-cursor-capabilities"></a>确定光标功能
 中的下列四个选项**SQLGetInfo**描述了支持哪些类型的游标和其功能是什么：  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 或 SQL_STATIC_CURSOR_ATTRIBUTES2 （具体取决于游标的类型）。 列出是否静态和键集驱动游标可以检测到其自己的更新、 删除和插入。  
   
  应用程序可以确定光标功能在运行时通过调用**SQLGetInfo**使用以下选项。 这通常是通过泛型应用程序。 光标功能还可以在过程中确定应用程序开发和使用硬编码到应用程序。 这种情况通常出现由垂直和自定义应用程序，但也可以如 ODBC 游标库使用的客户端游标实现的泛型应用程序。
-

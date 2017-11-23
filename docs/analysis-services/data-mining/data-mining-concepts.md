@@ -28,17 +28,16 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
@@ -190,4 +189,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

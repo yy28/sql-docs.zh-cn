@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4c398dbda7bc898d62ea16122ccfba02ea7d5b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 数据挖掘对象的编程
   使用 AMO 对数据挖掘对象进行编程非常简单直接。 第一步是创建数据结构模型以支持挖掘项目。 然后创建数据挖掘模型，该模型支持您要用于预测或查找数据下未看到的关系的挖掘算法。 创建挖掘项目（包括结构和算法）后，可以处理挖掘模型以获取定型的模型，稍后从客户端应用程序进行查询和预测时将使用该模型。  
@@ -156,4 +154,3 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

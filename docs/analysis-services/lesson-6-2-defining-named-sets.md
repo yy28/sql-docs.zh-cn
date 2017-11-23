@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d14d16deabb83c9eedc448e9b8e063aa56b662cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f06975fb10ab27d6087b1f46a543034aa01ca308
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>课程 6-2-定义命名集
 命名集是一个返回一组维度成员的多维表达式 (MDX)。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。  
@@ -150,4 +147,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

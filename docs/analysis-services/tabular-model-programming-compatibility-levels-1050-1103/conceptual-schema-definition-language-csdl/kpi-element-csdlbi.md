@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8941555a0768f80a30947c043aea639469ec8df3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc60e58643df0a47c0f31b93278e95bd1b64a804
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 元素 (CSDLBI)
   Kpi 元素定义一个可用作关键绩效指标 (KPI) 的计算。 在商业智能数据模型中，KPI 基于度量值，因此，KPI 的定义包含与度量值关联的所有元数据以及展示 KPI 值所需的信息，包括默认图形。  
@@ -96,7 +94,6 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

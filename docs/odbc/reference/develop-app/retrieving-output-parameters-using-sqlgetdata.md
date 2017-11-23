@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3a33528b7f64bb781e835e3ec0f9bbd563adb35
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1c4c3a857436f9b66d5aed447a6d5b47d59915a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>检索输出参数使用 SQLGetData
 在 ODBC 3.8 之前应用程序只能无法检索具有绑定的输出缓冲区的查询的输出参数。 但是，很难参数值的大小是非常大 （例如，较大的图像） 时，将分配一个非常大的缓冲区。 ODBC 3.8 引入了检索部分中的输出参数的新方法。 现在，应用程序可以调用**SQLGetData**使用较小的缓冲区多次检索大型参数值。 这是类似于检索大型列数据。  
@@ -278,4 +276,3 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
   
 ## <a name="see-also"></a>另请参阅  
  [语句参数](../../../odbc/reference/develop-app/statement-parameters.md)
-

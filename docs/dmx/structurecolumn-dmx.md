@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
+f1_keywords: StructureColumn
+dev_langs: DMX
+helpviewer_keywords: StructureColumn function
 ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bec1bd29c696b64b1b8bbbe2c31da593d1f1c098
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3e7f727e1007c6502e6612ccef563f670837cf5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +49,7 @@ StructureColumn('structure column name')
   
  如果引用的挖掘结构列是嵌套表，函数将返回表值。 返回的表值可用于 sub-SELECT 语句的 FROM 子句中。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  此函数是多态函数，可在允许有表达式（包括 SELECT 表达式列表、WHERE 条件表达式和 ORDER BY 表达式）的语句中的任意位置使用。  
   
  挖掘结构中的列的名称是一个字符串值，因此必须括在单引号： 例如， `StructureColumn('`**列 1**`')`。 如果多个列具有相同的名称，则该名称在包含 SELECT 语句的上下文中解析。  
@@ -158,4 +154,3 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
  [常规预测函数 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

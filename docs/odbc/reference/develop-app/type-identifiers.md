@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7abb798241e26114425911e86756bc31d3489257
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da01de66ee5b20d873b3b50ea24c72549174e90b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="type-identifiers"></a>类型标识符
 若要描述 SQL 和 C 数据类型，ODBC 定义两套*类型标识符*。 类型标识符描述的 SQL 列或 C 缓冲区的类型。 它是**#define**值，和是通常作为函数自变量传递或在元数据中返回。  
@@ -41,4 +39,3 @@ SQLINTEGER  DateInd = 0;
 SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_TYPE_DATE, SQL_TYPE_DATE, 0, 0,  
                   &Date, 0, &DateInd);  
 ```
-

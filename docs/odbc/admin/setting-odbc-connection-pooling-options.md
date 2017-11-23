@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>设置 ODBC 连接池选项
 应用程序，从无需为每种使用重新建立的连接池使用连接可以连接池。 你可以使用**连接池**选项卡**ODBC 数据源管理器**对话框中，若要启用和禁用性能监视。 双击要设置的连接超时期限的驱动程序名称。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 |创建的池|池处于活动状态，包括活动的和已删除的池数。 此计数器在 Windows 8 中，添加了驱动程序管理连接池中的连接。 有关详细信息，请参阅[识别驱动程序的连接池](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。|  
   
  你必须指定你自己监视参数。 与此版本的 ODBC 包含了用于性能监视的示例。
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, reference
+helpviewer_keywords: ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 76618b7bc7a8eef4e9eb77182c94598a62853ad3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
 ADO 文档的此部分包含有关每个 ADO 对象、 集合、 属性、 动态属性、 方法、 事件和枚举的主题。 此外，它包含要与 Microsoft Visual c + + 和 Windows Foundation 类 (WFC) 一起使用的 ADO 语法索引的列表。  
@@ -58,4 +55,3 @@ ADO 文档的此部分包含有关每个 ADO 对象、 集合、 属性、 动�
  [使用 ADO 编程附录 c:](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)
-

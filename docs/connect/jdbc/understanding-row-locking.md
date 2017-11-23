@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6c37c5ab29f67d7ce30603c4609cb66d3e625c61
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b41b33aa022bc0a62996e09a713f36bbe04e816
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-row-locking"></a>了解行锁定
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +37,6 @@ ms.lasthandoff: 09/09/2017
 >  有关详细信息行中的锁定有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅"中的锁定[!INCLUDE[ssDE](../../includes/ssde_md.md)]"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]联机丛书。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 JDBC 驱动程序管理结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序管理结果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

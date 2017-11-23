@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
   依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
@@ -402,4 +401,3 @@ NATURAL PREDICTION JOIN
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   
-

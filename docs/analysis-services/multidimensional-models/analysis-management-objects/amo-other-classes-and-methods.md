@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - AMO, backup and restore
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d201ea38ed360b35b5b19daf945cc11ffe45f849
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aca3ce3e5c98db0c60ca2ae03d7de15283b28f6b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他类和方法
   本部分包含公共类，并不特定于 olap 数据或数据挖掘，并且在管理或管理中的对象时，很有帮助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 它们包括诸如存储过程、跟踪、异常、备份和还原等功能。  
@@ -185,4 +183,3 @@ ms.lasthandoff: 09/01/2017
  [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

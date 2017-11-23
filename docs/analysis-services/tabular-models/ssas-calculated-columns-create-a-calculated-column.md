@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.as.daxref.CreataCalculatedColumn.f1
+f1_keywords: sql13.as.daxref.CreataCalculatedColumn.f1
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98b426c49d86a3bb54a5fdaa1736c2c92990ad29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 512b3ae1512c48d1d502d763505ee0609fd90608
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-calculated-column"></a>创建计算列
   通过计算列，可以将新数据添加到您的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 计算列中每行的值在您创建有效公式并单击 Enter 后会进行计算和填充。 然后可以将计算列添加到报告或分析应用程序中，就像添加任何其他数据列一样。 本主题说明如何使用模型设计器中的 DAX 编辑栏创建新的计算列。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 00394ba3e6a7e07e36ab28d0899c5ea1e6ff32ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-pages"></a>使用页
 使用**PageCount**属性来确定多少页的数据位于**记录集**对象。 *页*是一组记录其大小等于**PageSize**属性设置。 即使的最后一页是不完整，因为有较少的记录，比**PageSize**值，它将计为中的其他页**PageCount**值。 如果**记录集**对象不支持此属性， **PageCount**将为-1，则指示**PageCount**是无法确定。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  使用**AbsolutePage**属性来标识当前记录所在的页号。 同样，该提供程序必须支持相应的功能，此属性才可用。  
   
  **AbsolutePage**是基于 1 的并且等于 1 时的当前记录是中的第一个记录**记录集**。 设置此属性将移到特定页的第一个记录。 获取从页总数**PageCount**属性。
-

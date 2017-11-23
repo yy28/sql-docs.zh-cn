@@ -11,20 +11,18 @@ ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, about
+helpviewer_keywords: ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0d9da4cba3b4d90d82b3ac66ffec68a0e961ec40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX 数据对象 (ADO)
 
@@ -72,6 +70,5 @@ ms.lasthandoff: 09/09/2017
  免费帮助的 ADO 问题，请尝试发布到 ADO 公共新闻组。 通过 Microsoft 产品支持服务 (PSS) 支持专业人员介绍 ADO，以及其他经验丰富的 ADO 开发人员，将监视此新闻组。  
   
  可以在 Microsoft 帮助和支持网站上找到有关支持选项的详细信息。
-
 
 
