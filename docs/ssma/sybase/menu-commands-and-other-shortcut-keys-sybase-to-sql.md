@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06c2f7c3fb2ca9aecd8550dd4dcc45f0d2d5922c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b686d49eff27a252dd419d9dba90c15fe9fb1465
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>菜单命令和其他快捷键 (Sybase SQL)
 以下各节描述了用于访问菜单命令和其他 Sybase 应用程序的 SSMA 的各种对话框中使用键盘快捷方式的键盘快捷键。  
@@ -205,7 +203,6 @@ ms.lasthandoff: 08/02/2017
 |启动快速信息。|CTRL + SHIFT + 空间|  
 |请转到声明。|F12|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [键盘快捷方式 &#40;Sybase 到 SQL &#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   
-

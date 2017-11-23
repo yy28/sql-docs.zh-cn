@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pattern-value-arguments"></a>模式值自变量
 在目录中的某些参数函数，如*TableName*中的参数**SQLTables**，接受搜索模式。 这些自变量接受搜索模式如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;它们是如果此属性设置为 SQL_TRUE 不接受的搜索模式的标识符参数。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 2。*x*驱动程序不支持中的搜索模式*CatalogName*中的参数**SQLTables**。 ODBC 3*.x*驱动程序接受此参数中的搜索模式，如果 SQL_ATTR_ ODBC_VERSION 环境属性设置为 SQL_OV_ODBC3; 如果设置为 SQL_OV_ODBC2 不接受此参数中的搜索模式。  
   
  将 null 指针传递给搜索 pattern 参数不限制该自变量; 搜索它是空指针，并且搜索模式 %（任何字符） 是等效的。 但是，长度为零的搜索模式-即，指向长度为零的字符串的有效指针-匹配仅空字符串 ("")。
-

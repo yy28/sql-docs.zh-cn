@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>选择数据源或驱动程序
 此数据源或应用程序使用的驱动程序，有时应用程序中硬编码。 例如，编写由 MIS 部门要传输到另一个数据源的数据将包含这些数据源的名称的自定义应用程序-应用程序只需将不起作用的任何其他数据源。 另一个示例是垂直的应用程序，例如另一个用于订单条目。 此类应用程序始终使用同一数据源，已由应用程序已知的预定义的架构。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   **访问特定 DBMS 一次。** 例如，通过调用 ODBC 函数中检索数据的电子表格可能包含**驱动程序**关键字来标识特定的驱动程序。 驱动程序名称为到该驱动程序的任何用户有意义，因为无法在这些用户之间传递电子表格。 如果电子表格包含数据源名称，每个用户将必须创建相同的数据源，以使用电子表格。  
   
 -   **浏览到特定的驱动程序可访问的所有数据库的系统。** 有关详细信息，请参阅[使用 SQLBrowseConnect 连接](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)，本部分中更高版本。
-

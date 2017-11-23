@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - date_TSQL
 - date
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data types [SQL Server], date
 - date and time [SQL Server], date
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - date data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: bc3d838c81ea8d973cff90e2e57e4bfd8b443f69
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5c5d3a52b6163f375850b22e27baf9a858ef8ed8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +101,7 @@ ms.lasthandoff: 09/01/2017
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
-|**datetimeoffset**|YYYY MM DD hh: mm: [.nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh: mm:ss[.nnnnnnn] [+&#124;-] hh:mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
   
 ## <a name="converting-date-and-time-data"></a>将日期和时间数据转换
 当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 CAST 和 CONVERT 函数中使用的日期和时间数据的信息，请参阅[CAST 和 CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
@@ -291,4 +288,3 @@ SELECT
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-

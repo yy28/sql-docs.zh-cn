@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4f3b5a6b1a90d22889c4cd935abaf94f5172cfd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>配置设置参考 (Power Pivot for SharePoint)
   本主题提供有关 SharePoint 场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序使用的配置设置的参考文档。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

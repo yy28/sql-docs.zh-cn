@@ -1,5 +1,5 @@
 ---
-title: "+ = （字符串串联） (Transact SQL) |Microsoft 文档"
+title: "+ = （字符串串联和分配） (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - concatenate strings
 - string concatenation
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6c1716e014de1c99e4b3560d55674f0d82797c03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c557bcc1d3c2f314ce57e93701b11833f5a6fc6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="string-concatenation---equal-transact-sql"></a>字符串串联-等于 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-string-concatenation-assignment-transact-sql"></a>+ = （字符串串联赋值） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   将两个字符串串联起来并将一个字符串设置为运算结果。 例如，如果变量@x等于 Adventure，然后@x+ = Works 采用的原始值@x，将工作原理添加到字符串，并设置@x为该新值 'AdventureWorks'。  
   
@@ -132,8 +129,7 @@ GO
    
 ## <a name="see-also"></a>另请参阅  
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+ = &#40;添加等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ = &#40;添加分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40;字符串串联 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   
-

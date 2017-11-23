@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池可让应用程序使用的不需要为每种使用重新建立的连接池中的连接。 创建并放在池中的连接后，应用程序可以重复使用该连接，而不执行完整的连接过程。  
@@ -93,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  [连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft 数据访问组件中的池](http://go.microsoft.com/fwlink/?LinkId=120776)
-

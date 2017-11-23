@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7de8e08eafbe21fa6742aa228a9a19692c313a3c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9373c57ebf5b2688b13948a2a8af531f4f633d03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 全文筛选器后台程序启动器（“服务”选项卡）
-  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文将使用 SQL 全文筛选器后台程序启动器 (FDHOST Launcher) 服务。 如果使用全文搜索，则必须运行此服务。 有关筛选器后台程序主机进程的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“全文搜索体系结构”。  
+  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文将使用 SQL 全文筛选器后台程序启动器 (FDHOST Launcher) 服务。 如果使用全文搜索，则必须运行此服务。 有关筛选器后台程序主机进程的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“全文搜索体系结构”。  
   
  使用“SQL 全文筛选器后台程序启动器属性”的“属性”对话框上的“服务”选项卡，可以查看或指定以下选项。  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/02/2017
  显示 Windows 进程 ID。  
   
  **SQL 服务类型**  
- 显示用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装多种服务。  
+ 显示用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  指示此服务是正在运行、已停止还是已禁用。 **“...”**指示状态更改被挂起。  
   
   
-

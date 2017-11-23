@@ -2,32 +2,31 @@
 title: "创建数据库 （教程） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tutorial creating a database
+applies_to: SQL Server 2016
+helpviewer_keywords: tutorial creating a database
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 55a63275dc9e7d130614b5dece07b7f74edd53ca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6628dcf0ab38db441de9bd9324e69993e5759c38
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-1---creating-a-database"></a>课程 1-1-创建数据库
-与许多 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句一样，CREATE DATABASE 语句具有一个必需参数：数据库的名称。 CREATE DATABASE 还具有许多可选参数，如希望放置数据库文件的磁盘位置。 在您执行不带可选参数的 CREATE DATABASE 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用其中许多参数的默认值。 本教程使用的可选语法参数非常少。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]如许多[!INCLUDE[tsql](../includes/tsql-md.md)]语句，CREATE DATABASE 语句具有所需的参数： 数据库的名称。 CREATE DATABASE 还具有许多可选参数，如希望放置数据库文件的磁盘位置。 在您执行不带可选参数的 CREATE DATABASE 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用其中许多参数的默认值。 本教程使用的可选语法参数非常少。  
   
 ### <a name="to-create-a-database"></a>创建数据库  
   
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

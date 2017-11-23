@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da140d71612c135152befbf2527f016903a2d97a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ef30f1ff45422bbe034c1fe815753ebb7e2543df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-sybasetosql"></a>创建脚本文件 (SybaseToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  
   
-脚本文件可分为三部分组成，viz..,:  
+脚本文件可分为三部分组成，viz。。，：  
   
 1.  **配置：**使用户能够设置控制台应用程序的配置参数。  
   
@@ -411,4 +409,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
 [创建变量的值文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-

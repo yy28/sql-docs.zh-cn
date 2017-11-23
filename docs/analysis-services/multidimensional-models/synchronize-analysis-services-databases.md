@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
@@ -202,4 +201,3 @@ ms.lasthandoff: 09/01/2017
  [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   
-

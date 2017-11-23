@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 447d53ca968cd17441c359ca782dc212a3435095
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fe9cf1f66a181f252e644a6e610eb102776dc27d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>连接到 Sybase (SybaseToSQL)
 使用**连接到 Sybase**对话框中，若要连接到你想要迁移的 Sybase 自适应 Server Enterprise (ASE) 实例。  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/02/2017
   
 这是一个高级的模式选项。  
   
-

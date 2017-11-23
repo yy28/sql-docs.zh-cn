@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 306dbd7c423a167806b01d0e3f00d1eafbd1a140
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-conformance"></a>函数一致性
 下表指示这是定义完善的每个 ODBC 函数，一致性级别。  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [此函数 1] 重要的功能功能仅在更高版本的一致性级别均可用。  
   
  [2] 将某些属性设置为非默认值取决于一致性级别。 有关详细信息，请参阅下一部分中，[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。
-

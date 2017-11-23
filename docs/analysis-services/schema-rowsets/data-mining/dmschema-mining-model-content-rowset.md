@@ -13,25 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT
+apiname: DMSCHEMA_MINING_MODEL_CONTENT
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 110863a69d45ece85023e5dd3bbd8a554631ed43
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7d48b47cc0ded0541380a4a9997b1cab13bd21a0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 行集
   允许客户端应用程序浏览数据挖掘模型的内容。 客户端应用程序可使用本主题结尾处介绍的特殊树操作限制来浏览挖掘模型的内容。  
@@ -94,4 +90,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘架构行集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

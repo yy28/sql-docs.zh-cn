@@ -5,30 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b73a6710e7e3fdf6a73e365f55ded661d002b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9f7f7beee862cbb257ac4c6d117e11ecec0af5b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# 客户端协议 - TCP/IP 属性（“协议”选项卡）
+# <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>客户端协议 - TCP/IP 属性（“协议”选项卡）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，可使用“TCP/IP 属性”对话框的“协议”选项卡查看或指定下列选项。 若要连接到另一个端口，可以在 **“默认端口”** 框中键入端口号。 有关连接字符串的详细信息，请参阅 [使用 TCP IP 创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **“默认端口”**  
  指定 TCP/IP Net-library 在尝试连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目标实例时将使用的端口。 默认值端口为 1433。  
   
@@ -45,10 +43,9 @@ ms.lasthandoff: 08/02/2017
  **保持活动状态的间隔**  
  此参数（毫秒）确定重新传输 **KEEPALIVE** 直到接收到响应的间隔。 默认值为 1000 毫秒。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择网络协议](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
  [新别名 &#40;别名选项卡 &#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [<别名>属性（“别名”选项卡）](../../tools/configuration-manager/alias-properties-alias-tab.md)  
   
   
-

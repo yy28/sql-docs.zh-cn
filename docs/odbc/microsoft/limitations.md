@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05f969f344ef69777d0586c18aba76cf7630bfd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 034a4065615c3b0c298de110cd2501bd392a9704
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations"></a>限制
 本部分介绍 ODBC 桌面数据库驱动程序的以下主题方面的限制：  
@@ -35,7 +33,7 @@ ms.lasthandoff: 09/09/2017
 |---------------|----------------|-------------------------------|  
 |[聚合函数](../../odbc/microsoft/aggregate-function-limitations.md)|[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement-limitations.md)|[列名](../../odbc/microsoft/column-name-limitations.md)|  
 |[标量函数](../../odbc/microsoft/scalar-function-limitations.md)|[CALL 语句](../../odbc/microsoft/call-statement-limitations.md)|[数据类型](../../odbc/microsoft/data-type-limitations.md)|  
-|[Set 函数](../../odbc/microsoft/set-functions-limitations.md)|[创建索引语句](../../odbc/microsoft/create-index-statement-limitations.md)|[日期算术](../../odbc/microsoft/date-arithmetic-limitations.md)|  
+|[Set 函数](../../odbc/microsoft/set-functions-limitations.md)|[CREATE INDEX 语句](../../odbc/microsoft/create-index-statement-limitations.md)|[日期算术](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[排序](../../odbc/microsoft/sorting-limitations.md)|[创建 TABLE 语句](../../odbc/microsoft/create-table-statement-limitations.md)|[标识符](../../odbc/microsoft/identifiers-limitations.md)|  
 |[转换函数](../../odbc/microsoft/convert-function-limitations.md)|[DELETE 语句](../../odbc/microsoft/delete-statement-limitations.md)|[Index Name](../../odbc/microsoft/index-name-limitations.md)|  
 ||[DROP INDEX 语句](../../odbc/microsoft/drop-index-statement-limitations.md)|[参数化的查询](../../odbc/microsoft/parameterized-query-limitations.md)|  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/09/2017
 |||[其中子句](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[其中子句的当前](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[字符串](../../odbc/microsoft/string-limitations.md)|
-
