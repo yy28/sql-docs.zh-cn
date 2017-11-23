@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>编译嵌入式的 SQL 程序
 嵌入式的 SQL 程序包含的 SQL 和主机语言语句混合，因为它不能直接提交到主机语言使用的编译器。 相反，它是通过一个多步骤过程编译。 尽管此过程的不同产品产品，的步骤都大致相同的所有产品。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  由预编译器生成的数据库请求模块提交到一个特殊绑定实用程序。 此实用程序检查 SQL 语句、 分析、 验证，并优化，然后生成每个语句的访问计划。 结果是针对整个程序，表示嵌入的 SQL 语句的可执行文件版本的组合的访问计划。 绑定实用工具将计划存储在数据库中，通常将其分配将使用它的应用程序的名称。 是否此步骤将在编译时或运行的时依赖于 DBMS。  
   
  请注意，用于编译的嵌入式的 SQL 程序的步骤使用前面部分中所述的步骤非常密切关联[处理 SQL 语句](../../odbc/reference/processing-a-sql-statement.md)。 具体而言，请注意，预编译器分隔的 SQL 语句从主机语言代码，并且绑定实用程序分析并验证 SQL 语句和创建访问计划。 Dbms 其中第 5 步发生在编译时，在处理 SQL 语句的前四个步骤发生在编译时，最后一步 （执行） 发生时在运行时。 在这种 Dbms 非常快速地进行查询执行效果。
-

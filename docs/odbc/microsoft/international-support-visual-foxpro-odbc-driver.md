@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - collating sequences [ODBC]
 - Visual FoxPro ODBC driver [ODBC], international support
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06d85711cc234a8245e22b6b923b02641259eeef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>国际支持 （Visual FoxPro ODBC 驱动程序）
 Microsoft Visual FoxPro ODBC 驱动程序支持：  
@@ -49,4 +47,3 @@ Microsoft Visual FoxPro ODBC 驱动程序支持：
   
 ## <a name="sort-order"></a>排序顺序 (sort order)  
  排序顺序包含不同的排序规则*区域设置*的使您可以正确这些语言的数据进行排序。 Visual FoxPro 中当前的排序顺序确定字符表达式比较和索引或排序表的记录中显示在其中的顺序的结果。
-

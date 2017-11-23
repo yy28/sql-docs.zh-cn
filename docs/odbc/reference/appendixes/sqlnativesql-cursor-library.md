@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLNativeSql function [ODBC], Cursor Library
+helpviewer_keywords: SQLNativeSql function [ODBC], Cursor Library
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1541b22f68dabdc5f5425346fe83da7adf2ee83
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql （光标库）
 > [!IMPORTANT]  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  游标库错误地返回 SQLSTATE 34000 （无效的临时表名称），如果游标名称无效定位的 update 或 delete 语句中传递中*InStatementText*参数**SQLNativeSql**. **SQLNativeSql**不是要返回语法错误，仅在语句准备或执行时返回。
-

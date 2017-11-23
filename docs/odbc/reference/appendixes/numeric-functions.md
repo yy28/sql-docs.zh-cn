@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions"></a>数值函数
 下表介绍 ODBC 标量函数集中包含的数值函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_NUMERIC_FUNCTIONS，应用程序可以确定由驱动程序支持的数值的函数。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|返回的平方根*float_exp*。|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|返回的正切值*float_exp*，其中*float_exp*是以弧度表示的角度。|  
 |**截断 (** *numeric_exp*， *integer_exp***)** (ODBC 2.0)|返回*numeric_exp*截断为*integer_exp*放置小数点右侧。 如果*integer_exp*为负， *numeric_exp*截断为 &#124;*integer_exp*&#124; 小数点左侧的位数。|
-

@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3de186cec4b3299bbdc43cf2fe63c806c228cb66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 行集
   标识数据访问接口支持的（基本）数据类型。  
@@ -41,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  
-|**类型 _ 名称**|**DBTYPE_WSTR**|特定于访问接口的数据类型名称。|  
+|**TYPE_NAME**|**DBTYPE_WSTR**|特定于访问接口的数据类型名称。|  
 |**DATA_TYPE**|**DBTYPE_UI2**|数据类型的指示符。|  
 |**COLUMN_SIZE**|**DBTYPE_UI4**|非数值列的长度或以下参数，该参数或者是最大值或者是访问接口为此类型定义的长度。 对于字符数据，此为最大值或定义长度（以字符为单位）。 对于 DateTime 数据类型，本列为字符串表示形式的长度（假定精度允许的最大值为秒的小数形式）。<br /><br /> 如果数据类型为数值，则此为数据类型最大精度的上限。|  
 |**LITERAL_PREFIX**|**DBTYPE_WSTR**|用于在文本命令中作为此类型文字的前缀的一个或多个字符。|  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|如果类型指示符为小数点右侧允许的数字的最大数**DBTYPE_VARNUMERIC**， **DBTYPE_DECIMAL**，或**DBTYPE_NUMERIC**; 否则为N**U**LL。|  
 |**GUID**|**DBTYPE_GUID**|（专供将来使用）**GUID**的类型，如果将类型描述的类型库中。 否则为**NULL**。|  
 |**类型库**|**DBTYPE_WSTR**|（以备将来使用）如果类型在类型库中进行了说明，则为包含该类型说明的类型库。 否则，为 NULL。|  
-|**版本**|**DBTYPE_WSTR**|（以备将来使用）类型定义的版本。 访问接口可能希望控制类型定义的版本。 不同的访问接口可能使用不同的版本控制方案，例如时间戳或数字（整数或浮点数）。 **NULL**如果不支持。|  
+|**VERSION**|**DBTYPE_WSTR**|（以备将来使用）类型定义的版本。 访问接口可能希望控制类型定义的版本。 不同的访问接口可能使用不同的版本控制方案，例如时间戳或数字（整数或浮点数）。 **NULL**如果不支持。|  
 |**IS_LONG**|**DBTYPE_BOOL**|一个布尔值，指示数据类型是否是二进制大型对象块 (BLOB) 并具有非常长的数据。<br /><br /> **VARIANT_TRUE**指示数据类型是**BLOB**包含很长的数据; 很长的数据的定义是特定于提供程序。<br /><br /> **VARIANT_FALSE**指示数据类型是**BLOB** ，不包含很长的数据或不是**BLOB**。<br /><br /> 此值确定的设置**DBCOLUMNFLAGS_ISLONG**标志返回**GetColumnInfo**中**IColumnsInfo**和**GetParameterInfo**中**ICommandWithParameters**。|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|指示数据类型是否是最佳匹配的布尔值。<br /><br /> **VARIANT_TRUE**指示的数据类型是数据存储区中的所有数据类型与中的值指示的 OLE DB 数据类型之间的最佳匹配**DATA_TYPE**列。<br /><br /> **VARIANT_FALSE**指示数据类型不是最佳匹配。<br /><br /> 为每个在其中的行集的值**DATA_TYPE**列是相同的**BEST_MATCH**列设置为**VARIANT_TRUE**仅包含一行。|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|指示列的长度是否固定的布尔值。<br /><br /> **VARIANT_TRUE**指示的由数据定义语言 (DDL) 创建此类型的列将为固定长度。<br /><br /> **VARIANT_FALSE**指示 DDL 创建此类型的列将会的可变长度。<br /><br /> 如果此字段为**NULL**，并不知道该提供程序是否将映射具有固定长度或可变长度列此字段。|  
@@ -74,7 +70,6 @@ ms.lasthandoff: 09/01/2017
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
 ## <a name="see-also"></a>另请参阅  
- [OLE DB 架构行集合](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB 架构行集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: ed87490e0aedfd0953c8c77715ddc7e843aefd2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
 
@@ -84,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 为每个节点提供长度不超过 15 个字符的唯一名称。 默认情况下，在 Red Hat Linux 计算机名称是`localhost.localdomain`。 此默认名称可能不是唯一的，并且过长。 在新节点上设置计算机名称。 将计算机名称设置通过将其添加到`/etc/hosts`。 以下脚本，可以编辑`/etc/hosts`与`vi`。 
+3. 为每个节点提供长度不超过 15 个字符的唯一名称。 默认情况下，在 Red Hat Linux 计算机名称是`localhost.localdomain`。 此默认名称可能不是唯一的，并且过长。 在新节点上设置计算机名称。 将计算机名称设置通过将其添加到`/etc/hosts`。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -281,5 +280,4 @@ pacemaker: active/enabled
 ## <a name="next-steps"></a>后续步骤
 
 [为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

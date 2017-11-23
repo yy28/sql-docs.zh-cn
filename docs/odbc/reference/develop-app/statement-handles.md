@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dedc2ece9c73c0be4e9bbab61e231ab8e2d3060a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-handles"></a>语句句柄
 A*语句*非常轻松地视为 SQL 语句，如**选择\*从员工**。 但是，一个语句是远不止一个 SQL 语句，它包含所有与该 SQL 语句，如所有结果集由该语句创建和执行语句中使用的参数关联的信息。 语句不甚至不需要具有应用程序定义 SQL 语句。 例如，目录的如函数时**SQLTables**执行上一条语句，它会执行返回表名称的列表的预定义的 SQL 语句。  
@@ -46,4 +44,3 @@ A*语句*非常轻松地视为 SQL 语句，如**选择\*从员工**。 但是�
  在大多数 ODBC 函数使用语句句柄。 值得注意的是，它们用于在函数中绑定参数和结果集列 (**SQLBindParameter**和**SQLBindCol**)、 准备和执行语句 (**SQLPrepare****SQLExecute**，和**SQLExecDirect**)，检索元数据 (**SQLColAttribute**和**SQLDescribeCol**)，提取结果 (**SQLFetch**)，并检索诊断 (**SQLGetDiagField**和**SQLGetDiagRec**)。 它们也用在目录函数 (**SQLColumns**， **SQLTables**，依次类推) 和许多其他功能。  
   
  语句句柄分配与**SQLAllocHandle**并释放与**SQLFreeHandle**。
-

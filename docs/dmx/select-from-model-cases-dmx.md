@@ -17,23 +17,21 @@ f1_keywords:
 - SELECT
 - CASES
 - FROM
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SELECT FROM <model>.CASES statement
 - drillthrough [DMX]
 ms.assetid: d58acb47-aaa6-40b7-b8c4-6a6700fbc1dd
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1a02b3f56bd56fd7b86bbf3a998b7fdfd7316e9d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7f5ec287b2da5998748c19a5000a0a95b658f853
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。用例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +55,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *表达式列表*  
  一个逗号分隔的表达式列表。 该表达式可以包括列标识符、用户定义函数、UDF 以及 VBA 函数等。  
@@ -71,7 +69,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>注释  
  如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，为了保护敏感数据或个人信息，你应该构建你的数据源视图来屏蔽个人信息，并授予**AllowDrillthrough**必要时的挖掘结构权限。  
@@ -113,4 +111,3 @@ AND IsInNode('002')
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

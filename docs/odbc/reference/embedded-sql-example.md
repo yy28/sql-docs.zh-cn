@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>嵌入式的 SQL 的示例
 下面的代码是一个简单嵌入的 SQL 程序，用 C 语言编写程序演示很多，但不是全部的嵌入 SQL 技术。 程序提示用户输入订单号、 检索客户编号、 销售人员和订单的状态，并在屏幕上显示检索到的信息。  
@@ -81,4 +79,3 @@ bad_number:
 -   **错误处理**DBMS 向应用程序通过 SQL 通信区域，或 SQLCA 报告运行时错误。 在前面的代码示例中，第一个嵌入的 SQL 语句是包括 SQLCA。 这将告知预编译器在程序中包括 SQLCA 结构。 每当程序将处理返回的 DBMS 错误，这是必需的。 WHENEVER...GOTO 语句告知预编译器生成的分支到特定的标签错误发生的错误处理代码。  
   
 -   **单独选择**用于返回数据的语句是单独的 SELECT 语句; 也就是说，它返回单个行的数据。 因此，此代码示例不声明或不使用游标。
-

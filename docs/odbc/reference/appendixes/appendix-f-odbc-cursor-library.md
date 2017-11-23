@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], about cursor library
 - cursor library [ODBC]
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17e597eb8a071c0a6c08d6de6f1b8028efda4327
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f48f9e35793d197efc7a72600a122abc83484ed8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>附录 f: ODBC 游标库
 > [!IMPORTANT]  
@@ -48,11 +46,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [使用 ODBC 游标库](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
--   [正在执行的定位的 Update 和 Delete 语句](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
+-   [执行定位更新和删除语句](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
   
--   [光标库的代码示例](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
+-   [游标库代码示例](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
 -   [实现说明](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [ODBC 游标库错误代码](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
-

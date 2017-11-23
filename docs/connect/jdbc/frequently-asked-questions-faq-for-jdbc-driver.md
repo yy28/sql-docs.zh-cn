@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68c34ad2b9e444b39bf3ce8a5cfa33ad2dcd00c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508f8526ed13af3f7f92aa500b182e077f5bb23d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>常见问题 (FAQ) JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -119,4 +117,3 @@ JDBC 驱动程序属于开放源代码，可以在上找到源代码[GitHub](htt
 **可以通过验证的 FIPS 的算法驱动程序连接？** Microsoft JDBC 驱动程序不包含任何加密算法。 如果客户使用联邦信息处理标准 (FIPS) 认为可以接受的操作系统、应用程序和 JVM 算法，并将该驱动程序配置为使用这些算法，则该驱动程序将仅使用指定的算法进行通信。  
   
   
-

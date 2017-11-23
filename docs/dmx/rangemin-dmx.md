@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RangeMin
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMin function
+f1_keywords: RangeMin
+dev_langs: DMX
+helpviewer_keywords: RangeMin function
 ms.assetid: 64159bbe-7016-4f67-91d9-5c5f6ceb6c25
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8fe0cdfae5dbecbf72cd76846fddb446db06c942
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 03595b718b2381bd9cb8849d57c2e68400a6db82
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +46,7 @@ RangeMin(<scalar column reference>)
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **RangeMin**函数可在[SELECT DISTINCT FROM &#60; 模型 &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)查询。 与这种类型的查询一起使用时，标量列引用可以包含连续或离散的可预测列或输入列。  
   
  如果用于[SELECT FROM #60; 模型 &#62;预测联接 &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)、 **RangeMin**， **RangeMid**，和**RangeMax**函数将返回指定的存储桶的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**， **RangeMid**，和**RangeMax**函数描述预测指定的存储桶。 当**RangeMin**使用 PREDICTION JOIN 语句使用函数、 标量列引用只能包含离散、 可预测列。  
@@ -74,4 +70,3 @@ FROM [TM Decision Tree]
  [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)  
   
   
-

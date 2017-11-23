@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bcf939f68dd338e9672dfc4bc716b3d92ebda272
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e152abc34c459d82f451c5ded02d30f5fb76b23
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ select @x.exist('true()');
  下面的示例演示如何指定**exist （)**方法。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>示例：对 xml 类型变量指定 exist() 方法  
- 在下面的示例中，@x 是 **xml** 类型变量 (非类型化 xml) 和 @f 是一个整数类型变量，将存储返回的值 **exist （)** 方法。 **Exist （)**方法返回 True (1)，如果 XML 实例中存储的日期值是`2002-01-01`。  
+ 在下面的示例中，@x是**xml**类型变量 (非类型化 xml) 和@f是一个整数类型变量，将存储返回的值**exist （)**方法。 **Exist （)**方法返回 True (1)，如果 XML 实例中存储的日期值是`2002-01-01`。  
   
 ```  
 declare @x xml;  
@@ -169,4 +166,3 @@ WHERE CatalogDescription.exist('
  [XML 数据修改语言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

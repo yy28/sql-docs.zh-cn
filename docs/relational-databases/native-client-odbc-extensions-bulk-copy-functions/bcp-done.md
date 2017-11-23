@@ -1,0 +1,57 @@
+---
+title: "bcp_done |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: native-client-odbc-extensions-bulk-copy-functions
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: reference
+apiname: bcp_done
+apilocation: sqlncli11.dll
+apitype: DLLExport
+helpviewer_keywords: bcp_done function
+ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
+caps.latest.revision: "28"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: f00e496876a5ab595065d6f2d9dafc57a0f3d0ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
+---
+# <a name="bcpdone"></a>bcp_done
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+
+  结束大容量复制到程序变量从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用执行[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+DBINT bcp_done (  
+    HDBC hdbc);  
+```  
+  
+## <a name="arguments"></a>参数  
+ *hdbc*  
+ 为大容量复制启用 ODBC 连接句柄。  
+  
+## <a name="returns"></a>返回  
+ 永久保存到的最后一个调用后的行数[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)则为-1 发生错误。  
+  
+## <a name="remarks"></a>注释  
+ 调用**bcp_done**在最后一个调用后[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)或[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。 调用失败**bcp_done**后在错误中复制所有数据结果。  
+  
+## <a name="see-also"></a>另请参阅  
+ [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+  
+  

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>十进制数字
 *十进制数字*的 decimal 和 numeric 数据类型定义为最多的到数据的小数位数或小数点右边的位数。 对于近似的浮点数字列或参数，刻度是小数点的未定义的这是小数点的因为不固定右侧的位数。 为日期时间或间隔包含秒数部分的数据，十进制数字被指数据的秒部分在小数点右侧的数字个数。  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |所有日期时间类型|PRECISION|  
 |与秒组件的所有间隔类型|PRECISION|  
 |与任何秒组件的所有间隔类型|不适用|
-

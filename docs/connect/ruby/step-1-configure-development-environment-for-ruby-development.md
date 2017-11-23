@@ -8,22 +8,20 @@ ms.service:
 ms.component: ruby
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d722d1eed21162d5e076f5dfdfc3a2f18787f42e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步骤 1： 配置用于 Ruby 开发的开发环境
 你将需要配置你的开发环境满足先决条件才能开发应用程序使用的 SQL Server Ruby 驱动程序。    
@@ -116,4 +114,3 @@ c. 单击"确定"，和然后"提取"，提取文件。
 ```  
 > gem install tiny_tds  
 ```
-

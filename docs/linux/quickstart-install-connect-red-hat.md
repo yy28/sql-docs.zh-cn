@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
+ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安装 SQL Server 和 Red Hat 上创建数据库
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 10/21/2017
    sudo yum install -y mssql-server
    ```
 
-1. 运行包安装完成后**mssql conf 安装**并按照提示操作以设置 SA 密码，并选择你的版本。
+1. 软件包安装完成后，运行**mssql conf 安装**命令并按照操作提示设置 SA 密码，并选择你的版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -89,7 +88,7 @@ ms.lasthandoff: 10/21/2017
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下步骤安装 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
 
 1. 下载 Microsoft Red Hat 存储库配置文件。
 
@@ -109,7 +108,7 @@ ms.lasthandoff: 10/21/2017
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你**路径**环境变量。 这使您可以运行工具，而无需指定完整路径。 运行以下命令以修改**路径**登录会话和交互式/非-登录会话：
+1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**境变量。 这使您可以运行工具，而无需指定完整路径。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -118,7 +117,6 @@ ms.lasthandoff: 10/21/2017
    ```
 
 > [!TIP]
-> **Sqlcmd**是用于连接到 SQL Server 以运行查询并执行管理和开发任务只在一个工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-

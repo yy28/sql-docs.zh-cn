@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>获取长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 255 个字符的二进制数据。 此数据可能已经足够小，无法存储在单个缓冲区中，例如有几个千位字符的一部分描述。 但是，它可能太长，无法存储在内存中，如长文本文档或位图。 由于此类数据不能存储在单个缓冲区，可从使用部件中的驱动程序检索**SQLGetData**已提取的行中的其他数据之后。  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  某些驱动程序不会强制这些限制。 可互操作的应用程序应要么假定它们存在，或者确定哪些限制通过调用不会强制执行**SQLGetInfo** SQL_GETDATA_EXTENSIONS 选项。  
   
  如果应用程序不需要的字符或二进制数据列中的所有数据，它可以通过在执行该语句前设置 SQL_ATTR_MAX_LENGTH 语句属性来减少基于 DBMS 的驱动程序中的网络流量。 这会限制将返回的任何字符或二进制列的数据的字节数。 例如，假设某列包含长文本文档。 浏览包含此列的表的应用程序可能需要显示仅每个文档的第一页。 尽管可以驱动程序中模拟此语句属性，但是没有无需执行此操作。 具体而言，如果应用程序想要截断字符或二进制数据，它应将一个较小缓冲区绑定到的列**SQLBindCol**并允许截断的数据的驱动程序。
-

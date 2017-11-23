@@ -3,33 +3,36 @@ title: "Microsoft SQL Server 示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
+ms.prod: sample
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: a8aa94cd3d28fe8516588b0c7c25811319cb4c50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Microsoft SQL Server 示例
-此库包含示例数据库和 Microsoft SQL 产品包括 SQL Server 和 Azure SQL 数据库的其他示例。   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]此库包含示例数据库和 Microsoft SQL 产品包括 SQL Server 和 Azure SQL 数据库的其他示例。   
 
 ## <a name="new-wide-world-importers-sample-database"></a>新增功能！！ Wide World Importers 示例数据库
 
 我们很高兴地功能调用宽 World 导入程序 (WWI)，使用当前的功能、 工具和设计技术展示数据库设计开发新的示例数据库。 这些示例包括 OLTP 和 OLAP 数据库构建运行 SQL Server 2016 及更高版本。 
 
 ## <a name="documentation"></a>文档
-[WWI 文档](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)是在 MSDN 上。   
+[WWI 文档](./world-wide-importers/wide-world-importers-documentation.md)位于 Microsoft 文档。   
   
 
 ## <a name="sql-server-samples-repository"></a>SQL Server 示例存储库

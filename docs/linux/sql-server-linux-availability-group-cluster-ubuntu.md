@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -124,7 +123,7 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-以下命令将创建一个三节点群集。 在运行该脚本之前，将之间的值`**< ... >**`。 在主节点上运行以下命令。 
+以下命令将创建一个三节点群集。 在运行该脚本之前，替换 `**< ... >**` 之内的值。 在主节点上运行以下命令。 
 
    ```bash
    sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
@@ -234,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>后续步骤
 
 [运行 HA 可用性组](sql-server-linux-availability-group-failover-ha.md)
-
 

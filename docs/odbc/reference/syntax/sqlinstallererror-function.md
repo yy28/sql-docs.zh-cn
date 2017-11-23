@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLInstallerError
-apilocation:
-- sqlsrv32.dll
+apiname: SQLInstallerError
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLInstallerError
-helpviewer_keywords:
-- SQLInstallerError [ODBC]
+f1_keywords: SQLInstallerError
+helpviewer_keywords: SQLInstallerError [ODBC]
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 039de577f9c7d31bd3968494e1fc9113c041007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 函数
 **一致性**  
@@ -88,4 +82,3 @@ RETCODE SQLInstallerError(
  若要检索为函数调用的多个错误，应用程序调用**SQLInstallerError**多次。  
   
  当没有其他信息， **SQLInstallerError**返回 SQL_NO_DATA， *pfErrorCode*自变量是不确定， *pcbErrorMsg*参数等于 0，并*lpszErrorMsg*自变量包含单个 null 终止字符 (除非*cbErrorMsgMax*参数是否等于 0)。
-

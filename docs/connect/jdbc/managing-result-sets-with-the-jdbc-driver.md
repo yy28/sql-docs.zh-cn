@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cf61ff8794270ca5706284118c41c224bd5518f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e17e39f8a83313a60b269fed82631b80f07ffed5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>通过 JDBC 驱动程序管理结果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,10 +42,9 @@ ms.lasthandoff: 09/09/2017
 |-----------|-----------------|  
 |[了解游标类型](../../connect/jdbc/understanding-cursor-types.md)|描述了不同游标类型[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持。|  
 |[了解并发控制](../../connect/jdbc/understanding-concurrency-control.md)|说明 JDBC 驱动程序如何支持并发控制。|  
-|[了解行锁定](../../connect/jdbc/understanding-row-locking.md)|说明 JDBC 驱动程序如何支持行锁定。|  
+|[了解行锁](../../connect/jdbc/understanding-row-locking.md)|说明 JDBC 驱动程序如何支持行锁定。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

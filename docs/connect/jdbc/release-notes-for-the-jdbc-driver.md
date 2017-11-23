@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 驱动程序的发行说明
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -137,7 +135,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  对应用程序连接到的类型 4 Kerberos 集成身份验证的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 有关详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 (键入集成身份验证是中可用的 2 Kerberos [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 之前的版本。)  
   
- **访问扩展的事件日志中的诊断信息**  
+ **访问扩展事件日志中的诊断信息**  
   
  你可以访问服务器的扩展事件日志中的信息，了解连接失败的原因。 有关详细信息，请参阅[访问扩展事件日志中的诊断信息](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
@@ -154,7 +152,6 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  Microsoft JDBC Drivers 6.0、 4.2、 4.1 和 4.0 for SQL Server 应用程序不支持在 Itanium 的计算机上运行。  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,25 +18,23 @@ f1_keywords:
 - ^
 - bitwise
 - OR
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - OR operator
 - exclusive OR mathematical operations
 - bitwise exclusive OR (^)
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4923d20bdeb7e625157a47c0f70e685895c41550
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 635cdf87939b15fad65ba4cc103166bff2ba04d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^（位异或）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +64,7 @@ expression ^ expression
  **tinyint**如果输入的值为**tinyint**。  
   
 ## <a name="remarks"></a>注释  
-  **^** 按位运算符执行逻辑异按位或两个表达式，使每个相应位的两个表达式之间。 如果在输入表达式的正在被解析的对应位中，任意一位（但不是两个位）的值为 1，则结果中该位的值被设置为 1。 如果相对应的两个位的值都为 0 或者都为 1，那么结果中该位的值被清除为 0。  
+ **^** 按位运算符执行逻辑异按位或两个表达式，使每个相应位的两个表达式之间。 如果在输入表达式的正在被解析的对应位中，任意一位（但不是两个位）的值为 1，则结果中该位的值被设置为 1。 如果相对应的两个位的值都为 0 或者都为 1，那么结果中该位的值被清除为 0。  
   
  如果左侧和右侧表达式具有不同的整数数据类型 (例如，左侧*表达式*是**smallint**和右*表达式*是**int**)，较小的数据类型的自变量转换为更大的数据类型。 在这种情况下， **smallint***表达式*转换为**int**。  
   
@@ -118,10 +115,9 @@ GO
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [按位运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [^ = &#40;按位异或等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
+ [^ = &#40;按位异或赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
  [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

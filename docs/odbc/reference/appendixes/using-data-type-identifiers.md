@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7dbffa887dbe29c6bf1cd686537ebd6dbe6981fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f29b6e27866b5893c6875ee5c438d7c13a996e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-data-type-identifiers"></a>使用数据类型标识符
 应用程序通过两种方式使用数据类型标识符： 描述其缓冲区到该驱动程序，以及如何检索有关的结果集从驱动程序，以便他们可以确定哪种类型的 C 将缓冲区中要用于存储数据的元数据。 应用程序调用以下函数以执行这些任务：  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTypeInfo** -若要检索的列表支持的数据类型  
   
  描述符的 SQL_DESC_CONCISE_TYPE 字段中存储数据类型的标识符。 描述符函数**SQLSetDescField**和**SQLSetDescRec**可以与相应的类型用于执行前面的列表中列出的任务。 有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。
-

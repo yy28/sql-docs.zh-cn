@@ -2,9 +2,12 @@
 title: "创建挖掘模型 (DMX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,8 +17,7 @@ f1_keywords:
 - CREATE MINING MODEL
 - CREATE
 - CREATE_MINING_MODEL
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - RELATED TO column
 - mining models [Analysis Services], creating
@@ -24,19 +26,19 @@ helpviewer_keywords:
 - SESSION clause
 - CREATE MINING MODEL statement
 ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 279d4750f6264cbffb07e26a0d75317a1457cb56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8cdeac4e5da9e232959777278e5b5d0c45d7ac7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   在数据库中同时创建新的挖掘模型和挖掘结构。 通过在语句中定义新模型，或者通过使用预测模型标记语言 (PMML)，均可以创建模型。 第二种选择只适用于高级用户。  
   
@@ -70,12 +72,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  来检索当前的提供程序支持的算法的列表，只需使用[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看的当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
- 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *XML 字符串*  
  （仅适用于高级用户。）XML 编码的模型 (PMML)。 字符串必须以单引号 (') 引起。  
   
- **会话**子句，可以创建自动从服务器中删除时关闭连接或在会话超时的挖掘模型。 **会话**挖掘模型很有用，因为它们不需要用户是数据库管理员，并且它们仅使用磁盘空间，只要的连接已打开。  
+ **会话**子句，可以创建自动从服务器中删除时关闭连接或在会话超时的挖掘模型。**会话**挖掘模型很有用，因为它们不需要用户是数据库管理员，并且它们仅使用磁盘空间，只要的连接已打开。  
   
  **WITH DRILLTHROUGH**子句，对新的挖掘模型的钻取。 只有在创建模型时，才能启用钻取功能。 对于某些模型类型，在自定义查看器中浏览模型时需要进行钻取。 对于预测或使用 Microsoft 一般内容树查看器浏览，钻取则不是必需的。  
   
@@ -131,7 +133,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<预测 > 子句|Description|  
 |---------------------------|-----------------|  
-|**预测**|该列可以由模型预测，并且可以在输入事例中提供，以预测其他可预测列的值。|  
+|**PREDICT**|该列可以由模型预测，并且可以在输入事例中提供，以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  
   
 ### <a name="parameter-definition-list"></a>参数定义列表  
@@ -212,4 +214,3 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

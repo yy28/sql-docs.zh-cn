@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [ODBC], configuring
+helpviewer_keywords: data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42f60e7cd5673685a262467e54085a5d0b9ec068
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4609b8ec49a84b4eb5fb44c1be8c8a6a85ccc5f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configuring-data-sources"></a>配置数据源
 有关数据源信息存储在系统注册表中。 用户修改通过管理计划的数据源信息。 这可以是 ODBC 管理器、 ODBC 控制面板设备或由应用程序或驱动程序的开发人员编写的管理程序。  
@@ -38,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  本部分包含以下主题：  
   
 -   [配置组件](../../../odbc/reference/install/configuration-components.md)
-

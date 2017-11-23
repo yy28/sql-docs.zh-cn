@@ -1,0 +1,95 @@
+---
+title: "sp_help_fulltext_columns (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_help_fulltext_columns
+- sp_help_fulltext_columns_TSQL
+dev_langs: TSQL
+helpviewer_keywords: sp_help_fulltext_columns
+ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
+caps.latest.revision: "25"
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: e1cb2b03611ed1208716008e7178ce139e7d9c61
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  返回为全文索引指定的列。  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)改用目录视图。  
+  
+||  
+|-|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]   
+     [ , [ @column_name = ] 'column_name' ]  
+```  
+  
+## <a name="arguments"></a>参数  
+ [  **@table_name=**] *table_name*  
+ 为其请求全文索引信息的表的名称，由一部分或两部分组成。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索的全文检索列信息。  
+  
+ [  **@column_name=**] *column_name*  
+ 请求全文索引元数据的列的名称。 *column_name*是**sysname**，默认值为 NULL。 如果*column_name*省略或为 NULL，为每个全文索引列返回全文列信息*table_name*。 如果*table_name*还省略或为 NULL，在数据库中的所有表每个全文索引列返回的全文检索列信息。  
+  
+## <a name="return-code-values"></a>返回代码值  
+ 0（成功）或 1（失败）  
+  
+## <a name="result-sets"></a>结果集  
+  
+|列名|数据类型|Description|  
+|-----------------|---------------|-----------------|  
+|**TABLE_OWNER**|**sysname**|表所有者。 这是创建该表的数据库用户的名称。|  
+|**针对 TABLE_ID 所**|**int**|表的 ID。|  
+|**TABLE_NAME**|**sysname**|表的名称。|  
+|**FULLTEXT_COLUMN_NAME**|**sysname**|为索引指定的全文索引表中的列。|  
+|**FULLTEXT_COLID**|**int**|全文索引列的列 ID。|  
+|**FULLTEXT_BLOBTP_COLNAME**|**sysname**|全文索引表中指定全文索引列文档类型的列。 全文索引的列时，此值才适用**varbinary （max)**或**映像**列。|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|文档类型列的列 ID。 全文索引的列时，此值才适用**varbinary （max)**或**映像**列。|  
+|**FULLTEXT_LANGUAGE**|**sysname**|用于对列进行全文索引的语言。|  
+  
+## <a name="permissions"></a>Permissions  
+ 执行权限默认授予的成员**公共**角色。  
+  
+## <a name="examples"></a>示例  
+ 以下示例返回在 `Document` 表中为全文索引指定的列的信息。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_help_fulltext_columns 'Production.Document';  
+GO  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [COLUMNPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [sp_fulltext_column &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

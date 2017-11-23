@@ -8,34 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '*_TSQL'
 - '*'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiplication [SQL Server]
 - multiply operator (*)
 ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a78bf46a6fe16f415ac5290878947cf413182b6d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d86fa430d70b4e3f42f73f5a9f4e642034668401
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-multiply-transact-sql"></a>*（乘）(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-multiplication-transact-sql"></a>* （乘） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   两个表达式相乘（算术乘法运算符）。  
   
@@ -85,10 +82,9 @@ ORDER BY lastName ASC;
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#42; = &#40;乘等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
+ [&#42; = &#40;乘法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
  [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

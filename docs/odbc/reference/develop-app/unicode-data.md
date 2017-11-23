@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31122122cdb7a6f940dd1ba91eeb8caef8ac9d0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-data"></a>Unicode 数据
 SQL Unicode 数据类型用于描述驻留在本机上 DBMS 为 Unicode 的数据。 C Unicode 数据类型可用于允许应用程序将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以将数据转换从 Unicode C 类型 (SQL_C_WCHAR) 以使其带有 ANSI 驱动程序的函数。  
@@ -56,4 +54,3 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Unicode 驱动程序必须仍支持 ANSI 数据类型，包括 SQL_CHAR。 如果使用 Unicode 驱动程序的应用程序绑定到 SQL_CHAR，驱动程序管理器将不映射到 SQL_WCHAR SQL_CHAR 数据。 Unicode 驱动程序必须接受 SQL_CHAR 数据。  
   
  驱动程序管理器将驱动程序和 DSN 名称存储在 Unicode，并将它们映射到 ANSI，根据需要。 如果一个 Unicode 字符不能映射到一个 ANSI 字符 （如会出现在驱动程序和 DSN 名称中使用了不是计算机的本机代码页的代码页从字符），由默认字符 sup 表示无法转换的字符plied 系统。
-

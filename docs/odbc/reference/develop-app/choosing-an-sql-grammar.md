@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>选择的 SQL 语法
 可以在构造 SQL 语句时使用的第一个决定是要使用的语法。 除了可从各种标准的正文，如 Open Group、 ANSI 和 ISO，语法几乎每个 DBMS 供应商定义其自己的语法，其中每个会稍有不同于标准。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  因此，有两个选项的语法，用于： SQL 92 语法 （和转义序列 ODBC） 和特定 DBMS 的语法。 这二者当中，仅 SQL 92 语法是可互操作，因此所有的可互操作应用程序应使用它。 不是可互操作的应用程序可以使用的 SQL 92 语法或特定于 DBMS 的语法。 特定于 DBMS 的语法有两大优点： 它们可以利用任何功能不受 SQL 92，而且它们是稍更快，因为该驱动程序不需要对其进行修改。 可以通过设置 SQL_ATTR_NOSCAN 语句属性，它将停止搜索并替换转义序列的驱动程序部分强制执行后一种功能。  
   
  如果使用的 SQL 92 语法时，如何它通过调用修改由驱动程序对应用程序可以发现**SQLNativeSql**。 调试应用程序时，这是通常很有用。 **SQLNativeSql**接受 SQL 语句并将其返回后该驱动程序进行了修改。 由于此函数在核心接口一致性级别，它被支持的所有驱动程序。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,24 +17,22 @@ f1_keywords:
 - NOT
 - ~
 - Bitwise NOT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - NOT keyword
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6525306bfae5112e1d49a191c52cc0125dfe2e96
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cfe0944a896548bfd0e0e0612b832ac91417016
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="-bitwise-not-transact-sql"></a>~（位非）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/01/2017
  **位**如果输入的值为**位**。  
   
 ## <a name="remarks"></a>注释  
-  **~** 按位运算符执行按位逻辑不为*表达式*，反过来逐位。 如果*表达式*具有值为 0，结果集中的位将设置为 1; 否则，结果中的位将清值为 0。 换句话说，1 改成 0，而 0 则改成 1。  
+ **~** 按位运算符执行按位逻辑不为*表达式*，反过来逐位。 如果*表达式*具有值为 0，结果集中的位将设置为 1; 否则，结果中的位将清值为 0。 换句话说，1 改成 0，而 0 则改成 1。  
   
 > [!IMPORTANT]  
 >  执行任何种类的位运算时，位运算中使用的表达式的存储长度都是很重要的。 建议您在存储值时使用该相同的字节数。 例如，存储十进制值为 5 作为**tinyint**， **smallint**，或**int**产生存储具有不同数量的字节的值： **tinyint**使用 1 个字节; 存储数据**smallint**使用 2 个字节，存储数据和**int**使用 4 个字节存储数据。 因此，对执行按位运算**int**十进制值会产生不同结果与使用直接的二进制或十六进制的转换，尤其是当 **~**  (位非） 使用运算符。 位非运算可能针对长度较短的变量执行。 这种情况下，当长度较短的变量转换为较长的数据类型变量时，上 8 位中的位将不能设置为期望的值。 我们建议先将较小的数据类型变量转换为较大的数据类型，然后对结果执行非运算。  
@@ -122,6 +119,5 @@ FROM bitwise;
  [按位运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-
 
 

@@ -1,13 +1,14 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This 语句使多个数据库配置设置在**单个数据库**级别。 此语句是中均提供[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]并在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 这些设置是：  
   
@@ -135,7 +135,7 @@ PRIMARY
 
 IDENTITY_CACHE  **=**  { **ON** |关闭}  
 
-**适用于**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]（功能处于公共预览版中） 
+**适用于**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 启用或禁用在数据库级别的标识缓存。 默认值是**ON**。 标识缓存用于改进对具有标识列的表的插入性能。 若要避免的情况下服务器意外重新启动或故障转移到辅助服务器的位置中的标识列的值方面的差距，禁用 IDENTITY_CACHE 选项。 此选项是类似于现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，只不过它可以在数据库级别而不是仅在服务器级别设置。   
 
@@ -300,4 +300,3 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
  [服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
-

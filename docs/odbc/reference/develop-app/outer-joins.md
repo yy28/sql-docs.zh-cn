@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78f943033febb1f60ebfe420a10748af1f4260b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="outer-joins"></a>外部联接
 ODBC 支持 sql-92 左、 右和完全外部联接语法。 外部联接的转义序列是  
@@ -54,4 +52,3 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  若要确定数据源和驱动程序支持的外部联接的类型，应用程序调用**SQLGetInfo**带有 SQL_OJ_CAPABILITIES 标志。 可能支持的外部联接的类型左、 右、 完整，或嵌套的外部联接;外部联接中的列名中**ON**子句不具有其各自的表名称中的顺序相同**OUTER JOIN**子句; 结合外部联接; 和外部联接使用内部联接任何 ODBC 比较运算符。 如果 SQL_OJ_CAPABILITIES 信息类型返回 0，则不支持任何外部联接子句。
-

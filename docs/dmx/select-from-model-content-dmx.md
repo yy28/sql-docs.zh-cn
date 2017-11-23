@@ -17,23 +17,21 @@ f1_keywords:
 - SELECT
 - FROM
 - Content
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - SELECT FROM <model>.CONTENT statement
 ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7eaccd559a0898e489bf7befead782c7d3387245
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4a5f64e297e59d612be82f99e14f89df081be12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。内容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *表达式列表*  
  从内容架构行集派生的一组列，各列间以逗号分隔。  
@@ -60,12 +58,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  一个模型标识符。  
   
  *条件表达式*  
- 選擇性。 一个限制条件，用于限制从列列表返回的值。  
+ 可选。 一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  The **SELECT FROM** *\<model>***.内容**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 你可以使用**SELECT FROM\<模型 >。内容**语句以返回模型的 NODE_RULE 列中值。  
   
  下表列出了挖掘模型内容中包含的列。  
@@ -81,7 +79,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|与节点相对应的属性的名称。|  
 |NODE_NAME|节点的名称。|  
 |NODE_UNIQUE_NAME|节点在模型中的唯一名称。|  
-|NODE_TYPE|表示节点类型的整数。 。|  
+|NODE_TYPE|表示节点类型的整数。 实例时都提供 SQL Server 登录名。|  
 |NODE_GUID|节点 GUID。 如果没有 GUID，则为 NULL。|  
 |NODE_CAPTION|与节点关联的标签或标题， 主要用于显示目的。 如果不存在标题，则返回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|节点所具有的子节点的数目。|  
@@ -168,4 +166,3 @@ WHERE NODE_TYPE = 26
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

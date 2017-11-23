@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e70f226277b3ad4932756095a8ebc2f3121ee0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption 映射
 在应用程序调用**SQLSetStmtOption**到 ODBC 3*.x*驱动程序，将会调用  
@@ -64,4 +62,3 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  在应用程序调用**SQLSetStmtAttr**将 SQL_ATTR_USE_BOOKMARKS 设置为在 ODBC 3 SQL_UB_ON*.x*驱动程序，SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_FIXED。 SQL_UB_ON 是作为 SQL_UB_FIXED 相同的常量。 驱动程序管理器将通过 SQL_UB_FIXED 传递给该驱动程序。 ODBC 3 中已弃用 SQL_UB_FIXED*.x*，但 ODBC 3*.x*驱动程序必须实现它以使用 ODBC 2。*x*使用固定长度书签的应用程序。  
   
  ODBC 3*.x*驱动程序，驱动程序管理器不再将检查以查看*选项*SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。
-

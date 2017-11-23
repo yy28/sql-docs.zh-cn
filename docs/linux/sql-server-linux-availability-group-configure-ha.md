@@ -6,23 +6,28 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: On Demand
+ms.openlocfilehash: de348a584333eb113cca2e5eb052b21bbc3d1c54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>为在 Linux 上的 SQL Server 中配置 Alwayson 可用性组
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本文介绍如何创建 SQL 服务器始终在 Linux 上的高可用性的可用性组上。 有两种配置类型为可用性组。 A*高可用性*配置使用群集管理器提供业务连续性。 此配置还可以包括读取的横向扩展副本。 本文档说明如何创建可用性组实现高可用性配置。
+本文介绍如何创建 SQL 服务器始终在 Linux 上的高可用性的可用性组上。 有两种配置类型为可用性组。 A*高可用性*配置使用群集管理器提供业务连续性。 此配置还可以包括读取缩放副本。 本文档说明如何创建可用性组实现高可用性配置。
 
-你还可以创建*读取的横向扩展*不带群集管理器的可用性组。 此配置仅提供性能向外扩展的只读副本。它不提供高可用性。 若要创建一个读取的横向扩展可用性组，请参阅[在 Linux 上的 SQL server 读取横向扩展可用性组的配置](sql-server-linux-availability-group-configure-rs.md)。
+你还可以创建*读取缩放*不带群集管理器的可用性组。 此配置仅提供性能向外扩展的只读副本。它不提供高可用性。 若要创建读取缩放可用性组，请参阅[在 Linux 上的 SQL Server 的配置读取缩放可用性组](sql-server-linux-availability-group-configure-rs.md)。
 
 保证高可用性和数据保护的配置需要两个或三个同步提交副本。 具有三个同步副本的可用性组可自动恢复即使一个服务器不可用。 有关详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 
 
@@ -81,13 +86,19 @@ ms.lasthandoff: 08/28/2017
 * 设置主要和辅助副本`FAILOVER_MODE = EXTERNAL`。 
    指定与外部群集管理器，如 Pacemaker 交互副本。 
 
-下面的 TRANSACT-SQL 脚本创建名为的高可用性的可用性组`ag1`。 脚本将与可用性组副本`SEEDING_MODE = AUTOMATIC`。 此设置会导致 SQL Server 在每个辅助服务器上自动创建数据库。 为环境更新以下脚本。 替换`**<node1>**`，和`**<node2>**`具有承载副本的 SQL Server 实例的名称的值。 替换`**<5022>**`端口你设置镜像终结点的数据。 若要创建可用性组，请在承载主副本的 SQL Server 实例上运行以下 TRANSACT-SQL。
+下面的 TRANSACT-SQL 脚本创建名为的高可用性的可用性组`ag1`。 脚本将与可用性组副本`SEEDING_MODE = AUTOMATIC`。 此设置会导致 SQL Server 在每个辅助服务器上自动创建数据库。 为环境更新以下脚本。 替换`**<node1>**`， `**<node2>**`，或`**<node3>**`具有承载副本的 SQL Server 实例的名称的值。 替换`**<5022>**`端口你设置镜像终结点的数据。 若要创建可用性组，请在承载主副本的 SQL Server 实例上运行以下 TRANSACT-SQL。
 
 运行**只有一个**的以下脚本： 
 
-- 创建具有三个同步副本的可用性组。
+- [创建具有三个同步副本可用性组](#threeSynch)。
+- [创建具有两个同步副本和配置副本可用性组](#configOnly)
+- [创建具有三个同步副本可用性组](#readScale)。
 
-   ```Transact-SQL
+<a name="threeSynch"></a>
+
+- 创建具有三个同步副本可用性组
+
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
@@ -119,6 +130,33 @@ ms.lasthandoff: 08/28/2017
    >[!IMPORTANT]
    >运行上述脚本，以创建具有三个同步副本的可用性组后，不运行以下脚本：
 
+- 创建具有两个同步副本和配置副本的可用性组：
+
+   >[!IMPORTANT]
+   >此体系结构允许任何版本的 SQL Server 以承载第三个副本。 例如，可以在 SQL Server Enterprise Edition 上承载的第三个副本。 在 Enterprise Edition 上是唯一有效的终结点类型`WITNESS`。 
+
+   ```SQL
+   CREATE AVAILABILITY GROUP [ag1] 
+      WITH (CLUSTER_TYPE = EXTERNAL) 
+      FOR REPLICA ON 
+       N'**<node1>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node2>**' WITH (  
+          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node3>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+          AVAILABILITY_MODE = CONFIGURATION_ONLY  
+          );
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+   ```
 <a name="readScale"></a>
 
 - 创建具有两个同步副本可用性组
@@ -126,9 +164,9 @@ ms.lasthandoff: 08/28/2017
    包括与同步的可用性模式的两个副本。 例如，以下脚本创建一个名为的可用性组`ag1`。 `node1`和`node2`驻留在同步模式下，使用自动种子设定和自动故障转移的副本。
 
    >[!IMPORTANT]
-   >仅运行以下脚本来创建具有两个同步副本的可用性组。 如果你运行上述脚本，则不运行以下脚本。 
+   >仅运行以下脚本来创建具有两个同步副本的可用性组。 如果在运行前面编写的脚本，则不运行以下脚本。 
 
-   ```Transact-SQL
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
       WITH (CLUSTER_TYPE = EXTERNAL)
       FOR REPLICA ON
@@ -164,9 +202,9 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->创建可用性组后，你必须使用群集技术，如 Pacemaker 以实现高可用性配置集成。 使用可用性组，从开始读取的横向扩展配置[!INCLUDE [SQL Server 版本](..\includes\sssqlv14-md.md)]，不需要设置群集。
+>创建可用性组后，你必须使用群集技术，如 Pacemaker 以实现高可用性配置集成。 有关使用可用性组、 开头读取扩展配置[!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)]，不需要设置群集。
 
-如果遵循本文档中的步骤，则需要尚未群集的可用性组。 下一步是添加该群集。 此配置可用于读取横向扩展/负载平衡方案，它并不完整的高可用性。 对于高可用性，你需要为群集资源添加到可用性组。 请参阅[下一步行动](#next-steps)有关的说明。 
+如果遵循本文档中的步骤，则需要尚未群集的可用性组。 下一步是添加该群集。 此配置可用于读取-缩放/负载平衡方案，它并不完整的高可用性。 对于高可用性，你需要为群集资源添加到可用性组。 请参阅[下一步行动](#next-steps)有关的说明。 
 
 ## <a name="notes"></a>说明
 
@@ -184,4 +222,3 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [为 SQL Server 可用性组群集资源配置 SUSE Linux Enterprise Server 群集](sql-server-linux-availability-group-cluster-sles.md)
 
 [配置 SQL Server 可用性组群集资源的 Ubuntu 群集](sql-server-linux-availability-group-cluster-ubuntu.md)
-

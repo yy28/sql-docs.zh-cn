@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7c0d47b3ef5dc4bb01cbc667299902aa283eb039
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 008db0dabc1b0488daaef63945442b666ee02fa1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>始终加密的 JDBC 驱动程序的 API 参考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -201,4 +199,3 @@ Public enum  SQLServerStatementColumnEncryptionSetting
  [对 JDBC 驱动程序使用始终加密](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
   
-

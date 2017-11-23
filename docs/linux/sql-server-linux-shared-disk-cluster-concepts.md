@@ -15,14 +15,12 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 36c5b7ccd0cc8c3a56dca700469fb4fd05fa2871
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集实例-在 Linux 上的 SQL Server
 
 此文章介绍了在 Linux 上的 SQL Server 故障转移群集实例 (FCI) 与相关的概念。 
@@ -92,4 +90,3 @@ Pacemaker 群集只能有最多 16 节点当 Corosync 涉及到，因此单个 F
 - [配置故障转移群集实例-iSCSI-在 Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [配置 NFS-在 Linux 上的 SQL Server 的故障转移群集实例-](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [配置 SMB-在 Linux 上的 SQL Server 的故障转移群集实例-](sql-server-linux-shared-disk-cluster-configure-smb.md)
-
