@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端到端数据科学演练
 
@@ -45,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |主题列表|估计时间|
 |-|------------------------------|
 |[准备 R 演练数据](../tutorials/walkthrough-prepare-the-data.md) <br /><br />获取用于生成模型的数据。 下载一个公共数据集并将其加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中。|30 分钟|
-|[了解如何使用 SQL 数据](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />了解使用 SQL 工具和摘要数据。|10 分钟。|
-|[使用 R 的数据汇总](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />使用 R 来浏览数据并生成摘要。|10 分钟。|
+|[使用 SQL 探索数据](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />了解使用 SQL 工具和摘要数据。|10 分钟。|
+|[使用 R 汇总数据](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />使用 R 来浏览数据并生成摘要。|10 分钟。|
 |[创建在 SQL Server 中使用 R 的图形](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />通过混合使用 R 和 SQL 在本地和远程计算上下文中创建绘图。|10 分钟。|
 |[创建使用 R 和 T-SQL 数据功能）](../tutorials/walkthrough-create-data-features.md) <br /><br />在 R 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用自定义函数执行特征工程。 针对特征化任务，比较 R 和 T-SQL 的性能。 |10 分钟。|
 |[生成 R 模型并将其保存在 SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />训练和优化预测模型。 评估模型性能。 本演练创建分类模型。 使用 R 绘制模型的准确性。|15 分钟|
@@ -71,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>下一课
 
 [准备 R 演练数据](../tutorials/walkthrough-prepare-the-data.md)
-

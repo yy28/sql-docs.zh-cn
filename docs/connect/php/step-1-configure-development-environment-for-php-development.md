@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7bf34beaff0317b6e99367b0ee79d2c914cb8cc0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b7b0b338d6365108669c545833ee7e8552aea9b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-php-development"></a>步骤 1：配置用于 PHP 开发的开发环境
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 
 
 *   配置加载 PHP 驱动程序和配置 web 服务器托管 PHP 应用程序，此处所述： [PHP Linux 和 Mac 驱动程序安装教程](../../connect/php/installation-tutorial-linux-mac.md)
-

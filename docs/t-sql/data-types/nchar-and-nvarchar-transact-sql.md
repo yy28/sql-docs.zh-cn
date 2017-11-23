@@ -3,32 +3,32 @@ title: "nchar 和 nvarchar (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 字符数据类型都是固定长度**nchar**，或可变长度**nvarchar**，Unicode 数据并使用 UNICODE ucs-2 字符组。
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 固定长度的 Unicode 字符串数据。 *n*定义的字符串长度，并且必须是介于 1 与 4000 之间的值。 存储大小是两次 *n* 字节。 当排序规则代码页使用双字节字符时，存储大小仍是 *n* 字节。 具体取决于字符串的存储大小 *n* 字节可以是指定的值小于 *n* 。 ISO 同义词**nchar**是**国家/地区 char**和**国家字符集**...
   
 **nvarchar** [(n |**最大**)]  
-可变长度的 Unicode 字符串数据。 *n*定义的字符串长度和可以是从 1 到 4000 的值。 **最大**指示最大存储大小为 2 ^31-1 个字节 (2 GB)。 存储大小（以字节为单位）是所输入数据实际长度的两倍 + 2 个字节。 ISO 同义词**nvarchar**是**不同国家/地区 char**和**国家字符集不同**。
+可变长度的 Unicode 字符串数据。 *n*定义的字符串长度和可以是从 1 到 4000 的值。 **最大**指示最大存储大小为 2 ^31-1 个字符 (2 GB)。 存储大小（以字节为单位）是所输入数据实际长度的两倍 + 2 个字节。 ISO 同义词**nvarchar**是**不同国家/地区 char**和**国家字符集不同**。
   
 ## <a name="remarks"></a>注释  
 当 *n* 未指定数据定义或变量声明语句中的默认长度为 1。 当 *n* 未指定使用 CAST 函数的默认长度为 30。
@@ -103,4 +103,3 @@ Test data       More test data
 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

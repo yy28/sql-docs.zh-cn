@@ -14,10 +14,10 @@ SQL Server 2017 CTP 1.4 在 `sys.availability_groups` 中添加了 `sequence_num
 
 - 响应预升级操作所需的副本数为 3 - 1 = 2。 因此需准备 2 个副本来触发故障转移。 这意味着，主要副本服务中断的情况下，如果其中一个次要副本无响应，仅另一个次要副本响应预升级操作，则资源代理无法确保进行响应的次要副本具有最高的 sequence_number，从而不会触发故障转移。
 
-用户可选择替代默认行为，不采用上述设置，而将可用性组资源配置为不自动设置 `REQUIRED_COPIES_TO_COMMIT`。
+用户可选择替代默认行为，并不采取上述设置，而将可用性组资源配置为不自动设置 `REQUIRED_COPIES_TO_COMMIT`。
 
 >[!IMPORTANT]
->`REQUIRED_COPIES_TO_COMMIT` 为 0 时有数据丢失风险。 在主要副本中断的情况下，资源代理不会自动触发故障转移。 用户必须决定是等待主要副本恢复还是手动执行故障转移。
+>`REQUIRED_COPIES_TO_COMMIT` 为 0 时没有数据丢失风险。 在主要副本中断的情况下，资源代理不会自动触发故障转移。 用户必须决定是等待主要副本恢复还是手动执行故障转移。
 
 若要将 `REQUIRED_COPIES_TO_COMMIT` 设置为 0，请运行：
 

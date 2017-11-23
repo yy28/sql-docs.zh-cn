@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-data-types"></a>SQL 数据类型
 每个 DBMS 定义其自己的 SQL 类型。 每个 ODBC 驱动程序公开仅关联的 DBMS 定义这些 SQL 数据类型。 有关如何将驱动程序映射信息 DBMS SQL 类型到 ODBC 定义的 SQL 类型标识符和驱动程序将 DBMS SQL 类型映射到其自己的特定于驱动程序的 SQL 类型标识符如何通过调用返回**SQLGetTypeInfo**。 驱动程序也会返回 SQL 数据类型变为描述列和通过对的调用的参数的数据类型时**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -104,4 +102,3 @@ _INTERVAL_MINUTE_TO_SECOND [7]|间隔分钟 (*p*) 到第二个 (*q*)|分钟数/�
  本部分提供下面的示例。  
   
 -   [示例 SQLGetTypeInfo 结果集](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
-

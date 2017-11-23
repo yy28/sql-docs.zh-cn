@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01fbfab5df7b53db5e613534b12c12a33e425df8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9dbb4a0367eede2ada514714ccde35446c3443db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>安装适用于 DB2 SSMA (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for DB2 包含的客户端应用程序将用于执行到 DB2 迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和 Azure SQL 数据库。 它还包含支持数据迁移与 DB2 系统函数的使用已迁移数据库中的扩展包。  
@@ -41,7 +39,6 @@ ms.lasthandoff: 08/02/2017
 |[在 SQL Server &#40; DB2ToSQL &#41; 上安装 SSMA 组件](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|提供有关的信息和说明的实例上安装的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |[为 DB2 组件 &#40; DB2ToSQL &#41; 删除 SSMA](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|提供用于卸载客户端的说明程序和扩展包。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将 DB2 数据库迁移到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

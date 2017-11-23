@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 429751190eb204503600a09c2ca8aa7ca15713b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
   可以采用以下三种方法之一安装 Distributed Replay：  
@@ -66,7 +64,7 @@ ms.lasthandoff: 08/02/2017
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
-     \- OR-  
+     \- 或 -  
   
      \<共享功能目录 > \Tools\\（用户提供的替代共享的功能目录）  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 08/02/2017
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- OR-  
+     \- 或 -  
   
      \<共享功能目录 (x86) > \Tools\\（用户提供的替代共享的功能 (x86) 目录）  
   
@@ -221,10 +219,9 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

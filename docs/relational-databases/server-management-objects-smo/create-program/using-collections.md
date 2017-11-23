@@ -1,0 +1,110 @@
+---
+title: "使用集合 |Microsoft 文档"
+ms.custom: 
+ms.date: 08/06/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: smo
+ms.reviewer: 
+ms.suite: sql
+ms.technology: docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Management Objects, collections
+- SMO [SQL Server], collections
+- collections [SMO]
+ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
+caps.latest.revision: "49"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: fbe0ff814ef0457993feedba45b59cdfb958288e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
+---
+# <a name="using-collections"></a>使用集合
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]集合是从相同的对象类构造的并共享同一父对象的对象的列表。 集合对象始终包含对象类型的名称并具有 Collection 后缀。 例如，若要访问指定表中的列，请使用 <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection> 对象类型。 它包含所有属于同一 <xref:Microsoft.SqlServer.Management.Smo.Column> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象。  
+  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **为...每个**语句或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**语句可用于循环访问集合的每个成员。  
+  
+## <a name="examples"></a>示例  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+  
+## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>在 Visual Basic 中使用集合来引用对象  
+ 此代码示例演示如何通过使用设置列属性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>属性。 这些属性表示集合，当这些属性与指定对象名称的参数一起使用时可用来标识特定对象。 名称和架构所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合对象属性。  
+  
+```VBNET
+'Connect to the local, default instance of SQL Server.
+Dim srv As Server
+srv = New Server
+'Modify a property using the Databases, Tables, and Columns collections to reference a column.
+srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("ModifiedDate").Nullable = True
+'Call the Alter method to make the change on the instance of SQL Server.
+srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("ModifiedDate").Alter()
+```
+  
+## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>在 Visual C# 中使用集合来引用对象  
+ 此代码示例演示如何通过使用设置列属性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>属性。 这些属性表示集合，当这些属性与指定对象名称的参数一起使用时可用来标识特定对象。 名称和架构所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合对象属性。  
+  
+```csharp  
+{   
+//Connect to the local, default instance of SQL Server.   
+Server srv;   
+srv = new Server();   
+//Modify a property using the Databases, Tables, and Columns collections to reference a column.   
+srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName").Nullable = true;   
+//Call the Alter method to make the change on the instance of SQL Server.   
+srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName").Alter();   
+}  
+```  
+  
+## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>在 Visual Basic 中遍历集合中的成员  
+ 此代码示例循环访问<xref:Microsoft.AnalysisServices.Server.Databases%2A>集合属性，并显示所有数据库连接到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  
+```VBNET
+'Connect to the local, default instance of SQL Server.
+Dim srv As Server
+srv = New Server
+Dim count As Integer
+Dim total As Integer
+'Iterate through the databases and call the GetActiveDBConnectionCount method.
+Dim db As Database
+For Each db In srv.Databases
+    count = srv.GetActiveDBConnectionCount(db.Name)
+    total = total + count
+    'Display the number of connections for each database.
+    Console.WriteLine(count & " connections on " & db.Name)
+Next
+'Display the total number of connections on the instance of SQL Server.
+Console.WriteLine("Total connections =" & total)
+```
+  
+## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>在 Visual C# 中遍历集合中的成员  
+ 此代码示例循环访问<xref:Microsoft.AnalysisServices.Server.Databases%2A>集合属性，并显示所有数据库连接到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  
+```csharp  
+//Connect to the local, default instance of SQL Server.   
+{   
+Server srv = default(Server);   
+srv = new Server();   
+int count = 0;   
+int total = 0;   
+//Iterate through the databases and call the GetActiveDBConnectionCount method.   
+Database db = default(Database);   
+foreach ( db in srv.Databases) {   
+  count = srv.GetActiveDBConnectionCount(db.Name);   
+  total = total + count;   
+  //Display the number of connections for each database.   
+  Console.WriteLine(count + " connections on " + db.Name);   
+}   
+//Display the total number of connections on the instance of SQL Server.   
+Console.WriteLine("Total connections =" + total);   
+}   
+```  
+  
+  

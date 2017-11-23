@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - 32-bit applications with 32-bit drivers [ODBC]
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7e3b907c36e065440a9c07b93177d57745a38957
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 802b09dd83ce3671edbff33ff2be447c6279621f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>16 位和 32 位应用程序使用 32 位驱动程序
 > [!IMPORTANT]  
@@ -63,7 +61,6 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [16 位应用程序使用 32 位驱动程序](../../odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md)  
+-   [配合使用 16 位应用程序和 32 位驱动程序](../../odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md)  
   
--   [使用 32 位驱动程序的 32 位应用程序](../../odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md)
-
+-   [配合使用 32 位应用程序和 32 位驱动程序](../../odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md)

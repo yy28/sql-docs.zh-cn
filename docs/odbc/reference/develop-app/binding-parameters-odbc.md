@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-odbc"></a>绑定参数 ODBC
 SQL 语句中的每个参数必须为关联，或*绑定，*到应用程序之前执行的语句中的变量。 时应用程序将变量绑定到参数，它描述了该变量-地址、 C 数据类型和等等 — 于驱动程序。 它还描述参数本身-SQL 数据类型、 精度和等等。 该驱动程序将此信息存储在它维护适用于该语句，并使用的信息来从变量检索值时执行的语句的结构。  
@@ -52,9 +49,8 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
   
 -   [绑定参数标记](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   
--   [绑定参数按名称 （命名参数）](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
+-   [按名称绑定参数（命名参数）](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
   
--   [参数绑定偏移量](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
+-   [参数绑定偏移](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
 -   [描述参数](../../../odbc/reference/develop-app/describing-parameters.md)
-

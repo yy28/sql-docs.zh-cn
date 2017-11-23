@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions-odbc"></a>ODBC 事务
 A*事务*是工作的单元，都将作为一个原子操作; 也就是说，此操作成功，要么作为一个整体失败。 例如，考虑将资金从一个银行帐户转移到另一个。 这涉及到两个步骤： 从第一个帐户中取出 money 和存储在第二个。 很重要，这两个步骤都成功;不是可接受的一个步骤，若要成功执行，另一个失败。 支持事务的数据库就能够保证这一点。  
@@ -46,4 +44,3 @@ A*事务*是工作的单元，都将作为一个原子操作; 也就是说，此
 -   [事务隔离](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [并发控制](../../../odbc/reference/develop-app/concurrency-control.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8821ebd2fb20cf32c6b1921c36e45404421f415b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>与中间的参数化的命令计算命令
 典型的参数化的形状追加命令具有创建父级的子句**记录集**使用一个查询命令和创建子级的另一个子句**记录集**使用参数化的查询命令-即包含参数占位符的命令 (一个问号"？")。 调整所生成**记录集**具有两个级别，在其中父占用较高级别，且子占用较低的级别。  
@@ -38,5 +36,4 @@ ms.lasthandoff: 09/09/2017
  典型使用此功能是调用的聚合函数和分组功能 shapeCOMPUTE 命令创建干扰**记录集**分析信息有关子对象**记录集**. 此外，由于这是参数化的形状命令，每次父级的章节列访问时，新的子级**记录集**可能检索。 因为从子派生中间层，它们还将重新计算。  
   
 ## <a name="see-also"></a>另请参阅  
- [调整示例数据](../../../ado/guide/data/data-shaping-example.md)
-
+ [数据整理示例](../../../ado/guide/data/data-shaping-example.md)

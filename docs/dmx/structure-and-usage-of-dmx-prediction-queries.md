@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - empty prediction joins [DMX]
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 524d925504e7615d21f3e5e365418feebcee5380
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fca2ff8ef1e6fbe496d412a82c1d2694005ffe6b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 预测查询的结构和用法
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 -   **选择 [平展]**  
   
--   **返回页首**  
+-   **TOP**  
   
 -   **从***\<模型 >***PREDICTION JOIN**   
   
 -   **ON**  
   
--   **其中**  
+-   **WHERE**  
   
 -   **ORDER BY**  
   
@@ -101,4 +99,3 @@ ms.lasthandoff: 08/02/2017
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

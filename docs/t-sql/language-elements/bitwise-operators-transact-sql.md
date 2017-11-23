@@ -8,28 +8,25 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], bitwise
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 5d04924a82578040f801864bb68905feebc53e94
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="bitwise-operators-transact-sql"></a>位运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,13 +44,13 @@ ms.lasthandoff: 09/08/2017
 |NOT  <br> 反转位的每个位置处的位值。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 请参阅以下主题：   
-* [& （位与）](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = （位与等于）](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124;（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = （位或等于）](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ (位异或)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = （位异或等于）](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ （位非）](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+* [& &#40;按位 AND &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [& = &#40;按位与赋值 &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124;&#40;按位 OR 运算符 &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124; = &#40;按位 OR 赋值 &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40;按位异或 &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^ = &#40;按位异或赋值 &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40;位非 &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
  按位运算符的操作数可以是任何一种整数或二进制字符串数据类型类别的数据类型 (除**映像**数据类型)，只不过两个操作数不能为任何一种二进制字符串数据类型数据类型类别。 下表显示所支持的操作数数据类型。  
   
@@ -68,7 +65,6 @@ ms.lasthandoff: 09/08/2017
   
 ## <a name="see-also"></a>另请参阅  
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
+ [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
+ [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
-  
-

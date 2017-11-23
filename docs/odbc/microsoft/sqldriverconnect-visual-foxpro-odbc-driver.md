@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4233d9785ae420a2634db0e97d226bc1c2abbc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 363a727cd209f7ed3a5994f353f1e21922fe00ca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -57,4 +54,3 @@ ms.lasthandoff: 09/09/2017
  如果未指定数据源名称，驱动程序管理器会提示用户输入的信息 (具体取决于的设置*fDriverCompletion*自变量)，然后继续。 如果需要详细信息，Visual FoxPro ODBC 驱动程序将显示提示对话框。  
   
  有关详细信息，请参阅[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)中*ODBC 程序员参考*。
-

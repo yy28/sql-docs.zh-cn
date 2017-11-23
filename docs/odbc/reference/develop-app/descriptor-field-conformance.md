@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b25100a54d5a98a9db06bb26be4a3e1a6871b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-field-conformance"></a>描述符字段一致性
 下表指示每个 ODBC 描述符标头字段，这是定义完善的一致性级别。  
@@ -84,4 +82,3 @@ ms.lasthandoff: 09/09/2017
  [1] 支持为这些记录的字段是必需的仅当该驱动程序支持的适用的数据类型。  
   
  [2] 的核心级别的一致性，驱动程序必须支持 SQL_PARAM_INPUT。 为级别 2 接口符合规则，该驱动程序还必须支持 SQL_PARAM_INPUT_OUTPUT 和 SQL_PARAM_OUTPUT。
-

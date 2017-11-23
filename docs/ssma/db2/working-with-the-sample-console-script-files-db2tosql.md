@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20583ed71781b093b3195d8dc1f192258a5b569a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 08/02/2017
   
     生成报表的详细信息，请参阅[生成报表 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-    **说明：**  
+    **注意：**  
   
     确保变量值文件命令行自变量传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/02/2017
 [创建服务器连接文件 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
 [生成报表 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)  
   
-

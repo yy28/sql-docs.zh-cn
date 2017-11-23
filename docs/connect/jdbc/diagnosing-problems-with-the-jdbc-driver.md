@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 29345e44e8a99a5bbacf3260a739d27c579b096c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be682fd3dfd51814aac7be3d792c4d2350e9171c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>诊断与 JDBC 驱动程序有关的问题
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,11 +37,10 @@ ms.lasthandoff: 09/09/2017
 |[处理错误](../../connect/jdbc/handling-errors.md)|描述如何处理从返回的错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |[获取驱动程序版本](../../connect/jdbc/getting-the-driver-version.md)|介绍如何确定安装 JDBC Driver 的哪个版本。|  
 |[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)|介绍如何在使用 JDBC 驱动程序时启用跟踪。|  
-|[连接疑难解答](../../connect/jdbc/troubleshooting-connectivity.md)|介绍如何排除数据库连接问题。|  
-|[访问扩展的事件日志中的诊断信息](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|介绍如何使用服务器扩展事件日志中的信息来了解连接失败数。|  
+|[连接性疑难解答](../../connect/jdbc/troubleshooting-connectivity.md)|介绍如何排除数据库连接问题。|  
+|[访问扩展事件日志中的诊断信息](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|介绍如何使用服务器扩展事件日志中的信息来了解连接失败数。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

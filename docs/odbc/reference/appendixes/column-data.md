@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7694a2646f8cb62824991d37a01cd49f5291033
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-data"></a>列数据
 > [!IMPORTANT]  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  游标库不会更新其缓存的列，如果 **StrLen_or_IndPtr*在相应的行集缓冲区是 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果。  
   
  当它将更新一个列、 数据源空白填充定长字符数据和根据需要的零填充固定长度的二进制数据。 例如，数据源将 char （10） 列"Smith"存储为"Smith"。 到其缓存此数据复制后执行的定位的更新语句时，游标库将会不空白填充或用零填充行集缓冲区中的数据。 因此，如果应用程序需要的是光标库的缓存中的值是填补空白的或零填充，则它必须空白键盘或用零填充的行集缓冲区中的值在执行的定位的更新语句之前。
-

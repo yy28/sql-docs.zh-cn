@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVELBOTTOM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevelBottom function
+f1_keywords: DRILLDOWNLEVELBOTTOM
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownLevelBottom function
 ms.assetid: c00a6a02-e618-4713-805a-870e042f2d51
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e805f7df3e980727841d6d9ce0f4f755429c357d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9ff1ff6edc4bd145b29c1158c843ba8ae1642705
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +38,17 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *Count*  
+ *计数*  
  指定要返回的元组数的有效数值表达式。  
   
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
  *Numeric_Expression*  
- 選擇性。 返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
+ 可选。 返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
  *Include_Calc_Members*  
- 選擇性。 将计算成员添加到深化结果的关键字。  
+ 可选。 将计算成员添加到深化结果的关键字。  
   
 ## <a name="remarks"></a>注释  
  如果指定数值表达式，则**DrilldownLevelBottom**函数以升序排序，在指定组中，根据指定的值，每个成员的子级，如对子成员组成的集求值排序。 如果未指定数值表达式，则此函数根据由查询上下文决定的子成员集所表示的单元的值，对指定的集中每个成员的子成员按升序排序。此行为类似于 BottomCount 和 Tail (MDX) 函数，都以自然顺序返回一组成员，没有任何排序。  
@@ -98,4 +93,3 @@ FROM [Adventure Works]
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

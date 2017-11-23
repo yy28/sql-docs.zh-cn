@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>光标特征和游标类型
 应用程序可以指定而不是指定游标类型 （只进、 静态、 键集驱动的或动态） 游标的特性。 为此，应用程序选择光标的可滚动性 （通过设置 SQL_ATTR_CURSOR_SCROLLABLE 语句属性） 和大小写 （通过设置 SQL_ATTR_CURSOR_SENSITIVITY 语句属性） 在打开将光标放在该语句之前句柄。 然后将驱动程序选择的最有效地提供特征的光标类型请求的应用程序。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |到 SQL_CURSOR_FORWARD_ONLY SQL_ATTR_CURSOR_TYPE|到 SQL_NONSCROLLABLE SQL_ATTR_CURSOR_SCROLLABLE。|  
 |到 SQL_CURSOR_KEYSET_DRIVEN SQL_ATTR_CURSOR_TYPE|到 SQL_SCROLLABLE SQL_ATTR_SCROLLABLE。<br /><br /> SQL_ATTR_SENSITIVITY 到 SQL_UNSPECIFIED 或 SQL_SENSITIVE （根据驱动程序定义的条件，如果 SQL_ATTR_CONCURRENCY 不 SQL_CONCUR_READ_ONLY）。|  
 |到 SQL_CURSOR_STATIC SQL_ATTR_CURSOR_TYPE|到 SQL_SCROLLABLE SQL_ATTR_SCROLLABLE。<br /><br /> SQL_ATTR_SENSITIVITY 到 SQL_INSENSITIVE （如果 SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY）。<br /><br /> SQL_ATTR_SENSITIVITY 到 SQL_UNSPECIFIED 或 SQL_SENSITIVE （如果 SQL_ATTR_CONCURRENCY 没有 SQL_CONCUR_READ_ONLY）。|
-

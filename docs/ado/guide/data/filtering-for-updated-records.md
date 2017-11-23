@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- filtering for updated records [ADO]
+helpviewer_keywords: filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29539dfd62901a2db41e3d282f615a5ce550cb84
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b633f10b4bac5ec6347879510e1867e7d5d14741
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，你可以使用要查看自该记录集打开后已更改的那些记录的记录集筛选器属性或 UpdateBatch 上次调用。 若要执行此操作，将筛选器设置为等于 adFilterPendingRecords 以确定将更新多少条记录下, 一节中的代码示例中所示。  
@@ -64,4 +61,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [批处理模式](../../../ado/guide/data/batch-mode.md)
-

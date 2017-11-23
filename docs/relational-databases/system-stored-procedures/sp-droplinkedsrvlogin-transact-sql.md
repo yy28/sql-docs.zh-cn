@@ -1,0 +1,91 @@
+---
+title: "sp_droplinkedsrvlogin (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_droplinkedsrvlogin_TSQL
+- sp_droplinkedsrvlogin
+dev_langs: TSQL
+helpviewer_keywords: sp_droplinkedsrvlogin
+ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
+caps.latest.revision: "21"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 78ac85a6aff22b4c925a4635ab57805fab0a83c3
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  删除运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器上的登录与链接服务器上的登录之间的现有映射。  
+  
+||  
+|-|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,   
+   [ @locallogin= ] 'locallogin'  
+```  
+  
+## <a name="arguments"></a>参数  
+ [  **@rmtsrvname =** ] *rmtsrvname*  
+ 是链接服务器的名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]适用于登录映射。 *rmtsrvname*是**sysname**，无默认值。 *rmtsrvname*必须已存在。  
+  
+ [  **@locallogin =** ] *locallogin*  
+ 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有到链接服务器的映射的本地服务器上的登录名*rmtsrvname*。 *locallogin*是**sysname**，无默认值。 映射*locallogin*到*rmtsrvname*必须已存在。 如果为 NULL，默认映射创建的**sp_addlinkedserver**，删除它映射到该链接服务器上的登录名的本地服务器上的所有登录名。  
+  
+## <a name="return-code-values"></a>返回代码值  
+ 0（成功）或 1（失败）  
+  
+## <a name="remarks"></a>注释  
+ 本地服务器的现有映射删除登录名，当使用默认映射创建的**sp_addlinkedserver**当它连接到链接服务器代表该登录名。 若要更改默认映射，请使用**sp_addlinkedsrvlogin**。  
+  
+ 如果还删除默认映射，则只有显式提供了登录映射到该链接服务器时使用的登录名**sp_addlinkedsrvlogin**，可以访问链接的服务器。  
+  
+ **sp_droplinkedsrvlogin**不能在用户定义的事务内执行的。  
+  
+## <a name="permissions"></a>Permissions  
+ 要求对服务器拥有 ALTER ANY LOGIN 权限。  
+  
+## <a name="examples"></a>示例  
+  
+### <a name="a-removing-the-login-mapping-for-an-existing-user"></a>A. 为现有用户删除登录映射  
+ 以下示例删除从本地服务器到链接服务器 `Mary` 的登录 `Accounts` 的映射。 因此，登录 `Mary` 使用默认登录映射。  
+  
+```  
+EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';  
+```  
+  
+### <a name="b-removing-the-default-login-mapping"></a>B. 删除默认的登录映射  
+ 以下示例删除最初通过在链接服务器 `sp_addlinkedserver` 上执行 `Accounts` 而创建的默认登录映射。  
+  
+```  
+EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

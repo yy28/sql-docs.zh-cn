@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors"></a>可滚动游标
 在现代基于屏幕的应用程序，在用户滚动向后和向前数据。 对于此类应用程序，将返回到以前读取的行是一个问题。 一种可能性是关闭并重新打开游标，然后提取行，直到光标达到所需的行。 另一种可能性是读取结果集，它以本地方式，缓存并实现应用程序中滚动。 这两种可能性也只能与小结果集和第二种可能性很难实现。 更好的解决方案是使用*可滚动游标，*可以向后移动并将其转发结果集中。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   [相对和绝对滚动](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

@@ -1,12 +1,14 @@
 ---
 title: "ALTER AVAILABILITY GROUP (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - ALTER_AVAILABILITY_TSQL
 - ALTER AVAILABILITY GROUP
 - ALTER AVAILABILITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - ALTER AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
+caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef1d68317c2e288a13d7b07d559b5de45e29cd28
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   更改现有 Always On 可用性组中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 只有当前主副本支持大多数 ALTER AVAILABILITY GROUP 参数。 但是，只有辅助副本支持 JOIN、FAILOVER 和 FORCE_FAILOVER_ALLOW_DATA_LOSS 参数。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```SQL  
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -81,7 +81,7 @@ ALTER AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }   
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -227,7 +227,7 @@ ALTER AVAILABILITY GROUP group_name
 
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- SQL Server 自 2017 年 1 CTP 2.2 中引入。 用于设置最小同步提交主提交事务之前所需的辅助副本数。 保证 SQL Server 事务将等待，直到事务日志更新辅助副本的最小数量。 默认值为 0，这将使 SQL Server 2016 相同的行为。 最小值为 0。 最大值为减 1 的副本数目。 此选项与在同步提交模式下的副本。 当副本在同步提交模式下时，写入主副本上的等待，直到同步辅助副本上的写入都将提交到副本数据库事务日志。 如果承载辅助同步副本的 SQL 服务器停止响应，SQL Server 承载主副本将标记该辅助副本未同步，并且继续。 当无响应的数据库重新联机时它将处于"未同步"状态和副本将被标记为不正常，直到主可以使其同步试。 此设置可保证之前的最小副本数已提交的每个事务,，主副本将不会继续。 如果不可用的最小副本数则在主计算机上的提交将失败。 群集类型，此设置适用于可用性组`WSFC`和`EXTERNAL`。 对于群集类型`EXTERNAL`可用性组添加到群集资源时更改的设置。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
+ SQL Server 自 2017 年 1 中引入。 用于设置最小同步提交主提交事务之前所需的辅助副本数。 保证 SQL Server 事务将等待，直到事务日志更新辅助副本的最小数量。 默认值为 0，这将使 SQL Server 2016 相同的行为。 最小值为 0。 最大值为减 1 的副本数目。 此选项与在同步提交模式下的副本。 当副本在同步提交模式下时，写入主副本上的等待，直到同步辅助副本上的写入都将提交到副本数据库事务日志。 如果承载辅助同步副本的 SQL 服务器停止响应，SQL Server 承载主副本将标记该辅助副本未同步，并且继续。 当无响应的数据库重新联机时它将处于"未同步"状态和副本将被标记为不正常，直到主可以使其同步试。 此设置可保证之前的最小副本数已提交的每个事务,，主副本将不会继续。 如果不可用的最小副本数则在主计算机上的提交将失败。 对于群集类型`EXTERNAL`可用性组添加到群集资源时更改的设置。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
   
  将数据库添加*database_name*  
  指定要添加到可用性组的一个或多个用户数据库的列表。 这些数据库必须位于承载当前主副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上。 您可以为一个可用性组指定多个数据库，但每个数据库只能属于一个可用性组。 有关类型的可用性组都可以支持的数据库的信息，请参阅[先决条件、 限制和建议 Always On 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). 若要了解哪些本地数据库已属于某一可用性组，请参阅**replica_id**中的列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
@@ -284,7 +284,7 @@ ALTER AVAILABILITY GROUP group_name
  *port*  
  是与服务器实例的镜像端点关联的端口号（对于 ENDPOINT_URL 选项）或服务器实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用的端口号（对于 READ_ONLY_ROUTING_URL 选项）。  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT 的情况下 |ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT 的情况下 |ASYNCHRONOUS_COMMIT |CONFIGURATION_ONLY}  
  指定在主副本可以在给定主数据库上提交事务前，是否必须等待辅助副本确认日志记录硬编码（写入）到磁盘。 针对同一主副本上不同数据库的事务可以单独提交。  
   
  SYNCHRONOUS_COMMIT  
@@ -292,7 +292,16 @@ ALTER AVAILABILITY GROUP group_name
   
  ASYNCHRONOUS_COMMIT  
  指定主副本无需等待此辅助副本对日志进行硬编码（同步提交可用性模式）即可提交事务。 您可以为最多五个可用性副本（包括主副本）指定 ASYNCHRONOUS_COMMIT。  
-  
+
+ CONFIGURATION_ONLY 指定主副本同步到此副本上的主数据库提交可用性组配置元数据。 副本将不包含用户数据。 此选项：
+
+- 可以在任何版本的 SQL Server，包括 Express Edition 上承载。
+- 需要镜像端点的 CONFIGURATION_ONLY 副本类型的数据`WITNESS`。
+- 不能更改。
+- 不是有效时`CLUSTER_TYPE = WSFC`。 
+
+   有关详细信息，请参阅[配置唯一副本](../../linux/sql-server-linux-availability-group-ha.md)。
+    
  AVAILABILITY_MODE 在 ADD REPLICA ON 子句中是必需的，在 MODIFY REPLICA ON 子句中是可选的。 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
  FAILOVER_MODE  **=**  {自动 |手动}  
@@ -600,7 +609,7 @@ ALTER AVAILABILITY GROUP group_name
 ###  <a name="Join_Secondary_Replica"></a> A. 将辅助副本联接到可用性组  
  下面的示例将你连接到的辅助副本联接`AccountsAG`可用性组。  
   
-```  
+```SQL  
 ALTER AVAILABILITY GROUP AccountsAG JOIN;  
 GO  
 ```  
@@ -608,7 +617,7 @@ GO
 ###  <a name="Force_Failover"></a> B. 强制可用性组的故障转移  
  下面的示例强制 `AccountsAG` 可用性组故障转移到您所连接的辅助副本。  
   
-```  
+```SQL
 ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
 GO  
 ```  
@@ -624,4 +633,3 @@ GO
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-

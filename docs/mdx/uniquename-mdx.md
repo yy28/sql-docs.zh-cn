@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- UNIQUENAME
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- UniqueName function
+f1_keywords: UNIQUENAME
+dev_langs: kbMDX
+helpviewer_keywords: UniqueName function
 ms.assetid: f186094e-670c-401c-a82f-6b634b3f71f5
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 99dcf83e1138c631d761266a0e91ea13a19d966f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ba317c8f76dceec65aa7229c7837311671a4658c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回指定的维度、层次结构、级别或成员的唯一名称。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -63,7 +58,7 @@ Member_Expression.UniqueName
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **UniqueName**函数返回的对象，不返回的名称的唯一名称[名称](../mdx/name-mdx.md)函数。 返回的名称不包括多维数据集的名称。 返回的结果取决于服务器端设置或 MDX Unique Name Style 连接字符串属性。   
   
 ## <a name="example"></a>示例  
@@ -91,4 +86,3 @@ FROM [Adventure Works]
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

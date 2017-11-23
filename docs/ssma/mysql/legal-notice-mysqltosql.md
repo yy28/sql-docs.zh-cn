@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef7b1fcb0970c624531135240625203bd2ebf69d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 03ac841852f0bd181e479e779a6909ab05849485
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="legal-notice-mysqltosql"></a>法律声明 (MySQLToSql)
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
@@ -51,4 +49,3 @@ SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产�
   
 对于利用和使用未记录的入口点的应用程序和数据库，升级至 SQL Server 的未来版本的服务器和数据库未得到保证。 必须将 SQL Server 特性和功能的使用限制为 Microsoft SQL Server 文档中包含的内容。 如果功能未在 Microsoft SQL Server 文档中记录，则它不属于 SQL Server 支持的部分。  
   
-

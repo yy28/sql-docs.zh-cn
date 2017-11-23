@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - Data Mining Extensions [Analysis Services], statements
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - copying mining models
 ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f8429c48fb398f1d1a9e3f20741c7eecfd0810b5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431bc5b84d76725904fff27f63c73121e13fa48
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-the-dmx-select-statement"></a>了解 DMX Select 语句
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -115,7 +113,7 @@ ms.lasthandoff: 08/02/2017
   
 |查询类型|Description|  
 |----------------|-----------------|  
-|SELECT FROM *\<模型 >*。用例|返回用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [SELECT FROM &#60; 模型 &#62;。用例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [创建使用 DMX 的钻取查询](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM *\<模型 >*。用例|返回用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [SELECT FROM &#60; 模型 &#62;。用例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [使用 DMX 来创建钻取查询](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM *\<模型 >*。SAMPLE_CASES|返回一个示例事例，该事例代表用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [SELECT FROM &#60; 模型 &#62;。SAMPLE_CASES &#40; DMX &#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
 |SELECT FROM *\<结构 >*。 用例|从基础挖掘结构返回详细数据行，即使某些详细信息并未用于对该挖掘模型定型。<br /><br /> [SELECT FROM &#60; 结构 &#62;。用例](../dmx/select-from-structure-cases.md)<br /><br /> [钻取查询 &#40; 数据挖掘 &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/02/2017
  [数据挖掘扩展插件 &#40; DMX &#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   
-

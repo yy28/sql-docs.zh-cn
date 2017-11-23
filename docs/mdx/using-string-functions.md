@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- string functions
+dev_langs: kbMDX
+helpviewer_keywords: string functions
 ms.assetid: 962e820a-a1f9-49b5-90f0-a05261e6682b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5838cb18091adab8ee4e8b2c0a43042001c530dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12fc2dca6c7a0eb1c7d126ef0cfdc87df869c878
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-string-functions"></a>使用字符串函数
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +107,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  **StrToMember**和**StrToSet**应多加小心使用函数。 如果在计算定义中使用这些函数，则可能会导致查询性能较差。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [生成 &#40;MDX &#41;](../mdx/generate-mdx.md)   
  [名称 &#40;MDX &#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX &#41;](../mdx/uniquename-mdx.md)   
@@ -121,4 +117,3 @@ ms.lasthandoff: 08/02/2017
  [StrToSet &#40;MDX &#41;](../mdx/strtoset-mdx.md)  
   
   
-

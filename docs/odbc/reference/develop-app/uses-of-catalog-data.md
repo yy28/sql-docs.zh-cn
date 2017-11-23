@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c77be1b431a7f7e2cf8c040df7ceb9a9feaf321a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uses-of-catalog-data"></a>使用的目录数据
 应用程序使用各种不同的方式的目录数据。 下面是一些常见用途：  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
      此外可以使用此类环境**SQLTables**和**SQLColumns**创建程序员无法从中进行选择的列表。 此外可以使用这些环境**SQLPrimaryKeys**和**SQLForeignKeys**自动确定，显示所选表之间的关系并将**SQLStatistics**来确定并突出显示编制索引的字段，因此程序员可以创建高效的查询。  
   
 -   **构造游标。** 可以使用应用程序、 驱动程序或提供了一个可滚动游标引擎的中间件**SQLSpecialColumns**来确定哪些列或多列唯一标识行。 无法生成程序*键集*包含每个已提取的行的这些列中的值。 当应用程序滚动回行时，它将使用这些值提取行的最新数据。 有关可滚动游标和游标的详细信息，请参阅[可滚动游标](../../../odbc/reference/develop-app/scrollable-cursors.md)。
-

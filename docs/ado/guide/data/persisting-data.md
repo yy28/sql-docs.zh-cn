@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ecda57863abf45f1256f192d933c99bfb09a67dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9862fc9f45674d3995b857eec222d8f560870a6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-data"></a>保存数据
 （例如，使用便携式计算机） 的可移植计算已生成可以在连接和断开连接状态中运行的应用程序的需求。 ADO 通过让能够保存客户端游标的开发人员添加了对此支持**记录集**到磁盘，然后重新加载它更高版本。  
@@ -123,9 +121,8 @@ Destination, PersistFormat
 ## <a name="remarks"></a>注释  
  本部分包含以下主题。  
   
--   [有关记录集持久性的详细信息](../../../ado/guide/data/more-about-recordset-persistence.md)  
+-   [更多有关记录集暂留的信息](../../../ado/guide/data/more-about-recordset-persistence.md)  
   
--   [持久化筛选和分层记录集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
+-   [保留筛选记录集和分层记录集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
   
--   [保留记录采用 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+-   [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

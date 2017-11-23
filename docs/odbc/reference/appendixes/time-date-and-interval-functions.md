@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数
 下表列出了 ODBC 标量函数集中包含的日期和时间函数。 应用程序可以确定由驱动程序支持的日期和时间函数，应调用**SQLGetInfo**与*信息类型*SQL_TIMEDATE_FUNCTIONS。  
@@ -66,4 +64,3 @@ ms.lasthandoff: 10/05/2017
 |**TIMESTAMPDIFF (** *间隔*， *timestamp_exp1*， *timestamp_exp2* **)** (ODBC 2.0)|返回整数的类型的间隔数*间隔*依据*timestamp_exp2*大于*timestamp_exp1*。 有效值*间隔*都是以下关键字：<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> 其中用在第二个 billionths 表示秒的小数部分。 例如，以下 SQL 语句返回的每个员工和已使用他或她的年数的名称：<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> 如果其中任何一个时间戳表达式是一个时间值和*间隔*指定天、 周、 月、 季度或年，该时间戳的日期部分设置为当前日期之前计算时间戳之间的差异。<br /><br /> 如果其中任何一个时间戳表达式是一个日期值和*间隔*指定小数秒、 秒、 分钟或小时数，在计算时间戳之间的差异之前设置为 0 的时间部分的该时间戳。<br /><br /> 应用程序确定数据源支持通过调用哪些间隔**SQLGetInfo** SQL_TIMEDATE_DIFF_INTERVALS 选项。|  
 |**一周 (** *date_exp* **)** (ODBC 1.0)|返回基于周字段的年度的某一周*date_exp*为整数值 1 – 53 范围内。|  
 |**年 (** *date_exp* **)** (ODBC 1.0)|返回根据年份字段的年度*date_exp*为一个整数值。 范围是数据源而定。|
-

@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- unary operators
+dev_langs: kbMDX
+helpviewer_keywords: unary operators
 ms.assetid: bf1b5518-6040-4484-9ce8-79c0eb4373a9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5ae9c97c36985c48815ae6f96081646f22de225a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5b5aea52fb028a9c1d5345e60d4bfa400ecaa735
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unary-operators"></a>一元运算符
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +31,8 @@ ms.lasthandoff: 08/02/2017
   
 |运算符|Description|  
 |--------------|-----------------|  
-|[-（负号）](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
-|[+ （正）](../mdx/positive-mdx.md)|返回数值表达式的正值。|  
+|[-（负）](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
+|[+（正）](../mdx/positive-mdx.md)|返回数值表达式的正值。|  
   
  下面的示例显示了如何使用一维运算符返回度量值的负值：  
   
@@ -57,4 +53,3 @@ WHERE [Product].[Category].[Bikes]
  [运算符 &#40;MDX 语法 &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

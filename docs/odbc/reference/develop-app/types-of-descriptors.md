@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], types
+helpviewer_keywords: descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-descriptors"></a>类型的描述符
 描述符用于描述以下项之一：  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  描述符可以执行不同的角色。 不同的语句可以共享任何应用程序显式分配的描述符。 在一个语句中的行描述符可以充当另一个语句中的参数描述符。  
   
  始终是已知的给定的描述符是否是应用程序描述符或实现描述符，即使描述符具有尚未使用在数据库操作。 对于实现隐式分配的描述符，实现记录相对语句句柄于预定义的行。 应用程序将通过调用其分配任何描述符**SQLAllocHandle**不是应用程序描述符。
-

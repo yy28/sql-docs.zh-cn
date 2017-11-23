@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76c05e6d7148ac11e25783caca575bee034dd872
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在运行时构造的 SQL 语句
 在运行时，通常执行即席分析的应用程序生成 SQL 语句。 例如，电子表格可能允许用户选择要从中检索数据的列：  
@@ -81,4 +79,3 @@ int main() {
  应用程序在运行时构造 SQL 语句可以向用户提供更大的灵活性。 可以从前面的示例，甚至不支持诸如常见操作看到**其中**子句， **ORDER BY**子句或联接，在运行时构造 SQL 语句是极大地更复杂比硬编码的语句。 此外，测试此类应用程序会产生问题的因为它们可以构造任意数目的 SQL 语句。  
   
  在运行时构造 SQL 语句的潜在缺点是它需要更多的时间比使用硬编码语句构造的语句。 幸运的是，这很少是一个问题。 此类应用程序往往是一个用户界面大量和应用程序所花费的时间构造 SQL 语句是通常不大与用户所输入的条件花费的时间进行比较。
-

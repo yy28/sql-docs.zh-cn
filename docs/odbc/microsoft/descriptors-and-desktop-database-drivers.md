@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 795cc9faa07c8763398c9c31800e521055774e96
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67f656acd349419d7fc3d1c264985beeb36298ce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>描述符和桌面数据库驱动程序
 描述符是一种数据结构，其中包含有关列数据或动态参数的信息。 **SQLGetDescField**可以用于检索下面列出的受支持的描述符。 实现参数描述符 (IPD) 不会自动填充因为**SQLDescribeParam**不支持。 不可通过 Jet （如 SQL_DESC_BASE_TABLE_NAME) 的描述符字段也不支持。  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_DESC_UNNAMED|是否支持|  
 |SQL_DESC_UNSIGNED|是否支持|  
 |SQL_DESC_UPDATABLE|是否支持|
-

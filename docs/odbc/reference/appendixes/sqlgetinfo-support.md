@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], support
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f862c55c67fca4c14b5c8d3ede20c6a9ec4ca791
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 支持
 当一个 ODBC 2。*x*应用程序调用**SQLGetInfo**为 ODBC 3*.x*驱动程序，*信息类型*必须支持下表中的自变量。  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x*应用程序使用 ODBC 3*.x*驱动程序不应调用**SQLGetInfo**与*信息类型*中所述的自变量前面的表，但应使用 ODBC 3*.x* *信息类型*参数列在下一段落中。 没有之间的一一对应关系*信息类型*ODBC 2 中使用的参数。*x*和 ODBC 3 中所使用*.x*。 ODBC 3*.x*应用程序使用 ODBC 2。*x*驱动程序，另一方面，应使用*信息类型*自变量前面所述。  
   
  支持游标属性的信息类型情况下上, 表中的信息类型的某些选项已弃用。 这些不推荐使用类型为 SQL_FETCH_DIRECTION、 SQL_LOCK_TYPES、 SQL_POS_OPERATIONS、 SQL_POSITIONED_STATEMENTS、 SQL_SCROLL_CONCURRENCY 和 SQL_STATIC_SENSITIVITY 的信息。 新的游标属性类型是 SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2，其中 XXX 等于动态、 FORWARD_ONLY、 KEYSET_DRIVEN 或静态。 每个新的类型表示单个游标类型的驱动程序功能。 有关这些选项的详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。
-

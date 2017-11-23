@@ -1,25 +1,22 @@
 ---
 title: "使用与 revoscalepy Python 创建模型 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用与 revoscalepy Python 创建模型
 
@@ -143,4 +140,3 @@ def test_linmod_sql():
 + [SQL 开发人员的数据库中 Python](sqldev-in-database-python-for-sql-developers.md)
 + [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [部署和使用 Python 模型](../python/publish-consume-python-code.md)
-

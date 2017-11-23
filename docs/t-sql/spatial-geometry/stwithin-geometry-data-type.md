@@ -8,34 +8,30 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STWithin_TSQL
 - STWithin (geometry Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- STWithin (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa8935b7f67d593be8a1246bbc035e1f8d6c520a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb38281ba8e4c4cc7c483a7662b2bdeb95a8b4f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-如果返回 1**几何图形**实例是完全在另一个**几何图形**实例; 否则，返回 0。
+如果返回 1**几何图形**实例是完全在另一个**几何图形**实例; 否则，返回 0。 `STWithin`命令是区分大小写。
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +50,7 @@ ms.lasthandoff: 09/01/2017
  CLR 返回类型： **SqlBoolean**  
   
 ## <a name="remarks"></a>注释  
- 如果此方法将始终返回 null 的空间引用 Id 为 (Srid)**几何图形**实例不匹配。  
+ 如果此方法将始终返回 null 的空间引用 Id 为 (Srid)**几何图形**实例不匹配。
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STWithin()` 来测试两个 `geometry` 实例，以查看第一个实例是否完全包含在第二个实例中。  
@@ -69,8 +65,7 @@ SELECT @g.STWithin(@h);
   
 ## <a name="see-also"></a>另请参阅  
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [几何图形实例上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

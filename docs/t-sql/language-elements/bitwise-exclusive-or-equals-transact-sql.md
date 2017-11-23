@@ -1,5 +1,5 @@
 ---
-title: "^ = （位异或等于） (Transact SQL) |Microsoft 文档"
+title: "^ = （位异或赋值） (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ^=
 - ^=_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ^= (bitwise exclusive OR equals)
 - compound operators, ^=
+- assignment operators, ^=
+- augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ea63dff67d76e51b04e5ed6f994820a3797b91d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f7c69571c760fe828a6a731b348a12168b095cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-bitwise-exclusive-or-equals-transact-sql"></a>^=（位异或等于）(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = （位异或赋值） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在两个整数值之间执行“位异或”运算，并将一个值设置为运算的结果。  
   
@@ -63,4 +62,3 @@ expression ^= expression
  [按位运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>获取具有 SQLBulkOperations 行
 可以通过调用转换为行，该集合使用书签 refetched 数据**SQLBulkOperations。** 由绑定的书签列中的书签标识要提取的行。 不会提取具有 SQL_COLUMN_IGNORE 值的列。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 4.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_FETCH_BY_BOOKMARK。  
   
  没有此应用程序使用行操作数组以防止操作无需执行对某些列。 应用程序选择想要通过将仅书签的那些行复制到绑定的书签数组提取的行。
-

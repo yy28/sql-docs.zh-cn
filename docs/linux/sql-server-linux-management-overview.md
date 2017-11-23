@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 080751258a44cf02a5d30b5b9d82c6fda4ad32f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>选择合适的工具管理 Linux 上的 SQL Server
 
@@ -46,4 +45,3 @@ PowerShell 提供了丰富的命令行环境，用于管理 Linux 上的 SQL Ser
 ## <a name="next-steps"></a>后续步骤
 
 在 Linux 上 SQL Server 的详细信息，请参阅[在 Linux 上的 SQL Server](sql-server-linux-overview.md)。
-

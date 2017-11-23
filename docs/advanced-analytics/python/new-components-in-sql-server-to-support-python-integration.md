@@ -1,24 +1,22 @@
 ---
 title: "用于与 SQL Server 的 Python 集成组件 |Microsoft 文档"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>在 SQL Server 以支持 Python 集成的组件
 
@@ -104,7 +102,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
   + 将数据写入到表： 例如，保存结果到表
   + 创建数据库对象： 例如，如果将外部脚本另存为新的存储过程的一部分。
 
-  当[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是从远程客户端，执行 Python 脚本，Python 可执行文件必须从外部源中检索数据，请使用作为计算上下文，ODBC 用于写回。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]将映射到在当前实例中，用户的标识发出远程命令的用户的标识，并运行 ODBC 命令使用该用户的凭据。 执行此 ODBC 调用所需的连接字符串从客户端代码中获取。
+  当[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是从远程客户端，执行 Python 脚本，Python 可执行文件必须从外部源中检索数据，请使用作为计算上下文，ODBC 用于写回。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]映射到在当前实例中，用户的标识发出远程命令的用户的标识，并运行使用该用户的凭据 ODBC 命令。 执行此 ODBC 调用所需的连接字符串从客户端代码中获取。
 
 ## <a name="interaction-of-components"></a>组件的交互
 
@@ -116,9 +114,9 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 
 已为存储过程中嵌入脚本后，任何应用程序可以调用存储的过程可以启动 Python 代码的执行。  此后[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]管理执行代码，如下图中进行了总结。
 
-![脚本中 db python](../../advanced-analytics/python/media/script-in-db-python.png)
+![脚本中 db python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. 由参数指示 Python 运行时的请求 _@language= Python_传递给存储过程。 SQL Server 将此请求发送到快速启动板服务。
+1. 由参数指示 Python 运行时的请求`@language='Python'`传递给存储过程。 SQL Server 将此请求发送到快速启动板服务。
 2. 在快速启动板服务启动了适当的启动器;在此情况下，PythonLauncher。
 3. PythonLauncher 启动外部 Python35 进程。
 4. BxlServer 协调与要管理的数据交换和工作结果的存储的 Python 运行时。
@@ -131,11 +129,11 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 你可以从远程计算机，例如便携式计算机，运行 Python 脚本，并让他们的 SQl Server 计算机的上下文中执行，如果满足这些条件：
 
 + 相应地设计脚本
-+ 远程计算机具有安装机器学习服务所使用的扩展性库
++ 远程计算机安装了机器学习服务所使用的扩展性库。 [Revoscalepy](what-is-revoscalepy.md)包是需要使用远程计算上下文。
 
 从远程计算机发送脚本时下, 图总结了整个工作流。
 
-![远程 sqlcc 从 python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![远程 sqlcc 从 python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. 中支持的函数**revoscalepy**，Python 运行时调用的链接的函数，又会调用 BxlServer。
 2. BxlServer 附带机器学习服务 （数据库），并在单独的进程中运行 Python 运行时中。
@@ -150,4 +148,3 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 ## <a name="next-steps"></a>后续步骤
 
 [SQL Server 中的 Python 的体系结构概述](architecture-overview-sql-server-python.md)
-

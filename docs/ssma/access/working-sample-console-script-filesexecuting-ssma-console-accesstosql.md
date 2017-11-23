@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f6df4bfd6cda5393df2ac7e5bf782c4b5677b723
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a2ac9806e1f7577312ede0dddfcd38b3721f94f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用示例控制台脚本文件执行 SSMA 控制台 (AccessToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -72,9 +70,8 @@ ms.lasthandoff: 08/02/2017
     |`synchronize-target`|将目标对象与目标数据库同步。<br /><br />如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。|`object-name:`指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`|  
     |`migrate-data`|将源数据迁移到目标。<br /><br />如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`示例控制台脚本文件的命令的示例 2。|`object-name:`指定的源数据库/表需要要迁移的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [创建变量的值文件 &#40;AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
 [创建服务器连接文件 &#40;AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
 [生成报表 &#40;AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md)  
   
-

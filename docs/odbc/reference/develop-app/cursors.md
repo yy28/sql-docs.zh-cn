@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursors"></a>游标
 应用程序会获取与数据*光标*。 一种不同于结果集： 结果集是与特定搜索条件匹配的行集，而一种软件，将返回这些行到应用程序。 名称*游标，*因为它应用到数据库，可能源自终端的计算机上闪烁的光标。 就像该游标指示当前位置屏幕和类型化的单词出现的位置下一步，结果集上的光标指示结果集和下一步将返回哪些行中的当前位置。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  提交或回滚事务，通过显式调用**SQLEndTran**或通过在自动提交模式下操作时，会导致某些数据源，以关闭的连接上的所有语句上的所有游标。 有关详细信息，请参阅中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 属性[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。
-

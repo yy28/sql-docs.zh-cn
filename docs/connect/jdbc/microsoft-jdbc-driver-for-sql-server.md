@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 231aeea7b69585b01df5064b62707a85ec016ff7
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 996f6ff5a36c0aa96d857a548e272a756acf2212
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
@@ -34,9 +32,9 @@ ms.lasthandoff: 09/09/2017
 已针对大多数应用程序服务器（如 IBM WebSphere 和 SAP NetWeaver）对 Microsoft SQL Server JDBC 驱动程序进行了测试。
   
 ## <a name="getting-started"></a>入门  
-* [步骤 1： 配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)  
-* [步骤 2： 创建 SQL 数据库进行 Java 开发](step-2-create-a-sql-database-for-java-development.md)  
-* [步骤 3： 连接到 SQL 使用 Java 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [步骤 1：配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)  
+* [步骤 2：创建用于 Java 开发的 SQL 数据库](step-2-create-a-sql-database-for-java-development.md)  
+* [步骤 3：使用 Java 连接到 SQL 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>文档  
 * [入门](getting-started-with-the-jdbc-driver.md)
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/09/2017
 * [法规遵从性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>社区
-[查找其他 JDBC 驱动程序信息](finding-additional-jdbc-driver-information.md)  
+[查找 JDBC 驱动程序的其他信息](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>下载
 [下载 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -具有 Maven 项目，以及更多有关的附加信息。
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 * [在 Ubuntu 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL) 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
 * [SUSE Linux 企业服务器 (SLES) 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
-

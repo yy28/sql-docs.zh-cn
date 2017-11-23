@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- index command [ODBC]
+helpviewer_keywords: index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40581a79d22feadb8616c021820e93a634ef94d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdec619d99c610c75b9b27de710cd4e5913602f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="index-command"></a>索引命令
 创建要显示和访问表记录按逻辑顺序排列的索引文件。  
@@ -127,5 +124,4 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  [更改表的 SQL 命令](../../odbc/microsoft/alter-table-sql-command.md)   
  [删除标记命令](../../odbc/microsoft/delete-tag-command.md)   
  [SET COLLATE 命令](../../odbc/microsoft/set-collate-command.md)   
- [SET 唯一命令](../../odbc/microsoft/set-unique-command.md)
-
+ [SET UNIQUE 命令](../../odbc/microsoft/set-unique-command.md)

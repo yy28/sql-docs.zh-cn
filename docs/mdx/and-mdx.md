@@ -5,35 +5,30 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- AND, MDX
+f1_keywords: AND
+dev_langs: kbMDX
+helpviewer_keywords: AND, MDX
 ms.assetid: 398fd483-d010-4524-b115-0becad66f25c
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: aa1cb624cf58cfd163409605bc3f9d71e8d0f6af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e905bdd62e876240d0178dc337ed61665ac2699f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="and-mdx"></a>AND (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对两个数值表达式执行逻辑与运算。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -50,7 +45,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>返回值  
  一个布尔值，如果两个参数的计算结果为将返回 true **true**; 否则为**false**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **AND**运算符将两个表达式视为布尔值 (0，0，作为**false**; 否则为**true**) 执行逻辑与运算的运算符之前。 下表说明了如何**AND**运算符执行逻辑与。  
   
 |*Expression1*|*Expression2*|返回值|  
@@ -84,4 +79,3 @@ WHERE
  [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

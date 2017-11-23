@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOGGLEDRILLSTATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ToggleDrillState function
+f1_keywords: TOGGLEDRILLSTATE
+dev_langs: kbMDX
+helpviewer_keywords: ToggleDrillState function
 ms.assetid: 26fa1a0d-3ed1-45dc-955d-0591d49e4db9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a5827471269bfc2022c3b74134da10c053378509
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3b9676ef7df22333d4b9674f7b14744a17bf5b0f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  （可选）。 指示是否在深化级别包括计算成员（如果存在）的标志。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **ToggleDrillState**函数切换位于第一个集中的第二个集的每个成员的钻取状态。 第一个集可以包含任意维数的元组，但是第二个集必须包含单个维度的成员。 **ToggleDrillState**技术支持部门的组合**DrillupMember**和**DrilldownMember**函数。 如果该成员， *m*，第二个集是否位于第一个集，以及该成员向下钻取 （即，具有紧靠它的后代），然后`DrillupMember(Set_Expression1, {m})`应用于成员或元组中的第一个集。 如果该*m*向上钻成员 (即，没有任何子代*m*紧跟*m*)，`DrilldownMember(Set_Expression1, {m}[, RECURSIVE])`应用于第一个组。  
   
  如果可选**递归**标记用于、 向上钻取和向下的钻取以递归方式应用。 有关递归标志的详细信息，请参阅[DrillupMember](../mdx/drillupmember-mdx.md)和[DrilldownMember](../mdx/drilldownmember-mdx.md)函数。  
@@ -80,4 +75,3 @@ SELECT ToggleDrillState
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

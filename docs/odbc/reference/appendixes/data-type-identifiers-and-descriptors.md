@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0040a426bd11048a993e98015a536c76e1b4381c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b813632c3a281e1ae0ba90e95545e28d07ed09
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>数据类型标识符和描述符
 中列出的数据类型[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)和[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面的部分是"简洁"数据类型： 每个标识符是指一种数据类型。 没有标识符和数据类型之间的一一对应关系。 描述符，但是，此未显示在所有情况下使用单个值以确定数据类型。 在某些情况下，它们可以使用"详细"数据类型和类型子代码。 对于除日期时间和间隔数据类型以外的所有数据类型，详细类型标识符等同于简洁类型标识符和 SQL_DESC_DATETIME_INTERVAL_CODE 中的值等于 0。 对于日期时间和间隔的数据类型，但是，详细的类型 （SQL_DATETIME 或 SQL_INTERVAL） 存储在 SQL_DESC_TYPE、 简洁类型存储在 SQL_DESC_CONCISE_TYPE，和为每种简洁的类型的子存储在 SQL_DESC_DATETIME_INTERVAL_CODE。 设置这些字段之一将影响其他。 有关这些字段的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函数说明。  
@@ -57,4 +55,3 @@ QL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY
 |SQL_INTERVAL_HOUR_TO_MINUTE|SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_INTERVAL|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND|SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_INTERVAL|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_INTERVAL|SQL_CODE_MINUTE_TO_SECOND|
-

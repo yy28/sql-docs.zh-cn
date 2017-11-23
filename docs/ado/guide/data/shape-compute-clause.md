@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-compute-clause"></a>形状 COMPUTE 子句
 形状 COMPUTE 子句生成父**记录集**，其列包含的参考子**记录集**; 可选其内容是章，新的或计算的列的列或子级上执行聚合函数的结果**记录集**或以前整形**记录集**; 以及从子级的任何列**记录集**中列出可选的 BY 子句。  
@@ -150,5 +148,4 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [形状 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [在常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [值属性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
- [Visual Basic 应用程序函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-
+ [Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

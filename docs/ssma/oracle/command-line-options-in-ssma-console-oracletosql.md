@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d62f356dec9a1392feaa0eda9a4e735b33ad779e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e6af421b33900280ddc9469ddb26411a74c55668
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 控制台 (OracleToSQL) 中的命令行选项
 Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选项。 接下来的部分详细介绍相同。  
@@ -93,7 +91,7 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
 此命令用于输出到控制台或 xml 文件以 xml 格式的命令输出消息。  
   
-有两个选项可用于 xmloutput，viz..,:  
+有两个选项可用于 xmloutput，viz。。，：  
   
 -   如果 filepath 提供 xmloutput 切换后输出重定向到文件。  
   
@@ -181,4 +179,3 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
   
 -   有关故障排除控制台中的问题，请参阅[故障排除 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
   
-

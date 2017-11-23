@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sample console script files
+helpviewer_keywords: Sample console script files
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c79b522672035f45acccd85ec4c1321904b7478
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84a1bddb2cb42011d5150257e5dd28ebab1a9ade
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用示例控制台脚本文件 (MySQLToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -63,7 +60,7 @@ ms.lasthandoff: 08/02/2017
   
     生成报表的详细信息，请参阅[生成报表 &#40;MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **说明：**  
+    **注意：**  
   
     -   确保变量值文件命令行自变量传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
   
@@ -88,7 +85,7 @@ ms.lasthandoff: 08/02/2017
   
     架构映射到目标架构的源数据库。  
   
-    **属性**  
+    **Attribute**  
   
     -   `source-schema:`指定需要要转换的源数据库。  
   
@@ -102,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
     2.  如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`示例控制台脚本文件的命令的示例 4。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name`： 指定源数据库/对象需要要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
   
@@ -114,7 +111,7 @@ ms.lasthandoff: 08/02/2017
   
     2.  如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name:`指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
   
@@ -126,13 +123,12 @@ ms.lasthandoff: 08/02/2017
   
     2.  如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`示例控制台脚本文件的命令的示例 2。  
   
-    **属性**  
+    **Attribute**  
   
     `object-name:`指定的源数据库/表需要要迁移的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [创建变量的值文件 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
 [创建服务器连接文件 &#40;MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [生成报表 &#40;MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   
-

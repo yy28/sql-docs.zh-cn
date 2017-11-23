@@ -5,27 +5,24 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], syntax
 - MDX [Analysis Services], syntax
 ms.assetid: f4c16e1a-cf1a-4be0-839a-db018430ff14
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 9a98c63b23da676a8d84adbece9b722f949b13ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77aab8ddf130fc7f93cecfe762833bbda873c81a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 语法元素 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +37,10 @@ ms.lasthandoff: 08/02/2017
 |[运算符](../mdx/operators-mdx-syntax.md)|运算符是与一个或多个简单的 MDX 表达式一起使用、以构成更复杂的 MDX 表达式的语法元素。|  
 |[函数](../mdx/functions-mdx-syntax.md)|函数是可以接受零个、一个或多个输入值并返回一个标量值或对象的语法元素。 示例包括[总和](../mdx/sum-mdx.md)添加多个值，函数[成员](../mdx/members-set-mdx.md)函数返回一组的成员从维度或级别上，依次类推。|  
 |[注释](../mdx/comments-mdx-syntax.md)|注释是插入到 MDX 语句或脚本中，用来说明语句用途的文本段。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不会执行注释。|  
-|[保留的关键字](../mdx/reserved-keywords-mdx-syntax.md)|保留关键字是保留起来供 MDX 使用，且不应用作 MDX 语句中使用的对象名称的关键字。|  
+|[保留关键字](../mdx/reserved-keywords-mdx-syntax.md)|保留关键字是保留起来供 MDX 使用，且不应用作 MDX 语句中使用的对象名称的关键字。|  
 |[成员、 元组和集](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)|成员、元组和集是创建 MDX 查询之前必须了解的多维数据的核心概念。|  
   
 ## <a name="see-also"></a>另请参阅  
  [多维表达式 &#40;MDX &#41;引用](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

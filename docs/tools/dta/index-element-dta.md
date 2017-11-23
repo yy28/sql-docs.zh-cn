@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Index element (DTA)
+dev_langs: XML
+helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3da89d41eeb2c2ce6c859e3e5e93a76eb9e5ab1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
   包含为用户指定的配置创建或删除的索引的信息。  
@@ -71,7 +67,7 @@ ms.lasthandoff: 08/02/2017
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[创建元素 (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
-|**子元素**|[索引 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
+|**子元素**|[索引的名称元素 (DTA)](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[使用用户指定配置 (DTA) 的 XML 输入文件示例](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  
@@ -80,4 +76,3 @@ ms.lasthandoff: 08/02/2017
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

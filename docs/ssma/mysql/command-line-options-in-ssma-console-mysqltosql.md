@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ba887baa7ee43776f1d01688ec1ec29537a4ba4f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4016293e0ef155f5187da8f817cd4e000a087304
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 控制台 (MySQLToSQL) 中的命令行选项
 Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选项。 接下来的部分详细介绍相同。  
@@ -101,7 +99,7 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
 此命令用于输出到控制台或 xml 文件以 xml 格式的命令输出消息。  
   
-有两个选项可用于 xmloutput，viz..,:  
+有两个选项可用于 xmloutput，viz。。，：  
   
 -   如果 filepath 提供 xmloutput 切换后输出重定向到文件。  
   
@@ -189,4 +187,3 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
   
 -   有关故障排除控制台中的问题，请参阅[故障排除 &#40;MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

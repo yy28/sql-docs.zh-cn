@@ -1,19 +1,20 @@
 ---
 title: "选择 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   从数据库中检索行，并启用的一个或多个行或从一个或多个表中的列选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 虽然 SELECT 语句的完整语法较复杂，但其主要子句可归纳如下：  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. 返回页首  
-  
+
+> [!WARNING]
+> 上述顺序是通常如此。 但是，有个不同的序列可能不常见的情况。
+>
+> 例如，假设对视图，具有聚集的索引和视图不包括某些表行，并且该视图的所选列列表使用更改中的数据类型的转换*varchar*到*整数*。 在此情况下，可能在 WHERE 子句执行前执行转换。 常见确实。 通常是一种方法来修改视图以避免不同的序列中，如果它在你的示例很重要。 
+
 ## <a name="permissions"></a>Permissions  
  选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 要求的成员身份或**db_datareader**或**db_owner**固定数据库角色的成员，或**sysadmin**固定的服务器角色。 创建新表使用**SELECTINTO**还要求同时**CREATETABLE**权限，与**ALTERSCHEMA**拥有新的表的架构的权限。  
   
@@ -266,5 +271,4 @@ ORDER BY OrderDateKey;
  [选择示例 &#40;Transact SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

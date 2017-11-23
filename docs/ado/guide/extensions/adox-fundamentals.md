@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX, fundamentals
+helpviewer_keywords: ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22ef8c10cbc4cec9024b311297e3853790687bc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-fundamentals"></a>ADOX 基础知识
 适用于数据定义语言和安全 (ADOX) 的 Microsoft® ActiveX® 数据对象扩展是对 ADO 对象和编程模型的扩展。 ADOX 包括架构创建和修改，以及安全的对象。 因为它是架构操作的基于对象的方法，你可以编写代码来处理各种数据源而不考虑其本机语法方面的差异。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  [ADOX 属性](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO （多维） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO 程序员指南](../../../ado/guide/ado-programmer-s-guide.md)
-

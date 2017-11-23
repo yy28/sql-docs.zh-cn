@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- STRTOMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToMember function
+f1_keywords: STRTOMEMBER
+dev_langs: kbMDX
+helpviewer_keywords: StrToMember function
 ms.assetid: eb8a3dc0-5ae4-434e-b321-680a81a59e67
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: c706110946bae4176bd217288a185e977c846e90
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1b87517d73298dbc837d5659ac18b967c45aeaf7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +39,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
  *Member_Name*  
  直接或间接指定成员的有效字符串表达式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **StrToMember**函数返回的字符串表达式中指定的成员。 **StrToMember**函数通常用于与用户定义的函数返回成员规范从外部函数返回到 MDX 语句，或 MDX 查询进行参数化。  
   
 -   如果使用 CONSTRAINED 标志，则成员名称必须可直接解析为限定或未限定的成员名称。 此标志通过指定字符串可降低注入攻击的风险。 如果所提供的字符串无法直接解析为限定或未限定的成员名称，将出现以下错误：“违反了 STRTOMEMBER 函数中 CONSTRAINED 标志所规定的限制。”  
@@ -96,4 +91,3 @@ FROM [Adventure Works]
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-
