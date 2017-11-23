@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - connecting to driver [ODBC], connection attributes
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 930a0dba9eacdf828cff97fe464f7a6c8a41dc52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-attributes"></a>连接属性
 连接属性是连接的特性。 例如，因为事务发生在连接级别，所以事务隔离级别就是一个连接属性。 同样，登录超时值或尝试时连接超时前, 等待的秒数是连接属性。  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  连接后，必须设置翻译连接属性 （SQL_ATTR_TRANSLATE_DLL 和 SQL_ATTR_TRANSLATE_OPTION）。  
   
  在任何时候，可以设置所有其他连接属性。 有关详细信息，请参阅[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明。 (通过调用，不能在环境级别上设置连接属性**SQLSetEnvAttr**。)
-

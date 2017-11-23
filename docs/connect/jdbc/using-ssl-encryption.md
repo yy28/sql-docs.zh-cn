@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2ca2c1c7b566b70b82a70b939c5495e76ce4612a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7923995b392dff8c80f1ee6ae3946e421dc46331
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,11 +44,10 @@ ms.lasthandoff: 09/09/2017
 |主题|Description|  
 |-----------|-----------------|  
 |[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)|描述如何[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持 SSL 加密。|  
-|[使用 SSL 加密连接](../../connect/jdbc/connecting-with-ssl-encryption.md)|介绍如何连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库使用新的 SSL 特定的连接属性。|  
-|[配置 SSL 加密的客户端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|描述如何在客户端配置默认的信任存储区以及如何将私钥证书导入到客户端计算机的信任存储区中。|  
+|[使用 SSL 加密进行连接](../../connect/jdbc/connecting-with-ssl-encryption.md)|介绍如何连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库使用新的 SSL 特定的连接属性。|  
+|[为 SSL 加密配置客户端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|描述如何在客户端配置默认的信任存储区以及如何将私钥证书导入到客户端计算机的信任存储区中。|  
   
 ## <a name="see-also"></a>另请参阅  
  [保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

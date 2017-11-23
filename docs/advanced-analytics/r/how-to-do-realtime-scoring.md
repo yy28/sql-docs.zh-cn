@@ -1,24 +1,22 @@
 ---
 title: "如何执行实时评分或在 SQL Server 中的本机评分 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何执行实时评分或在 SQL Server 中的本机评分
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 10/17/2017
 > 在 SQL Server 2017 中建议的预测函数的使用。
 > 若要使用 sp\_rxPredict 要求你启用 SQLCLR 集成。 在启用此选项之前，请考虑的安全隐患。
 
-准备模型，然后生成评分的整个过程是非常相似：
+准备模型，然后生成评分的整个过程是类似：
 
 1. 创建使用受支持的算法的模型。
 2. 序列化模型时使用的特殊的二进制格式。
@@ -54,7 +52,7 @@ ms.lasthandoff: 10/17/2017
 
 ### <a name="serialization-and-storage"></a>序列化和存储
 
-若要执行快速的评分方法之一使用一个模型，必须采用特殊的序列化格式，已经过优化，大小和评分效率保存模型。
+若要使用的任一快速评分选项使用的模型，保存模型使用特殊的序列化的格式，已经过优化，大小和评分效率。
 
 + 调用`rxSerializeModel`要写入到支持的模型**原始**格式。
 + 调用`rxUnserializeModel`若要重建模型以在其他 R 代码，或查看模型。
@@ -75,13 +73,13 @@ ms.lasthandoff: 10/17/2017
 
   `rxWriteObject()`函数可以从类似于 SQL Server ODBC 数据源中检索 R 对象或对象写入 SQL Server。 API 仿效简单的键-值存储。
   
-  如果使用此函数时，一定要序列化模型首先使用新的序列化函数。 然后，设置*序列化*中标记出来`rxWriteObject`为 FALSE，以避免重复序列化步骤。
+  如果使用此函数时，一定要序列化模型首先使用新的序列化函数。 然后，设置*序列化*中的参数`rxWriteObject`为 FALSE，以避免重复序列化步骤。
 
 + 你可以还将模型保存到文件的原始格式，然后从文件读取到 SQL Server。 如果您准备移动或复制环境之间的模型，此选项可能会很有用。
 
 ## <a name="native-scoring-with-predict"></a>本机与预测评分
 
-在此示例中，你将创建一个模型，，然后从 T-SQL 调用实时预测函数。
+在此示例中，你将创建模型时，，，然后从 T-SQL 调用实时预测函数。
 
 ### <a name="step-1-prepare-and-save-the-model"></a>步骤 1. 准备和保存模型
 
@@ -125,7 +123,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-下面的代码创建基于模型**iris**数据集并将其保存到模型表。
+下面的代码创建基于模型**iris**数据集并将其保存到名为的表**模型**。
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -143,7 +141,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> 必须使用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) RevoScaleR 保存模型的函数。 标准 R`serialize`函数无法生成所需的格式。
+> 请务必使用[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) RevoScaleR 保存模型的函数。 标准 R`serialize`函数无法生成所需的格式。
 
 你可以运行类似以下内容以查看存储的模型中的二进制格式的语句：
 
@@ -182,7 +180,7 @@ go
 必须启用此功能，你想要用于评分的每个数据库。 服务器管理员应运行的命令行实用工具，RegisterRExt.exe，包含在 RevoScaleR 包。
 
 > [!NOTE]
-> 为了使实时评分来工作，需要在该实例中启用 SQL CLR 功能和数据库需要将标记为可信。 运行脚本时，为你执行这些操作。 但是，你应该考虑的其他安全隐患。
+> 为了使实时评分来工作，SQL CLR 功能需要启用实例; 中此外，数据库需要标记为可信。 运行脚本时，为你执行这些操作。 但是，执行此操作之前考虑的其他安全隐患 ！
 
 1. 打开提升的命令提示符，并导航到 RegisterRExt.exe 所在的文件夹。 默认安装中，可以使用以下路径：
     
@@ -208,11 +206,11 @@ go
 
 > [!NOTE]
 > 
-> 在 SQL Server 自 2017 年，附加的安全措施是到位以避免使用 CLR 集成的问题。 这些度量值会施加额外的使用限制以及此存储过程。
+> 在 SQL Server 自 2017 年，附加的安全措施是到位以避免使用 CLR 集成的问题。 这些度量值会施加额外的使用限制以及此存储过程。 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>步骤 2. 准备和保存模型
 
-Sp 所需的二进制格式\_rxPredict 是相同的预测。 因此，在 R 代码中，包括调用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)，并且请务必指定_realtimeScoringOnly_ = TRUE，如此示例所示：
+Sp 所需的二进制格式\_rxPredict 等同于使用预测函数所需的格式。 因此，在 R 代码中，包括调用[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，并且请务必指定`realtimeScoringOnly = TRUE`，如下例所示：
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -227,7 +225,8 @@ Sp 调用\_rxPredict 作为你像对任何其他存储过程。 在当前版本�
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,
@@ -255,4 +254,3 @@ EXEC sp_rxPredict
 + [将 Python 模型部署为具有 azureml 模型管理 sdk 的 web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [将 R 代码块或实时模型发布为新的 web 服务](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [mrsdeploy 包](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
-

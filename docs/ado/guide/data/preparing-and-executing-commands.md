@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], preparing and executing commands
+helpviewer_keywords: Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc77ab26c705aaaaed4a7171f8c9349be8ac7f0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preparing-and-executing-commands"></a>准备和执行命令
 命令是颁发给提供程序执行某些操作对基础数据源的说明。 SQL 语句，例如，是到 Microsoft SQL 数据提供程序的命令。 在 ADO 中，命令通常表示由**命令**对象，尽管还可以通过发出简单命令**连接**或**记录集**对象。  
@@ -45,11 +42,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [命令对象参数](../../../ado/guide/data/command-object-parameters.md)  
   
--   [调用存储的过程使用命令](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [使用命令调用存储过程](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [作为一个连接对象的方法调用存储的过程](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
--   [命名的命令](../../../ado/guide/data/named-commands.md)  
+-   [命名命令](../../../ado/guide/data/named-commands.md)  
   
 -   [将参数传递给命名命令](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-

@@ -3,10 +3,12 @@ title: "int、 bigint、 smallint 和 tinyint (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 9/8/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,8 +20,7 @@ f1_keywords:
 - int_TSQL
 - int
 - tinyint
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - exact numeric data [SQL Server]
 - numeric data
@@ -27,22 +28,21 @@ helpviewer_keywords:
 - int data type
 - smallint data type
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "28"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 2e99ccb97dc5c36f8b7870a042963d6302b3f1eb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-使用整数数据的精确数字数据类型。 若要在数据库中节省空间，使用的最小的数据类型可以可靠地包含所有可能的值。 例如，tinyint 应该足够是人员年龄，因为没有人位于要超过 255 年。 但是 tinyint 都不会为建筑物年龄足够因为某个大厦可能超过 255 年。
+使用整数数据的精确数字数据类型。 若要在数据库中节省空间，使用的最小的数据类型可以可靠地包含所有可能的值。 例如，则 tinyint 不能够满足一个人的年龄，因为没有人位于要超过 255 年。 但是 tinyint 都不会是某个大厦的年龄足够因为某个大厦可能超过 255 年。
   
 |数据类型|范围|存储器|  
 |---|---|---|
@@ -120,4 +120,3 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 [sys.types &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   
-

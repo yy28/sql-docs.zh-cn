@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>在记录集中移动到更多的方法
 以下四个方法用于解决问题，移动或向下滚动，在**记录集**: [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。 （其中的某些方法是在只进游标中不可用）。  
@@ -63,4 +61,3 @@ If oRs.BOF Then oRs.MoveFirst
  再举一例，如果您处在之中的特定行上**记录集**并且你调用**删除**，然后调用**MoveNext**，现在，你可以对记录紧跟在已删除的记录。 但调用**MovePrevious**使之前删除了当前的记录，因为已删除的记录不会再计数的活动成员资格方面的记录**记录集**。  
   
  很特别难移动相对于当前记录的方法的所有提供程序定义一致移动语义- **MovePrevious**， **MoveNext**，和**移动** — 在面对变化的当前记录中的数据。 例如，如果你正在使用一个经过排序，筛选**记录集**，和你更改当前记录中的数据，以便它将位于之前所有其他记录，但已更改的数据也不再与筛选器匹配，不清楚的位置**MoveNext**你应执行操作。 最安全的结论也在此相对移动**记录集**是风险比绝对移动 (例如，使用**MoveFirst**或**MoveLast**) 数据时更改时编辑了记录，添加或删除。 排序和筛选应基于的主键或 ID，因为此类型的值不应更改。
-

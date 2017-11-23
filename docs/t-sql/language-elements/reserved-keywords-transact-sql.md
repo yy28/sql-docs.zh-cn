@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ODBC function calls
 - keywords [SQL Server], reserved
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="reserved-keywords-transact-sql"></a>保留的关键字的 Transact SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>保留关键字 (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将保留关键字用于定义、操作和访问数据库。 保留关键字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言语法的一部分，用于分析和理解 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和批处理。 尽管在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留关键字作为标识符和对象名在语法上是可行的，但规定只能使用分隔标识符。  
   
@@ -120,38 +117,38 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**绝对**|**EXEC**|**重叠**|  
 |**操作**|**EXECUTE**|**填充**|  
-|**ADA**|**存在**|**部分**|  
+|**ADA**|**EXISTS**|**部分**|  
 |**添加**|EXTERNAL|**PASCAL**|  
 |**ALL**|**提取**|**位置**|  
 |**分配**|**FALSE**|**精度**|  
-|**ALTER**|**提取**|**准备**|  
+|**ALTER**|**FETCH**|**准备**|  
 |**AND**|**第一个**|**保留**|  
-|**任何**|**FLOAT**|**PRIMARY**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
 |**是**|**有关**|**之前**|  
 |**AS**|**外**|**权限**|  
-|**ASC**|**FORTRAN**|**过程**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**断言**|**找到**|**公共**|  
 |**在**|**FROM**|**读取**|  
-|**授权**|**FULL**|**实际**|  
+|**AUTHORIZATION**|**FULL**|**实际**|  
 |**AVG**|**获取**|**引用**|  
 |**BEGIN**|**全局**|**相对**|  
-|**BETWEEN**|**转到**|**限制**|  
-|**位**|**转到**|**REVOKE**|  
+|**BETWEEN**|**GO**|**限制**|  
+|**位**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**同时**|**组**|**回滚**|  
 |**通过**|**无**|**行**|  
-|**级联**|**小时**|**架构**|  
+|**级联**|**小时**|**SCHEMA**|  
 |**级联**|**标识**|**滚动**|  
-|**用例**|**立即**|**第二个**|  
+|**CASE**|**立即**|**第二个**|  
 |**强制转换**|**IN**|**部分**|  
 |**目录**|**包括**|**SELECT**|  
-|**CHAR**|**索引**|**会话**|  
+|**CHAR**|**INDEX**|**会话**|  
 |**CHAR_LENGTH**|**指示器**|**SESSION_USER**|  
 |**字符**|**最初**|**设置**|  
 |**CHARACTER_LENGTH**|**内部**|**大小**|  
 |**检查**|**输入**|**SMALLINT**|  
-|**关闭**|**不区分大小写**|**某些**|  
-|**将合并**|**INSERT**|**空间**|  
+|**CLOSE**|**不区分大小写**|**某些**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**逐份打印**|**INT**|**SQL**|  
 |**排序规则**|**整数**|**SQLCA**|  
 |**列**|**相交**|**SQLCODE**|  
@@ -159,42 +156,42 @@ ms.lasthandoff: 09/01/2017
 |**连接**|**到**|**SQLSTATE**|  
 |**连接**|**IS**|**SQLWARNING**|  
 |**约束**|**隔离**|**SUBSTRING**|  
-|**约束**|**联接**|**总和**|  
-|**继续**|**密钥**|**SYSTEM_USER**|  
-|**将转换**|**LANGUAGE**|**表**|  
+|**约束**|**联接**|**SUM**|  
+|**CONTINUE**|**密钥**|**SYSTEM_USER**|  
+|**将转换**|**LANGUAGE**|**TABLE**|  
 |**相对应**|**最后一个**|**临时**|  
-|**计数**|**前导**|**然后**|  
+|**COUNT**|**前导**|**然后**|  
 |**创建**|**LEFT**|**时间**|  
 |**跨**|**级别**|**时间戳**|  
 |**当前**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**本地**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**较低**|**自**|  
+|**CURRENT_TIME**|**LOWER**|**自**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**尾随**|  
-|**CURRENT_USER**|**最大值**|**事务**|  
-|**光标**|**最小值**|**翻译**|  
+|**CURRENT_USER**|**MAX**|**事务**|  
+|**光标**|**MIN**|**TRANSLATE**|  
 |**日期**|**分钟**|**转换**|  
-|**一天**|**模块**|**TRIM**|  
-|**解除分配**|**月**|**TRUE**|  
+|**DAY**|**模块**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**年 12 月**|**名称**|**联合**|  
 |**十进制**|**国家/地区**|**唯一**|  
 |**声明**|**自然**|**未知**|  
-|**默认值**|**NCHAR**|**UPDATE**|  
-|**可以推迟**|**下一步**|**上限**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**可以推迟**|**下一步**|**UPPER**|  
 |**延迟**|**不**|**使用情况**|  
-|**DELETE**|**NONE**|**用户**|  
+|**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**使用**|  
 |**描述**|**NULL**|**VALUE**|  
 |**描述符**|**NULLIF**|**值**|  
 |**诊断**|**数值**|**VARCHAR**|  
 |**断开连接**|**OCTET_LENGTH**|**不同的**|  
-|**非重复**|**的**|**视图**|  
+|**非重复**|**的**|**VIEW**|  
 |**域**|**ON**|**当**|  
 |**双**|**仅**|**每当**|  
-|**拖放**|**打开**|**WHERE**|  
+|**拖放**|**OPEN**|**WHERE**|  
 |**其他**|**选项**|**与**|  
 |**END**|**OR**|**工作**|  
 |**结束 EXEC**|**顺序**|**写入**|  
-|**转义**|**外部**|**年**|  
+|**转义**|**外部**|**YEAR**|  
 |**除非**|**输出**|**区域**|  
 |**异常**|||  
   
@@ -300,4 +297,3 @@ ms.lasthandoff: 09/01/2017
  [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

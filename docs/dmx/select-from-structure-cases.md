@@ -17,22 +17,19 @@ f1_keywords:
 - SELECT
 - CASES
 - FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <structure> statements
+dev_langs: DMX
+helpviewer_keywords: SELECT FROM <structure> statements
 ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8eb6456165c38406ac0aceb35d9e402b8d0706b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8af8e861c74c92be83e8ed61893d9a02587aa9a3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;结构&gt;。用例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  不能使用数据挖掘扩展插件 (DMX) 在挖掘结构上启用或禁用钻取功能。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -58,7 +55,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定返回行数的整数。  
+ 可选。 一个指定返回行数的整数。  
   
  *表达式列表*  
  一个逗号分隔的表达式列表。  
@@ -72,7 +69,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>注释  
  如果对模型和结构都启用了钻取功能，则拥有挖掘结构和模型钻取权限的角色的任何成员都可以使用下面的语法返回模型中未包括的结构列。  
@@ -107,11 +104,10 @@ WHERE IsTestCase();
   
  若要返回定型事例，请替换函数 `IsTrainingCase()`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [选择 &#40; DMX &#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

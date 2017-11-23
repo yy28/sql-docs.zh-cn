@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e62f170b3f8dd21ad077176a29ac750efe523462
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d69b5c896e89638553796d18a17a89a986f3ac96
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
   使用以下主题安装 Distributed Replay 功能。  
@@ -38,4 +36,3 @@ ms.lasthandoff: 08/02/2017
  [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
-

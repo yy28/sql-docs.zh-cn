@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- customization file in RDS [ADO]
+helpviewer_keywords: customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cadf89ac579b11ab829ecd288fec77df81eb0603
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 (**[]**) 包含的类型和参数。 文字字符串由指示四个部分类型**连接**， **sql**， **userlist**，或**日志**。 该参数是文字字符串、 默认值、 用户指定的标识符，或执行任何操作。  
@@ -82,7 +79,6 @@ identifier
  [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

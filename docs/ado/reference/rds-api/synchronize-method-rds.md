@@ -1,8 +1,7 @@
 ---
 title: "Synchronize 方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,20 +9,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Synchronize method [ADO]
+helpviewer_keywords: Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c69217abc435fb4b3438975db560b9ce5836ee8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4f6b559b8ad716be403a00d9cf171094286c222f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 将给定的记录集与在 ADO 2.5 及更高版本中使用的连接字符串指定的数据库同步。  
@@ -73,6 +70,5 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
 ## <a name="applies-to"></a>适用范围  
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

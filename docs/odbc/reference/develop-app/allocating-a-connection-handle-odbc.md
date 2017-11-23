@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 598ced35301a656baf5fc744785a6fc8aefe1ef4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>分配 ODBC 连接句柄
 应用程序可以连接到数据源或驱动程序，它必须先分配然后连接句柄，如下所示：  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  请务必注意，分配连接句柄不相同加载驱动程序。 不，直到连接函数调用，将加载驱动程序。 因此，分配连接句柄并后连接到该驱动程序或数据源之前，应用程序可以调用与连接句柄的唯一函数是**SQLSetConnectAttr**， **SQLGetConnectAttr**，或**SQLGetInfo** SQL_ODBC_VER 选项。 调用其他函数与连接句柄，例如**SQLEndTran**，返回 SQLSTATE 08003 （连接未打开）。 有关完整详细信息，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  有关连接句柄的详细信息，请参阅[连接句柄](../../../odbc/reference/develop-app/connection-handles.md)。
-

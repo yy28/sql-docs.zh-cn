@@ -1,42 +1,40 @@
 ---
 title: "安装没有 internet 访问权限的机器学习组件 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/0522/2017
-ms.prod: sql-server-2016
+ms.date: 11/30/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>安装没有 internet 访问权限的机器学习组件
 
-由于提供与 SQL Server 2016 和 SQL Server 2017 R 和 Python 组件是开放源代码，Microsoft 不默认情况下安装 R 或 Python 的组件。
-
-相反，我们提供相关安装程序，为方便起见在 Microsoft 下载中心和其他受信任的站点上捆绑包。 你必须同意适当的许可，和 SQL Server 安装程序将为你安装 R 或 Python 的组件。
+由于提供与 SQL Server 2016 和 SQL Server 2017 R 和 Python 组件是开放源代码，Microsoft 不默认情况下安装 R 或 Python 的组件。 相反，我们提供相关安装程序，为方便起见在 Microsoft 下载中心和其他受信任的站点上捆绑包。 你必须同意适当的许可，和 SQL Server 安装程序将为你安装 R 或 Python 的组件。
 
 本主题提供的下载位置中的安装程序和脱机安装程序过程的概述。
 
-## <a name="installation-process"></a>安装过程
+## <a name="overview-of-the-offline-installation-process"></a>脱机安装过程概述
 
 通常情况下，使用 SQL Server 2016 和 SQL Server 自 2017 年中的计算机组件的安装程序需要 internet 连接。 SQL Server 安装程序运行时，如果选择了任何机器学习选项，安装程序正在检查 Python 或 R 安装程序，作为以及任何其他必需的组件。
 
 + **如果计算机具有 internet 连接**
 
-    SQL Server 查找并下载的组件，然后将其安装在安装过程。 你必须接受单独安装每个开放源组件 （R 或 Python） 的许可条款。
+    SQL Server 查找和下载组件，然后将其安装在安装过程。 接受单独安装每个开放源组件 （R 或 Python） 的许可条款。
 
 + **如果计算机没有 internet 访问权限**
 
@@ -48,12 +46,21 @@ ms.lasthandoff: 10/06/2017
 
 ### <a name="step-1-obtain-additional-installers"></a>步骤 1. 获取其他安装程序
 
-有关**R**在 SQL Server 2016 和 SQL Server 自 2017 年中，你将需要获取两个不同的安装程序。 SQL Server 安装向导可确保按正确的顺序安装它们。
+**R**
+
+在 SQL Server 2016 和 SQL Server 2017 中支持 R 语言。 两个不同的安装程序是必需的开放源代码和专有的组件。 SQL Server 安装向导可确保按正确的顺序安装它们。
 
 + 安装程序与**SRO**名称中提供的开放源组件。
 + 安装程序与**SRS**名称中包含提供由 Microsoft，包括数据库的集成组件。
 
-有关**Python**在 SQL Server 自 2017 年，下载单个的 CAB 文件中和任何必备组件。
+**For Python**
+
+Python 语言仅支持 SQL Server 自 2017 年。 同样，有两个不同的安装程序，你必须下载。
+
++ 安装程序与**SPO**名称中的为 Microsoft Python 打开，并提供开放源代码组件。
++ 安装程序与**SPS**名称中适用于 Microsoft Python Server，并包含提供由 Microsoft，包括数据库的集成组件。
+
+**如何下载**
 
 1. 下载的安装程序[Microsoft 下载中心站点](#installerlocs)到计算机具有 internet 访问权限，并保存安装程序，而无需运行它。
 2. 安装程序 (CAB) 文件复制到你想要安装机器学习组件的计算机。
@@ -119,10 +126,15 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Microsoft Python 打开     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 自 2017 年 CU1** |
-Microsoft R Open     |使用 prervious|
+Microsoft R Open     |使用以前|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Microsoft Python 打开     |使用以前 |
 Microsoft Python 服务器    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**SQL Server 自 2017 年 CU2** |
+Microsoft R Open     |使用以前|
+Microsoft R Server      |使用以前|
+Microsoft Python 打开     |使用以前 |
+Microsoft Python 服务器    |使用以前|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016 的的下载
 
@@ -189,7 +201,6 @@ Microsoft R Server    |无更改;使用以前 |
 [Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
 [Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
 
-
 ## <a name="modslocales"></a>安装适用于不同的语言区域设置
 
 如果你下载。具有 internet 访问权限，安装向导的计算机上的 SQL Server 安装程序一部分的 CAB 文件检测本地语言，并会自动更改安装的语言。
@@ -204,7 +215,7 @@ Microsoft R Server    |无更改;使用以前 |
 
     > [!IMPORTANT]
     > 此问题适用仅为早期版本，并在更高版本已修复。
-    > 如果安装程序返回一条消息，它不能安装正确的语言，只能使用此解决方法。
+    > **如果安装程序返回一条消息，它不能安装正确的语言，只能使用此解决方法。**
 
 + **SQL server 自 2017 年 1**
 
@@ -220,14 +231,15 @@ Microsoft R Server    |无更改;使用以前 |
 
 + 如果你是*添加*到这些组件*现有*安装，使用更新的版本的 SQL Server 安装程序中，并相应更新的其他组件的版本。 指定要安装的 R 功能时，安装程序将查找匹配的版本为机器学习组件的安装程序。
 
-## <a name="command-line-arguments-for-setup"></a>安装程序命令行参数
+## <a name="command-line-arguments-for-specifying-component-locations"></a>用于指定组件位置的命令行自变量
 
-在执行无人参与的安装时，必须提供以下命令行自变量。 但是，不需要设置任何其他标志，以安装其他所需的组件;默认情况下以无提示方式安装系统必备组件，如.NET 核心。
+当从命令行执行脱机安装程序，你必须提供以下命令行参数来指定预先下载的组件的位置。 但是，不需要设置任何其他标志，以安装其他所需的组件;默认情况下以无提示方式安装系统必备组件，如.NET 核心。
 
 **安装程序的位置**
 
 - `/UPDATESOURCE`若要指定包含 SQL Server 更新安装程序的本地文件的位置
 - `/MRCACHEDIRECTORY`若要指定包含的 R 组件 CAB 文件的文件夹
+- `/MPYCACHEDIRECTORY`若要指定包含的 Python 组件 CAB 文件的文件夹
 
 **SQL Server 2016 中的 R 组件**
 
@@ -244,7 +256,7 @@ Microsoft R Server    |无更改;使用以前 |
 
 - `/ADVANCEDANALYTICS`若要获得有关外部脚本引擎支持
 - `/SQL_INST_MPY`若要使用 Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`若要接受许可协议的单独 R
+- `/IACCEPTPYTHONLICENSETERMS="True"`若要接受许可协议单独 Python
 
 
 > [!NOTE]
@@ -255,4 +267,3 @@ Microsoft R Server    |无更改;使用以前 |
 [安装 Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 由 R 服务支持团队这篇文章演示如何在 SQL Server 2016 中执行的无人参与的安装或升级 R services:[在没有 Internet 访问权限的计算机上部署 R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)。
-

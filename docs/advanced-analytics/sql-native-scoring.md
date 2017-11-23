@@ -5,21 +5,18 @@ ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="native-scoring"></a>本机评分
 
 本主题介绍 SQL Server 2017 对以近实时的机器学习模型提供评分的功能。
@@ -119,4 +116,3 @@ _评分_过程分为两步。 首先，你指定一个预先训练的模型，�
 + PMML 模型
 + 使用其他 R 库从 CRAN 或其他存储库创建的模型
 + 模型包含任何其他 R 转换
-

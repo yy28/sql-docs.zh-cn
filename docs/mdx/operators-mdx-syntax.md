@@ -5,29 +5,26 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: fd52d724dc1b51943019339bacdc56ea334492cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operators-mdx-syntax"></a>运算符（MDX 语法）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/02/2017
 |---------------------------------------|---------|  
 |将值分配给一个变量，或将一个结果集列与别名相关联。|[赋值运算符](../mdx/assignment-operators.md)|  
 |加法、减法、乘法、除法。|[算术运算符](../mdx/arithmetic-operators.md)|  
-|测试某个条件（如 AND、OR、NOT 和 XOR）的真实性。|[按位运算符](../mdx/bitwise-operators.md)|  
+|测试某个条件（如 AND、OR、NOT 和 XOR）的真实性。|[位运算符](../mdx/bitwise-operators.md)|  
 |将一个值与另一个值或表达式进行比较。|[比较运算符](../mdx/comparison-operators.md)|  
 |永久或临时将两个字符串合并成一个字符串。|[串联运算符](../mdx/concatenation-operators.md)|  
 |永久或临时将两个集表达式合并成一个集。|[集运算符](../mdx/set-operators.md)|  
@@ -71,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   DISTINCT  
   
--   解码的字符：  
+-   设置用户帐户 ：  
   
 -   ^  
   
@@ -116,4 +113,3 @@ ms.lasthandoff: 08/02/2017
  [MDX 语法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

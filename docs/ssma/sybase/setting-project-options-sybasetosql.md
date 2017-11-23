@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Project Options Setting
+helpviewer_keywords: Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d53fbd93f9b7d2a111185a04facaf4d39e7f0d98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40c2bffdb58fadfa3a9c7da58cf68b8c4390cd16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-sybasetosql"></a>设置项目选项 (SybaseToSQL)
 对于每个 SSMA 项目，你可以设置项目级别选项。 这些选项用于指定对象转换、 对象加载、 SQL azure、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，验证是否适用于项目的配置选项。  
@@ -51,7 +48,7 @@ SSMA 有五个集的项目设置：
   
 2.  Optimistic  
   
-3.  “完全”  
+3.  完全  
   
 4.  自定义  
   
@@ -86,7 +83,7 @@ SSMA 有五个集的项目设置：
   
     -   若要指定自定义设置，只需选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 你还可以自定义当前项目的设置。 这些设置将保存到当前的项目文件。  
   
@@ -100,7 +97,7 @@ SSMA 有五个集的项目设置：
   
     -   若要指定自定义模式，在**模式**下拉列表框中，选择**自定义**、 的左窗格中选择一个选项，单击的设置或值在右窗格中，然后选择或输入新的设置或值。  
   
-3.  单击 **确定** 以保存设置。  
+3.  单击**确定**以保存设置。  
   
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于您的项目需求：  
@@ -109,7 +106,6 @@ SSMA 有五个集的项目设置：
   
 -   否则，将转换到的 Sybase 数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象定义。 有关详细信息，请参阅[转换 Sybase ASE 数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [Sybase ASE 将数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

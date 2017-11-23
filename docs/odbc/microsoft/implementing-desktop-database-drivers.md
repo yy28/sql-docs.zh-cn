@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,24 +16,23 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93d3fa89e2e918082f327848a55c6dbd60376984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="implementing-desktop-database-drivers"></a>实现桌面数据库驱动程序
 可在 ODBC 数据源管理器联机帮助说明和有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的技术说明。 此文件可以访问期间从驱动程序安装例程[Microsoft ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  
   
  本部分包含以下主题。  
   
--   [与桌面数据库驱动程序一起使用的文件](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
+-   [要与桌面数据库驱动程序一起使用的文件](../../odbc/microsoft/files-to-use-with-the-desktop-database-drivers.md)  
   
 -   [ODBC 组件文件](../../odbc/microsoft/odbc-component-files.md)  
   
@@ -42,19 +40,18 @@ ms.lasthandoff: 09/09/2017
   
 -   [使用桌面数据库驱动程序的描述符](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
--   [对于桌面数据库驱动程序的诊断](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
+-   [桌面数据库驱动程序的诊断](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   
 -   [接受字符串参数的函数](../../odbc/microsoft/functions-accepting-string-parameters.md)  
   
--   [SQL 92 法规遵从性](../../odbc/microsoft/sql-92-compliance.md)  
+-   [SQL 92 符合性](../../odbc/microsoft/sql-92-compliance.md)  
   
 -   [驱动程序的基址](../../odbc/microsoft/base-address-of-drivers.md)  
   
 -   [安装程序 DLL](../../odbc/microsoft/setup-dll.md)  
   
--   [转换 Dll 和桌面数据库驱动程序](../../odbc/microsoft/translation-dlls-and-desktop-database-drivers.md)  
+-   [转换 DLL 和桌面数据库驱动程序](../../odbc/microsoft/translation-dlls-and-desktop-database-drivers.md)  
   
 -   [桌面数据库驱动程序兼容性](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
--   [桌面数据库驱动程序的性能问题](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
-
+-   [桌面数据库驱动程序性能问题](../../odbc/microsoft/desktop-database-driver-performance-issues.md)

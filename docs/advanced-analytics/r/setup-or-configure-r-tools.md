@@ -1,80 +1,64 @@
 ---
-title: "设置或配置 R 工具 | Microsoft Docs"
+title: "SQL Server 安装程序中包含的 R 工具 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/20/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 37910463066855d8929d554cb7f850c410dac4a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3baf97a960d7e8f950bb6e9cd251550f4c4b942
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="setup-or-configure-r-tools"></a>设置或配置 R 工具
-  Microsoft R Server 提供开发和测试 R 代码所需的所有基础 R 库、一套 ScaleR 包和标准的 R 工具。 但是，如果你想要使用专用的 R 开发环境，可以安装几个可用的专用环境，其中包括许多免费工具。  
-  
-## <a name="basic-r-tools"></a>基本 R 工具  
- Microsoft R Server 的安装中不需要额外的工具，因为默认已安装 R *基础安装*中包含的所有标准 R 工具。
+# <a name="r-tools-included-with-sql-server-setup"></a>SQL Server 安装程序中包含的 R 工具
 
--   **RTerm**：用于运行 R 脚本的命令行工具 
-  
--   **RGui.exe**：适用于 R 的简单交互式编辑器。RGui.exe 和 RTerm 的命令行参数相同。 
-  
--   **RScript**：用于以批处理模式运行 R 脚本的命令行工具。  
+当与 SQL Server 安装 R 时，可以使用任何安装的相同 R 工具**基**R，如 RGui、 Rterm，等的安装。 因此从技术上讲，你具有所需开发和测试 R 代码的所有工具。
 
-若要查找这些工具，请找到 R 库的位置。 根据你是只安装了 SQL Server R Services，还是同时安装了 R Server（独立版），此位置将有所不同。 有关详细信息，请参阅 [What is Installed and Where to Find R Packages](https://msdn.microsoft.com/library/mt695941(sql.130).aspx#Anchor_1)（安装的内容以及在何处找到 R 包）
-
-然后查看文件夹 `..\R_SERVER\bin\x64`。  
-
-> [!TIP]  
->  需要 R 工具的帮助？ 安装文件夹 `C:\Program Files\Microsoft SQL Server\R_SERVER\doc` 以及 `C:\Program Files\Microsoft SQL Server\R_SERVER\doc\manual` 中提供了文档。  
->   
->  或者，只需打开“RGui”，单击“帮助”，然后选择其中一个选项。  
-
-## <a name="microsoft-r-client"></a>Microsoft R Client
-
-Microsoft R Client 是一个免费下载的工具，让你开发可在 Microsoft R Server 或 SQL Server R Services 中轻松运行的 R 解决方案。 提供此选项的目的是帮助无法访问 R Server (Enterprise Edition) 的数据科研人员开发使用 ScaleR 的解决方案。 
-
-如果你在其他 R 开发环境（例如，用于 Visual Studio 的 R 工具或 RStudio）中使用 ScaleR，必须指定将 Microsoft R Client 用作 R 可执行文件。 这样，你便拥有 RevoScaleR 包以及其他 Microsoft R Server 功能的完全访问权限，不过性能将受到限制。
-
-还可以使用 R Client 中提供的工具（例如 RGui 和 RTerm）来运行脚本，或者编写和执行即席 R 代码。
-
-[安装 Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-install)
-  
-##  <a name="bkmk_RTools"></a> 用于 Visual Studio 的 R 工具  
-
- 为方便使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，请考虑使用 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] 作为开发环境。 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] 是适用于 Visual Studio 的免费加载项，可在所有版本的 Visual Studio 中运行。 Visual Studio 还提供对 Python 和 F # 集成的支持。  
-
- 有关安装说明，请参阅[如何安装 R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)。
+本主题列出了安装中包括的工具。
 
 > [!TIP]
-> 在安装任何新包之前，请检查默认使用的 R 运行时。 否则，很有可能会将新 R 包安装到默认库位置，以后无法在 R Server 中找到这些包！
+> 
+> 通常是更轻松地调试和测试 R 代码，即使用专用的开发环境。 你将找到更轻松地在 SQL Server 中运行 R 代码，如果你事先在中测试它的外部工具，以便你可以阅读详细的错误消息和调试解决方案。
+> 
+> 请参阅本文列表可用于开发 R 解决方案，以及如何将它们配置为使用 SQL Server 的免费工具：[设置数据科学客户端](set-up-a-data-science-client.md)
 
+**适用于：** SQL Server 2016 R Services （数据库） 和 Microsoft R Server （独立）;SQL Server 自 2017 年 1 机器学习服务 （数据库） 和机器学习 Server （独立）
 
-## <a name="rstudio"></a>RStudio
+## <a name="r-tools-included-with-installation"></a>包括与安装的 R 工具
 
-如果你偏好使用 RStudio，需要执行一些附加的步骤来使用 RevoScaleR 库：
-- 安装 Microsoft R Server 或 Microsoft R Client 来获取所需的包和库。
-- 更新 R 路径以使用 R Server 运行时。
+以下标准 R 工具都将纳入*基本安装*，因此默认情况下安装。
 
-有关详细信息，请参阅 [Configure Your IDE](https://msdn.microsoft.com/microsoft-r/r-client-get-started#step-2-configure-your-ide)（配置 IDE）。
++ **RTerm**： 用于运行 R 脚本的命令行终端
 
++ **RGui.exe**：适用于 R 的简单交互式编辑器。RGui.exe 和 RTerm 的命令行参数相同。
 
-## <a name="see-also"></a>另请参阅  
- [创建独立版 R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md)   
- [Microsoft R Server（独立版）入门](../../advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md)  
-  
-  
++ **RScript**：用于以批处理模式运行 R 脚本的命令行工具。
 
+若要找到这些工具，确定设置 SQL Server 或独立机器学习功能一起安装的 R 库。 例如，在默认安装中，R 工具位于以下文件夹：
+
++ SQL Server 2016 R Services:`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server 独立：`~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 自 2017 年 1 机器学习服务：`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 机器学习 Server （独立）：`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+如果你需要使用 R 工具的帮助，只需打开**RGui**，单击**帮助**，然后选择其中一个选项。
+
+## <a name="introducing-microsoft-r-client"></a>引入 Microsoft R 客户端
+
+Microsoft R 客户端是一个免费下载，使你可以访问的开发使用 RevoScaleR 包。 通过安装 R 客户端，你可以创建可以在所有受支持的计算上下文，包括 SQL Server 数据库中分析和分布式 R 计算 Hadoop、 Spark 中或使用机器学习服务器的 Linux 上运行的 R 解决方案。
+
+如果你已安装不同的 R 开发环境，如 RStudio，一定要重新配置要使用的库和可执行文件由 Microsoft R 客户端提供的环境。 通过这样你可以使用 RevoScaleR 包的所有功能尽管性能将受到限制。
+
+有关详细信息，请参阅[什么是 Microsoft R 客户端？](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)

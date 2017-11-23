@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2872802c5f870337f64606bbc412d4b3f38a55c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-drivers"></a>类型的驱动程序
 ODBC 驱动程序可以进行分类，如下所示：  
@@ -70,4 +68,3 @@ ODBC 驱动程序可以进行分类，如下所示：
   
 > [!NOTE]  
 >  16 位 ODBC 驱动程序不会直接使用 ODBC 3。*x*驱动程序管理器。 但是，很可能使用 2.0 ODBC 驱动程序管理器，它随后 thunk 最多 3 个 16 位驱动程序。*x*驱动程序管理器。
-

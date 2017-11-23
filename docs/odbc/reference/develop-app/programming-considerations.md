@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2cb1af941d23ae7ea03bac265642bd9cbbb152d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="programming-considerations"></a>编程时的注意事项
 本部分简要讨论数与编写 ODBC 应用程序和驱动程序相关的主题。  
@@ -32,19 +30,18 @@ ms.lasthandoff: 09/09/2017
   
 -   [多线程处理](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [对齐方式](../../../odbc/reference/develop-app/alignment.md)  
+-   [对齐](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   
--   [转换 Dll](../../../odbc/reference/develop-app/translation-dlls.md)  
+-   [转换 DLL](../../../odbc/reference/develop-app/translation-dlls.md)  
   
 -   [诊断工具](../../../odbc/reference/develop-app/diagnostic-tools.md)  
   
 -   [Visual Studio Analyzer](../../../odbc/reference/develop-app/visual-studio-analyzer.md)  
   
--   [特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)  
+-   [特定于驱动程序的数据类型、描述符类型、信息类型、诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)  
   
--   [向后兼容性和标准合规性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
+-   [后向兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
 -   [Windows 中的 ODBC](../../../odbc/reference/develop-app/odbc-in-windows.md)
-

@@ -5,27 +5,24 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - expressions [MDX], empty values
 - empty values [MDX]
 ms.assetid: 6338fb85-f513-4c3e-a774-4fd7c6986a91
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 977f5378647d306ce14bc01709b6229bead48929
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aef26d6b575ca340111054824fe024e81c6f7115
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-empty-values"></a>使用空值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)函数返回**TRUE**当且仅当标识由元组函数中指定的单元格为空。 否则，该函数返回**FALSE**。  
   
     > [!NOTE]  
-    >  **IsEmpty** 函数无法确定是否使用成员表达式，则返回空值。 若要确定是否从表达式返回了 null 成员，请使用[IS](../mdx/is-mdx.md)运算符。  
+    >  **IsEmpty**函数无法确定是否使用成员表达式，则返回空值。 若要确定是否从表达式返回了 null 成员，请使用[IS](../mdx/is-mdx.md)运算符。  
   
 -   当空单元值是数字运算符（+、-、*、/）中任一运算符的一个操作数时，如果另一个操作数是非空值，空单元值将被作为零处理。 如果两个操作数都为空，数字运算符将返回空单元值。  
   
@@ -154,10 +151,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 运算符参考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
  [表达式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
   
   
-

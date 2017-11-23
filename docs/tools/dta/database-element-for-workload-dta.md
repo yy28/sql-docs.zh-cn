@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Database element
+dev_langs: XML
+helpviewer_keywords: Database element
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a016251fd0cf1d9e6e3a9d3e5b62d126f35d4d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e71d9a3077821fc4b34ee5cebac5441065ddf013
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-element-for-workload-dta"></a>工作负荷的数据库元素 (DTA)
   指定工作负荷跟踪表所在的数据库。  
@@ -51,8 +47,8 @@ ms.lasthandoff: 08/02/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[工作负荷元素 &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
-|**子元素**|[数据库 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [数据库的架构元素 (DTA)](../../tools/dta/schema-element-for-database-dta.md)|  
+|**父元素**|[工作负荷元素 (DTA)](../../tools/dta/workload-element-dta.md)|  
+|**子元素**|[数据库的名称元素 (DTA)](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [数据库的架构元素 (DTA)](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>注释  
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseDetailsTypecomplexType** 。 请不要将此 **Database** 元素与根级父元素为 **Configuration** 元素的元素相混淆。 （请参阅[用于配置的数据库元素 (DTA)](../../tools/dta/database-element-for-configuration-dta.md)。）  
@@ -64,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

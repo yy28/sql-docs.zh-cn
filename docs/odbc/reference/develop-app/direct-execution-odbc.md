@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abce5a1c9f4fceb38420c15159cf89a2430025dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="direct-execution-odbc"></a>直接执行 ODBC
 直接执行是执行语句的最简单方法。 当针对执行提交该语句时，数据源将它编译成一个访问计划，然后执行该访问计划。  
@@ -61,4 +59,3 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   发送到数据源执行的语句和已转换的参数值。  
   
     -   返回任何错误。 其中包括序列化或状态的诊断，例如 SQLSTATE 24000 （无效的游标状态）、 SQLSTATE 42000 （语法错误或访问冲突），如语法错误和语义错误如 SQLSTATE 42S02 （基础表或视图未找到）。
-

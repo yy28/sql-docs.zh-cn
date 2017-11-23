@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC], catalog functions
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb83e909364bba3a06cfbc17926447364db8ae1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 497676e6b87b6603d4bc6cb1615bb1b133c7acd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalog-functions"></a>目录函数
 所有数据库都有一个结构，它概述了将存储在数据库中的数据的方式。 例如，简单的销售订单数据库可能具有在下图中，在其中将使用的 ID 列链接的表中所示的结构。  
@@ -41,7 +39,6 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [使用的目录数据](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
+-   [目录数据的用法](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
   
 -   [ODBC 中的目录函数](../../../odbc/reference/develop-app/catalog-functions-in-odbc.md)
-

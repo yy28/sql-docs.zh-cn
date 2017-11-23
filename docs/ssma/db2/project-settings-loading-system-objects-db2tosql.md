@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: acd361c61d56d93e5f2b28f498e67e3721fd0b2c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ef45d9ecb596daea8701af49dffa37d08d642bd5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>项目设置 （加载系统对象） (DB2ToSQL)
 加载系统对象页**项目设置**对话框中，可以指定哪些 DB2 系统对象 SSMA 将转换并向其中加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/02/2017
   
 如果您 DB2 的对象引用其他系统对象，则应选择这些对象。 如果不选择引用的 DB2 数据库对象的系统对象，SSMA 将报告转换错误。 如果你收到引起缺少系统对象的转换错误，请在此对话框中选择所缺少的对象。 然后，可以重复根据需要转换。  
   
-

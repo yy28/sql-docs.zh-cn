@@ -1,8 +1,7 @@
 ---
 title: "RDS 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2a034ccdd85f3c05d3438cd8a589ac47d1aabd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|将转换**记录集**表示的记录集数据的 MIME 字符串。|  
 |[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|创建用于目标业务对象的代理，并将指针返回到它。|  
 |[CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|创建一个空断开连接**记录集**。|  
-|[执行方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|执行请求，并创建一个高级的数据行集 （用于用 ADO 2.5 及更高版本）。|  
+|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|执行请求，并创建一个高级的数据行集 （用于用 ADO 2.5 及更高版本）。|  
 |[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|执行请求，并创建一个高级的数据行集 （用于用 ADO 2.1）。|  
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|返回一个指向所请求的接口的对象的功能更强大版本上。|  
 |[MoveFirst，MoveLast，MoveNext，MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|将移动到第一个，最后，在指定的下一步，或上一个记录**记录集**对象。|  
@@ -46,6 +44,5 @@ ms.lasthandoff: 09/09/2017
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|提交挂起的更改的本地缓存而可更新**记录集**中指定的数据源到**连接**属性。|  
 |[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|将给定的记录集与指定的连接字符串 （与 ADO 2.5 及更高版本一起使用） 的数据库同步。|  
 |[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|将给定的记录集与指定的连接字符串 （用 ADO 2.1 的使用） 的数据库同步。|
-
 
 

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- ADO MD code examples, VBScript
+dev_langs: VB
+helpviewer_keywords: ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c523217edd51165a4d0c75d39add46cfcf0d812e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c482bf2f54e027075979f2930dc55d31bf6a796
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="axis-example-vbscript"></a>轴示例 (VBScript)
 此 Active Server Page 显示 MDX 查询字符串中的 OLAP 数据，并将生成的单元集写入一个 HTML 表结构。  
@@ -171,4 +167,3 @@ intPC1 = cst.Axes(1).Positions.Count - 1
 </BODY>  
 </HTML>  
 ```
-

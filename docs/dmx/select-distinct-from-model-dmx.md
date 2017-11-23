@@ -16,25 +16,23 @@ ms.topic: language-reference
 f1_keywords:
 - DISTINCT
 - SELECT
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - discrete columns [DMX]
 - discretized columns [DMX]
 - SELECT DISTINCT FROM <model> statement
 - continuous columns
 ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e36b3c6b97fa441297961d2edf889bee61f67cc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aa916d15654b1fb4f806291d7d05ca7a683709f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +49,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>参数  
  *n*  
- 選擇性。 一个指定要返回行数的整数。  
+ 可选。 一个指定要返回行数的整数。  
   
  *表达式列表*  
  相关列标识符（从模型中派生）或表达式的以逗号分隔的列表。  
@@ -63,7 +61,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  一个限制条件，用于限制从列列表返回的值。  
   
  *expression*  
- 選擇性。 一个返回标量值的表达式。  
+ 可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>注释  
  **SELECT DISTINCT FROM**语句只能与单个列或一组相关的列。 该子句不可用于一组不相关的列。  
@@ -76,7 +74,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  结果**SELECT DISTINCT FROM\<模型 >**语句不同，具体取决于列类型。 下表说明了所支持的列类型和该语句的输出结果。  
   
-|列类型|输出|  
+|列类型|“输出”|  
 |-----------------|------------|  
 |离散|列中的唯一值。|  
 |离散化|列中每个离散化存储桶的中点。|  
@@ -154,10 +152,9 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  最小存储桶的最小值和最大存储桶的最大值为所观察到的最高值和最低值。 任何超出此观察范围的值都假定为属于最小存储桶和最大存储桶。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [选择 &#40; DMX &#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

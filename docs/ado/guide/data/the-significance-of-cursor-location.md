@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>光标位置的重要性
 每个游标使用临时资源来保存其数据。 这些资源可以是内存、 磁盘页面文件、 临时磁盘文件或甚至临时存储在数据库中。 游标被称为*客户端*光标时这些资源都位于客户端计算机上。 游标被称为*服务器端*时这些资源位于服务器上的光标。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  但是，务必点的服务器端游标已-至少暂时-对于每个活动的客户端消耗宝贵的服务器资源。 你必须相应地规划以确保你的服务器硬件能够管理的所有服务器端游标的活动客户端请求。 此外，服务器端游标可能会很慢因为它提供仅单个行的访问权限-不没有可用的任何批处理光标。  
   
  服务器端游标时都很有用插入、 更新或删除记录。 使用服务器端游标时，你可以对相同的连接的多个活动语句。
-

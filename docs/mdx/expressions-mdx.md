@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8474c90f0cfbcd8ae0aabce14623c427106298a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 608cba1c2819136f5bafa71be8ac5a347c5939cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,21 +83,20 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[使用多维数据集和子多维数据集表达式](../mdx/using-cube-and-subcube-expressions.md)|定义多维数据集和子多维数据集表达式。|  
+|[使用多维数据集表达式和子多维数据集表达式](../mdx/using-cube-and-subcube-expressions.md)|定义多维数据集和子多维数据集表达式。|  
 |[使用维度表达式](../mdx/using-dimension-expressions.md)|定义维度表达式。|  
 |[使用成员表达式](../mdx/using-member-expressions.md)|定义成员表达式。|  
 |[使用元组表达式](../mdx/using-tuple-expressions.md)|定义元组表达式。|  
 |[使用集表达式](../mdx/using-set-expressions.md)|定义集表达式。|  
 |[使用标量表达式](../mdx/using-scalar-expressions.md)|定义标量表达式。|  
-|[使用空值](../mdx/working-with-empty-values.md)|说明什么是空值以及如何处理此类值。|  
+|[处理空值](../mdx/working-with-empty-values.md)|说明什么是空值以及如何处理此类值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [MDX 语言参考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
  [MDX 查询基础知识 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

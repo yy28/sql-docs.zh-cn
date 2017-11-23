@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Driver Manager, installing
+helpviewer_keywords: Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ca46eb4fbb6203191a7aace3946daad8361b224
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -59,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  当你准备好安装，并且如果你的计算机可以访问外部站点通过 FTP，执行以下命令： **./build_dm.sh**。
 
-如果你的计算机无法访问外部站点通过 FTP，获取`unixODBC-2.3.0.tar.gz`。 你可以获取`unixODBC-2.3.0.tar.gz`从[http://www.unixodbc.org](http://www.unixodbc.org/)。单击**下载**页后，可以转到下载页面左侧的链接。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 此版本的不支持 unixODBC 2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh-下载 url = file://unixODBC-2.3.0.tar.gz**。  
+如果你的计算机无法访问外部站点通过 FTP，获取`unixODBC-2.3.0.tar.gz`。 你可以获取`unixODBC-2.3.0.tar.gz`从[http://www.unixodbc.org](http://www.unixodbc.org/)。单击**下载**页后，可以转到下载页面左侧的链接。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 此版本的不支持 UnixODBC 2.3.1 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh-下载 url = file://unixODBC-2.3.0.tar.gz**。  
 
 6.  类型**是**继续进行解压缩文件。 完成这部分过程最多需要 5 分钟。  
 
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
 [此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [发行说明](../../../connect/odbc/linux-mac/release-notes.md)
-

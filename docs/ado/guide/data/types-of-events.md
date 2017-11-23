@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 502c77b55eb0e3a60497fa10bf9fe8c8a412dc4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="types-of-events"></a>类型的事件
 有两种基本类型的事件。 "将事件，"在其调用操作开始之前，通常在其名称中包含"将"— 例如， **WillChangeRecordset**或**WillConnect**。 事件通常完成后调用的事件在其名称中包含"完成"— 例如， **RecordChangeComplete**或**ConnectComplete**。 存在例外-如**InfoMessage** -但这些关联的操作已完成后，执行。  
@@ -49,5 +47,4 @@ ms.lasthandoff: 09/09/2017
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [事件参数](../../../ado/guide/data/event-parameters.md)   
- [事件处理程序是如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)
-
+ [事件处理程序的协同工作原理](../../../ado/guide/data/how-event-handlers-work-together.md)

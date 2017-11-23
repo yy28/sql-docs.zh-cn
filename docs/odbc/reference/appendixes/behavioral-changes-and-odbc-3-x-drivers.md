@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7a5bcfea240af2477b3522f2baa849a6a5a6876
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>行为更改和 ODBC 3.x 驱动程序
 环境属性 SQL_ATTR_ODBC_VERSION 指示驱动程序是否需要展示 ODBC 2。*x*行为或 ODBC 3*.x*行为。 如何设置 SQL_ATTR_ODBC_VERSION 环境属性取决于应用程序。 ODBC 3*.x*应用程序必须调用**SQLSetEnvAttr**设置此属性后它们调用**SQLAllocHandle**分配环境句柄并在它们调用之前**SQLAllocHandle**分配连接句柄。 如果他们未能这样做，驱动程序管理器将返回 SQLSTATE HY010 （函数序列错误） 在后一种调用**SQLAllocHandle**。  
@@ -43,11 +41,11 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [Datetime 数据类型](../../../odbc/reference/appendixes/datetime-data-types.md)  
+-   [日期时间数据类型](../../../odbc/reference/appendixes/datetime-data-types.md)  
   
--   [向后兼容性的 C 数据类型](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
+-   [C 数据类型的后向兼容性](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
   
--   [固定长度书签](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
+-   [定长书签](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
   
 -   [SQLGetInfo 支持](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
   
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 -   [调用 SQLSetPos 以插入数据](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [按序号加载](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-

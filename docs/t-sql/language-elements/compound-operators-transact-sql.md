@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators
 - compound operators, described
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb178876814b5b83f839dda1d2a266948c43d8d2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e5fde8cd4265359722f33400d834b0a301718ef
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="compound-operators-transact-sql"></a>复合运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +39,14 @@ ms.lasthandoff: 09/01/2017
   
 |运算符|详细信息链接|操作|  
 |--------------|------------------------------|------------|  
-|+=|[+ = &#40;添加等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
-|-=|[-= &#40;减去等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  
-|*=|[&#42; = &#40;乘等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|将原始值乘上一定的量，并将原始值设置为结果。|  
-|/=|[&#40; 划分等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为结果。|  
-|%=|[取模等于 &#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为余数。|  
-|&=|[& = &#40;按位与等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|对原始值执行位与运算，并将原始值设置为结果。|  
-|^=|[^ = &#40;按位异或等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|对原始值执行位异或运算，并将原始值设置为结果。|  
-|&#124;=|[&#124; = &#40;按位或等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
+|+=|[+ = &#40;添加分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
+|-=|[-= &#40;减去分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  
+|*=|[&#42; = &#40;乘法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|将原始值乘上一定的量，并将原始值设置为结果。|  
+|/=|[&#40; 除分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为结果。|  
+|%=|[取模赋值 &#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为余数。|  
+|&=|[& = &#40;按位与赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|对原始值执行位与运算，并将原始值设置为结果。|  
+|^=|[^ = &#40;按位异或赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|对原始值执行位异或运算，并将原始值设置为结果。|  
+|&#124;=|[&#124; = &#40;按位 OR 赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -111,4 +108,3 @@ SELECT @x8 AS Bitwise_OR;
  [按位运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

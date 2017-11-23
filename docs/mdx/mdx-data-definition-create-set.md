@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,30 +13,28 @@ f1_keywords:
 - CREATE SET
 - CREATE_SET
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - named sets [MDX]
 - CREATE SET statement
 ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6684e5b5d8edd630e623e5210d977c70903b01c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12462e2b5a81c34e53332fa9749d698fecca36a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 数据定义-创建设置
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为当前多维数据集创建具有会话作用域的命名集。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -63,7 +60,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  定义集属性值的有效标量表达式。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  命名集是为重用而创建的维度成员集（或者是用于定义集的表达式）。 例如，使用命名集可以定义由销售额排在前十名的商店组成的维度成员集。 此组可以静态方式，或通过所示的函数定义[TopCount](../mdx/topcount-mdx.md)。 此命名集然后使用任何所需的一套前 10 个存储位置。  
   
  CREATE SET 语句创建命名的集，仍可在整个会话，并因此，可在多个查询在会话中。 有关详细信息，请参阅[Creating Session-Scoped 计算成员 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
@@ -121,4 +118,3 @@ SELECT [Core Products] ON 0
  [MDX 数据定义语句 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

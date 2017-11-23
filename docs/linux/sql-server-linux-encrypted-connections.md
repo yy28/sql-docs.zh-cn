@@ -14,15 +14,13 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
 
@@ -138,4 +136,3 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
 |目标主体名称不正确。  |请确保 SQL 服务器的证书上的公用名字段与客户端的连接字符串中指定的服务器名称匹配。 |  
 |现有的连接被远程主机强行关闭。 |当客户端不支持所需的 SQL Server 的 TLS 协议版本，可以出现此错误。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置为要求使用 TLS 1.2，请确保你的客户端还支持 TLS 1.2 协议。 |
 | | |   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>间隔文本
 ODBC 要求所有驱动程序支持 SQL_CHAR 或 SQL_VARCHAR 数据类型转换为所有 C interval 数据类型。 如果基础数据源不支持 interval 数据类型，但是，需要知道 SQL_CHAR 字段中的值的正确格式，才能支持这些转换该驱动程序。 同样，ODBC 要求应具有任何 ODBC C 类型可转换为 SQL_CHAR 或 SQL_VARCHAR，使驱动程序需要知道在字符字段中存储的时间间隔的何种格式。 本部分介绍驱动程序编写器需要使用转换到或从 C interval 数据类型的过程中验证 SQL_CHAR 字段的间隔文本的语法。  
@@ -102,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{间隔"223.16"第二个}<br /><br /> {间隔"223"年}|由于前导精度是未指定，则默认为 2，这是太小，无法容纳指定的文本。|  
 |{间隔"22.1234567"第二个}|秒精度未指定，因此它默认为 6。 的文本具有小数点后的七个数字。|  
 |{间隔"163-13' YEAR(3) 到月份}<br /><br /> {间隔"163 65 到小时 DAY(3)}<br /><br /> {为分钟的间隔"163 62:39"DAY(3)}<br /><br /> {间隔"163 12:125:59.163"DAY(3) 到 SECOND(3)}<br /><br /> {间隔"163:144"为分钟 HOUR(3)}<br /><br /> {间隔"163:567:234.163"到 SECOND(4) HOUR(3)}<br /><br /> {间隔"163:591.163"到 SECOND(5) MINUTE(3)}|尾随的字段不会不符合的公历的规则。|
-

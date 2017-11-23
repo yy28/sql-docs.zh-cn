@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XSLT transformations in ADO
+helpviewer_keywords: XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7fb8a2fc948c7793ed07076f338c230350d6abb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36b39d14a4856d882add1e9bafdc9457fa3b8bc1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 可将 XSLT 应用到生成的 XML 将其转换为另一种格式。 了解在 ADO 中的 XML 格式可帮助在开发可以将它转换为更加友好的用户的窗体的 XSLT 模板。  
@@ -61,5 +58,4 @@ ms.lasthandoff: 09/09/2017
  XSLT 将转换到一个 HTML 表，它显示每个字段的记录集以及表标题 ADO 保存方法生成的 XML 流。 表标题和行也被分配不同的字体和颜色。  
   
 ## <a name="see-also"></a>另请参阅  
- [保留记录采用 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

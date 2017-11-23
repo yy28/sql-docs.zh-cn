@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6bdda6d24e2f1437eb251315d5b91efc7ab1016d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a56f74ecd59fbe11c60bfef48a5750f18fd52b72
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3： 连接到 SQL 使用 Java 的概念证明
   
@@ -192,4 +190,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="additional-samples"></a>其他示例  
 [示例 JDBC 驱动程序应用程序](../../connect/jdbc/sample-jdbc-driver-applications.md)
-

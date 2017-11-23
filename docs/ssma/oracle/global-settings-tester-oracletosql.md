@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 19e0a4e308d0ac4414bdab9c03389947d9dde28b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 20c2dcbf26307c99830909447eb23679ffd3ac96
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>全局设置 （测试人员） (OracleToSQL)
 使用的测试人员页**全局设置**对话框中指定的 SSMA 测试人员的设置。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  是  
   
-2.  否  
+2.  是  
   
 **保存模式的辅助表**  
 此设置指定如何将保存测试用例执行期间创建的内部辅助表。 为此特定设置，可以设置以下选项：  
@@ -57,7 +55,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  是  
   
-2.  否  
+2.  是  
   
 **停止后第一次失败的测试执行**  
 此设置指定是否停止当前正在运行测试用例，如果执行时出错。 默认选项集是**是**。  
@@ -66,9 +64,8 @@ ms.lasthandoff: 08/02/2017
   
 1.  是  
   
-2.  否  
+2.  是  
   
 ## <a name="see-also"></a>另请参阅  
 [完成测试用例准备 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-

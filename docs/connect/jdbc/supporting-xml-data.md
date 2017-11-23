@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77ec535a43cf79b10e25d3c0fd7108d3c9a40dd0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5f561c72cda30a9f62e202cbd612725d02b7f408
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="supporting-xml-data"></a>支持 XML 数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,10 +40,9 @@ ms.lasthandoff: 09/09/2017
 |主题|Description|  
 |-----------|-----------------|  
 |[SQLXML 接口](../../connect/jdbc/sqlxml-interface.md)|介绍 SQLXML 接口及其方法。|  
-|[使用 SQLXML 编程](../../connect/jdbc/programming-with-sqlxml.md)|介绍如何使用[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]API 方法来存储和检索 XML 数据从关系数据库中的和**SQLXML** Java 数据类型。 此外还包含有关 SQLXML 对象类型的信息，并提供使用 SQLXML 对象的重要准则和限制的列表。|  
+|[使用 SQLXML 进行编程](../../connect/jdbc/programming-with-sqlxml.md)|介绍如何使用[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]API 方法来存储和检索 XML 数据从关系数据库中的和**SQLXML** Java 数据类型。 此外还包含有关 SQLXML 对象类型的信息，并提供使用 SQLXML 对象的重要准则和限制的列表。|  
   
 ## <a name="see-also"></a>另请参阅  
  [了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

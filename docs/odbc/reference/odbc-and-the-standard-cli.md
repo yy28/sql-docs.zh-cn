@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3dd0120602e6f6fe82022aff75bb7d8157dd5bd8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和标准 CLI
 ODBC 对齐具有以下规范和处理的调用级界面 (CLI) 标准。 （ODBC 功能是每个这些标准的超集。）  
@@ -87,4 +85,3 @@ ODBC 对齐具有以下规范和处理的调用级界面 (CLI) 标准。 （ODBC
 -   存储的过程支持，包括转义序列，输出参数绑定机制，以及目录函数  
   
 -   连接增强功能包括支持连接属性和属性浏览
-

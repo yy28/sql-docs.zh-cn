@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 6350438d06f574096f78c44af85a298b5003423a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d685be15fb8d0c6fea21d539e3370b3377316324
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>连接到 Oracle (OracleToSQL)
 使用**连接到 Oracle**对话框中，连接到你想要迁移的 Oracle 数据库。  
@@ -79,4 +77,3 @@ ms.lasthandoff: 08/02/2017
   
 SSMA 连接字符串，始终包含提供程序参数。 此外，请确保在连接到 Oracle 包括 Port 参数。  
   
-

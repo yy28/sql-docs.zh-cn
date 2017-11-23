@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a8ee4a2bd5672c3113c495c46f00b88b11c03e26
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a96949b4ca739e382a547769f496576bf13db8b7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interoperability"></a>互操作性
 *互操作性*是单个应用程序以运行许多不同 Dbms 的功能。 编写泛型且可互操作应用程序的需求是导致的 ODBC 开发的主要因素之一。 但是，互操作性不是简单的路径，然后从"不可互操作"到"完全可互操作。" 路径具有许多分支，并且每个需要功能、 速度、 代码复杂性和开发时间之间的权衡。  
@@ -43,17 +41,16 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [答案是 ODBC？](../../../odbc/reference/develop-app/is-odbc-the-answer.md)  
+-   [需要 ODBC？](../../../odbc/reference/develop-app/is-odbc-the-answer.md)  
   
 -   [选择互操作性的级别](../../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md)  
   
--   [确定目标 Dbms 和驱动程序](../../../odbc/reference/develop-app/determining-the-target-dbmss-and-drivers.md)  
+-   [确定目标 DBMS 和驱动程序](../../../odbc/reference/develop-app/determining-the-target-dbmss-and-drivers.md)  
   
--   [考虑到使用的数据库功能](../../../odbc/reference/develop-app/considering-database-features-to-use.md)  
+-   [考虑使用数据库功能](../../../odbc/reference/develop-app/considering-database-features-to-use.md)  
   
--   [在产品周期的长度](../../../odbc/reference/develop-app/length-of-the-product-cycle.md)  
+-   [产品周期长度](../../../odbc/reference/develop-app/length-of-the-product-cycle.md)  
   
--   [编写可互操作的应用程序](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
+-   [编写交互式应用程序](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
   
--   [测试可互操作的应用程序](../../../odbc/reference/develop-app/testing-interoperable-applications.md)
-
+-   [测试交互式应用程序](../../../odbc/reference/develop-app/testing-interoperable-applications.md)

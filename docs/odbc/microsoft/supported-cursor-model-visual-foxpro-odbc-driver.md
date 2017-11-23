@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f2085cb49ccab60d942e1098bd7537b5df81192
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>支持的游标模型 （Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序同时支持*块*(*行集*) 和*静态*游标。 以任何符合的符合性级别 1 ODBC 的驱动程序支持静态游标。 该驱动程序不支持动态，键集驱动的或混合 （键集和动态） 游标。  
@@ -50,4 +48,3 @@ Visual FoxPro ODBC 驱动程序同时支持*块*(*行集*) 和*静态*游标。 
   
 ## <a name="rowset"></a>行集 (rowset)  
  游标，表示从数据源检索的行中存储的数据块。
-

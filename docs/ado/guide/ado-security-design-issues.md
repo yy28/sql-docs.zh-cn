@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, security
+helpviewer_keywords: ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbc093aa095d74831e0f9d75ad78159db2e498e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 51c7e3cf9c99bdd76ce1b84a7c387b1e6e4d2f58
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-security-design-features"></a>ADO 安全设计功能
 下列各节描述安全设计功能在 ActiveX 数据对象 (ADO) 2.8 及更高版本。 ADO 2.8 中做了这些更改以提高安全性。 ADO 6.0 中，包括在 Windows Vista 中的 Windows DAC 6.0 中，在功能上等效于 ADO 2.8，它包括在 Windows XP 和 Windows Server 2003 中的 MDAC 2.8。 本主题提供有关如何最好地保护你的应用程序在 ADO 2.8 或更高版本中的信息。
@@ -120,4 +118,3 @@ This Website is using your identity to access a data source. If you trust this W
 
 > [!NOTE]
 >  文件类型检查本部分中所述仅适用于 Windows 2000 和更高版本。 它不适用于 ADO 2.8 或更高版本在早期 Windows 版本中，如 Windows 98 正在其中运行的情况下。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d80594ac41f27d28051fc64f489b5cad59335c00
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-data-sources"></a>管理数据源
 从驱动程序的安装程序安装 ODBC 驱动程序后，你可以为它定义一个或多个数据源。 数据源名称 (DSN) 应提供数据; 的唯一的说明例如，*工资单*或*Accounts Payable*。 为所有当前安装的驱动程序定义的用户和系统数据源中列出**用户 DSN**或**系统 DSN**选项卡**ODBC 数据源管理器**对话框。 中列出给定目录中的文件数据源**文件 DSN**选项卡中输入要显示的目录**查找**框中**文件 DSN**选项卡。  
@@ -57,4 +55,3 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)
-

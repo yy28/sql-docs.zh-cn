@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 478c7c00205a161d366a1052b52604047f9755dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 映射
 在应用程序调用**SQLGetStmtOption**为 ODBC 3*.x*驱动程序不支持它，对的调用  
@@ -62,4 +60,3 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  SQL_GET_BOOKMARK 语句选项已弃用 ODBC 3 中*.x*。 ODBC 3*.x*驱动程序以使用 ODBC 2。*x*应用程序使用 SQL_GET_BOOKMARK，则它必须支持 SQL_GET_BOOKMARK。 ODBC 3*.x*驱动程序以使用 ODBC 2。*x*应用程序，它必须支持将 SQL_USE_BOOKMARKS 设置为 SQL_UB_ON 和应公开固定长度书签。 如果 ODBC 3*.x*驱动程序还支持仅长度可变的书签，不固定长度书签，则它必须返回 SQLSTATE HYC00 （未实现的可选功能） 如果 ODBC 2。*x*应用程序尝试设置 SQL_USE_BOOKMARKS 为 SQL_UB_ON。  
   
  ODBC 3*.x*驱动程序，驱动程序管理器将不再检查以查看是否*选项*SQL_STMT_OPT_MIN 和 SQL_STMT_OPT_MAX，之间或大于 SQL_CONNECT_OPT_DRVR_START。 该驱动程序必须选中此项。
-

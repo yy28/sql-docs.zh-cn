@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ff5baf3dadeee06d33f5d75f0c62a1ee339ba2b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d810cee8f3d8b521350aa99a83ca6f7148cd5064
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Oracle 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -38,7 +36,7 @@ SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
 SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有先决条件。 如果未满足某些条件，则将显示一条错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -48,33 +46,33 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 ||||  
 |-|-|-|  
-|名称|类型|Description|  
+|Name|类型|Description|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
 |USER_TABLE$ AUD|table|保存已删除并覆盖的行的表。|  
 |USER_TABLE$ AUDID|table|保存新的和已更改行的表。|  
-|USER_TABLE|视图|简化的表示形式的表修改。|  
-|新 USER_TABLE $|视图|简化的表示形式插入的和被覆盖的行。|  
-|USER_TABLE$ NEW_ID|视图|插入的和已更改行的标识。|  
-|USER_TABLE$ 旧|视图|简化的表示形式被删除，而且覆盖的行。|  
+|USER_TABLE|view|简化的表示形式的表修改。|  
+|新 USER_TABLE $|view|简化的表示形式插入的和被覆盖的行。|  
+|USER_TABLE$ NEW_ID|view|插入的和已更改行的标识。|  
+|USER_TABLE$ 旧|view|简化的表示形式被删除，而且覆盖的行。|  
   
 以下对象创建的已验证表的架构中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 ||||  
 |-|-|-|  
-|名称|类型|Description|  
+|Name|类型|Description|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 和以下对象创建在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 数据库中。  
   
 ||||  
 |-|-|-|  
-|名称|类型|Description|  
+|Name|类型|Description|  
 |USER_TABLE$ Aud|table|保存已删除并覆盖的行的表。|  
 |USER_TABLE$ AudID|table|保存新的和已更改行的表。|  
-|USER_TABLE|视图|简化的表示形式的表修改。|  
-|新的 USER_TABLE $|视图|简化的表示形式插入的和被覆盖的行。|  
-|USER_TABLE$ new_id|视图|插入的和已更改行的标识。|  
-|旧的 USER_TABLE $|视图|简化的表示形式被删除，而且覆盖的行。|  
+|USER_TABLE|view|简化的表示形式的表修改。|  
+|新的 USER_TABLE $|view|简化的表示形式插入的和被覆盖的行。|  
+|USER_TABLE$ new_id|view|插入的和已更改行的标识。|  
+|旧的 USER_TABLE $|view|简化的表示形式被删除，而且覆盖的行。|  
   
 ### <a name="test-object-calls"></a>测试对象调用  
 在此步骤中，SSMA 测试人员时，将调用选择用于测试每个对象的结果进行比较并显示报表。  
@@ -90,4 +88,3 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
 [选择并配置受影响对象 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [测试迁移数据库对象 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

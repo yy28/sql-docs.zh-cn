@@ -16,8 +16,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1e835c27541ab59fc6913b31600cd5804ea99f6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   创建基于现有挖掘结构的新挖掘模型。  当你使用**ALTER 挖掘结构**语句以创建新的挖掘模型结构必须已存在。 与此相反，当使用此语句， [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md)，创建模型并自动在同一时间生成其基础挖掘结构。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -80,7 +78,7 @@ USING <algorithm> [(<parameter list>)]
 >  来检索当前的提供程序支持的算法的列表，只需使用[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看的当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
- 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *筛选条件*  
  应用于事例表中的列的筛选表达式。  
@@ -133,7 +131,7 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |术语|定义|  
-|**回归量**|指示该算法可以在回归算法的回归公式中使用指定列。|  
+|**REGRESSOR**|指示该算法可以在回归算法的回归公式中使用指定列。|  
 |**MODEL_EXISTENCE_ONLY**|指示该属性列的值没有该属性的存在重要。|  
   
  可以为一个列定义多个建模标志。 有关如何使用建模标志的详细信息，请参阅[建模标志 &#40; DMX &#41;](../dmx/modeling-flags-dmx.md)。  
@@ -143,7 +141,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**预测**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
+|**PREDICT**|该列可以由模型预测，并且它的值可用作输入以预测其他可预测列的值。|  
 |**PREDICT_ONLY**|此列可以由模型预测，但其值不可用于输入事例来预测其他可预测列的值。|  
   
 ## <a name="filter-criteria-expressions"></a>筛选条件表达式  
@@ -222,10 +220,9 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

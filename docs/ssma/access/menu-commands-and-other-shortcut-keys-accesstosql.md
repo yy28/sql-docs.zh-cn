@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3d94253e2feb340cf6f4a2761e2b96c27678ecb0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 786e602f81c26b7f53bd1825527300348923a884
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>菜单命令和其他快捷键 (AccessToSQL)
 以下各节描述了用于访问菜单命令和其他的 SSMA 的各种对话框中用于访问应用程序的快捷键的键盘快捷键。  
@@ -197,7 +195,6 @@ ms.lasthandoff: 08/02/2017
 |启动快速信息。|CTRL + SHIFT + 空间|  
 |请转到声明。|F12|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [键盘快捷方式 &#40;AccessToSQL &#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b806f4c887af3f1ba80ee3321820e97dd336fad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dbms-based-drivers"></a>基于 DBMS 的驱动程序
 基于 DBMS 的驱动程序用于 Oracle 或 SQL Server 等的数据源提供要使用的驱动程序的独立数据库引擎。 这些驱动程序通过独立的引擎，则访问物理数据也就是说，它们提交到的 SQL 语句，并从引擎中检索结果。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  下图显示三个不同配置的基于 DBMS 的驱动程序。 在第一个配置中，驱动程序和数据源位于同一台计算机上。 在第二个的驱动程序和数据源位于不同的计算机上。 在第三个、 驱动程序和数据源位于不同的计算机和网关位于之间它们位于另一个计算机上。  
   
  ![DBMS 的三种配置 &#45; 基于驱动程序](../../odbc/reference/media/pr07.gif "pr07")
-

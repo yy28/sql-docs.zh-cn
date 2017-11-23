@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5269d810e91187b8c57ce6b2fbd1043d1df3a89d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="argument-value-checks"></a>自变量值检查
 驱动程序管理器检查以下类型的自变量。 除非另行说明，否则驱动程序管理器将返回 SQL_ERROR 自变量值中的错误。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   列和参数号必须大于 0 或大于或等于 0，具体取决于该函数。 驱动程序必须检查这些基于当前结果集或 SQL 语句的参数值的上限。  
   
 -   长度/指示器参数和数据缓冲区的长度参数必须包含适当的值。 例如，自变量指定中的表名的长度**SQLColumns** (*NameLength3*) 必须是 sql_nts 以或值大于 0;*BufferLength*中**SQLDescribeCol**必须大于或等于 0。 该驱动程序可能还需要检查这些自变量。 例如，它可能会检查*NameLength3*小于或等于数据源中的表名称的最大长度。
-

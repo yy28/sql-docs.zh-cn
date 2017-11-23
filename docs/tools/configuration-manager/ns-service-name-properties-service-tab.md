@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 20af8fee22fed66c9ed516d37fc73ea413682e69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b5e8e22040a8d2c680e7ab14ead804ead600d77
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;服务名称&gt;属性 （服务选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  显示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 进程 ID。  
   
  **SQL 服务类型**  
- 用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装多种服务。  
+ 用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  指示此服务是正在运行、已停止还是已禁用。  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ffa0ff5fe4f788a3ec72ee003db166514f132db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource （Access 驱动程序）
 > [!NOTE]  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |线程|要使用的引擎的后台线程数。 此值默认为 3，但可以进行更改。<br /><br /> 这将设置为相同的选项**线程**在安装程序对话框中。|  
 |UID|对于 Microsoft Access 驱动程序，用户 ID 名称使用登录名。|  
 |USERCOMMITSYNC|确定 Microsoft Access 驱动程序是否将以异步方式执行用户定义的事务。 此值最初设置为"是"，这意味着，Microsoft Access 驱动程序将等待中用户定义的事务，若要完成的提交。<br /><br /> 此选项的值不应更改而无需仔细考虑后果。 有关选项的详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。<br /><br /> 这将设置为相同的选项**UserCommitSync**在安装程序对话框中。|
-

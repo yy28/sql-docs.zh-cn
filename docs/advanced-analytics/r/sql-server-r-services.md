@@ -1,27 +1,23 @@
 ---
 title: "SQL Server 机器学习服务 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c384b7fba553175767aaf7c439207771b31e6b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
 
@@ -39,7 +35,7 @@ SQL Server 支持的开放源代码 R 语言与一组全面的工具和技术的
   
     选择此功能，则在数据库引擎来支持以 R 或 Python 编写的代码的执行中安装扩展。 创建新的服务， [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，若要管理的外部运行时之间的通信和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。
   
-+ 安装**Microsoft 机器学习 Server （独立）**如果你不需要作为计算上下文中使用 SQL Server 的单独计算机上。 机器学习服务器包括相同的机器学习组件，以及可缩放的分布式执行的机器学习作业作为 web 服务的 mrsdeploy 包。
++ 安装**Microsoft 机器学习 Server （独立）**如果你不需要作为计算上下文中使用 SQL Server 的单独计算机上。 机器学习服务器包括相同的机器学习组件，以及执行可伸缩的分布式机学习作业作为 web 服务的能力。
   
 +    安装[Microsoft R 客户端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)开发可部署到 SQL Server 或在 Windows、 Linux 或 Hadoop 的机器学习服务器的解决方案的远程计算机上。
 
@@ -49,7 +45,7 @@ SQL Server 支持的开放源代码 R 语言与一组全面的工具和技术的
   
     当你选择了此功能时，可以具有运行 R 脚本使用 SQL Server 作为计算上下文，或在存储过程中运行 R 脚本的能力。
   
-+   安装**Microsoft R Server （独立）**从 SQL Server 2016 安装程序以设置用于 developin R 解决方案的单独计算机上的 R 组件。
++   安装**Microsoft R Server （独立）**从 SQL Server 2016 安装程序，可用于开发或部署 R 解决方案的单独计算机上安装的 R 组件。
 
 
 ## <a name="which-type-of-machine-learning-service-do-i-need"></a>是否需要哪种类型的机器学习服务？
@@ -75,4 +71,3 @@ SQL Server 支持的开放源代码 R 语言与一组全面的工具和技术的
 + [SQL Server R 教程](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     了解如何在 R 代码中创建 SQL Server 数据源，以及如何使用远程计算上下文。 面向 SQL 开发人员的其他教程演示如何在 SQL Server 中定型和部署 R 模型。
-

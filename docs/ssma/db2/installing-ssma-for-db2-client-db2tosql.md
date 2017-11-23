@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e78a577733066d3420777f33cb7ef05ff5e24a3b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4e003c72b6fea28c3048384701f3dc8839faacce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>安装适用于 DB2 客户端 (DB2ToSQL) SSMA
 SSMA 客户端包含的程序文件的执行以下任务：  
@@ -40,7 +38,7 @@ SSMA 客户端包含的程序文件的执行以下任务：
   
 本主题提供安装先决条件以及安装 SSMA 的说明。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 SSMA 用于处理上 z/OS 版本 9.0 和 10.0 的 DB2 或 LUW 9.8 和 10.1 或更高版本上的 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年。  
   
 在安装 SSMA 之前，请确保计算机满足以下要求：  
@@ -87,4 +85,3 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Mig
 [在 SQL Server &#40; DB2ToSQL &#41; 上安装 SSMA 组件](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
 [将 DB2 数据库迁移到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

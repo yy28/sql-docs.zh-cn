@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f1d2b9fa1bd4cfd574a1bec992dd060937289963
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e1393007372900c4480fa6ee8ae5311edd59feee
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SSMA for Access to SQL 中的新 GUI 功能
 本章介绍 SSMA 用户界面的新的功能  
@@ -132,4 +130,3 @@ GUI 对象历史记录可用于以下优势导航对象时：
 ### <a name="advanced-search"></a>高级的搜索  
 若要打开高级搜索对话框中的，在编辑菜单点查找，然后单击高级搜索。 在对话框中，你将能够查找使用模式的任何对象。 你可以选择对话框顶部搜索区域和对象类别。  
   
-

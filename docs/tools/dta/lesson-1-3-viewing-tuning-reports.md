@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>课程 1-3-查看优化报告
 在本课程的上一个练习中，您已经查看了在数据库引擎优化顾问建议中创建或删除数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，这些建议是 MySession 优化会话生成的结果。 MySession 优化会话是在 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的。  
@@ -53,8 +49,7 @@ ms.lasthandoff: 08/02/2017
 现在，你已经浏览了 MySession 优化会话的数据库引擎优化顾问 GUI 的“报告”选项卡。 可以执行相同的步骤来浏览为 EvaluateMySession 优化会话生成的报告。 双击“会话监视器”窗格中的 **EvaluateMySession** 开始该会话。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 3 课： 使用 dta 命令提示实用工具](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[第 3 课：使用 dta 命令提示实用工具](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   
-

@@ -6,16 +6,20 @@ ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords:
-- Linux, AAD authentication
+helpviewer_keywords: Linux, AAD authentication
+ms.workload: On Demand
+ms.openlocfilehash: ab9be968e11688a960e4306f82cf7ca47666f688
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的 active Directory 身份验证
 
@@ -144,8 +148,13 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    > 如果你看到的错误，"未安装必需的包，"，然后应安装这些包使用你的 Linux 分发的包管理器在运行前`realm join`试命令。
    >
    > 如果收到错误，"权限不足，无法加入域，"你将需要与域管理员检查有足够的权限将 Linux 计算机加入到你的域。
+   
+   > SQL Server 使用 SSSD 和 NSS 用于将用户帐户和组映射到安全标识符 (SID)。 SSSD 必须进行配置并运行 SQL Server 已成功创建 AD 登录名的顺序。 Realmd 将通常自动执行此操作一部分的加入域，但在某些情况下，你将需要单独执行此操作。
+   >
+   > 请查看以下配置[SSSD 手动](https://access.redhat.com/articles/3023951)，和[配置 NSS 用于 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
-1. 验证，可以现在从域中，收集有关用户的信息以及您可以获取作为该用户的 Kerberos 票证。
+  
+5. 验证，可以现在从域中，收集有关用户的信息以及您可以获取作为该用户的 Kerberos 票证。
 
    We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
@@ -297,4 +306,3 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 > [!div class="nextstepaction"]
 >[加密连接到 Linux 上的 SQL Server](sql-server-linux-encrypted-connections.md)
-
