@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 身份验证和授权
   在 SharePoint 2010 场中运行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 内容和操作，因为所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务执行所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
@@ -108,7 +107,7 @@ ms.lasthandoff: 09/01/2017
  在 Excel Services 中，与安全性相关的配置设置在受信任位置、受信任的数据访问接口和受信任的数据连接库中指定。 下表介绍可实现或增强 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置。 如果某个设置未在此处列出，则它对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器连接没有影响。 有关如何分步指定这些设置的说明，请参阅 [初始配置 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)中的“启用 Excel Services”一节。  
   
 > [!NOTE]  
->  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 |区域|设置|Description|  
 |----------|-------------|-----------------|  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot Securtiy 体系结构](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

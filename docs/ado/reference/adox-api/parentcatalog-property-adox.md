@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -40,20 +39,18 @@ f1_keywords:
 - _User::PutRefParentCatalog
 - _Group::GetParentCatalog
 - _Group::PutRefParentCatalog
-helpviewer_keywords:
-- ParentCatalog property [ADOX]
+helpviewer_keywords: ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f5229c37299494ca2b3b31e3ca3e0d091c93d96a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定用于提供对提供程序特定属性的访问的表、 用户或列的对象的父目录。  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-

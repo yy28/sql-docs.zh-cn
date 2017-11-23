@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>提供程序错误
 提供程序错误时，则返回-2147467259 运行时错误。 当你收到此错误时，请检查**错误**的活动的集合**连接**对象，将包含描述所发生的一个或多个错误。  
@@ -87,4 +85,3 @@ End Function
  **错误**与事件相关的错误发生时，也会使用对象。 你可以确定是否有错误发生的进程中通过检查引发 ADO 事件**错误**对象作为事件参数传递。  
   
  如果成功，结束中引发了事件的操作*adStatus*的事件处理程序的参数将设置为*adStatusOK*。 另一方面，如果引发事件的操作失败， *adStatus*参数设置为*adStatusErrorsOccurred*。 在这种情况下， *pError*参数将包含**错误**描述错误的对象。
-

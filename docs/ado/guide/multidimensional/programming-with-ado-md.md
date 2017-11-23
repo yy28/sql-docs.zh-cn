@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO MD, programming
+helpviewer_keywords: ADO MD, programming
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be1112dd330d98f751400cd269bdc237d6c23bad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 912a3560ce2a2c361fe0990dfd12b94a80833430
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-with-ado-md"></a>使用 ADO MD 编程
 若要使用你的开发工具 ADO MD，应建立对 ADO MD 类型库的引用。 ADO MD 库的说明是 Microsoft ActiveX 数据对象 （多维） 库。 ADO MD 库文件名称即 msadomd.dll，并且程序 ID (ProgID) 是"ADOMD"。 有关如何建立对库的引用的详细信息，请参阅你的开发工具的文档。  
@@ -35,4 +32,3 @@ ms.lasthandoff: 09/09/2017
  [多维架构和数据概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [使用 ADO 的 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

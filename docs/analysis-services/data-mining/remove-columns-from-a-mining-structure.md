@@ -19,17 +19,16 @@ helpviewer_keywords:
 - deleting columns
 - columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d7dc82033994b08f45283bf03bcae11d441c1b60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4fc6781554893147c9f2e5d1c3eb74c3526ec878
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>从挖掘结构中删除列
   在已创建挖掘结构后，可以使用数据挖掘设计器删除挖掘结构中的列。 删除挖掘结构列的原因可能包括以下几种：  
@@ -56,4 +55,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

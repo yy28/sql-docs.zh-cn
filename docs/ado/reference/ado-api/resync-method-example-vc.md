@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Resync method [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e19cbea099c6e029c38c6196860a7083ebdf2c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9250c47d60d915e7fed931a5ff8b1f12ff8b9ff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resync-method-example-vc"></a>重新同步方法示例 （VC + +）
 此示例演示如何使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法来刷新在静态记录集中的数据。  
@@ -152,4 +148,3 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>另请参阅  
  [重新同步方法](../../../ado/reference/ado-api/resync-method.md)
-

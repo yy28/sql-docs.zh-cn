@@ -21,17 +21,16 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 扩展事件监视 Analysis Services
   扩展事件 (xEvents) 是一种占用系统资源非常少的轻量跟踪和性能监视系统，因此成为诊断生产和测试服务器问题的理想工具。 它还是高度可扩展、可配置的，且位于 SQL Server 2016 中，可通过新的内置工具支持更轻松地使用。 在 SQL Server Management Studio 中，连接到 Analysis Services 实例后，你可配置、运行及监视实时跟踪，类似于使用 SQL Server Profiler。 添加了更好的工具应使 xEvents 成为 SQL Server Profiler 更合理的替代，并且在如何诊断数据库引擎问题和 Analysis Services 工作负荷问题中创建更多对称。  
@@ -178,4 +177,3 @@ ms.lasthandoff: 09/01/2017
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   
-

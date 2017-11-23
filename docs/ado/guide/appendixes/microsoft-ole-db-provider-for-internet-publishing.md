@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bac02557dcc9cf816edfcad5b6cc5d927e42f21a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d466123e7330eb599847225d2b108ec7f80d9ea9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 发布概述
 Microsoft OLE DB 提供程序用于 Internet 发布允许 ADO 由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的访问资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。
@@ -73,4 +71,3 @@ MSDAIPP.DSO
 
 ## <a name="see-also"></a>另请参阅
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md) [Internet 发布的 OLE DB 访问接口](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
-

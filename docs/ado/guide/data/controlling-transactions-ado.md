@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactions [ADO]
+helpviewer_keywords: transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1535ff20e7dbc40b8f478902512d068fd5501b27
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="controlling-transactions-ado"></a>控制事务 (ADO)
 ADO 支持事务处理中的帮助的连接**BeginTrans**， **CommitTrans**，和**不**方法**连接**对象。 实现事务处理中 ADO 大致下面的简单代码段所示。  
@@ -88,4 +85,3 @@ oConn.Close
  此处使用事务处理以确保两个记录更新作为一个单元的操作，并且两个产品名称都是交换或根本不会更改。  
   
  有关详细的讨论的事务处理，请参阅[更新和保持数据](../../../ado/guide/data/updating-and-persisting-data.md)。
-

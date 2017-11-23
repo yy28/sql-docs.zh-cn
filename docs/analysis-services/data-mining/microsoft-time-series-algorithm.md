@@ -23,17 +23,16 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93df14efa013e5f8768db94184aaf2f4203a62ef
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法提供了一些针对连续值（例如一段时间内的产品销售额）预测进行了优化的多种算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
@@ -169,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

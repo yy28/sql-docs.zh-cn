@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Customizing Project Settings
+helpviewer_keywords: Customizing Project Settings
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 4794b700b471298998650346ee88221577b13c11
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da372976a6ff02b25cd956fcb4eafcd7d957ab2d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 项目 (OracleToSQL)
 若要迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，首先创建新的 SSMA 项目。 项目是一个文件，其中包含以下信息：  
@@ -105,7 +102,7 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
   
         保存元数据可能需要几分钟。 如果你不想保存元数据，不选中所有复选框。  
   
-    2.  单击 **保存** 按钮。  
+    2.  单击**保存**按钮。  
   
         SSMA 将分析 Oracle 架构并将元数据保存到项目文件。  
   
@@ -132,4 +129,3 @@ SSMA 进行转换和加载数据库对象，迁移数据，并且与 Oracle 同�
 [连接到 Oracle 数据库 &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [连接到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
   
-

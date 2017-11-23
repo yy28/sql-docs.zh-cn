@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec09d62c989f8a01c3984491ab4aa187e1eea654
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
   在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
@@ -191,4 +190,3 @@ ms.lasthandoff: 09/01/2017
  [导入数据](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
-

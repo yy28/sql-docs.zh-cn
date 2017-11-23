@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Axis::DimensionCount
 - DimensionCount
-helpviewer_keywords:
-- DimensionCount property [ADO MD]
+helpviewer_keywords: DimensionCount property [ADO MD]
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8407c771dec2ed7b499d3804755048a8121d852f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 994982c9c5f2703636cc1d8e4eb5e218a13a65ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount 属性 (ADO MD)
 在指示的维数[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)。  
@@ -43,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另请参阅  
  [轴示例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [维度对象 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
-

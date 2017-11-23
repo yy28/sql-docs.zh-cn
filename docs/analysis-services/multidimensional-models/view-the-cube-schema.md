@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-cube-schema"></a>查看多维数据集架构
   在 **“多维数据集设计器”** 的 **“多维数据集结构”** 选项卡的 **“数据源视图”** 窗格中显示多维数据集架构。 架构是从中派生多维数据集的度量值和维度的表的集合。 每个多维数据集架构包含多维数据集中的度量值和维度基于的一个或多个事实表以及一个或多个维度表。  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
 |编辑数据源视图架构|在 **“数据源视图”** 菜单上，单击 **“编辑数据源视图”**。<br /><br /> - 或 -<br /><br /> 右键单击“数据源视图”窗格的背景，然后单击“编辑数据源视图”。|  
   
   
-

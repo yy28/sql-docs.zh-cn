@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structure-columns"></a>挖掘结构列
   创建挖掘结构时，通过选择外部数据的列，然后指定如何将数据用于建模来定义挖掘结构中的列。 因此，挖掘结构列不仅仅是数据源的数据副本：它们定义挖掘模型要如何使用数据源的数据。 您可以分配确定数据如何离散化的属性以及说明数据值如何分布的属性。  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

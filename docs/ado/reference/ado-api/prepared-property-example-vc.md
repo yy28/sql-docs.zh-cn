@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Prepared property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7aef05e8cead742742c3c15ee843844cf5d3bbb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66a54a6af3beff062dac448b345abaa58efae6ae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prepared-property-example-vc"></a>已准备好的属性示例 （VC + +）
 此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-准备的一个，另一个未准备好。  
@@ -153,5 +149,4 @@ void PrintComError(_com_error &e) {
 **准备好： 0.016 秒**   
 ## <a name="see-also"></a>另请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [已准备好的属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
-
+ [Prepared 属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

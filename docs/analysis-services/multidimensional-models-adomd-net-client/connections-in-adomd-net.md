@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - opening connections
 - closing connections
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7c3555be8e304add34cba3a8dd9f0bac4264216
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet"></a>Connections in ADOMD.NET
   ADOMD.NET，在你使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象打开连接与分析数据源，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 不再需要连接时，应显式关闭该连接。  
@@ -78,4 +76,3 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
  [ADOMD.NET 客户端编程](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
-

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多维模型中的数据源视图
   数据源视图 (DSV) 是关系数据源的抽象，它成为在多维项目中创建的多维数据集和维度的基础。 DSV 旨在让您控制项目中使用的数据结构，并且独立于基础数据源工作（例如，重命名或连接列，而不必直接修改原始数据源）。  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

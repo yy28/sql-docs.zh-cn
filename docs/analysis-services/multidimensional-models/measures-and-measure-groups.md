@@ -25,17 +25,16 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
   多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [在多维模型中创建度量值和度量值组](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   
-

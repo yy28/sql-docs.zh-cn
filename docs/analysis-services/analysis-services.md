@@ -8,8 +8,7 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-analysis-services"></a>什么是 Analysis Services？
   Analysis Services 是决策支持和业务分析，Reporting Services 报表，为业务报告和客户端应用程序，例如 Power BI 中，Excel 中，提供的分析数据和其他数据可视化工具中使用的分析数据引擎。  
@@ -69,4 +67,3 @@ Analysis Services 现已作为一项 Azure 服务在云中推出。 Azure Analys
 *  [教程](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [开发人员文档](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [技术参考 (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
-

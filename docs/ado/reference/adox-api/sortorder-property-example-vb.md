@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- SortOrder property [ADOX]
+dev_langs: VB
+helpviewer_keywords: SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f11956a6030b825c37f6600b2f8b40c47dc0ce20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 285f0e386e20bb7edee9a4a472875abac4d44b7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
 此示例演示[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到[列](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码中的国家/地区列追加升序索引**员工**表，然后显示记录。 然后代码中的国家/地区列追加降序索引**员工**表并再次显示记录。 显示升序和降序索引之间的差异。  
@@ -149,4 +145,3 @@ End Sub
  [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder 属性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
-

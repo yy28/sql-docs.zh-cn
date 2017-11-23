@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adOpenDynamic [ADO]
 - cursors [ADO], characteristics
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84f06591c70a42701ca264c99af00e4f072aadd0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a1313c42582efee8330abb89a03645dc1491217
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursor-and-lock-characteristics"></a>游标和锁定特征
 游标的特性取决于提供程序的功能，而以下优点和缺点通常适用于各种类型的游标和锁定。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 |**adLockBatchOptimistic**|-批处理更新<br />-允许断开连接的方案<br />-其他用户能够访问数据|由多个用户可以在一次更改数据|  
 |**adLockPessimistic**|其他用户锁定时不能更改数据|-防止其他用户访问数据，同时锁定|  
 |**adLockOptimistic**|-其他用户能够访问数据|由多个用户可以在一次更改数据|
-

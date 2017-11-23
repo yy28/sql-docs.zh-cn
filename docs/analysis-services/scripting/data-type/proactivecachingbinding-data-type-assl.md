@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProactiveCachingBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProactiveCachingBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ProactiveCachingBinding data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cb1f1d86b26222e327fc36090113cb4a0d5ce4ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e4a1ee1641254525484aae7afb965232a572a728
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>ProactiveCachingBinding 数据类型 (ASSL)
   定义表示信息，用以抽象派生的数据类型[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)元素有关数据源更改需要重新生成缓存，或重新生成进程的状态。  
@@ -90,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 脚本语言 XML 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

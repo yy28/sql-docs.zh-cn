@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a19b939b0b0eb33d436a3924a04562473b4c06a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
 非参数化命令，请执行所有提供程序命令和**记录集**命令执行过程中创建。 如果该命令以同步方式，执行所有**记录集**将完全填充。 如果选择了异步填充模式的填充的状态**记录集**将取决于的填充模式和的大小**记录集**。  
@@ -52,5 +50,4 @@ SHAPE {SELECT * FROM Customers}
 ## <a name="see-also"></a>另请参阅  
  [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [在常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

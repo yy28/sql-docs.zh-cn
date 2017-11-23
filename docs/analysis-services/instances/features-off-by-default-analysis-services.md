@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eb06cb663a0a94a0611d95532e80f15e5df2da7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b9d92a7620ed165d661fe4c48726a8049d33500
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="features-off-by-default-analysis-services"></a>默认情况下功能关闭 (Analysis Services)
   默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在设计上是安全的。 因此，可能危及安全的功能默认处于禁用状态。 下列功能在安装后处于禁用状态，如果要使用它们，则必须专门进行启用。  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
 -   组关联。 有关详细信息，请参阅 [Thread Pool Properties](../../analysis-services/server-properties/thread-pool-properties.md) 。  
   
   
-

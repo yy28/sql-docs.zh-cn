@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 自 2017 年 Analysis Services 向后兼容性 |Microsoft 文档"
 ms.date: 07/11/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.custom: 
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,12 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57a03d325a7415f08fd073ea805e022935f3fce7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
-ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 向后兼容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -62,7 +64,7 @@ A*停止使用功能*在早期版本中已弃用。 它可能继续将包含在�
 |多维|链接的维度|
 |工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
-|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -   跟踪配置：Microsoft.SqlServer.Management.XEvent<br />-   跟踪读取：Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
+|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置： Microsoft.SqlServer.Management.XEvent<br />-跟踪读取： Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
 
 ## <a name="breaking-changes"></a>重大更改
 A*是否重大更改*功能、 数据模型，应用程序代码或将脚本保存到不再函数将导致触发 after 升级到当前的发行版。
@@ -77,4 +79,3 @@ A*行为更改*都会影响在当前版本与以前的版本相比的相同功�
 
 ## <a name="see-also"></a>另请参阅
 [Analysis Services 向后兼容性 (SQL Server 2016)](analysis-services-backward-compatibility.md)
-

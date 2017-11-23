@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- IndexNulls property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6da5a87dc80fb32da7994031c1698861fcd4875a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61caac6dfa023dfb7dacfcfa6db002d81df0d745
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 属性示例 （VC + +）
 此示例演示[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将创建一个新的索引并设置的值**IndexNulls**根据用户输入。 然后，**索引**追加到**员工**[表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**应用于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**表，与**记录集**打开。 一条新记录添加到**员工**表，与**Null**索引的字段中的值。 是否显示此新记录依赖于设置**IndexNulls**属性。  
@@ -199,4 +195,3 @@ void IndexNullsX(_bstr_t strSel) {
          m_pCatalog = NULL;  
 }  
 ```
-

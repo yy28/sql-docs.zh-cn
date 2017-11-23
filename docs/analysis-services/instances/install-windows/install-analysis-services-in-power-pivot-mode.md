@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
   本主题中的过程将指导你以适用于 SharePoint 部署的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式在单台服务器上安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
@@ -319,4 +318,3 @@ ms.lasthandoff: 09/01/2017
  [升级工作簿和计划的数据刷新 &#40;SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   
-

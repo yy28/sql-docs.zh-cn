@@ -20,17 +20,16 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d2916b5895028aebea5b05f28a09ad7432e509f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
   利润图显示与使用挖掘模型相关联的估计利润。 例如，假定您的模型预测在一个业务方案中一个公司应该联系哪些客户。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [测试提升图的准确性（数据挖掘基础教程）](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   
-

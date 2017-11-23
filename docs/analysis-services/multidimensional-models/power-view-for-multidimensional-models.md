@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ba8299e-b990-4f77-a3c0-eee64e1f4281
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bfffc05ea7d77676825f1533b9ecb42d36f5d0ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6874cadc522dbdb3727863e3409909cd98a1b810
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view-for-multidimensional-models"></a>用于多维模型的 Power View
   Microsoft SQL Server 2016 Analysis Services 多维模型通过使用 Microsoft Power View 支持即席数据分析、探索和可视化。  
@@ -39,4 +38,3 @@ ms.lasthandoff: 09/01/2017
 -   [使用多维数据源创建 Power View 报表](../../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md)  
   
   
-

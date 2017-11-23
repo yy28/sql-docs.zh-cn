@@ -19,17 +19,16 @@ helpviewer_keywords:
 - named sets [Analysis Services]
 - members [Analysis Services], named sets
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4e1de3862587caab033e7d7178508ac4680b218
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a98318cc28f79ab24af1ecce382b0b39a78dfab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-named-sets"></a>创建命名集
   命名集是为重复使用而创建的一组维度成员或集表达式，例如用于多维表达式 (MDX) 查询中。 可以通过组合多维数据集数据、算数运算符、数字和函数来创建命名集。 例如，可以创建一个名为“前十位工厂”的命名集，它包含“工厂”维度中具有最高的“产量”度量值的十个成员。 然后最终用户可以在查询中使用“前十位工厂”。 例如，最终用户可以将“前十位工厂”放置在一个坐标轴上，将包含“产量”的“度量值”维度放置在另一个坐标轴上。 有关详细信息，请参阅[多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)和[在 MDX 中生成命名集 (MDX)](../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)。  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

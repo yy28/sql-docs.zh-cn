@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -41,20 +40,18 @@ f1_keywords:
 - _User25::put_Name
 - _Index::GetName
 - _User25::GetName
-helpviewer_keywords:
-- Name property [ADOX]
+helpviewer_keywords: Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 47d95403232ef3b5a13fc5f7c30854591f837bab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96a4d83770ee986c781efb9859eb071d197b112c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-property-adox"></a>Name 属性 (ADOX)
 指示对象的名称。  
@@ -77,11 +74,10 @@ ms.lasthandoff: 09/09/2017
 ||||  
 |-|-|-|  
 |[列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[组对象 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[索引对象 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[密钥对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[项对象 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
 |[表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [列和表追加方法名称的属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-

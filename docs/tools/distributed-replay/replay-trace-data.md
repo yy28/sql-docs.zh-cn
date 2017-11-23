@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7b49bfa52216022fdc65ccb8f9c34ea82b0efcd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 723159aa8d6662e98eb2e25a733b6e43184bcb30
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
   准备好输入跟踪数据之后，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能启动分布式重播。 有关详细信息，请参阅 [准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)。  
@@ -71,9 +69,8 @@ ms.lasthandoff: 08/02/2017
 3.  完成分布式重播时，管理工具将返回摘要信息。 如果指定 **-o** 选项，则重播活动已保存在每个客户端上的结果跟踪文件中。 有关结果跟踪文件的详细信息，请参阅 [查看重播结果](../../tools/distributed-replay/review-the-replay-results.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0d7e6045e81d10084b0d1951a373f88c675ee083
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基础对象的编程
   基础对象通常是简单直接的对象。 通常会创建和实例化这些对象，然后在不再需要它们时，用户可以断开与它们的连接。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 AMO 基础对象中的唯一一个复杂对象是 <xref:Microsoft.AnalysisServices.DataSourceView>，它需要详细信息来生成表示数据源视图的抽象模型。  
@@ -570,4 +568,3 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  [数据库对象 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

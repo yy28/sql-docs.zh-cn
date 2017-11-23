@@ -1,39 +1,36 @@
 ---
 title: "发布和使用的 Python 代码 |Microsoft 文档"
 ms.custom: 
-ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b060d27376b17709bd0f3fc8f39b8e01a6702e6b
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="publish-and-consume-python-web-services"></a>发布和使用 Python web 服务
 
 通过使用 Microsoft 机器学习 Server 中的操作化功能，可以将一个有效的 Python 解决方案部署到 web 服务。 本主题介绍成功发布，然后运行你的解决方案的步骤。
 
-> [!IMPORTANT]
->
-> 所附带机器学习 Server （独立），并使用机器学习 Server 版 9.1.0 中的功能的 Python 版本开发的目标是此示例。
- > 
- > 若要查看的相似示例，利用 Microsoft 机器学习 Server，版本 9.2.0，最新版本中的功能可在机器学习服务器站点上参阅这篇文章：[部署和管理 Python 中的 web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)。
-
 本文的目标受众是数据科学家提供想要了解如何将 Python 代码或模型发布作为在 Microsoft 机器学习 Server 中托管的 web 服务。 本文还说明了如何应用程序可以使用代码或模型。 本文假定您已精通 Python。
 
-**适用于： SQL Server 自 2017 年中的计算机学习 Server （独立）**
+> [!IMPORTANT]
+>
+> 此示例开发用于所附带机器学习 Server （独立），并使用机器学习服务器版本中的功能的 Python 版本**9.1.0**。
+ > 
+ > 单击以下链接以查看相同的示例中，重新发布使用机器学习 Server 中的较新库。 请参阅[部署和管理 Python 中的 web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)。
+
+**适用于： Microsoft R Server （独立）**
 
 ## <a name="overview-of-workflow"></a>工作流的概述
 
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/30/2017
 
 此代码示例假定你已经满足[先决条件](#prereq)若要从该 Swagger 生成 Python 客户端库使用文件和你已 Autorest。
 
-在代码块中之后, 你将在过程中找到更多详细说明每个 steo 的分步演练。
+在代码块中之后, 你将找到更多详细说明的整个过程的分步的演练。
 
 > [!IMPORTANT]
 > 此示例使用本地`admin`帐户进行身份验证。 但是，你应将凭据和[身份验证方法](#python-auth)由管理员配置。
@@ -65,7 +62,12 @@ ms.lasthandoff: 09/30/2017
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -75,6 +77,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin
@@ -88,7 +91,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -103,7 +106,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -151,7 +154,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -300,30 +303,28 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 3. 通过将传递生成静态生成的客户端库`rserver-swagger-<version>.json`文件 Swagger 代码生成器和指定的语言所需。 在这种情况下，应指定 Python。  
 
-   例如，如果你使用 AutoRest 生成 Python 客户端库，它可能如下所示，其中 3 位数字表示 R Server 版本号：
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    例如，如果你使用 AutoRest 生成 Python 客户端库，它可能如下所示，其中 3 位数字表示 R Server 版本号：
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-   您现在可以提供某些自定义标头并进行其他更改，然后使用生成的客户端库存根 （stub）。 请参阅[命令行界面](https://github.com/Azure/autorest/blob/master/docs/user/cli.md)文档在 GitHub 上以不同的配置选项和首选项，例如重命名命名空间有关的详细信息。
+4. 你可以提供某些自定义标头和进行其他更改，然后使用生成的客户端库存根 （stub）。 请参阅[命令行界面](https://github.com/Azure/autorest/blob/master/docs/user/cli.md)文档在 GitHub 上以不同的配置选项和首选项，例如重命名命名空间有关的详细信息。
    
-4. 了解核心客户端库，以查看你可以进行的各种 API 调用。 
+5. 了解核心客户端库，以查看你可以进行的各种 API 调用。 
 
-   在本示例中，Autorest 生成某些目录和文件以便 Python 客户端库在您的本地系统上。 默认情况下，命名空间 （和目录） 是`deployrclient`和可能如下所示：
+    在本示例中，Autorest 生成某些目录和文件以便 Python 客户端库在您的本地系统上。 默认情况下，命名空间 （和目录） 是`deployrclient`和可能如下所示：
    
    ![Autorest 输出路径](./media/data-scientist-python-autorest.png)
 
-   对于此默认命名空间中，在客户端库自身称为`deploy_rclient.py`。 如果在如 Visual Studio IDE 中打开此文件，你将看到类似如下内容：
+    对于此默认命名空间中，在客户端库自身称为`deploy_rclient.py`。 如果在如 Visual Studio IDE 中打开此文件，你将看到类似如下内容：
    
    ![Python 客户端库](./media/data-scientist-python-client-library.png)
-
 
 
 ### <a name="step-2-add-authentication-and-header-logic"></a>步骤 2. 添加身份验证和标头的逻辑
 
 请记住，所有 Api 都需要身份验证;因此，所有用户必须时进行身份都验证进行 API 调用使用`POST /login`API 或通过 Azure Active Directory (AAD)。 
 
-若要简化此过程，以便用户无需为每个单个调用提供其凭据，则颁发持有者访问令牌。  此持有者令牌是一种轻型安全令牌，授予对受保护资源的"持有者"访问权限： 在此情况下，机器学习服务器的 Api。 用户已经过身份验证后，应用程序必须验证用户的持有者令牌，以确保身份验证是成功完成，目标方。 若要了解有关管理这些令牌的详细信息，请参阅[安全访问令牌](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)。
+若要简化此过程，以便用户无需为每个调用提供其凭据，则颁发持有者访问令牌。  此持有者令牌是一种轻型安全令牌，授予对受保护资源的"持有者"访问权限： 在此情况下，机器学习服务器的 Api。 用户已经过身份验证后，应用程序必须验证用户的持有者令牌，以确保身份验证是成功完成，目标方。 若要了解有关管理这些令牌的详细信息，请参阅[安全访问令牌](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)。
 
 与核心 Api 交互前，先进行身份验证，获取持有者访问权限令牌使用[身份验证方法](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication)由你的管理员配置，然后将其包括在为每个后续请求的每个标头：
 
@@ -336,11 +337,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
    import deployrclient
    ```
 
-2. 将身份验证逻辑添加到你的应用程序，可以定义从本地计算机到计算机学习服务器的连接、 提供凭据，将捕获访问令牌，将该令牌添加到标头，使用该标头中的所有后续请求。  使用由管理员定义的身份验证方法： 基本的管理员帐户、 Active Directory/LDAP (AD/LDAP) 或 Azure Active Directory (AAD)。
+2. 将身份验证逻辑添加到你的应用程序定义从本地计算机到计算机学习服务器的连接、 提供凭据、 捕获访问令牌、 将该令牌添加到标头。 然后，你的所有后续请求中使用该标头。  使用由管理员定义的身份验证方法： 基本的管理员帐户、 Active Directory/LDAP (AD/LDAP) 或 Azure Active Directory (AAD)。
 
    **AD/LDAP 或`admin`帐户身份验证**
 
-   必须调用`POST /login`为了进行身份验证的 API。 你将需要传入`username`和`password`本地管理员，或如果启用了 Active Directory，将传递 LDAP 帐户信息。 反过来，机学习服务器将颁发的持有者/访问权限令牌。 身份验证后，用户将不需要再次提供凭据，只要令牌仍然有效，并且使用每个请求提交标头。 如果不知道您的连接设置，请联系您的管理员联系。
+   调用`POST /login`为了进行身份验证的 API。 传入`username`和`password`本地管理员，或如果启用了 Active Directory，将传递 LDAP 帐户信息。 反过来，机学习服务器颁发的持有者/访问权限令牌。 身份验证后，用户不再需要再次，提供凭据，只要令牌仍然有效，而且每个请求提交标头。 如果不知道您的连接设置，请联系您的管理员联系。
 
    ```python
    #Using client library generated from Autorest
@@ -358,7 +359,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
    **Azure Active Directory (AAD) 身份验证**
 
-   你必须通过 AAD 凭据、 授权和客户端 id。 反过来，AAD 将颁发[持有者访问令牌](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)。 身份验证后，用户将不需要再次提供凭据，只要令牌仍然有效，并且使用每个请求提交标头。 如果不知道您的连接设置，请联系您的管理员联系。
+   通过 AAD 凭据、 授权和客户端 id。 反过来，AAD 颁发[持有者访问令牌](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens)。 身份验证后，用户不再需要再次，提供凭据，只要令牌仍然有效，而且每个请求提交标头。 如果不知道您的连接设置，请联系您的管理员联系。
 
    ```python
    #Import the AAD authentication library
@@ -397,12 +398,12 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ### <a name="step-3-prepare-session-and-code"></a>步骤 3. 准备会话和代码
 
-身份验证后，你可以启动 Python 会话，并创建要发布更高版本的模型。 你可以在 web 服务包含任何 Python 代码或模型。 一旦你已设置你的会话环境，你可以甚至将其保存为快照以便可以重新加载您的会话，因为已过。 
+身份验证后，你可以启动 Python 会话和创建更高版本发布的模型。 你可以在 web 服务包含任何 Python 代码或模型。 一旦你已设置你的会话环境，你可以甚至将其保存为快照以便可以重新加载您的会话，因为已过。 
 
 > [!IMPORTANT]
 > 请记住包括`headers`中的每个请求。
 
-1. R 服务器上创建 Python 会话。 你必须指定名称和 Python 语言 (`runtime_type="Python"`)。  如果不将运行时类型设为 Python，则默认为。
+1. R 服务器上创建 Python 会话。 请确保指定的名称和 Python 语言 (`runtime_type="Python"`)。  如果不将运行时类型设为 Python，则默认为。
 
    这是示例的使用由 Autorest 生成的客户端库的延续：
 
@@ -466,9 +467,6 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 3. 创建快照的此 Python 会话，因此可以保存在 web 服务和在重现此环境占用的时间。 当你需要包括某些库、 对象、 模型、 文件和项目的已准备好的环境时，快照将非常有用。 快照保存整个工作区和工作目录。 但是，在发布时，你可以使用已创建的快照。
 
-   > [!NOTE] 
-   > 尽管在发布 web 服务为环境依赖关系时，还可以使用快照，它可能会带来的消耗时间的性能影响。  为了获得最佳性能，请仔细考虑快照的大小，并确保保留那些工作区对象需要和清除其余部分。 在会话中，你可以使用 Python`del`函数或[ `deleteWorkspaceObject` API 请求](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object)以删除不必要的对象。 
-
    ```python
    #Create a snapshot of the current session.
    response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
@@ -476,27 +474,27 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
+
+  > [!NOTE] 
+   > 尽管在发布 web 服务为环境依赖关系时，还可以使用快照，它可能会带来的消耗时间的性能影响。  为了获得最佳性能，请仔细考虑快照的大小，并确保保留那些工作区对象需要和清除其余部分。 在会话中，你可以使用 Python`del`函数或[ `deleteWorkspaceObject` API 请求](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object)以删除不必要的对象。 
 
 ### <a name="step-4-publish-the-model"></a>步骤 4. 发布模型 
 
 已生成你的客户端库，并已将身份验证逻辑内置在你的应用程序后，你可以与核心 Api 创建 Python 会话、 创建模型时，和然后发布 web 服务使用该模型进行交互。
 
-> [!NOTE]
-> 请记住，你必须先进行身份验证您进行任何 API 调用。 因此，包括`headers`中的每个请求。
+要记住的一些事项：
 
-+ 将此 SVM 模型发布为机器学习服务器中的 Python web 服务。 此 web 服务将评分获取传递给它一个向量。
++ 在进行任何 API 调用前，你必须进行身份验证。 因此，包括`headers`所有请求中。
++ 若要确保 web 服务注册为 Python 服务，请务必指定`runtime_type="Python"`。 如果不将运行时类型设为 Python，则默认为。
++ 评分需要一个具有花萼长度、 花萼宽度、 花瓣长度和花瓣宽度向量
 
-> [!IMPORTANT]
-> 若要确保 web 服务注册为 Python 服务，请务必指定`runtime_type="Python"`。 如果不将运行时类型设为 Python，则默认为。
+下面的代码作为 Python web 服务发布 SVM 模型。 此 web 服务生成预测的类别根据传递给它的值。
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -545,22 +543,22 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -585,11 +583,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ## <a name="managing-the-services"></a>管理服务
 
-现在，你已创建 web 服务，可以更新、 删除或重新发布该服务。 你还可以列出使用 Microsoft 机器学习服务器承载的所有 web 服务。
+现在，你已创建 web 服务，可以更新、 删除或重新发布该服务。 你还可以列出使用 R Server （或机器学习服务器） 承载的所有 web 服务。
 
 ### <a name="update-a-web-service"></a>更新 web 服务
 
-你可以更新 web 服务以更改的代码、 模型、 说明、 输入、 输出和的详细信息。 在此示例中，我们更新服务以将有用的说明添加到可能会使用此服务的人员。
+ 在此示例中，我们更新服务以将有用的说明添加到可能会使用此服务的人员。
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -600,9 +598,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+你可以更新 web 服务以更改代码、 模型、 说明、 输入、 输出和的详细信息。
+
 ### <a name="publish-another-version"></a>发布另一个版本
 
-你还可以发布 web 服务的另一个的版本。 在此示例中，则服务会现在返回为字符串而不是一个字符串列表的 Iris 指定。
+在此示例中，则服务会现在返回为字符串而不是一个字符串列表的 Iris 指定。
 
 ```python
 #Publish another version of the web service, but this time 
@@ -629,9 +629,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+你可以使用此模式来发布相同的 web 服务的多个版本。 
+
 ### <a name="list-services"></a>列出服务
 
-获取所有 web 服务，包括那些由其他用户或在不同语言中创建的列表。
+此示例获取所有 web 服务，包括那些由其他用户或在不同语言中创建的列表。
 
 ```python
 #Return the list of all existing web services.
@@ -645,8 +647,6 @@ for service in client.get_all_web_services(headers):
 
 ### <a name="delete-services"></a>删除服务
 
-你可以删除已创建的服务。 如果你被分配到具有适当的权限的角色，你还可以删除其他服务。
-
 在此示例中，我们会删除我们刚刚发布的第二个 web 服务版本。
 
 ```python
@@ -654,3 +654,4 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+你可以删除你创建的任何服务。 仅当你被分配到具有适当的权限的角色，你可以删除其他服务。

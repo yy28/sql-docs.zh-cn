@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Optimize property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07c69f576fcd1c85bd293c01c7b7995f7b7e1e9f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae76d9acb1ddf47964bef0c55caf6d029686a223
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-property-example-vc"></a>优化属性示例 （VC + +）
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象动态**优化**属性。 **Zip**字段**作者**表中**Pubs**数据库未被索引。 设置[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性**True**上**zip**字段授权 ADO 建立索引，可改进的性能[查找](../../../ado/reference/ado-api/find-method-ado.md)方法。  
@@ -143,5 +139,4 @@ void PrintComError(_com_error &e) {
  **Akiko Yokomoto 3 白银 Ct.胡桃 Creek CA**   
 ## <a name="see-also"></a>另请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [优化属性的动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Optimize 属性 - 动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

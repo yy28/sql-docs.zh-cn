@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff4058fd2827698cee28b1a9d6b759719688a212
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 模板
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
@@ -241,4 +240,3 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
  [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

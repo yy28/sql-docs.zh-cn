@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI 语义模型连接 (.bism)
   BI 语义模型连接 (.bism) 是可移植的连接，可在多维模式下将 Excel 或 Power View 报表连接到 Analysis Services 表格模型数据库或 Analysis Services 实例。 如果您熟悉 Office 数据连接 (.odc) 文件，则您会注意到定义和使用 .bism 连接文件的方式的相似性。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> 支持的数据库  
  BI 语义模型连接指向表格模型数据。 存在三种可用于此数据的数据源：  
   
--   以表格服务器模式在独立的 Analysis Services 实例上运行的表格模型数据库。 独立 Analysis Services 实例的部署位于场外部。 访问场外部的数据源要求附加权限，您可在本主题中阅读相关信息： [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
+-   以表格服务器模式在独立的 Analysis Services 实例上运行的表格模型数据库。 独立 Analysis Services 实例的部署位于场外部。 访问场外部的数据源要求附加权限，您可在本主题中阅读相关信息： [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 Excel 工作簿内嵌入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库等效于在独立的 Analysis Services 表格模式服务器上运行的表格模型数据库。 如果你已经使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则可以定义指向 SharePoint 库中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 BI 语义模型连接，并且使用现有 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 数据生成 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 报表。  你可以使用在 SQL Server 2008 R2 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的工作簿。  
   
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

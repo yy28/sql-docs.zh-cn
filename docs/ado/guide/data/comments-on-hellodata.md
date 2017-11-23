@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hellodata sample application [ADO]
+helpviewer_keywords: hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comments-on-hellodata"></a>对 HelloData 的注释
 HelloData 应用程序步骤通过一个典型的 ADO 应用程序的基本操作： 获取、 检查、 编辑和更新数据。 当启动应用程序时，单击第一个按钮，**获取数据**。 这将运行**GetData**子例程。  
@@ -82,4 +79,3 @@ HelloData 应用程序步骤通过一个典型的 ADO 应用程序的基本操�
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload**子例程非常重要的原因。 首先，由于这是一个示例应用程序，Form_Unload 清理对应用程序退出之前数据库所做的更改。 其次的代码演示如何直接从打开执行命令**连接**对象使用**执行**方法。 最后，它演示执行不返回行 – 查询 （更新查询） 对数据源的一个示例。
-

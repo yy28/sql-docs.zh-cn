@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 0e675845383c3e54c8477a8e0866231ac302cd1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64715dfd607a2216d03f7c0b3dbc1501718c546c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-sample-data-and-projects"></a>安装示例数据和项目 
 可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
@@ -164,4 +161,3 @@ Analysis Services 多维模型使用您从关系数据库管理系统导入的�
   
   
   
-

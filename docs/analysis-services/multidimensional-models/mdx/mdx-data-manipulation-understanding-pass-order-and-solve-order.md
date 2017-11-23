@@ -23,17 +23,16 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 数据操作-了解传递顺序和求解次序
   当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
@@ -229,4 +228,3 @@ FROM [Adventure Works]
  [操作数据 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

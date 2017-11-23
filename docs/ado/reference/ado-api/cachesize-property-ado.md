@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::CacheSize
-helpviewer_keywords:
-- CacheSize property [ADO]
+f1_keywords: Recordset15::CacheSize
+helpviewer_keywords: CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d5a36905a4de936dcac630adf97688d2b40855
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 属性 (ADO)
 指示返回的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)本地缓存在内存中的对象。  
@@ -59,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  [CacheSize 属性示例 (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize 属性示例 （VC + +）](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize 属性示例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
-

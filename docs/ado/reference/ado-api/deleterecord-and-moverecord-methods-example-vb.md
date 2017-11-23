@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 681e7990c2b93364e9792937cb68e0847de6f303
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 和移动记录方法示例 (VB)
 此示例演示如何复制、 移动、 编辑和删除发布到 Web 文件夹的文本文件的内容。 其他属性和使用的方法包括[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)， [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)，[源](../../../ado/reference/ado-api/source-property-ado-record.md)，和[刷新](../../../ado/reference/ado-api/flush-method-ado.md)。  
@@ -162,5 +159,4 @@ End Sub
  [GetChildren 方法 (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [移动记录方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL 属性 (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [源属性 （ADO 记录）](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Source 属性（ADO 记录）](../../../ado/reference/ado-api/source-property-ado-record.md)

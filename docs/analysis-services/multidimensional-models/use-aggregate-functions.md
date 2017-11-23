@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
+helpviewer_keywords: aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
   使用维度来切分度量值时，按该维度中包含的层次结构汇总该度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 **Sum**。 度量值的值的总和将根据活动的层次结构的级别而异。  
@@ -79,7 +77,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另请参阅  
  [度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
  [MDX 函数引用 &#40;MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
- [“选择增强功能”](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [定义半累加性行为](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
-

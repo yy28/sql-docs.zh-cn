@@ -19,17 +19,16 @@ helpviewer_keywords:
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c153dbc0b85271f175c86b37ee2b165957e926c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员可以在多个仅限查询的服务器之间分配查询工作负载这种大型任务中，更改表格或多维数据库的读/写模式。  
@@ -151,4 +150,3 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [DbStorageLocation 元素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f818532f51fa5fbbec6b6688709173849eae063
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
   线性回归模型将可预测属性的值表示为结合了各种输入的公式的结果，这样，数据将尽可能接近地适合于估计的回归线。 该算法只接受数值作为输入，并且自动检测提供最佳调整的输入。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

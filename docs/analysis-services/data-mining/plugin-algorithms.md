@@ -18,17 +18,16 @@ helpviewer_keywords:
 - algorithms [data mining], creating
 - plugin algorithms [Analysis Services]
 ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6af94e43b03b75765f7e84903dbadee1341d31a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66fad2d8974e832925ab67174f2c635b8f5fbf37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plugin-algorithms"></a>插件算法
   除了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的算法以外，您还可以将许多其他算法用于数据挖掘。 相应地， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为由第三方创建的“插件”算法提供了某种机制。 只要这些算法遵守特定的标准，就可以像使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 算法一样在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中使用它们。 插件算法具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的算法的所有功能。  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/01/2017
  [DMSCHEMA_MINING_SERVICES 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)  
   
   
-

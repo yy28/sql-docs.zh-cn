@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], calculated members
 - queries [MDX], calculated members
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 03ee94149faf02f0ef99bdde82f4f5847842fd57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc980db3ce9f468a98e7fbfb83d54981c4b6e6cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-calculated-members---building-calculated-members"></a>MDX 计算成员-生成计算的成员
   在多维表达式 (MDX) 中，计算成员是通过以下方式解析的成员：计算 MDX 表达式以返回值。 这种泛泛的定义所包括的范围十分惊人。 由于能在 MDX 查询中构造和使用计算成员，使得人们能够更有力地驾驭多维数据。  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [SELECT 语句 &#40;MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
-

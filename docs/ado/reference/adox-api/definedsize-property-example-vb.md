@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- DefinedSize property [ADOX], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: DefinedSize property [ADOX], Visual Basic example
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05838262ef249e38ba5fc33c06854b685be318a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3d78fa732b855f885253c7fed95e4b5e215e2f8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 属性示例 (VB)
 此示例演示[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 代码将重新定义的名字列的大小**员工**表*Northwind*数据库。 然后，在名字的值更改[字段](../../../ado/reference/ado-api/field-object.md)的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于**员工**显示表。 请注意，默认情况下，名字字段将成为使用空格填充后您重新定义**DefinedSize**属性。  
@@ -160,4 +156,3 @@ End Sub
 ## <a name="see-also"></a>另请参阅  
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 属性 (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
-

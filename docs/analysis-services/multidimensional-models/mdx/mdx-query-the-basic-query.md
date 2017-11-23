@@ -21,17 +21,16 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8d80527166b6b6a1d49cbd4f3735689c429020e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX 查询的基本查询
   基本多维表达式 (MDX) 查询就是 SELECT 语句 - MDX 中最常用的查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
@@ -123,4 +122,3 @@ WHERE ( [Sales Territory].[Southwest] )
  [SELECT 语句 &#40;MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
-

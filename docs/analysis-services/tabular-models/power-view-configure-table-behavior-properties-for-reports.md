@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-为报表配置表行为属性
   如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
@@ -147,4 +145,3 @@ ms.lasthandoff: 09/01/2017
  在计算模型中的表并对包含详细信息行（这些行应始终显示为单独项）的表设置表行为属性之后，您可以通过其他属性或设置来进一步优化模型。  
   
   
-

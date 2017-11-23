@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
   典型数据挖掘项目的目标是使用挖掘模型来进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  
@@ -161,4 +160,3 @@ FROM
  [数据定义查询（数据挖掘）](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   
-

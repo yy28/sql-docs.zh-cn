@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Lock Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Lock Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Lock
 - microsoft.xml.analysis.lock
 - http://schemas.microsoft.com/analysisservices/2003/engine#Lock
-helpviewer_keywords:
-- Lock command
+helpviewer_keywords: Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e3a174682bd6e2c84f48dbf75462fadecf2a573
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df377150443acf63e4f67cd4f8f4952f36277a32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lock-element-xmla"></a>Lock 元素 (XMLA)
   锁定指定的对象上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 |子元素|[ID](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)，[模式](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)，[对象](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>注释  
- **锁**命令锁定的对象，供共享或独占使用，在当前活动事务的上下文中。 只有数据库管理员或服务器管理员可以显式发出**锁**命令。 对象上的锁将阻止提交事务，直到删除该锁为止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持两种类型的锁：共享锁和排他锁。 有关支持的锁类型的详细信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[模式元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
+ **锁**命令锁定的对象，供共享或独占使用，在当前活动事务的上下文中。 只有数据库管理员或服务器管理员可以显式发出**锁**命令。 对象上的锁将阻止提交事务，直到删除该锁为止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持两种类型的锁：共享锁和排他锁。 有关支持的锁类型的详细信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[模式元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 仅允许锁定数据库。 **对象**元素必须包含对的对象引用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。 如果**对象**未指定元素或如果**对象**元素引用数据库之外的对象将会出错。  
   
@@ -80,8 +75,7 @@ ms.lasthandoff: 09/01/2017
  所有锁都位于当前事务的上下文中。 当提交或回滚当前事务时，事务中定义的所有锁都将自动释放。  
   
 ## <a name="see-also"></a>另请参阅  
- [解锁元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [解锁元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
+ [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

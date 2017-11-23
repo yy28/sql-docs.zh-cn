@@ -22,17 +22,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38a9c9d9a1fc035d652525b9ec0564977ac691bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52470e4818d24aeb2288d41f60114f040e669cd6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>数据库维度-创建日期类型维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  
@@ -83,4 +82,3 @@ ms.lasthandoff: 09/01/2017
  [维度类型](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   
-

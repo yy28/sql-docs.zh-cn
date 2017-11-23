@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- filters [Analysis Services]
+helpviewer_keywords: filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 36eec0622aa30b2ece9eac7ff3ee3b4e6403d252
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0830b6585e3859cf307ebe2fa4ea493cd8072546
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>从挖掘模型中删除筛选器
   在挖掘模型上创建筛选器时，可以在数据源视图中的数据子集上创建模型。 对于在原始数据子集上测试模型的准确性，筛选器也很有用。  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   
-

@@ -26,17 +26,16 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括备份和还原功能，以便您能从特定时间点恢复数据库及其对象。 此外，备份和还原是一项用于将数据库迁移到升级后的服务器、在服务器之间移动数据库或将数据库部署到生产服务器的有效方法。 出于数据恢复目的，如果您还没有制定备份计划并且您的数据十分重要，则应尽快设计和实施备份计划。  
@@ -138,4 +137,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

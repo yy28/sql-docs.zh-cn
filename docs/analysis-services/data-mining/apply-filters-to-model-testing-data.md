@@ -18,17 +18,16 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>将筛选器应用于模型测试数据
   在指定测试模型时使用的外部数据源时，可以选择应用筛选器以限制输入数据。 例如，您可能想要专门针对有关某一收入范围的客户的预测来测试模型。  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [选择准确性图表类型和设置图表选项](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
-

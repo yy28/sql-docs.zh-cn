@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], defining
+helpviewer_keywords: dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3fb255e95232a290d01321f0e2e5b8d6f83eeced
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度设计器，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  说明如何使用商业智能向导增强维度。  
   
   
-

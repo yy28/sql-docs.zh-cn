@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d3ffee8b910c5e13754c461671a00380d348f3f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="determining-edit-mode"></a>确定编辑模式
 ADO 维护一个与当前记录关联的编辑缓冲区。 **EditMode**属性指示是否进行了更改到此缓冲区，或是否已创建一条新记录。 使用**EditMode**来确定当前记录的编辑状态。 你可以测试挂起的更改被中断编辑过程并确定是否需要使用**更新**或**正在执行**方法。  
@@ -41,4 +39,3 @@ ADO 维护一个与当前记录关联的编辑缓冲区。 **EditMode**属性指
 |**adEditDelete**|指示当前记录已被删除。|  
   
  **EditMode**可以返回有效的值，只有在当前记录。 **EditMode**将返回错误，如果**BOF**或**EOF**是**True**或如果已删除该当前记录。
-

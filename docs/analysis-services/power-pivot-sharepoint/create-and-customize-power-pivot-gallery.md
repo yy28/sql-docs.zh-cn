@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>创建和自定义 Power Pivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种特殊的 SharePoint 文档库，可为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
@@ -159,8 +158,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另请参阅  
  [Power Pivot for SharePoint 安装疑难解答](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [使用 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
-

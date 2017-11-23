@@ -20,17 +20,16 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1d167da0ab38819f016dd4a0c18c2e65ef42da1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 向导-向维度中添加维度智能
   可以在多维数据集或维度中添加维度智能增强功能，以便为维度指定标准业务类型。 此增强功能还将为维度属性指定相应的类型。 客户端应用程序在分析数据时可以使用这些指定的类型。  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [使用商业智能向导定义时间智能计算](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   
-

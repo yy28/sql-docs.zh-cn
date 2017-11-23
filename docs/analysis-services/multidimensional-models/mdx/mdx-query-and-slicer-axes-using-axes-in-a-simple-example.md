@@ -18,17 +18,16 @@ helpviewer_keywords:
 - slicer axis
 - query axis [MDX]
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e27b8a961e692a9b1757573e4c735949fc537153
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 810e4ef20ff718f6f560768f7c14cf19d1a81230
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 查询轴和切片器轴-在简单的示例中使用轴
   本主题中提供的简单示例说明了指定和使用查询轴和切片器轴的基本操作。  
@@ -62,4 +61,3 @@ WHERE ( [Measures].[Packages] )
  [指定切片器轴的内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   
-

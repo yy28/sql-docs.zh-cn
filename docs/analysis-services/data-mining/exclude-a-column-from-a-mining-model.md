@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], columns
 - columns [data mining], excluding
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2538a1340fbdaef28902d73b56c40b2b5ddf0a5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a12584791ec8ea21a1338c09dbc0e5f7ef8f7a62
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>从挖掘模型中排除列
   在创建新的挖掘模型时，您可能不希望使用模型基于的挖掘结构中存在的所有列。 例如，您可能添加了一个客户名称列来用于钻取，但不想将该列用于建模。 或者，您可能决定为一个列创建具有不同离散化的多个副本，并且在每个模型中仅使用这些副本中的一个，而忽略其余副本。 您还可以有选择地在若干不同模型中添加输入列，看看所添加的变量是如何影响输出列的。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

@@ -22,20 +22,19 @@ helpviewer_keywords:
 - MAXIMUM_OUTPUT_ATTRIBUTES parameter
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 812ca4b26ed14645bbd84094077f24f44d8784cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91e15d1d56b8d548651c316d3169fc36b4a7fd04
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 算法技术参考
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的一种用于预测性建模的分类算法。 该算法计算输入列与可预测列之间的条件概率，并假定列相互独立。 由于此独立性假设，所以取名为 Naive Bayes。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的一种用于预测性建模的分类算法。 该算法计算输入列与可预测列之间的条件概率，并假定列相互独立。 由于此独立性假设，所以取名为 Naive Bayes。  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 算法的实现  
  和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法相比，此算法所需运算量较少，因而有助于快速生成挖掘模型，从而发现输入列与可预测列之间的关系。 此算法会考虑每对输入属性值和输出属性值。  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
-

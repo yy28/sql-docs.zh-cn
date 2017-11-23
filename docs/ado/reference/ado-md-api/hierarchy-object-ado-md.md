@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Hierarchy
-helpviewer_keywords:
-- Hierarchy object [ADO MD]
+f1_keywords: Hierarchy
+helpviewer_keywords: Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e02aefb90af923cea7bfd6d33b8b1e97415c6ae8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46bb03c91b2305f0453676891d87676e784b03fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示在其中的一种方式的成员[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以聚合或"汇总。" 可以在一个或多个层次结构上聚合的维度。  
@@ -50,7 +46,7 @@ ms.lasthandoff: 09/09/2017
 |----------|-----------------|  
 |AllMember|在层次结构中的汇总最高级别成员。|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
-|多维数据集名称|多维数据集的名称。|  
+|CubeName|多维数据集的名称。|  
 |DefaultMember|此层次结构的默认成员唯一名称。|  
 |Description|层次结构的有意义的描述。|  
 |DimensionType|为此层次结构所属的维度的类型。|  
@@ -72,4 +68,3 @@ ms.lasthandoff: 09/09/2017
  [层次结构集合 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [级别集合 (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-

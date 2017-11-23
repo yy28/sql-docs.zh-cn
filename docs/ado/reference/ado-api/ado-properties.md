@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>ADO 属性
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|指示当前的位置是否在流末尾。|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|指示数据中的筛选器**记录集**。|  
 |[HelpContext 和 HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|指示的帮助文件和相关联的主题**错误**对象。<br /><br /> **帮助上下文 Id**形式返回的上下文 ID，**长**值，帮助文件中的主题。<br /><br /> **HelpFile**返回**字符串**计算结果为的帮助文件的完全解析路径的值。|  
-|[索引](../../../ado/reference/ado-api/index-property.md)|指示当前对有效的索引名称**记录集**对象。|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|指示当前对有效的索引名称**记录集**对象。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|指示的隔离级别**连接**对象。|  
 |[项](../../../ado/reference/ado-api/item-property-ado.md)|按名称或序号指示集合的特定成员。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|指示要用作文本中的行分隔符的二进制字符**流**对象。|  
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/09/2017
 |[状态 （ADO 字段）](../../../ado/reference/ado-api/status-property-ado-field.md)|指示的状态**字段**对象。|  
 |[状态 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)|指示当前记录有关批处理更新或其他大容量操作的状态。|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|指示在分层结构**记录集**对象、 是否对基础的子记录的引用 (即，*章*) 对父行的位置更改时，发生变化。|  
-|[流属性](../../../ado/reference/ado-api/stream-property.md)|获取或设置 OLE DB**流**对象从/上**ADOStreamConstruction**对象。|  
+|[Stream 属性](../../../ado/reference/ado-api/stream-property.md)|获取或设置 OLE DB**流**对象从/上**ADOStreamConstruction**对象。|  
 |[类型](../../../ado/reference/ado-api/type-property-ado.md)|指示的操作的类型或数据类型**参数**，**字段**，或**属性**对象。|  
 |[类型 （ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)|指示数据中包含的类型**流**（二进制或文本）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指示的数据库中的当前值**字段**对象。|  
@@ -113,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 对象和接口](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-

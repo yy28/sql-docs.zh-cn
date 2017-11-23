@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4720db7c001c17a99016e9d81b32ee46d990e06f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdd0f236112d8c08e1bdc6356ac381d10d6b29b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tuples"></a>元组
   一个元组唯一标识多维数据集中数据的一个切片。 只要没有两个或多个成员属于相同的层次结构，元组就由维度成员的组合构成。  
@@ -82,4 +81,3 @@ FROM [Adventure Works]
  [使用成员、 元组，和集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   
-

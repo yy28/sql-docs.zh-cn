@@ -18,17 +18,16 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 线性回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 Microsoft 决策树算法的特殊版本，该线性回归算法针对连续属性的建模对进行了优化。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
@@ -99,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

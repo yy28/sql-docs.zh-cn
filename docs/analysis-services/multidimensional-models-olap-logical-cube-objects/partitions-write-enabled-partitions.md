@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - write-enabled partitions [Analysis Services]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>分区-写入的分区
   多维数据集中的数据通常为只读数据。 但在某些情况下，可能需要为分区启用写入。 使用可写入的分区，业务用户可以通过更改单元值并分析更改对多维数据集数据所产生的影响来研究方案。 向分区中写入时，客户端应用程序可以记录对分区中的数据所做的更改。 这些更改（称为写回数据）存储在单独的表中，并且不会覆盖度量值组中的任何现有数据。 但是，它们被作为多维数据集数据的一部分合并到了查询结果中。  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [启用写操作的维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

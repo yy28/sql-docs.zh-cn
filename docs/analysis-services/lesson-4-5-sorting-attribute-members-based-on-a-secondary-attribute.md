@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e7992790570b7f8651937ebbd799cd7621018be1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lesson 4-5-基于辅助属性排序属性成员
 在第 3 课中，您已了解了如何根据属性成员的名称或键值对属性成员进行排序。 您还了解了如何使用组合成员键影响属性成员和排序顺序。 有关详细信息，请参阅 [修改日期维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 但是，如果属性的名称或键都无法提供所需的排序顺序时，您可以使用辅助属性来获取所需的排序顺序。 通过定义属性之间的关系，您可以使用第二个属性来对第一个属性的成员进行排序。  
@@ -132,4 +129,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

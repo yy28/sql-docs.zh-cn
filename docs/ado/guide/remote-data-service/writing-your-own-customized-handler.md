@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9301a871c5b2c55b66c13ccb57888d6e4e37ac47
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 445f0d8d7a870ceda6cf4028b0cebe9264ed8358
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="writing-your-own-customized-handler"></a>编写你自己的自定义处理程序
 你可能想要编写你自己的处理程序是否的 IIS 服务器，则管理员希望获得的默认的 RDS 支持，但更好地控制用户请求和访问权限。  
@@ -115,6 +113,5 @@ HRESULT _stdcall GetRecordset(
  [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
 
 

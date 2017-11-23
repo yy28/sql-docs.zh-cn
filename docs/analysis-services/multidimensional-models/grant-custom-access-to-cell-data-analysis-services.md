@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.celldata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cell data
 - permissions [Analysis Services], cells
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb753663f77dbe9fae2eb37cce9a654bfa22f483
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授予单元数据的自定义访问权限 (Analysis Services)
   单元安全性用于允许或拒绝对多维数据集中度量值数据的访问。 下图显示了作为其角色仅允许访问特定度量值的用户进行连接时，数据透视表中允许和拒绝的度量值的组合。 此示例中， **分销商销售额** 和 **分销商总产品成本** 是通过此角色仅可访问的度量值。 所有其他度量值均被隐式拒绝（以下的下一节“允许访问特定度量值”中提供了用于获得此结果的步骤。）  
@@ -115,4 +113,3 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   
-

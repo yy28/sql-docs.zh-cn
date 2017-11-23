@@ -1,26 +1,24 @@
 ---
 title: "R Services 的结果和资源的性能 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 服务的性能： 结果和资源
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/01/2017
 + 第一个案例研究，由 R Services 开发团队中，查找要测量的特定优化技术的影响
 + 第二个案例研究，由数据科学家团队，体验过多个方法，以确定特定的大容量评分方案的最佳的优化。
 
-本主题列出的第一个案例研究的详细的结果。 对于第二个案例研究，摘要描述整体结果。 在本主题的最后，您会看到所有脚本和示例数据和原始作者使用的资源的链接。
+本主题列出的第一个案例研究的详细的结果。 对于第二个案例研究，摘要描述整体结果。 在本主题末尾是与所有脚本和示例数据，以及原始作者使用的资源的链接。
 
 ## <a name="performance-case-study-airline-dataset"></a>性能案例研究： 航班数据集
 
@@ -280,13 +278,13 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 从表加载训练的模型是一种更快的方法来执行预测。 我们建议你避免创建模型和执行在同一个脚本评分。
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>案例研究： 优化的恢复匹配任务
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究： 恢复匹配任务的优化
 
-由 Microsoft 数据科学家 Ke Huang SQL Server 中的测试的 R 代码的性能并启用以支持可缩放的企业级解决方案的数据科学家开发恢复匹配模型。
+恢复匹配模型开发的由 Microsoft 数据科学家 Ke Huang 来测试 SQL Server 中的 R 代码的性能，通过执行这样帮助数据科学家创建可缩放的企业级解决方案。
 
 ### <a name="methods"></a>方法
 
-对 RevoScaleR 和 MicrosoftML 封装了用于定型涉及大型数据集的复杂 R 解决方案中的预测模型。 SQL 查询和 R 代码都是相同。 已安装的 SQL server 的单个 Azure VM 上执行了所有测试。 作者然后进行比较，使用和不使用 SQL Server 提供的这些优化评分时间：
+对 RevoScaleR 和 MicrosoftML 封装了用于定型涉及大型数据集的复杂 R 解决方案中的预测模型。 SQL 查询和 R 代码都是相同的所有测试。 已安装的 SQL server 的单个 Azure VM 上执行了测试。 作者然后进行比较，评分时间使用和不使用 SQL Server 提供的以下优化：
 
 - 内存中表
 - ssNoVersion
@@ -328,12 +326,9 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 -   以供 R 会话的最大内存 = 70%
 
-对于恢复匹配模型中，外部脚本使用已大量并没有任何其他数据库引擎服务运行。 因此，分配给外部脚本的资源已增加到 70%，这是脚本性能的最佳配置。
+对于恢复匹配模型中，外部脚本使用已大量并没有任何其他数据库引擎服务运行。 因此，分配给外部脚本的资源已增加到 70%，证明脚本性能的最佳配置。
 
-此配置已到达通过动手试验不同的值。 如果你使用不同的硬件或另一种解决方案，最佳的配置可能不同。
-
-> [!IMPORTANT]
-> 若要查找有关你的案例的最佳配置的试验 ！
+此配置已到达通过动手试验不同的值。 如果你使用不同的硬件或另一种解决方案，最佳的配置可能不同。 始终通过试验来查找你的用例的最佳配置 ！
 
 在优化的解决方案中，已 20 核心计算机上在 8.5 秒内评分的数据 （与 100 功能） 1.1 万行。 优化显著改进了从评分时间方面的性能。
 
@@ -342,6 +337,16 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 我们建议你阅读此博客文章和随附教程有关的详细讨论。
 
 -   [SQL Server 中的机器学习的优化提示和技巧](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+许多用户首次加载 R （或 Python） 运行时没有小暂停记录。 出于此原因，这些测试中所述的首次运行的时间是通常测量但更高版本被丢弃。 后续缓存可能会导致显著的性能差异第一个和第二次运行。 此外还有一些系统开销时 SQL Server 和外部运行时，之间移动数据时尤其是通过网络，而不是直接从 SQL Server 正在加载传递数据。
+
+对于所有这些原因，没有用于缓解此初始加载期间，任何单个解决方案因为性能影响的变化较大取决于任务。 例如，缓存为评分批; 中的单行更行执行因此，连续评分的操作是要快得多，模型和 R 运行时都不重新加载。 你还可以使用[本机评分](../sql-native-scoring.md)以免完全加载 R 运行时。
+
+对于定型大的模型，或在大的批次评分，则开销可能会与从避免数据移动或流式处理和并行处理的提升相比最小。 请参阅以下最近的日志和其他性能指南的示例：
+
++ [使用 SQL Server 2016 R Services 的贷款分类](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [使用 R Services 的早期客户体验](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [使用 R 来检测欺诈行为在每秒 1 百万个事务](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Resources
 
@@ -407,4 +412,3 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 [性能优化 R-R 代码和数据优化](r-and-data-optimization-r-services.md)
 
 [性能优化的案例研究结果](performance-case-study-r-services.md)
-

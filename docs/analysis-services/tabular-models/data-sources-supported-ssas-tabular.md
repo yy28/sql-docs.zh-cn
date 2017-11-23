@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ad72f038095af14c6df605c3d018da0feec7b847
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: 2d716dc332ec8271a11498b6385d4801b64b808a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>在表格模型中受支持的数据源
 
@@ -78,4 +77,3 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
 不同数据源中包含类似数据的列是在模型设计器中创建关系的基础。 在使用异类数据源时，应选择包含这样的列的表：这些列可以映射到其他数据源中包含相同或类似数据的表。  
   
 OLE DB 访问接口有时可以提供更快的性能的大规模数据。 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
-

@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], mining structures
+helpviewer_keywords: Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 651223b9903c231f15ab4232c180b7432411e726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
   可以使用五个基本步骤为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘模型创建准确性图表：  
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [分类矩阵（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   
-

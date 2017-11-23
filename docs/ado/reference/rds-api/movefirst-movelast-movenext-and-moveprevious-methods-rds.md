@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22ac6b2d67502e7563cee5338a19b311c71b68c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae28d49a51d2bd4dbf516a7cc96bbf20381ccdfe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (RDS)
 将移动到第一个，最后，在指定的下一步，或上一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -57,7 +55,6 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## <a name="see-also"></a>另请参阅  
  [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [移动记录方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-
+ [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
 
 

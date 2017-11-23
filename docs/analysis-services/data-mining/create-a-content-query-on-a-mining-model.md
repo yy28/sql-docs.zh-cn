@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
+helpviewer_keywords: content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4cff8211d13fe5ddf5fd1128f0fd53a0ab013ae1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03b5c96e3a435a757fdb1bc8f83b2d1b093ed224
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
   使用 AMO 或 XML/A 可以采用编程方式查询挖掘模型内容，但是使用 DMX 创建查询更简单。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [数据挖掘架构行集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

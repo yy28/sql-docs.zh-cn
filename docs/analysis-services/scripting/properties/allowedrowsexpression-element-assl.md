@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b491e1057697a893e4fcdc0089cb9cfa103e58d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cf9c12f586ff7ffab5f627f049748d1f44eb9428
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="allowedrowsexpression-element-assl"></a>AllowedRowsExpression 元素 (ASSL)
   包含布尔类型的数据分析表达式 (DAX)，该表达式定义了父元素的内容。  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

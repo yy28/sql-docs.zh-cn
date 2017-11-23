@@ -26,17 +26,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>多维模型中的计算
   可以使用多维数据集设计器的“计算”选项卡创建计算成员、命名集和其他多维表达式 (MDX) 计算。  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  若要删除现有计算，请在 **“计算”** 选项卡中的 **“脚本组织程序”** 窗格中选择要删除的计算，再在 **“编辑”** 菜单中单击 **“删除”** ，或在工具栏上单击 **“删除”** 图标。 还可以在“脚本组织程序”窗格中右键单击计算，并从快捷菜单中选择“删除”。  
   
   
-

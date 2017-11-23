@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eeaa2b9b696f70a9a72e439e0a6a5a66ae132905
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>New-PowerPivotSystemServiceInstance cmdlet
 
@@ -108,4 +106,3 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  此示例命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务实例，但不对实例进行预配。 如果您没有提供名称，则改用默认名称 SQL Server Analysis Services 系统服务实例。 为该服务创建自定义名称是可选的。 您可以命名该服务以便支持测试方案；或者，如果您具有自定义工具或脚本，则可以在以后的步骤中设置该实例。  
   
   
-

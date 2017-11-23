@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - stored procedures [Analysis Services], designing
 - dependent assemblies [Analysis Services]
 - assemblies [Analysis Services]
 ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e768747452fbdae3d4e839c48bd52954528b6559
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ce4810cec6ebfe861150aa24fea322682dc0e8c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="designing-stored-procedures"></a>设计存储过程
   管理对象模型 Analysis Management Objects (AMO) 和面向客户端的对象模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® 数据对象（多维）(ADO MD) 在存储过程中都可用。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [定义存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - calculated values [MDX]
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cef256029853aabd5017f610081ed45ac632a935
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 78aef4c489045b9f40177bf82d8ad384cc86b85e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-calculations---build-cell-calculations"></a>MDX 单元计算-生成单元计算
   多维表达式 (MDX) 提供许多用于生成计算值（如计算成员、自定义汇总以及自定义成员）的工具。 然而，使用这些功能很难影响一组特定的单元或单个单元。  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

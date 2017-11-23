@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS tutorial [ADO], invoking server program
+helpviewer_keywords: RDS tutorial [ADO], invoking server program
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2686f9206b49cd193cda9970aad72a10d75c482
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd6ffeef7f178c7823b25fcd9a6b8e1a73c6756b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步骤 2： 调用服务器程序 （RDS 教程）
 客户端上的方法的调用时*代理*，实际的程序在服务器上执行该方法。 在此步骤中，将在服务器上执行查询。  
@@ -74,4 +71,3 @@ Sub RDSTutorial2B()
 ## <a name="see-also"></a>另请参阅  
  [步骤 3： 服务器获取记录集 （RDS 教程）](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

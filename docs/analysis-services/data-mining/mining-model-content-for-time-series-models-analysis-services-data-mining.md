@@ -18,17 +18,16 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d399cf55c957ed129e0f37e821f23eb9379b1e5b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
   所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
@@ -452,4 +451,3 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   
-

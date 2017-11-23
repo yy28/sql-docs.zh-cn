@@ -21,17 +21,16 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95d4624aab2e35b3e7ec34963aa33c3af8434eb5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 单元格属性-FORMAT_STRING 内容
   **FORMAT_STRING** 单元属性格式化 **VALUE** 单元属性以生成 **FORMATTED_VALUE** 单元属性的值。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
@@ -165,4 +164,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7a241c21719e2181f8dbbce11742a273d8552d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8bf7593fb1e8c770edde83e697f5b5be1d1d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
 两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**系列与操作上**连接**对象，与**RecordsetEvent**系列与操作上**记录集**对象。
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="see-also"></a>另请参阅
  [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO 事件](../../../ado/reference/ado-api/ado-events.md)[事件参数](../../../ado/guide/data/event-parameters.md)[事件处理程序是如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)[的事件类型](../../../ado/guide/data/types-of-events.md)
-

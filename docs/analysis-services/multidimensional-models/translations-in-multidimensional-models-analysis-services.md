@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
+f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f826e36a3fb58cfb1adba2b30a1375e3b84e71
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多维模型中的翻译 (Analysis Services)
   可以通过使用要翻译的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 对象的相应设计器，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义翻译。 定义翻译时，将创建一个与相应的 **对象关联的** 翻译 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。对于关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的属性，被创建的对象具有以指定语言表示的指定的显式文字值。  
@@ -134,4 +132,3 @@ ms.lasthandoff: 09/01/2017
  [语言和排序规则 &#40;Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   
-

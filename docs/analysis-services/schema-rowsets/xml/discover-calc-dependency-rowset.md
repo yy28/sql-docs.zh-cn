@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 行集
   报告计算之间的依赖关系以及这些计算中引用的对象。 您可以在客户端应用程序中使用这些信息来报告与复杂公式相关的问题，或者在删除或修改相关对象时发出警告。 您还可以使用行集提取在度量值或计算列中使用的 DAX 表达式。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**DATABASE_NAME**|**DBTYPE_WSTR**|是|指定包含要请求对其进行依赖关系分析的对象的数据库名称。 如果省略，则使用当前数据库。<br /><br /> 可通过使用此列对 **DISCOVER_DEPENDENCY_CALC** 行集进行限制。|  
 |**对象类型**|**DBTYPE_WSTR**|是|指示要请求对其进行依赖关系分析的对象的类型。 该对象必须是以下类型之一：<br /><br /> **ACTIVE_RELATIONSHIP**：处于活动状态的关系<br /><br /> **CALC_COLUMN**：计算列<br /><br /> **HIERARCHY**：层次结构<br /><br /> **MEASURE**：度量值<br /><br /> **RELATIONSHIP**：关系<br /><br /> **KPI**：KPI（关键绩效指标）<br /><br /> <br /><br /> 请注意， **DISCOVER_DEPENDENCY_CALC**行集可通过使用此列来限制。|  
 |**查询**|**DBTYPE_WSTR**|是|对于在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 中创建的表格模型，您可以包含 DAX 查询或表达式，以显示该查询或表达式的依赖关系图。 QUERY 限制为客户端应用程序提供了一种方法，以确定 DAX 查询所使用的对象。<br /><br /> 可在 XMLA 中或 DMV 查询的 WHERE 子句中指定 **QUERY** 限制。 有关详细信息，请参阅示例部分。|  
-|**表**|**DBTYPE_WSTR**||要为其生成依赖关系信息的对象所在的表的名称。|  
+|**TABLE**|**DBTYPE_WSTR**||要为其生成依赖关系信息的对象所在的表的名称。|  
 |**对象**|**DBTYPE_WSTR**||要为其生成依赖关系信息的对象的名称。 如果该对象是某一度量值或计算列，则使用该度量值的名称。 如果该对象是某一关系，则为包含参与该关系的列的表（或者多维数据集维度）的名称。|  
 |**表达式**|**DBTYPE_WSTR**||包含要寻找其依赖关系的对象的公式。|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||返回具有对引用对象的依赖关系的对象的类型。 返回的对象可以是以下类型之一：<br /><br /> **CALC_COLUMN**：计算列<br /><br /> **COLUMN**：数据列<br /><br /> **MEASURE**：度量值<br /><br /> **RELATIONSHIP**：关系<br /><br /> **KPI**：KPI（关键绩效指标）|  
@@ -139,4 +136,3 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
  [使用动态管理视图 &#40; Dmv &#41;监视 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-
