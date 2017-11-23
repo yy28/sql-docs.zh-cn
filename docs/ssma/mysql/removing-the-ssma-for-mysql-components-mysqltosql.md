@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 688f17b4f133dbbd47e9930e812bf20459f153e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 765696847ddb1abd44dfac3463fdfd75f9a5c97a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>为 MySQL 组件 (MySQLToSql) 删除 SSMA
 完成后将数据库迁移到 MySQL 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可能想要卸载 SSMA 组件。 你可以随时卸载客户端组件。 但是，如果你卸载来自的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然后，SSMA 将不再支持迁移到目标数据库 (SQL Server/SQL Azure) 使用服务器端数据迁移引擎从 MySQL 的数据。  
@@ -65,8 +63,7 @@ ms.lasthandoff: 08/02/2017
   
 卸载过程完成后，您可以确认在对象**sysdb.ssma_MySQL**架构，甚至整个**sysdb**数据库，是否使用已删除[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。 但是，如果你使用其他 SSMA 产品，它们也使用**sysdb**数据库。 如果数据库存在并且可确保没有其他数据库引用到此数据库中的对象，你可以分离数据库。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [安装适用于 MySQL 客户端 &#40; SSMAMySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
 [在 SQL Server 上安装 SSMA 组件](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
-

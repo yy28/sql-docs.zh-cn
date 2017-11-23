@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
+helpviewer_keywords: stored procedures [Analysis Services], data mining
 ms.assetid: a751856d-33bd-4788-9593-317b2826132d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1d73a02535eb55e16de7058fa9f24dc335763f45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67e09ad757b0433a4db09187492cdbe58dbe94ff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>数据挖掘存储过程（Analysis Services - 数据挖掘）
   从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持以任何托管语言编写的存储过程。 支持的托管语言包括 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET、C# 和托管 C++。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可以使用 **CALL** 语句直接调用存储过程，或作为数据挖掘扩展插件 (DMX) 查询的一部分来调用。  
@@ -52,7 +49,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另请参阅  
  [交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)   
  [交叉验证选项卡 &#40;挖掘准确性图表视图 &#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
- [调用存储的过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
+ [调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
   
-

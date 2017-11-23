@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7768246432f2711f7e3d99c046493e39b7e4ecf9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15aeda3b7b6ecb758aa2a0c0f3b8b2b85368dbf0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 实例管理
   Analysis Services 的实例是作为操作系统服务运行的 **msmdsrv.exe** 可执行程序的副本。 每个实例完全独立于同一服务器上的其他实例，且有自己的配置设置、权限、端口、启动帐户、文件存储和服务器模式属性。  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

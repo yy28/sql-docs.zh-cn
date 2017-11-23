@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReferenceMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReferenceMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReferenceMeasureGroupDimension
-helpviewer_keywords:
-- ReferenceMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReferenceMeasureGroupDimension
+helpviewer_keywords: ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8c14e0750b4f012a9229ee938b033a059070a2e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 202f688efbb94d7c3b3f72e5cce19cdc397c2099
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>ReferenceMeasureGroupDimension 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示通过中间维度与事实数据表间接相关的维度。 （例如，“销售”度量值组可引用“地域”维度，它们之间通过“客户”维度相关联。）  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 脚本语言 XML 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

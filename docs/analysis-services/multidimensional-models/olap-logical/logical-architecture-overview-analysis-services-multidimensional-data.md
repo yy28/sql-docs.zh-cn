@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 125422ba5479f56a2659f1fc609359741d63b7e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
   Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**作为安装的 Analysis Services 的实例是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]对于 SharePoint，用于加载和查询 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿内的数据模型。  
@@ -138,4 +136,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型数据库 &#40;SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

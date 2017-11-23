@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 882a0dca2f6c2c443507bc5b4d54820711e55ae7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f400a5513fcd16ea5344157e451d06b8fe103796
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此工作簿包含一个或多个刷新外部数据的查询
   对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 检测到连接信息，则将显示此警告，并提示你为此工作簿启用或禁用查询。  
@@ -59,7 +57,6 @@ ms.lasthandoff: 09/01/2017
   
 6.  单击 **“确定”**。  
   
- 此外，你还可以为包含 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的站点创建新的受信任位置，然后仅修改该站点的配置设置。 有关详细信息，请参阅 [在管理中心中为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 此外，你还可以为包含 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的站点创建新的受信任位置，然后仅修改该站点的配置设置。 有关详细信息，请参阅 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
   
-

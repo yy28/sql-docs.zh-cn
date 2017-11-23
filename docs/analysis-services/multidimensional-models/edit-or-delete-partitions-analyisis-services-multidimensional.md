@@ -18,17 +18,16 @@ helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7c951e3abb2fffc3882869e31570342e7647bd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a253d7cc22d90a06369a914b7aec8b4a8ec315f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>编辑或删除分区（Analysis Services - 多维）
   多维数据集分区可在 **中使用多维数据集设计器中的** “分区” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]选项卡来修改。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
  当您将源分区合并到目标分区时，将自动删除分区。 合并后将删除被指定为“源”的分区。 您也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中或在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的“分区”选项卡中手动删除分区。 右键单击并选择“删除”。 请记住，删除分区时也会同时删除数据和聚合。 作为预防措施，请确保您具有数据库的近期备份版本，以备您在以后需要撤消此步骤时使用。  
   
 > [!NOTE]  
->  或者，您也可以使用可自动执行生成、合并和删除分区任务的 XMLA 脚本。 XMLA 脚本可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中或在作为计划任务运行的自定义 SSIS 包中创建和执行。 有关详细信息，请参阅 [使用 SSIS 自动执行 Analysis Services 管理任务](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md)。  
+>  或者，您也可以使用可自动执行生成、合并和删除分区任务的 XMLA 脚本。 XMLA 脚本可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中或在作为计划任务运行的自定义 SSIS 包中创建和执行。 有关详细信息，请参阅 [Automate Analysis Services Administrative Tasks with SSIS](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md)。  
   
 ## <a name="partition-source"></a>分区源  
  为分区指定源表或命名查询。 若要更改源表，请单击该单元，再单击浏览 (**...**) 按钮。  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [在 Analysis Services 中合并分区（SSAS - 多维）](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

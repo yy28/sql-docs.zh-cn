@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 786633c9ef5ff8c1814b1622b1349734286b2312
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22e04c21256b7c21c31c87557b201fc802ca3847
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>课程 7-1-定义和浏览 Kpi
 若要定义关键绩效指标 (KPI)，应该先定义与 KPI 关联的 KPI 名称和度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：  
@@ -280,4 +277,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>下一课  
 [第 8 课：定义操作](../analysis-services/lesson-8-defining-actions.md)  
   
-

@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>课程 1-2-查看优化建议
 此任务将用到 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的优化会话。 使用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本优化了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将在“建议”选项卡中显示优化结果。以下任务介绍了[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问图形用户界面 (GUI) 中的“建议”选项卡，并指导你浏览该选项卡中提供的有关优化会话结果的信息。  
@@ -65,4 +61,3 @@ ms.lasthandoff: 10/24/2017
   
   
   
-

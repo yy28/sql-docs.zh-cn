@@ -22,17 +22,16 @@ helpviewer_keywords:
 - ordering dimensions [Analysis Services]
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0224266d87494010d6009a619085b67f76b035a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 879c7266c06551aa040a075e4af4ed537e58cab9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>BI 向导-定义维度的排序
   可通过将属性排序增强功能添加到多维数据集或维度中，指定属性成员的排序方式。 成员可以按属性的名称或键进行排序，也可以按另一个属性的名称或键基于属性关系进行排序。 默认情况下，成员按名称排序。 此增强功能将更改维度中的属性的 **OrderBy** 和 **OrderByAttributeID** 属性设置。  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  然后，可以在 **“条件”** 列中选择按 **“键”** 还是按 **“名称”**来对属性的成员进行排序。  
   
   
-

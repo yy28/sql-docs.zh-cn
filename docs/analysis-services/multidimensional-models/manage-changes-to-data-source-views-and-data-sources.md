@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d7e5aebbe0777d35918c8c68cd23767a8f02c0c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b1913d392467f4ba78976d9ab73919e7ac06051
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>管理对数据源视图和数据源所做的更改
   在重新运行架构生成向导时，它重用初始生成使用的相同数据源和数据源视图。 如果您添加数据源或数据源视图，则向导不会使用该数据源或数据源视图。 如果您在初始生成后删除原始数据源或数据源视图，则必须从头运行向导。 向导中的所有先前设置也会被删除。 下次运行架构生成向导时，基础数据库中任何绑定到已删除数据源或数据源视图的现有对象都被视为用户创建的对象。  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   
-

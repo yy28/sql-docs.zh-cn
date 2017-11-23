@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- DataFactory object [ADO]
+helpviewer_keywords: DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3df928f2c2ac6735bc1654b1f9eacb02cb202b42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24068333604b7ab6edea96567a4c0410d0df808a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 对象 (RDSServer)
 > [!IMPORTANT]
@@ -48,10 +45,9 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [DataFactory 对象 (RDSServer) 属性、 方法和事件](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [DataFactory 对象 (RDSServer) 属性、方法和事件](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [DataFactory 对象、 查询方法和 CreateObject 方法示例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
+ [DataFactory 对象、Query 方法和 CreateObject 方法示例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

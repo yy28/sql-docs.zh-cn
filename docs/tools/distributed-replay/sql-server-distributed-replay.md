@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 319e14792033ea15f4bcfc8b295a0b62f37f87c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb2346d3d23d313288d86f98d85dca5a42275cb3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化的影响。  
@@ -78,8 +76,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 分布式重播论坛](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用分布式重播对您的 SQL Server 进行负载测试 – 第 2 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [使用分布式重播对您的 SQL Server 进行负载测试 – 第 1 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [使用分布式重播进行负载测试你的 SQL Server – 第 2 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [使用分布式重播进行负载测试你的 SQL Server-第 1 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   
-

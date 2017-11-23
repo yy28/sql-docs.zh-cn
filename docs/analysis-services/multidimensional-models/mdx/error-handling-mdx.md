@@ -18,17 +18,16 @@ helpviewer_keywords:
 - scripts [MDX], exceptions
 - exceptions [MDX]
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8679c6d912e6dab8fa89f4f67ddfa9070c04460f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbd604d132fa204da606b44d72551f198661c81a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-handling-mdx"></a>错误处理 (MDX)
   每个多维数据集都可以控制多维表达式 (MDX) 脚本中处理错误的方法。 通过 **ScriptErrorHandlingMode** 枚举器完成错误处理。 此枚举器的可能值包括：  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  <xref:Microsoft.AnalysisServices.Cube.ScriptErrorHandlingMode%2A>  
   
   
-

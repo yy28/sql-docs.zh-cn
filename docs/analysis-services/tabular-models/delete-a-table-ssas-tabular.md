@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be456ceeef0d8d965c9e922bffbcec0507cb3777
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d3437449a05b5e1f60083135e020171b3d1e916
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-a-table-ssas-tabular"></a>删除表（SSAS 表格）
   在模型设计器中，您可以删除不再需要的模型工作区数据库中的表。 删除表并不影响原始源数据，只会影响你已导入并且正在使用的数据。 您无法撤消对表的删除。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [表和列（SSAS 表格）](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   
-

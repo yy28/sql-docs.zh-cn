@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - registering assemblies
 - database assemblies [Analysis Services]
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], creating
 - assemblies [Analysis Services]
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a18ccef8d4e2e79f5a88e43def0bf13b683e266
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1212037722863a4dc72ddb99387308cf2e33fc33
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-stored-procedures"></a>创建存储的过程
   所有存储过程必须与公共语言运行时 (CLR) 或组件对象模型 (COM) 类相关联才能使用。 必须在服务器上安装类-通常在窗体的[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 动态链接库 (DLL) — 并为在服务器上或程序集已注册[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。  
@@ -128,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [定义存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

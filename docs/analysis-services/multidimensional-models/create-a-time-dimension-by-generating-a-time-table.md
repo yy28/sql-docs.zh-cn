@@ -23,17 +23,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c4302e55bd6b91daf8d3d1073be96fe35501af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用的时间表时，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [通过在数据源中生成非时间表来创建维度](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

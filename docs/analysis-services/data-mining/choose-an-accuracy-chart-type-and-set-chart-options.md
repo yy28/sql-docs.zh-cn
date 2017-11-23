@@ -19,17 +19,16 @@ helpviewer_keywords:
 - classification accuracy [data mining]
 - accuracy testing [data mining]
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f440a7cd7770f1412480e19304af4efcf17b1fba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>选择准确性图表类型和设置图表选项
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多种用于确定挖掘模型的有效性的方法。 您可以为每个模型或结构创建的准确性图表的类型取决于以下因素：  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  对于所有模型类型，交叉验证报表的格式均相同，并且无法进行配置。 但报表的内容会有所不同，具体取决于要分析的模型的类型和可预测属性的数据类型。 也可以将报表的结果复制到剪贴板，然后在 Excel 中处理该数据。  
   
   
-

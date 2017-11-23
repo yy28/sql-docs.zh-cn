@@ -13,25 +13,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - schema rowsets [Analysis Services]
 - rowsets [Analysis Services], data mining
 - data mining [Analysis Services], schema rowsets
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 35f4df3e7e01a8f0987e955a180842efde5793e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad8ac453d1d299be98f3cb46496685063fd66576
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-schema-rowsets"></a>Data Mining Schema Rowsets
   正在运行的服务器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持以下数据挖掘架构行集。 若要检查特定的 XML/A 提供程序是否支持特定的行集，请使用[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)行集[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
@@ -64,4 +62,3 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
  [数据挖掘架构行集 &#40;SSAs &#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
   
   
-

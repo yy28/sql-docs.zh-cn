@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - identifying objects [XML for Analysis]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - object definitions [XML for Analysis]
 - XMLA, objects
 ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5f04bf324a3434c9806f27ab15a32e3c53d962d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 136679f6596d7e0bf3c33eca51461af13a9fa6d0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>定义和标识对象 (XMLA)
   在 XML for Analysis (XMLA) 命令中，将使用对象标识符和对象引用标识对象，并使用 Analysis Services 脚本语言 (ASSL) 元素 XMLA 命令定义对象。  
@@ -53,7 +51,6 @@ ms.lasthandoff: 09/01/2017
  [ParentObject 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)   
  [源元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
  [目标元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

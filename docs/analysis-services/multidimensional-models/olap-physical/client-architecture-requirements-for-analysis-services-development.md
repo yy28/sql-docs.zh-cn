@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - local mining models [Analysis Services]
 - Analysis Services, architecture
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - client architecture [Analysis Services]
 - local cubes [Analysis Services]
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b15bbb83f989f53ef8e8b959771f5bd7fa568a12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4bf626021f48834b9c7e3711ffcf5f31639591fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 开发的客户端体系结构要求
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持瘦客户端体系结构。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]计算引擎是完全基于服务器的因此所有查询将在服务器上都解析。 因此，每个查询只需在客户端和服务器之间进行一次来回行程，从而使得性能可以随着查询复杂性的增加而伸缩。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [OLAP 引擎服务器组件](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
   
-

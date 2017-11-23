@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来对新数据进行预测。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
@@ -237,4 +236,3 @@ NATURAL PREDICTION JOIN
  [第 5 课： 生成神经网络和逻辑回归模型 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
-

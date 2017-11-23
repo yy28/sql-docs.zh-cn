@@ -21,17 +21,16 @@ helpviewer_keywords:
 - unary operators
 - parent-child dimensions [Analysis Services]
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1d731ba3666e4569a45b6ab3e9254a1eaafdda35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 328bd8977389ac39d049d44095c447a2843efdbe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>父-子维度属性的自定义汇总运算符
   自定义汇总运算符提供了一种简单的方法，控制成员值如何汇总到父子层次结构的父值中。 在包含父子关系的维度中，可以指定包含一元运算符的列，以便用该运算符指定父属性的所有非计算成员的汇总。 计算出父成员的值后，一元运算符就将应用于成员。  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [父子维度中的一元运算符](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   
   
-

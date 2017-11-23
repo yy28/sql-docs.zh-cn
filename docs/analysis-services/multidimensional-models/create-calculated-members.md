@@ -20,17 +20,16 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-calculated-members"></a>创建计算成员
   可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
@@ -94,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

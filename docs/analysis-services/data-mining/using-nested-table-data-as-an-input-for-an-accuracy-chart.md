@@ -19,17 +19,16 @@ helpviewer_keywords:
 - nested tables
 - adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d60e6dbaae295d5bc4f3e221306ab478583defc9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ebe50e260a7de9520c75e534548d342fa3b2b68
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用嵌套表数据作为准确性图表的输入
   在使用外部数据测试挖掘模型的准确性时，如果挖掘模型包含嵌套表，则外部数据也必须包含一个事例表和一个关联的嵌套表。  
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   
-

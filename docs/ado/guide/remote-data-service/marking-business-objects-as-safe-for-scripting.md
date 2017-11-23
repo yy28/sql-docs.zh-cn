@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- business objects in RDS [ADO]
+helpviewer_keywords: business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45f9656022a71deab0cb91a3d9667cbd314c2ffb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a2131b594d20c4215a2c52422d930c0ac2edfb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>将标记为可安全执行脚本的业务对象
 > [!IMPORTANT]
@@ -52,6 +49,5 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  在最后一个步骤中，应用程序安装程序向导创建一个.htm 文件和.cab 文件。 然后可以将这两个文件复制到目标计算机，并双击要加载页，并正确注册服务器的.htm 文件。  
   
  因为默认情况下，将在 Windows\System32\Occache 目录中安装的业务对象，将其移到 Windows\System32 目录和更改**HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32**注册表项以匹配的正确路径。
-
 
 

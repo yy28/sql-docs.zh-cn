@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
   在生成初始架构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]更改多维数据集定义和维度定义，然后返回架构生成向导。 向导会更新主题区域数据库和相关数据源视图中的架构以反映所做的更改，并且尽可能保留当前存在于要重新生成的表中的数据。 如果在初始生成之后更改表，则架构生成向导会使用下列规则在可能的情况下保留这些更改：  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   
-

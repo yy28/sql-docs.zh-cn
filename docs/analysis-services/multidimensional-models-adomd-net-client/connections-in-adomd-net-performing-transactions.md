@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transactions [ADOMD.NET]
 - ADOMD.NET, transactions
 - AdomdTransaction object
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c78445de3ed3b17805bc458ce6078e0d9587eed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7fe4d80598e56de50748fd53e651ca1a2b5a48b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connections in ADOMD.NET-执行事务
   在 ADOMD.NET 中，可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 对象管理给定 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象的事务上下文。 使用此功能可在同一上下文中运行多个命令。 每个命令将读取相同的数据，在每个命令执行之间不会更改读取的数据。  
@@ -61,4 +59,3 @@ AdomdTransaction objTransaction = objConnection.BeginTransaction();
  [ADOMD.NET 客户端编程](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
-

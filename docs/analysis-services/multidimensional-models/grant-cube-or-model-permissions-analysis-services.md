@@ -14,25 +14,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
+f1_keywords: sql13.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cubes
 - cubes [Analysis Services], security
 - read/write permissions
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbde1e75c0ff22e0d2c426c04f2f4e3756536923
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
   多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
@@ -116,4 +114,3 @@ ms.lasthandoff: 09/01/2017
  [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

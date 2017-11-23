@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Type property [field] [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 16bfc2bc77c729bc2ae2043a79889dd461018137
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 109fda6751505bbdaf059e97a1bbf645962b9ec1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-example-field-vc"></a>类型属性示例 （字段） （VC + +）
 此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性**类型**的所有属性[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 有关运行此过程需要 FieldType 函数。  
@@ -180,5 +176,4 @@ void PrintComError(_com_error &e) {
  **类型： adDBTimeStamp**   
 ## <a name="see-also"></a>另请参阅  
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
- [类型属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-
+ [Type 属性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

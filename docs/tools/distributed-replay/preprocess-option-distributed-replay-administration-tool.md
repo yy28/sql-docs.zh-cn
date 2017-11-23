@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88d5c85d15eed2503cc1b7315173b4a4ac9fa462
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 313a794c807faa3adaf95e902526a9ac9504be80
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是一个命令行工具，可与分布式重播控制器一起用来进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/02/2017
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标")与管理工具语法结合使用的语法约定的详细信息，请参阅[TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,7 +36,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Parameters  
- **-m** *controller*  
+ **-m** *控制器*  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
@@ -109,9 +107,8 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [准备输入的跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
- [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
+ [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64cd9d5e1b628da9f4ceff1ac75663fb558238f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>计划数据刷新和数据源-无 Windows 身份验证
   本主题介绍当数据源 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 不 **支持 Windows 身份验证时，让** for SharePoint 计划数据刷新能够使用该数据源的工作流。 例如 Oracle 或 IDM DB2 数据源。 本主题中的图示和步骤引用 Oracle 数据源，但此工作流也适用于其他数据源。  
@@ -180,4 +179,3 @@ ms.lasthandoff: 09/01/2017
 -   请参阅 [使用 SharePoint 2013 和 SQL Server 2012 SP1 进行 Power Pivot 数据刷新 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)中的“计划的数据刷新”部分。  
   
   
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services], defining
+helpviewer_keywords: measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
   *度量值* 是数字数据值的聚合，如求和、计数、最小值、最大值、平均值或你创建的自定义 MDX 表达式。 *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   
-

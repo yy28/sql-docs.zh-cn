@@ -26,17 +26,16 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>处理多维模型 (Analysis Services)
   处理是 Analysis Services 将数据从关系数据源加载到多维模型的一个步骤或一系列步骤。 对于使用 MOLAP 存储的对象，数据将保存到磁盘的数据库文件所在文件夹中。 对于 ROLAP 存储，按需执行处理，以响应对象的 MDX 查询。 对于使用 ROLAP 存储的对象，处理是指在返回查询结果之前更新缓存。  
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

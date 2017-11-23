@@ -21,17 +21,16 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8069e4cb513ca83cd161564c6d9a0b2284890fdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f6516c119723c537d64481d17692d504df7f651
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>使用 SQL Server Data Tools 创建多维模型 (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了两个不同的环境以生成、部署和管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案： [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 这两个环境都可实现项目系统。 有关 Visual Studio 项目的详细信息，请参阅 MSDN Library 中的 [作为容器的项目](http://go.microsoft.com/fwlink/?LinkId=63960) 。  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型数据库 (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

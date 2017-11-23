@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 123bcb546cabae6895dac5fbf9edd06b97e9400b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c2dc7048ea3442a77f6aadf7d7b1868c2ac9d833
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="required-providers-for-data-shaping"></a>所需的提供程序，供你调整数据
 数据成型通常需要两个提供程序。 服务提供商[用于 OLE DB 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，提供调整功能和数据提供程序，如 OLE DB Provider for SQL Server 的数据，提供要填充形状的数据行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -48,5 +46,4 @@ cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"
 ## <a name="see-also"></a>另请参阅  
  [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
  [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [在常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

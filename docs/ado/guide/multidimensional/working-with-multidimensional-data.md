@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multidimensional data [ADO]
+helpviewer_keywords: multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2f0cdb5d3cad2bda529ff2abf5393701c7221a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e14c59fd0620129486408d33339e80624743f02
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是用于查找或筛选多维数据集中的特定值的一个或多个维度中的成员集合。  
@@ -91,4 +88,3 @@ Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec
  [多维架构和数据概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [使用 ADO MD 编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用 ADO 与 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
-

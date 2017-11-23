@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
+apiname: MDSCHEMA_SETS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1e197a9d26eb5839425166fde987de22637603f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4820c18992da2aab0ac8e0550a5cadd75ca193bc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 行集
   描述当前在数据库中定义的任何集，包括会话作用域的集。  
@@ -72,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB for OLAP 架构行集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

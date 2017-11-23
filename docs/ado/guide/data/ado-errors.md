@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors [ADO]
+helpviewer_keywords: errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73f1b516ebc7f133219764506b340bbf428f8207
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54a44c69afd01647c5dca1cab97993f890d81c21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-run-time-errors"></a>ADO 运行时错误
 ADO 错误报告到你的程序为运行时错误。 您的编程语言的错误捕获机制可用于捕获和处理它们。 例如，在 Visual Basic 中，使用**On Error**语句。 Visual c + +，这取决于你要用于访问 ADO 库的方法。 借助 #import，使用**try catch**块。 否则，c + + 程序员需要显式调用检索错误对象**GetErrorInfo**。 下面的 Visual Basic sub 过程演示如何捕获 ADO 错误：
@@ -106,4 +103,3 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  以下主题提供有关 ADO 错误的详细信息。
 
 -   [ADO 错误参考](../../../ado/guide/data/ado-error-reference.md)
-

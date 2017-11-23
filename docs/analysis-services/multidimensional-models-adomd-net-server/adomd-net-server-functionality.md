@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b84be4eb0e93ff524ba811fa1310a906bbbe5b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 40d68e739a9628113b7adfeab5db2a6b1445981f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET 服务器功能
   所有 ADOMD.NET 服务器对象都可对服务器上的数据和元数据提供只读访问。 若要检索数据和元数据，则可使用 ADOMD.NET 服务器对象模型，因为该服务器对象模型不支持架构行集。  
@@ -72,7 +70,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ADOMD.NET Server 编程](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET 服务器编程](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
   
-

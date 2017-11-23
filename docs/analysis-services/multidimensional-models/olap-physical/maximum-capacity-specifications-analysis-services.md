@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39c69ad1c26b30eda9244d192e6199903249ff40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb411a22638d709e633504675bd91dbcfa835810
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量规范 (Analysis Services)
   以下各表基于不同的服务器部署模式指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
  有关对象命名准则的详细信息，请参阅[ASSL 对象和对象特征](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
   
- 有关联机分析处理 (OLAP) 和数据挖掘的数据源限制的详细信息，请参阅[支持数据源 & #40;SSAS-多维 & #41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，[支持数据源 & #40;SSAS-多维 & #41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，和[ASSL 对象和对象特征](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
+ 有关联机分析处理 (OLAP) 和数据挖掘的数据源限制的详细信息，请参阅[支持数据源 &#40;SSAS-多维 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，[支持数据源 &#40;SSAS-多维 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，和[ASSL 对象和对象特征](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [常规属性](../../../analysis-services/server-properties/general-properties.md)  
   
   
-

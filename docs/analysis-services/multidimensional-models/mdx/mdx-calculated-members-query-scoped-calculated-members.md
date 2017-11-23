@@ -18,17 +18,16 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8a621061e7b9b04dfea37443c631ae611ee031ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3e4bb973a314a6f5ba9103960c4d54cb1a119fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 计算成员的查询作用域的计算成员
   如果某个计算成员仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字定义该计算成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
@@ -106,4 +105,3 @@ WHERE [Product].[Category].[Bikes]
  [创建会话作用域计算成员 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   
-

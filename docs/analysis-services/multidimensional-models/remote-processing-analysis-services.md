@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59113cc41bf1e7805b033ff0af68ee2c1accda3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f32eb86f0d4b18ac576df77a28885c7f2053d962
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
   可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
 -   在远程服务器上，必须启用 **“允许远程连接到此计算机”** ，然后必须列出发出处理请求的帐户作为允许的用户。  
   
--   必须配置 Windows 防火墙规则以允许进入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站连接。 确认可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接到远程 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例。 请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+-   必须配置 Windows 防火墙规则以允许进入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站连接。 确认可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接到远程 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例。 请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 -   先解决任何现有的本地处理错误，然后再尝试进行远程处理。 确认在处理请求位于本地时，可成功地从外部关系数据源检索数据。 有关指定用于检索数据的凭据的说明，请参阅[设置模拟选项（SSAS-多维）](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [处理对象 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   
-

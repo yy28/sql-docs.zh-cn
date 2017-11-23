@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 37ee4f05ad916e3fb1d12b2bfb29da183f9ebb47
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8a566a788ba66783ef3eb6dc999303bcb0b0248f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---manipulating-data"></a>MDX 数据操作的操作数据
   多维表达式 (MDX) 可用于以多种方式处理数据。 下列主题介绍了 MDX 语言中一些较高级的数据处理概念：  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

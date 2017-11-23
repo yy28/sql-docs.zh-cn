@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7c8eadd09ca4946db6618f30e48907d97147b80d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5da8ae05dc547de946228bb371df0b98a724ce41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX 计算成员的会话作用域的计算成员
   若要创建在整个多维表达式 (MDX) 会话中都可用的计算成员，请使用 [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) 语句。 直到 MDX 会话关闭才会删除使用 CREATE MEMBER 语句创建的计算成员。  
@@ -65,4 +64,3 @@ sum(([Stores].[ByLocation].Lag(3) :
  [创建查询作用域的计算成员 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   
-

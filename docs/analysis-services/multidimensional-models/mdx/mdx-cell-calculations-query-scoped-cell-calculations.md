@@ -18,17 +18,16 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d6b38d88d6a9bf5ba180a9023a962199633a6a4b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8c2d0cffb212b062f1c1ff8f39929e201dc642c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 单元计算的查询作用域的单元计算
   在多维表达式 (MDX) 中，可以使用 **WITH** 关键字描述查询上下文中的计算单元。 **WITH** 关键字的语法如下：  
@@ -67,4 +66,3 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  [CREATE CELL CALCULATION 语句 (MDX)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   
-

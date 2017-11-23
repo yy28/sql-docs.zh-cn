@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7ae03bc24451bb038581c53d5830c54a49f9c7d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4462aa5a323af4b957fedc5bdbb522705f4f7140
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
   数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -230,4 +229,3 @@ ms.lasthandoff: 09/01/2017
  [工作区数据库（SSAS 表格）](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - backing up databases [Analysis Services]
 - databases [Analysis Services], backing up
 ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8d6af5bf906e5889f0b974537651f46df6ecd68
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ba8993e2368a815eddc4be0d560d5bf45203745
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-options"></a>备份选项
   可通过多种方式备份 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但都要求您具有服务器管理员和数据库管理员的权限。 您可以在 **中打开** “备份” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，选择适当的选项配置，然后从该对话框本身运行备份。 或者，您可以使用文件中已指定的设置创建脚本；然后，可保存该脚本，根据需要定期运行。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  [备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   
-

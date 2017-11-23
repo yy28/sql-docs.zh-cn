@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
-

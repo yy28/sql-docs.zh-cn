@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, programming
 - AMO, programming
 ms.assetid: 91354fc9-22da-4724-b97f-3b1e7b0e69d3
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bbcf54edc79a1e8254ad6210d327f4a83973f1fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f746ed6c0ad7dc9c0702282f7a508d44cca7f8be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="developing-with-analysis-management-objects-amo"></a>使用分析管理对象 (AMO) 进行开发
 分析管理对象 (AMO) 是以编程方式访问的对象的完整库，使应用程序来管理正在运行的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>另请参阅
 [使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md) 
 [使用 Analysis Services 中的 XMLA 进行开发](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)
-

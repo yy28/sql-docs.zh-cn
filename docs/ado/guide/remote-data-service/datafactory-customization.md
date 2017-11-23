@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory customization in RDS [ADO]
+helpviewer_keywords: DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53054c25f273acc4e5c91e8641dfe50d94b5d115
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 044e738c69113740290843f14f0b2c14500307e1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datafactory-customization"></a>DataFactory 自定义项
 远程数据服务 (RDS) 使您能够轻松地在三层客户端/服务器系统中执行数据访问。 客户端数据控件指定连接和命令字符串参数在远程数据源或连接字符串上执行查询和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象参数，以便执行更新。  
@@ -56,6 +53,5 @@ ms.lasthandoff: 09/09/2017
 -   [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)  
   
 -   [编写自己的自定义处理程序](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

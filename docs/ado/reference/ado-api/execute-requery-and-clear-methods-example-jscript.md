@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - Requery method [ADO], JScript example
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ff72d44c2f5fa3bd71cabd091e3ec8ecf10d7bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e456b8b961d280e3e9b0e038cd34f852f0a897e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>执行、 重新执行查询，并清除方法示例 (JScript)
 此示例演示**执行**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法来检索当前数据中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**错误**通过访问集合**连接**对象[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。)命名该文件**ExecuteJS.asp**。  
@@ -195,4 +192,3 @@ BODY {
  [执行方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)
-

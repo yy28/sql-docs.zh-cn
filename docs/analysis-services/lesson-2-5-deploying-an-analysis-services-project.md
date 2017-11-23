@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5c933a78cedb5bf0169bd18efba310676a4cde7a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>课程 2-5-部署 Analysis Services 项目
 若要查看位于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象的多维数据集和维度数据，必须将该项目部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中，然后再处理该多维数据集及其维度。 部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建定义的对象。 处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中的对象会将基础数据源中的数据复制到多维数据集对象中。 有关详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)和[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

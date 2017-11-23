@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - receiving multiple Recordsets [ADO]
 - Recordset object [ADO], receiving multiple Recordsets
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3687e3ee6a2588a5461e48a1f3f26db91d14a8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ab72906b1f36e22bba58b58ca7917b3399ebc458
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="receiving-multiple-recordsets"></a>接收多个记录集
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)支持返回多个**记录集**对象为单个命令包含多个 SQL 语句，一个**记录集**每个 SQL 语句。 顺序**记录集**将返回遵循在其中的 SQL 语句放置在命令文本中的顺序。  
@@ -42,4 +40,3 @@ SELECT ProductID, ProductName, UnitPrice
  你可以使用**Recordset.NextRecordset**方法来枚举两个对象。  
   
  有关详细信息，请参阅[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)。
-

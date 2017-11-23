@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 05e11407da93e269ca8766d94df4820e54e43ecc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74951b1fd998740bff623f93685f7ee98155c595
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
   Analysis Services 可以在以下三种服务器模式之一下安装：多维和数据挖掘（默认模式）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
@@ -68,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

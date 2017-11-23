@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-a-custom-business-object"></a>注册自定义业务对象
 若要通过 Web 服务器已成功启动自定义业务对象 （.dll 或.exe），业务对象的 ProgID 必须输入到注册表中此过程所述。 此 RDS 功能通过运行仅批准可执行文件来保护你的 Web 服务器的安全性。  
@@ -49,6 +47,5 @@ ms.lasthandoff: 09/09/2017
 4.  选择**ADCLaunch**密钥，然后从**编辑**菜单上，指向**新建**单击**密钥**。  
   
 5.  键入你的自定义业务对象的 ProgID，然后单击**Enter**。 保留**值**空白条目。
-
 
 

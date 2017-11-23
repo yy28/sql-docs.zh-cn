@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0347835-4983-4d26-acbb-6c8fae7992bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf06631323bde8dc8c73bf716f5e0da858f19e71
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ada16ca5009f5b54501ad04d7d8472a07cad8c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-building-measures"></a>MDX 生成度量值
   在多维表达式 (MDX) 中，度量值是名为 DAX 的表达式，通过计算该表达式来解析它以返回表格模型中的值。 这种泛泛的定义所包括的范围十分惊人。 由于能在 MDX 查询中构造和使用度量值，使得人们能够更有力地驾驭表格数据。  
@@ -58,4 +57,3 @@ from [Model]
  [SELECT 语句 &#40;MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
-

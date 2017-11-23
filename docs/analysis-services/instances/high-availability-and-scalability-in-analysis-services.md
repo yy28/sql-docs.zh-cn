@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 中的高可用性和可伸缩性
   本指南介绍提高 Analysis Services 数据库可用性和可伸缩性的方法。 尽管每个目标无法单独实现，在在现实生活中，它们往往是相辅相成的：大型查询或处理工作负载的可伸缩部署通常附带高可用性的预期值。  
@@ -114,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 案例研究： 使用表格模型中大规模商业解决方案](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   
-

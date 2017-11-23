@@ -4,16 +4,14 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - ActiveConnection property [ADO], JScript example
 - CommandText property [ADO], JScript example
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: edab19241285b944cb2fad816a9f23cba64bff3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c975baf653e9cc32432bfec9359ff2caef7dc1c7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)
 此示例使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)， [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)， [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，和[方向](../../../ado/reference/ado-api/direction-property.md)属性来执行存储的过程。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActiveConnectionJS.asp**。  
@@ -191,5 +188,4 @@ BODY {
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Size 属性 （ADO 参数）](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-
+ [Size 属性（ADO 参数）](../../../ado/reference/ado-api/size-property-ado-parameter.md)

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 740d140999a182df59eb9741c5addedd9dac0aac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>特性属性-配置属性类型
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，特性类型可用于按业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  
@@ -320,4 +319,3 @@ ms.lasthandoff: 09/01/2017
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

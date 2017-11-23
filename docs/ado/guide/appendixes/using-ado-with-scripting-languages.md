@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 的脚本语言
 在一个脚本编写环境 ADO 可以公开通过服务器端脚本的数据。 在此方案中，ADO，基础 OLE DB 提供程序，它使用，并引用给定的数据存储所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 使用 Active Server Pages (ASP)，ADO 是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历，或查看特定的数据。  
@@ -76,5 +74,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另请参阅  
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [使用 ADO 与 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [使用 ADO 的 Microsoft Visual c + +](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-
+ [配合使用 ADO 与 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

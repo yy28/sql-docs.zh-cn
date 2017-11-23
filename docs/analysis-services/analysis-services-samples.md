@@ -19,12 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 097c3ab1c0827b9dd64bdb13a3c88a33cb0411e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a904cc21ff035388a15b9f985b81ec006aead7e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-samples"></a>Analysis Services 示例
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 09/01/2017
   此处使用的信息来查找示例数据库和项目以帮助你了解和测试您的 Analysis Services 解决方案。
   
 
-## <a name="samples-on-github"></a>在 GitHub 上的示例
+## <a name="samples-on-github"></a>GitHub 上的示例
 
 [Analysis Services 的 Git 存储库](https://github.com/Microsoft/Analysis-Services)包括代码示例和社区项目。
 
@@ -51,4 +50,3 @@ SQL Server 2016 引入了示例数据，Wide World Importers，一个新集合�
 
   
   
-

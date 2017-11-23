@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调入数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源不尚未公开这种方式。 但是，可以通过 ODBC 访问当今使用的大多数 DBMS 系统。
@@ -440,4 +438,3 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 ## <a name="see-also"></a>另请参阅
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 属性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 属性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [执行方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md) [参数集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [属性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供程序属性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支持方法](../../../ado/reference/ado-api/supports-method.md)
-

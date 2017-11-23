@@ -20,17 +20,16 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
   大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
@@ -141,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

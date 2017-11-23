@@ -20,17 +20,16 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8557ed990a03d36aaf4728726de1bb3dd67d6c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
   产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
@@ -168,4 +167,3 @@ ms.lasthandoff: 09/01/2017
  [访问控制列表 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   
-

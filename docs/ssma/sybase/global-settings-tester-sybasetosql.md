@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a9ebce7d1345b5d9c5a821347ee53ce89f34d07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21178ca7326678504244658192d7395bab79a9ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全局设置 （测试人员） (SybaseToSQL)
 使用的测试人员页**全局设置**对话框中指定的 SSMA 测试人员的设置。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  是  
   
-2.  否  
+2.  是  
   
 **保存模式的辅助表**  
 此设置指定如何将保存测试用例执行期间创建的内部辅助表。 为此特定设置，可以设置以下选项：  
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  是  
   
-2.  否  
+2.  是  
   
 **停止后第一次失败的测试执行**  
 此设置指定是否停止当前正在运行测试用例，如果执行时出错。 默认选项集是**是**。  
@@ -69,9 +67,8 @@ ms.lasthandoff: 08/02/2017
   
 1.  是  
   
-2.  否  
+2.  是  
   
 ## <a name="see-also"></a>另请参阅  
 [完成测试用例准备 &#40;SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-

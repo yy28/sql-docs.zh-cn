@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures"></a>度量值组
   在表格模型中，度量值是使用 DAX 公式创建的计算，以便用于报表客户端中。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
@@ -101,7 +100,6 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ## <a name="see-also"></a>另请参阅  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [创建和管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

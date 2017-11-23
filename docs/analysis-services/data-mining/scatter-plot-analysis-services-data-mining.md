@@ -19,17 +19,16 @@ helpviewer_keywords:
 - scatter charts
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 737cb2c584dc25396eafe6e023ff0d3bd8a32c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81f819ad89411bd9acea670ded6abac0b154a7b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散点图（Analysis Services - 数据挖掘）
   “散点图”  以图形方式对照显示数据中的实际值与模型预测的值。 其沿 X 轴显示实际值，沿 Y 轴显示预测值。 该图还显示一条显示完美预测的线，在这条线上预测值和实际值完全匹配。 某个点与该条理想 45 度角线的距离指示进行的预测的准确程度。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

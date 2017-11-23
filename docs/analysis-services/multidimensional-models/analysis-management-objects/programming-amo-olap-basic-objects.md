@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bebff2d4f64f26f0f1824042512534c5459f2872
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本对象的编程
   创建复杂 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象是一个简单直接的过程，但需要注意细节。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  
@@ -582,4 +580,3 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [安装适用于 Analysis Services 多维建模教程的示例数据和项目](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1566fc59ac51e0923392a3cc0bee6d24dd3bfa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语词汇表
 本主题定义与 ADO 相关的术语。
@@ -222,4 +219,3 @@ ms.lasthandoff: 09/09/2017
  树结构元素 （节点） 之间的分层关系。 树 （根） 的最高层没有一个节点。 根目录下, 可以有多个子级。 每个子节点又可以是其他的子级，因此如一个树分支的父级。 包含文档和其他文件夹的文件夹是树状结构的典型示例。 另请参阅层次结构、 节点、 根、 子和父级。
 
  Web 服务器提供 Web 服务和到 intranet 和 Internet 用户页的计算机。
-

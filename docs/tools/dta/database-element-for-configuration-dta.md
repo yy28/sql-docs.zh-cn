@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Database element
+dev_langs: XML
+helpviewer_keywords: Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 915bfe565ef74f074ee86dd9af032611cb8c68a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad4af22826a868e1860d5170fb156ba74d1b903c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-element-for-configuration-dta"></a>用于配置的数据库元素 (DTA)
   指定要用数据库引擎优化顾问进行假设配置（由 **配置** 元素指定）评估的数据库。  
@@ -50,8 +46,8 @@ ms.lasthandoff: 08/02/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[用于 Configuration &#40; DTA &#41; 的服务器元素](../../tools/dta/server-element-for-configuration-dta.md)|  
-|**子元素**|[数据库 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [数据库 &#40; DTA &#41; 的架构元素](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [建议元素 &#40; DTA &#41;](../../tools/dta/recommendation-element-dta.md)|  
+|**父元素**|[用于配置的服务器元素 (DTA)](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**子元素**|[数据库的名称元素 (DTA)](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [数据库的架构元素 (DTA)](../../tools/dta/schema-element-for-database-dta.md)<br /><br /> [建议元素 (DTA)](../../tools/dta/recommendation-element-dta.md)|  
   
 ## <a name="remarks"></a>注释  
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseTypecomplexType** 。 不要将此 **Database** 元素与其根父为 **Server** 元素的元素（出现在 XML 输入文件的顶部）混淆。 有关详细信息，请参阅[服务器的数据库元素 (DTA)](../../tools/dta/database-element-for-server-dta.md)。  
@@ -63,4 +59,3 @@ ms.lasthandoff: 08/02/2017
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

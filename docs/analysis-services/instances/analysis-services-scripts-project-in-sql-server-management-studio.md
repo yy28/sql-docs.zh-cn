@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Analysis Server Scripts project
 - items [Analysis Services]
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c974474663bf17f49f235ef57983a61196054d16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9edf723461387a102050c299f05d63281a4dd5a2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 脚本项目
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建分析服务器脚本项目，将相关脚本分组到一起，以便用于开发、管理和源代码管理。 如果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中当前未加载任何解决方案，则创建新的分析服务器脚本项目将自动创建一个新的解决方案。 否则，新的分析服务器脚本项目可以添加到现有解决方案中，或者在新的解决方案中进行创建。  
@@ -74,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

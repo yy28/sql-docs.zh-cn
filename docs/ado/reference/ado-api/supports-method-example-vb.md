@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Supports method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09f47061d9b99569b13ee3d5c57c713c4d0f56a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9be77a25c92ac849b8481d3c880d01831fe715e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supports-method-example-vb"></a>支持方法示例 (VB)
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法以显示数据集所支持的选项将打开具有不同的游标类型。 有关运行此过程需要 DisplaySupport 过程。  
@@ -171,5 +167,4 @@ End Sub
   
 ## <a name="see-also"></a>另请参阅  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [支持方法](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55a0d510b8d80ca4c3752194b4c9c488ac4d787b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>创建或自定义数据馈送库 (Power Pivot for SharePoint)
   *数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
@@ -125,4 +124,3 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot 数据馈送](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

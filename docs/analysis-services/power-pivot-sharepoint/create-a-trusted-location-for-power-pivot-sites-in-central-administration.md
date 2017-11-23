@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心中为 Power Pivot 站点创建受信任位置
   通过 Excel Services，您可以指定哪些位置是您在 SharePoint 服务器上打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而言，可以考虑为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的站点创建一个受信任位置，以便可以应用最适合进行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置，同时为场的剩余部分保留默认设置。  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [使用 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   
-

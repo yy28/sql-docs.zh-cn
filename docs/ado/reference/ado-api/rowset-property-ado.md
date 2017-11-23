@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - ADORecordsetConstruction::Rowset
 - ADORecordsetConstruction::put_Rowset
 - ADORecordsetConstruction::get_Rowset
-helpviewer_keywords:
-- Rowset property [ADO]
+helpviewer_keywords: Rowset property [ADO]
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8792f0b78e2dcc565d88847767506c310160ed5c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6b33788185909f6a7f428eee01a5403b5c03ab9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rowset-property-ado"></a>行集属性 (ADO)
 获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。 当你使用 put_Rowset 时，行集转换 ADO**记录集**对象。  
@@ -58,4 +55,3 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="applies-to"></a>适用范围  
  [ADORecordsetConstruction 接口](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
-

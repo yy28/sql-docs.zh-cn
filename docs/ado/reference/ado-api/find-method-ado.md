@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定的搜索、 起始行和与起始行的偏移量的方向。 如果满足条件，则在找到记录; 设置当前行位置否则，该位置设置为的终点 （或起点）**记录集**。  
@@ -78,5 +75,4 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  [查找方法示例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [索引属性](../../../ado/reference/ado-api/index-property.md)   
  [优化属性的动态 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [查找方法](../../../ado/reference/ado-api/seek-method.md)
-
+ [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

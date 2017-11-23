@@ -19,17 +19,16 @@ helpviewer_keywords:
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7e2cfa87e6eca8ee933fa42686f12070ce9dca7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 646c4b12597380221671a5894118b86a57f84dd1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>刷新数据源视图中的架构 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中定义数据源视图 (DSV) 后，基础数据源中的架构可能会更改。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

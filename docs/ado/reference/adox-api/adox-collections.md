@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7cf6e9c005180502d72071635d15ca9cc5341986
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb9f0e683dcdded14920be8104efcde355be0ce2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-collections"></a>ADOX 集合
 |||  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  [ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)   
  [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

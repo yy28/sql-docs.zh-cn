@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ca3adb3a174338a193e7fd96865d295dc1844b03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datasources-object-tmsl"></a>数据源对象 (TMSL)
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/01/2017
  DirectQuery 模式下可以使用 impersonateCurrentuser，如果 Analysis Services 配置为受信任委派，或  
                       如果在 Analysis Services 服务帐户的安全上下文中进行查询请求，impersonateServiceAccount。 请参阅[配置 Analysis Services for Kerberos 约束委派](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)。  
   
- 帐户  
+ account  
  用于模拟。 一个 Windows 帐户或数据库帐户已具有的有效登录名的读取权限外部数据库。  
   
  password  
@@ -197,4 +196,3 @@ ms.lasthandoff: 09/01/2017
  [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   
-

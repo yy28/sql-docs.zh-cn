@@ -23,17 +23,16 @@ helpviewer_keywords:
 - databases [Analysis Services], attach
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和分离 Analysis Services 数据库
   在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
@@ -72,7 +71,6 @@ ms.lasthandoff: 09/01/2017
  [数据库 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [分离元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Attach 元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
-

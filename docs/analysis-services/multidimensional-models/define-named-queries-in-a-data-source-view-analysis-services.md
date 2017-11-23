@@ -19,17 +19,16 @@ helpviewer_keywords:
 - modifying named queries
 - data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7a6db35f9ab119025bf5b7d60aed0b27747adaa8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
   命名查询是以表的形式表示的 SQL 表达式。 在命名查询中，可以指定一个 SQL 表达式以选择从一个或多个数据源的一个或多个表返回的行和列。 命名查询基于一个表达式，除此之外，它在行和关系方面都与数据源视图 (DSV) 中的其他表相似。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [在数据源视图中定义命名计算 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   
-

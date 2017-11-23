@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bbc70ccf710772ba1b32abe5b65858d95ef2b38e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 226842eb86c8eb7d5981407c805e18495dfb2579
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>在尝试建立连接的过程时出错
   如果你在未安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器上查询 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据，则系统会生成此错误。 如果 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务停止运行，或想要尝试查看旧版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据，则系统也会生成此错误。  
@@ -50,7 +48,6 @@ ms.lasthandoff: 09/01/2017
  对于在 SQL Server 2008 R2 版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，你必须安装 SQL Server 2008 R2 版本的 Analysis Services OLE DB 提供程序。 如果您安装了该访问接口，但未注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件，则将出现此错误。 有关文件注册的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据连接使用 Windows 身份验证，并且无法对用户凭据进行委托。以下连接刷新失败： Power Pivot 数据](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
+ [数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。以下连接刷新失败：Power Pivot 数据](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
   
   
-

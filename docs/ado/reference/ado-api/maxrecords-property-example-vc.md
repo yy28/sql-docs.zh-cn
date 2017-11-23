@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- MaxRecords property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e69d3f3ec9b90e01593951b908441ff106bb6d4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 77ab4e80cb319aa95f7a566462e648ccbb9bbadb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maxrecords-property-example-vc"></a>最大记录的属性示例 （VC + +）
 此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含中的 10 成本最高标题***标题***表。  
@@ -187,4 +183,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>另请参阅  
  [最大记录属性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Clone method [ADO], VBScript example
+dev_langs: VB
+helpviewer_keywords: Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 19c72838cd08fc1a5661b65e85dd340058bad9e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 311d18547421d327a8d1af3f85d9995ddfa8f5c6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clone-method-example-vbscript"></a>克隆方法示例 (VBScript)
 此示例使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后允许用户独立定位记录每个副本的指针。  
@@ -128,4 +124,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>另请参阅  
  [Clone 方法 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

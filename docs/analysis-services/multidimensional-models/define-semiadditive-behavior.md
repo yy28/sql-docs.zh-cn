@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2881b5fbfa0fef9b17e1e86d2bf83f2599995108
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bbc456220e6b9e8d46c93699a38e2b2cb959ba2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-semiadditive-behavior"></a>定义半累加性行为
   在很多业务方案中，半累加性度量值是非常常见的，它不在所有维度中统一进行聚合。 每个基于余额快照的多维数据集都会随着时间的推移而出现此问题。 您可以在用于处理证券、帐户余额、预算、人力资源、保险策略和法律事务以及很多其他业务领域的应用程序中找到这些快照。  
@@ -94,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  完成向导时，将覆盖任何现有的半累加性行为。  
   
   
-

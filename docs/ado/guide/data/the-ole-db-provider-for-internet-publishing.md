@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet 发布
 ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象可以用于使用 Microsoft OLE DB 提供程序 Internet 发布 （Internet 发布提供程序） 访问和处理资源，如 Web 文件夹或文件由 Microsoft FrontPage 提供服务。 使用 ADO，您可以指定的源**记录**，**流**，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)是 url。 你可以然后上载、 下载、 移动、 复制和删除资源，或直接操作资源属性。  
@@ -63,4 +61,3 @@ ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../.
 >  如果 Msdaipp.dso 显式指定的提供程序，使用值为*提供程序*连接字符串关键字或**提供程序**属性，不能使用"URL ="连接字符串中。 如果这样做，将会出错。 如前面所示相反，只需指定的 URL。  
   
  有关 Internet 发布提供程序的详细信息，请参阅[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或与与其源应用程序提供的提供程序文档 OLE DB Provider forInternet 发布已安装： Windows 2000、 Office 2000 或 Internet Explorer 5.0。
-

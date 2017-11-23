@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
 请务必了解让您可以选择应用程序的数据访问要求的最佳和最有效的光标类型游标的工作方式。 小于比最佳的光标配置可以使数据访问操作非常缓慢。  
@@ -35,17 +33,16 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [游标是什么？](../../../ado/guide/data/what-is-a-cursor.md)  
+-   [什么是游标？](../../../ado/guide/data/what-is-a-cursor.md)  
   
 -   [类型的游标](../../../ado/guide/data/types-of-cursors-ado.md)  
   
--   [光标位置的重要性](../../../ado/guide/data/the-significance-of-cursor-location.md)  
+-   [游标位置的重要性](../../../ado/guide/data/the-significance-of-cursor-location.md)  
   
--   [用于 OLE DB Microsoft 游标服务](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
+-   [用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
   
 -   [什么是锁定？](../../../ado/guide/data/what-is-a-lock.md)  
   
 -   [使用 CacheSize](../../../ado/guide/data/using-cachesize.md)  
   
 -   [游标和锁定特征](../../../ado/guide/data/cursor-and-lock-characteristics.md)
-

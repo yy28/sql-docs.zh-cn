@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.wspacedbconfig.f1
 - sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f0f897572dda34193a87cab649cb3d1b9e155fcb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e0d09f3f0bd09017c73579d3f8b04b27e91cabfb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-properties-ssas-tabular"></a>模型属性（SSAS 表格）
   本主题介绍表格模型属性。 SQL Server 开发工具中的每个表格模型项目都具有模型属性，这些属性影响生成你正创作的模型的方式、备份模型的方式以及存储工作区数据库的方式。 此处所描述的模型属性并不适用于已部署的模型。  
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [项目属性（SSAS 表格）](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   
-

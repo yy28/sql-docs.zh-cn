@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, defining projects [Analysis Services]
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b26af390b901d6f23eacd409d919a6d1c656ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25b3c2bf3c86f69e9333b5e62541bbcfbbc877ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
   您可以通过使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目模板或使用导入 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库向导读取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的内容，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 如果 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中当前未加载解决方案，则创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的同时将自动创建一个新的解决方案。 否则，新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目将添加到现有的解决方案中。 针对解决方案开发的最佳做法要求为不同类型的应用程序数据创建单独的项目，并且在项目相关时使用单个解决方案。 例如，您可能具有单个解决方案，该解决方案为 Integration Services 包、Analysis Services 数据库和 Reporting Services 报表包含不同的项目，它们全都由相同的业务应用程序使用。  
@@ -175,4 +174,3 @@ ms.lasthandoff: 09/01/2017
  [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   
-

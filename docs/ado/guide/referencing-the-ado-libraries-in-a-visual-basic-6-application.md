@@ -11,24 +11,22 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7369fe9b75148c7b0d448ff4fd2b9457dc77212
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>引用在 Visual Basic 6 应用程序的 ADO 库
 若要将 ADO 库导入一个 Microsoft Visual Basic 6 应用程序，必须在 Visual Basic 项目中设置的引用。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   *msado20.tlb*，ADO 2.0 类型库  
   
  如果你的应用程序必须使用任何这些 ADO 库的向后兼容性原因，你需要导入类型库的适当版本。 若要执行此操作，请按照上一节中的过程替换*msado15.dll*通过*msadoXX.tlb*，其中*XX*表示需要导入的版本号。
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34da07a0def568b8e066d9f9f4f3ffbc8d03a776
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95598bd78b65668193c9e3cb884a8d4693ef2a25
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>UpdateBatch 和执行方法示例 （VC + +）
 此示例演示[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法结合[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法。  
@@ -221,4 +218,3 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>另请参阅  
  [执行方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)
-

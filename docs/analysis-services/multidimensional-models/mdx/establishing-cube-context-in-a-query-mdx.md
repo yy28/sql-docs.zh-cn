@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cube context
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 08eee9eb06b6e69e5681f5d88ac3f9c7f7a29d27
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 826945c3b044e76db93204fcd29afbe822c7e8a6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>在查询中建立多维数据集上下文 (MDX)
   每个 MDX 查询都是在指定的多维数据集上下文中运行的。 此上下文定义了查询中的表达式求值的成员。  
@@ -72,4 +71,3 @@ FROM [Adventure Works]
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

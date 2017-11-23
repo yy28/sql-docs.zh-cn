@@ -14,24 +14,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8f9da21d5e3584a41ac9285be6c6541baf3de999
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af8401c0f7fb3b4e5a9088bc3698ce83fad70119
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services 脚本语言 XML 元素 (ASSL)
   尽管 Analysis Services 脚本语言 (ASSL) 架构仅包含 XML 元素，但从开发人员的角度来说，这些元素与以下概念相对应：  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

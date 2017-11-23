@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords: Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d406f4743c47ded117bf93a62bb4eefadb093058
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>设置数据源属性（SSAS 多维）
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据源对象指定与向多维模型提供数据的外部数据仓库或关系数据库的连接。 针对数据源的属性确定连接字符串、超时间隔、连接的最大数目以及事务隔离级别。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-

@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [XML for Analysis]
 - associated connections [XML for Analysis]
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - server process IDs [XML for Analysis]
 - sessions [XML for Analysis]
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d86c304f8735cc8933fd9c466af4f58f4d980c74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e74ce7bd5b03aa84b6c6580342504148a62a68bf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
   具体取决于发出该命令的用户的管理权限[取消](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)命令在 XML 中 Analysis (XMLA) 可以在会话、 会话、 连接、 服务器进程或相关联的会话上取消命令或连接。  
@@ -73,7 +71,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>另请参阅  
  [发现方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
- [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

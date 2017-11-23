@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
   若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
@@ -583,4 +581,3 @@ write-host -foregroundcolor DarkGray EndTime $time
 ```  
   
   
-

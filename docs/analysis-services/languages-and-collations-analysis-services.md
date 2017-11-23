@@ -8,12 +8,10 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "测试 Analysis Services"
+keywords: "测试 Analysis Services"
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2f1ca64cc2c6a3c3d376b47c660598e05227bf8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 **Language** 和 **Collation** 属性首次在安装过程中的实例级别进行设置，但以后可在对象层次结构的不同级别更改。  
@@ -190,4 +187,3 @@ ms.lasthandoff: 09/01/2017
  [排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-

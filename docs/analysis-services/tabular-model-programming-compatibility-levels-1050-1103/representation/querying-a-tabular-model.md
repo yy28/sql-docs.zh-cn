@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1968b025d87d76cf8e1cf2417e13dd6027a252d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querying-a-tabular-model"></a>查询表格模型
   作为开发人员，查询表格模型意味着从表格数据库检索数据；为完成此目标，您具有两个选项：在 DAX 中使用表查询，或者使用 MDX 并且在数据从多维数据集传入时检索数据。 不过，根据您的表格模型的基础模式，您可能会被限制为仅使用 DAX 表查询；DirectQuery 模式要求使用 DAX 表查询。  
@@ -119,4 +117,3 @@ DEFINE
 |2|2|Components||$  11,799,076.66|  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Batch Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Batch Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Batch
 - microsoft.xml.analysis.batch
 - http://schemas.microsoft.com/analysisservices/2003/engine#Batch
-helpviewer_keywords:
-- Batch command
+helpviewer_keywords: Batch command
 ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f30483f7b8ff16b7fcc0d4a5656d57b3c1c871a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 72ba969247e7e6ff86013c1c875f4486884268c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="batch-element-xmla"></a>Batch 元素 (XMLA)
   针对 Analysis (XMLA) 命令作为批处理操作，执行一个或多个 XML，按顺序或并行，实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -85,10 +80,9 @@ ms.lasthandoff: 09/01/2017
 > [!WARNING]  
 >  批处理操作当前不支持 Command/Execute/Statement。  
   
- 有关在 XMLA 执行批处理操作的详细信息，请参阅[执行批处理操作 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ 有关在 XMLA 执行批处理操作的详细信息，请参阅[执行批处理操作 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
 ## <a name="see-also"></a>另请参阅  
- [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

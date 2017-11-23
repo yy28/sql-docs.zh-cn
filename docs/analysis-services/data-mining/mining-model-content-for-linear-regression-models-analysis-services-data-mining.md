@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1fc5e735cff3a4fc79f73cf2905cf0fa28732ded
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d51c18399f6762976630b4498908e903a18847cf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -202,4 +201,3 @@ ms.lasthandoff: 09/01/2017
  [线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   
   
-

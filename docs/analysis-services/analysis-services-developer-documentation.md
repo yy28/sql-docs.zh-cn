@@ -17,17 +17,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 开发人员文档
 在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有可供选择的多个方法。  选项包括编写托管代码、 脚本或使用开放标准，如 XMLA 和 MSOLAP，如果你的解决方案要求不使用.NET framework。
@@ -85,4 +84,3 @@ Analysis Services 提供了许多方法，以自定义解决方案，通过代�
 ## <a name="see-also"></a>另请参阅
 [技术参考 &#40;SSAS &#41;](../analysis-services/powershell/technical-reference-ssas.md) 
 [查询和表达式语言参考 &#40;Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-

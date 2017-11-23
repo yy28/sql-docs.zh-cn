@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.importfromppt.f1
+f1_keywords: sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>从 Power Pivot 导入（SSAS 表格）
   本主题介绍如何通过使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入”项目模板从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]工作簿导入元数据和数据，来创建新的表格模型项目。  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [复制和粘贴数据 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
-

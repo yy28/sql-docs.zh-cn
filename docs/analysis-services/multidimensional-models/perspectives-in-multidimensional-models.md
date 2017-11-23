@@ -25,17 +25,16 @@ helpviewer_keywords:
 - cubes [Analysis Services], perspectives
 - deleting perspectives
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9961af8c7f6edef8ed330d70df42dc63ff5b9d9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dae8d8bd48e302e4d3ece6b7445ce900d328702e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多维模型中的透视
   透视是为特定应用程序或用户组创建的多维数据集的子集。 多维数据集本身是一个默认的透视。 透视针对客户端显示为一个多维数据集。 当用户查看透视时，该透视看上去像另一个多维数据集。 在透视中通过写回对多维数据集数据所做的任何更改也会作用于原始多维数据集。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中视图的详细信息，请参阅 [透视图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型中的多维数据集](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
-

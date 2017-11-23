@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.rolemanager.f1
 - sql13.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13aa039fc89a95af9f977c191ef90b624edb6b9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c625fce817af3072e059d5d2b1172383fcdafea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>创建和管理角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“角色管理器”对话框为模型项目定义角色。 在部署模型时，数据库管理员可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [CUSTOMDATA 函数 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   
-

@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
 - cubes [Analysis Services], storage
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - partitions [Analysis Services], cubes
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27b0e9be1051b6abab2e0be7b0e521e9a5b54567
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>多维数据集存储（Analysis Services - 多维数据）
   存储可能仅包括多维数据集元数据，也可能包括事实数据表中的所有源数据以及通过与度量值组相关的维度所定义的聚合。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尽量减少存储的多维数据集数据和聚合所需的空间使用几种方法：  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

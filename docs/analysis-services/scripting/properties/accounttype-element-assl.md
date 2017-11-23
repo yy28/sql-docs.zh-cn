@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AccountType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AccountType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AccountType
-helpviewer_keywords:
-- AccountType element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AccountType
+helpviewer_keywords: AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e59eeeebc216840a62266cda57da8bdf2838eeba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cdb339861e5b12a9f020af51fe96847fe8ca9b36
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="accounttype-element-assl"></a>AccountType 元素 (ASSL)
   包含帐户类型中定义的名称[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)元素。  
@@ -86,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

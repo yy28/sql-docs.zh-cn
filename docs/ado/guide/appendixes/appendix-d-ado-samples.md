@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff7338cdb0b935eac3c227d45d1f0f0083e442a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9c5f5d827900e2ff7ecf68320bd2b1165785d46a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Windows SDK 中的附录 d: ADO 示例
 Windows SDK 包含几个示例演示应用程序使用 ADO 和 RDS 的代码。 这些示例旨在帮助你了解如何使用 ADO 和 RDS，但不是应在生产服务器上部署。
@@ -42,4 +40,3 @@ Windows SDK 包含几个示例演示应用程序使用 ADO 和 RDS 的代码。 
 
 ## <a name="see-also"></a>另请参阅
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md) [Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [Visual c + + 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)[配置 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [附录 c:使用 ADO 编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 历史记录](../../../ado/guide/ado-history.md)
-

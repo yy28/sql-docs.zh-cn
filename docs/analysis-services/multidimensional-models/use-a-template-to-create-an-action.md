@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bc98dc219eb8b4f003f77236f088f2e1f4fbe4d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3d6d22f74c7e522d06b05eb93539d9b4bfa4654a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用模板创建操作
   多维数据集设计器中的 **“操作”** 视图包含可用于创建常见操作的许多模板。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问多维数据集设计器。  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [操作（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
   
   
-

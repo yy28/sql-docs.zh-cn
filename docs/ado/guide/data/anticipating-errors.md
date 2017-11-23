@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72dc8972826c149430203b95c14e6b5153620527
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="anticipating-errors"></a>预测错误
 错误防护是至少与错误处理一样重要。 此最后一节包含一个你的应用程序可以帮助进行不太可能发生的错误的预防措施的简短列表。  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  请确保**记录集**对象是否不超出边界**记录集**之前尝试移动记录指针。 如果您尝试对**MoveNext**时**EOF**为 True 或**MovePrev**时**BOF**为 True 时，将会出错。 如果你执行任何**移动**方法时同时**EOF**和**BOF**都为 True，将生成错误。  
   
  此外将发生错误如果你尝试执行操作，如**Seek**和**查找**上一个空**记录集**。
-

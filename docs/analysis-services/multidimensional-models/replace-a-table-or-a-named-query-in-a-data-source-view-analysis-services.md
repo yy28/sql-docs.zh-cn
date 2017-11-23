@@ -21,17 +21,16 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7ef8b35a810411ed5f035e8cc7ba69d737bf8df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6913e8639e482442c1af4da942ddae8a4089c877
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>在数据源视图中替换表或命名查询 (Analysis Services)
   在数据源视图设计器中，可以将数据源视图 (DSV) 中的表、视图或命名查询替换为来自相同数据源或不同数据源的其他表或视图，或者替换为 DSV 中定义的命名查询。 替换表时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有其他对象或引用了该表的项目将继续引用该表，因为 DSV 中表的对象 ID 不会发生更改。 任何仍然相关（基于名称和列类型匹配）的关系仍然保留。 与此不同的是，如果删除后再添加表，则将丢失引用和关系，因此必须重新创建引用和关系。  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5df4b77f4a373a69360c8e51f9c3f1362a4bf904
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
   Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
@@ -178,4 +177,3 @@ ORDER BY TABLE_NAME ASC
  [受限制的行集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函数](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   
-

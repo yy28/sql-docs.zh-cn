@@ -1,13 +1,14 @@
 ---
 title: "SQL Server 2016 Analysis Services 向后兼容性 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b7c58d201f40123ab206d02a4b32948c3d976c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 向后兼容性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,9 +52,9 @@ A*弃用功能*从在将来版本中，产品会停止但仍支持，并且包�
 |多维|会话多维数据集。 没有替代功能。|  
 |多维|本地多维数据集。 没有替代功能。|  
 |表格|未来版本中将不支持表格模型 1100 和 1103 兼容性级别。 替换是将模型设置兼容性级别 1200年或更高版本，将模型定义转换为表格元数据。 请参阅 [Analysis Services 中表格模型的兼容级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
-|工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [使用 SQL Server 扩展事件监视 Analysis Services](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
+|工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
-|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -   跟踪配置：Microsoft.SqlServer.Management.XEvent<br />-   跟踪读取：Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
+|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置： Microsoft.SqlServer.Management.XEvent<br />-跟踪读取： Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中以前弃用的功能公告仍然有效。 由于尚未从本产品中删除支持这些功能的代码，因此该版本中仍存在其中的许多功能。 在以前已弃用的功能时可能会访问，它们仍被视为已弃用，并且可能以物理方式删除从产品在任何时间。  
@@ -129,4 +129,3 @@ using Microsoft.AnalysisServices.Core;
 
 ## <a name="see-also"></a>另请参阅
 [Analysis Services 向后兼容性 (SQL Server 自 2017 年)](analysis-services-backward-compatibility-sql2017.md)
-

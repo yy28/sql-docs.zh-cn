@@ -20,17 +20,16 @@ helpviewer_keywords:
 - association rules
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 25c3f04c7ae61788f10cc488e5680107fb4e9a3e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="association-model-query-examples"></a>关联模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可创建预测查询。内容查询提供有关在分析过程中发现的规则和项集的详细信息，预测查询使用在数据中发现的关联来做出预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
@@ -250,4 +249,3 @@ ORDER BY NODE_SUPPORT DESC
  [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   
-

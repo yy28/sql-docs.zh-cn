@@ -1,90 +1,100 @@
 ---
-title: "R Services 的资源调控 | Microsoft Docs"
+title: "SQL Server 中的机器学习的资源调控 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e5f334edf065d691a78469c01bf2cd3352a71544
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5475c2258971c48c2e19bba69d9ec962ae48be87
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="resource-governance-for-r-services"></a>R Services 的资源调控
-  使用 R 的一个难点在于，在生产环境中分析大量数据需要额外的硬件，并且通常要将数据从数据库移到不受 IT 控制的计算机。  若要执行高级分析操作，客户需要利用数据库服务器资源；若要保护数据，他们需要此类操作符合企业级合规要求，例如安全性和性能方面的要求。  
+# <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server 中的机器学习的资源调控
+
+本文提供的资源调控概述 SQL Server 中的功能来帮助分配和平衡使用 R 和 Python 脚本的资源。
+
+**适用于：** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 
+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]和[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+
+## <a name="goals-of-resource-governance-for-machine-learning"></a>机器学习的资源调控的目标
+
+一个与 R 和 Python 等的机器学习语言的已知的难点是数据到不受计算机通常移动于数据库外部的 IT。 另一个是，R 是单线程，这意味着你可以仅使用中内存可用的数据。 
+
+SQL Server 计算机学习 Services 来缓解这两个问题，并帮助满足企业法规遵从性要求。 保存在数据库内的高级的分析和支持通过通过流式处理和分块操作等功能的大型数据集的更高的性能。 但是，移动数据库内的 R 和 Python 计算，这种情况可能会影响使用数据库，包括常规用户查询、 外部应用程序和计划的数据库作业的其他服务的性能。
+
+本部分提供有关如何管理外部运行时，如 R 和 Python，用于减少对其他核心数据库服务的影响资源的信息。 数据库服务器环境通常是多个从属应用程序和服务的集线器。
+
+你可以使用[资源调控器](../../relational-databases/resource-governor/resource-governor.md)来管理 R 和 Python 的外部运行时使用的资源。  对于机器学习中，资源调控包括这些任务：
+
++ 识别使用过多服务器资源的脚本。
   
- 本部分介绍如何管理 R 运行时使用的，以及在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例用作计算上下文的情况下运行的 R 作业使用的资源。  
+     管理员需要能够终止或限制消耗过多资源的作业。
   
-## <a name="what-is-resource-governance"></a>什么是资源调控？  
- 资源调控旨在识别和防范数据库服务器环境中的常见问题。这种环境通常包含多个要支持和平衡的依赖应用程序与服务。 对于 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，资源调控涉及到以下任务：  
++ 消减不可预测的工作负荷。
   
--   识别使用过多服务器资源的脚本。  
+     例如，如果在服务器上同时运行多个计算机学习作业，生成的资源争用无法导致不可预测的性能，或可能完成的工作负荷。 但是，如果使用资源池，作业可以相互隔离的。
   
-     管理员需要能够终止或限制消耗过多资源的作业。  
+-   排定工作负荷的优先级。
   
--   消减不可预测的工作负荷。  
+     管理员或架构师需要能够指定必须优先，或确保某些工作负荷要在资源争用时完成的工作负荷。
+
+## <a name="how-to-use-resource-governor-to-manage-machine-learning"></a>如何使用资源调控器来管理机器学习
+ 
+管理资源分配给 R 或 Python 的会话中，通过创建*外部资源池*，并将工作负荷分配到池或池。 外部资源池是一种新中引入的资源池[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]以帮助管理 R 运行时和其他处理到数据库引擎外部。
+
+SQL Server 支持三种类型的默认资源池： 
   
-     例如，如果多个 R 作业在服务器上并行运行，并且未使用资源池将这些作业彼此隔离，则产生的资源争用可能会导致性能不可预测，或者影响工作负荷的完成。  
+-   *内部池*表示 SQL Server 本身使用的、不可更改或限制的资源。
   
--   排定工作负荷的优先级。  
+-   *默认池*是预定义的用户池，可用于修改整个服务器的资源用量。 还可以定义属于此池的用户组，以管理对资源的访问。
   
-     管理员或架构师需要能够指定必须优先处理的工作负荷，或者保证在出现资源争用时能够完成某些工作负荷。  
+-   *默认外部池*是外部资源的预定义用户池。 此外，可以创建新的外部资源池，并定义属于此池的用户组。
   
- 在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中，可以使用[资源调控器](../../relational-databases/resource-governor/resource-governor.md)来管理 R 运行时和远程 R 作业所用的资源。  
+ 还可以创建*用户定义的资源池*将资源分配到数据库引擎或其他应用程序，创建*用户定义的外部资源池*来管理 R 和其他外部进程。
   
-## <a name="how-to-use-resource-governor-to-manage-r-jobs"></a>如何使用资源调控器管理 R 作业  
- 一般情况下，可以通过创建*外部资源池*并将工作负荷分配到一个或多个池，来管理分配给 R 作业的资源。 外部资源池是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中引入的一种新型资源池，可帮助管理 R 运行时以及数据库引擎外部的其他进程。  
-  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，现在有三种类型的默认资源池。  
-  
--   *内部池*表示 SQL Server 本身使用的、不可更改或限制的资源。  
-  
--   *默认池*是预定义的用户池，可用于修改整个服务器的资源用量。 还可以定义属于此池的用户组，以管理对资源的访问。  
-  
--   *默认外部池*是外部资源的预定义用户池。 此外，可以创建新的外部资源池，并定义属于此池的用户组。  
-  
- 还可以创建*用户定义的资源池*将资源分配到数据库引擎或其他应用程序，创建*用户定义的外部资源池*来管理 R 和其他外部进程。  
-  
- 有关术语和一般概念的全面介绍，请参阅[资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
+ 有关术语和一般概念的全面介绍，请参阅[资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。
 
   
-## <a name="resource-management-using-resource-governor"></a>使用资源调控器进行资源管理 
+## <a name="resource-management-walkthrough-with-resource-governor"></a>资源管理演练资源调控器
 
-   如果你不熟悉资源调控器，请参阅以下主题，获取有关如何修改实例默认资源和新建外部资源池的快速演练：[如何为 R 创建资源池](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)   
+如果你不熟悉到资源调控器，请参阅本主题有关如何修改实例默认资源并创建新的外部资源池的快速演练：[创建外部脚本的资源池](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
   
- 可以使用*外部资源池*机制来管理以下 R 可执行文件使用的资源：  
-  
--   Rterm.exe 和附属进程  
-  
--   BxlServer.exe 和附属进程  
-  
--   LaunchPad 启动的附属进程  
-  
- 但是，不支持使用资源调控器直接管理 Launchpad 服务。 这是因为 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 是一个受信任的服务，在设计上只能托管 Microsoft 提供的启动器。 此外，受信任的启动器已配置为避免消耗过多的资源。  
-  
- 我们建议使用资源调控器管理附属进程，并根据单个数据库配置和工作负荷的需求优化这些进程。  例如，在执行过程中，可以根据需要创建或销毁任一附属进程。  
-  
-## <a name="disable-external-script-execution"></a>禁用外部脚本执行  
- 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 过程中，对外部脚本的支持是可选的。 安装 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 后，执行外部脚本的功能默认已关闭，必须手动重新配置该属性并重新启动实例才能启用脚本执行。  
-  
- 因此，如果需要立即缓解某个资源问题或者出现了安全问题，管理员可以使用 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 并将属性 `external scripts enabled` 设置为 FALSE 或 0，来立即禁用任何外部脚本执行。  
-  
-## <a name="see-also"></a>另请参阅  
- [管理和监视 R 解决方案](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
- [如何为 R 创建资源池](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)  
- [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-  
+ 你可以使用*外部资源池*机制来管理使用机器学习中使用的以下可执行文件的资源：
 
++ Rterm.exe 和附属进程
++ Python.exe 和附属进程
++ BxlServer.exe 和附属进程
++ 附属进程启动快速启动板
+  
+> [!NOTE]
+> 
+> 不支持通过使用资源调控器的快速启动板服务的直接管理。 这是因为 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 是一个受信任的服务，在设计上只能托管 Microsoft 提供的启动器。 受信任的启动器配置以避免过度消耗资源。
+>   
+> 我们建议使用资源调控器管理附属进程，并根据单个数据库配置和工作负荷的需求优化这些进程。  例如，在执行过程中，可以根据需要创建或销毁任一附属进程。
+  
+## <a name="disable-external-script-execution"></a>禁用外部脚本执行
 
+在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 过程中，对外部脚本的支持是可选的。 在安装机器学习功能后, 能够执行外部脚本默认情况下，为 OFF 和您必须手动重新配置属性，并重新启动要启用脚本执行的实例。
+
+因此，如果需要立即，缓解资源问题或安全问题，管理员可以立即禁用任何外部脚本执行使用[sp_configure &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)和设置属性`external scripts enabled`为 FALSE 或 0。
+  
+## <a name="see-also"></a>另请参阅
+
+[管理和监视机器学习解决方案](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
+
+[为机器学习创建资源池](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
+
+[资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
