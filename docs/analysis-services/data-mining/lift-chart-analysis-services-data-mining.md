@@ -21,17 +21,16 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
   A  *chart* 以图形形式表示与随机推测相比挖掘模型带来的改进，并且根据“提升”  分数度量变化。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/01/2017
  [返回页首](#bkmk_Top)  
   
 ### <a name="lift-chart-with-target-value"></a>带有目标值的提升图  
- 下图显示了在 **Basic Data Mining Tutorial** 中创建的目标邮递 [](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)模型的提升图。 在此图中，目标属性为 [Bike Buyer]，并且目标值为 1，表示预测客户将会购买自行车。 因此，此提升图显示了在标识这些可能的客户时模型提供的改进。  
+ 下图显示了在 **Basic Data Mining Tutorial** 中创建的[目标邮递](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)模型的提升图。 在此图中，目标属性为 [Bike Buyer]，并且目标值为 1，表示预测客户将会购买自行车。 因此，此提升图显示了在标识这些可能的客户时模型提供的改进。  
   
  此图包含基于相同数据的多个模型。 这些模型之一已被自定义为目标特定客户。 您可以通过对用于定型的数据添加筛选器，自定义模型。 该筛选器将在定型和评估中使用的事例限制为年龄低于 30 的客户。 请注意，筛选的影响之一是基本模型和筛选后的模型将使用不同的数据集，因此用于在提升图中进行评估的事例数目也将不同。 解释预测结果和其他统计信息时应牢记这一点，这非常重要。  
   
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-
