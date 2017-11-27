@@ -89,7 +89,7 @@ ms.lasthandoff: 11/22/2017
   
 4.  选择要用于该连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或本机 OLE DB 访问接口。  
   
-     新连接的默认访问接口是“本机 OLE DB\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
+     新连接的默认访问接口是“本机 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
   
      您可以选择一个不同的访问接口来访问其他数据源。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支持的访问接口和关系数据库的列表，请参阅 [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
