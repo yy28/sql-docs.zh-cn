@@ -66,7 +66,7 @@ ms.lasthandoff: 11/22/2017
   
  若要解决此问题，请将计算机加入到与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器相同的域中，或在本地计算机上安装一个域控制器。 第二种解决方案是安装域控制器，这将要求您为所有服务和用户创建本地域帐户。 您将需要为您定义的帐户配置服务帐户和 SharePoint 权限。  
   
- 如果你的目标是在脱机状态下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的详细说明，请参阅 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] http://www.powerpivotgeek.com [上的博客文章“使](http://go.microsoft.com/fwlink/?LinkId=184241)服务器断开网络”。  
+ 如果你的目标是在脱机状态下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的详细说明，请参阅 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 上的博客文章“使服务器断开网络”。  
   
  **应用场景 4：服务器不稳定**  
   
