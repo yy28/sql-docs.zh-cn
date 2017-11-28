@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- statement parameters [ODBC]
+helpviewer_keywords: statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7039a3830f24f29260b41ad244799be677fc817b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e56b61d47581f98f37560875de920c45029c2e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-parameters"></a>语句参数
 A*参数*是中的 SQL 语句的变量。 例如，假设部件表具有名为 PartID、 描述和价格的列。 若要添加不带参数部件需要构造 SQL 语句，例如：  
@@ -54,11 +51,10 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [设置参数值](../../../odbc/reference/develop-app/setting-parameter-values.md)  
   
--   [发送的长整型数据](../../../odbc/reference/develop-app/sending-long-data.md)  
+-   [发送 Long 数据](../../../odbc/reference/develop-app/sending-long-data.md)  
   
 -   [检索由 SQLGetData 的输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
   
 -   [过程参数](../../../odbc/reference/develop-app/procedure-parameters.md)  
   
 -   [参数值的数组](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)
-

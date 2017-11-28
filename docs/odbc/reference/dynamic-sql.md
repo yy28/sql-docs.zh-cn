@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 尽管静态 SQL 适用于许多情况下，但是没有该数据访问无法预先确定的应用程序的类。 例如，假设电子表格，用户可以输入一个查询，后者电子表格随后发送到 DBMS 中检索数据。 此查询的内容显然无法知道向程序员写入电子表格程序时。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 3.  程序可以使用 EXECUTE 语句重复，提供每次执行动态语句的不同的参数值。  
   
  准备好的执行仍不是静态 SQL 相同。 在静态 SQL 中，处理的 SQL 语句的前四个步骤发生在编译时。 在准备好的执行这些步骤仍发生在运行时，但它们只执行一次;执行计划仅在调用 EXECUTE 时才发生。 这有助于消除一些动态 SQL 的体系结构中的固有的性能缺点。 下图显示静态 SQL、 与立即执行的动态 SQL 和与已准备好执行动态 SQL 之间的差异。
-

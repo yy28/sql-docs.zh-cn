@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_addtype"></a> 向文档库添加内容类型  
  您必须至少具有“管理列表”权限才能添加和配置内容类型。 此权限是“设计”权限级别和更高级别中所固有的。  
   
- 包含文档库的站点必须具有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 功能激活。 有关详细信息，请参阅 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+ 包含文档库的站点必须具有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 功能激活。 有关详细信息，请参阅 [在管理中心中针对网站集激活 Power Pivot 功能集成](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 1.  打开要为其启用 BI 语义模型连接内容类型的文档库。  
   

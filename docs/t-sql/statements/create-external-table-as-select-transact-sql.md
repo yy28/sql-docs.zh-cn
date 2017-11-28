@@ -8,8 +8,7 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>创建外部 TABLE AS SELECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -186,7 +184,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部分区移动  
   
- **适用于：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]作为创建外部表的必备组件，设备管理员需要配置 hadoop 连接。   有关详细信息，请参阅配置连接到外部数据 (Analytics Platform System) AP 文档可以从下载该[此处](http://www.microsoft.com/download/details.aspx?id=48241)。  
+ **适用于：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]作为创建外部表的必备组件，设备管理员需要配置 hadoop 连接。 有关详细信息，请参阅配置连接到外部数据 (Analytics Platform System) AP 文档可以从下载该[此处](http://www.microsoft.com/download/details.aspx?id=48241)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  由于外部表数据位于外部的数据库，备份和还原操作将仅在数据存储在数据库上运行。 这意味着只有元数据将备份和还原。  
@@ -266,6 +264,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

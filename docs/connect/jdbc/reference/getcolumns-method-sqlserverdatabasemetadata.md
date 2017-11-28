@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getColumns
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getColumns
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75d9ab3fb70f854e56df0c659275a2983a8487ff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -86,7 +82,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**int**|列的小数位数。|  
 |NUM_PREC_RADIX|**int**|列的基数。|  
 |NULLABLE|**int**|指示列是否可以为 Null。 它可以是以下值之一：<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**字符串**|与列关联的注释。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null 此列。  |  
+|REMARKS|**字符串**|与列关联的注释。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null 此列。|  
 |COLUMN_DEF|**字符串**|列的默认值。|  
 |SQL_DATA_TYPE|**int**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 该列与 DATA_TYPE 列相同，datetime 和 SQL-92 interval 数据类型除外。 该列始终返回值。|  
 |SQL_DATETIME_SUB|**int**|datetime 及 SQL-92 interval 数据类型的子类型代码。 对于其他数据类型，该列返回 NULL。|  
@@ -218,4 +214,3 @@ public class c1 {
  [SQLServerDatabaseMetaData 类](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 26f6b907cf81545ce8356ca7654c3779833f73aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c980058ea2cacba7b9160571b1b42884ea02e41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compatibility-matrix"></a>兼容性矩阵
 下表描述的兼容性应用程序和驱动程序以前在本部分中定义的类型。  
@@ -77,5 +75,4 @@ ms.lasthandoff: 09/09/2017
  因为[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)不支持在 Windows 7 之前发布的驱动程序管理器中应用程序无法加载在较旧版本的 Windows 如果它调用**SQLCancelHandle**直接。 若要与所有版本的驱动程序管理器处理，并使用**SQLCancelHandle**在新版本的 Windows 中，应用程序应调用**SQLCancelHandle**间接通过使用**LoadLibrary**和**GetProcAddress。**  
   
 ## <a name="see-also"></a>另请参阅  
- [什么是 ODBC 3.8 中的新增功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-
+ [ODBC 3.8 中的新增功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

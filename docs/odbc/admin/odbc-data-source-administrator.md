@@ -8,25 +8,23 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 数据源管理器
 Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 此应用程序位于下 Windows 控制面板**管理工具**。 在 Windows 8 中从开始，图标名为**ODBC 数据源**，并且在 64 位操作系统上没有 32 位和 64 位版本。  
@@ -37,7 +35,7 @@ Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 �
   
  本部分包含以下主题。  
   
--   [有关驱动程序和数据源](../../odbc/admin/about-drivers-and-data-sources.md)  
+-   [关于驱动程序和数据源](../../odbc/admin/about-drivers-and-data-sources.md)  
   
 -   [管理数据源](../../odbc/admin/managing-data-sources.md)  
   
@@ -46,4 +44,3 @@ Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 �
 -   [设置 ODBC 连接池选项](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [查看驱动程序](../../odbc/admin/viewing-drivers.md)
-

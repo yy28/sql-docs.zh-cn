@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -57,17 +55,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b866e3ab0ee44c8b65a7b5064f0feb1e4f52aff9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql---query"></a>提示 (TRANSACT-SQL) 的查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [合并](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -201,7 +198,7 @@ ms.lasthandoff: 09/01/2017
  MAXDOP*数*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 重写**最大并行度**配置选项的**sp_configure**和指定此选项以对查询的资源调控器。 MAXDOP 查询提示可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超过配置到资源调控器中，值[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用中所述的资源调控器 MAXDOP 值[ALTER WORKLOAD GROUP &#40;Transact SQL &#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). 与使用的所有语义规则**最大并行度**使用 MAXDOP 查询提示时，配置选项都适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 重写**最大并行度**配置选项的**sp_configure**和指定此选项以对查询的资源调控器。 MAXDOP 查询提示可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超过配置到资源调控器中，值[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用中所述的资源调控器 MAXDOP 值[ALTER WORKLOAD GROUP &#40;Transact SQL &#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). 与使用的所有语义规则**最大并行度**使用 MAXDOP 查询提示时，配置选项都适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!WARNING]  
 >  如果 MAXDOP 设置为零，服务器将选择最大并行度。  
@@ -563,4 +560,3 @@ GO
  [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

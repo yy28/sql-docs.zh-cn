@@ -3,17 +3,18 @@ title: "包含 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - CONTAINS predicate (Transact-SQL)
@@ -34,20 +35,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
+caps.latest.revision: "117"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜索单个词和短语的精确或模糊（不太精确的）匹配项、在一定差别范围内的相近词或加权匹配项。 CONTAINS 是采用一个谓词[WHERE 子句](../../t-sql/queries/where-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 语句以执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的全文搜索上的全文索引列中包含基于字符的数据类型。  
   
@@ -178,7 +178,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  指定要在中搜索的文本*column_name*匹配项的条件。  
   
-*\<contains_search_condition >*是**nvarchar**。 将另一个字符数据类型用作输入时，将发生隐式转换。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `CONTAINS` 谓词中发生隐式转换。
+*\<contains_search_condition >*是**nvarchar**。 将另一个字符数据类型用作输入时，将发生隐式转换。 不能使用大的字符串数据类型 nvarchar （max） 和 varchar （max）。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `CONTAINS` 谓词中发生隐式转换。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -288,7 +288,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  请注意内部搜索词， `CC`，不会进行计数。  
   
- **最大值**  
+ **MAX**  
  返回所有包含指定词的行，而不考虑它们之间距离。 这是默认设置。  
   
  \<match_order >  
@@ -556,4 +556,3 @@ GO
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Name element
+dev_langs: XML
+helpviewer_keywords: Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06d9a6eb98a793f777a8e209a49a8655939208c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40fb6bf358735f81a9d6551f6e647b40e567f934
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="name-element-for-column-dta"></a>列的名称元素 (DTA)
   在用户指定的配置中指定索引列的名称。  
@@ -50,7 +46,7 @@ ms.lasthandoff: 08/02/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[索引 &#40; DTA &#41; 的列元素](../../tools/dta/column-element-for-index-dta.md)|  
+|**父元素**|[索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  
@@ -60,4 +56,3 @@ ms.lasthandoff: 08/02/2017
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

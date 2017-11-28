@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed08d24f96b66b69bbff409cbc2c9e203526041b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以编程方式用于访问驱动程序的设置选项
 |选项|Description|方法|  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |系统数据库|想要访问与 Microsoft Access 数据库使用的 Microsoft Access 系统数据库的完整路径。<br /><br /> 单击**系统数据库**按钮以选择要使用的系统数据库。 ODBC Microsoft Access 驱动程序会提示用户输入名称和密码。 默认名称是管理员和管理员用户的 Microsoft Access 中的默认密码为空字符串。<br /><br /> 为提高你的 Microsoft Access 数据库的安全性，创建新用户，以替换管理员用户，并删除管理员用户，或更改管理员用户有权访问的对象。|若要动态设置此选项，使用**SYSTEMDB**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |线程|要使用的引擎的后台线程数。 对于 Microsoft Access 驱动程序，此值默认为 3，但可以更改。 用户可能需要增加的线程数，如果没有大量的数据库中的活动。<br /><br /> 中包含此选项**设置高级选项**Microsoft Access 驱动程序的对话框。|若要动态设置此选项，使用**线程**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |UserCommitSync|确定 Microsoft Access 驱动程序是否将以异步方式执行显式的用户定义的事务。 此值最初设置为"是"，这意味着，Microsoft Access 驱动程序将等待中用户定义的事务，若要完成的提交。<br /><br /> 将此选项设置为 False 可以有多用户环境中产生不可预知的后果。|若要动态设置此选项，使用**USERCOMMITSYNC**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|
-

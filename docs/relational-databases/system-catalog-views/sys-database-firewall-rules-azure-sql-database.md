@@ -1,0 +1,65 @@
+---
+title: "sys.database_firewall_rules （Azure SQL 数据库） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: 
+ms.prod_service: sql-database
+ms.reviewer: 
+ms.service: sql-database
+ms.component: system-catalog-views
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sys.database_firewall_rules_TSQL
+- database_firewall_rules_TSQL
+- sys.database_firewall_rules
+- database_firewall_rules
+dev_langs: TSQL
+helpviewer_keywords:
+- database_firewall_rules
+- sys.database_firewall_rules
+ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
+caps.latest.revision: "10"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c598371c8df7a92622ec43700fc504b082640e1f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+
+  返回有关与关联的数据库级防火墙设置的信息你[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 在使用包含的数据库用户时，数据库级防火墙设置特别有用。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+  
+ `sys.database_firewall_rules` 视图包含以下各列：  
+  
+|列名|数据类型|说明|  
+|-----------------|---------------|-----------------|  
+|id|**整数**|数据库级防火墙设置的标识符。|  
+|name|**NVARCHAR （128)**|您选择用来描述和区分数据库级防火墙设置的名称。|  
+|start_ip_address|**VARCHAR(50)**|数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。|  
+|end_ip_address|**VARCHAR(50)**|防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意： Windows Azure 连接尝试时才允许此这两个字段和**start_ip_address**字段等于`0.0.0.0`。|  
+|create_date|**日期时间**|创建数据库级防火墙设置时的 UTC 日期和时间。|  
+|modify_date|**日期时间**|上次修改数据库级防火墙设置时的 UTC 日期和时间。|  
+  
+## <a name="remarks"></a>注释  
+ 若要删除数据库防火墙规则，请使用[sp_delete_database_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md). 若要设置的所有防火墙规则[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，请参阅[sp_set_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md). 若要返回有关现有数据库的信息防火墙规则，请查询[sys.database_firewall_rules （Azure SQL 数据库）](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。  
+  
+## <a name="permissions"></a>Permissions  
+ 中提供了此视图**master**数据库和每个用户数据库中。 为具有连接到数据库的权限的所有用户提供对此视图的只读访问权限。  
+  
+## <a name="see-also"></a>另请参阅  
+ [sp_set_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules （Azure SQL 数据库）](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;Azure SQL Database &#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [Configure a Firewall for FILESTREAM 访问](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
+ [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+  
+  

@@ -3,37 +3,37 @@ title: "将合并 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COALESCE
 - COALESCE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], nonnull
 - COALESCE function
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9cb11cb46ab14ab7b1efee597371799882f0e55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 计算自变量的顺序并返回最初计算结果不是第一个表达式的当前值`NULL`。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`返回的第三个值，因为第三个值是第一个不为 null 的值。 
   
@@ -69,7 +69,7 @@ COALESCE ( expression [ ,...n ] )
   
  这意味着，输入的值 (*expression1*， *expression2*，*表达式*等) 计算多次。 此外，为了符合 SQL 标准，包含子查询的值表达式被视为不确定的且子查询被计算两次。 在每种情况中，第一次计算和后续计算可能返回不同的结果。  
   
- 例如，执行代码 `COALESCE((subquery), 1)` 时，计算子查询两次。 因此，您可能得到不同的结果，具体取决于查询的隔离级别。 例如，代码可以返回`NULL`下`READ COMMITTED`多用户环境中的隔离级别。 若要确保稳定的结果返回，使用`SNAPSHOT ISOLATION`隔离级别或替换`COALESE`与`ISNULL`函数。 或者，您可以重新编写查询以将子查询推入嵌套 select 语句，如下面的示例中所示：  
+ 例如，执行代码 `COALESCE((subquery), 1)` 时，计算子查询两次。 因此，您可能得到不同的结果，具体取决于查询的隔离级别。 例如，代码可以返回`NULL`下`READ COMMITTED`多用户环境中的隔离级别。 若要确保稳定的结果返回，使用`SNAPSHOT ISOLATION`隔离级别或替换`COALESCE`与`ISNULL`函数。 或者，您可以重新编写查询以将子查询推入嵌套 select 语句，如下面的示例中所示：  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -302,4 +302,3 @@ ORDER BY TotalSalary;
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

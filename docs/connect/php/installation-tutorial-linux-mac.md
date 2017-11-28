@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: ulvii
 ms.author: v-ulibra
 manager: Hadis Fard
 ms.workload: Inactive
+ms.openlocfilehash: f57df5092dfa9a1eabe1e0dc04eba28cd256d978
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca464b620a092a910d341c90b0fec364dadd89b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="php-linux-and-mac-drivers-installation-tutorial"></a>PHP Linux 和 Mac 驱动程序安装教程
 以下说明假定一个干净的环境，并演示如何以安装 PHP 7.x、 Microsoft ODBC 驱动程序、 Apache 和 Microsoft PHP Ubuntu 15.10，16.04，RedHat 7、 Debian 8 和 Mac OS X 上的驱动程序。
@@ -380,5 +378,4 @@ function FormatErrors( $errors )
 ?>
 ```
 将浏览器指向 http://localhost/testsql.php (http://localhost:8080/testsql.php 在 MacOS 上)。 你现在应能够连接到你的 SQL Server/Azure SQL 数据库。
-
 

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53621c73a5a5504287ff959f54aa27131f4c26c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-data-sources"></a>文件数据源
 *文件数据源*存储在文件中并允许重复使用单个用户或在多个用户之间共享连接信息。 当使用文件数据源时，驱动程序管理器使到使用.dsn 文件中的信息的数据源的连接。 此文件可以像任何其他文件一样操作。 文件数据源没有数据源名称，不机器数据源，以及未注册到任何一个用户或计算机。  
@@ -36,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  也可以是非共享.dsn 文件。 非共享.dsn 文件位于一台计算机上，指向机数据源。 非共享的文件数据源存在主要是为了允许机器数据源轻松转换为文件数据源，以便应用程序可以设计为仅用于文件数据源。 当驱动程序管理器将信息发送非共享的文件数据源中时，连接根据需要为.dsn 文件指向机器数据源。  
   
  有关文件数据源的详细信息，请参阅[连接使用的文件数据源](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，或[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。
-

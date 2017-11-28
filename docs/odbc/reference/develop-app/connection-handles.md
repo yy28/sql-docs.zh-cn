@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bed6c0fda5b192d92ff5b0fb2eebb151070ee096
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-handles"></a>连接句柄
 A*连接*组成驱动程序和数据源。 连接句柄标识每个连接。 连接句柄定义要使用的驱动程序不仅要使用该驱动程序使用的数据源。 实现 ODBC （驱动程序管理器或驱动程序） 的代码段，在连接句柄标识包含连接信息，如下所示的结构：  
@@ -44,4 +42,3 @@ A*连接*组成驱动程序和数据源。 连接句柄标识每个连接。 连
  连接到数据源时，主要用于连接句柄 (**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**)，正在断开连接的数据源 (**SQLDisconnect**)，获取有关的驱动程序和数据源的信息 (**SQLGetInfo**)，检索诊断 (**SQLGetDiagField**和**SQLGetDiagRec**)，并执行事务 (**SQLEndTran**)。 也用于设置和获取连接属性时 (**SQLSetConnectAttr**和**SQLGetConnectAttr**) 和获取 SQL 语句的本机格式时 (**SQLNativeSql**).  
   
  连接句柄分配与**SQLAllocHandle**并释放与**SQLFreeHandle**。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 33d736ccefdf92a08d5575869954ae61a043b55d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5f8a5d949127e7ad87866a0272fbd285fe12ceed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-using-file-data-sources"></a>使用文件数据源连接
 .Dsn 文件中存储文件数据源的连接信息。 因此，可以重复使用单个用户或如果他们具有适当的驱动程序安装在多个用户之间共享的连接字符串。 该文件包含驱动程序名称 （或对于非共享的文件数据源的另一个数据源名称） 和 （可选） 可以使用的连接字符串**SQLDriverConnect**。 驱动程序管理器生成连接字符串，调用**SQLDriverConnect**从.dsn 文件中的关键字。  
@@ -63,4 +61,3 @@ DSN = MyDataSource
   
 ## <a name="see-also"></a>另请参阅  
  [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
-

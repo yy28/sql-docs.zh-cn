@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
+caps.latest.revision: "154"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 8a5997cc7692e7cce1459dc64401397cc3b07eaf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>还原语句的自变量 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +127,7 @@ PAGE
   
  \<backup_device > [ **，**... *n*  ] 指定要用于还原操作的逻辑或物理备份设备。  
   
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  \<backup_device >:: = 指定逻辑或物理备份设备用于备份操作，，如下所示：  
   
@@ -253,7 +250,7 @@ LOADHISTORY
  有关详细信息，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 CREDENTIAL  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过 SP1 CU2[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -283,7 +280,7 @@ RESTART
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应重新启动被中断的还原操作。 RESTART 从中断点重新启动还原操作。  
   
 RESTRICTED_USER  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
  将新还原的数据库的访问权限的成员于**db_owner**， **dbcreator**，或**sysadmin**角色。  RESTRICTED_USER 替换了 DBO_ONLY 选项。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中已停止使用 DBO_ONLY。  
   
@@ -293,7 +290,7 @@ RESTRICTED_USER
  这些选项作用于包含要还原的备份的备份集。  
   
 文件 **=** { *backup_set_file_number* | **@***backup_set_file_number* }  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  标识要还原的备份集。 例如， *backup_set_file_number* 为 **1** 指示备份介质中的第一个备份集， *backup_set_file_number* 为 **2** 指示第二个备份集。 你可以通过使用 *RESTORE HEADERONLY* 语句来获取备份集的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
   
@@ -303,7 +300,7 @@ RESTRICTED_USER
 >  此文件选项与用于指定数据库文件，文件的文件选项无关 **=**  { *logical_file_name_in_backup*  |   **@** *logical_file_name_in_backup_var* }。  
   
  密码 **=**  {*密码* | **@***password_variable* }  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供备份集的密码。 备份集密码是一个字符串。  
   
@@ -319,7 +316,7 @@ RESTRICTED_USER
  这些选项作为一个整体对介质集进行操作。  
   
  MEDIANAME  **=**  { *media_name* | **@***media_name_variable*}  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  指定介质名称。 如果提供了介质名称，该名称必须与备份卷上的介质名称相匹配，否则还原操作将终止。 如果 RESTORE 语句中没有给出介质名称，将不会对备份卷执行介质名称匹配检查。  
   
@@ -327,7 +324,7 @@ RESTRICTED_USER
 >  在备份和还原操作中使用一致的介质名称可以为用于还原操作的介质提供额外的安全检查。  
   
  MEDIAPASSWORD  **=**  { *mediapassword* | **@***mediapassword_variable* }  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供介质集的密码。 介质集密码是一个字符串。  
   
@@ -370,7 +367,7 @@ RESTRICTED_USER
  这些选项允许你以确定是否为还原操作启用备份校验和和该操作是否停止上遇到错误。    
   
  { CHECKSUM | NO_CHECKSUM }  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  默认行为是在存在校验和时验证校验和，在不存在校验和时不进行验证并继续执行操作。  
   
@@ -388,7 +385,7 @@ RESTRICTED_USER
  显式禁用还原操作的校验和验证功能。  
   
  { **STOP_ON_ERROR** |CONTINUE_AFTER_ERROR}  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  STOP_ON_ERROR  
  指定还原操作在遇到第一个错误时停止。 这是 RESTORE 的默认行为，但对于 VERIFYONLY 例外，后者的默认值是 CONTINUE_AFTER_ERROR。  
@@ -423,7 +420,7 @@ RESTRICTED_USER
  这些选项只用于 TAPE 设备。 如果正在使用非磁带设备，则忽略这些选项。  
   
  REWIND  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将释放和重绕磁带。 REWIND 是默认设置。  
   
@@ -440,7 +437,7 @@ RESTRICTED_USER
 >  如果你使用 NOREWIND，实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前相同的进程中运行的备份或还原语句使用的后退或卸载选项，或服务器实例关闭的情况下一直保留磁带驱动器的所有权。 磁带保持打开将防止其他进程访问磁带。 有关如何显示打开的磁带列表以及如何关闭打开的磁带的信息，请参阅[备份设备 &#40;SQL server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  {**卸载**|NOUNLOAD}  
- **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。    
+ **支持：**[还原](../../t-sql/statements/restore-statements-transact-sql.md)， [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)， [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)， [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)， [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)，和[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  这些选项只用于 TAPE 设备。 如果正在使用非磁带设备，则忽略这些选项。  
   
@@ -493,7 +490,7 @@ RESTRICTED_USER
  指定为数据库分配新的 Service Broker 标识符。 由于该数据库被视为新的 Service Broker，因此将立即删除数据库中的现有会话，而不生成结束对话框消息。 必须使用新标识符重新创建任何引用旧 Service Broker 标识符的路由。  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options >  
- **支持：**[还原 {数据库 |日志}](../../t-sql/statements/restore-statements-transact-sql.md) ，并且仅用于完整或大容量日志恢复模式。    
+ **支持：**[还原 {数据库 |日志}](../../t-sql/statements/restore-statements-transact-sql.md) ，并且仅用于完整或大容量日志恢复模式。  
   
  通过在 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目标恢复点，可以将数据库还原到特定时间点或事务点。 指定的时间或事务始终从日志备份还原。 在还原序列的每个 RESTORE LOG 语句中，必须在相同的 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目标时间或事务。  
   
@@ -643,5 +640,4 @@ RESTRICTED_USER
  [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
   
   
-
 

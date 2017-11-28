@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -61,17 +59,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
+caps.latest.revision: "281"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cee79406283aa3b75d41b968370f490cb454ea5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -540,7 +537,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 重写**最大并行度**仅用于该操作的持续时间的配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 重写**最大并行度**仅用于该操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
  使用 MAXDOP 选项来限制执行并行计划时所用的处理器数量。 最大数量为 64 个处理器。  
   
@@ -871,7 +868,7 @@ WAIT_AT_LOW_PRIORITY
  类型的列**varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，**文本**， **ntext**，**映像**， **hierarchyid**，**几何图形**， **geography**，或 CLR UDT，不能在联机操作中添加。 如果在联机操作中添加这些列，将导致最大可能行大小超过 8,060 字节的限制。 在这种情况下将在脱机操作中添加列。  
   
 ## <a name="parallel-plan-execution"></a>并行计划执行  
- 在[!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)]和更高版本，处理器数运行所使用单个 ALTER TABLE ADD （索引基于） 约束或约束，DROP （聚集索引） 语句由**最大并行度**配置选项和当前的工作负荷。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]检测到系统正忙，则在语句执行开始之前将自动降低操作并行度。 可以通过指定 MAXDOP 选项，手动配置用于运行此语句的处理器数。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 在[!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)]和更高版本，处理器数运行所使用单个 ALTER TABLE ADD （索引基于） 约束或约束，DROP （聚集索引） 语句由**最大并行度**配置选项和当前的工作负荷。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]检测到系统正忙，则在语句执行开始之前将自动降低操作并行度。 可以通过指定 MAXDOP 选项，手动配置用于运行此语句的处理器数。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 ## <a name="partitioned-tables"></a>已分区表  
  除了执行涉及到已分区表的 SWITCH 操作外，ALTER TABLE 还可用于更改已分区表的列、约束和触发器的状态，就像它用于非分区表一样。 但是，该语句不能用于更改表本身进行分区的方式。 若要进行重新分区已分区的表，使用[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)和[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)。 此外，不能更改已分区表中列的数据类型。  
@@ -1859,5 +1856,4 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

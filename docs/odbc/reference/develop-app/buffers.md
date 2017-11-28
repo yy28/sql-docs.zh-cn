@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7fa45570f0f5bda2190f7b3193f404ffccd3d621
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="buffers"></a>缓冲区
 缓冲区是用于应用程序和驱动程序之间传递数据的应用程序任何的内存部分。 例如，应用程序缓冲区可以关联，或*绑定到*结果集具有列**SQLBindCol**。 是提取每个行，在这些缓冲区中的每个列返回数据。 *输入缓冲区*用于将数据传递到该驱动程序; 应用程序从*输出缓冲区*用于将数据从驱动程序返回到应用程序。  
@@ -65,4 +63,3 @@ ms.lasthandoff: 09/09/2017
 -   [分配和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
 -   [使用数据缓冲区](../../../odbc/reference/develop-app/using-data-buffers.md)
-

@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和时间数据类型及函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 09/06/2017
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 到 2079-06-06|1 分钟|4|是|是|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 到 9999-12-31|0.00333 秒|8|是|是|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999|100 纳秒|6 到 8|是|是|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY MM DD hh: mm: [.nnnnnnn] [+ &#124;-] hh: mm|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999（以 UTC 时间表示）|100 纳秒|8 到 10|是|是|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh: mm:ss[.nnnnnnn] [+&#124;-] hh:mm|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999（以 UTC 时间表示）|100 纳秒|8 到 10|是|是|  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [Rowversion](../../t-sql/data-types/rowversion-transact-sql.md)数据类型不是日期或时间数据类型。 **时间戳**是不推荐使用的同义词**rowversion**。  
@@ -94,9 +91,9 @@ ms.lasthandoff: 09/06/2017
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* ，*日期*)|返回表示指定的字符字符串*datepart*的指定日期。|**nvarchar**|不具有确定性|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* ，*日期*)|返回一个整数，表示指定*datepart*指定*日期*。|**int**|不具有确定性|  
-|[一天](../../t-sql/functions/day-transact-sql.md)|一天 (*日期*)|返回一个整数，表示指定的日部分*日期*。|**int**|具有确定性|  
-|[月](../../t-sql/functions/month-transact-sql.md)|月 (*日期*)|返回一个整数，表示指定的月份部分*日期*。|**int**|具有确定性|  
-|[年](../../t-sql/functions/year-transact-sql.md)|年 (*日期*)|返回一个整数，表示指定的年份部分*日期*。|**int**|具有确定性|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|一天 (*日期*)|返回一个整数，表示指定的日部分*日期*。|**int**|具有确定性|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|月 (*日期*)|返回一个整数，表示指定的月份部分*日期*。|**int**|具有确定性|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|年 (*日期*)|返回一个整数，表示指定的年份部分*日期*。|**int**|具有确定性|  
   
 ###  <a name="fromParts"></a>从其部分获取日期和时间值的函数
   
@@ -129,10 +126,10 @@ ms.lasthandoff: 09/06/2017
   
 |函数|语法|返回值|返回数据类型|确定性|  
 |---|---|---|---|---|
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|返回对会话进行 SET DATEFIRST 操作所得结果的当前值。|**tinyint**|不具有确定性|  
+|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST |返回对会话进行 SET DATEFIRST 操作所得结果的当前值。|**tinyint**|不具有确定性|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST {*数*&#124; **@**  *number_var* }|将一周的第一天设置为从 1 到 7 的一个数字。|不适用|不适用|  
 |[集 DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT {*格式*&#124; **@**  *format_var* }|用于输入设置的日期部分 （月/日/年） 的顺序**datetime**或**smalldatetime**数据。|不适用|不适用|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|返回当前使用的语言的名称。 @@LANGUAGE不是日期或时间的函数。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE |返回当前使用的语言的名称。 @@LANGUAGE不是日期或时间的函数。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
 |[设置语言](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE {[N] *语言* &#124; **@**  *language_var* }|设置会话和系统消息的语言环境。 SET LANGUAGE 不是日期或时间函数。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [[  **@language =** ] *语言* ]|返回有关所有支持语言的日期格式的信息。 **sp_helplanguage**日期或时间不是存储过程。 但是，语言设置会影响日期函数的输出。|不适用|不适用|  
   
@@ -149,11 +146,10 @@ ms.lasthandoff: 09/06/2017
 |[CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)|提供有关在日期和时间值与字符串文字及其他日期和时间格式之间进行相互转换的信息。|  
 |[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)|提供的数据库和数据库应用程序使用可移植性的指南[!INCLUDE[tsql](../../includes/tsql-md.md)]从一种语言到另一个，或该语句支持多种语言。|  
 |[ODBC 标量函数 &#40;Transact SQL &#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|提供有关可以在中使用的 ODBC 标量函数的信息[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 这包括 ODBC 日期和时间函数。|  
-|[时区 &AMP; #40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|提供时区转换。|  
+|[时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|提供时区转换。|  
   
 ## <a name="see-also"></a>另请参阅
 [函数](../../t-sql/functions/functions.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

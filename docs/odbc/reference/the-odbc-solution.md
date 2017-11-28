@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 806bc94a3807dbdd658cf710c0d22e2b6116d27b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-odbc-solution"></a>ODBC 解决方案
 问题，然后，是 ODBC 如何标准化数据库访问权限？ 有两个体系结构要求：  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/09/2017
      ODBC，以便应用程序可以确定哪些功能驱动程序和 DBMS 支持，提供两个函数 (**SQLGetInfo**和**SQLGetFunctions**) 返回的驱动程序和 DBMS 的常规信息功能和函数的列表的驱动程序支持。 ODBC 还定义了 API 和 SQL 语法一致性级别，这些级别指定的驱动程序支持的功能的广泛范围。 有关详细信息，请参阅[一致性级别](../../odbc/reference/develop-app/conformance-levels.md)。  
   
      请务必记住 ODBC 定义的所有功能，它公开的公共接口。 因此，应用程序包含特定于功能的代码，不是特定于 DBMS 的代码，并且可以使用的任何驱动程序公开那些功能。 这一个优点是，应用程序不需要在 DBMS 支持的功能已得到增强，; 时更新相反，当安装更新的驱动程序时，应用程序自动使用功能因为其代码是特定于功能的、 不是特定于驱动程序或特定于 DBMS 的。
-

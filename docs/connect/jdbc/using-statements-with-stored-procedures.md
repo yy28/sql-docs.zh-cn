@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a46f7218cee1a6561428ad83babf288bf8e24bb5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f617fdf969c0bdd238b07cb0def1b0a948a4d328
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-stored-procedures"></a>使用带有存储过程的语句
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,14 +55,13 @@ ms.lasthandoff: 09/09/2017
   
 |主题|Description|  
 |-----------|-----------------|  
-|[不使用任何参数的存储的过程](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|说明如何使用 JDBC 驱动程序运行不包含输入或输出参数的存储过程。|  
-|[使用输入参数的存储的过程](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|说明如何使用 JDBC 驱动程序运行包含输入参数的存储过程。|  
-|[使用具有输出参数的存储的过程](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|说明如何使用 JDBC 驱动程序运行包含输出参数的存储过程。|  
-|[使用返回的状态的存储的过程](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|说明如何使用 JDBC 驱动程序运行包含返回状态值的存储过程。|  
-|[使用更新计数的存储的过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|说明如何使用 JDBC 驱动程序运行返回更新计数的存储过程。|  
+|[使用不带参数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|说明如何使用 JDBC 驱动程序运行不包含输入或输出参数的存储过程。|  
+|[使用带有输入参数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|说明如何使用 JDBC 驱动程序运行包含输入参数的存储过程。|  
+|[使用带有输出参数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|说明如何使用 JDBC 驱动程序运行包含输出参数的存储过程。|  
+|[使用带有返回状态的存储过程](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|说明如何使用 JDBC 驱动程序运行包含返回状态值的存储过程。|  
+|[使用带有更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|说明如何使用 JDBC 驱动程序运行返回更新计数的存储过程。|  
   
 ## <a name="see-also"></a>另请参阅  
- [语句使用 JDBC 驱动程序](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序使用语句](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

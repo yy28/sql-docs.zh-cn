@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- odbcconf.exe
+helpviewer_keywords: odbcconf.exe
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2f22cf640a790f120701eda8424fb4c19edc7c49
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db8ff09a2b77f51c97ab73d6d994e1e1b4dce2a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbcconfexe"></a>ODBCCONF。EXE
 ODBCCONF.exe 是一个命令行工具，可以配置 ODBC 驱动程序和数据源名称。  
@@ -74,5 +71,4 @@ ODBCCONF [switches] action
 |SETFILEDSNDIR|当 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC。INI\ODBC 文件 DSN\DefaultDSNDir 不存在，SETFILEDSNDIR 操作会创建并将其分配 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir，后面附加有 \ODBC\Data 源处的值。<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC 处的值。INI\ODBC 文件 DSN\DefaultDSNDir 指定创建基于文件的数据源时使用 ODBC 数据源管理器的默认位置。<br /><br /> 例如：<br /><br /> / A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft 打开数据库连接 (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)
-
+ [Microsoft 开放式数据库连接 (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

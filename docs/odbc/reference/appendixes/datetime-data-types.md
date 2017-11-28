@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - compatibility [ODBC], datetime data types
 - data types [ODBC], time
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ff5b0244e54432e28d5a1b43d813911b3f90ffd2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="datetime-data-types"></a>Datetime 数据类型
 ODBC 3 中*.x*、 标识符的日期、 时间和时间戳 SQL 数据类型已更改从 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP (的实例，并用**#define** 9、 10 和 11 的标头文件中) 到 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的实例，并用**#define** 91、 92 和 93 的标头文件中)，分别。 标识符已更改从 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分别对应 C 类型和实例的**#define**已更改相应地。  
@@ -48,4 +46,3 @@ ODBC 3 中*.x*、 标识符的日期、 时间和时间戳 SQL 数据类型已�
  所有数据类型对的调用中的都请求时**SQLGetTypeInfo**，由该函数返回的结果集将包含 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP ODBC 3 中定义*.x*，和 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP ODBC 2 中定义。*x*。  
   
  由于如何 ODBC 3*.x*驱动程序管理器执行日期、 时间和时间戳数据类型映射，ODBC 3*.x*只能识别驱动程序，需要**#defines**的 91、 92，和有关日期、 时间和时间戳 C 数据类型的 93 进入*TargetType*的自变量**SQLBindCol**和**SQLGetData**或*ValueType*自变量**SQLBindParameter**，并仅需要识别**#defines**的 91，92 和 93、 日期时间、 和时间戳 SQL 数据类型进入*ParameterType*参数**SQLBindParameter**或*DataType*参数**SQLGetTypeInfo**。 有关详细信息，请参阅[Datetime 数据类型更改](../../../odbc/reference/develop-app/datetime-data-type-changes.md)。
-

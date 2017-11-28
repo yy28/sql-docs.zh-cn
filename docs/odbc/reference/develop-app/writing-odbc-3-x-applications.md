@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b0c0701ce83e4d1d30bd8f69f94ddc90e7a60a8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3941a679210a18b39ed201dd564b9613b48a2a58
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-applications"></a>编写 ODBC 3.x 应用程序
 当一个 ODBC 2。*x*应用程序升级到 ODBC 3。*x*，以便它适用于这两个 ODBC 2 应编写它。*x*和 3。*x*驱动程序。 应用程序应满足条件的代码，以充分利用 ODBC 3。*x*功能。  
@@ -92,7 +90,7 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [替换函数映射的向后兼容性应用程序](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
+-   [映射替换函数以实现应用程序后向兼容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   
 -   [调用 SQLCloseCursor](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
   
@@ -102,7 +100,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [游标库操作](../../../odbc/reference/develop-app/cursor-library-operations.md)  
   
--   [将光标 Attributes1 信息类型映射](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
+-   [映射游标 Attributes1 信息类型](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)
-

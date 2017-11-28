@@ -3,36 +3,36 @@ title: "创建外部数据源 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ba34b4411b5c3946bf1bc5cb75bc361cd7929990
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-data-source-transact-sql"></a>创建外部数据源 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   为 PolyBase、 弹性数据库查询或 Azure Blob 存储创建外部数据源。 根据方案，语法方面明显不同。 为 PolyBase 创建的数据源不能用于弹性数据库查询。  同样，不能针对 PolyBase 等使用的弹性数据库查询创建的数据源。 
   
@@ -418,31 +418,7 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>示例： Azure SQL 数据仓库
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>G. 创建外部数据源，以引用 Azure blob 存储
-若要创建外部数据源引用 Azure blob 存储容器，指定 Azure blob 存储 URI 和数据库范围的凭据，其中包含你的 Azure 存储帐户密钥。
-
-在此示例中，外部数据源是调用 dailylogs 下名为 myaccount 的 Azure 存储帐户的 Azure blob 存储容器。 Azure 存储外部数据源为仅数据传输，并且不支持谓词下推。
-
-此示例演示如何创建到 Azure 存储空间的身份验证的数据库范围凭据。 中的数据库凭据机密指定 Azure 存储帐户密钥。 指定数据库中的任何字符串作用域凭据标识，它不会向 Azure 存储进行身份验证使用。 然后，在创建外部数据源的语句中使用凭据。
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>H. 创建引用 Azure 数据湖存储的外部数据源
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. 创建引用 Azure 数据湖存储的外部数据源
 Azure 数据湖存储连接根据你 ADLS URI 和 Azure 活动目录应用程序的服务主体。 处找不到用于创建此应用程序的文档[数据湖存储身份验证使用 Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)。
 
 ```tsql
@@ -465,18 +441,7 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>示例： 并行数据仓库
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>I. 创建引用 Hadoop 的外部数据源
-若要创建外部数据源引用 Hortonworks 或 Cloudera Hadoop 群集，请指定计算机名称或 Hadoop Namenode 和端口的 IP 地址。
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>J. 创建使用启用的下推到 Hadoop 引用的外部数据源
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. 创建使用启用的下推到 Hadoop 引用的外部数据源
 指定 JOB_TRACKER_LOCATION 选项以启用到 Hadoop 使 PolyBase 查询的推计算。 启用后，PolyBase 将使用基于开销的决策来确定是否应会查询计算被推送到 Hadoop 或所有数据都应都移动来处理 SQL Server 中的查询。 
 
 ```tsql
@@ -488,7 +453,7 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>K. 创建外部数据源，以引用 Azure blob 存储
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. 创建外部数据源，以引用 Azure blob 存储
 若要创建外部数据源，以引用 Azure blob 存储容器，指定 Azure blob 存储 URI 为外部数据源位置。 将你的 Azure 存储帐户密钥添加到 PDW core-site.xml 文件进行身份验证。
 
 在此示例中，外部数据源是调用 dailylogs 下名为 myaccount 的 Azure 存储帐户的 Azure blob 存储容器。 Azure 存储外部数据源为仅数据传输，并且不支持谓词下推。
@@ -501,7 +466,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>示例： 大容量操作   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>L. 创建从 Azure Blob 存储中检索数据的大容量操作的外部数据源。   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 创建从 Azure Blob 存储中检索数据的大容量操作的外部数据源。   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。   
 使用大容量操作中使用以下数据源[大容量插入](../../t-sql/statements/bulk-insert-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。 必须使用创建所使用，凭据`SHARED ACCESS SIGNATURE`作为标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。   
 ```tsql
@@ -523,5 +488,4 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 [sys.external_data_sources (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

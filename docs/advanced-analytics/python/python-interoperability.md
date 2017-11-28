@@ -1,31 +1,26 @@
 ---
-title: "Python 互操作性 |Microsoft 文档"
+title: "与 SQL Server 的 Python 互操作性 |Microsoft 文档"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee7187d490c8da80c66fb27156b2726e71782238
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="python-interoperability"></a>Python 互操作性
+# <a name="python-interoperability-with-sql-server"></a>与 SQL Server 的 Python 互操作性
 
 本主题介绍了当你启用该功能会安装的 Python 组件**机器学习服务 （数据库）**和选择 Python 作为语言。
-
-> [!NOTE]
-> 对于 Python 支持是预发行功能，并仍在开发。
 
 ## <a name="python-components"></a>Python 组件
 
@@ -35,11 +30,11 @@ ms.lasthandoff: 09/01/2017
 
 例如，如果使用默认实例上的 Python 选项安装机器学习服务，查找下：
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 SQL Server 自 2017 年 1 机器学习 Services 的安装将添加 Python 的 Anaconda 分布。 具体而言，Anaconda 3 安装程序使用时，基于 Anaconda 4.3 分支。 SQL Server 自 2017 年的预期的 Python 级别是 Python 3.5 版。
 
-## <a name="new-in-this-release"></a>此版本中的新增功能
+## <a name="new-python-packages-in-this-release"></a>在此版本中的新 Python 包
 
 有关支持的 Anaconda 分发的包的列表，请参阅 Continuum 分析站点： [Anaconda 包列表](https://docs.continuum.io/anaconda/pkg-docs)
 
@@ -47,9 +42,9 @@ SQL Server 自 2017 年 1 机器学习 Services 的安装将添加 Python 的 An
 
 此库提供的功能等效于其中**RevoScaleR**打包成 Microsoft。换而言之，它支持远程计算上下文，以及各种的可缩放的机器学习模型，创建如**rxLinMod**。 有关 RevoScaleR 的详细信息，请参阅[分布式和并行计算与 ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)。
 
-因为支持 Python 是预发行功能仍处于开发阶段， **revoscalepy**库目前包括 RevoScaleR 功能的一个子集。 
+[For Python microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) Python 添加到你的安装时，安装将包作为 SQL Server 机器学习的一部分。 此程序包包含许多机器学习算法，经过优化的速度和准确性，以及行用于文本和图像处理的转换。 有关详细信息，请参阅[MicrosoftML 包使用 SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)。
 
-将来添加可能包括[Microsoft 认知工具包](https://www.microsoft.com/research/product/cognitive-toolkit/)。 以前称为 CNTK，此库支持多种神经网络模型，包括 convolutional 网络 (CNN)、 重复性网络 (RNN) 和长短术语内存网络 (LSTM)。
+紧密耦合 Microsoftml 和 revoscalepy;在 microsoftml 中使用的数据源被指 revoscalepy 对象。 计算上下文限制到 microsoftml revoscalepy 传输中。 也就是说，对于本地操作，提供了所有功能，但切换到远程计算上下文需要 RxInSqlServer。
 
 ## <a name="using-python-in-sql-server"></a>使用 SQL Server 中的 Python
 
@@ -77,4 +72,3 @@ For Python 的输入的数据必须是表格。 必须在的窗体中返回所�
 ## <a name="see-also"></a>另请参阅
 
 [Python 库和数据类型](python-libraries-and-data-types.md)
-

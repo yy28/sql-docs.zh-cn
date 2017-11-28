@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetPos function [ODBC], Cursor Library
+helpviewer_keywords: SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ef34ee5a34df9252c7ec03e12cfa5b1ddee8f72c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos （光标库）
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  游标库不支持对的调用中的 SQL_UPDATE 和 SQL_DELETE 操作**SQLSetPos**。 游标库实现定位的更新或删除 SQL 语句，通过创建搜索更新或删除语句的 WHERE 子句，枚举存储在其缓存为每个绑定的列的值。 有关详细信息，请参阅[处理定位更新和删除语句](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)。  
   
  如果该驱动程序不支持静态游标，应调用应用程序使用的是光标库**SQLSetPos**通过提取行集上仅**SQLExtendedFetch**或**SQLFetchScroll**，而无法由**SQLFetch**。 游标库实现**SQLExtendedFetch**和**SQLFetchScroll**通过进行的重复的调用来**SQLFetch** （使用 1 的行集大小） 驱动程序中。 游标库将传递到调用**SQLFetch**，而在其他另一方面，通过与驱动程序。 如果**SQLSetPos**通过提取多行的行集上调用**SQLFetch**当驱动程序不支持静态游标，调用将失败，因为**SQLSetPos**不起作用与只进游标。 即使应用程序已成功调用这也会出现**SQLSetStmtAttr**将 SQL_ATTR_CURSOR_TYPE 设置为 SQL_CURSOR_STATIC，即使该驱动程序不支持静态游标，游标库支持。
-

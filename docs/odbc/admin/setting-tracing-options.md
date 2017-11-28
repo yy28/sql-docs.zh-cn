@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1a62a03d3bb9e9876ed152bb4ac2cb8fb56ce66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-tracing-options"></a>设置跟踪选项
 **跟踪**选项卡**ODBC 数据源管理器**对话框中，可以配置跟踪 ODBC 函数调用的方法。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 >  Windows 8 （Visual Studio Analyzer 仅包含在较旧版本的 Visual Studio。） 从开始已删除的 Visual Studio Analyzer 的支持。 有关故障排除机制的替代方法，使用 BID 跟踪。  
   
  Visual Studio® 分析器跟踪提供性能和有关 ODBC 层的调试信息。 传出的所有事件将都激发顶级接口形式显示准确图片尽可能 ODBC 组件所用相关的时间。 Visual Studio Analyzer 跟踪需要时源设置注册任何事件源。 有关这种类型的跟踪的详细信息，请参阅 Visual Studio 文档。
-

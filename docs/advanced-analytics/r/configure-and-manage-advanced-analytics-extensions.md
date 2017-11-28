@@ -1,86 +1,62 @@
 ---
 title: "高级机器学习服务的配置选项 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.custom: SQL2016_New_Updated
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 872acf107d72989b4623a9d5f4ccb85c44d1f2f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>高级机器学习服务的配置选项
+# <a name="advanced-configuration-options-for-machine-learning-services"></a>机器学习服务的高级的配置选项
 
-本指南介绍你可以在设置之后，若要修改的 R 运行时和 SQL Server 中的机器学习与关联的其他服务配置的更改。
+本指南介绍你可以在设置之后，若要修改的外部脚本运行时和 SQL Server 中的机器学习与关联的其他服务配置的更改。
 
-适用于： SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
+**适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
 
-##  <a name="bkmk_Provisioning"></a>设置用户帐户，机器学习
+##  <a name="bkmk_Provisioning"></a>设置其他用户帐户，机器学习
 
 中的外部脚本进程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]低特权的本地用户帐户的上下文中运行。 在单个低特权帐户中运行这些过程具有以下优点：
 
 + 在减少的外部脚本运行时进程的特权[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机
 + 例如，R 或 Python 的外部运行时会话之间提供隔离。
 
-作为安装的一部分，新的 Windows*用户帐户池*创建包含所需的 R 运行时进程内运行的本地用户帐户。 如果需要，你可以修改用来支持 R 的用户数。你的数据库管理员还必须向此组授予权限，以使其可以连接到启用了 R Services 的任何实例。 有关详细信息，请参阅 [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)相关的其他服务进行轻微的配置更改。
+作为安装的一部分，新的 Windows*用户帐户池*创建包含所需的正在运行的外部运行时进程，如 R 或 Python 的本地用户帐户。 根据需要以支持机器学习任务，你可以修改用户的数。 
 
-不过，可以针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的敏感资源定义访问控制列表 (ACL) 来拒绝此组的访问，以防止 R 运行时进程访问资源。
+此外，数据库管理员必须授予此组的权限连接到启用机器学习了任何实例。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
-+ 用户帐户池链接到一个特定的实例。  对于启用了 R 脚本的每个实例，都会创建一个单独的辅助角色帐户池。 帐户不能在各个实例之间共享。
+对 protext 敏感资源上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以定义此组的访问控制列表 (ACL)。 通过指定组将被拒绝访问的资源，你可以通过外部进程，如 R 或 Python 运行时阻止访问。
 
-+ 池中的用户帐户名采用 SQLInstanceName*nn*相关的其他服务进行轻微的配置更改。 例如，如果你使用默认实例作为 R 服务器，则用户帐户池将支持 MSSQLSERVER01、MSSQLSERVER02 等用户名。
++ 用户帐户池链接到一个特定的实例。 已针对哪台计算机启用了学习每个实例需要单独的池的工作帐户。 帐户不能在各个实例之间共享。
 
-+ 用户帐户池的大小是静态的，默认值为 20。 可同时启动的 R 运行时会话数受此用户帐户池的大小限制。 不过，管理员可以使用 SQL Server 配置管理器更改此限制。
++ 池中的用户帐户名采用 SQLInstanceName*nn*相关的其他服务进行轻微的配置更改。 例如，如果为机器学习中使用的默认实例，用户帐户池将支持帐户名称，例如 MSSQLSERVER01、 MSSQLSERVER02，等。
 
-有关如何更改用户帐户池的详细信息，请参阅 [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)。
++ 用户帐户池的大小是静态的，默认值为 20。 可以同时启动的外部运行时会话数受此用户帐户池的大小。 若要更改此限制，管理员应使用 SQL Server 配置管理器。
+
+有关如何更改用户帐户池的详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
 ##  <a name="bkmk_ManagingMemory"></a>管理外部脚本进程使用的内存
 
-默认情况下，与 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 关联的 R 运行时进程使用的内存量限制为不超过总计算机内存的 20%。 但是，管理员可根据需要提高此限制。
+默认情况下，机器学习的外部脚本运行时仅限于不能超过 20%的总计算机内存。 它依赖于你的系统，但通常情况下，你可能会发现此限制不足的严重的机器学习任务，例如为模型定型或预测上很多行数据。 
 
-通常，对于繁重的 R 任务（例如训练模型或者基于大量数据行进行预测），此数量不够用。 你可能需要降低为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（或其他服务）保留的内存量并使用资源调控器定义一个或多个外部资源池并进行分配。 有关详细信息，请参阅[R 的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)。
+若要支持机器学习，管理员可以增加此限制。 执行此操作时，你可能需要减少为保留的内存量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他服务。 你还应考虑使用资源调控器来定义外部资源池或池，以便你可以分配到 R 或 Python 的作业的特定资源池。
 
-##  <a name="bkmk_ChangingConfig"></a>更改高级服务选项使用配置文件
+有关详细信息，请参阅[机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)。
 
-你可以通过编辑 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 配置文件来控制 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的一些高级属性。 此文件是在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间创建的，默认情况下以纯文本文件的形式保存在以下位置：
-
-`<instance path>\binn\rlauncher.config`
-
-你必须是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的管理员才能对此文件进行更改。 如果你要编辑该文件，我们建议你在保存更改之前创建备份副本。
-
-例如，若要使用记事本打开的默认实例的配置文件，将打开作为管理员，命令提示符并键入以下命令：
-
-```
-C:\>Notepad.exe "%programfiles%\Microsoft SQL Server\MSSQL13.MSSQLSERVER\mssql\binn\rlauncher.config"  
-```
-
-##  <a name="bkmk_properties"></a>编辑配置属性
-
-下表列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的每项设置及其允许值。
-
-所有设置采用键-值对的格式，每项设置单独占用一行。 例如，此属性为 RLauncher 指定跟踪级别：
-
-Default: TRACE_LEVEL=4
-
-
-|**设置名称**|**值类型**|**默认**|**说明**|
-|------------------|----------------|-------------|-----------------|
-|JOB_CLEANUP_ON_EXIT|Integer<br /><br /> 0 = 禁用<br /><br /> 1 = 启用|1<br /><br /> 退出时删除日志文件|指定在完成 R 会话之后，是否应该清除为每个 R 会话创建的临时工作文件夹。 此设置有助于调试。<br /><br /> 注意：这只是一项内部设置 – 请不要更改此值。|
-|TRACE_LEVEL|Integer<br /><br /> 1 = 错误<br /><br /> 2 = 性能<br /><br /> 3 = 警告<br /><br /> 4 = 信息|1<br /><br /> 仅输出警告|配置 R 启动器 (MSSQLLAUNCHPAD) 的跟踪详细程度以进行调试。 此设置将影响存储在以下跟踪文件中的跟踪的详细程度，这两项跟踪均位于 LOG_DIRECTORY 设置指定的路径中：<br /><br /> **rlauncher.log**：针对 T-SQL 查询启动的 R 会话生成的跟踪文件。<br /><br /> |
 
 ## <a name="bkmk_Launchpad"></a>修改快速启动板服务帐户
 
@@ -97,7 +73,37 @@ Default: TRACE_LEVEL=4
 
 若要深入了解运行 SQL Server 服务所需的权限，请参阅[配置 Windows 服务帐户和权限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
 
+##  <a name="bkmk_ChangingConfig"></a>更改高级的服务选项
+
+在早期版本的 SQL Server 2016 R Services 中，你无法通过编辑更改服务的某些属性[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]配置文件。 
+
+但是，此文件不再用于更改配置。 我们建议你使用 SQL Server 配置管理器，以便将效果更改到服务配置，如服务帐户和用户数。
+
+**若要修改快速启动板配置**
+
+1. 打开 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)。 
+2. 右键单击 SQL Server 快速启动板，然后选择**属性**。
+
+    + 若要更改服务帐户，请单击**Log On**选项卡。
+
+    + 若要增加用户数目，请单击**高级**选项卡。
+
+
+**若要修改调试设置**
+
+使用快速启动板的配置文件，这可能会在有限情况下，例如调试很有用，仅可以更改的几个属性。 过程中创建配置文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置和默认情况下保存为纯文本文件中的以下位置：`<instance path>\binn\rlauncher.config`
+
+你必须是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的管理员才能对此文件进行更改。 如果你要编辑该文件，我们建议你在保存更改之前创建备份副本。
+
+下表列出的高级的设置[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，与允许的值。 
+
+|**设置名称**|**类型**|**Description**|
+|----|----|----|
+|作业\_清理\_ON\_退出|Integer |这是一项内部设置仅 – 请不要更改此值。 </br></br>指定是否为每个外部运行时会话创建的临时工作文件夹应该进行清理完成会话后。 此设置有助于调试。 </br></br>支持的值为**0** （禁用） 或**1** （启用）。 </br></br>默认值为 1，退出时删除含义日志文件。|
+|跟踪\_级别|Integer |出于调试目的配置 MSSQLLAUNCHPAD 的跟踪详细级别。 这会影响由 LOG_DIRECTORY 设置指定的路径中的跟踪文件。 </br></br>支持的值为： **1** （错误）， **2** （性能） **3** （警告）， **4** （信息）。 </br></br>默认值为 1，这意味着仅输出警告。|
+
+所有设置采用键-值对的格式，每项设置单独占用一行。 例如，若要更改的跟踪级别，要添加行`Default: TRACE_LEVEL=4`。
+
 ## <a name="see-also"></a>另请参阅
 
 [安全注意事项](security-considerations-for-the-r-runtime-in-sql-server.md)
-

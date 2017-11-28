@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLGetTypeInfo
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db1eff513778d3c6df834bf42c4cf6c288380510
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cbcc75d7a527104ced19727797e282b63af2a6ae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo （Excel 驱动程序）
 > [!NOTE]  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE 将返回可搜索的列中的字节，计数器、 双精度型、 单、 long 类型的值和短数据类型。 （如功能可以通过将值转换为使用 ODBC 规范的转换函数，然后执行比较的字符。）  
   
  当使用 Microsoft Excel 驱动程序时，返回 TYPE_NAME 列中返回的 ODBC 类型名称**SQLGetTypeInfo**。
-

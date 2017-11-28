@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>何时使用过程
 有大量的使用过程的优点，所有基于这一事实使用过程的 SQL 语句将从移动应用程序数据源。 剩下的应用程序中是一个可互操作的过程调用。 这些优点包括：  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  第二个缺点是，许多 Dbms 不支持过程。 同样，这是最有可能是垂直设计为使用大量的 Dbms 运行的应用程序的问题。 若要确定是否支持过程，应用程序调用**SQLGetInfo** SQL_PROCEDURES 选项。  
   
  第三个缺点，这是特别适用于应用程序开发环境，是 ODBC 未定义用于创建过程标准语法。 也就是说，尽管应用程序可以 interoperably 调用过程，但它们无法 interoperably 创建它们。
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>表格模型设计器 (SSAS)
 表格模型设计器是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一部分（与 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成），它具有专用于开发专业表格模型解决方案的附加项目类型模板。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 作为免费 Web 下载内容安装。 有关详细信息，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
@@ -146,4 +144,3 @@ ms.lasthandoff: 10/20/2017
  [属性（SSAS 表格）](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
-

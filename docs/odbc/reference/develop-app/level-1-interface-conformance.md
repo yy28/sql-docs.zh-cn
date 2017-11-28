@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>级别 1 接口一致性
 级别 1 接口一致性级别包括核心接口一致性级别功能以及其他功能，如通常都存在于 OLTP 关系 DBMS 的事务。 级别 1 接口 – 符合的驱动程序可让应用程序执行以下操作，除了核心接口一致性级别中的功能：  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |107|使用 ODBC 函数而不是 SQL 语句，以便执行某些数据库操作： **SQLSetPos** SQL_POSITION 与 SQL_REFRESH。|  
 |108|获取访问权限由批处理和存储的过程，通过调用生成的多个结果集的内容**SQLMoreResults**。|  
 |109|分隔事务跨越几个 ODBC 函数中使用真正的原子性和能够指定在 SQL_ROLLBACK **SQLEndTran**。|
-

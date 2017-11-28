@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7629ed6d683be048f6649db10a4a6c6f2dd593b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-date"></a>到 c： 日期的 SQL
 日期 ODBC SQL 数据类型的标识符是：  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  [c] 这是对应的 C 数据类型的大小。  
   
  当日期 SQL 数据转换为字符 C 数据时，生成的字符串是在"*yyyy*-*mm*-*dd*"格式。 此格式不受 Windows® 国家/地区设置。
-

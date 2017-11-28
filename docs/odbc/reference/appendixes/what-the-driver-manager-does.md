@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662370f1e782edfc5f932ad26cdbc38643bcda7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-manager-does"></a>驱动程序管理器的用途
 下表总结了如何 ODBC 3*.x*驱动程序管理器将调用映射到 ODBC 2。*x*和 ODBC 3*.x*驱动程序。  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetchScroll**|返回指定的行集。 以下是实现详细信息：<br /><br /> -如果应用程序调用**SQLFetchScroll** ODBC 2 中。*x*驱动程序，ODBC 3*.x*驱动程序管理器将其映射到**SQLExtendedFetch**。 它使用的 SQL_ATTR_ROW_STATUS_PTR 语句特性的缓存的值*RowStatusArray*自变量和 SQL_ATTR_ROWS_FETCHED_PTR 语句属性的缓存的值*RowCountPtr*自变量。 如果*FetchOrientation*中的参数**SQLFetchScroll**是 SQL_FETCH_BOOKMARK，它使用的 SQL_ATTR_FETCH_BOOKMARK_PTR 语句特性的缓存的值*FetchOffset*自变量并返回错误，如果*FetchOffset*参数**SQLFetchScroll**是不是 0。<br />-如果应用程序调用这 ODBC 3 中*.x*驱动程序，ODBC 3*.x*驱动程序管理器将传递到该驱动程序的调用。|  
 |**SQLSetPos**|执行各种定位的操作。 ODBC 3*.x*驱动程序管理器将传递到调用**SQLSetPos**于驱动程序，而不考虑驱动程序版本。|  
 |**SQLSetScrollOptions**|当驱动程序管理器映射**SQLSetScrollOptions**为应用程序使用 ODBC 3*.x*驱动程序不支持**SQLSetScrollOptions**，驱动程序管理器将设置 SQL_ROWSET_SIZE 语句选项，不 SQL_ATTR_ROW_ARRAY_SIZE 语句特性，为*RowsetSize*中的参数**SQLSetScrollOption**。 因此， **SQLSetScrollOptions**按调用提取多行时，应用程序不使用**SQLFetch**或**SQLFetchScroll**。 仅当通过调用提取多个行时，才可以使用它**SQLExtendedFetch**。|
-

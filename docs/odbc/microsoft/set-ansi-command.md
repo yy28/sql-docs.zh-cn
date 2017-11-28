@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set ANSI command [ODBC]
+helpviewer_keywords: set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d234ae95815df1aae95f3d54781464a752c5fd99
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2095dc0b30fc2e16d4ce691cc097dcda1614d090
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
 确定如何使用进行的不同长度的字符串之间的比较 = Visual FoxPro SQL 命令中的运算符。  
@@ -66,5 +63,4 @@ SET ANSI ON | OFF
   
 ## <a name="see-also"></a>另请参阅  
  [选择的 SQL 命令](../../odbc/microsoft/select-sql-command.md)   
- [SET 确切命令](../../odbc/microsoft/set-exact-command.md)
-
+ [SET EXACT 命令](../../odbc/microsoft/set-exact-command.md)

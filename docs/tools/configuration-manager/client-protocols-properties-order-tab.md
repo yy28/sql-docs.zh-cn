@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client protocols [SQL Server]
+helpviewer_keywords: client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c3e253853ebcaec3217634605e573d9a96bd063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# 客户端协议属性（“顺序”选项卡）
+# <a name="client-protocols-properties-order-tab"></a>客户端协议属性（“顺序”选项卡）
   使用“客户端协议属性”对话框中的“顺序”页，可以查看和启用客户端协议。  
   
  单击某个协议，再单击 **“启用”** 或 **“禁用”** ，可以将所选协议移到 **“启用的协议”** 列表或 **“禁用的协议”** 列表中。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient 不会使用这些设置。 .NET SqlClient 的协议顺序依次为：TCP、命名管道。此顺序不能改变。  
   
-## 选项  
+## <a name="options"></a>选项  
  **“启用的协议”**  
  列出已安装但当前未使用的协议。  
   
@@ -59,8 +56,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  如果通过前缀或连接字符串的一部分指定了协议，则仅尝试使用指定的协议。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择网络协议](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

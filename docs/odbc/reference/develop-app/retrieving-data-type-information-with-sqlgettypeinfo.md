@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>检索 SQLGetTypeInfo 的数据类型信息
 ODBC 基础 SQL 数据类型从到 ODBC 类型标识符的映射是近似值，因为提供函数 (**SQLGetTypeInfo**) 通过该驱动程序可以完全描述了每个数据源中的 SQL 数据类型。 此函数将返回一个结果集，其中每个行所说明的一种数据类型，例如名称、 类型标识符、 精度、 小数位数和可为 null 的特征。  
@@ -42,4 +40,3 @@ ODBC 基础 SQL 数据类型从到 ODBC 类型标识符的映射是近似值，�
 -   ODBC 未定义的在中使用的数据类型名称**CREATE TABLE**和**ALTER TABLE**语句。 相反，应用程序应使用在 TYPE_NAME 列中返回的结果集返回的名称**SQLGetTypeInfo**。 这样做的原因是，尽管大部分 SQL 不会跨 Dbms 的很多不同，数据类型名称有很大差异。 而不强制驱动程序以分析 SQL 语句和将标准数据类型名称替换为特定于 DBMS 的数据类型名称下 ODBC 需要应用程序首先使用特定于 DBMS 的名称。  
   
  请注意， **SQLGetTypeInfo**不一定描述所有应用程序可能会遇到的数据类型。 具体而言，结果集可能包含不直接支持的数据源的数据类型。 例如，由 ODBC 定义中由目录函数返回的结果集的列的数据类型和数据源可能不支持这些数据类型。 若要确定结果集中的数据类型的特征，应用程序调用**SQLColAttribute**。
-

@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/02/2017
 - 函数语法
 - 参数列表
 - 返回值
-- 備註
+- 注释
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -133,12 +132,12 @@ ms.lasthandoff: 08/02/2017
    );
    ```
 
-| Parameters | 参数 | 說明
+| Parameters | 参数 | 解释
 | ----- | ----- | ------ |
 | | **名称** |此用于标识出虚拟设备集。
 | | **ppVirtualDevice** |如果此函数成功，则会返回指向虚拟设备的指针。 此设备用于 GetCommand 和 CompleteCommand。
 
-| 返回值 | 参数 | 說明
+| 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
 | |**NOERROR** |函数成功。
 | |**VD_E_ABORT** | 已请求中止。
@@ -170,7 +169,7 @@ ms.lasthandoff: 08/02/2017
 | |**超时** |此为等待的时间（毫秒）。 使用 INFINTE 或负值以无限期等待。 使用 0 以轮询一条命令。 如果在超时过期之前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端则会决定后续操作。
 | |**ppCmd** |成功返回命令后，参数将返回要执行的命令的地址。 返回的内存是只读的。 完成命令后，此指针会被传递到 CompleteCommand 例程。 有关每条命令的详细信息，请参阅本文档后面的“命令”。
         
-| 返回值 | 参数 | 說明
+| 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
 | |**NOERROR** |已获取一条命令。
 | |**VD_E_CLOSE** |设备已由服务器关闭。
@@ -195,12 +194,12 @@ ms.lasthandoff: 08/02/2017
    );
    ```
 
-| Parameters | 参数 | 說明
+| Parameters | 参数 | 解释
 | ----- | ----- | ------ |
 | |**pCmd** |这是以前从 ClientVirtualDevice::GetCommand 返回命令的地址。
 | |**completionCode** |这是表示完成状态的状态代码。 必须为所有命令返回此参数。 返回的代码应适合正在执行的命令。 ERROR_SUCCESS 用于在所有情况下代表成功执行的命令。 有关可能代码的完整列表，请参阅文件 vdierror.h。 有关每条命令的典型状态代码列表，请参阅本文档后面的“命令”。
 | |**bytesTransferred** |这是已成功传输的字节数。 仅对数据传输命令 Read 和 Write 返回此值。
-| |**position** |这是对仅 GetPosition 命令的响应。
+| |**位置** |这是对仅 GetPosition 命令的响应。
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
@@ -223,9 +222,9 @@ ms.lasthandoff: 08/02/2017
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |InclusionThresholdSetting | 不适用
+| |无 | 不适用
         
-| 返回值 | 参数 | 說明
+| 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
 | |**NOERROR**|已成功发布中止通知。
 
@@ -241,9 +240,9 @@ ms.lasthandoff: 08/02/2017
    int ClientVirtualDeviceSet::Close ();
    ```
 
-| Parameters | 参数 | 說明
+| Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |InclusionThresholdSetting |不适用
+| |无 |不适用
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
@@ -268,11 +267,11 @@ ms.lasthandoff: 08/02/2017
    );
    ```
 
-| Parameters | 参数 | 說明
+| Parameters | 参数 | 解释
 | ----- | ----- | ------ |
 | |**setName** |这将标识出设备集。 此名称是区分大小写，并且必须与它调用 ClientVirtualDeviceSet::Create 时，主要的客户端所使用的名称相匹配。
 
-| 返回值 | 参数 | 說明
+| 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
 | |**NOERROR** |函数成功。
 | |**VD_E_PROTOCOL** |尚未创建虚拟设备集，虚拟设备集已在此客户端上打开或虚拟设备集尚未准备好接受来自次要客户端的打开请求。
@@ -330,6 +329,5 @@ ms.lasthandoff: 08/02/2017
 | |**VD_E_INVALID** |ppBuffer 是无效的句柄。
 
 **备注**必须格外小心进行正确通信句柄。 对于单个虚拟设备集而言，句柄是本地的。 共享句柄的合作伙伴进程必须确保仅在最初获取缓冲区的虚拟设备集范围内使用缓冲区句柄。
-
 
 

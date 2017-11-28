@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77550572f392ddce8c442106bda7456fda08dd53
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e49d68f567f26e852dcf8bee3a9827797c9c23f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setting-the-data-source-properties"></a>设置数据源属性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +33,6 @@ ms.lasthandoff: 09/09/2017
  有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据源，请参阅[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)类。 有关如何使用 SQLServerDataSource 类来与建立连接的示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到 SQL Server 使用 JDBC 驱动程序](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

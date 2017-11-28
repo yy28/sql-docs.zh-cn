@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
+caps.latest.revision: "144"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0960e000c4ba1d798228445720e39db0f627f9b1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -180,7 +177,7 @@ DBCC CHECKDB
  MAXDOP  
  **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过 SP2 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
     
- 重写**最大并行度**配置选项的**sp_configure**语句。 MAXDOP 可以超过 sp_configure 使用配置的值。 如果 MAXDOP 超过配置到资源调控器中，值[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]使用中所述的资源调控器 MAXDOP 值[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 重写**最大并行度**配置选项的**sp_configure**语句。 MAXDOP 可以超过 sp_configure 使用配置的值。 如果 MAXDOP 超过配置到资源调控器中，值[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]使用中所述的资源调控器 MAXDOP 值[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
 > [!WARNING] 
 > 如果 MAXDOP 设置为零则 SQL Server 将选择最大并行度，以使用度。    
@@ -219,7 +216,7 @@ DBCC CHECKDB 不检查禁用的索引。 已禁用的索引有关的详细信息
 建议您使用 PHYSICAL_ONLY 选项，以便可以频繁检查生产系统。 使用 PHYSICAL_ONLY 可以极大地缩短对大型数据库运行 DBCC CHECKDB 的运行时间。 同时建议您定期运行没有选项的 DBCC CHECKDB。 应当以什么频率执行这些运行任务将取决于各个企业及其生产环境。
     
 ## <a name="checking-objects-in-parallel"></a>并行检查对象    
-默认情况下，DBCC CHECKDB 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制可用于 DBCC 检查处理器的最大数目，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+默认情况下，DBCC CHECKDB 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制可用于 DBCC 检查处理器的最大数目，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
     
 > [!NOTE]
 > 并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关详细信息，请参阅并行一致性检查的 RDBMS 可管理性部分中[支持 SQL Server 2016 各个版本的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。    
@@ -406,5 +403,4 @@ GO
 [查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
 [系统表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-
 

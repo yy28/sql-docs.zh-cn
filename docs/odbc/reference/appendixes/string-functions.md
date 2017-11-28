@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions"></a>字符串函数
 下表列出的字符串操作函数。 应用程序可以确定由驱动程序支持哪些字符串函数，应调用**SQLGetInfo**与*信息类型*SQL_STRING_FUNCTIONS。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**空间 (** *计数* **)** (ODBC 2.0)|返回一个包含的字符字符串*计数*空格。|  
 |**子字符串 (** *string_exp*，*启动*，长度**)** (ODBC 1.0)|返回派生自的字符字符串*string_exp*中由指定的字符位置开始，*启动*为*长度*字符。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|返回一个字符串等于，在*string_exp*，所有小写字符转换为大写形式。|
-

@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 84bb78e184f1bca9e683aeebf46b178e3a7dd61f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>在 Linux 和 macOS 上的 SQL Server 的 Microsoft ODBC 驱动程序的发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,4 +55,3 @@ SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enter
 Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅 [如何：使用 ODBC 连接到 Windows Azure SQL 数据库](http://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l`选项 （登录超时值） 已添加到`bcp`。 有关详细信息，请参阅[使用连接**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
-

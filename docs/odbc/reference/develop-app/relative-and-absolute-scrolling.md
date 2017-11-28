@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>相对和绝对滚动
 中的滚动选项大多数**SQLFetchScroll**将光标位置相对于当前的位置或位置的绝对位置。 **SQLFetchScroll**支持提取下一行，之前，第一个和最后一个行集，作为很好地为相对提取 (提取行集 *n* 从开始的当前行集的行) 和绝对提取 (提取从行开始的行集 *n* )。 如果 *n* 是中的绝对读取负，行进行计数从结果集的末尾。 因此，行为-1 的绝对读取意味着提取开头结果集中的最后一行的行集。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  游标，这是结果的大小中的行数设置，则将用作诊断标头的 SQL_DIAG_CURSOR_ROW_COUNT 字段。 此字段中的值定义之后才**SQLExecute**， **SQLExecDirect**，或**SQLMoreResult**已调用。 此计数可以的近似计数或进行确切计数，具体取决于驱动程序的功能。 可以通过调用确定驱动程序的支持**SQLGetInfo**游标属性的信息类型和检查是否针对的游标类型返回 SQL_CA2_CRC_APPROXIMATE 或 SQL_CA2_CRC_EXACT 位。  
   
  对于动态游标从不支持的确切的行计数。 对于其他类型的游标，该驱动程序可以支持准确或近似行计数，但不是两者。 如果驱动程序支持既不准确，也不大致行计数为特定的游标类型、 SQL_DIAG_CURSOR_ROW_COUNT 字段包含到目前为止已提取的行数。 无论何种驱动程序支持， **SQLFetchScroll**与*操作*的 SQL_FETCH_LAST 将导致 SQL_DIAG_CURSOR_ROW_COUNT 字段包含的确切的行计数。
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72efaedb35351454fbf464ed1a2c941239ff9c58
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支持的 ODBC SQL 语法
 ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心安装选项和扩展 ODBC 2.5 语法。 可以通过跳转到显示其他信息[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)，[相关名称](../../odbc/microsoft/correlation-names.md)，和[过程调用](../../odbc/microsoft/procedure-invocation.md)主题。  
@@ -43,11 +41,11 @@ ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心�
   
 -   [谓词之间](../../odbc/microsoft/between-predicate.md)（核）  
   
--   [创建索引语句](../../odbc/microsoft/create-index-statement.md)  
+-   [CREATE INDEX 语句](../../odbc/microsoft/create-index-statement.md)  
   
 -   [日期算术](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet： 日期、 时间和时间戳文本](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet：日期、时间和时间戳文本](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX 语句](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -57,7 +55,7 @@ ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心�
   
 -   [ORDER BY 表达式列表](../../odbc/microsoft/order-by-expression-list.md)  
   
--   [ORDER BY GROUP BY 的](../../odbc/microsoft/order-by-with-group-by.md)  
+-   [ORDER BY 与 GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
 -   EXISTS 谓词 （核）  
   
@@ -72,4 +70,3 @@ ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心�
 -   [标量函数](../../odbc/microsoft/scalar-functions.md)  
   
 -   [表名称](../../odbc/microsoft/table-names.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
 大量的语言功能，如外部联接和标量函数调用，通常被实现的 Dbms。 但是，为这些功能语法往往是特定于 DBMS 的即使标准语法定义的各种标准正文。 因此，ODBC 定义包含以下语言功能的标准语法的转义序列：  
@@ -66,13 +64,12 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [日期、 时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
+-   [日期、时间和时间戳文本](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   
 -   [标量函数调用](../../../odbc/reference/develop-app/scalar-function-calls.md)  
   
--   [如谓词转义字符](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
+-   [LIKE 谓词转义字符](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
 -   [外部联接](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [过程调用](../../../odbc/reference/develop-app/procedure-calls.md)
-

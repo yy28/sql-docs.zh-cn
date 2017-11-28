@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5caebf50c2f7ec29bef49b2b42bbd5a1452218a8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1e0e00c69c3b2203539c093d3cd9935ef661f126
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驱动程序的概述
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,14 +34,14 @@ ms.lasthandoff: 09/09/2017
   
 |主题|Description|  
 |-----------|-----------------|  
-|[下载 Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Microsoft SQL Server JDBC 驱动程序的下载链接|  
+|[下载 Microsoft SQL Server JDBC 驱动程序](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Microsoft SQL Server JDBC 驱动程序的下载链接|  
 |[JDBC 驱动程序的发行说明](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|介绍 Microsoft JDBC 驱动程序当前版本中新增的功能。|  
 |[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)|介绍使用 Microsoft JDBC 驱动程序所需的系统要求。|  
 |[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)|描述如何配置您的环境以使用 Microsoft JDBC 驱动程序以及如何使的简单连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。|  
 |[了解 Java EE 支持](../../connect/jdbc/understanding-java-ee-support.md)|介绍如何在 Java 平台 Enterprise Edition (Java EE) 环境中使用 Microsoft JDBC 驱动程序。|  
-|[部署的 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)|介绍如何在 Windows 和 Unix 操作系统中部署 Microsoft JDBC 驱动程序。|  
-|[重新分发的 Microsoft JDBC 驱动程序](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|描述如何注册以再分发 Microsoft JDBC 驱动程序。|  
-|[查找其他 JDBC 驱动程序信息](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|介绍在何处可找到有关 Microsoft JDBC 驱动程序的其他资源，包括外部资源的链接。|  
+|[部署 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)|介绍如何在 Windows 和 Unix 操作系统中部署 Microsoft JDBC 驱动程序。|  
+|[再分发 Microsoft JDBC 驱动程序](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|描述如何注册以再分发 Microsoft JDBC 驱动程序。|  
+|[查找 JDBC 驱动程序的其他信息](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|介绍在何处可找到有关 Microsoft JDBC 驱动程序的其他资源，包括外部资源的链接。|  
 |[Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft SQL Server JDBC 驱动程序的支持矩阵和支持生命周期策略。|  
 |[Frequently Asked 问题 &#40;常见问题 &#41;JDBC 驱动程序](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC 驱动程序常见问题解答。|  
   
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  [JDBC 驱动程序 API 参考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   
-

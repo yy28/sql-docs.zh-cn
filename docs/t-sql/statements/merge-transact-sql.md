@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - updating data [SQL Server]
 - modifying data [SQL Server], MERGE statement
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd8ecb3609dd70516023afe84125252c708ad1ad
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d071a0137d39abb638131df391c72eae75292c08
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,10 +165,10 @@ SET
   
 ## <a name="arguments"></a>参数  
  与\<common_table_expression >  
- 指定在 MERGE 语句作用域内定义的临时命名结果集或视图，也称为公用表表达式。 该结果集派生自一个简单查询，并由 MERGE 语句引用。 有关详细信息，请参阅[使用 common_table_expression & #40;Transact SQL & #41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 指定在 MERGE 语句作用域内定义的临时命名结果集或视图，也称为公用表表达式。 该结果集派生自一个简单查询，并由 MERGE 语句引用。 有关详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  顶部 (*表达式*) [%]  
- 指定受影响的行数或行百分比。 *表达式*可以是一个数字或百分比的行。 在 TOP 表达式中引用的行不是以任意顺序排列的。 有关详细信息，请参阅[顶部 & #40;Transact SQL & #41;](../../t-sql/queries/top-transact-sql.md).  
+ 指定受影响的行数或行百分比。 *表达式*可以是一个数字或百分比的行。 在 TOP 表达式中引用的行不是以任意顺序排列的。 有关详细信息，请参阅[顶部 &#40;Transact SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
   
  在联接整个源表和整个目标表并且删除了不符合插入、更新或删除操作条件的联接行之后，应用 TOP 子句。 TOP 子句将联接行的数量进一步减少为指定值，并且以一种无序方式对其余联接行应用插入、更新或删除操作。 也就是说，在 WHEN 子句中定义的操作中，这些行是无序分布的。 例如，如果指定 TOP (10)，将会影响 10 行；在这些行中，可能会更新 7 行而插入 3 行，或者可能删除 1 行、更新 5 行并且插入 4 行，等等。  
   
@@ -198,7 +195,7 @@ SET
   
  \<table_source > 可以是使用一个派生的表[!INCLUDE[tsql](../../includes/tsql-md.md)][表值构造函数](../../t-sql/queries/table-value-constructor-transact-sql.md)以构造通过指定多个行的表。  
   
- 有关语法和参数的此子句的详细信息，请参阅[FROM & #40;Transact SQL & #41;](../../t-sql/queries/from-transact-sql.md).  
+ 有关语法和参数的此子句的详细信息，请参阅[FROM &#40;Transact SQL &#41;](../../t-sql/queries/from-transact-sql.md).  
   
  ON \<merge_search_condition >  
  在其上指定的条件\<table_source > 关联在一起; *target_table*以确定它们匹配的地方。 
@@ -222,12 +219,12 @@ SET
  当通过返回任何行\<table_source >，不能访问源表中的列。 如果中指定的 update 或 delete 操作\<merge_matched > 子句引用源表中的列，返回错误 207 （无效的列名称）。 例如，由于无法访问源表中的 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1`，因此 `Col1` 子句可能导致该语句失败。  
   
  和\<clause_search_condition >  
- 指定任何有效的搜索条件。 有关详细信息，请参阅[搜索条件 & #40;Transact SQL & #41;](../../t-sql/queries/search-condition-transact-sql.md).  
+ 指定任何有效的搜索条件。 有关详细信息，请参阅[搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  \<table_hint_limited >  
  为由 MERGE 语句执行的每个插入、更新或删除操作指定对目标表应用的一个或多个表提示。 需要有 WITH 关键字和括号。  
   
- 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 & #40;Transact SQL & #41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  对作为 INSERT 语句目标的表指定 TABLOCK 提示与指定 TABLOCKX 提示具有相同的效果。 对表采用排他锁。 如果指定了 FORCESEEK，会将其应用于与源表联接的目标表的隐式实例。  
   
@@ -238,7 +235,7 @@ SET
  指定目标表上的一个或多个索引的名称或 ID，以执行与源表的隐式联接。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<output_clause >  
- 返回的行中的每一行*target_table* ，是更新、 插入或删除，顺序不分先后。 **$action**可以在 output 子句中指定。 **$action**是类型的列**nvarchar(10)** ，返回的每一行的三个值之一: 'INSERT'、 'UPDATE' DELETE'，根据执行该行的操作。 此子句的自变量的详细信息，请参阅[OUTPUT 子句 & #40;Transact SQL & #41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ 返回的行中的每一行*target_table* ，是更新、 插入或删除，顺序不分先后。 **$action**可以在 output 子句中指定。 **$action**是类型的列**nvarchar(10)** ，返回的每一行的三个值之一: 'INSERT'、 'UPDATE' DELETE'，根据执行该行的操作。 此子句的自变量的详细信息，请参阅[OUTPUT 子句 &#40;Transact SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  选项 ( \<query_hint > [，...n])  
  指定使用优化器提示来自定义数据库引擎处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
@@ -249,7 +246,7 @@ SET
  更新设置\<set_clause >  
  指定目标表中要更新的列或变量名的列表，以及用于更新它们的值。  
   
- 此子句的自变量的详细信息，请参阅[更新 & #40;Transact SQL & #41;](../../t-sql/queries/update-transact-sql.md). 不允许将变量设置为与列相同的值。  
+ 此子句的自变量的详细信息，请参阅[更新 &#40;Transact SQL &#41;](../../t-sql/queries/update-transact-sql.md). 不允许将变量设置为与列相同的值。  
   
  DELETE  
  指定匹配中的行的行*target_table*将被删除。  
@@ -266,10 +263,10 @@ SET
  DEFAULT VALUES  
  强制插入的行包含为每个列定义的默认值。  
   
- 有关此子句的详细信息，请参阅[INSERT & #40;Transact SQL & #41;](../../t-sql/statements/insert-transact-sql.md).  
+ 有关此子句的详细信息，请参阅[INSERT &#40;Transact SQL &#41;](../../t-sql/statements/insert-transact-sql.md).  
   
  \<搜索条件 >  
- 指定用于指定的搜索条件\<merge_search_condition > 或\<clause_search_condition >。 有关此子句的参数的详细信息，请参阅[搜索条件 & #40;Transact SQL & #41;](../../t-sql/queries/search-condition-transact-sql.md).  
+ 指定用于指定的搜索条件\<merge_search_condition > 或\<clause_search_condition >。 有关此子句的参数的详细信息，请参阅[搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="remarks"></a>注释  
  必须指定三个 MATCHED 子句中的至少一个子句，但可以按任何顺序指定。 不能在同一个 MATCHED 子句中多次更新一个变量。  
@@ -278,7 +275,7 @@ SET
   
  MERGE 语句需要一个分号 (;) 作为语句终止符。 如果运行没有终止符的 MERGE 语句，将引发错误 10713。  
   
- 后合并，使用[@@ROWCOUNT & #40;Transact SQL & #41;](../../t-sql/functions/rowcount-transact-sql.md)返回的行插入、 更新和删除到客户端总数。  
+ 后合并，使用[@@ROWCOUNT &#40;Transact SQL &#41;](../../t-sql/functions/rowcount-transact-sql.md)返回的行插入、 更新和删除到客户端总数。  
   
  在数据库兼容级别设置为 100 或更高时，MERGE 为完全保留的关键字。 MERGE 语句可用于设置为 90 和 100 的数据库兼容级别；但是，在将数据库兼容级别设置为 90 时，MERGE 为非完全保留的关键字。  
   
@@ -398,7 +395,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 借助派生的源表，使用 MERGE 对目标表执行 UPDATE 和 INSERT 操作  
- 下面的示例使用 MERGE 以更新或插入行的方式来修改 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `SalesReason` 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 当 `NewName` 的值不匹配时，就会将源行插入到目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 & #40;Transact SQL & #41;](../../t-sql/queries/table-value-constructor-transact-sql.md). 该示例还说明了如何在表变量中存储 OUTPUT 子句的结果，并且说明存储结果之后如何通过执行返回已插入和更新的行的计数的简单选择操作来汇总 MERGE 语句的结果。  
+ 下面的示例使用 MERGE 以更新或插入行的方式来修改 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `SalesReason` 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 当 `NewName` 的值不匹配时，就会将源行插入到目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 &#40;Transact SQL &#41;](../../t-sql/queries/table-value-constructor-transact-sql.md). 该示例还说明了如何在表变量中存储 OUTPUT 子句的结果，并且说明存储结果之后如何通过执行返回已插入和更新的行的计数的简单选择操作来汇总 MERGE 语句的结果。  
   
 ```  
 -- Create a temporary table variable to hold the output actions.  
@@ -456,11 +453,10 @@ GO
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [OUTPUT 子句 & #40;Transact SQL & #41;](../../t-sql/queries/output-clause-transact-sql.md)   
+ [OUTPUT 子句 &#40;Transact SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [Integration Services 中合并包](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [表值构造函数 & #40;Transact SQL & #41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
+ [表值构造函数 &#40;Transact SQL &#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
   
   
-
 

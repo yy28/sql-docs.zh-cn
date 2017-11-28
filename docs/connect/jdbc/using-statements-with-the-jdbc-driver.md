@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用语句
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,15 +43,14 @@ ms.lasthandoff: 09/09/2017
 |主题|Description|  
 |-----------|-----------------|  
 |[使用 SQL 语句](../../connect/jdbc/using-statements-with-sql.md)|介绍如何使用 JDBC 驱动程序的 SQL 语句以使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。|  
-|[使用存储过程的语句](../../connect/jdbc/using-statements-with-stored-procedures.md)|描述如何使用 JDBC 驱动程序存储的过程使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。|  
+|[在存储过程中使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)|描述如何使用 JDBC 驱动程序存储的过程使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。|  
 |[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)|说明如何使用 JDBC 驱动程序从多个结果集检索数据。|  
 |[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)|说明如何使用 SQL 转义序列，例如日期和时间原义字符和函数。|  
-|[使用自动生成密钥](../../connect/jdbc/using-auto-generated-keys.md)|说明如何使用自动生成的键。|  
+|[使用自动生成的键](../../connect/jdbc/using-auto-generated-keys.md)|说明如何使用自动生成的键。|  
 |[执行批处理操作](../../connect/jdbc/performing-batch-operations.md)|说明如何使用 JDBC 驱动程序执行批处理操作。|  
 |[处理复杂语句](../../connect/jdbc/handling-complex-statements.md)|说明如何使用 JDBC 驱动程序运行复杂语句，这些语句执行多种任务并且可能返回不同类型的数据。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

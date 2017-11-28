@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
+ms.openlocfilehash: 3cf5b554da4a01fd52aa2ae0766b1379bab1acfb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安装 SQL Server，并在 Ubuntu 上创建数据库
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 10/21/2017
 
 ## <a id="install"></a>安装 SQL Server
 
-若要配置 SQL Server 在 Ubuntu 上，在安装终端中运行以下命令**mssql server**包。
+若要在 Ubuntu 上配置 SQL Server ，在终端中运行以下命令安装**mssql server**包。
 
 > [!IMPORTANT]
 > 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)。
@@ -71,7 +70,7 @@ ms.lasthandoff: 10/21/2017
    sudo apt-get install -y mssql-server
    ```
 
-1. 运行包安装完成后**mssql conf 安装**并按照提示操作以设置 SA 密码，并选择你的版本。
+1. 软件包安装完成后，运行**mssql conf 安装**命令并按照操作提示设置 SA 密码，并选择你的版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -89,13 +88,13 @@ ms.lasthandoff: 10/21/2017
    systemctl status mssql-server
    ```
 
-1. 如果你计划远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433年）。
+1. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。
 
 此时，SQL Server 正在您 Ubuntu 的计算机上运行并且已准备好使用 ！
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下步骤安装 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -116,7 +115,7 @@ ms.lasthandoff: 10/21/2017
    sudo apt-get install -y mssql-tools unixodbc-dev
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你**路径**环境变量。 这使您可以运行工具，而无需指定完整路径。 运行以下命令以修改**路径**登录会话和交互式/非-登录会话：
+1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**境变量。 这使您可以运行工具，而无需指定完整路径。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -125,7 +124,6 @@ ms.lasthandoff: 10/21/2017
    ```
 
 > [!TIP]
-> **Sqlcmd**是用于连接到 SQL Server 以运行查询并执行管理和开发任务只在一个工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-
