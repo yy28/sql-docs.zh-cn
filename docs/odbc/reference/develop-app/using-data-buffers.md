@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 323e8344dc92f9297a69ac98e115b20000d13162
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62d94e1afab75c39a16aa0f9e3b4ca0e70527dfb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-data-buffers"></a>使用数据缓冲区
 由以下三部分信息描述数据缓冲区： 它们类型、 地址和字节的长度。 每当函数需要这部分信息之一，并且不能已了解它，它有一个与其应用程序将其传递的参数。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 -   [数据缓冲区地址](../../../odbc/reference/develop-app/data-buffer-address.md)  
   
 -   [数据缓冲区长度](../../../odbc/reference/develop-app/data-buffer-length.md)
-

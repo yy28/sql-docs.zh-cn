@@ -2,32 +2,31 @@
 title: "授予对数据库对象的访问权限 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- granting access to database objects
+applies_to: SQL Server 2016
+helpviewer_keywords: granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5ccbacfe52541c59e12b992220f40806cae46bca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cc5c15a44f16e4049974ff76095a389348707c7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>课 2-4-授予访问数据库对象
-作为管理员，可以从 **Products** 表和 **vw_Names** 视图执行 Select，以及执行 **pr_Names** 过程；但是 Mary 不能。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]作为管理员，你可以执行从选择**产品**表和**vw_Names**查看和执行**pr_Names**过程; 但是，Mary 无法。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
   
 ### <a name="procedure-title"></a>过程标题  
   
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

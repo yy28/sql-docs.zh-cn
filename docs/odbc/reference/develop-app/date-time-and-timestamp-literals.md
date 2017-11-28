@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], literals
+helpviewer_keywords: escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aa042321602332ea016b88c69332dd67a256044
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 时间和时间戳文本
 日期、 时间和时间戳文本的转义序列是  
@@ -97,4 +94,3 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  若要确定驱动程序是否支持间隔文字 ODBC 转义序列，应用程序调用**SQLGetTypeInfo**。 如果数据源支持的日期时间间隔数据类型，它还必须支持相应的转义序列。  
   
  数据源还可以支持 ANSI sql-92 规范中定义的日期时间间隔文本中的 ODBC 转义序列从不同的日期时间文字。 若要确定数据源是否支持 ANSI 文本，应用程序调用**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 选项。
-

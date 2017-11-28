@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], testing
 - operators [Transact-SQL], comparison
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 45c0e85b89d542dce815104eb8e831169599227b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08cdeecc9dc7da123ae94623a30913ed358de93b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="comparison-operators-transact-sql"></a>比较运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +39,15 @@ ms.lasthandoff: 09/01/2017
   
 |运算符|含义|  
 |--------------|-------------|  
-|[= （等于）](../../t-sql/language-elements/equals-transact-sql.md)|等于|  
+|[=（等于）](../../t-sql/language-elements/equals-transact-sql.md)|等于|  
 |[>（大于）](../../t-sql/language-elements/greater-than-transact-sql.md)|大于|  
 |[<（小于）](../../t-sql/language-elements/less-than-transact-sql.md)|小于|  
 |[>=（大于或等于）](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|大于或等于|  
 |[<=（小于或等于）](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|小于或等于|  
 |[<>（不等于）](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|不等于|  
-|[！ = （不等于）](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|不等于（非 ISO 标准）|  
-|[\！ < （不小于）](../../t-sql/language-elements/not-less-than-transact-sql.md)|不小于（非 ISO 标准）|  
-|[！ > （不大于）](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大于（非 ISO 标准）|  
+|[!=（不等于）](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|不等于（非 ISO 标准）|  
+|[!<（不小于）](../../t-sql/language-elements/not-less-than-transact-sql.md)|不小于（非 ISO 标准）|  
+|[!>（不大于）](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大于（非 ISO 标准）|  
   
 ## <a name="boolean-data-type"></a>Boolean 数据类型  
  比较运算符的结果具有**布尔**数据类型。 它有三个值：TRUE、FALSE 和 UNKNOWN。 返回的表达式**布尔**数据类型被称为布尔表达式。  
@@ -74,6 +71,6 @@ IF (@MyProduct <> 0)
   
 ## <a name="see-also"></a>另请参阅  
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

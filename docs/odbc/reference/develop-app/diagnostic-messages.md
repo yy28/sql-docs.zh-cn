@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-messages"></a>诊断消息
 诊断消息将返回每个 SQLSTATE 带。 使用大量不同的消息通常返回相同的 SQLSTATE。 例如，为 SQL 语法中的大多数错误返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误很可能可以通过不同的消息进行描述。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [1] 在此情况下，该驱动程序充当的驱动程序和数据源。  
   
  方括号 (**[]**) 必须包含在消息中，不能证明是可选项。
-

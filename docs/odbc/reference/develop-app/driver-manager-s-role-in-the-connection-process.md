@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驱动程序管理器 &#39; s 连接过程中的角色
 请记住，应用程序请勿直接调用驱动程序函数。 相反，这些驱动程序管理器具有相同名称的函数调用，驱动程序管理器调用驱动程序函数。 通常情况下，发生这种情况几乎立即。 例如，在应用程序调用**SQLExecute**驱动程序管理器中之后，一些错误检查，驱动程序管理器调用**SQLExecute**驱动程序中。  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  驱动程序管理器将会锁定环境句柄 (*henv*) 在调用驾之前**SQLAllocHandle**和**SQLFreeHandle**时*HandleType*设置为**SQL_HANDLE_DBC**。  
   
  在应用程序调用**SQLDisconnect**，驱动程序管理器调用**SQLDisconnect**驱动程序中。 但是，它留在应用程序重新连接到该驱动程序的情况下加载的驱动程序。 在应用程序调用**SQLFreeHandle**使用 SQL_HANDLE_DBC 选项时，驱动程序管理器调用**SQLFreeHandle**驱动程序中。 如果任何其他连接不使用该驱动程序，然后调用驱动程序管理器**SQLFreeHandle**中与 SQL_HANDLE_ENV 驱动程序选项和卸载该驱动程序。
-

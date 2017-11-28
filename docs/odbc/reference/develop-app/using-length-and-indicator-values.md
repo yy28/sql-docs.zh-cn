@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>使用长度和指示器值
 长度/指示器缓冲区用于传递的字节长度的数据缓冲区或如 SQL_NULL_DATA，指示数据为 NULL 的特殊指示器中的数据。 根据使用它的函数，定义长度/指示器缓冲区为 SQLINTEGER 或 SQLSMALLINT。 因此，单个自变量需要对其进行描述。 数据缓冲区是否 nondeferred 输入的缓冲区，该参数将包含的字节长度的数据本身或指示器值。 通常名为*StrLen_or_Ind*或类似的名称。 例如，下面的代码调用**SQLPutData**传递缓冲区的数据的完整; 字节长度 (*ValueLen*) 被直接传递，因为数据缓冲区 (*ValuePtr*) 是输入的缓冲区。  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM。 一个过程是而不是相应的数据缓冲区中的值的过程中使用输入参数的默认值。  
   
 -   SQL_COLUMN_IGNORE。 **SQLBulkOperations**或**SQLSetPos**是忽略数据缓冲区中的值。 通过调用更新数据行时**SQLBulkOperations**或**SQLSetPos，**列值不会更改。 通过调用插入新的数据行时**SQLBulkOperations**，该列的值设置为其默认值或者，如果列不具有默认情况下，为 NULL。
-

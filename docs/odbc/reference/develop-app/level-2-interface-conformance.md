@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 216cfaa83c7b48e94778b98fde9766a47221091b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-interface-conformance"></a>级别 2 接口一致性
 级别 2 接口一致性级别包括级别 1 界面一致性 – 级别功能以及下列功能：  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |209|设置为 SQL_CONCUR_READ_ONLY 以外的至少一个值的 SQL_ATTR_CONCURRENCY 语句属性。|  
 |210|超时登录请求和 SQL 查询 （SQL_ATTR_LOGIN_TIMEOUT 和 SQL_ATTR_QUERY_TIMEOUT） 的能力。|  
 |211|能够更改默认隔离级别;能够执行"可序列化"的隔离级别的事务。|
-

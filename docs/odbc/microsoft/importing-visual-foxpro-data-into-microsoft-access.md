@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Access
 - Visual FoxPro data [ODBC], importing
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6835c7ba9b4e1d2034b20e2e9945888f74bba60c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Visual FoxPro 数据导入 Microsoft Access
 你可以导入到 Microsoft Access 数据库使用导入选项 Visual FoxPro 数据库中存储的数据。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  你现在可以使用 Microsoft Access 操作导入 Visual FoxPro 表中的数据。 你导入的数据是在 Visual FoxPro; 中存储的数据的快照对导入数据所做的更改不发送回 Visual FoxPro 数据源中。  
   
  如果您希望更改可在 Microsoft Access，若要更改 Visual FoxPro 数据源上的数据，请参阅[查询和 Microsoft Access 更新 Visual FoxPro 数据](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)。
-

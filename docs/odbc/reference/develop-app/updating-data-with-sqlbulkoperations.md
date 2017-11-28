@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2bcfa39dca534aaa03fe95293b6143180ac9920
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75e5f954065c0b41935aa231c85c093d5ee10226
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新数据
 应用程序可以执行大容量更新、 删除、 提取或插入操作上具有对的调用的数据源中的基础表**SQLBulkOperations**。 调用**SQLBulkOperations**是一个便捷替代方式构造和执行 SQL 语句。 它可让 ODBC 驱动程序支持定位的更新，即使数据源不支持定位的 SQL 语句。 它是范例的通过函数调用实现完整的数据库访问的一部分。  
@@ -42,11 +40,10 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [使用 SQLBulkOperations 更新书签的行](../../../odbc/reference/develop-app/updating-rows-by-bookmark-with-sqlbulkoperations.md)  
+-   [使用 SQLBulkOperations 按书签更新行](../../../odbc/reference/develop-app/updating-rows-by-bookmark-with-sqlbulkoperations.md)  
   
--   [删除通过具有 SQLBulkOperations 书签的行](../../../odbc/reference/develop-app/deleting-rows-by-bookmark-with-sqlbulkoperations.md)  
+-   [使用 SQLBulkOperations 按书签删除行](../../../odbc/reference/develop-app/deleting-rows-by-bookmark-with-sqlbulkoperations.md)  
   
--   [与 SQLBulkOperations 插入行](../../../odbc/reference/develop-app/inserting-rows-with-sqlbulkoperations.md)  
+-   [使用 SQLBulkOperations 插入行](../../../odbc/reference/develop-app/inserting-rows-with-sqlbulkoperations.md)  
   
--   [获取具有 SQLBulkOperations 行](../../../odbc/reference/develop-app/fetching-rows-with-sqlbulkoperations.md)
-
+-   [使用 SQLBulkOperations 提取行](../../../odbc/reference/develop-app/fetching-rows-with-sqlbulkoperations.md)

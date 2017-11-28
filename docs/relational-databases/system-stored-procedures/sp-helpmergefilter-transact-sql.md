@@ -1,0 +1,88 @@
+---
+title: "sp_helpmergefilter (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: replication
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+applies_to: SQL Server
+f1_keywords:
+- sp_helpmergefilter
+- sp_helpmergefilter_TSQL
+helpviewer_keywords: sp_helpmergefilter
+ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
+caps.latest.revision: "15"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 6ec2500e3fc16c2f6c78473fb97a6b1bf757ef52
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  返回有关合并筛选器的信息。 此存储过程在发布服务器的任何数据库中执行。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+sp_helpmergefilter [ @publication= ] 'publication'   
+    [ , [ @article= ] 'article']  
+    [ , [ @filtername= ] 'filtername']  
+```  
+  
+## <a name="arguments"></a>参数  
+ [  **@publication=**] *发布*  
+ 发布的名称。 *发布*是**sysname**，无默认值。  
+  
+ [  **@article=**] *文章*  
+ 项目的名称。 *文章*是**sysname**，默认值为 **%** ，其返回的所有项目的名称。  
+  
+ [  **@filtername=**] *filtername*  
+ 要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为 **%** ，这将返回有关上项目或发布定义的所有筛选器信息。  
+  
+## <a name="result-sets"></a>结果集  
+  
+|列名|数据类型|Description|  
+|-----------------|---------------|-----------------|  
+|**join_filterid**|**int**|联接筛选器的 ID。|  
+|**filtername**|**sysname**|筛选器名称。|  
+|**联接项目名称**|**sysname**|联接项目名。|  
+|**join_filterclause**|**nvarchar(2000)**|用于限定联接的筛选子句。|  
+|**join_unique_key**|**int**|表示是否在唯一键上联接。|  
+|**基表所有者**|**sysname**|基表所有者的名称。|  
+|**基表名称**|**sysname**|基表的名称。|  
+|**联接表所有者**|**sysname**|与基表联接的表所有者的名称。|  
+|**联接表名称**|**sysname**|与基表联接的表名。|  
+|**项目名称**|**sysname**|与基表联接的表项目名。|  
+|**filter_type**|**tinyint**|合并筛选器的类型，可以为下面的一种：<br /><br /> **1** = 联接筛选器<br /><br /> **2** = 逻辑记录关系<br /><br /> **3** = both|  
+  
+## <a name="return-code-values"></a>返回代码值  
+ **0** （成功） 或**1** （失败）  
+  
+## <a name="remarks"></a>注释  
+ **sp_helpmergefilter**合并复制中使用。  
+  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergefilter**。  
+  
+## <a name="see-also"></a>另请参阅  
+ [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

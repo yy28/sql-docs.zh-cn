@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7747f421fe4a7356086cf27ecf62739f34acdd17
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors"></a>块状游标
 许多应用程序花费大量时间将跨网络的数据。 这一次的一部分花费实际跨网络，使数据以及它的部分是在上所花费网络开销，例如，为请求的数据行所做的驱动程序调用。 如果应用程序能够高效地使用可以降低后一种时间*块，*或*fat、* *光标、*可一次返回多个行。  
@@ -44,9 +42,8 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [用于块状游标绑定列](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)  
+-   [绑定列用于块游标](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)  
   
--   [使用块状游标](../../../odbc/reference/develop-app/using-block-cursors.md)  
+-   [使用块游标](../../../odbc/reference/develop-app/using-block-cursors.md)  
   
 -   [行状态数组](../../../odbc/reference/develop-app/row-status-array.md)
-

@@ -3,10 +3,12 @@ title: "DBCC SHOW_STATISTICS (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -32,20 +33,19 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS 显示表或索引视图的当前查询优化统计信息。 查询优化器使用统计信息估计查询结果中的基数或行数，这样，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以使用基数估计在查询计划中选择索引查找运算符而不是索引扫描运算符，从而通过避免消耗大量资源的索引扫描来提高查询性能。
   
@@ -149,7 +149,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 查询优化器按照直方图梯级的统计重要性来定义直方图梯级。 它使用最大差异算法使直方图中的梯级减至最少，并同时最大化边界值之间的差异。 最大梯级数为 200。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 例如，具有 100 个非重复值的列所具有的直方图的边界点可以少于 100。
   
 ## <a name="density-vector"></a>密度向量  
-查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 例如，如果统计信息对象包含键列 CustomerId、ItemId、Price，则根据以下每个列前缀计算密度。
+查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 例如，如果统计信息对象有键列`CustomerId`，`ItemId`和`Price`，密度计算上每个以下的列前缀。
   
 |列前缀|计算密度所基于的对象|  
 |---|---|
@@ -163,7 +163,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 若要查看统计信息对象，该用户必须拥有表或用户必须是属于`sysadmin`固定服务器角色、`db_owner`固定数据库角色或`db_ddladmin`固定的数据库角色。
   
-SQL Server 2012 SP1 修改了这些权限限制，允许具有 SELECT 权限的用户使用此命令。 请注意，SELECT 权限必须满足以下要求才能运行此命令：
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 修改权限限制，并允许具有 SELECT 权限，才能使用此命令的用户。 请注意，SELECT 权限必须满足以下要求才能运行此命令：
 -   用户必须对统计对象中的所有列具有权限  
 -   用户必须对筛选条件（如果存在）中的所有列具有权限  
 -   表不能具有行级别安全性策略。  
@@ -227,4 +227,3 @@ GO
 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f706364735794aea773847431a9d42d0a09c8183
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-4a-fetch-the-results"></a>步骤 4a： 提取结果
 下一步是提取结果，如下面的插图中所示。  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  检索结果的完整说明，请参阅[检索结果 (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)和[检索结果 （高级）](../../../odbc/reference/develop-app/retrieving-results-advanced.md)。  
   
  在应用程序现在返回到"步骤 3:: 生成并执行 SQL 语句"以在同一个事务; 中执行另一个语句或转到"步骤 5:: 提交事务"以提交或回滚事务。
-

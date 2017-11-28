@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], supported versions
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c59ade51c0b3aec211c60974e8b27c8fc521d526
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-versions-of-foxpro"></a>受支持的版本的 FoxPro
 你可以使用 Microsoft® Visual FoxPro® ODBC 驱动程序，来访问 FoxPro 表中存储数据。 支持以下版本的 FoxPro 数据：  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  有关如何连接到数据源的详细信息，请参阅[添加 Visual FoxPro 数据源](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)。  
   
  若要下载驱动程序，请参阅[Visual FoxPro ODBC 驱动程序下载站点](http://go.microsoft.com/fwlink/?LinkId=121318)。
-

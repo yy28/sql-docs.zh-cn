@@ -17,25 +17,23 @@ f1_keywords:
 - SELECT
 - SELECT_INTO
 - SELECT INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - SELECT INTO statement
 - mining models [Analysis Services], creating
 - copying mining models
 ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 978c1deca02aa60a7a123707de9ac3e95cd68851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: db4e68e8051e1104ce9ed7ad42d8ac9f86a98274
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +57,7 @@ FROM <existing model>
  提供程序定义的数据挖掘算法的名称。  
   
  *参数列表*  
- 選擇性。 由提供程序定义的算法所需参数的逗号分隔列表。  
+ 可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *expression*  
  计算结果为定型数据的有效筛选条件的表达式。 有关可用作筛选器的表达式的详细信息，请参阅[挖掘模型 &#40; 筛选器Analysis Services-数据挖掘 &#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
@@ -101,4 +99,3 @@ FROM [TM Clustering]
  [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

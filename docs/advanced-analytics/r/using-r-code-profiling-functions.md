@@ -5,22 +5,20 @@ ms.date: 11/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 745133739eed6e7ca08ffd55e51f479304566ec9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe4b8a4299570f07b858962bb665e37fc980e44
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-r-code-profiling-functions"></a>使用 R 代码分析函数
 除了使用 SQL Server 资源和工具来监视 R 脚本执行外，还可以使用由其他 R 包提供的性能工具来获取有关内部函数调用的详细信息。 本主题提供了引导你入门的一些基本资源的列表。 若要查看专家指导，建议你参阅由 Hadley Wickham 编写的“Advanced R”一书中有关[性能](http://adv-r.had.co.nz/Performance.html)的一章。
@@ -77,7 +75,6 @@ help("Sys.time")
 ### <a name="location-of-r-help-files"></a>R 帮助文件的位置
 
 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
-
 
 
 

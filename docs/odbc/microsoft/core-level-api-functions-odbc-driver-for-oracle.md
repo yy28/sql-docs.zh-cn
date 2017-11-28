@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7dd288a2b2c95f19c2e2a472bc5875971c9df312
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>核心级别 API 函数 （适用于 Oracle 的 ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -45,7 +43,7 @@ ms.lasthandoff: 09/09/2017
 |**SQLCancel**|取消语句句柄，hstmt 上的处理。 在某些情况下，Oracle 不允许取消正在运行的语句。 这意味着正在运行的语句将继续，直到 Oracle 完成此过程中，用于 Oracle 的 ODBC 驱动程序取消这段时间的语句的结果。|  
 |**SQLColAttributes**|返回结果集中的列的描述符信息。 描述符信息作为字符串、 32 位依赖于描述符的值或一个整数值返回。|  
 |**SQLConnect**|连接到数据源。 若要使用 Oracle 操作系统身份验证，指定"/"作为*szUID*参数和""作为*szAuthStr*参数。|  
-|**SQLDescribeCol**|返回名称、 类型、 精度、 小数位数和给定的结果列的为空性。 **注意：****SQLDescribeCol**报告为 SQL_VARCHAR 的计算的列。  |  
+|**SQLDescribeCol**|返回名称、 类型、 精度、 小数位数和给定的结果列的为空性。 **注意：****SQLDescribeCol**报告为 SQL_VARCHAR 的计算的列。|  
 |**SQLDisconnect**|关闭连接。 如果共享环境的情况下启用连接池和应用程序调用**SQLDisconnect**在该环境中连接时，该连接返回到连接池，仍可供使用的其他组件相同的共享的环境中。|  
 |**SQLError**|返回有关上一个错误的错误或状态信息。 驱动程序保持堆栈或可以为返回的错误的列表*hstmt*， *hdbc*，和*henv*自变量，具体取决于如何在调用**SQLError**进行。 每个语句后刷新错误队列。 通常检索 Oracle 错误消息，否则为空。|  
 |**SQLExecDirect**|执行新、 未准备好的 SQL 语句。 如果语句中存在任何参数，驱动程序将使用的参数标记变量的当前值。 如果你的表、 视图或字段名称包含空格，将名称括在返回引号标记。 例如，如果你的数据库包含名为的表*我表*和字段*My Field*，括起标识符的每个元素如下所示：<br /><br /> 选择\`我表\`。 \`我 Field1\`，;\`我表\`。\`我 Field2\` FROM\`我表|  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|将游标名称相关联与活动语句句柄， *hstmt*。|  
 |**SQLSetParam**|替换为 SQLBindParameter ODBC 2 中。*x*。|  
 |**SQLTransact**|请求提交或回滚操作中，为对所有语句句柄 (hstmts) 与连接关联的所有活动操作或与环境句柄，关联的所有连接*henv*。 如果提交失败时在手动模式下，则事务会保持活动状态，则你可以选择回滚事务，或重试提交操作。 如果在自动事务模式下，提交操作失败，事务将自动回滚;事务不能为非活动状态。|
-

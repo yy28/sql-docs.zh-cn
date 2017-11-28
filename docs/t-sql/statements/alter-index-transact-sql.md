@@ -3,17 +3,18 @@ title: "ALTER INDEX (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   通过禁用、重新生成或重新组织索引或者设置索引的选项，修改现有的表或视图索引（关系或 XML）。  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |重新组织分区 = *partition_number*|未分区的索引、XML 索引、空间索引或已禁用的索引|  
 |IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** （从 SQL Server 2012 开始） 的 SQL Server 和 Azure SQL 数据库。|  
 |ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** （从 SQL Server 2012 开始） 的 SQL Server 和 Azure SQL 数据库。|
-| 可恢复 = ON  | 不支持的可恢复索引**所有**关键字。 <br /><br /> **适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能） |   
+| 可恢复 = ON  | 不支持的可恢复索引**所有**关键字。 <br /><br /> **适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 |   
   
 > [!WARNING]
 >  有关详细信息可以联机执行索引操作，请参阅[联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
@@ -436,7 +436,7 @@ PAD_INDEX = { ON | OFF }
 
 可恢复 **=**  {ON |**OFF**}
 
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）  
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库   
 
  指定是否可恢复联机索引操作。
 
@@ -446,7 +446,7 @@ PAD_INDEX = { ON | OFF }
 
 MAX_DURATION  **=**  *时间*[**分钟**] 用于**RESUMABLE = ON** (需要**ONLINE = ON**).
  
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）  
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
 
 指示时间 （以分钟为单位指定的整数值） 可恢复联机索引操作正在暂停之前执行。 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**适用于**： 开头 （功能处于公共预览版中） 的 SQL Server 2017
+**适用于**： 从 SQL Server 自 2017 年 1 开始  
 
 恢复已暂停，手动或由于失败的索引操作。
 
 MAX_DURATION 用于**RESUMABLE = ON**
 
  
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库
 
 时间 （以分钟为单位指定一个整数值） 可恢复的联机索引操作之后执行正在恢复。 时间到期后，可恢复的操作已暂停，如果它仍在运行。
 
 与使用 WAIT_AT_LOW_PRIORITY **RESUMABLE = ON**和**ONLINE = ON**。  
   
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
   
  要等待的时间对此表的阻止操作暂停后恢复联机索引重新生成。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
 
 
 PAUSE
  
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
   
 暂停可恢复的联机索引重新生成操作。
 
 中止
 
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）   
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库   
 
 中止已声明为可恢复的正在运行或暂停索引操作。 您必须显式执行**中止**命令终止可恢复索引重新生成操作。 故障或暂停可恢复的索引操作不会终止其执行;相反，它留在无限期暂停状态的操作。
   
@@ -712,7 +712,7 @@ PAUSE
 
 ### <a name="resumable-index-operations"></a>可恢复的索引操作
 
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
 
 联机索引重新生成被指定为可恢复使用 RESUMABLE = ON 选项。 
 -  可恢复的选项不会保存在给定索引的元数据并且仅适用于当前的 DDL 语句的持续时间。 因此，RESUMABLE = ON 子句必须显式指定，若要启用 resumability。
@@ -786,7 +786,7 @@ PAUSE
   
 -   列存储索引不可用 SQL Server 2012 之前。 
 
--  可恢复的索引操作是可从开始的 SQL Server 2017 和 Azure SQL 数据库 （功能是以公共预览版） |   
+-  均与 SQL Server 2017 和 Azure SQL 数据库开始提供的可恢复的索引操作   
   
 ## <a name="basic-syntax-example"></a>基本语法示例：   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 可恢复的联机索引重新生成
 
-**适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）    
+**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库   
 
  下面的示例演示如何使用可恢复的联机索引重新生成。 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

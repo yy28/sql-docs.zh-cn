@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
+ms.openlocfilehash: ace4b62046bdb10ab32718d2c941892ef83d0ee8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -459,4 +458,3 @@ traceflag = 3456
 若要改为使用环境变量使这些配置更改的某些项目，请参阅[与环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
 
 其他管理工具和方案，请参阅[管理在 Linux 上的 SQL Server](sql-server-linux-management-overview.md)。
-

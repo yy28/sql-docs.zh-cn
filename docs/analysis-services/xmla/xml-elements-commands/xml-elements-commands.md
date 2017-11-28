@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 19644de3ba240e417faa3d787360686d7b5c835f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64577ef2799fd56cc4e404a42fc351be8ece6baa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---commands"></a>XML 元素的命令
   此参考部分包含 XML 用于 Analysis (XMLA) 元素，可以在用**命令**期间元素**执行**方法调用。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/01/2017
 |[UpdateCells 元素](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)|更新启用写操作的多维数据集中的单元。|  
   
   
-

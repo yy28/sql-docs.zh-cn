@@ -6,7 +6,7 @@
 - 安装 SQL Server
 
 >[!NOTE]
->在Linux上，必须先创建可用性组，然后再将其添加为群集管理的群集资源。 本文档举例说明了如何创建可用性组。 有关在各种发行版中创建群集并将可用性组添加为群集资源的特定说明，请参阅[后续步骤](#next-steps)中的链接。
+>在Linux上，必须先创建可用性组，然后再将其添加为群集管理的群集资源。 本文档举例说明了如何创建可用性组。 有关在各种分发中创建群集并将可用性组添加为群集资源的特定说明，请参阅[后续步骤](#next-steps)中的链接。
 
 1. **更新每个主机的计算机名**
 
@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 可选择性地启用 Always On 可用性组的扩展事件，以便在对可用性组进行故障排除时帮助诊断根本原因。 在每个 SQL Server 实例上运行以下命令。 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ GO
 
 以下 Transact-SQL 脚本将创建名为 `dbm_login` 的登录名和名为 `dbm_user` 的用户。 使用强密码更新脚本。 在所有 SQL Server 实例上运行以下命令，创建数据库镜像终结点用户。
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Linux 上的 SQL Server 服务使用证书验证镜像终结点之间的通信�
 
 以下 Transact-SQL 脚本将创建主密钥和证书。 然后备份证书，并使用私钥保护文件。 使用强密码更新脚本。 连接到主 SQL Server 实例，并运行以下 Transact-SQL 来创建证书：
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -126,9 +126,9 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>在辅助服务器上创建证书
 
-以下 Transact-SQL 脚本根据在主 SQL Server 副本上创建的备份创建主密钥和证书。 该命令还会为用户授予访问证书的权限。 使用强密码更新脚本。 解密密码与在此前的步骤中创建 .pvk 文件使用的密码相同。 在所有辅助服务器上运行以下脚本创建证书。
+以下 Transact-SQL 脚本根据在主 SQL Server 副本上创建的备份创建主密钥和证书。 该命令还会为用户授予访问证书的权限。 使用强密码更新脚本。 解密密码与上一步中创建 .pvk 文件使用的密码相同。 在所有辅助服务器上运行以下脚本创建证书。
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>在所有副本上创建数据库镜像终结点
 
-数据库镜像端点使用传输控制协议 (TCP) 在参与数据库镜像会话或承载可用性副本的服务器实例之间发送和接收消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。 
+数据库镜像端点使用传输控制协议 (TCP) 在参与数据库镜像会话或承载可用性副本的服务器实例之间发送和接收消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。 TCP 侦听器需要的侦听器 IP 地址。 侦听器 IP 地址必须是 IPv4 地址。 你还可以使用`0.0.0.0`。 
 
 以下 Transact-SQL 将为可用性组创建名为 `Hadr_endpoint` 的侦听终结点。 它启动终结点，并向创建的用户授予连接权限。 在运行该脚本之前，替换 `**< ... >**` 之内的值。
 
->[!NOTE]
->对于此版本，请不要为侦听器 IP 使用不同的 IP 地址。 我们正在修复此问题，当前唯一可接受的值是“0.0.0.0”。
-
 为所有 SQL Server 实例上的环境更新以下 Transact-SQL： 
 
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->防火墙上的 TCP 端口需对侦听器端口打开。
+>[!NOTE]
+>如果你在一个节点上使用 SQL Server Express Edition 托管配置唯一的副本，为角色的唯一有效值是`WITNESS`。 在 SQL Server Express Edition 上运行以下脚本。
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->对于 SQL Server 2017 版本，数据库镜像终结点支持的唯一身份验证方法是 `CERTIFICATE`。 未来的版本中将启用 `WINDOWS` 选项。
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-有关完整信息，请参阅[数据库镜像终结点 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)。
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

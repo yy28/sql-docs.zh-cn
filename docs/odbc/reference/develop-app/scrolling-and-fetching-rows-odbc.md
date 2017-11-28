@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bf6624c5c5a814c1b290fec1d4f717e66dd5e46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>滚动和提取行 (ODBC)
 使用可滚动游标时，应用程序调用**SQLFetchScroll**定位游标和提取行。 **SQLFetchScroll**支持相对滚动 (下一步、 之前，和相对 *n* 行)，绝对滚动 (名字、 姓氏，和行 *n* )，和定位的书签。 *FetchOrientation*和*FetchOffset*中的自变量**SQLFetchScroll**指定要提取，哪些行集，如以下关系图中所示。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  滚动 ODBC 2 支持。*x*驱动程序通过**SQLExtendedFetch**。 有关详细信息，请参阅[块状游标可滚动游标，向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)为了向后兼容的附录 g： 驱动程序准则中。
-

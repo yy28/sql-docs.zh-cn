@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54f9d438571b1535d16f5fc3b333e9a9cede42eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="character-data-and-c-strings"></a>字符数据和 C 字符串
 引用 （如列名称、 动态参数和字符串特性值） 的长度可变的字符数据的输入的参数具有一个关联的长度参数。 如果在应用程序终止 null 字符，在 C 中的典型的字符串，它提供了作为自变量中，以字节为单位的 （不包括 null 终止符） 的字符串的长度，或者 sql_nts 以 （Null-Terminated 字符串）。 非负长度参数指定的关联字符串的实际长度。 长度参数可能为 0 以指定一个零长度字符串，它是不同于 NULL 值。 负值 sql_nts 以指示要通过定位 null 终止字符确定字符串的长度的驱动程序。  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  尽管应用程序和驱动程序通常使用 C 字符串 （以 null 结尾的字符数组） 来保存字符数据，但是没有无需执行此操作。 在 C 中，字符数据可以也被视为字符 （不带 null 终止） 的数组和长度/指示器缓冲区中单独传递其字节长度。  
   
  因为非 – null 结尾的数组中可容纳字符数据，而且其字节长度单独传递，则可以在字符数据中嵌入的空字符。 但是，ODBC 函数的行为在这种情况下是不确定，并且它是特定于驱动程序是否驱动程序处理这种情况正确。 因此，可互操作的应用程序应始终处理可以包含嵌入的 null 字符作为二进制数据的字符数据。
-

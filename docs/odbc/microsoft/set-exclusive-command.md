@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET EXCLUSIVE command [ODBC]
+helpviewer_keywords: SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5aa039c9af4b3dfbabce2647408be7f612c80f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 830cec1dbb87ae2bc4336d28d6112fd76b4db0ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-exclusive-command"></a>SET 独占命令
 指定是否在网络上独占或共享用于打开表文件。  
@@ -48,5 +45,4 @@ SET EXCLUSIVE ON | OFF
  更改设置排他的设置不会更改以前打开表的状态。 例如，如果表将打开，其中设置独占设置为 ON 和独占设置更高版本更改为 OFF，表将保留其独占使用状态。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC Visual FoxPro 安装程序对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-
+ [ODBC Visual FoxPro 设置对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

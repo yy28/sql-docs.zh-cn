@@ -8,24 +8,21 @@ ms.service:
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
+dev_langs: CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8985e162d0a1d72d2ca655be26b6c5c1a1607358
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4： 使用 ADO.NET 的 sql 的弹性连接
 
@@ -325,4 +322,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="next-steps"></a>后续步骤  
   
 若要浏览其他最佳 practicies 和设计准则，请访问[连接到 SQL 数据库： 链接、 最佳实践和设计准则](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
-

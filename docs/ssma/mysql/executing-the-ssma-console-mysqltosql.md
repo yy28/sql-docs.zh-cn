@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5536ace7511bbbb778b9ca5c3732ff78c986afd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d3524ac9d8aac255fdf87bedbe6cf3badad963bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。  
@@ -679,7 +677,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 8.  `write-summary-report-to`指定将生成摘要报表的路径。 如果只提到的文件夹路径，然后按名称文件**ConvertSQLReport.XML**创建。 （可选属性）  
   
-    创建具有 viz 进一步子类别的 2 的报表..,:  
+    创建具有 viz 进一步子类别的 2 的报表。。，：  
   
     -   报告错误 （="true/false"，使用默认为"false"（可选属性））。  
   
@@ -770,4 +768,3 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 3.  有关故障排除控制台中的问题，请参阅[故障排除 &#40;MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

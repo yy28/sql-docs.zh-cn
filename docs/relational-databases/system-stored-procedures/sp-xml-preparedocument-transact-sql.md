@@ -1,0 +1,169 @@
+---
+title: "sp_xml_preparedocument (TRANSACT-SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_xml_preparedocument_TSQL
+- sp_xml_preparedocument
+dev_langs: TSQL
+helpviewer_keywords: sp_xml_preparedocument
+ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
+caps.latest.revision: "38"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: de3ff49a53061f7a804c44886535f764e445fb2e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  读取作为输入提供的 XML 文本，然后使用 MSXML 分析器 (Msxmlsql.dll) 对其进行分析，并提供分析后的文档供使用。 分析后的文档对 XML 文档中的各节点（元素、属性、文本和注释等）的树状表示形式。  
+  
+ **sp_xml_preparedocument**返回可用来访问新创建的内部表示形式的 XML 文档的句柄。 此句柄是有效的持续时间的会话，或直到执行使无效句柄**sp_xml_removedocument**。  
+  
+> [!NOTE]  
+>  分析后的文档存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部缓存中。 MSXML 分析器占用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用总内存的八分之一。 若要避免内存不足，运行**sp_xml_removedocument**若要释放的内存。  
+  
+> [!NOTE]  
+>  有关向后兼容性， **sp_xml_preparedocument**折叠 CR （char(13)) 和 LF （即使这些字符进行实体化的属性中的 char(10)) 字符。  
+  
+> [!NOTE]  
+>  通过调用 XML 分析器**sp_xml_preparedocument**内部 Dtd 和实体声明可以分析。 因为恶意构造 Dtd 和实体声明可以用于执行拒绝服务攻击，我们强烈建议用户不是直接传递到不受信任源从 XML 文档**sp_xml_preparedocument**。  
+>   
+>  若要缓解递归实体扩展攻击， **sp_xml_preparedocument**可以扩展下方文档的顶层单个实体的实体数限制为 10,000。 该限制不适用于字符或数字实体。 通过该限制，可以存储带有多个实体引用的文档，同时可以禁止在长于 10,000 个扩展的链中递归扩展任意实体。  
+  
+> [!NOTE]  
+>  **sp_xml_preparedocument**限制为 256 一次可以打开的元素的数目。  
+  
+||  
+|-|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+sp_xml_preparedocument  
+hdoc   
+OUTPUT  
+[ , xmltext ]  
+[ , xpath_namespaces ]   
+```  
+  
+## <a name="arguments"></a>参数  
+ *hdoc*  
+ 新建文档的句柄。 *hdoc*是一个整数。  
+  
+ [ *xmltext* ]  
+ 是原来的 XML 文档。 MSXML 分析器分析该 XML 文档。 *xmltext*是文本参数： **char**， **nchar**， **varchar**， **nvarchar**，**文本**， **ntext**或**xml**。 默认值为 NULL，在此情况下将创建一个空 XML 文档的内部表示形式。  
+  
+> [!NOTE]  
+>  **sp_xml_preparedocument**只能处理文本或非类型化的 XML。 如果将作为输入的实例值已经是类型化的 XML，首先将它转换为新的非类型化的 XML 实例，或者转换为一个字符串，然后传递该值作为输入。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+  
+ [ *xpath_namespaces* ]  
+ 指定在 OPENXML 的行和列 XPath 表达式中使用的命名空间声明。 *xpath_namespaces*是文本参数： **char**， **nchar**， **varchar**， **nvarchar**，**文本**， **ntext**或**xml**。  
+  
+ 默认值是**\<根 xmlns:mp ="urn： 架构-microsoft-com:xml-metaprop">**。 *xpath_namespaces*通过格式良好的 XML 文档在 OPENXML 中的 XPath 表达式中使用的前缀为提供命名空间 Uri。 *xpath_namespaces*声明必须用来引用命名空间前缀**urn： 架构-microsoft-com:xml-metaprop**; 这可提供有关已分析的 XML 元素的元数据。 虽然可以使用这项技术来为元属性命名空间重新定义命名空间前缀，但该命名空间不会丢失。 前缀**mp**仍有效**urn： 架构-microsoft-com:xml-metaprop**即使*xpath_namespaces*包含任何此类声明。  
+  
+## <a name="return-code-values"></a>返回代码值  
+ 0（成功）或 >0（失败）  
+  
+## <a name="permissions"></a>Permissions  
+ 要求 **公共** 角色具有成员身份。  
+  
+## <a name="examples"></a>示例  
+  
+### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>A. 为格式正确的 XML 文档准备内部表示形式  
+ 以下示例返回作为输入提供的 XML 文档的新建内部表示形式的句柄。 在对 `sp_xml_preparedocument` 的调用中，将使用默认的命名空间前缀映射。  
+  
+```  
+DECLARE @hdoc int;  
+DECLARE @doc varchar(1000);  
+SET @doc ='  
+<ROOT>  
+<Customer CustomerID="VINET" ContactName="Paul Henriot">  
+   <Order CustomerID="VINET" EmployeeID="5" OrderDate="1996-07-04T00:00:00">  
+      <OrderDetail OrderID="10248" ProductID="11" Quantity="12"/>  
+      <OrderDetail OrderID="10248" ProductID="42" Quantity="10"/>  
+   </Order>  
+</Customer>  
+<Customer CustomerID="LILAS" ContactName="Carlos Gonzlez">  
+   <Order CustomerID="LILAS" EmployeeID="3" OrderDate="1996-08-16T00:00:00">  
+      <OrderDetail OrderID="10283" ProductID="72" Quantity="3"/>  
+   </Order>  
+</Customer>  
+</ROOT>';  
+--Create an internal representation of the XML document.  
+EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;  
+-- Remove the internal representation.  
+exec sp_xml_removedocument @hdoc;  
+```  
+  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. 为带 DTD 的格式正确的 XML 文档准备内部表示形式  
+ 以下示例返回作为输入提供的 XML 文档的新建内部表示形式的句柄。 存储过程根据文档中包含的 DTD 来验证装载的文档。 在对 `sp_xml_preparedocument` 的调用中，将使用默认的命名空间前缀映射。  
+  
+```  
+DECLARE @hdoc int;  
+DECLARE @doc varchar(2000);  
+SET @doc = '  
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE root   
+[<!ELEMENT root (Customers)*>  
+<!ELEMENT Customers EMPTY>  
+<!ATTLIST Customers CustomerID CDATA #IMPLIED ContactName CDATA #IMPLIED>]>  
+<root>  
+<Customers CustomerID="ALFKI" ContactName="Maria Anders"/>  
+</root>';  
+  
+EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;  
+```  
+  
+### <a name="c-specifying-a-namespace-uri"></a>C. 指定命名空间 URI  
+ 以下示例返回作为输入提供的 XML 文档的新建内部表示形式的句柄。 调用`sp_xml_preparedocument`保留`mp`到元属性命名空间映射前缀，并将添加`xyz`到命名空间的映射前缀`urn:MyNamespace`。  
+  
+```  
+DECLARE @hdoc int;  
+DECLARE @doc varchar(1000);  
+SET @doc ='  
+<ROOT>  
+<Customer CustomerID="VINET" ContactName="Paul Henriot">  
+   <Order CustomerID="VINET" EmployeeID="5"   
+           OrderDate="1996-07-04T00:00:00">  
+      <OrderDetail OrderID="10248" ProductID="11" Quantity="12"/>  
+      <OrderDetail OrderID="10248" ProductID="42" Quantity="10"/>  
+   </Order>  
+</Customer>  
+<Customer CustomerID="LILAS" ContactName="Carlos Gonzlez">  
+   <Order CustomerID="LILAS" EmployeeID="3"   
+           OrderDate="1996-08-16T00:00:00">  
+      <OrderDetail OrderID="10283" ProductID="72" Quantity="3"/>  
+   </Order>  
+</Customer>  
+</ROOT>'  
+--Create an internal representation of the XML document.  
+EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [XML 存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
+ [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)  
+  
+  

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步骤 3： 生成并执行的 SQL 语句
 第三步是生成和执行 SQL 语句，如下面的插图中所示。 用于执行此步骤的方法很可能有很大差异。 应用程序可能会提示用户输入的 SQL 语句，生成基于用户输入的 SQL 语句或使用硬编码的 SQL 语句。 有关详细信息，请参阅[构造 SQL 语句](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  
@@ -43,7 +41,6 @@ ms.lasthandoff: 09/09/2017
   
 |SQL 语句的类型|继续执行|  
 |---------------------------|----------------|  
-|**选择**或目录函数|[步骤 4a： 提取结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**更新**，**删除**，或**插入**|[步骤 4b： 提取的行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|**选择**或目录函数|[步骤 4a：提取结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**更新**，**删除**，或**插入**|[步骤 4b：提取行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |所有其他 SQL 语句|步骤 3： 生成并执行的 SQL 语句 （本主题） 或[步骤 5： 提交事务](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

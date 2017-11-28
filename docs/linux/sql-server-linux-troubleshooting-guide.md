@@ -6,15 +6,20 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 05/08/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -119,6 +124,37 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 对于 SQL 转储 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
+   ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>在最小配置中或在单用户模式下启动 SQL Server
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>在最小配置模式下启动 SQL Server
+在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
+在某些情况下，你可能需要使用启动选项-m 在单用户模式下启动 SQL Server 的实例。 例如，您可能要更改服务器配置选项或恢复已破坏的 master 数据库或其他系统数据库。 例如，你可能想要更改服务器配置选项或恢复已损坏的主数据库或其他系统数据库   
+
+在单用户模式下启动 SQL Server
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+在使用 SQLCMD 单用户模式下启动 SQL Server
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  在 Linux 上的 SQL Server 启动与"mssql"的用户，以防止将来启动问题。 示例"sudo-u mssql /opt/mssql/bin/sqlservr [启动选项]" 
+
+如果你意外已经与另一个用户启动 SQL Server，你将需要改回为之前从 SQL Server 开始 systemd mssql 用户的 SQL Server 数据库文件的所有权。 例如，若要将 /var/opt/mssql 下的所有数据库文件的所有权更改为 mssql 的用户，请运行以下命令
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## <a name="common-issues"></a>常见的问题

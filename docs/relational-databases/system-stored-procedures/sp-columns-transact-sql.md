@@ -1,0 +1,131 @@
+---
+title: "sp_columns (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_columns_TSQL
+- sp_columns
+dev_langs: TSQL
+helpviewer_keywords: sp_columns
+ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
+caps.latest.revision: "45"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  返回在当前环境中可查询的指定对象的列信息。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+sp_columns [ @table_name = ] object  
+     [ , [ @table_owner = ] owner ]   
+     [ , [ @table_qualifier = ] qualifier ]   
+     [ , [ @column_name = ] column ]   
+     [ , [ @ODBCVer = ] ODBCVer ]  
+```  
+  
+## <a name="arguments"></a>参数  
+ [  **@table_name=**]*对象*  
+ 用于返回目录信息的对象的名称。 *对象*可以是表、 视图或其他对象，其中包含如表值函数的列。 *对象*是**nvarchar(384)**，无默认值。 支持通配符模式匹配。  
+  
+ [  **@table_owner* * * =**]*所有者*  
+ 用于返回目录信息的对象的对象所有者。 *所有者*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则应用基础 DBMS 的默认对象的可见性规则。  
+  
+ 如果当前用户拥有一个具有指定名称的对象，则返回该对象的列。 如果*所有者*未指定当前用户不拥有具有指定的对象和*对象*， **sp_columns**查找具有指定的对象*对象*拥有的数据库所有者。 如果存在这样的对象，则返回该对象的列。  
+  
+ [  **@table_qualifier* * * =**]*限定符*  
+ 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 各种 DBMS 产品支持三部分命名对象 (*限定符***。***所有者***。***名称*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示的数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
+  
+ [  **@column_name=**]*列*  
+ 一个单独的列，当只需要目录信息的一列时可使用该参数。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
+  
+ [  **@ODBCVer=**] *ODBCVer*  
+ 是正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 版本 2 和 3 之间的行为差异，请参阅 ODBC **SQLColumns**规范。  
+  
+## <a name="return-code-values"></a>返回代码值  
+ 无  
+  
+## <a name="result-sets"></a>结果集  
+ **Sp_columns**目录存储过程等同于**SQLColumns** ODBC 中。 返回对结果进行排序的**TABLE_QUALIFIER**， **TABLE_OWNER**，和**TABLE_NAME**。  
+  
+|列名|数据类型|Description|  
+|-----------------|---------------|-----------------|  
+|**TABLE_QUALIFIER**|**sysname**|对象限定符名称。 此字段可以为 NULL。|  
+|**TABLE_OWNER**|**sysname**|对象所有者名称。 此字段始终返回值。|  
+|**TABLE_NAME**|**sysname**|对象名。 此字段始终返回值。|  
+|**COLUMN_NAME**|**sysname**|列名称，为每个列的**TABLE_NAME**返回。 此字段始终返回值。|  
+|**DATA_TYPE**|**int**|ODBC 数据类型的整数代码。 如果该数据类型无法映射到 ODBC 类型，则为 NULL。 在中返回的本机数据类型名称**TYPE_NAME**列。|  
+|**TYPE_NAME**|**sysname**|表示数据类型的字符串。 基础 DBMS 提供此数据类型的名称。|  
+|**精度**|**int**|有效数字位数。 返回值**精度**列是以 10 为基数。|  
+|**LENGTH**|**int**|传输的数据大小。<sup>1</sup>|  
+|**缩放**|**int**|小数点右边的数字位数。|  
+|**基数**|**int**|数值数据类型的基数。|  
+|**可以为 NULL**|**int**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
+|**备注**|**varchar(254)**|该字段总是返回 NULL。|  
+|**COLUMN_DEF**|**nvarchar(4000)**|列的默认值。|  
+|**SQL_DATA_TYPE**|**int**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列等同于**DATA_TYPE**列中，除**datetime**和 SQL 92**间隔**数据类型。 该列始终返回值。|  
+|**SQL_DATETIME_SUB**|**int**|子类型代码**datetime**和 SQL 92**间隔**数据类型。 对于其他数据类型，该列返回 NULL。|  
+|**CHAR_OCTET_LENGTH**|**int**|字符或整数数据类型的列的最大长度（字节）。 对于所有其他数据类型，该列返回 NULL。|  
+|**ORDINAL_POSITION**|**int**|列在对象中的序号位置。 对象中的第一列为 1。 该列始终返回值。|  
+|**IS_NULLABLE**|**varchar(254)**|对象中列的是否可为 Null。 根据 ISO 规则确定为 Null 性。 遵从 ISO SQL 标准的 DBMS 不能返回空字符串。<br /><br /> YES = 列可以包含 NULL。<br /><br /> NO = 列不能包含 NULL。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 为此列返回的值不同，则返回该值**可以为 NULL**列。|  
+|**SS_DATA_TYPE**|**tinyint**|扩展存储过程使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
+  
+ <sup>1</sup>有关详细信息，请参阅 Microsoft ODBC 文档。  
+  
+## <a name="permissions"></a>Permissions  
+ 需要对架构的 SELECT 和 VIEW DEFINITION 权限。  
+  
+## <a name="remarks"></a>注释  
+ **sp_columns**遵循分隔标识符的要求。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+  
+## <a name="examples"></a>示例  
+ 以下示例返回指定表的列信息。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_columns @table_name = N'Department',  
+   @table_owner = N'HumanResources';  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例返回指定表的列信息。  
+  
+```  
+-- Uses AdventureWorks  
+  
+EXEC sp_columns @table_name = N'DimEmployee',  
+   @table_owner = N'dbo';  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [sp_tables &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [目录存储的过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  
+
+

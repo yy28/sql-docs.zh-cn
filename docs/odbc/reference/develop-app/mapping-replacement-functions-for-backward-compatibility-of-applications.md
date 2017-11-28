@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>替换函数映射的向后兼容性应用程序
 ODBC 3*.x*应用程序工作到 ODBC 3*.x*对 ODBC 2 起驱动程序管理器。*x*驱动程序，只要使用任何新功能。 同时复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器映射以下 ODBC 3。*x*函数，已替换一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  
@@ -486,4 +484,3 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLSetStmtAttr**将 SQL_ATTR_USE_BOOKMARKS 属性设置为 SQL_UB_VARIABLE，驱动程序管理器将该属性设置在基础 ODBC 2 SQL_UB_ON。*x*驱动程序。
-

@@ -3,10 +3,12 @@ title: "与 common_table_expression (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 该表达式源自简单查询，并且在单条 SELECT、INSERT、UPDATE 或 DELETE 语句的执行范围内定义。 该子句也可用在 CREATE VIEW 语句中，作为该语句的 SELECT 定义语句的一部分。 公用表表达式可以包括对自身的引用。 这种表达式称为递归公用表表达式。  
   
@@ -601,48 +601,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>L. 创建一个简单公用表表达式  
- 下例显示 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的每名销售代表每年的销售订单总数。  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>M. 使用公用表表达式来限制次数和报告平均数  
- 以下示例显示销售代表在所有年度内的平均销售订单数。  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>N. 使用 CTAS 语句中的公用表表达式  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 使用 CTAS 语句中的公用表表达式  
  下面的示例创建一个包含每年的销售订单的总数在每个销售代表的新表[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]。  
   
 ```  
@@ -671,7 +630,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>O. 使用 CETAS 语句中的公用表表达式  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 使用 CETAS 语句中的公用表表达式  
  下面的示例创建新的外部表包含每年的销售订单的总数在每个销售代表[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]。  
   
 ```  
@@ -701,7 +660,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>P. 在语句中使用多个以逗号分隔 Cte  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 在语句中使用多个以逗号分隔 Cte  
  下面的示例演示在单个语句中包括两个 Cte。 Cte 不能为嵌套 （不允许使用递归）。  
   
 ```  
@@ -728,4 +687,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  
   
   
-

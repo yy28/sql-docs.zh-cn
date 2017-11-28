@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rowset-size"></a>行集大小
 要使用哪些行集大小取决于应用程序。 基于屏幕的应用程序通常按照两个策略之一。 第一种是将行集大小设置为显示在屏幕; 上的行数如果用户调整屏幕的大小，应用程序做相应更改的行集大小。 第二个是行集的大小设置为一个更大数字，如 100，从而减少了对数据源的调用数。 应用程序内的行集尽可能本地滚动，并仅在它滚动外部行集时提取新行。  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos**使用实际上是从前面调用开始的行集大小**SQLFetch**或**SQLFetchScroll**，这是因为**SQLSetPos**进行操作已设置的行集。 **SQLSetPos**还将可以选取最新的行集大小如果**SQLBulkOperations**后已更改的行集大小已调用。  
   
 -   **SQLBulkOperations**使用行集的大小实际上在时调用，因为它执行独立于任何提取的行集表的操作。
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>模型对象 (TMSL)
 
@@ -44,10 +43,10 @@ ms.lasthandoff: 09/01/2017
  所有对象都有一组通用的属性，包括名称、 类型、 说明、 一个属性集合和批注。 **模型**对象还具有以下属性。  
   
  storageLocation  
- 要放置模型磁盘上的位置。  
+ 磁盘上放置模型的位置。  
   
  defaultMode  
- 为使数据在分区中可用的默认方法。  
+ 使数据在分区中可用的默认方法。  
   
  defaultDataView  
  对于在 DirectQuery 模式下的模型，此属性确定哪个分区用于对模型运行查询。  有效值包括完全安装选项和示例。  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/01/2017
  要用于设置格式的区域性。  
   
  collation  
- 排序规则序列中。 请参阅[Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)有关详细信息。  
+ 排序规则序列。 请参阅[Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)有关详细信息。  
   
  表  
  在模型中，包括分区、 列、 度量值、 Kpi 和批注的表的完整集合。 请参阅[表对象 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)有关详细信息。  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d9eb1d31f0dcba8b17849a8f2b897420e1627cd4
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 63d691c8bef93ad734a7596532ba567708128a2d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>使用 JDBC 驱动程序处理元数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,11 +46,10 @@ ms.lasthandoff: 09/09/2017
 |主题|Description|  
 |-----------|-----------------|  
 |[使用数据库元数据](../../connect/jdbc/using-database-metadata.md)|说明如何检索有关当前已连接数据库的元数据信息。|  
-|[使用结果设置元数据](../../connect/jdbc/using-result-set-metadata.md)|说明如何检索有关当前结果集的元数据信息。|  
+|[使用结果集元数据](../../connect/jdbc/using-result-set-metadata.md)|说明如何检索有关当前结果集的元数据信息。|  
 |[使用参数元数据](../../connect/jdbc/using-parameter-metadata.md)|说明如何检索有关预定义语句参数和可调用语句参数的元数据信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: "DBCC CHECKFILEGROUP (Transact SQL) |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/16/2017
+ms.custom: 
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKFILEGROUP_TSQL
 - DBCC CHECKFILEGROUP
 - CHECKFILEGROUP
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DBCC CHECKFILEGROUP statement
 - database objects [SQL Server], checking
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6e5335bd6685e1c547361d931938134becaac84
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]检查分配和结构完整性的所有表和索引的视图中指定的文件组的当前数据库。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]检查分配和结构完整性的所有表和索引的视图中指定的文件组的当前数据库。
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
@@ -99,7 +98,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 重写**最大并行度**配置选项的**sp_configure**语句。 MAXDOP 可以超过 sp_configure 使用配置的值。 如果 MAXDOP 超过配置资源调控器的值，数据库引擎所使用的资源调控器 MAXDOP 值，ALTER WORKLOAD GROUP (TRANSACT-SQL) 中所述。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 重写**最大并行度**配置选项的**sp_configure**语句。 MAXDOP 可以超过 sp_configure 使用配置的值。 如果 MAXDOP 超过配置资源调控器的值，数据库引擎所使用的资源调控器 MAXDOP 值，ALTER WORKLOAD GROUP (TRANSACT-SQL) 中所述。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!CAUTION]  
 >  如果 MAXDOP 设置为零，服务器将选择最大并行度。  
@@ -120,7 +119,7 @@ DBCC CHECKFILEGROUP 使用内部数据库快照来提供执行这些检查所必
 >  对 tempdb 运行 DBCC CHECKFILEGROUP 不会执行任何分配检查，并且必须获得共享表锁才能执行表检查。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照。 这意味着，无法获得所需的事务一致性。  
   
 ## <a name="checking-objects-in-parallel"></a>并行检查对象  
-默认情况下，DBCC CHECKFILEGROUP 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制可用于 DBCC 检查处理器的最大数目，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+默认情况下，DBCC CHECKFILEGROUP 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制可用于 DBCC 检查处理器的最大数目，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>单独文件组的非聚集索引  
@@ -241,4 +240,3 @@ WITH ESTIMATEONLY;
 [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
   
   
-

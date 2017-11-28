@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5fe29e8cd03ded1ee2125d2729ede4c66f196838
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6405c2a0890b9a5b43c420960f1b823b39ad9e60
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函数和游标库
 > [!IMPORTANT]  
@@ -33,53 +31,52 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [ODBC 游标库由执行的函数](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
+-   [由游标库执行的 ODBC 函数](../../../odbc/reference/appendixes/odbc-functions-executed-by-the-cursor-library.md)  
   
--   [ODBC 函数不执行由游标库](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
+-   [不是由游标库执行的 ODBC 函数](../../../odbc/reference/appendixes/odbc-functions-not-executed-by-the-cursor-library.md)  
   
--   [SQLBindCol （光标库）](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
+-   [SQLBindCol（游标库）](../../../odbc/reference/appendixes/sqlbindcol-cursor-library.md)  
   
--   [SQLBindParameter （光标库）](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
+-   [SQLBindParameter（游标库）](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
 -   [SQLBulkOperations （光标库）](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
 -   [SQLCloseCursor （光标库）](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
--   [SQLEndTran （光标库）](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
+-   [SQLEndTran（游标库）](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
--   [SQLExtendedFetch （光标库）](../../../odbc/reference/appendixes/sqlextendedfetch-cursor-library.md)  
+-   [SQLExtendedFetch（游标库）](../../../odbc/reference/appendixes/sqlextendedfetch-cursor-library.md)  
   
--   [SQLFetch （光标库）](../../../odbc/reference/appendixes/sqlfetch-cursor-library.md)  
+-   [SQLFetch（游标库）](../../../odbc/reference/appendixes/sqlfetch-cursor-library.md)  
   
--   [SQLFetchScroll （光标库）](../../../odbc/reference/appendixes/sqlfetchscroll-cursor-library.md)  
+-   [SQLFetchScroll（游标库）](../../../odbc/reference/appendixes/sqlfetchscroll-cursor-library.md)  
   
--   [SQLFreeStmt （光标库）](../../../odbc/reference/appendixes/sqlfreestmt-cursor-library.md)  
+-   [SQLFreeStmt（游标库）](../../../odbc/reference/appendixes/sqlfreestmt-cursor-library.md)  
   
--   [SQLGetData （光标库）](../../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)  
+-   [SQLGetData（游标库）](../../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)  
   
--   [SQLGetDescField 和 SQLGetDescRec （光标库）](../../../odbc/reference/appendixes/sqlgetdescfield-and-sqlgetdescrec-cursor-library.md)  
+-   [SQLGetDescField 和 SQLGetDescRec（游标库）](../../../odbc/reference/appendixes/sqlgetdescfield-and-sqlgetdescrec-cursor-library.md)  
   
--   [SQLGetFunctions （光标库）](../../../odbc/reference/appendixes/sqlgetfunctions-cursor-library.md)  
+-   [SQLGetFunctions（游标库）](../../../odbc/reference/appendixes/sqlgetfunctions-cursor-library.md)  
   
--   [SQLGetInfo （光标库）](../../../odbc/reference/appendixes/sqlgetinfo-cursor-library.md)  
+-   [SQLGetInfo（游标库）](../../../odbc/reference/appendixes/sqlgetinfo-cursor-library.md)  
   
--   [SQLGetStmtAttr （光标库）](../../../odbc/reference/appendixes/sqlgetstmtattr-cursor-library.md)  
+-   [SQLGetStmtAttr（游标库）](../../../odbc/reference/appendixes/sqlgetstmtattr-cursor-library.md)  
   
--   [SQLGetStmtOption （光标库）](../../../odbc/reference/appendixes/sqlgetstmtoption-cursor-library.md)  
+-   [SQLGetStmtOption（游标库）](../../../odbc/reference/appendixes/sqlgetstmtoption-cursor-library.md)  
   
--   [SQLNativeSql （光标库）](../../../odbc/reference/appendixes/sqlnativesql-cursor-library.md)  
+-   [SQLNativeSql（游标库）](../../../odbc/reference/appendixes/sqlnativesql-cursor-library.md)  
   
--   [SQLRowCount （光标库）](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
+-   [SQLRowCount（游标库）](../../../odbc/reference/appendixes/sqlrowcount-cursor-library.md)  
   
--   [SQLSetConnectAttr （光标库）](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
+-   [SQLSetConnectAttr（游标库）](../../../odbc/reference/appendixes/sqlsetconnectattr-cursor-library.md)  
   
--   [SQLSetDescField 和 SQLSetDescRec （光标库）](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
+-   [SQLSetDescField 和 SQLSetDescRec（游标库）](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
 -   [SQLSetEnvAttr （光标库）](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
--   [SQLSetPos （光标库）](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
+-   [SQLSetPos（游标库）](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   
--   [SQLSetScrollOptions （光标库）](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
+-   [SQLSetScrollOptions（游标库）](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
   
--   [SQLSetStmtAttr （光标库）](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)
-
+-   [SQLSetStmtAttr（游标库）](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)

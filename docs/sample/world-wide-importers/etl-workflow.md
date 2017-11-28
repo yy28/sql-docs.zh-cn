@@ -1,30 +1,31 @@
 ---
 title: "ETL 工作流 |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流
-ETL 包 WWI_Integration 用于将数据从 WideWorldImporters 数据库迁移到 WideWorldImportersDW 数据库，数据发生更改。 定期运行包 （通常每天一次）。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]ETL 包 WWI_Integration 用于将数据从 WideWorldImporters 数据库迁移到 WideWorldImportersDW 数据库，数据发生更改。 定期运行包 （通常每天一次）。
 
 ## <a name="overview"></a>概述
 
@@ -42,7 +43,7 @@ ETL 包 WWI_Integration 用于将数据从 WideWorldImporters 数据库迁移到
 
 此后，数据流任务的一系列加载每个维度，则每个事实。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - SQL Server 2016 （或更高版本） 与数据库 WideWorldImporters 和 WideWorldImportersDW。 这可能是在相同或不同的 SQL Server 实例上。
 - SQL Server Management Studio (SSMS)
@@ -80,4 +81,3 @@ ETL 包 WWI_Integration 用于将数据从 WideWorldImporters 数据库迁移到
    - 单击确定以创建作业。
 
 3. 执行或计划作业。
-

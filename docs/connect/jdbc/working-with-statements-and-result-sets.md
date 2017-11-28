@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ce65afcf2086b4b3383f45fd6f0174668eeb1e1a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 525a3177f662898957cdfdee8e8bf737c8f59d7e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用语句和结果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +48,6 @@ ms.lasthandoff: 09/09/2017
  可使用已逐渐具体化的流或 BLOB 和 CLOB，来处理对较大的列值的更新或对较大的 IN 参数的发送。 JDBC 驱动程序通过多次往返通信将其“分块”发送到服务器，这样您便可以设置和更新超出内存允许范围的值。  
   
 ## <a name="see-also"></a>另请参阅  
- [提高性能和使用 JDBC 驱动程序的可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [借助 JDBC 驱动程序提高性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

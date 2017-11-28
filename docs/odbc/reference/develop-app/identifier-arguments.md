@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>标识符的自变量
 如果带引号的标识符参数中的字符串，该驱动程序中删除前导空格和尾随空格，并将按原义在引号内的字符串。 如果不带引号的字符串，该驱动程序将删除尾随空白和折叠为大写的字符串。 设置标识符的参数为 null 指针返回 SQL_ERROR 和 SQLSTATE HY009 （不允许使用 null 指针），除非自变量是一个目录名称，并且不支持目录。  
@@ -44,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  带引号的标识符用于从相同的名称，如 ROWID Oracle 中的伪列中区分 true 列名称。 如果"ROWID"中的目录函数自变量传递，该函数将使用 ROWID 伪列如果它存在。 如果伪列不存在，则该函数会使用"ROWID"列。 如果目录函数的自变量传入 ROWID，该函数会使用 ROWID 列。  
   
  有关带引号的标识符的详细信息，请参阅[带引号的标识符](../../../odbc/reference/develop-app/quoted-identifiers.md)。
-

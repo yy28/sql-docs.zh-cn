@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6d949d95301c6fb66ad6b027b99113850bea8e9d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 309bea8c888b7fd057e942dd348125c9b420afb7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-based-driver-diagnostic-example"></a>基于文件的驱动程序诊断示例
 基于文件的驱动程序可以充当同时 ODBC 驱动程序和数据源。 因此可以生成错误和警告同时作为组件中的 ODBC 连接和作为数据源。 它也是接口与驱动程序管理器中的组件，因为它格式，并返回自变量**SQLGetDiagRec**。  
@@ -51,4 +49,3 @@ Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"
 ```  
   
  因为此错误与数据源相关的该驱动程序会添加数据源 ([dBASE]) 的文件格式作为前缀到诊断消息中。 因为该驱动程序也是 interfaced 与数据源的组件，它为供应商 ([Microsoft]) 和驱动程序 ([ODBC dBASE 驱动程序]) 中添加前缀。
-

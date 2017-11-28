@@ -1,26 +1,24 @@
 ---
 title: "避免错误上安装的用户库中的 R 程序包 |Microsoft 文档"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>避免在用户库中安装的 R 包上的错误
 
@@ -35,7 +33,7 @@ R 开发人员需要安装新的 R 包都习惯于安装随意情况下，此包
 例如，在典型的 R 开发环境中，用户将添加包的位置的 R 环境变量`libPath`，或引用的完整包路径，如下：
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 但是，这可以永远不会处理在 SQL Server 中运行 R 解决方案时因为 R 包必须安装到与实例关联的特定的默认库。
@@ -68,7 +66,6 @@ SQL Server 提供功能，可帮助你管理多个包版本，并对其授予用
 
     + 编辑代码以确保从默认库中，不是从临时目录或用户库加载包。
 
-+ 避免作为解决方案的一部分的即席包安装。 检查代码以确保有到安装的包或动态安装包的代码不调用。 如果您没有权限，代码将失败，并且如果您具有权限，你应该从你想要执行的其他代码单独安装包。
++ 避免作为解决方案的一部分的即席包安装。 检查代码以确保有到安装的包或动态安装包的代码不调用。 如果你没有安装包的权限，代码将失败。 即使您具有权限，安装包，你应单独执行操作因此从你想要执行的其他代码。
 
-+ 修改任何直接对 R 包库路径。 如果包安装在默认库中，则 R 运行时将从默认库加载包，即使 R 代码中指定了不同的库也是如此。
-
++ 更新代码以删除对 R 包或 R 库路径直接引用。 如果包安装在默认库中，则 R 运行时将从默认库加载包，即使 R 代码中指定了不同的库也是如此。

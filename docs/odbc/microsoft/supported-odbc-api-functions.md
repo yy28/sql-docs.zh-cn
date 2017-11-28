@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-odbc-api-functions"></a>支持的 ODBC API 函数
 调配的目的是通知应用程序哪些功能可用于向其驱动程序中。 Microsoft ODBC 桌面数据库驱动程序支持核心和级别 1 的所有函数。  
@@ -63,23 +61,22 @@ Transact] (.../ Topic/SQLTransact%20Function.md)|[访问](../../odbc/microsoft/s
   
  以下主题提供有关 ODBC 函数的备注。 这些说明适用于所有 ODBC 桌面数据库驱动程序。  
   
--   [SQLGetData （桌面数据库驱动程序）](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
+-   [SQLGetData（桌面数据库驱动程序）](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
 -   [SQLGetStmtOption （桌面数据库驱动程序）](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
--   [SQLMoreResults （桌面数据库驱动程序）](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
+-   [SQLMoreResults（桌面数据库驱动程序）](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   
--   [SQLPrepare （桌面数据库驱动程序）](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
+-   [SQLPrepare（桌面数据库驱动程序）](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
   
--   [SQLProcedures （桌面数据库驱动程序）](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
+-   [SQLProcedures（桌面数据库驱动程序）](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
   
--   [SQLSetCursorName （桌面数据库驱动程序）](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
+-   [SQLSetCursorName（桌面数据库驱动程序）](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
   
--   [SQLSetPos （桌面数据库驱动程序）](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
+-   [SQLSetPos（桌面数据库驱动程序）](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
   
--   [SQLSetScrollOptions （桌面数据库驱动程序）](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
+-   [SQLSetScrollOptions（桌面数据库驱动程序）](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
   
--   [SQLSetStmtOption （桌面数据库驱动程序）](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
+-   [SQLSetStmtOption（桌面数据库驱动程序）](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
--   [SQLSpecialColumns （桌面数据库驱动程序）](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-
+-   [SQLSpecialColumns（桌面数据库驱动程序）](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)

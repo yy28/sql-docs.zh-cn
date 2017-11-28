@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面数据库驱动程序体系结构
 这些驱动程序旨在为使用在 Microsoft Windows 95 或更高版本，或 Windows NT 4.0 和 Windows 2000。 唯一的 32 位应用程序支持 Windows 95 或更高版本;在 Windows NT 4.0 和 Windows 2000 上支持 16 位和 32 位应用程序。  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll 实现 ODBC 函数基于 Microsoft Jet API。 没有直接映射之间 ODBC 和 Microsoft Jet 函数，但是所示。 许多因素，如的游标模型和 SQL 映射，防止直接关联的函数。  
   
  Microsoft Jet 引擎和 ODBC 驱动程序管理器之间驻留的 ODBC 驱动程序。 为应用程序调用某些 ODBC 函数处理由驱动程序管理器中且不会传递给该驱动程序。 有关这些函数中，Microsoft Jet 永远看不见函数调用，因为它没有直接连接到的驱动程序管理器。
-

@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 91ab1a812b55c84e3b55c439290d247df91eea40
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 
@@ -121,4 +120,3 @@ SQL Server Data Tools (SSDT) 可将 Visual Studio 转变为一种强大的开发
 [SSDT MSDN 文档]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [教程： 编写 TRANSACT-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 参考 （数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx
-

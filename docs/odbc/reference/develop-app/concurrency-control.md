@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d40d92b6771aa27a0fbfbdbfefd485496b10984c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a10dc30810a1ea71bd4e2c9d823ed010f7f611d4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-control"></a>并发控制
 *并发*是两个事务能够在同一时间，使用相同的数据和增加的事务隔离通常伴随并发减少。 这是因为事务隔离通常实现锁定的行，并且因为锁定更多的行，可以不会被锁定的行至少暂时阻止的情况下完成更少的事务。 尽管并发减少通常作为用来维护数据库完整性更高事务隔离级别权衡可接受，它可以获得交互式应用程序中的问题就成为与使用游标的高读/写活动。  
@@ -41,5 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [并发类型](../../../odbc/reference/develop-app/concurrency-types.md)  
   
--   [开放式并发](../../../odbc/reference/develop-app/optimistic-concurrency.md)
-
+-   [乐观并发](../../../odbc/reference/develop-app/optimistic-concurrency.md)

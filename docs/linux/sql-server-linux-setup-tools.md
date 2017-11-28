@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -270,4 +269,3 @@ brew install --no-sandbox mssql-tools
 - [在 Docker 上运行](quickstart-install-connect-ubuntu.md)
 
 有关如何使用的示例**bcp**若要大容量导入和导出数据，请参阅[大容量复制数据到 Linux 上的 SQL Server](sql-server-linux-migrate-bcp.md)。
-

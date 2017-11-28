@@ -2,32 +2,31 @@
 title: "摘要： 配置对数据库对象的权限 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- configuring permissions on databases
+applies_to: SQL Server 2016
+helpviewer_keywords: configuring permissions on databases
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 42d1210ebcc8d1db5fcc2464747f2e1339bd4696
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 02c4683e77acceff8486e6310069b3088c103d3f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>课 2-5-摘要-配置对数据库对象权限
-登录名为用户提供了连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的权限。 用户是可以访问特定数据库的登录名。 使用 GRANT 语句可授予用户读取数据以及访问和更改数据的权限。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]登录名授予用户权限以连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 用户是可以访问特定数据库的登录名。 使用 GRANT 语句可授予用户读取数据以及访问和更改数据的权限。  
   
 视图是单条 SELECT 语句，在用户看来就像一个表。 存储过程是以批处理形式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  
   
@@ -36,4 +35,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

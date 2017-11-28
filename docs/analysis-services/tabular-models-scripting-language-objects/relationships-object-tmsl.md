@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>关系对象 (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  所有对象都有一组通用的属性，包括名称、 类型、 说明、 一个属性集合和批注。 **关系**对象还具有以下属性。  
   
  isActive  
- 一个布尔值，该值指示是否将关系标记为活动或非活动。 一个活动关系自动用于跨表筛选。 可以通过使用 USERELATIONSHIP 函数的 DAX 计算显式使用的非活动关系。  
+ 一个布尔值，该值指示是否将关系标记为活动或非活动。 活动关系自动用于跨表筛选。 非活动关系可通过 USERELATIONSHIP 函数显式用于 DAX 计算。  
   
  crossFilteringBehavior  
  指示关系如何影响数据的筛选。 请参阅[双向交叉筛选器的 SQL Server 2016 Analysis Services 中的表格模型](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)有关详细信息。 以下是有效值：  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   DatePartOnly (2)-当联接两个日期时间列，联接仅日期部分。  
   
  relyOnReferentialIntegrity  
- 未使用;留待将来使用。  
+ 未使用；保留供将来使用。  
   
  securityFilteringBehavior  
  枚举值，该值指示关系如何影响计算行级别安全性表达式时，筛选的数据。 以下是有效值：  
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [创建关系](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

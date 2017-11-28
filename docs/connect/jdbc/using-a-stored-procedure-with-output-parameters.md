@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7dc04aac6bf9ec53b72705322ebe7f056caf8bfb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e5c3b945652c04cbbe75563d853703b5676b43f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用带有输出参数的存储过程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +102,6 @@ public static void executeStoredProcedure(Connection con) {
  存储过程可能返回更新计数和多个结果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]遵循 JDBC 3.0 规范，哪些状态之前检索到 OUT 参数，应检索多个结果集和更新的计数。 即，应用程序应检索的所有结果集对象和更新之前使用 CallableStatement.getter 方法检索扩展参数计数。 否则，结果集对象和尚未检索的更新计数将会丢失时检索到 OUT 参数。 有关更新计数的详细信息和多个结果集，请参阅[存储过程使用更新的计数](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)和[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用存储过程的语句](../../connect/jdbc/using-statements-with-stored-procedures.md)  
+ [在存储过程中使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
-

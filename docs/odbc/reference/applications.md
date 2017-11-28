@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>应用程序
 *应用程序*是一个程序，调用 ODBC API 访问数据。 虽然许多类型的应用程序可能，但大多数分为三个类别，用作本指南中的示例。  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
 -   正在从数据源断开连接。  
   
  因为大多数数据访问工作使用 SQL 来完成，为其应用程序使用 ODBC 的主要任务是提交 SQL 语句和检索这些语句所生成的结果 （如果有）。 为其应用程序使用 ODBC 的其他任务包括确定和调整到驱动程序功能和浏览数据库目录。
-

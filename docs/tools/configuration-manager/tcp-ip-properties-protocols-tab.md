@@ -5,31 +5,28 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- TCP/IP [SQL Server], configuration options
+helpviewer_keywords: TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ade77164dd1a752439d21249284b63c48bfcb8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0cb8a1ffb609405f5c27ee62d3663ba2b4214d46
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# TCP/IP 属性（“协议”选项卡）
+# <a name="tcpip-properties-protocols-tab"></a>TCP/IP 属性（“协议”选项卡）
   使用“TCP/IP 属性”对话框可以配置 TCP/IP 协议的选项。 在左窗格中单击 **TCP/IP** 以在详细信息窗格中显示单个 IP 地址配置。  
   
  必须重新启动 Microsoft SQL Server，更改才会生效。  
   
-## 选项  
+## <a name="options"></a>选项  
  **已启用**  
  可能的值为“是”和“否”。  
   
@@ -42,9 +39,8 @@ ms.lasthandoff: 09/27/2017
  **No Delay**  
  SQL Server 不会实施对此属性的更改。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择网络协议](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
  [使用 TCP IP 创建有效的连接字符串](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   
-

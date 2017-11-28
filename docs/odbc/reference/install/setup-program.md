@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 741ccfc8e9a096b60eca94b125890d48f65eb764
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-program"></a>安装程序
 > **注意：**使用 Windows XP 和 Windows Server 2003 中，启动**ODBC 包含在 Windows 操作系统中**。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  安装中有多少实际上可通过安装程序依赖于它在安装程序 DLL 的调用哪些函数。 安装程序 DLL 包含用于安装各个 ODBC 组件函数。 安装程序只需调用**SQLInstallDriverManager**， **SQLInstallDriverEx**，或**SQLInstallTranslatorEx**在安装程序 DLL，若要检索的路径在其中组件是要安装并向注册表添加有关组件的信息的目录。 这些函数实际上不复制文件;安装程序会尝试使用这些函数的自变量中的信息。  
   
  安装程序 DLL 还包含用于删除 ODBC 组件函数。 在安装程序调用**SQLRemoveDriverManager**， **SQLRemoveDriver**，或**SQLRemoveTranslator** DLL 以降低组件的使用情况计数的在安装程序注册表和组件的新的使用情况计数降为 0，如果从注册表删除有关组件的所有信息。 这些函数不会实际删除 component; 的文件安装程序会尝试如果新的使用率计数为 0。
-

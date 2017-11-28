@@ -21,17 +21,16 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d83878543d1c749757b2603a3fe3001fb6b1581
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
   链接度量值组基于同一数据库内不同多维数据集中的另一度量值组，或基于一个不同的 Analysis Services 数据库。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [定义链接维度](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   
-

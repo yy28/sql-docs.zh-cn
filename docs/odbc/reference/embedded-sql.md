@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql"></a>嵌入式的 SQL
 将 SQL 语句发送到 DBMS 的第一个技术嵌入 SQL。 因为 SQL 不使用变量和控制的流语句，它通常用于为数据库子语言，可以添加到在传统的编程语言中，例如 C 或 COBOL 编写的程序。 这是一个中央的嵌入式 SQL 了解： 置于主机编程语言中编写的程序的 SQL 语句。 简言之，以下方法用于在主机语言中嵌入的 SQL 语句：  
@@ -46,11 +44,10 @@ ms.lasthandoff: 09/09/2017
   
  本部分包含以下主题。  
   
--   [嵌入式的 SQL 的示例](../../odbc/reference/embedded-sql-example.md)  
+-   [嵌入式 SQL 示例](../../odbc/reference/embedded-sql-example.md)  
   
--   [编译嵌入式的 SQL 程序](../../odbc/reference/compiling-an-embedded-sql-program.md)  
+-   [编译嵌入式 SQL 程序](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
 -   [静态 SQL](../../odbc/reference/static-sql.md)  
   
 -   [动态 SQL](../../odbc/reference/dynamic-sql.md)
-

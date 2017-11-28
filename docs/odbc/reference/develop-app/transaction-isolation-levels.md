@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transaction-isolation-levels"></a>事务隔离级别
 *事务隔离级别*是事务隔离成功的范围内的度量。 具体而言，事务隔离级别是根据存在以下现象相符合定义的：  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |可序列化|在事务等待，直到由其他事务写入锁定的行不会被锁定;这可以防止读取任何"脏"的数据。<br /><br /> 事务持有读取的锁 （如果它仅读取行） 或上的范围的写入锁 （如果它能够更新或删除行） 行它影响。 例如，如果事务包含的 SQL 语句**选择\*从订单**，范围是整个 Orders 表; 事务读取锁定表而不会不允许任何新行插入到它。 如果事务包含的 SQL 语句**删除从订单其中状态 = 关闭**，范围为"已关闭"状态的所有行; 事务写入锁订单中的所有行具有都表的"已关闭"而不会状态不允许要插入或更新以便得到的行的状态为"已关闭"的任何行。<br /><br /> 由于其他事务不能更新或删除范围中的行，当前事务可避免任何不可重复读取。 由于其他事务不能在范围中插入任何行，当前事务可避免任何幻像。 提交或回滚时，事务将释放其锁定。|  
   
  务必要注意的事务隔离级别不会影响事务的功能，以查看其自己的更改;事务可以始终查看他们所做的任何更改。 例如，事务可能包含两个**更新**语句，其中第一个引发的所有雇员的工资 10%的和第二个设置的任何员工支付超出该数量到某些最大时间。 此操作成功作为单个事务，所以第二个**更新**语句可以看到的第一个结果。
-

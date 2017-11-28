@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3941b8cdc2a53cb0f9fe3ad2b94f2ef972ad3775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes"></a>行为更改
 行为的更改是，这些更改*语法*接口的保持不变，但*语义*已更改。 有关这些更改后，在 ODBC 2 中使用的功能。*x*不同 ODBC 3 中的相同功能的行为。*x*。  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Datetime 数据类型更改](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
-

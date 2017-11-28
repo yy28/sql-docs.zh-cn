@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-types"></a>Interval 数据类型
 一个时间间隔被指两个日期和时间之间的差异。 按两种不同方式之一表示的时间间隔。 其中一个是*年-月*表示年和月八进制整数方面的时间间隔的间隔。 另一种是*一天时间*表示按天、 分钟和秒的间隔的间隔。 这两种类型的间隔不同，并且不能混合，因为月份可以具有不同的天数。  
@@ -69,11 +67,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
--   [时间间隔数据类型精度](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
+-   [间隔数据类型精度](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
   
 -   [间隔数据类型长度](../../../odbc/reference/appendixes/interval-data-type-length.md)  
   
 -   [间隔文本](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [间隔数据类型中重写默认前导和秒精度](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-
+-   [重写间隔数据类型的默认前导和秒精度](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

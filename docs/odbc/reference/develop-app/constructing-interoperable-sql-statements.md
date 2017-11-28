@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>构造可互操作的 SQL 语句
 如前面的部分中所述，可互操作的应用程序应使用 ODBC SQL 语法。 除了使用此语法，但是，许多其他问题面临的可互操作的应用程序。 例如，应用程序作用是什么如果它想要使用包含的功能，如外部联接中，不支持的所有数据源？  
@@ -43,13 +41,12 @@ ms.lasthandoff: 09/09/2017
   
 -   [带引号的标识符](../../../odbc/reference/develop-app/quoted-identifiers.md)  
   
--   [标识符的大小写](../../../odbc/reference/develop-app/identifier-case.md)  
+-   [标识符大小写](../../../odbc/reference/develop-app/identifier-case.md)  
   
 -   [转义序列](../../../odbc/reference/develop-app/escape-sequences.md)  
   
--   [文本的前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
+-   [文本前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
   
--   [在过程调用中的参数标记](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
+-   [过程调用中的参数标记](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [DDL 语句](../../../odbc/reference/develop-app/ddl-statements.md)
-

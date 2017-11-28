@@ -1,5 +1,5 @@
 ---
-title: "赋值运算符 (Transact SQL) |Microsoft 文档"
+title: "= （赋值运算符） (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], assignment
 - assignment operators [Transact-SQL]
@@ -21,20 +19,19 @@ helpviewer_keywords:
 - relationships [SQL Server], assignment operators
 - column headings [SQL Server]
 ms.assetid: c3040db6-21d6-40ac-a783-82c98ec006cc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 51f9aef3b4ef22dc63e36524627589b3f3c0c4cf
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d10872712d1b7114655b5d95ab9b871709c55b14
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="assignment-operator-transact-sql"></a>赋值运算符 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+# <a name="-assignment-operator-transact-sql"></a>= （赋值运算符） (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   等号 (=) 是唯一的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 赋值运算符。 在以下示例中，将创建一个 `@MyCounter` 变量，然后赋值运算符将 `@MyCounter` 设置为表达式返回的值。  
   
@@ -56,7 +53,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   
-

@@ -3,37 +3,37 @@ title: "CREATE EXTERNAL TABLE (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
 - CREATE EXTERNAL TABLE
 - PolyBase, T-SQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abb5affb76f0caac24e973928561939280ba40
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   创建引用的 Hadoop 群集或 Azure blob 存储中存储的数据的 PolyBase 外部表。 此外可以用于创建外部表的[弹性数据库查询](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)。  
   
@@ -469,102 +469,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-create-an-external-table-with-data-in-text-delimited-format"></a>H. 创建外部表包含数据采用文本分隔的格式。  
- 此示例显示创建外部表具有格式文本分隔文件中数据所需的所有步骤。 它定义外部数据源 mydatasource 和外部文件格式 myfileformat。 然后 CREATE EXTERNAL TABLE 语句中引用这些服务器级对象。 有关详细信息，请参阅[CREATE EXTERNAL DATA SOURCE &#40;Transact SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)和[创建外部文件格式 &#40;Transact SQL &#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat  
-WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT,   
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')  
-);  
-  
-CREATE EXTERNAL TABLE ClickStream (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee.tbl',  
-        DATA_SOURCE = mydatasource,  
-        FILE_FORMAT = myfileformat  
-    )  
-;  
-  
-```  
-  
-### <a name="i-create-an-external-table-with-data-in-rcfile-format"></a>I. RCFile 格式中的数据创建外部表。  
- 此示例显示创建外部表具有格式 RCFiles 数据所需的所有步骤。 它定义外部数据源 mydatasource_rc 和外部文件格式 myfileformat_rc。 然后 CREATE EXTERNAL TABLE 语句中引用这些服务器级对象。 有关详细信息，请参阅[CREATE EXTERNAL DATA SOURCE &#40;Transact SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)和[创建外部文件格式 &#40;Transact SQL &#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_rc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_rc  
-WITH (  
-    FORMAT = RCFILE,  
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_rc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee_rc.tbl',  
-        DATA_SOURCE = mydatasource_rc,  
-        FILE_FORMAT = myfileformat_rc  
-    )  
-;  
-  
-```  
-  
-### <a name="j-create-an-external-table-with-data-in-orc-format"></a>J. 使用 ORC 格式的数据创建外部表。  
- 此示例显示创建外部表具有作为 ORC 文件格式数据所需的所有步骤。 它定义外部数据源 mydatasource_orc 和外部文件格式 myfileformat_orc。 然后 CREATE EXTERNAL TABLE 语句中引用这些服务器级对象。 有关详细信息，请参阅[CREATE EXTERNAL DATA SOURCE &#40;Transact SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)和[创建外部文件格式 &#40;Transact SQL &#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_orc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_orc  
-WITH (  
-    FORMAT = ORC,  
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_orc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/',  
-        DATA_SOURCE = mydatasource_orc,  
-        FILE_FORMAT = myfileformat_orc  
-    )  
-;  
-  
-```  
-  
-### <a name="k-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>K. 将数据从 ADLS 导入 Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. 将数据从 ADLS 导入 Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -610,7 +515,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="l-join-external-tables"></a>L. 联接外部表  
+### <a name="i-join-external-tables"></a>I. 联接外部表  
   
 ```  
 SELECT url.description  
@@ -620,7 +525,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="m-join-hdfs-data-with-pdw-data"></a>M. 加入 HDFS 数据与 PDW 数据  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>J. 加入 HDFS 数据与 PDW 数据  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -630,7 +535,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="n-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>N. 将行数据从 HDFS 导入分布式 PDW 表  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>K. 将行数据从 HDFS 导入分布式 PDW 表  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -639,7 +544,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="o-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>O. 从 HDFS 的行数据导入到复制的 PDW 表  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>L. 从 HDFS 的行数据导入到复制的 PDW 表  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -657,7 +562,6 @@ FROM ClickStream
  [创建 TABLE AS SELECT &#40;Azure SQL 数据仓库 &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
-
 
 
 

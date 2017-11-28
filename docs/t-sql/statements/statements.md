@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e6e36b056aaca063970c81d2932ec47ee7cef29e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d780aa463f6d4defe7dc727091863feabe7f338a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -63,4 +60,3 @@ Service Broker 已为消息和队列的应用程序提供本机支持的功能�
 
 ## <a name="session-settings"></a>会话设置
 SET 语句确定当前的会话句柄运行时间设置的方式。 有关概述，请参阅[SET 语句](set-statements-transact-sql.md)。
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 260a530210b2e336067f2036f632cf347c1654f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-limitations"></a>字符串限制
 SQL 语句字符串的最大长度为 65000 个字符。  
@@ -36,4 +34,3 @@ SQL 语句字符串的最大长度为 65000 个字符。
  管道字符 (&#124;) 不能在字符串内，是否字符用引号括起来后与否。  
   
  对于最大互操作性，应用程序应将字符串传递在参数中，而不是传递带引号的字符串。
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db8463f643763f4dbaa621b5e26549c5523197ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f8939b2e1ae81c3eb171e78753e7fc3b6cc17ae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arguments-in-catalog-functions"></a>目录函数中的参数
 所有目录函数都接受的参数与该应用程序可以将限制返回的数据的作用域。 例如，在第一个和第二个调用到**SQLTables**下面的代码中返回的结果集包含所有表有关的信息，而第三个调用返回有关订单表的信息：  
@@ -60,7 +58,6 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
 -   [模式值自变量](../../../odbc/reference/develop-app/pattern-value-arguments.md)  
   
--   [标识符的自变量](../../../odbc/reference/develop-app/identifier-arguments.md)  
+-   [标识符自变量](../../../odbc/reference/develop-app/identifier-arguments.md)  
   
 -   [值列表自变量](../../../odbc/reference/develop-app/value-list-arguments.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 67932080ad5ec8edc79232387a7b72df8627c076
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>无法刷新工作簿中用于数据连接的数据
   对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 提交对某一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的连接请求并且该请求失败，则会返回此错误。  
@@ -68,11 +66,10 @@ ms.lasthandoff: 09/01/2017
   
  若要解决此问题，请将计算机加入到与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器相同的域中，或在本地计算机上安装一个域控制器。 第二种解决方案是安装域控制器，这将要求您为所有服务和用户创建本地域帐户。 您将需要为您定义的帐户配置服务帐户和 SharePoint 权限。  
   
- 如果你的目标是在脱机状态下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的详细说明，请参阅 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] http://www.powerpivotgeek.com [上的博客文章“使](http://go.microsoft.com/fwlink/?LinkId=184241)服务器断开网络”。  
+ 如果你的目标是在脱机状态下使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的详细说明，请参阅 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 上的博客文章“使服务器断开网络”。  
   
  **应用场景 4：服务器不稳定**  
   
  一个或多个服务可能处于不一致的状态。 在某些情况下，运行 IISRESET 将会解决该问题。  
   
   
-

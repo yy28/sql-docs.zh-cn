@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56610f09ea40942988e88202ac09ec6a3a5e48e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -170,7 +168,6 @@ LIMIT <rows> [OFFSET <row offset>]
  转义语法有两个部分： \<*行*> 是必需的它指定要返回的行数。 偏移量和\<*行偏移量*> 是可选的并且指定要在开始返回行之前跳过的行数。 JDBC 驱动程序通过将查询转换为使用 TOP 而不是 LIMIT，仅支持必需部分。 SQL Server 不支持 LIMIT 子句。 **JDBC 驱动程序不支持可选\<行偏移量 > 和驱动程序将引发异常，如果它使用**。  
   
 ## <a name="see-also"></a>另请参阅  
- [语句使用 JDBC 驱动程序](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序使用语句](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

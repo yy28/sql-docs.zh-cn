@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getIndexInfo
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getIndexInfo
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 028937d023b6cf899eb5fa47354cb0c5d21545bc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -89,10 +85,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**短**|索引的类型。 它可以是以下值之一：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**短**|列在索引中的序号位置。 索引中的第一列为 1。|  
 |COLUMN_NAME|**字符串**|列的名称。|  
-|ASC_OR_DESC|**字符串**|索引排序规则中所用的顺序。 它可以是以下值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回"A"。  |  
+|ASC_OR_DESC|**字符串**|索引排序规则中所用的顺序。 它可以是以下值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回"A"。|  
 |CARDINALITY|**int**|表中的行数或索引中的唯一值个数。|  
 |PAGES|**int**|用于存储索引或表的页数。|  
-|FILTER_CONDITION|**字符串**|筛选条件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null。  |  
+|FILTER_CONDITION|**字符串**|筛选条件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null。|  
   
 > [!NOTE]  
 >  有关 getIndexInfo 方法返回的数据的详细信息，请参阅"sp_indexes (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
@@ -129,4 +125,3 @@ public static void executeGetIndexInfo(Connection con) {
  [SQLServerDatabaseMetaData 类](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-
