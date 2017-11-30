@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET 选项 (Transact SQL) |Microsoft 文档"
 description: "了解有关如何设置数据库选项，如自动优化，加密，SQL Server 和 Azure SQL 数据库中查询存储区"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,17 +26,19 @@ helpviewer_keywords:
 - checksums [SQL Server]
 - automatic tuning
 - SQL plan regression correction
+- auto_create_statistics
+- auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: "159"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b460ca1e3f662ea59c0b7bcd4b1fc0e0e059e236
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 数据库镜像， [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，所兼容性级别`SET`选项但在单独主题中所述由于它们的长度。 有关详细信息，请参阅[ALTER DATABASE 数据库镜像 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)， [ALTER DATABASE SET HADR &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)，和[ALTER DATABASE 兼容级别 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  可以通过使用当前的会话配置许多数据库 set 选项[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md) ，并且在连接时通常配置应用程序。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。  
+> 可以通过使用当前的会话配置许多数据库 set 选项[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md) ，并且在连接时通常配置应用程序。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -276,8 +278,7 @@ SET
  **\<auto_option >:: =**  
   
  控制自动选项。  
-  
- AUTO_CLOSE { ON | OFF }  
+ <a name="auto_close"></a>AUTO_CLOSE {ON |关闭}  
  ON  
  在最后一个用户退出后，数据库完全关闭，其资源得到释放。  
   
@@ -300,8 +301,8 @@ SET
 >  数据库镜像要求将 AUTO_CLOSE 设置为 OFF。  
   
  数据库设置为 AUTOCLOSE = ON 时，启动数据库自动关闭的操作将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更高版本中，对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
-  
- AUTO_CREATE_STATISTICS { ON | OFF }  
+ 
+ <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS {ON |关闭}  
  ON  
  查询优化器根据需要在查询谓词中的单列上创建统计信息，以便改进查询计划和查询性能。 在查询优化器编译查询时创建这些单列统计信息。 这些单列统计信息只在尚不是现有统计信息对象的第一列的列上创建。  
   
@@ -319,7 +320,7 @@ SET
   
  **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
- AUTO_SHRINK { ON | OFF }  
+ <a name="auto_shrink"></a>AUTO_SHRINK {ON |关闭}  
  ON  
  数据库文件是定期收缩的候选项。  
   
@@ -335,9 +336,9 @@ SET
  可通过查看 sys.databases 目录视图中的 is_auto_shrink_on 列或 DATABASEPROPERTYEX 函数的 IsAutoShrink 属性来确定此选项的状态。  
   
 > [!NOTE]  
->  AUTO_SHRINK 选项在包含数据库中不可用。  
+> AUTO_SHRINK 选项在包含数据库中不可用。  
   
- AUTO_UPDATE_STATISTICS { ON | OFF }  
+ <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS {ON |关闭}  
  ON  
  指定在统计信息由查询使用并且可能过期时，查询优化器更新统计信息。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。  
   
@@ -356,7 +357,7 @@ SET
   
  详细信息，请参阅"使用数据库范围内的统计信息选项"部分中[统计信息](../../relational-databases/statistics/statistics.md)。  
   
- AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+ <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC {ON |关闭}  
  ON  
  指定针对 AUTO_UPDATE_STATISTICS 选项的统计信息更新是异步的。 查询优化器不等待统计信息更新完成即编译查询。  
   
@@ -373,7 +374,7 @@ SET
   
  描述何时使用同步或异步统计信息更新的详细信息，请参阅"使用数据库范围内的统计信息选项"部分中[统计信息](../../relational-databases/statistics/statistics.md)。  
   
- **\<automatic_tuning_option >:: =**  
+ <a name="auto_tuning"></a> **\<automatic_tuning_option >:: =**  
  **适用于**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
 
  启用或禁用`FORCE_LAST_GOOD_PLAN`[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)选项。  
@@ -387,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  控制更改跟踪选项。 可以启用更改跟踪、设置选项、更改选项以及禁用更改跟踪。 有关示例，请参阅本主题后面的“示例”一节。  
   
@@ -425,7 +426,7 @@ SET
  该数据库是包含数据库。 如果数据库已启用复制、更改数据捕获或更改跟踪功能，则将数据库包含关系设置为 partial 将失败。 错误检查将在一次失败后停止。 有关包含的数据库的详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。  
   
 > [!NOTE]  
->  无法在中配置包含[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。 包含未显式指定，但[!INCLUDE[ssSDS](../../includes/sssds-md.md)]可以使用包含的功能，如包含数据库用户。  
+> 无法在中配置包含[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。 包含未显式指定，但[!INCLUDE[ssSDS](../../includes/sssds-md.md)]可以使用包含的功能，如包含数据库用户。  
   
  **\<cursor_option >:: =**  
   
@@ -443,7 +444,7 @@ SET
  可通过查看 sys.databases 目录视图中的 is_cursor_close_on_commit_on 列或 DATABASEPROPERTYEX 函数的 IsCloseCursorsOnCommitEnabled 属性来确定此选项的状态。  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  控制游标作用域是使用 LOCAL 还是 GLOBAL。  
   
@@ -459,13 +460,13 @@ SET
   
  **\<database_mirroring >**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  有关参数说明，请参阅[ALTER DATABASE 数据库镜像 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  控制 date_correlation_optimization 选项。  
   
@@ -493,7 +494,7 @@ SET
   
  **\<db_state_option >:: =**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  控制数据库的状态。  
   
@@ -507,7 +508,7 @@ SET
  数据库标记为 READ_ONLY，禁用日志记录，并且仅限 sysadmin 固定服务器角色的成员访问。 EMERGENCY 主要用于故障排除。 例如，可以将由于损坏了日志文件而标记为可疑的数据库设置为 EMERGENCY 状态。 这样，系统管理员便可对数据库进行只读访问。 只有 sysadmin 固定服务器角色的成员才可以将数据库设置为 EMERGENCY 状态。  
   
 > [!NOTE]  
->  **权限：**数据库更改为脱机或紧急状态状态所需的主题数据库的 ALTER DATABASE 权限。 服务器级别 ALTER ANY DATABASE 权限是将数据库从脱机状态移到联机状态所必需的。  
+> **权限：**数据库更改为脱机或紧急状态状态所需的主题数据库的 ALTER DATABASE 权限。 服务器级别 ALTER ANY DATABASE 权限是将数据库从脱机状态移到联机状态所必需的。  
   
  可以通过检查中的状态和 state_desc 列确定此选项的状态[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图或的 Status 属性[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)函数。 有关详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
@@ -529,14 +530,14 @@ SET
  若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 联合数据库上，将禁用 SET { READ_ONLY | READ_WRITE }。  
+> 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 联合数据库上，将禁用 SET { READ_ONLY | READ_WRITE }。  
   
  **\<db_user_access_option >:: =**  
   
  控制用户对数据库的访问。  
   
  SINGLE_USER  
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定一次只能有一个用户可以访问数据库。 如果指定了 SINGLE_USER，但已有其他用户连接到数据库，则 ALTER DATABASE 语句将被阻止，直到所有用户都断开与指定数据库的连接为止。 若要重写此行为，请参阅 WITH\<终止 > 子句。  
   
@@ -575,7 +576,7 @@ MULTI_USER
   
  **\<external_access_option >:: =**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  控制是否允许外部资源（例如另一个数据库中的对象）访问数据库。  
   
@@ -587,7 +588,7 @@ MULTI_USER
  数据库不能参与建立跨数据库所有权链。  
   
 > [!IMPORTANT]  
->  如果 cross db ownership chaining 服务器选项为 0 (OFF)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可以识别此设置。 如果 cross db ownership chaining 为 1 (ON)，则不论此选项为何值，所有用户数据库都可以参与跨数据库所有权链。 此选项通过设置[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+> 如果 cross db ownership chaining 服务器选项为 0 (OFF)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可以识别此设置。 如果 cross db ownership chaining 为 1 (ON)，则不论此选项为何值，所有用户数据库都可以参与跨数据库所有权链。 此选项通过设置[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
  若要设置此选项，需要对数据库的 CONTROL SERVER 权限。  
   
@@ -659,7 +660,7 @@ MULTI_USER
   
  **\<HADR_options >:: =**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  请参阅[ALTER DATABASE SET HADR &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -692,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  打开|关闭|清除[全部]  
  控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。  
@@ -762,7 +763,7 @@ OPERATION_MODE
  系统将提供占用日志空间最小的简单备份策略。 服务器故障恢复不再需要的日志空间可被自动重用。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
 > [!IMPORTANT]  
->  简单恢复模式比其他两种模式更容易管理，但代价是数据文件损坏时丢失数据的风险也较大。 最近的数据库备份或差异数据库备份之后的所有更改都将丢失，必须手动重新输入。  
+> 简单恢复模式比其他两种模式更容易管理，但代价是数据文件损坏时丢失数据的风险也较大。 最近的数据库备份或差异数据库备份之后的所有更改都将丢失，必须手动重新输入。  
   
  默认恢复模式由 **model** 数据库的恢复模式决定。 有关选择合适恢复模式的详细信息，请参阅[恢复模式 &#40;SQL server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -776,9 +777,9 @@ OPERATION_MODE
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]不能检测不完整页。  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除语法结构 TORN_PAGE_DETECTION ON | OFF。 请避免在新的开发工作中使用此语法结构，并计划修改当前使用此语法结构的应用程序。 请改用 PAGE_VERIFY 选项。  
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除语法结构 TORN_PAGE_DETECTION ON | OFF。 请避免在新的开发工作中使用此语法结构，并计划修改当前使用此语法结构的应用程序。 请改用 PAGE_VERIFY 选项。  
   
- PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
+<a name="page_verify"></a>PAGE_VERIFY {校验和 |TORN_PAGE_DETECTION |无}  
  发现磁盘 I/O 路径错误引起的损坏的数据库页面。 磁盘 I/O 路径错误可能导致数据库损坏问题。这种错误通常是将该页面写入磁盘时发生的电源故障或磁盘硬件故障引起的。  
   
  CHECKSUM  
@@ -797,7 +798,7 @@ OPERATION_MODE
 -   在用户数据库或系统数据库升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本后，将保留 PAGE_VERIFY 值（NONE 或 TORN_PAGE_DETECTION）。 建议您使用 CHECKSUM。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，tempdb 数据库的 PAGE_VERIFY 数据库选项设置为 NONE 且不能修改。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本，tempdb 数据库的默认值是校验和对于新安装的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果是升级安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则默认值仍为 NONE。 可以修改该选项。 我们建议为 tempdb 数据库使用 CHECKSUM。  
+    > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，tempdb 数据库的 PAGE_VERIFY 数据库选项设置为 NONE 且不能修改。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本，tempdb 数据库的默认值是校验和对于新安装的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果是升级安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则默认值仍为 NONE。 可以修改该选项。 我们建议为 tempdb 数据库使用 CHECKSUM。  
   
 -   TORN_PAGE_DETECTION 可能使用较少资源，但提供的 CHECKSUM 保护最少。  
   
@@ -809,9 +810,9 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对因校验和、页撕裂或其他 I/O 错误而失败的任何读取都重试四次。 如果在其中一次重试中读取成功，则会向错误日志中写入一条消息，且触发读取的命令将继续执行。 如果重试失败，则该命令失败，且显示错误消息 824。  
   
- 有关校验和、 残缺页上，读取重试的详细信息，错误消息 823 和 824，以及其他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]I/O 审核功能，请参阅此[Microsoft Web 站点](http://go.microsoft.com/fwlink/?LinkId=47160)。  
+ 有关错误消息 823、 824 和 825 的详细信息，请参阅[如何解决 SQL Server 中的消息 823 错误](http://support.microsoft.com/help/2015755)，[如何解决 SQL Server 中的消息 824<](http://support.microsoft.com/help/2015756)和[如何进行故障排除的消息 825&#40; 读取重试 &#41;SQL Server 中](http://support.microsoft.com/help/2015757)。
   
- 此选项的当前设置可以确定通过检查中的 page_verify_option 列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图或 IsTornPageDetectionEnabled 属性[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)函数。  
+ 此选项的当前设置可以确定通过检查*page_verify_option*中的列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图或*IsTornPageDetectionEnabled*属性[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)函数。  
   
 **\<remote_data_archive_option >:: =**  
   
@@ -1250,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. 启用查询存储  
- **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  下面的示例启用查询存储并配置查询存储参数。  
   
@@ -1258,11 +1259,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1278,6 +1279,6 @@ SET QUERY_STORE = ON
  [将事务隔离级别设置 &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
+ [sys.data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   

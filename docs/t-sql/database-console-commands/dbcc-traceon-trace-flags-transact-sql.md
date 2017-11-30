@@ -1,7 +1,7 @@
 ---
 title: "跟踪标志 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44c2252590b6fdb9ffdbe895830eb49328c28e6a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-跟踪标志 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,10 @@ ms.lasthandoff: 11/17/2017
 |**692**|大容量加载到堆或聚集的索引的数据时禁用快速的插入。 启动[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，快速插入启用默认情况下利用最小日志记录时数据库处于简单或大容量日志记录的恢复模型，以优化插入到新页的记录的插入性能。 使用快速插入，每个批量负载批获取跳过具有可用空间来优化插入性能的现有范围内分配查找的新扩展。<br /><br /> 使用快速的插入、 大容量加载使用小的批大小可能会导致增加未使用的空间对象因此建议使用每个批处理的大型 batchsize 完全填充范围内使用的。 如果增加 batchsize 不可行，则此跟踪标志有助于减少未使用的空间保留这会降低性能。 <br /><br />**注意：**此跟踪标志适用于[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]RTM 和更高版本的生成。<br /><br />**作用域**： 全局或会话|
 |**715**|启用到没有非聚集索引的堆大容量加载操作的表锁。 启用此跟踪标志后，大容量加载操作将获取大容量更新 (BU) 锁大容量复制数据到表时。 大容量更新 (BU) 锁允许多个线程能够在同一个表，同时批量加载数据，同时防止其他进程不是从访问该表中的大容量加载数据。<br /><br />行为类似于当用户显式指定 TABLOCK 提示执行大容量加载时或当 sp_tableoption 表锁而使大容量加载为给定的表启用。 但是，当启用此跟踪标志时，此行为将成为无任何查询或数据库更改的默认值。<br /><br />**作用域：**全局或会话|
 |**834**|使用 Microsoft Windows 大型页分配的缓冲池。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/3210239)。<br /><br />**注意：**如果你使用的列存储索引功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，我们不建议开启跟踪标志 834。<br /><br />**作用域**： 全局仅|
+|**845**|启用锁定页上的标准 Sku[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时的服务帐户，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存权限启用已锁定页。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/970070)和上的文档页[服务器内存服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)。<br /><br />**注意：**开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]此行为已启用默认情况下标准 Sku，且不能使用跟踪标志 845。<br /><br />**作用域**： 全局仅|
 |**902**|在安装累积更新或 Service Pack 时，会绕过数据库升级脚本的执行。 如果在脚本升级模式期间遇到错误，它被建议更多指导，请与 Microsoft SQL 客户服务和支持 (CSS) 联系。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2163980)。<br /><br />**警告：**此跟踪标志旨在用于在脚本升级模式下，故障排除失败的更新的和不支持在生产环境中连续运行。 数据库升级脚本需要对于完整安装的累积更新和 Service Pack 成功执行。 不执行此操作可能会导致意外的问题与您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。<br /><br />**作用域**： 全局仅|
-|**1117**|如果文件组中的文件达到了自动增长阈值，增加的文件组中的所有文件。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项控制此行为和跟踪标志 1117年产生任何影响。 有关详细信息，请参阅[ALTER DATABASE 文件和文件组选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**作用域：**全局仅|
-|**1118**|删除服务器上的大多数单页分配，以减少 SGAM 页上的争用。 创建一个新的对象后，默认情况下，从不同 （混合扩展盘区） 的扩展盘区分配的前八页。 此后，如果需要更多的页，将从相同的片区（统一区）分配进行分配。 SGAM 页用于跟踪这些混合区，因此发生大量混合页分配时，可能会很快成为瓶颈。 创建新对象时，此跟踪标志从相同的片区分配所有 8 页，以最大限度降低扫描 SGAM 页的需求。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/328551)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 设置 MIXED_PAGE_ALLOCATION 选项控制此行为和跟踪标志 1118年产生任何影响。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**作用域：**全局仅|  
+|**1117**|如果文件组中的文件达到了自动增长阈值，增加的文件组中的所有文件。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项控制此行为，因此跟踪标志 1117年已失效。 有关详细信息，请参阅[ALTER DATABASE 文件和文件组选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**作用域：**全局仅|
+|**1118**|删除服务器上的大多数单页分配，以减少 SGAM 页上的争用。 创建一个新的对象后，默认情况下，从不同 （混合扩展盘区） 的扩展盘区分配的前八页。 此后，如果需要更多的页，将从相同的片区（统一区）分配进行分配。 SGAM 页用于跟踪这些混合区，因此发生大量混合页分配时，可能会很快成为瓶颈。 创建新对象时，此跟踪标志从相同的片区分配所有 8 页，以最大限度降低扫描 SGAM 页的需求。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/328551)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 设置 MIXED_PAGE_ALLOCATION 选项控制此行为，因此跟踪标志 1118年已失效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**作用域：**全局仅|  
 |**1204**|返回参与死锁的锁的资源和类型，以及受影响的当前命令。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/832524)。<br /><br />**作用域：**全局仅|  
 |**1211**|基于内存不足或基于锁数禁用锁升级。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]不会将行锁或页锁升级到表锁。<br /><br />使用此跟踪标志可生成过多的锁数目。 这样会降低[!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能，或因为内存不足而导致 1204 错误（无法分配锁资源）。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**作用域**： 全局或会话|  
 |**1222**|以不符合任何 XSD 架构的 XML 格式，返回参与死锁的锁的资源和类型，以及受影响的当前命令。<br /><br />**作用域**： 全局仅|  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |**2312**|使您能够设置为查询优化器基数估计模型[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本，取决于数据库的兼容性级别。 有关详细信息，请参阅[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，为实现此目的在查询级别中，添加使用提示 FORCE_DEFAULT_CARDINALITY_ESTIMATION[查询提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用此跟踪标志。<br /><br />**作用域**： 全局或会话或查询| 
 |**2335**|导致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假设在查询优化过程固定的内存量为可用。 它不会限制内存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]授予执行查询。 为配置的内存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将仍可使用数据缓存、 查询执行情况和其他使用者。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2413549)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**作用域**： 全局或会话或查询|
 |**2340**|导致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不是使用排序操作 （批处理排序），对于生成计划时优化嵌套的循环联接的。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2009160)。<br /><br />从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，为实现此目的在查询级别中，添加使用提示 DISABLE_OPTIMIZED_NESTED_LOOP[查询提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用此跟踪标志。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**作用域**： 全局或会话或查询|
-|**2371**|固定的自动更新统计信息阈值更改为动态的自动更新统计信息的阈值。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由引擎控制此行为和跟踪标志 2371年不起作用。<br /><br />**作用域**： 全局仅|
+|**2371**|固定的自动更新统计信息阈值更改为动态的自动更新统计信息的阈值。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]并在列表视图[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130 上，此行为由引擎控制和跟踪标志 2371年不起作用。<br /><br />**作用域**： 全局仅|
 |**2389**|启用自动生成升序键 （直方图修正） 的快速统计的信息。 如果设置跟踪标志 2389年，并且起始的统计信息列标记为升序排序，然后在查询编译时用于估计基数直方图进行调整。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 改为使用跟踪标志 4139。<br /><br />**作用域**： 全局或会话或查询|
 |**2390**|启用自动生成升序或未知键 （直方图修正） 的快速统计的信息。 如果设置了跟踪标志 2390年，并且起始的统计信息列标记为升序或未知，则将在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 改为使用跟踪标志 4139。<br /><br />**作用域**： 全局或会话或查询|
 |**2453**|允许表变量的行的数量不足发生更改时触发重新编译。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**作用域**： 全局或会话或查询|
