@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  [向任何库添加数据馈送内容类型](#addtolib)  
   
 ##  <a name="prereq"></a> 先决条件  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅 [在管理中心中针对网站集激活 Power Pivot 功能集成](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
  您必须是网站所有者才能创建该库。  
   

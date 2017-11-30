@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9168e7a06ce377c6c1d47456197f8e513b2b58fb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   返回包含有关中的未声明参数的元数据的结果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 考虑每个参数中使用 **@tsql** 批处理，但不是声明中 **@params** 。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 该过程返回一个空结果集如果 **@tsql** 输入的批处理不具有参数声明中的除 **@params** 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](http://msdn.microsoft.com/library/bb500435.aspx)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
 ## <a name="syntax"></a>语法  
   

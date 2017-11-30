@@ -22,20 +22,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34dc0365eab64acf81dcb2dce24c8df38bd95e92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6b2e503789cf2ad564132f34af4e9ab61464332a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出有关一个或多个邮件配置文件的信息。  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +60,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |列名|数据类型|Description|  
 |**profile_id**|**int**|配置文件 ID。|  
 |**名称**|**sysname**|配置文件名。|  
-|**说明**|**nvarchar(256)**|配置文件的说明。|  
+|**description**|**nvarchar(256)**|配置文件的说明。|  
   
 ## <a name="remarks"></a>注释  
  当指定配置文件名称或配置文件 id，则**sysmail_help_profile_sp**返回有关该配置文件的信息。 否则为**sysmail_help_profile_sp**返回有关在每个配置文件信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  

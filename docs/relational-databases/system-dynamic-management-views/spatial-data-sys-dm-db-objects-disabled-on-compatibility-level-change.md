@@ -24,20 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f80f567756374edf0c348296d9b1197c6f828a76
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空间数据-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   列出由于更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的兼容级别而将禁用的索引和约束。 在升级或更改兼容级别之后，包含持久化计算列且其表达式使用空间 UDT 的索引和约束将被禁用。 使用此动态管理函数可以确定兼容级别变化所带来的影响。  
-  
-||  
-|-|  
-|**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

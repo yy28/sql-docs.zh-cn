@@ -20,7 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Add a custom map to a Reporting Services mobile report
+# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>向 Reporting Services 移动报表添加自定义地图
 自定义地图需要两个文件：  
 * 针对几何形状的 .SHP 文件  
 * 针对元数据的 .DBF 文件  
