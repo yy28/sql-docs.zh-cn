@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0abb8eb792b85eed60df52f70a2c13c2e3f920d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba8deb3b11b01cf9f53e02024815150fa4441b6d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/17/2017
   数据库邮件处理的每个消息都在视图中占一行。 如果要查看所有消息的状态，则请使用该视图。  
   
  若要查看仅具有失败的状态消息，使用[sysmail_faileditems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 若要查看未发送的邮件，使用[sysmail_unsentitems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). 若要查看已发送的消息，使用[sysmail_sentitems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

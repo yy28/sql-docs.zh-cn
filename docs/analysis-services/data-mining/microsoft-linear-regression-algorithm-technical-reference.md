@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |可预测属性|Continuous、Cyclical 和 Ordered|  
   
 > [!NOTE]  
->  支持**Cyclical** 和 **Ordered** content types are supported, but the algorithm treats them as discrete values 和 does not perform special processing.  
+>  支持**Cyclical** 和 **Ordered** 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

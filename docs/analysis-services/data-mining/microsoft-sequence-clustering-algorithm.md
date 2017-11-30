@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
  该算法在许多方面都类似于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法。 不过， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不是查找包含类似属性的事例的分类，而是查找顺序中包含类似路径的事例的分类。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] web site collects information about what pages site users visit, and about the order in which the pages are visited. 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
+ [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 网站收集有关站点用户访问哪些页面以及页面访问顺序的信息。 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种混合算法，它综合了聚类分析方法和 Markov 链分析，以识别分类及其顺序。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法的特点之一是使用顺序数据。 此数据通常表示数据集中状态之间的一系列事件或转换，例如，特定用户的一系列产品购买或 Web 点击操作。 该算法会检查所有转换概率，并测量数据集中所有可能顺序之间的差异或距离，以确定最好使用哪些顺序作为聚类分析的输入。 在创建候选顺序列表后，该算法通过期望最大化 (EM) 将该顺序信息用作聚类分析的输入。  
