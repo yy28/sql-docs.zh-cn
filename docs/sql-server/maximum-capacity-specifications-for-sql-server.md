@@ -1,11 +1,10 @@
 ---
 title: "SQL Server 的最大容量规范 | Microsoft Docs"
-ms.date: 03/09/2017
+ms.date: 11/6/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c56b0a570f295896e76c5d0b3441042543445178
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 
@@ -81,12 +79,12 @@ ms.lasthandoff: 08/11/2017
 |每个数据库的文件个数||32,767||  
 |文件大小（数据）||16 TB||  
 |文件大小（日志）||2 TB||  
-|每个数据库的内存优化数据文件个数||4.096||  
+|每个数据库的内存优化数据文件个数||[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 中为 4,096。 更高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会施加这样的严格限制。||  
 |每个内存优化数据文件的差异文件||1||  
 |每个表的外键表引用数||传出 = 253。 传入 = 10,000。|有关限制，请参阅 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)。|  
 |标识符长度（以字符计）||128||  
 |每台计算机的实例数||独立服务器上为 50 个实例。<br /><br /> 在使用共享群集磁盘作为您的群集安装的存储选项时，在故障转移群集上支持 25 个实例。如果您为群集安装选择 SMB 文件共享作为存储选项，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在故障转移群集上支持 50 个实例。||  
-|每个内存优化表的索引个数||8||  
+|每个内存优化表的索引个数||自 [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 起以及在 [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)] 中为 999<br/>[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] 和 [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)] 中为 8||  
 |包含 SQL 语句的字符串的长度（批大小）||65,536 * 网络数据包大小|网络数据包大小指的是用于在应用程序和关系 [!INCLUDE[ssDE](../includes/ssde-md.md)]之间进行通信的表格格式数据流 (TDS) 数据包的大小。 默认的数据包大小为 4 KB，由“网络数据包大小”配置选项控制。|  
 |每个连接的锁数||每个服务器的最大锁数||  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||仅受内存限制|此值针对静态锁分配。 动态锁仅受内存限制。|  
@@ -159,4 +157,3 @@ ms.lasthandoff: 08/11/2017
  [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

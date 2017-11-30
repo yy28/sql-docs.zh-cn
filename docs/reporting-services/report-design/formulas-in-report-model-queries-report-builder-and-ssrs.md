@@ -1,5 +1,5 @@
 ---
-title: "在报表中的公式模拟查询 （报表生成器和 SSRS） |Microsoft 文档"
+title: "报表模型查询中的公式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 当你为报表模型数据源定义查询时，可以在报表模型查询设计器的“定义公式”对话框中定义公式。  公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  函数可用于执行简单计算或复杂计算。 函数的结构以函数名称开头，后跟左括号、用逗号分隔的函数参数、右括号。  
   
- ![函数的示例。](../../reporting-services/report-design/media/functionexample.gif "函数的示例。")  
+ ![函数的示例。](../../reporting-services/report-design/media/functionexample.gif "An example of a function.")  
   
  参数可以是字段引用、数字、文本和逻辑值（如 **TRUE** 或 **FALSE**）。 参数也可以是常量、公式或其他函数。 所输入的参数必须生成该参数的有效值。 例如，如果公式为两个整数相乘，则结果不能为文本字符串。  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |文本函数|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

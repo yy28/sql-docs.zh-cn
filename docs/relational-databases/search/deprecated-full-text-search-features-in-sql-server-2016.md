@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d927fde6997929f3f92870ea55100f64d4b7395
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2849b5a4570c4ce4c2633c13522c66d04b4c47fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的全文搜索功能
   本主题介绍 SQL Server 中仍然可用但却不推荐使用的全文搜索功能。 按照计划，未来版本将不再具有这些功能。 不要在新的应用程序中使用不推荐的功能。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 |不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> | <prefix_term>}<br /><br /> {<br /><br /> { { NEAR | ~ }    {<simple_term> | <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> | <prefix_term>} [ ,…*n* ]<br /><br /> | ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> “应用程序适配器” 区域）<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> | <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,…*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,…*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> “应用程序适配器” 区域）<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG 选项：<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|无。|CREATE FULLTEXT CATLOG IN PATH<br /><br /> 无。<sup>*</sup>|237<br /><br /> 无。*|  
 |DATABASEPROPERTYEX 属性：IsFullTextEnabled|无。|DATABASEPROPERTYEX**('IsFullTextEnabled')**|202|  
 |sp_detach_db 选项：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|无。|sp_detach_db @keepfulltextindexfile|226|  
@@ -62,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  ***SQL Server:Deprecated Features** 对象不监视 CREATE FULLTEXT CATLOG ON FILEGROUP *文件组*的出现情况。  
   
   
-

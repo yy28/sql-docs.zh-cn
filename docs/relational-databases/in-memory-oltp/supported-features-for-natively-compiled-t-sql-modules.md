@@ -1,26 +1,24 @@
 ---
 title: "本机编译的 T-SQL 模块支持的功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 09744996c2fddd8ca88570922a06783e5d9b04a9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -195,8 +193,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
-      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 APPLY 运算符。
 
 ##  <a name="bfncsp"></a> 本机编译模块中的内置函数  
  内存优化表的约束中以及本机编译的 T-SQL 模块中支持以下函数。  
@@ -206,8 +204,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
-      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
 -   恒等函数：SCOPE_IDENTITY  
 
@@ -216,8 +214,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
-      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 JSON 函数。
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
+      从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
 
@@ -307,6 +305,5 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [本机编译存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [本机编译存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: "创建 RSExecRole |Microsoft 文档"
+title: "创建 RSExecRole | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用称为 **RSExecRole** 的预定义数据库角色向报表服务器数据库授予报表服务器权限。 为报表服务器数据库自动创建了 **RSExecRole** 角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将报表服务器数据库移到新的或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。  
@@ -67,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  打开 **“角色”**。  
   
-7.  右键单击**数据库角色**，然后选择**新的数据库角色**。 将显示“常规”页。  
+7.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
   
 8.  在 **“角色名称”**中，键入 **RSExecRole**。  
   
@@ -101,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 20. 对于其余的每个存储过程，重复此操作。 必须向**RSExecRole** 授予全部三个存储过程的执行权限。  
   
- ![数据库角色属性页](../../reporting-services/security/media/rsexecroledbproperties.gif "数据库角色属性页")  
+ ![“数据库角色属性”页](../../reporting-services/security/media/rsexecroledbproperties.gif "Database Role Properties page")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>在 MSDB 中创建 RSExecRole  
  Reporting Services 使用 SQL Server 代理服务的存储过程并从系统表中检索作业信息，以支持计划操作。 下列步骤说明如何向 RSExecRole 授予这些过程的执行权限和对表的选择权限。  
@@ -116,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  打开 **“角色”**。  
   
-5.  右键单击**数据库角色**，然后选择**新的数据库角色**。 将显示“常规”页。  
+5.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
   
 6.  在“角色名称”中，键入 **RSExecRole**。  
   
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. 对于 sysjobs 表重复此操作。 必须向 RSExecRole 授予这两个表的选择权限。  
   
 ## <a name="move-the-report-server-database"></a>移动报表服务器数据库  
- 创建角色之后，可以将报表服务器数据库移到新的 SQL Server 实例。 有关详细信息，请参阅[将报表服务器数据库移到另一台计算机](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
+ 创建角色之后，可以将报表服务器数据库移到新的 SQL Server 实例。 有关详细信息，请参阅[将报表服务器数据库移至其他计算机](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
   
- 如果您正在升级[!INCLUDE[ssDE](../../includes/ssde-md.md)]到 SQL Server 2016，你可以将其升级之前或之后移动数据库。  
+ 如果要将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 升级到 SQL Server 2016，可以在数据库移动之前或之后进行升级。  
   
- 当报表服务器连接到它时，将自动升级报表服务器数据库。 数据库升级不要求任何特定的步骤。  
+ 当报表服务器连接到报表服务器数据库时，该数据库将自动升级。 数据库升级不要求任何特定的步骤。  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>还原加密密钥和验证您的工作  
  如果已附加报表服务器数据库，则现在应可以完成以下步骤来验证您的工作。  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  单击 **“选择现有报表服务器数据库”**。  
   
-5.  输入数据库引擎的服务器名称。 如果报表服务器数据库附加到命名实例时，则必须按以下格式键入实例名称： \<servername >\\< instancename\>。  
+5.  输入数据库引擎的服务器名称。 如果将报表服务器数据库附加到命名实例，则必须按以下格式键入实例名称：\<servername>\\<instancename\>。  
   
 6.  单击 **“测试连接”**。  
   
@@ -241,4 +238,4 @@ ms.lasthandoff: 08/09/2017
 [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

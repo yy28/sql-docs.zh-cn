@@ -2,11 +2,13 @@
 title: "向可用性组添加增强的数据库故障转移 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
+ms.reviewer: mikeray
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>向可用性组添加增强的数据库故障转移 (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，如果加入主要副本上的可用性组的数据库无法继续写入事务，即使为进行自动故障转移同步和配置副本，此数据库也无法触发故障转移。
 
@@ -44,7 +45,7 @@ SQL Server 2016 引入了一个新的可选行为，名为“增强的数据库�
 
 在实例 A 和实例 B 之间配置一个可用性组，其中包含两个数据库：DB1 和 DB2。 可用性模式设置为随自动故障转移模式同步提交，同时启用增强的数据库故障转移。 无法访问包含 DB2 的数据和事务日志文件的磁盘。 检测到问题时，可用性组将自动故障转移到实例 B。
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>配置和查看增强的数据库故障转移选项
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>配置和查看增强的数据库故障转移选项
 
 可使用 SQL Server Management Studio 或 Transact-SQL 配置增强的数据库故障转移。 PowerShell cmdlet 当前不具有此功能。 默认情况下，增强的数据库故障转移处于禁用状态。
 
@@ -63,17 +64,18 @@ SQL Server 2016 引入了一个新的可选行为，名为“增强的数据库�
 ### <a name="transact-sql"></a>Transact-SQL
 
 若要在创建可用性组的过程中配置增强的数据库故障转移行为，DB_FAILOVER 必须设置为 ON，如下所示：
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 若要在配置可用性组后添加此行为，请使用 ALTER AVAILABILITY GROUP 命令：
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 若要禁用此行为，请发出以下 ALTER AVAILABILITY GROUP 命令：
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>动态管理视图
@@ -88,5 +90,4 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 - [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [使用 Transact-SQL 创建可用性组](create-an-availability-group-transact-sql.md)
-
 

@@ -1,32 +1,30 @@
 ---
-title: "配置报表服务器服务帐户 （SSRS 配置管理器） |Microsoft 文档"
+title: "配置报表服务器服务帐户（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e68467845079107509d7cf259b06b8f5c52dbb06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为单个服务实现，其中包含报表服务器 Web 服务、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]以及用于计划的报告处理和订阅传递的后台处理应用程序。 本主题说明最初如何配置服务帐户以及如何使用 Reporting Services 配置工具修改帐户或密码。  
   
 ## <a name="initial-configuration"></a>初始配置  
- 报表服务器服务帐户是在安装过程中定义的。 可以在域用户帐户或内置帐户（如 **虚拟服务帐户**）下运行服务。 没有默认帐户;在中指定所用的帐户**服务帐户**安装向导页将成为报表服务器服务的初始帐户。  
+ 报表服务器服务帐户是在安装过程中定义的。 可以在域用户帐户或内置帐户（如 **虚拟服务帐户**）下运行服务。 没有默认帐户；你在安装向导的“服务帐户”页中指定的任何帐户都将成为 报表服务器服务的初始帐户。  
   
 > [!IMPORTANT]  
 >  尽管报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 是单独的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序，但是它们都在同一个报表服务器进程标识中的单个服务体系结构下运行。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 -   自动更新用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的登录权限。 新帐户将添加到 **RSExecRole**。  
   
-     旧帐户的数据库登录名不会被自动删除。 请务必删除不再使用的帐户。 有关详细信息，请参阅[管理报表服务器数据库 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) SQL Server 联机丛书中。  
+     旧帐户的数据库登录名不会被自动删除。 请务必删除不再使用的帐户。 有关详细信息，请参阅 SQL Server 联机丛书中的[管理报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
   
      只有在首先将报表服务器数据库连接配置为使用新服务帐户的情况下，才需要将数据库权限授予该服务帐户。 如果将报表服务器数据库连接配置为使用域用户帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名，连接信息将不受服务帐户更新的影响。  
   
@@ -114,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 配置管理器 &#40;本机模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-
+ [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

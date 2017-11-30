@@ -1,5 +1,5 @@
 ---
-title: "打开 Reporting Services SharePoint 跟踪日志 (ULS) 事件 |Microsoft 文档"
+title: "为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: be2f1f7acebd93946e4319b81f4a23b436808702
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
 
   从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 事件写入 SharePoint 统一日志记录服务 (ULS) 跟踪日志。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的类别在 SharePoint 管理中心的“监视”页上提供。  
@@ -109,7 +107,7 @@ Get-SPDiagnosticConfig
 |本地模式呈现||  
 |SOAP 客户端代理||  
 |UI 页||  
-|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目被来源于客户端应用程序，包括 Power View，SQL Server Reporting Services 外接程序的功能。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的 **“类别”** 和“Power View”的 **“区域”** 下。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
+|Power View|写入 **LogClientTraceEvents** API 的日志条目。 这些条目来源于客户端应用程序，包括 Power View（SQL Server Reporting Services 加载项的功能）。<br /><br /> 来自 LogClientTraceEvents API 的所有日志条目将记录在“SQL Server Reporting Services”的 **“类别”** 和“Power View”的 **“区域”** 下。<br /><br /> 使用“Power View”区域记录的条目内容由客户端应用程序决定。|  
 |报表服务器警报运行时||  
 |报表服务器应用程序域管理器||  
 |报表服务器缓冲响应||  
@@ -117,7 +115,7 @@ Get-SPDiagnosticConfig
 |报表服务器目录||  
 |报表服务器块区||  
 |报表服务器清除||  
-|报表服务器配置管理器|示例条目：<br /><br /> MediumUsing 报表服务器内部 url `http://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
+|报表服务器配置管理器|示例条目：<br /><br /> MediumUsing 报表服务器内部 URL `http://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
 |报表服务器 Crypto||  
 |报表服务器数据扩展插件||  
 |报表服务器数据库轮询||  
@@ -147,13 +145,13 @@ Get-SPDiagnosticConfig
 |共享服务|示例条目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting access to content databases.<br /><br /> MediumProvisioning instances for ReportingWebServiceApplication<br /><br /> MediumProcessing service account change for ReportingWebServiceApplication<br /><br /> MediumSetting database permissions.|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell 查看日志文件  
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")你可以使用 PowerShell 返回的列表[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]从 ULS 日志文件中相关事件。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“**sql server reporting services**”的行的筛选后列表：  
+ ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")可以使用 PowerShell 从 ULS 日志文件中返回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关事件列表。 从 SharePoint 2010 Management Shell 运行以下命令以便从该文件（ULS 日志文件 UESQL11SPOINT-20110606-1530.log）中返回包含“**sql server reporting services**”的行的筛选后列表：  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- 有许多可以下载的工具，通过这些工具可以读取 ULS 日志。 例如， [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) 或 [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic)。 两者都在 CodePlex 上提供。  
+ 具有可以下载的工具，通过这些工具可以读取 ULS 日志。 例如，GitHub 上提供的 [SharePoint 日志查看器](https://github.com/hasankhan/SharePointLogViewer)。 
   
  有关如何使用 PowerShell 查看日志数据的详细信息，请参阅 [查看诊断日志 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
   
@@ -162,5 +160,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  有关在 SharePoint 2010 管理中心配置 SharePoint 服务器上的诊断日志记录的详细信息和步骤，请参阅 [配置诊断日志记录设置 (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)。  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

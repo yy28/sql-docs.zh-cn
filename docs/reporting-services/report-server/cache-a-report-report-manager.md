@@ -1,5 +1,5 @@
 ---
-title: "如何缓存一个报表 （报表管理器） |Microsoft 文档"
+title: "缓存报表（报表管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe7f91a706a0b65920b3f32bd4fabde48cba31fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>计划缓存报表的过期时间  
   
-1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要设置缓存属性的报表，悬停在该项上，然后单击下拉箭头。  
   
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 6.  选择以下两个缓存选项之一，并配置过期时间：  
   
-    -   若要将缓存副本配置为在特定时间段后过期，请单击**“缓存报表的临时副本。使报表副本过期的分钟数之后**。 键入报表过期所需的分钟数。  
+    -   若要将缓存副本配置为在特定时间段后过期，请单击**“缓存报表的临时副本。在数分钟之后使报表副本过期”**。 键入报表过期所需的分钟数。  
   
-    -   若要配置为按计划过期的缓存的副本，请单击**缓存报表的临时副本。使根据以下计划的报表副本过期。** 单击 **“配置”**，或选择一个共享计划以控制报表过期时间。  
+    -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本。按下列计划使报表副本过期。” 单击 **“配置”**，或选择一个共享计划以控制报表过期时间。  
   
 7.  单击 **“应用”**。  
   
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
  [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

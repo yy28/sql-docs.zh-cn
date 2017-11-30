@@ -1,5 +1,5 @@
 ---
-title: "打印报表 (Reporting Services SharePoint 模式下) |Microsoft 文档"
+title: "打印报表（SharePoint 模式下的 Reporting Services）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a2f14906a5c3333c480de32fbcb34a8aaf7e2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>打印报表（SharePoint 模式下的 Reporting Services）
   对于在 SharePoint 模式下运行的报表服务器，可使用三种方法从 SharePoint Web 应用程序打印报表：  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [启用和禁用 Reporting Services 的客户端打印](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
-

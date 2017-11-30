@@ -1,5 +1,5 @@
 ---
-title: "在 Web 应用程序中使用 URL 访问 |Microsoft 文档"
+title: "在 Web 应用程序中使用 URL 访问 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 123e0ff6bbc5a33214e515401ad38f7af5604b5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>将集成 Reporting Services 使用 URL 访问的 Web 应用程序
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 访问集成 Reporting Services - Web 应用程序
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 访问是为实现通过网络访问单独报表而专门设计的。 此类型的访问最适合于将报表查看和导航集成到自定义 Web 应用程序中。 为了在 Web 应用程序中使用 URL 访问，您可以：  
   
 -   将 URL 从某一网站或门户寻址到特定的报表服务器。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 08/12/2017
 -   使用窗体 POST 方法并使用窗体字段将查询字符串参数传递到报表服务器 URL。  
   
 ## <a name="url-access-through-direct-addressing"></a>通过直接寻址进行 URL 访问  
- 若要访问报表服务器或报表服务器数据库项使用的 URL，只需提供从 Web 浏览器或应用程序中的 URL 地址。 还可以向 URL 提供可能影响所访问的报表或资源的外观的参数。 URL 可以指定目标报表服务器通过 Web 浏览器的地址栏或 URL 的原因可能是**IFrame**大型 Web 应用程序或门户的一部分。 您可以在门户的不同网页上包括指向报表的超链接，以及以报表的特定框架为目标或在这一过程中打开新的浏览器窗口。  
+ 若要使用某一 URL 访问某个报表服务器或报表服务器数据库项，只需从某一 Web 浏览器或应用程序内提供该 URL 地址。 还可以向 URL 提供可能影响所访问的报表或资源的外观的参数。 URL 可以通过 Web 浏览器的地址栏以某一报表服务器为目标，或者 URL 可以是作为更大的 Web 应用程序或门户的一部分的 IFrame 的来源。 您可以在门户的不同网页上包括指向报表的超链接，以及以报表的特定框架为目标或在这一过程中打开新的浏览器窗口。  
   
  在以下示例中，超链接以名为“main”的框架为目标，该框架可能不同于包括该超链接的框架。 该超链接可能是 Web 门户的一部分。  
   
@@ -51,9 +49,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- 在前面的示例中，设备信息设置**LinkTarget** URL 的查询字符串中传递值为"main"。 这确保报表中的所有钻取超链接也以名为“main”的框架为目标。  
+ 在上例中，设备信息设置 LinkTarget 与值“main”一起传递到 URL 的查询字符串中。 这确保报表中的所有钻取超链接也以名为“main”的框架为目标。  
   
- 有关设备信息设置的详细信息，请参阅[传递设备信息设置应用于呈现扩展](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
+ 有关设备信息设置的详细信息，请参阅[将设备信息设置传递给呈现扩展插件](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
  请注意，许多服务器和浏览器都限制 URL 中允许的字符数。 在某些情况下，这一限制是 256 字符。 若要避免这一限制，可通过窗体提交使用 POST 请求。  
   
@@ -87,10 +85,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [将 Reporting Services 集成到应用程序](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [将使用 URL 访问的 Reporting Services 的集成](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [将 Reporting Services 集成到应用程序中](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [使用 URL 访问集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [在 Windows 应用程序中使用 URL 访问](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [URL 访问 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md)  
   
   
-

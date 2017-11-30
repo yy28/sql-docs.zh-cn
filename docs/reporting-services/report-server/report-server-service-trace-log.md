@@ -1,5 +1,5 @@
 ---
-title: "报表服务器服务跟踪日志 |Microsoft 文档"
+title: "报表服务器服务跟踪日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -16,33 +16,33 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a0410f4feb1525ca103d852b601145ec2585dc47
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 37d44eeb29ad4e2acfd4f9618c755f2c5d8b9b28
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器跟踪日志是包含报表服务器服务操作的详细的信息的 ASCII 文本文件。  在这些文件中的信息包括由报表服务器 Web 服务、 web 门户和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息非常有用。 例如，排除订阅问题时。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细信息。  文件中的信息包括由报表服务器 Web 服务、Web 门户和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息非常有用。 例如，排除订阅问题时。  
  
 ##  <a name="bkmk_view_log"></a> 报表服务器日志文件位于何处？  
- 跟踪日志文件是`ReportServerService_<timestamp>.log`和`Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`并且位于以下文件夹：  
+ 跟踪日志文件为 `ReportServerService_<timestamp>.log` 和 `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`，且位于以下文件夹中：  
   
  `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`  
   
- 跟踪日志午夜 （当地时间） 后发生的第一项开始每日、 创建和每当重新启动该服务。 时间戳基于协调世界时 (UTC)。 该文件是 EN-US 格式。 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。  
+ 跟踪日志每天进行创建，其中第一个条目发生在午夜（本地时间）之后，并且在每次重新启动该服务时都创建跟踪日志。 时间戳基于协调世界时 (UTC)。 该文件是 EN-US 格式。 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。  
   
  查看演示使用 Microsoft Power Query 查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件的简短视频。  
   
 [![观看演示 power query 和 ssrs 日志文件的视频](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)  [使用 Microsoft Power Query 查看 Reporting Services 日志文件](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
   
 ##  <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置  
- 在配置文件中管理跟踪日志行为**ReportingServicesService.exe.config**。 可在以下文件夹路径中找到该配置文件：  
+ 在配置文件 ReportingServicesService.exe.config 中管理跟踪日志行为。可在以下文件夹路径中找到该配置文件：  
   
  `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`中管理跟踪日志行为。  
   
@@ -74,11 +74,11 @@ ms.lasthandoff: 08/09/2017
 |**FileName**|指定日志文件名的第一部分。 该名称的其余部分由 **Prefix** 指定的值完成。||  
 |**FileSizeLimitMb**|指定跟踪日志大小的上限。 文件大小的单位为 MB。<br /><br /> 可通过设置跟踪级别（0 到 4）来控制要记录的内容的数量，从而控制文件的大小。 还可以指定要跟踪的组件。 如果在尚未达到 14 天过期时间之前日志文件已达到最大大小，将使用较新的项替换较旧的项。|有效值介于 0 到最大整数之间。 默认值为 32。 如果指定 0 或负数，报表服务器会将该值视为 1。|  
 |**KeepFilesForDays**|指定多少天后删除跟踪日志文件。|有效值介于 0 到最大整数之间。 默认值为 14。 如果指定 0 或负数，报表服务器会将该值视为 1。|  
-|**Prefix**|指定一个生成的值，该值可将日志实例彼此区分开。|默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为"appdomain、 tid，时间"。 请不要修改此设置。|  
+|**Prefix**|指定一个生成的值，该值可将日志实例彼此区分开。|默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为“appdomain, tid, time”。 请不要修改此设置。|  
 |**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。|有效值包括：<br /><br /> <br /><br /> DebugWindow<br /><br /> File（默认值）<br /><br /> StdOut|  
 |**TraceFileMode**|指定跟踪日志是否包含 24 小时时段内的数据。 每天应当为每个组件设置唯一的跟踪日志。|此值设置为“Unique”（默认值）。 不要修改此值。|  
-|**组件类别**|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<组件类别 >:\<tracelevel ><br /><br /> 可以指定所有或部分组件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 **all**的跟踪。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<添加名称 ="组件"value ="all，SemanticQueryEngine:4"/ >|组件类别可以设置为：<br /><br /> <br /><br /> **All** 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br /><br /> **RunningJobs** 用于跟踪正在进行中的报表或订阅操作。<br /><br /> **SemanticQueryEngine** 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br /><br /> **SemanticModelGenerator** 用于跟踪模型生成。<br /><br /> **http** 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)。|  
-|组件类别的**tracelevel** 值|\<组件类别 >:\<tracelevel ><br /><br /> <br /><br /> 如果您不对组件追加跟踪级别，将使用为 **DefaultTraceSwitch** 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。|有效的跟踪级别值包括：<br /><br /> <br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。|  
+|**组件类别**|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 可以指定所有或部分组件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 **all**的跟踪。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|组件类别可以设置为：<br /><br /> <br /><br /> **All** 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br /><br /> **RunningJobs** 用于跟踪正在进行中的报表或订阅操作。<br /><br /> **SemanticQueryEngine** 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br /><br /> **SemanticModelGenerator** 用于跟踪模型生成。<br /><br /> **http** 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)。|  
+|组件类别的**tracelevel** 值|\<component category>:\<tracelevel><br /><br /> <br /><br /> 如果您不对组件追加跟踪级别，将使用为 **DefaultTraceSwitch** 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。|有效的跟踪级别值包括：<br /><br /> <br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。|  
   
 ##  <a name="bkmk_add_custom"></a> 添加自定义配置设置以指定转储文件位置  
  可以添加自定义设置来设置 Dr. Watson for Windows 工具用于存储转储文件的位置。 自定义设置为 **Directory**。 下例提供了如何在 **RStrace** 部分中指定此配置设置的说明：  
@@ -110,13 +110,12 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="previous-versions"></a>先前版本
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]早期版本中，存在多个跟踪日志文件，每个应用程序一个跟踪日志文件。 以下文件已过时，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本不会再创建它们：
-+ ReportServerWebApp_*\<时间戳 >*.log
-+ ReportServer_*\<时间戳 >*.log
-+ ReportServerService_main_*\<时间戳 >*.log
++ ReportServerWebApp_\<timestamp>.log
++ ReportServer_\<timestamp>.log
++ ReportServerService_main_\<timestamp>.log
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [错误和事件参考 &#40;Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+ [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
   
-

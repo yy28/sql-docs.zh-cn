@@ -1,5 +1,5 @@
 ---
-title: "发布和重新发布报表部件 （报表生成器和 SSRS） |Microsoft 文档"
+title: "发布和重新发布报表部件（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03b06d981e4ff824fbdca3f598271fce666237af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 28b130f64609c404a07cac0b2b18d4857b3cb701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
      否则，单击 **“在发布前查看和修改报表部件”**。  
   
-3.  编辑报表部件名称和说明： 双击名称以对其进行编辑，并单击中**说明**字段添加说明。  
+3.  编辑报表部件名称和说明：双击名称以便编辑它，然后在“说明”字段中单击以便添加说明。  
   
     > [!NOTE]  
     >  最好提供报表部件名称和说明，以便在搜索时帮助用户识别它。 对于整个路径而言，报表部件名称的最大长度是 260 个字符，包括服务器上文件夹的名称，后随报表部件的实际名称。  
@@ -64,10 +63,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [报表部件和报表生成器中的数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [报表部件故障排除（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [检查更新或关闭更新（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   
-

@@ -1,28 +1,25 @@
 ---
 title: "安装 SQL Server 服务更新 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 09/05/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: c3575f248a06e596cefea9c41a86bff1e3ebeb09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 874dc2c5d78484b3aab341b8d515d4e652fe4c30
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-servicing-updates"></a>安装 SQL Server 服务更新
 本主题提供了有关为 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]安装更新的信息。 本节提供有关以下方面的信息：  
@@ -47,7 +44,11 @@ ms.lasthandoff: 09/05/2017
 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装进程集成在一起。 产品更新可包括累积更新、Service Pack 或者 Service Pack 连同累积更新。  
   
 ## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>在已安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 后为其安装更新  
-在 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的已安装实例上，我们建议应用最新的安全更新和关键更新，包括常规分发发布 (GDR)、Service Pack (SP) 和累积更新 (CU)。 有关其他信息，请参阅 [2016 年 3 月针对 SQL Server 增量服务模式 (ISM) 的公告](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)。 
+在 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的已安装实例上，我们建议应用最新的安全更新和关键更新，包括常规分发发布 (GDR)、Service Pack (SP) 和累积更新 (CU)。 有关其他信息，请参阅 [2016 年 3 月针对 SQL Server 增量服务模型 (ISM) 的公告](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)。
+
+> [!NOTE]
+> 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，我们将采用简化、可预测的主流服务生命周期，而且服务包 (SP) 将不再可用。 仅在需要时会发布累积更新 (CU) 和常规分发版本 (GDR)。
+> 有关其他信息，请参阅 [2017 年 9 月针对 SQL Server 的现代服务模型 (MSM) 的公告](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新 (MU)、Windows Server Update Services (WSUS) 和 Microsoft 下载中心获得。 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全更新和关键更新通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新提供，并且能够通过控制面板中的 Windows Update 小程序查看您需要的选择进入 MU 的这些更新。  
   
@@ -57,5 +58,4 @@ ms.lasthandoff: 09/05/2017
 [使用安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
 [向 SQL Server 实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
 [修复失败的 SQL Server 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
-
 

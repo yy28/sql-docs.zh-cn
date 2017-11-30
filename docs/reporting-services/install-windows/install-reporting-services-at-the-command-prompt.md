@@ -1,29 +1,25 @@
 ---
-title: "安装 Reporting Services 在命令提示符下 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "在命令提示符处安装 Reporting Services | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- command line
+helpviewer_keywords: command line
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: d56cf1f72a7d7ea20ae63c59d119d372e76aa393
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/12/2017
-
+ms.openlocfilehash: 66e7404f20931764647f5c27623b8762245d1796
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-at-the-command-prompt"></a>在命令提示符处安装 Reporting Services
 
@@ -97,4 +93,3 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

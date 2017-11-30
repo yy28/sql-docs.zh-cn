@@ -1,31 +1,29 @@
 ---
-title: "创建数据驱动订阅 （SSRS 教程） |Microsoft 文档"
+title: "创建数据驱动订阅（SSRS 教程）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 4af396aaffe116ff7000c2c787c31f775742a485
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教程通过一个简单示例，介绍了如何创建数据驱动订阅，生成筛选报表输出并将其保存到文件共享，解释了数据驱动订阅的概念。 
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="requirements"></a>要求  
 数据驱动订阅通常由报表服务器管理员创建和维护。 创建数据驱动订阅的步骤要求具有生成查询的相关知识、了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
-本教程使用*销售订单*在本教程创建的报表[创建基本表报表 &#40;SSRS 教程 &#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)和示例数据库中的数据**AdventureWorks2014**。  
+本教程使用教程[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中创建的销售订单报表和示例数据库 AdventureWorks2014 中的数据。  
   
 您的计算机必须安装以下软件才能使用此教程：  
   
@@ -84,5 +82,4 @@ ms.lasthandoff: 08/09/2017
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
-
 

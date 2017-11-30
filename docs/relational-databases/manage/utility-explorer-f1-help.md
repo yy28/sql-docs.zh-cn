@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aea52a04d46a97dc90a7454000c9989382edbee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="utility-explorer-f1-help"></a>实用工具资源管理器的 F1 帮助
   下面各部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具功能和关联的操作。  
@@ -129,9 +127,9 @@ ms.lasthandoff: 08/03/2017
   
 -   绿色的选中标记 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的数据层应用程序的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
+-   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源未充分利用。  
   
--   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
+-   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源过度利用。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
@@ -271,9 +269,9 @@ ms.lasthandoff: 08/03/2017
   
 -   绿色的选中标记 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 没有违反资源使用策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例的数目。 资源得到很好地利用。  
   
--   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源使用不足。  
+-   绿色向下箭头 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 资源未充分利用。  
   
--   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源使用过度。  
+-   红色向上箭头 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 资源过度利用。  
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
@@ -518,4 +516,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

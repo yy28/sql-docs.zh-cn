@@ -1,47 +1,44 @@
 ---
 title: "使用查询存储监视性能 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 11/28/2016
+ms.custom: SQL2016_New_Updated
+ms.date: 10/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 97f02cbce2fb1511f79b92f97857e30b11d907de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
-ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储功能让你可以探查查询计划选项和性能。 它可帮助你快速找到查询计划更改所造成的性能差异，从而简化了性能疑难解答。 查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。 它按时间窗口将数据分割开来，使你可以查看数据库使用模式并了解服务器上何时发生了查询计划更改。 可以使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。 
   
- 有关在 Azure SQL 数据库中运行查询存储的信息，请参阅 [在 Azure SQL 数据库中运行查询存储](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)。  
+ 有关在 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中运行查询存储的信息，请参阅[在 Azure SQL 数据库中运行查询存储](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)。  
   
 ##  <a name="Enabling"></a> 启用查询存储  
  默认情况下，新数据库的查询存储处于非活动状态。  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查询存储页  
+#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“查询存储”页  
   
 1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。  
   
     > [!NOTE]  
-    >  至少需要 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+    >  至少需要 16 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
@@ -82,11 +79,11 @@ ms.lasthandoff: 08/03/2017
 -   了解特定查询或计划的等待性质。
   
 查询存储包含三个存储：
-- 计划存储：用于保存执行计划信息
-- 运行时统计信息存储：用于保存执行统计信息。 
+- 计划存储：用于保存执行计划信息。
+- 运行时统计信息存储：用于保存执行统计信息。
 - 等待统计信息存储：用于保存等待统计信息。
  
- **max_plans_per_query** 配置选项限制了计划存储中查询可存储的唯一计划数。 为增强性能，通过异步方式向这两个存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
+ **max_plans_per_query** 配置选项限制了计划存储中查询可存储的唯一计划数。 为增强性能，通过异步方式向存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
   
  以下查询返回查询存储中查询和计划的相关信息。  
   
@@ -123,7 +120,8 @@ JOIN sys.query_store_query_text AS Txt
 |每个数据库的高 RESOURCE_SEMAPHORE 等待|特定查询在查询存储中的高内存等待|查找查询存储中前几个使用内存最多的查询。 这些查询可能会进一步延迟受影响查询的进度。 请考虑对这些查询或受影响的查询使用 MAX_GRANT_PERCENT 查询提示。|
 |每个数据库的高 LCK_M_X 等待|特定查询在查询存储中的高锁定等待|检查受影响查询的查询文本，并确定目标实体。 在查询存储中查找修改同一实体的其他查询，该实体频繁执行和/或具有较高持续时间。 确定这些查询后，请考虑更改应用程序逻辑，以提高并发性，或使用限制性较弱的隔离级别。|
 |每个数据库的高 PAGEIOLATCH_SH 等待|特定查询在查询存储中的高缓冲 IO 等待|在查询存储中查找读取数越高的查询。 如果它们与含较高 IO 等待的查询匹配，执行执行搜索而不是扫描时，请考虑引入关于基础实体的索引，以便减少查询的 IO 开销。|
-|每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 – 可能存在计划回归，或缺失的索引。| 
+|每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 – 可能存在计划回归，或缺失的索引。|
+
 ##  <a name="Options"></a> 配置选项 
 
 以下选项可用于配置查询存储参数。
@@ -138,22 +136,22 @@ JOIN sys.query_store_query_text AS Txt
  确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过 DATA_FLUSH_INTERVAL_SECONDS 配置此异步传输发生的频率。 默认值为 900（15 分钟）。  
   
  `MAX_STORAGE_SIZE_MB`  
- 配置查询存储的最大大小。 如果查询存储中的数据命中 MAX_STORAGE_SIZE_MB 限制，则查询存储会自动从读写状态更改为只读状态，并停止收集新数据。  默认值为 100 Mb。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 Gb，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值则为 10 Mb。
+ 配置查询存储的最大大小。 如果查询存储中的数据命中 MAX_STORAGE_SIZE_MB 限制，则查询存储会自动从读写状态更改为只读状态，并停止收集新数据。  默认值为 100 Mb。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB。
   
  `INTERVAL_LENGTH_MINUTES`  
- 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 INTERVAL_LENGTH_MINUTES 进行配置。 默认值为 60。 
+ 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 INTERVAL_LENGTH_MINUTES 进行配置。 默认值是 **60**秒。 
   
  `SIZE_BASED_CLEANUP_MODE`  
- 控制当数据总量接近最大大小时是否自动激活清除进程。 可为“自动”（默认）或“关闭”。  
+ 控制当数据总量接近最大大小时是否自动激活清除进程。 可为“AUTO”（默认）或“OFF”。  
   
  `QUERY_CAPTURE_MODE`  
- 指定查询存储是捕获所有查询，还是基于执行计数和资源消耗捕获相关查询，或是停止添加新查询且仅跟踪当前查询。 可以是 ALL（捕获所有查询）、AUTO（忽略不太频繁的查询以及编译和执行持续时间不长的查询。）或 NONE（停止捕获新查询）。 SQL Server 2016 上的默认值为 ALL，而 Azure SQL 数据库上的默认值为 AUTO。
+ 指定查询存储是捕获所有查询，还是基于执行计数和资源消耗捕获相关查询，或是停止添加新查询且仅跟踪当前查询。 可以是 ALL（捕获所有查询）、AUTO（忽略不太频繁的查询以及编译和执行持续时间不长的查询。）或 NONE（停止捕获新查询）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）上的默认值为 ALL，而 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上的默认值为 AUTO。
   
  `MAX_PLANS_PER_QUERY`  
  一个整数，表示为每个查询保留的最大计划数。 默认值为 200。  
  
  `WAIT_STATS_CAPTURE_MODE`  
- 控制查询存储是否捕获等待统计信息。 可能为 OFF = 0 或 ON = 1（默认值）  
+ 控制查询存储是否捕获等待统计信息。 可以为“OFF”或“ON”（默认）。  
  
  查询 **sys.database_query_store_options** 视图以确定查询存储的当前选项。 有关值的详细信息，请参阅 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
@@ -162,6 +160,9 @@ JOIN sys.query_store_query_text AS Txt
 ##  <a name="Related"></a> 相关视图、功能和过程  
  通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用以下视图和过程来查看和管理查询存储。  
 
+### <a name="query-store-functions"></a>查询存储函数  
+ 此函数有助于执行查询存储操作。 
+ 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
@@ -585,4 +586,3 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
  [在 Azure SQL 数据库中运行查询存储](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   
-

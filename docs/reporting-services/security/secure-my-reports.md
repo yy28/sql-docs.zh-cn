@@ -1,5 +1,5 @@
 ---
-title: "保护我的报表 |Microsoft 文档"
+title: "保护“我的报表”| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,30 +17,29 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-my-reports"></a>保护“我的报表”
   “我的报表”功能为使用报表提供了一个由用户管理的工作区。 为了发挥“我的报表”文件夹应有的作用，该文件夹与其他普通文件夹相比，需要限制条件较少的权限。 只有在其他文件夹中查看和运行报表的权限的用户可能需要一组扩展的权限来管理其“我的报表”文件夹及其所拥有的内容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供专用于此用途的角色分配和角色定义。  
   
 > [!NOTE]  
->  “我的报表”只适用于报表管理器。 不可在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+>  “我的报表”只适用于报表管理器。 该文件夹在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中不可用。  
   
 ## <a name="role-assignment-for-my-reports"></a>“我的报表”的角色分配  
  “我的报表”的角色分配中的元素都是预先设置好的，对于激活“我的报表”文件夹的每个用户，将自动为其创建角色分配。 对于广泛使用“我的报表”的单位而言，让报表服务器自动分配安全性尤其有用，因为管理员不必为每一个“我的报表”用户授予访问权限。  
   
  “我的报表”角色分配由以下元素组成：   
   
--   用户的我的报表文件夹，它位于用户文件夹\\*\<用户名 >*\My 报表文件夹。  
+-   用户的“我的报表”文件夹，位于“用户文件夹\\\<用户名>\我的报表”文件夹下。  
   
 -   用户帐户，在激活“我的报表”文件夹时确定。 当用户单击报表管理器中的“我的报表”文件夹时，或将报表从报表设计器发布到“我的报表”文件夹时，将激活一个文件夹。 当用户请求“我的报表”链接的属性时，也将激活此文件夹。  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="denying-access-to-my-reports"></a>拒绝访问“我的报表”  
  可以通过以下方式阻止用户访问“我的报表”：  
   
--   在“站点设置”页上禁用“我的报表”。 有关详细信息，请参阅[启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。  
+-   在“站点设置”页上禁用“我的报表”。 有关详细信息，请参阅 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。  
   
 -   删除“我的报表”角色中的所有任务。   
   
@@ -62,8 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)   
- [安全的文件夹](../../reporting-services/security/secure-folders.md)   
+ [保护文件夹](../../reporting-services/security/secure-folders.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "管理报表部件 |Microsoft 文档"
+title: "管理报表部件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   报表部件可在分页报表中由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  在从报表生成器之类的报表创作应用程序将报表部件发布到 SharePoint 集成模式下的报表服务器时，报表服务器目录也将更新，从库中搜索将精确反映新的或更新的报表部件。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>将报表部件直接上载到 SharePoint 文件夹  
- 如果某一报表部件直接上载到 SharePoint 文档文件夹（而非从报表创作应用程序发布），将不会更新报表服务器目录。 从报表部件库搜索将找不到上载的报表部件。 若要帮助保持您的 SharePoint 文件夹和报表服务器目录同步，您可以激活 SharePoint 服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件同步功能。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
+ 如果某一报表部件直接上载到 SharePoint 文档文件夹（而非从报表创作应用程序发布），将不会更新报表服务器目录。 从报表部件库搜索将找不到上载的报表部件。 若要帮助保持您的 SharePoint 文件夹和报表服务器目录同步，您可以激活 SharePoint 服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件同步功能。 有关详细信息，请参阅 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
   
  通过调用某些 Reporting Services 管理 API（例如 GetProperties 和 SetProperties），还可以同步文件。  
   
@@ -96,9 +95,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [报表部件故障排除（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [报表设计器 &#40; 中的报表部件SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

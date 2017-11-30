@@ -1,12 +1,14 @@
 ---
 title: "事务 - AlwaysOn 可用性组和数据库镜像 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 11/01/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 74b2beeb4f74afab2dc7300e51093d3e271f58e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc86ef8e495bacaaaebf2470306b25d38d5158e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本主题介绍了用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务。  
 
@@ -65,7 +66,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
   
 -   可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址： [https://support.microsoft.com/zh-cn/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句创建可用性组。 当前不可更改现有可用性组。  
+-   必须使用 CREATE AVAILABILITY GROUP 命令和 WITH DTC\_SUPPORT = PER_DB 子句创建可用性组。 当前不可更改现有可用性组。  
 
 - 将加入可用性组的所有 SQL Server 实例都必须为 SQL Server 2016 或更高版本。
  
@@ -93,8 +94,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
 > [!NOTE]  
 >  通过本主题未批准的方式配合 DTC 使用数据库镜像或配合 DTC 使用可用性组不受支持。  这并不意味着不支持与 DTC 不相关的产品方面；而是不支持因错误使用分布式事务而引发的任何问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="next-steps"></a>后续步骤  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
-

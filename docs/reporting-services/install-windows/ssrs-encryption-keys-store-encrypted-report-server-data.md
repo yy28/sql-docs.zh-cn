@@ -1,12 +1,11 @@
 ---
-title: "存储加密的报表服务器数据 （SSRS 配置管理器） |Microsoft 文档"
+title: "存储加密的报表服务器数据（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0727e4e4fa6290396d08bedbd1404722c18e6807
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥的存储加密的报表服务器数据
+# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥 - 存储加密的报表服务器数据
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  
   
 ## <a name="encrypted-values"></a>加密值  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   报表服务器用于连接到报表服务器数据库（存储内部服务器数据）的连接信息和凭据。  
   
-     这些值是在安装过程中或报表服务器配置期间指定和加密的。 您可以在任何时候使用 Reporting Services 配置工具或 **rsconfig** 实用工具更新连接信息。 对配置设置的加密则是使用对所有用户都可用的本地计算机的计算机级密钥来执行的。 加密的报表服务器连接信息存储在 rsreportserver.config 文件中（其他任何配置文件都不会包含加密设置）。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+     这些值是在安装过程中或报表服务器配置期间指定和加密的。 您可以在任何时候使用 Reporting Services 配置工具或 **rsconfig** 实用工具更新连接信息。 对配置设置的加密则是使用对所有用户都可用的本地计算机的计算机级密钥来执行的。 加密的报表服务器连接信息存储在 rsreportserver.config 文件中（其他任何配置文件都不会包含加密设置）。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
   
 -   报表服务器用于连接到向报表提供数据的外部数据源的存储凭据。  
   
@@ -67,10 +65,9 @@ ms.lasthandoff: 08/09/2017
  报表服务器中还存储有其他可能包含需保护的敏感信息的未加密数据。 具体来说，报表历史记录快照和报表执行快照包含的查询结果可能包括仅供授权用户使用的数据。 因此，对包含机密数据的报表使用快照功能时，需要注意，有权打开报表服务器数据库中的表的用户也能通过检查表的内容来查看所存储报表的部分内容。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不支持缓存或报表历史记录报表使用参数基于的安全标识的用户。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对于所用参数基于用户安全标识的报表，不支持缓存或报表历史记录。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

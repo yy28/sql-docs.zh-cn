@@ -1,5 +1,5 @@
 ---
-title: "预览视图 |Microsoft 文档"
+title: "“预览”视图 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.previewview.f1
-helpviewer_keywords:
-- Preview view [Reporting Services]
+f1_keywords: sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 55771c2f37d8d9d5913ab96a226f108a6e0f709d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preview-view"></a>“预览”视图
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“预览”视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。
@@ -95,4 +92,3 @@ ms.lasthandoff: 08/09/2017
 + [报表设计器的 F1 帮助](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
-

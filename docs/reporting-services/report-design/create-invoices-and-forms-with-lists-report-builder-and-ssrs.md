@@ -1,5 +1,5 @@
 ---
-title: "使用列表 （报表生成器和 SSRS） 创建发票和窗体 |Microsoft 文档"
+title: "创建带列表的发票和表单（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcbc50e4c1bb576d4956b569dc7644d8e6f23abf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a856a2cd47641a0bf906de517813e9d41ae3ea1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>创建带列表的发票和表单（报表生成器和 SSRS）
   列表数据区域重复 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表数据集中的每一个组或行。 可以使用列表创建自由格式的报表或表单（如发票），或与其他数据区域结合使用。 可以定义包含任意数量的报表项的列表。 可以使用以下项嵌套列表  
@@ -34,13 +33,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="AddingList"></a> 向报表添加列表  
  从功能区上的“插入”选项卡向设计图面添加一个列表。 默认情况下，该列表最初在一行中有一个单元与详细信息组关联。  
   
- ![在设计图面上的新列表报表项](../../reporting-services/report-design/media/rs-listtemplatenew.gif "设计图面上的新列表报表项")  
+ ![设计图面上的新列表报表项](../../reporting-services/report-design/media/rs-listtemplatenew.gif "设计图面上的新列表报表项")  
   
  在设计图面上选择列表时，将显示行控点和列控点，如下图所示。  
   
- ![从工具箱中，选择将新列表，添加](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "新列表添加从工具箱中，选择")  
+ ![从工具箱添加的新列表，选中](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
   
- 最开始使用的列表是一个基于 Tablix 数据区域的模板。 添加一个列表后，可以继续增强设计，具体的方法是通过指定筛选器、排序或组表达式来更改此列表的内容或外观，或者更改此列表跨多个报表页显示的方式。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。 尽管列表起初只具有一行、一列，但您可以通过添加嵌套或相邻的行组或列组或者添加额外的详细信息行，来进一步改进列表的设计。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+ 最开始使用的列表是一个基于 Tablix 数据区域的模板。 添加一个列表后，可以继续增强设计，具体的方法是通过指定筛选器、排序或组表达式来更改此列表的内容或外观，或者更改此列表跨多个报表页显示的方式。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。 尽管列表起初只具有一行、一列，但您可以通过添加嵌套或相邻的行组或列组或者添加额外的详细信息行，来进一步改进列表的设计。 有关详细信息，请参阅[利用 Tablix 数据区域的灵活性（报表生成器和 SSRS）](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="DisplayingLayout"></a> 以自由格式布局显示数据  
@@ -48,11 +47,11 @@ ms.lasthandoff: 08/09/2017
   
  下图显示了一个列表，该列表显示有关一个订单的信息，其中包括这些字段：Date、Order、Qty、Product、LineTotal 和一张图像。  
   
- ![在设计视图、 4 个字段和映像列表](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "设计视图、 4 个字段和映像中的列表")  
+ ![设计视图中的列表，有 4 个字段和一个图像](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "设计视图中的列表，有 4 个字段和一个图像")  
   
  预览时，该列表重复以自由格式显示字段数据，如下图中所示：  
   
- ![具有 4 个字段和一个图像列表的预览版](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "预览版具有 4 个字段和一个图像列表")  
+ ![具有 4 个字段和一个图像的列表的预览](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "具有 4 个字段和一个图像的列表的预览")  
   
 > [!NOTE]  
 >  这两张图中显示的点线用来说明每个字段值的自由格式布局。 通常情况下，在生产报表中不会使用点线。  
@@ -63,16 +62,15 @@ ms.lasthandoff: 08/09/2017
   
  例如，可以嵌入一个表和一张图表，分别显示同一数据集的不同视图。 可以向列表添加组，以使嵌套的报表项将对每个组值重复一次。 下图显示一个按产品类别分组的列表。 请注意，没有详细信息行。 两个表并列嵌套在此列表中。 第一个表显示包含总销售额的子类别。 第二个表显示按地域分组的类别，并包含一张显示子类别分布情况的图表。  
   
- ![2 个表的列表，另一个使用嵌套图表](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "2 个表，另一个使用嵌套图表的列表")  
+ ![具有两个表（其中一个表带有嵌套图表）的列表](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "具有两个表（其中一个表带有嵌套图表）的列表")  
   
  预览时，该表显示自行车的所有子类别的总销售额，它旁边的表显示每个地域的销售额细目。 通过使用表达式为表指定背景色和为图表指定自定义调色板，第一个表还提供了图表颜色的图例。  
   
- ![预览、 2 个表，另一个使用嵌套图表](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "预览，2 个表，另一个使用嵌套图表")  
+ ![两个表（其中一个表带有嵌套图表）的预览](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "两个表（其中一个表带有嵌套图表）的预览")  
   
   
 ## <a name="see-also"></a>另请参阅  
- [聚合函数引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

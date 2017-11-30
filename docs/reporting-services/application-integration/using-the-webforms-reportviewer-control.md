@@ -1,5 +1,5 @@
 ---
-title: "使用 WebForms ReportViewer 控件 |Microsoft 文档"
+title: "使用 WebForms ReportViewer 控件 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -10,47 +10,44 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3b92dbd07d94a0e30c93d994c5eaaa28cb7627d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
   若要查看部署到报表服务器的报表或在本地文件系统上存在的报表，您可以在 Web 应用程序中使用 WebForms ReportViewer 控件来呈现它们。  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>在 Web 应用程序中使用 ReportViewer 控件  
   
-1.  创建一个新[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用 ASP.NET Web 站点[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
+1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 创建一个新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET 网站。  
   
-     \- 或者-  
+     \- 或 -  
   
      打开一个现有的 ASP.NET 网站并添加一个新的 Web 窗体。  
   
-2.  找到**ScriptManager**中控制**AJAX Extensions**组中**工具箱**窗口中，并将其拖到设计图面上的 Web 窗体。  
+2.  在“工具箱”窗口的“AJAX 扩展”组中找到“ScriptManager”控件，并将其拖到 Web 窗体的设计图面上。  
   
-     如果**工具箱**不是可见，你是否可以访问从**视图**通过选择菜单**工具箱**。  
+     如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问。  
   
-3.  找到**ReportViewer**中控制**工具箱**并将其拖到设计图面下**ScriptManager**控件。  
+3.  在“工具箱”中找到“ReportViewer”控件，并将其拖到“ScriptManager”控件下的设计图面上。  
   
-     **ReportViewer**名为 reportViewer1 控件添加到窗体。  
+     名为 reportViewer1 的“ReportViewer”控件便会添加到该窗体中。  
   
- 将控件添加到窗体后**ReportViewer 任务**智能标记会显示提示您选择一个报表。 如果你想要查看该报表已部署到报表服务器选择**\<服务器报表 >**选项从**选择报表**下拉列表。 一次**\<服务器报表 >**选项为所选的两个其他属性将显示，**报表服务器 Url**和**报表路径**。 **报表服务器 Url**是到报表服务器的地址和**报表路径**是你想要呈现的报表的完整路径。  
+ 此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表。 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项。 选中“\<服务器报表>”选项后，将出现两个附加的属性，“报表服务器 URL”和“报表路径”。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径。  
   
- 如果你想要在本地模式下查看报表选择**设计新报表**启动报表设计器，或选择已是现有的项目的一部分的报表选项。 选择报表后，请务必输入中的报表 RDLC 文件的名称**ReportPath** ReportViewer 控件的属性。 此属性将出现在**LocalReport**中的节点**属性**窗格。  
+ 如果想要以本地模式查看报表，请选择“设计新报表”选项以启动报表设计器，或选择已是现有项目一部分的一个报表。 选择报表后，请确保在 ReportViewer 控件的“ReportPath”属性中输入报表 RDLC 文件的名称。 此属性将显示在“属性”窗格中的“LocalReport”节点下。  
   
- 在呈现报表时，您可以选择在 ReportViewer 工具栏上隐藏一个或多个项。 例如，您可以隐藏打印按钮。 若要隐藏工具栏项，请将以下 ReportViewer 属性设置为**False**中**属性**窗格。  
+ 在呈现报表时，您可以选择在 ReportViewer 工具栏上隐藏一个或多个项。 例如，您可以隐藏打印按钮。 若要隐藏工具栏项，可在“属性”窗格中将以下 ReportViewer 属性设置为“False”。  
   
 -   **ShowBackButton**  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="viewing-reports-in-remote-processing-mode"></a>在远程处理模式下查看报表  
  下面的示例演示如何呈现已部署到报表服务器的报表。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例报表项目随附的 Sales Order Detail 报表。  
   
- 该示例使用集成的 Windows 身份验证，因此您首先必须启用模拟。 若要执行此插入以下行到**web.config**文件：  
+ 该示例使用集成的 Windows 身份验证，因此您首先必须启用模拟。 为此，请将以下行插入“web.config”文件：  
   
 ```  
 <!-- Web.config file. -->  
@@ -155,19 +152,19 @@ End Class
   
 1.  打开该报表将添加到的网站。  
   
-2.  从**网站**菜单上，选择**添加现有项**。  
+2.  从“网站”菜单中选择“添加现有项”。  
   
 3.  浏览到安装了 AdventureWorks 报表示例项目的位置。  
   
      默认位置是 C:\Program Files\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports。  
   
-4.  选择销售订单 Detail.rdl 文件，然后单击**添加**按钮。  
+4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮。  
   
      Sales Order Detail.rdl 文件现在应是该项目的一部分。  
   
-5.  右键单击解决方案资源管理器中的销售订单 Detail.rdl 文件并选择**重命名**。 重命名为报表**销售订单 Detail.rdlc** ，然后按 enter 键。  
+5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter。  
   
-     如果解决方案资源管理器不可见，则可以打开它从**视图**菜单中的选择解决方案资源管理器。  
+     如果“解决方案资源管理器”不可见，可以通过从“视图”菜单中选择“解决方案资源管理器”来将其打开。  
   
  以下代码示例将为销售订单数据创建一个数据集，然后以本地模式呈现 Sales Order Detail 报表。  
 
@@ -490,8 +487,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [集成 Reporting Services 使用的 ReportViewer 控件](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- [ReportViewer 控件 2016年中的数据收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
+ [使用 ReportViewer 控件集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [ReportViewer 控件 2016 中的数据收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   
   
-

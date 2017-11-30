@@ -1,7 +1,6 @@
 ---
-title: "Reporting Services 和 Power View 的浏览器支持 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 和 Power View 的浏览器支持 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,30 +20,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-了解有关哪些浏览器版本受支持的用于管理和查看 SQL Server Reporting Services，ReportViewer 控件和 Power View。
+了解管理和查看 SQL Server Reporting Services、ReportViewer 控件和 Power View 支持的浏览器版本。
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 ## <a name="browser-requirements-for-the-web-portal"></a>Web 门户的浏览器要求
 
-下面是支持的 web 门户网站的浏览器的当前列表。
+以下是 Web 门户当前支持的浏览器列表。
 
 **Microsoft Windows**  
 *Windows 7、8.1、10；Windows Server 2008 R2、2012、2012 R2*
@@ -113,7 +111,7 @@ ms.lasthandoff: 08/09/2017
 
  如果未启用脚本功能，则打开报表时将显示如下错误消息：
 
-- **您的浏览器不支持脚本或已配置为不允许脚本运行。请单击此处在没有脚本的情况下查看此报表**。
+- **您的浏览器不支持脚本或已配置为不允许脚本运行。单击此处查看不含脚本的报表**。
 
  如果选择查看不支持脚本的报表，则报表将会以 HTML 格式呈现，同时不具有报表工具栏和文档结构图等报表查看器功能。
 
@@ -155,12 +153,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>后续步骤
 
-[查找和 web 门户中查看报表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[在 Web 门户中查找和查看报表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [Web 门户（SSRS 本机模式）](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
 

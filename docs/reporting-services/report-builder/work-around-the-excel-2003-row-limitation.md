@@ -1,5 +1,5 @@
 ---
-title: "解决 Excel 2003 行限制 |Microsoft 文档"
+title: "避开 Excel 2003 行限制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 764b6da1c5ea43d02d7b5b950aa056434acf1a12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   本主题介绍在将分页报表导出到 Excel 时，如何避开 Excel 2003 的行限制。 本解决方法适用于只包含表的报表。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击表中的“数据”行，然后单击“添加组” > “父组”，以添加外部表组。  
   
-     ![选择的父组](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "选择父组")  
+     ![选择父组](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Select the Parent Group")  
   
 3.  在 **“分组依据”** 表达式框中输入下面的公式，然后单击 **“确定”** 添加父组。  
   
@@ -49,21 +48,20 @@ ms.lasthandoff: 08/09/2017
   
 4.  删除组列：右键单击列标题，单击“删除列”，选择“仅删除列”，然后单击“确定”。  
   
-     ![删除组列](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "删除组列")  
+     ![删除组列](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Delete a group column")  
   
 5.  右键单击 **“行组”** 部分中的 **“组 1”** ，然后单击 **“组属性”**。  
   
-     ![查看组属性](../../reporting-services/report-builder/media/groupproperties-updated.png "查看组属性")  
+     ![查看组属性](../../reporting-services/report-builder/media/groupproperties-updated.png "View group properties")  
   
 6.  在 **“组属性”** 对话框的 **“排序”** 页面上，选择默认排序选项，然后单击 **“删除”**。  
   
-     ![删除默认排序](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "删除默认排序")  
+     ![删除默认排序](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Delete default sorting")  
   
 7.  在 **“分页符”** 页面上，单击 **“在组的各实例之间”** ，然后单击 **“确定”**。  
   
-     ![设置分页符](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "设置分页符")  
+     ![设置分页符](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Set page breaks")  
   
 8.  保存报表。 在将其导出至 Excel 时，其会导出成多个工作表，且每个工作表最多包含 65000 行。  
   
   
-

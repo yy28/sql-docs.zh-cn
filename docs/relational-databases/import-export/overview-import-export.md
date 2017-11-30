@@ -1,24 +1,22 @@
 ---
 title: "在 SQL Server 和 Azure SQL 数据库中导入和导出数据 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ab07b5c374b20ce815c16f5346969d3517bbc26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>在 SQL Server 和 Azure SQL 数据库中导入和导出数据
 可通过多种方法将数据导入 SQL Server 和 Azure SQL 数据库，以及从 SQL Server 和 Azure SQL 数据库中导出数据。 这些方法包括 Transact-SQL 语句、命令行工具和向导。
@@ -35,6 +33,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="use-the-import-flat-file-wizard"></a>使用导入平面文件向导
 如果并不需要导入和导出向导和其他工具中提供的所有配置选项，则可以使用 SQL Server Management Studio (SSMS) 中的“导入平面文件向导”将文本文件导入 SQL Server。 有关详细信息，请参阅下文：
+- [将平面文件导入 SQL 向导](import-flat-file-wizard.md)
 - [SQL Server Management Studio 17.3 中的新增功能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [SSMS 17.3 中的新导入平面文件向导简介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -65,4 +64,3 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="next-steps"></a>后续步骤
 如果不确定从何处开始进行导入或导出任务，请考虑使用 SQL Server 导入和导出向导。 有关快速说明，请参阅[导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
-

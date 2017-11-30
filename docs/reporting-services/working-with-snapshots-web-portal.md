@@ -1,33 +1,30 @@
 ---
-title: "使用快照 （web 门户） |Microsoft 文档"
+title: "使用快照（web 门户）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7498112d3822d18976ea6482c6014ce7bc69435f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>使用快照（web 门户）
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-你可以控制如果为报表创建快照，应选择**省略号 （...）**的报表，请选择**管理**并选择**Caching**或**历史记录快照**。  
+可以通过依次选择报表的省略号 (…)、“管理”和“缓存”或“历史记录快照”，来控制是否为报表创建快照。  
   
 > [!NOTE]
 > 需要启动 SQL Server 代理服务。  
@@ -40,9 +37,9 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
-1.  在“缓存” 页上，选择“始终对预先生成的快照运行此报告”以启用用于创建快照的选项。  
+1.  在“缓存”页上，选择“始终对预先生成的快照运行此报表”，启用用于创建快照的选项。  
   
-2.  如果要计划定期快照，请选择“按计划创建缓存快照”。 然后可以使用共享计划，或定义自定义计划以刷新快照。  
+2.  如果要计划定期执行快照，请选择“按计划创建缓存快照”。 然后可以使用共享计划，或定义自定义计划以刷新快照。  
   
 3.  如果要立即创建缓存快照，请选择“当我在此页面上单击‘应用’时创建缓存快照”。 如果仅选择此选项，则不会刷新快照。  
   
@@ -58,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
-1.  若要创建历史记录快照，请选择“+ 新历史记录快照”。 这会处理报表并向列表添加条目。  
+1.  若要创建历史记录快照，请选择“+ 新建历史记录快照”。 这会处理报表并向列表添加条目。  
   
 2.  可以转到用于定义计划和保留策略的设置。  
   
@@ -66,11 +63,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="schedule-and-settings"></a>计划和设置  
   
-选择“计划和设置”将提供附加选项，用于计划和控制保持已创建快照的保留。  
+选择“计划和设置”将提供附加选项，用于计划和控制保持已创建快照的保留期。  
   
 ![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-可以选择创建计划，以便创建快照。 还可以阻止其他人创建新快照。 取消选中“允许用户手动创建快照”会禁用“+ 新快照历史记录”按钮。  
+可以选择创建计划，以便创建快照。 还可以阻止其他人创建新快照。 取消选中“允许用户手动创建快照”会禁用“+ 新建快照历史记录”按钮。  
   
 还可以定义要用于保留快照的方式。  
   
@@ -84,5 +81,4 @@ ms.lasthandoff: 08/09/2017
 [使用分页报表](working-with-paginated-reports-web-portal.md)  
 [使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

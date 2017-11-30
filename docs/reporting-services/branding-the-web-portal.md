@@ -1,26 +1,23 @@
 ---
-title: "Web 门户的品牌 |Microsoft 文档"
+title: "设置 Web 门户的品牌 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -74,7 +71,7 @@ LESS 样式表中包含了引用预定义 LESS 变量的块，如下所示。
         background-color:@primaryButtonBg;   
     }  
   
-颜色值，而这与 CSS 语法类似，前缀为@symbol，是唯一的。 这些颜色值是变量，变量值由 json 文件设置。  
+与 CSS 语法类似，带有 @symbol 符号前缀的颜色值对 LESS 而言是唯一的。 这些颜色值是变量，变量值由 json 文件设置。  
   
 例如，如果 colors.json 文件具有以下值。  
   
@@ -247,5 +244,4 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
         }  
     }  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

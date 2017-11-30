@@ -1,26 +1,24 @@
 ---
-title: "将仪表添加到移动报表 |Reporting Services |Microsoft 文档"
+title: "向移动报表添加仪表 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>向移动报表添加仪表 | Reporting Services
 仪表是移动报表中最基本且使用最广泛的视觉对象。 它们显示数据集中的单个值 — 值本身，或相比于目标的值。
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
 *“布局”选项卡中的仪表可视化效果*  
   
-SQL Server 移动报表发布服务器中的所有仪表都具有至少一个属性共同： 一个主要的值，设置其中一个数据表的移动报表中的数字字段。  
+在 SQL Server 移动报表发布服务器中，所有仪表具有至少一个共同属性：一个主值，设置为移动报表某个数据表中的数值字段。  
 
 除数字仪表外的所有仪表还可以显示比较值或 *差异*值 — 主值和比较值之间的关系。 比较值通常是目标，而仪表是达到该目标的进度或实际值与目标值之间的差异的可视指示器。
 
@@ -47,7 +45,7 @@ SQL Server 移动报表发布服务器中的所有仪表都具有至少一个属
 
 3. 在除数字仪表外的任何仪表中，在“数据属性”窗格的“比较值”下面选择数据表和数值字段。
 
-4. [可选]若要更改聚合，请选择“选项”，然后选择其他聚合。
+4. [可选] 若要更改聚合，请选择“选项”，然后选择其他聚合。
    
    >**注意**：当你更改主值的聚合时，可能还想更改比较值的聚合，但在某些情况下，你可能想要混用聚合方法。  
 
@@ -95,4 +93,3 @@ SQL Server 移动报表发布服务器中的所有仪表都具有至少一个属
 * [Reporting Services 移动报表中的导航器](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 移动报表中的可视化效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 移动报表中的数据网格](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

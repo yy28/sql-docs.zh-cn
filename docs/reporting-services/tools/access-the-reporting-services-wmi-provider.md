@@ -1,5 +1,5 @@
 ---
-title: "访问 Reporting Services WMI 提供程序 |Microsoft 文档"
+title: "访问 Reporting Services WMI 提供程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/02/2016
 ms.prod: sql-server-2016
@@ -10,25 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- Reporting Services WMI Provider
-apilocation:
-- reportingservices.mof
+apiname: Reporting Services WMI Provider
+apilocation: reportingservices.mof
 helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aa02df2ee2953c1a3f4b02236cd5203ff08cdc3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2e0d74cf74f3693ec16e5efbc6e6e552f171391c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>访问 Reporting Services WMI 提供程序
   Reporting Services WMI 提供程序公开了两个 WMI 类，用于通过脚本管理本机模式报表服务器实例：  
@@ -38,8 +35,8 @@ ms.lasthandoff: 08/09/2017
   
 |类|命名空间|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13|为客户端提供连接到已安装的报表服务器所需的基本信息。|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName >*\v13\Admin|表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。<br /><br /> **\*\* 重要提示 \*\*** 只有拥有管理权限才能访问此类。|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13|为客户端提供连接到已安装的报表服务器所需的基本信息。|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13\Admin|表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。<br /><br /> **\*\* 重要提示 \*\*** 只有拥有管理权限才能访问此类。|  
   
  以上每个类实例是为每个报表服务器实例创建的。 您可以使用任何 Microsoft 或第三方工具来访问报表服务器公开的 WMI 对象，包括 .NET Framework 本身公开的 WMI 编程接口。 本主题介绍如何使用 PowerShell 命令 [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx)访问和使用 WMI 类实例。  
   
@@ -94,4 +91,3 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

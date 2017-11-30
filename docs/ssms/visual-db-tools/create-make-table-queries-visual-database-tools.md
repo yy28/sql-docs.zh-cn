@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
 可以使用“生成表”查询将行复制到一个新表中，“生成表”查询对创建要使用的数据子集或在数据库之间复制表的内容非常有用。 “生成表”查询与“插入结果”查询类似，但它会创建要向其中复制行的新表。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   “分组依据”选项（如果您希望仅复制摘要信息）。  
   
-例如，下面的查询将创建一个名为 `uk`_`customers` 的新表，并将 `customers` 表中的信息复制到该表中：  
+例如，下面的查询将创建一个名为 `uk_customers` 的新表，并将 `customers` 表中的信息复制到该表中：  
   
 ```  
 SELECT *   
@@ -90,4 +89,3 @@ WHERE country = 'UK'
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [查询类型 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

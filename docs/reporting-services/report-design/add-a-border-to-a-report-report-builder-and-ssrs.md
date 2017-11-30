@@ -1,5 +1,5 @@
 ---
-title: "向报表 （报表生成器和 SSRS） 添加边框 |Microsoft 文档"
+title: "向报表添加边框（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: baeb498889d0698ec955b76edbf06904a5aad650
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>向报表添加边框（报表生成器和 SSRS）
   通过向表头、表尾和表体本身添加边框（而不是添加线条或矩形），可以为 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加边框。    
@@ -30,17 +29,16 @@ ms.lasthandoff: 08/09/2017
     
 ## <a name="to-add-a-border-to-a-report"></a>向报表添加边框    
     
-1.  在表头中任何项外部的表头中右键单击，然后单击“表头属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、上边框和右边框。    
+1.  右键单击页眉中任何项的外部，然后单击“页眉属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、上边框和右边框。    
     
     > [!NOTE]    
-    >  如果没有在报表中使用表头，则可以仅围绕表体放置边框，也可以从“插入”选项卡中添加表头。    
+    >  如果没有在报表中使用页眉，则可以仅围绕表体放置边框，也可以从“插入”选项卡中添加页眉。    
     
-2.  在设计图面上任何项外部的主体中右键单击，然后单击“主体属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框和右边框。    
+2.  右键单击设计图面上任何项外部的主体，然后单击“主体属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框和右边框。    
     
-3.  在表尾中任何项外部的表尾中右键单击，然后单击“表尾属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。    
+3.  右键单击页脚中任何项的外部，然后单击“页脚属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   
-

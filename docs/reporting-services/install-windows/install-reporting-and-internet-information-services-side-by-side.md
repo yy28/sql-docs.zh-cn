@@ -1,37 +1,33 @@
 ---
-title: "安装 Reporting 和 Internet 信息服务的并行 |Microsoft 文档"
+title: "并行安装 Reporting Services 和 Internet Information Services | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deploying [Reporting Services], IIS
+helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d45e32e12a3f9a4e87afd6557a9c292ea1a26b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>安装 Reporting 和 Internet 信息服务的并行
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-你可以安装和在同一台计算机上运行 SQL Server Reporting Services (SSRS) 和 Internet 信息服务 (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
+可以在同一台计算机上安装和运行 SQL Server Reporting Services (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
   
 |IIS 版本|问题|说明|  
 |-----------------|------------|-----------------|  
@@ -50,32 +46,32 @@ ms.lasthandoff: 08/09/2017
   
 |示例|请求|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|接收发送到的所有请求`http://123.234.345.456/reports`或`http://\<computername>/reports`如果域名服务可以为该主机名解析的 IP 地址。|  
+|`http://123.234.345.456:80/reports`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收发送到 `http://123.234.345.456/reports` 或 `http://\<computername>/reports` 的所有请求。|  
 |`http://+:80/reports`|只要 URL 包含“reports”虚拟目录名，就将接收发送到对于该计算机有效的任何 IP 地址或主机名的任何请求。|  
-|`http://123.234.345.456:80`|接收的任何请求都指定`http://123.234.345.456`或`http://\<computername>`如果域名服务可以为该主机名解析的 IP 地址。|  
+|`http://123.234.345.456:80`|如果域名服务可以将 IP 地址解析为相应主机名，则将接收指定 `http://123.234.345.456` 或 `http://\<computername>` 的所有请求。|  
 |`http://+:80`|对于映射到 **“所有已分配的”**的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
 |`http://*:80`|对于映射到 **“所有未分配的”**的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
  端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0、 8.5 与 SQL Server Reporting Services 的 URL 保留项  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>用于带有 SQL Server Reporting Services 的 IIS 8.0、8.5 的 URL 保留项  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 保留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
 |应用程序|URL 保留|说明|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
-|报表服务器|`http://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收到 http:// 的所有请求\<计算机名 > / reportserver。|  
-|Web 门户|`http://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]接收到 http:// 的所有请求\<计算机名 > / 报表。|  
+|报表服务器|`http://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
+|Web 门户|`http://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收针对 http://\<computername>/reports 的所有请求。|  
 |IIS|`http://*:80/`|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>通过并行部署的 IIS 8.0、 8.5 上的 SQL Server Reporting Services
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>在 IIS 8.0、8.5 上并行部署 SQL Server Reporting Services
 
  当 IIS 网站的虚拟目录名与 Reporting Services 所使用的虚拟目录名相同时，IIS 和 Reporting Services 之间会出现互操作性问题。 例如，假设您具有以下配置：  
   
 -   IIS 中一个分配到端口 80 的网站，以及名为“Reports”的虚拟目录。  
   
--   安装在默认配置中，其中 URL 保留还指定了端口 80 的报表服务器实例和[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]应用程序也使用"Reports"作为虚拟目录名称。  
+-   在默认配置中安装的报表服务器实例，其中 URL 保留还指定了端口 80，[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 应用程序也使用“Reports”作为虚拟目录名。  
   
- 在此配置，发送到 http:// 请求\<computername >: 80/reports 将收到[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]。 安装报表服务器实例之后，通过在 IIS 中的 Reports 虚拟目录访问的应用将不再接收请求。  
+ 对于该配置，发送到 http://\<computername>:80/reports 的请求将由 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收。 在安装了报表服务器实例之后，通过 IIS 中的 Reports 虚拟目录访问的应用程序将不再接收请求。  
   
  如果您并行运行所部署的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新旧版本，则有可能会遇到上面描述的路由问题。 这是由于所有版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 都使用“ReportServer”和“Reports”作为报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 应用程序的虚拟目录名，从而增加了在 IIS 中拥有“reports”和“reportserver”虚拟目录的可能性。  
   
@@ -87,9 +83,8 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置报表服务器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [安装 Reporting Services 本机模式报表服务器](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

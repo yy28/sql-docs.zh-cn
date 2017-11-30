@@ -2,7 +2,7 @@
 title: "Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs"
 description: "自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,12 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64f0c0226ab040eb8b43c4b62a6784296d22c6aa
+ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/14/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -183,7 +181,7 @@ WHERE   [fo].[Quantity] = 361;
 1. 另请注意，我们不再发出溢出警告，因为我们将基于从 MSTVF 表扫描流出的真实行数授予更多内存。
 
 ### <a name="interleaved-execution-eligible-statements"></a>交错执行符合条件的语句
-交错执行中的 MSTVF 引用语句当前必须处于只读，且不为数据修改操作的一部分。 此外，如果不对 CROSS APPLY 的内侧使用 MSTVF，则 MSTVF 不符合用于交错执行的条件。
+交错执行中的 MSTVF 引用语句当前必须处于只读，且不为数据修改操作的一部分。 此外，如果 MSTVF 不使用运行时常数，则其不适合用于交错执行。
 
 ### <a name="interleaved-execution-benefits"></a>交错执行的优点
 一般情况下，估计行数与实际行数之间的偏差越大，下游计划操作数翻倍，则性能影响越大。
@@ -231,5 +229,4 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)
 
 [演示自适应查询处理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

@@ -1,5 +1,5 @@
 ---
-title: "以 html 格式 （报表生成器和 SSRS） 呈现 |Microsoft 文档"
+title: "以 HTML 格式呈现（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现分页报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  文档结构图标签将呈现出来，并可通过在查看器控件中使用文档结构图进行定位。 如果数据区域表头已省略，标签将呈现在第一个子单元上。 如果不存在相应的子单元，标签将呈现在其标记处前面的子单元上。  
   
 ### <a name="bookmarks"></a>书签  
- 书签链接以超链接形式呈现和显示。 标签目标将呈现出来并可通过单击书签链接进行定位。 单击书签链接后，报表将跳转到目标书签标签的首次出现处，并且如有可能，浏览器将滚动以便书签链接处于窗口顶部。 HTML 定位点 (\<>) 使用标记来标记书签目标。  
+ 书签链接以超链接形式呈现和显示。 标签目标将呈现出来并可通过单击书签链接进行定位。 单击书签链接后，报表将跳转到目标书签标签的首次出现处，并且如有可能，浏览器将滚动以便书签链接处于窗口顶部。 HTML 定位点 (\<a>) 标记用于标记书签目标。  
   
 ### <a name="interactive-sorting"></a>交互式排序  
  如果已为某一文本框定义了用户排序，则 HTML 呈现扩展插件将在该文本框内呈现排序图标，呈现位置为文本框内容的右侧。 如果报表包含任何已定义用户排序的文本框，则单击相应排序图标后将呈现导致回发到服务器的 JavaScript。  
   
 ### <a name="hyperlinks-and-drillthrough"></a>超链接和钻取  
- 超链接和钻取链接呈现为对使用 HTML 定位点的报表项的超链接 (\<>) 围绕它们定义的项的标记。  
+ 报表项上的超链接和钻取链接都呈现为超链接，呈现方法为在这些链接所定义的项周围放置 HTML 定位点 (\<a>) 标记。  
   
 ### <a name="search"></a>搜索  
  搜索功能允许用户在报表内搜索文本字符串。  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services &#40; 中的分页报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展 &#40; 的交互功能报表生成器和 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

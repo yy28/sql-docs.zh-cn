@@ -1,5 +1,5 @@
 ---
-title: "访问 SOAP API |Microsoft 文档"
+title: "访问 SOAP API | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
 - Web service [Reporting Services], SOAP
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 6a5e70f353771fb763029f8fa3306ce04067f3e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9519a04820618fc8f3a59c16b8282b6be1cb0146
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-the-soap-api"></a>访问 SOAP API
   报表服务器 Web 服务使用通过 HTTP 的简单对象访问协议 (SOAP)，并充当客户端程序和报表服务器之间的通信接口。 该 Web 服务提供两个端点（一个用于报表执行，一个用于报表管理），并且由您可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的完整功能的方法和一组复杂类型对象构成。 若要调用该服务，必须引用 Reporting Services Web 服务描述语言 (WSDL)。  
@@ -47,9 +45,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
   
--   <xref:ReportExecution2005> 端点允许开发人员以编程方式在报表服务器中处理和呈现报表。 通过访问此终结点的 WSDL `ReportExecution2005.asmx?wsdl`。  
+-   <xref:ReportExecution2005> 端点允许开发人员以编程方式在报表服务器中处理和呈现报表。 用于此端点的 WSDL 通过 `ReportExecution2005.asmx?wsdl` 访问。  
   
- WSDL 可供开发工具包支持 SOAP 和 Web 服务，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK。  
+ WSDL 可由支持 SOAP 和 Web 服务的开发包（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK）使用。  
   
  以下示例显示指向 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理 WSDL 文件的 URL 的格式：  
   
@@ -61,15 +59,14 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |URL 元素|Description|  
 |-----------------|-----------------|  
-|*服务器*|报表服务器部署到的服务器的名称。|  
-|*reportserver*|包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
-|*\<终结点名称 >.asmx*|Web 服务端点的名称。|  
+|服务器|报表服务器部署到的服务器的名称。|  
+|reportserver|包含 XML Web 服务的文件夹的名称。 此名称在设置期间配置。|  
+|\<终结点名称>.asmx|Web 服务端点的名称。|  
   
  有关 WSDL 格式的详细信息，请参阅万维网联合会 (W3C) WSDL 规范，网址为 http://www.w3.org/TR/wsdl。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Web 服务和.NET Framework 构建应用程序](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [使用 Web 服务和 .NET Framework 生成应用程序](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

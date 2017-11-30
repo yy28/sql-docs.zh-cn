@@ -1,5 +1,5 @@
 ---
-title: "已发布报表的 SharePoint 集成模式下设置参数 |Microsoft 文档"
+title: "设置已发布报表的参数 - SharePoint 集成模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,18 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57f464054989a20b56b729624d711b6520466d13
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>设置已发布的报表的 SharePoint 集成模式下的参数
+# <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>设置已发布报表的参数 - SharePoint 集成模式
   参数化报表可以在运行报表时接受用于筛选数据的输入值。 参数是在创建报表时定义的。 根据报表定义中报表参数的定义方式，参数可以接受单值、多值或者根据上一选择而变化的动态值（例如，选择产品类别后，下一选择可能是该类别中的特定产品）。 参数可以具有默认值，该值可用于自动运行经过筛选的报表，也可以由不同的值来代替。  
   
  这些属性可在报表定义中设置，也可以在报表发布后设置。 虽然可以在已发布报表中修改某些参数属性以更改值和显示属性，但是不能更改参数名或数据类型。 参数名称和数据类型只能由报表作者在报表定义中更改。  
@@ -91,4 +90,3 @@ ms.lasthandoff: 08/09/2017
  [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   
-

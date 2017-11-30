@@ -1,5 +1,5 @@
 ---
-title: "配置和管理 SQL Server Reporting Services 报表服务器 |Microsoft 文档"
+title: "配置和管理 SQL Server Reporting Services 报表服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: fe898a9401340f80884fa15f3ea1ce45108fbbc6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>配置和管理 SQL Server Reporting Services 报表服务器
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 10/06/2017
 SQL Server Reporting Services 是基于服务器的报表平台，提供了各种现成可用的工具和服务，帮助你创建、部署和管理组织的报表，并提供了使你能扩展和自定义报表功能的编程功能。 您可以将您的报表环境与 SharePoint 产品相集成，体验使用 SharePoint 站点提供的协作环境所带来的好处。
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
-使用下列部分来帮助你了解概念、 部署方案、 过程和更高，面向与 SharePoint 产品或技术集成 Reporting Services 环境：  
+以下各节中的内容可以帮助你理解与将 Reporting Services 环境与 SharePoint 产品或技术相集成有关的概念、部署方案、过程等等：  
   
 -   SharePoint 文档库中的菜单选项  
   
@@ -66,7 +65,6 @@ SQL Server Reporting Services 是基于服务器的报表平台，提供了各�
   
 -   [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 有关 Reporting Services 的更多常规信息，请参阅[Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 有关其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../../sql-server/sql-server-technical-documentation.md)。  
+ 有关 Reporting Services 的一般信息，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的 [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。 有关其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../../sql-server/sql-server-technical-documentation.md)。  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

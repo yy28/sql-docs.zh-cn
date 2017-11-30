@@ -1,5 +1,5 @@
 ---
-title: "报表生成器中预览报表 |Microsoft 文档"
+title: "在报表生成器中预览报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，经常预览报表以验证报表显示你所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  编辑会话的其他优点包括可以编辑使用嵌入数据源或引用项（如存储在报表服务器上的图像或子报表）的报表。  
   
 > [!NOTE]  
-> 有一些在报表生成器中预览和查看在浏览器之间的差异。 例如，添加到报表中，在指定日期/时间类型参数时，月历控件是在报表生成器，并在浏览器中不同。 
+> 在报表生成器中预览与在浏览器中查看有一些差异。 例如，在指定日期/时间类型参数时添加到报表中的日历控件与报表生成器和浏览器中的日历控件有所不同。 
   
 ## <a name="improving-preview-performance"></a>改进预览性能  
  您创建和更新报表的方式影响报表在预览中呈现的速度。 当您首次预览依赖于服务器引用的报表时，将为您创建一个编辑会话，并且将在报表运行时使用的数据添加到存储在报表服务器上的数据缓存中。 当您对报表进行不影响数据的更改时，报表将使用数据的缓存副本。 这意味着，您每次预览报表时将看不到数据更改。 如果您需要新数据，请单击功能区上的 **“刷新”** 按钮。  
@@ -82,11 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [格式设置报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [保存报表 &#40;报表生成器 &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [保存报表（报表生成器）](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

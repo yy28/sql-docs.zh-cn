@@ -1,13 +1,11 @@
 ---
-title: "Power BI 报表服务器集成 （配置管理器） |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "Power BI 报表服务器集成（配置管理器）| Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,14 +16,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -38,7 +34,7 @@ ms.lasthandoff: 10/06/2017
 
 - **Azure Active Directory：** 你的组织必须使用 Azure Active Directory，以便为 Azure 服务和 Web 应用程序提供目录和身份管理。 有关详细信息，请参阅[什么是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  在你的组织第一次订阅 Azure 服务（例如 Office 365 和 Microsoft Intune）时，便会自动创建托管租户。   当前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
+- **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  在你的组织第一次订阅 Azure 服务（例如 Office 365 和 Microsoft Intune）时，便会自动创建托管租户。   目前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
 
 - 执行 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成的用户需要是 Azure AD 租户的成员、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系统管理员和 ReportServer 目录数据库的系统管理员。
 
@@ -48,7 +44,7 @@ ms.lasthandoff: 10/06/2017
 
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
-有关详细信息如何存储凭据，请参阅部分中配置存储凭据的特定于报表的数据源"中[Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)。
+有关如何存储凭据的详细信息，请参阅[在 Reporting Services 数据源中存储凭据中](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)的“为特定于报表的数据源配置存储凭据”部分。
 
 有关详细信息，管理员可以查看  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件。  他们将看到类似于以下内容的消息： 查看和监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件最好的方式是对文件使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query。  有关详细信息和简短视频，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
 
@@ -58,7 +54,7 @@ ms.lasthandoff: 10/06/2017
 
 ##  <a name="bkmk_steps2integrate"></a> 集成并注册报表服务器
 
-完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的以下步骤。 有关详细信息，请参阅[Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
+完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的以下步骤。 有关详细信息，请参阅 [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
 1. 选择 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成页。
 
@@ -66,7 +62,7 @@ ms.lasthandoff: 10/06/2017
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登录对话框中，键入用于登录 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的凭据。
 
-4. 完成注册后**Power BI 注册详细信息**部分将记下 Azure 租户 ID 和重定向 URL。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
+4. 注册完成后，“Power BI 注册详细信息”部分将记下 Azure 租户 ID 和重定向 URL。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
 
 5. 选择“结果”窗口中的“复制”按钮，以将注册详细信息复制到 Windows 剪贴板，这样你便可以将它们保存起来供以后参考。
 
@@ -74,7 +70,7 @@ ms.lasthandoff: 10/06/2017
 
 **注销：** 从 Azure Active Directory 注销报表服务器，会导致下面的结果：
 
-- **我的设置**链接将不再从 web 门户网站菜单栏中看到。
+- “我的设置”链接在 Web 门户菜单栏中不再可见。
 
 - 已固定的报表项仍固定在仪表板中，但将不再更新仪表板上的磁贴。
 
@@ -88,11 +84,11 @@ ms.lasthandoff: 10/06/2017
 
 如果你的报表服务器的配置已更改，请使用“更新注册”  。 例如，如果你想要添加或删除用户用于浏览 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL。
 
-- 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，选择**Web 门户 URL**
+- 请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中，选择“Web 门户 URL”
 
-     选择**高级**。
+     选择“高级”。
 
-- 选择**添加**若要添加的新 HTTP 标识[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]，然后选择**确定**。
+- 选择“添加”为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 添加新 HTTP 标识 ，然后选择“确定”。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 图标将发生更改以指示已更改服务器配置。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
@@ -112,9 +108,9 @@ ms.lasthandoff: 10/06/2017
 
 3. Power BI 客户端应用程序在 Azure Active Directory 中的托管租户中创建。
 
-4. 注册包括用户从报表服务器登录时使用的重定向 URL。  应用 ID 和 URL 将保存到报表服务器数据库中。 重定向 URL 将在对 Azure 的身份验证调用期间使用，以便该调用可以返回到报表服务器。 例如，当用户登录或将项固定到仪表板。
+4. 注册包括用户从报表服务器登录时使用的重定向 URL。  应用 ID 和 URL 将保存到报表服务器数据库中。 重定向 URL 将在对 Azure 的身份验证调用期间使用，以便该调用可以返回到报表服务器。 例如，当用户登录或将项固定到仪表板时。
 
-5. 应用程序 ID 和 URL 将显示在 Configuration Manager 中。
+5. 应用 ID 和 URL 显示在配置管理器中。
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
@@ -134,7 +130,7 @@ ms.lasthandoff: 10/06/2017
 
 7. 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以管理仪表板磁贴上报表项的计划刷新。 订阅使用用户登录时创建的安全令牌。
 
-     令牌是适用于**90 天**，此后哪些用户需要再次登录以创建新的用户令牌。 令牌过期后，已固定的磁贴仍将显示在仪表板上，但不再刷新数据。  用于已固定项的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅将出错，直到创建新的用户令牌。 请参阅[我的 Power BI 集成 &#40; web 门户 &#41; 设置](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 了解有关详细信息。
+     令牌适于 90 天，此后用户需要再次登录以创建新的用户令牌。 令牌过期后，已固定的磁贴仍将显示在仪表板上，但不再刷新数据。  用于已固定项的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅将出错，直到创建新的用户令牌。 请参阅[我的 Power BI 集成设置（Web 门户）](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 了解有关详细信息。
 
 用户第二次固定某一项时，跳过步骤 1-4，改为从 ReportServer 数据库和流中检索应用 ID 和 URL，然后继续执行步骤 5。
 
@@ -163,4 +159,3 @@ ms.lasthandoff: 10/06/2017
 [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

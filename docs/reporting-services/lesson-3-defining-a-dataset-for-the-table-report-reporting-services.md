@@ -1,28 +1,25 @@
 ---
-title: "第 3 课： 定义数据集的表报表 (Reporting Services) |Microsoft 文档"
+title: "第 3 课：为表报表定义数据集 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8fc3a1ba59c5b795720813a6018c50672ef1d66e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：为表报表定义数据集 (Reporting Services)
 定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在“报表数据”窗格中，单击“新建”，然后单击“数据集…”。 此时将打开 **“数据集属性”** 对话框。  
   
-2.  在“名称”框中，键入 **AdventureWorksDataset**。  
+2.  在“名称”框中，键入 AdventureWorksDataset。  
   
 3.  单击“使用在我的报表中嵌入的数据集”。  
   
@@ -65,9 +62,9 @@ ms.lasthandoff: 08/09/2017
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-7.  （可选）单击“查询设计器”按钮。 查询将在基于文本的查询设计器中显示。 通过单击“编辑为文本”，可以切换到图形查询设计器。 通过单击查询设计器工具栏上的“运行![ssrs_querydesigner_run](../reporting-services/media/ssrs-querydesigner-run.png)”按钮，查看查询的结果。  
+7.  （可选）单击“查询设计器”按钮。 查询将在基于文本的查询设计器中显示。 通过单击“编辑为文本”，可以切换到图形查询设计器。 通过单击查询设计器工具栏上的“运行 ![ssrs_querydesigner_run](../reporting-services/media/ssrs-querydesigner-run.png)  ”按钮，查看查询的结果。  
   
-    将看到来自 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库中四个不同表的六个字段的数据。 查询利用别名等 Transact-SQL 功能。 例如，SalesOrderHeader 表称为 soh 。  
+    将看到来自 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库中四个不同表的六个字段的数据。 查询利用别名等 Transact-SQL 功能。 例如，SalesOrderHeader 表称为 soh。  
   
 8.  单击“确定”退出查询设计器。  
   
@@ -86,5 +83,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

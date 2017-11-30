@@ -1,5 +1,5 @@
 ---
-title: "数据警报消息 |Microsoft 文档"
+title: "数据警报消息 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea76fbe6f4b59874270d70efde68b3d3493d7f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-messages"></a>数据警报消息
 
@@ -29,23 +28,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 数据警报通过电子邮件传递两种类型的数据警报消息： 具有数据警报结果和具有错误说明的消息。 具有结果的消息向所有收件人告知有关报表数据中共同感兴趣的和对业务决策至关重要的更改。 如果由于某种原因导致错误且结果不可用，则发送错误消息。
+SQL Server Reporting Services 数据警报通过电子邮件传递两种类型的数据警报消息：具有数据警报结果的消息和具有错误说明的消息。 具有结果的消息向所有收件人告知有关报表数据中共同感兴趣的和对业务决策至关重要的更改。 如果由于某种原因导致错误且结果不可用，则发送错误消息。
 
 数据警报定义的所有者还可以在数据警报管理器中查看有关数据警报实例的信息。 有关详细信息，请参阅 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)。  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
 ##  <a name="DataAlertMessages"></a> 数据警报消息  
  下图显示具有结果的数据警报消息和具有错误说明的警报消息。  
   
  **结果消息**  
   
- ![使用结果的数据警报的电子邮件消息](../reporting-services/media/rs-alertmessageresults.gif "带有结果的数据警报的电子邮件")  
+ ![包含结果的数据警报电子邮件](../reporting-services/media/rs-alertmessageresults.gif "Data alert e-mail message with results")  
   
  **错误消息**  
   
- ![使用错误消息的数据警报消息](../reporting-services/media/rs-alertmessageerrror.gif "与错误消息的数据警报消息")  
+ ![包含错误消息的数据警报消息](../reporting-services/media/rs-alertmessageerrror.gif "Data alert message with error message")  
   
  这些消息包含相同类型的信息。  
   
@@ -71,12 +70,11 @@ SQL Server Reporting Services 数据警报通过电子邮件传递两种类型�
   
 -   [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [编辑警报设计器中的某个数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 ## <a name="see-also"></a>另请参阅
 
 [数据警报设计器](../reporting-services/data-alert-designer.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

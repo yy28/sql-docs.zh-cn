@@ -1,7 +1,6 @@
 ---
-title: "为报表服务器访问配置防火墙 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "将防火墙配置为允许报表服务器访问 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ea69363565456fda2c1adc7d48d60c6a0bef8f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9954ce3ea11c4925dc5c99f13ccafd12e602d5c6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>将防火墙配置为允许报表服务器访问
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定 IP 地址、端口和虚拟目录的 URL 访问报表服务器应用程序和已发布的报表。 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的迹象包括尝试从远程客户端计算机打开 **报表管理器** 时出现空白页，或请求报表后出现空白网页。  
@@ -55,39 +53,38 @@ ms.lasthandoff: 08/09/2017
   
 5.  单击 **“端口”** 的 **“规则类型”**。  
   
-6.  单击“下一步” 。  
+6.  单击 **“下一步”**。  
   
 7.  在 **“协议和端口”** 页上，单击 **TCP**。  
   
 8.  选择 **“特定本地端口”** ，然后键入值 **80**。  
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 10. 在 **“操作”** 页上，单击 **“允许连接”**。  
   
-11. 单击“下一步” 。  
+11. 单击 **“下一步”**。  
   
 12. 在 **“配置文件”** 页上，单击适合您的环境的选项。  
   
-13. 单击“下一步” 。  
+13. 单击 **“下一步”**。  
   
-14. 上**名称**页上，输入的名称**ReportServer (TCP 端口 80 上)**  
+14. 在“名称”页上，输入名称“ReportServer (TCP on port 80)”  
   
 15. 单击 **“完成”**。  
   
 16. 重新启动计算机。  
   
 ## <a name="next-steps"></a>后续步骤  
- 打开端口后，必须在确认远程用户是否可以通过所打开的端口访问报表服务器之前，通过主文件夹或站点级别的角色分配授予用户访问报表服务器的权限。 如果用户不具有足够的权限，那么虽然可以正确地打开端口，但报表服务器连接仍会失败。 有关详细信息，请参阅[授予用户对报表服务器 &#40; 的访问权限报表管理器 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+ 打开端口后，必须在确认远程用户是否可以通过所打开的端口访问报表服务器之前，通过主文件夹或站点级别的角色分配授予用户访问报表服务器的权限。 如果用户不具有足够的权限，那么虽然可以正确地打开端口，但报表服务器连接仍会失败。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
   
- 您还可以通过在其他计算机上启动报表管理器来验证是否正确打开了端口。 有关详细信息，请参阅[报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+ 您还可以通过在其他计算机上启动报表管理器来验证是否正确打开了端口。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器 Url &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [创建报表服务器数据库 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [配置报表服务器服务帐户 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
-

@@ -1,32 +1,29 @@
 ---
-title: "从 Reporting Services 移动报表中的共享数据集获取数据 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "在 Reporting Services 移动报表中从共享数据集获取数据 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
-除了[从 Excel 文件加载数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，SQL Server 移动报表发布服务器还可以从几乎任何源访问数据。 访问数据需要配置 Reporting Services web 门户上的共享的数据源。 了解有关 [创建共享数据源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [创建共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)的详细信息。  
+除了[从 Excel 文件中加载数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)外，SQL Server 移动报表发布服务器还可以访问几乎任何来源的数据。 访问数据需要在 Reporting Services Web 门户上配置的共享数据源。 了解有关 [创建共享数据源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [创建共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)的详细信息。  
   
-共享数据源以及共享数据集配置 Reporting Services 服务器上后，可以在创建的移动报表中使用它们[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。   
+在 Reporting Services 服务器上配置共享数据源和共享数据集后，可以在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 中创建的移动报表中使用它们。   
   
 从 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 连接到 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]服务器后，将移动报表连接到共享数据集非常简单。   
   
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  如果这是首次连接到服务器，请填写服务器名称以及你的用户名和密码。 将服务器名称按以下格式放入服务器地址框：  
   
-    \<"servername"> /reports/  
+    \<"servername">/reports/  
   
     在此示例中:  
        
@@ -53,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="add-edit-or-remove-a-report-server"></a>添加、编辑或删除报表服务器  
   
-如果已连接到报表服务器，在“数据”选项卡上选择“添加数据”后，将看不到用于添加另一个报表服务器的选项。 这时应执行以下步骤：  
+如果已连接到报表服务器，在“数据”选项卡上选择“添加数据”后，看不到用于添加另一个报表服务器的选项。 这时应执行以下步骤：  
   
 1. 选择左上角的“连接”。  
   
@@ -66,13 +63,12 @@ ms.lasthandoff: 08/09/2017
 2. 添加新的服务器连接，或者编辑或删除现有的连接。  
   
 ### <a name="see-also"></a>另请参阅  
-- [使用 SQL Server 移动报表发布服务创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [Web 门户 （SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
+- [使用 SQL Server Mobile Report Publisher 创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+-  [Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  [在 iPad 应用中查看 SQL Server 移动报表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  [View SQL Server mobile reports and KPIs in the iPhone app (Power BI for iOS)（在 iPhone 应用 (Power BI for iOS) 中查看 SQL Server 移动报表和 KPI）](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
   
   
   
   
-
 

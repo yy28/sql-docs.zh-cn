@@ -2,10 +2,13 @@
 title: "SQL Server 的帮助查看器和脱机内容 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -13,19 +16,19 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a5e7fb01cd74ccafb3a324dbd79bd849bef0bca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server 的帮助查看器和脱机内容
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 09/08/2017
   
    >[!IMPORTANT] 
    >在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请执行以下操作。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。  
-   >>在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。 仅当已安装 Visual Studio 时，才会在本地计算机上提供此文件。 
+   >>在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings 文件，并将下面代码中的日期更改为将来的某个日期。 仅当已安装 Visual Studio 时，才会在本地计算机上提供此文件。 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     左窗格中的目录会自动更新，以包含添加的文档。  
@@ -139,7 +142,5 @@ ms.lasthandoff: 09/08/2017
 此外，帮助查看器不支持代理设置，也不支持 ISO 格式。 
 
 ## <a name="additional-information"></a>其他信息
-[Microsoft 帮助查看器 - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft Help Viewer - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

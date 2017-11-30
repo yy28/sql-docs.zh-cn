@@ -1,5 +1,5 @@
 ---
-title: "DataSources 和 DataSets 集合引用 （报表生成器和 SSRS） |Microsoft 文档"
+title: "DataSources 和 DataSets 集合引用（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a1e556a8c6ac712d61d262c4d96993a9ab3ecf11
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 557ea9ee2c43822c699d6c2d855d5ab6c1a980ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>内置集合的数据源和数据集引用 （报表生成器）
+# <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>内置集合 - 数据源和数据集引用（报表生成器）
   **DataSources** 集合表示在报表中使用的所有数据源。 同样， **DataSets** 集合表示报表中所有数据源的所有数据集。 使用 **“报表数据”** 窗格显示报表数据集的层次结构视图，报表数据集按照它们所引用的数据源组织。 如果这些集合中包含引用，则在预览报表时将不会看到值。 这些集合只有在将报表发布到报表服务器之后才可用。  
   
 > [!NOTE]  
@@ -49,8 +48,7 @@ ms.lasthandoff: 08/09/2017
  可使用表达式定义包含在数据集中的查询。 您可以使用此功能来设计报表，报表中的查询可以根据用户的输入、其他数据集中的数据或其他变量进行更改。 有关查询的详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

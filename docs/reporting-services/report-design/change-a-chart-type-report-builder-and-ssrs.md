@@ -1,5 +1,5 @@
 ---
-title: "更改图表类型 （报表生成器和 SSRS） |Microsoft 文档"
+title: "更改图表类型（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e963dc1fbee3ca6c7d035a748fe49708b36a78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fdc412e2ad4896548d07f4a747cb5e150bb68d4b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
 首次将图表插入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中时，将显示“选择图表类型”对话框。 如果取消此对话框，则默认情况下会添加柱形图图表类型。  
@@ -35,17 +34,16 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-change-the-chart-type"></a>更改图表类型  
   
-1.  在设计视图中，右键单击图表，然后单击**更改图表类型**。  
+1.  在“设计”视图中，右键单击图表，然后单击“更改图表类型”。  
   
     > [!NOTE]  
     >  有多个序列显示在图表中时，必须右键单击要更改的序列，而不是图表。  
   
-2.  在**SelectChart 类型**对话框中，选择图表类型从列表中。  
+2.  在“选择图表类型”对话框中，从列表中选择图表类型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [向报表添加图表（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "本地模式和在报表查看器的连接的模式报表对比 |Microsoft 文档"
+title: "报表查看器中的本地模式和连接模式报表对比 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5f8342550dc105fb6d3544e1d8bd65fcd660ff64
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: cbf47d2ec1105b105ea2d2c8102bcd9b71cb2a1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>本地模式和在报表查看器的连接的模式报表对比
+# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>报表查看器中的本地模式和连接模式报表对比
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,13 +29,13 @@ ms.lasthandoff: 10/06/2017
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表可配置为在 *“本地模式”* 或 *“连接模式”*下运行，以利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 您而是可以在数据扩展插件支持本地模式报表时，使用报表查看器直接从 SharePoint 呈现报表。 这种方法称为“本地模式” 。 在之前的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本中，SharePoint 场需连接到在 SharePoint 模式下配置的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，以便报表查看器控件可以呈现报表。 这种方法称为“远程模式”  或“连接模式” 。  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
- 在*本地模式*没有任何[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式中，用户可以查看报表，但无法使用订阅和数据警报之类的服务器端功能。  
+ “本地模式”中没有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式中，用户可以查看报表，但无法使用订阅和数据警报之类的服务器端功能。  
 
 ## <a name="local-mode-vs-connected-mode-and-supported-extensions"></a>本地模式与连接模式对比以及支持的扩展插件
 
- **本地模式：** 当你具有支持本地模式的数据扩展插件时，报表查看器会直接从 SharePoint 呈现报表。 在*本地模式*没有任何[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式下，用户可以查看报表，但 **无法** 使用订阅和数据警报之类的服务器端功能。  
+ **本地模式：** 当你具有支持本地模式的数据扩展插件时，报表查看器会直接从 SharePoint 呈现报表。 “本地模式”中没有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式下，用户可以查看报表，但 **无法** 使用订阅和数据警报之类的服务器端功能。  
   
  **连接模式**也称为 *远程模式* ，在 SharePoint 模式下需使用连接至 SharePoint 场的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，以便报表服务器控件可以呈现报表。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 10/06/2017
 > [!NOTE]  
 >  与以前的版本一样，您不能在 .rsds 文件中嵌入用户名和密码。  
   
-## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>使用 SharePoint 2013 配置本地模式和访问服务
+## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>使用 SharePoint 2013 配置本地模式和 Access Services
 
  您可以配置 SharePoint 2013 场支持现有的 Access 2010 Web 数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本地模式。 有关详细信息，请参阅 [为 SharePoint Server 2013 中的 Web 数据库安装和配置 Access Services 2010](http://technet.microsoft.com/library/ee748653\(office.15\).aspx)。  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 10/06/2017
   
 -   [Access 应用基本任务](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500)。  
   
-## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>配置本地模式使用 SharePoint 2010 reporting
+## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>使用 SharePoint 2010 配置本地模式报告
 
  本地模式要求 ASP.NET 会话状态。 安装 Access 服务将启用 ASP.Net 会话状态。 您也可以使用 PowerShell 来启用。  
   
@@ -89,7 +88,6 @@ ms.lasthandoff: 10/06/2017
   
 ## <a name="see-also"></a>另请参阅
 
- [支持的 Reporting Services 数据源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Reporting Services 支持的数据源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

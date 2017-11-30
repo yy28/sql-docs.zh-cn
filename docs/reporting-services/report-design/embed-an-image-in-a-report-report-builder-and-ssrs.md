@@ -1,5 +1,5 @@
 ---
-title: "在报表 （报表生成器和 SSRS） 中嵌入图像 |Microsoft 文档"
+title: "在报表中嵌入图像（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a1825a28cd9939228a73c1a4a6269c717b691ab2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 58b65bbbbb0fd6126ef760bfae5ca25a7a39fc6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在报表中嵌入图像（报表生成器和 SSRS）
   报表中可以包含嵌入图像。 嵌入图像可确保图像对报表始终可用，但会影响报表定义（即定义报表的文件）的大小。 报表中嵌入的图像在“报表数据”窗格中列出。  
@@ -69,9 +68,8 @@ ms.lasthandoff: 08/09/2017
 3.  在 **MIMEType** 属性旁边的文本框内单击，并从下拉列表中选择一个新 MIME 类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [映像 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [添加数据绑定图像 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [映像属性对话框中，常规 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [添加数据绑定图像（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "PathName 属性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文档"
+title: "PathName 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- PathName Property
-apilocation:
-- reportingservices.mof
+apiname: PathName Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- PathName property
+helpviewer_keywords: PathName property
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7f4204f70941f42c97654f68923ce44b87ddc508
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ee1a853ecf936379331db202493a2560027ac864
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---pathname"></a>ConfigurationSetting 属性-路径名
+# <a name="configurationsetting-property---pathname"></a>ConfigurationSetting 属性 - PathName
   指定报表服务器实例的安装路径。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -56,4 +52,3 @@ public string PathName;
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "准备实现传递扩展插件 |Microsoft 文档"
+title: "准备实现传递扩展插件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7bbaf0976e9b145df33e04eea93a5d2ae0408c11
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0c6131647a38abb2eddf8856b5a86bfff2287e86
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>准备实现传递扩展插件
   在实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件之前，应定义要实现的接口。 首先需要确定使用传递扩展插件的方式、传递扩展插件需要哪些设置以及为传递报表通知而需要实现的特定功能。  
@@ -50,16 +48,15 @@ ms.lasthandoff: 08/12/2017
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> 接口|表示 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的一个扩展插件。|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口|表示 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的一个传递扩展插件。|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 接口|包含传递扩展插件所需的有关报表服务器的信息（例如，可用呈现扩展插件的列表）。|  
-|<xref:Microsoft.ReportingServices.Interfaces.Setting>类|表示扩展插件的设置。|  
-|<xref:Microsoft.ReportingServices.Interfaces.Notification>类|包含传递扩展插件用于传递报表的订阅信息。|  
-|<xref:Microsoft.ReportingServices.Interfaces.Report>类|表示报表特定的信息以及使传递扩展插件能够向用户传递报表的方法。|  
-|<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile>类|表示来自呈现扩展插件的输出。 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 对象包含关联的文件名和类型信息，传递扩展插件需要这些信息以处理由呈现扩展插件返回的流。|  
+|<xref:Microsoft.ReportingServices.Interfaces.Setting> 类|表示扩展插件的设置。|  
+|<xref:Microsoft.ReportingServices.Interfaces.Notification> 类|包含传递扩展插件用于传递报表的订阅信息。|  
+|<xref:Microsoft.ReportingServices.Interfaces.Report> 类|表示报表特定的信息以及使传递扩展插件能够向用户传递报表的方法。|  
+|<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 类|表示来自呈现扩展插件的输出。 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 对象包含关联的文件名和类型信息，传递扩展插件需要这些信息以处理由呈现扩展插件返回的流。|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口|一个用户控件，表示在报表管理器中从用户检索传递扩展插件特定的订阅信息的方法（例如，电子邮件地址或指向文件共享的路径）。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [实现传递扩展插件](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Reporting Services 扩展插件库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "ATOM 设备信息设置 |Microsoft 文档"
+title: "ATOM 设备信息设置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 847b387a04f302c731ed3cb1d2c31df57e202680
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 26921ea102ffa0f0aa293bf91eeaf580a505b536
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="atom-device-information-settings"></a>ATOM 设备信息设置
   用于 Atom 呈现扩展插件的设备信息设置支持要使用的 Atom 馈送和字符编码的名称的提交。  
@@ -36,8 +35,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [将设备信息设置传递给呈现扩展插件](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [自定义在 RSReportServer.Config 中的呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技术参考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [在 RSReportServer.Config 中自定义呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技术参考 (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   
-

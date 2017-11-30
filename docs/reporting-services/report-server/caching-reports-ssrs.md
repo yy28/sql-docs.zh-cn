@@ -1,5 +1,5 @@
 ---
-title: "缓存报表 (SSRS) |Microsoft 文档"
+title: "缓存报表 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 79a60b96277352c51ce19d24d9504735e5fdb91f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  缓存是一种性能增强技术。 缓存的内容是非永久性的，会随着报表的添加、替换或删除而发生更改。 如果需要可预测性更高的缓存策略，则应创建报表快照。 有关详细信息，请参阅 [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]若要支持用户会话和报表处理数据库中存储临时文件。 缓存这些文件是为了供内部使用，以便在单一浏览器会话内保持一致的查看体验。 有关如何缓存内部使用的临时文件的详细信息，请参阅[报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以在数据库中存储临时文件以支持用户会话和报表处理。 缓存这些文件是为了供内部使用，以便在单一浏览器会话内保持一致的查看体验。 有关如何缓存内部使用的临时文件的详细信息，请参阅[报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
   
 ## <a name="cached-instances"></a>缓存实例  
  报表的缓存实例基于报表的中间格式。 报表服务器通常根据报表名称来缓存报表的单个实例。 但是，如果报表可以基于查询参数包含不同数据，则可以在任何给定的时间缓存该报表的多个版本。 例如，假设有一个参数化报表以区域代码作为参数值。 如果四个不同用户指定了四个唯一的区域代码，则将创建四个缓存副本。  
@@ -76,13 +75,12 @@ ms.lasthandoff: 08/09/2017
  如果出于任何原因（例如，如果用户指定的参数值与生成缓存报表所用的参数值不同）无法从缓存实例呈现报表，则报表服务器将重新运行该报表。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置处理选项 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [预加载缓存 &#40;报表管理器 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
- [计划](../../reporting-services/subscriptions/schedules.md)   
- [缓存共享数据集 &#40;SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [缓存刷新选项 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [预加载缓存（报表管理器）](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [“计划”](../../reporting-services/subscriptions/schedules.md)   
+ [缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [缓存刷新选项（报表管理器）](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
-

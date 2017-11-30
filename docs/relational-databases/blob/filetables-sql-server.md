@@ -5,8 +5,7 @@ ms.date: 10/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5403ba768ce8c511b2054b7b34a32b66546d019e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
   FileTable 功能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。 FileTable 使得应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括全文搜索和语义搜索）。  
@@ -63,9 +61,9 @@ ms.lasthandoff: 06/22/2017
   
 -   每行包含以下项： 有关 FileTable 的架构的详细信息，请参阅 [FileTable Schema](../../relational-databases/blob/filetable-schema.md)。  
   
-    -   流数据的**file_stream** 列和 **stream_id** (GUID) 标识符。 （ **file_stream** 列对于目录为 NULL。）  
+    -   流数据的 file_stream 列和 stream_id (GUID) 标识符。 （ **file_stream** 列对于目录为 NULL。）  
   
-    -   用于表示和维护文件以及目录层次结构的 **path_locator** 列和 **parent_path_locator** 列。  
+    -   用于表示和维护当前项（文件或目录）以及目录层次结构的 path_locator 列和 parent_path_locator 列。  
   
     -   10 个文件属性，如可用于文件 I/O API 的创建日期和修改日期。  
   
@@ -138,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  列出用于支持 FileTable 功能的新增或更改的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象。  
   
   
-

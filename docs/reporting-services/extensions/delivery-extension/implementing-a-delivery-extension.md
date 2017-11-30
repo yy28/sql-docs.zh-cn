@@ -1,5 +1,5 @@
 ---
-title: "Implementing a Delivery Extension |Microsoft 文档"
+title: "实现传递扩展插件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,60 +10,58 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery [Reporting Services]
 - custom delivery extensions [Reporting Services]
 - extensions [Reporting Services], delivery
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 5db9bf52437c018bc1dcb40e7fa8a8ce2824fa12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: e84b9e82afa18a9fabefeafdaa931719cf8344d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-a-delivery-extension"></a>实现传递扩展插件
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用户能够创建和发布报表，一次创建和发布，可以传递给不同的位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
   
- 传递扩展插件的示例实现，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 有关传递扩展插件的示例实现，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
-## <a name="in-this-section"></a>本節內容  
- [传递扩展概述](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  
+## <a name="in-this-section"></a>本节内容  
+ [传递扩展插件概述](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  
  介绍如何为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 编写自定义传递扩展插件。  
   
  [准备实现传递扩展插件](../../../reporting-services/extensions/delivery-extension/preparing-to-implement-a-delivery-extension.md)  
  介绍在实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件时可用的接口和类，以及在实现前要考虑的问题。  
   
- [创建传递扩展库](../../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md)  
+ [创建传递扩展插件库](../../../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md)  
  介绍如何为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件分配命名空间以及如何将传递扩展插件编译成库 DLL。  
   
- [实现的传递扩展插件 IDeliveryExtension 接口](../../../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
+ [为传递扩展插件实现 IDeliveryExtension 接口](../../../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  介绍传递扩展插件的属性以及如何实现您自己的传递扩展插件类。  
   
- [通知类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
- 描述的属性**通知**类以及如何在传递扩展实现中使用。  
+ [将通知类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
+ 介绍 Notification 类的属性以及如何在传递扩展插件实现中使用该类。  
   
- [设置类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
- 描述的属性**设置**类以及如何在传递扩展实现中使用。  
+ [将 Setting 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
+ 介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类。  
   
- [使用用于传递扩展插件的 IDeliveryReportServerInformation 界面](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- 描述的属性**IDeliveryReportServerInformation**接口以及如何在传递扩展实现中使用。  
+ [将 IDeliveryReportServerInformation 接口用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
+ 介绍 IDeliveryReportServerInformation 接口的属性以及如何在传递扩展插件实现中使用该接口。  
   
- [用于传递扩展插件的报表类](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
- 描述的属性**报表**类以及如何在传递扩展实现中使用。  
+ [将 Report 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
+ 介绍 Report 类的属性以及如何在传递扩展插件实现中使用该类。  
   
- [RenderedOutputFile 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
- 描述的属性**RenderedOutputFile**类以及如何在传递扩展实现中使用。  
+ [将 RenderedOutputFile 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
+ 介绍 RenderedOutputFile 类的属性以及如何在传递扩展插件实现中使用该类。  
   
- [实现的传递扩展插件 ISubscriptionBaseUIUserControl 接口](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
+ [为传递扩展插件实现 ISubscriptionBaseUIUserControl 接口](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
  介绍传递扩展插件用户控件的属性以及如何实现您自己的用于订阅的用户界面。  
   
  [部署传递扩展插件](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
@@ -77,7 +75,6 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 扩展插件库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

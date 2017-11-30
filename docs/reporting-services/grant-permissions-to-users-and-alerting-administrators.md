@@ -1,5 +1,5 @@
 ---
-title: "向用户和警报管理员授予权限 |Microsoft 文档"
+title: "向用户和警报管理员授予权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 939400cecf41e9da66cff3a369fa963419d8908f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>向用户和警报管理员授予权限
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 用户和警报管理员必须首先被授予 SharePoint 权限，然后才能创建、编辑、删除和查看数据警报。 没有用于使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报功能的特殊权限，你将使用内置的 SharePoint 权限。
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 **信息工作者**- 权限必须包括“创建警报”和“查看项”等 SharePoint 权限。 名为“设计”、“参与讨论”、“读取”和“仅查看”的内置 SharePoint 权限级别包括“创建警报”和“查看项”SharePoint 权限。 您还可以创建自定义权限级别，该级别具有支持创建、编辑、运行和查看数据警报的用户所需的权限。
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/17/2017
   
 5.  选择 **“向 SharePoint 组添加用户”** 或 **“直接授予用户权限”** 选项。 根据您是选择 **“向 SharePoint 组添加用户”** 还是选择 **“直接授予用户权限”** ，执行下列操作之一：  
   
-    -   如果你选择了“向 SharePoint 组添加用户”，则在下拉列表中选择某一权限级别。  
+    -   如果选择了“向 SharePoint 组添加用户”，则在下拉列表中选择某一权限级别。  
   
     -   如果您选择了 **“直接授予用户权限”**，则选择某一权限级别。  
   
@@ -60,8 +59,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="see-also"></a>另请参阅
 
-[在 SharePoint 站点 &#40; 上设置为报表服务器项的权限Reporting Services SharePoint 集成模式 &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

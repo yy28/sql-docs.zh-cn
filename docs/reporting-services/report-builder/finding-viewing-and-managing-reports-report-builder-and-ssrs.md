@@ -1,5 +1,5 @@
 ---
-title: "查找、 查看和管理报表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "查找、查看和管理报表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e1d41386fc5cea7f7356e5d2d39fe9ea9082d608
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
@@ -72,21 +72,21 @@ ms.lasthandoff: 08/09/2017
   
 -   在服务器上创建新文件夹，以便按照您所需的方式组织报表。  
   
- 其中的某些任务可能需要由报表服务器的管理员为您完成。 若要了解有关报表服务器上执行的任务的详细信息，请参阅[Reporting Services 报表服务器 &#40;本机模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ 其中的某些任务可能需要由报表服务器的管理员为您完成。 若要了解有关在报表服务器上执行的任务的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
  报表管理器通常包含文件夹、报表、数据源和报表模型，以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 您可以在“我的报表”内创建文件夹，以便进一步组织您的报表。 有关详细信息，请参阅 [使用“我的报表”（报表生成器和 SSRS）](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)。  
   
  报表管理器在 Reporting Services HTML 查看器中显示报表。 该 HTML 查看器提供了用于在 HTML 中查看报表的框架，并且包括报表工具栏、参数部分、凭据部分和文档映射。 报表工具栏提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。 在通过 URL 访问报表时，报表工具栏也会在浏览器窗口中显示于报表顶部。 打印功能是可选的，并且必须由管理员启用。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 以下各图显示了“报表管理器”窗口中的报表工具栏和报表工具栏功能概览。  
   
- ![报表工具栏在报表管理器](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "报表工具栏在报表管理器")  
+ ![报表管理器中的报表工具栏](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
 “报表管理器”窗口  
   
- ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "报表工具栏")  
+ ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
 报表工具栏  
   
- 运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)和[将报表导出为其他文件类型 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ 运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)和[将报表导出为其他文件类型（报表生成器和 SSRS）](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
   
- 选择和运行报表的最简单方法是打开报表管理器，然后搜索或浏览到要查看的报表。 有关如何打开报表的分步说明，请参阅[打开和关闭报表 &#40;报表管理器 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ 选择和运行报表的最简单方法是打开报表管理器，然后搜索或浏览到要查看的报表。 有关如何打开报表的分步说明，请参阅[打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
   
  在运行某一报表后，您可以刷新该报表以查看新数据。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
 |选项|结果|  
 |------------|------------|  
 |浏览器窗口上的**“刷新”** 按钮|显示在会话缓存中存储的报表。 用户打开报表时即会创建会话缓存。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用浏览器会话来保持一致的查看体验。|  
-|![报表工具栏上的浏览器中刷新按钮](../../reporting-services/media/htmlviewer-refresh.GIF "报表工具栏上的浏览器中刷新按钮")|单击报表工具栏上的 **“刷新”** 按钮时，如果报表是按需运行的，则报表服务器将重新运行查询并更新报表数据。 如果报表已缓存或者为快照，则单击 **“刷新”** 后，将显示存储在报表服务器数据库中的报表。|  
+|![报表工具栏上的浏览器“刷新”按钮](../../reporting-services/media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|单击报表工具栏上的 **“刷新”** 按钮时，如果报表是按需运行的，则报表服务器将重新运行查询并更新报表数据。 如果报表已缓存或者为快照，则单击 **“刷新”** 后，将显示存储在报表服务器数据库中的报表。|  
 |Ctrl+F5 组合键|产生与单击报表工具栏上的 **“刷新”** 按钮相同的结果。|  
   
   
@@ -107,16 +107,16 @@ ms.lasthandoff: 08/09/2017
   
  若要访问应用程序页，请从报表或先前添加到 SharePoint 库的其他报表服务器项的下拉菜单中选择特定于项的操作。 您可能还可以在报表生成器中创建报表、生成模型和设置模型项的安全性，这取决于具体的项以及您拥有的权限。  
   
- 有关 Reporting Services 和 SharePoint 技术的详细信息，请参阅[配置和管理的报表服务器 &#40;Reporting Services SharePoint 模式 &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com 上。  
+ 有关 Reporting Services 和 SharePoint 技术的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=154888)中的[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点中查找报表服务器项  
  在您能够设置属性之前，首先必须能够找到项。 报表服务器项总是存储在多个库中或者存储在某个库的一个文件夹内。  
   
- 访问 SharePoint 站点时，您可以看到“浏览”页和“库工具”选项卡。 “浏览”页列出各个库，还列出所选库的内容。 您可以查看库中的报表、报表模型和其他项，浏览文件夹，搜索站点以查找项。  
+ 访问 SharePoint 站点时，您可以看到“浏览”页和“库工具”选项卡。“浏览”页列出各个库，还列出所选库的内容。 您可以查看库中的报表、报表模型和其他项，浏览文件夹，搜索站点以查找项。  
   
  若要将报表服务器项与 SharePoint 站点中的其他项区分开，可使用图标直观地识别出报表服务器项，也可以将鼠标指针置于类型上方并查看文件扩展名。 下图显示了 **Reports** 库中的文件夹、报表模型和报表定义：  
   
- ![与报表服务器项的 Sharepoint 库](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "与报表服务器项的 Sharepoint 库")  
+ ![带有报表服务器项的 SharePoint 库](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Sharepoint library with report server items")  
   
 ### <a name="viewing-reports"></a>查看报表  
  上载到 SharePoint 库的报表定义（.rdl 文件）是通过 Reporting Services 外接程序安装的报表查看器 Web 部件来查看的。 当您安装该外接程序时会自动定义一个 .rdl 文件关联。 因此，选择报表时，报表会自动在该 Web 部件中打开。 在打开报表后，可使用 Web 部件提供的报表工具栏在页面间导航，或者搜索、缩放和打印报表。 工具栏包括“导出数据馈送”选项，用于将报表导出为 Atom 数据馈送。它还包括 **“操作”** 菜单，提供用于打印报表、订阅报表和将报表导出为不同格式（例如 PDF、Word 和 Excel）的选项。 通过 **“操作”** 菜单，您还可以在报表生成器中打开报表。 下图显示了一个报表以及 **“操作”** 菜单中的“导出”选项的选项。  
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="managing-items-through-actions"></a>通过操作来管理项  
  可以通过每个项的下拉菜单中的操作来执行管理任务。 根据您拥有的权限，每个项都拥有一些共有的操作，这些操作是存储在 SharePoint 库中的项的标准操作。 **“查看属性”** 和 **“编辑属性”** 便属于这样的共有操作。 自定义操作可提供特定于项的管理功能。 下图显示了某个报表定义具有的操作。 对于报表定义，可以具有 **“管理订阅”** 和 **“管理处理选项”**这样的自定义操作：  
   
- ![报表服务器项的菜单命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "报表服务器项的菜单命令")  
+ ![报表服务器项的菜单命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Menu commands for report server items")  
   
   
 ##  <a name="DeskTop"></a> 在桌面应用程序中查看报表  

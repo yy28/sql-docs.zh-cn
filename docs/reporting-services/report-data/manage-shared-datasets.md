@@ -1,5 +1,5 @@
 ---
-title: "管理共享数据集 |Microsoft 文档"
+title: "管理共享数据集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a7ff9770deac8363b38390c74a79bfe2a582c164
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6414ac861d66bdacde41575662c7c66fc5014839
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  共享数据集定义包括查询、包括默认值在内的数据集参数、是否区分大小写之类的数据选项以及数据集筛选器。 只要在报表中包括共享数据集，就使用在定义中设置的值。  
   
- 若要在报表中使用某一共享数据集，请打开报表生成器之类的应用程序，浏览到报表服务器或 SharePoint 站点，然后选择该共享数据集。 这会将共享数据集的一个实例添加到报表。 在报表中，不能查看或更改该共享数据集的查询或共享数据源。 您可以指定应用于报表中该实例的一组附加的数据集属性值。 例如，您可以添加筛选器或更改是否区分大小写之类的数据选项。 有关详细信息，请参阅[报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)中[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 若要在报表中使用某一共享数据集，请打开报表生成器之类的应用程序，浏览到报表服务器或 SharePoint 站点，然后选择该共享数据集。 这会将共享数据集的一个实例添加到报表。 在报表中，不能查看或更改该共享数据集的查询或共享数据源。 您可以指定应用于报表中该实例的一组附加的数据集属性值。 例如，您可以添加筛选器或更改是否区分大小写之类的数据选项。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="managing-shared-datasets"></a>管理共享数据集  
  若要管理已发布共享数据集的属性，对于本机模式下的报表服务器，可使用报表管理器，如果报表服务器部署在 SharePoint 集成模式下，则可以使用 SharePoint 站点上的应用程序页。 您可以对共享数据集执行的任务取决于您的角色分配以及网站级别和项级别权限，包括针对文件夹的权限（如果权限继承有效）。 针对共享数据集的项级别安全性与针对报表的项级别安全性遵循相同的模型。 有关详细信息，请参阅 [保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 |-|-|  
 |编辑名称|更改共享数据集的名称。 来自依赖项的所有引用将继续有效。|  
 |编辑说明|更改共享数据集的说明。|  
-|编辑查询执行超时值|以秒为单位设置查询执行超时值。 零 (0) 秒表示没有超时。 确定数据集查询超时之前等待的秒数。 若要指定无超时值，则使用 0。 有关详细信息，请参阅[获得报表和共享数据集处理 &#40; 设置超时值SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|编辑查询执行超时值|以秒为单位设置查询执行超时值。 零 (0) 秒表示没有超时。确定数据集查询超时之前等待的秒数。若要指定无超时值，则使用 0。 有关详细信息，请参阅[为报表和共享数据集处理设置超时值 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。|  
 |查看依赖项|查看使用此共享数据集的项：已发布的报表部件、共享数据源和报表。|  
   
  下面的其他共享数据集属性将自动配置：  

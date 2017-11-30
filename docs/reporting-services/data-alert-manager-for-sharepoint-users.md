@@ -1,5 +1,5 @@
 ---
-title: "数据警报管理器为 SharePoint 用户 |Microsoft 文档"
+title: "适用于 SharePoint 用户的数据警报管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,29 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 用户的数据警报管理器
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供的 SharePoint 信息工作者，以便管理数据警报的数据警报管理器。 他们可以查看他们所创建的警报的有关信息、删除警报以及打开警报定义以便编辑，并按需运行警报。 他们可以选择是仅查看单个报表的警报，还是所有报表的警告。 下图显示数据警报管理器中可用于信息工作者的功能。
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 为 SharePoint 信息工作者提供了数据警报管理器以便管理数据警报。 他们可以查看他们所创建的警报的有关信息、删除警报以及打开警报定义以便编辑，并按需运行警报。 他们可以选择是仅查看单个报表的警报，还是所有报表的警告。 下图显示数据警报管理器中可用于信息工作者的功能。
 
-![警报管理器功能的 SharePoint 用户](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 用户的警报管理器功能")  
+![适用于 SharePoint 用户的警报管理器功能](../reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 在为数据警报启用某一 SharePoint 站点时，将创建两个 SharePoint 页（MyDataAlerts.aspx 和 SiteDataAlerts.aspx）并且将这两个 SharePoint 页将添加到该 SharePoint 站点中。 MyDataAlerts.aspx 是针对 SharePoint 信息工作者的数据警报管理器。 信息工作者通过对其创建警报的报表的右键单击菜单，打开数据警报管理器。  
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="ViewingAlerts"></a> 查看数据警报信息  
  您可以查看在数据警报设计器中创建的数据警报列表。 若要打开数据警报管理器，请右键单击发布到 SharePoint 库的报表。 下图显示了报表右键单击菜单中的“管理数据警报”选项。  
   
- ![从报表上下文菜单中打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "报表上下文菜单中打开警报管理器")  
+ ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
  数据警报管理器包括一个表，该表列出警报名称、报表名称、警报定义创建者的姓名、发送警报消息的数目、上次运行警报的时间、上次修改警报定义的时间以及最新警报消息的状态。 如果无法生成或发送警报消息，则状态列将包含有关该错误的信息并且帮助您纠正该警报问题。 有关详细信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="EditAlerts"></a> 编辑数据警报  
- 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，将打开数据警报设计器，显示警报定义。 有关详细信息，请参阅[数据警报设计器](../reporting-services/data-alert-designer.md)和[在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+ 作为信息工作者，从数据警报管理器中打开您的警报定义以便编辑。 您可以编辑您创建的警报定义，但无法编辑其他人创建的警报定义。 右键单击警报定义并单击“编辑”时，“数据警报设计器”随即打开，其中将显示警报定义。 有关详细信息，请参阅 [数据警报设计器](../reporting-services/data-alert-designer.md) 和 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
 ##  <a name="RunAlerts"></a> 运行数据警报  
@@ -85,9 +83,9 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="HowTo"></a> 相关任务  
  本节列出了向您展示如何管理警报和编辑警报定义的过程。  
   
--   [管理我的数据警报管理器中的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
+-   [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [编辑警报设计器中的某个数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
 ## <a name="see-also"></a>另请参阅
@@ -96,5 +94,4 @@ ms.lasthandoff: 08/09/2017
 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

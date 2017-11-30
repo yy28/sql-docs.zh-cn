@@ -1,5 +1,5 @@
 ---
-title: "报表数据集 (SSRS) |Microsoft 文档"
+title: "报表数据集 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e55933fa73a87f99231eecb4d1520af4039829c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-datasets-ssrs"></a>报表数据集 (SSRS)
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
  您还可以通过添加包括其所依赖的数据集的报表部件，向报表添加数据集。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何创建一个报表，显示来自数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，请参阅[教程： 创建基本表报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). 若要生成包含自身数据的报表，请参阅[教程：脱机创建快速图表报表（报表生成器）](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何创建可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据的报表，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成包含自身数据的报表，请参阅[教程：脱机创建快速图表报表（报表生成器）](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 08/09/2017
 -   基于嵌入数据源添加嵌入数据集。  
   
 > [!NOTE]  
->  在报表服务器上，将单独确保共享项的安全，或者通过从发布这些共享项的文件夹继承权限来确保它们的安全。 为了使其他用户有权访问您保存的共享数据集，您必须理解授予权限的方式。 有关详细信息，请参阅[安全 &#40;报表生成器 &#41;](../../reporting-services/report-builder/security-report-builder.md)或[保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。  
+>  在报表服务器上，将单独确保共享项的安全，或者通过从发布这些共享项的文件夹继承权限来确保它们的安全。 为了使其他用户有权访问您保存的共享数据集，您必须理解授予权限的方式。 有关详细信息，请参阅[安全性（报表生成器）](../../reporting-services/report-builder/security-report-builder.md)或[保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。  
   
  向报表添加数据后，可以使用数据区域对报表页上的数据进行排列，修改报表部件并与其他人共享这些更改，以及使用户能够限制在报表中所看到的数据或者对数据进行排序。 有关详细信息，请参阅下列相关主题：  
   
 -   [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
  在查询设计器中，可以运行查询以查看示例数据并验证查询命令语法。 结果集中的列名将成为您在“报表数据”窗格中看到的字段名称。 结果集必须是单组行和列，在其中，为每行数据存在相同数目的值。 不支持来自单个查询的多个结果集。 不支持不具有固定数目的列并且可为每一行生成不同数目的数据值的不规则层次结构。  
   
- 若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和[数据连接、 数据源和连接字符串 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ 若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
  数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅针对数据扩展插件和[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)的特定类型的主题。  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [报表创作概念 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

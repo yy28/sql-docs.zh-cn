@@ -1,5 +1,5 @@
 ---
-title: "子报表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "子报表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子报表（报表生成器和 SSRS）
   子报表是在主报表的表体中显示其他报表的报表项。 从概念上说，报表中的子报表类似于网页中的框架。 子报表用于在报表中嵌入另一个报表。 任何报表都可以用作子报表。 显示为子报表的报表存储在报表服务器上，通常与父报表在同一文件夹中。 您可以设计父报表，以便向子报表传递参数。 可以在数据区域中重复子报表，使用参数在子报表的每个实例中筛选数据。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  可以将子报表放入报表的主体或数据区域中。 如果将子报表放在数据区域中，则子报表将重复数据区域中的组或行的每个实例。 若要将值从组或行传递给子报表，则在子报表值属性中，对于包含要传递给子报表参数的值的字段，请使用字段表达式。  
   
- 有关使用子报表的详细信息，请参阅[添加子报表和参数 （&） #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ 有关使用子报表的详细信息，请参阅[添加子报表和参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)。  
   
 ## <a name="specifying-subreport-names-and-locations"></a>指定子报表的名称和位置  
  您可以设计一个主报表，将子报表的位置指定为同一报表服务器上的不同文件夹。  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  在报表生成器中，若要预览主报表中的子报表，这两个报表必须位于相同报表服务器中，否则必须指定子报表的完整路径。  
   
 ## <a name="see-also"></a>另请参阅  
- [钻取、 深化、 子报表和嵌套的数据区域和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

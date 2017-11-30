@@ -1,5 +1,5 @@
 ---
-title: "显示标头和组尾与组 （报表生成器和 SSRS） |Microsoft 文档"
+title: "与组一起显示组头和组尾（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,29 +11,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 5c1004a59c0cda51fb5cf9230b81a18945765005
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
   您可以帮助控制是否在显示与 Tablix 数据区域中某个组相关联的动态行的同时显示静态行，如组头或组尾。  
   
- 若要在多个页上重复所有列标题或行标题，可以设置 Tablix 数据区域的属性。 有关详细信息，请参阅[显示行标题和多个页 （报表生成器和 SSRS） 上的列标题](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)。  
+ 若要在多个页上重复所有列标题或行标题，可以设置 Tablix 数据区域的属性。 有关详细信息，请参阅[在多个页中显示行标题和列标题（报表生成器和 SSRS）](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)。  
   
- 若要控制与嵌套组相关联的动态行和列的呈现行为，或者与标签或小计相关联的静态行和列的呈现行为，必须设置 Tablix 成员的属性。 一个 Tablix 成员表示一个静态或动态的行或列。 每个静态成员重复一次。 例如，总计行就是一个静态行。 一个动态成员针对每个组实例重复一次。 例如，一个与具有组表达式 [Territory] 的组相关联的行针对每个唯一地区值重复一次。 有关 tablix 成员的详细信息，请参阅[Tablix 数据区域单元、 行和列 &#40;报表生成器 &#41;和 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
+ 若要控制与嵌套组相关联的动态行和列的呈现行为，或者与标签或小计相关联的静态行和列的呈现行为，必须设置 Tablix 成员的属性。 一个 Tablix 成员表示一个静态或动态的行或列。 每个静态成员重复一次。 例如，总计行就是一个静态行。 一个动态成员针对每个组实例重复一次。 例如，一个与具有组表达式 [Territory] 的组相关联的行针对每个唯一地区值重复一次。 有关 Tablix 成员的详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
  可以在“分组”窗格中选择 Tablix 成员，并在“属性”窗格中设置 **KeepWithGroup**、 **KeepTogether**和 **RepeatOnNewPage** 属性。 使用 **KeepWithGroup** 可帮助将组头和组尾与组显示在相同页上。 使用 **KeepTogether** 可帮助将静态成员与组的行或列显示在一起。 使用 **RepeatOnNewPage** 可在以下页上重复显示组头和组尾：其中的每一页至少显示 **KeepWithGroup** 值所指定的行组成员的一个完整实例。 列组成员不支持**RepeatOnNewPage** 。  
   
 > [!NOTE]  
->  **KeepWithGroup**， **KeepTogether**，和**RepeatOnNewPage**是可以通过使用设置的组成员属性**高级模式**的分组窗格。 有关详细信息，请参阅[分组窗格 &#40;报表生成器 &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  KeepWithGroup、KeepTogether和 RepeatOnNewPage 是可通过使用“分组”窗格的“高级模式”设置的组成员属性。 有关详细信息，请参阅[“分组”窗格（报表生成器）](../../reporting-services/report-design/grouping-pane-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,8 +74,7 @@ ms.lasthandoff: 09/27/2017
 5.  （可选）预览报表。 如果可能，报表呈现器使该成员与指定列组成员一起显示。  
   
 ## <a name="see-also"></a>另请参阅  
- [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   
-

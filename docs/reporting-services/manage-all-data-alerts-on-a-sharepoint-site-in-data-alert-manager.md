@@ -1,5 +1,5 @@
 ---
-title: "管理数据警报管理器中的 SharePoint 站点上的所有数据警报 |Microsoft 文档"
+title: "在数据警报管理器中管理 SharePoint 站点上的所有数据警报 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: c8d04c7c8406b1a1653be71b6e76110e4479fedb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在数据警报管理器中管理 SharePoint 站点上的所有数据警报
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/17/2017
 
 SharePoint 警报管理员可以查看由任何站点用户创建的数据警报的列表以及有关警报的信息。 警报管理员也可以删除警报。 下图显示数据警报管理器中可用于警报管理员的功能。
 
- ![SharePoin tsite 管理员警报管理器](../reporting-services/media/rs-alertmanagersite.gif "SharePoin tsite 管理员的警报管理器")
+ ![SharePoint 网站管理员的警报管理器](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 网站管理员的警报管理器")
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
-## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>查看站点用户所创建的警报列表  
+## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>查看站点用户创建的警报列表  
   
 1.  转到保存数据警报定义的 SharePoint 站点。  
   
@@ -62,8 +61,7 @@ SharePoint 警报管理员可以查看由任何站点用户创建的数据警报
 
 ## <a name="see-also"></a>另请参阅
 
-[管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

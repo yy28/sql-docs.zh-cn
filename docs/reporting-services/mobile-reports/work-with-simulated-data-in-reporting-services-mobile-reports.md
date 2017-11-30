@@ -1,27 +1,24 @@
 ---
-title: "使用 Reporting Services 移动报表中的模拟数据 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "使用 Reporting Services 移动报表中的模拟数据 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb83717100f70933d2b1fe00bcd19a8a2901f65
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 84d3282dc887d43798e1bfdb0c0e18554b85d1a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 将库元素放在设计图面上时， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 会立即生成该元素的模拟数据。 创建移动报表时，此数据有许多用处。   
@@ -57,5 +54,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

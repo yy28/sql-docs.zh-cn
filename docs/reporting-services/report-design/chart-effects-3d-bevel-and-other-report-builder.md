@@ -1,5 +1,5 @@
 ---
-title: "三维、 凹凸效果和图表 （报表生成器和 SSRS） 中的其他效果 |Microsoft 文档"
+title: "图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10156"
+f1_keywords: "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90e2cfecc2090f5d09ac1a7a5fce1e6b4cbcca81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>图表效果的三维、 凹凸效果，和其他 （报表生成器）
+# <a name="chart-effects---3d-bevel-and-other-report-builder"></a>图表效果 - 三维效果、凹凸效果和其他效果（报表生成器）
   三维 (3D) 效果可以使 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的图表更具深度感并增强视觉效果。 例如，若要强调分离型饼图的某个特定切片，可以旋转并更改图表的透视，以便人们可以首先注意到该切片。 将三维效果应用于图表时，将会禁用所有渐变颜色和阴影类型。  
   
  可以将三维效果应用于单个图表，还可以在同一报表中同时显示二维和三维图表。  
   
- 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅[将三维效果添加到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
+ 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅 [向图表添加三维效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)。  
   
- 为图表增添视觉影响的另外一种方法是在条形图、柱形图、饼图和圆环图中添加凹凸效果、阳文和纹理样式。 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。     
+ 为图表增添视觉影响的另外一种方法是在条形图、柱形图、饼图和圆环图中添加凹凸效果、阳文和纹理样式。 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,9 +64,8 @@ ms.lasthandoff: 08/09/2017
  选择图表区时，您可以通过在“属性”窗格中 Area3Dstyle 下出现的 **“明暗度”** 属性，为三维图表添加突出显示样式。 简单的照明样式会对图表区元素应用相同的色调。 真实样式会根据指定的照明角度，更改图表区元素的色调。  
   
 ## <a name="see-also"></a>另请参阅  
- [在图表 &#40; 的格式设置轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [将三维效果添加到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [向图表添加三维效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   
-

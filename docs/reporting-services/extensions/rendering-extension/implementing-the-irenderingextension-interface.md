@@ -1,5 +1,5 @@
 ---
-title: "实现 IRenderingExtension 接口 |Microsoft 文档"
+title: "实现 IRenderingExtension 接口 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 60eac755180faaba012c7fbd14001fcb66a37975
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 230c2e5ad4ffb61eb6d3b4d94db4e376b1f04d66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>实现 IRenderingExtension 接口
   呈现扩展插件从与实际数据相结合的报表定义中获取结果，并将得到的数据呈现为某种可用的格式。 组合的数据和格式的转换是通过一个实现 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的公共语言运行时 (CLR) 类完成的。 该类将对象模型转换为可由查看器、打印机或其他输出目标使用的输出格式。  
@@ -44,20 +42,20 @@ ms.lasthandoff: 08/12/2017
 ## <a name="render-method"></a>Render 方法  
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 方法包含表示以下对象的参数：  
   
--   *报表*你想要呈现。 此对象包含报表的属性、数据和布局信息。 report 是报表对象模型树的根。  
+-   要呈现的 report 本身。 此对象包含报表的属性、数据和布局信息。 report 是报表对象模型树的根。  
   
--   *ServerParameters*如果任何包含具有报表服务器的参数的字符串字典对象。  
+-   ServerParameters，包含字符串字典对象以及用于报表服务器的参数（如果有）。  
   
--   *DeviceInfo*包含的设备设置的参数。 有关详细信息，请参阅[传递设备信息设置应用于呈现扩展](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
+-   deviceInfo 参数，其中包含设备设置。 有关详细信息，请参阅[将设备信息设置传递给呈现扩展插件](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
--   *ClientCapabilities*参数，其中包含<xref:System.Collections.Specialized.NameValueCollection>字典对象具有与其呈现客户端信息。  
+-   clientCapabilities 参数，其中包含 <xref:System.Collections.Specialized.NameValueCollection> 字典对象，此字典对象具有与要向其呈现的客户端的信息。  
   
--   *RenderProperties* ，包含有关呈现结果信息。  
+-   RenderProperties，其中包含有关呈现结果的信息。  
   
--   *CreateAndRegisterStream*是委托函数调用以获取流以将呈现到。  
+-   createAndRegisterStream 是一个委托函数，可以调用它来获取要呈现到的流。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo 参数  
- *DeviceInfo*参数包含呈现参数，不报表参数。 这些呈现参数将传递给呈现扩展插件。 *DeviceInfo*值会转换为<xref:System.Collections.Specialized.NameValueCollection>由报表服务器的对象。 中的项*deviceInfo*参数被视为不区分大小写的值。 如果由于 URL 发出的呈现请求访问，在窗体中的 URL 参数`rc:key=value`转换为键/值对中的*deviceInfo*字典对象。 浏览器检测代码还提供了中的以下项*clientCapabilities*字典： EcmaScriptVersion、 JavaScript、 MajorVersion、 MinorVersion、 Win32、 类型和 AcceptLanguage。 任何名称/值对中的*deviceInfo*不理解的呈现扩展插件的参数将被忽略。 以下代码示例显示用于检索图标的示例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
+ deviceInfo 参数包含呈现参数，而不包含报表参数。 这些呈现参数将传递给呈现扩展插件。 报表服务器会将 deviceInfo 值转换为一个 <xref:System.Collections.Specialized.NameValueCollection> 对象。 deviceInfo 参数中的项被视为区分大小写的值。 如果作为 URL 访问的结果提出呈现请求，则格式为 `rc:key=value` 的 URL 参数将转换为 deviceInfo 字段对象中的键/值对。 浏览器检测代码还在 clientCapabilities 字典中提供以下各项：EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type 以及 AcceptLanguage。 将忽略 deviceInfo 中呈现扩展插件不理解的任何名称/值对。 以下代码示例显示用于检索图标的示例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -80,11 +78,10 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> 方法呈现报表中的特定流。 所有流都是在初始 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 调用过程中创建的，但最初不向客户端返回这些流。 此方法用于辅助流（如 HTML 呈现中的图像）或多页呈现扩展插件的其他页（如图像/EMF）。  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource 方法  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法检索信息而不执行报表的完整呈现。 有时，报表所需的信息并不要求呈现此报表本身。 例如，如果你需要与呈现扩展插件关联的图标，则使用*deviceInfo*参数，其中包含一个标记**\<图标 >**。 在此类情况下，可以使用 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法。  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法检索信息而不执行报表的完整呈现。 有时，报表所需的信息并不要求呈现此报表本身。 例如，如果需要与呈现扩展插件关联的图标，则可以使用包含单个标记 \<Icon> 的 deviceInfo 参数。 在此类情况下，可以使用 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [实现的呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [实现呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [呈现扩展插件概述](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
   
   
-

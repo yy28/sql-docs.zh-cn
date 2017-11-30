@@ -1,7 +1,6 @@
 ---
-title: "URL 访问参数引用 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "URL 访问参数引用 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_htmlviewer"></a> HTML 查看器命令 (rc:)  
  HTML 查看器命令用于指向 HTML 查看器（例如，从报表管理器中）且以 rc: 为前缀：  
   
--   *工具栏*:  
+-   Toolbar：  
                   显示或隐藏工具栏。 如果此参数的值为 **false**，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值为 **true**。  
   
     > [!IMPORTANT]  
@@ -126,12 +124,12 @@ ms.lasthandoff: 08/09/2017
   
 -   *Stylesheet*：指定要应用于 HTML 查看器的样式表。  
   
--   设备信息设置： 形式指定的设备信息设置`rc:tag=value`，其中*标记*是设备信息设置特定于当前使用的呈现扩展插件的名称 (请参见的说明*格式*参数)。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   设备信息设置：以 `rc:tag=value` 形式指定设备信息设置，其中，tag 是特定于当前使用的呈现扩展插件的设备信息设置的名称（请参阅 Format 参数的说明）。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 报表服务器命令 (rs:)  
  报表服务器命令以 *rs:* 为前缀，用于指向报表服务器：  
   
--   *命令*:  
+-   Command：  
                   根据目录项的类型，对其执行操作。 默认值由在 URL 访问字符串中引用的目录项的类型确定。 有效值包括：  
   
     -   **ListChildren** 和 **GetChildren** 显示文件夹的内容。 文件夹项显示在一般项导航页内。  
@@ -206,7 +204,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **GetComponentDefinition** 显示与已发布的报表项关联的 XML 定义。 您必须对已发布的报表项具有“读取内容”  权限才能使用此值。  
   
--   *格式*:  
+-   Format：  
                   指定呈现和查看报表的格式。 常用值包括：  
   
     -   **HTML5**  
@@ -233,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
      默认值是 **HTML5**秒。 有关详细信息，请参阅 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
   
-     完整列表，请参阅**\<呈现 >**的报表服务器的 rsreportserver.config 文件的扩展节。  有关在何处查找文件的信息，请参阅 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+     有关完整列表，请参阅报表服务器 rsreportserver.config 文件的 \<Render> 扩展部分。  有关在何处查找文件的信息，请参阅 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
      例如，若要直接从 **Native** 模式报表服务器获取报表的 PDF 副本：  
   
@@ -247,7 +245,7 @@ ms.lasthandoff: 08/09/2017
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
--   *ParameterLanguage*:  
+-   ParameterLanguage：  
                   提供在与浏览器语言无关的 URL 中传递的参数的语言。 默认值为浏览器语言。 该值可以为区域性值，如 **en-us** 或 **de-de**。  
   
      例如在 **Native** 模式中，将覆盖浏览器语言并指定区域性值 de-DE：  
@@ -264,24 +262,24 @@ ms.lasthandoff: 08/09/2017
     http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
--   *PersistStreams*:  
+-   PersistStreams：  
                   呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终将返回 0 字节流，以指明持久流结束。 默认值是 **false**秒。  
   
--   *GetNextStream*:  
+-   GetNextStream：  
                   在使用 PersistStreams 参数访问的持久流中获取下一个数据块。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 **false**秒。  
   
--   *SessionID*:  
+-   SessionID：  
                   指定客户端应用程序和报表服务器之间已建立的活动报表会话。 此参数的值设置为会话标识符。  
   
      您可以将会话 ID 指定为 cookie 或 URL 的一部分。 在报表服务器已配置为不使用会话 cookie 时，没有指定会话 ID 的第一个请求将导致具有某一会话 ID 的重定向。 有关报表服务器会话的详细信息，请参阅 [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。  
   
--   *ClearSession*:  
+-   ClearSession：  
                   **true** 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同报表参数值运行多次的同一报表。）默认值是 **false**秒。  
   
--   *ResetSession*:  
+-   ResetSession：  
                   **true** 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值是 **false**秒。  
   
--   *ShowHideToggle*:  
+-   ShowHideToggle：  
                   切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。  
   
 ##  <a name="bkmk_webpart"></a> 报表查看器 Web 部件命令 (rv:)  
@@ -319,7 +317,7 @@ ms.lasthandoff: 08/09/2017
   
 -   *AsyncRender*：控制是否异步呈现报表。 默认值为 **true**，该值指定将异步呈现报表。 该值必须为布尔值 **true** 或 **false**。  
   
--   *ParamMode*： 控制报表查看器 Web 部件参数提示区域在整页的视图中的显示方式。 默认值是 **Full**秒。 有效值包括：  
+-   ParamMode：控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值包括：  
   
     -   **Full**：显示参数提示区域。  
   
@@ -333,7 +331,7 @@ ms.lasthandoff: 08/09/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*： 控制报表查看器 Web 部件的文档结构图区域在整页的视图中的显示方式。 默认值是 **Full**秒。 有效值包括：  
+-   DocMapMode：控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值包括：  
   
     -   **Full**：显示文档结构图区域。  
   
@@ -349,7 +347,7 @@ ms.lasthandoff: 08/09/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*：控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如：如果没有“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32 的结果；对于仅限“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。 默认值是 **-1**，这将包括所有工具栏项。 有效值包括：  
+-   *ToolBarItemsDisplayMode*：控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如：如果没有“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32 的结果；对于仅限“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。 默认值是 **-1**，这将包括所有工具栏项。 有效值为  
   
     -   1 (0x1)：“后退”按钮  
   
@@ -381,7 +379,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [URL 访问 (SSRS)](../reporting-services/url-access-ssrs.md)   
- [导出报表使用 URL 访问](../reporting-services/export-a-report-using-url-access.md)  
+ [使用 URL 访问导出报表](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

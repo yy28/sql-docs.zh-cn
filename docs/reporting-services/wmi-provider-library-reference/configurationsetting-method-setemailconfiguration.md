@@ -1,5 +1,5 @@
 ---
-title: "SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文档"
+title: "SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetEmailConfiguration method
+helpviewer_keywords: SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da1694467a88220546fa8ec8e02ff78564f605ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c69a54107955301b2c97aa1bd7c64d156a65c697
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 方法-SetEmailConfiguration
+# <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 方法 - SetEmailConfiguration
   配置报表服务器用来发送电子邮件的电子邮件传递扩展插件。  
   
 ## <a name="syntax"></a>语法  
@@ -75,4 +71,3 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

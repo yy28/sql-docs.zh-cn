@@ -1,5 +1,5 @@
 ---
-title: "缓存共享数据集 (SSRS) |Microsoft 文档"
+title: "缓存共享数据集 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cdaf429e989b54bafff0a2423a75ebfc93395897
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
   可以将用于共享数据集的查询结果复制到缓存，以便为多个报表提供一致的数据并且缩短数据集查询的响应时间。 与报表类似，您可以在首次使用时或通过指定一个计划，将共享数据集配置为存入缓存。  
@@ -105,4 +104,3 @@ ms.lasthandoff: 06/22/2017
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
-

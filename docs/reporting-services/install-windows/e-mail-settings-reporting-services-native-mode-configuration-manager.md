@@ -1,29 +1,26 @@
 ---
-title: "电子邮件设置-Reporting Services 本机模式 （配置管理器） |Microsoft 文档"
+title: "电子邮件设置 - Reporting Services 本机模式（配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords:
-- SQL11.rsconfigtool.emailsettings.F1
+f1_keywords: SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>电子邮件设置 - Reporting Services 本机模式（配置管理器）
 Reporting Services 包括电子邮件传递扩展插件，以便可以通过电子邮件分发报表。 根据定义电子邮件订阅的方式，传递可能由通知、链接、附件或嵌入报表组成。 电子邮件传递扩展插件可与现有的邮件服务器技术一起使用。 邮件服务器必须是 SMTP 服务器或转发器。 报表服务器通过操作系统提供的协作数据对象 (CDO) 库 (cdosys.dll) 连接到 SMTP 服务器。
@@ -57,25 +54,25 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 
 1. 启动 Reporting Services 配置管理器，然后连接到报表服务器实例。
 
-2. 在**发件人地址**，输入要在中使用的电子邮件地址**从：**字段生成的电子邮件。 
+2. 在“发件人地址”中，输入要在所生成电子邮件的“发件人：”字段中使用的电子邮件地址。 
 
-     您必须指定一个有权从 SMTP 服务器中发送邮件的用户帐户。 您在此处键入的值**发件人地址**保存在`<From>`rsreportserver.config 文件中的字段。  
+     您必须指定一个有权从 SMTP 服务器中发送邮件的用户帐户。 为“发件人地址”键入的值保存在 rsreportserver.config 文件中的 `<From>` 字段中。  
 
 3.  在 **SMTP Server**中，指定要使用的 SMTP 服务器或网关。 
 
      此值可以是 IP 地址、企业 Intranet 上计算机的 NetBIOS 名称或者完全限定域名。 键入的 **SMTP Server** 的值保存在 rsreportserver.config 文件中的 `<SMTPServer>` 字段中。
 
-4. 使用**身份验证**下拉框来指定如何对 SMTP 服务器的身份验证。 此 
+4. 使用“身份验证”下拉列表来指定如何对 SMTP 服务器进行身份验证。 此 
 
-     - **无身份验证**意味着将以匿名方式连接到指定的邮件服务器。
+     - **不进行身份验证**意味着你将以匿名方式连接到指定的邮件服务器。
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **0** 。
      
-     - **用户名和密码 （基本）**允许你指定用户名和密码以连接到邮件服务器。 你还可以选择**使用安全连接**若要将此转到您的邮件服务器的加密连接。
+     - **用户名和密码（基本）**允许你指定用户名和密码以连接到邮件服务器。 还可以选择“使用安全连接”将此连接通过加密连接转至你的邮件服务器。
      
-          选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **1** 。 选择**使用安全连接**将设置`SMTPUseSSL`到**True**。 **用户名**将设置在`<SendUserName>`为加密值。 **密码**将设置在`<SendPassword>`为加密值。
+          选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **1** 。选择“使用安全连接”会将 `SMTPUseSSL` 设置为“True”。 将在 `<SendUserName>` 中将“用户名”设置为一个加密值。 将在 `<SendPassword>` 中将“密码”设置为一个加密值。
      
-     - **报表服务器服务帐户 (NTLM)**为报表服务器将使用你指定的服务帐户。 如果使用报表服务器服务帐户进行身份验证，请验证该服务帐户具有**发送**SMTP 服务器上的权限。
+     - **报表服务器服务帐户 (NTLM)**将使用你为报表服务器指定的服务帐户。 如果使用报表服务器服务帐户进行身份验证，请验证该服务帐户在 SMTP 服务器上是否具有“发送方式”权限。
      
           选择此选项将在 rsreportserver.config 中设置 `<SendUsing>` 的值为 **2** 和 `<SMTPAuthenticate>` 的值为 **2** 。
 
@@ -134,9 +131,9 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 ## <a name="configuration-options-for-remote-smtp-service"></a>远程 SMTP 服务的配置选项
 报表服务器与 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：
 
-- `<SendUsing>`指定用于发送消息的方法。 您可以选择网络 SMTP 服务或本地 SMTP 服务拾取目录。 若要使用远程 SMTP 服务，必须在 RSReportServer.config 文件中将此值设置为 **2** 。
-- `<SMTPServer>`指定远程 SMTP 服务器或转发器。 如果使用远程 SMTP 服务器或转发器，则必须指定此值。
-- `<From>`设置一个值，将出现在**从：**的电子邮件的行。 如果使用远程 SMTP 服务器或转发器，则必须指定此值。
+- `<SendUsing>` 指定发送消息的方法。 您可以选择网络 SMTP 服务或本地 SMTP 服务拾取目录。 若要使用远程 SMTP 服务，必须在 RSReportServer.config 文件中将此值设置为 **2** 。
+- `<SMTPServer>` 指定远程 SMTP 服务器或转发器。 如果使用远程 SMTP 服务器或转发器，则必须指定此值。
+- `<From>` 设置显示在电子邮件的“发件人：”行中的值。 如果使用远程 SMTP 服务器或转发器，则必须指定此值。
 
 其他用于远程 SMTP 服务的值包括以下值（请注意，除非您要覆盖默认值，否则无需指定这些值）：
 
@@ -184,25 +181,25 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 
 ### <a name="to-configure-a-local-smtp-service-for-the-report-server"></a>配置报表服务器的本地 SMTP 服务
 
-1. 在 Control Panel 中，选择**打开或关闭 Windows 功能**启动**添加角色和功能向导**。
+1. 在控制面板中，选择“打开或关闭 Windows 功能”以启动“添加角色和功能向导”。
 
-2. 选择**基于角色或基于功能的安装**和选择**下一步**。
+2. 选择“基于角色或基于功能的安装”，然后选择“下一步”。
 
-3. 选择要安装到的 Internet 信息服务器 (IIS) 并选择的服务器**下一步**。
+3. 选择要在上面安装 Internet Information Server (IIS) 的服务器，然后选择“下一步”。
 
-4. 选择**下一步**上*服务器角色** 页。
+4. 在“服务器角色”* 页上选择“下一步”。
      
-5. 上*功能*页上，选择**SMTP 服务器**，然后选择**下一步**。
+5. 在“功能”页上，选择“SMTP 服务器”，然后选择“下一步”。
 
-     如果系统提示你添加所需的 SMTP 服务器，请选择的功能**添加功能**。
+     如果系统提示你添加 SMTP 服务器所需的功能，请选择“添加功能”。
 
-6. 选择**下一步**上*Web 服务器角色 (IIS)*页。
+6. 在“Web 服务器角色 (IIS)”页上，选择“下一步”。
 
-7. 选择**下一步**上*角色服务*页。
+7. 在“角色服务”页上，选择“下一步”。
 
-8. 选择**安装**上**确认**页。
+8. 在“确认”页上，选择“安装”。
 
-9. 验证**简单邮件传输协议 (SMTP)**在服务控制台中运行 windows 服务。
+9. 验证“简单邮件传输协议 (SMTP)”windows 服务是否正在服务控制台中运行。
 
      若要配置本地 SMTP 服务器，你将需要使用管理工具下的 IIS 6.0 管理器。
 
@@ -220,9 +217,9 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
      
 15. 将 `<SMTPServerPickupDirectory>` 设置到 SMTP 服务拾取文件夹。
      
-     默认位置将为*C:\inetpub\mailroot\Pickup*。
+     默认位置将为 C:\inetpub\mailroot\Pickup。
      
-16. 设置 `<From>`。 这将设置中显示的值**从：**的电子邮件的行。
+16. 设置 `<From>`。 这将设置电子邮件的“发件人：”行中显示的值。
      
 17. 保存该文件。
   
@@ -232,4 +229,3 @@ Reporting Services 包括电子邮件传递扩展插件，以便可以通过电�
 [Rsreportserver.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   
-

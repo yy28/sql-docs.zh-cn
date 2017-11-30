@@ -1,5 +1,5 @@
 ---
-title: "配置 Reporting Services 使用使用者可选名称 |Microsoft 文档"
+title: "配置 Reporting Services 以使用使用者可选名称 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 使用使用者可选名称
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 以使用使用者可选名称
 
-本主题说明如何配置 Reporting Services (SSRS) 用于使用者可选名称 (SAN) 通过修改 rsreportserver.config 文件并使用 Netsh.exe 工具。
+本主题说明了如何通过修改 rsreportserver.config 文件和使用 Netsh.exe 工具配置 Reporting Services (SSRS) 以使用使用者可选名称 (SAN)。
 
 该说明适用于 Reporting Service URL 以及 Web 服务 URL。
 
 要使用 SAN，SSL 证书必须在服务器上注册，签名并且获得私钥。 你无法使用自签名证书。  
   
- Reporting Services 中的 Url 可以配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是允许 SSL 服务侦听多个 Url，并与其他应用程序共享 SSL 端口的证书中的附加字段。 SAN 如下所示`www.s2.com`。  
+ Reporting Services 中的 URL 可配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务对许多 URL 进行侦听，并与其他应用程序共享 SSL 端口。 SAN 的形式为 `www.s2.com`。  
   
  有关 Reporting Services 的 SSL 设置的详细信息，请参阅[配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>SSRS 配置为使用 web 服务 URL 的使用者备用名称
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>将 SSRS 配置为使用适用于 Web 服务 URL 的使用者可选名称
   
 1.  启动 Reporting Services 配置管理器。  
   
@@ -41,13 +40,13 @@ ms.lasthandoff: 10/06/2017
   
 2.  在“Web 服务 URL”  页面上，选择一个 SSL 端口和 SSL 证书。  
   
-     ![Reporting Services 配置管理器](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services 配置管理器")  
+     ![Reporting Services 配置管理器](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
   
      配置管理器注册端口的 SSL 证书。  
   
 3.  打开 rsreportserver.config 文件。  
   
-     SSRS 本机模式下，该文件位于以下文件夹中的默认情况下：  
+     对于 SSRS 本机模式，默认情况下，该文件位于以下文件夹：  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +54,7 @@ ms.lasthandoff: 10/06/2017
   
 4.  复制 Report Server Web 服务应用程序的 URL 部分。  
   
-     例如，以下的初始 URL 部分是：  
+     例如，以下初始 URL 部分为：  
   
     ```  
         <URL>  
@@ -66,7 +65,7 @@ ms.lasthandoff: 10/06/2017
   
     ```  
   
-     以下修改后的 URL 部分是：
+     以下修改后的 URL 部分为：
   
     ```  
     <URL>  
@@ -96,7 +95,7 @@ ms.lasthandoff: 10/06/2017
     Netsh>http  
     ```  
   
-8.  通过键入以下内容显示现有 urlacl:
+8.  键入以下内容显示现有 urlacl：
   
     ```  
     Netsh http>show urlacl  
@@ -129,7 +128,6 @@ ms.lasthandoff: 10/06/2017
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [修改 Reporting Services 配置文件](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [配置报表服务器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

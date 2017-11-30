@@ -1,5 +1,5 @@
 ---
-title: "更改默认 Reporting Services 传递扩展插件 |Microsoft 文档"
+title: "更改默认 Reporting Services 传递扩展插件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e46c81c5c96bc3c71eef8a2ca48a89c177ca1700
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>更改默认 Reporting Services 传递扩展插件
   你可以通过修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置设置，来更改显示在订阅定义页的“传递方式”  列表中的默认传递扩展插件。 例如，你可以修改该配置，以便在用户创建新订阅时，文件共享传递（而非电子邮件传递）默认处于选中状态。 你还可以更改传递扩展插件在用户界面中的排列顺序。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="default-native-mode-report-server-configuration"></a>默认的本机模式报表服务器配置  
  报表管理器的“传递方式”  列表中传递扩展插件的显示顺序取决于 **RSReportServer.config** 文件中传递扩展插件项的顺序。 例如，下图显示列表中最先显示的是“电子邮件”，并且它默认处于选中状态。  
   
- ![传递扩展插件的默认列表](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "的传递扩展插件的默认列表")  
+ ![传递扩展插件的默认列表](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "default list of delivery extensions")  
   
  以下是 **RSReportServer.config** 的默认部分，用于控制默认传递扩展插件及其在报表管理器中的显示顺序。 请注意，“电子邮件”最先显示在该文件中，并且已设置为默认项。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
      在文本编辑器中打开 RSReportServer.config 文件。 有关配置文件的详细信息，请参阅 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。 更改该配置后，UI 的外观将类似于下图：  
   
-     ![修改的传递扩展插件列表](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "修改的传递扩展插件的列表")  
+     ![修改后的传递扩展插件的列表](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "modified list of delivery extensions")  
   
 2.  将 DeliveryUI 部分修改为如以下示例所示，并注意关键更改：  
   
@@ -125,4 +123,3 @@ ms.lasthandoff: 08/09/2017
  [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

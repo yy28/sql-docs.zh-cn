@@ -1,5 +1,5 @@
 ---
-title: "添加、 移动或删除文本框 （报表生成器和 SSRS） |Microsoft 文档"
+title: "添加、移动或删除文本框（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 96e5c879ff7427c121ae2a90a39587f475280ab2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>添加、移动或删除文本框（报表生成器和 SSRS）
   文本框是 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中最常用的报表项。 您可以向表体添加文本框以显示诸如标题、参数选择、内置字段以及日期之类的信息。  
@@ -76,8 +76,8 @@ ms.lasthandoff: 08/09/2017
     >  如果在文本框中单击并处于编辑模式，请按 ESC 以选择文本框。  
   
 ## <a name="see-also"></a>另请参阅  
- [文本框 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [键盘快捷方式 &#40;报表生成器 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [键盘快捷键（报表生成器）](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

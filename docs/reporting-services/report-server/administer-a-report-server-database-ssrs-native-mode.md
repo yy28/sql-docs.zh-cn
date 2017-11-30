@@ -1,5 +1,5 @@
 ---
-title: "管理报表服务器数据库 （SSRS 本机模式） |Microsoft 文档"
+title: "管理报表服务器数据库（SSRS 本机模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 3fc4f3adeac32e917b5b218548906ca6a9cb664d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 464f02ee6324db06587ee1c7233f8fcd12026722
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库用作内部存储。 默认情况下，这两个数据库分别命名为 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 随报表服务器主数据库一同创建，用于存储临时数据、会话信息和缓存的报表。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多用来管理报表服务器数据库的工具。  
   
--   若要备份或还原报表服务器数据库、移动报表服务器数据库或恢复报表服务器数据库，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或数据库命令提示实用工具。 有关说明，请参阅[将报表服务器数据库移到另一台计算机 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) SQL Server 联机丛书中。  
+-   若要备份或还原报表服务器数据库、移动报表服务器数据库或恢复报表服务器数据库，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或数据库命令提示实用工具。 有关说明，请参阅 SQL Server 联机丛书中的[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
   
 -   若要将现有数据库内容复制到另一个报表服务器数据库，可以附加报表服务器数据库的一个副本，并将其用于其他报表服务器实例。 或者，可以创建并运行一个使用 SOAP 调用的脚本，以便在新数据库中重新创建报表服务器。 可以使用 **rs** 实用工具来运行该脚本。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="naming-conventions-for-the-report-server-databases"></a>报表服务器数据库的命名约定  
  创建主数据库时，数据库名称必须遵循为 [数据库标识符](../../relational-databases/databases/database-identifiers.md)指定的规则。 临时数据库名称始终与报表服务器主数据库的名称相同，但是带有 Tempdb 后缀。 您不能为临时数据库选择其他名称。  
   
- 由于报表服务器数据库被视为内部组件，因此不支持对其进行重命名。 如果重命名报表服务器数据库，则会出现错误。 具体来说，如果重命名主数据库，则将显示一条错误消息，说明数据库名称不同步。 如果重命名 ReportServerTempdb 数据库，则稍后运行报表时将出现以下内部错误：  
+ 由于报表服务器数据库被视为内部组件，因此不支持对其进行重命名。 如果重命名报表服务器数据库，则会出现错误。 具体来说，如果重命名主数据库，则将显示一条错误消息，说明数据库名称不同步。如果重命名 ReportServerTempdb 数据库，则稍后运行报表时将出现以下内部错误：  
   
  “报表服务器上出现内部错误。 有关详细信息，请参阅错误日志。 (rsInternalError)  
   
@@ -81,18 +81,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>关于数据库版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，未提供有关数据库版本的显式信息。 但是，由于数据库版本始终与产品版本同步，因此可以使用产品版本信息来了解数据库版本的更改时间。 产品版本信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]指示通过文件版本信息，显示在中的所有 SOAP 调用，标头的日志文件，并且当您连接到报表服务器 URL (例如，当打开浏览器到`http://localhost/reportserver`)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，未提供有关数据库版本的显式信息。 但是，由于数据库版本始终与产品版本同步，因此可以使用产品版本信息来了解数据库版本的更改时间。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的产品版本信息是通过出现在日志文件中以及所有 SOAP 调用的标头中的文件版本信息指示的；连接到报表服务器 URL（例如，打开浏览器浏览 `http://localhost/reportserver`）时也会指示这些产品版本信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [创建本机模式报表服务器数据库 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [配置报表服务器服务帐户 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器数据库连接 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [创建报表服务器数据库 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [备份和还原 Reporting Services 的操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [报表服务器数据库 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Reporting Services 报表服务器 &#40;本机模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [存储加密的报表服务器数据 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

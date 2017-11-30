@@ -1,11 +1,10 @@
 ---
-title: "我的设置以便 Power BI 集成 （web 门户） |Microsoft 文档"
+title: "Power BI 集成的“我的设置”（Web 门户）| Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +12,22 @@ f1_keywords:
 - power bi
 - power bi integration
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 8e627f20918a4d6ee5f882677ccc7b2c26616e2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ade5494f2849c8fd48fe9b81f00e5435dc242195
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>我的 Power BI 集成（Web 门户）设置
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-单个用户使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的“我的设置”页来管理其 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 登录。 当执行步骤以将报表项固定时，将自动提示你登录。  但是，你可以使用**我的设置**页上，如果需要进行手动登录或者需要注销。  如果**我的设置**菜单选项不可见，请不与集成报表服务器[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
+单个用户使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的“我的设置”页来管理其 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 登录。 当执行步骤以将报表项固定时，将自动提示你登录。  但是，如果需要手动登录或者需要注销，可以使用“我的设置”页。如果“我的设置”菜单选项不可见，则报表服务器未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 集成。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
 ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/17/2017
    
  ![ssRS_WebPortal_PowerBI_Notification](../reporting-services/media/ssrs-webportal-powerbi-notification.png)    
    
-在磁贴[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]直到通过再次登录，将不会刷新仪表板**MySettings**。  
+通过“我的设置”页再次登录后，[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板中的磁贴才会刷新。  
   
 ![ssRS_WebPortal_PowerBI_SignIn_Again](../reporting-services/media/ssrs-webportal-powerbi-signin-again.png)  
   
@@ -52,4 +50,4 @@ ms.lasthandoff: 08/17/2017
 [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [Web 门户](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

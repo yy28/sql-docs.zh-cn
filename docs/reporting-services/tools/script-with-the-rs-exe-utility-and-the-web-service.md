@@ -1,5 +1,5 @@
 ---
-title: "脚本使用 rs.exe 实用工具和 Web 服务 |Microsoft 文档"
+title: "使用 rs.exe 实用工具和 Web 服务编写脚本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6c01ecec4f909ff4e5cbe445b1685b6dd07a750
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>使用 rs.exe 实用工具和 Web 服务编写脚本
   开发人员和报表服务器管理员可以使用 **rs** 实用工具 (RS.exe) 在报表服务器上执行操作。 利用此实用工具，可以通过用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写的脚本以编程方式管理报表服务器。  
@@ -36,15 +35,14 @@ ms.lasthandoff: 08/09/2017
   
  有关脚本示例，请参阅下面内容：  
   
- [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="see-also"></a>另请参阅  
  [为部署和管理任务编写脚本](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [报表服务器 Web 服务](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [RS.exe 实用工具 &#40;SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   
-

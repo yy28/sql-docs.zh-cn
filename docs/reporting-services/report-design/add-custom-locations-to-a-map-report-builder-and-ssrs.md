@@ -1,5 +1,5 @@
 ---
-title: "在向地图 （报表生成器和 SSRS） 添加自定义位置 |Microsoft 文档"
+title: "向地图添加自定义位置（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
+f1_keywords: MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c78f99c32d37e36986c4ea8bac20c12f87d4d568
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 394d7d0f914f7b86ffc042a6e7bcde269c8e6b12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>向地图添加自定义位置（报表生成器和 SSRS）
   向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图之后，可以添加你自己的点位置。  
@@ -44,19 +42,19 @@ ms.lasthandoff: 08/09/2017
   
 2.  在工具栏中，单击 **“添加层”**。  
   
-3.  从下拉列表中，单击**添加点层**。 将不包含点的点层添加到该地图。 默认情况下，为嵌入的点准备了点层。  
+3.  从下拉列表中，单击“添加点层”。 将不包含点的点层添加到该地图。 默认情况下，为嵌入的点准备了点层。  
   
 ## <a name="to-add-a-custom-point"></a>添加自定义点  
   
 1.  在报表设计图面中，单击该地图以选择它并显示“地图”窗格。  
   
-2.  在地图窗格中，右键单击具有类型的点层**嵌入**，然后单击**添加点**。 光标将变为十字准线。  
+2.  在“地图”窗格中，右键单击具有类型“嵌入”的点层，然后单击“添加点”。 光标将变为十字准线。  
   
 3.  若要添加点，请单击地图上的某个位置。 在您单击的位置将嵌入的点添加到所选层中。  
   
 ## <a name="to-customize-the-display-for-an-embedded-point"></a>自定义嵌入点的显示方式  
   
-1.  右键单击的点，并依次**点属性**。 将打开 **“地图嵌入点属性”** 对话框。  
+1.  右键单击该点，然后单击“点属性”。 将打开 **“地图嵌入点属性”** 对话框。  
   
 2.  单击 **“覆盖此层的点选项”**。 将在左窗格中显示多个属性页。  
   
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/09/2017
  [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
   
-

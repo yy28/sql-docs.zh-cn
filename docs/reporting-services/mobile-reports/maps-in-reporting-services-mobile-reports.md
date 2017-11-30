@@ -1,26 +1,24 @@
 ---
-title: "Reporting Services 移动报表中的映射 |Microsoft 文档"
+title: "Reporting Services 移动报表中的地图 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 地图是实现地理数据可视化效果的好办法。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三种不同类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。 你也可以 [上载和使用自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -63,12 +61,12 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
 1. 在左上角选择“数据”  选项卡。  
   
-2. 选择**添加数据**，然后选择**本地 Excel**或**SSRS 服务器**。  
+2. 选择“添加数据”，然后选择“本地 Excel”或“SSRS 服务器”。  
   
    > **提示**：请确保 [数据的格式为可用于移动报表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 选择需要的工作表，并选择“导入” 。  
-   你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中看到你的数据。  
+   你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看到你的数据。  
   
 4. 在“数据”视图 >“数据属性”面板 >“键”下面，在左侧的框中选择包含地图数据的表，然后在右侧的框中选择与你的地图中的区域相匹配的键字段。  
   
@@ -89,4 +87,3 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
 - [使用 SQL Server 移动报表发布服务创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

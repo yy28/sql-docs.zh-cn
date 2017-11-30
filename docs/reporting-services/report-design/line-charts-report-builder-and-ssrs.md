@@ -1,5 +1,5 @@
 ---
-title: "折线图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "折线图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309753291bfae573be58b124c033d021adb254c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fd410e360eac7fa3b7bda2a4b63abee459740d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折线图（报表生成器和 SSRS）
   折线图将序列显示为一组由单个线条连接的点。 折线图用于表示在一段连续时间内发生的大量数据。 有关如何向折线图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
  下图显示了一个包含三个序列的折线图。  
   
- ![折线图](../../reporting-services/report-design/media/rs-linechart.gif "折线图")  
+ ![折线图](../../reporting-services/report-design/media/rs-linechart.gif "Line chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **渐变线图**。 一种使用渐变线而不是规则线条的折线图。 渐变线图通过使用一种线条来连接各点，这种线条使渐变线图看起来像阶梯或楼梯的梯级一样。  
   
--   **迷你图**。 迷你图是折线图的变体，它仅在 Tablix 或矩阵的单元中显示线条序列。 有关详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+-   **迷你图**。 迷你图是折线图的变体，它仅在 Tablix 或矩阵的单元中显示线条序列。 有关详细信息，请参阅 [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="data-considerations-for-line-charts"></a>折线图的数据注意事项  
   
@@ -53,12 +52,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [柱形图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [图表类型 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [面积图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)   
- [图表 &#40; 中的空和 Null 数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)   
+ [图表中的空点和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 数据警报 |Microsoft 文档"
+title: "Reporting Services 数据警报 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f2be4b604e088329f719195976903f6dcb516246
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
 
@@ -29,12 +28,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 数据警报是一种数据驱动警报解决方案，可帮助你了解报表数据感兴趣或重要给您，并在恰当的时间。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。
+SQL Server Reporting Services 数据警报是一种数据驱动的警报解决方案，用于在恰当的时间向你通知令你感兴趣或对你重要的报表数据。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。
 
 数据警报消息是通过电子邮件发送的。 根据信息的重要程度，您可以选择发送消息的频率以及仅当结果变化时才发送。 您可以指定多个电子邮件收件人，这可让他人知情以改善效率和协作。
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 ##  <a name="AlertingWF"></a> 数据警报体系结构和工作流
 
@@ -56,7 +55,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动警报解决方�
   
  下图显示了一个工作流，该工作流包括以下任务：创建并保存数据警报定义；创建 SQL 代理作业以便开始处理数据警报实例；以及通过电子邮件发送数据警报消息，该消息包含对一个或多个收件人触发警报的报表数据。  
   
- ![在 Reporting Services 警报的工作流](../reporting-services/media/rs-alertingworkflow.gif "在 Reporting Services 警报的工作流")  
+ ![Reporting Services 警报中的工作流](../reporting-services/media/rs-alertingworkflow.gif "Workflow in Reporting Services alerting")  
   
 ### <a name="reports-supported-by-data-alerts"></a>数据警报支持的报表  
  您可以针对以报表定义语言 (RDL) 编写并在报表设计器或报表生成器中创建的所有类型的专业报表创建数据警报。 包含数据区域（如表和图表）的报表、具有子报表的报表以及具有多个并行列组和嵌套数据区域的复杂报表。 唯一要求是该报表至少包含一个任何类型的数据区域，并且报表数据源配置为使用存储凭据或没有凭据。 如果在报表中没有数据区域，则无法对其创建警报。  
@@ -88,7 +87,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动警报解决方�
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>保存数据警报定义和警报元数据  
  当您在 SharePoint 集成模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，将自动创建 SQL Server 警报数据库。  
   
- 数据警报定义和警报元数据保存在警报数据库中。 默认情况下，此数据库称为 ReportingServices\<GUID > _Alerting。  
+ 数据警报定义和警报元数据保存在警报数据库中。 默认情况下，该数据库将命名为 ReportingServices\<GUID>_Alerting。  
   
  当您保存数据警报定义时，警报功能将为该警报定义创建一个 SQL Server 代理作业。 作业包含一个作业计划。 该计划基于您在警报定义中定义的重复执行模式。 运行该作业将启动数据警报定义的处理。  
   
@@ -127,7 +126,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动警报解决方�
   
  如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅 [配置 SQL Server 代理](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) 和 [启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
- 可以使用 SharePoint 管理中心中的 **“设置订阅和警报”** 页来查看 SQL Server 代理是否正在运行，并创建和下载之后要运行以向 SQL Server 代理授予权限的自定义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 通过使用 PowerShell 还可以生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
+ 可以使用 SharePoint 管理中心中的 **“设置订阅和警报”** 页来查看 SQL Server 代理是否正在运行，并创建和下载之后要运行以向 SQL Server 代理授予权限的自定义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 通过使用 PowerShell 还可以生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
 ##  <a name="ConfigAlert"></a> 配置数据警报  
  从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，只要在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的设置（包括数据警报）就将在报表服务器配置文件 (rsreportserver.config) 和 SharePoint 配置数据库之间分布。 当您将创建服务应用程序作为安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的一个步骤时，会自动创建 SharePoint 配置数据库。 有关详细信息，请参阅 [RsReportServer.config 配置文件](../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [Reporting Services 配置文件](../reporting-services/report-server/reporting-services-configuration-files.md)。  
@@ -295,7 +294,7 @@ SQL Server Reporting Services 数据警报是一种数据驱动警报解决方�
   
      有关管理站点上所有数据警报的详细信息，请参阅 [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在数据警报管理器中管理 SharePoint 站点上的所有数据警报](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
--   **设置订阅和数据警报** ，在其中查看 Reporting Services 是否可以针对数据警报使用 SQL Server 代理，是否可以下载允许访问 SQL Server 代理的脚本。 有关详细信息，请参阅 [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
+-   **设置订阅和数据警报** ，在其中查看 Reporting Services 是否可以针对数据警报使用 SQL Server 代理，是否可以下载允许访问 SQL Server 代理的脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
 ##  <a name="Globalization"></a> 全球化数据警报  
  某些书写方式（如阿拉伯语和希伯莱语）是自右至左书写。 数据警报支持从右到左书写以及从左到右书写。 数据警报检测区域性，并相应地更改用户界面的外观和行为及数据警报消息的布局。 此区域性派生自用户计算机上操作系统的区域设置。 在每次更新并重新保存数据警报定义时保存此区域性。  
@@ -326,7 +325,6 @@ SQL Server Reporting Services 数据警报是一种数据驱动警报解决方�
 
 [数据警报设计器](../reporting-services/data-alert-designer.md)   
 [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[数据警报管理器为 SharePoint 用户](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+[SharePoint 用户的数据警报管理器](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

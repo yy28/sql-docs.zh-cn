@@ -1,26 +1,23 @@
 ---
-title: "创建报表服务器数据库 （SSRS 配置管理器） |Microsoft 文档"
+title: "创建报表服务器数据库（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: aac0bcb0b004a0c8225b580313281c9668c1c882
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 75f48182cdabaa731eca28d2e9a6ad3dc638178f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-report-server-database"></a>创建报表服务器数据库
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -47,7 +44,7 @@ ms.lasthandoff: 09/21/2017
   
 -   自动：如果选择默认配置安装选项，请使用 SQL Server 安装向导。 在 SQL Server 安装向导中，这是“报表服务器安装选项”页中的 **“安装和配置”** 。 如果选择 **“仅安装”** 选项，则必须使用 Reporting Services 配置管理器来创建数据库。  
   
--   手动：使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   手动：使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 如果使用远程 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 来承载该数据库，则必须手动创建报表服务器数据库。 有关详细信息，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
  **SharePoint 模式：** “报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项 **“仅安装”**。 此选项安装所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下方式之一至少创建一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序：  
   
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/21/2017
 [Reporting Services 配置管理器](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

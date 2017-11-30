@@ -1,5 +1,5 @@
 ---
-title: "了解组 （报表生成器和 SSRS） |Microsoft 文档"
+title: "了解组（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解组（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，组是绑定到数据区域的报表数据集中的命名数据集。 基本上，一个组可组织一个报表数据集视图。 数据区域中的所有组都指定相同报表数据集的不同视图。  
@@ -42,12 +41,12 @@ ms.lasthandoff: 08/09/2017
  一个组具有指定的名称和一个组表达式集。 该组表达式集可以是单个数据集字段引用，也可以是多个表达式的组合。 在运行时，如果组包含多个表达式，则合并组表达式，并应用于组中的数据。 例如，有一个组使用日期字段来组织数据区域中的数据。 在运行时，按日期组织数据，然后与每个日期的其他数据集值总计一起显示。  
   
 ## <a name="when-do-i-create-groups"></a>何时创建组？  
- 大多数情况下，报表生成器和报表设计器会在您设计数据区域时自动为您创建组。 对于表、矩阵或列表，当您在“分组”窗格上放置字段时，将创建组。 对于图表，当您在图表放置区上放置字段时，将创建组。 对于仪表，则必须使用仪表属性对话框。 对于表、矩阵或列表，还可以手动创建组。 有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 有关如何在创建报表时添加组的示例，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+ 大多数情况下，报表生成器和报表设计器会在您设计数据区域时自动为您创建组。 对于表、矩阵或列表，当您在“分组”窗格上放置字段时，将创建组。 对于图表，当您在图表放置区上放置字段时，将创建组。 对于仪表，则必须使用仪表属性对话框。 对于表、矩阵或列表，还可以手动创建组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 有关如何在创建报表时添加组的示例，请参阅[教程：创建基本表报表（报表生成器）](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
 ## <a name="how-can-i-modify-a-group"></a>如何修改组？  
- 在创建组之后，可以设置特定于数据区域的属性（例如筛选器和排序表达式、分页符和组变量），以存储特定于作用域的数据。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 在创建组之后，可以设置特定于数据区域的属性（例如筛选器和排序表达式、分页符和组变量），以存储特定于作用域的数据。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
- 若要修改现有组，请打开相应的组属性对话框。 可以更改组的名称。 而且，可以基于单个字段或多个字段，或者基于在运行时指定值的报表参数指定组表达式。 还可以使组基于一个表达式集，例如一个用于指定人口统计学数据的年龄范围的表达式集。 有关详细信息，请参阅[组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
+ 若要修改现有组，请打开相应的组属性对话框。 可以更改组的名称。 而且，可以基于单个字段或多个字段，或者基于在运行时指定值的报表参数指定组表达式。 还可以使组基于一个表达式集，例如一个用于指定人口统计学数据的年龄范围的表达式集。 有关详细信息，请参阅 [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  如果更改组的名称，则必须手动更新引用该组的以前名称的任何组表达式。  
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
      为数据区域创建组时，报表生成器和报表设计器会向该数据区域自动添加行或列，并使用这些行或列显示组数据。  
   
--   **递归层次结构组** ：递归层次结构组将包括多个级别的单个报表数据集中的数据组织起来。 例如，递归层次结构组可以显示组织层次结构，例如，向 [Employee] 报告的 [Employee]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的组属性和内置函数使您能够为这种报表数据创建组。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
+-   **递归层次结构组** ：递归层次结构组将包括多个级别的单个报表数据集中的数据组织起来。 例如，递归层次结构组可以显示组织层次结构，例如，向 [Employee] 报告的 [Employee]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的组属性和内置函数使你能够为这种报表数据创建组。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
  下面的列表总结了对每个数据区域使用组的方式：  
   
@@ -97,19 +96,18 @@ ms.lasthandoff: 08/09/2017
   
  添加组之后，数据区域的行和列控点将更改，以反映组成员身份。 删除组时，可以选择仅删除组定义，也可以选择删除组及其所有关联的行和列。 有关详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
- 若要限制要在详细信息数据或组数据的计算中显示或使用的数据，请为组设置筛选器。 有关详细信息，请参阅[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
+ 若要限制要在详细信息数据或组数据的计算中显示或使用的数据，请为组设置筛选器。 有关详细信息，请参阅 [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
- 默认情况下，在创建组时，组的排序表达式与组表达式相同。 若要更改排序顺序，请更改排序表达式。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 默认情况下，在创建组时，组的排序表达式与组表达式相同。 若要更改排序顺序，请更改排序表达式。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
 #### <a name="understanding-group-membership-for-tablix-cells"></a>了解 Tablix 单元的组成员身份  
  Tablix 数据区域的行或列中的单元可以属于多个行组和列组。 在使用聚合函数（例如 `=Sum(Fields!FieldName.Value`）的单元的文本框中定义表达式时，单元的默认组作用域是其所属的最内部的子组。 如果某个单元同时属于行组和列组，则作用域是两个最内部的组。 还可以编写表达式，用于相对于另一个数据集计算以某组为作用域的聚合小计。 例如，可以相对于列组或相对于数据区域的所有数据（例如 `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`）计算组的百分比。 有关详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)和[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [添加或删除数据区域 &#40; 中的组报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [向组或 Tablix 数据区域 &#40; 添加总计报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [在数据区域 &#40; 中的数据进行排序报表生成器和 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [深化操作 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [深化操作（报表生成器和 SSRS）](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

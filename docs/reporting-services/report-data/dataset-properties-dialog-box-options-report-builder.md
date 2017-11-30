@@ -1,5 +1,5 @@
 ---
-title: "数据集属性对话框中，相应的选项 （报表生成器） |Microsoft 文档"
+title: "“数据集属性”对话框 ->“选项”（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.options.f1
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0425449331af8a4bb6d26203447bcb1fed0aaac2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8eea917788cfd0811750a1ffb59888fa7e2a156a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>“数据集属性”对话框 -&gt;“选项”（报表生成器）
   在“数据集属性”对话框中选择“选项”可更改查询的数据选项，如排序规则选项和将小计视为详细数据进行处理。 有关排序规则的详细信息，请参阅 [SQL Server 联机丛书](../../relational-databases/collations/collation-and-unicode-support.md) 中的 [排序规则和 Unicode 支持](http://go.microsoft.com/fwlink/?linkid=98335)。  
@@ -40,25 +40,25 @@ ms.lasthandoff: 08/09/2017
  选择用于决定在对数据排序时所用的排序规则顺序的区域设置。 **“默认值”** 指示报表服务器在报表运行时将尝试从数据访问接口派生该值。 如果无法派生该值，则将从计算机的区域设置派生默认值。  
   
  **区分大小写**  
- 选择一个用于决定是否区分大小写的值。 此选项指示数据是否区分大小写。 您可以将 **“区分大小写”** 设置为 **True**、 **False**或 **“自动”**。 默认值为 **“自动”**，表示报表服务器在报表运行时应尝试从数据访问接口派生该值。 如果数据提供程序不支持区分大小写的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
+ 选择一个用于决定是否区分大小写的值。 此选项指示数据是否区分大小写。 您可以将 **“区分大小写”** 设置为 **True**、 **False**或 **“自动”**。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值。 如果数据提供程序不支持区分大小写的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **区分重音**  
- 选择一个用于决定是否区分重音的值。 **“区分重音”** 指示数据是否区分重音；可以将此选项设置为 **True**、 **False**或 **“自动”**。 默认值为 **“自动”**，指示报表服务器在报表运行时将尝试从数据访问接口派生该值。 如果数据访问接口不支持区分重音的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
+ 选择一个用于决定是否区分重音的值。 **“区分重音”** 指示数据是否区分重音；可以将此选项设置为 **True**、 **False**或 **“自动”**。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值。 如果数据访问接口不支持区分重音的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **区分假名类型**  
- 选择一个用于决定是否区分假名类型的值。 此选项指示数据是否区分假名类型；可以将此选项设置为 **True**、 **False**或 **“自动”**。 默认值为 **“自动”**，表示报表服务器在报表运行时应尝试从数据访问接口派生该值。 如果数据访问接口不支持区分假名类型的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
+ 选择一个用于决定是否区分假名类型的值。 此选项指示数据是否区分假名类型；可以将此选项设置为 **True**、 **False**或 **“自动”**。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值。 如果数据访问接口不支持区分假名类型的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **区分全半角**  
- 选择一个用于决定是否区分全半角的值。 此选项指示数据是否区分全半角，并可以将设置为**True**， **False**，或**自动**。 默认值为 **“自动”**，表示报表服务器在报表运行时应尝试从数据访问接口派生该值。 如果数据访问接口不支持区分全半角的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
+ 选择一个用于决定是否区分全半角的值。 此选项指示数据是否区分全半角；可设置为 True、False 或“自动”。默认值为“自动”，指示报表服务器应在报表运行时尝试从数据提供程序派生该值。 如果数据访问接口不支持区分全半角的类型，则报表将按该值为 **False**的情况运行。 如果您知道该值并且知道该值受支持，请选择 **True**。  
   
  **将小计解释为详细信息行**  
- 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值，**自动**，指示小计行应视为与详细信息行中，是否报表不使用**聚合**（） 函数，就可以访问在数据集中的任何字段。 如果希望将小计行解释为聚合行，请选择 **False**。 如果你想要被解释为详细信息行的小计行并且你知道它们不使用**聚合**（) 函数中，选择**True**。  
+ 选择一个值，该值指示是否希望将小计行解释为详细信息行而非聚合行。 默认值为“自动”，指示如果报表未使用 Aggregate() 函数来访问数据集中的任何字段，则应将小计行视为详细信息行。 如果希望将小计行解释为聚合行，请选择 **False**。 如果希望将小计行解释为详细信息行，并且知道它们不使用 Aggregate() 函数，请选择“True”。  
   
 ## <a name="see-also"></a>另请参阅  
  [用于对话框、窗格和向导的报表生成器帮助](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [聚合函数 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [数据集属性对话框中，查询 &#40;报表生成器 &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
+ [聚合函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [“数据集属性”对话框 ->“查询”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
   
   

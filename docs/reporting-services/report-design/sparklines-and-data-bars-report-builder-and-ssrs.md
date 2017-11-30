@@ -1,5 +1,5 @@
 ---
-title: "迷你图和数据条 （报表生成器和 SSRS） |Microsoft 文档"
+title: "迷你图和数据条（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 231a738dac853548fe12d2762aedba651f379828
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。   
@@ -40,13 +40,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="KindsofSparklines"></a> 迷你图的类型  
  您几乎可以像常规图表一样创建任意类型的迷你图。 一般情况下，不能生成三维迷你图。 您可以生成以下完整图表的迷你图版本：  
   
--   [柱形图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): 基本、 堆积，和的百分比堆积柱形图。  
+-   [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本柱形图、堆叠柱形图和百分比堆叠柱形图。  
   
--   [折线图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md): 3D 除外折线图。  
+-   [折线图（报表生成器和 SSRS）](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)：除三维折线图之外的所有图。  
   
--   [面积图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)： 除 3D 面积图  
+-   [分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)：除三维分区图之外的所有图  
   
--   [饼图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)： 和圆环图，平面和三维，但不是在其他形状如漏斗图和棱锥图图表。  
+-   [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)：圆环图（平面和三维均可），但不包括漏斗图和棱锥图之类的其他形状。  
   
 -   [范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)：股价图、K 线图、误差线和盒须图。  
   
@@ -59,12 +59,12 @@ ms.lasthandoff: 08/09/2017
   
  您可以生成以下完整图表的数据条版本：  
   
--   [条形图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md): Basic，堆积和 100%堆积条形图。  
+-   [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)：基本条形图、堆叠条形图和百分比堆叠条形图。  
   
--   [柱形图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md): Basic，堆积和 100%堆积柱形图。 柱形图可以是迷你图或数据条。  
+-   [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本柱形图、堆叠柱形图和百分比堆叠柱形图。 柱形图可以是迷你图或数据条。  
   
 ##  <a name="AlignDatainTableMatrix"></a> 在表或矩阵中对齐迷你图数据  
- 在您将一个迷你图插入到表或矩阵中时，将每个迷你图中的数据点与该列中其他迷你图的数据点对齐通常十分重要。 否则，很难比较不同行中的数据。 例如，为您的公司中的不同销售人员按月比较销售数据时，您需要对齐月份。 如果某个员工在四月外出，则该员工在该月可能会没有销售数据。 您想要看到该月的差距，并且看到后续月份的数据与其他员工的数据对齐。 为此，您可以对齐水平轴。 有关详细信息，请参阅有关迷你图中的部分[获得总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)，请参阅和[对齐表或矩阵 &#40; 中的图表中的数据报表生成器和 SSRS &#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
+ 在您将一个迷你图插入到表或矩阵中时，将每个迷你图中的数据点与该列中其他迷你图的数据点对齐通常十分重要。 否则，很难比较不同行中的数据。 例如，为您的公司中的不同销售人员按月比较销售数据时，您需要对齐月份。 如果某个员工在四月外出，则该员工在该月可能会没有销售数据。 您想要看到该月的差距，并且看到后续月份的数据与其他员工的数据对齐。 为此，您可以对齐水平轴。 有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)中关于迷你图的部分，另请参阅[在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
  同样，为了可以跨多行进行比较，数据还必须垂直对齐，这意味着一个迷你图或数据条中条和线条的高度必须相对于所有其他迷你图或数据条中条和线条的高度。 否则，将不能彼此比较这些行。  
   
@@ -109,6 +109,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [教程： 将迷你图添加到您的报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

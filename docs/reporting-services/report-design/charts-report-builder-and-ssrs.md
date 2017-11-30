@@ -1,5 +1,5 @@
 ---
-title: "图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "图表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,49 +21,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ca57a00afd7256fce9c620099277a9894cbf59a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
-关于使用图表数据区域可帮助的读取器读取你[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]分页的报表了解大量一目了然的聚合数据。  
+了解如何使用图表数据区域帮助 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表的读者一目了然地理解大量聚合数据。  
 
-花费仔细准备和了解你的数据，创建一个图表之前, 的更多时间容易它将是快速、 高效地设计图表。 选择要使用的图表的帮助，请参阅[图表类型](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)开始立即尝试与图表，请参阅栏、 列、 迷你图和中的饼图教程[报表生成器教程](../../reporting-services/report-builder-tutorials.md)。  
+创建图表前，在细致准备和理解数据上花费的时间越多，就能够越轻松地实现快速高效的图表设计。 若要帮助选择使用哪个图表，请参阅[图表类型](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) 要立即开始试用图表，请参阅[报表生成器教程](../../reporting-services/report-builder-tutorials.md)中的条形图、柱形图、迷你图和饼图教程。  
   
  下图显示了图表中使用的多种不同元素。  
   
- ![图表元素图示](../../reporting-services/report-design/media/rs-chartelementsc.gif "图表元素图示")  
+ ![图表元素关系图](../../reporting-services/report-design/media/rs-chartelementsc.gif "Chart elements diagram")  
   
- 你可以将图表作为报表分开发布*报表部件*。 有关详细信息，请参阅[报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
+ 可以将图表作为报表部件与报表分开发布。 有关详细信息，请参阅[报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。
   
  
 ##  <a name="DesigningChart"></a> 设计图表  
- 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 在您单击设计图面上的图表时，“图表数据”窗格将出现，并且具有三个区域（类别组、序列组和值）。 如果该报表具有共享的或嵌入的数据集，则数据集中的字段将显示在“报表数据”窗格中。 将字段从数据集拖到图表数据窗格中的合适区域。 默认情况下，将字段添加到图表的某一区域中时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 您还可以使用序列分组动态生成序列。 图表是[组织如矩阵](#SimilarMatrix)。  
+ 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 在您单击设计图面上的图表时，“图表数据”窗格将出现，并且具有三个区域（类别组、序列组和值）。 如果该报表具有共享的或嵌入的数据集，则数据集中的字段将显示在“报表数据”窗格中。 将数据集中的字段拖到“图表数据”窗格的适当区域中。 默认情况下，将字段添加到图表的某一区域中时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 您还可以使用序列分组动态生成序列。 图表[组织成矩阵](#SimilarMatrix)样式。  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  设计时图表中的数据与处理报表时图表中的数据不同。 它不是您真正的数据。 已添加的是生成的数据，这样您就可以设计近似所见即所得的图表。  
   
-##  <a name="SimilarMatrix"></a>图表如何就像矩阵  
+##  <a name="SimilarMatrix"></a>图表如何组织成矩阵样式  
  考虑图表的工作方式的方法之一就是将图表与矩阵进行比较。  
   
- ![从工具箱中，选择添加新矩阵](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "新矩阵添加从工具箱中，选择")  
+ ![从工具箱添加的新矩阵，选中](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "从工具箱添加的新矩阵，选中")  
   
  从概念上讲，它们的组织结构是相同的：  
   
--   矩阵中的列组就像图表中的类别组区域。  
+-   矩阵中的“列”组与图表中的“类别组”区域类似。  
   
--   矩阵中的行组就像图表中的序列组区域。  
+-   矩阵中的“行”组与图表中的“系列组”区域类似。  
   
--   矩阵中的数据区域就像图表中的值区域。  
+-   矩阵中的“数据”区域与图表中的“值”区域类似。  
   
  
 ##  <a name="AddingData"></a> 向图表添加数据  
@@ -96,11 +96,11 @@ ms.lasthandoff: 08/09/2017
   
  可以使用以下几种方法合并图表上的数据：  
   
--   使用饼图时，将小切片收集到一个名为“其他”的切片中。 这将减少饼图上的切片数。 有关详细信息，请参阅[收集饼图上的小切片（报表生成器和 SSRS）](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
+-   使用饼图时，将小切片收集到一个名为“其他”的切片中。 这将减少饼图上的切片数。 有关详细信息，请参阅 [收集饼图上的小切片（报表生成器和 SSRS）](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
   
 -   有大量数据点时避免使用数据点标签。 仅当饼图上有少量数据点时，数据点标签才具有最佳效果。  
   
--   筛选出不需要或不相关的数据。 这有助于突出显示要在图表上显示的关键数据。 若要筛选图表中的数据点，可以对类别组或序列组设置筛选器。 默认情况下，图表使用内置函数 Sum 将属于同一组的值聚合到序列中的单个数据点中。 如果更改序列的聚合函数，则也必须更改筛选表达式中的聚合函数。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+-   筛选出不需要或不相关的数据。 这有助于突出显示要在图表上显示的关键数据。 若要筛选图表中的数据点，可以对类别组或序列组设置筛选器。 默认情况下，图表使用内置函数 Sum 将属于同一组的值聚合到序列中的单个数据点中。 如果更改序列的聚合函数，则也必须更改筛选表达式中的聚合函数。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
 -   若要在表或矩阵模板中显示比率数据，请考虑使用线性仪表而不是条形图。 仪表更适用于在单元中显示单个值。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
    
@@ -144,10 +144,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [图像、文本框、矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [交互式排序、 文档结构图和链接 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [嵌套的数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [教程： 将一个柱形图添加到您的报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [教程：向报表添加柱形图（报表生成器）](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [教程：向报表添加饼图（报表生成器）](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [教程： 将条形图添加到您的报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [教程：向报表添加条形图（报表生成器）](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

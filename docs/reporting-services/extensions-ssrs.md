@@ -1,5 +1,5 @@
 ---
-title: "扩展插件 (SSRS) |Microsoft 文档"
+title: "扩展插件 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9cd11331e81e9d2af7c235f02d8abdb22ae3c5c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extensions-ssrs"></a>扩展插件 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的报表服务器使用扩展插件来模块化其为身份验证、数据处理、报表呈现和报表传递接受的输入或输出的类型。 这便于现有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装利用行业中的新的软件标准，例如新的身份验证架构或自定义数据源类型。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 报表服务器至少分别需要一个身份验证扩展插件、数据处理扩展插件和呈现扩展插件。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Excel 呈现扩展插件** Excel 呈现扩展插件呈现可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更高版本中查看和修改的报表。 此呈现扩展插件会创建二进制交换文件格式 (BIFF) 的文件。 BIFF 是 Excel 数据的本机文件格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中呈现的报表支持适用于任何电子表格的所有功能。 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
--   “CSV 呈现扩展插件” 逗号分隔值 (CSV) 呈现扩展插件通过不带任何格式的以逗号分隔的纯文本文件形式呈现报表。 用户随后可使用电子表格应用程序（如 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]）或任何其他可读取文本文件的程序打开这些文件。 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
+-   **CSV 呈现扩展插件** 逗号分隔值 (CSV) 呈现扩展插件通过不带任何格式的以逗号分隔的纯文本文件形式呈现报表。 用户随后可使用电子表格应用程序（如 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]）或任何其他可读取文本文件的程序打开这些文件。 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
   
 -   **XML 呈现扩展插件** XML 呈现扩展插件以 XML 文件形式呈现报表。 随后可通过其他程序存储或读取这些 XML 文件。 您还可以使用 XSLT 转换将报表转换为另一种 XML 架构，供其他应用程序使用。 XML 呈现扩展插件生成的 XML 文件是 UTF-8 编码文件。 有关详细信息，请参阅[导出到 XML（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。  
   
@@ -82,4 +81,3 @@ ms.lasthandoff: 08/09/2017
  后台处理应用程序使用传递扩展插件将报表传递到各个位置。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括电子邮件传递扩展插件和文件共享传递扩展插件。 电子邮件传递扩展插件可以通过简单邮件传输协议 (SMTP) 发送电子邮件，并在其中包含报表本身或指向报表的 URL 链接。 还可以向寻呼程序、电话或其他设备发送没有 URL 链接或报表的简短通知。 文件共享传递扩展插件可以将报表保存到网络上的共享文件夹中。 您可以指定位置、呈现格式和文件名，并覆盖所创建的文件的选项。 可以使用文件共享传递插件来存档所呈现的报表，并将其作为处理特大型报表的策略的一部分。 传递扩展插件可以与订阅协同工作。 用户创建订阅时，可以选择一个可用的传递扩展插件，以确定如何传递报表。  
   
   
-

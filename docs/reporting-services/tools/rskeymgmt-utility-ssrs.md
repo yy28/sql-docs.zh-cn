@@ -1,5 +1,5 @@
 ---
-title: "rskeymgmt 实用工具 (SSRS) |Microsoft 文档"
+title: "rskeymgmt 实用工具 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e71c6c5cb692355df51b2d9b7e2caa8c330f5b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
@@ -136,7 +135,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>删除加密密钥和加密的内容  
- 此示例显示如何删除报表服务器中存储的所有加密密钥。 如果安装的是报表服务器扩展部署，则将删除部署中包括的所有报表服务器实例的加密密钥。 删除加密密钥还会删除报表服务器数据库中现有的全部已加密值。 有关加密内容的详细信息，请参阅[存储加密的 Report Server 数据 (SSRS Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
+ 此示例显示如何删除报表服务器中存储的所有加密密钥。 如果安装的是报表服务器扩展部署，则将删除部署中包括的所有报表服务器实例的加密密钥。 删除加密密钥还会删除报表服务器数据库中现有的全部已加密值。 有关加密内容的详细信息，请参阅[存储加密的报表服务器数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
 ```  
 rskeymgmt -d  
@@ -155,7 +154,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>联接同一台计算机上的报表服务器实例  
  可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 **-u** 和 **-v** 参数。 仅当联接远程计算机中的实例时才需使用 **-u** 和 **-v** 参数。 如果指定这些参数，您将收到以下错误：“用户凭据不能用于本地连接”。  
   
- 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中， \< **initializedinstance**> 是已初始化为使用报表服务器数据库中，实例的名称和\< **newinstance**> 是你想要添加到部署的实例名称：  
+ 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<initializedinstance> 是已初始化为使用报表服务器数据库的实例名称，而 \<newinstance> 是要添加到部署的实例名称：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,20 +170,19 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>文件位置  
- Rskeymgmt.exe 位于  **\<*驱动器*>: files\microsoft SQL Server\110\Tools\Binn * * 或在  **\<*驱动器*>: \Program 文件 (x86) \Microsoft SQL Server\110\Tools\Binn**。 可以在文件系统的任何文件夹中运行此实用工具。  
+ Rskeymgmt.exe 位于 \<drive>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 \<drive>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn** 下。 可以在文件系统的任何文件夹中运行此实用工具。  
   
 ## <a name="remarks"></a>注释  
  报表服务器对存储的凭据和连接信息进行加密。 公钥和对称密钥可用于对数据进行加密。 要运行报表服务器，报表服务器数据库必须具有有效的密钥。 你可以使用 **rskeymgmt** 来备份、删除或还原密钥。 如果无法还原密钥，此工具将为您提供一种方法，以删除不再使用的加密内容。  
   
  **rskeymgmt** 实用工具用于管理在安装或初始化期间定义的密钥集。 它通过远程过程调用 (RPC) 端点连接到本地报表服务器 Windows 服务。 必须运行报表服务器 Windows 服务才能使用此实用工具。  
   
- 有关加密密钥的详细信息，请参阅[配置和管理加密密钥 (SSRS Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[初始化报表服务器 (SSRS Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 有关加密密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)和[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展部署 - Reporting Services 本机模式 (Configuration Manager)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services 报表服务器 &#40;本机模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [报表服务器命令提示实用工具 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

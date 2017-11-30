@@ -1,5 +1,5 @@
 ---
-title: "删除某个项 (Management Studio) |Microsoft 文档"
+title: "删除项 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - deleting report items
 - report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 454b2f64f2f2ae1e4fdbda0d34b0da058855aef3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-an-item-management-studio"></a>删除项 (Management Studio)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器实例时，您可以删除角色定义和共享计划， 但不能删除报表服务器上的报表、模型或其他项。 若要删除报表服务器内容，请改用报表管理器。 或者，如果报表服务器被配置为 SharePoint 集成模式，请使用包含您的内容的 SharePoint 库中的项管理功能。  
@@ -38,12 +37,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  右键单击该项，然后单击“删除”。  
   
-4.  出现提示时，[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  出现提示时， [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [删除目录项 &#40;Management Studio &#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [SQL Server Management Studio &#40; 的 reporting ServicesSSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [删除目录项 (Management Studio)](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [SQL Server Management Studio 中的 Reporting Services (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
-

@@ -1,33 +1,33 @@
 ---
 title: "内存中 OLTP（内存中优化）| Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 106
+caps.latest.revision: "106"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 8ca8131b077c7c6b0e38be07cb037a17d42d2d08
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b377f0c359751a5c970ceef2e1d7fa6bc556e3d7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可显著改善事务处理、数据引入和数据加载的性能以及暂时数据方案。  若要跳转到快速测试自己的内存优化表和本机编译的存储过程所需的基本代码和知识，请参阅
  -  [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/03/2017
  
  请注意， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 是用于提高事务处理性能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术。 有关提高报告和分析查询性能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术，请参阅 [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
- 已对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的内存中 OLTP 进行了多项改进。 增加了 Transact-SQL 外围应用，以使其更易于迁移数据库应用程序。 添加了对内存优化表和本机编译的存储过程执行 ALTER 操作的支持，以使其更易于维护应用程序。 有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 中新增功能的信息，请参阅[列存储索引 - 新增功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)。  
+ 已对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的内存中 OLTP 进行了多项改进。 增加了 Transact-SQL 外围应用，以使其更易于迁移数据库应用程序。 添加了对内存优化表和本机编译的存储过程执行 ALTER 操作的支持，以使其更易于维护应用程序。 有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 中新增功能的信息，请参阅[列存储索引 - 新增功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)。  
   
 > [!NOTE]  
 >  **进行试用**  
@@ -95,4 +95,3 @@ ms.lasthandoff: 08/03/2017
  [数据库功能](../../relational-databases/database-features.md)  
   
   
-

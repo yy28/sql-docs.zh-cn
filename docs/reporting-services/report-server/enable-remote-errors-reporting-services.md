@@ -1,5 +1,5 @@
 ---
-title: "启用远程错误 (Reporting Services) |Microsoft 文档"
+title: "启用远程错误 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d409aa01ca3d060068fa9045b0a1fafec8bf3fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
   可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 **EnableRemoteErrors** 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 报表服务器系统属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
-1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[连接到 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
+1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) 连接到 Management Studio 中的报表服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  右键单击报表服务器节点，然后选择“属性”。  
   
@@ -120,4 +119,3 @@ ms.lasthandoff: 08/09/2017
     >  您可以通过编辑报表服务器数据库中的 **ConfigurationInfo** 表将 **EnableRemoteErrors** 设置为 **True**，但是如果报表服务器正在使用中，则应使用 SQL Server Management Studio 或脚本来修改此设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
   
   
-

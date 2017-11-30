@@ -1,28 +1,25 @@
 ---
-title: "第 4 课： 定义子报表的数据连接和数据表 |Microsoft 文档"
+title: "第 4 课：定义用于子报表的数据连接和数据表 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c717fecbc14933bdfaac30e64faa2b8a9ff2940
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 课：定义用于子报表的数据连接和数据表
 设计父报表后，接下来要创建用于子报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2014 数据库。  
@@ -31,41 +28,41 @@ ms.lasthandoff: 08/09/2017
   
 1.  在“网站”菜单上，选择“添加新项”。  
   
-2.  在“添加新项”对话框中，选择“数据集”，然后选择“添加”。 出现提示后，选择“是”，将该项添加到 **App_Code** 文件夹。  
+2.  在“添加新项”对话框中，选择“数据集”，然后选择“添加”。 出现提示后，应选择“是”，将该项添加到 App_Code 文件夹。  
   
     此操作将一个新的 XSD 文件 **DataSet2.xsd** 添加到项目，并打开数据集设计器。  
   
 3.  从“工具箱”窗口中，将 **TableAdapter** 控件拖到设计图面上。 随后将启动 **TableAdapter** 配置向导。  
   
-4.  在“选择数据连接”页上，可以选择在第 2 课中创建的连接。 如果这样做，选择“下一步”并转到步骤 8。 否则，请选择“新建连接”。  
+4.  在“选择数据连接”页上，可以选择在第 2 课中创建的连接。 如果执行了此操作，请选择“下一步”并转到步骤 8。 否则，请选择“新建连接”。  
   
 5.  在“添加连接”对话框中，执行以下步骤：  
   
-    1.  在“服务器名称”框中，输入 **AdventureWorks2014** 数据库所在的服务器。  
+    1.  在“服务器名称”框中，输入 AdventureWorks2014 数据库所在的服务器。  
   
         默认的 SQL Server Express 实例为 **(local)\sqlexpress**。  
   
     2.  在“登录到服务器”部分中，选择使你可访问数据的选项。 “使用 Windows 身份验证”为默认选项。  
   
-    3.  在“选择或输入数据库名称”下拉列表中，选择 **AdventureWorks2014**。  
+    3.  在“选择或输入数据库名称”下拉列表中，选择“AdventureWorks2014”。  
   
     4.  选择“确定”，然后选择“下一步”。  
   
-6.  如果在第 5 (b) 步中选择了“使用 SQL Server 身份验证”，则选择一个选项，决定在字符串中加入敏感数据还是在应用程序代码中设置该信息。  
+6.  如果在步骤 5 (b) 中选择了“使用 SQL Server 身份验证”，则选择一个选项，决定是在字符串中加入敏感数据还是在应用程序代码中设置该信息。  
   
-7.  在“将连接字符串保存到应用程序配置文件中”页上，键入连接字符串的名称，或接受默认的 **AdventureWorks2014ConnectionString**。 选择“下一步” 。  
+7.  在“将连接字符串保存到应用程序配置文件中”页上，键入连接字符串的名称，或接受默认的“AdventureWorks2014ConnectionString”。 选择“下一步” 。  
   
 8.  在“选择命令类型”页上，选择“使用 SQL 语句”，然后选择“下一步”。  
   
-9. 在“输入 SQL 语句”页上，输入以下 Transact-SQL 查询以从 **AdventureWorks2014** 数据库检索数据，然后选择“下一步”。  
+9. 在“输入 SQL 语句”页上，输入以下 Transact-SQL 查询以从 AdventureWorks2014 数据库检索数据，然后选择“下一步”。  
   
     ```  
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    还可通过选择“查询生成器”创建查询，然后通过选择“执行查询”按钮验证查询。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关如何获取 **AdventureWorks2014** 示例数据库的详细信息，请参阅 [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/)（Microsoft SQL Server 数据库产品示例）。  
+    还可通过选择“查询生成器”创建查询，然后通过选择“执行查询”按钮验证查询。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关如何获取 AdventureWorks2014 示例数据库的详细信息，请参阅 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
   
-10. 在“选择要生成的方法”页上，取消选中“创建方法以将更新直接发送到数据库(GenerateDBDirectMethods)”，然后单击“完成”。  
+10. 在“选择要生成的方法”页上，取消选中“创建方法以将更新直接发送到数据库(GenerateDBDirectMethods)”，然后选择“完成”。  
   
     > [!WARNING]  
     > 务必取消选中“创建方法以将更新直接发送到数据库(GenerateDBDirectMethods)”  
@@ -74,10 +71,9 @@ ms.lasthandoff: 08/09/2017
   
 11. 保存该文件。  
   
-12. 若要预览数据，请在“数据”菜单上选择“预览数据”，然后选择“预览”。  
+12. 要预览数据，请在“数据”菜单上选择“预览数据”，然后选择“预览”。  
   
 ## <a name="next-task"></a>下一个任务  
 您已成功创建了用于子报表的数据连接和数据表。 接下来，将使用报表向导设计子报表。 请参阅 [第 5 课：使用报表向导设计子报表](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)。  
   
-
 

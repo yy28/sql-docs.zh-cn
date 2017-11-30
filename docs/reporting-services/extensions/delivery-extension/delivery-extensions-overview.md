@@ -1,5 +1,5 @@
 ---
-title: "传递扩展概述 |Microsoft 文档"
+title: "传递扩展插件概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 07f9b2fcb366ecf1b433917852462766d6cd0951
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delivery-extensions-overview"></a>传递扩展插件概述
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用户能够创建和发布报表，一次创建和发布，可以传递给不同的位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的传递扩展插件。  
   
@@ -55,17 +53,16 @@ Reporting Services 传递扩展插件体系结构
   
 -   一台安装了报表服务器的部署计算机。  
   
--   开发计算机与[!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]或[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]软件开发工具包 (SDK) 安装。  
+-   一台安装了 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 的开发计算机。  
   
 -   深入了解 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特性和功能，尤其是订阅和传递。  
   
 -   深入了解 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 和 Web 控件（如果您计划为报表管理器实现您自己的订阅用户界面）。  
   
--   中的开发体验[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]如语言[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C# 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 语言（例如，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET）进行开发的经验。  
   
 ## <a name="see-also"></a>另请参阅  
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [实现传递扩展插件](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Reporting Services 扩展插件库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

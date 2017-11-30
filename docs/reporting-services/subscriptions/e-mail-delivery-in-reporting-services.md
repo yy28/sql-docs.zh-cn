@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 中的电子邮件传递 |Microsoft 文档"
+title: "Reporting Services 中的电子邮件传递 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 若要通过电子邮件分发报表，你可以 1) 配置报表服务器以进行电子邮件传递，并 2) 定义标准订阅或数据驱动订阅。 一个订阅不能在一个电子邮件中传递多个报表。 但你可以创建多个订阅。  
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/27/2017
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
   
- 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果你选择**包括链接**在订阅中，电子邮件中包含指向报表的超链接。  
+ 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包含链接”，电子邮件将包含一个指向该报表的超链接。  
   
 ## <a name="native-mode-role-based-e-mail-settings"></a>本机模式的基于角色的电子邮件设置  
  在本机模式的报表服务器环境中，所使用的电子邮件传递设置因角色是包含“管理单独的订阅”任务还是“管理所有订阅”任务而异。  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  对于本机模式的报表服务器，电子邮件传递扩展插件通过本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器和编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置。 对于 SharePoint 模式的报表服务器，电子邮件传递扩展插件是在 SharePoint 管理页和 PowerShell 脚本中进行配置的。  
   
  
- 有关如何配置本机模式报表服务器的信息，请参阅[电子邮件设置-Reporting Services 本机模式 （配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ 有关如何配置本机模式报表服务器的信息，请参阅[电子邮件设置 - Reporting Services 本机模式（配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [角色分配](../../reporting-services/security/role-assignments.md)  
   
   
-

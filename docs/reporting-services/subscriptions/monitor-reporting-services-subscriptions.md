@@ -1,5 +1,5 @@
 ---
-title: "监视器 Reporting Services 订阅 |Microsoft 文档"
+title: "监视 Reporting Services 订阅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d1d01e4c59bba393ddc713c24f7ba829b3420b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -55,17 +54,17 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |新建订阅|在您首次创建订阅时显示。|  
 |Inactive|无法处理订阅时显示。 有关详细信息，请参阅本主题后面的“管理不活动订阅”部分。|  
-|完成： \<*数*> 处理的\<*数*> 总;\<*数*> 错误。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
-|\<*数*> 处理|计划和传递处理器成功传递或不再试图传递的通知数。 当数据驱动传递完成后，已处理通知数应等于已生成通知的总数。|  
-|\<*数*> 总|最后一次传递订阅生成的通知总数。|  
-|\<*数*> 错误|计划和传递处理器无法传递或不再试图传递的通知数。|  
+|已完成：已处理 \<number> 个，共 \<number> 个；\<number> 个错误。|显示数据驱动订阅执行的状态；此消息来自计划和传递处理器。|  
+|已处理 \<number> 个|计划和传递处理器成功传递或不再试图传递的通知数。 当数据驱动传递完成后，已处理通知数应等于已生成通知的总数。|  
+|总计 \<number> 个|最后一次传递订阅生成的通知总数。|  
+|\<number> 个错误|计划和传递处理器无法传递或不再试图传递的通知数。|  
 |无法发送邮件：传输无法连接到服务器。|表示报表服务器未连接到邮件服务器；此消息来自电子邮件传递扩展插件。|  
-|文件\< *filename*> 向其写入\<路径 >。|表示已成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
+|文件 \<filename> 已写入 \<path>。|表示已成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
 |写入文件时出现未知错误。|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
-|连接到目标文件夹中，失败\<路径 >。 请验证目标文件夹或文件共享是否存在。|表示无法找到指定的文件夹；此消息来自文件共享传递扩展插件。|  
-|文件\<文件名 > 无法写入到\<路径 >。 请重试。|表示无法用新版本更新文件；此消息来自文件共享传递扩展插件。|  
-|写入文件时出错\<文件名 >:\<消息 >|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
-|\<自定义的状态消息 >|与传递成功和失败有关的状态消息，由传递扩展插件提供。 如果使用的是第三方传递扩展插件或自定义传递扩展插件，可能出现其他状态消息。|  
+|连接到目标文件夹 \<path> 时出错。 请验证目标文件夹或文件共享是否存在。|表示无法找到指定的文件夹；此消息来自文件共享传递扩展插件。|  
+|文件 \<filename> 无法写入 \<path>。 请重试。|表示无法用新版本更新文件；此消息来自文件共享传递扩展插件。|  
+|写入文件 \<filename> 时出错：\<message>|表示未能成功传递到文件共享位置；此消息来自文件共享传递扩展插件。|  
+|\<custom status messages>|与传递成功和失败有关的状态消息，由传递扩展插件提供。 如果使用的是第三方传递扩展插件或自定义传递扩展插件，可能出现其他状态消息。|  
   
  报表服务器管理员还可以监视当前处理的标准订阅。 但不能监视数据驱动订阅。 有关详细信息，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="native-mode-log-files"></a>本机模式日志文件  
  如果在传递过程中出现错误，将在报表服务器跟踪日志中记录一个条目。  
   
- 报表服务器管理员可以查看 **reportserverservice_\*.log** 文件来确定订阅传递的状态。 对于电子邮件传递，报表服务器日志文件包括针对特定电子邮件帐户的处理和传递记录。 以下是日志文件的默认位置：  
+ 报表服务器管理员可以查看 reportserverservice_\*.log 文件来确定订阅传递的状态。 对于电子邮件传递，报表服务器日志文件包括针对特定电子邮件帐户的处理和传递记录。 以下是日志文件的默认位置：  
   
  `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
  以下是与订阅相关的跟踪日志文件错误消息示例：  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. 异常： System.Net.Mail.SmtpException: SMTP 服务器需要安全连接或客户端未经身份验证。 The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  日志文件不包括有关是否打开报表或传递是否真正成功的信息。 成功传递意味着计划和传递处理器未生成任何错误，并且报表服务器已连接到邮件服务器。 如果电子邮件在用户邮箱中产生无法传递的消息错误，该信息不会包括在日志文件中。 有关日志文件的详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
 ||||||||  
 |-|-|-|-|-|-|-|  
 |日期|处理|区域|类别|Level|Correlation|消息|  
-|5/21/2014 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|（空）|**发送邮件时出错。** 异常： System.Net.Mail.SmtpException: 邮箱不可用。 The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|（空）|**发送邮件时出错。** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 监视订阅  
  如需查看可用于检查本机模式或 SharePoint 模式订阅的状态的 PowerShell 脚本的示例，请参见 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
@@ -127,7 +126,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

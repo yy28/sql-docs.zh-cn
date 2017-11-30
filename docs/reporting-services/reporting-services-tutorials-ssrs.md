@@ -1,7 +1,7 @@
 ---
-title: "Reporting Services 教程 (SSRS) |Microsoft 文档"
+title: "Reporting Services 教程 (SSRS) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tutorials [Reporting Services]
+applies_to: SQL Server 2016
+helpviewer_keywords: tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eebe70acfc915140f4d43a5a454ffcde6d572af7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8b510b2f73d086fb3f1d37d94d2ee3178d3481a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教程 (SSRS)
 
@@ -48,12 +45,11 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>另请参阅  
-* [Adventure Works 2014 示例数据库](https://msftdbprodsamples.codeplex.com/releases/view/125550)  
-* [CodePlex 上的 Reporting Services 示例](http://go.microsoft.com/fwlink/?LinkId=198283)  
+* [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）  
+* [TechNet wiki 上的 Reporting Services 示例](http://go.microsoft.com/fwlink/?LinkId=198283)  
 * [TechNet Wiki：SQL Server 2012 示例](http://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   
   
-
 

@@ -1,28 +1,25 @@
 ---
-title: "使用分页报表 （web 门户） |Microsoft 文档"
+title: "使用分页报表（Web 门户）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>使用分页报表（Web 门户）
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  这将启动报表生成器，或者提示你下载它。  
   
-4.  生成报表，然后选择左上方的“保存”图标将分页报表保存回报表服务器。  
+4.  生成报表，然后选择左上方的“保存”图标，将分页报表保存回报表服务器。  
   
 ## <a name="manage-an-existing-paginated-report"></a>管理现有分页报表  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > 如果在文件夹中看不到分页报表，请确保你看的是分页报表。 你可以从 Web 门户右上方的菜单栏中选择“查看”  。 请确保已选中“分页报表”。  
   
-1.  选择**省略号 （...）**你想要管理的数据集。  
+1.  选择要管理的数据集旁边的省略号 (…)。  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -112,7 +109,7 @@ ms.lasthandoff: 08/09/2017
   
 如果帐户为 Windows 凭据，指定的帐户对用来托管报表所用数据源的计算机必须具有本地登录权限。  
   
-选择“使用这些凭据登录，然后尝试模拟此用户查看报表”将允许委托凭据，但前提是数据源支持模拟。 对于 SQL Server 数据库，此选项设置“SETUSER”功能 对于 Analysis Services，此选项使用 EffectiveUserName。  
+选择“使用这些凭据登录，然后尝试模拟用户查看报表”可允许委托凭据，但前提是数据源支持模拟。 对于 SQL Server 数据库，此选项设置“SETUSER”功能 对于 Analysis Services，此选项使用 EffectiveUserName。  
   
 **通过提示用户查看报表以获取凭据**  
   
@@ -132,7 +129,7 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>依赖项  
-使用“依赖项”页可以查看引用此报表的项的列表。 每个项类型的图标都指示了它是什么。 然后，你可以选择**省略号 （...）**来管理这些项的每个项进一步。  
+使用“依赖项”页可以查看引用此报表的项的列表。 每个项类型的图标都指示了它是什么。 然后，可以选择每个项对应的省略号 (…) 进一步管理这些项。  
   
 ## <a name="caching"></a>Caching  
 缓存分页报表的数据时，你有多个选项。 只需进行简单选择即可开始操作。  
@@ -201,5 +198,4 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
 [Web 门户](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

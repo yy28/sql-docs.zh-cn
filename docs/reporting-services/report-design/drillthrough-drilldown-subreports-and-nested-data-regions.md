@@ -1,5 +1,5 @@
 ---
-title: "钻取、 深化、 子报表和嵌套的数据区域 |Microsoft 文档"
+title: "钻取、向下钻取、子报表和嵌套数据区域 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b727d0fd866b14e5ac8ff2f383e2cdc7b53a9bde
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>钻取、深化、子报表和嵌套数据区域
   可以通过多种方法组织数据，以显示一般信息与详细信息之间的关系。  您可以将所有数据都放在报表中，但将这些数据设置为在用户单击以显示详细信息之前处于隐藏状态，这就是“深化”  操作。 可以在“嵌套”  在其他数据区域（例如表或矩阵）内的一个数据区域（例如表或图表）内显示数据。 还可以在完全包含在主报表内的“子报表”  中显示数据。 或者，可以将详细信息数据放在“钻取”  报表中，钻取报表是在用户单击链接时显示的单独报表。  
@@ -105,4 +104,3 @@ ms.lasthandoff: 08/09/2017
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

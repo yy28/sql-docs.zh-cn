@@ -1,5 +1,5 @@
 ---
-title: "排除 Reporting Services 报表处理故障 |Microsoft 文档"
+title: "Reporting Services 报表处理疑难解答 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8df3dd891b236ca295a4cc0deebdc5768d06dffa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a22c557ce2289c950edceff045b1c868d60ef677
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>排除 Reporting Services 报表处理故障
 检索报表数据后，报表处理器会将这些数据与布局信息组合。 将在组合的数据和布局的上下文中计算具有表达式的每个报表项属性。 使用本主题可以帮助解决这些问题。   
@@ -58,5 +57,4 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
 [错误和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

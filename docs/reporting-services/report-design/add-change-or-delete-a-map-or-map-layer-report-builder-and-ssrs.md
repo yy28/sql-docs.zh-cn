@@ -1,5 +1,5 @@
 ---
-title: "添加、 更改或删除地图或地图层 （报表生成器和 SSRS） |Microsoft 文档"
+title: "添加、更改或删除地图或地图层（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 023b512a91e802a0e04e108e59f1c757ddaf74a9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="ChangeLayer"></a> 使用地图层向导更改层的选项  
   
--   运行地图层向导。 此向导允许您更改使用地图层向导创建的层的选项。 在地图窗格中，右键单击该层，，然后在工具栏上，单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
+-   运行地图层向导。 此向导允许您更改使用地图层向导创建的层的选项。 在“地图”窗格中，右键单击该层，然后在工具栏上单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
      有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
@@ -83,10 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  在工具栏上，单击**添加层**按钮，然后从下拉列表中，单击你想要添加的层的类型：**点**，**行**，或**多边形**。  
+2.  在工具栏上单击“添加层”按钮，从下拉列表中单击要添加的层类型：“点”、“线条”或“多边形”。  
   
     > [!NOTE]  
-    >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要启动该向导从地图窗格工具栏，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
+    >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
 3.  右键单击该层，然后单击“层数据”。  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  右键单击地图窗格中的层，然后单击**层数据**。  
+2.  在“地图”窗格中右键单击层，然后单击“层数据”。  
   
 3.  单击 **“筛选器”**。  
   
@@ -212,7 +211,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  右键单击该层，，然后单击**磁贴属性**。  
+2.  右键单击该层，然后单击“图块属性”。  
   
 3.  单击 **“可见性”**。  
   
@@ -244,7 +243,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  设置 **“可见性”** 选项以控制地图层的显示方式。  
   
-    -   在地图层窗格中，右键单击层以选中它，然后在地图层工具栏上，单击属性，以打开**地图层属性**。  
+    -   在“地图层”窗格中，右键单击某个层以便选择该层，然后在“地图层”工具栏上单击“属性”，以便打开“地图层属性”。  
   
     -   单击 **“可见性”**。  
   
@@ -257,8 +256,7 @@ ms.lasthandoff: 08/09/2017
      还可以有条件隐藏层。 有关详细信息，请参阅[隐藏项（报表生成器和 SSRS）](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [报表故障排除： 地图报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

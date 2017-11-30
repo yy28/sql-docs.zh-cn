@@ -1,31 +1,29 @@
 ---
-title: "Reporting Services 移动报表中的自定义映射 |Microsoft 文档"
+title: "Reporting Services 移动报表中的自定义地图 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 移动报表中的自定义地图
-在 SQL Server 移动报表发布服务器中的地图中名为的格式定义*ESRI 形状文件*。  
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
+SQL Server 移动报表发布服务器中的地图使用称为 ESRI 形状文件的格式进行定义。  
   
-该格式最初由一家私营公司设计，现在这种半开放格式被广泛应用于大部分 GIS 应用程序。 根据此格式，移动报表发布服务器需要两个文件定义地图提供：  
+该格式最初由一家私营公司设计，现在这种半开放格式被广泛应用于大部分 GIS 应用程序。 根据此格式，移动报表发布服务器需要提供两个文件来定义地图：  
   
 - 针对几何形状的 .SHP 文件  
 - 针对元数据的 .DBF 文件  
@@ -39,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="technical-information"></a>技术信息  
   
 - 官方规范： [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- 维基百科形状文件文章：[http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- 维基百科形状文件文章： [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>创建和编辑地图几何图形  
   
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/09/2017
   
   
   
-

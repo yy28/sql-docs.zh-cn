@@ -1,5 +1,5 @@
 ---
-title: "规划报表设计和报表部署 |Reporting Services |Microsoft 文档"
+title: "报表设计和报表部署的规划 | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 7a70068f6dff7c2304a9faac5a85be10d6e1968b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>报表设计和报表部署的规划 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一些创作和部署分页报表的方法。 了解如何计划协同工作的报表创作环境和报表服务器环境。
@@ -74,7 +73,7 @@ ms.lasthandoff: 09/27/2017
   
  如果您将报表定义上载到报表服务器或者升级包含现有报表的报表服务器，报表服务器将保留原格式的报表定义。 **首次使用时**，报表服务器会将报表服务器数据库中的报表升级到二进制格式，并保留这种格式以便以后查看。 报表定义 (.rdl) 本身不升级。  
   
- 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 选择报表，然后单击**下载**。 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
+ 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”。 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
   
  若要升级报表定义，必须在报表创作环境（例如 SQL Server Data Tools 或报表生成器）中打开报表，然后保存它。  
   
@@ -121,4 +120,3 @@ ms.lasthandoff: 09/27/2017
  [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
-

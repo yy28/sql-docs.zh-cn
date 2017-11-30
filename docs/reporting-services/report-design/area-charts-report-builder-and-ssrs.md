@@ -1,5 +1,5 @@
 ---
-title: "面积图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "面积图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbb5e600306a5d107f7cbd542fb2c66abe96b35a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 569148f956a56418e8aae426fbe366ab23e2c3bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面积图（报表生成器和 SSRS）
   面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何向分区图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
@@ -51,16 +50,15 @@ ms.lasthandoff: 08/09/2017
   
 -   在一般的面积图中，如果多个序列中的值相似，则面积可能会发生重叠，从而遮挡了重要的数据点值。 可以通过将图表类型更改为堆积面积图来解决此问题，堆积面积图的设计目的就是为了在面积图上显示多个序列。  
   
--   如果堆积面积图中含有间隙，可能是因为数据集包含空值，空值在堆积面积图上将显示为空白区域。 如果数据集包含空值，请考虑在图表中插入空点。 如果添加空点，则会用一种不同的颜色填充图表上的空白区域以指示 Null 或零值。 有关详细信息，请参阅[添加空点添加到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   如果堆积面积图中含有间隙，可能是因为数据集包含空值，空值在堆积面积图上将显示为空白区域。 如果数据集包含空值，请考虑在图表中插入空点。 如果添加空点，则会用一种不同的颜色填充图表上的空白区域以指示 Null 或零值。 有关详细信息，请参阅[向图表添加空点（报表生成器和 SSRS）](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
   
 -   面积图类型在行为上与柱形图和折线图非常相似。 如果要在多个序列之间进行比较，请考虑改用柱形图。 如果要分析在一段时间内的走向，请考虑使用折线图。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [图表类型 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [折线图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
- [更改图表类型 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [折线图（报表生成器和 SSRS）](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
+ [更改图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)   
  [图表中的空白和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   
-

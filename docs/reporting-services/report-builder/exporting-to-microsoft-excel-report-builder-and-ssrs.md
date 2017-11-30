@@ -1,5 +1,5 @@
 ---
-title: "将导出到 Microsoft Excel （报表生成器和 SSRS） |Microsoft 文档"
+title: "导出到 Microsoft Excel（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置。 有关详细信息，请参阅 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)。  
   
- 请参阅[导出报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)有关如何将导出到 Excel 的详细信息。  
+ 有关如何导出到 Excel 的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
 > [!IMPORTANT]  
 >  定义 **String**类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 如果报表参数未与查询参数关联，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法、脚本或 URL，并将报表呈现为 Excel 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 -   单元格中的最大字符数限制为 32,767 个。 如果超出此限制，呈现器会显示错误消息。  
   
--   最大行高为 409 磅。 如果行内容导致行高超过 409 磅，Excel 单元格将显示的文本部分量最多 409 磅。 单元格内容的其余部分是 32767 的仍 （最多 Excel 个字符的最大数目） 与单元中。
+-   最大行高为 409 磅。 如果该行内容导致行高超过 409 磅，则 Excel 单元格将显示最多 409 磅的部分文本。 其余的单元格内容仍在单元格内（最多可达 Excel 最大字符数 32,767）。
 
--  因为最大行高为 409 磅，如果定义的报表中的单元格高度是一个大于 409 磅，Excel 会将单元格内容拆分为多个行。
+-  由于最大行高为 409 磅，如果报表中单元格的定义高度大于 409 磅，则 Excel 会将单元格内容拆分为多行。
   
 -   在 Excel 中并没有限定工作表的最大数量，但是诸如内存和磁盘空间等外部因素可能限制工作表的最大数量。  
   
@@ -116,15 +116,15 @@ ms.lasthandoff: 08/09/2017
 ### <a name="report-row-groups-and-column-groups"></a>报表行组和列组  
  当导出到 Excel 时，包含行组或列组的报表包含空单元。 假设一个报表，在上下班路程上对行进行分组。 每个上下班路程可以包含多个客户。 下图显示了此报表。  
   
- ![Reporting Services web 门户中的报表](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services web 门户中的报表")  
+ ![Reporting Services Web 门户中的报表](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services Web 门户中的报表")  
   
  当将报表导出到 Excel 时，上下班路程只出现在“上下班路程”列的一个单元中。 根据文本在报表中的对齐方式（顶部、中、底部），该值将位于第一个单元、中间单元或最后一个单元中。 其他单元为空。 包含客户名称的“名称”列没有空单元。 下图显示了报表导出到 Excel 之后的情况。 添加红色的单元边界是为了进行强调。 灰色框是空单元格。 （红色线条和灰色框都不是报表导出的一部分。）  
   
- ![报表导出到 Excel，具有行](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "报表导出到 Excel，具有行")  
+ ![导出到 Excel 的报表（带线条）](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "导出到 Excel 的报表（带线条）")  
   
  这意味着，对于具有行组或列组的报表而言，在将其导出到 Excel 之后，必须先进行修改，然后才能在透视表中显示导出的数据。 必须在缺少组值的单元中添加组值，以使工作表成为在所有单元中均具有值的平面表。 下图显示了更新的工作表。  
   
- ![报表导出到 Excel，平展](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "报表导出到 Excel，平展")  
+ ![导出到 Excel 的报表（已平展）](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "导出到 Excel 的报表（已平展）")  
   
  因此如果创建某个报表的目的是为了将此报表导出到 Excel 以便对报表数据进行进一步分析，请考虑不要对报表中的行或列进行分组。  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。  
   
--   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[本地模式与。报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式报表和的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果将 **Excel 2003** 菜单选项呈现器配置为可见，则 Excel 和 Excel 2003 选项可用于以下方案中：  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 08/09/2017
   
  图表、迷你图、数据条、地图、仪表和指示器导出为图片。 它们所描绘的数据（例如图表的值和成员标签）不随它们一起导出，并且在数据包括在报表内数据区域中的列或行中之前不可用于 Excel 工作簿中。  
   
- 如果您想要使用图表、迷你图、数据条、地图、仪表和指示器数据，请将报表导出到 .csv 文件中或者从报表生成与 Atom 兼容的数据馈送。 有关详细信息，请参阅[将导出到 CSV 文件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)和[从报表 &#40; 生成数据馈送报表生成器和 SSRS &#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ 如果您想要使用图表、迷你图、数据条、地图、仪表和指示器数据，请将报表导出到 .csv 文件中或者从报表生成与 Atom 兼容的数据馈送。 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)和[从报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="page-sizing"></a>确定页大小  
  Excel 呈现扩展插件采用页面高度和宽度设置来确定要在 Excel 工作表中定义哪些纸张设置。 Excel 会试图将 PageHeight 和 PageWidth 属性设置与最常用的一种纸张大小相匹配。  
@@ -200,7 +200,7 @@ ms.lasthandoff: 08/09/2017
  如果未找到匹配项，Excel 将使用打印机的默认页面大小。 如果页面宽度小于页面高度，则将页面方向设置为“纵向”；否则，将方向设置为“横向”。  
   
 ##  <a name="WorksheetTabNames"></a> 工作表选项卡名称  
- 将报表导出到 Excel 时，将分页符创建的报表页导出到不同的工作表。 如果您提供了报表的初始页名称，默认情况下 Excel 工作簿的每个工作表将具有此名称。 此名称显示在工作表选项卡上。 不过，由于工作簿的每个工作表必须具有唯一的名称，因此从第二个工作表开始会将一个整数追加到每个工作表的初始页名称，从 1 开始追加，每增加一个工作表，该整数递增 1。 例如，如果初始页名称为 **Sales Report by Fiscal Year**，则第二个工作表的名称为 **Sales Report by Fiscal Year1**，第三个工作表的名称为 **Sales Report by Fiscal Year2**，依次类推。  
+ 将报表导出到 Excel 时，将分页符创建的报表页导出到不同的工作表。 如果您提供了报表的初始页名称，默认情况下 Excel 工作簿的每个工作表将具有此名称。 此名称显示在工作表选项卡上。不过，由于工作簿的每个工作表必须具有唯一的名称，因此从第二个工作表开始会将一个整数追加到每个工作表的初始页名称，从 1 开始追加，每增加一个工作表，该整数递增 1。 例如，如果初始页名称为 **Sales Report by Fiscal Year**，则第二个工作表的名称为 **Sales Report by Fiscal Year1**，第三个工作表的名称为 **Sales Report by Fiscal Year2**，依次类推。  
   
  如果分页符创建的所有报表页都提供新页名称，每个工作表将具有相关的页名称。 但是，这些页名称可能不唯一。 如果页名称不唯一，按与初始页名称相同的方式来命名工作表。 例如，如果两个组的页名称是 **Sales for NW**，则一个工作表选项卡将具有名称 **Sales for NW**，另一个工作表选项卡具有名称 **Sales for NW1**。  
   
@@ -255,7 +255,7 @@ ms.lasthandoff: 08/09/2017
   
  文档结构图大纲呈现为可折叠的 Excel 大纲。 大纲结构与文档结构图的嵌套结构相匹配。 大纲的扩展和折叠状态从第二级开始。  
   
- 地图的根节点是报表名称， \< *reportname*>.rdl，并且它不是交互。 文档结构图链接字体是宋体 (10pt)。  
+ 结构图的根节点是报表名称 \<reportname>.rdl，它是不可交互的。 文档结构图链接字体是宋体 (10pt)。  
   
 ### <a name="drillthrough-links"></a>钻取链接  
  文本框中出现的钻取链接在用于呈现文本的单元格中呈现为 Excel 超链接。 图像和图表的钻取链接在呈现的图像上呈现为 Excel 超链接。 单击钻取链接时，将打开客户端的默认浏览器并导航到目标的 HTML 视图。  
@@ -273,11 +273,10 @@ ms.lasthandoff: 08/09/2017
  如果某个报表必须以多种格式呈现，并且不可能创建以您所需的所有格式呈现的报表布局，则可以考虑使用 RenderFormat 内置全局属性中的值，在运行时有条件地更改报表外观。 这样，您可以根据用于在每种格式中获取最佳结果的呈现器，隐藏或显示报表项。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services &#40; 中的分页报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展 &#40; 的交互功能报表生成器和 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

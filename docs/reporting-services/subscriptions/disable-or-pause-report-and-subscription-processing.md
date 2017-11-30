@@ -1,5 +1,5 @@
 ---
-title: "禁用或暂停报表和订阅处理 |Microsoft 文档"
+title: "禁用或暂停报表和订阅处理 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2015
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7c8a74891d7629293de30b0929e323febec0ac17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>禁用或暂停报表和订阅处理
   可采用多种方法禁用或暂停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和订阅处理。 本主题中的方法从禁用订阅延伸到中断数据源连接。 并非所有方法在两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式下都可行。下表概述了各种方法以及支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式：  
@@ -53,9 +52,9 @@ ms.lasthandoff: 08/09/2017
 > [!TIP]  
 >  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中的新增功能！ **启用和禁用订阅**。 新用户界面选项允许你快速禁用和启用订阅。 已禁用的订阅将维持自身的其他配置属性（例如计划），并且可以轻松地启用。 你也可以通过编程方式启用和禁用订阅或者审核哪些订阅已禁用。  
   
- ![reporting services 订阅功能区](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "reporting services 订阅功能区")  
+ ![报表服务订阅功能区](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "报表服务订阅功能区")  
   
- 在本机模式报表管理器中，从“我的订阅”  页或单个订阅的“管理”  页浏览到订阅。 选择一个或多个订阅，然后单击任一禁用![禁用 reporting services 订阅](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "禁用 reporting services 订阅")按钮或启用按钮![启用 reporting services 订阅](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "启用 reporting services 订阅")功能区上。 已禁用的订阅标记为警告图标![状态警告的 reporting services subscriptio](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "状态警告的 reporting services subscriptio")并且状态被列为**禁用**。  
+ 在本机模式报表管理器中，从“我的订阅”  页或单个订阅的“管理”  页浏览到订阅。 在功能区中选择一个或多个订阅，然后单击“禁用”按钮 ![禁用报表服务订阅](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "禁用报表服务订阅") 或“启用”按钮 ![启用报表服务订阅](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "启用报表服务订阅")。 禁用的订阅标记有警告图标 ![报表服务订阅的状态警告](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "报表服务订阅的状态警告")，且状态被列为“已禁用”。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 会在禁用订阅时在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志中写入一行，在启用订阅时另外写入一行。 例如，在报表服务器日志文件中：  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
   
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 禁用单个订阅：**使用以下 PowerShell 脚本来禁用特定的订阅。 更新服务器名称和订阅 ID。  
+ ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 使用 Windows PowerShell 禁用单个订阅：使用以下 PowerShell 脚本禁用特定订阅。 更新服务器名称和订阅 ID。  
   
 ```  
 #disable specific subscription  
@@ -87,7 +86,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell，若要列出所有已禁用的订阅：**使用以下 PowerShell 脚本以列出所有当前的本机模式报表服务器上已禁用的订阅。 更新服务器名称。  
+ ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 使用 Windows PowerShell 列出所有已禁用的订阅：使用以下 PowerShell 脚本列出当前本机模式报表服务器上所有已禁用的订阅。 更新服务器名称。  
   
 ```  
 #list all disabled subscriptions  
@@ -98,7 +97,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell 启用所有已禁用的订阅：**使用以下 PowerShell 脚本启用当前已禁用的所有订阅。 更新服务器名称。  
+ ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 使用 Windows PowerShell 启用所有已禁用的订阅：使用以下 PowerShell 脚本启用当前已禁用的所有订阅。 更新服务器名称。  
   
 ```  
 #enable all subscriptions  
@@ -112,7 +111,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")**使用 Windows PowerShell，若要禁用所有订阅：**使用以下 PowerShell 脚本列表禁用**所有**订阅。  
+ ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 使用 Windows PowerShell 禁用所有订阅：使用以下 PowerShell 脚本禁用所有订阅。  
   
 ```  
 #DISABLE all subscriptions  
@@ -128,7 +127,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> 暂停共享计划  
  如果报表或订阅按照某个共享计划运行，您可以通过暂停该计划来阻止这些报表或订阅的处理。 在恢复计划之前，会延迟由该计划驱动的所有报表和订阅处理。  
   
--   **SharePoint 模式：** ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")中**站点设置**，选择**管理共享计划**。 选择计划，并单击“暂停所选计划” 。  
+-   SharePoint 模式：在“站点设置” ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置") 中，选择“管理共享计划”。 选择计划，并单击“暂停所选计划” 。  
   
 -   **本机模式：** 在报表管理器中，单击“站点设置” 。 选择计划，然后单击“暂停” 。  
   
@@ -137,7 +136,7 @@ ForEach ($subscription in $subscriptions)
   
  请注意，即使数据源不可用，你也仍可加载相应的报表。 该报表不包含任何数据，但具有适当权限的用户可以访问与该报表关联的属性页、安全设置、报表历史记录和订阅信息。  
   
--   **SharePoint 模式：** 若要在 SharePoint 模式报表服务器中禁用共享数据源，请浏览到包含该数据源的文档库。 ![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")单击数据源，然后清除**启用此数据源**复选框。  
+-   **SharePoint 模式：** 若要在 SharePoint 模式报表服务器中禁用共享数据源，请浏览到包含该数据源的文档库。 ![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon") 单击数据源，然后清除“启用此数据源”复选框。  
   
 -   **本机模式：** 若要在本机模式报表服务器中禁用共享数据源，请在报表管理器中打开相应的数据源，再清除“启用此数据源”  复选框。  
   
@@ -173,10 +172,9 @@ ForEach ($subscription in $subscriptions)
 ## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [配置报表管理器 &#40;本机模式 &#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
- [Reporting Services 报表服务器 &#40;本机模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [安全属性页上，项 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [配置报表管理器（本机模式）](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [项的“安全性”属性页（报表管理器）](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
-

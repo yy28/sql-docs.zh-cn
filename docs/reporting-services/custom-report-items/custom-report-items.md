@@ -1,5 +1,5 @@
 ---
-title: "自定义报表项 |Microsoft 文档"
+title: "自定义报表项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,28 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - extending Reporting Services
 - Reporting Services, extending
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: d50b011363826860678b6b7c503d2ecea01a89cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-report-items"></a>自定义报表项
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供大量工具，用于生成和发布企业报表，管理安全性和订阅，以及通过全面的 API 扩展报表功能。 报表使用称作报表定义语言 (RDL) 的基于 XML 的语言定义。 RDL 提供一组指令，用于描述报表的布局、查询信息和项类型。 可以通过编写自定义报表项来扩展 RDL。 自定义报表项由运行时组件（由报表处理器在运行时调用）和设计时组件（允许在报表设计器中使用该自定义报表项）构成。  
   
- 完全实现的自定义报表项的示例，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 有关完全实现的自定义报表项的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="custom-report-item-scenarios"></a>自定义报表项应用场景  
  需要将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到其应用程序中的开发人员可能要求在 RDL 中不固有支持的功能。 这可能包括如下项：映射控件、水平列表、垂直列表和透视表矩阵。 可以开发运行时自定义报表项组件并向应用程序分发，以便满足此需求。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/12/2017
  [自定义报表项体系结构](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
  描述组成自定义报表项的组件。  
   
- [自定义报表项的实现要求](../../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md)  
+ [自定义报表项实现要求](../../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md)  
  描述用于创建自定义报表项的先决条件。  
   
  [创建自定义报表项运行时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)  
@@ -51,13 +50,13 @@ ms.lasthandoff: 08/12/2017
  [创建自定义报表项设计时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  描述如何创建自定义报表项设计时组件。  
   
- [如何︰ 部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  描述如何部署自定义报表项。  
   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
- 描述自定义报表项基础结构类和中的托管的包装类**Microsoft.ReportDesigner**命名空间。  
+ 描述 Microsoft.ReportDesigner 命名空间中的自定义报表项基础结构类和托管包装类。  
   
 ## <a name="see-also"></a>另请参阅  
- [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)  
   
   

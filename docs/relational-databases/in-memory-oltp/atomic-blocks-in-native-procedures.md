@@ -1,28 +1,31 @@
 ---
 title: "ATOMIC 块 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ebc75200894e27976911f2c7413e027fbb1c5b14
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40d88b09043e3b21326dde6cb85ced071f2b89b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **BEGIN ATOMIC** 属于 ANSI SQL 标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持顶级本机编译存储过程的 ATOMIC 块，以及本机编译的标量用户定义函数。 有关这些函数的详细信息，请参阅 [内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
 -   每个本机编译的存储过程都恰好包含一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句块。 这个语句块是原子块。  
@@ -128,7 +131,7 @@ ORDER BY c1
 GO  
 ```  
   
- 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332 和 41333。  
+ 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332、41333 和 41839。  
   
 ## <a name="session-settings"></a>会话设置  
  在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 **BEGIN ATOMIC** 指定，而其他设置则始终固定为相同值。  
@@ -170,4 +173,3 @@ GO
  [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

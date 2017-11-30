@@ -1,5 +1,5 @@
 ---
-title: "创建文档结构图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "创建文档结构图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0dc1672f1c03db4e7e5b4d7a6a8e11e9f6a9a66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
 
 文档结构图提供了一组指向所呈现报表中的报表项的导航链接。 当您查看包含文档结构图的报表时，将在报表旁显示一个单独的侧窗格。 用户通过单击文档结构图中的链接，可跳至显示报表项的报表页。 报表的各区域和组将按一定层次结构的链接形式排列。 单击文档结构图中的项会刷新报表，并显示与文档结构图中所单击项对应的报表区域。  
@@ -117,10 +115,9 @@ ms.lasthandoff: 08/09/2017
 4.  将此 URL 粘贴到报表管理器中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
   
 > [!NOTE]  
->  有关下载示例报表的详细信息，请参阅[报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  有关下载示例报表的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
 >  有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
 
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

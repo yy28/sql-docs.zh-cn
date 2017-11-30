@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services SharePoint 服务和服务应用程序 |Microsoft 文档"
+title: "Reporting Services SharePoint 服务和服务应用程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 3b0351819369c0c17a5f97318b1132c69ec71432
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f46395b33312f778b202c166870cf53d8da8012f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服务和服务应用程序
 
@@ -27,16 +26,16 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Reporting Services SharePoint 模式的体系 SharePoint 服务体系结构，并利用 SharePoint 服务和一对多服务应用程序。 创建服务应用程序将使该服务可用并生成服务应用程序数据库。 您可以创建多个 Reporting Services 服务应用程序，但一个服务应用程序已足以用于大多数部署方案。  
+  Reporting Services SharePoint 模式的体系结构以 SharePoint 服务体系结构为基础，并利用 SharePoint 服务和一对多服务应用程序。 创建服务应用程序将使该服务可用并生成服务应用程序数据库。 您可以创建多个 Reporting Services 服务应用程序，但一个服务应用程序已足以用于大多数部署方案。  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
 ## <a name="creating-a-reporting-services-service-application"></a>创建 Reporting Services 服务应用程序
 
- 你可以使用 SharePoint 管理中心或 PowerShell 脚本来创建 Reporting Services 服务应用程序。 有关使用 SharePoint 管理中心的详细信息，请参阅中的"创建 Reporting Services Service Application"部分[安装 Reporting Services SharePoint 模式用于 SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。 有关创建服务应用程序的示例 PowerShell 脚本，请参阅本主题中后面的 PowerShell 部分。  
+ 可以使用 SharePoint 管理中心或 PowerShell 脚本创建 Reporting Services 服务应用程序。 有关如何使用 SharePoint 管理中心的详细信息，请参阅[安装 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)中的“创建 Reporting Services 服务应用程序”一节。 有关创建服务应用程序的示例 PowerShell 脚本，请参阅本主题中后面的 PowerShell 部分。  
   
-## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>修改代理服务器组的服务应用程序的关联
+## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>修改服务应用程序与代理服务器组的关联
 
  创建服务应用程序的“新建”页包含 **“Web 应用程序关联”**部分。 此部分允许您在创建服务应用程序时对其进行关联。 使用以下步骤可更改关联和将客户配置分配给服务应用程序。 还可以使用相同的常规过程将代理添加到默认组，而不是更改服务应用程序与自定义组的关联。  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  在“服务应用程序关联”页中，将视图更改为 **“服务应用程序”**。  
   
-3.  找到并单击新的 Reporting Services 服务应用程序的名称。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
+3.  找到并单击新 Reporting Services 服务应用程序的名称。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
   
 4.  在 **“编辑以下连接组”** 选择框中，选择 **自定义**。  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  在“服务应用程序”功能区中，单击 **“属性”**。  
   
-## <a name="create-a-reporting-services-service-application-using-powershell"></a>创建 Reporting Services 服务应用程序使用 PowerShell
+## <a name="create-a-reporting-services-service-application-using-powershell"></a>使用 PowerShell 创建 Reporting Services 服务应用程序
 
  您可以使用 PowerShell 创建服务应用程序和代理。 下面的示例假定您知道要配置服务应用程序使用的应用程序池。  
   
@@ -90,4 +89,3 @@ ms.lasthandoff: 10/06/2017
 |备份和还原服务应用程序及相关的组件，如加密密钥和代理。|[备份和还原 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

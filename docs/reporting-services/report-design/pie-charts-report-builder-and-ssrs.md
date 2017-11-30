@@ -1,5 +1,5 @@
 ---
-title: "饼图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "饼图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b7f623c58e745f8509f27adc21076c1b15d36f53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
-  饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。 形状图的详细信息，请参阅[形状图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。 有关形状图的详细信息，请参阅[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。  
   
  下图显示了带有百分比格式的数据标签的三维饼图。  图例位于右侧中间位置。  
   
- ![饼图](../../reporting-services/report-design/media/piechart.gif "饼形图")  
+ ![饼图](../../reporting-services/report-design/media/piechart.gif "Pie chart")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,14 +63,14 @@ ms.lasthandoff: 08/09/2017
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>对饼图应用绘制样式  
  您可以向饼图添加特殊的绘制样式以增强其视觉效果。 绘制样式包括凹凸效果和凹陷效果。 这些效果仅可在二维饼图上使用。 下图显示了饼图上的凹凸绘制样式和凹陷绘制样式示例。  
   
- ![饼图绘制样式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "饼图绘制样式")  
+ ![饼图绘制样式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "Pie Drawing Styles")  
   
- 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。     
+ 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>在饼图上显示百分比值  
  与其他形状图类似，饼图表示整体的各部分比例。 因此，通常将饼图标签设置为百分比格式。 为与其他图表类型保持一致，默认情况下图表不显示百分比标签。 有关如何在图表上将值显示为百分比的详细信息，请参阅 [在饼图上显示百分比值（报表生成器和 SSRS）](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 有关如何在报表中将数字设置为百分比格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
- ![饼图数据点标签以百分比形式](../../reporting-services/report-design/media/rs-piechartpercentages.gif "饼图数据点标签以百分比形式")  
+ ![将数据点标签显示为百分比的饼图](../../reporting-services/report-design/media/rs-piechartpercentages.gif "Pie chart with data point labels as percentages")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>防止饼图上的标签重叠  
  如果饼图上有许多数据点，数据标签将会重叠。 有几种方法可避免标签重叠：  
@@ -93,12 +92,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [在饼图外显示数据点标签（报表生成器和 SSRS）](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [收集饼图 &#40; 上的小切片报表生成器和 SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [在饼图 &#40; 上显示百分比值报表生成器和 SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [收集饼图上的小切片（报表生成器和 SSRS）](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图上显示百分比值（报表生成器和 SSRS）](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [教程：向报表添加饼图（报表生成器）](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [格式设置的图例的图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [图表 &#40; 中的空和 Null 数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [设置图表上图例的格式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [图表中的空点和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

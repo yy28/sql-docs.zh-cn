@@ -1,27 +1,25 @@
 ---
-title: "教程： 将饼形图添加到报表 （报表生成器） |Microsoft 文档"
+title: "教程：向报表添加饼图（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f48e91fcf3ea24bacaf71649db1cb4d92c7f6962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
 在本教程中，将在 Reporting Services 分页报表中创建饼图。 添加百分比，并将小切片合并为一个切片。
@@ -35,11 +33,11 @@ ms.lasthandoff: 08/09/2017
 如果饼图上有太多数据点，这些数据点就可能挤在一起，这会降低图表的可读性。 在这种情况下，请考虑将多个小切片组合成一个更大的切片。 将数据聚合到少量数据点之后，饼图更具可读性。  
  
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程。 有关分步说明有关如何浏览到报表服务器上，添加数据源，并添加数据集，请参阅本系列第一个教程：[教程： 创建基本表报表 &#40;报表生成器 &#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 在本教程中，将向导的多个步骤合并为两个过程。 有关如何浏览到报表服务器、添加数据源和添加数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：10 分钟  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.使用图表向导创建饼图  
@@ -54,11 +52,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击**图表向导**。  
+3.  在右窗格中，单击“图表向导”。  
   
-4.  上**选择的数据集**页上，单击**创建数据集**，然后单击**下一步**。  
+4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”。  
   
-5.  上**选择数据源的连接**页上，选择现有的数据源或浏览到报表服务器并选择数据源，，然后单击**下一步**。 您可能需要输入用户名和密码。  
+5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -83,19 +81,19 @@ ms.lasthandoff: 08/09/2017
   
 8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 ## <a name="ChartType"></a>2.选择图表类型  
 可以从各种预定义的图表类型中进行选择。  
 
   
-1.  上**选择图表类型**页上，单击**饼图**，然后单击**下一步**。 **排列图表字段**页将打开。  
+1.  在“选择图表类型”页中，单击“饼图”，然后单击“下一步”。 将打开“排列图表字段”页。  
   
-    上**排列图表字段**页上，产品将字段拖动到**类别**窗格。 类别定义了饼图上的切片数。 在本示例中，将有 8 个切片，每个产品对应一个切片。  
+    在“排列图表字段”页上，将“Product”字段拖到“类别”窗格中。 类别定义了饼图上的切片数。 在本示例中，将有 8 个切片，每个产品对应一个切片。  
   
-2.  销售将字段拖动到**值**窗格。 Sales 表示子类别的销售量。 **值**窗格显示`[Sum(Sales)]`因为图表中显示每个产品的聚合。  
+2.  将“Sales”字段拖到“值”窗格中。 Sales 表示子类别的销售量。 “值”窗格显示 `[Sum(Sales)]`，因为该图表显示的是每个产品的销售总额。  
   
-3.  单击**下一步**以进行预览。  
+3.  单击“下一步”查看预览。  
   
 5.  单击 **“完成”**。  
   
@@ -117,18 +115,18 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到报表设计视图。  
   
-2.  右键单击饼图，单击**显示数据标签**。 数据标签会显示在图表上。  
+2.  右键单击饼图，然后单击“显示数据标签”。 数据标签会显示在图表上。  
   
-3.  右击标签，然后单击**序列标签属性**。  
+3.  右键单击标签，然后单击“序列标签属性”。  
   
 4.  在“标签数据”框中，选择“#PERCENT”。  
     
-5.  （可选）若要指定多少小数将标签置于所示，在**标记数据**后框中**#PERCENT**，类型**{Pn}**其中 *n* 是要显示的小数数字。 例如，若不显示小数位数，请键入 **#PERCENT{P0}**。  
+5.  （可选）若要指定标签显示的小数位数，在“标签数据”框的“#PERCENT”后面键入“{Pn}”，其中 n 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}**。  
 
-6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值**确认操作**对话框中，单击**是**。  
+6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”对话框中单击“是”。  
   
     > [!NOTE]  
-    > **数字格式**中**序列标签属性**格式百分比时，对话框中将没有任何作用。 它将标签的格式设置为百分比，但不会计算每一切片占饼图的百分比。  
+    > 设置百分比格式时，“序列标签属性”对话框中的“数字格式”不起作用。 它将标签的格式设置为百分比，但不会计算每一切片占饼图的百分比。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -143,21 +141,21 @@ ms.lasthandoff: 08/09/2017
 
 1.  切换到报表设计视图。  
   
-2.  如果属性窗格中未显示，在**视图**选项卡 >**显示/隐藏**组 > 选择**属性**。  
+2.  如果看不到“属性”窗格，请在“视图”选项卡的“显示/隐藏”组中选择“属性”。  
   
 3.  在设计图面上，单击饼图的任一切片。 序列的属性将显示在“属性”窗格中。  
   
 4.  在 **“常规”** 部分，展开 **CustomAttributes** 节点。  
   
-5.  设置**CollectedStyle**属性**SingleSlice**。  
+5.  将“CollectedStyle”属性设置为“SingleSlice”。  
 
     ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
-6.  验证**CollectedThreshold**属性设置为 5。  
+6.  确保将“CollectedThreshold”属性设置为“5”。  
   
-7.  验证**CollectedThresholdUsePercent**属性设置为**True**。  
+7.  确保将“CollectedThresholdUsePercent”属性设置为“True”。  
   
-8.  上**主页**选项卡上，单击**运行**以预览报表。  
+8.  在“主文件夹”选项卡上，单击“运行”以预览报表。  
   
 现在，在图例中可看到类别“其他”。 新饼图切片将所有小于 5% 的切片组合成一个占整个饼图 6% 的切片。  
 
@@ -173,7 +171,7 @@ ms.lasthandoff: 08/09/2017
 
 2. 选择饼图本身。
 
-3. 在属性窗格中，在**自定义特性**，更改从 PieStartAngle **0**到**270**。
+3. 在“属性”窗格中，“自定义属性”下，将“PieStartAngle”从“0”更改为“270”。
 
 4. 单击 **“运行”** 以预览报表。
 
@@ -187,7 +185,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在图表中，选择“图表标题”框，然后按 Delete。
 
-2. n 设计图面上，单击**单击此处添加标题**。  
+2. 在设计图面上，单击“单击以添加标题”。  
   
 2.  键入 **Camera and Camcorder Sales**，按 Enter，然后键入 **As a Percentage of Total Sales**，如下所示：  
   
@@ -197,7 +195,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  选择 **Camera and Camcorder Sales**，然后在“开始”选项卡上的“字体”部分，单击“加粗”。  
   
-4.  选择**作为百分比的总销售额**，然后在**主页**选项卡 >**字体**部分 > 将字体大小设置为**10**。  
+4.  选择“As a Percentage of Total Sales”，然后在“开始”选项卡上的“字体”部分中，将字号设置为“10”。  
   
 5.  （可选）您可能需要使“标题”文本框更高一些，以容纳两行文本。  
   
@@ -213,18 +211,17 @@ ms.lasthandoff: 08/09/2017
   
 2.  在“文件”菜单上，单击“保存”。  
   
-3.  在**名称**，类型**Sales Pie Chart**。  
+3.  在“名称”中，键入“Sales Pie Chart”。  
   
 4.  单击 **“保存”**。  
   
 报表将保存在报表服务器上。  
   
 ## <a name="next-steps"></a>后续步骤  
-这样，您就成功完成了“向报表添加饼图”教程的学习。 若要了解有关图表的详细信息，请参阅[图表 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+这样，您就成功完成了“向报表添加饼图”教程的学习。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

@@ -1,34 +1,34 @@
 ---
 title: "使用 AlwaysOn 可用性组仪表板 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 可用性组仪表板 (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   数据库管理员使用 AlwaysOn 可用性组仪表板大致了解 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的可用性组及其可用性副本和数据库的运行状况。 可用性组仪表板的一些典型用法如下：  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  群集的名称和状态，所连接的服务器实例和可用性组都是该群集的成员节点。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性副本详细信息  
- **“可用性副本”** 窗格显示以下列：  
+
+连接到主要副本时，“可用性副本详细信息”会显示可用性组中所有副本中的信息。 连接到次要副本时，显示内容仅显示已连接副本中的信息。  
+
+**“可用性副本”** 窗格显示以下列：  
   
  **名称**  
  承载可用性副本的服务器实例的名称。 默认情况下显示此列。  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "交互式排序、 文档结构图和链接 （报表生成器和 SSRS） |Microsoft 文档"
+title: "交互式排序、文档结构图和链接（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 304da15a594fff8a68074b1b1ff172c0b8eac2bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>交互式排序、文档结构图和链接（报表生成器和 SSRS）
   在基于 Web 的环境中，您可以添加许多让用户与报表进行交互的功能。 用户可以更改报表中值的排序顺序，在报表中显示或隐藏某些项，或者单击其中的链接以访问其他报表或网页。 还可以添加目录或文档结构图。 报表用户只需单击目录或文档结构图中的项，即可跳至报表内的相应区域。  
@@ -41,20 +41,20 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>本節內容  
- [交互式排序 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>本节内容  
+ [交互式排序（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  介绍如何将交互排序按钮添加到列标题。  
   
- [创建文档结构图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [创建文档结构图（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  介绍如何添加目录以支持在大型报表中导航。  
   
- [将书签添加到报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [向报表添加书签（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  说明如何添加书签以在报表内创建链接。  
   
- [将超链接添加到 URL &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [向 URL 添加超链接（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  说明如何添加从报表指向 URL 的链接。  
   
 ## <a name="see-also"></a>另请参阅  
- [钻取、 深化、 子报表和嵌套的数据区域和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

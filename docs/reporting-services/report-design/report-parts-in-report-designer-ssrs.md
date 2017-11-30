@@ -1,5 +1,5 @@
 ---
-title: "报表部件在报表设计器 (SSRS) |Microsoft 文档"
+title: "报表设计器中的报表部件 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
 
   在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。  
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  部署报表。  
   
- 在您部署报表时，报表部件将发布到某一 SharePoint 站点或报表服务器，并且其他人可以重复使用它。 若要发布报表部件，你必须具有足够的权限并连接到报表服务器上部署报表时。  
+ 在您部署报表时，报表部件将发布到某一 SharePoint 站点或报表服务器，并且其他人可以重复使用它。 若要发布某一报表部件，在部署报表时，必须具有与某一报表服务器的连接并且对其具有足够的权限。  
   
   
 ##  <a name="SearchReuseComponents"></a> 重复使用报表部件  
@@ -101,5 +98,4 @@ ms.lasthandoff: 08/09/2017
 
 [管理报表部件](../../reporting-services/report-design/managing-report-parts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

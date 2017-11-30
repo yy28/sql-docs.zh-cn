@@ -4,45 +4,45 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>联机索引操作的工作方式
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题将定义联机索引操作中存在的结构，并显示与这些结构相关联的活动。  
   
 ## <a name="online-index-structures"></a>联机索引结构  
- 为了在索引数据定义语言 (DDL) 操作期间允许执行并发用户活动，在在线索引操作期间使用了以下结构：源和预先存在的索引、目标以及一个临时映射索引（用于在线重新生成堆或删除聚集索引）。  
+ 为了在索引数据定义语言 (DDL) 操作期间允许执行并发用户活动，在联机索引操作期间使用了以下结构：源和预先存在的索引、目标以及一个临时映射索引（用于联机重新生成堆或删除聚集索引）。  
   
 -   **源和预先存在的索引**  
   
      源是指原始表或聚集索引数据。 预先存在的索引是指与源结构相关联的任何非聚集索引。 例如，如果联机索引操作正在重新生成一个与四个非聚集索引相关联的聚集索引，则源就是现有的聚集索引，而预先存在的索引就是这些非聚集索引。  
   
-     多个用户可以同时对预先存在的索引执行选择、插入、更新和删除操作。 这包括通过触发器和引用完整性约束执行的大容量插入（支持但不建议执行）和隐式更新。 所有预先存在的索引都可进行查询和搜索。 这意味着查询优化器可以选择预先存在的索引，如有必要，还可以在索引提示中指定预先存在的索引。  
+     多名用户可以同时对预先存在的索引执行选择、插入、更新和删除操作。 这包括通过触发器和引用完整性约束执行的大容量插入（支持但不建议执行）和隐式更新。 所有预先存在的索引都用于查询和搜索。 这意味着查询优化器可以选择预先存在的索引，如有必要，还可以在索引提示中指定预先存在的索引。  
   
 -   **Target**  
   
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/22/2017
   
 |阶段|源活动|源锁|  
 |-----------|---------------------|------------------|  
-|准备<br /><br /> 很短的阶段|准备系统元数据以创建新的空索引结构。<br /><br /> 定义表的一个快照。 即，使用行版本控制提供事务级读一致性。<br /><br /> 对源执行的并发用户写操作将被阻塞一段很短的时间。<br /><br /> 不允许执行并发 DDL 操作（创建多个非聚集索引除外）。|对表的 S（共享）*<br /><br /> IS（意向共享）<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|准备<br /><br /> 短暂的阶段|准备系统元数据以创建新的空索引结构。<br /><br /> 定义表的一个快照。 即，使用行版本控制提供事务级读一致性。<br /><br /> 对源执行的并发用户写操作在短时间内将受到阻止。<br /><br /> 不允许执行并发 DDL 操作（创建多个非聚集索引除外）。|对表的 S（共享）*<br /><br /> IS（意向共享）<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
 |生成<br /><br /> 主要阶段|在大容量加载操作中对数据进行扫描、排序、合并并将数据插入到目标中。<br /><br /> 并发的用户选择、插入、更新和删除操作将被同时应用到预先存在的索引和所有正在生成的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|最后<br /><br /> 很短的阶段|必须完成所有未提交的更新事务，这一阶段才能开始。 根据获取的锁，所有新的用户读/写事务将被阻塞一段很短的时间，直到此阶段完成为止。<br /><br /> 系统元数据将被更新以便用目标替换源。<br /><br /> 如有必要，源将被删除。 例如，在重新生成或删除聚集索引之后。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果创建的是非聚集索引，则为对表的 S。\*<br /><br /> 如果删除了任何源结构（索引或表），则为 SCH-M（架构修改）。\*|  
+|最后<br /><br /> 短暂的阶段|必须完成所有未提交的更新事务，这一阶段才能开始。 根据获取的锁，所有新的用户读/写事务将在短时间内被阻塞，直到此阶段完成为止。<br /><br /> 系统元数据将被更新以便用目标替换源。<br /><br /> 如有必要，源将被删除。 例如，在重新生成或删除聚集索引之后。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果创建的是非聚集索引，则为对表的 S。\*<br /><br /> 如果删除了任何源结构（索引或表），则为 SCH-M（架构修改）。\*|  
   
  \* 索引操作将等待任何未提交的更新事务完成后，才会获取对表的 S 锁或 SCH-M 锁。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
  在完成索引操作之前，不能通过用户发出的 SELECT 语句来访问目标。  
   
- 完成准备阶段和最后阶段之后，存储在过程缓存中的查询和更新计划将失效。 随后的查询将使用新的索引。  
+ 完成准备阶段和最后阶段之后，存储在过程缓存中的查询和更新计划将失效。 后续查询使用新的索引。  
   
  为联机索引操作所涉及的表声明的游标仅在联机索引阶段有效。 更新游标在每个阶段均无效。 只读游标在最后阶段之后才失效。  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

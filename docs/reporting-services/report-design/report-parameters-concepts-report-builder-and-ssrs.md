@@ -1,5 +1,5 @@
 ---
-title: "报表参数概念 （报表生成器和 SSRS） |Microsoft 文档"
+title: "报表参数概念（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 23eac75e6409a45bf8661373bd948774d74871f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb4044deed8935af354e1c6f15ace89f0b3e5010
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>报表参数概念（报表生成器和 SSRS）
   您可以向报表添加参数，以便链接相关报表、控制报表外观、筛选报表数据或者将报表的作用域限制为特定的用户或位置。  
@@ -36,9 +36,9 @@ ms.lasthandoff: 08/09/2017
   
 -   手动方式：当您在“报表数据”窗格中创建报表参数时。 参数是可以在报表的表达式中包含的内置集合之一。 因为使用表达式在整个报表定义中定义值，所以您可以使用参数来控制报表外观或将值传递到相关的子报表或也使用参数的报表。  
   
- 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
- 经常使用参数在将数据返回到报表之前和之后筛选报表数据。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 经常使用参数在将数据返回到报表之前和之后筛选报表数据。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
  当您设计报表时，报表参数保存在报表定义中。 当您发布报表时，报表参数与报表定义分开保存和管理。 在将报表保存到报表服务器之后，可以执行以下操作：  
   
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/09/2017
  如果您计划为发布的报表创建报表快照、历史记录或订阅，则必须了解报表参数如何影响报表的设计需求。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表创作概念 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [教程： 将参数添加到您的报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [教程：向报表添加参数（报表生成器）](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

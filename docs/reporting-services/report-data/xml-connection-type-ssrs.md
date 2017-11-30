@@ -1,5 +1,5 @@
 ---
-title: "XML 连接类型 (SSRS) |Microsoft 文档"
+title: "XML 连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a95a6e93bb34674003530e094e9d4544a8aabfec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ff81c239e4d585678887245afa822059b8ae47e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -128,7 +127,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  
   
- 对于 Web 服务时，你可以提供\<**查询**> 元素，指定到调用或 SOAP 操作的方法。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
+ 对于 Web 服务，可以提供用于指定调用方法或 SOAP 操作的 \<Query> 元素。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>检索 XML 文档数据的要求  
  使用 http 协议时，服务器必须返回 XML 数据，或者 XML 数据必须嵌入 XML **Query** 元素中。 如果您使用 http 协议直接引用 XML 文档，则文档的扩展名必须为 .xml。  
@@ -145,7 +144,7 @@ ms.lasthandoff: 08/09/2017
  若要添加参数，必须通过“ **数据集属性** ”对话框中的 [“参数”](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 页手动创建参数。  
   
 ##  <a name="Remarks"></a> 注释  
- XML 数据扩展插件支持基于 XML 数据（表格格式且不分层）生成报表。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)  
+ XML 数据扩展插件支持基于 XML 数据（表格格式且不分层）生成报表。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)。  
   
  不提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索 XML 文档的内置支持。  
   
@@ -156,7 +155,7 @@ ms.lasthandoff: 08/09/2017
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [将筛选器添加到数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
 ##  <a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
@@ -164,22 +163,21 @@ ms.lasthandoff: 08/09/2017
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [数据连接、 数据源和报表生成器中的连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供有关嵌入数据集和共享数据集的信息。  
   
- [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

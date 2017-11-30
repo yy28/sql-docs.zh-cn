@@ -1,5 +1,5 @@
 ---
-title: "内置的全局和用户引用 （报表生成器和 SSRS） |Microsoft 文档"
+title: "内置的全局和用户引用（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,30 +11,30 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: db369d1d9cd1e8767da8dc25a2a2487f138044d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合的内置全局和用户引用 （报表生成器）
+# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合 - 内置的全局和用户引用（报表生成器）
   内置字段集合包含 **Globals** 和 **User** 集合，表示处理报表时由 Reporting Services 提供的全局值。 **Globals** 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 **User** 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>使用 Globals 集合  
- **Globals** 集合包含报表的全局变量。 这些变量显示在设计图面上，通过带前缀 （& a) （and 符），例如， `[&ReportName]`。 下表对 **Globals** 集合的成员进行了说明。  
+ **Globals** 集合包含报表的全局变量。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&ReportName]`。 下表对 **Globals** 集合的成员进行了说明。  
   
 |**成员**|**类型**|**Description**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|报表开始运行的日期和时间。|  
-|PageNumber|**Integer**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 在矩形、 数据区域、 数据区域组或一个代码图，PageBreak 属性中，分页符的页码将 ResetPageNumber 属性设置为**True**。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
+|PageNumber|**Integer**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 若要为矩形、数据区域、数据区域组或地图在分页符内对页面进行编号，请在“PageBreak”属性上，将“ResetPageNumber”属性设置为“True”。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
 |ReportFolder|**字符串**|包含该报表的文件夹的完整路径。 它不包括报表服务器 URL。|  
 |ReportName|**字符串**|报表存储在报表服务器数据库中的名称。|  
 |ReportServerUrl|**字符串**|正在运行该报表的报表服务器的 URL。|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>使用 User 集合  
- **User** 集合包含运行报表的用户的相关数据。 可以使用此集合筛选报表中显示的数据，例如，仅显示当前用户的数据或显示 UserID（如在报表标题中）。 这些变量显示在设计图面上，通过带前缀 （& a) （and 符），例如， `[&UserID]`。  
+ **User** 集合包含运行报表的用户的相关数据。 可以使用此集合筛选报表中显示的数据，例如，仅显示当前用户的数据或显示 UserID（如在报表标题中）。 在设计图面上，这些变量显示为带有前缀 &（& 号），例如 `[&UserID]`。  
   
  下表对 **User** 集合的成员进行了说明。  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [表达式对话框 &#40;报表生成器 &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [表达式 &#40; 中的数据类型报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [格式设置数字和日期 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [“表达式”对话框（报表生成器）](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "呈现数据 （报表生成器和 SSRS） |Microsoft 文档"
+title: "呈现数据（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
-ms.contentlocale: zh-cn
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>呈现数据（报表生成器和 SSRS）
   使用 HTML、MHTML、Word、Excel、PDF 或 Image 之类的布局呈现器时，数据和其组织保持不变。 当使用逗号分隔值 (CSV) 或 XML 之类的数据呈现器格式导出时，不会呈现任何可视布局元素。 呈现报表时，CSV 和 XML 会将某些规则应用到表体及其内容。 这些规则用于确定数据在这些格式中的呈现方式。  
@@ -47,17 +46,16 @@ ms.lasthandoff: 11/07/2017
   
 -   DataElementStyle 属性用于控制在 XML 中是否将报表项呈现为元素或特性。  
   
- CSV 导出选项可将报表数据另存为不带任何格式的以逗号分隔的纯文本文件。 默认情况下，文件使用逗号 (,) 分隔各个字段和行，但可以使用设备信息设置配置此设置。 生成的文件可以用电子表格程序（如 Office SharePoint Server）打开，也可以用作其他程序的导入格式。 .csv 文件可在诸如记事本之类的文本编辑器中打开。 如果以 URL 形式进行访问，则 .csv 文件将返回 **text/csv**的 MIME 类型。 这种 .csv 文件为 MIME 1.0 版文件。 有关呈现在 CSV 文件中键入报表的详细信息，请参阅[将导出到 CSV 文件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
+ CSV 导出选项可将报表数据另存为不带任何格式的以逗号分隔的纯文本文件。 默认情况下，文件使用逗号 (,) 分隔各个字段和行，但可以使用设备信息设置配置此设置。 生成的文件可以用电子表格程序（如 Office SharePoint Server）打开，也可以用作其他程序的导入格式。 .csv 文件可在诸如记事本之类的文本编辑器中打开。 如果以 URL 形式进行访问，则 .csv 文件将返回 **text/csv**的 MIME 类型。 这种 .csv 文件为 MIME 1.0 版文件。 有关以 CSV 文件类型呈现报表的详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
   
- 使用具有报表数据导出选项的 XML 文件可将报表另存为 XML 文件。 报表的 XML 架构特定于报表。 XML 导出选项不保存报表布局信息。 使用此选项生成的 XML 可以导入到数据库、用作 XML 数据消息或发送到自定义应用程序。 有关呈现在 XML 文件中键入报表的详细信息，请参阅[将导出到 XML &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
+ 使用具有报表数据导出选项的 XML 文件可将报表另存为 XML 文件。 报表的 XML 架构特定于报表。 XML 导出选项不保存报表布局信息。 使用此选项生成的 XML 可以导入到数据库、用作 XML 数据消息或发送到自定义应用程序。 有关以 XML 文件类型呈现报表的详细信息，请参阅[导出到 XML（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services 设备信息设置](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
-

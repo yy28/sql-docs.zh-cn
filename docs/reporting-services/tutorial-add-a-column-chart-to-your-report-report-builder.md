@@ -1,28 +1,25 @@
 ---
-title: "教程： 将一个柱形图添加到报表 （报表生成器） |Microsoft 文档"
+title: "教程：向报表添加柱形图（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
 本教程中将创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，该报表包含一个柱形图，将序列显示为一组按类别分组的垂直条。 
@@ -37,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：15 分钟。  
   
@@ -52,11 +49,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-chart-report"></a>创建图表报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  在“设计查询”页中，单击“编辑为文本”。  
+6.  在“设计查询”页上，单击“编辑为文本”。  
   
 7.  将以下查询粘贴到查询窗格中：  
   
@@ -94,20 +91,20 @@ ms.lasthandoff: 08/09/2017
   
 8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 ## <a name="ChartType"></a>2.选择图表类型  
 可从几种预定义的图表类型中进行选择，完成向导后可修改图表。  
   
 ### <a name="to-add-a-column-chart"></a>添加柱形图  
   
-1.  在“选择图表类型”页上，柱形图为默认图表类型。 单击“下一步” 。  
+1.  在“选择图表类型”页上，柱形图为默认图表类型。 单击 **“下一步”**。  
   
 2.  在“排列图表字段”页上，将 SalesDate 字段拖到“类别”中。 “类别”显示在水平轴上。  
   
 3.  将 Sales 字段拖到“值”中。 “值”框显示 Sum(Sales)，因为销售总计值之和是对每个日期的合计。 “值”显示在垂直轴上。  
   
-4.  单击“下一步” 。  
+4.  单击 **“下一步”**。  
  
 6.  单击 **“完成”**。  
   
@@ -128,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到报表设计视图。  
   
-2.  右键单击水平轴 > 单击“水平轴属性”。  
+2.  右键单击水平轴，然后单击“水平轴属性”。  
   
 3.  在“数字”选项卡的“类别”中选择“日期”。  
   
@@ -150,11 +147,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击水平轴标题，然后单击“显示轴标题”以删除标题。 因为水平轴显示日期，所以不需要标题。  
   
-3.  右键单击水平轴 > 单击“水平轴属性”。  
+3.  右键单击水平轴，然后单击“水平轴属性”。  
   
 5.  在“标签”选项卡的“更改轴标签自动调整选项”下，选择“禁用自动调整”。  
   
-7.  在“标签旋转角度”中，选择 **-90**。  
+7.  在“标签旋转角度”中，选择 -90。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -173,15 +170,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到报表设计视图。  
   
-2.  右键单击图表上的图例 > 单击“图例属性”。  
+2.  右键单击图表上的图例，然后单击“图例属性”。  
   
-3.  “布局和位置”，请选择其他位置。 例如，选择底部中间选项。  
+3.  在“布局和位置”下，选择其他位置。 例如，选择底部中间选项。  
   
     如果将图例置于图表的顶部或底部，则图例的布局将会从垂直改为水平。 可以在“布局”框中选择不同的布局。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  （可选）因为本教程中只有一个类别，所以图表不需要图例。 若要删除图例，右键单击“图例” > 单击“删除图例”。  
+5.  （可选）因为本教程中只有一个类别，所以图表不需要图例。 若要删除图例，右键单击“图例”，然后单击“删除图例”。  
   
 6.  单击 **“运行”** 以预览报表。  
   
@@ -189,7 +186,7 @@ ms.lasthandoff: 08/09/2017
     
 1.  切换到报表设计视图。  
   
-2.  选择图表顶部的词语“图表标题”，然后键入 **Store Sales Order Totals**。  
+2.  选择图表顶部的词语“图表标题”，然后键入 Store Sales Order Totals。  
   
 3.  单击 **“运行”** 以预览报表。  
   
@@ -200,23 +197,23 @@ ms.lasthandoff: 08/09/2017
   
 2. 单击图表左侧垂直轴上的标签以选择它们。  
   
-3.  在“主文件夹”选项卡 > “数字”组上，单击“货币”按钮。 轴标签将更改以显示货币格式。  
+3.  在“主文件夹”选项卡上，单击“数字”组，然后单击“货币”按钮。 轴标签将更改以显示货币格式。  
   
 4.  单击两次“减少小数位数”按钮，以显示舍入为最接近的美元金额。  
   
-5.  右键单击垂直轴 > 单击“垂直轴属性”。  
+5.  右键单击垂直轴，然后单击“垂直轴属性”。  
   
-6.  在“数字”选项卡中，注意已在“类别”框中选择了“货币”，并且“小数位数”已经为 **0**（零）。  
+6.  在“数字”选项卡中，注意已在“类别”框中选择了“货币”，并且“小数位数”已经为 0（零）。  
   
 7.  检查“值的显示位置”。 已选中“千位”。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 右键单击垂直轴 > 单击“显示轴标题”。 
+9. 右键单击垂直轴，然后单击“显示轴标题”。 
 
-10. 右键单击垂直轴标题 > 单击“轴标题属性”。  
+10. 右键单击垂直轴标题，然后单击“轴标题属性”。  
   
-10. 将“标题文本”字段中的文本替换为**Sales Total (in Thousands)**。 还可以指定与如何设置标题格式相关的多种选项。  
+10. 将“标题文本”字段中的文本替换为 Sales Total (in Thousands)。 还可以指定与如何设置标题格式相关的多种选项。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -260,7 +257,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  在“设置公式参数”中，针对“期间”，选择“4”。  
   
-6.  在“边框”选项卡的“线条宽度”中，选择 **3pt**。  
+6.  在“边框”选项卡的“线条宽度”中，选择“3磅”。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -284,7 +281,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  选择“Sales Chart”，然后转至“主文件夹”选项卡 > “字体”部分 > “粗体”。  
   
-5.  选择“January to December 2015”，并在“主文件夹”选项卡 > “字体”部分，将字号设置为 **10**。  
+5.  选择“January to December 2015”，并在“主文件夹”选项卡上，单击“字体”部分，将字号设置为 10。  
   
 6.  （可选）可能需要使“标题”文本框更高一些，以容纳两行文本。 单击下边缘中间，显示双向箭头时下拉。 并且可能需要拖动图表的顶部，使标题不重叠。  
   
@@ -302,7 +299,7 @@ ms.lasthandoff: 08/09/2017
 
     可将其保存到计算机或报表服务器中。
   
-3.  在“名称”中，键入 **Sales Order Column Chart**。  
+3.  在“名称”中，键入 Sales Order Column Chart。  
   
 4.  单击 **“保存”**。  
   
@@ -313,5 +310,4 @@ ms.lasthandoff: 08/09/2017
 -    [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

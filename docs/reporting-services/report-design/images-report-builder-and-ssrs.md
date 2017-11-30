@@ -1,5 +1,5 @@
 ---
-title: "图像 （报表生成器和 SSRS） |Microsoft 文档"
+title: "图像（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 777cab4f21219aa5b4387c67b264e3769cbf1e59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="images-report-builder-and-ssrs"></a>图像（报表生成器和 SSRS）
   图像是一种报表项，包含对嵌入在报表中、存储在数据库中、存储在报表服务器上或存储在 Web 上其他位置的图像的引用。 图像可以是数据行重复使用的图片。 您还可以将图像用作某些报表项的背景。  
@@ -86,7 +85,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [导出到图像文件（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
- [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
-

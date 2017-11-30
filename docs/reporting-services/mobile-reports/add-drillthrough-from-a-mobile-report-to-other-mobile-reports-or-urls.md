@@ -1,26 +1,24 @@
 ---
-title: "从移动报表中添加钻取，到其他移动报表或 Url |Microsoft 文档"
+title: "添加从某个移动报表到其他移动报表或 URL 的钻取 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>添加从某个移动报表到其他移动报表或 URL 的钻取
 你可以添加从某个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表中的任何仪表、图表或数据网格到另一个移动报表或自定义 URL 的钻取。 
@@ -87,6 +85,5 @@ ms.lasthandoff: 08/09/2017
  
 * [向 Reporting Services 移动报表添加参数](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [使用 SQL Server 移动报表发布服务器创建移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Web 门户 （SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
-
+* [Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
 

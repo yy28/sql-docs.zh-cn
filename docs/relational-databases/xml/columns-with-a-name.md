@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
 ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
   下面是一些特定条件，在这些条件下具有名称的行集列将映射（区分大小写）到生成的 XML：  
@@ -38,7 +35,7 @@ ms.lasthandoff: 11/08/2017
 -   一列具有不同的名称。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名以 @ 符号开头  
- 如果列名称开头 at 符号 (@)，并且不包含斜杠标记 （/） 的属性`row`创建包含相应列值的元素。 例如，以下查询将返回包含两列（@PmId 和 Name）的行集。 在生成的 XML， **PmId**属性添加到相应`row`元素和 ProductModelID 值分配给它。  
+ 如果列名以 @ 符号开头并且不包含斜杠标记 (/)，则会创建包含相应列值的 `row` 元素的属性。 例如，以下查询将返回包含两列（@PmId 和 Name）的行集。 在生成的 XML 中，会向相应的 `row` 元素添加 PmId 属性并为其分配 ProductModelID 值。  
   
 ```  
   
@@ -71,9 +68,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名不以 @ 符号开头  
- 如果列名不以开头 at 符号 (@)，不是某个 XPath 节点测试，并且不包含斜杠标记 （/），是行元素的子元素的 XML 元素`row`默认情况下，创建。  
+ 如果列名不以 @ 符号开头、不是某个 XPath 节点测试并且不包含斜杠标记 (/)，则会创建一个 XML 元素，该元素是行元素（默认情况下为 `row`）的子元素。  
   
- 以下查询指定了列名 result。 因此，`result`子元素添加到`row`元素。  
+ 以下查询指定了列名 result。 因此，会向 `row` 元素添加 `result` 子元素。  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +85,7 @@ for xml PATH
 </row>  
 ```  
   
- 以下查询为针对 **xml** 类型的 Instructions 列指定的 XQuery 所返回的 XML 指定了列名 ManuWorkCenterInformation。 因此，`ManuWorkCenterInformation`元素将添加的子级为`row`元素。  
+ 以下查询为针对 **xml** 类型的 Instructions 列指定的 XQuery 所返回的 XML 指定了列名 ManuWorkCenterInformation。 因此，可添加 `ManuWorkCenterInformation` 元素来作为 `row` 元素的子元素。  
   
 ```  
 SELECT   
@@ -133,7 +130,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名称开头\@。因此，一个属性， **EmpID**，添加到`row`元素。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 生成的 XML 将包含`EmpName`下的子`row`元素，与`EmpName`子将具有`First`，`Middle`和`Last`元素子级。  
+ 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以“\@”开头。因此，向 `row` 元素添加 EmpID 属性。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，`row` 元素下包含 `EmpName` 子元素，而 `EmpName` 子元素包含 `First`、`Middle` 和 `Last` 子元素。  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  默认情况下，PATH 模式生成以元素为中心的 XML。 因此，在 PATH 模式中指定 ELEMENTS 指令将不起作用。 但是，如上一个示例所示，可以指定带有 XSINIL 的 ELEMENTS 指令来针对 Null 值生成元素。  
   
- 除了 ID 和名称以外，以下查询还将检索雇员地址。 按照地址列的列名称中的路径`Address`子元素添加到`row`元素和地址详细信息将添加的元素子级`Address`元素。  
+ 除了 ID 和名称以外，以下查询还将检索雇员地址。 按照地址列的列名中包含的路径，可向 `row` 元素添加 `Address` 子元素，并添加地址详细信息来作为 `Address` 元素的子元素。  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +202,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>若干列共享同一个路径前缀  
- 如果若干后续列共享同一个路径前缀，则它们将被分组到同一名称下。 如果它们使用的是不同的命名空间前缀，则即使它们被绑定到同一命名空间，也被认为是不同的路径。 在前面的查询中，FirstName、 MiddleName 和 LastName 列共享同一个 EmpName 前缀。因此，作为的子级添加`EmpName`元素。 这也是这种情况，你已创建时`Address`上一示例中的元素。  
+ 如果若干后续列共享同一个路径前缀，则它们将被分组到同一名称下。 如果它们使用的是不同的命名空间前缀，则即使它们被绑定到同一命名空间，也被认为是不同的路径。 在上一个查询中，FirstName、MiddleName 和 LastName 列共享同一个 EmpName 前缀。因此，它们被添加为 `EmpName` 元素的子元素。 在上一个示例中创建 `Address` 元素时也是如此。  
   
 ## <a name="one-column-has-a-different-name"></a>有一列具有不同的名称  
  如果列之间出现具有不同名称的列，则该列将会打破分组，如以下修改后的查询所示。 该查询通过在 FirstName 和 MiddleName 列之间添加地址列，打破了 FirstName、MiddleName 和 LastName 的分组（如上一个查询中所指定）。  
@@ -225,7 +222,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 因此，查询将创建两个`EmpName`元素。 第一个`EmpName`元素具有`FirstName`子元素和第二个`EmpName`元素具有`MiddleName`和`LastName`元素子级。  
+ 结果，查询创建两个 `EmpName` 元素。 第一个 `EmpName` 元素包含 `FirstName` 子元素，第二个 `EmpName` 元素包含 `MiddleName` 和 `LastName` 子元素。  
   
  结果如下：  
   
@@ -248,4 +245,3 @@ FOR XML PATH
  [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "指示器 （报表生成器和 SSRS） |Microsoft 文档"
+title: "指示器（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8ae79c60e278b5fa3cfd1a2924e45a701ffc06e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器是以直观的形式提供单个数据值的状态的小型仪表。 表示指示器及其状态的图标十分简单，并且即使在以小尺寸使用时也保持有效的外观。  
@@ -95,7 +94,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在表和矩阵中使用指示器  
  指示器的简单形状使其很适合在表和矩阵中使用。 指示器甚至在小尺寸下效果也很好。 这使它们可用于报表的详细信息行或组行中。  
   
- 下图显示具有使用方向指示器集的表的报表**四向箭头 （彩色）**，以指示销售。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
+ 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -134,7 +133,7 @@ ms.lasthandoff: 08/09/2017
   
  无论您是使用百分比还是数字状态度量单位，都可能会发生此情况。 在您使用数字度量单位时更有可能发生此情况，因为您为此度量值提供特定值。 在您对报表数据值进行四舍五入时也更有可能发生此情况，因为这往往会使数据更离散。  
   
- 下列方案说明了时会更改的序列中的三个状态如何影响数据的数据可视化**3 向箭头 （彩色）**方向指示器。 默认情况下，该序列为：  
+ 下面的方案描述当在“3 个箭头(彩色)”方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：  
   
 1.  红色向下箭头  
   
@@ -144,7 +143,7 @@ ms.lasthandoff: 08/09/2017
   
  下面的方案显示对于四个不同的状态序列及其值范围，这些序列是如何影响数据可视化的。  
   
- 在这些情况下， **3 向箭头 （彩色）**指示器使用数字状态度量。  
+ 在这些方案中，“3 个箭头(彩色)”指示器使用数字状态度量。  
   
 |状态序列|起始值|结束值|  
 |--------------------|-----------------|---------------|  
@@ -187,7 +186,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [更改指示器图标和指示器集（报表生成器和 SSRS）](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [设置和配置度量单位 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [设置和配置度量单位（报表生成器和 SSRS）](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [设置同步作用域（报表生成器和 SSRS）](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -197,8 +196,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

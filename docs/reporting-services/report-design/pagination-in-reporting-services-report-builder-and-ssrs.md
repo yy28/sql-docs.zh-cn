@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services （报表生成器和 SSRS） 中的分页 |Microsoft 文档"
+title: "Reporting Services 中的分页（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分页（报表生成器和 SSRS）
   分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。  
@@ -50,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  为边距、列间距、页眉和页脚分配空间后剩下的物理页区域称为“可用页区域” 。 只有在您以硬分页符呈现器格式呈现和打印报表时才会应用边距。 下图指示了一个物理页的边距和可用页区域。  
   
- ![具有边距和可用区域的物理页。](../../reporting-services/report-design/media/rspagemargins.gif "具有边距和可用区域的物理页。")  
+ ![带有边距和可用区域的物理页。](../../reporting-services/report-design/media/rspagemargins.gif "带有边距和可用区域的物理页。")  
   
 ### <a name="newsletter-style-columns"></a>新闻稿样式列  
  报表可分成多列（就像报纸中的各栏一样），这些列被视为在同一物理页上呈现的逻辑页。 这些列按从左到右、从上到下的方式排列，各列之间以空白隔开。 如果报表分成多个列，则每个物理页被垂直划分为多个列，每列被视为一个逻辑页。 例如，假定在一个物理页上有两列。 报表内容将首先填充第一列，然后填充第二列。 如果在前两列中不能完全容纳此报表，则此报表会依次填充下一页上的第一列和第二列。 将按从左到右、从上到下的顺序继续填充列，直到呈现完所有报表项为止。 如果您指定的列大小导致水平宽度或垂直宽度等于零，则列间距默认为零。  
   
  可通过以下方法指定列：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 TopMargin、BottomMargin、LeftMargin 和 RightMargin 属性。 如果要使用未定义的边距大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定边距大小。 只有在以 PDF 或图像格式呈现和打印报表时才会应用列。 下图指示了一个包含多个列的页的可用页区域。  
   
- ![与图所示的列的物理页。](../../reporting-services/report-design/media/rspagecolumns.gif "图所示的列使用的物理页。")  
+ ![带有所述列的物理页。](../../reporting-services/report-design/media/rspagecolumns.gif "带有所述列的物理页。")  
   
 ## <a name="page-breaks-and-page-names"></a>分页符和页名称  
  当一个报表具有页名称时，该报表可能更具可读性并且其数据更易于审核和导出。 Reporting Services 为报表和 tablix 数据区域（表、矩阵和列表）、组和报表中的矩形提供属性，以便控制分页、重置页码和在分页符上提供新的报表页名称。 这些功能可以增强报表的效果，而与呈现报表的格式无关，但在将报表导出到 Excel 工作簿时特别有用。  
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  有关在报表导出到 Excel 时这些属性的工作方式的详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [页面布局和呈现 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

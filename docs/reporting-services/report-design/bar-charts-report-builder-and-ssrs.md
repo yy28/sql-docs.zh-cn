@@ -1,5 +1,5 @@
 ---
-title: "条形图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "条形图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1c5e74cfac92dc9ed1461e0bc537fdac8e10af0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>条形图（报表生成器和 SSRS）
   条形图将序列显示为若干组水平图条。 平面条形图与柱形图密切相关，柱形图将序列显示为多组垂直图条，而范围条形图将序列显示为多组具有不同起点和终点的水平图条。  
@@ -64,17 +63,16 @@ ms.lasthandoff: 08/09/2017
 -   如果数据集包含许多与图表大小有关的数据点，则会缩小列或图条的大小以及二者之间的空间。 若要手动设置图表中各个列的宽度，请通过修改 **PointWidth** 属性来修改其宽度（以像素为单位）。 默认情况下，此属性的值为 0.8。 当增大图表中各个列或图条的宽度时，将缩小每个列或图条之间的空间。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [图表类型 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [图表 &#40; 中的空和 Null 数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [柱形图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [范围图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [在图表 &#40; 的格式设置序列颜色报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [在图表 &#40; 的格式设置轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [格式设置的图例的图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [图表中的空点和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上图例的格式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [向图表添加凹凸效果、浮雕和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教程： 将条形图添加到报表 （报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程： 将条形图添加到报表](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [教程：向报表添加条形图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教程：向报表添加条形图](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   
-

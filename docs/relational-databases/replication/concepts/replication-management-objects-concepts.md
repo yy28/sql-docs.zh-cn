@@ -1,16 +1,14 @@
 ---
 title: "复制管理对象概念 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 714dbb2c15192b10310f6acd21c592acefdba019
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +185,10 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  虽然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类支持在设置属性时声明显式事务，但这样的事务会影响内部复制事务，可能产生难以预料的结果，因此不应在 RMO 中使用。  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>启用 RMO 组件的 TLS 1.2 支持 
+ 通过安装更新 [KB 3140245](http://support.microsoft.com/help/3140245)，并创建文章中提到的注册表项，可以在 Windows 2012 及更低版本上启用 RMO 组件的 TLS1.2 支持。 在 Windows 2012 R2 和更高版本上，只需创建上述文章中提到的注册表项。
+ 
 ## <a name="example"></a>示例  
  本示例演示如何缓存属性更改。 对事务发布属性的更改被缓存，直到将其显式发送给服务器。  
   

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Library Delivery in Reporting Services |Microsoft 文档"
+title: "Reporting Services 中的 SharePoint 库传递 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
   配置为 SharePoint 集成模式的报表服务器包含可用于向 SharePoint 库中发送报表的传递扩展插件。  
@@ -77,10 +76,10 @@ ms.lasthandoff: 08/09/2017
  指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " < > | # { } %  
   
  Title  
- 指定一个可选**标题**目标库中报表的属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
+ 为目标库中的报表指定可选的“标题”属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
- 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： `http://mySharePointWeb/MySite/MyDocLib`; 其中`http://mySharePointWeb`指示 Web 应用程序，"MySite"是 SharePoint 站点，而"MyDocLib"是该报告将传递 SharePoint 库。  
+ 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如：`http://mySharePointWeb/MySite/MyDocLib`；其中 `http://mySharePointWeb` 表示 Web 应用程序，“MySite”是 SharePoint 网站，“MyDocLib”是将传入报表的 SharePoint 库。  
   
  不能指定页、站点或列表。 目标容器必须是同一站点上或同一场中的库。  
   
@@ -88,12 +87,11 @@ ms.lasthandoff: 08/09/2017
  指定处理订阅时是否使用更新的版本替换具有相同名称和扩展名的文件。 如果希望使用更新的版本替换现有文件，请选择 **“覆盖”** 。 如果不希望订阅替换文件，请选择 **“无”** 。 在这种情况下，如果存在具有目标名称和扩展名的文件，则不进行传递。 如果希望通过在文件名末尾追加数字来添加同一文件的连续版本，请选择 **“Autoincrement”** 。  
   
  自动复制  
- 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，则在启用“覆盖”的情况下会复制此文件。 如果使用 **“Autoincrement”** 或 **“无”**，则传递将失败并发生 **rsDeliveryError** 错误。  
+ 如果使用自动复制功能将一个文件的最新版本自动复制到多个位置，在启用“覆盖”的情况下则会复制此文件。 如果使用 **“Autoincrement”** 或 **“无”**，则传递将失败并发生 **rsDeliveryError** 错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

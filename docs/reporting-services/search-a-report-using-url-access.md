@@ -1,5 +1,5 @@
 ---
-title: "使用 URL 访问报表中搜索 |Microsoft 文档"
+title: "使用 URL 访问搜索报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - text searches [Reporting Services]
 - URL access [Reporting Services], report searches
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 39ec7f9885cff6bcfcbf65e0448f3e8e837bc8a6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6aefdb5ecbc8db1470c4297a10d878763c7974de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 访问搜索报表
   可以使用 URL 访问在报表中搜索一组特定的文本。 若要在报表中搜索，请将 URL 中的 *rc:FindString* 参数的值设置为等于所要搜索的文本。 另外，可以使用 *rc:StartFind* 和 *rc:EndFind* 参数将搜索范围缩小到相应报表中的特定页。  
@@ -38,8 +37,7 @@ http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:S
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [URL 访问 &#40;SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 访问 (SSRS)](../reporting-services/url-access-ssrs.md)   
  [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
   
   
-

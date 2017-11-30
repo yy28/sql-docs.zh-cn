@@ -1,13 +1,14 @@
 ---
-title: "Stretch Database 的数据库和表 - Stretch Database 顾问 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/14/2016
-ms.prod: sql-server-2016
+title: "使用数据迁移助手标识 Stretch Database 的数据库和表 | Microsoft Docs"
+ms.custom: 
+ms.date: 10/30/2017
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.suite: sql
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,51 +17,51 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e8acd180029f247e7a975c7f2525100ad56ebef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Stretch Database 的数据库和表 - Stretch Database 顾问
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用数据迁移助手标识 Stretch Database 的数据库和表
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  为标识 Stretch Database 的数据库和表的候选项，请下载 SQL Server 2016 升级顾问并运行 Stretch Database 顾问。 Stretch Database 顾问也能标识阻止问题。  
+  若要标识作为 Stretch Database 候选项的数据库和表，以及潜在的障碍，请下载并运行 Microsoft 数据迁移助手。
   
-## <a name="download-and-install-upgrade-advisor"></a>下载和安装升级顾问  
- 下载和安装升级顾问请单击 [此处](https://www.microsoft.com/en-us/download/details.aspx?id=53595)。 此工具不包含在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 安装介质中。  
+## <a name="get-data-migration-assistant"></a>获取数据迁移助手
+ 从 [此处](https://www.microsoft.com/download/details.aspx?id=53595)下载并安装数据迁移助手。 此工具不包含在 SQL Server 安装介质中。  
   
-## <a name="run-the-stretch-database-advisor"></a>运行 Stretch Database 顾问  
+## <a name="run-data-migration-assistant"></a>运行数据迁移助手  
   
-1.  运行升级顾问。  
-  
-2.  选择“方案” ，然后选择“运行 STRETCH DATABASE 顾问” 。  
-  
-3.  在“运行 Stretch Database 顾问”  边栏选项卡上，单击“选择要分析的数据库” 。  
-  
-4.  在“选择数据库”边栏选项卡，输入或选择服务器名称和身份验证信息。 单击 **“连接”**。
+1.  运行 Microsoft 数据迁移助手。  
 
-5.  将显示所选服务器上的数据库列表。 选择要分析的数据库。 然后单击“选择”。  
-  
-6.  在“运行 Stretch Database 顾问”  边栏选项卡上，单击“运行” 。  将运行分析。  
-  
+2.  创建类型为“评估”的新项目并为其命名。
+
+3.  选择“SQL Server”作为“源服务器类型”和“目标服务器类型”。
+
+4.  选择“创建”。 
+
+5. 在“选项”页面（步骤 1）上，选择“新功能建议”。 （可选）清除所选的“兼容性问题”。
+
+6.  在“选择源”页面（步骤 2）上，连接到服务器，选择数据库，然后选择“添加”。
+
+7.  选择“开始评估”。
+
 ## <a name="review-the-results"></a>查看结果  
   
-1.  分析完成后，在“已分析数据库”边栏选项卡上，选择一个已分析过的数据库以显示“分析结果”边栏选项卡。  
-  
-     “分析结果”  边栏选项卡在选定的数据库中列出了与默认推荐条件匹配的推荐表。 
-  
-2.  在“分析结果”边栏选项卡上的表列表中，选择一个推荐的表以显示“表结果”边栏选项卡。  
-  
-     “表结果”边栏选项卡将列出所选表的阻止问题（若有）。 有关 Stretch Database 顾问检测到的阻止问题的更多信息，请参阅 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
-  
-3.  在“表结果”边栏选项卡上的阻止问题列表中，选择其中一个问题并展示有关所选问题的详细信息以及提出缓解步骤。 如果你想将对 Stretch Database 配置所选的表，则执行建议的缓解步骤。  
+1.  分析完成后，在“查看结果”页面（步骤 3）上，选择“功能建议”选项，然后选择“存储”选项卡。
+
+2.  查看与 Stretch Database 相关的建议。 每项建议都列出了 Stretch Database 可能适合的表以及任何潜在的障碍。
+
+## <a name="historical-note"></a>历史注释
+Stretch Database 顾问之前是 SQL Server 2016 升级顾问的一个组件。 那时，必须作为单独的操作选择并运行 Stretch Database 顾问。
+
+随着数据迁移助手的发布，它替换并扩展了升级顾问，并将 Stretch Database 顾问的功能纳入到此新工具中。 无需选择任何选项即可获取与 Stretch Database 相关的建议。 当在数据迁移助手中运行评估时，与 Stretch Database 相关的结果将显示在“功能建议”的“存储”选项卡上。
   
 ## <a name="next-step"></a>下一步  
  启用 Stretch Database。  
@@ -75,4 +76,3 @@ ms.lasthandoff: 07/29/2017
  [为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

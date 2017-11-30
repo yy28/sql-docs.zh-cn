@@ -1,5 +1,5 @@
 ---
-title: "管理我的数据警报在数据警报管理器 |Microsoft 文档"
+title: "在数据警报管理器中管理我的数据警报 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: de78105e53535a100792126ff762cdfab2f691c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
 
@@ -32,10 +31,10 @@ ms.lasthandoff: 08/17/2017
 
 SharePoint 用户可以查看他们所创建的数据警报列表以及与这些警报有关的信息。 用户还可以删除其警报，打开警报定义以便在数据警报设计器中进行编辑，以及运行其警报。 下图显示数据警报管理器中可用于用户的功能。
 
- ![警报管理器功能的 SharePoint 用户](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 用户的警报管理器功能")
+ ![适用于 SharePoint 用户的警报管理器功能](../reporting-services/media/rs-alertmanageriw.gif "Alert Manager features for SharePoint users")
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 ### <a name="to-view-a-list-of-your-alerts"></a>查看您的警报列表  
   
@@ -43,7 +42,7 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
   
 2.  单击针对报表展开下拉菜单的图标，然后单击“管理数据警报”。 下图显示该下拉菜单。  
   
-     ![从报表上下文菜单中打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "报表上下文菜单中打开警报管理器")  
+     ![从报表上下文菜单打开警报管理器](../reporting-services/media/rs-openalertmanager.gif "Open Alert Manager from report context menu")  
   
      数据警报管理器随之打开。 默认情况下，它列出了针对您在库中选择的报表的警报。  
   
@@ -64,7 +63,7 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
     >  只有创建了数据警报定义的用户才能对其进行编辑。  
   
     > [!NOTE]  
-    >  如果报表已更改并且从该报表生成的数据馈送已更改，则警报定义将不再有效。 在发生以下情况之一时警报定义将不再有效：警报在其规则中引用的列从报表中删除、更改数据类型或包括在其他数据馈送中，或删除或移动了报表。 您可以打开无效的警报定义，但在其根据报表数据馈送所基于的当前版本变为有效之前无法重新保存。 若要了解有关如何从报表中生成数据馈送的详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+    >  如果报表已更改并且从该报表生成的数据馈送已更改，则警报定义将不再有效。 在发生以下情况之一时警报定义将不再有效：警报在其规则中引用的列从报表中删除、更改数据类型或包括在其他数据馈送中，或删除或移动了报表。 您可以打开无效的警报定义，但在其根据报表数据馈送所基于的当前版本变为有效之前无法重新保存。 若要深入了解如何从报表中生成数据馈送，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
   
 ### <a name="to-delete-an-alert-definition"></a>删除警报定义  
   
@@ -80,8 +79,7 @@ SharePoint 用户可以查看他们所创建的数据警报列表以及与这些
 
 ## <a name="see-also"></a>另请参阅
 
-[管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

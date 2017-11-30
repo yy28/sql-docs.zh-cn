@@ -1,5 +1,5 @@
 ---
-title: "表、 矩阵和列表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "表、矩阵和列表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -36,22 +36,21 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe304f126caffb096e5cd5a4610225f373fde504
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
- 在[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]，表、 矩阵和列表是*数据区域*显示分页报表数据组织为行和列的单元中。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、 矩阵和列表经常统称为*tablix*数据区域。  
+ 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，表、矩阵和列表是在以行和列形式组织的单元中显示分页报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  
   
- 表、矩阵和列表模板是在 Tablix 数据区域的基础上建立的，Tablix 数据区域是可以在单元中显示数据的灵活的网格。 在表和矩阵模板中，单元将组织成行和列的形式。 因为模板是基础 tablix 数据区域的变体，你可以结合模板格式显示数据和更改表、 矩阵或列表上要包含的另一个数据区域的功能，为您开发报表。 例如，如果您添加一个表并发现它没有满足您的需要，则可以添加列组以使该表成为矩阵。  
+ 表、矩阵和列表模板是在 Tablix 数据区域的基础上建立的，Tablix 数据区域是可以在单元中显示数据的灵活的网格。 在表和矩阵模板中，单元将组织成行和列的形式。 因为模板是一般性的基础 tablix 数据区域的变体，所以，你可以结合模板格式显示数据，并且在你开发报表时更改表、矩阵或列表以便包括其他数据区域的功能。 例如，如果您添加一个表并发现它没有满足您的需要，则可以添加列组以使该表成为矩阵。  
   
  表和矩阵数据区域可以通过包括嵌套的表、矩阵、列表、图表和仪表，显示复杂的数据关系。 表和矩阵具有表格形式的布局，并且其数据来自在单个数据源基础上建立的单个数据集。 表和矩阵之间的主要差异在于，表只能包含行组，而矩阵可具有行组和列组。  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Table"></a> 表  
  使用表显示详细信息数据、组织行组中的数据，或者同时用于两种目的。 表模板包含三个列和一个表头行和一个数据详细信息行。 下图显示了在设计图面上选择的初始表模板：  
   
- ![在设计图面上的表模板所选](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "设计图面上的表模板所选")  
+ ![设计图面上的表模板，选中](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
   
  可以按单个字段、多个字段或通过编写自己的表达式来对数据进行分组。 可以创建嵌套的组或独立的相邻组和显示分组数据的聚合值，或将合计添加到组。 例如，如果您的表中有一个称为 [类别] 的行组，则可以为每个组添加小计，以及为报表添加总计。 为了改进表的外观和突出显示要强调的数据，可以合并单元并将格式应用于数据和表标题。  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Matrix"></a> 矩阵  
  使用矩阵显示按行和列进行分组的聚合数据汇总，类似于数据透视表或交叉表。 组的行数和列数由每个行组和列组中的唯一值的个数确定。 下图显示了在设计图面上选择的初始矩阵模板：  
   
- ![从工具箱中，选择添加新矩阵](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "新矩阵添加从工具箱中，选择")  
+ ![从工具箱添加的新矩阵，选中](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "从工具箱添加的新矩阵，选中")  
   
  您可以按行组和列组中的多个字段或表达式对数据进行分组。 在运行时，当组合报表数据和数据区域时，随着为列组添加列和为行组添加行，矩阵将在页面上水平和垂直增长。 矩阵单元显示仅限于单元所属行组和列组的交集的聚合值。 例如，如果您的矩阵具有一个行组（类别）和两个显示销售额之和的列组（区域和年份），则报表中将显示两个单元，其中对于“类别”组中的每个值都显示销售额之和。 单元的作用域是两个交集：类别和区域的交集，以及类别和年份的交集。 矩阵可以包含嵌套组和相邻组。 嵌套组具有父-子关系，相邻组具有对等关系。 您可以添加矩阵内嵌套行组和列组的任何级别和所有级别的小计。  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="List"></a> 列表  
  使用列表创建自由格式布局。 您不受网格布局的限制，而可以在列表内自由放置字段。 可以使用列表设计用于显示多个数据集字段的表单，也可以将其用作容器以便并排显示分组数据的多个数据区域。 例如，您可以为列表定义组；添加表、图表和图像；并显示每组值的表和图形表单中的各个值，正如对雇员或病人记录所执行的操作一样。  
   
- ![从工具箱中，选择将新列表，添加](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "新列表添加从工具箱中，选择")  
+ ![从工具箱添加的新列表，选中](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
   
  有关详细信息，请参阅 [创建带列表的发票和表单]。  
   
@@ -168,13 +167,12 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [嵌套的数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [将多个数据区域链接到同一数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

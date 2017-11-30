@@ -1,28 +1,25 @@
 ---
-title: "使用订阅 （web 门户） |Microsoft 文档"
+title: "使用订阅（Web 门户）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 131c3a86efc1e3fe2c0e896f726f292ab5e0db55
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>使用订阅（Web 门户）
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-你可以到达订阅页通过选择**省略号 （...）**的报表，请选择**管理**并选择**订阅**。  
+可以通过依次选择报表的省略号 (…)、“管理”和“订阅”来访问“订阅”页。  
   
 从“订阅”页中，可以通过选择“+ 新订阅”来创建新订阅。 还可以编辑现有订阅，或删除选择的订阅。  
   
@@ -96,5 +93,4 @@ ms.lasthandoff: 08/09/2017
 [使用分页报表](working-with-paginated-reports-web-portal.md)  
 [使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

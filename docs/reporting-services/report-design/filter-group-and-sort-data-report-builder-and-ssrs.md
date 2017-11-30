@@ -1,5 +1,5 @@
 ---
-title: "筛选、 分组和排序数据 （报表生成器和 SSRS） |Microsoft 文档"
+title: "对数据进行筛选、分组和排序（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e9e31e800ebadc67463c8b209ad16a592e85027c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **交互式排序** 若要让用户能够对列进行排序，或反向切换列的排序顺序，您可向表或矩阵中的列标题或组头单元添加一个交互式排序按钮。  
   
- 若要帮助用户自定义筛选表达式、组表达式或排序表达式，您可以更改表达式，添加对报表参数的引用。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 若要帮助用户自定义筛选表达式、组表达式或排序表达式，您可以更改表达式，添加对报表参数的引用。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
  有关详细信息和示例，请参阅下列主题：  
   
@@ -63,9 +62,9 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Filtering"></a> 对报表中的数据进行筛选  
  筛选器是报表的部件，可在通过数据连接检索报表数据后，帮助控制这些数据。 如果您无法将数据集查询更改为在从外部数据源检索数据之前筛选数据，则需要使用筛选器。  
   
- 在可能的情况下，请生成仅返回需要显示在报表中的数据的数据集查询。 如果您减少了必须检索和处理的数据量，则会有助于提高报表性能。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 在可能的情况下，请生成仅返回需要显示在报表中的数据的数据集查询。 如果您减少了必须检索和处理的数据量，则会有助于提高报表性能。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
- 在从外部数据源检索数据之后，您可以向数据集、数据区域和数据区域组（包括详细信息组）添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。 有关详细信息，请参阅[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
+ 在从外部数据源检索数据之后，您可以向数据集、数据区域和数据区域组（包括详细信息组）添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。 有关详细信息，请参阅 [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
  对于每个筛选器，需要指定一个“筛选器公式” 。 筛选器公式包括数据集字段或表达式，用于指定要筛选的数据、运算符以及要比较的值。 在处理项时，只包括与筛选条件匹配的数据值。  
   
@@ -95,9 +94,9 @@ ms.lasthandoff: 08/09/2017
   
  若要根据若干数据集字段进行分组，请将每个字段添加到组表达式集合。 您还可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中编写您自己的组表达式。 例如，您可以按照值范围进行分组，或者通过使用报表参数使用户能够选择对数据区域中的数据进行分组的方式。 有关详细信息，请参阅 [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
- 在报表显示方面，可以在各组或组的每个实例前后添加分页符，以减少每页中的数据量，帮助管理报表呈现性能。 有关详细信息，请参阅[添加分页符 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ 在报表显示方面，可以在各组或组的每个实例前后添加分页符，以减少每页中的数据量，帮助管理报表呈现性能。 有关详细信息，请参阅[添加分页符（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
   
- 创建数据区域组是在报表中组织数据的方式之一。 可以通过多种方式组织数据，每种方式都具有自身的优势。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+ 创建数据区域组是在报表中组织数据的方式之一。 可以通过多种方式组织数据，每种方式都具有自身的优势。 有关详细信息，请参阅 [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 ### <a name="defining-group-variables"></a>定义组变量  
  定义组时，可以创建一个组变量，在以组为作用域并且可以从嵌套组访问的表达式中使用。 组变量对于每个组实例进行一次计算，并且可从子组中的表达式访问。 例如，对于按区域或子区域分组的数据，可以针对每个区域计算税收，并在子区域组的计算中使用该税收值。  
@@ -115,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
  所有三种排序类型均可在同一报表中组合使用。 默认情况下，排序顺序取决于数据集查询返回数据的顺序。 排序表达式应用于数据区域和数据区域组。 交互式排序在排序表达式后应用。  
   
- 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 聚合函数 First、Last 和 Previous 的返回值会受到排序顺序的影响。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 聚合函数 First、Last 和 Previous 的返回值会受到排序顺序的影响。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>在数据集查询中对数据进行排序  
  在数据集查询中包括排序顺序可在为报表检索数据之前对数据进行预排序。 通过在查询中对数据进行排序，排序工作将由数据源而非报表处理器完成。  
@@ -214,12 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [指示器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

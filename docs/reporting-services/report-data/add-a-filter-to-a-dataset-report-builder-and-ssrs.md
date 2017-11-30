@@ -1,5 +1,5 @@
 ---
-title: "将筛选器添加到数据集 （报表生成器和 SSRS） |Microsoft 文档"
+title: "向数据集添加筛选器（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b12f3e795ce72291ce6c48b2c9b82108935f2b8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>向数据集添加筛选器（报表生成器和 SSRS）
   向数据集添加筛选器可以在从外部数据源检索数据后限制报表中的数据。 在向数据集添加筛选器后，所有报表部件或数据区域将都只使用与筛选条件匹配的数据。  
@@ -77,8 +77,8 @@ ms.lasthandoff: 08/09/2017
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [添加数据集筛选器、 数据区域筛选器和组筛选器 （&） #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [添加筛选器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
+ [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "页面布局和呈现 （报表生成器和 SSRS） |Microsoft 文档"
+title: "页面布局和呈现方式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c68aa21a9134e0d964c4728182141ad61937dfca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
 阅读有关用于分页报表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现扩展插件的信息，以便可确定报表的外观按所需方式呈现，包括页面布局、分页符和纸张大小。 
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
  报表可以跨越多个页，每个页上都可以有重复的页眉和页脚。 报表可包含图形元素，如图像和线条，并可具有多种基于表达式的字体、颜色和样式。  
   
 ##  <a name="ReportSections"></a> 报表区域  
- 报表由三个主要区域组成：页眉（可选）、页脚（可选）和表体。 *报表*页眉和页脚不是单独的章节的报表，但而是包含在顶部和底部的表体放置报表项。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
+ 报表由三个主要区域组成：页眉（可选）、页脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
   
  您可以设置报表项的属性，以便一开始就在页中隐藏或显示该报表项。 可以设置数据区域的行、列或组的可见性属性，并提供切换按钮使用户能以交互方式显示或隐藏报表数据。 还可以使用表达式（包括基于报表参数的表达式）来设置可见性或初始可见性。  
   
@@ -124,4 +123,3 @@ ms.lasthandoff: 08/09/2017
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

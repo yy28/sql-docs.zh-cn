@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 列表查询设计器 （报表生成器） |Microsoft 文档"
+title: "SharePoint 列表查询设计器（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10016"
+f1_keywords: "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 80e18350f83053841f3525d2b959272a54d8cd06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 列表查询设计器（报表生成器）
   报表生成器和报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 SharePoint 站点中为报表数据集检索的数据。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/09/2017
 |**显示隐藏字段**|在显示字段还是隐藏字段之间切换，这些字段是由 SharePoint 自动生成的（如用于 SharePoint 链接项的 ProgId 和 Level），但通常不在报表中使用。 隐藏这些字段可使字段列表更短且易于使用。|  
   
 ## <a name="see-also"></a>另请参阅  
- [查询设计器 &#40;报表生成器 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

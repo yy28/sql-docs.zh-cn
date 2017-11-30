@@ -1,5 +1,5 @@
 ---
-title: "处理大型报表 |Microsoft 文档"
+title: "处理大型报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53bf81960ca2faca6d14be007966a0713166d19e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  
@@ -77,9 +76,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [预加载缓存 &#40;报表管理器 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [预加载缓存（报表管理器）](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

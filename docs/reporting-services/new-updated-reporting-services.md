@@ -1,6 +1,6 @@
 ---
-title: "已更新-Reporting Services 的 SQL Server 文档 |Microsoft 文档"
-description: "显示有关最近更改中的文档，为 Microsoft SQL server Reporting Services 的更新内容的代码段。"
+title: "已更新 - SQL Server Reporting Services 文档 | Microsoft Docs"
+description: "显示 Microsoft SQL Server Reporting Services 文档中最近更新内容的片段。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -15,14 +15,13 @@ ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: reporting-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: b4a8b5b8db36f4ae7418934311eb6706de0ea43a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>新的和最近的更新： Reporting Services for SQL Server
+# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>新增内容和最近更新内容：SQL Server Reporting Services
 
 
 
@@ -34,8 +33,8 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- *日期范围的更新：* &nbsp; **自 2017 年 1-09-11** &nbsp;到&nbsp;**自 2017 年 1-09-27**
-- *主题区域：* &nbsp; **for SQL Server Reporting Services**。
+- 更新日期范围：从 2017-09-11 到 2017-09-27&nbsp;&nbsp;&nbsp;
+- 主题区域：&nbsp; SQL Server Reporting Services。
 
 
 
@@ -47,8 +46,8 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [将报表查看器 web 部件添加到 SharePoint 页](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
-2. [部署 SharePoint 站点上的报表查看器 web 部件](report-server-sharepoint/deploy-report-viewer-web-part.md)
+1. [将报表查看器 Web 部件添加到 SharePoint 页面](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
+2. [在 SharePoint 网站上部署报表查看器 Web 部件](report-server-sharepoint/deploy-report-viewer-web-part.md)
 
 
 
@@ -98,20 +97,20 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新 + 更新 (0 + 1): **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1): **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (4 + 1): **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (17 + 0): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (3 + 0): **sql Linux**文档](../linux/new-updated-linux.md)
-- [新 + 更新 (1 + 1): **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (2 + 0): **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 1): **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (0+1)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (4+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (17+0)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章 (3+0)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (1+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章 (2+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章 (0+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新 + 更新 (0 + 0):**连接到 SQL**文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
@@ -119,11 +118,10 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
 - [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新 + 更新 (0 + 0): **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章 (0+0)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
 - [新的和更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 0): **SQL 的工具**文档](../tools/new-updated-tools.md)
+- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
-
 
 

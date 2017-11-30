@@ -1,5 +1,5 @@
 ---
-title: "Power Pivot 连接类型 (SSRS) |Microsoft 文档"
+title: "Power Pivot 连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7a8fe1f1b6dd44f468095502b924c432032cf11d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据。  
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源必须发布在 SharePoint 站点上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。  
   
  为了支持从报表生成器到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的连接，工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一起安装，但如果你在使用不具有此应用程序的计算机，则必须从 [SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)下载和安装 ADOMD.NET。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>连接字符串  
- 连接字符串是指向 URL[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的 SharePoint 上发布工作簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库或其他库，例如， `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
+ 连接字符串是指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或其他库中在 SharePoint 上发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 URL，例如，`http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
   
 ## <a name="credentials"></a>凭据  
  指定访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
@@ -70,7 +69,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services MDX 查询设计器用户界面（报表生成器）](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

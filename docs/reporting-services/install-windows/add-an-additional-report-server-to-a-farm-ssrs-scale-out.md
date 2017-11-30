@@ -1,28 +1,25 @@
 ---
-title: "将另一个报表服务器添加到场 （SSRS 扩展） |Microsoft 文档"
+title: "向场中添加另一个报表服务器（SSRS 横向扩展）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d1a4e4da2f35e6bea1acebb686c7395bfc12b25b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 
   将第二个或更多的 SharePoint 模式报表服务器添加到您的 SharePoint 场可改进报表服务器处理的性能和响应时间。 如果您在将更多的用户、报表和其他应用程序添加到报表服务器时发现性能下降，则添加其他报表服务器可改进性能。 在存在硬件问题或者您在对环境中的单独服务器执行一般性的维护时，也建议添加第二个报表服务器以便提高报表服务器的可用性。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始，用于在 SharePoint 模式中扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境的步骤遵循标准 SharePoint 场部署并且利用 SharePoint 负载平衡功能。  
@@ -74,11 +71,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_additional"></a> 附加配置  
  可以优化扩展部署中的单个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器以仅执行后台处理，从而不与交互式报表执行争用资源。 后台处理包括计划、订阅和数据警报。  
   
- 若要更改单个报表服务器的行为，设置 **\<b l e >**中为 false **RSreportServer.config**配置文件。  
+ 若要更改单个报表服务器的行为，请在 RSreportServer.config 配置文件中将 \<IsWebServiceEnable> 设置为 false。  
   
- 默认情况下，报表服务器均配置有\<b l e > 设置为 TRUE。 当所有服务器都配置为 TRUE 时，将在场中的所有节点上均衡交互式操作和后台处理的负载。  
+ 默认情况下，将配置报表服务器且 \<IsWebServiceEnable> 将设置为 TRUE。 当所有服务器都配置为 TRUE 时，将在场中的所有节点上均衡交互式操作和后台处理的负载。  
   
- 如果配置使用的所有报表服务器\<b l e > 设置为 False，你将看到类似于以下的错误消息时尝试使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能：  
+ 如果配置所有报表服务器且 \<IsWebServiceEnable> 设置为 False，则在尝试使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时将看到类似以下内容的一条错误消息：  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
@@ -89,5 +86,4 @@ ms.lasthandoff: 08/09/2017
 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

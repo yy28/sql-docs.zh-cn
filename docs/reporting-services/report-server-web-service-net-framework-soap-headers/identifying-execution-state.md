@@ -1,5 +1,5 @@
 ---
-title: "标识执行状态 |Microsoft 文档"
+title: "标识执行状态 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
   超文本传输协议 (HTTP) 是一个无连接且无状态协议，这意味着它不自动指示不同请求是否来自同一个客户端，甚至也不指示单个浏览器实例是否仍在查看页面或站点。 会话创建逻辑连接，以通过 HTTP 在服务器与客户端之间维护状态。 与特定会话相关的用户特定的信息称为会话状态。  
   
  会话管理涉及将 HTTP 请求与从同一个会话生成的其他先前请求相关。 如果没有会话管理，则由于 HTTP 协议的无连接和无状态性质，因此这些请求将与报表服务器 Web 服务无关。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不公开会话状态的总体概念，例如，由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 公开的这类概念。 但是，在执行报表时，报表服务器将保留状态之间方法调用的形式**执行**。 执行允许用户通过多种方式与报表交互 - 包括从报表服务器加载报表，为报表设置凭据和参数，以及呈现报表。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不公开会话状态的总体概念，例如，由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 公开的这类概念。 然而，当执行报表时，报表服务器以 execution 的形式维护方法调用之间的状态。 执行允许用户通过多种方式与报表交互 - 包括从报表服务器加载报表，为报表设置凭据和参数，以及呈现报表。  
   
  当客户端与报表服务器通信时，它们使用执行来管理报表查看和用户在报表中导航到其他页的过程，以及显示或隐藏报表的各个部分。 对于客户端应用程序正在运行的每个报表，都存在一个唯一执行。  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  下图显示报表的处理和呈现路径。  
   
- ![报告处理/呈现路径](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "报告处理/呈现路径")  
+ ![报表处理/呈现路径](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Report processing/rendering path")  
   
  为了支持上面介绍的函数，当前 SOAP Render 方法已被拆分为多个方法，其中包括执行初始化阶段、处理阶段和呈现阶段。  
   
@@ -65,10 +63,9 @@ ms.lasthandoff: 08/12/2017
   
  您还可以使用 URL 访问命令管理报表会话。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
  [使用 Reporting Services SOAP 标头](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

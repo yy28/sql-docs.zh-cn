@@ -1,12 +1,14 @@
 ---
 title: "可用性模式（AlwaysOn 可用性组）| Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +19,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，“可用性模式”是一个副本属性，该属性确定某一给定可用性副本是否可在同步提交模式下运行。 对于每个可用性副本，必须为同步提交模式或异步提交模式配置可用性模式。  如果主要副本配置为“异步提交模式”，则它不会等待任何次要副本将传入的事务日志记录写入磁盘（以便强制写入日志）。 如果某一给定的辅助副本配置为异步提交模式，则主副本不会等待该辅助副本强制写入日志。 如果主要副本和某一给定次要副本都配置为同步提交模式，则主要副本将等待次要副本，以便确认它已强制写入日志（除非次要副本在主要副本的会话超时期限内未能使用 ping 命令联系上主要副本）。  
+  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，“可用性模式”是一个副本属性，该属性确定某一给定可用性副本是否可在同步提交模式下运行。 对于每个可用性副本，必须为同步提交模式、异步提交模式或仅配置模式配置可用性模式。  如果主要副本配置为“异步提交模式”，则它不会等待任何次要副本将传入的事务日志记录写入磁盘（以便强制写入日志）。 如果某一给定的辅助副本配置为异步提交模式，则主副本不会等待该辅助副本强制写入日志。 如果主要副本和某一给定次要副本都配置为同步提交模式，则主要副本将等待次要副本，以便确认它已强制写入日志（除非次要副本在主要副本的会话超时期限内未能使用 ping 命令联系上主要副本）。 
   
+
 > [!NOTE]  
 >  如果某一辅助副本超过了主副本的会话超时期限，则主副本将暂时切换到该辅助副本的异步提交模式。 在该辅助副本重新与主副本连接后，它们将恢复同步提交模式。  
   
@@ -58,6 +61,8 @@ ms.lasthandoff: 08/02/2017
 -   同步提交模式相对于性能而言更强调高可用性，为此付出的代价是事务滞后时间增加。 在同步提交模式下，事务将一直等到辅助副本已将日志强制写入到磁盘中才会向客户端发送事务确认。 当在辅助数据库上开始数据同步时，辅助副本将开始应用来自相应的主数据库的传入日志记录。 一旦已经强制写入每个日志记录，辅助数据库就会进入 SYNCHRONIZED 状态。 此后，在日志记录写入本地日志文件之前，辅助副本会先将每个新事务强制写入。 在同步给定辅助副本的所有辅助数据库时，同步提交模式将支持手动故障转移和自动故障转移（可选）。  
   
      有关详细信息，请参阅本主题后面的 [同步提交可用性模式](#SyncCommitAvMode)。  
+
+-   仅配置模式适用于不位于 Windows Server 故障转移群集的可用性组。 仅配置模式中的副本不包含用户数据。 在仅配置模式下，主数据库副本存储可用性组配置元数据。 有关详细信息，请参阅[包含仅配置副本的可用性组](../../../linux/sql-server-linux-availability-group-ha.md)。
   
  下图显示具有五个可用性副本的可用性组。 主副本和一个辅助副本配置为使用同步提交模式以及自动故障转移。 另一个次要副本配置为仅使用计划手动故障转移的同步提交模式，并且两个次要副本配置为使用异步提交模式，其仅支持强制手动故障转移（一般称为“强制故障转移”）。  
   
@@ -185,4 +190,3 @@ ms.lasthandoff: 08/02/2017
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

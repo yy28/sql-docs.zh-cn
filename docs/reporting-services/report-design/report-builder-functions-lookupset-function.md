@@ -1,5 +1,5 @@
 ---
-title: "LookupSet 函数 （报表生成器和 SSRS） |Microsoft 文档"
+title: "LookupSet 函数（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bd6668bfd3fe7553f9b132e4ad0f3843eb6351fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 736ad16f4df2a6c1d58ed2f34d59ea2e5627a648
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---lookupset-function"></a>报表生成器功能-LookupSet 函数
+# <a name="report-builder-functions---lookupset-function"></a>报表生成器函数 - LookupSet 函数
   从包含名称/值对的数据集返回指定名称的一组匹配值。  
   
 > [!NOTE]  
@@ -65,7 +64,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   返回一组结果表达式值。  
   
- 若要从具有指定名称的名称/值对（具有 1 对 1 的关系）的数据集中检索单个值，请使用 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要调用**查找**获取的值集，可使用[Multilookup 函数 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ 若要从具有指定名称的名称/值对（具有 1 对 1 的关系）的数据集中检索单个值，请使用 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)。  
   
  存在下列限制：  
   
@@ -146,17 +145,16 @@ End Function
 ```  
   
 ## <a name="example"></a>示例  
- 若要生成 HTML，必须调用该函数。 在文本框的 Value 属性中粘贴以下表达式并将文本的标记类型设置为 HTML。 有关详细信息，请参阅[将 HTML 添加到报表（报表生成器和 SSRS）](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)。  
+ 若要生成 HTML，必须调用该函数。 在文本框的 Value 属性中粘贴以下表达式并将文本的标记类型设置为 HTML。 有关详细信息，请参阅[向报表添加 HTML（报表生成器和 SSRS）](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)。  
   
 ```  
 =Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [表达式 &#40; 中的数据类型报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

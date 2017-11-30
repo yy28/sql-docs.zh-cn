@@ -1,5 +1,5 @@
 ---
-title: "RSReportDesigner 配置文件 |Microsoft 文档"
+title: "RSReportDesigner 配置文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: debdd3bfd68c202222fcdd153c366b3ff6d70367
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在 **Data** 元素中。 呈现扩展插件信息存储在 **Render** 元素中。 **Designer** 元素可枚举报表设计器中所用的查询生成器。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  若要自定义呈现扩展插件设置，则可使用编辑配置文件的特定说明。 有关详细信息，请参阅 [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
   
- 有关如何编辑配置文件的一般说明，请参阅[修改 Reporting Services 配置文件 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ 有关如何编辑配置文件的常规说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 ## <a name="example-configuration-file"></a>示例配置文件  
  下面的示例说明了 RSReportDesigner.config 文件的格式。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
 |**InstanceName**|预览服务器的标识符。 不要修改此值。|  
 |**SessionCookies**|指定报表服务器是否使用浏览器 cookie 维持会话信息。 有效值包括 **true** 和 **false**。 默认值为 **true**。 如果将此值设置为 False，会话数据将存储在 **reportservertempdb** 数据库中。|  
 |**SessionTimeoutMinutes**|指定会话 cookie 的有效期。 默认为 3 分钟。|  
-|**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rspreviewpolicy.config。 有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|  
+|**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rspreviewpolicy.config。有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|  
 |**CacheDataForPreview**|如果设置为 **True**，报表设计器则将数据存储在本地计算机的缓存文件中。 有效值为 **True** （默认值）和 **False**。 有关详细信息，请参阅 [Previewing Reports](../../reporting-services/reports/previewing-reports.md)。|  
 |**Render**|枚举报表设计器可用于进行预览操作的呈现扩展插件。 用于预览的呈现扩展插件组应该与随报表服务器安装的呈现扩展插件组相同。<br /><br /> **Name** 指定呈现扩展插件。 如果您通过代码调用呈现扩展插件，请使用该值来调用特定的扩展插件。<br /><br /> **Type** 指定扩展类的完全限定类名（以及库名，两者之间用逗号分隔）。<br /><br /> **Visible** 指定是否在相应的用户界面中显示该名称。 此有效值可为 **True** （默认值）或 **False**。 如果为 **True**，则该名称将在相应的用户界面中显示。|  
 |**Data**|枚举报表设计器可用于连接为报表提供数据的数据源的数据处理扩展插件。 在报表设计器中使用的数据处理扩展插件组可能与随报表服务器安装的数据处理扩展插件组相同。 如果您要添加或删除自定义扩展插件，请参阅 [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)。<br /><br /> **Name** 指定数据处理扩展插件。<br /><br /> **Type** 指定扩展类的完全限定类名（以及库名，两者之间用逗号分隔）。|  

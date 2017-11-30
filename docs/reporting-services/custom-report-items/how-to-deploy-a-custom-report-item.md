@@ -1,5 +1,5 @@
 ---
-title: "如何： 部署自定义报表项 |Microsoft 文档"
+title: "如何：部署自定义报表项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, deploying
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 742e80b96e6887188620b4f2a7ab3808475ceda2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: fdb4225367a54cf9468536ba37b2ee4822aee969
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>如何部署自定义报表项
   若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自定义报表项，必须修改报表服务器配置文件，并将设计时和运行时组件程序集复制到报表设计器和报表服务器的相应应用程序文件夹中。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>部署自定义报表项  
   
-1.  编辑 Rsreportdesigner.config 文件，以配置供在相应设计器中使用的自定义报表项运行时组件和设计时组件。 请注意， **ReportItemName**条目必须匹配**CustomReportItemAttribute**属性中使用你**CustomReportItemDesigner**类。 例如：  
+1.  编辑 Rsreportdesigner.config 文件，以配置供在相应设计器中使用的自定义报表项运行时组件和设计时组件。 注意：ReportItemName 条目必须匹配 CustomReportItemDesigner 类中所用的 CustomReportItemAttribute 属性。 例如：  
   
     ```  
     <ReportItems>  
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItems>  
     ```  
   
-3.  编辑 Rsssrvpolicy.config 文件以添加**CodeGroup**授予了自定义报表项的适当权限。 例如：  
+3.  编辑 Rsssrvpolicy.config 文件以添加可向相应自定义报表项授予合适权限的 CodeGroup。 例如：  
   
     ```  
     <CodeGroup   
@@ -78,4 +75,3 @@ ms.lasthandoff: 08/12/2017
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "在滚动报表 （报表生成器和 SSRS） 时保持标题可见 |Microsoft 文档"
+title: "在滚动报表时保持标题可见（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,34 +11,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 92092ffce1c4ae2fcd0c3751eb0dcefc9818de6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
   呈现报表之后，为防止行和列标签滚动出视野之外，可以冻结行或列标题。  
   
  控制行和列的方式取决于您是拥有表还是矩阵。 如果您拥有表，则将静态成员（行标题和列标题）配置为保持可见。 如果您拥有矩阵，则将行组头和列组头配置为保持可见。  
   
- 如果将报表导出到 Excel，则不会自动冻结标头。 可以冻结 Excel 中的窗格。 有关详细信息请参阅**页眉和页脚**部分[将导出到 Microsoft Excel &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ 如果将报表导出到 Excel，则不会自动冻结标头。 可以冻结 Excel 中的窗格。 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的“页眉和页脚”节。  
   
 > [!NOTE]  
 >  即使表拥有行组和列组，也不能使这些组头在滚动时保持可见  
   
  下图显示了一个表。  
   
- ![表](../../reporting-services/report-design/media/table.png "表")  
+ ![表](../../reporting-services/report-design/media/table.png "Table")  
   
  下图显示了一个矩阵。  
   
- ![矩阵](../../reporting-services/report-design/media/matrix.png "矩阵")  
+ ![矩阵](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在设计图面上，单击表中任意位置，可在分组窗格中显示静态成员及组。  
   
-     ![分组窗格](../../reporting-services/report-design/media/grouppane-updated.png "分组窗格")  
+     ![“分组”窗格](../../reporting-services/report-design/media/grouppane-updated.png "Grouping pane")  
   
      “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  单击要在滚动时保持可见的静态成员（行或列）。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
-     ![Tablix 成员属性](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix 成员属性")  
+     ![Tablix 成员属性](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix Member properties")  
   
 4.  在“属性”窗格中，将 **FixedData** 设置为 **True**。  
   
@@ -75,10 +75,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [使用一组 &#40; 显示页眉和页脚报表生成器和 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [在多个页 &#40; 上显示行标题和列标题报表生成器和 SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [分组窗格 &#40;报表生成器 &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [与组一起显示组头和组尾（报表生成器和 SSRS）](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [在多个页中显示行标题和列标题（报表生成器和 SSRS）](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [“分组”窗格（报表生成器）](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

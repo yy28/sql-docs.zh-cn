@@ -1,26 +1,26 @@
 ---
 title: "读取缩放可用性组 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7c607ab320a7deb80fb140ee9f4cc25b798b7fc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6dfa046a07b9fd5a3eddbe474b5ea63c1163c26c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="read-scale-availability-groups"></a>读取缩放可用性组
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -38,7 +38,9 @@ ms.lasthandoff: 08/02/2017
 如果业务要求是转换主要副本上运行的任务关键型工作负荷的资源，用户现在则可以使用只读路由或直接连接到可读次要副本，而无需依赖于与任何群集技术进行集成。 Windows 和 Linux 平台上的 SQL Server 2017 支持这些新功能。
 
 >[!IMPORTANT]
->这不是高可用性安装程序。 不需要监视基础结构、协调故障检测和进行自动故障转移。 需要 HADR 功能的用户可使用群集管理器（Windows 上的 WSFC 或 Linux 上的 Pacemaker）。 
+>这不是高可用性安装程序。 不需要监视基础结构、协调故障检测和进行自动故障转移。 如果不具有群集，SQL Server 无法提供自动化 HA 解决方案可提供的低恢复时间目标 (RTO)。 需要 HA 功能的用户可使用群集管理器（Windows 上的 WSFC 或 Linux 上的 Pacemaker）。 
+>
+>读取缩放可用性组可提供灾难恢复功能。 当只读副本处于同步提交模式时，它们将提供零个恢复点目标 (RPO)。 若要对读取缩放可用性组进行故障转移，请参阅[对读取缩放可用性组上的主要副本进行故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)
 
 ## <a name="use-distributed-availability-groups-for-geographic-read-scale"></a>使用分布式可用性组进行地理读取缩放
 
@@ -57,4 +59,3 @@ ms.lasthandoff: 08/02/2017
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

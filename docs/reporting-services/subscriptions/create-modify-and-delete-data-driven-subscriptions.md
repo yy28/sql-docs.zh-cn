@@ -1,5 +1,5 @@
 ---
-title: "创建、 修改和删除数据驱动订阅 |Microsoft 文档"
+title: "创建、修改和删除数据驱动订阅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 0c9cdf45f989d471d7454914e7298bb504d20288
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>创建、修改和删除数据驱动订阅
   数据驱动订阅是一种基于查询的订阅，可以在运行时获取用于处理该订阅的数据值。 当触发订阅时，会处理一个查询以获取有关收件人、报表传递选项、呈现格式和参数设置的最新信息。 将查询结果与订阅定义相结合，以创建动态订阅，该订阅使用了已在雇员数据库、客户数据库或任何其他数据库（包含可用作订阅服务器数据的信息）中维护的数据。  
   
- 若要创建新的数据驱动订阅或修改现有订阅，请使用报表管理器中的“创建数据驱动订阅”页。 这些页面将引导您完成创建或修改订阅的每一个步骤。 若要在创建订阅后访问该订阅，请使用“我的订阅”页和报表的“订阅”列表。 若要了解如何创建数据驱动订阅，请参阅[创建数据驱动订阅 &#40;SSRS 教程 &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ 若要创建新的数据驱动订阅或修改现有订阅，请使用报表管理器中的“创建数据驱动订阅”页。 这些页面将引导您完成创建或修改订阅的每一个步骤。 若要在创建订阅后访问该订阅，请使用“我的订阅”页和报表的“订阅”列表。 若要了解如何创建数据驱动订阅，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
   
  本主题内容：  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”**。  
   
-2.  单击 **“订阅”** 选项卡。 也可以单击报表管理器顶部的 **“我的订阅”** 链接  
+2.  单击 **“订阅”** 选项卡。也可以单击报表管理器顶部的“我的订阅”链接  
   
-3.  选择要修改的订阅。 下面的图标表示数据驱动订阅：![数据驱动订阅图标](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "数据驱动订阅图标")  
+3.  选择要修改的订阅。 以下图标表示数据驱动订阅：![数据驱动订阅图标](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Data-driven subscription icon")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>修改现有的数据驱动订阅（SharePoint 模式）  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [订阅页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [我的订阅页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [“订阅”页（报表管理器）](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [“我的订阅”页（报表管理器）](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

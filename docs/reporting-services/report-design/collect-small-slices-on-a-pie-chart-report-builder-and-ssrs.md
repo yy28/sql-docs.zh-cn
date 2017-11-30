@@ -1,5 +1,5 @@
 ---
-title: "在饼图 （报表生成器和 SSRS） 上将小切片收集 |Microsoft 文档"
+title: "收集饼图上的小切片（报表生成器和 SSRS） | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e25526de7b4ae194d0aa510c12a9a995208c035a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a791e5bae17ab1259fb664d065a9a13fcde21aa1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集饼图上的小切片（报表生成器和 SSRS）
-饼图切片过多用可以会显得混乱。 了解如何在饼图中的许多小切片收集到一个一个切片中[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]分页报表。
+饼图切片过多可能显得混乱。 了解如何将饼图中的许多小切片收集到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的单个切片中。
  
  若要将若干小切片收集到一个切片中，请先确定用于收集小切片的阈值以饼图的百分比度量或为固定值。 
  
- [教程： 将饼形图添加到您的报表 （报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)如果你想要首先示例数据来尝试这将指导你完成收集到一个切片，细小的扇区。
+ 如果想先使用示例数据尝试此操作，可在[教程：向报表添加饼图（报告生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)的指导下将小切片收集到单个切片中。
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/09/2017
          将 CollectedThreshold 属性设置为 **10**。  
   
         > [!NOTE]  
-        >  如果 CollectedStyle 设置为**SingleSlice**，为值大于 CollectedThreshold **100**，和到 CollectedThresholdUsePercent **True**，图表将引发异常，因为它无法计算百分比。 若要解决此问题，请将 CollectedThreshold 设置为一个值小于**100**。  
+        >  如果将 CollectedStyle 设置为 SingleSlice，将 CollectedThreshold 设置为大于 100 的值，并将 CollectedThresholdUsePercent 设置为 True，则图表会引发异常，因为它无法计算百分比。 要解决此问题，请将 CollectedThreshold 设置为小于 100 的值。  
   
     -   **按数据值。** 例如，若要将饼图上少于 5000 的切片收集到一个切片：  
   
@@ -87,10 +86,9 @@ ms.lasthandoff: 08/09/2017
 >  您不能设置辅助饼图的格式。 因此，强烈建议使用第一种方法收集饼图切片。  
   
 ## <a name="see-also"></a>另请参阅  
-* [教程： 将饼形图添加到报表 （报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
-*  [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+* [教程：向报表添加饼图（报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+*  [饼图&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [在饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
 *  [在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)     
   
-

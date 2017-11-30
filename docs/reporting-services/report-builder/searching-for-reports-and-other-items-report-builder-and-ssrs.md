@@ -1,5 +1,5 @@
 ---
-title: "搜索报表和其他项 （报表生成器和 SSRS） |Microsoft 文档"
+title: "搜索报表和其他项（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e3c41db09cbe1387545b72fd2942e4b30e71d1fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 88576d1bab512cb0d8567ef95e6b7ef3a1db124a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜索报表和其他项（报表生成器和 SSRS）
   您可以使用报表管理器在报表服务器中按名称或说明搜索特定的项。 可以搜索发布的报表、报表模型、文件夹、共享数据源和资源。 无法搜索计划、所有者、角色分配、订阅或者报表历史记录中的特定快照。 搜索是在存储项的报表服务器数据库上执行的。  
@@ -39,10 +38,9 @@ ms.lasthandoff: 09/27/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
- [使用我的报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
+ [在报表管理器中查找和查看报表（报表生成器和 SSRS）](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
+ [使用“我的报表”（报表生成器和 SSRS）](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [打开和关闭报表 &#40;报表管理器 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   
-

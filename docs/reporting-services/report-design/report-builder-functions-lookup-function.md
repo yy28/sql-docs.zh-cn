@@ -1,5 +1,5 @@
 ---
-title: "Lookup 函数 （报表生成器和 SSRS） |Microsoft 文档"
+title: "Lookup 函数（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4426bffe23295c623d0bba5592c1488cb0ede770
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0ff6e6ecbde8b322548ca4798b7e1fd762339c21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---lookup-function"></a>报表生成器功能-Lookup 函数
+# <a name="report-builder-functions---lookup-function"></a>报表生成器函数 - Lookup 函数
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  
   
 > [!NOTE]  
@@ -65,7 +64,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   返回结果表达式值。  
   
- 若要为单个名称或键字段检索多个值（具有 1 对多关系），请使用[LookupSet 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)。 若要调用**查找**获取的值集，可使用[Multilookup 函数 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
+ 若要为单个名称或键字段检索多个值（具有 1 对多关系），请使用[LookupSet 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)。  
   
  存在下列限制：  
   
@@ -103,10 +102,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [表达式 &#40; 中的数据类型报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

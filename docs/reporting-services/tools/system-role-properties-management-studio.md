@@ -1,5 +1,5 @@
 ---
-title: "系统角色属性 (Management Studio) |Microsoft 文档"
+title: "系统角色属性 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.systemroleproperties.f1
+f1_keywords: sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68038228fd6fb7b2af8dd6f1bb5ae50b7f63daac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9b8c79918ee560fc34ed7f642e54dd39e57a1264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="system-role-properties-management-studio"></a>系统角色属性 (Management Studio)
   使用“系统角色”页可以查看当前为报表服务器定义的系统角色定义。 系统角色定义包含一组任务的命名集合，这些任务相对于整个站点（而不是单项）执行。 角色定义将分配给用户或组，以据此创建角色分配。 角色定义中的任务指定用户或组可以执行的任务。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]具有两个预定义的系统角色定义：**系统管理员**和**系统用户**。 您可以通过更改任务列表来修改这些角色定义，也可以创建支持其他任务组合的新系统角色。 对角色定义进行编辑将影响包括角色定义的所有角色分配。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 有两个预定义的系统角色定义： **系统管理员** 和 **系统用户**。 您可以通过更改任务列表来修改这些角色定义，也可以创建支持其他任务组合的新系统角色。 对角色定义进行编辑将影响包括角色定义的所有角色分配。  
   
 > [!NOTE]  
 >  系统角色分配仅适用于在本机模式下运行的报表服务器。 如果针对报表服务器配置了 SharePoint 集成，则此页不可用。  
@@ -47,10 +45,9 @@ ms.lasthandoff: 08/09/2017
  提供每个任务的有关信息。 不能修改任务说明。  
   
 ## <a name="see-also"></a>另请参阅  
- [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
- [预定义的角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

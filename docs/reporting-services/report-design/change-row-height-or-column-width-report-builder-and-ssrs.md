@@ -1,5 +1,5 @@
 ---
-title: "更改行高或列宽 （报表生成器和 SSRS） |Microsoft 文档"
+title: "更改行高或列宽（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
   设置行高时，您所指定的是呈现的报表中行的最大高度。 但默认情况下，行中的文本框设置为可在运行时沿垂直方向增长，以容纳其中的数据，这会使行超过您指定的高度。 若要设置固定行高，您必须更改文本框的属性，使其不会自动增高。  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  在设计视图中，单击表行中的单元。  
   
-     ![在表中选择单元格](../../reporting-services/report-design/media/table-selectcell.png "表中所选单元格")  
+     ![表中的已选单元格](../../reporting-services/report-design/media/table-selectcell.png "Selected Cell in a Table")  
   
 2.  在显示的“属性”  窗格中，修改“高度”  属性，然后单击“属性”  窗格外部的任意位置。  
   
-     ![所选的表单元格的属性窗格](../../reporting-services/report-design/media/cell-propertiespane.png "选的表格单元格的属性窗格")  
+     ![所选表单元格的“属性”窗格](../../reporting-services/report-design/media/cell-propertiespane.png "Properties Pane for selected table cell")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>防止行自动垂直增高  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/27/2017
 3.  在“属性”窗格中，将 CanGrow 设置为 **False**。  
   
     > [!NOTE]  
-    >  如果看不到属性窗格中，从**视图**菜单上，单击**属性**。  
+    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”。  
   
 ### <a name="to-change-column-width"></a>更改列宽  
   
@@ -71,12 +70,11 @@ ms.lasthandoff: 09/27/2017
 3.  单击以抓住列边缘，然后向左或向右移动列边缘，从而调整列宽。  
   
 ## <a name="see-also"></a>另请参阅  
- [Tablix 数据区域 （报表生成器和 SSRS）](tablix-data-region-report-builder-and-ssrs.md)   
- [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [表 （报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩阵 （报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
- [列表 （报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 （报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tablix 数据区域（报表生成器和 SSRS）](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
+ [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

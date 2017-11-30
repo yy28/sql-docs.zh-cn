@@ -1,34 +1,31 @@
 ---
-title: "Reporting Services 移动报表的数据 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "Reporting Services 移动报表的数据 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 68ae16ae7746d414109530a18584277931bea9c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 数据模型非常简单。 将数据作为数据集的集合导入 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 。 不需要数据集之间的正式关系。 只要键值匹配，就可以在各个数据集之间进行查找。 日期/时间聚合通过移动报表运行时进行处理，即使数据集之间的日期/时间数据粒度不同，它们也会在不同的数据集之间进行匹配。   
   
 可以从以下两种类型的源导入数据：   
   
-* **本地 Excel 文件**：选择 Excel 文档，然后选择要导入的工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始的 Excel 文件中的数据，请使用**刷新数据**中右上角的命令上[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]**数据**选项卡。阅读更多有关[为 SSRS 移动报表准备 Excel 数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
+* **本地 Excel 文件**：选择 Excel 文档，然后选择要导入的工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始 Excel 文件中的数据，请使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]“数据”选项卡右上角的“刷新数据”命令。阅读有关[为 SSRS 移动报表准备 Excel 数据的详细信息](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
 * **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 共享数据集**：浏览服务器上已发布数据集的列表，然后选择要添加到移动报表中的数据集。 基于服务器数据的移动报表始终与原始服务器数据集标尺连接，并反映该服务器上的数据的最新状态。 请参阅 [支持的数据源列表](https://msdn.microsoft.com/library/ms159219.aspx)。   
   
@@ -49,5 +46,4 @@ ms.lasthandoff: 09/27/2017
 - [保留移动报表中 Analysis Services 数据的日期格式](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 
   
   
-
 

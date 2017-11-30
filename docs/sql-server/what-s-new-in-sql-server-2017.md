@@ -1,32 +1,32 @@
 ---
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
-SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。
+SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。 有关 Linux 上的 SQL Server 的相关详细信息，请参阅 [Linux 上的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)
 
 [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)试用：[下载 SQL Server 2017 发行版 - 2017 年 10 月：](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
->**在 Linux 上运行 SQL Server！** 有关详细信息，请参阅 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)（Linux 上的 SQL Server 文档）。
+> [!NOTE]
+> 除了以下更改外，在正式版发布后会定期发布累积更新。 这些累积更新提供许多改进和修复。 有关最新 CU 版本的信息，请参阅 [SQL Server 2017 累积更新](http://aka.ms/sql2017cu)。
 
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 数据库引擎
 
@@ -95,9 +95,10 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 有关详细信息，请参阅 [SQL Server Analysis Services 2017 中的新增功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
-自 CTP 2.1 起，不可再通过 SQL Server 安装程序安装 SSRS。 转到 Microsoft 下载中心，[下载 Microsoft SQL Server 2017 Reporting Services 候选发布](https://www.microsoft.com/download/details.aspx?id=55252)。 
-- 注释现在可用于报表，以增加视角并与他人协作。 还可包含带有批注的附件。 (CTP 2.1)
+不可再通过 SQL Server 安装程序安装 SQL Server Reporting Services。 请转到 Microsoft 下载中心以[下载 Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。 
+- 注释现在可用于报表，以增加视角并与他人协作。 还可包含带有批注的附件。
 - 在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
+- 为了实现现代应用程序开发以及自定义，SSRS 现在支持完全符合 OpenAPI 规范的 RESTful API。 现在可在 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) 上找到完整的 API 规范和文档。
 
 有关详细信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
@@ -125,3 +126,4 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

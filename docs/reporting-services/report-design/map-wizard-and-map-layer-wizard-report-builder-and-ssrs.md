@@ -1,5 +1,5 @@
 ---
-title: "地图向导和地图层向导 （报表生成器和 SSRS） |Microsoft 文档"
+title: "地图向导和地图层向导（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: ef6a44a6fedf7815e6a7ad5304cf8ee840a52894
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -121,12 +121,12 @@ ms.lasthandoff: 08/09/2017
  地图库所包含的地图来自面向报表创作环境的地图库文件夹中的报表。 库中的地图提供支持向报表快速添加地图。 库中预先定义的地图是由地图提供商提供的。  
   
 > [!NOTE]  
->  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口人口调查局开发 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
+>  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 许可的 TIGER/Line 形状文件。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
  若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 一组文件通常包括*\<文件名 >*.shp 文件，其中包含空间数据和支持文件， *\<文件名 >*.dbf。  
+ ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>。  
   
  当您将形状文件指定为空间数据源而该文件位于您的本地计算机中时，空间数据将自动嵌入到报表中。 若要动态使用 ESRI 文件中的空间数据，必须执行以下操作：  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间查询是一种数据集查询，该查询指定来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的 SQLGeometry 或 SQLGeography 数据类型的数据。  
   
 > [!NOTE]  
->  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计器 &#40;报表生成器 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
   
  在查询设计器中运行该查询时，结果集显示一列，其中的空间数据显示为文本。 例如，一行可能包含作为一个点的空间数据，而下一行可能包含定义一组点的空间数据。 每行都成为一个地图元素。 您可以改变每个图元素的显示，将其作为不可分的单元。  
   
@@ -254,9 +254,9 @@ ms.lasthandoff: 08/09/2017
   
  报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [规划地图报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
- [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
