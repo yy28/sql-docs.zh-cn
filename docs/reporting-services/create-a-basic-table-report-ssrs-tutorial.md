@@ -1,50 +1,46 @@
 ---
-title: "创建基本表报表 （SSRS 教程） |Microsoft 文档"
+title: "创建基本表报表（SSRS 教程）| Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 658a882ae3c4e907e50b71a5b98137aa009ea4e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
 
-在本教程中，你使用报表设计器在 SQL Server Data Tools 中创建基本[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分页报表基于的表与 **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** 数据库。 你还可以创建[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分页报表使用报表生成器。 
+在本教程中，将使用 SQL Server Data Tools 中的报表设计器，根据 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库创建包含表的基本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 还可以使用报表生成器创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
 
-当你完成本教程，你将创建报表项目、 设置连接信息、 定义的查询、 添加表数据区域、 组和总一些字段，并预览报表。  
+在完成本教程时，将创建报表项目、设置连接信息、定义查询、添加表数据区域、对某些字段进行分组和汇总以及预览报表。  
   
 ## <a name="requirements"></a>要求  
 若要使用本教程，您的系统必须安装以下组件：  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server 数据库引擎。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server 数据库引擎。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 。  
   
--   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库。  有关详细信息，请参阅 [Adventure Works 2014 示例数据库](https://msftdbprodsamples.codeplex.com/releases/view/125550)。  
+-   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库。  有关详细信息，请参阅 [Adventure Works 2014 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)与安装了，因此具有报表设计器的"SQL Server Reporting Services"组件。    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 安装有“SQL Server Reporting Services”组件，因此具有报表设计器。    
   
 还必须具有从 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库检索数据的只读权限。
 
@@ -68,4 +64,3 @@ ms.lasthandoff: 09/27/2017
 [Reporting Services 教程](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

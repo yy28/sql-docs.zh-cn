@@ -1,5 +1,5 @@
 ---
-title: "数据集字段集合 （报表生成器和 SSRS） |Microsoft 文档"
+title: "数据集字段集合（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
   数据集字段表示来自数据连接的数据。 字段可以表示数值数据，也可以表示非数值数据。 示例包括销售额、总销售额、客户名称、数据库标识符、URL、图像、空间数据和电子邮件地址。 在设计图面上，字段显示为报表项（如文本框、表和图表）中的表达式。  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  支持多维查询的数据源（例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）支持字段的字段属性。 字段属性显示在查询的结果集中，但是在 **“报表数据”** 窗格中不可见。 它们仍可在报表中使用。 若要引用字段的属性，请将该字段拖到报表中，然后将默认属性 **Value** 更改为所需属性的字段名。 例如，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中，可以定义多维数据集单元格中的值格式。 通过使用字段属性 **FormattedValue**可使用已格式化值。 若要直接使用该格式化值，而不是使用一个值，然后再设置文本框的格式属性，请将该字段拖到该文本框中，然后将默认表达式 `=Fields!FieldName.Value` 更改为 `=Fields!FieldName.FormattedValue`。  
   
 > [!NOTE]  
->  并非所有的 **Field** 属性均可用于所有数据源。 针对所有的数据源定义 **Value** 和 **IsMissing** 属性。 仅当数据源提供了其他预定义的属性（例如，多维数据源的 **Key**、 **UniqueName**和 **ParentUniqueName** ）时，才支持这些属性。 某些数据访问接口支持自定义属性。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如，对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源，请参阅[for an Analysis Services Database &#40; 扩展字段属性SSRS &#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  并非所有的 **Field** 属性均可用于所有数据源。 针对所有的数据源定义 **Value** 和 **IsMissing** 属性。 仅当数据源提供了其他预定义的属性（例如，多维数据源的 **Key**、 **UniqueName**和 **ParentUniqueName** ）时，才支持这些属性。 某些数据访问接口支持自定义属性。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   
 ##  <a name="Defaults"></a> 了解字段的默认表达式  
@@ -113,10 +112,9 @@ ms.lasthandoff: 08/09/2017
  处理报表时，数据集的结果集可能会由于数据源中不再存在指定的所有列而不包含这些列的值。 可以使用字段属性 IsMissing 检测在运行时是否返回了某个字段的值。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [“数据集属性”对话框 ->“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [报表部件和报表生成器中的数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

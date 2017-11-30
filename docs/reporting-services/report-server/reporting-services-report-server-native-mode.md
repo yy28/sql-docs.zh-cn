@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 报表服务器 （本机模式） |Microsoft 文档"
+title: "Reporting Services 报表服务器（本机模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 704f732494ca5afbe20a1e2c58d09b4ba00be432
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/09/2017
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表、模型、文件夹、资源和共享数据源的管理。 通过属性和安全设置，所有这些项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  
   
 > [!NOTE]  
->  内容管理不同于报表服务器管理。 有关如何管理报表服务器运行的环境的详细信息，请参阅[配置和管理的报表服务器 &#40;Reporting Services SharePoint 模式 &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
+>  内容管理不同于报表服务器管理。 有关如何管理报表服务器运行环境的详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
  内容管理包括以下任务：  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
- 通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 &#40;Reporting Services &#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ 通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
  用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 报表管理器用于授予用户对报表服务器项和操作的访问权限，查看和使用报表以及其他内容类型，以及查看和使用所有共享项和报表分发功能。  
   
@@ -117,4 +116,3 @@ ms.lasthandoff: 08/09/2017
  [排除 Reporting Services 安装故障](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   
-

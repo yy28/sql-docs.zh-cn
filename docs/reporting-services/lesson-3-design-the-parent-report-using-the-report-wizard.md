@@ -1,28 +1,25 @@
 ---
-title: "第 3 课： 设计父报表使用报表向导 |Microsoft 文档"
+title: "第 3 课：使用报表向导设计父报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b491008866649087e050b04261bfde7a3ad82e92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f07184dd7763bcfd710b1fd1f521665cca3785b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 课：使用报表向导设计父报表
 创建用于父报表的数据连接和数据表后，接下来要使用报表设计器中的报表向导设计父报表。 有关报表设计器的详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
@@ -37,9 +34,9 @@ ms.lasthandoff: 08/09/2017
   
     随后将启动报表向导。  
   
-4.  在“数据集属性”页上的“数据源”框中，选择在[第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中创建的 **DataSet1**。  
+4.  在“数据集属性”页上的“数据源”框中，选择在[第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中创建的 DataSet1。  
   
-    随后将自动用你在上面创建的 **DataTable** 更新“可用数据集”框。  
+    随后将自动用你在上面创建的 DataTable 更新“可用数据集”框。  
   
 5.  选择“下一步” 。  
   
@@ -47,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
     1.  将“ProductID”、“Name”、“ProductNumber”、“SafetyStockLevel”和“ReorderLevel”从“可用字段”拖至“值”框中。  
   
-    2.  单击“Sum(ProductID)”、“Sum(SafetyStockLevel)”、“Sum(ReorderLevel)”旁的箭头，然后取消选择“Sum”。  
+    2.  选择“Sum(ProductID)”、“Sum(SafetyStockLevel)”、“Sum(ReorderLevel)”旁的箭头，然后取消选择“Sum”。  
   
 7.  选择“下一步”两次，然后选择“完成”以关闭“报表向导”。  
   
@@ -60,5 +57,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "部署和 SQL Server Data Tools (SSDT) 中的版本支持 |Microsoft 文档"
+title: "SQL Server Data Tools 中的部署和版本支持 (SSDT) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 02dc4f34643ca904f04c0f2c1b88fc3bdc202904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>部署和 SQL Server Data Tools (SSDT) 中的版本支持
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的部署和版本支持 (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支持以下方案：  
   
 -   打开报表定义 (*.rdl) 和报表服务器项目 (\*.rptproj)。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/06/2017
   
 -   OutputPath 是一个生成属性，它标识用于存储在报表生成验证、部署和预览过程中使用的报表定义的文件夹路径。  
   
--   ErrorLevel 是一个生成属性，它标识报告为错误的生成问题的严重性。 严重级别小于或等于 ErrorLevel 的值的问题将报告为错误；否则，将问题报告为警告。 有关详细信息，请参阅中的"报表验证和错误级别"部分[设计报表使用报表设计器 &#40;SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel 是一个生成属性，它标识报告为错误的生成问题的严重性。 严重级别小于或等于 ErrorLevel 的值的问题将报告为错误；否则，将问题报告为警告。 有关详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的“报表验证和错误级别”一节。  
   
 -   TargetServerVersion 是一个部署属性，它标识安装在目标报表服务器（在 TargetServerURL 属性中指定）上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的预期版本。  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/06/2017
 ##  <a name="bkmk_SupportedVersions"></a> 支持的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表服务器项目，32 位开发环境不是在上运行[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-基于计算机和上未安装[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-基于服务器。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
   
  下表说明了可在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作和发布报表的支持版本。  
   
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/06/2017
  [发布数据源和报表](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
-

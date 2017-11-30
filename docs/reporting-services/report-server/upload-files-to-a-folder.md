@@ -1,5 +1,5 @@
 ---
-title: "将文件上载到文件夹 |Microsoft 文档"
+title: "将文件上载到文件夹 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6381fa38e39b7b8730a90eebcdd557f2e30da8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upload-files-to-a-folder"></a>将文件上载到文件夹
   您可以从文件系统上载文件，然后将其作为托管项存储在报表服务器数据库中。 上载文件时的情况因文件类型而异。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
  ![报表图标](../../reporting-services/report-server/media/hlp-16doc.gif "报表图标")  
 报表图标  
   
- ![模型图标](../../reporting-services/report-server/media/model-icon.gif "模型图标")  
+ ![模型图标](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 报表模型图标  
   
  ![通用资源图标](../../reporting-services/report-server/media/hlp-16file.gif "通用资源图标")  
@@ -65,10 +64,9 @@ ms.lasthandoff: 08/09/2017
 |查看文件夹的内容|查看资源，查看报表|  
   
 ## <a name="see-also"></a>另请参阅  
- [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
- [上载文件或报表 &#40;报表管理器 &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [上传文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   
-

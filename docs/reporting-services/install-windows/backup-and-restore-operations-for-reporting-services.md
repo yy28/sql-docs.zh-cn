@@ -1,5 +1,5 @@
 ---
-title: "备份和还原 Reporting Services 的操作 |Microsoft 文档"
+title: "Reporting Services 的备份和还原操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -20,28 +20,26 @@ helpviewer_keywords:
 - files [Reporting Services], restoring
 - files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b16289b6455ac596fcc05b58db3793e3c8d5c541
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的备份和还原操作
 
   本主题概述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的所有数据文件，并介绍应在何时以及如何备份这些文件。 为报表服务器数据库文件制定备份和还原计划是恢复策略中最重要的一部分。 但是，更全面的恢复策略应包括备份加密密钥、自定义程序集或扩展插件、配置文件，以及报表和模型的源文件。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  备份和还原操作通常用于移动所有或部分 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装：  
   
--   如果只移动报表服务器数据库，则可以使用备份和还原或附加和分离功能在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中重新定位数据库。 有关详细信息，请参阅[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
+-   如果只移动报表服务器数据库，则可以使用备份和还原或附加和分离功能在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中重新定位数据库。 有关详细信息，请参阅 [将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
   
 -   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装移到新计算机的过程称为迁移。 在迁移安装时，需要运行安装程序以安装新的报表服务器实例，然后将实例数据复制到新计算机上。 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的详细信息，请参阅以下主题：  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的备份和恢复的详细信息，请参阅 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 > [!IMPORTANT]  
->  如果您的报表服务器在 SharePoint 模式下，有其他一些数据库需要加以注意，包括 SharePoint 配置数据库和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]警报数据库。 在 SharePoint 模式下，对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序将创建三个数据库。 **reportserver**、 **reportservertempdb**和 **dataalerting** 数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  如果你的报表服务器处于 SharePoint 模式下，则会有其他一些数据库需要加以注意，包括 SharePoint 配置数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警报数据库。 在 SharePoint 模式下，对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序将创建三个数据库。 **reportserver**、 **reportservertempdb**和 **dataalerting** 数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>备份加密密钥  
  首次配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装时，应备份加密密钥。 此外，任何时候更改服务帐户标识或重命名计算机时，都应备份密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 有关 SharePoint 模式报表服务器的信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)中的“密钥管理”部分。  
@@ -99,5 +97,4 @@ ms.lasthandoff: 08/09/2017
 [管理报表服务器数据库](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
 [配置和管理加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

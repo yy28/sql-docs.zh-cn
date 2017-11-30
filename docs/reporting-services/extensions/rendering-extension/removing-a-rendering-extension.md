@@ -1,5 +1,5 @@
 ---
-title: "删除呈现扩展插件 |Microsoft 文档"
+title: "删除呈现扩展插件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -10,35 +10,32 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deleting rendering extensions
 - removing rendering extensions
 - rendering extensions [Reporting Services], removing
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: ea37cf7ac15504a00aeb0f1379e9d48a71231e1c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 7603ca8ad7e5fb5688b51e847a7b742cf691afb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="removing-a-rendering-extension"></a>删除呈现扩展插件
-  若要删除[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]呈现扩展插件时，只需删除**扩展**从 rsreportserver.config 文件，位于你呈现扩展插件的元素**%ProgramFiles%\Microsoft SQL Server\MSRS10_50。\<实例名称 > \Reporting Services\ReportServer**文件夹。 如果为报表设计器以及报表服务器进行条目，请删除**扩展**元素从[RSReportDesigner Configuration File](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)以及。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  
+  要删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 呈现扩展插件，只需从 rsreportserver.config file, located in %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer 文件夹中删除呈现扩展插件的 Extension 元素即可。 如果为报表设计器以及报表服务器生成条目，则还需从 [RSReportDesigner 配置文件](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中删除 Extension 元素。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置文件](../../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [实现的呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [呈现扩展概述](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
+ [实现呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [呈现扩展插件概述](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
  [实现 IRenderingExtension 接口](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
- [有关扩展的安全注意事项](../../../reporting-services/extensions/security-considerations-for-extensions.md)   
+ [扩展插件的安全注意事项](../../../reporting-services/extensions/security-considerations-for-extensions.md)   
  [部署呈现扩展插件](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
   
-

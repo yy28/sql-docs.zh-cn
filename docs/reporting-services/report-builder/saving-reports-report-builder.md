@@ -1,5 +1,5 @@
 ---
-title: "保存报表 （报表生成器） |Microsoft 文档"
+title: "保存报表（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 159062c578f63088b16fdb807d60eb6c3613baca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
   在报表生成器中，可以将分页报表保存到你有写入权限的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表服务器、SharePoint 库和文件共享，也可以将其保存到你的计算机。 
@@ -71,9 +70,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  [报表、报表部件和报表定义（报表生成器和 SSRS）](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [安装和卸载报表生成器](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
- [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [打印报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   
-

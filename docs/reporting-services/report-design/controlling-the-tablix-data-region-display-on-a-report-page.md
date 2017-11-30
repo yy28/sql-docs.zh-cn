@@ -1,5 +1,5 @@
 ---
-title: "控制 Tablix 数据区域的显示报表页上 |Microsoft 文档"
+title: "控制 Tablix 数据区域在报表页上的显示 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,27 +11,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制 Tablix 数据区域在报表页上的显示
 了解可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表为表、矩阵或列表数据区域设置以更改其在查看报表时的显示方式的属性。  
    
 ## <a name="controlling-the-appearance-of-data"></a>控制数据的外观  
-表、 矩阵和列表数据区域都是*tablix*数据区域。 下列功能有助于控制 Tablix 数据区域的外观：  
+表、矩阵和列表数据区域都是 Tablix 数据区域的示例。 下列功能有助于控制 Tablix 数据区域的外观：  
   
 -   **设置数据格式。** 若要在表、矩阵或列表中设置数据格式，请在单元格中设置文本框的属性。 可以同时设置多个单元的属性。 若要设置图表中的数据的格式，请在序列上设置格式设置属性。 有关详细信息，请参阅[设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)和[设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)。  
   
--   **编写表达式**。 有关详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
+-   **编写表达式**。 有关详细信息，请参阅[报表中的表达式用法（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
   
 -   **控制排序顺序**。 若要控制排序顺序，可在数据区域中定义排序表达式。 若要控制与组关联的行和列的排序顺序，可在组中定义排序表达式，包括详细信息组。 您也可以添加交互式排序按钮，以使用户能够对 Tablix 数据区域及其包含的组进行排序。 有关详细信息，请参阅[对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
   
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **有条件地隐藏数据**。 若要根据条件控制是显示还是隐藏数据区域或部分数据区域，可以将 Hidden 属性设置为 **True** 或表达式。 表达式可以包括对报表参数的引用。 还可以指定切换项，以使用户可以决定是否显示详细信息数据。 有关详细信息，请参阅[深化操作（报表生成器和 SSRS）](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)。  
   
--   **合并单元。** 您可以将表内多个连续单元合并为一个单元。 这称作列跨越（即单元合并）。 单元只能以水平方式或垂直方式合并。 当您合并单元后，只保留第一个单元中的数据， 而删除其他单元中的数据。 合并后的单元可以拆分为原来的列。 有关详细信息，请参阅[在数据区域中合并单元格（报表生成器和 SSRS）](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)。  
+-   **合并单元。** 您可以将表内多个连续单元合并为一个单元。 这称作列跨越（即单元合并）。 单元只能以水平方式或垂直方式合并。 当您合并单元后，只保留第一个单元中的数据， 而删除其他单元中的数据。 合并后的单元可以拆分为原来的列。 有关详细信息，请参阅[合并数据区域中的单元（报表生成器和 SSRS）](../../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md)。  
   
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>控制 Tablix 数据区域在报表页中的位置和扩展  
  下列功能有助于控制 Tablix 数据区域在所呈现的报表中的显示方式：  
@@ -72,18 +71,17 @@ ms.lasthandoff: 08/09/2017
   
 -   **滚动时显示行标题和列标题**。 您可以控制在使用浏览器滚动报表时是否显示行标题和列标题。 有关详细信息，请参阅[在滚动报表时保持标题可见（报表生成器和 SSRS）](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)。  
   
- 有关报表导出格式对 Tablix 数据区域在报表页中呈现方式的影响的详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
+ 如需深入了解将报表导出为其他格式对 Tablix 数据区域在报表页中的呈现方式产生的影响，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [将多个数据区域链接到同一数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [嵌套的数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [控制分页符、 标题、 列和行和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Tablix 数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [控制分页符、标题、列和行（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [创建矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [创建带列表的发票和窗体](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [创建带列表的发票和表单](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,27 +1,24 @@
 ---
-title: "为 Reporting Services 移动报表准备 Excel 数据 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "为 Reporting Services 移动报表准备 Excel 数据 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0403dcd2f622f6bd6c8cbc88d12a4f8a955d8605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>为 Reporting Services 移动报表准备 Excel 数据
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-转换单元格后，必须通过从“类别”列表中依次选择这些单元格或整列 >“上下文”菜单 >“设置单元格格式” > “日期”来将其格式设置为日期。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
+转换单元格后，必须通过选择这些单元格，或从“类别”列表中依次选择整列 >“上下文”菜单 >“设置单元格格式” > “日期”来将其格式设置为日期。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
   
 ## <a name="unsupported"></a>不支持  
   
@@ -103,5 +100,4 @@ Excel 工作表中的自定义对象（包括数据透视表、可视化功能�
   
   
   
-
 

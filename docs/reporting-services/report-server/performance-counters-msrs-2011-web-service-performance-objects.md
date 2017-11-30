@@ -1,5 +1,5 @@
 ---
-title: "MSRS 2011 Web Service 性能对象的性能计数器 |Microsoft 文档"
+title: "MSRS 2011 Web Service 性能对象的性能计数器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d75a88f416a41812b2e4e6cd99b87c2a5279e985
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>性能计数器 MSRS 2011 Web Service 性能对象
+# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>MSRS 2011 Web Service 性能对象的性能计数器
   本主题介绍 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 性能对象的性能计数器。 这些对象是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 本机模式部署的组成部分。  
   
 > [!NOTE]  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 |**总快照更新数**|报表执行快照更新的总数|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell Cmdlet 返回列表  
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")以下 Windows PowerShell 脚本将返回 countersetname 以"msr"计数器集：  
+ ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")下面的 Windows PowerShell 脚本将返回 CounterSetName 以“msr”开头的计数器集：  
   
 ```  
 get-counter -listset msr*  
@@ -132,8 +131,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>另请参阅  
  [监视报表服务器性能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [获得 MSRS 2011 Web Service SharePoint Mode 和 MSRS 2011 Windows Service SharePoint 模式性能对象 &#40; 性能计数器SharePoint 模式 &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

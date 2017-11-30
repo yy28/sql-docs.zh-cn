@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services 的 MDX 查询设计器中定义参数 |Microsoft 文档"
+title: "在 Analysis Services 的 MDX 查询设计器中定义参数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e3a54629b97f7e774a75d33711d34ba866b86c6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查询设计器中定义参数
   若要参数化 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源的 MDX 查询，则必须向查询添加查询参数。 在 MDX 查询设计器中，在设计模式和查询模式下都可以通过指定筛选器来添加查询参数。 使用查询参数定义查询后，Reporting Services 会自动创建报表参数和数据集，以提供有效值的列表。 这样用户就可以指定要直接传递给查询的值。  
@@ -65,11 +64,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  在工具栏上单击 **“设计”** 以切换到查询模式。  
   
-3.  在 MDX 查询设计器工具栏上，单击**查询参数**(![查询参数对话框中的图标](../../reporting-services/report-data/media/iconqueryparameter.gif "查询参数对话框中的图标"))。 此时将打开“查询参数”对话框。  
+3.  在 MDX 查询设计器工具栏上，单击“查询参数”（![“查询参数”对话框图标](../../reporting-services/report-data/media/iconqueryparameter.gif "“查询参数”对话框图标")）。 此时将打开“查询参数”对话框。  
   
-4.  在**参数**列中，单击**\<输入参数 >**，然后键入参数的名称。  
+4.  在“参数”列中，单击“\<输入参数>”，然后键入参数的名称。  
   
-5.  在“**维度**”列中，从下拉列表中选择一个值。  
+5.  在“ **维度** ”列中，从下拉列表中选择一个值。  
   
 6.  在“ **层次结构** ”列中，从下拉列表中选择一个值。  
   
@@ -88,8 +87,7 @@ ms.lasthandoff: 08/09/2017
      若要查看为报表参数提供可用值的数据集，请右键单击“报表数据”窗格中的任意空白区域，然后单击“ **显示隐藏的数据集**”。 此时“报表数据”窗格将显示报表中的所有数据集。  
   
 ## <a name="see-also"></a>另请参阅  
- [针对 MDX &#40; analysis Services 连接类型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [针对 MDX 的 Analysis Services 连接类型&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
-

@@ -1,28 +1,26 @@
 ---
-title: "将导航器添加到 Reporting Services 移动报表 |Microsoft 文档"
+title: "向 Reporting Services 移动报表添加导航器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>将导航器添加到 Reporting Services 移动报表
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中，你将添加 *导航器* 来按时间或按选定内容筛选可视化效果中的数据。 
 
 导航器类似于 Power BI 和 Excel 数据透视表中的切片器，但导航器也有一些独特的特征。
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 正如其名，时间导航器用于筛选某个时间范围所绑定的数据范围。   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*在左侧的四个线图中时间范围预设设置。在右侧的折线图是筛选器。*  
+左侧的四个折线图在“时间范围预设”中设置。右侧的折线图是筛选器。  
   
 当你在预览模式下或在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中查看报表时，可拖动时间导航器中的箭头来筛选报表的其余部分。  
   
@@ -57,9 +55,9 @@ ms.lasthandoff: 08/09/2017
   
 选择列表通过将列表中的选定值与筛选表中每行的指定列的值相匹配来筛选移动报表中的数据。 
 
-1. 从“布局”选项卡中，将**选择列表**拖至设计图面并根据需要重设其大小。
+1. 从“布局”选项卡中，将“选择列表”拖至设计图面并根据需要重设其大小。
 
-2. 选择“数据”选项卡，并在“数据属性”窗格的“键”下面选择表以及将作为筛选器的列。 
+2. 选择“数据”选项卡，并在“数据属性”窗格中的“键”下面选择表以及将作为筛选器的列。 
 
 3. 在“标签”下面，选择将显示该标签的列。 键列和标签列可以相同。  
   
@@ -83,15 +81,15 @@ ms.lasthandoff: 08/09/2017
   
 记分卡网格筛选器的功能与选择列表筛选器非常类似，但它还会显示值列和分数指示器（与指示器数据网格中的指示器相同）。 在选择键列、标签列和可选父键列后，需选择输入表和输入列以向记分卡提供数据。 记分卡数据列应该可以根据键列进行筛选。  
 
-1. 从“布局”选项卡中，将**记分卡网格**拖至设计图面并根据需要重设其大小。
+1. 从“布局”选项卡中，将“记分卡网格”拖至设计图面并根据需要重设其大小。
 
-2. 选择“数据”选项卡，并在“数据属性”窗格的“键”下面选择表以及将作为筛选器的列。 
+2. 选择“数据”选项卡，并在“数据属性”窗格中的“键”下面选择表以及将作为筛选器的列。 
 
 3. 在“标签”下面，选择将显示该标签的列。 键列和标签列可以相同。  
   
 4. 若要添加分数指示器，请在“数据列”窗格中，选择“添加得分”。   
   
-5. 为分数指示器命名，并选择“选项”以设置与你为数据网格中的指示器所设的属性相同的属性：  
+5. 为分数指示器命名，并选择“选项”以设置与你为数据网格中的指示器所设置的同一属性：  
   
    * 仪表类型
    * 值字段
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/09/2017
 * [Reporting Services 移动报表中的可视化效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 移动报表中的仪表](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Reporting Services 移动报表中的数据网格](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

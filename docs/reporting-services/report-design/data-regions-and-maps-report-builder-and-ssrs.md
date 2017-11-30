@@ -1,5 +1,5 @@
 ---
-title: "数据区域和地图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "数据区域和地图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data regions
+helpviewer_keywords: data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: de9339b33d20c0b1e69f6b1aec0499aed716609f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>数据区域和地图（报表生成器和 SSRS）
   数据区域是报表中的对象，显示来自报表数据集中的数据。 可以在表、矩阵或列表中以数字和文本形式显示报表数据；在图表或仪表中以图形方式显示报表数据；以及在地图中以地理为背景显示报表数据。 表、矩阵和列表都基于“Tablix  ”数据区域，这种数据区域可根据需要扩展以显示数据集中的所有数据。 Tablix 数据区域支持多个行组和列组，还支持静态和动态的行和列。 图表显示各种图表格式的多个序列和类别组。 仪表显示数据集的单个值或聚合值。 地图会将空间数据显示为地图元素，这些地图元素的外观会根据数据集中的聚合数据而变化。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>表  
- “表”是逐行显示数据的数据区域。 表列是静态的：列数是在设计报表时确定的。 表行是动态的：它们向下扩展以容纳数据。 您可以向表添加组，以按照所选的字段或表达式来组织数据。 有关将表添加到报表的信息，请参阅[表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ “表”是逐行显示数据的数据区域。 表列是静态的：列数是在设计报表时确定的。 表行是动态的：它们向下扩展以容纳数据。 您可以向表添加组，以按照所选的字段或表达式来组织数据。 有关向报表添加表的信息，请参阅[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)。  
   
 ## <a name="matrix"></a>矩阵  
  “矩阵”也称为交叉表。 矩阵数据区域包含动态列和行，它们都可以扩展以容纳数据。 矩阵可以具有动态列和行及静态列和行。 列或行可以包含其他列或行，并且可用于对数据进行分组。 阅读有关 [向报表添加矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)的详细信息。  
@@ -72,9 +70,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表、报表部件和报表定义（报表生成器和 SSRS）](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [页面布局和呈现 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

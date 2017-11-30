@@ -1,36 +1,37 @@
 ---
 title: "系统版本控制临时表入门 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0318f2a574bcdb2f02016fc6d865252deb6fef4a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fd2178542c6f193986377a5a7dacd42420e7a86c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>系统版本控制临时表入门
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   根据你的方案，你可以创建新的系统版本控制临时表，或通过将临时属性添加到现有的表架构修改现有的系统版本控制临时表。   
 修改临时表中的数据时，系统将生成对应用程序和最终用户透明的版本历史记录。 因此，使用系统版本控制临时表时，不需要对修改表或查询最新（实际）状态的数据的方式进行任何更改。   
 除了常规的 DML 和查询，临时表还提供了简单方便的方法来让你通过扩展的 Transact-SQL 语法从数据历史记录中获得见解。   
 每个系统版本控制表都分配有一个历史记录表，但该表对用户完全透明，除非他们想要通过创建附加索引或选择不同的存储选项来优化工作负载性能或存储空间。    
 下图说明了使用系统版本控制临时表的典型工作流：   
-![临时表入门](../../relational-databases/tables/media/getting-started-with-temporal.png "Getting Started with Temporal")  
+![时态入门](../../relational-databases/tables/media/getting-started-with-temporal.png "Getting Started with Temporal")  
   
  本主题分为以下 5 个子主题：  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

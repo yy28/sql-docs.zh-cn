@@ -1,5 +1,5 @@
 ---
-title: "设置 Reporting Services 脚本文件的格式 |Microsoft 文档"
+title: "设置 Reporting Services 脚本文件的格式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 07ff237eee12f3cf3499ad30880adfecef157e3a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="format-a-reporting-services-script-file"></a>设置 Reporting Services 脚本文件的格式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本是用来定义 Reporting Services SOAP API 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 代码文件，该文件是针对基于 Web 服务描述语言 (WSDL) 构建的代理编写的。 脚本文件以 Unicode 或 UTF-8 文本文件形式存储，扩展名为 .rss。  
@@ -60,8 +59,7 @@ End Sub
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器 Web 服务](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [RS.exe 实用工具 &#40;SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   
-

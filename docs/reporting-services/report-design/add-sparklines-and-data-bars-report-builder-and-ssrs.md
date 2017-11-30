@@ -1,5 +1,5 @@
 ---
-title: "添加迷你图和数据条 （报表生成器和 SSRS） |Microsoft 文档"
+title: "添加迷你图和数据条（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9f084fc55a0f3011a40c6f2d8a2cfcdf61dc9f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 211700a96c3b38ed19977a02ba35743eb4eccc48
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>添加迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是小的备用图，它包含一些额外细节，可以传递很多信息。 有关它们的详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
@@ -39,15 +38,15 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  不能将迷你图放置于表的详细信息组中。 它们必须处于与组相关联的单元中。  
   
-4.  在**更改迷你图/数据栏类型**对话框中，单击类型的迷你图或数据条你想，然后单击**确定**。  
+4.  在“更改迷你图/数据条类型”对话框中，单击所需的迷你图或数据条类型，然后单击“确定”。  
   
 5.  单击该迷你图或数据条。  
   
      将打开 **“图表数据”** 窗格。  
   
-6.  在**值**区域中，单击**添加字段**加号 (**+**)，然后单击你想图表其值的字段。  
+6.  在“值”区域中，单击“添加字段”加号 (**+**)，然后单击要将其值制成图表的字段。  
   
-7.  在**类别组**区域中，单击**添加字段**加号 (**+**)，然后单击你想要分组依据其值的字段。  
+7.  在“类别组”区域中，单击“添加字段”加号 (**+**)，然后单击要依据其值分组的字段。  
   
      对于迷你图和数据条，通常不向 **“序列组”** 区域添加字段，因为每行只需要一个序列。  
   
@@ -56,4 +55,3 @@ ms.lasthandoff: 08/09/2017
  [在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   
-

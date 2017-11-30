@@ -1,5 +1,5 @@
 ---
-title: "共享数据集设计视图 （报表生成器） |Microsoft 文档"
+title: "共享数据集设计视图（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a9ac302273553bb46457ab5edfb5d75d71b3e523
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 共享数据集发布在报表服务器上，可由多个报表使用。 你可以创建数据集，以便与他人共享。 在共享数据集设计窗口中，你可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
  在“连接”组中使用 **“选择”** 按钮可以选择报表中的共享数据源，或浏览到报表服务器上的共享数据源。  
   
 > [!NOTE]  
->  共享数据集必须基于共享数据源。 如果你需要的数据源不可用，则需要在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、 修改和删除共享数据源 &#40;SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
+>  共享数据集必须基于共享数据源。 如果你需要的数据源不可用，则需要在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
  有关详细信息，请参阅 [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
@@ -56,9 +55,9 @@ ms.lasthandoff: 08/09/2017
   
  在将共享数据集添加到报表后，报表作者可以覆盖以下选项：排序规则、区分大小写、区分重音、区分假名类型、区分全半角、小计。 他们还可以创建其他数据集筛选器来限制报表中的数据。  
   
- 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
- 有关缓存刷新计划的详细信息，请参阅[缓存共享数据集 &#40;SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ 有关缓存刷新计划的详细信息，请参阅[缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)。  
   
 ### <a name="query-designer"></a>查询设计器  
  使用查询设计器工具栏可以帮助您生成用于指定要通过数据连接检索的数据的查询。 您看到的工具栏取决于与通过数据连接获得的数据源类型相关联的查询设计器。  
@@ -99,8 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

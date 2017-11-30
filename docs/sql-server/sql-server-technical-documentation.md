@@ -1,14 +1,13 @@
 ---
-title: "SQL Server 技术文档 | Microsoft Docs"
-ms.date: 10/02/2017
+title: "SQL Server 文档 | Microsoft Docs"
+ms.date: 10/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.portal.f1
+f1_keywords: sql13.portal.f1
 helpviewer_keywords:
 - documentation [SQL Server], home page
 - Help [SQL Server]
@@ -18,40 +17,36 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 106
+caps.latest.revision: "106"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 4e0f1f726de8ebde526376c213348a7a14597689
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 8898a815eac39966c1dd8ced8d6230e2cf8b4cac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-technical-documentation"></a>SQL Server 技术文档
+# <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 2014 安装](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)。
+SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 中处于领先水平。 本文档可帮助你安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
 
-用于帮助安装、配置和使用 SQL Server 2016 的文档。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
+|新增功能  | 发行说明  |
+|---------|---------|
+|[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)        |
+|[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
+|[SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
+   
+**试用 SQL Server！**
 
-**SQL Server 2017**
+|||
+|-|-|
+|[![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
+|[![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
+| [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
 
-- [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)
-- [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)
-
-**SQL Server 2016**
-
-- [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)
-- [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)
-    
-**试用 SQL Server！**    
-- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [下载 SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [启动具有 SQL Server 2016 SP1 或 SQL Server 2017 的虚拟机](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server 技术    
     
@@ -68,25 +63,20 @@ ms.lasthandoff: 10/02/2017
 
 ## <a name="migrate-and-move-data"></a>迁移和移动数据
 - [使用 SQL Server 导入和导出向导导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Microsoft 数据迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53595)
-- [将 SQL Server 数据库迁移至 Azure SQL 数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)
+- [将 SQL Server 数据库迁移至 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## <a name="earlier-sql-server-versions"></a>早期 SQL Server 版本
-- [SQL Server 2014 联机丛书](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [安装 SQL Server 2014 Express 和其他较旧的 SQL Server 版本](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)。 （**感谢你参与 [Scott Hanselman](http://www.hanselman.com/) 的演讲，了解如何将所有安装程序包链接收集到一个地方！**）  
-- [SQL Server 2012 技术文档](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2 产品文档](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [SQL Server 2008 技术文档](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
+- [SQL Server 2014 文档](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2012 文档](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 文档](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 文档](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
 - [SQL Server 2005 存档文档](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
 
 ## <a name="samples"></a>示例  
 - [Wide World Importers 示例数据库](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
-- [适用于 SQL Server 2016 的 AdventureWorks 示例数据库和脚本](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [适用于 SQL Server 2016 的 AdventureWorks 示例数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [GitHub 上的 SQL Server 示例](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>详细信息   
-+ 若要脱机查看 SQL Server 文档，请参阅 [SQL Server 的帮助查看器和脱机内容](sql-server-help-installation.md)。
-+ [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)
-+ [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
-
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

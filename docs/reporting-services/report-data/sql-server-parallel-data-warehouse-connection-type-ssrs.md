@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 并行数据仓库连接类型 (SSRS) |Microsoft 文档"
+title: "SQL Server 并行数据仓库连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b4cc5365a0d351304f0e4939b20425fec0f97db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库工具，可以通过大规模并行处理提供高性能和可扩展性。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]使用 SQL Server 数据库进行分布式处理和数据存储。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库工具，可以通过大规模并行处理提供高性能和可扩展性。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 使用 SQL Server 数据库进行分布式处理和数据存储。  
   
- 跨多个物理节点，每个节点运行自己的 SQL Server 实例设备分区大型数据库表。 当报表连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 实例，都没有任何区别。  
+ 该工具可跨多个物理节点对大型数据库表进行分区，每个节点运行自己的 SQL Server 实例。 当报表连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 实例，都没有任何区别。  
   
  若要在报表中包含来自 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的数据，您必须拥有一个基于类型为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]并从中检索数据。  
   
@@ -79,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [文本](#QueryText)  
   
- 你使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]与[!INCLUDE[ssDW](../../includes/ssdw-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]与 SQL Server。 SQL 语言的这两种方言非常相似。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源连接类型编写的查询通常可以用于 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 数据源连接类型。  
+ 将 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 用于 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]；将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用于 SQL Server。 SQL 语言的这两种方言非常相似。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源连接类型编写的查询通常可以用于 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 数据源连接类型。  
   
  如果不对数据进行聚合和汇总以减少查询返回的行数，从大型数据库（包括 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]等数据仓库）检索报表数据的查询所生成的结果集就可能会包含大量的行。 您可以使用图形查询设计器或基于文本的查询设计器，编写包括聚合和分组的查询。  
   
@@ -141,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [将筛选器添加到数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 相关章节  
@@ -150,16 +149,16 @@ WHERE EmployeeID = (@EmpID)
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [数据连接、 数据源和报表生成器中的连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供有关嵌入数据集和共享数据集的信息。  
   
- [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
 
 ## <a name="next-steps"></a>后续步骤
@@ -168,4 +167,4 @@ WHERE EmployeeID = (@EmpID)
 [对数据进行筛选、分组和排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [表达式](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

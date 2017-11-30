@@ -1,5 +1,5 @@
 ---
-title: "创建、 修改和删除报表历史记录中的快照 |Microsoft 文档"
+title: "创建、修改和删除报表历史记录中的快照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9a85cae2bbc12b86357160781596b1730fba7c88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>创建、修改和删除报表历史记录中的快照
   报表历史记录是报表快照的集合。 通过添加和删除快照或修改影响报表历史记录存储的属性，可以对报表历史记录进行维护。 您可以手动或按计划创建报表历史记录。  
@@ -66,11 +65,10 @@ ms.lasthandoff: 08/09/2017
  删除报表时将同时删除报表历史记录。 例如，如果删除月销售情况报表，代之以新报表，则与该报表关联的所有报表历史记录也将随之删除。 但是，如果移动报表，所有报表历史记录也将随之移动。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建报表历史记录 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [添加快照以报告历史记录 &#40;报表管理器 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [限制报表历史记录 &#40;报表管理器 &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [创建报表历史记录（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [向报表历史记录添加快照（报表管理器）](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [限制报表历史记录（报表管理器）](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   
-

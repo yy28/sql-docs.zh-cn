@@ -1,5 +1,5 @@
 ---
-title: "在数据警报设计器中创建数据警报 |Microsoft 文档"
+title: "在数据警报设计器中创建数据警报| Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 您在数据警报设计器中创建数据警报定义。 在您保存警报定义后，可以在数据警报设计器中重新打开、编辑和重新保存它们。 有关编辑警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 和 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 ## <a name="create-a-data-alert-definition"></a>创建数据警报定义
  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/17/2017
   
      下图显示该 **“操作”** 菜单。  
   
-     ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "打开警报的设计器从 SharePoint 库")  
+     ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
      数据警报设计器将打开，并且显示报表在表中生成的第一个数据馈送的前 100 行。  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/17/2017
   
 20. 或者，在 **“主题”** 文本框中，更新警报消息的“主题”行。  
   
-     默认使用者是**数据警报的\<数据警报名称 >**。  
+     默认“主题”为“\<数据警报名称> 的数据警报”。  
   
 21. 还可以在 **“说明”** 文本框中键入对警报消息的说明。  
   
@@ -130,8 +129,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="see-also"></a>另请参阅
 
 [数据警报设计器](../reporting-services/data-alert-designer.md)   
-[管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

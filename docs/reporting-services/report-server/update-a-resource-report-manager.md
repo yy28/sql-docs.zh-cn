@@ -1,5 +1,5 @@
 ---
-title: "更新资源 （报表管理器） |Microsoft 文档"
+title: "更新资源（报表管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 09c43f1eb33ae86935be561c2ef956307092a9e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
   通过将资源替换为新资源，可以更新资源。 资源是存储在报表服务器上的项，包含您上载的文件中的内容。 通过向现有资源中导入新的文件内容或其他文件内容，即可替换现有资源。 通过更新资源，可以在保留资源的现有属性和安全设置的同时更新内容。  
   
 ### <a name="to-update-a-resource"></a>更新资源  
   
-1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航或搜索到要更新的资源。  
   
@@ -50,10 +49,9 @@ ms.lasthandoff: 08/09/2017
  如果正在更新的资源包含某个报表中所使用的图像，则需要刷新该报表，才可以看到更新后的图像。  
   
 ## <a name="see-also"></a>另请参阅  
- [内容页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [上载文件页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)   
+ [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [“上传文件”页（报表管理器）](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [将文件上传到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)   
  [报表管理器的 F1 帮助](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   
-

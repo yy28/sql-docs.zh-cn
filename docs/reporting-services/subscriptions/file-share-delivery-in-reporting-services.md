@@ -1,5 +1,5 @@
 ---
-title: "文件共享传递 Reporting Services 中的 |Microsoft 文档"
+title: "Reporting Services 中的文件共享传递 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,22 +14,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d0492a8bc9b5ef61e8ef8b1d237aac1f818abd5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 需要编写器权限的帐户可以是订阅中配置的凭据，也可以是为报表服务器配置的“文件共享帐户”  。 有关文件共享帐户的详细信息，请参阅 [订阅设置和文件共享帐户（配置管理器）](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  
   
- 若要将报表分发到文件共享位置，需要定义标准订阅或数据驱动订阅。 若要了解如何使用数据驱动订阅中的文件共享传递，请参阅[创建数据驱动订阅 &#40;SSRS 教程 &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). 此外，运行远程文件共享订阅的帐户需要本地登录 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 计算机的权限。  
+ 若要将报表分发到文件共享位置，需要定义标准订阅或数据驱动订阅。 若要了解如何在数据驱动订阅中使用文件共享传递，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。 此外，运行远程文件共享订阅的帐户需要本地登录 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 计算机的权限。  
   
 ||  
 |-|  
@@ -80,15 +79,14 @@ ms.lasthandoff: 08/09/2017
   
  **覆盖：** 你可以指定覆盖选项，从而在每次报表传递时重复使用相同的文件名，或者创建新的文件。 若要覆盖文件，必须使用相同的文件名和扩展名。  
   
- 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，将添加 **@timestamp** 变量的文件名称 (例如，  *CompanySales@timestamp* )。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
+ 为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，请将“@timestamp”变量添加到文件名中（例如，CompanySales@timestamp）。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
   
  下图举例说明了为订阅配置的文件共享传递设置。  
   
- ![文件共享订阅](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "文件共享订阅")  
+ ![文件共享订阅](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [订阅设置和文件共享帐户 &#40;Configuration Manager &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [订阅设置和文件共享帐户（配置管理器）](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "报告数据 (SSRS) |Microsoft 文档"
+title: "报表数据 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d5cac8267c1a38401eee78758a6e34adcbdd06ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-data-ssrs"></a>报表数据 (SSRS)
   报表数据可以来自您的组织中的多种数据源。 设计报表的第一步是创建表示基础报表数据的数据源和数据集。 每个数据源都包含数据连接信息。 每个数据集都包含一个查询命令，该命令定义要用作来自数据源的数据的字段集。 若要展现来自各数据集的数据，请添加表、矩阵、图表或地图之类的数据区域。 处理报表时，将对数据源运行查询，并且每个数据区域都可以根据需要进行扩展，以便显示数据集的查询结果。  
   
 ##  <a name="BkMk_ReportDataTerms"></a> 术语  
   
--   **数据连接。** 也称为*数据源*。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
+-   **数据连接。** 也称为“数据源”。 数据连接包含名称和依赖于连接类型的连接属性。 根据设计，数据源连接不包含凭据。 数据连接不指定从外部数据源中检索哪些数据。 为此，请在创建数据集时指定查询。  
   
 -   **数据源定义。** 包含报表数据源的 XML 表示形式的文件。 在发布报表之后，其数据源作为数据源定义（独立于报表定义）保存到报表服务器或 SharePoint 站点上。 例如，报表服务器管理员可以更新连接字符串或凭据。 在本机报表服务器上，文件类型为 .rds。 在 SharePoint 站点上，文件类型为 .rsds。  
   
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   您可以使用的数据源取决于所安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据扩展插件。 对数据源的支持可能会因客户端创作工具、报表服务器版本和报表服务器平台而异。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
--   基于数据源类型以及是在您的客户端还是报表服务器或 SharePoint 站点查看报表的，数据源凭据将会有所不同。 有关详细信息，请参阅[在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式上的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)、[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md) 中特定于每个工具的凭据信息。  
+-   基于数据源类型以及是在您的客户端还是报表服务器或 SharePoint 站点查看报表的，数据源凭据将会有所不同。 有关详细信息，请参阅[在 SharePoint 网站上为报表服务器项设置权限（SharePoint 集成模式中的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)、[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)中特定于每个工具的凭据信息。  
   
 ## <a name="related-tasks"></a>相关任务  
  与创建数据连接以及从外部数据源、数据集和查询添加数据相关的任务。  
@@ -96,4 +95,3 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>相关内容  
   
-

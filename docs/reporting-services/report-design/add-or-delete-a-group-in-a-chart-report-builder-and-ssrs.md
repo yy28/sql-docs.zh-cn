@@ -1,5 +1,5 @@
 ---
-title: "添加或删除图表 （报表生成器和 SSRS） 中的组 |Microsoft 文档"
+title: "在图表中添加或删除组（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5828189294b51d10f36c4d0250f6a7b5aa5f2151
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，单击图表数据区域以显示“图表数据”窗格。 通过将数据集字段拖到 **“类别组”** 和 **“序列组”** 区域来创建组。 若要添加嵌套组，请向该区域添加多个字段。  
@@ -65,4 +64,3 @@ ms.lasthandoff: 08/09/2017
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

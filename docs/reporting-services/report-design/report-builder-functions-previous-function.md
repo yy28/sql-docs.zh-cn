@@ -1,5 +1,5 @@
 ---
-title: "上一个函数 （报表生成器和 SSRS） |Microsoft 文档"
+title: "Previous 函数（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9cbaa857daff88ffa155f29ff83c16d6d9a6b856
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c2b4f171ad0d7b0c00e2df239308a2a84e76862
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---previous-function"></a>报表生成器函数的上一个函数
+# <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  
   
 > [!NOTE]  
@@ -41,7 +40,7 @@ Previous(expression, scope)
  （**Variant** 或 **Binary**）用于标识数据和检索以前值的表达式，例如 `Fields!Fieldname.Value` 或 `Sum(Fields!Fieldname.Value)`。  
   
  *作用域*  
- (**String**) 可选。 为组或数据区域中或空值的名称 (**执行任何操作**中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要从其检索以前的值指定的作用域*表达式*。  
+ (**String**) 可选。 组或数据区域的名称，也可以为 null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为“Nothing”），它指定从中检索由表达式指定的以前值的作用域。  
   
 ## <a name="return-type"></a>返回类型  
  返回 **Variant** 或 **Binary**。  
@@ -60,7 +59,7 @@ Previous(expression, scope)
   
  如果 *expression* 包含指定非默认作用域的聚合函数，则 *Previous* 函数的 **scope** 参数必须是聚合函数调用中指定的作用域的包含作用域。  
   
- 函数**级别**， **InScope**，**聚合**和**上一步**不能在*表达式*参数。 不支持将 *recursive* 参数指定给任何聚合函数。  
+ 在 expression 参数中，不能使用函数 Level、InScope、Aggregate 和 Previous。 不支持将 *recursive* 参数指定给任何聚合函数。  
   
  有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)和[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
@@ -87,10 +86,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [表达式 &#40; 中的数据类型报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

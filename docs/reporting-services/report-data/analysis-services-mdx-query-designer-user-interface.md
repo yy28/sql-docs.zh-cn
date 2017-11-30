@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services MDX 查询设计器用户界面 |Microsoft 文档"
+title: "Analysis Services MDX 查询设计器用户界面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - MDX [Reporting Services], creating datasets
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aa4efde457b2769796523bd95ae4d11fe31c8029
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源生成多维表达式 (MDX) 查询和数据挖掘表达式 (DMX) 查询。 该主题介绍了 MDX 查询设计器。 有关 DMX 查询设计器的详细信息，请参阅 [针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
  下图列出了设计模式的窗格。  
   
- ![Analysis Services MDX 查询设计器、 设计视图](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查询设计器、 设计视图")  
+ ![Analysis Services MDX 查询设计器，设计视图](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
   
  下表列出了查询模式下的窗格：  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 |“筛选器”窗格|用于选择维度和相关的层次结构，以筛选源中的数据并限制返回报表的数据。|  
 |“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。 。|  
   
- 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果**自动执行**(![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")) 选择工具栏上的切换按钮时，查询设计器将运行查询每次拖放到数据窗格上的元数据对象。 你可以手动运行查询使用**运行**(![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")) 在工具栏上的按钮。  
+ 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的“自动执行”（![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "AutoExecute the query")）切换按钮，则每次将元数据对象拖到“数据”窗格时，查询设计器都将运行查询。 可以使用工具栏上的“运行”（![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")）按钮手动运行查询。  
   
  在此模式下创建 MDX 查询时，下面的附加属性将会自动包含到查询中：  
   
@@ -73,27 +72,27 @@ ms.lasthandoff: 08/09/2017
 |按钮|Description|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
-|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
-|![将更改为 MDX 查询视图](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "更改为 MDX 查询视图")|切换到命令类型 MDX。|  
-|![将更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "更改到 DMX 查询语言视图")|切换到命令类型 DMX。|  
-|![刷新结果数据](../../reporting-services/report-data/media/rsqdicon-refresh.gif "刷新结果数据")|刷新数据源的元数据。|  
+|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
+|![更改为 MDX 查询视图](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|切换到命令类型 MDX。|  
+|![更改为 DMX 查询语言视图](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|切换到命令类型 DMX。|  
+|![刷新结果数据](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Refresh result data")|刷新数据源的元数据。|  
 |![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
-|![显示空单元格的切换](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "显示空单元格的切换")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
-|![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
-|![显示聚合按钮](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "显示聚合按钮")|在“数据”窗格中显示聚合。|  
+|![切换显示空单元格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "AutoExecute the query")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
+|![“显示聚合”按钮](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Show Aggregations button")|在“数据”窗格中显示聚合。|  
 |![删除](../../reporting-services/report-data/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
-|![查询参数对话框中的图标](../../reporting-services/report-data/media/iconqueryparameter.gif "查询参数对话框中的图标")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建具有相同名称的报表参数。 查询参数的值设置为引用该报表参数的表达式。|  
-|![准备查询按钮](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "准备查询按钮")|准备查询。|  
+|![“查询参数”对话框图标](../../reporting-services/report-data/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建具有相同名称的报表参数。 查询参数的值设置为引用该报表参数的表达式。|  
+|![“准备查询”按钮](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "“准备查询”按钮")|准备查询。|  
 |![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
-|![取消查询](../../reporting-services/report-data/media/rsqdicon-cancel.gif "取消的查询")|取消查询。|  
-|![切换到设计模式](../../reporting-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|  
+|![取消查询](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancel the query")|取消查询。|  
+|![切换到设计模式](../../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode")|在设计模式和查询模式之间切换。|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>查询模式下的图形 MDX 查询设计器  
  若要将图形查询设计器更改为 **“查询”** 模式，请单击工具栏上的 **“设计模式”** 按钮。  
   
  下图列出了查询模式的窗格。  
   
- ![Analysis Services MDX 查询设计器中，查询视图](../../reporting-services/report-data/media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX 查询设计器中，查询视图")  
+ ![Analysis Services MDX 查询设计器，查询视图](../../reporting-services/report-data/media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX query designer, query view")  
   
  下表列出了查询模式下的窗格：  
   
@@ -117,18 +116,17 @@ ms.lasthandoff: 08/09/2017
   
 -   **添加计算成员** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **显示空单元格**(![显示空单元格的切换](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "显示空单元格的切换"))  
+-   **显示空单元格**（![切换显示空单元格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
   
--   **自动执行**(![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询"))  
+-   **自动执行**（![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "AutoExecute the query")）  
   
--   **显示聚合**(![显示聚合按钮](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "显示聚合按钮"))  
+-   **显示聚合**（![“显示聚合”按钮](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Show Aggregations button")）  
   
 ## <a name="see-also"></a>另请参阅  
- [为 Analysis Services &#40; MDX 查询设计器中定义参数报表生成器和 SSRS &#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [针对 DMX &#40; analysis Services 连接类型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [针对 MDX &#40; analysis Services 连接类型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   
-

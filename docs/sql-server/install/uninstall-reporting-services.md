@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fc07c41e5bb9244ecbe5456e7f9944f460a73488
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-reporting-services"></a>卸载 Reporting Services
   卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会删除您已创建的内容或已修改的配置。 但是，如果存在在卸载完成后您需要的内容，建议您首先生成内容的副本，再开始卸载过程。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 Windows“控制面板”中，单击 **“程序和功能”**。  
   
-2.  在 **“程序和功能”** 中，选择 **Microsoft SQL Server 2012**。  
+2.  在“程序和功能”中，选择“Microsoft SQL Server 2016”。  
   
 3.  在卸载向导中，选择包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例功能 **RS**的实例。  
   

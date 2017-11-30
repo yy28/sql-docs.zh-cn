@@ -1,13 +1,11 @@
 ---
-title: "安装 Reporting Services 本机模式报表服务器 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "安装 Reporting Services 本机模式报表服务器 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 15a6372f34d1490499880d89e32ac8f0804b0fb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安装 Reporting Services 本机模式报表服务器
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 10/06/2017
 了解如何在本机模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 这将提供对用于管理报表和其他项的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的访问权限。
 
 > [!NOTE]
-> 是否在寻找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
+> 要查找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式报表服务器是默认的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式，可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装或从命令行安装。 在安装向导中，你可以选择安装文件并使用默认设置配置服务器或仅安装文件。  本主题讨论“本机模式默认配置”，其中，安装程序安装并配置报表服务器实例。 安装完成后，报表服务器便进入运行状态，可供基本的报表查看和管理。  其他功能（例如 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成和使用订阅处理电子邮件的发送）需要其他配置。  
   
@@ -79,14 +76,14 @@ ms.lasthandoff: 10/06/2017
   
 -   用于运行安装程序的用户帐户必须是本地 Administrators 组成员，而且拥有针对承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例创建数据库的权限。  
   
--   安装程序必须能够使用默认值来保留用于访问报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 这些值为端口 80、 强通配符和格式中的虚拟目录名称**ReportServer_\<***instance_name*  **>** 和**Reports_\<***instance_name***>**。  
+-   安装程序必须能够使用默认值来保留用于访问报表服务器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 这些值包括端口 80、强通配符和虚拟目录名（格式为 ReportServer_\<instance_name> 和 Reports_\<instance_name）**>**。  
   
 -   安装程序必须能够使用默认值来创建报表服务器数据库。 这些值包括 **ReportServer** 和 **ReportServerTempDB**。 如果存在以前安装的现有数据库，安装程序则因无法将报表服务器配置为本机模式的默认配置而被阻止。 必须重命名、移动或删除这类数据库以取消阻止安装程序。  
   
  如果计算机不满足默认安装的全部要求，则必须在“仅文件”模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并在安装程序结束后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器对其进行配置。
  
  > [!IMPORTANT]
- > 虽然可以在只读域控制器 (RODC) 的环境中安装 Reporting Services，Reporting Services 需要访问读写域控制器正常。 如果 Reporting Services 仅有权访问在 RODC，你可能尝试管理该服务时遇到错误。
+ > 尽管可以在具有只读域控制器 (RODC) 的环境中安装 Reporting Services，但 Reporting Services 需要有权访问读写域控制器才能正常工作。 如果 Reporting Services 只有权访问 RODC，当你在尝试管理此服务时则可能会遇到错误。
   
 ##  <a name="bkmk_defaultURLreservations"></a> 默认 URL 保留项  
  URL 保留项由前缀、主机名、端口和虚拟目录组成：  
@@ -94,15 +91,15 @@ ms.lasthandoff: 10/06/2017
 |组成部分|说明|  
 |----------|-----------------|  
 |前缀|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，安装程序将尝试创建使用 HTTP 前缀的 URL 保留项。|  
-|主机名|默认主机名为强通配符 (+)。 它指定报表服务器将接受解析为计算机上，任何主机名的指定端口上的任何 HTTP 请求包括`http://<computername>/reportserver`， `http://localhost/reportserver`，或`http://<IPAddress>/reportserver`。|  
+|主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver`。|  
 |端口|默认端口为 80。 请注意，如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 应用程序时，必须将该端口显式添加至 URL 中。|  
-|虚拟目录|默认情况下，虚拟目录创建 ReportServer_ 格式\<*instance_name*> 为报表服务器 Web 服务和 Reports_\<*instance_name*> 为[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|  
+|虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer_\<instance_name>（对于报表服务器 Web 服务）和 Reports_\<instance_name>（对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，默认的虚拟目录为 **reports**。|  
   
  完整的 URL 字符串示例如下所示：  
   
--   `http://+:80/reportserver`提供对报表服务器的访问。  
+-   `http://+:80/reportserver` 用于访问报表服务器。  
   
--   `http://+:80/reports`提供对访问[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]。
+-   `http://+:80/reports` 用于访问 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]。
   
 ##  <a name="bkmk_installwithwizard"></a> 使用 SQL Server 安装向导安装本机模式  
  以下列表介绍了在 SQL Server 安装向导中选择的  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 特定步骤和选项。 该列表并不介绍您在安装向导中看到的每一页，而是仅介绍作为本机模式安装一部分的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关页。  
@@ -125,7 +122,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  在 **“安装角色”** 页上，选择 **“SQL Server 功能安装”**。  
   
-     ![安装程序角色的 SQL Server 功能安装](../../reporting-services/install-windows/media/rs-setuprole.png "for 安装角色的 SQL Server 功能安装")  
+     ![安装角色的 SQL Server 功能安装](../../reporting-services/install-windows/media/rs-setuprole.png "SQL Server Feature Installation for setup role")  
   
 3.  在 **“功能选择”** 页上，选择以下选项：  
   
@@ -133,7 +130,7 @@ ms.lasthandoff: 10/06/2017
   
     -   (2) **Reporting Services - 本机**。  
   
-     ![在功能选择中选择的 SSRS 本机模式](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "在功能选择中选择的 SSRS 本机模式")  
+     ![功能选择中的 SSRS 本机模式选择](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "SSRS Native Mode Select in Feature Selection")  
   
 4.  查看通过的“功能规则”  。  
   
@@ -143,13 +140,13 @@ ms.lasthandoff: 10/06/2017
   
     -   `http://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **服务器配置**： 如果你打算使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]订阅功能，然后在**服务器配置**页上，配置 SQL Server 代理**自动**启动类型。   默认为手动。  
+6.  **服务器配置**：如果计划使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则在“服务器配置”页上配置 SQL Server 代理“自动”启动类型。   默认为手动。  
   
 7.  在“数据库引擎配置”  页上，添加 SQL Server 管理员。  
   
 8.  在 **“Reporting Services 配置”** 页上，选择 **“安装和配置”**。  
   
-     ![SSRS 本机模式配置](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS 本机模式配置")  
+     ![SSRS 本机模式配置](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS Native Mode Configuration")  
   
     > [!NOTE]  
     >  除非同时选择安装该数据库功能，否则“安装和配置” 将不可用。  
@@ -174,18 +171,18 @@ ms.lasthandoff: 10/06/2017
   
 ##  <a name="bkmk_additional_configuration"></a> 其他配置  
   
--   若要配置[!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]集成以便可以固定报表项到[!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]仪表板，请参阅[Power BI 报表服务器集成](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
+-   若要配置 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成，以便可以将报表项固定至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板，请参阅 [Power BI 报表服务器集成](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
   
--   若要配置为订阅处理的电子邮件，请参阅[电子邮件设置-Reporting Services 本机模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)和[Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
+-   若要为订阅处理配置电子邮件，请参阅[电子邮件设置 - Reporting Services 本机模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)及[ Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
--   若要配置 web 门户，以便您可以查看和管理报表的报表计算机上访问它，请参阅[为报表服务器访问配置防火墙](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)和[配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
+-   若要配置 Web 门户 ，以便可以在报表计算机上对它进行访问以查看和管理报表，请参阅[将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)和[配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
 ## <a name="see-also"></a>另请参阅
 
 [排除 Reporting Services 安装故障](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
 [配置报表服务器服务帐户](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
-[配置报表服务器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [“仅文件”安装 (Reporting Services)](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [初始化报表服务器](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
@@ -193,4 +190,3 @@ ms.lasthandoff: 10/06/2017
 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

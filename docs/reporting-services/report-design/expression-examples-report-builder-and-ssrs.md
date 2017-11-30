@@ -1,5 +1,5 @@
 ---
-title: "表达式示例 （报表生成器和 SSRS） |Microsoft 文档"
+title: "表达式示例（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 04/06/2017
 ms.prod: sql-server-2016
@@ -26,19 +26,19 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
-表达式通常在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和的可以包含的引用类型的详细信息，请参阅[表达式使用在报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)，和[添加表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+表达式通常在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
   
 > [!IMPORTANT]  
 >  启用 RDL 沙盒处理后，在报表发布时，只能在表达式文本中使用某些类型与成员。 有关详细信息，请参阅 [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-有关简单表达式和复杂表达式、使用表达式的位置、以及表达式中可以包含的引用类型的详细信息，请参阅 [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 有关用于计算聚合计算表达式的上下文的详细信息，请参阅[获得总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+有关简单表达式和复杂表达式、使用表达式的位置、以及表达式中可以包含的引用类型的详细信息，请参阅 [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 有关为计算聚合而计算表达式时所处上下文的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 若要了解如何编写使用许多本主题中的表达式示例所用的函数和运算符的表达式，请参阅 [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md)。  
 
@@ -102,12 +102,12 @@ ms.lasthandoff: 08/09/2017
     =Today()  
     ```  
   
--   使用**DateInterval**函数来拉出特定日期的一部分。 以下是一些有效**DateInterval**参数：
+-   使用 DateInterval 函数拉取某日期的特定部分。 以下是一些有效的 DateInterval 参数：
 
     -   DateInterval.Second
     -   DateInterval.Minute
     -   DateInterval.Hour
-    -   条件下所
+    -   DateInterval.Weekday
     -   DateInterval.Day
     -   DateInterval.DayOfYear
     -   DateInterval.WeekOfYear
@@ -115,7 +115,7 @@ ms.lasthandoff: 08/09/2017
     -   DateInterval.Quarter
     -   DateInterval.Year
 
-    例如，此表达式将在今天的日期的当前年份中显示的周数：
+    例如，此表达式可显示当前日期在该年中位于哪一周：
   
     ```  
     =DatePart(DateInterval.WeekOfYear, today()) 
@@ -169,7 +169,7 @@ ms.lasthandoff: 08/09/2017
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   以下表达式生成介于 SellStartDate 和 LastReceiptDate 之间的间隔年。 这些字段在两个不同的数据集内，即 DataSet1 和 DataSet2。 [第一个函数 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)，这是聚合函数，返回 DataSet1 和 DataSet2 中 LastReceiptDate 的第一个值中的 SellStartDate 的第一个值。  
+-   以下表达式生成介于 SellStartDate 和 LastReceiptDate 之间的间隔年。 这些字段在两个不同的数据集内，即 DataSet1 和 DataSet2。 [First 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-first-function.md)是一个聚合函数，它返回 DataSet1 中 SellStartDate 的第一个值和 DataSet2 中 LastReceiptDate 的第一个值。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -215,7 +215,7 @@ ms.lasthandoff: 08/09/2017
   
      如果文本框仅包含日期或数字，则应使用文本框的 Format 属性来应用格式设置，而不应在文本框中使用 **Format** 函数。  
   
--   **右**， **Len**，和**InStr**函数可用于返回子字符串，例如，修剪*域*\\*用户名*到不仅仅是用户名。 下面的表达式从名为 User 的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
+-   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名。 下面的表达式从名为 User 的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -240,7 +240,7 @@ ms.lasthandoff: 08/09/2017
   
     ```  
   
--   若要基于单个参数提供日期范围，可使用 **Regex** [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 函数对更改现有字符串的格式很有用，例如设置电话号码格式。 The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
+-   若要基于单个参数提供日期范围，可使用 **[!INCLUDE[dnprdnshort](../Token/dnprdnshort_md.md)]** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 函数对更改现有字符串的格式很有用，例如设置电话号码格式。 以下表达式使用 Replace 函数将字段中的十位电话号码格式从“nnn-nnn-nnnn”更改为“(nnn) nnn-nnnn”：  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -485,7 +485,7 @@ ms.lasthandoff: 08/09/2017
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     有关详细信息，请参阅[将超链接添加到 URL &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
+     有关详细信息，请参阅[向 URL 添加超链接（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)。  
   
 -   下面的表达式可以有条件地控制是否要在文本框中添加 URL。 此表达式的计算结果取决于一个名为 `IncludeURLs` 的参数，该参数允许用户决定是否在报表中包括活动 URL。 此表达式设置为一个对文本框的操作。 通过将参数设置为 False，然后再查看报表，可以导出不包含超链接的 Microsoft Excel 报表。  
   
@@ -518,7 +518,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ##  <a name="CustomCode"></a> 自定义代码  
- 您可以在报表中使用自定义代码。 自定义代码嵌入在报表中，或存储在报表使用的自定义程序集中。 有关自定义代码的详细信息，请参阅[自定义代码和在报表设计器 &#40; 中的表达式的程序集引用SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ 您可以在报表中使用自定义代码。 自定义代码嵌入在报表中，或存储在报表使用的自定义程序集中。 有关自定义代码的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用组变量自定义聚合  
  您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714)（在 Reporting Services 2008 使用组变量自定义聚合）。  
@@ -560,10 +560,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [组表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [常用筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
-

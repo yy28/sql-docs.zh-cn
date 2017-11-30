@@ -1,31 +1,30 @@
 ---
 title: "执行可用性组的计划手动故障转移 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/25/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.manualfailover.f1
+f1_keywords: sql13.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: cba9c53e2ce51f12ea806337ec7a5923bbd17efc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5017d65bb6324f7137c4b5a2a2e0e59b95829748
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的计划手动故障转移 (SQL Server)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（“计划的手动故障转移”）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移（类似于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移）将辅助副本转换为主角色，同时将以前的主副本转换为辅助角色。  
@@ -54,7 +53,10 @@ ms.lasthandoff: 08/02/2017
 -   **跟进：**  [在对可用性组执行手动故障转移后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
-  
+
+>[!IMPORTANT]
+>在没有群集管理器的情况下，需要通过一些特定过程对读取缩放可用性组进行故障转移。 当可用性组具有 CLUSTER_TYPE = NONE 时，请按照[故障转移读取缩放可用性组上的主要副本](#ReadScaleOutOnly)中的过程进行操作。
+
 ###  <a name="Restrictions"></a> 限制和局限  
   
 -   故障转移命令将在目标辅助副本接受它之后立即返回。 但是，在可用性组完成故障转移之后，数据库恢复操作将以异步方式执行。  
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/02/2017
 -   目标辅助副本当前必须与主副本同步。 这要求此辅助副本上的所有辅助数据库必须已加入到可用性组，并与其对应的主数据库同步（即本地辅助数据库必须为 SYNCHRONIZED）。  
   
     > [!TIP]  
-    >  若要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的“is_failover_ready”列，或查看[“AlwaysOn 组面板”](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”列。  
+    >  若要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的 **“is_failover_ready”** 列，或查看[“AlwaysOn 组面板”](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) **的“故障转移就绪”**列。  
   
 -   只有目标辅助副本支持该任务。 您必须连接到承载目标辅助副本的服务器实例。  
   
@@ -129,14 +131,19 @@ ms.lasthandoff: 08/02/2017
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+
 ##  <a name="FollowUp"></a> 跟进：在对可用性组进行手动故障转移后  
  如果您故障转移到可用性组的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外，则调整 WSFC 节点的仲裁投票以反映新的可用性组配置。 有关详细信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
+<a name = "ReadScaleOutOnly"><a/>
+
+##<a name="fail-over-primary-replica-on-read-scale--availability-group"></a>故障转移读取缩放可用性组上的主要副本
+
+[!INCLUDE[Force Failover](../../../includes/ss-force-failover-read-scale-out.md)]
+
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [执行可用性组的强制手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
   
-

@@ -1,28 +1,25 @@
 ---
-title: "订阅设置和文件共享帐户 （配置管理器） |Microsoft 文档"
+title: "订阅设置和文件共享帐户（配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.rsconfigtool.subscriptionsettings.F1
+f1_keywords: SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f0f86350f35ccf9843328fc8f8795a0ed2215f7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>订阅设置和文件共享帐户（配置管理器）
   使用 **配置管理器的**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “订阅设置”页为本机模式报表服务器和文件共享订阅配置文件共享帐户。 文件共享帐户运行使用将报表传递给文件共享的多个订阅中的单组凭据。 需要更改凭据时，可以为文件共享帐户配置更改并且无需更新每个单独的订阅。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  下图是配置用于文件共享传递的订阅上显示的内容。 如果尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。  
   
- ![configuration manager 文件共享帐户](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "configuration manager 文件共享帐户")  
+ ![配置管理器文件共享帐户](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "configuration manager file share account")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>阻止权限提升或提升的权限  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 >  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>审核文件共享帐户的使用情况的 PowerShell 示例  
- 运行以下的 Windows PowerShell 脚本，以列出所有[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置为使用的订阅**文件共享帐户**。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
+ 运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户”的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
   
 ```  
 # get all file share subscriptions using the default file share account  
@@ -107,4 +104,3 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
  [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   
-

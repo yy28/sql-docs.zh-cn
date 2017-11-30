@@ -1,5 +1,5 @@
 ---
-title: "rsProcessingError-Reporting Services 错误 |Microsoft 文档"
+title: "rsProcessingError - Reporting Services 错误 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsProcessingError
+helpviewer_keywords: rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1ceb80c23e3c5e6d71d6857319da424a8815d504
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 错误
     
@@ -76,9 +74,9 @@ ms.lasthandoff: 08/09/2017
   
 -   如果在报表设计器预览中创作报表，请查看完整的错误消息文本。 扩充文本中提供了详细信息。  
   
--   如果是在报表服务器上查看报表，并且是以报表服务器上的本地管理员身份运行，则可以通过右键单击页并选择“查看源”来查看调用堆栈。 调用堆栈中提供了详细信息。  
+-   如果在报表服务器上查看报表，并且以报表服务器上的本地管理员身份运行，则可以通过右键单击页并选择“查看源”来查看调用堆栈。 调用堆栈中提供了详细信息。  
   
--   如果以本地管理员身份在报表服务器上运行，请在日志文件中搜索 `ReportProcessingException`。 日志项包含详细信息。 报表服务器日志文件位于通常\<*驱动器*>: files\microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*。 日志。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+-   如果以本地管理员身份在报表服务器上运行，请在日志文件中搜索 `ReportProcessingException`。 日志项包含详细信息。 报表服务器日志文件通常位于 \<drive>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__datetimestamp.log。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>无法加载表达式宿主程序集。  
  自定义程序集必须设置了强名称签名和 AllowPartiallyTrustedCallers 属性。 有关详细信息，请参阅 [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) 和 [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md)。  
@@ -87,7 +85,7 @@ ms.lasthandoff: 08/09/2017
  检查表达式的拼写。 内置全局名称、参数名称和字段名称均区分大小写。 在导致错误的表达式中，检查该名称在报表中是否实际存在以及拼写是否正确。 有关详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 ### <a name="parameter-properties-and-null"></a>参数属性和 Null  
- 多值参数不能为 Null。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 多值参数不能为 Null。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>无法处理包含子报表的主报表  
  必须使用相同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理包含子报表的报表。 将报表升级到报表定义架构的当前版本时，可能会同时更新主报表和子报表，也可能不会。 如果报表与其子报表的版本不兼容，则会显示以下消息：“无法处理子报表”。  
@@ -104,26 +102,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>无法比较筛选器的数据类型  
  在筛选器公式中，定义筛选内容的筛选器表达式和筛选器值必须为相同数据类型才能进行比较。 如果出现以下错误之一，请修改字段表达式或筛选器值以使数据类型匹配：  
   
--   处理*\<报表项类型 >*为*\<报表项名称 >*无法执行。 无法比较类型的数据*\<类型 >*和*\<类型 >*。 请检查返回的数据类型*\<报表项名称 >*。  
+-   无法为 \<report item name> 执行 \<report item type> 的处理。 无法比较 \<type> 和 \<type> 类型的数据。 请检查 \<report item name> 返回的数据类型。  
   
--   无法评估*\<属性名称 >*。  
+-   无法计算 \<property name>。  
   
--   无法评估*\<属性名称 >*。 它所引用的数据集字段包含错误： *\<错误字符串 >*。  
+-   无法计算 \<property name>。 它引用了一个数据集字段，该字段包含一个错误：\<error string>。  
   
- 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>聚合函数调用中指定的作用域无效或有冲突  
  如果 Tablix 单元中包含对表达式的聚合函数调用，报表处理器将使用单元所属的最内部组的作用域来计算表达式。  
   
  也可以将特定作用域的名称传递给聚合函数。 作用域可以引用数据集和数据区域的名称，也可以引用位于数据层次结构中较高位置的作用域的名称。 这适用于以下消息：  
   
--   *\<报表项类型 >* *\<报表项名称 >*具有无效的作用域"*\<作用域名称 >*"。 该作用域必须是当前作用域或包含在当前作用域内。  
+-   \<report item type>“\<report item name>”具有无效的作用域“\<scope name>”。 该作用域必须是当前作用域或包含在当前作用域内。  
   
--   *\<属性名称 >*表达式*\<报表项类型 >* *\<报表项名称 >*具有无效的聚合函数的作用域参数。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
+-   \<report item type>“\<report item name>”的 \<property name> 表达式包含的作用域参数对聚合函数无效。 作用域参数必须设置为字符串常量，该常量可以等于所包含组的名称、所包含数据区域的名称或数据集的名称。  
   
  对于计算运行总计的聚合函数（**Previous**、 **RunningValue**或 **RowNumber**），可以将作用域参数指定为行组名称或列组名称，但不能同时指定二者。 这适用于以下错误消息：  
   
--   **以前**， **RunningValue**或**RowNumber**聚合函数中的数据单元格使用*\<报表项类型 >* *\<报表项名称 >*的分组的行和列中的作用域，请参阅*\<报表项类型 >*。 所有的作用域参数**上一步**， **RunningValue**和**RowNumber**聚合函数内的*\<报表项类型 >*可以引用行分组或数据列分组，但不是两个。  
+-   \<report item type>“\<report item name>”的数据单元中所用的 Previous、RunningValue 或 RowNumber 聚合函数同时引用了 \<report item type> 的行和列中的分组作用域。 \<report item type> 内的所有 Previous、RunningValue 和 RowNumber 聚合函数的作用域参数均可引用数据行分组或数据列分组，但不能同时引用这二者。  
   
  有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)和[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -131,14 +129,13 @@ ms.lasthandoff: 08/09/2017
  如果报表包含多个数据集，请勿使用添加到报表设计图面上的文本框的默认作用域。 应使用一个表达式，其中包含数据集名称（作为作用域）和聚合函数。 例如， `=First(Fields!FieldName.Value, "DataSet2")`。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [聚合函数引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [常用筛选器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [自定义代码和在报表设计器 &#40; 中的表达式的程序集引用SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [参数的集合引用 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [常用筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Parameters 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   
-

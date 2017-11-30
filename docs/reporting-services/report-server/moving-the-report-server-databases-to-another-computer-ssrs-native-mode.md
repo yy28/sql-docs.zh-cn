@@ -1,5 +1,5 @@
 ---
-title: "将报表服务器数据库移到另一台计算机 （SSRS 本机模式） |Microsoft 文档"
+title: "将报表服务器数据库移动到其他计算机（SSRS 本机模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90dc9bb5624c19c282d34782909fb5e168b4a695
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
 
   可以将安装中使用的报表服务器数据库移至其他计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 必须一同移动或复制数据库 reportserver 和数据库 reportservertempdb。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装需要这两个数据库；reportservertempdb 数据库必须按名称与将要移动的 reportserver 主数据库相关。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
  移动数据库不会影响当前为报表服务器项定义的计划操作。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 >  当重新定位报表服务器数据库是对现有安装的唯一更改时，建议执行本主题中提供的步骤。 若要迁移整个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装（即，移动数据库并更改使用该数据库的报表服务器 Windows 服务的标识），需要重新配置连接并重置加密密钥。  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>分离和附加报表服务器数据库  
- 如果可使报表服务器脱机，则可分离数据库，以将其移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此方法将保留数据库中的权限。 如果你使用的 SQL Server 数据库，必须将其移到另一个 SQL Server 实例。 移动数据库后，必须重新配置报表服务器与报表服务器数据库的连接。 如果您运行的是扩展部署，则必须为部署中的每个报表服务器重新配置报表服务器数据库连接。  
+ 如果可使报表服务器脱机，则可分离数据库，以将其移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此方法将保留数据库中的权限。 如果在使用 SQL Server 数据库，则必须将其移动到另一个 SQL Server 实例。 移动数据库后，必须重新配置报表服务器与报表服务器数据库的连接。 如果您运行的是扩展部署，则必须为部署中的每个报表服务器重新配置报表服务器数据库连接。  
   
  请使用下列步骤来移动数据库：  
   
@@ -235,5 +233,4 @@ GO
 [配置和管理加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [报表服务器数据库](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

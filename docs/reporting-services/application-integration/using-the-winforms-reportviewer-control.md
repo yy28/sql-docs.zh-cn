@@ -1,5 +1,5 @@
 ---
-title: "使用 WinForms ReportViewer 控件 |Microsoft 文档"
+title: "使用 WinForms ReportViewer 控件 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,51 +10,48 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
   若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>将 ReportViewer 控件添加到 Windows 应用程序  
   
-1.  创建新的 Windows 应用程序使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
+1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 创建新的 Windows 应用程序。  
   
-     \-或者-  
+     \- 或 -  
   
      打开一个现有的 Windows 应用程序项目并添加一个新窗体。  
   
-2.  查找中的 ReportViewer 控件**工具箱**。 如果**工具箱**不是可见，你是否可以访问从**视图**通过选择菜单**工具箱**。  
+2.  在“工具箱”中找到 ReportViewer 控件。 如果“工具箱”不可见，可以通过从“视图”菜单中选择“工具箱”来进行访问。  
   
-     ![选择 ReportViewer 控件](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "选择 ReportViewer 控件")  
+     ![选择 ReportViewer 控件](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
   
 3.  将 ReportViewer 控件拖到 Windows 窗体的设计图面上。  
   
-     一个名为 reportViewer1 的 ReportViewer 控件添加到窗体。  
+     名为 reportViewer1 的 ReportViewer 控件便会添加到该窗体中。  
   
- 该控件添加到窗体中之后, **ReportViewer 任务**智能标记将出现，提示你选择报表。  
+ 此控件添加到该窗体之后，将出现“ReportViewer 任务”智能标记，并提示你选择一个报表。  
   
- 如果你想要查看该报表已部署到报表服务器上，选择**\<服务器报表 >**选项从**选择报表**下拉列表。 后**\<服务器报表 >**选择选项后，两个其他属性将显示：**报表服务器 Url**和**报表路径**。 **报表服务器 Url**是到报表服务器的地址和**报表路径**是要呈现的报表的完整路径。  
+ 如果要查看的报表已部署到报表服务器上，则从“选择报表”下拉列表中选择“\<服务器报表>”选项。 选中“\<服务器报表>”选项后，将出现两个附加的属性：“报表服务器 URL”和“报表路径”。 “报表服务器 URL”是指向相应报表服务器的地址，“报表路径”是指向要呈现的报表的完整路径。  
   
- ![选择服务器报表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "选择服务器报表")  
+ ![选择服务器报表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Select server report")  
   
- 如果你想要在本地模式下查看报表的报表，则选择**设计新报表**启动报表设计器，或选择已是现有的项目的一部分的报表选项。  
+ 如果想以本地模式查看报表，请选择“设计新报表”选项来启动报表设计器，或选择一个已是现有项目一部分的报表。  
   
- ![选择本地报表](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "选择本地报表")  
+ ![选择本地报表](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Select local report")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>在远程处理模式下查看报表  
  下面的示例演示了如何使用 WinForms ReportViewer 控件呈现已部署到报表服务器的报表。 此示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例报表项目随附的 Sales Order Detail 报表。  
@@ -157,30 +154,30 @@ End Class
   
 1.  打开该报表将添加到的 Windows 项目。  
   
-2.  从**项目**菜单上，选择**添加现有项**。  
+2.  从“项目”菜单中选择“添加现有项”。  
   
 3.  浏览到安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 报表示例项目的位置。  
   
-     下载报表示例，请转到[AdventureWorks 2012 报表示例](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     请转到 [AdventureWorks 2012 报表示例](http://go.microsoft.com/fwlink/?LinkId=404153)以下载此报表示例  
   
-4.  选择销售订单 Detail.rdl 文件，然后单击**添加**按钮。  
+4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮。  
   
      Sales Order Detail.rdl 文件现在应是该项目的一部分。  
   
-     ![销售订单详细信息报表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "销售订单详细信息报表")  
+     ![销售订单详细信息报表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
   
-5.  右键单击解决方案资源管理器中的销售订单 Detail.rdl 文件并选择**重命名**。 重命名为报表**销售订单 Detail.rdlc** ，然后按 enter 键。  
+5.  在“解决方案资源管理器”中右键单击 Sales Order Detail.rdl 文件，然后选择“重命名”。 将该报表重命名为“Sales Order Detail.rdlc”，然后按 Enter。  
   
-     如果解决方案资源管理器不可见，则可以打开它从**视图**通过选择菜单**解决方案资源管理器**。  
+     如果“解决方案资源管理器”不可见，可以通过从“视图”菜单中选择“解决方案资源管理器”来将其打开。  
   
     > [!NOTE]  
-    >  重命名文件扩展名 rdl rdlc 将允许你编辑报表使用报表设计器中的为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]。  
+    >  将文件扩展名 rdl 重命名为 rdlc 后，便可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的报表设计器编辑该报表。  
   
-6.  对该报表重命名之后，请选择该文件并找到“属性”窗口。 更改**复制到输出目录**属性**如果较新则复制**。  
+6.  对该报表重命名之后，请选择该文件并找到“属性”窗口。 将“复制到输出目录”属性更改为“如果较新则复制”。  
   
-     ![配置复制到输出设置](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "配置复制到输出设置")  
+     ![配置复制到输出设置](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
   
-     如果**属性**窗口不可见，则可以打开它从**视图**通过选择菜单**属性窗口**。  
+     如果“属性”窗口不可见，可以通过从“视图”菜单中选择“属性窗口”来将其打开。  
   
  以下代码示例将为销售订单数据创建一个数据集，然后以本地模式呈现 Sales Order Detail 报表。  
 
@@ -512,7 +509,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [集成 Reporting Services 使用的 ReportViewer 控件](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [使用 ReportViewer 控件集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

@@ -1,12 +1,11 @@
 ---
-title: "删除并重新创建加密密钥 （SSRS 配置管理器） |Microsoft 文档"
+title: "删除和重新创建加密密钥（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b918ecf448e9498c95b679843ccc857b75b92f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密密钥-删除并重新创建加密密钥
+# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密密钥 - 删除和重新创建加密密钥
   删除和重新创建加密密钥不属于加密密钥例行维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
   
 -   当确信现有对称密钥的安全受到威胁时，应重新创建对称密钥。 作为安全性方面的最佳做法，您还可以定期重新创建密钥。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
  只有在报表服务器处于工作状态时，才能重新创建对称密钥。 重新创建加密密钥以及重新对内容进行加密将会中断服务器的操作。 在进行重新加密时，必须将服务器脱机。 在重新加密过程中，不应该向报表服务器发送请求。  
   
- 可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具重置对称密钥和加密的数据。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器 (SSRS Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 可以使用 Reporting Services 配置工具或 **rskeymgmt** 实用工具重置对称密钥和加密的数据。 有关如何创建对称密钥的详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>如何重新创建加密密钥（Reporting Services 配置工具）  
   
@@ -121,8 +119,7 @@ ms.lasthandoff: 08/09/2017
 4.  对于使用加密数据的订阅（其中包括文件共享传递扩展插件和使用加密的任何第三方传递扩展插件），打开每个订阅，再重新键入凭据。 使用报表服务器电子邮件传递的订阅不使用加密数据，因而不受密钥更改的影响。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [存储加密的报表服务器数据 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting Services 中的高可用性 |Microsoft 文档"
+title: "SQL Server Reporting Services 中的高可用性 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 07d0ea9121ddea2a5841f534ee0b54a54c61c0e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 4cac952300b83cd2ad568a8dc6900bcf74e6c5a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services 中的高可用性
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 10/06/2017
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的高可用性功能来最大化报表服务器数据库的正常运行时间。 如果您将某个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例配置为在故障转移群集中运行，则在创建报表服务器数据库时可选择该实例。  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库并且在可能的情况下用于数据源。 有关详细信息，请参阅[Reporting Services 与 Alwayson 可用性组](../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库并且在可能的情况下用于数据源。 有关详细信息，请参阅 [Reporting Services 与 AlwaysOn 可用性组](../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
   
 -   将多个报表服务器配置为在扩展部署下运行，其中所有服务器共享一个报表服务器数据库。 如果在扩展部署中部署多个报表服务器实例（最好在不同的服务器上部署），将有助于在其中一个报表服务器实例出现故障时提供不间断的服务。  
   
@@ -38,4 +37,3 @@ ms.lasthandoff: 10/06/2017
  报表服务器 Web 服务和 Windows 服务紧密集成，并作为一个报表服务器实例一起运行。 您不能单独配置任一服务的可用性。  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

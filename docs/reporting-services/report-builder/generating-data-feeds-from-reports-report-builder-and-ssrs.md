@@ -1,5 +1,5 @@
 ---
-title: "生成数据馈送从报表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "基于报表生成数据馈送（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e11ab920d6af6f09aa911f237ecf3a7c234b016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出分页报表中可用的数据馈送以及来自报表中的数据区域的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，你可以使用 Atom 呈现扩展插件，然后，可以使用 Power Pivot 或 Power BI 中的生成的数据源。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出分页报表中可用的数据馈送以及来自报表中的数据区域的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，可以使用 Atom 呈现扩展插件生成随后可用在 Power Pivot 或 Power BI 中的数据馈送。  
   
  Atom 服务文档为报表中的每个数据区域至少列出一个数据馈送。 根据数据区域的类型以及数据区域显示的数据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以自数据区域生成多个数据馈送。 例如，矩阵或图表可以提供多个数据馈送。 Atom 呈现扩展插件创建 Atom 服务文档时，将为每个数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以访问数据馈送的内容。  
   
@@ -85,13 +83,13 @@ ms.lasthandoff: 08/09/2017
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>数据部分  
- 数据馈送的数据部分包含一个\<**条目**> 元素中生成的 Atom 呈现扩展插件的平展行集中的每一行。  
+ 数据馈送的数据部分为 Atom 呈现扩展插件生成的平展行集中的每一行都包含一个 \<entry> 元素。  
   
  下图显示了使用组和总计的报表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下面的 XML 演示\<**条目**> 从该报表数据源中的元素。 请注意， \<**条目**> 元素包含的总销售额和组的订单和销售订单和订单的所有组的总计。 \<**条目**> 元素包含多个报表上的所有值。  
+ 下面的 XML 在数据馈送中显示了来自该报表的 \<entry> 元素。 请注意，\<entry> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计。 \<entry> 元素包含报表中的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -120,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
  嵌套数据区域的数据行通常较宽，特别是在嵌套表和矩阵包括组和总计的情况下。 您可能会发现，将报表导出到数据馈送并且查看数据馈送以确定生成的数据就是所需数据，这会很有帮助。  
   
- 当 Atom 呈现扩展插件创建 Atom 服务文档时，将为数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。 如上所示的示例 Atom 服务文档包括 URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`。 该 URL 标识报表 (Product Sales Summary)、Atom 呈现格式 (ATOM) 以及数据馈送的名称 (xAx0x1)。  
+ 当 Atom 呈现扩展插件创建 Atom 服务文档时，将为数据馈送创建一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。 示例 Atom 服务文档（如上所示）包括 URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`。 该 URL 标识报表 (Product Sales Summary)、Atom 呈现格式 (ATOM) 以及数据馈送的名称 (xAx0x1)。  
   
  报表项名称默认为报表项的报表定义语言 (RDL) 元素名称，这些名称经常较为直观或容易记忆。 例如，放入报表的第一个矩阵的默认名称为 Tablix 1。 数据馈送使用这些名称。  
   
- 若要令数据馈送易于使用，可以使用数据区域的 DataElementName 属性来提供友好名称。 如果为 DataElementName 提供值的数据馈送子元素\< **d**> 将使用是它而不是默认的数据区域名称。 例如，如果数据区域的默认名称是 Tablix1，DataElementName 设置 SalesByTerritoryYear 则\< **d**> 在数据源使用 SalesByTerritoryYear。 如果数据区域具有两个数据馈送（类似上述矩阵报表），则数据馈送中使用的名称为 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
+ 若要令数据馈送易于使用，可以使用数据区域的 DataElementName 属性来提供友好名称。 如果为 DataElementName 提供值，数据馈送子元素 \<d> 将使用该值，而不是使用默认的数据区域名称。 例如，如果数据区域的默认名称为 Tablix1，而 DataElementName 设置为 SalesByTerritoryYear，则数据馈送中的 \<d> 将使用 SalesByTerritoryYear。 如果数据区域具有两个数据馈送（类似上述矩阵报表），则数据馈送中使用的名称为 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
   
  如果对报表显示的数据和数据馈送中的数据进行比较，则可能发现一些差异。 报表经常显示格式化的数值和时间/日期数据，但数据馈送包含非格式化的数据。  
   
@@ -195,8 +193,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>后续步骤
 
-[将导出到 CSV 文件](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[导出到 CSV 文件](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [导出报表](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

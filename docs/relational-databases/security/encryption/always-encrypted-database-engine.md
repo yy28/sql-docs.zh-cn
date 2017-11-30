@@ -1,13 +1,14 @@
 ---
 title: "Always Encrypted（数据库引擎）| Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/31/2017
 
 接下来，驱动程序将联系包含列主密钥的密钥存储，以便进行解密加密列的加密密钥值，然后使用纯文本列加密密钥来加密参数。 产生的纯文本列加密密钥已缓存，以便在以后使用相同的列加密密钥时减少对密钥存储的往返访问次数。 驱动程序将指向加密列的参数的纯文本值替换为它们的加密值，并将查询发送到服务器以进行处理。
 
-服务器计算结果集，对于结果集中包含的任何加密信息，驱动程序将附加列的加密元数据，包括有关加密算法和相应的密钥的信息。 驱动程序首先尝试在本地缓存中查找纯文本列加密密钥，如果无法在缓存中找到该密钥，则只访问列主密钥。 接下来，驱动程序解密结果并将纯文本值返回给应用程序。
+服务器计算结果集，对于结果集中包含的任何加密列，驱动程序将附加列的加密元数据，包括有关加密算法和相应密钥的信息。 驱动程序首先尝试在本地缓存中查找纯文本列加密密钥，如果无法在缓存中找到该密钥，则只访问列主密钥。 接下来，驱动程序解密结果并将纯文本值返回给应用程序。
 
  客户端驱动程序使用列主密钥存储提供程序与包含列主密钥的密钥存储进行交互，列主密钥存储提供程序是一个客户端软件组件，用于封装包含列主密钥的密钥存储。 常见类型的密钥存储的提供程序在 Microsoft 的客户端驱动程序库中提供，或作为单独的软件下载。 你也可以实现自己的提供程序。 包括内置的列主密钥存储提供程序的“始终加密”功能因驱动程序库及其版本的不同而有所不同。 
 
@@ -254,4 +254,3 @@ GO
 [sp_refresh_parameter_encryption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

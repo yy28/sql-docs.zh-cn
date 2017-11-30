@@ -1,5 +1,5 @@
 ---
-title: "Hyperion Essbase 连接类型 (SSRS) |Microsoft 文档"
+title: "Hyperion Essbase 连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9b00e87526b4ea030ff6359d0969e84f11cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  
@@ -55,7 +54,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **查询视图** 将维度、成员、成员属性、度量值和 KPI 从元数据浏览器拖至“查询”窗格，以生成 MDX 查询。 在“查询”窗格中可以直接编辑 MDX 文本。 将计算成员从“计算成员”窗格拖至“查询”窗格，以定义附加数据集字段。  
   
-     有关详细信息，请参阅[Hyperion Essbase 查询设计器用户界面（报表生成器）](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)。  
+     有关详细信息，请参阅 [Hyperion Essbase 查询设计器用户界面（报表生成器）](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)。  
   
 -   从报表导入现有 MDX 查询。 使用 **“导入”** 查询按钮浏览到 .rdl 文件并导入查询。 对于包含基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的嵌入数据集的报表，可以从中导入查询。 不支持直接从 .mdx 文件导入 MDX 查询。  
   
@@ -81,7 +80,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>预定义的字段属性  
- 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 **UniqueName**。 若要在文本框中包含的唯一名称值，使用表达式`=Fields!`  *\<FieldName >*`.UniqueName`。  
+ 通常受多个数据访问接口支持并出现在报表数据集的基础 MDX 查询中的预定义字段属性。 例如，MDX 维度属性 MEMBER_UNIQUE_NAME 映射到预定义报表数据集字段属性 **UniqueName**。 若要在文本框中包含唯一名称值，请使用表达式 `=Fields!`*\<FieldName>*`.UniqueName`。  
   
  下表提供了可以用于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的预定义字段属性的列表。  
   
@@ -98,7 +97,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>自定义属性  
- 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含的值，则使用表达式`=Fields!`  *\<FieldName >*`("Long Names")`。 表达式中的字段名区分大小写。  
+ 为某个数据访问接口所支持并出现在报表数据集的基础 MDX 查询中的自定义字段属性，但这些属性不作为该数据集的字段出现在报表“数据集”窗格中。 例如， **Long Names** 是为某个维度级别定义的成员属性。 若要在文本框中包含该值，请使用表达式 `=Fields!`*\<FieldName>*`("Long Names")`。 表达式中的字段名区分大小写。  
   
  可以使用以下语法在表达式中引用自定义扩展属性：  
   
@@ -124,7 +123,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [将筛选器添加到数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> 相关章节  
@@ -133,26 +132,25 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [数据连接、 数据源和报表生成器中的连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
- [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  提供有关嵌入数据集和共享数据集的信息。  
   
- [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关数据集查询生成的字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
- [使用 SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
  提供有关使用此数据扩展插件的详细信息。  
   
   
 ## <a name="see-also"></a>另请参阅  
- [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

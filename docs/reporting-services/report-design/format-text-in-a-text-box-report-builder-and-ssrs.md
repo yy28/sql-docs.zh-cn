@@ -1,5 +1,5 @@
 ---
-title: "设置文本框 （报表生成器和 SSRS） 中的文本格式 |Microsoft 文档"
+title: "设置文本框中文本的格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cc81cc2f3f19b6ce326d11db6114deeeb907
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab1c264ec07230bd81769ab2886177552095e636
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>设置文本框中文本的格式（报表生成器和 SSRS）
   可以单独设置文本框中任何一部分文本的格式，并在一个文本框中混合使用占位符文本和静态文本。 这种混合格式并添加占位符文本的功能可使您能够为报表中的文本创建邮件合并或模板。 使用占位符可以单独定义任何表达式并设置其格式。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-format-text-and-placeholders-differently-in-the-same-text-box"></a>在同一文本框中以不同方式设置文本和占位符的格式  
   
-1.  在 **“插入”** 选项卡上，单击 **“列表”**。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。 此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框，“查询”](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)。  
+1.  在 **“插入”** 选项卡上，单击 **“列表”**。 单击设计图面，然后拖动鼠标根据所需大小创建一个文本框。 此时将打开 **“数据集属性”** 对话框。 可以使用共享数据集或嵌入在报表中的数据集。 有关详细信息，请单击[“数据集属性”对话框 ->“查询”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)或[“数据集属性”对话框 ->“查询”](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)。  
   
 2.  在 **“插入”** 选项卡上，单击 **“文本框”**。 在列表中单击，然后拖动鼠标根据所需大小创建一个文本框。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  将字段从数据集拖到文本框中。 此时将为您的字段创建一个占位符。  
   
-5.  对于基本格式设置，请选择占位符文本，然后在 **“开始”** 选项卡上的 **“字体”** 组中，单击其中一个格式设置选项。 例如，单击 **“加粗”** 按钮。  
+5.  对于基本格式设置，请选择占位符文本，然后在 **“开始”** 选项卡上的 **“字体”** 组中，单击其中一个格式设置选项。例如，单击“加粗”按钮。  
   
      要获得更多格式设置选项，请右键单击占位符文本，然后单击“占位符属性”。  
   
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/09/2017
  列表会将字段中的每个值重复一次，每次重复时， *FieldName* 占位符都会由数据集中该字段的值替换。  
   
 ## <a name="see-also"></a>另请参阅  
- [文本框 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [格式设置文本和占位符 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [将 HTML 添加到报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式设置数字和日期 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [占位符属性对话框，常规 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
+ [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [向报表添加 HTML（报表生成器和 SSRS）](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   
   

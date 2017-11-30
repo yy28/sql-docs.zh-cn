@@ -1,5 +1,5 @@
 ---
-title: "向报表 （报表生成器和 SSRS） 添加书签 |Microsoft 文档"
+title: "向报表添加书签（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b63dc6993525970f131b89ac6aea79f8a9c6e72
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6b1596b50f62a3e42ce592d3bc675cf19165ee46
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>向报表添加书签（报表生成器和 SSRS）
   若要在报表中提供自定义目录或自定义内部导航链接，可以向报表中添加书签或书签链接。 通常情况下，如果要引导用户到报表中的某一位置，例如表、图表以及表或矩阵中显示的唯一组值，可以向该位置添加书签。 可以创建用作书签的字符串；或者，对于组而言，可以将书签设置为组表达式。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在报表设计视图中，选择要向其添加书签的文本框、图像、图表或其他报表项。 所选项的属性将显示在“属性”窗格中。  
   
-2.  在 **“书签”**旁的文本框中，键入作为此书签的标签的字符串。 例如，可以键入 **BikePhoto** 作为报表中图像的书签。 此外，也可以单击表达式 (**fx**) 按钮打开“表达式”对话框，指定一个计算结果为标签的表达式。 对于组，键入的表达式应为组表达式。  
+2.  在 **“书签”**旁的文本框中，键入作为此书签的标签的字符串。 例如，可以键入 **BikePhoto** 作为报表中图像的书签。 此外，也可以单击表达式 (fx) 按钮打开“表达式”对话框，指定一个计算结果为标签的表达式。 对于组，键入的表达式应为组表达式。  
   
     > [!NOTE]  
     >  书签可以为任意字符串，但在报表中必须是唯一的。 如果书签不是唯一的，则指向该书签的链接将跳至第一个匹配书签。  
@@ -61,9 +60,8 @@ ms.lasthandoff: 08/09/2017
 7.  若要测试该链接，请单击 **“运行”** 以预览报表，然后单击对其设置此链接的报表项。  
   
 ## <a name="see-also"></a>另请参阅  
- [交互式排序、 文档结构图和链接 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

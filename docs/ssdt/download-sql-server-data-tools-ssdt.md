@@ -1,42 +1,41 @@
 ---
 title: "下载 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "安装 ssdt, 下载 ssdt, 最新 ssdt"
+keywords: "安装 ssdt, 下载 ssdt, 最新 ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-caps.latest.revision: 113
+caps.latest.revision: "113"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 39a840f8a28c40b9bea33608f754532954f5db7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 1f3f61e959e495126e59b634a397647799184973
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下载 SQL Server Data Tools (SSDT)
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** 是一款可免费下载的现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Integration Services 包、Analysis Services 数据模型和 Reporting Services 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。 
 
-SSDT for Visual Studio 2017（15.3.0 预览版）的预览版本现已可用。 此版本为 Visual Studio 2017 15.3 及以上版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目引入了独立的 Web 安装体验。
+SSDT for Visual Studio 2017（15.4.0 预览版）现已可用。 此版本为 Visual Studio 2017 15.4 及更高版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目引入了独立的 Web 安装体验。
 
 | SSDT for Visual Studio 2017（预览版） | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2017（15.3.0 预览版）](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png)下载 SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
+|[![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2017（15.4.0 预览版）](https://go.microsoft.com/fwlink/?LinkId=860015) | [![download](../ssdt/media/download.png)下载 SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]
-> 在安装 SSDT for Visual Studio 2017（预览版）之前，请关闭所有 VS 实例，并卸载 VS 2017 上已安装的 SSAS 和 SSRS。
+> 在安装 SSDT for Visual Studio 2017（15.4.0 预览版）之前，请关闭所有 VS 实例，并卸载 VS 2017 上已安装的“Microsoft Analysis Services 项目”和“Microsoft Reporting Services项目”扩展。 
 > 
+> “SSDT for Visual Studio 2017（15.3.0 预览版）”不支持升级，因此在安装“SSDT for Visual Studio 2017（15.4.0 预览版）”之前，必须先卸载前者。 
 
 
 SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.3：[下载数据层应用程序框架 (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
@@ -46,8 +45,8 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.3
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017
 **版本信息**  
   
-版本号：15.3.0 预览版  
-此版本的内部版本号为：14.0.16121.0
+版本号：15.4.0 预览版  
+此版本的内部版本号为：14.0.16134.0
 
 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
 
@@ -71,7 +70,8 @@ SSDT for Visual Studio 2017 与安装 VS 的系统要求相同，支持操作系
 
 ### <a name="available-languages---ssdt-for-vs-2015"></a>支持的语言 - SSDT for VS 2015
   
- 此版本的 SSDT 可安装在以下语言中：  
+此版本的 SSDT 可安装在以下语言中：  
+
 [中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
 [中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
 [英语（美国）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
@@ -88,22 +88,17 @@ SSDT for Visual Studio 2017 与安装 VS 的系统要求相同，支持操作系
 
 SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法。 该 ISO 是一个自包含文件，包含 SSDT 所需的所有组件并且可使用可续传的下载管理器进行下载，适用于网络带宽有限或网络不稳定的情形。 下载之后，该 ISO 即可作为驱动器安装或刻录到 DVD 上。
 
-> [!IMPORTANT]
-> 以下 ISO 链接会安装 SSDT for VS 2015 17.2。
->
-> 很快便会提供用于 17.3 的 ISO 链接。
-
-[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
-[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
-[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
-[法语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
-[日语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
-[俄语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
+[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x804) |
+[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x404) |
+[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x409) |
+[法语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40c)  
+[德语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x407) |
+[意大利语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x410) |
+[日语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x411) |
+[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x412) |
+[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x416) |
+[俄语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x419) |
+[西班牙语]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40a)
 
 
 ## <a name="download-visual-studio"></a>下载 Visual Studio
@@ -147,4 +142,3 @@ SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法�
 [SSDT 文档](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API 参考](https://msdn.microsoft.com/library/dn645454.aspx)  
 [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
-

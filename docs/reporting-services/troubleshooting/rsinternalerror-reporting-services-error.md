@@ -1,5 +1,5 @@
 ---
-title: "rsInternalError-Reporting Services 错误 |Microsoft 文档"
+title: "rsInternalError - Reporting Services 错误 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsInternalError
+helpviewer_keywords: rsInternalError
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7265597c2376d62b6d3e42c55c8d87e45f6d869e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a261e873ff05510a0c07dc837c64ed90d67b29d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 错误
     
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/09/2017
  内部错误不常见。 如果出现此错误，可以查看报表服务器跟踪日志以了解详细信息。 此外，如果是以本地管理员的身份在出现错误的计算机上运行，则可以查看调用堆栈以了解详细信息。  
   
 ## <a name="user-action"></a>用户操作  
- 若要确定此消息的具体原因，请查看位于 \Microsoft SQL Server\MSRS12 报表服务器日志文件。\<instancename > \Reporting Services\LogFiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
+ 若要确定出现此消息的具体原因，请查看位于以下目录的报表服务器日志文件：\Microsoft SQL Server\MSRS12.\<实例名>\Reporting Services\LogFiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
  若要查看调用堆栈，请右键单击出现错误的页，然后指向“查看源”。 必须在出现该错误的同一计算机上具有管理员权限，才可查看调用堆栈。  
   
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/09/2017
  [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   
-

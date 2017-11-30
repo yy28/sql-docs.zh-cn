@@ -1,5 +1,5 @@
 ---
-title: "数据警报管理器为向管理员发出警报 |Microsoft 文档"
+title: "适用于警报管理员的数据警报管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9df65141967b8e9e0ab4e1f7115986b19674d341
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>向管理员提出警报的数据警报管理器
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 提供为 SharePoint 警报管理员管理数据警报的数据警报管理器。 警报管理员可以查看与保存到站点的所有警报有关的信息和删除警报。 下图显示数据警报管理器中可用于 SharePoint 警报管理员的功能。
+SQL Server Reporting Services 为 SharePoint 警报管理员提供了数据警报管理器以便管理数据警报。 警报管理员可以查看与保存到站点的所有警报有关的信息和删除警报。 下图显示数据警报管理器中可用于 SharePoint 警报管理员的功能。
 
-![SharePoin tsite 管理员警报管理器](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 站点管理员的警报管理器")
+![SharePoint 网站管理员的警报管理器](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 网站管理员的警报管理器")
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
  在为数据警报启用站点时，将创建两个 SharePoint 页（MyDataAlerts.aspx 和 SiteDataAlerts.aspx）并且将这两个 SharePoint 页将添加到该 SharePoint 站点中。 SiteDataAlerts.aspx 是用于向管理员提出警报的数据警报管理器。 警报管理员可以从“站点设置”SharePoint 页打开数据警报管理器。 警报管理员必须具有 SharePoint 管理警报权限才能打开数据警报管理器。  
   
@@ -51,7 +50,7 @@ SQL Server Reporting Services 提供为 SharePoint 警报管理员管理数据�
 ##  <a name="ViewingAlerts"></a> 查看数据警报信息  
  在 SharePoint 中安装和配置 Reporting Services 时，“站点设置”SharePoint 页将包括 **Reporting Services** 选项。 警报管理员可在 Reporting Service 中单击 **“管理数据警报”** 选项以便打开数据警报管理器。 下图显示您可以从“站点设置”页上的何处打开数据警报管理器。  
   
- ![报告的站点设置页的服务部分](../reporting-services/media/rs-sitesettings.gif "Reporting Services 部分中的站点设置页")  
+ ![“站点设置”页的 Reporting Services 部分](../reporting-services/media/rs-sitesettings.gif "Reporting Services section of Site Settings page")  
   
  数据警报管理器包括一个表，该表列出警报名称、报表名称、警报所有者的姓名、发送警报消息的数目、上次运行警报的时间、上次修改警报定义的时间以及警报消息的状态。 如果无法生成或发送警报，则状态列将包含有关该错误的信息并且帮助您纠正该警报问题。 有关详细信息，请参阅 [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
@@ -61,7 +60,7 @@ SQL Server Reporting Services 提供为 SharePoint 警报管理员管理数据�
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|最后一个警报已成功运行且已发送。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|已成功运行最后一个警报，但由于数据未发生更改，因此未发送任何警报。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<错误消息 > 日志文件包含有关错误的详细的信息。 参阅与标识符的日志条目： \<GUID >。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<错误消息> 该日志文件包含有关错误的详细信息。 请参考具有以下标识符的日志条目：\<GUID>。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|创建了警报。|  
   
  有关详细信息，请参阅 [在数据警报管理器中管理 SharePoint 站点上的所有数据警报](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
@@ -86,5 +85,4 @@ SQL Server Reporting Services 提供为 SharePoint 警报管理员管理数据�
 
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

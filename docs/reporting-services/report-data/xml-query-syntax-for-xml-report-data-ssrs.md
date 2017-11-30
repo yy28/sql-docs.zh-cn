@@ -1,5 +1,5 @@
 ---
-title: "用于 XML 报表数据 (SSRS) 的 XML 查询语法 |Microsoft 文档"
+title: "用于 XML 报表数据的 XML 查询语法 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2505ed537c92255f1291e4f800a49bb070f1149
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的 XML 查询语法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML **Query** 或元素路径来创建数据集查询。 XML**查询**开头**\<查询 >**标记并包括命名空间和数据源而异的 XML 元素。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML **Query** 或元素路径来创建数据集查询。 XML 查询以 \<Query> 标记开头，并且包括因数据源而异的命名空间和 XML 元素。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
   
  可以为以下类型的 XML 数据创建 XML 数据源：  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 |使用默认值的 XML 文档。|*No query*。<br /><br /> 元素路径是从 XML 文档本身派生而来的，并且与命名空间无关。|  
   
 > [!NOTE]  
->  第一个 Web 服务示例列出了使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法获得的 Web 服务 XML 数据。 若要运行此查询，你必须创建新的数据源，并将连接字符串设置为`http://localhost/reportserver/reportservice2006.asmx`。 <xref:ReportService2006.ReportingService2006.ListChildren%2A>方法采用两个参数：**项**和**递归**。 将 **项** 的默认值设置为 **/** ，将 **递归** 的默认值设置为 **1**。  
+>  第一个 Web 服务示例列出了使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法获得的 Web 服务 XML 数据。 若要运行此查询，必须创建新的数据源并将连接字符串设置为 `http://localhost/reportserver/reportservice2006.asmx`。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法接受两个参数：Item 和 Recursive。 将 **项** 的默认值设置为 **/** ，将 **递归** 的默认值设置为 **1**。  
   
 ## <a name="specifying-namespaces"></a>指定命名空间  
  使用 XML **Query** 元素可以指定在数据源的 XML 数据中使用的命名空间。 下面的 XML 查询使用命名空间 **sales**。 **和** 的 XML `sales:LineItems` ElementPath `sales:LineItem` 节点使用命名空间 **sales**。  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 |XML 查询元素|数据集中的结果字段|  
 |-----------------------|-------------------------------------|  
-|\<查询 / >|答： 值`http://schemas.microsoft.com/...`<br /><br /> 值 b:`http://schemas.microsoft.com/...`<br /><br /> 值 c:`http://schemas.microsoft.com/...`|  
+|\<Query/>|值 A：`http://schemas.microsoft.com/...`<br /><br /> 值 B：`http://schemas.microsoft.com/...`<br /><br /> 值 C：`http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|值 D<br /><br /> 值 E<br /><br /> 值 F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文档：DPNamespace.xml  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 连接类型 &#40;SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Customize Rendering Extension Parameters in RSReportServer.Config |Microsoft 文档"
+title: "在 RSReportServer.Config 中自定义呈现扩展插件参数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自定义呈现扩展插件参数
   可以在 RSReportServer 配置文件中指定呈现扩展插件参数，以覆盖在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行的报表的默认报表呈现行为。 可通过修改呈现扩展插件参数来实现以下目标：  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **DeviceInfo** XML 结构定义呈现扩展插件使用的设备信息设置。 大多数呈现扩展插件参数作为设备信息设置进行指定。  
   
- 可以使用文本编辑器修改该文件。 可在 \Reporting Services\Report Server\Bin 文件夹中找到 RSReportServer.config 文件。 有关修改配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 &#40;RSreportserver.config &#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ 可以使用文本编辑器修改该文件。 可在 \Reporting Services\Report Server\Bin 文件夹中找到 RSReportServer.config 文件。 有关修改配置文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 ## <a name="changing-the-display-name"></a>更改显示名称  
  呈现扩展插件的显示名称显示在报表工具栏的“导出”列表中。 默认显示名称的示例包括 Web 存档、TIFF 文件和 Acrobat (PDF) 文件。 通过在配置文件中指定 **OverrideNames** 元素，可以将默认的显示名称替换为自定义值。 此外，如果您要定义单个呈现扩展插件的两个实例，则可在“导出”列表中使用 **OverrideNames** 元素来区分每个实例。  
@@ -146,4 +145,3 @@ ms.lasthandoff: 08/09/2017
  [XML 设备信息设置](../reporting-services/xml-device-information-settings.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "总计、 聚合和内置集合的表达式作用域 |Microsoft 文档"
+title: "总计、聚合和内置集合的表达式作用域 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 238c0537821da0ab64a6eb27121a9f98d29ad9bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>总计、聚合和内置集合的表达式作用域
   在编写表达式时，您会发现在很多情况下都会使用“作用域”  一词。 作用域可以指定要用于计算表达式的数据、呈现的页面上的文本框集、可基于切换显示或隐藏的报表项集。 “作用域”  一词出现在与表达式计算、聚合函数语法和条件可见性相关的主题中以及有关这些范畴的错误消息中。 使用以下说明有助于区分“作用域”  适用的含义：  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **命名作用域** ：处于作用域中用于表达式的数据集、数据区域或数据区域组的名称。 对于聚合计算，您可以指定包含作用域。 不能在一个表达式中同时为行组和列组指定命名作用域。 不能指定被包含作用域，除非该表达式针对聚合的聚合。  
   
-     以下表达式生成介于 SellStartDate 和 LastReceiptDate 之间的间隔年。 这些字段在两个不同的数据集内，即 DataSet1 和 DataSet2。 [第一个函数 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)，这是聚合函数，返回 DataSet1 和 DataSet2 中 LastReceiptDate 的第一个值中的 SellStartDate 的第一个值。  
+     以下表达式生成介于 SellStartDate 和 LastReceiptDate 之间的间隔年。 这些字段在两个不同的数据集内，即 DataSet1 和 DataSet2。 [First 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-first-function.md)是一个聚合函数，它返回 DataSet1 中 SellStartDate 的第一个值和 DataSet2 中 LastReceiptDate 的第一个值。  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  在报表的某些位置中，您必须指定一个作用域。 例如，对于设计图面上的文本框，你必须指定数据集的名称才能使用： `=Max(Fields!Sales.Value,"Dataset1")`。 在其他位置中，有隐式的默认作用域。 例如，如果您没有为组作用域中的文本框指定聚合，则首先使用默认聚合。  
   
- 每个聚合函数主题都列出了可供其使用的作用域。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 每个聚合函数主题都列出了可供其使用的作用域。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ##  <a name="Examples"></a> 用于表数据区域的聚合表达式示例  
  为了编写指定非默认作用域的表达式，需要进行一些实践。 为了帮助您理解不同的作用域，请使用下面的图和表。 该图标记销售信息表中显示按年份和季度销售以及按销售区域销售的物品数量的各单元。 请注意行控点和列控点上的可视化提示，它们显示行和列组结构并且指示嵌套组。 该表具有以下结构：  
@@ -114,14 +114,14 @@ ms.lasthandoff: 08/09/2017
 |C07|外部行组“Cat”|[Cat]<br /><br /> [Sum(Qty)]|`=Fields!Cat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C08|与 C07 相同|||  
 |C09|外部行组“Cat”和内部列组“Qtr”|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C10|与 C07 相同|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
-|C11|外部行组“Cat”和列组“Territory”|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
+|C10|与 C07 相同|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
+|C11|外部行组“Cat”和列组“Territory”|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
 |C12|内部行组“Subcat”|[Subcat]<br /><br /> [Sum(Qty)]|`=Fields!SubCat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C13|内部行组“Subcat”和内部列组“Qtr”|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C14|内部行组“Subcat”|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
-|C15|内部行组“Subcat”和列组“Territory”|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C14|内部行组“Subcat”|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C15|内部行组“Subcat”和列组“Territory”|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- 有关解释 Tablix 数据区域中的可视化提示的详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 有关 tablix 数据区域的详细信息，请参阅[Tablix 数据区域单元、 行和列 &#40;报表生成器 &#41;和 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 有关表达式和聚合的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 有关解释 Tablix 数据区域中的可视化提示的详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 有关 Tablix 数据区域的详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 有关表达式和聚合的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
   
 ##  <a name="Sparklines"></a> 为迷你图同步刻度  
@@ -157,7 +157,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Sort"></a> 指定用于同步排序顺序的排序表达式  
  在您向某一表列添加交互式排序按钮时，可为具有公共包含作用域的多个项同步排序。 例如，您可以向某一矩阵中的列标题添加一个排序按钮，并且将包含作用域指定为绑定到该矩阵的数据集的名称。 在用户单击排序按钮时，不仅对矩阵行进行排序，而且还对绑定到相同数据集的图表的图表序列组进行排序。 这样，可以同步依赖于该数据集的所有数据区域，以便显示相同的排序顺序。  
   
- 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Nulls"></a> 取消单元中的 Null 值或零值  
@@ -166,9 +166,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [组表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [创建递归层次结构组 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式设置文本和占位符 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

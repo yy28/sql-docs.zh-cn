@@ -1,5 +1,5 @@
 ---
-title: "创建一个自定义报表项设计时组件，|Microsoft 文档"
+title: "创建自定义报表项设计时组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  
@@ -35,12 +32,12 @@ ms.lasthandoff: 08/12/2017
  在开发环境中使用设计时组件设置的属性可通过宿主设计环境序列化和反序列化，然后存储为报表定义语言 (RDL) 文件中的元素。 报表由报表处理器执行时，使用设计时组件设置的属性将由报表处理器传递给自定义报表项运行时组件，后者将呈现自定义报表项，并将自定义报表项传递回报表处理器。  
   
 > [!NOTE]  
->  作为实现自定义报表项设计时组件[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]组件。 本文档将介绍自定义报表项设计时组件所特有的实现细节。 有关开发组件使用的详细信息[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，请参阅[Visual Studio 中的组件](http://go.microsoft.com/fwlink/?LinkId=116576)MSDN 库中。  
+>  自定义报表项设计时组件以 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 组件的形式实现。 本文档将介绍自定义报表项设计时组件所特有的实现细节。 有关使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发组件的详细信息，请参阅 MSDN 库中的 [Visual Studio 中的组件](http://go.microsoft.com/fwlink/?LinkId=116576)。  
   
- 完全实现的自定义报表项的示例，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 有关完全实现的自定义报表项的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="implementing-a-design-time-component"></a>实现设计时组件  
- 自定义报表项设计时组件的主类继承自**Microsoft.ReportDesigner.CustomReportItemDesigner**类。 除了标准的属性用于[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]组件类应定义控制， **CustomReportItem**属性。 此属性必须与如在 reportserver.config 文件中定义的相应自定义报表项的名称对应。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 属性的列表，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档中的“属性”。  
+ 自定义报表项设计时组件的主类继承自 Microsoft.ReportDesigner.CustomReportItemDesigner 类。 除了用于 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 控件的标准属性外，该组件类还应定义 CustomReportItem 属性。 此属性必须与如在 reportserver.config 文件中定义的相应自定义报表项的名称对应。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 属性的列表，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档中的“属性”。  
   
  以下代码示例显示的是将应用到自定义报表项设计时控件的属性：  
   
@@ -58,9 +55,9 @@ namespace PolygonsCRI
 ```  
   
 ### <a name="initializing-the-component"></a>初始化组件  
- 可以使用 <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> 类传递自定义报表项的用户指定属性。 实现**CustomReportItemDesigner**类应重写**InitializeNewComponent**方法来创建你的组件的新实例<xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>类并将其设置为默认值。  
+ 可以使用 <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> 类传递自定义报表项的用户指定属性。 实现 CustomReportItemDesigner 类时应重写 InitializeNewComponent 方法以创建相应组件的 <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> 类的新实例，并将其设置为默认值。  
   
- 下面的代码示例显示的自定义报表项设计时组件类重写示例**CustomReportItemDesigner.InitializeNewComponent**方法以初始化组件的<xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>类：  
+ 下面的代码示例显示的是自定义报表项设计时组件类重写 CustomReportItemDesigner.InitializeNewComponent 方法以初始化该组件的 <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> 类的示例：  
   
 ```csharp  
 public override void InitializeNewComponent()  
@@ -94,9 +91,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>修改组件属性  
- 你可以修改**CustomData**以下几种方式设计环境中的属性。 可以使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器修改任何由设计时组件公开且以 <xref:System.ComponentModel.BrowsableAttribute> 属性标记的特性。 此外，你可以修改属性，通过将项拖到自定义报表项的设计图面上或通过右键单击设计环境中的控件并选择**属性**上以显示一个自定义属性窗口的快捷菜单。  
+ 可以通过多种方式在设计环境下修改 CustomData 属性。 可以使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器修改任何由设计时组件公开且以 <xref:System.ComponentModel.BrowsableAttribute> 属性标记的特性。 另外，还可通过以下方式修改属性：将相应项拖动到自定义报表项的设计图面，或者在设计环境下右键单击该控件，然后在快捷菜单上选择“属性”以显示自定义属性窗口。  
   
- 下面的代码示例演示**Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData**属性具有<xref:System.ComponentModel.BrowsableAttribute>应用属性：  
+ 以下代码示例显示应用了 <xref:System.ComponentModel.BrowsableAttribute> 特性的 Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData 属性：  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -160,7 +157,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>使用设计器谓词  
- 设计器谓词是与事件处理程序链接的菜单命令。 在设计环境下使用自定义报表项运行时控件时，可以添加将显示在相应组件的快捷菜单中的设计器谓词。 可以通过从运行时组件中返回的可用设计器谓词的列表**谓词**属性。  
+ 设计器谓词是与事件处理程序链接的菜单命令。 在设计环境下使用自定义报表项运行时控件时，可以添加将显示在相应组件的快捷菜单中的设计器谓词。 可以使用 Verbs 属性从运行时组件返回可用设计器谓词的列表。  
   
  下面的代码示例显示的是将添加到 <xref:System.ComponentModel.Design.DesignerVerbCollection> 的设计器谓词和事件处理程序，以及事件处理程序代码：  
   
@@ -192,13 +189,13 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用修饰  
- 此外可以实现自定义报表项类**Microsoft.ReportDesigner.Design.Adornment**类。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 **修饰**中定义的类[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner**命名空间是一种传递实现的<xref:System.Windows.Forms.Design.Behavior.Adorner>类在 Windows 窗体中找到。 有关完整文档**装饰器**类，请参阅[行为服务概述](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN 库中。 有关示例代码，实现**Microsoft.ReportDesigner.Design.Adornment**类，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 此外，自定义报表项类还可实现 Microsoft.ReportDesigner.Design.Adornment 类。 使用修饰后，自定义报表项控件可提供设计图面主矩形之外的区域。 这些区域可用来处理用户界面事件，如鼠标单击和拖放操作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Microsoft.ReportDesigner 命名空间中定义的 Adornment 类是通过传递 Windows 窗体中的 <xref:System.Windows.Forms.Design.Behavior.Adorner> 类实现的。 有关 Adorner 类的完整文档，请参阅 MSDN 库中的[行为服务概述](http://go.microsoft.com/fwlink/?LinkId=116673)。 有关实现 Microsoft.ReportDesigner.Design.Adornment 类的示例代码，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
  有关在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中如何对 Windows 窗体进行编程和使用 Windows 窗体的详细信息，请参见 MSDN Library 中的以下主题：  
   
 -   Design-Time Attributes for Components（组件的设计时属性）  
   
--   中的组件[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
+-   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
   
 -   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
   
@@ -206,7 +203,6 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [自定义报表项体系结构](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [创建自定义报表项运行时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [如何︰ 部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

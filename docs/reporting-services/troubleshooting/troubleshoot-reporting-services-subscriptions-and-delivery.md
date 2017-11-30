@@ -1,5 +1,5 @@
 ---
-title: "排除 Reporting Services 订阅和传递 |Microsoft 文档"
+title: "Reporting Services 订阅和传递疑难解答 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>对 Reporting Services 订阅和传递进行故障排除
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 如果你正在 Microsoft Windows Server 2003 上运行具有邮局协议版本 3 (POP3) 的电子邮件应用程序，可能无法使用本地 POP3 服务器发送报表。 如果将报表服务器配置为使用本地 POP3 服务器发送电子邮件，并创建发送报表的订阅，则可能会收到以下错误消息：  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-其中\<错误消息 > 替换为返回从协作数据对象 (CDO) 的其他错误消息信息。  
+其中，\<error message> 将被替换为从协作数据对象 (CDO) 返回的其他错误消息。  
   
 ### <a name="to-resolve-this-problem"></a>解决此问题：  
 * 将 `SendUsing` 元素在 **Rsreportserver.config** 文件中的值设置为 1。  
@@ -84,5 +83,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

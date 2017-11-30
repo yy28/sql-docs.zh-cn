@@ -1,5 +1,5 @@
 ---
-title: "本机到 SharePoint 迁移 (SSRS) |Microsoft 文档"
+title: "本机到 SharePoint 迁移 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1a58f3884e041b06f741a40ada0bbff6ce7e3181
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 794f9a12c8350eb01234e7ab7d12a5467fbbf244
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>本机到 SharePoint 迁移 (SSRS)
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/17/2017
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 编写调用报表服务器 Web 服务 SOAP 方法的 Visual Basic 脚本，以便在各数据库之间复制数据。 使用 **RS.exe** 实用工具运行此脚本。 Rs.exe 随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。  
   
-    -   [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 以下主题说明如何使用可从 CodePlex 下载的示例脚本。  
+    -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 以下主题说明如何使用可从 CodePlex 下载的示例脚本。  
   
     -   CodePlex 上的示例 rss 脚本，可将一个报表服务器中的内容迁移到另一个中的 [Reporting Services RS.exe 脚本](http://azuresql.codeplex.com/releases/view/115207)  
   
@@ -60,5 +59,4 @@ ms.lasthandoff: 08/17/2017
 |订阅|是|请参阅列表订阅方法 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 和 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 方法。|  
 |快照|||
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

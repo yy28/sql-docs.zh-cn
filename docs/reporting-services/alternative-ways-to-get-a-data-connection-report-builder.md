@@ -1,28 +1,25 @@
 ---
-title: "若要获取的数据连接 （报表生成器） 的其他方法 |Microsoft 文档"
+title: "获取数据连接的备选方法（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 81cebc286a8187b058ac1be3262f968fa6a69299
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>获取数据连接的备选方法（报表生成器）
 数据连接包含要连接到外部数据源（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）的信息。 通常会从数据源所有者处获取连接信息以及要使用的凭据类型。  
@@ -44,9 +41,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  若要验证是否能连接到数据源，请单击“测试连接”。 将显示消息“已成功地创建连接”。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  单击“下一步” 。  
+4.  单击 **“下一步”**。  
   
-    如果需要，请输入您的凭据。 若要本地保存凭据，请选择“保存连接的密码”。 如果不选择此选项，则每当你运行该报表时系统都会提示你输入凭据  
+    如果需要，请输入您的凭据。 要本地保存凭据，请选择“保存连接的密码”。 如果不选择此选项，则每当你运行该报表时系统都会提示你输入凭据  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在“新建表或矩阵”或“新建图表向导”中，在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”。 将打开“选择数据源的连接”页面。  
   
-2.  单击 **“浏览”**。 将打开“选择数据源”对话框。  
+2.  单击 **“浏览”**。 “选择数据源”对话框随即打开。  
   
 3.  从“查找范围”下拉列表中选择“最近使用的站点和服务器”。 在数据源窗格中，单击服务器的 URL，然后单击“打开”。  
   
@@ -72,9 +69,9 @@ ms.lasthandoff: 08/09/2017
   
     将显示消息“已成功地创建连接”。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  单击“下一步” 。  
+7.  单击 **“下一步”**。  
   
-8.  如果系统提示您输入用户名和密码，请输入您的凭据。 若要本地保存凭据，请选择“保存连接的密码”。  
+8.  如果系统提示您输入用户名和密码，请输入您的凭据。 要本地保存凭据，请选择“保存连接的密码”。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -82,5 +79,4 @@ ms.lasthandoff: 08/09/2017
 [报表数据集 (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
   
-
 

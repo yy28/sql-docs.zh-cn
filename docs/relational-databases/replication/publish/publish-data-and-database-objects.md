@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,16 +40,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 322e73b7f01d2fdbe8dade75183fdb6376a78eaf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
   创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
@@ -121,7 +120,7 @@ ms.lasthandoff: 06/22/2017
   
  为复制发布表时，可以指定应将哪些架构对象复制到订阅服务器。例如，已声明的引用完整性（主键约束、引用约束和唯一约束）、索引、用户 DML 触发器（不能复制的 DDL 触发器）、扩展属性和排序规则。 仅在发布服务器和订阅服务器之间的初始同步中复制扩展属性。 如果在初始同步之后添加或修改扩展属性，则不会复制该更改。  
   
- 若要指定架构选项，请参阅[指定架构选项](../../../relational-databases/replication/publish/specify-schema-options.md) 或 <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>。  
+ 若要指定架构选项，请参阅[指定架构选项](../../../relational-databases/replication/publish/specify-schema-options.md)或 <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>。  
   
 ### <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引  
  复制支持发布已分区表和已分区索引。 支持级别取决于使用的复制类型，以及您为发布指定的选项以及与已分区表相关联的项目。 有关详细信息，请参阅[复制已分区表和索引](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
@@ -262,4 +261,3 @@ ms.lasthandoff: 06/22/2017
  [订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

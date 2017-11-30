@@ -1,5 +1,5 @@
 ---
-title: "修改 Reporting Services 配置文件 (RSreportserver.config) |Microsoft 文档"
+title: "修改 Reporting Services 配置文件 (RSreportserver.config) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2cea3ba2d8e2a303a61a6af8bc4f7da4802cc88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将应用程序设置存储在一组配置文件中。 安装程序会为您安装的每个报表服务器实例创建配置文件。 每个文件中的值要么在安装过程中设置，要么在您使用工具和应用程序将服务器配置为执行某个操作时设置。 在某些情况下，必须直接修改文件来添加或配置高级设置。 将配置设置指定为 XML 元素或属性。 如果您了解 XML 和配置文件，则可以使用文本编辑器或代码编辑器来修改可以由用户定义的设置。  
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
     -   **RSReportServerServices.exe.config** 位于以下文件夹中：  
     
         > [!NOTE] 
-        > 这不是适用于 2017 年 1 月 Power BI 技术预览中 SQL Server Reporting Services 的报表。
+        > SQL Server Reporting Services 中 2017 年 1 月的 Power BI 技术预览版报表不支持此配置文件。
   
         ```  
         C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
     -   [配置 Web 门户以传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [自定义在 RSReportServer.Config 中的呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  保存该文件。  
   
@@ -117,4 +116,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
-

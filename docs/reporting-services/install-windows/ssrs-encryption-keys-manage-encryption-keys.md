@@ -1,12 +1,11 @@
 ---
-title: "配置和管理加密密钥 （SSRS 配置管理器） |Microsoft 文档"
+title: "配置和管理加密密钥（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1433e2532fc1deeb8abe5ac0ca71de69956730e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 798344004af25af275625a88f4569acca84c8eb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 加密密钥-管理加密密钥
+# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 加密密钥 - 管理加密密钥
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的凭据和连接信息。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，通过一组用于保护敏感数据的公钥、私钥和对称密钥支持加密。 安装或配置报表服务器时，在报表服务器初始化期间会创建对称密钥，报表服务器使用此对称密钥对存储在报表服务器中的敏感数据进行加密。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在报表服务器数据库中存储敏感数据的每个报表服务器实例，都要创建一个公钥私钥对。  
   
  管理加密密钥包括创建对称密钥的备份副本以及了解密钥的还原、删除或更改的时间和方式。 如果迁移报表服务器安装或配置扩展部署，则必须拥有对称密钥的备份副本，以便可以将其应用于新的安装。  
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
 [Reporting Services 配置管理器（本机节点）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
-

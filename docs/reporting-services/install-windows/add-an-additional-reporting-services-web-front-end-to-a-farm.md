@@ -1,26 +1,24 @@
 ---
-title: "添加其他 Reporting Services Web 前端到场 |Microsoft 文档"
+title: "向场中添加另一个 Reporting Services Web 前端 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a17e4965637841339d34d7842b0df1bea5f7757f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 55e30cb376d088cfe2a3e6cdfeb2c15736276596
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>向场中添加另一个 Reporting Services Web 前端
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包括应用程序服务器和 Web 前端 (WFE) 服务器所需的组件。 本主题主要介绍如何为 WFE 服务器安装所需的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能（例如订阅、数据警报和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）使用的应用程序页。 WFE 所需的主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装是安装用于 SharePoint 2016 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。  
@@ -48,14 +46,14 @@ ms.lasthandoff: 08/09/2017
   
 -   (4) 表示软件或硬件的网络负载平衡解决方案 (NLB)  
   
- ![将 SSRS 添加到新的 SharePoint WFE](../../reporting-services/install-windows/media/rs-sharepointscale-wfe.gif "添加到新的 SharePoint WFE 的 SSRS")  
+ ![向新的 SharePoint WFE 添加 SSRS](../../reporting-services/install-windows/media/rs-sharepointscale-wfe.gif "Add SSRS to a new SharePoint WFE")  
   
  下面的步骤假定管理员正在安装和配置服务器。  
   
 |步骤|说明和链接|  
 |----------|--------------------------|  
 |将 SharePoint 服务器添加到场。|你需要安装 SharePoint 以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
-|安装 SQL Server Reporting Services 外接程序用于 SharePoint 2016 产品。|有几种方法可安装外接程序。 以下步骤使用 SQL Server 安装向导。 有关安装该外接程序的详细信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1） 运行 SQL Server 安装。<br /><br /> 2) 在“安装角色”页上，选择“SQL Server 功能安装”<br /><br /> 3) 在“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”<br /><br /> 4) 单击随后几页上的“下一步”，完成安装选项。<br /><br/>有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
+|安装用于 SharePoint 2016 产品的 SQL Server Reporting Services 外接程序。|有几种方法可安装外接程序。 以下步骤使用 SQL Server 安装向导。 有关安装该外接程序的详细信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) 运行 SQL Server 安装。<br /><br /> 2) 在“安装角色”页上，选择“SQL Server 功能安装”<br /><br /> 3) 在“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”<br /><br /> 4) 在随后出现的多个页面上，单击“下一步”，完成安装选项。<br /><br/>有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的详细信息，请参阅 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
 |验证新服务器是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 验证列表中是否包含新的服务器。|  
 |更新您的 NLB 解决方案。|如果需要，更新您的硬件或软件的 NLB 环境，以便包括新的服务器。|  
 
@@ -64,5 +62,4 @@ ms.lasthandoff: 08/09/2017
 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

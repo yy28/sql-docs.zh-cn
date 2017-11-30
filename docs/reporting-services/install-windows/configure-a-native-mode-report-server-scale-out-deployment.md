@@ -1,12 +1,11 @@
 ---
-title: "配置本机模式报表服务器扩展部署 |Microsoft 文档"
+title: "配置本机模式报表服务器扩展部署 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,23 +13,22 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 39de4778d781c1d98c93b3ab802c0ca09d39eeb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>配置本机模式报表服务器扩展部署
 
   Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。  
   
- SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。 通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+ SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
   在以下情形中使用“扩展部署”  ：  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
     -   使用安装程序安装将与扩展部署联接的每个报表服务器实例。  
   
-         为避免在将服务器实例连接到共享数据库时出现数据库兼容错误，应确保所有实例都为同一版本。 例如，如果你创建报表服务器数据库使用 SQL Server 2016 报表服务器实例，同一部署中的所有其他实例还必须是 SQL Server 2016。  
+         为避免在将服务器实例连接到共享数据库时出现数据库兼容错误，应确保所有实例都为同一版本。 例如，如果使用 SQL Server 2016 报表服务器实例创建报表服务器数据库，则同一部署中的其他所有实例也必须为 SQL Server 2016 实例。  
   
     -   使用 Reporting Services 配置管理器将每个报表服务器连接到共享数据库。 您一次只能连接并配置一台报表服务器。  
   
@@ -74,19 +72,19 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="service-accounts"></a>服务帐户
 
-当处理向外扩展部署时，所用的 Reporting Services 实例的服务帐户很重要。 部署 Reporting Services 实例时，应执行下列操作之一。
+在处理扩展部署时，用于 Reporting Services 实例的服务帐户非常重要。 部署 Reporting Services 实例时，应执行以下操作之一。
 
-**选项 1:**应使用的服务帐户相同的域用户帐户配置的所有 Reporting Services 实例。
+**选项 1：**应使用相同的域用户帐户为服务帐户配置所有的 Reporting Services 实例。
 
-**选项 2:**的每个服务帐户，域帐户，或不，需要授予 dbadmin 内承载 ReportServer 目录数据库的 SQL Server 数据库实例的权限。
+**选项 2：**需要向每个单独的服务帐户（无论是否为域帐户）授予 SQL Server 数据库实例内的 dbadmin 权限，该数据库实例正在托管 ReportServer 目录数据库。
 
-如果已配置的不同配置与上述选项之一，可能会遇到出现间歇性故障的修改与 SQL 代理的任务。 这将显示这两个 Reporting Services 中的错误日志和 web 门户上时编辑报表订阅。
+如果已配置不同于上述任一选项的配置，则在使用 SQL 代理修改任务时可能会遇到间歇性故障。 在编辑报表订阅时，这会作为错误同时显示在 Reporting Services 日志和 Web 门户中。
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-问题是间歇性是仅创建 SQL 代理任务的服务器将有权查看，删除或编辑项。 如果你不执行上述选项之一，操作将仅会成功时的负载平衡器将所有你对该订阅的请求发送到创建 SQL 代理任务的服务器。 
+会间歇性出现的问题为只有创建了 SQL 代理任务的服务器将有权查看、删除或编辑项。 如果不执行上述选项之一，则只有在负载均衡器将对该订阅的所有请求发送到创建了 SQL 代理任务的服务器时，操作才会成功。 
   
 ## <a name="to-install-the-first-report-server-instance"></a>安装第一个报表服务器实例  
   
@@ -94,7 +92,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
   
-3.  配置报表服务器 Web 服务 URL、 Web 门户 URL 和报表服务器数据库。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[配置报表服务器（Reporting Services 本机模式）](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。  
+3.  配置报表服务器 Web 服务 URL、Web 门户 URL 和报表服务器数据库。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[配置报表服务器（Reporting Services 本机模式）](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。  
   
 4.  验证报表服务器是否正常运行。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -106,25 +104,25 @@ An error occurred within the report server database.  This may be due to a conne
   
 3.  将报表服务器连接到用于第一个报表服务器实例的数据库：  
   
-    1.  选择**数据库**以打开数据库页。  
+    1.  选择“数据库”打开“数据库”页。  
   
-    2.  选择**更改数据库**。  
+    2.  选择“更改数据库”。  
   
-    3.  选择**选择现有的报表服务器数据库**。  
+    3.  选择“选择现有报表服务器数据库”。  
   
     4.  键入承载您要使用的报表服务器数据库的 SQL Server 数据库引擎实例的服务器名称。 此服务器必须是上述说明中连接到的服务器。  
   
-    5.  选择**测试连接**，然后选择**下一步**。  
+    5.  选择“测试连接”，然后选择“下一步”。  
   
-    6.  在**报表服务器数据库**，选择你创建的第一个报表服务器的数据库，然后选择**下一步**。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
+    6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
   
     7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“下一步” 。  
   
-    8.  选择**摘要**，然后选择**完成**。  
+    8.  选择“摘要”，然后选择“完成”。  
   
-4.  配置报表服务器**Web 服务 URL**。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
+4.  配置报表服务器“Web 服务 URL”。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
   
-5.  配置**Web 门户 URL**。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
+5.  配置“Web 门户 URL”。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
   
 ## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>将第二个报表服务器实例联接到扩展部署  
   
@@ -132,7 +130,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  单击“扩展部署”打开“扩展部署”页。 您会看到两个条目，分别对应于连接到报表服务器数据库的两个报表服务器实例。 第一个报表服务器实例应已联接。 第二个报表服务器应在“等待联接”。 如果您在自己的部署中没有看到类似的条目，请确认您已连接到已配置和初始化为使用报表服务器数据库的第一个报表服务器。  
   
-     ![向外扩展部署页面的部分屏幕截图](../../reporting-services/install-windows/media/scaloutscreen.gif "部分的向外扩展部署页的屏幕截图")  
+     ![“扩展部署”页的部分屏幕快照](../../reporting-services/install-windows/media/scaloutscreen.gif "“扩展部署”页的部分屏幕快照")  
   
 3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”。  
   
@@ -141,7 +139,7 @@ An error occurred within the report server database.  This may be due to a conne
     >   
     >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
   
-4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器并单击**Web 服务 URL**或**Web 门户 URL**。  
+4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”。  
   
  如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 
@@ -150,9 +148,9 @@ An error occurred within the report server database.  This may be due to a conne
 [配置服务帐户](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[配置报表服务器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[配置报表服务器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[添加和删除横向扩展部署的加密密钥](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+[添加和删除扩展部署的加密密钥](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

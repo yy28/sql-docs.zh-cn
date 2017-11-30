@@ -1,5 +1,5 @@
 ---
-title: "IsWebServiceEnabled 属性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文档"
+title: "IsWebServiceEnabled 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- IsWebServiceEnabled
-apilocation:
-- reportingservices.mof
+apiname: IsWebServiceEnabled
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- IsWebServiceEnabled property
+helpviewer_keywords: IsWebServiceEnabled property
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 212ccc756eba90bf497d479497f377ab4a701344
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 796029abc62d345b09c20dd79120faa0dfaa7297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting 属性-IsWebServiceEnabled
+# <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting 属性 - IsWebServiceEnabled
   指示是否已启用报表服务器 Web 服务。 只读。  
   
 ## <a name="syntax"></a>语法  
@@ -56,4 +52,3 @@ public boolean IsWebServiceEnabled;
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

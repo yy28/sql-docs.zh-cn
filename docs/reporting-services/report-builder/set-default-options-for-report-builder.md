@@ -1,5 +1,5 @@
 ---
-title: "设置报表生成器的默认选项 |Microsoft 文档"
+title: "设置报表生成器的默认选项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10427"
+f1_keywords: "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94d44bd81cda6f1afb8c4e027137f7df4c5915d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-default-options-for-report-builder"></a>设置报表生成器的默认选项
   在报表生成器中，可以设置大量有用的默认设置，以使报表创作更加容易和快速。  例如，如果你可以设置或更改默认报表服务器，除非另行指定，否则报表生成器会将你的报表自动保存到同一报表服务器。  
@@ -57,4 +55,3 @@ ms.lasthandoff: 08/09/2017
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

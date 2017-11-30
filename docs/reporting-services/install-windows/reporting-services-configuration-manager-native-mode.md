@@ -1,12 +1,11 @@
 ---
-title: "Reporting Services 配置管理器 （本机模式） |Microsoft 文档"
+title: "Reporting Services 配置管理器（本机模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/21/2017
   
 -   配置报表服务器电子邮件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一个报表服务器电子邮件传递扩展插件，该插件使用简单邮件传输协议 (SMTP) 将报表或报表处理通知传递到电子邮箱。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器指定网络中用于电子邮件传递的 SMTP 服务器或网关。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并不帮助您管理报表服务器内容、启用额外功能或授予服务器的访问权。 完全部署需要，还可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]若要启用额外功能或修改默认值，以及 web 门户来授予用户访问服务器。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并不帮助您管理报表服务器内容、启用额外功能或授予服务器的访问权。 完全部署还需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启用额外功能或修改默认值，以及使用 Web 门户授予用户对服务器的访问权。
 
 ##  <a name="bkmk_requirements"></a> 要求
 
@@ -76,19 +73,19 @@ ms.lasthandoff: 09/21/2017
 
 1.  使用适合于您的 Microsoft Windows 版本的以下步骤：
 
-    - 在 Windows 开始屏幕中，键入**报表**和选择**Reporting Services 配置管理器**从 earch 结果。
+    - 从 Windows“开始”屏幕上，键入“Reporting”，然后从搜索结果中选择“Reporting Services 配置管理器”。
 
     - 选择“开始”，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”。
 
          如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，在打开 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 服务器组件的配置工具时，应指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 而非 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。
 
-         选择**Reporting Services 配置管理器**。
+         选择“Reporting Services 配置管理器”。
 
 2. 此时将出现 **“Reporting Services 配置连接”** 对话框，可以选择要配置的报表服务器实例。 选择“连接”。
 
 3. 在 **“服务器名称”**中，指定安装报表服务器实例的计算机的名称。 默认情况下，将显示本地计算机的名称，但如果要连接到安装在远程计算机上的报表服务器，则可以键入远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。
 
-4. 如果指定远程计算机，选择**查找**来建立连接。
+4. 如果指定远程计算机，请选择“查找”以建立连接。
 
 5. 在 **Report Server 在stance**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
 
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/21/2017
 [配置和管理报表服务器](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

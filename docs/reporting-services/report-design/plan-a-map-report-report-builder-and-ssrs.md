@@ -1,5 +1,5 @@
 ---
-title: "规划地图报表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "规划地图报表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 138021b238290bf881bd1bd6291c11db958f1653
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
 好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，可将地图添加到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 08/09/2017
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|点|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
 |![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|点|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
   
- 在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关该向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+ 在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
  可以单独为每个层自定义显示或数据选项。 有关运行向导后自定义地图的详细信息，请参阅 [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)中的“在何处可以获取 ESRI 形状文件？”。  
   
@@ -156,9 +156,9 @@ ms.lasthandoff: 08/09/2017
  若要使用动态空间数据，空间数据源必须位于报表服务器上。 当在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设计报表时，可以将空间数据源添加到项目，并将其以及报表定义一起发布到报表服务器。 如果您使用报表生成器来设计报表，必须首先将空间数据上载到报表服务器，然后在向导或层属性中，为该地图层指定此空间数据源。  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义的数据和显示的地图或地图层 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [教程： 映射报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [报表故障排除： 地图报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

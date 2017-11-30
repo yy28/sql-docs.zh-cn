@@ -1,12 +1,11 @@
 ---
 title: "排序规则和 Unicode 支持 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b165344ccc0f06c8de77633069ff4bd59ad8d4a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 **char** 和 **varchar** 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论你是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解正在处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)。    
@@ -133,7 +131,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  还可以尝试针对服务器上的数据使用另一个排序规则。 选择一个映射到客户端上的代码页的排序规则。    
     
- 若要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中提供的 UTF-16 排序规则，可以选择一个增补字符 `_SC` 排序规则（仅 Windows 排序规则）来改进对某些 Unicode 字符的搜索和排序。    
+ 若要使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的 UTF-16 排序规则来改进对某些 Unicode 字符的搜索和排序（仅 Windows 排序规则），可以选择一个补充字符 (_SC) 排序规则或版本 140 排序规则。    
     
  若要评估与使用 Unicode 或非 Unicode 数据类型相关的问题，请测试您的具体方案以确定您所在环境下的性能差异大小。 最好对整个组织中的系统所使用的排序规则进行标准化，并尽可能部署 Unicode 服务器和客户端。    
     
@@ -155,35 +153,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> 增补字符    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 **nchar** 和 **nvarchar** 等数据类型来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” ，两个连续的 16 位字称为“代理项对” 。    
     
+ 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，新的补充字符 (_SC) 排序规则系列可用于以下数据类型：nchar、nvarchar 和 sql_variant。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`（如果使用日语排序规则）。    
+
+ 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，所有新的排序规则将自动支持补充字符。
+
  如果使用增补字符：    
     
 -   只有在 90 版本或更高版本的排序规则中才可以将增补字符用于排序和比较操作。    
     
--   所有 _100 级排序规则均支持使用增补字符进行语言排序。    
+-   所有 100 版本的排序规则均支持使用补充字符进行语言排序。    
     
 -   不支持将增补字符用在元数据（如数据库对象的名称）中。    
     
--   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，新的增补字符 (SC) 排序规则系列可用于以下数据类型：nchar、nvarchar 和 sql_variant。 例如： `Latin1_General_100_CI_AS_SC`或 `Japanese_Bushu_Kakusu_100_CI_AS_SC`（如果使用日语排序规则）。    
-  > [!NOTE]    
-  >  使用含补充字符 (\_SC) 的排序规则的数据库无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时启用。 这是因为为复制而创建的某些系统表和存储过程使用不支持补充字符的旧版 ntext 数据类型。  
+-   使用含补充字符 (\_SC) 的排序规则的数据库无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时启用。 这是因为为复制而创建的某些系统表和存储过程使用不支持补充字符的旧版 ntext 数据类型。  
     
-     SC 标志可应用于：    
+-   SC 标志可应用于：    
     
-    -   90 版本 Windows 排序规则    
+    -   90 版本的排序规则    
     
-    -   100 版本 Windows 排序规则    
+    -   100 版本的排序规则    
     
-     SC 标志不能应用于：    
+-   SC 标志不能应用于：    
     
     -   80 版本非版本化 Windows 排序规则    
     
     -   BIN 或 BIN2 二进制排序规则    
     
-    -   SQL* 排序规则    
+    -   SQL\* 排序规则    
     
- 下表比较了在使用具有和没有 SC 排序规则的增补字符时某些字符串函数和字符串运算符的行为。    
+    -   140 版本的排序规则（这些排序规则无需 SC 标志，因为它们已支持补充字符）    
     
-|字符串函数或运算符|具有 SC 排序规则|没有 SC 排序规则|    
+ 下表比较了某些字符串函数和字符串运算符在使用具有和没有补充字符识别 (SCA) 排序规则的补充字符时的行为：    
+    
+|字符串函数或运算符|具有补充字符识别 (SCA) 排序规则|没有 SCA 排序规则|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|UTF-16 代理项对作为单个码位计数。|UTF-16 代理项对作为两个码位计数。|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|这些函数会将每个代理项对作为单个码位处理并按预期方式工作。|这些函数可能拆分任意代理项对并导致意外的结果。|    
@@ -205,13 +207,15 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 
 ##  <a name="Japanese_Collations"></a> 在  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]开始，支持两种新的日语排序规则系列，具有各种排列选项（_CS、_AS、_KS、_WS、_VSS 等）。 
+从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，支持两种新的日语排序规则系列，并具有各种排列选项（\_CS、\_AS、\_KS、\_WS、\_VSS）。 
 
 若要列出这些排序规则，可以查询 SQL Server 数据库引擎：
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+所有新的排序规则都有对补充字符的内置支持，因此，新的排序规则都没有（或不需要）SC 标志。
 
 数据库引擎索引、内存优化表、列存储索引和本机编译模块中支持这些排序规则。
     
@@ -239,5 +243,4 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
  [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

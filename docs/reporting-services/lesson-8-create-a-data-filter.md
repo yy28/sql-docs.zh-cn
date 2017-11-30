@@ -1,28 +1,25 @@
 ---
-title: "第 8 课： 创建数据筛选器 |Microsoft 文档"
+title: "第 8 课：创建数据筛选器 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3061a846f34ad19da2ea2d17ef571513d8d97ae1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
 在父报表上添加钻取操作后，接下来将创建一个数据筛选器，用于为子报表定义的数据表。  
@@ -44,13 +41,13 @@ ms.lasthandoff: 08/09/2017
   
 2.  选择 tablix 中的某个列标题，右键单击在该列标题上方显示的灰色单元，然后选择“Tablix 属性”。  
   
-3.  选择“筛选器”页，然后选择“添加”。  
+3.  在“筛选器”页进行选择，然后选择“添加”。  
   
 4.  在“表达式”字段中，从下拉列表中选择“ProductID”。 筛选器即应用于此列。  
   
-5.  在“运算符”下拉列表中选择等号 (**=**) 运算符。  
+5.  在“运算符”下拉列表中选择等号 (=) 运算符。  
   
-6.  选择“值”字段旁的表达式按钮，在“类别”区域中选择“参数”，然后在“值”区域中双击“productid”。 “为以下项设置表达式: 值”字段现在应包含类似于 **=Parameters!productid.Value** 的表达式。  
+6.  选择“值”字段旁的“表达式”按钮，在“类别”区域中选择“参数”，然后在“值”区域中双击“productid”。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式。  
   
 7.  选择“确定”，然后在“Tablix 属性”对话框中再次选择“确定”。  
   
@@ -112,7 +109,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在设计器视图中打开 Default.aspx。  
   
-2.  右键单击“ReportViewer”控件，然后选择“属性”。  
+2.  右键单击 ReportViewer 控件，然后选择“属性”。  
   
 3.  在“属性”页上，选择“事件”图标。  
   
@@ -228,7 +225,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在设计器视图中打开 Default.aspx。  
   
-2.  右键单击“ReportViewer”控件，然后选择“属性”。  
+2.  右键单击 ReportViewer 控件，然后选择“属性”。  
   
 3.  在“属性”窗格上，选择“事件”图标。  
   
@@ -300,5 +297,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

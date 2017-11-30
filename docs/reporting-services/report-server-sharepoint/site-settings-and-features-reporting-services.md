@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 站点设置和网站功能 （SharePoint 模式） |Microsoft 文档"
+title: "Reporting Services 网站设置和网站功能（SharePoint 模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,48 +14,46 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: ea81c248f302e322d981b90147d42cb83a4804cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: d9bde6f14f53f2b5043bdfec1182c9c43ef37329
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 网站设置和网站功能 （SharePoint 模式）
+# <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 网站设置和网站功能（SharePoint 模式）
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Reporting Services SharePoint 模式具有多个站点级别的自定义功能和 SharePoint 站点设置页可以管理站点功能。 这些设置适用于整个网站，并且会影响所有 Reporting Services 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
+Reporting Services SharePoint 模式具有几个网站级自定义功能和可以从“SharePoint 网站设置”页管理的网站功能。 这些设置适用于整个网站并影响所有 Reporting Services 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
 |网站设置|Description|  
 |------------------|-----------------|  
-|Reporting Services 站点设置|本主题中所述站点范围的设置。|  
+|Reporting Services 网站设置|本主题中介绍了适用于网站的设置。|  
 |管理数据警报|管理数据警报功能。|  
 |报表服务器文件同步|默认情况下停用的网站级功能。<br /><br /> 在文档库中直接添加或更新文件时，将报表服务器文件（.rdl、.rsds、.smdl、.rsd、.rsc、.rdlx）从 SharePoint 文档库同步到报表服务器。<br /><br /> 有关详细信息，请参阅 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)|  
   
-## <a name="open-the-reporting-services-site-settings-page"></a>打开 Reporting Services 站点设置页
+## <a name="open-the-reporting-services-site-settings-page"></a>打开 Reporting Services“网站设置”页
   
-1.  从 SharePoint 站点的**站点操作**菜单上，选择**站点设置**。  
+1.  在 SharePoint 网站的“网站操作”菜单中，选择“网站设置”。  
   
-2.  在**Reporting Services**部分中，选择**Reporting Services 网站设置**。  
+2.  在 Reporting Services 部分中，选择“Reporting Services 网站设置”。  
   
-## <a name="options-for-reporting-services-site-settings"></a>用于 Reporting Services 网站设置选项
+## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 网站设置选项
   
 |选项|Description|  
 |------------|-----------------|  
 |**启用 RSClientPrint ActiveX 控件下载**|该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 有关控件的详细信息，请参阅 [Using the RSClientPrint Control in Custom Applications](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**启用本地模式下的远程错误**|在本地模式下运行时，在远程计算机上显示或隐藏详细的错误消息。 如果看到类似于以下内容的错误消息，则启用远程错误可能很有用：<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  
 |**启用报表的辅助功能元数据**|启用报表的 HTML 输出中的辅助功能元数据|  
-|**启用报表的精确数据可视化调整大小**|配置 tablix 中数据可视化调整大小行为以完全适合。 这包括图表、仪表和地图。 禁用该行为（即数据可视化对象为大致适合时），可能留下一些空格。 此设置仅适用于在报表查看器 web 部件中的呈现。 若要管理的服务器端呈现这种行为，你需要修改**rsreportserver.config**文件。 有关详细信息，请参见以下内容：<br /><br /> [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。<br /><br /> [Customize Rendering Extension Parameters in RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。<br /><br /> [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。<br /><br /> 启用“精确”可能会影响性能，因为确定精确大小所需的处理时间可能比大致适合时所需的时间长。|  
+|**启用报表的精确数据可视化调整大小**|配置 tablix 中数据可视化调整大小行为以完全适合。 这包括图表、仪表和地图。 禁用该行为（即数据可视化对象为大致适合时），可能留下一些空格。 此设置仅适用于在报表查看器 Web 部件中呈现。 要为服务器端呈现管理此行为，需要修改 rsreportserver.config 文件。 有关详细信息，请参见以下内容：<br /><br /> [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。<br /><br /> [Customize Rendering Extension Parameters in RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。<br /><br /> [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。<br /><br /> 启用“精确”可能会影响性能，因为确定精确大小所需的处理时间可能比大致适合时所需的时间长。|  
   
 ## <a name="see-also"></a>另请参阅
 
  [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
   
-

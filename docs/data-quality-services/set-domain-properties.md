@@ -2,30 +2,24 @@
 title: "设置域属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 425137ae60d9cc7378483f7e26d036cdecf1407b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-domain-properties"></a>设置域属性
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中设置域属性。  
@@ -57,7 +51,7 @@ ms.lasthandoff: 09/09/2017
  一旦创建了一个域后，就可以更改该域名或说明。 对于知识库而言，域名必须唯一。 说明最多可以有 256 个字符。  
   
 ###  <a name="Type"></a> 数据类型  
- 在您选择域后，为域中的值选择以下数据类型之一： **String** （默认设置）、 **Date**、 **Integer**或 **Decimal**。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 有关 DQS 中四个域数据类型的支持的数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+ 在您选择域后，为域中的值选择以下数据类型之一： **String** （默认设置）、 **Date**、 **Integer**或 **Decimal**。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 对于 DQS 中四个域数据类型支持的数据类型的相关信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 ###  <a name="Leading"></a> 使用前导值  
  选中此复选框可指定将输出一组同义词中的前导值，而非是其同义词的值。 取消选择 **“使用前导值”** 可指定每个同义词值以其正确或更正形式输出，并且不会被其组的前导值替换。  
@@ -97,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  如果数据类型为 **String**，则选择此选项可指定在清理期间在域中 DQS 将不会标识语法错误。 在为该域标识语法错误无关紧要时选中此复选框。 例如，标识语法错误可能对于序列号无意义。 此控制仅可用于字符串数据类型。 DQS 不会检查非字符串数据类型是否有语法错误。  
   
   
-

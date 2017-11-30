@@ -1,5 +1,5 @@
 ---
-title: "使用 Reporting Services 的外部数据集 |Microsoft 文档"
+title: "将外部数据集用于 Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>将外部数据集用于 Reporting Services
-  **数据集**对象是支持的核心断开连接，分布式数据方案起[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。 **数据集**对象是的内存驻留表示形式提供一致的关系编程模型，而不考虑数据源的数据。 它可用于具有 XML 数据的多种不同的数据源，或者用于管理应用程序的本地数据。 **数据集**对象表示一组完整的数据，包括相关的表、 约束和表之间的关系。 由于**数据集**中存储和公开数据，你的数据的对象的通用性可能通常处理和转换为**数据集**对象，然后该数据任何报告发生。  
+  DataSet 对象是支持具有 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 的断开连接的、分布式数据方案的核心。 DataSet 对象是数据的驻留内存表示形式，提供与数据源无关的一致的关系编程模型。 它可用于具有 XML 数据的多种不同的数据源，或者用于管理应用程序的本地数据。 DataSet 对象表示完整的数据集合，包括相关表、约束以及表之间的关系。 由于 DataSet 对象既存储数据、又公开数据，因此，数据可能会经常被处理并转换为 DataSet，然后发生针对这些数据的报告。  
   
- 与[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]数据处理扩展插件，你可以将集成任何自定义**数据集**由外部应用程序的对象。 若要实现此目的，您创建中的自定义数据处理扩展[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]类似之间的桥梁你**数据集**对象和报表服务器。 用于处理此代码的大多数**数据集**对象包含在**DataReader**你创建的类。  
+ 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件，可以集成外部应用程序创建的任何自定义 DataSet 对象。 为此，在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中创建一个自定义数据处理扩展插件，充当 DataSet 对象和报表服务器之间的桥梁。 用于处理此 DataSet 对象的大多数代码包含在所创建的 DataReader 类中。  
   
- 公开的第一步你**数据集**到报表服务器的对象是实现中的提供程序特定方法你**DataReader**可以填充的类**数据集**对象。 下面的示例演示如何将静态数据载入**数据集**通过使用中的提供程序特定方法的对象你**DataReader**类。  
+ 向报表服务器公开 DataSet 对象的第一步是在可填充 DataSet 对象的 DataReader 类中实现特定于访问接口的方法。 以下示例说明如何通过在 DataReader 类中使用特定于访问接口的方法，将静态数据加载到 DataSet 对象中。  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,12 +166,11 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- 一旦你创建或检索你的数据集，就可以使用**数据集**的实现中的对象**读取**， **GetValue**， **GetName**， **GetOrdinal**， **GetFieldType**，和**FieldCount**的成员**DataReader**类。  
+ 一旦创建或检索数据集后，就可以在实现 DataReader 类的 Read、GetValue、GetName、GetOrdinal、GetFieldType 和 FieldCount 成员时使用 DataSet 对象。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [实现数据处理扩展插件](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 扩展插件库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

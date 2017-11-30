@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>协调多个用户所做的更改 (Visual Database Tools)
 在多用户环境中，多个用户可以同时对同一个对象进行更改。 当您在表或数据库关系图设计器中处理对象的结构时，可能会出现这种情况；对于查询和视图设计器的“结果”窗格内所返回结果中的值，也会出现这种情况。 这可能导致您需要解决的冲突。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/18/2017
   
 -   选择“是”保存表并使用列表中的所有更改更新数据库。  
   
-    此操作将影响共用相同数据库对象的表。 例如，假设编辑 `au`表中的`id` _ `titleauthors` 列，而另一个用户正在处理 `authors` 表，该表通过 `titleauthors` 列与 `au`\_`id` 表相关。 保存您的表将影响另一个用户的表。 与此类似，假设另一个用户为 `qty` 表中的 `sales` 列定义了一个 CHECK 约束。 如果您删除 `qty` 列并保存 `sales` 表，则另一个用户的 CHECK 约束将受到影响。  
+    此操作将影响共用相同数据库对象的表。 例如，假设编辑 `titleauthors` 表中的 `au_id` 列，而另一名用户正在处理 `authors` 表，该表通过 `au_id` 列与 `titleauthors` 表相关联。 保存您的表将影响另一个用户的表。 与此类似，假设另一个用户为 `qty` 表中的 `sales` 列定义了一个 CHECK 约束。 如果您删除 `qty` 列并保存 `sales` 表，则另一个用户的 CHECK 约束将受到影响。  
   
 -   选择“否”取消保存操作。  
   
@@ -65,4 +64,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>另请参阅  
 [“检测到数据库更改”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "代码访问安全的 Reporting Services |Microsoft 文档"
+title: "Reporting Services 中的代码访问安全性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,23 +19,23 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: d34c2136e148bcd5297160f1776b13b86c343a7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的代码访问安全性
-  代码访问安全性以下面几个核心概念为中心：证据、代码组和命名权限集。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，报表管理器、报表设计器和报表服务器组件均有一个策略文件，该文件用来为自定义程序集配置代码访问安全性，还用来配置数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 下面几节提供了代码访问安全性的概述。 有关详细信息将在本部分中介绍的主题，请参见"安全策略"中模型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档。  
+  代码访问安全性以下面几个核心概念为中心：证据、代码组和命名权限集。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，报表管理器、报表设计器和报表服务器组件均有一个策略文件，该文件用来为自定义程序集配置代码访问安全性，还用来配置数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 下面几节提供了代码访问安全性的概述。 有关本节中所涵盖主题的更详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档中的“安全策略模型”。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用代码访问安全性的原因在于，尽管报表服务器基于 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技术而构建，但是典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序和报表服务器之间有着显著的区别。 典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序不执行用户代码。 与此相反，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用开放的且可扩展的体系结构，用户可对使用的报表定义文件编程**代码**的报表定义语言和开发专用的功能集成到在报表中使用的自定义程序集的元素。 此外，开发人员可以设计和部署功能强大的扩展插件来增强报表服务器的功能。 由于具有这种强大的功能和灵活性，因此将需要提供尽可能多的保护和安全性。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用代码访问安全性的原因在于，尽管报表服务器基于 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技术而构建，但是典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序和报表服务器之间有着显著的区别。 典型的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序不执行用户代码。 相比之下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用开放式可扩展体系结构，该体系结构允许用户使用报表定义语言的 Code 元素来针对报表定义文件编程，并在自定义程序集内进行专用功能开发，以供报表使用。 此外，开发人员可以设计和部署功能强大的扩展插件来增强报表服务器的功能。 由于具有这种强大的功能和灵活性，因此将需要提供尽可能多的保护和安全性。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 开发人员可以使用其报表中的任何 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集并在本机调用部署到全局程序集缓存中的所有程序集功能。 报表服务器唯一能够控制的内容就是向报表表达式和已加载的自定义程序集授予的权限。 在[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，自定义程序集接收**执行**-默认情况下的权限。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 开发人员可以使用其报表中的任何 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集并在本机调用部署到全局程序集缓存中的所有程序集功能。 报表服务器唯一能够控制的内容就是向报表表达式和已加载的自定义程序集授予的权限。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，自定义程序集在默认情况下接收仅 Execute 权限。  
   
 ## <a name="evidence"></a>证据  
  证据是公共语言运行时 (CLR) 用来为代码程序集确定安全策略的信息。 证据向公共语言运行时指示代码具有特定的特征。 证据的常见形式包括数字签名和程序集位置， 但也可以自定义设计证据来表示其他对应用程序有意义的信息。  
@@ -64,10 +63,10 @@ ms.lasthandoff: 08/12/2017
  您应当与系统管理员或应用程序开发专家一起来确定代码访问安全性的类型以及自定义程序集或 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展插件所需的代码组。  
   
 ## <a name="named-permission-sets"></a>命名权限集  
- 命名权限集是管理员可以将其与某个代码组关联的权限集。 大多数命名权限集都至少包含一个权限、一个名称以及对该权限集的说明。 管理员可以使用命名权限集来创建或修改代码组的安全策略。 可以将多个代码组与同一个命名权限集关联。 CLR 提供内置的命名的权限集;其中有**执行任何操作**，**执行**， **Internet**， **LocalIntranet**，**的所有内容**，和**FullTrust**。  
+ 命名权限集是管理员可以将其与某个代码组关联的权限集。 大多数命名权限集都至少包含一个权限、一个名称以及对该权限集的说明。 管理员可以使用命名权限集来创建或修改代码组的安全策略。 可以将多个代码组与同一个命名权限集关联。 CLR 提供内置的命名权限集，其中包括 Nothing、Execution、Internet、LocalIntranet、Everything 和 FullTrust。  
   
 > [!NOTE]  
->  中的自定义数据、 传递、 呈现和安全扩展[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]必须在下运行**FullTrust**权限集。 可以与系统管理员一起为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展插件添加适当的代码组和成员身份条件。  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的自定义数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件必须以 FullTrust 权限集运行。 可以与系统管理员一起为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 扩展插件添加适当的代码组和成员身份条件。  
   
  可以将自定义的权限级别与那些和报表一起使用的自定义程序集相关联。 例如，如果您希望允许程序集访问特定的文件，则可以新建一个具有特定文件 I/O 访问权限的命名权限集，然后将该权限集分配给您的代码组。 下面的权限集向 MyFile.xml 文件授予只读访问权限：  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [安全开发 &#40;Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ [安全开发 (Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

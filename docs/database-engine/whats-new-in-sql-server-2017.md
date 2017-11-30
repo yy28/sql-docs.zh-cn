@@ -1,29 +1,30 @@
 ---
 title: "数据库引擎中的新增功能 - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eddd1edd812d9224e151960788f8f510f809fb27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>数据库引擎中的新增功能 - SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 本主题介绍对 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 的 [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] 所做的改进。 单击下面的链接可获取每项改进的详细信息。
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/12/2017
     - 本机编译模块中的`CROSS APPLY` 运算符。   
 - 增加了新的字符串函数 [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md)、 [TRANSLATE](../t-sql/functions/translate-transact-sql.md)和 [TRIM](../t-sql/functions/trim-transact-sql.md) 。   
 - `WITHIN GROUP` 子句现在支持 [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) 函数。
-- 增加了两个新的日语排序规则系列 (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140)，并增加了在日语排序规则中使用的排序规则选项 Variation-selector-sensitive (_VSS)。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)   
+- 增加了两个新的日语排序规则系列（Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140），并增加了在这些新的日语排序规则中使用的排序规则选项 Variation-selector-sensitive (_VSS)。 此外，所有新的排序规则将自动支持补充字符，而无需指定 _SC 选项。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)   
 - 新的批量访问选项（[BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)）允许直接从如下两种文件访问数据：指定为 CSV 格式的文件，以及通过[外部数据源](../t-sql/statements/create-external-data-source-transact-sql.md) 的新 `BLOB_STORAGE` 选项存储在 Azure Blob 存储中的文件。
 - 数据库 **COMPATIBILITY_LEVEL** 140 已添加。   在此级别上运行的客户将获得最新语言功能和查询优化器行为。 这包括每个 Microsoft 发布的预发布版本中的更改。
 - 对计算增量统计信息更新阈值的方式的改进（需要140 兼容模式）。
@@ -86,5 +87,4 @@ ms.lasthandoff: 10/12/2017
 - 新权限： `DATABASE SCOPED CREDENTIAL` 当前属于安全对象类，可支持 `CONTROL`、 `ALTER`、 `REFERENCES`、 `TAKE OWNERSHIP`和 `VIEW DEFINITION` 权限。 现可在 `sys.fn_builtin_permissions` 中查看仅限于 SQL 数据库的 `ADMINISTER DATABASE BULK OPERATIONS`。   
 - 添加了 [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) DMV，为 Windows 和 Linux 提供操作系统信息。   
 - 使用 R Services 创建数据库角色，以管理与包关联的权限。 有关详细信息，请参阅 [SQL Server 的 R 包管理](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
-
 

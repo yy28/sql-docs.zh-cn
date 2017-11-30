@@ -1,5 +1,5 @@
 ---
-title: "格式设置仪表 （报表生成器和 SSRS） 上的刻度 |Microsoft 文档"
+title: "设置仪表上刻度的格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,21 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b35ef78ab099933bd7d86bab2818734d1f93836
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上刻度的格式（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表刻度是仪表上显示的具有上限和下限的数字范围。 为了准确显示仪表指针指向的读数，仪表刻度通常包含仪表标签和刻度线。 仪表刻度通常与一个或多个仪表指针相关联。 同一个仪表中可以具有多个刻度。  
   
- ![仪表刻度上的元素的概述](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "仪表刻度上的元素的概述")  
+ ![仪表刻度上的元素概述](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Overview of elements on a gauge scale")  
   
  与其中定义了多个组的图表不同，仪表上只显示一个值。 必须定义刻度的最小值和最大值。 间隔数值会根据指定的最小值和最大值自动计算。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  指定最小值和最大值。 不会根据数据集自动计算这些值，因此必须在仪表的 **“属性”** 对话框中提供相应的值。  
   
-2.  如果未为“间隔”指定值，则使用默认值“自动”。 这表示应用程序将根据在第一步中指定的最小值和最大值计算等距间隔。 如果指定了间隔值，仪表将计算最大值和最小值的差，并用该数字除以在“间隔”属性中指定的值。  
+2.  如果未为“间隔”指定值，则使用默认值“自动”。这表示应用程序将根据在第一步中指定的最小值和最大值计算等距间隔。 如果指定了间隔值，仪表将计算最大值和最小值的差，并用该数字除以在“间隔”属性中指定的值。  
   
  还存在用于定义标签和刻度线间隔的属性。 如果指定了这些属性的值，这些值将覆盖为刻度间隔属性指定的值。 例如，如果刻度间隔为“自动”，但是您指定了 4 作为标签间隔，则标签将显示为 0、4、8 等，不过仪表仍将根据其自身的计算方式来计算主要刻度线。 这可能导致标签与刻度线不同步的情况。 如果设置了标签间隔，请考虑隐藏刻度线。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  刻度半径是从仪表中心到刻度条中间位置的距离。 刻度半径的值按仪表直径的百分比度量。 最好使刻度半径值低于 35。 如果指定的值大于 35，绘制的刻度将可能超出仪表的边界。 下图显示如何相对于仪表直径在刻度条上度量刻度半径。  
   
- ![相对于仪表直径的刻度半径](../../reporting-services/report-design/media/scaleradiusdiagram.gif "相对于仪表直径的刻度半径")  
+ ![相对于仪表直径的刻度半径](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Scale radius relative to gauge diameter")  
   
  开始角度是介于 0 至 360 之间的旋转角度，是刻度的起始位置。 位置零 (0) 位于仪表的底部，开始角度按顺时针方向旋转。 例如，如开始角度为 90 度，将使刻度从 9 点钟位置开始。  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/09/2017
 -   线性仪表上仪表高度或宽度（以值小者为准）的 1%。  
   
 ## <a name="see-also"></a>另请参阅  
- [在仪表 &#40; 的格式设置范围报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [在仪表 &#40; 的格式设置指针报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [为日期或货币 &#40; 的格式轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [在图表 &#40; 的格式设置轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [设置仪表上范围的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [设置仪表上指针的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

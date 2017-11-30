@@ -1,5 +1,5 @@
 ---
-title: "添加凹凸效果、 阳文和纹理样式为图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "向图表添加棱台、浮雕和纹理样式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 204e67c4b1fb62e3e38188f155196d8edc095356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>图表效果-添加凹凸效果、 阳文和纹理 （报表生成器）
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>图表效果 - 添加棱台、浮雕或纹理（报表生成器）
   当使用某些图表类型时，您可以指定绘制样式以增加图表的视觉效果。 这些绘制效果仅适用于图表的序列。 它们对其他图表元素不起任何作用。  
   
  当使用的是饼图或圆环图的任何变体时，可以指定软边或凹陷绘制样式，这类似于可应用到图像的凹凸效果或阳文效果。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  不能在同一个图表上具有三维和凹凸效果或阳文样式。 如果已为图表启用三维样式，将看不到 PieDrawingStyle 属性。  
   
- ![与凹陷绘制样式的饼图](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "凹陷绘制样式与饼形图")  
+ ![带有凹形绘制样式的饼图](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "带有凹形绘制样式的饼图")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>向条形图或柱状图中添加纹理样式  
   
@@ -63,13 +62,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  不能在同一个图表上具有三维和凹凸效果或阳文样式。 如果已为图表启用三维样式，将看不到 PieDrawingStyle 属性。  
   
- ![条形图 LightToDark 绘制效果](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "LightToDark 绘制效果条形图")  
+ ![具有 LightToDark 绘制效果的条形图](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "具有 LightToDark 绘制效果的条形图")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [柱形图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [饼图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

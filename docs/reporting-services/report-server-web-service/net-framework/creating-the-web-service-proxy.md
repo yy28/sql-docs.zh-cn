@@ -1,5 +1,5 @@
 ---
-title: "创建 Web 服务代理 |Microsoft 文档"
+title: "创建 Web 服务代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -19,27 +18,26 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3f80f446e3d68059d2337d6fa64e9e99022e24f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
   客户端和 Web 服务可以通过 SOAP 消息进行通信，这些消息将输入参数和输出参数封装为 XML。 代理类将参数映射到 XML 元素，然后通过网络发送 SOAP 消息。 通过这种方法，代理类使您不必在 SOAP 级别与 Web 服务通信，并允许您在支持 SOAP 和 Web 服务代理的任何开发环境中调用 Web 服务方法。  
   
- 有两种方法将代理类添加到你的开发项目使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]： 中的 WSDL 工具[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，并通过添加中的 Web 引用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 下列各节更为详细地讨论这一主题。  
+ 可以通过两种方法，使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将代理类添加到开发项目中：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的 WSDL 工具和在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中添加 Web 引用。 下列各节更为详细地讨论这一主题。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>使用 WSDL 工具添加代理  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包括 Web 服务描述语言工具 (Wsdl.exe)，它使得您能够生成 Web 服务代理以用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 开发环境中。 若要在支持的 Web 服务的语言中创建客户端代理的最常见方法 (当前 C# 和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 是使用 WSDL 工具。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包括 Web 服务描述语言工具 (Wsdl.exe)，它使得您能够生成 Web 服务代理以用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 开发环境中。 在支持 Web 服务的语言（当前为 C# 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）中创建客户端代理的最常用方法是使用 WSDL 工具。  
   
- **若要添加到你的项目使用 Wsdl.exe 的代理类**  
+ **使用 Wsdl.exe 将代理类添加到项目中**  
   
 1.  从命令提示符下，使用 Wsdl.exe 创建代理类，同时指定（至少）指向报表服务器 Web 服务的 URL。  
   
@@ -76,15 +74,15 @@ ReportingService2010 service = new ReportingService2010();
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>在 Visual Studio 中使用 Web 引用添加代理  
  Web 引用使一个项目可以使用一个或多个 Web 服务。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 使用户可以通过以下几个简单步骤向项目添加 Web 服务引用。  
   
- **若要添加到项目的 Web 引用**  
+ **将 Web 引用添加到项目**  
   
-1.  在**解决方案资源管理器**，选择将使用 Web 服务的项目。  
+1.  在“解决方案资源管理器”中，选择要使用 Web 服务的项目。  
   
-2.  上**项目**菜单上，单击**添加 Web 引用**。  
+2.  在“项目”菜单中，单击“添加 Web 引用”。  
   
-     **添加 Web 引用**对话框随即打开。  
+     “添加 Web 引用”对话框打开。  
   
-3.  在**URL**字段中，输入报表服务器 Web 服务的完整路径。  
+3.  在“URL”字段中，输入指向报表服务器 Web 服务的完整路径。  
   
      报表服务器 Web 服务的报表执行端点的简化 URL 可能如下所示：  
   
@@ -92,7 +90,7 @@ ReportingService2010 service = new ReportingService2010();
     http://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
-     此 URL 包含在其中部署报表服务器 Web 服务的域、包含该服务的文件夹的名称以及该服务的发现文件的名称。 有关不同的 URL 元素的完整说明，请参阅[访问 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
+     此 URL 包含在其中部署报表服务器 Web 服务的域、包含该服务的文件夹的名称以及该服务的发现文件的名称。 有关不同 URL 元素的完整说明，请参阅[访问 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
   
      由 Web 服务提供的方法和属性的说明将出现在“浏览器”窗格的左侧。  
   
@@ -101,15 +99,15 @@ ReportingService2010 service = new ReportingService2010();
   
 4.  验证项目是否可以使用报表服务器 Web 服务，以及您是否具有适当的权限访问报表服务器。  
   
-5.  在**Web 引用名称**字段中，输入将使用的名称在你的代码以编程方式访问报表服务器 Web 服务。  
+5.  在“Web 引用名”字段中输入一个名称，将在代码中使用该名称以编程方式访问报表服务器 Web 服务。  
   
-6.  选择**添加引用**按钮以在你的应用程序到 Web 服务中创建引用。  
+6.  选择“添加引用”按钮，以在应用程序中创建对 Web 服务的引用。  
   
-     新的引用将出现在**解决方案资源管理器**下活动项目的 Web 引用节点中，名为规定**Web 引用名称**字段。  
+     新引用将出现在“解决方案资源管理器”中处于活动状态的项目的“Web 引用”节点下，其名称在“Web 引用名”字段中指定。  
   
-7.  在**解决方案资源管理器**，展开 Web 引用文件夹，需要注意的 Web 引用类可供你项目中的项的命名空间。  
+7.  在“解决方案资源管理器”中，展开“Web 引用”文件夹，以记下与可用于项目中的项的 Web 引用类对应的命名空间。  
   
-     添加到你的项目的 Web 引用后, 关联的文件将显示在的 Web 引用文件夹中的文件夹**解决方案资源管理器**。  
+     在将 Web 引用添加到项目后，关联的文件将显示在“解决方案资源管理器”的“Web 引用”文件夹内的某个文件夹中。  
   
  在添加 Web 引用之后，使用以下语法创建代理类的实例：  
   
@@ -126,7 +124,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 你还可以添加**使用**(**导入**中[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 报表服务器 Web 服务引用指令。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
+ 还可以将“using”（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Import”）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -138,8 +136,7 @@ using myNamespace.myReferenceName;
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器 Web 服务](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [技术参考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [使用 Web 服务和 .NET Framework 生成应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [技术参考 (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

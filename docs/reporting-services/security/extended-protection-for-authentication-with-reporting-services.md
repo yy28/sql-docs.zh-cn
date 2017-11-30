@@ -1,5 +1,5 @@
 ---
-title: "使用 Reporting Services 扩展保护身份验证 |Microsoft 文档"
+title: "Reporting Services 针对验证的扩展保护 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,35 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
 
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 此功能自身并不直接提供保护机制来防止特定攻击（如凭据转发），但它为诸如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的应用程序提供了一种基础结构来实施针对验证的扩展保护。  
   
  作为扩展保护一部分的主要身份验证增强功能是服务绑定和渠道绑定。 渠道绑定使用渠道绑定标记 (CBT)，以验证在两个端点之间建立的渠道不会受到危害。 服务绑定使用服务器主体名称 (SPN) 来验证身份验证标记的预期目的地。 有关扩展保护的详细背景信息，请参阅 [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](http://go.microsoft.com/fwlink/?LinkId=179922)。  
   
-SQL Server Reporting Services (SSRS) 支持和实行已在操作系统中启用并配置中的扩展保护[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求，因此，可能因操作系统中支持扩展保护以及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护功能而受益。  
+SQL Server Reporting Services (SSRS) 支持和实行已在操作系统中启用并在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中配置的扩展保护。 默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求，因此，可能因操作系统中支持扩展保护以及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护功能而受益。  
   
 > [!IMPORTANT]  
 >  默认情况下，Windows 不启用扩展保护。 有关如何在 Windows 中启用扩展保护的信息，请参阅 [身份验证的扩展保护](http://go.microsoft.com/fwlink/?LinkID=178431)。 操作系统和客户端身份验证堆栈必须同时支持扩展保护，身份验证才能成功。 对于较早的操作系统，您可能需要安装多个更新，才能获得完整的支持扩展保护功能的计算机。 有关扩展保护的最新开发动态的信息，请参阅 [updated information with Extended Protection（扩展保护的更新信息）](http://go.microsoft.com/fwlink/?LinkId=183362)。  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 扩展保护概述
 
-SSRS 支持和实行已在操作系统中启用的扩展的保护。 如果操作系统不支持扩展保护或者尚未启用操作系统中的此功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护功能将无法进行身份验证。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护还需要 SSL 证书。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+SSRS 支持和实行已在操作系统中启用的扩展保护功能。 如果操作系统不支持扩展保护或者尚未启用操作系统中的此功能， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护功能将无法进行身份验证。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展保护还需要 SSL 证书。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 > [!IMPORTANT]  
->  默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不启用扩展保护。 可以通过修改 **rsreportserver.config** 配置文件或使用 WMI API 来更新此配置文件，以便启用此功能。 SSRS 不提供一个用户界面来修改或查看扩展保护设置。 有关详细信息，请参阅本主题中的 [配置设置](#ConfigurationSettings) 部分。  
+>  默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不启用扩展保护。 可以通过修改 **rsreportserver.config** 配置文件或使用 WMI API 来更新此配置文件，以便启用此功能。 SSRS 不能提供用于修改或查看扩展保护设置的用户界面。 有关详细信息，请参阅本主题中的 [配置设置](#ConfigurationSettings) 部分。  
   
  因更改扩展保护设置或所配置的设置不正确而导致的共同问题并不显示明显的错误消息或对话框窗口。 与扩展保护配置和兼容性相关的问题会导致身份验证失败并在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 跟踪日志中记录错误。  
   
@@ -53,7 +51,7 @@ SSRS 支持和实行已在操作系统中启用的扩展的保护。 如果操�
   
 ### <a name="upgrade"></a>升级  
   
--   升级[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到 SQL Server 2016 的服务器将使用默认值为配置设置添加**rsreportserver.config**文件。 如果设置已存在，则 SQL Server 2016 安装将保留在**rsreportserver.config**文件。  
+-   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器升级到 SQL Server 2016 可将具有默认值的配置设置添加到 rsreportserver.config 文件。 如果设置已经存在，SQL Server 2016 安装将在 rsreportserver.config 文件中保留它们。  
   
 -   将配置设置添加到 **rsreportserver.config** 配置文件时，默认行为是针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将扩展保护功能设置为关闭，必须按本主题所述启用此功能。 有关详细信息，请参阅本主题中的 [配置设置](#ConfigurationSettings) 部分。  
   
@@ -179,4 +177,4 @@ SSRS 支持和实行已在操作系统中启用的扩展的保护。 如果操�
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

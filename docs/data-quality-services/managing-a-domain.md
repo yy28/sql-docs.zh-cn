@@ -2,28 +2,23 @@
 title: "管理域 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9447ffaa80392c633244932fd77443073cbf14df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-a-domain"></a>管理域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用域。 域包含要分析的数据源的特定字段中数据的语义表示。 域是您为数据源创建的知识库的一部分，并且，通过分析样本数据源或导入数据而逐步建立的知识将添加到在该知识库中定义的域。 这些域中的知识随后用于在数据质量项目中执行清除和匹配。 域是 Data Quality Services 中所有活动的核心。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 09/09/2017
  还可以创建复合域，该域包含两个或更多单一域，而每个单一域包含有关共用数据的知识。 有关详细信息，请参阅[管理复合域](../data-quality-services/managing-a-composite-domain.md)。  
   
 ## <a name="domain-properties"></a>域属性  
- 当您创建域时，您具有以下有关如何从源数据填充域以及如何输出域值的选项。 有关详细信息，请参阅 [设置域属性](../data-quality-services/set-domain-properties.md)。  
+ 当您创建域时，您具有以下有关如何从源数据填充域以及如何输出域值的选项。 有关详细信息，请参阅[设置域属性](../data-quality-services/set-domain-properties.md)。  
   
 -   选择您用来填充域的数据的类型。 有关每个域数据类型的支持的数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
@@ -69,4 +64,3 @@ ms.lasthandoff: 09/09/2017
 |创建一个复合域，并将知识添加到该域中。|[管理复合域](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

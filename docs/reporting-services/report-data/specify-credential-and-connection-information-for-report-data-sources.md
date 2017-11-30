@@ -1,5 +1,5 @@
 ---
-title: "指定凭据和报表数据源的连接信息 |Microsoft 文档"
+title: "为报表数据源指定凭据和连接信息 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: b16e0b6c380cfe47f2bc82ea0328d9386ada294c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c1c30915d5b9e78b9e8c33b33a2c66b91f47512
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -51,21 +51,21 @@ ms.lasthandoff: 08/09/2017
 ## <a name="when-credentials-are-used-in-report-builder"></a>在报表生成器中使用凭据时  
  在报表生成器中，在连接到报表服务器或完成数据相关的任务时（例如，创建嵌入数据源，运行数据集查询或预览报表）通常会使用凭据。 凭据不保存在报表中。 将在报表服务器或本地客户端对凭据进行单独管理。 下表介绍了可能需要提供的凭据类型、凭据的存储位置以及使用方法：  
   
--   输入中的报表服务器凭据[Reporting Services 登录对话框中 &#40;报表生成器 &#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   在 [Reporting Services 登录对话框（报表生成器）](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md)中输入的报表服务器凭据。  
   
      当您首次保存到、发布到或浏览到报表服务器或 SharePoint 站点时，可能需要输入凭据。 在报表生成器会话结束之前，将始终使用所输入的凭据。 如果选择保存凭据，则这些凭据将安全地与您的用户设置一起存储在您的计算机上。 在后续的报表生成器会话中，将使用保存的凭据连接到同一报表服务器或 SharePoint 站点。 报表服务器管理员或 SharePoint 管理员指定要使用哪一种类型的凭据。  
   
--   数据源中输入的凭据[数据源属性对话框中，凭据 &#40;报表生成器 &#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)嵌入的数据源的页。  
+-   在嵌入数据源的[“数据源属性”对话框 ->“凭据”（报表生成器）](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)页输入的数据源凭据。  
   
      报表服务器使用这些凭据与外部数据源建立数据连接。 对于某些类型的数据源，可以将凭据安全地存储在报表服务器上。 利用这些凭据，其他用户无需提供凭据即可运行报表进行基础数据连接。  
   
--   数据源中输入的凭据[输入数据源凭据对话框中 &#40;报表生成器 &#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)运行数据集查询，刷新数据集字段或预览报表时。  
+-   运行数据集查询，刷新数据集字段或预览报表时，在[输入数据源凭据对话框（报表生成器）](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)中输入的数据源凭据。  
   
      使用这些凭据，报表生成器可以与外部数据源建立数据连接，或对配置为提示需要提供凭据的报表进行预览。 在此对话框中输入的凭据不会存储在报表服务器中，且不能由其他用户使用。 在报表编辑会话期间，报表生成器会对这些凭据进行缓存，以便您无需在每次运行查询或预览报表时输入凭据。  
   
      对于共享数据源，使用 **“保存我的密码”** 选项可以将凭据与用户设置一起保存到本地计算机上。 报表生成器在每次连接到相应的外部数据源时使用保存的凭据。  
   
- 有关详细信息，请参阅[数据源属性对话框中，常规 &#40;报表生成器 &#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)和[报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+ 有关详细信息，请参阅[“数据源属性”对话框 ->“常规”（报表生成器）](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)和[在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="using-remote-data-sources"></a>使用远程数据源  
  如果报表从远程数据库服务器检索数据，请验证以下内容：  
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 **“安全设置”**下，展开 **“本地策略”**，然后单击 **“用户权限分配”**。  
   
-3.  在细节窗格中，右键单击**允许本地登录**，然后右键单击**属性**。  
+3.  在详细信息窗格中，右键单击“允许在本地登录”，再右键单击“属性”。  
   
 4.  单击 **“添加用户或组”**。  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  确保您选择的帐户也没有拒绝权限：  
   
-    1.  右键单击**拒绝本地登录**，然后右键单击**属性**。  
+    1.  右键单击“拒绝本地登录”，再右键单击“属性”。  
   
     2.  如果列出了该帐户，则将其选中，然后单击 **“删除”**。  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   报表是一个使用了父报表的凭据的子报表。  
   
- 上述情况下，报表服务器使用一个您必须事先定义的无人参与的执行帐户连接到远程数据源。 由于报表服务器不能使用它的服务凭据连接到远程服务器，因此必须指定一个可由报表服务器用于建立连接的帐户。 有关创建此帐户的详细信息，请参阅[配置无人参与的执行帐户 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ 上述情况下，报表服务器使用一个您必须事先定义的无人参与的执行帐户连接到远程数据源。 由于报表服务器不能使用它的服务凭据连接到远程服务器，因此必须指定一个可由报表服务器用于建立连接的帐户。 有关创建此帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="user-name-and-password-login"></a>使用用户名和密码登录  
  选择 **“使用此用户名和密码”**时，必须提供用户名和密码才能访问数据源。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，凭据针对的可能是数据库登录。 凭据将传递到数据源用于身份验证。  
@@ -170,8 +170,8 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [创建、 删除或修改共享的数据源 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [配置的报表 &#40; 数据源属性报表管理器 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

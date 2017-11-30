@@ -1,5 +1,5 @@
 ---
-title: "报表发布到报表服务器 |Microsoft 文档"
+title: "将报表发布到报表服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
@@ -24,25 +24,24 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c19bf5cffb0330cde3e8f9125c5f1c5cac55ad24
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
-  在设计并测试完一个或一组报表后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能将报表发布到报表服务器上。 可以发布单独报表或包含多个报表和数据源的报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用术语*部署*，而不是术语*发布*。 这两个术语可以互换。  
+  在设计并测试完一个或一组报表后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能将报表发布到报表服务器上。 可以发布单独报表或包含多个报表和数据源的报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语“部署”替代术语“发布”。 这两个术语可以互换。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为管理报表发布提供项目配置。 此配置指定报表服务器的位置、在报表服务器上安装的 SQL Server Reporting Services 的版本、发布到报表服务器的数据源是否被覆盖等等。 例如，“Debug”配置可以发布到与“release”配置不同的服务器。 除了使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的配置之外，还可以创建其他配置。  
  
 ## <a name="requirements-to-publish"></a>发布要求
-权限是通过基于角色的安全性确定的，而安全性由报表服务器管理员定义。 发布操作通常通过授予**发布服务器角色**。  
+权限是通过基于角色的安全性确定的，而安全性由报表服务器管理员定义。 发布操作通常由“发布者角色”授予。  
   
 ## <a name="project-configurations"></a>项目配置  
  报告环境中可能安装了多个报表服务器和不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以创建多个配置，然后根据部署方案选择不同的配置。 项目配置包括用于生成报表的属性（如临时存储所生成的报表的文件夹）以及如何处理生成问题。 配置还具有用于指定报表服务器的位置和版本以及报表服务器上的文件夹的属性。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-publish-all-reports-in-a-project"></a>发布项目中的所有报表  
   
-上**生成**菜单上，单击**部署\<报表项目名称 >**。 或者，在解决方案资源管理器中，右键单击报表项目，然后单击“部署”。 可以在“输出”窗口中查看发布过程的状态。  
+在“生成”菜单中，单击“部署 \<报表项目名称>”。 或者，在解决方案资源管理器中，右键单击报表项目，然后单击“部署”。 可以在“输出”窗口中查看发布过程的状态。  
   
 当您部署报表服务器项目时，也会部署报表服务器中的共享数据源。 将使用相同的项目配置部署所有报表：部署到同一个报表服务器、该服务器上的同一个文件夹等等。 若要将报表发布到不同服务器，请逐个发布这些报表，或者只包含报表服务器项目中您要发布的报表。 一个解决方案可以包含多个报表服务器项目，而使用多个项目可能会使管理报表部署的过程变得更为简单，因为您可以使用不同的配置来部署不同的项目。 
   
@@ -67,17 +66,16 @@ ms.lasthandoff: 08/09/2017
 在解决方案资源管理器中，右键单击报表，然后单击 **“部署”**。 可以在“输出”窗口中查看发布过程的状态。  
   
  当您发布报表时，还必须部署报表使用的共享数据源。   
- 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 若要执行此操作，选择将该报表 （例如，发布配置） 的配置，右键单击报表，，然后单击**部署**。  
+ 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，“发布”配置），然后右键单击相应的报表，再单击“部署”。  
   
- 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击共享的数据源，然后单击**部署**。  
+ 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击该共享数据源，再单击“部署”。  
   
  必须指定报表服务器的目标服务器 URL，并且可能需要更改将报表和共享数据源部署到的默认文件夹。  
 
   
 ## <a name="see-also"></a>另请参阅  
  [“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [升级报表](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

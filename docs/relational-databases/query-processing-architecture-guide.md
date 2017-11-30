@@ -1,32 +1,33 @@
 ---
 title: "查询处理体系结构指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可处理对各种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
 
@@ -38,7 +39,9 @@ ms.lasthandoff: 10/13/2017
 
 `SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或直接称为“计划”。 本主题的后续各节将详细介绍查询计划的内容。
 
-在优化单个 `SELECT` 语句期间查询优化器的输入和输出如下图中所示： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+在优化单个 `SELECT` 语句期间查询优化器的输入和输出如下图中所示：
+
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 语句只定义以下内容：  
 * 结果集的格式。 它通常在选择列表中指定。 然而，其他子句（如 `ORDER BY` 和 `GROUP BY` ）也会影响结果集的最终格式。
@@ -619,7 +622,7 @@ WHERE ProductID = 63;
   每个查询或索引操作均要求一定数量的工作线程才能执行。 执行并行计划比执行串行计划需要更多的工作线程，所需工作线程数会随着并行度的提高而增加。 无法满足特定并行度的并行计划的工作线程要求时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个工作线程）。 
 
 3. 所执行的查询或索引操作的类型。  
-  创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 虽然不推荐，但用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)将默认值更改为 5。 
+  创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 如果适合性测试发现其他值更适合正在运行的工作负载，用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 更改默认值 5。 
 
 4. 待处理的行数是否足够。  
   如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
@@ -716,9 +719,9 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) 具有 DOP 4 的查询计划，涉及双表联接
+下图显示了一个查询计划，该计划按并行度等于 4 执行且包括一个双表联接。
 
-上图显示按并行度等于 4 执行且包括一个双表联接的查询优化器计划。
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 这个并行计划包含三个并行运算符。 `o_datkey_ptr` 索引的 Index Seek 运算符和 `l_order_dates_idx` 索引的 Index Scan 运算符都会并行执行。 将生成若干排他流。 这可以分别通过 Index Scan 和 Index Seek 运算符上面最接近的 Parallelism 运算符来确定。 二者都在对交换类型重新分区。 即它们正在流之间重新组织数据并生成与输入数量相同的输出流。 这个流数等于并行度。
 
@@ -727,6 +730,8 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 Index Seek 运算符上面的 parallelism 运算符正在使用 `O_ORDERKEY` 的值对其输入流重新分区。 由于其输入没有按照 `O_ORDERKEY` 列的值进行排序，而且这是 `Merge Join` 运算符中的联接列，所以 parallelism 和 Merge Join 运算符之间的 Sort 运算符确保为联接列上的 `Merge Join` 运算符进行输入排序。 与 Merge Join 运算符一样，`Sort` 运算符也是并行执行的。
 
 最上面的 parallelism 运算符将若干流的结果收集成一个流。 之后，该 parallelism 运算符下方的 Stream Aggregate 运算符所执行的部分聚合被聚集到单个的 `SUM` 值中，这个值是该 parallelism 运算符上方的 Stream Aggregate 运算符中每个不同的 `O_ORDERPRIORITY` 值之和。 因为此计划有两个交换部分，且并行度等于 4，所以它使用了八个工作线程。
+
+有关此示例中使用的运算符的详细信息，请参阅[Showplan 逻辑和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
 
 ### <a name="parallel-index-operations"></a>并行索引操作
 
@@ -1040,4 +1045,3 @@ GO
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数估计](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)
-

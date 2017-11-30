@@ -1,5 +1,5 @@
 ---
-title: "报表历史记录方法 |Microsoft 文档"
+title: "报表历史记录方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - report history [Reporting Services], methods
 - historical data [Reporting Services]
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7dc9b4a2dcda53da58431ccf9746b4986b61738
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: c8259dc3f456729ff58ce9e0ff980c84098f7e26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-history-methods"></a>报表历史记录方法
   可以使用这些方法来创建和管理项历史记录快照。  
@@ -43,10 +41,9 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|设置项历史记录选项，这些选项指定何时为指定的目录项创建项历史记录快照。|  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [使用 Web 服务和 .NET Framework 生成应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [报表服务器 Web 服务方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [技术参考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [技术参考 (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

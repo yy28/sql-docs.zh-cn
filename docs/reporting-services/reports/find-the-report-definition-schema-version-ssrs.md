@@ -1,5 +1,5 @@
 ---
-title: "查找报表定义架构版本 (SSRS) |Microsoft 文档"
+title: "查找报表定义架构版本 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,17 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dadc45cb80ec7fa1fedca54af2a17eef5eef2bf6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="find-the-report-definition-schema-version-ssrs"></a>查找报表定义架构版本 (SSRS)
 
 报表定义文件为用于验证 rdl 文件的报表定义架构的版本指定 RDL 命名空间。 当在报表创作环境（如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的报表设计器或报表生成器）中打开某个 .rdl 文件时，如果报表是针对先前命名空间创建的，会自动创建一个备份文件，并将该报表升级到当前命名空间。 如果保存升级后的报告定义，则同时还会保存转换后的 .rdl 文件。 这是升级报表定义的唯一方法。 报表定义本身在报表服务器上不升级。 已编译的报表在报表服务器上升级。 有关更多信息，请参见 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何确定报表设计器的 RDL 架构版本  
   
-1.  打开一个新项目。 您选择的项目版本决定 RDL 架构的版本。 在 SQL Server，支持多个架构版本。 有关详细信息，请参阅[部署和版本支持 SQL Server Data Tools 中](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
+1.  打开一个新项目。 您选择的项目版本决定 RDL 架构的版本。 在 SQL Server 中，支持多个架构版本。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
 2.  在 **“项目”** 菜单上，单击 **“添加新项”**。 **“添加新项”** 对话框将会打开。  
   
@@ -93,5 +91,4 @@ ms.lasthandoff: 08/09/2017
 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)   
 [报表定义语言](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

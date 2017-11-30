@@ -1,5 +1,5 @@
 ---
-title: "以编程方式访问 WMI 提供程序 |Microsoft 文档"
+title: "以编程方式访问 WMI 提供程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/02/2016
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a8608faf31e4132570de4e57e748d02057c3722d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3164c9bb0a62d74b1a647bdf3c9e2f82110aaddf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以编程方式访问 WMI 提供程序
 
 ## <a name="wmi-provider-overview"></a>WMI 提供程序概述  
- 用于获取有关的信息的命名空间[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本主题中所示的示例在代码中是**System.Management**命名空间，在中找到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 **System.Management**命名空间提供一组的托管的代码类通过其[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]应用程序可以访问和处理管理信息。 有关详细信息使用 Reporting Services WMI 类使用**System.Management**命名空间，请参阅中的"访问管理信息与 System.Managment" [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。  
+ 用于获取本主题中所示代码示例中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的相关信息的命名空间为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中的 System.Management 命名空间。 System.Management 命名空间提供一组托管代码类，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 应用程序可通过这些类访问和操作管理信息。 有关使用采用 System.Management 命名空间的 Reporting Services WMI 类的详细信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 中的“使用 System.Managment 访问管理信息”。  
   
 ## <a name="finding-a-report-server-instance"></a>查找报表服务器实例  
  查找与您的报表服务器安装有关的信息的首选方式是枚举 WMI 实例集合。 下面的示例说明如何通过创建某一集合并循环遍历该集合以显示属性，查找每个报表服务器实例上的属性。  
@@ -138,4 +136,3 @@ class Class1
  [RsReportServer.config 配置文件](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

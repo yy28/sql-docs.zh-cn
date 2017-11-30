@@ -1,5 +1,5 @@
 ---
-title: "性能计数器-ReportServer 服务性能对象 |Microsoft 文档"
+title: "性能计数器 - ReportServer 服务，性能对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Server service, performance counters
+helpviewer_keywords: Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 92bc628afcaed8a45652e58a6073bd5a53df4012
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 82b91953a753773f09586c10ed87d05b83bb2230
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters---reportserver-service--performance-objects"></a>性能计数器-ReportServer 服务性能对象
+# <a name="performance-counters---reportserver-service--performance-objects"></a>性能计数器 - ReportServer 服务，性能对象
   该主题描述了作为 **部署的一部分的** ReportServer:Service **和** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 性能对象的性能计数器。  
   
 > [!NOTE]  
@@ -44,13 +42,13 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 性能计数器（本机模式报表服务器）  
- **ReportServer:Service** 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 **ReportServer:Service**格式显示。 计数器的命名的实例显示格式**ReportServer$\<***instance_name***>： 服务**。  
+ **ReportServer:Service** 性能对象包含一个计数器集合，用于跟踪报表服务器实例的与 HTTP 相关的事件以及与内存相关的事件。 此性能对象对计算机上的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例显示一次，可以在每个实例的性能对象中添加或删除计数器。 默认实例的计数器以 **ReportServer:Service**格式显示。 命名实例的计数器以 **ReportServer$\<***instance_name***>:Service** 格式显示。  
   
  **ReportServer:Service** 性能对象是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的新增功能，它提供 Internet Information Services (IIS) 和以前版本的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所含的计数器的子集。 这些新计数器是特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此外，此性能对象还包括用于跟踪内存管理事件的计数器。  
   
  下表列出了 **ReportServer:Service** 性能对象中包含的计数器。  
   
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")以下 Windows PowerShell 脚本将返回 countersetname 的性能计数器的列表  
+ ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -83,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service（SharePoint 模式报表服务器）  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中添加了 **ReportServerSharePoint:Service** 性能对象。  
   
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")以下 Windows PowerShell 脚本将返回 countersetname 的性能计数器的列表  
+ ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 下面的 Windows PowerShell 脚本将返回 CounterSetName 的性能计数器列表  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/09/2017
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell Cmdlet 返回列表  
- ![PowerShell 相关内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")以下的 Windows PowerShell 脚本将返回 CounterSetName"reportserversharepoint: Service"的性能计数器列表：  
+ ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 下面的 Windows PowerShell 脚本将返回 CounterSetName“ReportServerSharePoint:Service”的性能计数器列表：  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -104,8 +102,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [监视报表服务器性能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [获得 MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象 &#40; 性能计数器本机模式 &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2011 Web Service 和 MSRS 2011 Windows Service 性能对象的性能计数器（本机模式）](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [MSRS 2011 Web Service SharePoint Mode 性能对象和 MSRS 2011 Windows Service SharePoint Mode 性能对象的性能计数器（SharePoint 模式）](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   
-

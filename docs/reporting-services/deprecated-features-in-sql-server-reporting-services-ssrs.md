@@ -1,5 +1,5 @@
 ---
-title: "已弃用的 SQL Server 2016 中的 SQL Server Reporting Services 中的功能 |Microsoft 文档"
+title: "SQL Server 2016 的 SQL Server Reporting Services 中已弃用的功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -16,30 +16,28 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4a02f1937207f0d3dd559c539d078b1a218666df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bf0b79086482761cacb11d81b9432c52fc1f8f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-本主题介绍不推荐使用的 SQL Server Reporting Services 功能。 在不推荐使用这些功能的版本中仍提供这些功能，但是计划在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中删除它们。 不要在新的应用程序中使用已弃用的功能。
+本主题介绍已弃用的 SQL Server Reporting Services 功能。 在不推荐使用这些功能的版本中仍提供这些功能，但是计划在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中删除它们。 不要在新的应用程序中使用已弃用的功能。
 
 ## <a name="features-not-supported-in-the-next-version-of-sql-server-reporting-services"></a>SQL Server Reporting Services 的下一版本中不支持的功能
 
-不会在 SQL Server 的下一个版本中支持以下 SQL Server Reporting Services 功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。
+以下 SQL Server Reporting Services 功能在下一个 SQL Server 版本中不受支持。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。
 
 |类别|不推荐使用的功能|
 |--------------|------------------------| 
@@ -53,9 +51,8 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>后续步骤
 
- [Reporting Services 中的新增](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)[向后兼容性 |Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
- [SQL Server 2016 中 SQL Server Reporting Services 的行为更改](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+ [Reporting Services 中的新增功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)[向后兼容性 | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
+ [SQL Server 2016 的 SQL Server Reporting Services 中的行为更改](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

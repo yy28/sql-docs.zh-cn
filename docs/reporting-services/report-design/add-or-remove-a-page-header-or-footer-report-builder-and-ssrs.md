@@ -1,5 +1,5 @@
 ---
-title: "添加或删除页眉或页脚 （报表生成器和 SSRS） |Microsoft 文档"
+title: "添加或删除页眉或页脚（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 551fbc941b9d0aaf5c2a4cbd9a7d0b2a7828096e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>添加或删除页眉或页脚（报表生成器和 SSRS）
   您可以向页眉或页脚添加静态文本、图像、线条、矩形和边框。 如果您希望在页眉或页脚中添加变量或计算数据，还可以在文本框中包含表达式和数据绑定图像。  
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/09/2017
  [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
-

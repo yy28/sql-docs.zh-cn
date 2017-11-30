@@ -1,5 +1,5 @@
 ---
-title: "卸载报表生成器 |Microsoft 文档"
+title: "卸载报表生成器 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>卸载报表生成器
 
 可以从控制面板或命令行卸载报表生成器的独立版本。
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  在“控制面板”中，单击 **“程序和功能”**。  
   
-3.  找到[!INCLUDE[msCoName](../../includes/msconame-md.md)]中的 SQL Server 2016 报表生成器**名称**列表，然后单击它。  
+3.  在“名称”列表中找到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 报表生成器并单击它。  
   
 4.  单击 **“卸载”**。  
   
@@ -65,4 +64,4 @@ ms.lasthandoff: 08/09/2017
 
 [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

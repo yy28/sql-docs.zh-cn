@@ -1,12 +1,11 @@
 ---
-title: "配置无人参与的执行帐户 （SSRS 配置管理器） |Microsoft 文档"
+title: "配置无人参与的执行帐户（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1a5f61d6a94b80b2745f386ab16ff32a4ce0d778
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 3.  键入帐户和密码，再次键入密码，然后单击 **“应用”**。  
   
 ### <a name="using-rsconfig-utility"></a>使用 RSCONFIG 实用工具  
- 设置帐户的另一种方法是使用 **rsconfig** 实用工具。 若要指定帐户，请使用 **rsconfig** 的 **-e**参数。 为 **rsconfig** 指定 **-e** 参数可强制该实用工具将帐户信息写入到配置文件中。 您无需指定 RSreportserver.config 的路径。 请按照以下步骤来配置该帐户。  
+ 设置帐户的另一种方法是使用 **rsconfig** 实用工具。 若要指定帐户，请使用 **rsconfig** 的 **-e**参数。 为 **rsconfig** 指定 **-e** 参数可强制该实用工具将帐户信息写入到配置文件中。 您无需指定 RSreportserver.config 的路径。请按照以下步骤来配置该帐户。  
   
 1.  创建或选择一个有权访问为报表服务器提供数据或服务的计算机和服务器的域帐户。 您应使用权限受到限制（如只读权限）的帐户。  
   
@@ -61,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  键入以下命令，为本地报表服务器实例配置该帐户：  
   
-     **rsconfig-e-u\<域/用户名 >-p\<密码 >**  
+     rsconfig -e -u\<域/用户名> -p\<密码>  
   
- **rsconfig -e** 支持其他参数。 有关语法和查看命令示例的详细信息，请参阅[rsconfig 实用工具 &#40;SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) SQL Server 联机丛书中。  
+ **rsconfig -e** 支持其他参数。 若要获取有关语法的详细信息和查看命令示例，请参阅 SQL Server 联机丛书中的 [rsconfig 配置工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)。  
   
 ### <a name="how-account-information-is-stored"></a>帐户信息的存储方式  
  设置帐户后，将在本地或远程报表服务器实例上的 RSreportserver.config 文件中以加密值的形式指定以下设置：  
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>无人参与的报表处理帐户的使用方法  
  若要检索图像文件，报表服务器将自动使用该帐户，您不需要执行任何具体操作。 若要使用此帐户连接到为报表提供数据的外部数据源，则必须在报表数据源或共享数据源的“数据源属性”页中指定 **“凭据类型”** 选项：  
   
--   在[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]或在 SharePoint 站点上，选择**不需要凭据**选项。  
+-   在 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或 SharePoint 网站中，选择“不需要凭据”选项。  
   
  无人参与的报表处理帐户主要用于连接到外部服务器，而不是用作数据库服务器的登录名。 如果要使用此帐户凭据登录到数据库，则必须在连接字符串中指定凭据。 如果数据库服务器支持 Windows 集成安全性，并且用于无人参与报表处理的帐户拥有数据库读取权限，则可以指定 **Integrated Security=SSPI** 。 否则，必须在连接字符串中输入用户名和密码，该字符串对拥有数据源连接属性编辑权限的任何用户均显示为明文形式。  
   
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 配置管理器（SSRS 本机模式）](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
   
   
-

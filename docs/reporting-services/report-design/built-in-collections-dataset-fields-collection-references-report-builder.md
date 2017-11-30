@@ -1,5 +1,5 @@
 ---
-title: "数据集字段集合引用 （报表生成器和 SSRS） |Microsoft 文档"
+title: "数据集字段集合引用（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合的数据集字段集合引用 （报表生成器）
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合 - 数据集字段集合引用（报表生成器）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  
   
  表达式中的简单字段引用在设计图面上显示为简单表达式。 例如，将字段 `Sales` 从“报表数据”窗格拖到设计图面上的表单元时，将显示 `[Sales]` 。 这表示对文本框 Value 属性设置的是基础表达式 `=Fields!Sales.Value` 。 运行报表时，报表处理器会计算此表达式，并在表单元的文本框中显示数据源中的实际数据。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)和[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
@@ -34,11 +33,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-the-field-collection-for-a-dataset"></a>显示数据集的字段集合  
  若要显示字段集合的各个值，可将每个字段拖到表详细信息行，并运行报表。 表详细信息行或列表数据区域中的引用将显示数据集中每一行的值。  
   
- 若要显示字段的汇总值，可将每个数值字段都拖到矩阵的数据区域中。 总计行的默认聚合函数为 Sum，例如， `=Sum(Fields!Sales.Value)`。 可以更改默认函数以便计算不同的总计。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 若要显示字段的汇总值，可将每个数值字段都拖到矩阵的数据区域中。 总计行的默认聚合函数为 Sum，例如， `=Sum(Fields!Sales.Value)`。 可以更改默认函数以便计算不同的总计。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
  若要在设计图面（而非数据区域的一部分）的文本框中直接显示字段集合的汇总值，必须指定数据集名称作为聚合函数的作用域。 例如，对于名为 `SalesData`的数据集，以下表达式指定了字段 `Sales`所有值的总计： `=Sum(Fields!Sales,"SalesData")`。  
   
- 使用“表达式”****对话框定义简单字段引用时，可以在“类别”窗格中选择字段集合，并查看“字段”****窗格中的可用字段列表。 每个字段都具有多个属性，包括 Value 和 IsMissing。 其余属性是数据集可能可用的预定义扩展字段属性，具体取决于数据源类型。  
+ 使用“表达式”对话框定义简单字段引用时，可以在“类别”窗格中选择字段集合，并查看“字段”窗格中的可用字段列表。 每个字段都具有多个属性，包括 Value 和 IsMissing。 其余属性是数据集可能可用的预定义扩展字段属性，具体取决于数据源类型。  
   
 ### <a name="detecting-nulls-for-a-dataset-field"></a>检测数据集字段的 Null 值  
  若要检测为 Null（在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）的字段值，可使用函数 **IsNothing**。 当以下表达式放置在表详细信息行的文本框中时，将测试字段 `MiddleName` 。如果值为 Null，则显示文本“No Middle Name”，如果值不为 Null，则使用该字段值本身：  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在运行时检测动态字段的缺失字段  
- 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，你的查询可能调用存储的过程在其中结果集随一个输入参数，或你的查询可能`SELECT * FROM` *\<表 >*更改表定义的位置。  
+ 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>，其中表定义会发生变化。  
   
 > [!NOTE]  
 >  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用于检测多维数据集中的空成员，并且与 **EMPTY** 和 **NON EMPTY**查询语言概念无关。  
@@ -101,4 +100,3 @@ End Function
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

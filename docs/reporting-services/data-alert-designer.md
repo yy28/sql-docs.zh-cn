@@ -1,5 +1,5 @@
 ---
-title: "数据警报设计器 |Microsoft 文档"
+title: "数据警报设计器 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
  若要创建警报定义，您需要执行许多相关任务：  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="AlertDesigner"></a> 数据警报设计器用户界面  
  数据警报设计器分为若干区域。 其中包括用于选择报表数据馈送的区域、通过向条件添加规则来创建简单或复杂条件的区域等区域。 下图显示数据警报设计器中的区域。  
   
- ![在警报设计器用户界面的区域](../reporting-services/media/rs-alertdesigner.gif "在警报设计器用户界面的区域")  
+ ![“警报设计器”用户界面中的区域](../reporting-services/media/rs-alertdesigner.gif "Areas within the Alert Designer user interface")  
   
   
 ### <a name="alert-data"></a>警报数据  
@@ -177,7 +177,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="email-settings"></a>电子邮件设置  
  在“收件人”选项中，指定通过电子邮件接收数据警报消息的收件人的电子邮件地址。 多个电子邮件地址由分号分隔，与在 Microsoft Office Outlook 电子邮件中的操作方式相同。 还可以指定分发组作为收件人，以便更容易和更有效地管理收件人列表。 如果在您创建警报定义时 SharePoint 可以确定您的电子邮件地址，则您的电子邮件地址将自动添加到收件人列表中；否则，您需要显式将您自己作为收件人添加。  
   
- 电子邮件的默认使用者是**数据警报的\<警报名称 >**。 您可以更改主题以适合您的需要。  
+ 电子邮件的默认主题为“\<警报名称> 的数据警报”。 您可以更改主题以适合您的需要。  
   
  还可以提供一个说明以包含在 **“说明”** 选项的数据警报消息中。 包含说明（尤其如果您具有类似的数据警报）将帮助您快速区分和了解您的警报消息。 除了在报表服务器满足指定规则时发送的警报消息之外，在发生错误时还向所有收件人发送一条警报消息。 有关详细信息，请参阅 [Data Alert Messages](../reporting-services/data-alert-messages.md)。  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="CreateAlert"></a> 创建数据警报定义  
  如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果对该报表进行参数化，则您可能需要使用不同的参数值来运行该报表，以便确保您感兴趣的数据出现在该报表中。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
   
- ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "打开警报的设计器从 SharePoint 库")  
+ ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
  有关详细信息，请参阅 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
@@ -205,7 +205,7 @@ ms.lasthandoff: 08/09/2017
   
  若要编辑数据警报定义，请在警报管理器中右键单击，然后单击 **“编辑”**。 下图显示了数据警报管理器中数据警报上的上下文菜单。  
   
- ![通过单击编辑打开数据警报设计器](../reporting-services/media/rs-alertmanageriwopendesigner.gif "打开数据警报设计器通过单击编辑")  
+ ![通过单击“编辑”打开数据警报设计器](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
   
  有关详细信息，请参阅 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
@@ -213,13 +213,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="HowTo"></a> 相关任务  
  本节列出的过程介绍如何创建和编辑警报。  
   
--   [编辑警报设计器中的某个数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
 ## <a name="see-also"></a>另请参阅
 
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)   
-[管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+[适用于警报管理员的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

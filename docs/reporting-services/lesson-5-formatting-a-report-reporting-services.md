@@ -1,27 +1,25 @@
 ---
-title: "第 5 课： 格式设置报表 (Reporting Services) |Microsoft 文档"
+title: "第 5 课：设置报表格式 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a59d1082e60e358e1447838997192791950c41ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击带有 `[Date]` 字段表达式的单元格，然后单击“文本框属性”。  
   
-3.  单击**数**，然后在**类别**字段中，单击**日期**。  
+3.  单击“数字”，然后在“类别”字段中，单击“日期”。  
   
 4.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”**。  
   
@@ -50,7 +48,7 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
   
 1.  右键单击带有 `[LineTotal]` 字段表达式的单元格，然后单击“文本框属性”。  
   
-2.  单击**数**，然后在**类别**字段中，单击**货币**。  
+2.  单击“数字”，在“类别”字段中，单击“货币”。  
   
 3.  如果区域设置为“英语(美国)”，则默认设置应为：  
   
@@ -81,20 +79,19 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
   
 3.  选择包含列标题标签的行，从 **“格式”** 菜单中，指向 **“字体”** ，然后单击 **“加粗”**。  
   
-4.  若要预览报表，请单击 **“预览”** 选项卡。 其外观应与下图相似：  
+4.  若要预览报表，请单击 **“预览”** 选项卡。其外观应与下图相似：  
   
-    ![具有以粗体显示的列标题的表的预览](../reporting-services/media/rs-basictabledetailsformattedpreview.png "具有以粗体显示的列标题的表的预览")  
+    ![具有以粗体显示的列标题的表的预览](../reporting-services/media/rs-basictabledetailsformattedpreview.png "Preview of table with bold column headers")  
   
 5.  在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
 ## <a name="next-steps"></a>后续步骤  
 您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [设置数字和日期格式（报表生成器和 SSRS）](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
 [呈现行为（报表生成器和 SSRS）](../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
   
-
 

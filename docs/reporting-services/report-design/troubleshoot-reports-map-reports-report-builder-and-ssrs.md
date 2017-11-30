@@ -1,5 +1,5 @@
 ---
-title: "报表故障排除： 地图报表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "报表疑难解答：地图报表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2ed84682cda474d2cba6e7f0854e8cc1cde8d827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -164,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
  若要控制每个图例的标题和内容，请将图例属性用于规则。 您可以指定要创建的划分数、更改向每个划分赋值的计算、设置最小和最大范围值以及更改图例文本的格式。  
   
- 有关详细信息，请参阅[更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ## <a name="the-rules-that-i-set-do-not-give-the-results-that-i-expect"></a>我设置的规则没有带来我预期的结果。  
  规则应用于与层上的地图元素关联的分析数据。 使用以下列表帮助确定与所有颜色规则、大小规则、宽度规则以及标记类型规则相关的问题：  
@@ -181,7 +180,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>当我运行报表时，不显示色阶。  
  当地图层为整个层的多边形、线条或点或嵌入地图元素指定颜色规则时，色阶向用户显示信息。 如果没有地图元素指定颜色规则，或者如果地图规则是使用图例而非颜色地图指定的，则呈现的报表中不显示颜色地图。  
   
- 若要显示色阶，请为层或嵌入地图元素指定颜色规则。 有关详细信息，请参阅[更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 若要显示色阶，请为层或嵌入地图元素指定颜色规则。 有关详细信息，请参阅 [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Tile"></a> 图块问题  
  使用这一部分可以帮助解决与图块背景选项相关的问题。  
@@ -213,8 +212,7 @@ ms.lasthandoff: 08/09/2017
  若要指定与并非报表数据集组成部分的空间数据相关的数据，必须使用符号 # 且后跟一个指定数据名称的标签。  
   
 ## <a name="see-also"></a>另请参阅  
- [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [解决报表生成器](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [报表生成器故障排除](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   
-

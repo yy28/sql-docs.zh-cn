@@ -1,27 +1,24 @@
 ---
-title: "使用 Reporting Services 中的 Kpi |Microsoft 文档"
+title: "使用 Reporting Services 中的 KPI | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -75,7 +72,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  选择**省略号 （...）**在数据中。 此时会弹出“选择数据集”  屏幕。  
+2.  在数据框中选择省略号 (…)。 此时会弹出“选择数据集”  屏幕。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
 若要删除 KPI，可以执行以下操作。  
   
-1.  选择**省略号 （...）**你想要删除的 kpi。 选择“管理” 。  
+1.  选择要删除的 KPI 的省略号 (…)。 选择“管理” 。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
 ## <a name="refreshing-a-kpi"></a>刷新 KPI  
   
-若要刷新 KPI，你将需要配置共享数据集缓存。 有关详细信息缓存刷新计划，请参阅[处理共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)。  
+若要刷新 KPI，请配置共享数据集缓存。 有关缓存刷新计划的详细信息，请参阅[使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)。  
   
 ## <a name="next-steps"></a>后续步骤
   
 [Web 门户](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

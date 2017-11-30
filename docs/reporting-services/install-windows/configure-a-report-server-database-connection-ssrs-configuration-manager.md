@@ -1,33 +1,30 @@
 ---
-title: "配置报表服务器数据库连接 （SSRS 配置管理器） |Microsoft 文档"
+title: "配置报表服务器数据库连接（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 75e8a98156714dd94582aa5f87daabc8f03d093c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-每个报表服务器实例都需要连接到存储由服务器管理的报表、报表模型、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库和配置连接的分步说明，请参阅[创建本机模式报表服务器数据库 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+每个报表服务器实例都需要连接到存储由服务器管理的报表、报表模型、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。
 
  如果出现下列情况，则必须配置报表服务器数据库连接：  
   
@@ -37,16 +34,16 @@ ms.lasthandoff: 09/21/2017
   
 -   更改数据库连接所使用的用户帐户或密码。 当帐户信息存储在 RSReportServer.config 文件中时，您只需要更新数据库连接。 如果使用服务帐户进行连接（该帐户使用 Windows 集成安全性作为凭据类型），则不会存储密码，从而无需更新连接信息。 有关更改帐户的详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
--   配置报表服务器扩展部署。 配置扩展部署时，您需要创建多个到报表服务器数据库的连接。 有关如何执行此多步操作的详细信息，请参阅[配置本机模式报表服务器扩展部署 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   配置报表服务器扩展部署。 配置扩展部署时，您需要创建多个到报表服务器数据库的连接。 有关如何执行此多步操作的详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Reporting Services 如何连接到数据库引擎  
- 报表服务器根据凭据和连接信息以及对使用该数据库的报表服务器实例有效的加密密钥来访问报表服务器数据库。 拥有有效的加密密钥对于存储和检索敏感数据是必要的。 首次配置数据库时，会自动创建加密密钥。 创建密钥之后，如果更改报表服务器服务标识，则必须更新这些密钥。 有关使用加密密钥的详细信息，请参阅[配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ 报表服务器根据凭据和连接信息以及对使用该数据库的报表服务器实例有效的加密密钥来访问报表服务器数据库。 拥有有效的加密密钥对于存储和检索敏感数据是必要的。 首次配置数据库时，会自动创建加密密钥。 创建密钥之后，如果更改报表服务器服务标识，则必须更新这些密钥。 有关使用加密密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
   
  报表服务器数据库为内部组件，只有报表服务器可以访问。 为报表服务器数据库指定的凭据和连接信息专门由报表服务器使用。 请求报表的用户不需要拥有报表服务器数据库的数据库权限或数据库登录名。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 **System.Data.SqlClient** 连接到承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果使用的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的本地实例，报表服务器将使用共享内存建立连接。 如果使用的是报表服务器数据库的远程数据库服务器，则可能必须根据所使用的版本启用远程连接。 如果使用的是 Enterprise Edition，则默认情况下会启用 TCP/IP 远程连接。  
   
- 若要验证实例接受远程连接，请单击**启动**，单击**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，单击**SQL Server 配置管理器**，然后验证为每个服务启用了 TCP/IP 协议。  
+ 若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议。  
   
  启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”**、 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**、 **“SQL Server 配置管理器”**、 **“SQL Server 网络配置”**，再单击 **“MSSQLSERVER 协议”**。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 启用或禁用服务器网络协议 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="storing-database-connection-information"></a>存储数据库连接信息  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
   
- 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值 （即，使用服务帐户来建立连接），将连接配置\< **LogonUser**>， \< **LogonDomain**>，和\< **LogonCred**>，如下所示将为空，：  
+ 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即，使用服务帐户来建立连接），则 \<LogonUser>、\<LogonDomain> 和 \<LogonCred> 将为空，如下所示：  
   
 ```  
 <Dsn></Dsn>  
@@ -130,4 +127,3 @@ ms.lasthandoff: 09/21/2017
 [配置报表服务器服务帐户](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

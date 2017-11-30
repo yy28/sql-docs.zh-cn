@@ -1,30 +1,28 @@
 ---
-title: "创建本机模式报表服务器数据库 （SSRS 配置管理器） |Microsoft 文档"
+title: "创建本机模式报表服务器数据库（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>创建本机模式报表服务器数据库
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  选择数据库实例。  
   
-5.  右键单击**TCP/IP**和选择**已启用**。  
+5.  右键单击“TCP/IP”，并选择“已启用”。  
   
 6.  重新启动服务。  
   
@@ -81,17 +79,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在数据库页中，选择**更改数据库**。  
+2.  在“数据库”页上，选择“更改数据库”。  
   
-3.  选择**创建新的报表服务器数据库**，然后选择**下一步**。  
+3.  选择“创建新的报表服务器数据库”，然后选择“下一步”。  
   
 4.  连接到您将用于创建和承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例：  
   
-    1.  键入要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。 向导将显示作为默认实例（如果可用）运行的本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 否则，您必须键入要使用的服务器和实例。 此格式指定命名的实例： \<servername >\\< instancename\>。  
+    1.  键入要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。 向导将显示作为默认实例（如果可用）运行的本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 否则，您必须键入要使用的服务器和实例。 以此种格式指定命名的实例：\<servername>\\<instancename\>。  
   
     2.  输入用于一次性连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的凭据以创建报表服务器数据库。 有关如何使用这些凭据的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) 。  
   
-    3.  选择**测试连接**以验证到服务器的连接。  
+    3.  选择“测试连接”，验证与服务器的连接。  
   
     4.  选择“下一步” 。  
   
@@ -111,13 +109,13 @@ ms.lasthandoff: 08/09/2017
   
          选择 **“数据库凭据”** 以使用已定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名进行连接。 如果报表服务器位于不同域、不可信域或装有防火墙的计算机中，则建议使用数据库凭据。  
   
-         如果你拥有的最低特权域用户帐户具有登录到该计算机和数据库服务器的权限，则选择“Windows 凭据”。  
+         如果你拥有的最低特权域用户帐户具有登录到该计算机和数据库服务器的权限，请选择“Windows 凭据”。  
   
          如果希望报表服务器使用其自身的服务帐户进行连接，则选择 **“服务凭据”** 。 使用此选项，该服务器将使用集成安全性进行连接；凭据不进行加密或存储。  
   
     2.  选择“下一步” 。  
   
-7.  检查以确保设置正确无误，然后选择摘要页上的信息**下一步**。  
+7.  检查“摘要”页上的信息以确保设置正确，然后选择“下一步”。  
   
 8.  选择“报表服务器 URL”页或“报表管理器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，您会在浏览器窗口中看到报表服务器文件夹层次结构或报表管理器。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
@@ -127,13 +125,13 @@ ms.lasthandoff: 08/09/2017
 
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在数据库页中，选择**更改凭据**。 
+2.  在“数据库”页上，选择“更改凭据”。 
 
 3.  连接到您将用于创建和承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例：  
   
     1.  输入用于一次性连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的凭据以创建报表服务器数据库。 有关如何使用这些凭据的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) 。  
   
-    2.  选择**测试连接**以验证到服务器的连接。  
+    2.  选择“测试连接”，验证与服务器的连接。  
   
     3.  选择“下一步” 。  
 
@@ -143,13 +141,13 @@ ms.lasthandoff: 08/09/2017
   
          选择 **“数据库凭据”** 以使用已定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名进行连接。 如果报表服务器位于不同域、不可信域或装有防火墙的计算机中，则建议使用数据库凭据。  
   
-         如果你拥有的最低特权域用户帐户具有登录到该计算机和数据库服务器的权限，则选择“Windows 凭据”。  
+         如果你拥有的最低特权域用户帐户具有登录到该计算机和数据库服务器的权限，请选择“Windows 凭据”。  
   
          如果希望报表服务器使用其自身的服务帐户进行连接，则选择 **“服务凭据”** 。 使用此选项，该服务器将使用集成安全性进行连接；凭据不进行加密或存储。  
   
     2.  选择“下一步” 。 
 
-5. 查看设置，然后选择**下一步**。
+5. 检查设置，然后选择“下一步”。
 
 6. 更改完成后，选择“完成”。
 
@@ -159,4 +157,4 @@ ms.lasthandoff: 08/09/2017
 [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

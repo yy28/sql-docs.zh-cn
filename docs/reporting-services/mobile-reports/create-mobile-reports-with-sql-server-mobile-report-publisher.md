@@ -1,34 +1,31 @@
 ---
-title: "使用 SQL Server Mobile Report Publisher 创建移动报表 |Microsoft 文档"
-description: "了解有关 Reporting Services 移动报表连接到本地数据，具有多种类型的数据可视化效果的移动设备。"
-ms.custom:
-- SQL2016_New_Updated
+title: "使用 SQL Server 移动报表发布服务器创建移动报表 | Microsoft Docs"
+description: "了解适用于移动设备的 Reporting Services 移动报表，它可连接到本地数据，且具有多种类型的数据可视化效果。"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3214b23fb77338df8594268fe51f0e10fb6a71b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 移动报表发布服务器创建移动报表
 了解 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，其针对移动设备进行了优化，可连接到本地数据，且具有多种类型的数据可视化效果。 
 
 >[!NOTE]
->  你是否需要将仪表板等 Kpi Datazen 服务器内容迁移到 SQL Server 2016[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
+>  是否需要将 Datazen 服务器内容（如仪表板和 KPI）迁移到 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 
 * 将你的移动报表连接到各种数据源，包括本地 SQL Server 和 Analysis Services 数据。 
 * 在网格行和列可调整且移动报表元素灵活的设计图面上设计移动报表，这些报表可轻松缩放至任何屏幕大小。 
-* 然后将这些移动报表保存到 Reporting Services 服务器，并查看和浏览器中或在 Ipad、 Iphone、 Android 手机和平板电脑和 Windows 10 设备上的 Power BI 移动应用中与它们进行交互。
+* 然后，将这些移动报表保存到 Reporting Service 服务器，并在 iPad、iPhone、Android 手机、平板电脑和 Windows 10 设备上的浏览器或 Power BI 移动应用中进行查看和交互。
   
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>创建 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  移动报表  
   
@@ -54,8 +51,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI 移动应用中的 SSRS 移动报表
 
--  视图[Reporting Services 移动报表和 Kpi 的 iOS 移动应用中](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  视图[Reporting Services 移动报表和 Android 设备的 Power BI 应用中的 Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  查看[移动应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  查看 [Android 设备 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  [Windows 10 设备 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
 ## <a name="see-also"></a>另请参阅  
@@ -67,5 +64,4 @@ ms.lasthandoff: 08/09/2017
 
   
   
-
 

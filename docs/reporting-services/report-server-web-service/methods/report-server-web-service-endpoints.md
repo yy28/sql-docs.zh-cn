@@ -1,5 +1,5 @@
 ---
-title: "报表服务器 Web 服务终结点 |Microsoft 文档"
+title: "报表服务器 Web 服务终结点 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - management endpoints [Reporting Services]
 - Web service [Reporting Services], endpoints
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2a0c98cd0c45fc7121a93a51e623dcd2bf36d8bf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
-
+ms.openlocfilehash: 0cfcd383b82ccffd424232d2c4f6653446c8f3b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
   报表服务器 Web 服务提供了几个端点，用于管理报表服务器以及执行和导航报表。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 06/13/2017
  有三个端点可用于管理报表服务器上的对象，即：<xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010>。 <xref:ReportService2005> 端点用于管理配置为本机模式的报表服务器上的对象。 <xref:ReportService2006> 端点用于管理配置为 SharePoint 集成模式的报表服务器上的对象。 <xref:ReportService2010> 端点合并了 <xref:ReportService2005> 和 <xref:ReportService2006> 的功能，可以管理为本机或 SharePoint 集成模式配置的报表服务器上的对象。  
   
 > [!IMPORTANT]  
->  当报表服务器配置为 SharePoint 集成模式， <xref:ReportService2005> Api 将返回**rsOperationNotSupportedSharePointMode**错误。 如果报表服务器配置为纯模式， <xref:ReportService2006> Api 将返回**rsOperationNotSupportedNativeMode**错误。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
+>  如果报表服务器配置为 SharePoint 集成模式，<xref:ReportService2005> API 将返回 rsOperationNotSupportedSharePointMode 错误。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 rsOperationNotSupportedNativeMode 错误。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用 <xref:ReportService2005> 和 <xref:ReportService2006> 端点。 <xref:ReportService2010> 端点包含两个端点的功能和其他管理功能。  
@@ -73,10 +71,10 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |代理端点|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。<br /><br /> 注意： 此终结点中已弃用[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。|  
+|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。<br /><br /> 注意：在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用此终结点。|  
 |<xref:ReportService2010>|为管理配置为本机模式或 SharePoint 集成模式的报表服务器提供 API。|  
 |<xref:ReportExecution2005>|提供用于运行和导航报表的 API。|  
-|<xref:ReportServiceAuthentication>|提供用于 SharePoint Web 应用程序配置用于表单身份验证时，对报表服务器的用户进行身份验证 Api。|  
+|<xref:ReportServiceAuthentication>|提供 API，以便在将 SharePoint Web 应用程序配置为窗体身份验证时，针对报表服务器对用户进行身份验证。|  
   
  以下是引用 SharePoint 站点上代理端点的示例 URL。  
   
@@ -96,4 +94,3 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthenticati
  [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   
-

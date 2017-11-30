@@ -1,5 +1,5 @@
 ---
-title: "报表模型查询设计器用户界面 |Microsoft 文档"
+title: "报表模型查询设计器用户界面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a7fd4f315f8fe171a6b5e8df47c5e5be5b01fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  下图标出了每个窗格。  
   
- ![语义模型查询设计器 UI](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "语义模型查询设计器 UI")  
+ ![语义模型查询设计器 UI](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Semantic Model Query Designer UI")  
   
  下表介绍了每个窗格的功能。  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |“资源管理器”窗格|显示模型中的实体和实体字段的图形化表示形式。 使用此窗格可以浏览实体、实体之间的关系以及字段。|  
 |设计区域|显示模型中的字段列表。 使用此窗格可以排列所选字段的布局。|  
-|“结果”窗格|显示查询的结果。 若要运行查询，在任何窗格中，右键单击，然后单击**运行**，或单击**运行**(![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")) 在工具栏上的按钮。|  
+|“结果”窗格|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”窗格（![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")）按钮。|  
   
  若在“资源管理器”和“设计区域”窗格中更改信息，则单击 **“运行”**时将会影响到“结果”窗格中的内容。  
   
@@ -61,11 +60,11 @@ ms.lasthandoff: 08/09/2017
 |按钮|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 报表服务器模型数据源的查询为 XML 格式的语义模型查询语言 (SMQL) 规范。|  
-|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
-|![撤消操作](../../reporting-services/report-data/media/rsqdicon-undo.gif "撤消操作")|撤消上一操作。|  
-|![重做操作](../../reporting-services/report-data/media/rsqdicon-redo.gif "重做操作")|重做上一操作。|  
+|**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
+|![撤消操作](../../reporting-services/report-data/media/rsqdicon-undo.gif "Undo action")|撤消上一操作。|  
+|![重做操作](../../reporting-services/report-data/media/rsqdicon-redo.gif "Redo action")|重做上一操作。|  
 |![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")|运行查询并在“结果”窗格中显示结果行。|  
-|![选定的筛选器列旁边的筛选器图形](../../reporting-services/report-data/media/rsqdicon-filter.gif "选定的筛选器列旁边的筛选器图形")|打开 **“筛选数据”** 对话框，以便指定要筛选的数据。 可以独立于当前设计区域中的数据单独指定筛选器。|  
+|![所选筛选器列旁边的筛选器图形](../../reporting-services/report-data/media/rsqdicon-filter.gif "Filter graphic next to selected filter column")|打开 **“筛选数据”** 对话框，以便指定要筛选的数据。 可以独立于当前设计区域中的数据单独指定筛选器。|  
   
 ## <a name="text-based-query-designer"></a>基于文本的查询设计器  
  创建报表服务器模型数据集查询时，默认情况下，会显示图形查询设计器。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
  下图标出了每个窗格。  
   
- ![泛型语义模型语言查询设计器](../../reporting-services/report-data/media/rsqd-dsawmodel-smql-generic.gif "泛型语义模型语言查询设计器")  
+ ![通用语义模型语言查询设计器](../../reporting-services/report-data/media/rsqd-dsawmodel-smql-generic.gif "Generic Semantic Model Language Query Designer")  
   
  下表介绍了每个窗格的功能。  
   
@@ -95,8 +94,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  [查询设计工具 (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [报表模型连接 &#40;SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [报表模型连接 (SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

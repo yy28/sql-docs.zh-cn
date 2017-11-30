@@ -1,5 +1,5 @@
 ---
-title: "保护报表和资源 |Microsoft 文档"
+title: "保护报表和资源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>保护报表和资源
   您可以设置各个报表和资源的安全性，以控制用户对这些项的访问权限。 默认情况下，只有是“管理员”内置组的成员的用户，才能运行报表、查看资源、修改属性以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问报表或资源。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  报表将发布到报表服务器，或可能通过这样一种方式提供：可从 Web 页的 URL 控制报表参数值。  
   
-3.  攻击者创建链接到网页或窗体中指定参数的值的报表服务器"javascript:\<恶意脚本此处 >"并将该链接发送到引诱攻击中的其他人。  
+3.  攻击者创建一个链接，该链接指向用于指定参数值（格式为“javascript:\<此处为恶意脚本>”）的 Web 页或报表服务器，并将此链接发送到引诱攻击中的其他人。  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>减少已发布报表或文档中的超链接脚本注入攻击  
  报表可以在报表项或报表项一部分的 Action 属性的值中包含嵌入的超链接。 在处理报表时，可将超链接绑定到从外部数据源检索的数据。 如果恶意用户修改基础数据，则超链接可能受到脚本攻击危害。 如果用户单击已发布或导出的报表中的链接，则可能会运行恶意脚本。  
@@ -81,10 +80,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [配置报表生成器访问权](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [配置报表生成器访问权限](../../reporting-services/report-server/configure-report-builder-access.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [安全的共享的数据源项](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [保护共享数据源项](../../reporting-services/security/secure-shared-data-source-items.md)   
  [在 Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

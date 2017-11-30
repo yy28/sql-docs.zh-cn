@@ -1,5 +1,5 @@
 ---
-title: "计划 |Microsoft 文档"
+title: "计划 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="schedules"></a>计划
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供**共享计划**和**报表特定计划**来帮助你控制处理和分发报表。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了“共享计划”和“报表特定计划”，可帮助控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。
   
   -   共享计划作为单独的项创建。 创建共享计划后，您就可以在定义订阅或其他某个计划操作时引用它们。  
   
@@ -140,11 +139,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除报表历史记录中的快照](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [缓存报表 &#40;SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-

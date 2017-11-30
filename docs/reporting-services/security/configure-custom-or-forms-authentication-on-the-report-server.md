@@ -1,5 +1,5 @@
 ---
-title: "报表服务器上配置自定义或窗体身份验证 |Microsoft 文档"
+title: "在报表服务器上配置自定义身份验证或窗体身份验证 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
 
@@ -34,7 +33,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 > [!NOTE]
 >  若要创建自定义身份验证扩展插件，需要自定义代码并掌握 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 安全性方面的专业知识。 如果您不希望创建自定义身份验证扩展插件，则可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 组和帐户，但应大幅减小报表服务器部署的范围。 有关自定义身份验证的详细信息，请参阅 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)。
 
-此外，如果你想要在与 SharePoint 产品集成的 SQL Server Reporting Services 环境中使用 Forms 身份验证或自定义身份验证扩展插件，你必须配置 SharePoint 站点以使用你选择的身份验证方法。 有关在 SharePoint 中配置身份验证的详细信息，请参阅 [Developer Network (MSDN) 上的](http://go.microsoft.com/fwlink/?LinkId=115575) Authentication Samples [!INCLUDE[msCoName](../../includes/msconame-md.md)] 身份验证示例。
+此外，如果希望在与 SharePoint 产品集成的 SQL Server Reporting Services 环境中使用窗体身份验证或自定义身份验证扩展插件，则必须将 SharePoint 站点配置为使用你所选的身份验证方法。 有关在 SharePoint 中配置身份验证的详细信息，请参阅 [Developer Network (MSDN) 上的](http://go.microsoft.com/fwlink/?LinkId=115575) Authentication Samples [!INCLUDE[msCoName](../../includes/msconame-md.md)] 身份验证示例。
 
 
 
@@ -42,7 +41,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 
 1.  在文本编辑器中打开 RSReportServer.config。
 
-2.  查找\<**身份验证**>。
+2.  查找 \<Authentication>。
 
 3.  复制以下 XML 结构：
 
@@ -55,7 +54,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
     </Authentication>
     ```
 
-4.  将其粘贴上的现有项\<**身份验证**>。
+4.  将其粘贴在 \<> 的现有条目上。
 
      请注意，不能将 **Custom** 与其他身份验证类型一起使用。
 
@@ -74,7 +73,7 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
     ```
     <identity impersonate = "false" />  
     ```
-9. 将 **PassThroughCookies** 元素结构添加到配置文件中。 有关详细信息，请参阅[配置 Web 门户来传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. 将 **PassThroughCookies** 元素结构添加到配置文件中。 有关详细信息，请参阅[将 Web 门户配置为传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
 10. 保存该文件。  
   
@@ -85,9 +84,9 @@ Reporting Services 提供了可扩展的体系结构，该体系结构允许您�
 ## <a name="see-also"></a>另请参阅
 
 [实现安全扩展插件](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-[Reporting Services 自定义安全示例 (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
-[报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
+[Reporting Services 自定义安全性示例 (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
+[针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [在报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[报表服务器上配置 Windows 身份验证](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+[在报表服务器上配置 Windows 身份验证](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

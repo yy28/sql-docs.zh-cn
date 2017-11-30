@@ -1,5 +1,5 @@
 ---
-title: "数据处理扩展概述 |Microsoft 文档"
+title: "数据处理扩展插件概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,31 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 11e8c43eb7b717227cf5a624f6a18a424b598967
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-overview"></a>数据处理扩展插件概述
-  借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]数据处理扩展插件进行建模的子集后[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]数据提供程序接口。  
+  借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的数据处理扩展插件。  
   
 |数据处理扩展插件|Description|  
 |-------------------------------|-----------------|  
-|用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据处理扩展插件|使用 SQL Server.NET Framework 数据提供程序连接到并从中检索数据[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]。|  
-|用于 OLE DB 的数据处理扩展插件|用于 OLE DB 的.NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以查询具有 OLE DB 访问接口的任何数据源。|  
-|用于 Oracle 的数据处理扩展插件|用于 Oracle 的.NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以通过 Oracle 客户端连接软件访问 Oracle 数据源。|  
-|用于 ODBC 的数据处理扩展插件|用于 ODBC 的.NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以访问存在有关 ODBC 驱动程序的任何数据库中的数据。|  
+|用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据处理扩展插件|使用用于 SQL Server 的 .NET Framework 数据提供程序可以连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 和从其检索数据。|  
+|用于 OLE DB 的数据处理扩展插件|使用用于 OLE DB 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以查询具有 OLE DB 访问接口的任何数据源。|  
+|用于 Oracle 的数据处理扩展插件|使用用于 Oracle 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以通过 Oracle 客户端连接软件访问 Oracle 数据源。|  
+|用于 ODBC 的数据处理扩展插件|使用用于 ODBC 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以访问存在有关 ODBC 驱动程序的任何数据库中的数据。|  
   
  可以使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理 API 向您的报表服务器添加自定义数据处理。  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  您可为自己的数据源开发数据处理扩展插件，或者可以使用接口向公共数据库基础结构添加用于数据处理的附加层。 您可以部署自定义数据处理扩展插件，实现数据与组织中的现有报表服务器的无缝集成。 还可以将它们用作提供给您的使用者的自定义报表套件的一部分。  
   
- ![数据处理扩展体系结构](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "数据处理扩展体系结构")  
+ ![数据处理扩展插件体系结构](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
 Reporting Services 数据处理扩展插件体系结构  
   
  实现自定义 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的好处包括：  
@@ -62,7 +59,7 @@ Reporting Services 数据处理扩展插件体系结构
 ## <a name="data-extension-process-flow"></a>数据扩展插件处理流程  
  在开发自定义数据扩展插件前，您应该理解报表服务器是如何使用数据扩展插件处理数据的。 还应理解报表服务器调用的构造函数和方法。  
   
- ![处理的数据处理扩展插件流](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "处理流数据处理扩展插件")  
+ ![数据处理扩展插件的处理流程](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
 报表服务器调用的数据扩展插件的分步处理流程  
   
  该图说明下列事件序列：  
@@ -78,17 +75,16 @@ Reporting Services 数据处理扩展插件体系结构
   
 -   一台安装了报表设计器或报表服务器的部署计算机。  
   
--   开发计算机与[!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)]或更高版本，或[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]软件开发工具包 (SDK) 安装。  
+-   一台安装了 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 或更高版本或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 的开发计算机。  
   
 -   深入理解 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 功能。  
   
--   深入了解[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)]体系结构，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]数据提供程序、 ADO.NET 数据集对象，以及常见[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]接口。  
+-   深入了解 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 体系结构、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序、ADO.NET DataSet 对象和常用的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接口。  
   
--   中的开发体验[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]如语言[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C# 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 语言（例如，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET）进行开发的经验。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 扩展插件](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services 扩展插件库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

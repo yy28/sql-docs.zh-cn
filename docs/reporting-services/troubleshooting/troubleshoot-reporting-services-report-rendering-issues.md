@@ -1,5 +1,5 @@
 ---
-title: "排查 Reporting Services 报表呈现问题 |Microsoft 文档"
+title: "排查 Reporting Services 报表呈现问题 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5bd1f634ba25711137db413e2069cd7d9ae328cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>排查 Reporting Services 报表呈现问题
 将报表数据与布局信息组合起来后，会将组合的报表发送到报表呈现器。 例如，本地预览报表时，您是使用 HTML 呈现器查看组合报表。 使用本主题可帮助解决特定于报表呈现的问题。   
@@ -80,5 +79,4 @@ Reporting Services 提供了一个选项，可用来控制是保留还是消除�
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

@@ -1,12 +1,11 @@
 ---
-title: "有关 URL 保留和注册 （SSRS 配置管理器） |Microsoft 文档"
+title: "关于 URL 保留项和注册（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
-ms.contentlocale: zh-cn
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 保留项和注册 （SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 保留项。 URL 保留项定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 保留项。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为您创建 URL 保留项：  
@@ -66,7 +64,7 @@ ms.lasthandoff: 11/07/2017
 |HTTP.SYS 中的 URL 保留项|URL|解释|  
 |---------------------------------|---------|-----------------|  
 |`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|此 URL 保留项针对端口 80 指定了一个通配符 (+)。 这会将指定主机（在端口 80 上解析为报表服务器计算机）的任何传入请求放入报表服务器队列中。 请注意，借助此 URL 保留项，可以使用任意数目的 URL 访问报表服务器。<br /><br /> 对于大多数操作系统而言，这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的默认 URL 保留项。|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|此 URL 保留项指定了一个 IP 地址，与通配符 URL 保留项相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 保留项，对报表服务器的请求`http://<computername>/reportserver`或`http://localhost/reportserver`将失败。|  
+|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|此 URL 保留项指定了一个 IP 地址，与通配符 URL 保留项相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 保留项，对 `http://<computername>/reportserver` 或 `http://localhost/reportserver` 的报表服务器请求将失败。|  
   
 ##  <a name="DefaultURLs"></a> 默认 URL  
  如果在默认配置中安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安装程序将为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]保留 URL。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中定义 URL 保留项时，也可以接受这些默认值。 如果安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为命名实例，则默认 URL 将包含实例名称。  
@@ -105,9 +103,9 @@ ms.lasthandoff: 11/07/2017
  因为默认安全性为 **RSWindowsNegotiate**，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 有关身份验证的详细信息，请参阅 [联机丛书中的](../../reporting-services/security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLlocalAdmin"></a> 用于本地管理的 URL  
- 你可以使用`http://localhost/reportserver`或`http://localhost/reports`如果指定强还是弱通配符 URL 保留项。  
+ 如果为 URL 保留项指定了强通配符或弱通配符，则可使用 `http://localhost/reportserver` 或 `http://localhost/reports`。  
   
- `http://localhost` URL 将解释为`http://127.0.0.1`。 如果您将 URL 保留项限定为计算机名称或单个 IP 地址，则除非在本地计算机上为 127.0.0.1 创建附加保留项，否则将无法使用 localhost。 同样，如果您的计算机上禁用 localhost 或 127.0.0.1，也无法使用该 URL。  
+ `http://localhost` URL 将解释为 `http://127.0.0.1`。 如果您将 URL 保留项限定为计算机名称或单个 IP 地址，则除非在本地计算机上为 127.0.0.1 创建附加保留项，否则将无法使用 localhost。 同样，如果您的计算机上禁用 localhost 或 127.0.0.1，也无法使用该 URL。  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]， [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更高版本包括新的安全功能，可以将偶然使用提升的权限运行程序的风险降到最低。 还需要执行一些其他步骤，才能在这些操作系统上启用本地管理。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -116,4 +114,3 @@ ms.lasthandoff: 11/07/2017
  [URL 保留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
-

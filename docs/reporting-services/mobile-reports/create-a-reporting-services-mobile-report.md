@@ -1,43 +1,41 @@
 ---
-title: "创建 Reporting Services 移动报表 |Microsoft 文档"
+title: "创建 Reporting Services 移动报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>创建 Reporting Services 移动报表
-借助 SQL Server 移动报表发布服务器，你可以快速创建缩放至任何屏幕的大小，可调整的网格行和列和移动报表元素灵活的设计图面上的 SQL Server 2016 Reporting Services 移动报表。  
+借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server 2016 Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  
   
-首次创建移动报表，你可以从 Reporting Services web 门户你本地计算机上安装 SQL Server 移动报表发布服务器。 也可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=733527)安装此应用程序。 在首次安装之后，就可以从 Web 门户或本地开始了。   
+首次创建移动报表时，请从 Reporting Services Web 门户开始，以在本地计算机上安装 SQL Server 移动报表发布服务器。 也可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=733527)安装此应用程序。 在首次安装之后，就可以从 Web 门户或本地开始了。   
     
-1. 在 Reporting Services web 门户的顶部栏中，选择**新建** > **移动报表**。  
+1. 在 Reporting Services Web 门户的顶部栏中，选择“新建” > “移动报表”。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. 上**布局**选项卡移动报表发布服务器中，选择导航器、 仪表、 图表、 地图或数据网格并将其拖到设计网格。  
+2. 在移动报表发布服务器的“布局”选项卡中，选择导航器、仪表、图表、映射或数据网格并将其拖到设计网格。  
   
 3. 抓住元素的右下角并将其拖到所需大小。  
   
    ![SSMRP_ResizeChart](../../reporting-services/mobile-reports/media/ssmrp-resizechart.png)  
   
-   在“主”  设计网格中创建报表中的所需元素。 然后，便可以[在平板电脑或手机中设计报表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)。     
+   在“主”  设计网格中创建报表中的所需元素。 然后，便可以 [在平板电脑或手机中设计报表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)。     
      
    在设计网格下方的“可视属性”  中，查看你可以设置的各种属性。  
      
@@ -69,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 11. 保存报表的时间。 在左上角选择“保存”图标，然后选择“保存在本地”  或“保存到服务器” 。  
   
-   若要将其保存到服务器，你需要访问 SQL Server 2016 Reporting Services 报表服务器。  
+   若要将其保存到服务器，需要访问 SQL Server 2016 Reporting Services 报表服务器。  
      
    ### <a name="see-also"></a>另请参阅  
      
@@ -77,4 +75,3 @@ ms.lasthandoff: 08/09/2017
 -   [为手机或平板电脑设计 Reporting Services 移动报表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

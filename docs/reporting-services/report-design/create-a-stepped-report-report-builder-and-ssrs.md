@@ -1,5 +1,5 @@
 ---
-title: "创建递阶的报表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "创建递阶报表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c78e1a3998673851e9860a6e6a6e295cde2d7f3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
 递阶报表是一种  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
   
- ![呈现递阶的报表](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered 递阶报表")  
+ ![呈现的递阶报表](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered stepped report")  
   
  传统的表报表将父组放置在报表中的相邻列中。 利用新的 tablix 数据区域，可以向同一列添加组和详细信息行或子组。 若要将组行与详细信息行或子组行区分开来，可以应用格式设置（如字体颜色）或缩进详细信息行。  
   
@@ -54,15 +53,15 @@ ms.lasthandoff: 08/09/2017
   
      现在即创建了一个基本表格报表。 此报表呈现时，您将看到一列组实例值，以及一列或多列分组的详细信息数据。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![与组的表数据区域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "与组的表数据区域")  
+     ![带有组的表数据区域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Table data region with group")  
   
      下图显示了您查看报表时所呈现的数据区域可能的外观。  
   
-     ![呈现分组的报表](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered 分组报表")  
+     ![呈现的分组报表](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered grouped report")  
   
 3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![具有组头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "具有组头行的数据区域")  
+     ![带有组头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Data region with group header row")  
   
 4.  若要使同一列中组头行下方的详细信息行缩进显示，请更改详细信息数据单元的空白大小。  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
      数据区域的外观将与下例类似。  
   
-     ![递阶报表的数据区域](../../reporting-services/report-design/media/steppedreportdataregion.gif "递阶报表的数据区域")  
+     ![递阶报表的数据区域](../../reporting-services/report-design/media/steppedreportdataregion.gif "Data region for stepped report")  
   
      **递阶报表布局的数据区域**  
   
@@ -99,24 +98,23 @@ ms.lasthandoff: 08/09/2017
     1.  在“行组”窗格中，右键单击组，再单击“添加组”，然后选择要添加的组的类型。  
   
         > [!NOTE]  
-        >  可以通过若干种方式向数据区域添加组。 有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+        >  可以通过若干种方式向数据区域添加组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
     2.  在 **“Tablix 组”** 对话框中，键入一个名称。  
   
-    3.  在 **“组表达式”**中，键入一个表达式或选择要用作分组依据的数据集字段。 若要创建表达式，请单击表达式 (**fx**) 按钮打开“表达式”对话框。  
+    3.  在 **“组表达式”**中，键入一个表达式或选择要用作分组依据的数据集字段。 要创建表达式，请单击表达式 (fx) 按钮打开“表达式”对话框。  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  更改用于显示组数据的单元的填充值。  
   
 ## <a name="see-also"></a>另请参阅  
- [页眉和页脚 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [格式设置报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tablix 数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩阵 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [列表（报表生成器和 SSRS）](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

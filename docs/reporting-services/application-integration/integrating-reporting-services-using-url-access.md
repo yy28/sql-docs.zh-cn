@@ -1,5 +1,5 @@
 ---
-title: "将集成 Reporting Services 使用 URL 访问 |Microsoft 文档"
+title: "使用 URL 访问集成 Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 2ed79fbeaa1ec2f4f29878d715ae0a4f87986722
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: e0e4d5c1ade93a1b14f4a365e2af542570a201b6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 访问集成 Reporting Services
   借助于 URL 访问，您可以通过报表服务器 URL 访问报表。 使用 URL 请求，您可以访问特定的报表服务器以及报表服务器数据库中的报表、资源和其他项。 还可以为用户自定义报表查看和导航体验。 URL 的查询字符串包含设备信息设置，以及针对报表和所选呈现输出的报表参数。 报表服务器处理 URL 请求的方法取决于您通过 URL 访问的项的参数、参数前缀和类型。  
@@ -44,8 +42,7 @@ ms.lasthandoff: 08/12/2017
  介绍如何使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 环境中。  
   
 ## <a name="see-also"></a>另请参阅  
- [将 Reporting Services 集成到应用程序](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [URL 访问 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [将 Reporting Services 集成到应用程序中](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md)  
   
   
-

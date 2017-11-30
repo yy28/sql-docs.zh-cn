@@ -5,24 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - table aliases [SQL Server]
 - aliases [SQL Server], tables
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 2e7c4230e0e72e3de7a636e822a6f89b94b379fb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d76ede0538ac5fb723e35fb32f045f3b14cd86ca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>创建表别名 (Visual Database Tools)
 别名可使表名的使用更为方便。 在以下情况下，使用别名很有帮助：  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/18/2017
   
 -   使用同一个表的多个实例（如在自联接中），并需要一种引用其中的一个实例或其他实例的方法。  
   
-例如，可以为表名 `"e"` _ `employee`创建别名`information`，然后在查询的其余部分使用 `"e"` 引用该表。  
+例如，可以为表名 `employee_information` 创建别名 `"e"`，然后在查询的其余部分使用 `"e"` 引用该表。  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>为表或表值对象创建别名  
   
@@ -49,4 +48,3 @@ ms.lasthandoff: 08/18/2017
 [汇总查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

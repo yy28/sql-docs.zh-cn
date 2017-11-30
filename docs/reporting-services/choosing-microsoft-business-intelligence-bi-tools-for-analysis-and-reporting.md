@@ -1,5 +1,5 @@
 ---
-title: "选择 Microsoft 商业智能 (BI) 工具以进行分析和报告 |Microsoft 文档"
+title: "选择用于分析和报告的 Microsoft 商业智能 (BI) 工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a9684685e218cb0f2dd1fe01c11606ce750c66a2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 70d7be18434e610fa3ed3a6d237a0a7b676e3274
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>选择用于分析和报告的 Microsoft 商业智能 (BI) 工具
 选择正确的商业智能工具可能令人难以应付。 了解不同 Microsoft 产品，找到最适合你需求的一个产品。
@@ -39,14 +38,14 @@ ms.lasthandoff: 09/27/2017
 |执行自助式预测分析||||||[Excel 数据挖掘外接程序](http://msdn.microsoft.com/library/dn282385.aspx) （支持 Excel 2016）|  
 |可视化和浏览数据||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [三维地图](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |使用自然语言查询提问|||||[问答](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|使用移动设备访问报告||||[HTML 5 (支持查看 < 10 MB 的文件)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>（使用适用于移动设备的 Power BI 应用）|  
+|使用移动设备访问报告||||[HTML 5（支持查看 10MB 以内的文件）](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>（使用适用于移动设备的 Power BI 应用）|  
 |协作和共享|||[SharePoint 网站](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint 团队网站](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**公司 BI**|IT 专业人员||||||  
 |创建多维/表格公司模型||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |创建即席数据可视化|||[Power View for SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |创建面板|||[SharePoint 面板](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint 服务](http://technet.microsoft.com/library/ee424392.aspx)||[Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
-|创建操作报表||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
-|创建自定义和嵌入式报表|||||[嵌入的 power BI](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|创建操作报表||||||[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)*|  
+|创建自定义和嵌入式报表|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**高级分析**|数据科学家||||||  
 |执行自助式预测分析||||||[Excel 数据挖掘外接程序](http://msdn.microsoft.com/library/dn282385.aspx) （支持 Excel 2016）|  
 |使用数据挖掘算法||||||[Analysis Services 中的数据挖掘](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/27/2017
  *Reporting Services 具有大量支持新式分页报表交付方式的功能。  
   
   
-

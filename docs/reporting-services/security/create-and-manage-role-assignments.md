@@ -1,5 +1,5 @@
 ---
-title: "创建和管理角色分配 |Microsoft 文档"
+title: "创建和管理角色分配 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
  您必须是报表服务器计算机上的本地管理员组的成员，才能创建角色分配。 您可以通过将其他用户分配给  内容管理员角色来委托该责任。  
   
- 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
+ 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>创建系统级角色分配  
  若要创建或管理系统级角色分配，请使用报表管理器，打开“站点设置”页。  
@@ -69,10 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或删除角色分配 &#40;报表管理器 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [角色分配](../../reporting-services/security/role-assignments.md)   
  [角色定义](../../reporting-services/security/role-definitions.md)   
- [预定义的角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

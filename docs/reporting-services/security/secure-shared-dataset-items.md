@@ -1,5 +1,5 @@
 ---
-title: "保护共享数据集项 |Microsoft 文档"
+title: "保护共享数据集项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 40a9f5257e09cf35129c0f11d89675fdeb285c94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-shared-dataset-items"></a>保护共享数据集项
   在报表服务器上，共享数据集项可由多个报表使用。 您可以对共享数据集加以保护以便控制用户能够访问的程度。 默认情况下，只有是“管理员”内置组的成员的用户才能查看共享数据集、修改属性、启用缓存、创建缓存刷新计划以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问共享数据集。  
@@ -56,10 +55,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)   
- [安全的文件夹](../../reporting-services/security/secure-folders.md)   
+ [保护文件夹](../../reporting-services/security/secure-folders.md)   
  [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

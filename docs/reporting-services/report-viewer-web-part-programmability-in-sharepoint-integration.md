@@ -1,5 +1,5 @@
 ---
-title: "报表查看器 Web 部件在 SharePoint 集成的可编程性 |Microsoft 文档"
+title: "SharePoint 集成中的报表查看器 Web 部件可编程性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fe234d83738bda4dd578d8be0a6d2c4619cd8b70
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9339b0f383efd757e9be49271f4a5bdd2d7a4d4f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 集成中的报表查看器 Web 部件可编程性
-  报表查看器 Web 部件是一个包含一组公共应用程序编程接口 (API)，使开发人员可以创建自定义 SharePoint 应用程序的服务器控件。 您可以创建自定义 Web 部件，以使用 Web 部件连接向报表查看器 Web 部件提供报表路径和参数。 还可以在自定义 SharePoint Web 部件页中嵌入 Web 部件，并使用该公共 API 对其进行自定义。  
+  报表查看器 Web 部件是一个服务器控件，其中包含一组公共应用程序编程接口 (API)，使开发人员能够创建自定义 SharePoint 应用程序。 您可以创建自定义 Web 部件，以使用 Web 部件连接向报表查看器 Web 部件提供报表路径和参数。 还可以在自定义 SharePoint Web 部件页中嵌入 Web 部件，并使用该公共 API 对其进行自定义。  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>使用自定义 Web 部件连接到报表查看器 Web 部件  
- 报表查看器 Web 部件是连接使用者实现的 SharePoint Web 部件到<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>或 T:Microsoft.SharePoint.WebPartPages.IFilterValues。 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件，如**文档**Web 部件可以提供报表查看器 Web 部件时将作为报表查看器 Web 部件相同的 Web 部件页面上放置的报表路径。 同样，T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件，如**文本筛选器**或**选择筛选器**，可以提供报表查看器 Web 部件时将作为报表查看器 Web 部件相同的 Web 部件页面上放置的报表参数。  
+ 报表查看器 Web 部件是实现 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 或 T:Microsoft.SharePoint.WebPartPages.IFilterValues 的 SharePoint Web 部件的连接使用者。 将某个 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件（如“文档”Web 部件）放在与报表查看器 Web 部件所在的同一 Web 部件页上时，它可以向报表查看器 Web 部件提供报表路径。 同样，将 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件（如“文本筛选器”或“选择筛选器”）放在与报表查看器 Web 部件所在的同一 Web 部件页上时，它可以向报表查看器 Web 部件提供报表参数。  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>使用 IWebPartRow 实现报表路径访问接口  
  若要通过 Web 部件连接向报表查看器 Web 部件提供报表路径，请执行以下操作：  
@@ -40,9 +39,9 @@ ms.lasthandoff: 08/12/2017
 3.  在基于 Web 的 Web 部件设计用户界面中将 Web 部件连接到报表查看器 Web 部件。  
   
     > [!NOTE]  
-    >  你只能连接一个<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>Web 部件连接到报表查看器 Web 部件时，你无法连接同时<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>到报表查看器 Web 部件，同时 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件和 Web 部件。  
+    >  一次只能将一个 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件连接到报表查看器 Web 部件，并且不能同时将一个 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件和一个 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件连接到报表查看器 Web 部件。  
   
- 为你<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>Web 部件，要正确使用 T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart，你必须执行以下操作<xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A>方法：  
+ 若要使 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件能够与 T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart 正常工作，必须执行 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> 方法中的以下操作：  
   
 -   使用 <xref:System.Data.DataRowView> 对象作为输入参数调用回调方法。  
   
@@ -52,17 +51,17 @@ ms.lasthandoff: 08/12/2017
     >  [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2010 的外接程序中的报表查看器 Web 部件还支持使用“FileRef”列来接收报表路径。  
   
 ### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>使用 IfilterValues 实现报表参数访问接口  
- Web 部件实现 T:Microsoft.SharePoint.WebPartPages.IFilterValues 可以向报表查看器 Web 部件提供一个参数值。 发送到报表查看器 Web 部件的参数值可能会受到与在报表定义中指定的报表参数相同的限制，如数据类型、有效值等。  
+ 一个实现 T:Microsoft.SharePoint.WebPartPages.IFilterValues 的 Web 部件可以向报表查看器 Web 部件提供一个参数值。 发送到报表查看器 Web 部件的参数值可能会受到与在报表定义中指定的报表参数相同的限制，如数据类型、有效值等。  
   
  若要向报表查看器 Web 部件提供报表参数，请执行以下操作：  
   
-1.  创建 Web 部件实现 T:Microsoft.SharePoint.WebPartPages.IFilterValues 接口。  
+1.  创建实现 T:Microsoft.SharePoint.WebPartPages.IFilterValues 接口的 Web 部件。  
   
-2.  将 Web 部件添加到与 T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart 相同的页。  
+2.  将 Web 部件添加到与 T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart 所在的同一页面中。  
   
-3.  连接到基于 Web 的 Web 部件设计用户界面中的报表查看器 Web 部件 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件。  
+3.  在基于 Web 的 Web 部件设计用户界面中，将 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件连接到报表查看器 Web 部件。  
   
     > [!NOTE]  
-    >  你可以一次连接到报表查看器 Web 部件的多个 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件。 但是，无法连接同时<xref:System.Web.UI.WebControls.WebParts.IWebPartRow>到报表查看器 Web 部件，同时 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件和 Web 部件。  
+    >  可一次将多个 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件连接到报表查看器 Web 部件。 但是，无法同时将一个 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件和一个 T:Microsoft.SharePoint.WebPartPages.IFilterValues Web 部件连接到报表查看器 Web 部件。  
   
   

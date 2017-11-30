@@ -1,5 +1,5 @@
 ---
-title: "格式设置图表 （报表生成器和 SSRS） 上的图例 |Microsoft 文档"
+title: "设置图表上图例的格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -28,22 +28,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bae3ff2a5111c020fdfaa20c3c3e4fc0d905558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-legend---formatting-report-builder"></a>图表图例的格式 （报表生成器）
+# <a name="chart-legend---formatting-report-builder"></a>图表图例 - 设置格式（报表生成器）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  
   
- ![关系图的图表图例](../../reporting-services/report-design/media/rs-legenddiagram.gif "图表图例的图示")  
+ ![图表图例示意图](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagram of a chart legend")  
   
  对于除形状图以外的图表，图例项连接到该图表上的单个序列；对于形状图而言，图例连接到各个数据点。 图表会自动基于根据数据生成的序列向图例中添加项。  
   
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-legend-items-horizontally"></a>水平显示图例项  
  默认情况下，图例的格式被设置为由一行或多行组成的列表，其中每一行都包含一个图例项。 图例区会展开以容纳图例项的数量。 如果图例无法展开，将显示省略号 ( )。 图例可垂直或水平展开，具体情况取决于指定的图例样式。 可以在 **“图例属性”** 对话框中更改布局样式，或更改分配的空间以显示所有图例项。  
   
- 若要水平显示图例，请将图例停靠到图表的顶部或底部。 这将导致图例水平展开。 此外可以将布局属性设置为**行**或**宽表**。 在“属性”窗格中设置 MaxAutoSize 属性以控制当图例停靠在图表区的顶部或底部时分配给图例的垂直空间。  
+ 若要水平显示图例，请将图例停靠到图表的顶部或底部。 这将导致图例水平展开。 还可以将 Layout 属性设置为“行”或“宽表”。 在“属性”窗格中设置 MaxAutoSize 属性以控制当图例停靠在图表区的顶部或底部时分配给图例的垂直空间。  
   
 ## <a name="formatting-the-legend-text"></a>设置图例文本的格式  
  可以在 **“图例属性”** 对话框的 **“字体”** 页上更改图例文本的字体、大小、样式和颜色。  
@@ -86,12 +85,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [“图例属性”对话框，“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [更改图例项 &#40; 的文本报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [在图表 &#40; 的格式设置序列颜色报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [隐藏图表 &#40; 上的图例项报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [更改图例项的文本（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [隐藏图表上的图例项（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   
-

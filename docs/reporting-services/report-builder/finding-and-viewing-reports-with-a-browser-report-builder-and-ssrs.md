@@ -1,5 +1,5 @@
 ---
-title: "查找和查看报表使用的浏览器 （报表生成器和 SSRS） |Microsoft 文档"
+title: "使用浏览器查找和查看报表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
   通过与报表服务器直接连接，您可以使用支持的任何 Web 浏览器查看报表。 每个报表在报表服务器上都有一个 URL 地址。 无需使用 Web 应用程序，输入报表的 Web 地址即可在浏览器窗口中打开相应报表。 相应的报表会以 HTML 格式打开，并且包含报表工具栏，这样在此报表中您就可以在各页间导航或按数据值进行搜索。 您可以在 URL 中设置参数以隐藏报表工具栏或选择报表的输出格式。  
@@ -48,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
 -   不带任何其他指示符的链接指向的是报表或模型。  
   
--   标记\<ds > 指示共享的数据源。  
+-   标记 \<ds> 表示共享数据源。  
   
--   标记\<dir > 指示文件夹项。  
+-   标记 \<dir> 表示文件夹项。  
   
 -   一种文件扩展名表示一种资源。 文件扩展名用于标识资源的 MIME 类型。 例如，.jpg 表示 JPEG 格式的图像。  
   
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/09/2017
  有关通过 URL 访问报表的详细信息，包括有关 URL 构造方式的信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "矩形和线条 （报表生成器和 SSRS） |Microsoft 文档"
+title: "矩形和线条（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 867fbfb3ed5bf9afd834ed4f08c5ccf83b068734
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和线条（报表生成器和 SSRS）
   使用矩形和线条可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中创建各种视觉效果。 可在“开始”选项卡的“边框”部分设置这些报表项的显示属性，还可使用“属性”窗格设置其他属性。 可以为矩形添加类似背景色或图像、工具提示或书签这样的功能。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
  不能将矩形中的报表项作为报表部件发布。 当用户向报表添加该矩形时，他们将获取该矩形及其包含的项。  阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
 ##  <a name="RectangleAsContainer"></a> 将矩形用作容器  
- 可以将矩形用作其他项的容器。 移动矩形时，其中包含的项也将随之一起移动。 矩形中的项在其 **Parent** 属性中显示该矩形的名称。 有关将矩形用作容器的详细信息，请参阅[添加矩形或容器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)和[在矩阵和图表 &#40; 上显示相同的数据报表生成器 &#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
+ 可以将矩形用作其他项的容器。 移动矩形时，其中包含的项也将随之一起移动。 矩形中的项在其 **Parent** 属性中显示该矩形的名称。 有关使用矩形作为容器的详细信息，请参阅[添加矩形或容器（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)和[在矩阵和图表中显示相同数据（报表生成器）](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。  
   
 > [!NOTE]  
 >  矩形是可在其中创建项或将项拖到其中的唯一容器。 如果您在设计图面上现有项的周围绘制一个矩形，则此矩形不会充当该项的容器。 矩形不会在项的 Parent 属性中列出。  

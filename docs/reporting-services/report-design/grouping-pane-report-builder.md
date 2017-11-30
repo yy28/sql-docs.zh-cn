@@ -1,5 +1,5 @@
 ---
-title: "分组窗格 （报表生成器） |Microsoft 文档"
+title: "“分组”窗格（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10033"
-helpviewer_keywords:
-- Grouping Pane dialog box
+f1_keywords: "10033"
+helpviewer_keywords: Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f8017dd30a085519f9dd5d3593aaa3d59329f8c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3766308293310541636462adc6b44de34ca7d703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grouping-pane-report-builder"></a>“分组”窗格（报表生成器）
   “分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格包含“行组”窗格和“列组”窗格。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -37,18 +34,18 @@ ms.lasthandoff: 08/09/2017
   
  “分组”窗格支持以下模式：  
   
--   **默认。** 使用默认模式可以添加、编辑或删除组。 通过从“报表数据”窗格中拖动字段并将它们插入组层次结构中，可以添加父组、子组和详细信息组。 若要添加相邻组，必须使用 **“添加组”** 快捷方式。 有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+-   **默认。** 使用默认模式可以添加、编辑或删除组。 通过从“报表数据”窗格中拖动字段并将它们插入组层次结构中，可以添加父组、子组和详细信息组。 若要添加相邻组，必须使用 **“添加组”** 快捷方式。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
--   **高级**。 使用 **“高级模式”** 可以查看行组和列组的所有成员，以及为静态成员设置属性。 创建组或添加总计时，将自动设置用于控制 Tablix 数据区域如何在每个报表页上呈现行和列的属性。 若要手动调整这些属性，必须在 Tablix 成员上设置它们。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+-   **高级**。 使用 **“高级模式”** 可以查看行组和列组的所有成员，以及为静态成员设置属性。 创建组或添加总计时，将自动设置用于控制 Tablix 数据区域如何在每个报表页上呈现行和列的属性。 若要手动调整这些属性，必须在 Tablix 成员上设置它们。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
 ## <a name="default-mode"></a>默认模式  
  在默认模式中，“行组”窗格和“列组”窗格将显示所有父组、子组和相邻组的层次结构视图。 子组缩进显示在其父组下面。 相邻组以与其同级组相同的缩进程度显示。 下图显示一个 Tablix 数据区域，其中包含嵌套行组和嵌套及相邻的列组。  
   
- ![Tablix，嵌套及相邻行组和列组](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix，嵌套及相邻行组和列组")  
+ ![Tablix、嵌套行组和列组，以及相邻行组和列组](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix, nested and adjacent row and column groups")  
   
  “分组”窗格显示相应的行组和列组。 在下图中，在“行组”窗格中已选择基于子类别的组，并在 Tablix 数据区域中选择了 [Subcat] 分组单元：  
   
- ![对于嵌套的行和列组的分组窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "嵌套行组和列组的分组窗格")  
+ ![嵌套行组和列组的“分组”窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Grouping pane for nested row and column groups")  
   
  在“行组”窗格中，基于子类别的组是基于类别的组的子组。 在“列组”窗格中，国家/地区组是地理组的子组。 年组和国家/地区组是相邻组。  
   
@@ -85,9 +82,8 @@ ms.lasthandoff: 08/09/2017
 -   **（静态）** 指示没有标题单元的静态成员，称为隐藏静态。  
   
 ## <a name="see-also"></a>另请参阅  
- [用于对话框、 窗格和向导的报表生成器帮助](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [用于对话框、窗格和向导的报表生成器帮助](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

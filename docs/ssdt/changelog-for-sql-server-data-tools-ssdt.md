@@ -1,30 +1,61 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 64583be5bd94e71a52b894c5babd3d29107c56dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT for Visual Studio 2017（15.4.0 预览版）
+内部版本号：14.0.16134.0
+  
+### <a name="whats-new"></a>新增功能
+
+此版本为 Visual Studio 2017 15.4 或更高版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目提供了独立的 Web 安装程序。
+
+### <a name="installer"></a>安装程序
+
+- 允许用户在安装新的 SSDT for VS 2017 实例时设置昵称。
+- 在未选择任何 VS 实例的情况下会隐藏安装程序的功能选择复选框。
+- 根据客户反馈优化了安装程序的某些消息。
+- 修复了安装程序不支持升级的问题。
+
+
+### <a name="ssis"></a>SSIS
+
+- 修复了安装 Azure 功能包后导入/导出向导无法列出数据源的问题。
+- 修复了切换连接时编辑 SSIS Analysis Services 进程任务会引发异常的问题。
+- 修复了在应用添加 __$command_id 列的 SQL 修补程序后 CDC 组件会中断的问题。
+- 修复了将目标指向旧版 SQL Server 时无法编辑和执行第三方包的问题。
+- 修复了双击 DTSWizard.exe 并选择“平面文件源”时“平面文件源”配置对话框无法正确显示的问题。
+- 修复了将目标指向 SQL Server 2017 时包含 Azure 功能包任务/组件的包无法执行的问题。
+
+
+**已知问题**
+
+- 安装程序尚未本地化。
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 for Visual Studio 2015
 内部版本号：14.0.61709.290
@@ -550,4 +581,3 @@ SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQ
 [Analysis Services 中的新增功能](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services 中的新增功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

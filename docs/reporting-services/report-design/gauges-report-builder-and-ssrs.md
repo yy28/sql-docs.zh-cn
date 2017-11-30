@@ -1,5 +1,5 @@
 ---
-title: "仪表 （报表生成器和 SSRS） |Microsoft 文档"
+title: "仪表（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -159,17 +159,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c0b12e57fd5917ee91a4191d87c3e354248928a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表数据区域显示数据集的单个值。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 在单个仪表面板中，可以创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  
@@ -184,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
  有两种类型的仪表：径向仪表和线性仪表。 下图显示了仪表面板中单个径向仪表的基本元素。  
   
- ![仪表元素图示](../../reporting-services/report-design/media/gauge-elements-diagram.gif "仪表元素图示")  
+ ![仪表元素示意图](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
  有关将仪表用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
@@ -198,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  线性仪表为矩形，方向为水平或垂直，类似标尺。 仪表指针通常是温度计，但可以是标记和条。 由于其形状，此仪表类型用于集成到表或矩阵数据区域中，以便显示进度数据。  
   
- 除了上述差异外，这两种仪表类型可互换。 但是，如果您需要在报表中使用简单仪表，则应考虑使用指示器来代替仪表。 有关详细信息，请参阅[指示器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ 除了上述差异外，这两种仪表类型可互换。 但是，如果您需要在报表中使用简单仪表，则应考虑使用指示器来代替仪表。 有关详细信息，请参阅[指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
  下图显示了径向仪表和线性仪表。 径向仪表是圆形并且使用针形指针。 线性仪表是水平的并且使用温度计指针。  
   
@@ -254,7 +253,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="defining-a-group-on-a-gauge"></a>在仪表上定义组  
  将字段添加到仪表之后，可以添加一个数据组。 仪表不同于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的所有其他数据区域，它可以在一个数据区域中显示多个组。 通过在仪表上定义组表达式来添加组与在 Tablix 数据区域中添加行组相同。 但是，添加组之后，仪表仅将最后一个组的值显示为指针值。 例如，如果针对年份添加分组表达式，指针将指向数据集中表示最后一年的销售额聚合值的值。 有关组的详细信息，请参阅 [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
- 对于在表或列表中显示多个仪表并希望显示按组聚合的数据等情况，您可能希望在仪表中添加组。 有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+ 对于在表或列表中显示多个仪表并希望显示按组聚合的数据等情况，您可能希望在仪表中添加组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
 ##  <a name="PositioningData"></a> 定位仪表中的元素  
  仪表面板是包含一个或多个仪表的顶级容器。 通过单击仪表之外，可以查看 **“仪表面板属性”** 对话框。 每个仪表又都包含几个仪表元素：仪表刻度、仪表范围和仪表指针。 使用仪表时，将需要了解如何在仪表面板中度量元素，以修改这些元素的大小和位置。  
@@ -306,10 +305,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

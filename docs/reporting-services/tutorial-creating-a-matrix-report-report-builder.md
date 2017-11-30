@@ -1,27 +1,25 @@
 ---
-title: "教程： 创建矩阵报表 （报表生成器） |Microsoft 文档"
+title: "教程：创建矩阵报表（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
 本教程教你如何使用嵌套行组和列组中的示例销售数据的矩阵组件创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -53,13 +51,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  在右窗格中，单击“表或矩阵向导”。  
   
-4.  上**选择的数据集**页上，单击**创建数据集**。  
+4.  在“选择数据集”页上，单击“创建数据集”。  
   
-5.  单击“下一步” 。  
+5.  单击 **“下一步”**。  
   
-6.  上**选择数据源的连接**页上，选择现有的数据源，或浏览到报表服务器，选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的信息，请参阅[教程： 创建基本表报表 &#40;报表生成器 &#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入数据源的信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  单击“下一步” 。  
+7.  单击 **“下一步”**。  
   
 8.  在“设计查询”页上，单击“编辑为文本”。  
   
@@ -100,24 +98,24 @@ ms.lasthandoff: 08/09/2017
   
 10. （可选）单击运行图标 (!) 以运行查询并查看数据。
 
-11. 单击“下一步” 。  
+11. 单击 **“下一步”**。  
   
 ## <a name="Groups"></a>2.使用新的表或矩阵向导组织数据并选择布局  
 使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成矩阵设计之前展现对数据进行分组的结果。  
   
-1.  上**排列字段**页上，拖动区域从**可用字段**到**行组**。  
+1.  在“排列字段”页上，将 Territory 从“可用字段”拖到“行组”中。  
   
-2.  拖动到销售日期**行组**和将其放下方区域。  
+2.  将 SalesDate 拖到“行组”中并将其放在 Territory 下面。  
   
-    在该字段中列出的顺序**行组**定义组层次结构。 步骤 1 和 2 首先按地区组织字段的值，然后按照销售日期组织字段的值。  
+    “行组”中字段的列出顺序定义组层次结构。 步骤 1 和 2 首先按地区组织字段的值，然后按照销售日期组织字段的值。  
   
-3.  拖动到的子类别**列组**。  
+3.  将 Subcategory 拖到“列组”中。  
   
-4.  拖动到的产品**列组**并将其放子类别下。  
+4.  将 Product 拖到“列组”中，然后将其放在 Subcategory 下面。  
   
-    同样，在该字段中列出的顺序**列组**定义组层次结构。 步骤 3 和 4 首先按子类别组织字段的值，然后按照产品组织字段的值。  
+    “列组”中字段的列出顺序定义了组层次结构。 步骤 3 和 4 首先按子类别组织字段的值，然后按照产品组织字段的值。  
   
-5.  拖动到销售**值**。  
+5.  将 Sales 拖到“值”中。  
   
     将使用汇总数值字段的默认函数 Sum 函数对 Sales 进行汇总。  
   
@@ -129,15 +127,15 @@ ms.lasthandoff: 08/09/2017
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  单击“下一步” 。  
+7.  单击 **“下一步”**。  
   
-8.  在选择布局页上，在**选项**，验证**显示小计和总计**选择。  
+8.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
 9. 验证是否选择了“分块式，小计下方显示”。  
   
-10. 验证选项**展开/折叠组**选择。  
+10. 确认选择了“展开/折叠组”选项。  
   
-11. 单击“下一步” 。  
+11. 单击 **“下一步”**。  
   
 13. 单击 **“完成”**。  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  按 Ctrl 键，然后选择包含 `[Sum(Sales)]`的九个单元。  
   
-3.  上**主页**选项卡 >**数** > **货币**。 单元会更改为显示已设置好格式的货币。  
+3.  在“主文件夹”选项卡中，单击“数字” > “货币”。 单元会更改为显示已设置好格式的货币。  
   
     如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。  
     
@@ -170,9 +168,9 @@ ms.lasthandoff: 08/09/2017
   
 4.  单击包含 `[SalesDate]`的单元格。  
   
-5.  在**数**组 >**日期**。  
+5.  在“数字”组中转至“日期”。  
   
-    单元格会显示示例日期 **[2000/1/31]**。 如果看不到示例日期，请单击**占位符样式**中**数字**分组，并依次**示例值**。  
+    单元格会显示示例日期 **[2000/1/31]**。 如果看不到示例日期，请单击“数字”组中的“占位符样式”，然后单击“示例值”。  
   
 6.  单击 **“运行”** 以预览报表。  
   
@@ -187,15 +185,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  右键单击包含的单元格`[Subcategory]`，指向**添加组**，然后单击**相邻的右**。  
+2.  右键单击包含 `[Subcategory]` 的单元，指向“添加组”，然后单击“右侧相邻”。  
   
     此时将打开 **“Tablix 组”** 对话框。  
   
-3.  在**Group By**列表，选择销售日期，，然后单击**确定**。  
+3.  在“分组依据”列表中选择 SalesDate，然后单击“确定”。  
   
     一个新的列组被添加到 Subcategory 列组的右侧。  
   
-4.  右键单击包含的新列组中的单元格`[SalesDate],`，然后单击**表达式**。  
+4.  右键单击新列组中包含 `[SalesDate],` 的单元，然后单击“表达式”。  
   
 5.  将以下表达式复制到“表达式”框中。  
   
@@ -205,13 +203,13 @@ ms.lasthandoff: 08/09/2017
   
     该表达式从销售日期中提取工作日名称。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
-6.  右键单击包含，总共的子类别列组中的单元格，然后单击**复制**。  
+6.  右键单击 Subcategory 列组中包含 Total 的单元，然后单击“复制”。  
   
-7.  右键单击立即下包含在步骤 5 中创建的表达式的单元格的单元格，然后单击**粘贴**。  
+7.  右键单击包含在步骤 5 中创建的表达式的单元紧下方的单元，然后单击“粘贴”。  
   
 8.  按 Ctrl 键。  
   
-9. 在子类别组中，单击销售列标题并将它并右击，然后单击下面的三个单元格**复制**。  
+9. 在 Subcategory 组中，单击 Sales 列标题以及标题下的三个单元，右键单击，然后单击“复制”。  
   
 10. 将这四个单元粘贴到新列组中的四个空单元中。  
   
@@ -231,7 +229,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在左侧，最远的数量列中选择文本，然后键入**QTY**。  
+2.  选择距左侧最远的 Quantity 列中的文本，然后键入“QTY”。  
   
     列标题现在是 QTY。  
   
@@ -264,11 +262,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  按 Ctrl 键，选择四个角单元。  
   
-4.  右键单击单元格，然后单击**合并单元格**。  
+4.  右键单击所选单元，然后单击“合并单元”。  
   
-5.  右键单击新合并的单元格，然后单击**文本框属性**。  
+5.  右键单击新合并的单元，然后单击“文本框属性”。  
   
-6.  上**边框**选项卡 >**预设** > **无**。
+6.  在“边框”选项卡中，转至“预设” > “无”。
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -283,15 +281,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  选择包含表体顶部的文本框**单击此处添加标题**，然后按 Delete 键。  
+2.  选择表体顶部包含“单击以添加标题”的文本框，然后按 Delete 键。  
   
-3.  上**插入**选项卡 >**标头** > **添加标头**。  
+3.  在“插入”选项卡中，转至“表头” > “添加表头”。  
   
     页眉将添加到表体的顶部。  
   
-4.  上**插入**选项卡上，单击**文本框**，然后拖动报表表头内的文本框。 使文本框大约 6 英寸长、3/4 英寸高，并且将其放置于表头的左侧。  
+4.  在“插入”选项卡中，单击“文本框”，然后将某一文本框拖到报表表头内。 使文本框大约 6 英寸长、3/4 英寸高，并且将其放置于表头的左侧。  
   
-5.  在文本框中，键入**的区域、 子类别和日销售额**。  
+5.  在文本框中，键入“Sales by Territory, Subcategory, and Day”。  
   
 6.  选择键入的文本，在“主页”选项卡中，转至“字体”：
     * **大小为 24 pt**
@@ -316,7 +314,7 @@ ms.lasthandoff: 08/09/2017
   
     此时将显示“正在连接到报表服务器”消息。 当连接完成时，您将看到报表服务器管理员指定为默认报表位置的报表文件夹的内容。  
   
-4.  在**名称**，将默认名称替换**SalesByTerritorySubcategory**。  
+4.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   
 5.  单击 **“保存”**。  
   
@@ -328,14 +326,14 @@ ms.lasthandoff: 08/09/2017
   
 2.  单击 **“桌面”**、 **“我的文档”**或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
-3.  在**名称**，将默认名称替换**SalesByTerritorySubcategory**。  
+3.  在“名称”中，用“SalesByTerritorySubcategory”替换默认名称。  
   
 4.  单击 **“保存”**。  
   
 ## <a name="RotateTextBox"></a>9.（可选）将文本框旋转 270 度  
 具有矩阵的报表在运行时可以垂直方式和水平方式展开。 通过垂直旋转文本框或者旋转 270 度，您可以节约水平空间。 呈现的报表然后将更窄，并且如果导出到 Microsoft Word 之类的格式，报表将更有可能适合打印页面。  
   
-文本框还可以将文本显示为竖排（从上到下）。 有关详细信息，请参阅[文本框 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+文本框还可以将文本显示为竖排（从上到下）。 有关详细信息，请参阅[文本框（报表生成器和 SSRS）](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)。  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>旋转文本框 270 度  
   
@@ -347,11 +345,11 @@ ms.lasthandoff: 08/09/2017
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   
-3.  在属性窗格中，找到 writingmode 设置属性，并将其从更改**默认**到**Rotate270**。  
+3.  在“属性”窗格中，找到 WritingMode 属性，并将其值从“默认”更改为“Rotate270”。  
   
-    如果属性窗格未打开，请单击**视图**选项卡的功能区中，，然后选择**属性**。  
+    如果“属性”窗格未打开，请单击功能区的“视图”选项卡，然后选择“属性”。  
   
-4.  验证 CanGrow 属性设置为**True**。  
+4.  请确认 CanGrow 属性设置为“True”。  
   
 5.  在“开始”选项卡上的“段落”部分中，选择“垂直居中”和“水平居中”，以便从垂直和水平方向上都将文本定位于单元格的中心。  
  
@@ -371,5 +369,4 @@ ms.lasthandoff: 08/09/2017
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

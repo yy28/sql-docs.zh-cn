@@ -1,7 +1,6 @@
 ---
-title: "PPTX 设备信息设置 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "PPTX 设备信息设置 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/11/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - pptx
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 27e5acf9e2c8c234da1b7786a482d049d77c29b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 设备信息设置
   下表列出以 PPTX 格式呈现 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表时的设备信息设置。  
@@ -51,8 +49,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [将设备信息设置传递给呈现扩展插件](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [自定义在 RSReportServer.Config 中的呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技术参考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [在 RSReportServer.Config 中自定义呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技术参考 (SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   
-

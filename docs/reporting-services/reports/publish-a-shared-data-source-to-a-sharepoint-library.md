@@ -1,5 +1,5 @@
 ---
-title: "将共享的数据源发布到 SharePoint 库 |Microsoft 文档"
+title: "将共享数据源发布到 SharePoint 库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9446eee0c8c36cb9a962de16da272c6ba5829891
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开现有的或新的报表服务器项目。  
   
-2.  在 **“项目”** 菜单上，单击 **“属性”**。 *\<项目 >***属性页**对话框随即打开。  
+2.  在 **“项目”** 菜单上，单击 **“属性”**。 “\<项目>属性页”对话框即会打开。  
   
 3.  选择发布到 SharePoint 站点所用的 **“配置”** 。  
   
@@ -63,7 +62,6 @@ ms.lasthandoff: 08/09/2017
  [“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [将报表发布到报表服务器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [使用 Office 数据连接 &#40;。odc &#41;使用报表 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
-

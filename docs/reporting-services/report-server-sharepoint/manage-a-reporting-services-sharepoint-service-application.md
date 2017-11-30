@@ -1,5 +1,5 @@
 ---
-title: "管理 Reporting Services SharePoint 服务应用程序 |Microsoft 文档"
+title: "管理 Reporting Services SharePoint 服务应用程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
 
@@ -27,12 +26,12 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 管理中心内管理服务应用程序。 “管理”和“属性”页允许您更新服务应用程序的配置及常见管理任务。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序通过 SharePoint 管理中心进行管理。 “管理”和“属性”页允许您更新服务应用程序的配置及常见管理任务。  
 
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
-## <a name="open-service-application-properties-page"></a>打开服务应用程序属性页
+## <a name="open-service-application-properties-page"></a>打开服务应用程序属性页面
 
  要打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用属性页面，请完成以下步骤：  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  有关服务应用程序属性的详细信息，请参阅 [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
   
-## <a name="open-service-application-management-pages"></a>打开服务应用程序管理页
+## <a name="open-service-application-management-pages"></a>打开服务应用程序管理页面
 
  要打开 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用管理页面，请完成以下步骤：  
   
@@ -52,11 +51,11 @@ ms.lasthandoff: 10/06/2017
   
 3.  您也可以在服务应用程序名称附近单击或单击 **“类型”** 列，这将选择整行，然后在 SharePoint 功能区上单击 **“管理”** 。  
   
-## <a name="system-settings-page"></a>系统设置页
+## <a name="system-settings-page"></a>系统设置页面
 
  系统设置页允许您配置服务应用程序的行为和用户体验，包括各种超时。
   
-### <a name="report-settings"></a>报告设置
+### <a name="report-settings"></a>报表设置
   
 |设置|注释|  
 |-------------|--------------|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |设置|注释|  
 |-------------|--------------|  
 |启用报表生成器下载|默认值为 TRUE。<br /><br /> 指定客户端是否能够看到可用于下载报告生成器应用程序的按钮。|  
-|报表生成器启动 URL|当报表服务器不使用默认报表生成器 URL 时，可指定自定义 URL。 此设置是可选的。 如果不指定值，将使用默认 URL，它将启动报表生成器。 启动与单击报表生成器 3.0-一旦应用程序中，输入以下值： http://\<计算机名 > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|报表生成器启动 URL|当报表服务器不使用默认报表生成器 URL 时，可指定自定义 URL。 此设置是可选的。 如果不指定值，将使用默认 URL，它将启动报表生成器。 若要将 Report Builder 3.0 作为 Click-Once 应用程序启动，请输入以下值：http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |启用客户端打印|默认值为 TRUE。<br /><br /> 指定用户是否可以下载提供打印选项的客户端控件。|  
 |编辑会话超时|默认值为 7200 秒。|  
 |编辑会话缓存限制|默认值为 5。|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  您可以查看和删除正在运行的作业，例如报表订阅和数据驱动订阅所创建的作业。 该页不用于管理订阅，而是管理由订阅触发的作业。 例如，安排为每小时运行一次的订阅将每小时生成一个在 **“管理作业”** 页面上显示的作业。  
   
- ![管理正在运行的作业](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理正在运行的作业")  
+ ![管理正在运行的作业](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
   
 ## <a name="key-management"></a>密钥管理
  下表总结了“密钥管理”页面  
@@ -117,8 +116,8 @@ ms.lasthandoff: 10/06/2017
   
 |第|Description|  
 |----------|-----------------|  
-|备份加密密钥|1） 中键入新密码到**密码：**和**确认密码：**框，然后单击**导出**。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
-|还原加密密钥|1） 键入或浏览到该密钥文件**文件位置**框<br /><br /> 2） 在**密码**框中，键入用于备份加密文件的密码。<br /><br /> 3） 单击**确定**|  
+|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
+|还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件<br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码。<br /><br /> 3) 单击“确定”|  
 |更改加密密钥|此操作将创建一个新密钥，并且重新加密您已加密的内容。 如果有很多内容，此操作可能需要几个小时。<br /><br /> 完成更改加密密钥操作后，建议您备份新密钥。|  
 |删除加密的内容|删除的内容无法恢复。<br /><br /> **\*\* 重要提示 \*\*** 删除和重新创建对称密钥的操作不能逆转或撤消。 删除或重新创建该密钥可能对您当前的安装产生重要影响。 如果删除对称密钥，则使用此密钥加密的所有现有数据也将被删除。 删除的数据包括指向外部报表数据源的连接字符串、存储的连接字符串和某些订阅信息。|  
 
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用此格式： *\<域 >\\< 用户帐户\>*。  
+ 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>。  
   
  **密码**  
  键入密码。  
@@ -175,7 +174,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **发件人地址**  
  指定要在所生成电子邮件的“发件人:”字段中使用的电子邮件地址。 您必须指定一个有权从 SMTP 服务器中发送邮件的用户帐户。  
 
-## <a name="provision-subscriptions-and-alerts"></a>设置订阅和警报
+## <a name="provision-subscriptions-and-alerts"></a>预配订阅和警报
 
  使用该页验证 SQL Server 代理是否正在运行，并将对报表服务的访问设置为使用 SQL Server 代理。 SQL Server 代理是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅、计划和数据警报所必需的。 [用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  选中代理对应的框，然后单击 **“确定”**。  
   
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-

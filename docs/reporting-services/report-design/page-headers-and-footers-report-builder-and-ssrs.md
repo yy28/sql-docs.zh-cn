@@ -1,5 +1,5 @@
 ---
-title: "页眉和页脚 （报表生成器和 SSRS） |Microsoft 文档"
+title: "页眉和页脚（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色、背景图像和表达式。 表达式包含只具有一个数据集的报表的数据集字段引用，以及作为作用域包括的数据集的聚合函数调用。  
@@ -42,11 +41,11 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  各个呈现扩展插件对页的处理方式各不相同。 有关报表分页和呈现扩展插件的详细信息，请参阅[Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
- 默认情况下，报表有页脚，但没有页眉。 有关如何添加或删除它们的详细信息，请参阅[添加或删除页眉或页脚（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+ 默认情况下，报表有页脚，但没有页眉。 有关如何添加或删除它们的详细信息，请参阅[添加或删除页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
- 页眉和页脚通常包含页码、报表标题和其他报表属性。 有关如何将这些项添加到报表页眉或页脚的详细信息，请参阅[显示页码或其他报表属性（报表生成器和 SSRS）](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)。  
+ 页眉和页脚通常包含页码、报表标题和其他报表属性。 有关如何将这些项添加到报表报表头或报表尾的详细信息，请参阅[显示页码或其他报表属性（报表生成器和 SSRS）](../../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)。  
   
- 创建页眉或页脚之后，即在每个报表页面上显示它们。 有关如何在第一页和最后一页上隐藏页眉和页脚的详细信息，请参阅[隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)。  
+ 创建页眉或页脚之后，即在每个报表页面上显示它们。 有关如何在第一页和最后一页上隐藏页眉和页脚的详细信息，请参阅[隐藏第一页或最后一页的页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -130,11 +129,10 @@ ms.lasthandoff: 08/09/2017
   
  根据与打印页的尺寸相关的逻辑页数，可以生成更准确的页计数。 在 Excel 中，页脚会自动使用逻辑页码。 若要将逻辑页计数放在页眉中，必须将设备信息设置配置为使用简单页眉。 注意，使用简单页眉时，将删除在页眉区域中处理复杂报表布局的功能。  
   
- 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中处理数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表 &#40; 中嵌入图像报表生成器和 SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [矩形和线条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [在报表中嵌入图像（报表生成器和 SSRS）](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

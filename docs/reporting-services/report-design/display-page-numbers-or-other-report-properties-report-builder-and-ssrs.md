@@ -1,5 +1,5 @@
 ---
-title: "显示页码或其他报表属性 （报表生成器和 SSRS） |Microsoft 文档"
+title: "显示页码或其他报表属性（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f3761ae99fd13d1f69ed59719967797d9af0c51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -68,9 +67,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
   
-     “为以下项设置表达式：值”文本框包含表达式 =Globals!PageNumber。  
+     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber。  
   
-2.  将光标放在 = 号和类型之后**"页"（& a)**。  
+2.  将光标放在 = 号后，然后键入 "Page " &。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber  
   
@@ -80,17 +79,16 @@ ms.lasthandoff: 08/09/2017
   
 1.  右键单击包含表达式的文本框，然后单击 **“表达式”**。  
   
-2.  在表达式的末尾键入 **&" of "&**。  
+2.  在表达式的末尾键入 &" of "&。  
   
-3.  在“类别”窗格中，展开“内置字段”，然后双击 **TotalPages**。  
+3.  在“类别”窗格中，展开“内置字段”，然后双击 TotalPages。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber &" of "&Globals!TotalPages  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [页眉和页脚 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [在文本框中 &#40; 的格式文本报表生成器和 SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [设置文本框中文本的格式（报表生成器和 SSRS）](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
-

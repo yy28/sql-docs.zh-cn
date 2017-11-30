@@ -1,5 +1,5 @@
 ---
-title: "创建和管理本机模式报表服务器的订阅 |Microsoft 文档"
+title: "创建和管理本机模式报表服务器的订阅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
   标准订阅是由希望通过电子邮件传递报表或将报表传递到共享文件夹的各个用户所创建的订阅。 本主题提供了由各个用户创建和管理的标准订阅的有关信息。 而数据驱动订阅具有不同的要求和步骤，将在另一个主题中进行讨论。 有关详细信息，请参阅 [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  导航到你要订阅的报表。 单击报表菜单，然后单击“订阅” 。  
   
-     ![报表菜单](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "报表菜单")  
+     ![报表菜单](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
   
 3.  **描述**：键入此报表的描述，最多 512 个字符。  
   
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **创建文件时添加文件扩展名**：此选项会在文件名中添加三个字符的文件扩展名。 文件扩展名由所选择的报表输出格式决定。  
   
-8.  **路径**： 键入你想要将报表传递现有文件夹的通用命名约定 (UNC) 路径 (例如， \\ \\< servername\>\\< myreports\>)。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
+8.  **路径**：键入要向其中传递报表的现有文件夹的通用命名约定 (UNC) 路径（例如，\\\\<servername\>\\<myreports\>）。 在路径开头包括双反斜杠字符。 在路径末尾不要使用反斜杠。  
   
-     ![文件共享订阅](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "文件共享订阅")  
+     ![文件共享订阅](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
   
 9. **呈现格式**：为文件传递选择一种报表输出格式。 选择与要用来打开报表的桌面应用程序相对应的格式。 避免使用不以单数据流呈现报表的格式，也不要使用引入静态文件不支持的交互的格式（例如 HTML 4.0）。  
   
-10. **凭据**：选择使用文件共享帐户或特定的 Windows 用户凭据。 如果你的报表管理员尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。 有关详细信息，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在**用户名**和**密码**文本框中，指定访问文件共享，使用格式所需的凭据*\<域 >*\\*\<用户名 >*用于用户名。  
+10. **凭据**：选择使用文件共享帐户或特定的 Windows 用户凭据。 如果你的报表管理员尚未配置文件共享帐户，则将禁用“使用文件共享帐户”  。 有关详细信息，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在“用户名”和“密码”文本框中，指定访问文件共享所需的凭据，用户名的格式为 \<domain>\\\<user name>。  
   
 11. **覆盖选项**：  
   
@@ -92,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
     -   若要选择已具有要使用的日期、时间和重复信息的预定义共享计划，请单击 **“根据共享计划”**，然后选择要使用的计划。  
   
-    -   若要将报表传递的报表快照更新的较新版本时，请单击**刷新报表内容时**。 如果订阅的报表以预定间隔检索数据，则用于刷新数据的计划决定处理订阅的时间。  
+    -   若要在报表快照更新为较新版本时传递报表，请单击“刷新报表内容时”。 如果订阅的报表以预定间隔检索数据，则用于刷新数据的计划决定处理订阅的时间。  
   
         > [!NOTE]  
         >  此选项仅适用于已与更新计划相关联的快照。  
@@ -107,20 +106,20 @@ ms.lasthandoff: 08/09/2017
   
 2.  导航到你要订阅的报表。 单击报表菜单，然后单击“订阅” 。  
   
-     ![报表菜单](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "报表菜单")  
+     ![报表菜单](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
   
 3.  **描述**：键入此报表的描述，最多 512 个字符。  
   
 4.  **所有者**：“所有者”字段默认为当前用户，创建订阅时不能编辑。 但是，在保存订阅后，你可以更改订阅属性，包括所有者和描述。  
   
-5.  **通过其传递**： 选择**电子邮件**。 如果**电子邮件**是不可用，您的报表服务器尚未配置为电子邮件订阅。 请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **传递方式**：选择“电子邮件”。 如果“电子邮件”不可用，说明尚未为电子邮件订阅配置报表服务器。 请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **收件人**：“收件人:”字段中的收件人姓名会使用你的域用户帐户自行填写地址。 请验证格式是否 [用户 name]@[domain.com]Report 服务器配置设置确定是否**到**字段自行转换为地址与你的用户帐户。 有关更改配置设置的电子邮件地址的详细信息，请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+6.  **收件人**：“收件人:”字段中的收件人姓名会使用你的域用户帐户自行填写地址。 确认其格式为 [用户名]@[domain.com] 报表服务器配置设置将决定“收件人”字段是否使用用户帐户自行填写地址。 有关更改配置设置的电子邮件地址的详细信息，请参阅 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
     > [!NOTE]  
-    >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 您还可以键入其他电子邮件地址中**Cc**，**密件抄送**，和**答复到**文本框。 这要求您具有管理所有订阅的权限。  
+    >  根据所拥有的权限，您可能还可以键入您希望报表传递到的电子邮件地址。 若要指定多个电子邮件地址，请用分号 (;) 分隔它们。 还可以在“抄送”、“密件抄送”和“答复”文本框中键入其他电子邮件地址。 这要求您具有管理所有订阅的权限。  
   
-7.  **使用者**： 默认为"@ReportName已在执行@ExecutionTime"。 你可以对主题进行编辑，但请注意，@ReportName和@ExecutionTime中支持的只有全局变量**主题**字段。  
+7.  ：默认为“在 @ExecutionTime 执行 @ReportName”。 可以对主题进行编辑，但请注意，@ReportName 和 @ExecutionTime 是“主题”字段中仅支持的两个全局变量。  
   
 8.  按如下说明选择传递选项：  
   
@@ -133,7 +132,7 @@ ms.lasthandoff: 08/09/2017
   
 9. 从 **“呈现格式”** 列表框中选择一种呈现格式。 如果选择 **“包括报表”** 以嵌入或附加报表副本，则此选项可用。  
   
-    -   若要将报表嵌入电子邮件的正文中，选择**Web 存档**。  
+    -   若要在电子邮件正文中嵌入报表，请选择“Web 存档”。  
   
     -   若要将报表作为附件发送，请选择任一其他呈现格式。  
   
@@ -145,7 +144,7 @@ ms.lasthandoff: 08/09/2017
   
     -   若要选择已具有要使用的日期、时间和重复信息的预定义共享计划，请单击 **“根据共享计划”**，然后选择要使用的计划。  
   
-    -   若要将报表传递的报表快照更新的较新版本时，请单击**刷新报表内容时**。 如果订阅的报表以预定间隔检索数据，则用于刷新数据的计划决定处理订阅的时间。  
+    -   若要在报表快照更新为较新版本时传递报表，请单击“刷新报表内容时”。 如果订阅的报表以预定间隔检索数据，则用于刷新数据的计划决定处理订阅的时间。  
   
     > [!NOTE]  
     >  此选项仅适用于已与更新计划相关联的快照。  
@@ -171,13 +170,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_delete_subscription"></a> 删除订阅  
  删除订阅  
   
-1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器的工具栏上，单击“我的订阅”  ，并导航到要修改或删除的订阅。  
   
 3.  单击报表菜单，然后单击“删除”   
   
-     ![报表菜单](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "报表菜单")  
+     ![报表菜单](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
   
  若要取消报表服务器上当前正在处理的订阅，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
@@ -189,9 +188,8 @@ ms.lasthandoff: 08/09/2017
  [创建和管理 SharePoint 模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [使用我的订阅 &#40;本机模式报表服务器 &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [使用我的订阅（本机模式报表服务器）](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

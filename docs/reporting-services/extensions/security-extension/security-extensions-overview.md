@@ -1,5 +1,5 @@
 ---
-title: "安全扩展插件概述 |Microsoft 文档"
+title: "安全扩展插件概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- security [Reporting Services], extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: d56cfaf647b8f54b7535416ead02fcfaa7c3fbac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-extensions-overview"></a>安全扩展插件概述
   利用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全扩展插件，可以对用户或组进行身份验证和授权；这样，不同的用户便可登录至同一台报表服务器，并基于他们的标识执行不同的任务或操作。 默认情况下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于 Windows 的身份验证扩展插件，该插件使用 Windows 帐户协议来验证声明在系统上拥有帐户的用户的标识。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的安全系统为用户授权。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 基于角色的安全模型与其他技术的基于角色的安全模型类似。  
   
  因为安全扩展插件基于可扩展的开放式 API，所以您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中创建新的身份验证和授权扩展插件。 下面的示例为使用基于窗体的身份验证和授权的典型安全扩展插件实现：  
   
- ![Reporting Services 安全扩展过程](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services 的安全扩展过程")  
+ ![Reporting Services 安全扩展插件进程](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services security extension process")  
   
  如图所示，身份验证和授权将按以下所示发生：  
   
@@ -63,7 +60,7 @@ ms.lasthandoff: 08/12/2017
 13. 用户继续请求对报表服务器的操作，直到会话结束为止。  
   
 ## <a name="when-to-implement-a-security-extension"></a>使用安全扩展插件的条件  
- 我们建议尽可能使用 Windows 身份验证。 不过，在下列两种情况下，可能适合使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的身份验证和授权：  
+ 建议尽量使用 Windows 身份验证。 不过，在下列两种情况下，可能适合使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的身份验证和授权：  
   
 -   您具有无法使用 Windows 帐户的 Internet 或 Extranet 应用程序。  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 08/12/2017
  [配置报表管理器以便传递自定义身份验证 Cookie](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   
-

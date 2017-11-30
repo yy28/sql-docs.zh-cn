@@ -1,28 +1,27 @@
 ---
 title: "SQL Server 教程 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 10/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
+
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供有助于了解新技术和功能的教程。 针对早期版本的教程通常也适用于较新版本。 教程中涉及到新功能时，将指示完成此教程所需的最低版本。  
      
 -   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。    
@@ -30,7 +29,7 @@ ms.lasthandoff: 07/31/2017
 - 签出 [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 存储库中提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 示例。 
 
  
-## <a name="current-tutorials"></a>最新教程  
+## <a name="current-tutorials"></a>当前教程  
   
 |技术|Description|  
 |--------------|---------------|  
@@ -40,9 +39,9 @@ ms.lasthandoff: 07/31/2017
 |[Integration Services 教程](../integration-services/integration-services-tutorials.md)|了解如何创建和部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包。|  
 |[复制教程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]设置和运行复制技术。|  
 |[Reporting Services 教程 (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何创建基本报表和订阅。|  
-|[SQL Server R Services 教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|了解如何使用 R 语言处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据以及从 [!INCLUDE[tsql](../includes/tsql-md.md)]运行 R 脚本。|  
+|[SQL Server 机器学习教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|了解如何使用 R 或 Python 处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据。 从 [!INCLUDE[tsql](../includes/tsql-md.md)] 运行 R 或 Python 脚本。|  
   
- ## <a name="previously-published-tutorials"></a>以前发布的教程：  
+ ## <a name="previously-published-tutorials"></a>以前发布的教程 
   
  - [SQL Server 2014 教程](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 07/31/2017
  - [SQL Server 2008 R2 教程](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

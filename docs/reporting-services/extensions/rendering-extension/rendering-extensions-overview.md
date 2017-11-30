@@ -1,5 +1,5 @@
 ---
-title: "呈现扩展概述 |Microsoft 文档"
+title: "呈现扩展插件概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 78da7dbcbe7df3c4b53f6df4559963d74e877208
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
-  呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]包括七种呈现扩展插件： HTML、 Excel、 Word、 CSV 或文本、 XML、 图像和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
+  呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
   
 > [!NOTE]  
 >  若要确定哪些呈现扩展插件可用，您可以在 RSReportServer.config 文件中查看已安装的扩展插件列表。  
@@ -44,16 +42,16 @@ ms.lasthandoff: 08/12/2017
 |**PDF**|在 Adobe Acrobat Reader 中呈现报表。 此格式在报表工具栏的“导出”下拉列表中显示为“Acrobat (PDF) 文件”。|  
 |**EXCEL**|在 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 中呈现报表。|  
 |**WORD**|在 [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] 中呈现报表。|  
-|**HTML 4.0** （HTML 呈现扩展插件的一部分）|HTML 是用于最初呈现报表的格式。 如果浏览器支持 HTML 4.0，则这是所使用的格式。 否则，使用 HTML 3.2。|  
-|**MHTML** （HTML 呈现扩展插件的一部分）|以 MHTML 格式呈现报表。 报表在 Internet Explorer 中打开。 此格式在报表工具栏的“导出”下拉列表中显示为“Web 存档”。|  
+|HTML 4.0（HTML 呈现扩展插件的一部分）|HTML 是用于最初呈现报表的格式。 如果浏览器支持 HTML 4.0，则这是所使用的格式。 否则，使用 HTML 3.2。|  
+|MHTML（HTML 呈现扩展插件的一部分）|以 MHTML 格式呈现报表。 报表在 Internet Explorer 中打开。 此格式在报表工具栏的“导出”下拉列表中显示为“Web 存档”。|  
 |**NULL**|不将报表呈现为特定的格式。 这一呈现扩展插件用于将报表放到缓存中。 空呈现应与计划的执行或传递一起使用。|  
   
- 建议的格式和及其用法的详细信息，请参阅[导出报表 &#40;报表生成器和 SSRS &#41;](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ 有关建议的格式及其用法的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
  由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 实现或随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的每个呈现扩展插件都使用一组通用的接口。 这可确保每个扩展插件实现类似的功能并降低报表服务器核心中的呈现代码的复杂性。  
   
 ## <a name="rendering-object-model"></a>呈现对象模型  
- 当处理报表时，结果是公开的对象模型，称为呈现对象模型 (ROM)。 呈现对象模型是定义已处理报表的内容、布局和数据的各个类的集合。 ROM 可供希望为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 设计、开发和部署自定义呈现扩展插件的开发人员使用。 当报表服务器处理报表的 XML 定义以及用户定义的报表数据时，将生成 ROM。 当完成处理后，呈现扩展插件使用公共对象模型以定义报表的输出。 ROM 的可用的公共类定义中**Microsoft.ReportingServices.OnDemandReportRendering**命名空间。  
+ 当处理报表时，结果是公开的对象模型，称为呈现对象模型 (ROM)。 呈现对象模型是定义已处理报表的内容、布局和数据的各个类的集合。 ROM 可供希望为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 设计、开发和部署自定义呈现扩展插件的开发人员使用。 当报表服务器处理报表的 XML 定义以及用户定义的报表数据时，将生成 ROM。 当完成处理后，呈现扩展插件使用公共对象模型以定义报表的输出。 ROM 的可用公共类在 Microsoft.ReportingServices.OnDemandReportRendering 命名空间中定义。  
   
 ## <a name="writing-custom-rendering-extensions"></a>编写自定义呈现扩展插件  
  在决定创建自定义呈现扩展插件之前，应评估更为简单的替代方法。 您可以：  
@@ -62,13 +60,12 @@ ms.lasthandoff: 08/12/2017
   
 -   通过将 XSL 转换 (XSLT) 与 XML 呈现格式的输出结合起来，添加自定义格式和演示功能。  
   
- 编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果必须呈现的报表中未附随格式[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]和编写您自己的呈现扩展插件，托管的代码实现呈现扩展代码必须实现决定**Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**接口，所需的报表服务器。  
+ 编写自定义呈现扩展插件的过程困难重重。 呈现扩展插件通常必须支持报表元素的所有可能组合，并要求您实现许许多多的类、接口、方法和属性。 如果必须以未随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的格式呈现报表，并且决定为呈现扩展插件编写自己的托管代码实现，则呈现扩展插件代码必须实现报表服务器要求的 Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension 接口。  
   
  有关 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的补充文档和白皮书，请参阅 [Reporting Services 网站](http://go.microsoft.com/fwlink/?LinkId=19951)上的最新技术资源。  
   
 ## <a name="see-also"></a>另请参阅  
- [实现的呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [实现呈现扩展插件](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [Reporting Services 扩展插件库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

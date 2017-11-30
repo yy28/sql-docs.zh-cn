@@ -1,5 +1,5 @@
 ---
-title: "报表服务器 HTTP 日志 |Microsoft 文档"
+title: "报表服务器 HTTP 日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- HTTP [Reporting Services]
+helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90732a6f209640298ec1776fd5368b26fd2526fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -35,8 +33,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|文件名|默认情况下，文件名是 ReportServerService_HTTP_\<时间戳 >。 日志。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
-|文件位置|该文件位于 \Microsoft SQL Server\\*\<SQL Server 实例 >*\Reporting Services\LogFiles。|  
+|文件名|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
+|文件位置|该文件位于 \Microsoft SQL Server\\\<SQL Server Instance>\Reporting Services\LogFiles 中。|  
 |文件格式|该文件是 EN-US 格式。 它是 ASCII 文本文件。|  
 |创建和保留文件|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果您配置了相应的设置但并未看到日志文件，请打开报表或启动报表服务器应用程序（如报表管理器）以生成 HTTP 请求从而创建日志文件。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
   
@@ -86,8 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   
- [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [错误和事件参考 &#40;Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

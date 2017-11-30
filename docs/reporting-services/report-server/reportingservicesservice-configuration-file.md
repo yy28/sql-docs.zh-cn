@@ -1,5 +1,5 @@
 ---
-title: "ReportingServicesService 配置文件 |Microsoft 文档"
+title: "ReportingServicesService 配置文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 437760484aa49e7e4a8f806a2fd7bc64ec405f33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
  ||  
@@ -38,7 +37,7 @@ ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。
  此文件位于 \Reporting Services\Report Server\Bin 文件夹。  
   
 ## <a name="editing-guidelines"></a>编辑指南  
- 您可以对此文件进行修改，重命名日志文件或提高/降低跟踪级别。 请不要修改任何其他设置。 有关说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 有关跟踪日志的详细信息，请参阅[报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
+ 您可以对此文件进行修改，重命名日志文件或提高/降低跟踪级别。 请不要修改任何其他设置。 有关说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>配置示例  
  下面的示例显示了 ReportingServicesService.exe.config 文件中的设置和默认值。  
@@ -99,4 +98,3 @@ ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

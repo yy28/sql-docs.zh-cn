@@ -1,5 +1,5 @@
 ---
-title: "报表参数 （报表生成器和报表设计器） |Microsoft 文档"
+title: "报表参数（报表生成器和报表设计器）| Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2016
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 08a65ad0d4d65c7461862757f9a9bf1f8bac651b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表参数的常规用法、可设置的属性等内容。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和报表设计器中所创建的分页报表中使用报表参数，也可在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中所创建的移动报表中使用。 阅读有关 [报表参数概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)的详细信息。  
@@ -55,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
 -   使用参数可将主报表关联到钻取报表、子报表和链接报表。 设计一组报表时，您可以将各个报表设计为回答某些特定的问题。 每个报表都可以为相关信息提供不同的视图或不同的详细程度。 若要提供一组相关报表，请为目标报表上的相关数据创建参数。  
   
-     有关详细信息，请参阅[钻取报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)，[子报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)，和[创建链接的报表](../../reporting-services/reports/create-a-linked-report.md)。  
+     有关详细信息，请参阅[钻取报表（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)、[子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)和[创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   为多个用户自定义参数集。 基于报表服务器上的销售报表创建两个链接报表。 一个链接报表使用销售人员的预定义参数值，而第二个链接报表使用销售经理的预定义参数值。 两个报表使用相同的报表定义。  
   
  **更改报表显示**  
   
--   通过 URL 请求向报表服务器发送命令，以自定义报表的呈现。 有关详细信息，请参阅[URL 访问 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md)和[传递 URL 中的报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+-   通过 URL 请求向报表服务器发送命令，以自定义报表的呈现。 有关详细信息，请参阅 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md) 和[在 URL 内传递报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
 -   允许用户指定值以帮助自定义报表的外观。 例如，提供一个布尔参数以指示是否展开或折叠表中所有的嵌套行组。  
   
@@ -70,19 +70,19 @@ ms.lasthandoff: 08/09/2017
      有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。  
   
 ##  <a name="UserInterface"></a> 使用参数查看报表  
- 查看具有参数的报表时，报表查看器工具栏将显示每个参数，以便你可以通过交互方式指定值。 下图显示报表 withparameters 参数区域@ReportMonth， @ReportYear， @EmployeeID， @ShowAll， @ExpandTableRows， @CategoryQuota，和@SalesDate。  
+ 查看具有参数的报表时，报表查看器工具栏将显示每个参数，以便你可以通过交互方式指定值。 下图显示了具有参数 @ReportMonth、@ReportYear、@EmployeeID、@ShowAll、@ExpandTableRows、@CategoryQuota 和 @SalesDate 的报表的参数区域。  
   
- ![查看使用参数的报表](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "查看使用参数的报表")  
+ ![查看带有参数的报表](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "View report with parameters")  
   
-1.  **“参数”窗格** 报表查看器工具栏显示各个参数的提示和默认值。 可以在参数窗格中自定义参数布局。 有关详细信息，请参阅[自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)。  
+1.  **“参数”窗格** 报表查看器工具栏显示各个参数的提示和默认值。 可以在参数窗格中自定义参数布局。 有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  
   
-2.  **@SalesDate参数**参数@SalesDate是数据类型**DateTime**。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
+2.  **@SalesDate 参数**参数 @SalesDate 的数据类型为 DateTime。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
   
-3.  **@ShowAll参数**参数@ShowAll是数据类型**布尔**。 使用单选按钮指定 **True** 或 **False**。  
+3.  **@ShowAll 参数**参数 @ShowAll 的数据类型为 Boolean。 使用单选按钮指定 **True** 或 **False**。  
   
 4.  **“显示或隐藏参数区域”控点** 在报表查看器工具栏上，单击此箭头可显示或隐藏参数窗格。  
   
-5.  **@CategoryQuota参数**参数@CategoryQuota是数据类型**Float**，因此它采用的数字值。  @CategoryQuota设置为允许多个值。  
+5.  **@CategoryQuota 参数**参数 @CategoryQuota 的数据类型为 Float，因此它采用数值。  @CategoryQuota 设置为允许多个值。  
   
 6.  **查看报表** 输入参数值之后，单击“查看报表”可运行报表。 如果所有参数都具有默认值，则报表会在第一次查看时自动运行。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
  添加一个包含变量的数据集查询或包含输入参数的数据集存储过程。 为每个变量或输入参数创建一个数据集参数，并为每个数据集参数创建一个报表参数。  
   
- ![报表生成器参数数据集属性](../../reporting-services/report-design/media/ssrb-paramdatasetprops.png "报表生成器参数数据集属性")  
+ ![报表生成器参数数据集属性](../../reporting-services/report-design/media/ssrb-paramdatasetprops.png "Report Builder Parameter Dataset Properties")  
   
  来自报表生成器的此图像显示：  
   
@@ -123,10 +123,10 @@ ms.lasthandoff: 08/09/2017
   
  添加一个报表部件，其中包含对参数的引用或对包含变量的共享数据集的引用。  
   
- 报表部件存储于报表服务器上，并且可供他人用于其报表中。 不能通过报表服务器对参数的报表部件进行管理。 可以在报表部件库中搜索参数，并在添加参数后，在报表中配置这些参数。 有关详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
+ 报表部件存储于报表服务器上，并且可供他人用于其报表中。 不能通过报表服务器对参数的报表部件进行管理。 可以在报表部件库中搜索参数，并在添加参数后，在报表中配置这些参数。 有关详细信息，请参阅 [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  对于具有相关数据集以及参数的数据区域，参数可以发布为单独的报表部件。 尽管参数作为报表部件列出，但您不能直接向报表添加报表部件参数。 而是应添加报表部件，此时，将从报表部件包含或引用的数据集查询中自动生成任何所需的报表参数。 有关报表部件的详细信息，请参阅[报表部件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)和[报表部件在报表设计器 &#40;SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  对于具有相关数据集以及参数的数据区域，参数可以发布为单独的报表部件。 尽管参数作为报表部件列出，但您不能直接向报表添加报表部件参数。 而是应添加报表部件，此时，将从报表部件包含或引用的数据集查询中自动生成任何所需的报表参数。 有关报表部件的详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)和[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ### <a name="parameter-values"></a>参数值  
  以下是用于在报表中选择参数值的选项。  
@@ -155,16 +155,16 @@ ms.lasthandoff: 08/09/2017
 |Visible|选择此选项可在报表运行时在其顶部显示报表参数。 此选项允许用户在运行时选择参数值。|  
 |Hidden|选择此选项可隐藏已发布报表中的报表参数。 报表参数值仍可在报表 URL、订阅定义或报表服务器中进行设置。|  
 |内部|选择此选项可以隐藏报表参数。 在已发布报表中，只能在报表定义中查看报表参数。|  
-|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果为 **DateTime** 参数提供了可用值，则在参数窗格中将显示日期下拉列表而不是显示日历控件。<br /><br /> 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **\*\* 安全说明 \*\*** 在任何包含数据类型为 **Text**的参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限。 有关详细信息，请参阅 [安全性（报表生成器）](../../reporting-services/report-builder/security-report-builder.md)中所创建的移动报表中使用。|  
+|可用值|如果已为参数指定可用值，则有效值将始终作为下拉列表显示。 例如，如果为 **DateTime** 参数提供了可用值，则在参数窗格中将显示日期下拉列表而不是显示日历控件。<br /><br /> 为了确保值列表在报表与子报表中是一致的，可以在数据源中设置一个选项，使用单个事务处理与数据源关联的数据集中的所有查询。<br /><br /> **安全说明** 在任何包含数据类型为 Text 的参数的报表中，请务必使用可用值列表（也称为有效值列表），并确保任何运行该报表的用户仅具有查看该报表中数据所必需的权限。 有关详细信息，请参阅 [安全性（报表生成器）](../../reporting-services/report-builder/security-report-builder.md)中所创建的移动报表中使用。|  
 |默认值|设置来自查询或静态列表的默认值。<br /><br /> 如果每个参数均具有默认值，则报表将在第一次查看时自动运行。|  
-|高级|设置报表定义属性 **UsedInQuery**，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 **True** 。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 False。<br /><br /> **\*\*警告： \* \*** 使用**永远不会刷新**时要格外小心。 在报表服务器上， **UsedInQuery** 用于帮助控制报表数据和所呈现报表的高速缓存选项，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
+|高级|设置报表定义属性 **UsedInQuery**，该值指示此参数是直接还是间接影响报表中的数据。<br /><br /> **自动确定何时刷新**<br /> 当您希望报表处理器来确定该值的设置时选择此选项。 如果报表处理器发现数据集查询具有对此参数的直接或间接引用，或者报表具有子报表，则该值为 **True** 。<br /><br /> **始终刷新**<br /> 当报表参数直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 True。<br /><br /> **从不刷新**<br /> 当报表参数未直接或间接用于数据集查询或参数表达式时，请选择此选项。 此选项将 **UsedInQuery** 设置为 False。<br /><br /> **注意** 应慎重使用“从不刷新”。 在报表服务器上， **UsedInQuery** 用于帮助控制报表数据和所呈现报表的高速缓存选项，以及控制快照报表的参数选项。 如果您未正确设置 **“从不刷新”** ，可能导致对不正确的报表数据或报表进行高速缓存，或者导致快照报表具有不一致的数据。 有关详细信息，请参阅[报表定义语言 (SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 数据集查询  
  若要筛选数据集查询中的数据，可以通过指定结果集中要包含或排除的值，来包含一个限制检索到的数据的限制子句。  
   
  使用数据源的查询设计器来帮助生成参数化查询。  
   
--   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅主题中的特定的外部数据源类型[报表数据集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md). 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
+-   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) 中针对特定外部数据源类型的相关主题。 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
 -   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)中与数据扩展插件对应的查询设计器主题。  
   
@@ -183,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **报表订阅。** 可以指定参数值以筛选数据并通过订阅传递报表。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
--   **URL 访问。** 可以在指向报表的 URL 中指定参数值。 还可以使用 URL 访问运行报表并指定参数值。 有关详细信息，请参阅[URL 访问 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md).  
+-   **URL 访问。** 可以在指向报表的 URL 中指定参数值。 还可以使用 URL 访问运行报表并指定参数值。 有关详细信息，请参阅 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md)。  
   
  如果重新发布报表定义，通常会保留已发布报表的参数属性。 如果报表定义重新发布为同一报表，并且参数名和数据类型不变，则属性设置将保留不变。 如果添加或删除了报表定义中的参数，或是更改了现有参数的数据类型或名称，则您最好更改已发布报表中的参数属性。  
   
@@ -261,4 +261,3 @@ ms.lasthandoff: 08/09/2017
  [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

@@ -1,7 +1,6 @@
 ---
-title: "在 Reporting Services 数据源中存储凭据 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "在 Reporting Services 数据源中存储凭据 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/23/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - stored credentials [Reporting Services]
 - data sources [Reporting Services], stored credentials
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 93885081e436e3ca4afec2e80caf1d6026fa5f90
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
   可以配置存储的凭据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器可使用这些凭据来访问报表的外部数据。 如果报表在无人参与的状态下运行，则使用存储凭据，例如将报表作为电子邮件发布的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 计划或触发报表处理时，报表服务器将检索和使用这些凭据。 本主题向你说明了为本机模式下和 SharePoint 模式下的报表服务器配置存储凭据的过程。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/09/2017
 -   [为共享数据源配置存储凭据（SharePoint 模式）](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> 存储凭据的安全策略要求  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")需要用于存储的凭据的帐户配置报表服务器上的以下安全策略之一。 建议使用环境要求的最低级别权限来选择策略。  
+ ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 要求为报表服务器上的以下其中一项安全策略配置用于存储凭据的帐户。 建议使用环境要求的最低级别权限来选择策略。  
   
 1.  **允许在本地登录**。 有关详细信息，请参阅 [允许在本地登录](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 为特定于报表的数据源配置存储的凭据（本机模式）  
   
-1.  在本机模式下的报表管理器中，浏览至包含该报表的文件夹。 单击项上下文菜单![ssrs 项的报表管理器中的上下文菜单](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "ssrs 项的报表管理器中的上下文菜单")。  
+1.  在本机模式下的报表管理器中，浏览至包含该报表的文件夹。 单击项上下文菜单 ![报表管理器中 ssrs 项的上下文菜单](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items")。  
   
 2.  单击“管理”  ，然后单击“数据源” 。  
   
@@ -73,19 +71,19 @@ ms.lasthandoff: 08/09/2017
   
 7.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，指定按以下格式：\<域 >\\< 帐户\>，然后选择**用作 Windows 凭据连接到数据源时。**  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”**。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”**。  
   
 8.  单击 **“应用”**。  
   
-     ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[存储的凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> 为特定于报表的数据源配置存储的凭据（SharePoint 模式）  
   
-1.  浏览到包含该报表的文档库，然后单击打开菜单![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")。  
+1.  浏览到包含该报表的文档库，然后单击打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")。  
   
-2.  单击第二个打开的菜单![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")，然后单击**管理数据源**。  
+2.  单击第二个打开菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击“管理数据源”。  
   
 3.  单击想要使用存储的凭据进行配置的“自定义”  数据源的名称。  
   
@@ -101,19 +99,19 @@ ms.lasthandoff: 08/09/2017
   
 7.  键入“用户名”  和“密码” 。  
   
-    -   如果帐户是 Windows 域用户帐户，指定按以下格式：\<域 >\\< 帐户\>，然后选择**用作 Windows 凭据连接到数据源时。**  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
   
     -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据” 。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”**。  
   
 8.  单击 **ok**。  
   
-     ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[存储的凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 为共享数据源配置存储凭据（本机模式）  
   
 1.  在本机模式下的报表管理器中，浏览至共享数据源项。 ![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
   
-2.  单击上下文菜单![ssrs 项的报表管理器中的上下文菜单](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "ssrs 项的报表管理器中的上下文菜单")，然后单击**管理**。  
+2.  单击上下文菜单 ![报表管理器中 ssrs 项的上下文菜单](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "context menu in report manager for ssrs items")，然后单击“管理”。  
   
 3.  在“数据源类型”  列表中，指定处理数据源的数据所用的数据处理扩展。  
   
@@ -127,19 +125,19 @@ ms.lasthandoff: 08/09/2017
   
 5.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，指定按以下格式：\<域 >\\< 帐户\>，然后选择**用作 Windows 凭据连接到数据源时。**  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”**。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”**。  
   
 6.  单击 **“应用”**。  
   
-     ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[存储的凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 为共享数据源配置存储凭据（SharePoint 模式）  
   
-1.  在文档库中，浏览到共享的数据源项。![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
+1.  在文档库中，浏览到共享数据源项。![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
   
-2.  单击上下文菜单![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")，然后单击第二个的上下文菜单![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "ssrs 项的文档库上下文菜单")。  
+2.  单击上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")，然后单击第二个上下文菜单 ![ssrs 项的文档库上下文菜单](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "document library context menu for ssrs items")。  
   
 3.  单击“编辑数据源定义” 。  
   
@@ -155,20 +153,19 @@ ms.lasthandoff: 08/09/2017
   
 6.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，指定按以下格式：\<域 >\\< 帐户\>，然后选择**用作 Windows 凭据。**  
+    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“用作 Windows 凭据”。  
   
     -   如果用户名和密码是数据库凭据，请勿选择“用作 Windows 凭据” 。 如果数据服务器支持模拟或委托，则可以选择“设置此帐户的执行上下文” 。  
   
 7.  单击 **“确定”**。  
   
-     ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[存储的凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ## <a name="see-also"></a>另请参阅  
- [指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [配置的报表 &#40; 数据源属性报表管理器 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [创建、 删除或修改共享的数据源 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [数据源属性页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [新数据源页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [“数据源”属性页（报表管理器）](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [“新建数据源”页（报表管理器）](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
-

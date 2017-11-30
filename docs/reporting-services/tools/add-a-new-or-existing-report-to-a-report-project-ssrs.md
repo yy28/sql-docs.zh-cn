@@ -1,5 +1,5 @@
 ---
-title: "向报表项目 (SSRS) 添加新的或现有报表 |Microsoft 文档"
+title: "向报表项目中添加新报表或现有报表 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- reports [Reporting Services], creating
+helpviewer_keywords: reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6edee3df21691e6f9e53a167bb1bd1bce502e76a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你可以通过使用报表向导或通过将新的空白报表添加到项目中来添加新的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
@@ -31,13 +29,13 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  若要使用现有数据源预览报表，您必须有权从报表创作客户端访问此数据源。 有关详细信息，请参阅 [数据连接、数据源和连接字符串](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
- 添加报表后，您可以定义数据源和数据集，并且可以设计报表布局。 开始使用，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)或[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)。  
+ 添加报表后，您可以定义数据源和数据集，并且可以设计报表布局。 要开始使用，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)或[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)。  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>使用报表向导添加新报表  
   
 1.  在解决方案资源管理器中，右键单击“报表”文件夹，然后单击“添加新报表”。 将打开 **“报表向导”** 对话框。  
   
-     向导将指导你完成创建数据源、 使用查询创建数据集，定义组，指定布局和创建报表。 这些步骤包括：  
+     该向导将指导你逐步完成以下操作：创建数据源，创建带查询的数据集，定义组，指定布局，以及创建报表。 这些步骤包括：  
   
     -   **选择数据源。** 创建报表的第一步是定义数据源。 报表向导提供了报表项目中的所有共享数据源的列表，此外还提供了选项，用于创建新数据源。  
   
@@ -67,7 +65,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

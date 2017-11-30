@@ -1,5 +1,5 @@
 ---
-title: "地图 （报表生成器和 SSRS） |Microsoft 文档"
+title: "地图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 46d27d3ff4f777c42ef3c9e79bf43d80edf3b1e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，可以向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/09/2017
 #### <a name="sources-of-spatial-data"></a>空间数据的来源  
  支持以下空间数据源：  
   
--   **地图库报表。** 空间数据嵌入在位于地图库中的报表内。 默认情况下，地图库安装在*\<驱动器 >*: files\microsoft SQL Server\Report 生成器 \MapGallery。  
+-   **地图库报表。** 空间数据嵌入在位于地图库中的报表内。 默认情况下，地图库安装在下面的位置：\<drive>:\Program Files\Microsoft SQL Server\Report Builder \MapGallery。  
   
     > [!NOTE]  
     >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 许可的 TIGER/Line 形状文件。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
@@ -261,4 +260,3 @@ ms.lasthandoff: 08/09/2017
  [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

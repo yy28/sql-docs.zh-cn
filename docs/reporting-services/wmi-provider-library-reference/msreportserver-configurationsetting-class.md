@@ -1,5 +1,5 @@
 ---
-title: "MSReportServer_ConfigurationSetting 类 |Microsoft 文档"
+title: "MSReportServer_ConfigurationSetting 类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_ConfigurationSetting Class
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_ConfigurationSetting Class
+apilocation: reportingservices.mof
 apitype: MOFDef
 helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fafb0a0252f8aa4f39a4ada65f1b22490690f95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
   表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。  
@@ -50,7 +47,7 @@ public class MSReportServer_ConfigurationSetting
  此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
 ## <a name="example"></a>示例  
- 若要运行下面的代码，添加你的服务器名称代替每\< *servername*>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 *MSReportServer_ConfigurationSetting* 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
+ 若要运行下面的代码，请添加服务器名称来取代每个 \<servername>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 *MSReportServer_ConfigurationSetting* 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
   
 ```vb  
 Imports System  
@@ -183,4 +180,3 @@ class Class1
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

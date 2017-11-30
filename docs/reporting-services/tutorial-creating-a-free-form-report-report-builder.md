@@ -1,27 +1,25 @@
 ---
-title: "教程： 创建自由格式的报表 （报表生成器） |Microsoft 文档"
+title: "教程：创建自由格式的报表（报表生成器） | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: eeb53cfbcf47af7c3580cb75b34acaf0f140810d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。
@@ -60,9 +58,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
-4.  验证连接类型是 Microsoft SQL Server，然后在**连接字符串**框中，键入：**数据源 =\<服务器名 >**  
+4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>  
   
-    **\<服务器名 >**，对于示例 Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 因为此报表的数据不是从 SQL Server 数据库中提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库仅用于对查询进行分析。  
+    \<servername>（例如，Report001）指定安装了 SQL Server Database Engine 的实例的计算机。 因为此报表的数据不是从 SQL Server 数据库中提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库仅用于对查询进行分析。  
   
 5.  单击 **“凭据”**，然后输入连接至 SQL Server 数据库引擎实例所需的凭据。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在“报表数据”窗格中，单击“新建” > “数据集”。  
   
-2.  在**名称**框中，键入： **ListDataset**。  
+2.  在“名称”框中，键入：ListDataset。  
   
 3.  单击“使用在我的报表中嵌入的数据集” ，然后验证数据源是否为 **ListDataSource**。  
   
@@ -115,7 +113,7 @@ ms.lasthandoff: 08/09/2017
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity  
     ```  
   
-7.  单击**运行**图标 （！） 以运行查询。  
+7.  单击“运行”图标 (!) 以运行查询。  
   
     查询结果将是可用于在您的报表中显示的数据。  
   
@@ -130,14 +128,14 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-list"></a>添加列表  
   
-1.  上**插入**选项卡 >**数据区域** > **列表**。 
+1.  在“插入”选项卡 >“数据区域” > “列表”上。 
 
-2. 在表体（标题和页脚区域之间）内单击，然后拖动生成列表框。 将列表框设为 7 英寸高，6.25 英寸宽。 若要获取的确切大小，在**属性**窗格中，在**位置**，键入值**宽度**和**高度**属性。
+2. 在表体（标题和页脚区域之间）内单击，然后拖动生成列表框。 将列表框设为 7 英寸高，6.25 英寸宽。 若要获取确切大小，请在“位置”下的“属性”窗格中，键入“宽度”和“高度”属性的值。
   
     > [!NOTE]  
     > 此报表使用纸张大小 Letter (8.5 X11) 以及 1 英寸的边距。 高于 9 英寸或宽于 6.5 英寸的列表框可能会生成空白页。  
   
-2.  列表框内单击，右键单击顶部栏会在的列表，然后单击**Tablix 属性**。  
+2.  单击列表框内部，然后右键单击列表顶部栏，单击“Tablix 属性”。  
   
     ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  在列表内右键单击，然后单击 **“矩形属性”**。  
   
-6.  上**常规**选项卡上，选择**添加分页符后的**复选框。  
+6.  在“常规”选项卡上，选中“在组件后面添加分页符”复选框。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
-2.  在**分组依据**列表中，选择`[Territory].`  
+2.  在“分组依据”列表中，选择 `[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,9 +165,9 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
-5.  选择**仅删除列**。  
+5.  选择“仅删除列”。  
   
-6.  在行组窗格中，右键单击**详细信息**组 >**删除组**。  
+6.  在“行组”窗格中，右键单击“详细信息”组，然后单击“删除组”。  
    
 7.  选择“仅删除组”。  
   
@@ -180,15 +178,15 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>向报表添加图形元素  
   
-1.  上**插入**选项卡上，选择**矩形**。 
+1.  在“插入”选项卡上，选择“矩形”。 
 
-2. 单击列表的左上角，然后通过拖动将矩形设为 7 英寸高，3.5 英寸宽。 同样，若要获取的确切大小，在**属性**窗格中，在**位置**，键入值**宽度**和**高度**。
+2. 单击列表的左上角，然后通过拖动将矩形设为 7 英寸高，3.5 英寸宽。 同样，若要获取精确大小，请在“位置”下的“属性”窗格中，键入“宽度”和“高度”的值。
   
-2.  右击该矩形 >**矩形属性**。  
+2.  右键单击该矩形，然后单击“矩形属性”。  
   
 3.  单击 **“填充”** 选项卡。  
   
-4.  在**填充颜色**，选择**浅灰色**。  
+4.  在“填充颜色”中，选择“浅灰色”。  
    
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -205,11 +203,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  上**插入**选项卡 >**文本框**。 在列表左上角的之前添加的矩形内部单击，通过拖动将文本框设为约 3.45 英寸宽，5 英寸高。  
+2.  在“插入”选项卡 >“文本框”上。 在列表左上角的之前添加的矩形内部单击，通过拖动将文本框设为约 3.45 英寸宽，5 英寸高。  
   
 3.  将光标置于文本框中，然后键入 **Newsletter for** 。 在“for”一词后包括一个空格，以将文本与将要在下一步中添加的字段分隔开来。   
   
-    ![添加时事通讯标题文本](../reporting-services/media/tutorial-newsletterfor.png "添加时事通讯标题文本")  
+    ![添加新闻稿标题文本](../reporting-services/media/tutorial-newsletterfor.png "添加新闻稿标题文本")  
   
 4.  将“ `[Territory]` ”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Newsletter for ”后面。  
   
@@ -217,11 +215,11 @@ ms.lasthandoff: 08/09/2017
   
 5.  选择文本和“ `[Territory]` ”字段。  
   
-6.  上**主页**选项卡 >**字体**，选择： 
+6.  在“主文件夹”选项卡的“字体”上，选择： 
   
-    *  **Segoe 半粗体**。
-    *  **20 pt**。
-    *  **Tomato**。  
+    *  “Segoe Semibold”。
+    *  “20 磅”。
+    *  “番茄色”。  
   
 9. 将光标置于步骤 3 中键入的文本下方，然后键入 **Hello** 并在该词后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。  
  
@@ -229,11 +227,11 @@ ms.lasthandoff: 08/09/2017
    
 11. 选择在之前步骤中添加的文本。
   
-12. 上**主页**选项卡 >**字体**，选择： 
+12. 在“主文件夹”选项卡的“字体”上，选择： 
   
-    *  **Segoe 半粗体**。
-    *  **16 pt**。
-    *  **黑色**。  
+    *  “Segoe Semibold”。
+    *  “16 磅”。
+    *  “黑色”。  
    
 15. 将光标置于在步骤 9 到 13 中添加的文本下方，然后复制并粘贴以下无意义文本：  
   
@@ -246,11 +244,11 @@ ms.lasthandoff: 08/09/2017
   
 16. 选择刚才添加的文本。  
   
-17.  上**主页**选项卡 >**字体**，选择： 
+17.  在“主文件夹”选项卡的“字体”上，选择： 
   
-      *  **Segoe UI**。
-      *  **10pt**。
-      *  **黑色**。  
+      *  “Segoe UI”。
+      *  “10 磅”。
+      *  “黑色”。  
  
 20. 将光标置于文本框内无意义文本的下方，然后键入 **Congratulations on your total sales of**并在文本后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。 
   
@@ -258,15 +256,15 @@ ms.lasthandoff: 08/09/2017
 
 25. 选择刚才添加的文本和字段。  
   
-17.  上**主页**选项卡 >**字体**，选择： 
+17.  在“主文件夹”选项卡的“字体”上，选择： 
   
-      *  **Segoe 半粗体**。
-      *  **16 pt**。
-      *  **黑色**。  
+      *  “Segoe Semibold”。
+      *  “16 磅”。
+      *  “黑色”。  
   
-22. 选择刚刚`[Sales]`字段中，右键单击该字段 >**表达式**。  
+22. 仅选择“`[Sales]`”字段，右键单击该字段，然后单击“表达式”。  
   
-23. 在**表达式**框中，更改该表达式以便包括 Sum 函数，如下所示：  
+23. 在“表达式”框中，更改表达式以便包括 Sum 函数，如下所示：  
   
     ```  
     =Sum(Fields!Sales.value)  
@@ -276,7 +274,7 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. 与`[Sum(Sales)]`仍然选择，在**主页**选项卡 >**数**组 >**货币**。  
+29. 仍然选择“`[Sum(Sales)]`”，在“主文件夹”选项卡上，依次单击“数字”组和“货币”。  
   
 30. 右键单击包含“单击以添加标题”文本的文本框，然后单击 **“删除”**。  
   
@@ -295,21 +293,21 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-table"></a>添加表  
   
-1.  上**插入**选项卡 >**数据区域**区域 >**表** > **表向导**。  
+1.  在“插入”选项卡上，依次单击“数据区域”区域 >“表” > “表向导”。  
   
-2.  上**选择的数据集**页上，单击**ListDataset** > **下一步**。  
+2.  在“选择数据集”页上，单击“ListDataset” > “下一步”。  
   
-4.  上**排列字段**页上，将从该产品字段拖动**可用字段**到**值。**  
+4.  在“排列字段”页上，将“Product”字段从“可用字段”拖到“值”中。  
   
 5.  对“SalesDate”、“Quantity”和“Sales”重复步骤 3。 将 SalesDate 放置于 Product 之下，将 Quantity 放置于 SalesDate 之下，并且将 Sales 放置于 SalesDate 之下。  
   
-6.  单击“下一步” 。  
+6.  单击 **“下一步”**。  
   
 7.  在 **“选择布局”** 页上，查看表的布局。  
   
     这个表很简单：只有五列，没有行或列组。 因为它不具有组，所以与组相关的布局选项不可用。 您将手动更新该表以便包括本教程后面部分中的总计。  
   
-8.  单击“下一步” 。  
+8.  单击 **“下一步”**。  
   
 9. 单击 **“完成”**。  
   
@@ -318,7 +316,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     > 确保该表位于列表框和灰色矩形内部。  
   
-12. 与选择，在表**行组**窗格中右键单击**详细信息** > **添加总计** > **后**。  
+12. 选中该表，在“行组”窗格中右键单击“详细信息” > “添加总计” > “之后”。  
   
     ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
   
@@ -326,9 +324,9 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. 选择“[SalesDate]”字段。 上**主页**选项卡 >**数**，更改**默认**到**日期**。
+12. 选择“[SalesDate]”字段。 在“主文件夹”选项卡上，单击“数字”，将“默认值”更改为“Date”。
 
-13. 选择“[Sum(Sales)]”字段。 上**主页**选项卡 >**数**，更改**默认**到**货币**。
+13. 选择“[Sum(Sales)]”字段。 在“主文件夹”选项卡上，单击“数字”，将“默认值”更改为“Currency”。
 
 单击 **“运行”** 以预览报表。  
   
@@ -374,12 +372,12 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  上**插入**选项卡 >**报表项** > **行。**  
+2.  在“插入”选项卡上，单击“报表项” > “线条”。  
   
 3.  在第 4 课中添加的文本框下方画一条线。  
   
-4.  单击行，然后在**主页**选项卡 >**边框**，选择：
-     * **宽度**选择**3** pt。
+4.  单击这条线，然后在“主文件夹”选项卡上单击“边框”，选择以下各项：
+     * “宽度”：选择“3 磅”。
      * “颜色”选择“番茄色”。  
   
 ## <a name="Visualization"></a>8.（可选）添加汇总数据可视化  
@@ -389,7 +387,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  上**插入**选项卡 >**报表项** >  **矩形**。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
+2.  在“插入”选项卡上，单击“报表项” >  “矩形”。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
   
 3.  选中新矩形，在“属性”窗格中，将 **边框颜色设为浅灰色**、 **边框样式设为纯色**以及 **边框宽度设为 2 磅**。 
 
@@ -397,15 +395,15 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-pie-chart"></a>添加饼图  
   
-1.  上**插入**选项卡 >**数据可视化效果** > **图表** > **图表向导**。  
+1.  在“插入”选项卡上，单击“数据可视化” > “图表” > “图表向导”。  
   
-2.  上**选择的数据集**页上，单击**ListDataset** > **下一步**。  
+2.  在“选择数据集”页上，单击“ListDataset” > “下一步”。  
   
-3.  单击**饼图** > **下一步**。  
+3.  单击“饼图” > “下一步”。  
   
-4.  在排列图表的字段页上，拖动到的产品**类别**。  
+4.  在“排列图表字段”页上，将“Product”拖到“类别”中。  
   
-5.  拖动 Quantity to**值**，然后单击**下一步**。  
+5.  将“Quantity”拖到“值”中，然后单击“下一步”。  
   
 6.  单击 **“完成”**。  
   
@@ -415,14 +413,14 @@ ms.lasthandoff: 08/09/2017
    
 10. 选择图表标题，然后键入 **Product Quantities Sold**。  
   
-12. 上**主页**选项卡 >**字体**，使标题：
-    * **字体** **Segoe UI 半粗体**。
-    * **大小** **12 pt**。
-    * **颜色****黑色**。  
+12. 在“开始”选项卡的“字体”上，对标题进行以下设置：
+    * “字体”设为“Segoe UI Semibold”。
+    * “大小”设为“12 磅”。
+    * “颜色”设为“黑色”。  
 
-13. 右键单击图例 >**图例属性**。
+13. 右键单击图例，然后单击“图例属性”。
 
-14. 上**常规**选项卡上，在**图例位置**，选择底部的中心点。 
+14. 在“常规”选项卡的“图例位置”下，选择底部的中心点。 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -432,15 +430,15 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-column-chart"></a>添加柱形图  
   
-1.  上**插入**选项卡 >**数据可视化效果** > **图表，** > **图表向导**。  
+1.  在“插入”选项卡上，单击“数据可视化” > “图表” > “图表向导”。  
   
-2.  上**选择的数据集**页上，单击**ListDataset**，然后单击**下一步**。  
+2.  在“选择数据集”页上，单击“ListDataset”，然后单击“下一步”。  
   
-3.  单击**列**，然后单击**下一步**。  
+3.  单击“柱形图”，然后单击“下一步”。  
   
-4.  上**排列图表字段**页上，产品将字段拖动到**类别**。  
+4.  在“排列图表字段”页上，将“Product”字段拖到“类别”窗格中。  
   
-5.  拖动到销售**值，** ，然后单击**下一步**。  
+5.  将“Sales”拖到“值”中，然后单击“下一步”。  
   
     “值”显示在垂直轴上。  
   
@@ -454,10 +452,10 @@ ms.lasthandoff: 08/09/2017
    
 10. 选择图表标题，然后键入 **Product Sales**。  
   
-12. 上**主页**选项卡 >**字体**，使标题：
-    * **字体** **Segoe UI 半粗体**。
-    * **大小** **12 pt**。
-    * **颜色****黑色**。  
+12. 在“开始”选项卡的“字体”上，对标题进行以下设置：
+    * “字体”设为“Segoe UI Semibold”。
+    * “大小”设为“12 磅”。
+    * “颜色”设为“黑色”。  
   
 15. 右键单击图例，然后单击 **“删除图例”**。  
   
@@ -466,7 +464,7 @@ ms.lasthandoff: 08/09/2017
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 选择图表轴，然后在*主页** 选项卡 >**数** > **货币**。
+12. 选择图表轴，然后在“主文件夹”选项卡上单击“数字” > “货币”。
 
 13. 选择“减少小数位数”两次，以便数字仅显示美元，而不显示美分。      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>确认图表位于矩形内  
@@ -494,7 +492,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  选择饼图，按下 Ctrl 键，然后选择柱形图。  
   
-2.  选择这两个图表，用鼠标右键单击 >**布局** > **使宽度相同**。  
+2.  选中两个图表，然后右键单击“布局” > “使宽度相同”。  
   
     > [!NOTE]  
     > 你首先单击的项决定所有选定项的宽度。  
@@ -513,10 +511,9 @@ ms.lasthandoff: 08/09/2017
 * [创建带列表的发票和表单](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-有关查询设计器的详细信息，请参阅[查询设计器 &#40;报表生成器 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)和[基于文本的查询设计器用户界面 &#40;报表生成器 &#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+有关查询设计器的详细信息，请参阅[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)和[基于文本的查询设计器用户界面（报表生成器）](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
   
-
 

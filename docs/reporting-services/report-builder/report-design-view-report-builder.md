@@ -1,5 +1,5 @@
 ---
-title: "报表设计视图 （报表生成器） |Microsoft 文档"
+title: "报表设计视图（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助轻松组织报表资源并快速生成所需分页报表。 设计图面位于窗口中心，周围是功能区和窗格。 设计图面用于添加和组织报表项。 本文说明用于添加、选择和组织报表资源，以及更改报表项属性的窗格。  
   
- ![报表生成器设计视图](../../reporting-services/report-builder/media/ssrb-designview.png "报表生成器设计视图")  
+ ![报表生成器设计视图](../../reporting-services/report-builder/media/ssrb-designview.png "Report Builder Design View")  
   
 1.  功能区  
   
@@ -65,15 +65,15 @@ ms.lasthandoff: 08/09/2017
   
  还可以更改以下项：  
   
--   表体属性，如边框和填充的颜色，通过右键单击设计图面上，任何报表项，外部的空白区域单击**正文属性**。  
+-   表体属性（如边框和填充颜色），方法是右键单击设计图面上所有报表项以外的白色区域，再单击“表体属性”。  
   
--   页眉和页脚的属性，如边框和填充的颜色，通过右键单击任何报表项外的页眉或页脚区域中的设计图面的空白区域单击**标头属性**或**页脚属性**。  
+-   表头和表尾属性（如边框和填充颜色），方法是右键单击设计图面上表头和表尾区域中所有报表项以外的白色区域，再单击“表头属性”或“表尾属性”。  
   
--   报表的属性本身，例如页面设置，通过右键单击设计图面周围的灰色区域并单击**报表属性**。  
+-   报表自身的属性（如页面设置），方法是右键单击设计图面周围的蓝色区域，再单击“报表属性”。  
   
--   通过右键单击它们，并单击报表项的属性**属性**。  
+-   报表项的属性，方法是右键单击它们，再单击“属性”。  
   
- 有关使用键盘来操作设计图面上的信息，请参阅[键盘快捷方式 &#40;报表生成器 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ 有关使用键盘操作设计图面上的项的信息，请参阅[键盘快捷方式（报表生成器）](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>设计图面大小和打印区域  
  设计图面大小可能与您指定用来打印报表的打印区域的页面大小不同。 更改设计图面的大小将不会更改报表的打印区域。 不论您为报表的打印区域设置何种大小，整个设计区域的大小都不会改变。 有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/09/2017
  在您向报表设计图面中添加某些项时，这些项也会自动添加到“报表数据”窗格中。 例如，如果您从“报表部件库”添加一个报表部件，该报表部件是一个数据区域，则数据集会自动添加到“报表数据”窗格中。 有关详细信息，请参阅 [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。 另外，如果您在报表中嵌入一个图像，则该图像将添加到“报表数据”窗格的“图像”文件夹中。  
   
 > [!NOTE]  
->  您可以使用 **“新建”** 按钮向“报表数据”窗格添加新项。 您可以从同一数据源或其他数据源向报表添加多个数据集。 可以从报表服务器添加共享数据集。 若要从同一数据源添加新的数据集，右键单击数据源，并依次**添加数据集**。  
+>  您可以使用 **“新建”** 按钮向“报表数据”窗格添加新项。 您可以从同一数据源或其他数据源向报表添加多个数据集。 可以从报表服务器添加共享数据集。 若要从同一数据源添加新数据集，请右键单击某个数据源，然后单击“添加数据集”。  
   
  有关“报表数据”窗格中各项的详细信息，请参阅以下主题：  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="ReptPartGallery"></a> 报表部件库  
  创建报表的最简单方式是在该报表服务器或集成到 SharePoint 站点的报表服务器上查找现有报表部件（如表或图表）。  
   
- 单击**报表部件**在插入选项卡上，若要打开报表部件库。 可以在曲终搜索要添加到报表中的报表部件。 可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
+ 单击“插入”选项卡上的“报表部件”打开报表部件库。 可以在曲终搜索要添加到报表中的报表部件。 可以按照报表部件的全名或部分名称、创建者、最后修改者、最后修改时间、存储位置以及报表部件的类型，对报表部件进行筛选。 例如，您可以搜索由您的同事之一在上周创建的所有图表。  
   
 > [!NOTE]  
 >  要查看报表部件库，需要连接到服务器。  
@@ -152,11 +152,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="GroupPane"></a> “分组”窗格 (Report Builder)  
  使用组可以将报表数据组织成可视层次结构，也可以计算总计。 可以在设计图面上或“分组”窗格中查看数据区域内的行组和列组。 “分组”窗格有两个窗格：“行组”和“列组”。 选定数据区域后，“分组”窗格会将该数据区域内的所有组显示为一个层次结构列表；子组以缩进的方式显示在其父组下方。  
   
- ![报表生成器行组](../../reporting-services/report-builder/media/ssrb-rowgroups.png "报告生成器行组")  
+ ![报表生成器行组](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Report Builder Row Groups")  
   
  可通过将字段从“报表数据”窗格中拖放到设计图面上或“分组”窗格中来创建组。 在“分组”窗格中，可以添加父组、相邻组和子组，更改组属性以及删除组。  
   
- 默认情况下会显示“分组”窗格，但可以通过在“视图”选项卡上清除“分组窗格”复选框来关闭该窗格。 “分组”窗格对“图表”或“仪表”数据区域不可用。  
+ 默认情况下会显示“分组”窗格，但可以通过在“视图”选项卡上清除“分组窗格”复选框来关闭该窗格。“分组”窗格对“图表”或“仪表”数据区域不可用。  
   
  有关详细信息，请参阅[“分组”窗格（报表生成器）](../../reporting-services/report-design/grouping-pane-report-builder.md)和[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
@@ -169,10 +169,10 @@ ms.lasthandoff: 08/09/2017
  阅读有关 [在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)的详细信息。  
   
 ### <a name="running-a-report-with-parameters"></a>使用参数运行报表  
- 当您运行报表时，该报表会自动进行处理。 如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，需要为参数选择一个值，然后在“运行”选项卡上单击 **“查看报表”** 。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
+ 当您运行报表时，该报表会自动进行处理。 如果报表中包含参数，则只有在所有参数都具有默认值的情况下，该报表才能自动运行。 如果某个参数没有默认值，当运行报表时，需要为参数选择一个值，然后在“运行”选项卡上单击 **“查看报表”** 。有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ### <a name="print-preview"></a>打印预览  
- 在“运行”模式下预览报表时，报表像是以 HTML 格式生成的报表。 虽然预览并非 HTML 格式，但报表的布局和分页与 HTML 格式的输出结果类似。 可通过切换到打印预览模式，查看报表的打印效果。 单击 **“运行”** 选项卡上的 **“打印预览”** 按钮。 所显示的报表就如同打印在纸张上一样。 此视图与图像呈现扩展插件和 PDF 呈现扩展插件所生成的输出类似。 虽然打印预览并非图像或 PDF 文件，但报表的布局和分页与这些格式的输出类似。  
+ 在“运行”模式下预览报表时，报表像是以 HTML 格式生成的报表。 虽然预览并非 HTML 格式，但报表的布局和分页与 HTML 格式的输出结果类似。 可通过切换到打印预览模式，查看报表的打印效果。 单击 **“运行”** 选项卡上的 **“打印预览”** 按钮。所显示的报表就如同打印在纸张上一样。 此视图与图像呈现扩展插件和 PDF 呈现扩展插件所生成的输出类似。 虽然打印预览并非图像或 PDF 文件，但报表的布局和分页与这些格式的输出类似。  
   
   
 ## <a name="see-also"></a>另请参阅  

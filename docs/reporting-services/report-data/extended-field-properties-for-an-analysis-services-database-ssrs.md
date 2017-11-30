@@ -1,5 +1,5 @@
 ---
-title: "扩展字段属性，Analysis services 数据库 (SSRS) |Microsoft 文档"
+title: "Analysis Services 数据库的扩展字段属性 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d3cd894cfb7466ae39ac921b8b3405da6c2e77a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 **Value** 和 **IsMissing** 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以通过编写使用内置 **Fields** 集合按名称指定扩展字段属性值的表达式，来将这些扩展字段属性值包含在报表中。  
   
  扩展属性包括预定义属性和自定义属性。 预定义属性是多个数据源中通用的属性，它们映射到特定字段属性名称并可通过内置 **Fields** 集合按名称进行访问。 自定义属性是特定于每个数据提供程序的属性，只能通过内置 **Fields** 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
- 在图形模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询设计器定义查询时，一组预定义的单元属性和维度属性会自动添加到 MDX 查询。 您只能使用在您的报表的 MDX 查询中专门列出的扩展属性。 根据您的报表，可能需要修改默认 MDX 命令文本才能包含多维数据集中定义的其他维度或自定义属性。 有关详细信息中提供的扩展字段[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源，请参阅[创建和使用属性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ 在图形模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询设计器定义查询时，一组预定义的单元属性和维度属性会自动添加到 MDX 查询。 您只能使用在您的报表的 MDX 查询中专门列出的扩展属性。 根据您的报表，可能需要修改默认 MDX 命令文本才能包含多维数据集中定义的其他维度或自定义属性。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源中的可用扩展字段的详细信息，请参阅[创建和使用属性值 (MDX)](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>在报表中使用字段属性  
  扩展字段属性包括预定义属性和数据访问接口特定属性。 即使字段属性位于为数据集生成的查询中，它们也不会与字段列表一起显示在 **“报表数据”** 窗格中，因此，不能将字段属性拖至报表设计图面中。 相反，您必须将字段拖至报表，然后将字段的 **Value** 属性更改为要使用的属性。 例如，如果已设置多维数据集的单元格数据的格式，则可以通过表达式 `=Fields!FieldName.FormattedValue`，来使用 FormattedValue 字段属性。  
@@ -156,8 +155,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [表达式 &#40; 中的内置集合报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-

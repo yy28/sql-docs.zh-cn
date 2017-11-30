@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Active
+ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 配置文件
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]RsReportServer.config 文件存储报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -77,8 +77,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|否|  
 |**CleanupCycleMinutes**|指定多少分钟后从报告服务器数据库删除旧会话和过期快照。 有效值的范围为 0 到最大整数之间。 默认值为 10。 如果将值设置为 0，将禁止数据库清除进程。|N,S|  
 |**MaxActiveReqForOneUser**|指定一个用户可以同时处理的报表的最大数目。 达到此限制之后，将拒绝进一步的报表处理请求。 有效值介于 1 和最大整数之间。 默认值为 20。<br /><br /> 注意，大多数请求都处理得非常快，因此单个用户在任意给定时间都不太可能拥有 20 个以上的打开连接。 如果用户同时打开了 15 个以上的占用大量进程的报表，则最好增大此值。<br /><br /> 对于在 SharePoint 集成模式下运行的报表服务器，将忽略此设置。|N,S|  
-|**MaxActiveReqForAnonymous**|指定的最大可以在同一时间是在进程中的匿名请求数。 一旦达到该限制，进一步将拒绝处理请求。 有效值介于 1 和最大整数之间。 預設值是 200。
-|**DatabaseQueryTimeout**|指定多少秒后与报表服务器数据库的连接超时。 此值将传递到 System.Data.SQLClient.SQLCommand.CommandTimeout 属性。 有效值的范围为 0 到 2147483647。 默认值为 120。 值 0 表示等待时间无限制，因此并不推荐使用该值。|否|  
+|MaxActiveReqForAnonymous|指定可以同时处理的匿名请求的最大数目。 达到此限制之后，将拒绝进一步的处理请求。 有效值介于 1 和最大整数之间。 默认值为 200。
+|**DatabaseQueryTimeout**|指定多少秒后与报表服务器数据库的连接超时。此值将传递到 System.Data.SQLClient.SQLCommand.CommandTimeout 属性。 有效值的范围为 0 到 2147483647。 默认值为 120。 值 0 表示等待时间无限制，因此并不推荐使用该值。|否|  
 |**AlertingCleanupCycleMinutes**|默认值为 20。<br /><br /> 确定清理在警报数据库中存储的临时数据的频率。|S|  
 |**AlertingDataCleanupMinutes**|默认值为 360。<br /><br /> 确定用于创建或编辑警报定义的会话数据在警报数据库内保留多长时间。 默认值为 6 小时。|S|  
 |**AlertingExecutionLogCleanup**Minutes|默认值为 10080。<br /><br /> 确定保留多长时间的警报执行日志值。 默认值为 7 天。|S|  
@@ -169,7 +169,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxQueueThreads**|指定报表服务器 Windows 服务同时处理订阅和通知所用的线程数。 有效值的范围为 0 到最大整数之间。 默认值为 0。 如果选择了 0，报表服务器将确定最大的线程数。 如果指定了某个整数，则所指定的值将设置可以同时创建的线程数的上限。 有关报表服务器 Windows 服务如何针对运行中的进程管理内存的详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。|N,S|  
 |**UrlRoot**|此设置由报表服务器传递扩展插件使用，用来编写在电子邮件和文件共享订阅中传递的报表使用的 URL。 它必须是有效的指向报表服务器的 URL 地址，通过该地址可以访问已发布的报表。 报表服务器使用此设置生成供脱机访问或以无人参与方式访问的 URL。 这些 URL 用于导出的报表中，传递扩展插件使用它们来编写包含在传递消息（例如电子邮件中的链接）中的 URL。 报表服务器基于以下行为确定报表中的 URL：<br /><br /> 如果 **UrlRoot** 为空（默认值）且存在 URL 保留项，则报表服务器会自动确定 URL，其方式与 ListReportServerUrls 方法生成 URL 的方式相同。 将使用 ListReportServerUrls 方法返回的第一个 URL。 或者，如果 SecureConnectionLevel 大于零 (0)，则使用第一个 SSL URL。<br /><br /> 如果将 **UrlRoot** 设置为一个特定值，则会使用显式值。<br /><br /> 如果 **UrlRoot** 为空且未配置任何 URL 保留，则所呈现的报表和电子邮件链接中的 URL 是不正确的。|N,S|  
 |**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|否|  
-|**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rssrvrpolicy.config。 有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|N,S|  
+|**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rssrvrpolicy.config。有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|N,S|  
 |**IsWebServiceEnabled**|指定报表服务器 Web 服务是否响应 SOAP 和 URL 访问请求。 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用服务时，设置此值。|N,S|  
 |**IsReportManagerEnabled**|从 SQL Server 2016 Reporting Services 累积更新 2 开始已弃用此设置。 将始终启用 Web 门户。|否|  
 |**FileShareStorageLocation**|指定文件系统中用于存储临时快照的单个文件夹。 尽管可以将文件夹路径指定为 UNC 路径，但不建议您这样做。 默认值为空。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
@@ -250,7 +250,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SMTPServer**|指定用于指示远程 SMTP 服务器或转发器的地址的字符串值。 对于远程 SMTP 服务，必须指定此值。 它可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。|  
 |**SMTPServerPort**|指定一个整数值，该值指示 SMTP 服务用来发送外发邮件的端口。 端口 25 通常用于发送电子邮件。|  
 |**SMTPAccountName**|包含用于分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook Express 帐户名的字符串值。 如果已将 SMTP 服务器配置为以某种方式使用该帐户名，则可设置此值，否则可将此项保留为空白。 使用 **From** 指定用于发送报表的电子邮件帐户。|  
-|**SMTPConnectionTimeout**|指定一个整数值，表示与 SMTP 服务的有效套接字连接等待多少秒后才会超时。 默认值为 30 秒，但如果 **SendUsing** 设置为 2，则将忽略此值。|  
+|**SMTPConnectionTimeout**|指定一个整数值，表示与 SMTP 服务的有效套接字连接等待多少秒后才会超时。默认值为 30 秒，但如果 **SendUsing** 设置为 2，则将忽略此值。|  
 |**SMTPServerPickupDirectory**|指定表示本地 SMTP 服务的拾取目录的字符串值。 此值必须为完全限定的本地文件夹路径（例如，d:\rs-emails）。|  
 |**SMTPUseSSL**|指定一个布尔值，通过设置该值可以在通过网络发送 SMTP 消息时使用安全套接字层 (SSL)。 默认值为 0（或 False）。 当 **SendUsing** 元素设置为 2 时可以使用此设置。|  
 |**SendUsing**|指定发生消息所使用的方法。 有效值为<br /><br /> 1=通过本地 SMTP 服务拾取目录发送消息。<br /><br /> 2=通过网络 SMTP 服务发送消息。|  
@@ -847,7 +847,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

@@ -5,8 +5,7 @@ ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,23 +17,24 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9acd28a1480da44ca385a405a72269c124d4bd7c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
-ms.openlocfilehash: c314a49371def978bf695970694b697fded976c3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
   启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
   
 > [!WARNING]  
 >  错误地使用启动选项可能会影响服务器性能并且可能阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动。  
+>
+>  使用“mssql”用户启动 Linux 上的 SQL Server 以防止将来的启动问题。 例如，“sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]” 
   
 ## <a name="about-startup-options"></a>关于启动选项  
  安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，安装程序会将一组默认的启动选项写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 注册表。 可以使用这些启动选项指定备用的 master 数据库文件、master 数据库日志文件或错误日志文件。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 找不到所需文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不启动。  
@@ -84,4 +84,3 @@ ms.lasthandoff: 09/22/2017
  [sqlservr Application](../../tools/sqlservr-application.md)  
   
   
-

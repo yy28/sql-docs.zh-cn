@@ -1,5 +1,5 @@
 ---
-title: "呈现数据区域 （报表生成器和 SSRS） |Microsoft 文档"
+title: "呈现数据区域（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99ca6c9509f25c118931ccab981987b3427e4b2d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fdbf64f9ab101eccfc3cfb4fdbf70d73a04fb3b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>呈现数据区域（报表生成器和 SSRS）
   除了适用于所有报表项的常规呈现行为外，数据区域还要遵循其他一些分页和呈现行为。 特定于数据区域的呈现规则包括数据区域如何增长，如何呈现特殊的单元（如角单元或标题单元）以及如何呈现从右向左读的数据区域。 本主题将介绍如何呈现数据区域的各个部分。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
  组上的逻辑分页符不会导致外部组标题断开。 例如，假定报表具有国家这一外部组和国家地区这一内部组。 如果在国家地区组的实例之间存在逻辑分页符，则报表的两页上都会显示国家这一外部组。  
   
 #### <a name="repeated-tablix-headers"></a>重复的 Tablix 标题  
- 当 RepeatWith 属性设置中进行**属性**呈现数据区域的位置每一页上重复窗格中，不会在数据区域中，列标题，如更改的项。 例如，如果某行数据显示在下一页并且设置了 Repeat With 属性，则列标题也会显示在呈现的页上。  
+ 在“属性”窗格中设置 RepeatWith 属性时，在数据区域内不会改变的项（例如列标题）将会在呈现该部分数据区域的每页上重复显示。 例如，如果某行数据显示在下一页并且设置了 Repeat With 属性，则列标题也会显示在呈现的页上。  
   
 ### <a name="tablix-corner"></a>Tablix 角  
  左上角称为 Tablix 角。 Tablix 角内可以包含其他报表项，但如果在这种角内插入逻辑分页符，则在呈现 Tablix 数据区域时，将会忽略这些分页符。  
@@ -53,13 +52,12 @@ ms.lasthandoff: 08/09/2017
  图表、仪表和映射数据区域在表体中呈现和显示时其行为与图像的行为类似。 数据区域内的值可以具有关联的操作，例如链接到其他报表或转至书签；并且如果呈现器支持，这些操作也可以呈现出来。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services &#40; 中的分页报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展 &#40; 的交互功能报表生成器和 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

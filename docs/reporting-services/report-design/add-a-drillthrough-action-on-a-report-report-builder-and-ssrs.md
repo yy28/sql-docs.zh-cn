@@ -1,5 +1,5 @@
 ---
-title: "在报表 （报表生成器和 SSRS） 上添加钻取操作 |Microsoft 文档"
+title: "在报表中添加钻取操作（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aea97d13582353816693b5e1a2345001071c685b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在报表中添加钻取操作（报表生成器和 SSRS）
   单击主报表中的链接时打开的报表称为“钻取报表” 。 此钻取链接启用了一个钻取操作。  
   
  钻取报表必须发布到与主报表相同的报表服务器上，但可位于不同的文件夹中。 可以向具有 **“操作”** 属性的任何项添加钻取链接，例如文本框、图像或图表中的数据点。  
   
- 若要为某个报表添加钻取链接，必须首先创建主报表将链接到的钻取报表。 钻取报表通常包含原始摘要报表中包含的某项的详细信息，并且经常包含一些参数，将基于从主报表传递给钻取报表的这些参数来筛选钻取报表。 有关创建钻取报表的详细信息，请参阅[报表（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)。  
+ 若要为某个报表添加钻取链接，必须首先创建主报表将链接到的钻取报表。 钻取报表通常包含原始摘要报表中包含的某项的详细信息，并且经常包含一些参数，将基于从主报表传递给钻取报表的这些参数来筛选钻取报表。 有关创建钻取报表的详细信息，请参阅[钻取报表（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,16 +58,15 @@ ms.lasthandoff: 08/09/2017
         > [!NOTE]  
         >  值可以包含其计算结果将传递到报表参数的表达式。 值列表中的表达式包括当前报表的字段列表。  
   
-     有关如何隐藏报表中的参数的信息，请参阅[添加、更改或删除报表参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)。  
+     有关如何在报表中隐藏参数的信息，请参阅[添加、更改或删除报表参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)。  
   
 6.  （可选）对于文本框，通过更改功能区的“主文件夹”选项卡上的文本颜色和效果有助于向用户指示该文本是一个链接。  
   
 7.  若要测试该链接，请运行报表，然后单击对其设置此链接的报表项。  
   
 ## <a name="see-also"></a>另请参阅  
- [操作属性对话框 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [在图表 &#40; 的格式设置数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [上一系列 &#40; 显示工具提示报表生成器和 SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [“操作属性”对话框（报表生成器和 SSRS）](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   
-

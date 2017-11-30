@@ -2,11 +2,13 @@
 title: "SQL Server - Deprecated Features 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 对象提供一个计数器来监视指定为不推荐使用的功能。 在每个事例中计数器都提供一个使用计数，列出自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动以来遇到不推荐使用的功能的次数。  
   
@@ -114,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Hindi|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。 请改用 Indic_General_90。|  
 |不带括号的 HOLDLOCK 表提示||  
 |IDENTITYCOL|遇到 INDENTITYCOL 语法。 请重写语句以使用 $identity 语法。 每次编译时发生。|  
-|不包含 COUNT_BIG(*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (*)。|  
+|不包含 COUNT_BIG(\*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (\*)。|  
 |INDEX_OPTION|遇到选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。 请重写语句以使用当前语法。 每次查询时发生。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 语法。 请重写语句以查询 sys.index_columns。 每次编译时发生。|  
 |间接 TVF 提示|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除对通过视图执行的多语句表值函数 (TVF) 调用的间接应用表提示。|  
@@ -292,4 +294,3 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

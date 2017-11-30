@@ -2,11 +2,13 @@
 title: "孤立用户故障排除 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: 
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 53342ad62ae05d614acee18c2bbace0b2feaae6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户故障排除 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   当数据库用户是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主 **数据库中的登录名，但该登录名在** 主 **数据库中已不存在时，**中会出现孤立用户。 当删除登录名，或者将数据库移动到另一台不存在该登录名的服务器时会出现这种情况。 本主题介绍如何找到孤立用户，并将它们重新映射到登录名。  
   
@@ -135,8 +137,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_password (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)   
  [sys.sysusers (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md)   
- [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)
- [sys.syslogins (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+ [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
-

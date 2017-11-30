@@ -1,29 +1,26 @@
 ---
-title: "SQL Server 移动报表： 端到端演练 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: "SQL Server 移动报表：端到端演练 | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表： 端到端演练
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
 
 在网格行和列可调整且移动报表元素灵活的设计图面上创建移动报表。 连接到各种本地数据源，或上传 Excel 工作簿以创建移动报表。 然后将报表保存到 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户，并在浏览器或 Power BI 移动应用中查看它们。  
@@ -38,11 +35,11 @@ ms.lasthandoff: 09/27/2017
 ## <a name="before-we-start"></a>准备工作  
 若要继续，需要准备这些产品：  
   
-* 若要创建数据源和 Kpi，并将数据集和移动报表发布，你需要访问 [！包括[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)。  
-* 到[创建共享数据集](../install-windows/install-report-builder.md)。  
+* 若要创建数据源和 KPI、发布数据集和移动报表，需要访问 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)。  
+* [若要创建共享数据集](../install-windows/install-report-builder.md)。  
 * 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkId=717766)。  
-* [AdventureWorks 示例数据库和脚本](http://msftdbprodsamples.codeplex.com/)。  
-*  OR: World Wide Importers 示例数据库，可从[Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页。
+* [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
+*  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
 * 查看结果： 
   *   [注册 Power BI 服务](http://go.microsoft.com/fwlink/?LinkID=513879) 并
   *  [下载 Power BI 移动应用](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
@@ -50,16 +47,16 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="create-a-shared-data-source"></a>创建共享数据源  
   
-可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源的列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **数据源**。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “数据源”。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 输入你的数据源信息 >**确定**。  
+3. 输入数据源信息，然后单击“确定”。  
   
     默认情况下，数据源不会显示在门户中。    
    
-5. 若要查看数据源，请单击**显示** > **数据源**。  
+5. 若要查看数据源，请单击“显示” > “数据源”。  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -73,7 +70,7 @@ ms.lasthandoff: 09/27/2017
   
 使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
-1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **分页报表**启动[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
 2. 单击“新数据集” 。  
@@ -102,7 +99,7 @@ ms.lasthandoff: 09/27/2017
 ## <a name="create-KPI">创建 KPI</a>  
 可在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中立即创建 KPI。    
   
-1. 在 web 门户右上角，单击**新建** > **新的 KPI**。   
+1. 在 Web 门户右上角，单击“新建” > “新建 KPI”。   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
@@ -147,7 +144,7 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="start-with-the-visuals"></a>从视觉对象开始  
   
-1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **移动报表**启动[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “移动报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -236,7 +233,7 @@ ms.lasthandoff: 09/27/2017
   
 在母版布局上创建视觉对象后，接下来可以创建一个移动报表，并专门针对你的手机用户布局进行优化。    
   
-1. 在右上角，单击画布图标 > **Phone**。  
+1. 单击右上角的画布图标，再单击“手机”。  
   
 2. 在“控制实例” 下的布局选项卡上，你会看到已创建的两个图表。   
   
@@ -252,7 +249,7 @@ ms.lasthandoff: 09/27/2017
   
 3. 在服务器上，浏览到要保存移动报表的文件夹。  
   
-4. 单击**选择文件夹** > **保存**。  
+4. 单击“选择文件夹” > “保存”。  
   
    你会收到一条确认报表已保存的消息。  
     
@@ -313,5 +310,4 @@ KPI 和移动报表显示在 Reporting Services Web 门户中它们所在的相�
 -  [Windows 10 设备 Power BI 应用中的 Reporting Services 移动报表和 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

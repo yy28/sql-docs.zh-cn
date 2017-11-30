@@ -1,5 +1,5 @@
 ---
-title: "设置报表处理属性 |Microsoft 文档"
+title: "设置报表处理属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,22 +18,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e2bae47182f317a699f968b6953015f7a2eac823
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
   
- 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 你还可以设置属性使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; 请参阅[处理选项属性页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 设置属性，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
   
 ## <a name="report-execution-modes"></a>报表执行模式  
  您既可以按需运行报表，也可以按快照形式运行报表。 以下部分介绍了各种运行方法。  
@@ -59,14 +58,13 @@ ms.lasthandoff: 08/09/2017
   
 -   现有订阅配置使用的参数值与您为快照指定的默认参数值不同。  
   
- 如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ 如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [配置报表的执行属性（报表管理器）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [如何： 向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [如何：向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

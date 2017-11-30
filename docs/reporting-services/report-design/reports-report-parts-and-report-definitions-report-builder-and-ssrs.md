@@ -1,5 +1,5 @@
 ---
-title: "报表，报表部件，和报表定义 （报表生成器和 SSRS） |Microsoft 文档"
+title: "报表、报表部件和报表定义（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 388fcfa8fcd993428e35308d5070612992851993
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>报表、报表部件和报表定义（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用各种术语来描述不同状态的分页报表，包括初始定义、发布的报表以及显示给用户查看的报表。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/27/2017
  发布的报表是通过角色分配进行保护的，这种角色分配使用的是基于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色的安全模式。 通过 URL、SharePoint Web 部件或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户，即可访问发布的报表，也可以导航到发布的报表并在报表生成器中打开这些报表。  
   
 ### <a name="report-snapshots"></a>报表快照  
- 报表也可以作为包含自报表最初运行时起的布局信息和数据的快照进行发布。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ 报表也可以作为包含自报表最初运行时起的布局信息和数据的快照进行发布。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[在报表管理器中查找和查看报表（报表生成器和 SSRS）](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)。  
   
 ## <a name="rendered-reports"></a>呈现的报表  
  呈现的报表是经过完全处理的报表，其中包含格式适于查看（例如 HTML）的数据和布局信息。 只有在报表以输出格式呈现之后，才能查看报表。 您可以通过执行以下操作之一来呈现报表：  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/27/2017
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

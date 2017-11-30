@@ -1,5 +1,5 @@
 ---
-title: "发布或本机模式报表服务器上查看报表故障排除 |Microsoft 文档"
+title: "对在本机模式报表服务器上发布或查看报表进行故障排除 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>对在本机模式报表服务器上发布或查看报表进行故障排除
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>在已发布的报表中切换项时，无任何反应。  
   在本地预览中查看报表时，可在该报表中切换项，以及显示或隐藏这些项。 将报表发布到报表服务器后查看该报表时，切换项无法正常使用。   
   
-\<报表服务器名称 > 包含下划线 (_)  
+\<报表服务器名称> 包含下划线 (_)  
   
 如果运行报表时没有错误，但切换项不能正常使用（例如，单击展开图标 (+) 后没有反映），请检查承载报表服务器的计算机的名称。 如果计算机名称包含下划线，则切换项将无法正常使用。 这是一个已知问题。 目前没有解决方法。   
   
@@ -66,5 +65,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

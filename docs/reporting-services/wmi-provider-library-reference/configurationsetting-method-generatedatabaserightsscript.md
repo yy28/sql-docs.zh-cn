@@ -1,5 +1,5 @@
 ---
-title: "GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文档"
+title: "GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseRightsScript method
+helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9657229fa2bbdb3e7be35fd385162bf8debb53c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法-GenerateDatabaseRightsScript
+# <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   生成一个 SQL 脚本，用来向用户授予运行报表服务器所需的报表服务器数据库和其他数据库的权限。 调用者需要能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器并能够执行该脚本。  
   
 ## <a name="syntax"></a>语法  
@@ -72,7 +68,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>注释  
  如果 *DatabaseName* 为空，则忽略 *IsRemote* ，并且数据库名称使用报表服务器配置文件中的值。  
   
- 如果*IsWindowsUser*设置为**true**，*用户名*格式应为\<域 >\\< 用户名\>。  
+ 如果将 IsWindowsUser 设置为 true，则 UserName 的格式应为 \<domain>\\<username\>。  
   
  如果将 *IsWindowsUser* 设置为 **true**，则生成后的脚本将向用户授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录权限，将报表服务器数据库设置为默认数据库，并向用户授予报表服务器数据库、报表服务器临时数据库、master 数据库和 MSDB 系统数据库的 **RSExec** 角色。  
   
@@ -82,12 +78,12 @@ out Int32 HRESULT);
   
 |被转换的帐户/SID|公用名称|远程名称|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Local System|\<域 >\\< 计算机名\>$|  
-|.\LocalSystem|Local System|\<域 >\\< 计算机名\>$|  
-|ComputerName\LocalSystem|Local System|\<域 >\\< 计算机名\>$|  
-|LocalSystem|Local System|\<域 >\\< 计算机名\>$|  
-|(S-1-5-20)|Network Service|\<域 >\\< 计算机名\>$|  
-|NT AUTHORITY\NetworkService|Network Service|\<域 >\\< 计算机名\>$|  
+|(S-1-5-18)|Local System|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Local Service|错误 – 参见下方内容。|  
 |NT AUTHORITY\LocalService|Local Service|错误 – 参见下方内容。|  
   
@@ -103,9 +99,9 @@ out Int32 HRESULT);
 |“(local)”||  
 |“LOCAL”||  
 |localhost||  
-|\<计算机名 >|testlab14|  
-|\<MachineFQDN >|example.redmond.microsoft.com|  
-|\<Ip 地址 >|180.012.345,678|  
+|\<Machinename>|testlab14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress>|180.012.345,678|  
   
  如果将 *IsWindowsUser* 设置为 **true**，则 WMI 提供程序会调用 LookupAccountName 以获取帐户的 SID，然后调用 LookupAccountSID 以获取要置于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本中的帐户名。 这样便可确保所使用的帐户名可通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 验证。  
   
@@ -124,4 +120,3 @@ out Int32 HRESULT);
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

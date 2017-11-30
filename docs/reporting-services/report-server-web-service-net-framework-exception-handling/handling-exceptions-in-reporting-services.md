@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services 中处理异常 |Microsoft 文档"
+title: "在 Reporting Services 中处理异常 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,36 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], exceptions
 - .NET Framework [Reporting Services]
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7e1472c11575ba8bed99992ec9630e408c347291
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 40b238f118a957a86f7fb0791d9a6012cc150ff6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>在 Reporting Services 中处理异常
-  在无法完成某一 Reporting Services SOAP API 客户端请求时，报表服务器将返回错误，而非预期调用结果。 在完成后调用，不能作为 SOAP 返回报表服务器 Web 服务错误**错误**XML 元素。 错误的密钥描述性元素是**详细信息**元素，其中包括所有由报表服务器以及任何附加的 Web 服务错误信息提供的错误信息。 中的密钥信息**详细信息**元素是报表服务器错误代码。 基于这些消息和错误代码，您可以确定要在应用程序中执行的相应后续操作。 有关 SOAP 错误的详细信息，请参阅万维网联合会 (W3C) 网站，网址为 http://www.w3.org/TR/SOAP。  
+  在无法完成某一 Reporting Services SOAP API 客户端请求时，报表服务器将返回错误，而非预期调用结果。 在无法完成调用时，针对报表服务器 Web 服务的错误将以 SOAP Fault XML 元素的形式返回。 该错误的主要描述性元素是 detail 元素，它包括报表服务器提供的所有错误消息以及所有附加的 Web 服务错误信息。 detail 元素中的关键信息是报表服务器错误代码。 基于这些消息和错误代码，您可以确定要在应用程序中执行的相应后续操作。 有关 SOAP 错误的详细信息，请参阅万维网联合会 (W3C) 网站，网址为 http://www.w3.org/TR/SOAP。  
   
 ## <a name="soap-faults-and-the-net-framework"></a>SOAP 错误和 .NET Framework  
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，如果对 Web 服务客户端请求中发生错误，报表服务器进行通信，客户端调用的代码，Web 服务通过引发的错误**SoapException**对象。 **SoapException**包装 SOAP 错误中包含的信息。 **详细信息**属性**SoapException**映射到**详细信息**SOAP 错误中的元素。 应用程序应捕获**SoapException**对象使用 try/catch 块，并使用**详细信息**属性**SoapException**以采取相应的操作。 有关详细信息**SoapException**类和**详细信息**中的属性[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[Reporting Services SoapException 类](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)。 有关详细信息**SoapException**类，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中，如果在对 Web 服务的客户端请求中出现错误，则报表服务器将通过引发 SoapException 对象向调用 Web 服务的客户端代码传达此错误。 SoapException 包装 SOAP 错误中包含的信息。 SoapException 的 Detail 属性映射到 SOAP 错误中的 detail 元素。 应用程序应使用 try/catch 块捕获 SoapException 对象，并且使用 SoapException 的 Detail 属性执行适当操作。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 SoapException 类和 Detail 属性的详细信息，请参阅 [Reporting Services SoapException 类](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)。 有关 SoapException 类的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档。  
   
 ## <a name="see-also"></a>另请参阅  
- [详细信息属性](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)   
- [引入了 Reporting Services 中的异常处理](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Detail 属性](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)   
+ [介绍 Reporting Services 中的异常处理](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 类](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   
-
