@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  有多种类型的 CLR 集成托管数据库对象。 有关这些对象的常规信息，请参阅[生成数据库对象所具有公共语言运行时 (CLR) 集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。 每当执行这些对象，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建**AppDomain**下它程序可以加载并执行所需的代码。 隔离级别**AppDomain**是**AppDomain**每个数据库的每位所有者。 即用户所拥有的所有 CLR 对象始终都执行在同一个**AppDomain**每个数据库 （如果用户注册 CLR 数据库对象，在不同数据库中，CLR 数据库对象将在不同应用程序域中运行）。 **AppDomain**代码完成执行后才会被销毁。 而是缓存在内存中以备将来执行， 这提高了性能。  
   
  有关详细信息，请参阅[应用程序域](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299659)）。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

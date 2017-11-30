@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ede97a8012bf4dbdbd312f7ae5179bb794378c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   对于与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成相关的每个属性（包括宿主 CLR 的版本和状态）返回一行。 通过运行初始化托管的 CLR [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)， [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)，或[DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md)语句，或通过执行任何 CLR 例程、 类型或触发器。 **Sys.dm_clr_properties**视图并不指定是否已在服务器上启用的用户 CLR 代码的执行。 使用启用的用户 CLR 代码的执行[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)存储过程，并[启用 clr](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)选项设置为 1。  
   
  **Sys.dm_clr_properties**视图包含**名称**和**值**列。 此视图中的每一行都提供了有关宿主 CLR 的某个属性的详细信息。 使用此视图搜集有关宿主 CLR 的信息，例如 CLR 安装目录、CLR 版本和宿主 CLR 的当前状态。 此视图可以帮助您确定 CLR 集成代码之所以无效是否是因为服务器上的 CLR 安装存在问题。  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,11 +1,11 @@
 ---
 title: "ALTER INDEX (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
-ms.component: t-sql|statements
+ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: TSQL
+dev_langs: t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,17 +43,19 @@ helpviewer_keywords:
 - indexes [SQL Server], options
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
+- index rebuild [SQL Server]
+- index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ef1bc9e0e99288cb739f53eb42a8e19691a04601
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
--- Syntax for SQL Server and SQL Database
+-- Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  
@@ -150,7 +152,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```  
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -185,13 +187,13 @@ ALTER INDEX { index_name | ALL }
   
 |所有与此操作使用关键字|如果表有一个或多个，语句会失败|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** （从 SQL Server 2012 开始） 的 SQL Server 和 Azure SQL 数据库。|  
+|REBUILD WITH ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
 |重新生成分区 = *partition_number*|未分区的索引、XML 索引、空间索引或已禁用的索引|  
 |REORGANIZE|ALLOW_PAGE_LOCKS 设置为 OFF 的索引。|  
 |重新组织分区 = *partition_number*|未分区的索引、XML 索引、空间索引或已禁用的索引|  
-|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** （从 SQL Server 2012 开始） 的 SQL Server 和 Azure SQL 数据库。|  
-|ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** （从 SQL Server 2012 开始） 的 SQL Server 和 Azure SQL 数据库。|
-| 可恢复 = ON  | 不支持的可恢复索引**所有**关键字。 <br /><br /> **适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 |   
+|IGNORE_DUP_KEY = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|  
+|ONLINE = ON|XML 索引<br /><br /> 空间索引<br /><br /> 列存储索引：**适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
+| 可恢复 = ON  | 不支持的可恢复索引**所有**关键字。 <br /><br /> **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  有关详细信息可以联机执行索引操作，请参阅[联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
@@ -207,7 +209,7 @@ ALTER INDEX { index_name | ALL }
  *table_or_view_name*  
  与该索引关联的表或视图的名称。 若要显示有关对象的索引的报表，使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  
   
- SQL Database 支持三个部分组成的名称格式 database_name。[schema_name].table_or_view_name database_name 是当前数据库或 database_name 是 tempdb 和 table_or_view_name 时以 # 开头。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]支持三个部分组成的名称格式 database_name。[schema_name].table_or_view_name database_name 是当前数据库或 database_name 是 tempdb 和 table_or_view_name 时以 # 开头。  
   
  重新生成 [WITH **(**\<rebuild_index_option > [ **，**...*n*]**)** ]  
  指定将使用相同的列、索引类型、唯一性属性和排序顺序重新生成索引。 此子句相当于[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)。 REBUILD 启用已禁用的索引。 重新生成聚集索引并不重新生成关联的非聚集索引，除非指定了关键字 ALL。 如果未指定索引选项，现有的索引选项值存储在[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)应用。 其值不会存储在任何索引选项**sys.indexes**，则应用默认的选项的参数定义中所示。  
@@ -219,7 +221,7 @@ ALTER INDEX { index_name | ALL }
 > [!NOTE]
 >  重新生成主 XML 索引时，基础用户表在索引操作持续期间不可用。  
   
-**适用于**: SQL Server （从 SQL Server 2012 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  对于列存储索引，重新生成操作：  
   
@@ -233,7 +235,7 @@ ALTER INDEX { index_name | ALL }
   
 PARTITION  
 
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定只重新生成或重新组织索引的一个分区。 如果不指定分区*index_name*不是已分区的索引。  
   
@@ -244,13 +246,13 @@ PARTITION
   
  *partition_number*  
    
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  要重新生成或重新组织已分区索引的分区数。 *partition_number*是可引用变量的常量表达式。 其中包括用户定义类型变量或函数以及用户定义函数，但不能引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *partition_number*必须存在或该语句将失败。  
   
  与**(**\<single_partition_rebuild_index_option >**)**  
    
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  SORT_IN_TEMPDB、 MAXDOP 和 DATA_COMPRESSION 是可在重新生成单个分区时指定的选项 (分区 =  *n* )。 不能在单个分区重新生成操作中指定 XML 索引。  
   
@@ -296,7 +298,7 @@ REORGANIZE 是在线执行的。
   
 -   若要压缩所有打开和已关闭行组，请参阅本部分中的重新组织与 (COMPRESS_ALL_ROW_GROUPS) 选项。  
   
-对于 SQL Server （从 2016年开始） 和 SQL 数据库中的列存储索引，重新组织执行下列其他碎片整理优化联机：  
+中的列存储索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2016年开始） 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，重新组织执行下列其他碎片整理优化联机：  
   
 -   以物理方式从行组删除行时已逻辑删除 10%或更多的行。 已删除的字节进行回收物理介质上。 例如，如果有 100 万行压缩的行组具有 100k 行删除的行，SQL Server 将删除已删除的行，并重新压缩 900 k 行与行组。 它将保存在存储上通过删除已删除的行。  
   
@@ -305,7 +307,7 @@ REORGANIZE 是在线执行的。
 -   在其中 10%或更多的行已被逻辑删除的行组，SQL Server 将尝试与一个或多个行组组合此行组。    例如，具有 500,000 行压缩行组 1 和与 1,048,576 行的最大压缩行组 21。  行组 21 具有的删除的行数的 60%，这会为 409,830 行。 SQL Server 优先组合这些行来压缩已 909,830 行新行组的两个组。  
   
 与重新组织 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在 SQL Server （从 2016年开始） 和 SQL 数据库中，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2016年开始） 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
 -   ON 到列存储，而不考虑大小和状态 （关闭或打开） 强制所有行组。  
   
 -   关闭到列存储强制所有已关闭行组。  
@@ -315,7 +317,7 @@ REORGANIZE 是在线执行的。
   
 PAD_INDEX = { ON | OFF }  
    
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定索引填充。 默认为 OFF。  
   
@@ -329,7 +331,7 @@ PAD_INDEX = { ON | OFF }
   
 填充因子 =*填充因子*  
  
- **适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。
+ **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 *填充因子*必须是介于 1 到 100 的整数值。 默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。  
   
@@ -342,8 +344,7 @@ PAD_INDEX = { ON | OFF }
   
  SORT_IN_TEMPDB = {ON |**OFF** }  
  
-
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定是否存储中的排序结果**tempdb**。 默认为 OFF。  
   
@@ -384,7 +385,7 @@ PAD_INDEX = { ON | OFF }
  若要恢复统计信息自动更新，请将 STATISTICS_NORECOMPUTE 设置为 OFF，或执行 UPDATE STATISTICS 但不包含 NORECOMPUTE 子句。  
   
 > [!IMPORTANT]
->  如果禁用分发统计信息的自动重新计算，可能会阻止查询优化器为涉及该表的查询挑选最佳执行计划。  
+> 如果禁用分发统计信息的自动重新计算，可能会阻止查询优化器为涉及该表的查询挑选最佳执行计划。  
   
  STATISTICS_INCREMENTAL = {ON |**OFF** }  
  当**ON**，创建的统计信息是每个分区统计信息。 当**OFF**，删除统计信息树和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新计算统计信息。 默认值是**OFF**。  
@@ -404,9 +405,8 @@ PAD_INDEX = { ON | OFF }
 -   对内部表创建的统计信息。  
   
 -   使用空间索引或 XML 索引创建的统计信息。  
-  
  
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  联机 **=**  {ON |**OFF** }\<因为应用于 rebuild_index_option >  
  指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
@@ -414,7 +414,7 @@ PAD_INDEX = { ON | OFF }
  对于 XML 索引或空间索引，仅支持 ONLINE = OFF。如果 ONLINE 设置为 ON，则会引发错误。  
   
 > [!NOTE]
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[版本和的支持的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ON  
  在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这样，即可继续对基础表和索引进行查询或更新。 操作开始时，将对源对象保持极短时间的共享 (S) 锁。 操作结束时，如果创建非聚集索引，将对源持有极短时间的 S 锁；当联机创建或删除聚集索引时，或者重新生成聚集或非聚集索引时，将获取 SCH-M（架构修改）锁。 对本地临时表创建索引时，ONLINE 不能设置为 ON。  
@@ -432,11 +432,11 @@ PAD_INDEX = { ON | OFF }
   
 -   分区索引的子集（可以联机重新构建整个分区索引。）  
 
--  V12 之前, 的 SQL 数据库和 SQL Server 2012 之前的 SQL Server 不允许`ONLINE`选项的聚集的索引生成或重新生成操作，当基本表包含**varchar （max)**或**varbinary （max)**列。
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]V12 和之前的 SQL Server 之前[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，不允许`ONLINE`选项的聚集的索引生成或重新生成操作，当基本表包含**varchar （max)**或**varbinary （max)**列。
 
 可恢复 **=**  {ON |**OFF**}
 
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库   
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  指定是否可恢复联机索引操作。
 
@@ -446,13 +446,13 @@ PAD_INDEX = { ON | OFF }
 
 MAX_DURATION  **=**  *时间*[**分钟**] 用于**RESUMABLE = ON** (需要**ONLINE = ON**).
  
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 指示时间 （以分钟为单位指定的整数值） 可恢复联机索引操作正在暂停之前执行。 
 
 ALLOW_ROW_LOCKS  **=**  { **ON** |关闭}  
  
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  指定是否允许行锁。 默认值为 ON。  
   
@@ -464,7 +464,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** |关闭}
   
 ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}  
   
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  指定是否允许使用页锁。 默认值为 ON。  
   
@@ -479,7 +479,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  MAXDOP  **=**  max_degree_of_parallelism  
  
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
@@ -500,10 +500,10 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
  有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]
->  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[版本和的支持的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  COMPRESSION_DELAY  **=**  { **0** |*持续时间 [分钟]* }  
- 此功能可从 SQL Server 2016 开始  
+ 此功能是可用的开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
  对于基于磁盘的表，延迟指定的最小必须保持为增量行组处于关闭状态的分钟数增量行组之前中 SQL Server 可以将其压缩到压缩行组。 由于基于磁盘的表不跟踪插入和更新时间在上单个行，SQL Server 应用延迟到处于关闭状态的增量行组。  
 默认值为 0 分钟。  
@@ -526,13 +526,13 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  COLUMNSTORE  
    
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 指定对使用 COLUMNSTORE_ARCHIVE 选项压缩的索引或指定分区进行解压缩。 在还原数据时，将继续通过用于所有列存储索引的列存储压缩对数据进行压缩。  
   
  COLUMNSTORE_ARCHIVE  
   
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE_ARCHIVE 会进一步将指定分区压缩为更小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
   
@@ -540,7 +540,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  在分区上**(** { \<partition_number_expression > |\<范围 >}[**，**...n] **)**  
     
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。 
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 
   
  指定对其应用 DATA_COMPRESSION 设置的分区。 如果索引未分区，则 ON PARTITIONS 参数将产生错误。 如果不提供 ON PARTITIONS 子句，则 DATA_COMPRESSION 选项将应用于分区索引的所有分区。  
   
@@ -556,7 +556,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
   
-```tsql  
+```t-sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -569,7 +569,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  指定是否了索引或索引分区的基础表可以重新生成联机或脱机。 如果**重新生成**在线执行 (**ON**) 此表中的数据是可用于在索引操作期间的查询和数据修改。  默认值是**OFF**。  
   
  ON  
- 在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 上表的 S 锁需要在开始索引重新生成和末尾的联机索引重新生成表上的 SCH-M 锁。 不过两个锁都是短的元数据锁，特别是 Sch-M 锁必须等待所有阻塞事务完成。 在等待期间，Sch-M 锁在访问同一表时阻止在此锁后等待的所有其他事务。  
+ 在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 上表的 S 锁中的索引重建，但在联机索引重新生成末尾的表上的 SCH-M 锁开始需要。 不过两个锁都是短的元数据锁，特别是 Sch-M 锁必须等待所有阻塞事务完成。 在等待期间，Sch-M 锁在访问同一表时阻止在此锁后等待的所有其他事务。  
   
 > [!NOTE]
 >  联机索引重新生成可以设置*low_priority_lock_wait*此部分后面所述的选项。  
@@ -579,19 +579,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  与使用 WAIT_AT_LOW_PRIORITY **ONLINE = ON**仅。  
  
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
   
  MAX_DURATION =*时间*[**分钟**]  
   
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  联机索引重新生成锁将在执行 DDL 命令时以低优先级等待的等待时间（以分钟为单位指定的整数值）。 如果该操作被阻止的**MAX_DURATION**时间、 之一**ABORT_AFTER_WAIT**将执行操作。 **MAX_DURATION**时间始终是以分钟和 word**分钟**可以省略。  
  
  ABORT_AFTER_WAIT = [**NONE** | **自助** | **BLOCKERS** }]  
    
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  无  
  继续以普通（常规）优先级等待锁。  
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**适用于**： 从 SQL Server 自 2017 年 1 开始  
+**适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 恢复已暂停，手动或由于失败的索引操作。
 
 MAX_DURATION 用于**RESUMABLE = ON**
 
  
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 时间 （以分钟为单位指定一个整数值） 可恢复的联机索引操作之后执行正在恢复。 时间到期后，可恢复的操作已暂停，如果它仍在运行。
 
 与使用 WAIT_AT_LOW_PRIORITY **RESUMABLE = ON**和**ONLINE = ON**。  
   
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  要等待的时间对此表的阻止操作暂停后恢复联机索引重新生成。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
 
 
 PAUSE
  
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
 暂停可恢复的联机索引重新生成操作。
 
 中止
 
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库   
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
 中止已声明为可恢复的正在运行或暂停索引操作。 您必须显式执行**中止**命令终止可恢复索引重新生成操作。 故障或暂停可恢复的索引操作不会终止其执行;相反，它留在无限期暂停状态的操作。
   
@@ -640,7 +640,7 @@ PAUSE
  未显式指定选项时，则应用当前设置。 例如，如果未在 REBUILD 子句中指定 FILLFACTOR 设置，将在重新生成过程中使用系统目录中存储的填充因子值。 若要查看当前的索引选项设置，请使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
 > [!NOTE]
->  系统目录中不存储 ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值。 除非在索引语句中指定，否则，将使用选项的默认值。
+> 系统目录中不存储 ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值。 除非在索引语句中指定，否则，将使用选项的默认值。
   
  在多处理器计算机中，就像其他查询那样，ALTER INDEX REBUILD 自动使用更多处理器来执行与修改索引相关联的扫描和排序操作。 当你运行 ALTER INDEX REORGANIZE，无论 LOB_COMPACTION，**最大并行度**值是单个线程的操作。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
@@ -710,9 +710,9 @@ PAUSE
   
  同一时间执行的所有其他联机索引操作都将失败。 例如，您不能在同一个表中同时重新生成两个索引或更多索引，也不能在同一个表中重新生成现有索引时创建新的索引。  
 
-### <a name="resumable-index-operations"></a>可恢复的索引操作
+### <a name="resumable-indexes"></a>可恢复的索引操作
 
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库 
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 联机索引重新生成被指定为可恢复使用 RESUMABLE = ON 选项。 
 -  可恢复的选项不会保存在给定索引的元数据并且仅适用于当前的 DDL 语句的持续时间。 因此，RESUMABLE = ON 子句必须显式指定，若要启用 resumability。
@@ -739,13 +739,12 @@ PAUSE
    -    使用重新生成索引的 ALTER TABLE  
    -    使用的 DDL 命令"RESUMEABLE = ON"不能显式事务中执行 (不能属于开始 tran... 提交块）
    -    重新生成已计算的索引或时间戳列作为键列。
--   索引重新生成在基础表包含 LOB 列可恢复群集的情况下需要此操作的开始 SCH-M 锁
+-   当基础表包含 LOB 列可恢复群集索引重新生成需要在此操作的起始 SCH-M 锁
    -    SORT_IN_TEMPDB = ON 可恢复的索引不支持选项 
 
 > [!NOTE]
 > DDL 命令可运行直到完成、 暂停或失败。 以防该命令会暂停，则将发出错误，该值指示该操作已暂停和索引创建未完成。 可以从获取有关当前索引状态的详细信息[sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。 为之前发生故障时，将发出错误以及。 
 
-  
  有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>联机索引操作使用 WAIT_AT_LOW_PRIORITY  
@@ -782,15 +781,15 @@ PAUSE
   
 ## <a name="version-notes"></a>版本说明  
   
--   SQL 数据库不使用文件组和 filestream 选项。  
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不使用文件组和 filestream 选项。  
   
--   列存储索引不可用 SQL Server 2012 之前。 
+-  列存储索引不可用之前[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 
 
--  均与 SQL Server 2017 和 Azure SQL 数据库开始提供的可恢复的索引操作   
+-  可恢复的索引操作都可用开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
 ## <a name="basic-syntax-example"></a>基本语法示例：   
   
-```tsql 
+```t-sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -849,20 +848,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```tsql
+```t-sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- 使用 TABLOCK 选项在并行中插入行。 从 SQL Server 2016 开始，INSERT INTO 操作可以并行运行时使用 TABLOCK。  
+ 使用 TABLOCK 选项在并行中插入行。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，INSERT INTO 操作可以并行运行时使用 TABLOCK。  
   
-```tsql  
+```t-sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  运行此命令可查看打开的增量行组。 行组数取决于并行度。  
   
-```tsql  
+```t-sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -870,20 +869,20 @@ WHERE object_id  = object_id('cci_target');
   
  运行此命令以强制到列存储的所有已关闭和打开行组。  
   
-```tsql  
+```t-sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  再次运行此命令，你将看到较小的行组被合并到一个压缩行组。  
   
-```tsql  
+```t-sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. 已关闭的增量行组压缩到列存储  
  此示例使用 REORGANIZE 选项设为压缩每个已关闭的增量行组到列存储为压缩行组。   这不是有必要，但当元组发动机不能压缩已关闭行组的速度不够快时非常有用。  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -893,13 +892,13 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 所有打开和关闭增量行组压缩到列存储  
- 不适用于： SQL Server 2012 和 2014年  
+ 不适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- 从 SQL Server 2016 开始，你可以重新组织使用运行 (COMPRESS_ALL_ROW_GROUPS = ON) 每个打开和已关闭的增量行组压缩到列存储为压缩行组。    这将清空增量存储，并强制所有行被压缩到列存储。 这是执行许多插入操作，因为这些操作在一个或多个增量存储中存储的行后尤其有用。  
+ 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，你可以重新组织使用运行 (COMPRESS_ALL_ROW_GROUPS = ON) 每个打开和已关闭的增量行组压缩到列存储为压缩行组。 这将清空增量存储，并强制所有行被压缩到列存储。 这是执行许多插入操作，因为这些操作在一个或多个增量存储中存储的行后尤其有用。  
   
  REORGANIZE 将合并行组来填充最多的最大行数的行组\<= 1,024,576。 因此，压缩所有打开和已关闭行组时你不会得到与大量在它们中只有少量的行的压缩行组。 你想要为已满尽可能减少的压缩的大小并提高查询性能的行组。  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -909,30 +908,31 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. 对列存储索引联机碎片整理  
- 不适用于： SQL Server 2012 和 2014年。  
+ 不适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  
   
- 重新组织从 SQL Server 2016 开始，未超过压缩多增量行组到列存储。 它还执行联机碎片整理。 首先，它通过以物理方式删除已删除的行，10%或更多行组中的行已被删除时减少列存储的大小。  然后，它将组合在一起以形成更大包含最多为每行组 1,024,576 行的最大值的行组的行组。  将所键入的所有行组被重新压缩。  
+ 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，REORGANIZE 多个未到列存储压缩增量行组。 它还执行联机碎片整理。 首先，它通过以物理方式删除已删除的行，10%或更多行组中的行已被删除时减少列存储的大小。  然后，它将组合在一起以形成更大包含最多为每行组 1,024,576 行的最大值的行组的行组。  将所键入的所有行组被重新压缩。  
   
 > [!NOTE]
->  从 SQL Server 2016 开始，则重新生成列存储索引不能再在大多数情况下需要因为 REORGANIZE 以物理方式移除已删除的行，并合并行组。 COMPRESS_ALL_ROW_GROUPS 选项强制到其以前仅可以使用重新生成列存储的所有打开或已关闭的增量行组。   REORGANIZE 处于联机状态，并且出现在后台，因此该操作那样可以继续进行查询。  
+>  从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，则重新生成列存储索引不能再在大多数情况下需要因为 REORGANIZE 以物理方式移除已删除的行，并合并行组。 COMPRESS_ALL_ROW_GROUPS 选项强制到其以前仅可以使用重新生成列存储的所有打开或已关闭的增量行组。   REORGANIZE 处于联机状态，并且出现在后台，因此该操作那样可以继续进行查询。  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
 ```  
   
 ### <a name="e-rebuild-a-clustered-columnstore-index-offline"></a>E. 重新生成聚集列存储索引脱机  
- 适用于： SQL Server 2012、 SQL Server 2014  
+适用于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
- 使用 SQL Server 2016 和在启动[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，我们建议您使用 ALTER INDEX REORGANIZE 而不是 ALTER INDEX REBUILD。  
+> [!TIP]
+> 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]并在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，我们建议您使用 ALTER INDEX REORGANIZE 而不是 ALTER INDEX REBUILD。  
   
 > [!NOTE]
->  在 SQL Server 2012 和 2014年中，重新组织仅用于已关闭行组压缩到列存储。 若要执行碎片整理操作，并为所有增量行组都强制转到列存储的唯一方法是重新生成索引。  
+> 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，重新组织仅用于已关闭行组压缩到列存储。 若要执行碎片整理操作，并为所有增量行组都强制转到列存储的唯一方法是重新生成索引。  
   
  此示例演示如何重新生成聚集列存储索引和所有增量行组都强制转到列存储。 这个第一步将准备具有一个聚集列存储索引的表 FactInternetSales2 并且插入来自前四列的数据。  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -953,7 +953,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  结果显示没有一个打开行组，这意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将等待关闭行组和将数据移到列存储前添加更多的行。 此下一个语句重新生成聚集列存储索引，这会强制到列存储的所有行。  
   
-```tsql  
+```t-sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -961,24 +961,24 @@ SELECT * FROM sys.column_store_row_groups;
  SELECT 语句的结果表明行组被压缩 (COMPRESSED)，这意味着行组的列段现在被压缩并且存储于列存储中。  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. 重新生成聚集列存储索引脱机的分区  
- 使用此窗体： SQL Server 2012、 SQL Server 2014  
+ **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ 
+ 若要重新生成大型聚集列存储索引的分区，使用使用分区选项的 ALTER INDEX REBUILD。 此示例重新生成分区 12。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，我们建议将替换 REORGANIZE 重新生成。  
   
- 若要重新生成大型聚集列存储索引的分区，使用使用分区选项的 ALTER INDEX REBUILD。 此示例重新生成分区 12。 从 SQL Server 2016 开始，建议重新生成替换重新组织。  
-  
-```tsql  
+```t-sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
 ```  
   
 ### <a name="g-change-a-clustered-columstore-index-to-use-archival-compression"></a>G. 更改群集的而索引以使用存档压缩  
- 不适用于： SQL Server 2012  
+ 不适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
  你可以选择通过使用 COLUMNSTORE_ARCHIVE 数据压缩选项减少甚至可更进一步聚集列存储索引的大小。 这是适用于你想要保留更便宜的存储上的旧数据。 我们建议仅使用这通常由于不能访问的数据上解压缩低于使用正常的列存储压缩。  
   
  下面的示例重新生成一个聚集列存储索引以便使用存档压缩，然后显示如何删除该存档压缩。 最后的结果将仅使用列存储压缩。  
   
-```tsql  
+```t-sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1010,25 +1010,25 @@ GO
 ### <a name="a-rebuilding-an-index"></a>A. 重新生成索引  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Employee` 表中重新生成单个索引。  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. 重新生成表的所有索引并指定选项  
  下面的示例指定了 `ALL` 关键字。 这将重新生成与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的表 Production.Product 相关联的所有索引。 其中指定了三个选项。  
   
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```tsql  
+```t-sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
   
  下面的示例添加包含低优先级锁选项的 ONLINE 选项，并添加行压缩选项。  
   
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```tsql  
+```t-sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1043,16 +1043,16 @@ REBUILD WITH
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. 通过 LOB 压缩重新组织索引  
  下面的示例重新整理 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的单个聚集索引。 因为该索引在叶级别包含 LOB 数据类型，所以该语句还会压缩所有包含该大型对象数据的页。 注意，不需要指定 WITH (LOB_COMPACTION) 选项，因为默认值为 ON。  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. 设置索引的选项。  
  下面的示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的索引 `AK_SalesOrderHeader_SalesOrderNumber` 设置了几个选项。  
   
-**适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```tsql  
+```t-sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1066,20 +1066,20 @@ GO
 ### <a name="e-disabling-an-index"></a>E. 禁用索引。  
  下面的示例禁用了对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Employee` 表的非聚集索引。  
   
-```tsql  
+```t-sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### <a name="f-disabling-constraints"></a>F. 禁用约束  
  下面的示例通过禁用中的主键索引禁用 PRIMARY KEY 约束[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。 自动禁用对基础表的 FOREIGN KEY 约束，并显示警告消息。  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
  结果集返回此警告消息。  
   
- ```tsql  
+ ```t-sql  
  Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
  on table 'EmployeeDepartmentHistory' referencing table 'Department'  
  was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
@@ -1090,13 +1090,13 @@ ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
   
  通过重新生成 PRIMARY KEY 索引启用 PRIMARY KEY 约束。  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
  此时，将启用 FOREIGN KEY 约束。  
   
-```tsql  
+```t-sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1105,9 +1105,9 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. 重新生成分区索引  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中重新生成一个分区索引为 `5` 的分区，分区号为 `IX_TransactionHistory_TransactionDate`。 分区 5 是联机重新生成的，并且对索引重新生成操作获取的每个锁分别应用低优先级锁的 10 分钟等待时间。 如果在此时间无法获取锁来完成索引重新生成，重新生成操作语句就会中止。  
   
-**适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```tsql  
+```t-sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1123,7 +1123,7 @@ GO
 ### <a name="i-changing-the-compression-setting-of-an-index"></a>I. 更改索引的压缩设置  
  下面的示例重新生成未分区行存储表的索引。  
   
-```tsql
+```t-sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1135,13 +1135,13 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 可恢复的联机索引重新生成
 
-**适用于**： 开头 SQL Server 自 2017 年和 Azure SQL 数据库   
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  下面的示例演示如何使用可恢复的联机索引重新生成。 
 
 1. 执行联机索引重新生成作为恢复的挂起操作随 MAXDOP = 1。
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1149,29 +1149,29 @@ GO
 
 3. 作为可恢复操作随 MAX_DURATION 设置为 240 分钟执行联机索引重新生成。
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. 暂停正在运行的可恢复的联机索引重新生成。
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. 恢复已执行，因为 maxdop 指定新值的可恢复操作将设置为 4 索引重新生成联机索引重新生成。
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. 恢复为可恢复执行索引联机重新生成联机索引重新生成操作。 设置为 2 的 MAXDOP 设置为 240 分钟，如果被阻止锁等待 10 分钟索引作为 resmumable 正在运行的索引的执行时间之后, 终止所有阻止程序问题。 
 
-   ```tsql
+   ```t-sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. 中止可恢复索引重新生成操作正在运行或已暂停。
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   

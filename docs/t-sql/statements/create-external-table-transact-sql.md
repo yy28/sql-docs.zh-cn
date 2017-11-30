@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  列定义中，包括数据类型和列数必须与匹配的外部文件中的数据。 如果存在不匹配，在查询的实际数据时，将拒绝文件行。  
   
- 对于引用外部数据源中的文件的外部表，列和类型定义必须映射到外部文件的确切架构。 定义引用 Hadoop/Hive 中存储的数据的数据类型，使用 SQL 和 Hive 数据类型之间的以下映射，然后选择从它时，强制转换为 SQL 数据类型的类型。 类型包括配置单元的所有版本，除非另有说明。  
-  
+ 对于引用外部数据源中的文件的外部表，列和类型定义必须映射到外部文件的确切架构。 定义引用 Hadoop/Hive 中存储的数据的数据类型，使用 SQL 和 Hive 数据类型之间的以下映射，然后选择从它时，强制转换为 SQL 数据类型的类型。 类型包括配置单元的所有版本，除非另有说明。
+
+> [!NOTE]  
+>  SQL Server 不支持 Hive_无穷大_中任何转换数据值。 PolyBase 将失败，并将数据类型转换错误。
+
+
 |SQL 数据类型|.NET 数据类型|Hive 数据类型|Hadoop/Java 数据类型|注释|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|对于无符号的数字。|  

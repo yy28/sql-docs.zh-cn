@@ -2,9 +2,12 @@
 title: "MDX 保留字 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5f25b4718ec55d6e7d41c626cc6f0f499cf49d4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a4dd6fad354f66226b72ad6a61ff9e5bf7529372
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   下表包含多维表达式 (MDX) 使用的保留字。 在 MDX 中，不应在任何标识符（例如多维数据集名称或用户定义的函数名称）中使用这些保留字。  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
 ## <a name="see-also"></a>另请参阅  
- [保留的关键字 & #40;MDX 语法 & #41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 语言参考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [保留的关键字 &#40;MDX 语法 &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [MDX 语言参考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f00190c24d06f888767343270f77dfdeea8ee7b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6bb1977fb034f2fd2c682b12b4466bd7914009dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
   为通过使用添加的每个数据库主密钥密码返回一行**sp_control_dbmasterkey_password**存储过程。 用于保护主密钥的密码存储在凭据存储区中。 凭据名称遵循此格式：##DBMKEY_<database_family_guid>_<random_password_guid>##。 该密码存储为凭据机密。 有关通过使用添加的每个密码**sp_control_dbmasterkey_password**，没有中行**sys.credentials**。  
   
  此视图中的每一行显示**credential_id**和**family_guid**的由该凭据与关联的密码保护的主密钥的数据库。 使用加入**sys.credentials**上**credential_id**将返回有用的字段，例如**create_date**和凭据名称。  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

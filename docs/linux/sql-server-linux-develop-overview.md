@@ -4,7 +4,7 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,19 +13,20 @@ ms.component: linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa5b8ecf8b9801874d0af342d268073a09e4812c
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 你可以创建应用程序连接到并从多种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + Linux 上使用 SQL Server 自 2017 年。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > 用户还可使用这些相同的开发选项面向其他平台上的 SQL Server。 应用程序可面向本地或云中、在 Linux、Windows 或 macOS 上的 Docker 中运行的 SQL Server。 也可面向 Azure SQL 数据库和 Azure SQL 数据仓库。

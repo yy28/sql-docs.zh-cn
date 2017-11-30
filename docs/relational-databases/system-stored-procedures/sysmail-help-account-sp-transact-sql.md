@@ -22,20 +22,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b586334d1b725922ec38b3ed63e6cfc8eb0847a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfc032a279abad7949e67f4c232cbe30219baa30
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出有关数据库邮件帐户的信息（密码除外）。  
-  
-||  
-|-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +60,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |列名|数据类型|Description|  
 |**account_id**|**int**|帐户 ID。|  
 |**名称**|**sysname**|帐户名称。|  
-|**说明**|**nvarchar(256)**|对帐户的说明。|  
+|**description**|**nvarchar(256)**|对帐户的说明。|  
 |**电子邮件地址**|**nvarchar （128)**|发送消息的电子邮件地址。|  
 |**display_name**|**nvarchar （128)**|帐户的显示名称。|  
 |**replyto_address**|**nvarchar （128)**|对于来自此帐户的消息发送答复的地址。|  
