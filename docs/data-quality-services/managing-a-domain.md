@@ -2,9 +2,12 @@
 title: "管理域 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9447ffaa80392c633244932fd77443073cbf14df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ccacb5ac042cbfe0e72623b78cf930587c7dd7fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-a-domain"></a>管理域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用域。 域包含要分析的数据源的特定字段中数据的语义表示。 域是您为数据源创建的知识库的一部分，并且，通过分析样本数据源或导入数据而逐步建立的知识将添加到在该知识库中定义的域。 这些域中的知识随后用于在数据质量项目中执行清除和匹配。 域是 Data Quality Services 中所有活动的核心。  

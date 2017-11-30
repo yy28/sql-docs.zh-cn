@@ -1,10 +1,13 @@
 ---
 title: "为内存优化表配置存储 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8375225727d88b2decb8c3256876f78f3f2872f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e72a08f08a3d6ad49c429739108e0e862d0e507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]需要配置存储容量和每秒输入/输出操作数 (IOPS)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]需要配置存储容量和每秒输入/输出操作数 (IOPS)。  
   
 ## <a name="storage-capacity"></a>存储容量  
  使用 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的信息估计数据库的持久内存优化表的内存中大小。 由于未为内存优化表保留索引，因此不包括索引大小。 确定此大小后，您需要提供大小为持久内存中表大小的四倍的磁盘空间。  

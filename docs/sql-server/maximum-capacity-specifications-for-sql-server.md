@@ -1,9 +1,13 @@
 ---
 title: "SQL Server 的最大容量规范 | Microsoft Docs"
 ms.date: 11/6/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +28,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c56b0a570f295896e76c5d0b3441042543445178
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3e1a3a30b7018a3c31fa6cd2d97ffda10e43fcaa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 有关与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 的最大容量规范](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)。
 
   以下各表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。 若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
