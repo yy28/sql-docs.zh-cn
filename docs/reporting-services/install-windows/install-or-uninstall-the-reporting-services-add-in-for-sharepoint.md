@@ -1,36 +1,33 @@
 ---
-title: "安装或卸载 Reporting Services 外接程序为 SharePoint |Microsoft 文档"
+title: "安装或卸载用于 SharePoint 的 Reporting Services 外接程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e10b1aadc6a89e0d18b55d577f075fcb04353fcb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8fe9e32b81cdd92ab382912fef72c0e140f33e87
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  在 SharePoint 服务器上运行用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装包 (rsSharePoint.msi)，以在 SharePoint 部署中启用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 这些功能包括 Power View、报表查看器 Web 部件、URL 代理端点、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容类型和应用程序页，使用它们可以创建、查看和管理 SharePoint 站点上的报表、报表模型、数据源和其他报表服务器内容。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是在 SharePoint 模式下运行的报表服务器的必需组件。 外接程序可以安装从 SQL Server 2016 安装向导或通过从 SQL Server 2016 功能包下载 rsSharePoint.msi 来。 有关外接程序和下载页的版本列表，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+  在 SharePoint 服务器上运行用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装包 (rsSharePoint.msi)，以在 SharePoint 部署中启用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 这些功能包括 Power View、报表查看器 Web 部件、URL 代理端点、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容类型和应用程序页，使用它们可以创建、查看和管理 SharePoint 站点上的报表、报表模型、数据源和其他报表服务器内容。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是在 SharePoint 模式下运行的报表服务器的必需组件。 可以从 SQL Server 2016 安装向导或通过从 SQL Server 2016 功能包下载 rsSharePoint.msi 来安装此外接程序。 有关外接程序和下载页的版本列表，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 > [!NOTE]
-> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
 ##  <a name="bkmk_prereq"></a> 先决条件  
  将报表服务器与 SharePoint 产品的实例集成需要若干步骤，安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是其中的一步。 有关安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的详细信息，请参阅 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
@@ -57,9 +54,9 @@ ms.lasthandoff: 08/17/2017
 >  在安装 SharePoint 产品之前安装外接程序的好处是：当新的服务器添加到场后，SharePoint 场会配置并激活 Reporting Services 外接程序。  
   
 ##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
- SQL Server 2016 Reporting Services 外接程序用于 SharePoint 产品可以安装使用以下两种方法之一：  
+ 使用以下两种方法之一可以安装用于 SharePoint 产品的 SQL Server 2016 Reporting Services 外接程序：  
   
--   **安装向导：** ![注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")SQL Server 2016 的新建外, 接程序可以安装通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
+-   安装向导：![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "请注意")作为 SQL Server 2016 中的新增功能，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
   
 -   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
@@ -111,7 +108,7 @@ Rssharepoint.msi /?
   
          **CD %temp%**。  
   
-         该文件应位于： **\Users\\< 您的姓名\>\AppData\Local\Temp**  
+         该文件应位于：**\Users\\<你的姓名\>\AppData\Local\Temp**  
   
     2.  键入下列命令。 完成该配置步骤需要几分钟时间。 在此过程中，将重新启动 W3SVC 服务。 在程序复制文件、注册组件和运行 SharePoint 产品配置向导时，将显示若干状态消息。  
   
@@ -165,7 +162,7 @@ Rssharepoint.msi /?
   
 1.  在控制面板的 **“程序”**中，选择 **“卸载程序”**。  
   
-2.  选择**Microsoft SQL Server RS 外接程序为 SharePoint**。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
+2.  选择“用于 SharePoint 的 Microsoft SQL Server RS 外接程序”。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
   
 3.  单击 **“删除”**。  
   
@@ -219,7 +216,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> 安装日志文件  
- 安装程序在运行期间，会为安装 **外接程序的用户将相应信息记录到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件夹下的一个日志文件中。 例如**c:\Users\\< 用户名\>\AppData\Local\Temp** 。文件名称是**RS_SP_\<数 >.log**，例如**RS_SP_0.log**。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
+ 安装程序在运行期间，会为安装 **外接程序的用户将相应信息记录到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件夹下的一个日志文件中。 例如，**c:\Users\\<用户名\>\AppData\Local\Temp**。此文件名为 **RS_SP_\<number>.log**，例如，**RS_SP_0.log**。 日志中的每个错误都以字符串“SSRSCustomActionError”开头。  
   
 > [!NOTE]  
 >  AppData 是 Windows 操作系统中隐藏的文件夹。 您可能需要修改您的 Windows 资源管理器的文件夹设置，以便可以看到隐藏的文件和文件夹。  
@@ -255,7 +252,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_upgrade"></a> 升级  
  如果具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的现有安装，则可以升级到当前版本。 外接程序安装程序将检测现有版本并提示您确认是否更新。 将显示如下的消息：  
   
- **你的系统上检测到此产品的较低版本。您想要升级现有安装？**  
+ 在你的系统上检测到此产品的较低版本。是否要升级现有安装？  
   
  如果确认更新，则旧版本的外接程序将被删除，然后安装新版本。  
   
@@ -280,5 +277,4 @@ Rssharepoint.msi /?
 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Reporting Services 报表服务器（SharePoint 模式）](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

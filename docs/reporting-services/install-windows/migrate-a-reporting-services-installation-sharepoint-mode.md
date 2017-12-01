@@ -1,5 +1,5 @@
 ---
-title: "迁移 Reporting Services 安装 （SharePoint 模式） |Microsoft 文档"
+title: "迁移 Reporting Services 安装（SharePoint 模式）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 11c9a5f84630fc2f0804422e1e7191f5da8bd454
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  此主题概述将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署从一个 SharePoint 环境迁移到另一环境所需的步骤。 具体步骤可能会根据您正在从其迁移的版本而有所不同。 有关 SharePoint 模式的升级和迁移方案的详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。 如果你只想要将报表项从一个服务器复制到另一个服务器，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+  此主题概述将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署从一个 SharePoint 环境迁移到另一环境所需的步骤。 具体步骤可能会根据您正在从其迁移的版本而有所不同。 有关 SharePoint 模式的升级和迁移方案的详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。 如果你只想要将报表项从一个服务器复制到另一个服务器，请参阅[用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署的信息，请参阅 [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 -   [在 SharePoint 2013 中移动内容数据库](http://technet.microsoft.com/library/cc262792.aspx)。
   
 ##  <a name="bkmk_prior_versions"></a> 从 SQL Server 2012 之前的 Reporting Services SharePoint 模式版本迁移  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式体系结构在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中已更改，包括服务应用程序数据库架构。 如果你想要迁移到[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]从之前版本的 SharePoint 模式下[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，首先通过安装 SharePoint 和 SQL Server 2016 Reporting Services SharePoint 模式创建新的 SharePoint 环境。 有关详细信息，请参阅 [安装 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式体系结构在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中已更改，包括服务应用程序数据库架构。 如果要从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的版本迁移到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 模式，请先通过安装 SharePoint 和 SQL Server 2016 Reporting Services SharePoint 模式创建新的 SharePoint 环境。 有关详细信息，请参阅 [安装 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
  新 SharePoint 环境运行后，可以在包括内容数据库的数据库级别选择仅内容迁移或完全迁移。  
   
@@ -63,23 +61,23 @@ ms.lasthandoff: 08/17/2017
 -   **Reporting Services 迁移工具：** 该工具可以将报表项从本机模式服务器复制到 SharePoint 模式服务器。 有关详细信息，请参阅 [Reporting Services 迁移工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560)。  
   
 ###  <a name="bkmk_full_migration"></a> 完全迁移  
- **完全迁移：** 如果您将 SharePoint 内容数据库与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库一起迁移到新的场中，则可以按照在本文中介绍的一系列备份和还原选项执行。 在某些情况下，您将需要使用与在备份阶段中使用的不同工具来用于还原阶段。 例如，你可以使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]从早期版本的 Configuration Manager 备份加密密钥[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]但你需要使用 SharePoint 管理中心或 PowerShell 将加密密钥还原到的 SQL Server 2016 Reporting Services SharePoint 模式安装。  
+ **完全迁移：** 如果您将 SharePoint 内容数据库与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库一起迁移到新的场中，则可以按照在本文中介绍的一系列备份和还原选项执行。 在某些情况下，您将需要使用与在备份阶段中使用的不同工具来用于还原阶段。 例如，你可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的先前版本备份加密密钥，但需要使用 SharePoint 管理中心或 PowerShell 将加密密钥还原到 SQL Server 2016 Reporting Services SharePoint 模式安装。  
   
 ####  <a name="bkmk_databases"></a> 您将在完成的迁移中看到的数据库  
  下表描述了与在您成功迁移了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 安装后将具有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关的 SQL Server 数据库：  
   
 |数据库|示例名称||  
 |--------------|------------------|-|  
-|目录数据库|ReportingService_ [服务应用程序 GUID] **(\*)**|用户迁移。|  
-|Temp 数据库|ReportingService_ [服务应用程序 GUID] TempDB **(\*)**|用户迁移。|  
+|目录数据库|ReportingService_[服务应用程序 GUID] **(\*)**|用户迁移。|  
+|Temp 数据库|ReportingService_[服务应用程序 GUID]TempDB **(\*)**|用户迁移。|  
 |警报数据库|ReportingService_[服务应用程序 GUID]_Alerting|在创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序时创建。|  
   
- **(\*)**表所示的示例名称遵循在创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
+ **(\*)**该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
   
 ####  <a name="bkmk_backup_operations"></a> 备份操作  
  本节介绍迁移所需的信息的类型以及用于完成备份的工具或过程。  
   
- ![SSRS SharePoint 迁移的基本原理图](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "的 SSRS SharePoint 迁移的基本原理图")  
+ ![SSRS SharePoint 迁移的基本关系图](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "Basic diagram of SSRS SharePoint Migration")  
   
 ||对象|方法|说明|  
 |-|-------------|------------|-----------|  
@@ -96,8 +94,8 @@ ms.lasthandoff: 08/17/2017
 ||对象|方法|说明|  
 |-|-------------|------------|-----------|  
 |**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> <br /><br /> 请参阅 [确定升级方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)中的“数据库附加升级”部分和 [附加数据库和升级到 SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)。|  
-|**2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL Server 数据库。|SQL Database 库备份和还原。<br /><br /> **或**<br /><br /> SQL Server 数据库分离和附加。|第一次将使用的数据库，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]将更新数据库架构，因此它会使用 SQL Server 2016 环境需要。|  
-|**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅 中的[“步骤 3：创建 Reporting Services 服务应用程序”](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
+|**2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL Server 数据库。|SQL Database 库备份和还原。<br /><br /> **或**<br /><br /> SQL Server 数据库分离和附加。|首次使用数据库时，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将根据需要更新数据库架构，以便数据库可用于 SQL Server 2016 环境。|  
+|**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅 [Install The First Report Server in SharePoint Mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)中的“步骤 3：创建 Reporting Services 服务应用程序”。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
 |**4**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting。|  
 |||||  
 |**5**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密密钥。|使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序“SystemSettings”页还原密钥备份文件。<br /><br /> **或**<br /><br /> PowerShell。|请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)主题中的“密钥管理”部分。|   
@@ -138,5 +136,4 @@ ms.lasthandoff: 08/17/2017
 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [迁移 Reporting Services 安装](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

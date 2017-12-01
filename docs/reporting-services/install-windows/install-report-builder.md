@@ -1,31 +1,29 @@
 ---
-title: "安装报表生成器 |Microsoft 文档"
+title: "安装报表生成器 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03ea560675e5b89228ab3faa99a9d2c37586b4b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
   
- 通常，由管理员安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、授予从 Web 门户下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的权限，以及管理文件夹与对报表、报表部件和保存到报表服务器的共享数据集的权限。 有关详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]管理，请参阅[Reporting Services 报表服务器 &#40;本机模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ 通常，由管理员安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、授予从 Web 门户下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的权限，以及管理文件夹与对报表、报表部件和保存到报表服务器的共享数据集的权限。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>从 Web 门户或 SharePoint 库安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
   
@@ -44,24 +42,24 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="system-requirements"></a>系统要求
   
- 请参阅 Microsoft 下载中心上 [报表生成器下载页](http://go.microsoft.com/fwlink/?LinkID=734968) 的**“系统要求”**  部分。
+ 请参阅 Microsoft 下载中心上 [报表生成器下载页](http://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”**部分。
   
 ##  <a name="download"></a> 从下载站点安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
 1.  在 [Microsoft 下载中心的报表生成器页上](http://go.microsoft.com/fwlink/?LinkID=734968) ，单击“下载” 。  
   
-2.  后[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]下载完成后，单击**运行**。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 下载完成后，单击“运行”。  
   
      此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 向导。  
   
 3.  接受许可协议中的条款，然后单击“下一步” 。  
   
-4.  在 **“默认的目标服务器”** 页上，如果目标报表服务器的 URL 与默认 URL 不同，则可选择提供前者。 单击“下一步” 。  
+4.  在 **“默认的目标服务器”** 页上，如果目标报表服务器的 URL 与默认 URL 不同，则可选择提供前者。 单击 **“下一步”**。  
   
     > [!NOTE]  
-    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 你还可以执行从**选项**中的对话框[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]。  
+    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中的“选项”对话框也可以执行相同操作。  
   
-5.  单击**安装**以完成安装[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]。  
+5.  单击“安装”以完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的安装。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-a-share"></a>从共享安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
@@ -79,9 +77,9 @@ ms.lasthandoff: 08/09/2017
   
  如果要进行根本没有用户界面交互的完全静默安装，请指定 **/quiet** 选项。 根据设计，quiet 选项标志会隐藏安装错误。 因此，建议在使用 quiet 选项时包括 **/l** 选项，该选项指定进行日志记录。   
   
-1.  上[Microsoft 下载中心的报表生成器页上](http://go.microsoft.com/fwlink/?LinkID=734968)，单击**下载**。  
+1.  在 [Microsoft 下载中心的“报表生成器”页](http://go.microsoft.com/fwlink/?LinkID=734968)上，单击“下载”。  
   
-2.  后[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]下载完成后，单击**保存**。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 下载完成后，单击“保存”。  
   
 3.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
@@ -101,17 +99,16 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="set-includessrbnoversionincludesssrbnoversion-mdmd-defaults"></a>设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 默认值。  
   
--   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]后，可以设置一些默认选项。 单击**文件** > **选项**。  
+-   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]后，可以设置一些默认选项。 单击“文件” > “选项”。  
   
      设置默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者 SharePoint 站点最有用。 有关详细信息，请参阅 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)。  
   
 -   单击“报表生成器”  。  
   
-     如果看不到的现有服务器列表中的报表服务器，关闭**打开报表**对话框中，然后单击**连接**底部[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]以连接到服务器。  
+     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 底部的“连接” ，以连接到服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   
  [卸载报表生成器](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
-

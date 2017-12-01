@@ -1,5 +1,5 @@
 ---
-title: "升级报表 |Microsoft 文档"
+title: "升级报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -20,19 +20,17 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: bdadf0d9fbbc3ef63716ee1745773de97aa7450f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="upgrade-reports"></a>升级报表
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/27/2017
   
  在您将报表定义文件直接上载到报表服务器或 SharePoint 站点时，报表不升级。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中升级报表定义是升级 .rdl 文件的唯一方法。  
   
- 在本地或在报表服务器上升级报表后，您可能注意到出现附加的错误、警告和消息。 这是对内部报表对象模型和处理组件进行更改的结果，当在报表中检测到根本问题时，将导致出现这些消息。 有关详细信息，请参阅 [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "向后兼容性 |Reporting Services")。  
+ 在本地或在报表服务器上升级报表后，您可能注意到出现附加的错误、警告和消息。 这是对内部报表对象模型和处理组件进行更改的结果，当在报表中检测到根本问题时，将导致出现这些消息。 有关详细信息，请参阅[ [Reporting Services 的向后兼容性]](../../reporting-services/reporting-services-backward-compatibility.md "向后兼容性 | Reporting Services")。  
   
- 有关新功能的相关详细信息 [！包括[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)。  
+ 有关 [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md) 的新增功能的详细信息。  
 
 ##  <a name="bkmk_versionsupported"></a> 能够升级的版本  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 早期的任一版本中创建的报表都可以升级。 包括下列版本：  
@@ -67,12 +65,12 @@ ms.lasthandoff: 09/27/2017
   
  您设置的部署属性可以影响保存报表定义文件的架构。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
   
- 你可以在的早期版本中创建的.rdl 文件上载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第一次使用自动升级到新的版本和它。 报表服务器将以原始格式存储报表定义文件。 报表将在第一次被查看时自动升级，但是存储的报表定义文件仍保持不变。  
+ 可以将在早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中创建的 .rdl 文件上载到新版本，该报表将在第一次使用时自动升级。 报表服务器将以原始格式存储报表定义文件。 报表将在第一次被查看时自动升级，但是存储的报表定义文件仍保持不变。  
   
  若要为报表、报表服务器或报表设计器标识当前 RDL 架构，请参阅[查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
   
 ##  <a name="bkmk_publishedreports_and_snapshots"></a> 已发布的报表和报表快照  
- 第一次使用时，报表服务器会尝试将现有的已发布报表和报表快照升级为新的报表定义架构，不需要您执行特定操作。 当用户查看报表或报表快照时，或者当报表服务器处理订阅时，将尝试进行升级。 报表定义不会被替换，但会继续存储在其原始架构中的报表服务器上。 如果报表不能升级，则报表将在向后兼容模式下运行。  
+ 第一次使用时，报表服务器会尝试将现有的已发布报表和报表快照升级为新的报表定义架构，不需要您执行特定操作。 当用户查看报表或报表快照时，或者当报表服务器处理订阅时，将尝试进行升级。 报表定义不会被替换，而是继续存储在它在报表服务器上的原始架构中。 如果报表不能升级，则报表将在向后兼容模式下运行。  
   
 ##  <a name="bkmk_backcompat"></a> 向后兼容模式  
  成功升级的报表由 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表处理器进行处理。 不能升级的报表由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器在向后兼容模式下进行处理。 一个报表不能同时由这两个报表处理器来处理。 第一次使用时，报表将成功升级或标记为向后兼容。  
@@ -109,7 +107,7 @@ ms.lasthandoff: 09/27/2017
   
      有关详细信息，请参阅本主题后面的 [在报表设计器中打开报表](#OpeningaReport) 。  
   
- 有关如何确定报表服务器的当前 RDL 命名空间信息[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或报表，请参阅[查找报表定义架构版本 &#40;SSRS &#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ 有关为报表服务器、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或报表标识当前 RDL 命名空间的信息，请参阅[查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>升级报表服务器上的报表  
  当 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表第一次在已升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器的报表服务器上运行时，该报表将自动升级到报表服务器支持的当前报表定义命名空间。 该报表可能在升级之前已存在于报表服务器上，或该报表可能已通过报表管理器上传，或从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的报表设计器发布到报表服务器。  
@@ -118,10 +116,10 @@ ms.lasthandoff: 09/27/2017
   
 |CRI 类型|报表服务器升级操作|  
 |--------------|----------------------------------|  
-|第三方 CRI|不执行升级。<br /><br /> 由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理。|  
+|第三方 CRI|不执行升级。<br /><br /> 由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器进行处理。|  
   
 ###  <a name="OpeningaReport"></a> 在报表设计器中使用 CRI 打开报表  
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  中使用报表设计器中的 CRI 打开 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表时，报表将升级到新的报表定义架构。 根据报表中包含的 CRI，将执行下列操作之一：  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用报表设计器中的 CRI 打开 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表时，报表将升级到新的报表定义架构。 根据报表中包含的 CRI，将执行下列操作之一：  
   
 -   检测到第三方 CRI。 如果安装在报表创作计算机上的 CRI 的版本与新的 RDL 架构不兼容，则设计图面将显示带有红色 X 的文本框。您必须与系统管理员联系，以便从与新的 RDL 架构兼容的第三方供应商那里安装新版本的 CRI。  
   
@@ -139,9 +137,9 @@ ms.lasthandoff: 09/27/2017
   
 -   **否** ：如果不希望转换报表中的 CRI，请选择 **“否”** 。 当前版本中的报表处理器无法显示这些 CRI。 如果您的系统管理员计划安装从第三方软件供应商那里得到的且与新报表定义格式兼容的新版本 CRI，则应当选择 **“否”**。 在使用新版本以前，CRI 将作为带有红色 X 的空文本框显示在报表中。  
   
- 在任一情况下，报表将升级到新的报表定义格式和原始报表的备份副本另存为*\<报表名称 >* `-` Backup.rdl。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
+ 在上述两种情况下，报表都将升级到新的报表定义格式，并将原始报表的备份副本另存为 \<Report Name> `-` Backup.rdl。 如果在报表创作工具中保存报表，则会以新的报表定义格式保存升级的报表。 如果发布报表，则报表首先保存在您的计算机上，然后发布到报表服务器。 您需要将报表的升级版本发布到报表服务器。  
   
- 如果不保存报表，则原始报表将保持不变。 但是，不能编辑此报表中的 SQL Server 2016 版本[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]或报表创作环境使用较新的报表定义格式。 你可以继续将其上载到通过运行报表的原始版本[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]通过 web 门户的报表服务器。 有关详细信息，请参阅[Web 门户](../../reporting-services/web-portal-ssrs-native-mode.md)。  
+ 如果不保存报表，则原始报表将保持不变。 但是，不能在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 SQL Server 2016 版本中或者在使用较新报表定义格式的报表创作环境中编辑该报表。 对于报表的原始版本，通过使用 Web 门户将它上载到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器，可以继续运行它。 有关详细信息，请参阅 [Web 门户](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
  对于上载而不是发布到报表服务器的报表，报表处理器将在第一次使用该报表时确定是否可以将它升级。 对于无法升级的报表，将以向后兼容模式对其进行处理，并像在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的早期版本中那样继续显示它们。  
 
@@ -155,4 +153,3 @@ ms.lasthandoff: 09/27/2017
 [升级报表服务器数据库](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
-
