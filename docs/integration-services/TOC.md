@@ -177,7 +177,7 @@
 ## 请关注博客
 ### [SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)
 ## 获取帮助
-### [MSDN 上的 SSIS 论坛](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [MSDN 上的 SSIS 论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow 上的 SSIS 标记](http://stackoverflow.com/questions/tagged/ssis)  
 ## 提供反馈
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
