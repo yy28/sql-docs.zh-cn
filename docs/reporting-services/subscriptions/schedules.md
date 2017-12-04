@@ -95,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 |在用户定义的订阅中创建、修改或删除报表特定计划|管理单独的订阅|浏览者、报表生成器、我的报表、内容管理员|访问者，成员|  
 |创建、修改或删除所有其他计划操作的报表特定计划|管理报表历史记录，管理所有订阅，管理报表|内容管理员|所有者|  
   
- 有关本地模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的详细信息，请参阅 [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)、 [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 和 [任务和权限](../../reporting-services/security/tasks-and-permissions.md)。 对于 SharePoint 模式，请参阅 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
+ 有关本地模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的详细信息，请参阅 [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)、 [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 和 [任务和权限](../../reporting-services/security/tasks-and-permissions.md)。 对于 SharePoint 模式，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 计划和传递处理的工作方式  
  计划和传递处理器提供以下功能：  
