@@ -3,9 +3,12 @@ title: "Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Mi
 description: "自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。"
 ms.custom: 
 ms.date: 11/13/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,14 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 64f0c0226ab040eb8b43c4b62a6784296d22c6aa
-ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
+ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文将介绍以下自适应查询处理功能，这些功能可用于提高 SQL Server 和 Azure SQL 数据库中的查询性能：
 - 批处理模式内存授予反馈。
@@ -69,7 +71,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 为保持最优，不同的参数值可能还需要不同的查询计划。 此类查询被定义为“参数敏感型”。 对于参数敏感型计划，如果查询具有不稳定的内存要求，则内存授予反馈对该查询禁用。  在重复运行查询后禁用计划，并且可以通过监视 memory_grant_feedback_loop_disabled XEvent 观察到这一切。
 
 ### <a name="memory-grant-feedback-caching"></a>内存授予反馈缓存
-反馈可以存储在单个执行的缓存计划中。 它是该语句的连续执行，但受益于内存授予反馈调整。 此功能适用于重复执行语句。 内存授予反馈将只更改缓存的计划。 当前未在查询 Ssore 中捕获更改。
+反馈可以存储在单个执行的缓存计划中。 它是该语句的连续执行，但受益于内存授予反馈调整。 此功能适用于重复执行语句。 内存授予反馈将只更改缓存的计划。 当前未在查询存储中捕获更改。
 如果从缓存中逐出计划，则不会保存反馈。 如果存在故障转移，则反馈也将丢失。 使用 OPTION(RECOMPILE) 的语句可创建新的计划，并不会缓存它。 由于它未被缓存，因此不会产生内存授予反馈，也不会针对编译和执行存储。  但是，如果已缓存未使用 OPTION(RECOMPILE) 的等效语句（即包含相同的查询哈希），则重新执行的连续语句可受益于内存授予反馈。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>跟踪内存授予反馈活动

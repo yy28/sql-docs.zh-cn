@@ -2,9 +2,12 @@
 title: "安全性和保护（复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3eba6450ead24807245610cf52f8667ed989c852
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53e3c9e5da3240ec81b4cf64cc89361f0ef67926
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-and-protection-replication"></a>安全性和保护（复制）
-  帮助保护在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中部署的复制方案以免受到恶意攻击，并提高数据的安全性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]帮助保护在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中部署的复制方案免遭恶意攻击，并提高数据的安全性。  
   
  ![小文件文件夹图标](../../../analysis-services/media/filefolder-small.png "小文件文件夹图标") **安全性概述**  
  [威胁和漏洞缓解（复制）](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
