@@ -1,7 +1,7 @@
 ---
 title: "重新组织和重新生成索引 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -37,22 +37,21 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 45e81e0c369f28cd0b10f62766b67413239ce5dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 有关与以前版本的 SQL Server 相关的内容，请参阅[重新组织和重新生成索引](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx)。
 
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会自动维护索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢。  
+  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会自动修改索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢，特别是扫描操作。  
   
- 您可以通过重新组织或重新生成索引来修复索引碎片。 对于基于分区方案生成的已分区索引，可以在完整索引或索引的单个分区上使用下列方法之一。 重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 ALL，将删除表中的所有索引，然后在单个事务中重新生成。 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。  
-  
-  
+ 您可以通过重新组织或重新生成索引来修复索引碎片。 对于基于分区方案生成的已分区索引，可以在完整索引或索引的单个分区上使用下列方法之一。 重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 `ALL`，将删除表中的所有索引，然后在一个事务中重新生成。 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。  
+   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Fragmentation"></a> 检测碎片  
@@ -71,34 +70,34 @@ ms.lasthandoff: 11/17/2017
 |**avg_fragmentation_in_percent** 值|修复语句|  
 |-----------------------------------------------|--------------------------|  
 |> 5% 且 < = 30%|ALTER INDEX REORGANIZE|  
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
+|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|  
   
- \* 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。  
+<sup>1</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。  
   
- 这些值提供了一个大致指导原则，用于确定应在 ALTER INDEX REORGANIZE 和 ALTER INDEX REBUILD 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 非常低的碎片级别（小于 5%）不应通过这些命令来解决，因为删除如此少量的碎片所获得的收益始终远低于重新组织或重新生成索引的开销。  
+ 这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 非常低的碎片级别（小于 5%）不应通过这些命令来解决，因为删除如此少量的碎片所获得的收益始终远低于重新组织或重新生成索引的开销。 有关 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 的详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。   
   
 > [!NOTE]
->  通常，小索引中的碎片是不可控制的。 小索引的页面有关存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少该索引中的碎片。
+> 通常，小索引中的碎片是不可控制的。 小索引的页面有关存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少该索引中的碎片。
   
-###  <a name="Restrictions"></a> 限制和局限  
+### <a name="Restrictions"></a> 限制和局限  
   
--   带有多于 128 个区的索引通过两个单独的阶段重新生成：逻辑阶段和物理阶段。 在逻辑阶段，将把由索引使用的现有分配单元标记为释放，对数据行进行复制并排序，然后将它们移到为存储重新生成的索引而创建的新分配单元。 在物理阶段，先前标记为取消分配的分配单元在发生在后台的短事务中被物理删除，而且不需要很多锁。  
+-   带有多于 128 个区的索引通过两个单独的阶段重新生成：逻辑阶段和物理阶段。 在逻辑阶段，将把由索引使用的现有分配单元标记为释放，对数据行进行复制并排序，然后将它们移到为存储重新生成的索引而创建的新分配单元。 在物理阶段，先前标记为取消分配的分配单元在发生在后台的短事务中被物理删除，而且不需要很多锁。 有关区的详细信息，请参考[页和区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md)。 
   
 -   重新组织索引时不能指定索引选项。  
   
--   `ALTER INDEX REORGANIZE` 语句要求包含索引的数据文件具有可用的空间，因为该操作仅可在同一文件中分配临时工作，而不能在文件组内的另一个文件中进行分配。  因此尽管文件组可能有可用的空闲页，用户仍会遇到错误 1105“由于 'PRIMARY' 文件组已满，无法为数据库 \<database name> 中的对象 \<index name>.\<table name> 分配空间”。
+-   `ALTER INDEX REORGANIZE` 语句要求包含索引的数据文件具有可用的空间，因为该操作仅可在同一文件中分配临时工作，而不能在文件组内的另一个文件中进行分配。 因此，尽管文件组可能有可用的空闲页，用户仍可能会遇到错误 1105：`Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
   
--   对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。
+-   对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不推荐。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。
   
-> [!NOTE]
->  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 CREATE STATISTICS 或 UPDATE STATISTICS 以及 FULLSCAN 子句。
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS` 以及 `FULLSCAN` 子句。
   
-###  <a name="Security"></a> 安全性  
+### <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+#### <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedureFrag"></a> 使用 SQL Server Management Studio  
+## <a name="SSMSProcedureFrag"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 检查索引碎片  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
@@ -155,7 +154,7 @@ ms.lasthandoff: 11/17/2017
      **建立虚影行版本**  
      由于某个快照隔离事务未完成而保留的虚影记录的数目。  
   
-##  <a name="TsqlProcedureFrag"></a> 使用 Transact-SQL  
+##  <a name="TsqlProcedureFrag"></a> 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 检查索引碎片  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -195,7 +194,7 @@ ms.lasthandoff: 11/17/2017
   
  有关详细信息，请参阅 [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。  
   
-##  <a name="SSMSProcedureReorg"></a> 使用 SQL Server Management Studio  
+##  <a name="SSMSProcedureReorg"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 删除碎片  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>重新组织或重新生成索引  
   
@@ -249,17 +248,17 @@ ms.lasthandoff: 11/17/2017
   
 8.  单击“确定” **。**  
   
-##  <a name="TsqlProcedureReorg"></a> 使用 Transact-SQL  
+## <a name="TsqlProcedureReorg"></a> 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 删除碎片 
   
-#### <a name="to-reorganize-a-defragmented-index"></a>重新组织碎片索引  
+#### <a name="to-reorganize-a-fragmented-index"></a>重新组织碎片索引  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -279,7 +278,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  
@@ -288,9 +287,9 @@ ms.lasthandoff: 11/17/2017
     GO  
     ```  
   
-#### <a name="to-rebuild-a-defragmented-index"></a>重新生成碎片索引  
+#### <a name="to-rebuild-a-fragmented-index"></a>重新生成碎片索引  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -309,7 +308,15 @@ ms.lasthandoff: 11/17/2017
      [!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_2.sql)]  
   
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
+ 
+#### <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
+
+利用[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
   
 ## <a name="see-also"></a>另请参阅  
   [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
+  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
+  [自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
+  [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
   

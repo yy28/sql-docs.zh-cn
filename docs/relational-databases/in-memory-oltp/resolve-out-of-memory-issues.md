@@ -1,7 +1,7 @@
 ---
 title: "解决内存不足问题 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/29/2016
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07e5aefc9b5dc699a956d06b0fc5c3dac53a7a4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,10 @@ ms.lasthandoff: 11/17/2017
   
 |主题|概述|  
 |-----------|--------------|  
-|[解决 OOM 导致的数据库还原故障](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”时应采取的操作。|  
-|[消除工作负荷的低内存或 OOM 情况的影响](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_recoverFromOOM)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
-|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”时应采取的操作。 …” 当可用内存足以进行操作时。|  
+|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”时应采取的操作。|  
+|[消除工作负荷的低内存或 OOM 情况的影响](#bkmk_recoverFromOOM)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
+|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”时应采取的操作。 …” 当可用内存足以进行操作时。|
+|[在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)|在虚拟化环境中使用内存中 OLTP 需要注意的内容。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
  尝试还原数据库时，你可能会收到错误消息：“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”。这表明服务器没有足够的可用内存来还原数据库。
@@ -50,11 +51,10 @@ ms.lasthandoff: 11/17/2017
     如果数据库 [绑定到资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)（这是最佳做法），可用于还原的内存将由 MAX_MEMORY_PERCENT 控制。 如果值太低，还原将失败。 此代码段将资源池 PoolHk 的 MAX_MEMORY_PERCENT 更改为所安装内存的 70%。  
   
     > [!IMPORTANT]  
-    >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 设置为与 MAX_MEMORY_PERCENT 相同的值。   
-    > 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
+    > 如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 设置为与 MAX_MEMORY_PERCENT 相同的值。   
+    > 有关详细信息，请参阅主题 [在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)。  
   
     ```tsql  
-  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -73,20 +73,20 @@ ms.lasthandoff: 11/17/2017
   
      有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
   
--   增加**最大服务器内存**。  
-    有关如何配置**最大服务器内存**[使用内存配置选项优化服务器性能](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)  
+-   增加 **最大服务器内存**。  
+    有关配置 max server memory 的信息，请参阅主题[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
 ##  <a name="bkmk_recoverFromOOM"></a> 消除工作负荷的低内存或 OOM 情况的影响  
  当然，最好不要出现低内存或 OOM（内存不足）情况。 好的计划和监视有助于避免 OOM 情况。 但再好的计划也并不总能预见实际情况，最后仍有可能遇到低内存或 OOM 情况。 从 OOM 恢复有两个步骤：  
   
-1.  [打开 DAC（专用管理员连接）](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_openDAC)  
+1.  [打开 DAC（专用管理员连接）](#bkmk_openDAC)  
   
-2.  [采取纠正措施](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_takeCorrectiveAction)  
+2.  [采取纠正措施](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> 打开 DAC（专用管理员连接）  
- Microsoft SQL Server 提供了专用管理员连接 (DAC)。 即使服务器对其他客户端连接停止响应，管理员也可以使用 DAC 访问正在运行的 SQL Server 数据库引擎实例来排除服务器上的故障。 DAC 可通过 `sqlcmd` 实用工具和 SQL Server Management Studio (SSMS) 获得。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了专用管理员连接 (DAC)。 即使服务器对其他客户端连接停止响应，管理员也可以使用 DAC 访问正在运行的 SQL Server 数据库引擎实例来排除服务器上的故障。 `sqlcmd` 实用工具和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都包含 DAC。  
   
- 有关如何使用 `sqlcmd` 和 DAC 的指南，请参阅 [使用专用管理员连接](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css)。 有关通过 SSMS 使用 DAC 的指南，请参阅 [如何：将 SQL Server Management Studio 与专用管理员连接配合使用](http://msdn.microsoft.com/library/ms178068.aspx)。  
+ 有关通过 SSMS 或 `sqlcmd` 使用 DAC 的指导，请参阅[用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> 采取纠正措施  
  要处理 OOM 情况，需要通过减少使用量释放现有内存，或者为内存中表提供更多可用内存。  
@@ -94,14 +94,14 @@ ms.lasthandoff: 11/17/2017
 #### <a name="free-up-existing-memory"></a>释放现有内存  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>删除不重要的内存优化表行并等待垃圾收集  
- 您可以删除内存优化表中不重要的行。 垃圾收集器将这些行使用的内存返回可用内存 。 内存中 OLTP 引擎能够积极回收垃圾。 但是，长时间运行的事务可能会妨碍垃圾收集。 例如，如果有一个事务运行 5 分钟，在事务活动期间，无法对所有因更新/删除操作而创建的行版本进行垃圾收集。  
+ 您可以删除内存优化表中不重要的行。 垃圾收集器将这些行使用的内存返回可用内存 内存中 OLTP 引擎能够积极回收垃圾。 但是，长时间运行的事务可能会妨碍垃圾收集。 例如，如果有一个事务运行 5 分钟，在事务活动期间，无法对所有因更新/删除操作而创建的行版本进行垃圾收集。  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>将一行或多行移到基于磁盘的表  
  下面的 TechNet 文章提供有关将行从内存优化表移到基于磁盘的表的指导。  
   
--   [应用程序级分区](http://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
+-   [应用程序级分区](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
   
--   [用于对内存优化表进行分区的应用程序模式](http://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
+-   [用于对内存优化表进行分区的应用程序模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
 #### <a name="increase-available-memory"></a>增加可用内存  
   
@@ -115,10 +115,9 @@ ms.lasthandoff: 11/17/2017
   
 > [!IMPORTANT]  
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   
-> 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
+> 有关详细信息，请参阅主题 [在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)。  
   
 ```tsql  
-  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -128,11 +127,9 @@ WITH
      ( MAX_MEMORY_PERCENT = 70 )  
 GO  
   
--- reconfigure the Resource Governor  
---    RECONFIGURE enables resource governor  
+-- reconfigure the Resource Governor to enabled it
 ALTER RESOURCE GOVERNOR RECONFIGURE  
 GO  
-  
 ```  
   
  有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
@@ -142,19 +139,34 @@ GO
   
 > [!IMPORTANT]  
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   
-> 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
+> 有关详细信息，请参阅主题 [在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)。  
   
 ##  <a name="bkmk_PageAllocFailure"></a> 在提供足够内存时，解决由于内存不足导致的页分配失败问题  
- 如果你收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”。 有关详细信息，请参阅‘http://go.microsoft.com/fwlink/?LinkId=330673’。” ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
+ 如果可用物理内存足以分配页时，在错误日志中收到错误消息 `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.`，可能是因为禁用了 Resource Governor。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
   
  若要解决此问题，您需要启用资源调控器。  
   
- 有关使用对象资源管理器、资源调控器属性或 Transact-SQL 启用资源调控器的限制和局限以及指导的信息，请参阅 [启用资源调控器](http://technet.microsoft.com/library/bb895149.aspx) 。  
+ 有关使用对象资源管理器、资源调控器属性或 Transact-SQL 启用资源调控器的限制和局限以及指导的信息，请参阅 [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md) 。  
+ 
+## <a name="bkmk_VMs">在 VM 环境下使用内存中 OLTP 的最佳做法</a>
+服务器虚拟化可以帮助你改进应用程序配置、维护、可用性和备份/恢复流程，进而降低 IT 资本和运营成本并提高 IT 效率。 由于近年来的技术进步，可以更轻松地使用虚拟化来合并复杂的数据库工作负载。 本主题说明了在虚拟化环境中使用 SQL Server 内存中 OLTP 的最佳做法。
+
+### <a name="memory-pre-allocation"></a>内存预先分配
+对于虚拟化环境中的内存，更好的性能和增强的支持是两个重要的注意事项。 您必须能够根据不同虚拟机的要求（高峰负载和非高峰负载）快速将内存分配到虚拟机，同时确保不浪费内存。 通过 Hyper-V 动态内存功能，可以更灵活地在主机上运行的虚拟机之间分配和管理内存。
+
+当虚拟化带有内存优化表的数据库时，需要修改一些用于虚拟化和管理 SQL Server 的最佳做法。 对于不带有内存优化表的数据库，可遵循两个最佳做法：
+-  如果使用 min server memory，最好只分配需要的内存量，以便保留足够内存以用于其他进程（从而避免分页）。
+-  不要将内存预先分配值设置得过高。 否则，其他进程可能无法在需要时获得足够内存，这可能会导致内存分页。
+
+如果在数据库带有内存优化表时遵循上述做法，尝试还原和恢复数据库可能会导致数据库处于“恢复挂起”状态，即使你拥有可恢复数据库的足够内存时也是如此。 原因在于，与动态内存分配功能将内存分配至数据库相比，内存中 OLTP 在启动时以更主动的方式将数据存入内存。
+
+### <a name="resolution"></a>解决方法
+要缓解此问题，请将足够内存预先分配至数据库以恢复或重新启动数据库，而不要分配最小值，依靠动态内存在需要时分配更多内存。
   
 ## <a name="see-also"></a>另请参阅  
  [管理内存中 OLTP 的内存](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [内存使用情况的监视和故障排除](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [数据库与资源池绑定的指南，请参阅主题](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [最佳做法：在 VM 环境下使用内存中 OLTP](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
-  
+ [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md)  
+ [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
   

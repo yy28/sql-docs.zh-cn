@@ -1,10 +1,13 @@
 ---
 title: "数据库引擎服务启动选项 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/21/2017
-ms.prod: sql-server-2016
+ms.date: 11/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,25 +19,32 @@ helpviewer_keywords:
 - temporarily override default startup options [SQL Server]
 - startup options [SQL Server]
 - starting SQL Server, options
+- single-user mode [SQL Server], startup parameter
+- overriding default startup parameters
+- minimal configuration mode [SQL Server], startup parameter
+- default startup parameters
+- temporarily override default startup parameters [SQL Server]
+- startup parameters [SQL Server]
+- starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: "80"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9acd28a1480da44ca385a405a72269c124d4bd7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b603e31a37884e7c436a184767f8572412e2ec3
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
-  启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
   
 > [!WARNING]  
 >  错误地使用启动选项可能会影响服务器性能并且可能阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动。  
 >
->  使用“mssql”用户启动 Linux 上的 SQL Server 以防止将来的启动问题。 例如，“sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]” 
+>  使用“mssql”用户启动 Linux 上的 SQL Server 以防止将来的启动问题。 例如：`sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]` 
   
 ## <a name="about-startup-options"></a>关于启动选项  
  安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，安装程序会将一组默认的启动选项写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 注册表。 可以使用这些启动选项指定备用的 master 数据库文件、master 数据库日志文件或错误日志文件。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 找不到所需文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不启动。  
@@ -54,7 +64,7 @@ ms.lasthandoff: 11/09/2017
 |---------------------------|-----------------|  
 |**-c**|缩短从命令提示符启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的启动时间。 通常， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 通过调用服务控制管理器作为服务启动。 由于在通过命令提示符启动时 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不作为服务启动，因此请使用 **-c** 跳过此步骤。|  
 |**-f**|以最小配置启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。 在最低配置模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 置于单用户模式。 有关详细信息，请参阅下面的 **-m** 说明。|  
-|**-g**  *memory_to_reserve*|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程之内但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池之外分配内存而保留的内存整数量 (MB)。 内存池以外的内存是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于加载诸如下列项目的区域：扩展过程 .dll 文件、分布式查询引用的 OLE DB 提供程序以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用的自动化对象。 默认值为 256 MB。<br /><br /> 使用此选项可帮助优化内存分配，但仅限于物理内存超过操作系统设置的应用程序可用虚拟内存配置限制时。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用要求异乎寻常，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的虚拟地址空间都在使用，则对于这样的大内存配置适合使用此选项。 对此选项的不当使用会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法启动或遇到运行时错误。<br /><br /> 除非你在 **错误日志中看到下列任何警告，否则请使用** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数的默认值：<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"<br /><br /> 这些消息可能指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正试图释放部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池空间，以便为扩展存储过程 .dll 文件或自动化对象等项目找到空间。 在这种情况下，可以考虑增加由 **-g** 开关保留的内存量。<br /><br /> 使用小于默认值的值将增加 SQL Server 内存管理器所管理的内存池和线程栈中的可用内存量；而在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可改善需要大量内存的工作负荷的性能。|  
+|**-g**  *memory_to_reserve*|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程之内但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池之外（通过 [max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 服务器设置进行设置）的内存分配保留的内存整数量 (MB)。 内存池以外的内存是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于加载诸如下列项目的区域：扩展过程 .dll 文件、分布式查询引用的 OLE DB 提供程序以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用的自动化对象。 默认值为 256 MB。<br /><br /> 使用此选项可帮助优化内存分配，但仅限于物理内存超过操作系统设置的应用程序可用虚拟内存配置限制时。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存使用要求异乎寻常，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的虚拟地址空间都在使用，则对于这样的大内存配置适合使用此选项。 对此选项的不当使用会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法启动或遇到运行时错误。<br /><br /> 除非你在 **错误日志中看到下列任何警告，否则请使用** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数的默认值：<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"<br /><br /> 这些消息可能指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正试图释放部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存池空间，以便为扩展存储过程 .dll 文件或自动化对象等项目找到空间。 在这种情况下，可以考虑增加由 **-g** 开关保留的内存量。<br /><br /> 使用小于默认值的值将增加 SQL Server 内存管理器所管理的内存池和线程栈中的可用内存量；而在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可改善需要大量内存的工作负荷的性能。|  
 |**-m**|在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，只能连接一个用户，并且不启动 CHECKPOINT 进程。 CHECKPOINT 保证将已完成的事务定期从磁盘缓存写入数据库设备。 （通常，在遇到需要修复的系统数据库问题时使用此选项。）启用 sp_configure allow updates 选项。 默认情况下，allow updates 处于禁用状态。 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使计算机本地 Administrators 组的任何成员作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。有关单用户模式的详细信息，请参阅 [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)。|  
 |**-mClient 应用程序名称**|将连接限制为指定的客户端应用程序。 例如， `-mSQLCMD`  将连接限制为单个连接并且该连接必须将自身标识为 SQLCMD 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 使用 `"Microsoft SQL Server Management Studio - Query" ` 与 SSMS 查询编辑器连接。 SSMS 查询编辑器选项不能使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 配置管理器进行配置，因为它包括该工具拒绝使用的短划线字符。<br /><br /> 客户端应用程序名称区分大小写。 如果应用程序名称包含空格或特殊字符，则需要使用双引号引起来。<br /><br />**从命令行启动时的示例：**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -mSQLCMD` <br /><br /> 安全说明：请勿将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。|  
 |**-n**|不要使用 Windows 应用程序日志来记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如果你使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **-n**实例，我们建议你同时使用 **-e** 启动选项。 否则，将不会记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。|  
@@ -77,7 +87,8 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="related-tasks"></a>相关任务  
 [配置 scan for startup procs 服务器配置选项](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
-[启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+[启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+[配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
   
 ## <a name="see-also"></a>另请参阅  
  [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   

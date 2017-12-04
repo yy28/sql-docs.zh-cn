@@ -14,11 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 347e737c378f79ec1bdd0de42d78c896c3c44f7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32a2cc64cb54fda7244a07ad8aff8463899f0b3d
+ms.sourcegitcommit: 4286dddf27dcdf1c8ef3ef134474e72559c2f65c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/09/2017
 
 ## <a name="activate-feature"></a>激活功能
 
-1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，选择 *“网站设置”。
+1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置”。
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
@@ -116,7 +116,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 收回解决方案不会从 SharePoint 网站内的 Web 部件列表中删除报表查看器 Web 部件。 若要删除报表查看器 Web 部件，请执行以下操作。
 
-1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，选择 *“网站设置”。
+1. 在 SharePoint 网站中，选择左上角的“齿轮”图标，然后选择“网站设置”。
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 

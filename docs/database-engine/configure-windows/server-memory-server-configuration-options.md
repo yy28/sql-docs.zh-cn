@@ -1,7 +1,7 @@
 ---
 title: "“服务器内存”服务器配置选项 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -28,72 +28,73 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0da01a7ae4950f77d2c80cac2bc44e9ec90d5258
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3d5134098013c95051fc38f634461d00718e2f8
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
+使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
   
- **min server memory** 的默认设置为 0， **max server memory** 的默认设置为 2147483647 MB。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
+“min server memory”的默认设置为 0，“max server memory”的默认设置为 2147483647 MB。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。 有关详细信息，请参阅[动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 
+
+**max server memory** 所允许的最小内存量是 128 MB。
   
-> [!NOTE]  
->  将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 **–f** 启动选项启动它，并将 **max server memory** 重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
-  
- 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
-  
- 请参阅查询的示例 B 以返回当前使用的内存。 **最大服务器内存** 控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配，包括缓冲池、编译内存、所有缓存、QE 内存授权、锁管理器内存和 CLR 内存（实质上是 **sys.dm_os_memory_clerks**中存在的所有内存分配器）。 线程堆栈的内存、内存堆、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外的联接的服务器提供程序以及非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL 分配的所有内存均不由最大服务器内存控制。  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用内存通知 API **QueryMemoryResourceNotification** 来确定 SQL Server 内存管理器何时可以分配内存和释放内存。  
-  
- 建议允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态使用内存；但可以手动设置内存选项并限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以访问的内存量。 在设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的内存量之前，请通过从总物理内存中减去操作系统和任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所需的内存（如果计算机并非完全由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]专用，则还要减去其他系统使用的内存量）来确定适当的内存设置。 这个差值就是可以分配给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的最大内存量。  
-  
+> [!IMPORTANT]  
+> 将“max server memory”值设置得太高可能导致一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能需要与同一主机上承载的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例争用内存。 但是，将此值设置得太低可能会导致极大的内存压力和性能问题。 将“max server memory”设置为最小值甚至可能导致无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 ***–f*** 启动选项启动它，并将 **max server memory** 重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可动态使用内存；但也可以手动设置内存选项并限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以访问的内存量。 在设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存量之前，请通过从总物理内存中减去操作系统所需的内存（即不受 max_server_memory 设置控制的内存分配）以及任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所需的内存（如果计算机并非完全由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专用，则还要减去其他系统使用的内存量）。 这个差值就是可以分配给当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的最大内存量。  
+ 
 ## <a name="setting-the-memory-options-manually"></a>手动设置内存选项  
- 将 **min server memory** 和 **max server memory** 设置成一个内存范围。 在需要兼顾同一台计算机上运行的其他应用程序的内存要求时，此方法对于配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的系统或数据库管理员来说非常有用。  
+可以将 min server memory 和 max server memory 设置成一个内存范围。 在需要兼顾同一台主机上运行的其他应用程序或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的内存要求时，此方法对于配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的系统或数据库管理员来说非常有用。
+
+> [!NOTE]
+> **min server memory** 和 **max server memory** 选项都是高级选项。 如果使用 **sp_configure** 系统存储过程来更改这些设置，则只有在“显示高级选项”设置为 1 时才能更改它们。 这些设置更改后会立即生效，不需要重新启动服务器。  
   
- 使用 **min server memory** 可以保证可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 SQL Server 内存管理器使用的最小内存量。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会在启动时立即分配 **min server memory** 中指定的内存量。 不过，除非降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **的值，否则当内存使用量由于客户端负荷而达到该值后，** 不能释放内存。  
-  
+<a name="min_server_memory"></a> 使用 min_server_memory 可以保证可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器使用的最小内存量。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会在启动时立即分配 **min server memory** 中指定的内存量。 不过，除非降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **的值，否则当内存使用量由于客户端负荷而达到该值后，** 不能释放内存。 例如，同一个主机中可同时存在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，为了给实例保留内存，请设置 min_server_memory 参数而不是 max_server_memory。 此外，为了确保来自基础主机的内存压力不会尝试从来宾 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟机 (VM) 上的缓冲池释放超过可接受性能所需的内存，在虚拟环境中设置 min_server_memory 值非常必要。
+ 
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
   
- **max server memory** 所允许的最小内存量是 128 MB。  
+<a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
+ -  从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
+ -  然后减去等于“max server memory”控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即堆栈大小<sup>1</sup> * 计算出的最大工作线程数<sup>2</sup> + -g 启动参数<sup>3</sup>（如果未设置 -g，则为 256MB）。 所得结果就是一个实例设置的 max_server_memory 设置。
+ 
+<sup>1</sup> 有关每个体系结构的线程堆栈大小的信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
+
+<sup>2</sup> 有关为当前主机中给定数量的关联 CPU 计算得出的默认工作线程数的信息，请参阅介绍如何[配置最大工作线程数服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文档页。
+
+<sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页。
+
+## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置内存选项的方式  
+使用“min server memory”和“max server memory”这两个服务器内存选项重新配置由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
-## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>如何使用 SQL Server Management Studio 配置内存选项  
- 使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
-  
-### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>配置固定内存量的过程  
- 设置固定内存量  
+### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>配置固定内存量的过程（不推荐）  
+设置固定内存量：  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
 2.  单击 **“内存”** 节点。  
   
-3.  在 **“服务器内存选项”**中，为 **“最小服务器内存”** 和 **“最大服务器内存”**输入所需的内存量。  
+3.  在“服务器内存选项”中，为“最小服务器内存”和“最大服务器内存”输入所需的内存量。  
   
-     使用默认设置，将允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据可用系统资源动态更改其内存需求。 “min server memory”的默认设置为 0，“max server memory”的默认设置为 2147483647 MB。  
+     使用默认设置，将允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据可用系统资源动态更改其内存需求。 建议按[上述内容](#max_server_memory)设置 max server memory。 
   
-## <a name="maximize-data-throughput-for-network-applications"></a>最大化网络应用程序数据吞吐量  
- 若要优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的系统内存使用情况，应该限制系统用于文件缓存的内存量。 若要限制文件系统缓存，请确保未选择 **“最大化文件共享数据吞吐量”** 。 通过选择 **“最小化使用的内存”** 或 **“平衡”**，可以指定最小文件系统缓存。  
+## <a name="lock-pages-in-memory-lpim"></a>锁定内存页 (LPIM) 
+此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 已向有权运行 sqlservr.exe 的帐户授予 Windows 锁定内存页 (LPIM) 用户权限时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 和更高版本的实例中将“锁定内存页”选项设置为“打开”。  
   
-#### <a name="to-check-the-current-setting-on-your-operating-system"></a>检查操作系统的当前设置  
+若要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **禁用**“锁定内存页”选项，请为有权运行 sqlservr.exe（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动帐户）启动帐户的帐户删除“锁定内存页”用户权限。  
+ 
+设置此选项可实现根据其他内存分配器的请求扩大或缩小内存，不影响[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 使用“锁定内存页”用户权限时，建议按[如上所述](#max_server_memory)，为 max server memory 设置一个上限。
+
+> [!IMPORTANT]
+> 应仅在必要时设置此选项，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志中将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` 自 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，Standard Edition 使用锁定页不再需要[跟踪标志 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
   
-1.  依次单击“开始”和“控制面板”，双击“网络连接”，然后双击“本地连接”。  
-  
-2.  在 **“常规”** 选项卡上，单击 **“属性”**，选择 **“Microsoft 网络的文件和打印机共享”**，然后单击 **“属性”**。  
-  
-3.  如果选中了 **“最大化网络应用程序数据吞吐量”** ，请任选一个相应的其他选项，单击 **“确定”**，再关闭其余对话框。  
-  
-## <a name="lock-pages-in-memory"></a>锁定内存页  
- 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 已向有权运行 sqlservr.exe 的帐户授予 Windows“锁定内存页”(LPIM) 用户权限时，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition 和更高版本的实例中将 SQL Server 的“锁定内存页”选项设置为 ON。  
-  
- 若要对 **禁用** “锁定内存页” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项，请删除 SQL Server 启动帐户的“锁定内存页”用户权限。  
-  
-### <a name="to-disable-lock-pages-in-memory"></a>禁用“锁定内存页”  
- 禁用“锁定内存页”选项  
+### <a name="to-enable-lock-pages-in-memory"></a>启用“锁定内存页”  
+启用“锁定内存页”选项：  
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。 在“打开”  框中，键入 **gpedit.msc**  
   
@@ -109,39 +110,28 @@ ms.lasthandoff: 11/20/2017
   
 5.  在该窗格中，双击“锁定内存页”。  
   
-6.  在 **“本地安全策略设置”** 对话框中，选择有权运行 sqlservr.exe 的帐户，然后单击 **“删除”**。  
+6.  在“本地安全策略设置”对话框中，添加有权运行 sqlservr.exe （[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动帐户）的帐户。  
   
-## <a name="virtual-memory-manager"></a>虚拟内存管理器  
- 提交的地址空间区域由 Windows 虚拟内存管理器 (VMM) 映射到可用的物理内存。  
-  
- 有关不同操作系统所支持的物理内存量的详细信息，请参阅 Windows 文档“Windows 版本的内存限制”。  
-  
- 虚拟内存系统允许虚拟内存超过物理内存，这样虚拟内存与物理内存的比率可以大于 1:1。 因此，大型程序在计算机上运行时可以具有多种物理内存配置。 但是，使用比所有进程的平均组合工作集大得多的虚拟内存可能会导致性能降低。  
-  
- **min server memory** 和 **max server memory** 选项都是高级选项。 如果使用 **sp_configure** 系统存储过程来更改这些设置，则只有在“显示高级选项”设置为 1 时才能更改它们。 这些设置更改后会立即生效，不需要重新启动服务器。  
-  
-## <a name="running-multiple-instances-of-sql-server"></a>运行多个 SQL Server 实例  
+## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>运行多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
  当运行多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，可以使用三种方法来管理内存：  
   
--   使用 **max server memory** 控制内存使用量。 为每个实例建立最大设置，注意总的允许设置值不能大于计算机上的物理总内存。 可能需要为每个实例提供与预期的工作负荷或数据库大小成正比的内存。 这种方法的优势体现在：当启动新的进程或实例时，可以立即为这些进程或实例提供可用内存。 这种方法的缺点为：如果没有运行所有实例，则所有运行中的实例都无法使用剩余的可用内存。  
+-   使用“max server memory”控制内存使用量，[如上所述](#max_server_memory)。 为每个实例建立最大设置，注意总的允许设置值不能大于计算机上的物理总内存。 可能需要为每个实例提供与预期的工作负荷或数据库大小成正比的内存。 这种方法的优势体现在：当启动新的进程或实例时，可以立即为这些进程或实例提供可用内存。 这种方法的缺点为：如果没有运行所有实例，则所有运行中的实例都无法使用剩余的可用内存。  
   
--   使用 **min server memory** 控制内存使用量。 为每个实例建立最小设置，以使这些最小值的和比计算机上总的物理内存小 1-2 GB。 此外，可能需要建立与该实例的预期负荷成正比的最小值。 这种方法的优势体现在：如果没有同时运行所有实例，则运行中的实例可以使用剩余的可用内存。 当计算机上存在其他占用大量内存的进程时，这种方法也十分有用，因为它可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至少获得合理的内存量。 这种方法的缺点是：当启动新的实例（或任何其他进程）时，运行的实例可能会花费一些时间来释放内存，如果实例必须将修改后的页写回到数据库中来释放内存，则花费的时间可能会更长。  
+-   使用“min server memory”控制内存使用量，[如上所述](#min_server_memory)。 为每个实例建立最小设置，以使这些最小值的和比计算机上总的物理内存小 1-2 GB。 此外，可能需要建立与该实例的预期负荷成正比的最小值。 这种方法的优势体现在：如果没有同时运行所有实例，则运行中的实例可以使用剩余的可用内存。 当计算机上存在其他占用大量内存的进程时，这种方法也十分有用，因为它可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 至少获得合理的内存量。 这种方法的缺点是：当启动新的实例（或任何其他进程）时，运行的实例可能会花费一些时间来释放内存，如果实例必须将修改后的页写回到数据库中来释放内存，则花费的时间可能会更长。  
   
 -   不执行任何操作（不推荐）。 带有工作负荷的第一个实例通常分配所有的内存。 空闲实例或稍后启动的实例最终可能会只使用最少的可用内存量运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会尝试均衡分配各个实例的内存使用量。 但是，所有实例均将响应 Windows 内存通知信号以调整它们内存需求量的大小。 Windows 不会使用内存通知 API 来平衡各个应用程序使用的内存。 它只提供有关系统内存可用性的全局反馈。  
   
  您可以在不重新启动实例的情况下更改这些设置，以便可以轻松地进行尝试以找到适合使用模式的最佳设置。  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>为 SQL Server 提供最大内存量  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中都可以将内存配置为最大进程虚拟地址空间限制 (8 TB)。  
-  
- ***/3gb** 是一个操作系统的启动参数。 有关详细信息，请访问 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中，内存最大可配置为进程虚拟地址空间限制。 有关详细信息，请参阅 [Windows 和 Windows Server 版本的内存限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016)。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="example-a"></a>示例 A  
  以下示例将 `max server memory` 选项设置为 4 GB：  
   
-```  
+```t-sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -155,20 +145,30 @@ GO
 ### <a name="example-b-determining-current-memory-allocation"></a>示例 B. 确定当前内存分配  
  以下查询返回有关当前分配内存的信息。  
   
-```  
-SELECT  
-(physical_memory_in_use_kb/1024) AS Memory_usedby_Sqlserver_MB,  
-(locked_page_allocations_kb/1024) AS Locked_pages_used_Sqlserver_MB,  
-(total_virtual_address_space_kb/1024) AS Total_VAS_in_MB,  
-process_physical_memory_low,  
-process_virtual_memory_low  
+```t-sql  
+SELECT 
+  physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
+    large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
+    locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
+    virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
+    virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
+    virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
+    page_fault_count AS sql_page_fault_count,
+    memory_utilization_percentage AS sql_memory_utilization_percentage, 
+    process_physical_memory_low AS sql_process_physical_memory_low, 
+    process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
+ [内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md)   
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
+ [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
+ [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
+ [Linux 上 SQL Server 2017 的各版本和支持的功能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
+ [Windows 和 Windows Server 版本的内存限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ 

@@ -2,9 +2,12 @@
 title: "SQL Server 教程 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e7eec3322fecf2df16624ce63f0188c526108d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供有助于了解新技术和功能的教程。 针对早期版本的教程通常也适用于较新版本。 教程中涉及到新功能时，将指示完成此教程所需的最低版本。  
      
 -   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。    

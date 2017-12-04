@@ -1,7 +1,7 @@
 ---
 title: "配置 min memory per query 服务器配置选项 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -22,16 +22,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18458fbe7a7008c23516d372e15979e9dfc7decc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05c59d21bfa00c9d32ef740f4a1ef7acfcf178d8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>配置每次查询占用的最小内存服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “每次查询占用的最小内存” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “每次查询占用的最小内存”选项指定将分配给查询执行时所需要的最小内存量 (KB)。 例如，如果将 **min memory per query** 设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “每次查询占用的最小内存” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “每次查询占用的最小内存”选项指定将分配给查询执行时所需要的最小内存量 (KB)。 例如，如果将 **min memory per query** 设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
   
  **本主题内容**  
   
@@ -55,13 +55,15 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   每次查询占用的最小内存的量优先于 [索引创建内存选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。 如果改变这两个选项，并且索引创建内存小于每次查询占用的最小内存，则将收到警告消息，但仍会设置值。 在查询执行期间还会收到一个类似的警告。  
+-   min memory per query 的量优先于 [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 选项。 如果改变这两个选项，并且索引创建内存小于每次查询占用的最小内存，则将收到警告消息，但仍会设置值。 在查询执行期间还会收到一个类似的警告。  
   
 ###  <a name="Recommendations"></a> 建议  
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器尝试确定要分配给查询的最佳内存量。 min memory per query 选项允许管理员指定任何单个查询收到的最小内存量。 如果查询需要对大量数据执行哈希和排序操作，则这些查询获得的内存通常比该选项指定的最小内存多。 对于一些小型查询和中等大小的查询，增大 min memory per query 的值可能提高性能，但会导致内存资源争夺加剧。 每次查询占用的最小内存选项包括为排序分配的内存。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器尝试确定要分配给查询的最佳内存量。 min memory per query 选项允许管理员指定任何单个查询收到的最小内存量。 如果查询需要对大量数据执行哈希和排序操作，则这些查询获得的内存通常比该选项指定的最小内存多。 对于一些小型查询和中等大小的查询，增大 min memory per query 的值可能提高性能，但会导致内存资源争夺加剧。 min memory per query 选项包括为排序操作分配的内存。  
+
+-    不要将 min memory per query 服务器配置选项设置得太高，尤其是在非常繁忙的系统上，因为查询将不得不等到能确保占有所请求的最小内存、或直到时间超过 query wait 服务器配置选项内所指定的值。 如果可用内存比执行查询所需的指定最小内存多，则只要查询能对多出的内存加以有效的利用，就可以使用多出的内存。 
   
 ###  <a name="Security"></a> 安全性  
   
@@ -98,8 +100,7 @@ GO
 EXEC sp_configure 'min memory per query', 3500 ;  
 GO  
 RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
 ##  <a name="FollowUp"></a> 跟进：在配置每次查询占用的最小内存选项之后  

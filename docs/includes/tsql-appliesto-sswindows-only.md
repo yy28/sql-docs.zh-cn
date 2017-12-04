@@ -1,1 +1,1 @@
-<Token>本主题适用于：![yes](media/yes.png)Windows 上的 SQL Server![no](media/no.png)Linux 上的 SQL Server![no](media/no.png)Azure SQL 数据库![no](media/no.png)Azure SQL 数据仓库![no](media/no.png)并行数据仓库</Token>
+<Token>**本主题适用于：**![yes](media/yes.png)SQL Server（仅限 Windows）![no](media/no.png)Azure SQL 数据库![no](media/no.png)Azure SQL 数据仓库![no](media/no.png)并行数据仓库</Token>

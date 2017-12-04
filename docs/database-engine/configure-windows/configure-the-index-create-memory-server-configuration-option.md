@@ -1,7 +1,7 @@
 ---
 title: "配置 index create memory 服务器配置选项 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c9e2a10cd21015fa56a2081e359baf3b9198064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aab31080adfc6235d6110aa0ad21159996bfcff
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>配置 index create memory 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **index create memory** 选项控制最初为创建索引分配的最大内存量。 此选项的默认值为 0（自动配置）。 如果随后创建索引时需要更多内存，而且有内存可供使用，服务器将使用可用的内存，从而超出此选项的设置。 如果没有内存可供使用，则继续使用已分配的内存来创建索引。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 在创建索引时，**index create memory** 选项控制最初为排序操作分配的最大内存量。 此选项的默认值为 0（自动配置）。 如果随后创建索引时需要更多内存，而且有内存可供使用，服务器将使用可用的内存，从而超出此选项的设置。 如果没有内存可供使用，则继续使用已分配的内存来创建索引。  
   
  **本主题内容**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   **min memory per query** 选项的设置优先于 **index create memory** 选项的设置。 如果更改这些选项，使 **index create memory** 小于 **min memory per query**，则会收到警告消息，但设置的值仍会生效。 而且，在查询执行过程中，您还会收到类似的警告。  
+-   [min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) 选项的设置优先于 index create memory 选项的设置。 如果更改这些选项，使 **index create memory** 小于 **min memory per query**，则会收到警告消息，但设置的值仍会生效。 而且，在查询执行过程中，您还会收到类似的警告。  
   
 -   使用已分区表和已分区索引时，如果出现非对齐的已分区索引且并行度很高，则创建索引时的最低内存要求将显著提高。 此选项控制在单一索引创建操作中为所有索引分区分配的初始内存总量。 如果此选项设置的内存量小于运行查询所需的最小内存，查询将终止并显示错误消息。  
   
@@ -62,6 +62,8 @@ ms.lasthandoff: 11/20/2017
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
   
 -   **index create memory** 选项是自行配置的，通常不需要调整即可工作。 但如果在创建索引时遇到困难，可以考虑提高此选项的运行值。  
+
+-   在生产系统上创建索引通常是不常执行的任务，通常安排在非高峰时段执行。 因此，不常创建索引且在非峰值时间时，增加 index create memory 可提高索引创建的性能。 但是，最好将 [min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) 配置选项保持在一个较低的值，这样即使所有请求的内存都不可用，索引创建作业仍能开始。
   
 ###  <a name="Security"></a> 安全性  
   
