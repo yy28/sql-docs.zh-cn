@@ -1,5 +1,5 @@
 # [概述](language-reference.md)  
-# [新的和最近更新的文章](new-updated-t-sql.md)
+# [新的和已更新的项目](new-updated-t-sql.md)
 
 # [数据类型](../t-sql/data-types/data-types-transact-sql.md)
 # [数据库控制台命令](../t-sql/database-console-commands/database-console-commands.md)

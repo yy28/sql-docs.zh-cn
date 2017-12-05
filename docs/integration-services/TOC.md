@@ -3,7 +3,7 @@
 # 概述
 ## [SQL Server 2016 Integration Services 中的新增功能](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [SQL Server 2017 Integration Services 中的新增功能](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [新的和最近更新的文章](new-updated-integration-services.md)
+## [新的和已更新的项目](new-updated-integration-services.md)
 ## [SQL Server 各个版本支持的 Integration Services 功能](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services 的后向兼容性](integration-services-backward-compatibility.md)
 

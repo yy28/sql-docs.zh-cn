@@ -4,7 +4,7 @@
 # 新增功能
 ## [SSMS 更改日志和以前的版本](sql-server-management-studio-changelog-ssms.md)
 ## [发行说明](download-sql-server-management-studio-ssms.md#release-notes)
-## [新的和最近更新的文章](new-updated-ssms.md)
+## [新的和已更新的项目](new-updated-ssms.md)
 
 # [下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)
 
