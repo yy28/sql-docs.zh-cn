@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="viewing-the-results-of-processing"></a>查看处理结果  
  处理了挖掘结构后，此挖掘结构包含数据的简洁表示形式，以用于统计分析。 如果尚未清除缓存，则可以用以下几种方式访问此缓存中的数据：  
   
--   针对模型创建数据挖掘扩展插件 (DMX) 查询，并钻取到结构中。 有关详细信息，请参阅 [SELECT FROM <模型> SAMPLE_CASES (DMX)](../../dmx/select-from-model-cases-dmx.md)。  
+-   针对模型创建数据挖掘扩展插件 (DMX) 查询，并钻取到结构中。 有关详细信息，请参阅 [SELECT FROM &#60;模型&#62; SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md)。  
   
 -   基于结构浏览模型，并使用用户界面中的其中一个选项钻取到结构事例。 有关详细信息，请参阅 [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)或 [从挖掘模型钻取到事例数据](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)。  
   

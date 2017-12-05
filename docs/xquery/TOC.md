@@ -1,5 +1,5 @@
 # [概述](xquery-language-reference-sql-server.md)  
-# [新的和最近更新的文章](new-updated-xquery.md)
+# [新的和已更新的项目](new-updated-xquery.md)
 # [模块和 Prolog - XQuery Prolog](modules-and-prologs-xquery-prolog.md)  
 
 # [XQuery 基础知识](xquery-basics.md)  
