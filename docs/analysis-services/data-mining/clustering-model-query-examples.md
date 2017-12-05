@@ -139,7 +139,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   NODE_DESCRIPTION 列包含逗号分隔的属性列表。 请注意，为便于显示，可能对属性列表进行了缩略。  
   
--   NODE_DISTRIBUTION 列中的嵌套表包含分类的属性的完整列表。 如果您的客户端不支持分层行集，可以通过在 SELECT 列列表前添加 FLATTENED 关键字来返回嵌套表。 有关 FLATTENED 关键字的使用的详细信息，请参阅 [SELECT FROM <model>.CONTENT (DMX)](../../dmx/select-from-model-content-dmx.md)。  
+-   NODE_DISTRIBUTION 列中的嵌套表包含分类的属性的完整列表。 如果您的客户端不支持分层行集，可以通过在 SELECT 列列表前添加 FLATTENED 关键字来返回嵌套表。 有关 FLATTENED 关键字的使用的详细信息，请参阅 [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md)。  
   
  [返回页首](#bkmk_top2)  
   

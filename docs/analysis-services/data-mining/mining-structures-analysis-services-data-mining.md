@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您希望查看挖掘结构中的数据，则可以使用数据挖掘扩展插件 (DMX) 来创建查询。 例如， `SELECT * FROM <structure>.CASES` 语句返回挖掘结构中的所有数据。 若要检索此信息，必须处理挖掘结构，并且必须缓存处理结果。  
   
- `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM <结构>.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM <模型>.CASES (DMX)](../../dmx/select-from-model-cases-dmx.md)。  
+ `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 &#有关详细信息，请参阅 [SELECT FROM &#60;结构&#62;.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM &#60;模型&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>在挖掘结构中使用数据挖掘模型  
  数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名 。 有关为结构列创建别名的详细信息，请参阅[为模型列创建别名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)和[挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)。  

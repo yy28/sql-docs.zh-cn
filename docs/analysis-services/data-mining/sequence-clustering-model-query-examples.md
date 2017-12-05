@@ -189,7 +189,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- 有关详细信息，请参阅 [SELECT FROM <模型>.SAMPLE_CASES (DMX)](../../dmx/select-from-model-sample-cases-dmx.md)。  
+ 有关详细信息，请参阅 [SELECT FROM &#60;模型&#62;.SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md)。  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>分类特征和分类对比  
  **“分类特征”** 选项卡汇总了每个分类的主属性，按概率进行排序。 您可以查看属于一个分类的事例数，以及该分类中的事例分布情况：每个特征都有一定的支持。 若要查看特定分类的特征，您必须知道该分类的 ID。  

@@ -1,5 +1,5 @@
 # [概述](analysis-services-language-reference.md)  
-# [新的和最近更新的文章](new-updated-mdx.md)
+# [新的和已更新的项目](new-updated-mdx.md)
 
 # [多维表达式 (MDX) 参考](multidimensional-expressions-mdx-reference.md)  
 ## [MDX 语法元素](mdx-syntax-elements-mdx.md)  

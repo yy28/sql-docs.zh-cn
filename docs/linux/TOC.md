@@ -3,7 +3,7 @@
 # 概述
 ## [发行说明](sql-server-linux-release-notes.md)
 ## [此版本中有什么新增功能？](sql-server-linux-whats-new.md)
-## [新的和最近更新的文章](new-updated-linux.md)
+## [新的和已更新的项目](new-updated-linux.md)
 ## [版本和支持的功能](sql-server-linux-editions-and-components-2017.md)
 
 # 快速入门

@@ -1,5 +1,6 @@
 # 关于此版本
 ## [新增功能](whats-new-analytics-platform-system.md)
+## [新的和已更新的项目](new-updated-analytics-platform-system.md)
 
 # 体系结构
 ## [并行数据仓库概述](parallel-data-warehouse-overview.md)

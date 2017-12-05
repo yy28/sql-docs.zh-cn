@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 SELECT <model column list>, StructureColumn('<structure column name') FROM <modelname>.CASES  
 ```  
   
- 有关使用 DMX 查询返回事例数据的其它信息，请参阅 [SELECT FROM <模型>.CASES (DMX)](../../dmx/select-from-model-cases-dmx.md) 和 [SELECT FROM <结构>.CASES](../../dmx/select-from-structure-cases.md)。  
+ 有关使用 DMX 查询返回事例数据的其它信息，请参阅 [SELECT FROM &#60;模型&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md) 和 [SELECT FROM &#60;结构&#62;.CASES](../../dmx/select-from-structure-cases.md)。  
   
 ## <a name="examples"></a>示例  
  下面的 DMX 查询从时序模型返回特定产品系列的事例数据。 该查询还返回 **Amount**列，该列在挖掘结构中可用，但却未在挖掘模型中使用。  
