@@ -1,5 +1,5 @@
 # [概述](database-features.md)
-# [新的和最近更新的文章](new-updated-relational-databases.md)
+# [新的和已更新的项目](new-updated-relational-databases.md)
 
 # [SQL Server 指南](sql-server-guides.md)
 ## Always On 可用性组故障排除和监视指南
