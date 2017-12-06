@@ -2,9 +2,12 @@
 title: "URL 保留语法（SSRS 配置管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8118c7cf2050588a64a35b068903aa7ac3154c88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88f5408801551be37142c616644a6cb114834cd4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 保留语法（SSRS 配置管理器）
   本主题介绍报表服务器 Web 服务和报表管理器的 URL 字符串的各部分。 该内部存储的 URL 字符串的结构不同于在浏览器窗口的地址栏中键入的 URL 的结构。 URL 保留项字符串会在您配置 URL 时显示在 Reporting Services 配置工具的“结果”窗口中，也会出现在 RSReportServer.config 文件中。 如果要解决 URL 保留项中存在的问题，或者要查询 HTTP.SYS 以查看服务器上定义的内部 URL 保留项，则了解该 URL 字符串的定义方式会很有用。  

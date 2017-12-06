@@ -2,9 +2,12 @@
 title: "设置已发布报表的参数 - SharePoint 集成模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 57f464054989a20b56b729624d711b6520466d13
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c1057911b1443b5d83777ec7a6e7fff90d73ece
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>设置已发布报表的参数 - SharePoint 集成模式
   参数化报表可以在运行报表时接受用于筛选数据的输入值。 参数是在创建报表时定义的。 根据报表定义中报表参数的定义方式，参数可以接受单值、多值或者根据上一选择而变化的动态值（例如，选择产品类别后，下一选择可能是该类别中的特定产品）。 参数可以具有默认值，该值可用于自动运行经过筛选的报表，也可以由不同的值来代替。  

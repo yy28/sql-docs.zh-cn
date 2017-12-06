@@ -2,9 +2,12 @@
 title: "安全性（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 927607181f78077fdaf9a02f959b2c37d7ed9c51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4fd85a37ae3cb0f88a875c11642c9076852fffd9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）
   报表生成器是一类设计用来与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器配合使用的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
      若要在报表服务器上查看或发布项，需将应用于与报表相关的项和操作的权限集组织到角色中。 报表服务器管理员为您分配了一个或多个角色。 例如，利用预定义的角色浏览器，可以查看报表、文件夹、模型和资源。  
   
-     如果您无法连接到或浏览到报表服务器，请与报表服务器管理员联系。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 安全性和保护](../../reporting-services/security/reporting-services-security-and-protection.md)。  
+     如果您无法连接到或浏览到报表服务器，请与报表服务器管理员联系。 有关详细信息，请参阅 [Reporting Services Security and Protection](../../reporting-services/security/reporting-services-security-and-protection.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   在 SharePoint 集成模式中配置的报表服务器  
   
@@ -115,9 +118,9 @@ ms.lasthandoff: 11/09/2017
   
 -   除非您提供了有效的值，否则不要使用基于查询参数且类型为 **Text** 的参数。 可用值列表可帮助用户只选择有效值。 如果不使用可用值列表，则无法限制用户可输入的值。  
   
--   不要使用全局 [&UserID] 来保护私有数据。 当此值作为报表参数时，可以使用 URL 访问语法在报表 URL 中指定此值。 在共享数据集的表达式中使用此值可防止数据集被缓存。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [URL 访问参数引用](../../reporting-services/url-access-parameter-reference.md)。  
+-   不要使用全局 [&UserID] 来保护私有数据。 当此值作为报表参数时，可以使用 URL 访问语法在报表 URL 中指定此值。 在共享数据集的表达式中使用此值可防止数据集被缓存。 有关详细信息，请参阅 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- 在将项发布到报表服务器后，报表服务器管理员可通过分配基于角色的安全性或文件夹和项级别安全性来帮助保护这些项。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的[保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)。  
+ 在将项发布到报表服务器后，报表服务器管理员可通过分配基于角色的安全性或文件夹和项级别安全性来帮助保护这些项。 有关详细信息，请参阅 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 联机丛书 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ## <a name="see-also"></a>另请参阅  

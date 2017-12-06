@@ -2,9 +2,12 @@
 title: "Hyperion Essbase 连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b04a9b00e87526b4ea030ff6359d0969e84f11cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  

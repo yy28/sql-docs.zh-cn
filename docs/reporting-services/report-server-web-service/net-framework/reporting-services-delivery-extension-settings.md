@@ -2,9 +2,12 @@
 title: "Reporting Services 传递扩展插件设置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -29,11 +32,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2f1e2c16fa9a9d72a2dd9743127348296cce3f9d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1487873422f2c5e0725583d952de3304d0056355
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 传递扩展插件设置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括电子邮件传递扩展插件和文件共享传递扩展插件。 电子邮件传递扩展插件提供了通过电子邮件将报表发送到单个用户或组的方式。 文件共享传递扩展插件可用于将呈现的报表自动发送到网络上的共享区中。 您可以使用具有标准订阅或数据驱动订阅的支持的传递扩展插件之一。 只要您调用 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法，就将传递特定于传递扩展插件类型的传递设置。 若要以编程方式检索传递设置的列表，请使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  

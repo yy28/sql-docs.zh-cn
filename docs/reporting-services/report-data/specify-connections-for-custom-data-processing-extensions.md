@@ -2,9 +2,12 @@
 title: "指定用于自定义数据处理扩展插件的连接 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2a24b319e99347c18d45743c74be2b15c9df0a45
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbfdb365ac9c57233fddcbb4a5054eb563af5219
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
   您可以在报表服务器上创建或使用第三方自定义数据处理扩展插件来增强支持的数据源的数据处理能力，或者支持默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中不可用的其他类型的数据源。 对连接的处理会因实现方式的不同而有所不同。 数据处理扩展插件可能具有下列实现方式：  

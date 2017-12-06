@@ -2,9 +2,12 @@
 title: "报表和快照的大小限制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d433a0ea0b586929858ca4fe83fcf1a48274f59e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  

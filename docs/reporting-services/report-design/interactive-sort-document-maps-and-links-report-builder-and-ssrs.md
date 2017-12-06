@@ -2,9 +2,12 @@
 title: "交互式排序、文档结构图和链接（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 304da15a594fff8a68074b1b1ff172c0b8eac2bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9cf84a0ac978195980be637d6b387c2e4a492164
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>交互式排序、文档结构图和链接（报表生成器和 SSRS）
   在基于 Web 的环境中，您可以添加许多让用户与报表进行交互的功能。 用户可以更改报表中值的排序顺序，在报表中显示或隐藏某些项，或者单击其中的链接以访问其他报表或网页。 还可以添加目录或文档结构图。 报表用户只需单击目录或文档结构图中的项，即可跳至报表内的相应区域。  

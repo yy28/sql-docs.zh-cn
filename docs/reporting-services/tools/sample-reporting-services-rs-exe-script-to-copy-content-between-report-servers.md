@@ -2,9 +2,12 @@
 title: "用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0bf93b5fc051df1784ed19656b3650f4b494258a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 41f7f0b36b5889772bde8fbdc39840061bdf88fb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
   本主题包括并说明一个示例 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本，该脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/09/2017
 |历史记录|**“否”**|**“否”**||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
 |计划|是|是|若要迁移计划，在目标服务器上需运行 SQL Server 代理。 如果在目标服务器上未运行 SQL Server 代理，将会显示如下错误消息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|角色和系统策略|是|是|默认情况下，该脚本不会在服务器之间复制自定义权限架构。 默认行为是项将复制到目标服务器并且“从父项继承权限”标志设置为 TRUE。 如果您希望该脚本复制单独项的权限，请使用 SECURITY 开关。<br /><br /> 如果源服务器和目标服务器 **未处于相同报表服务器模式下**，例如从本机模式到 SharePoint 模式，并且您使用 SECURITY 开关，则该脚本将尝试基于比较（请参阅主题 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)）映射默认角色和组。 自定义角色和组不复制到目标服务器。<br /><br /> 在 **处于相同模式下**的服务器之间复制脚本并且使用 SECURITY 开关时，该脚本将在目标服务器上创建新角色（本机模式）或组（SharePoint 模式）。<br /><br /> 如果某一角色已在目标服务器上存在，该脚本将创建如下“失败”消息，并且继续迁移其他项。 在该脚本运行完毕之后，请验证目标服务器上的角色已配置为满足您的需要。 迁移角色：找到了 8 项。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **注意：** 如果某一用户在源服务器上存在，但在目标服务器上不存在，则该脚本无法在目标服务器上应用角色分配，即使使用了 SECURITY 开关，该脚本也无法应用角色分配。|  
+|角色和系统策略|是|是|默认情况下，该脚本不会在服务器之间复制自定义权限架构。 默认行为是项将复制到目标服务器并且“从父项继承权限”标志设置为 TRUE。 如果您希望该脚本复制单独项的权限，请使用 SECURITY 开关。<br /><br /> 如果源服务器和目标服务器 **未处于相同报表服务器模式下**，例如从本机模式到 SharePoint 模式，并且您使用 SECURITY 开关，则该脚本将尝试基于比较（请参阅主题 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)）映射默认角色和组。 自定义角色和组不复制到目标服务器。<br /><br /> 在 **处于相同模式下**的服务器之间复制脚本并且使用 SECURITY 开关时，该脚本将在目标服务器上创建新角色（本机模式）或组（SharePoint 模式）。<br /><br /> 如果某一角色已在目标服务器上存在，该脚本将创建如下“失败”消息，并且继续迁移其他项。 在该脚本运行完毕之后，请验证目标服务器上的角色已配置为满足您的需要。 迁移角色：找到了 8 项。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **注意：** 如果某一用户在源服务器上存在，但在目标服务器上不存在，则该脚本无法在目标服务器上应用角色分配，即使使用了 SECURITY 开关，该脚本也无法应用角色分配。|  
 |共享数据源|是|是|该脚本将不覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 凭据 **不** 作为数据源的一部分被复制。 在迁移内容项后，在目标服务器上更新凭据信息。|  
 |共享数据集|是|是||  
 |文件夹|是|是|该脚本将不覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  

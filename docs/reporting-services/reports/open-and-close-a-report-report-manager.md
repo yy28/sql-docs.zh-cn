@@ -2,9 +2,12 @@
 title: "打开和关闭报表（报表管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d9541855640ec0be24c633ea3946a1cec03315d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cca7f1627bfa5169912c242a0d81a4877f6848a4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-and-close-a-report-report-manager"></a>打开和关闭报表（报表管理器）
   可以使用报表管理器来查看已经发布到报表服务器的报表。 默认情况下，所有的报表都以 HTML 形式打开。 在打开报表之后，可以将其导出，以便以其他应用程序格式进行查看。 如果报表中包含交互式功能，或者如果它是包含交互式数据的报表生成器报表，则可以单击相应的链接来查看其他报表或数据。  

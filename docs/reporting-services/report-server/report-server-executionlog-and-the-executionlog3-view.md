@@ -2,9 +2,12 @@
 title: "报表服务器 ExecutionLog 和 ExecutionLog3 视图 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ccd6c7081233b6d677ad366e7796a03b01d5e13e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  

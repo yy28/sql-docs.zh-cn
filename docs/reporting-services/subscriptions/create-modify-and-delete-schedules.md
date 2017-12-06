@@ -2,9 +2,12 @@
 title: "创建、修改和删除计划 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32fe1afefa899880710a818c56eef4079fe90622
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>创建、修改和删除计划
   通过本主题，可以了解有关创建、修改和删除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共享计划的信息。  若要在本机模式下管理共享计划，请使用 Web 门户中的“计划”页或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的“共享计划”文件夹。 对于 SharePoint 模式，请使用针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。  

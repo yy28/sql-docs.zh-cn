@@ -2,9 +2,12 @@
 title: "为报表数据源指定凭据和连接信息 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -34,11 +37,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: b16e0b6c380cfe47f2bc82ea0328d9386ada294c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dca189f8895ebe919a91fa390777c7bf3b1fdd7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  

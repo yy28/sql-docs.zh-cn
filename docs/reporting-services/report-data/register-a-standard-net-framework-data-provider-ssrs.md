@@ -2,9 +2,12 @@
 title: "注册标准 .NET Framework 数据提供程序 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  

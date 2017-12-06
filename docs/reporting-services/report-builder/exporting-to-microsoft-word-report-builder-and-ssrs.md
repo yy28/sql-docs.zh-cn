@@ -2,9 +2,12 @@
 title: "导出到 Microsoft Word（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: fa120c78f7b443eb0dc6078a5444b79b20bbda8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a42bdc5a9d8a0f19958d6537de027d815b3ca8d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -166,7 +169,7 @@ ms.lasthandoff: 11/09/2017
   
 -   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。  
   
--   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式报表和的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式报表和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果 **Word 2003** 呈现器配置为可见，则 **Word** 和 **Word 2003** 菜单选项可用于以下方案中：  
   

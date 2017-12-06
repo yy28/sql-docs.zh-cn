@@ -2,9 +2,12 @@
 title: "Reporting Services 工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5a676c4c1a27de60187426c0a3046e874f3c23b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9cc8974ff85c595e97de7fc795a8a7908c983300
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含支持在托管环境中开发和使用具有丰富功能的报表的一组图形和脚本编写工具。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  

@@ -1,9 +1,13 @@
 ---
 title: "HTML 查看器和报表工具栏 | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  

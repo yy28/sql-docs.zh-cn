@@ -2,9 +2,12 @@
 title: "在 SharePoint 站点上授予对报表服务器项的权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: df4d201ba6de1ebda47f12e3c116ef4a7645a59b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 763199247d5c6b1c86f7e078c4687c78dfc12650
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了内置安全功能。使用这些功能，你可以授予对从 SharePoint 站点和库访问的报表服务器项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  

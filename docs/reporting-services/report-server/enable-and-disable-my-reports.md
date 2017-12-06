@@ -2,9 +2,12 @@
 title: "启用和禁用“我的报表”| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 352e2118319664c4458c4e46ea5623bcf8290a45
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>启用和禁用“我的报表”
   使用“我的报表”功能可以在报表服务器数据库内分配个人存储区，便于用户在私人文件夹中保存自己的报表。 报表服务器管理员可以启用或禁用此功能，或通过修改控制用户如何使用此工作区的安全设置，来更改该功能的工作方式。  

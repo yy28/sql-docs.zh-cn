@@ -2,9 +2,12 @@
 title: "将 Office 数据连接 (.odc) 用于报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2d6f6fa222bb8d4c5c9cd53a560c093c814ccd01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c146c2fe80f27ace8a8f03ce2767efd9751acf48
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>将 Office 数据连接 (.odc) 用于报表
   对于局限性方案而言，可以使用现有 Office 数据连接 (.odc) 文件来为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表提供连接信息。 在创建共享数据源时，可用 .odc 文件替代 .rsds 文件。 报表服务器使用 .odc 文件的方式与使用 .rsds 文件的方式相同；它读取文件以获得数据源类型、连接字符串以及凭据信息。  

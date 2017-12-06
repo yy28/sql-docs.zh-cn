@@ -2,9 +2,12 @@
 title: "与 Reporting Services 报表的数据检索问题疑难解答 |Microsoft 文档"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae2ec9a548d851f8494d144401e043547d68e4b8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>排查与 Reporting Services 报表相关的数据检索问题
 报表处理的第一步是通过运行数据集查询检索每个数据集的报表数据。 本地预览报表时，数据源连接和凭据必须使用足够的权限才能检索计算机上的数据。 在报表服务器上运行报表时，数据源连接和凭据必须使用足够的权限才能检索报表服务器上的数据。 使用本主题可帮助解决有关报表数据检索的问题。   

@@ -2,9 +2,12 @@
 title: "用于 XML 报表数据的 XML 查询语法 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a2505ed537c92255f1291e4f800a49bb070f1149
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1450a6eb904cb77744930f5319ed541f3abb7284
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的 XML 查询语法 (SSRS)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML **Query** 或元素路径来创建数据集查询。 XML 查询以 \<Query> 标记开头，并且包括因数据源而异的命名空间和 XML 元素。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  

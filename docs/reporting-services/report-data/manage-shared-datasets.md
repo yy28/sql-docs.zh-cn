@@ -2,9 +2,12 @@
 title: "管理共享数据集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a7ff9770deac8363b38390c74a79bfe2a582c164
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  

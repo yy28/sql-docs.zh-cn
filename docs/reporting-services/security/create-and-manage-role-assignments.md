@@ -2,9 +2,12 @@
 title: "创建和管理角色分配 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: febbd48dbe572a668ad8811eec0cff11cb43a849
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  

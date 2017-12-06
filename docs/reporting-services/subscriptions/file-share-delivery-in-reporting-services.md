@@ -2,9 +2,12 @@
 title: "Reporting Services 中的文件共享传递 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0d0492a8bc9b5ef61e8ef8b1d237aac1f818abd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc40553b8a964ad542f22c983ffa7fae5dec243e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 需要编写器权限的帐户可以是订阅中配置的凭据，也可以是为报表服务器配置的“文件共享帐户”  。 有关文件共享帐户的详细信息，请参阅 [订阅设置和文件共享帐户（配置管理器）](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  

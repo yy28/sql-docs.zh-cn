@@ -2,9 +2,12 @@
 title: "Reporting Services 报表处理疑难解答 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a22c557ce2289c950edceff045b1c868d60ef677
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b379a4a9cb342c96e23be750ff4c8c1df08a6dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>排除 Reporting Services 报表处理故障
 检索报表数据后，报表处理器会将这些数据与布局信息组合。 将在组合的数据和布局的上下文中计算具有表达式的每个报表项属性。 使用本主题可以帮助解决这些问题。   

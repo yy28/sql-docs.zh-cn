@@ -2,9 +2,12 @@
 title: "创建、删除或修改角色 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7b5b8d11868d108447e1a3109bff28abcef2de33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fb32b134be7425c12573c6971c0e537a6c0e7d8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>角色定义 - 创建、删除或修改
   Reporting Services 提供了定义对报表服务器的访问级别的预定义角色。 需要访问报表服务器的每个用户或组都通过说明可以执行的任务的角色来进行访问。 这些角色是对作为整体的报表服务器进行定义的。 不能对报表服务器的特定部分改变角色定义，也不能指定根据不同情况以不同的方式使用角色。  

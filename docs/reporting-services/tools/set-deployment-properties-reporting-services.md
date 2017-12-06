@@ -2,9 +2,12 @@
 title: "设置部署属性 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3485cc9a08bb868a16c731ccf3d2d684a110e46e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
   在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你必须指定报表服务器，并视需要指定报表文件夹和共享数据源，以便你可以将报表服务器项目中的项发布到报表服务器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成、预览和部署报表所需的属性和值存储在报表服务器项目的项目配置中。 可以为这些项目属性创建多个命名集，从而方便地在属性集之间切换。 每个属性集都是一个配置。 例如，可拥有一个向测试服务器发布报表的配置，还可拥有另一个向生产服务器发布报表的配置。  
