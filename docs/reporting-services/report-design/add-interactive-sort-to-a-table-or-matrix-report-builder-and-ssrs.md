@@ -2,9 +2,12 @@
 title: "向表或矩阵添加交互式排序（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a87f586dfc1846f3224d2e24f566a5575e35965f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3ce7daac84995cae0c3dbc3e039acfcab5f41e13
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
   添加交互式排序按钮可以让用户能够更改表和矩阵中行和列的排序顺序。 只有支持用户交互的呈现格式（例如 HTML）才支持此功能。  

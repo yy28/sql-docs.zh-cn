@@ -2,9 +2,12 @@
 title: "授予对本机模式报表服务器的权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 254e3311ee8f54ab80a722ca753de9c99d376b57
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2075a15c7c179a6a3b81da4f139536282505f663
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  

@@ -2,9 +2,12 @@
 title: "设置文本和占位符的格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7022c0f2662d62f5ff74a1c1d67a2e4f85f5a681
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e3dbe51460c639d7574df42ad9d0a275e80cdbd5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>设置文本和占位符的格式（报表生成器和 SSRS）
   文本框可以是数据区域中包含以下内容的报表项或独立单元：文本、计算字段、指向数据库中字段的指针或前面所有三项的组合。 您可以混合字体和颜色、添加加粗和倾斜样式以及使用段落样式（如对齐和悬挂缩进）。 可以设置整个文本框的格式，也可以设置文本框内特定文本、数字、表达式或字段的格式。  

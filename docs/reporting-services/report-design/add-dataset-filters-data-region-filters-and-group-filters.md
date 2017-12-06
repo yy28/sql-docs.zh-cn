@@ -2,9 +2,12 @@
 title: "添加数据集筛选器、数据区域筛选器和组筛选器| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ed3e111ebce37b58c5a76a0dcb56a5a87d6c8810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ead354a4f95b061f44728b76bbbccd6ef84606a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>添加数据集筛选器、数据区域筛选器和组筛选器
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  

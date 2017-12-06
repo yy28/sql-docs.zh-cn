@@ -2,9 +2,12 @@
 title: "Reporting Services 日志文件和来源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5242a9107b7a69b017fbb0ceb78d1d33ff5ec24d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd203c65fc1220fbb26ad0acb4c99fd96f67327c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 日志文件和来源
   报表服务器和报表服务器环境使用各种日志目标来记录有关服务器操作和状态的信息。 有两个基本日志记录类别：执行日志记录和跟踪日志记录。 执行日志记录包含有关报表执行统计信息、审核、性能诊断和优化的信息。 跟踪日志记录是有关错误消息和一般诊断的信息。  

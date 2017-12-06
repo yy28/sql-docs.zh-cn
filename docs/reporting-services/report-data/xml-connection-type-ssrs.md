@@ -2,9 +2,12 @@
 title: "XML 连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ff81c239e4d585678887245afa822059b8ae47e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae17d2f33412291f42ceb71e80e3c9a0b0cad0a3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  

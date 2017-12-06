@@ -2,9 +2,12 @@
 title: "Analysis Services 数据库的扩展字段属性 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d3cd894cfb7466ae39ac921b8b3405da6c2e77a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d09ae6530bc9180b23a4ec81eeaeaabf1c41110
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 **Value** 和 **IsMissing** 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以通过编写使用内置 **Fields** 集合按名称指定扩展字段属性值的表达式，来将这些扩展字段属性值包含在报表中。  

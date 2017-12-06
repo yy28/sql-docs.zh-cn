@@ -2,9 +2,12 @@
 title: "导出到 Microsoft Excel（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -148,7 +151,7 @@ ms.lasthandoff: 11/09/2017
   
 -   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。  
   
--   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式报表和的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式报表和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果将 **Excel 2003** 菜单选项呈现器配置为可见，则 Excel 和 Excel 2003 选项可用于以下方案中：  
   

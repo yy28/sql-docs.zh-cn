@@ -2,9 +2,12 @@
 title: "教程：创建自由格式的报表（报表生成器） | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: eeb53cfbcf47af7c3580cb75b34acaf0f140810d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 33d2dfa08fcc9b3cbf41a80642e9d67bab8d2b3f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。

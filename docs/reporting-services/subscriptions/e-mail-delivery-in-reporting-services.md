@@ -2,9 +2,12 @@
 title: "Reporting Services 中的电子邮件传递 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 89246a976a0de3c1f3c3581509cb0f71a26cd1a5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 若要通过电子邮件分发报表，你可以 1) 配置报表服务器以进行电子邮件传递，并 2) 定义标准订阅或数据驱动订阅。 一个订阅不能在一个电子邮件中传递多个报表。 但你可以创建多个订阅。  

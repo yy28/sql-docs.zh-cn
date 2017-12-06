@@ -2,9 +2,12 @@
 title: "报表数据 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d5cac8267c1a38401eee78758a6e34adcbdd06ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1581775de3bf36ecfd3153918ff4457b8d6dde7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-data-ssrs"></a>报表数据 (SSRS)
   报表数据可以来自您的组织中的多种数据源。 设计报表的第一步是创建表示基础报表数据的数据源和数据集。 每个数据源都包含数据连接信息。 每个数据集都包含一个查询命令，该命令定义要用作来自数据源的数据的字段集。 若要展现来自各数据集的数据，请添加表、矩阵、图表或地图之类的数据区域。 处理报表时，将对数据源运行查询，并且每个数据区域都可以根据需要进行扩展，以便显示数据集的查询结果。  

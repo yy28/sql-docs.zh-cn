@@ -2,9 +2,12 @@
 title: "在 SharePoint Web 应用程序中设置报表服务器操作的权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a872862355624b84fe792cfccc892f26bf9e3433
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 14e26b4d8f398fcfc8d648f757e782e0afda2101
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 应用程序中设置报表服务器操作的权限
   对于在 SharePoint 集成模式下运行的报表服务器而言，在 SharePoint 站点定义的安全设置将决定您查看和管理报表、报表模型以及共享数据源的方式。 如果使用的是默认 SharePoint 组、权限级别和权限分配，则可以使用当前安全设置来处理报表和其他文档。  

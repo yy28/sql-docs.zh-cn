@@ -2,9 +2,12 @@
 title: "控制行标题和列标题（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d793d5d6533ebb9ffc466d80966a15a0c250c00d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 522078cebd78ad8991cec90cde78ad3ff961721c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制行标题和列标题（报表生成器和 SSRS）
   表、矩阵或列表数据区域可以水平或垂直跨多页。 您可以指定是否在每页上重复显示行标题或列标题。 在交互式呈现器（如报表管理器）或报表预览中，还可以指定是否冻结行标题或列标题，以便在滚动报表时始终显示标题。 在表或矩阵中，第一行通常包含列标题，用来为每列中的数据加上标签；第一列通常包含行标题，用来为每行中的数据加上标签。 对于嵌套组，您可能需要重复显示包含组标签的初始行标题集和列标题集。 默认情况下，列表数据区域不包含标题。  

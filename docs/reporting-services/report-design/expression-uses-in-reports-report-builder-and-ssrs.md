@@ -2,9 +2,12 @@
 title: "在报表中使用表达式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55c99fec659eaeffa55efee403bd336a20f9ccab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，可以在整个报表定义中使用表达式来指定或计算以下各项的值：参数、查询、筛选器、报表项属性、组和排序定义、文本框属性、书签、文档结构图、动态页眉和页脚内容、图像以及动态数据源定义。 本主题提供了一些可在其中使用表达式更改报表内容或外观的示例。 此列表并不全面。 可以在显示表达式 (fx) 按钮的对话框中或在显示“\<Expression...>”的下拉列表中设置表达式的任何属性。  

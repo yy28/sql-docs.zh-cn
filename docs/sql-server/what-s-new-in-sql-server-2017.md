@@ -2,10 +2,10 @@
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: db5dd719e105809acbd5e4bc925a94af94df902e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。 有关 Linux 上的 SQL Server 的相关详细信息，请参阅 [Linux 上的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)

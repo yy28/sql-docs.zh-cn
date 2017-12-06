@@ -2,9 +2,12 @@
 title: "管理报表部件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   报表部件可在分页报表中由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  

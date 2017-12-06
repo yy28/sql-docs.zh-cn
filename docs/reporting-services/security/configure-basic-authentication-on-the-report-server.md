@@ -2,9 +2,12 @@
 title: "在报表服务器上配置基本身份验证 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2972097a7cc52ee5c73ec05d684de19b56cd1fd6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  

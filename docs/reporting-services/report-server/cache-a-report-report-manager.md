@@ -2,9 +2,12 @@
 title: "缓存报表（报表管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fe7f91a706a0b65920b3f32bd4fabde48cba31fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eade0d555ad4e5d8495048a8605b5a441fc220bc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  

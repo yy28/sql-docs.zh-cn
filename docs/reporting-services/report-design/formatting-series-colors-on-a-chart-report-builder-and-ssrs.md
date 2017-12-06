@@ -2,9 +2,12 @@
 title: "设置图表上序列颜色的格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 691f319ecd8b3b9bf6788ff4ac8ea9df469f433f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b887ca39b5198b02294c8e09de765e61ffe5a0e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>设置图表上序列颜色的格式（报表生成器和 SSRS）
   Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置 **Pacific** 颜色调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  

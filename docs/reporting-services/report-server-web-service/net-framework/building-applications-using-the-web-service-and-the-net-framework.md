@@ -2,9 +2,12 @@
 title: "使用 Web 服务和 .NET Framework 生成应用程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6ceb869a4839e89ea4c893a5dce966499d013466
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b45bd81569667c9de217935b8d212e270af28139
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
   借助 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以通过熟悉的编程构造（如方法、基元类型和用户定义的复杂类型）使用 Web 服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含可用来创建 Web 服务客户端的基础结构和工具，这些客户端可以调用任何符合万维网联盟 (W3C) 标准的 Web 服务。  

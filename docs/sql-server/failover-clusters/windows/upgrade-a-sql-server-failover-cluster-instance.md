@@ -2,10 +2,10 @@
 title: "升级 SQL Server 故障转移群集实例 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>升级 SQL Server 故障转移群集实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务包或累积更新，或在所有故障转移节点上分别将其安装到新的 Windows 服务包或累积更新时进行升级，故障时间限制为一次手动故障转移（或者如果无法故障转移回原始的主要副本，则限制为两次手动故障转移）。  

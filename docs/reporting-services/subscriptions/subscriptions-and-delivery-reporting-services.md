@@ -2,9 +2,12 @@
 title: "订阅和传递 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 4eaaff0f98fb1aa8ee29b2019efbad2f52843610
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。  

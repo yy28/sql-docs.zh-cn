@@ -2,9 +2,12 @@
 title: "在 Management Studio 中连接到报表服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -26,11 +29,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 339328c6ab47ee4d61ff2f7d887736813fac1133
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b6a12b85b69cb6bb8ae1b5bc138a47d1a58c1a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了对象资源管理器，可用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 对于 Reporting Services，可以使用对象资源管理器执行以下操作：  

@@ -2,9 +2,12 @@
 title: "对数据区域中的数据排序（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 78e3b4cc49c3df0b36d393c0c626b16fbfad9a0b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>对数据区域中的数据排序（报表生成器和 SSRS）
   若要更改报表首次运行时数据区域中数据的排序顺序，必须为数据区域或组设置排序表达式。 默认情况下，组的排序表达式自动设置为与组表达式相同的值。  

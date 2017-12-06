@@ -2,9 +2,12 @@
 title: "报表服务器服务跟踪日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a0410f4feb1525ca103d852b601145ec2585dc47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643bbac27a2db99f611a164e97da36c6e5204dbf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细信息。  文件中的信息包括由报表服务器 Web 服务、Web 门户和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息非常有用。 例如，排除订阅问题时。  

@@ -2,9 +2,12 @@
 title: "角色定义 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 53968d85370c60720f4d6caf72054a869348b27d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d30bd923a2a88d4438c2700073cf8430966e0d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions"></a>角色定义
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，“角色定义”是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  

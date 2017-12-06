@@ -1,10 +1,13 @@
 ---
 title: "将 Reporting Services 项目固定到 Power BI 仪表板 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13af28f9c90f848c77a1709bbac115a0e70943b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>将 Reporting Services 项目固定到 Power BI 仪表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 使用户能够将报表查看器工具栏中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表项作为新磁贴固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   若要固定，你的管理员需要先将报表服务器与 Azure Active Directory 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]相集成。  

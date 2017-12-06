@@ -2,9 +2,12 @@
 title: "Reporting Services 角色任务与SharePoint 组权限对比 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6dfe5a9c884008b2e5e5e744e2b2169356c6442f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
   本主题将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  

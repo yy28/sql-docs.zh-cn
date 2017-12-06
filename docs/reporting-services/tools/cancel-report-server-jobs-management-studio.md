@@ -2,9 +2,12 @@
 title: "取消报表服务器作业 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 86acc5b5fd6099f2c10699689281b62d04689aa1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e3ce670be898d98447464fdcc89390e9eefa927d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
   使用“取消报表服务器作业”对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  

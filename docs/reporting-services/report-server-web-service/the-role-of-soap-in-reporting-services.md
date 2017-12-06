@@ -2,9 +2,12 @@
 title: "SOAP 在 Reporting Services 中的作用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 ms.workload: Inactive
-ms.openlocfilehash: ae2242cc79e7fb3d5719e374a45751d27d5c2b5c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af67f104153e9662ad9ea98aab6e9634070bc721
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   报表服务器 Web 服务使用简单对象访问协议 (SOAP) 消息通过网络发送基于文本的命令。 这些命令采用的形式为使用 HTTP 通过万维网发送的 XML 文本。 通过将 SOAP 用作其通信协议，报表服务器 Web 服务使应用程序和组件能够使用开放和广为接受的基础结构与报表服务器交换数据。 SOAP 标准在 www.w3.org/TR/SOAP 中定义。  

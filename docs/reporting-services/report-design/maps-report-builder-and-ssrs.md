@@ -2,9 +2,12 @@
 title: "地图（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 46d27d3ff4f777c42ef3c9e79bf43d80edf3b1e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9fa84129aa040635592363705e4b4faf108e554
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，可以向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  

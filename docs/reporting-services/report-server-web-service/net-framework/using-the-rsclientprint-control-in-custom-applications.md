@@ -2,9 +2,12 @@
 title: "在自定义应用程序中使用 RSClientPrint 控件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ab24b29b32d1c2b5e37e5645e6ae449486b4c8ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4d641ec2dacd6f0296199e9f547bce6baa1c0cb2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  

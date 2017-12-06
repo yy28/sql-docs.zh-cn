@@ -2,9 +2,12 @@
 title: "报表参数（报表生成器和报表设计器）| Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 08a65ad0d4d65c7461862757f9a9bf1f8bac651b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表参数的常规用法、可设置的属性等内容。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。 可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和报表设计器中所创建的分页报表中使用报表参数，也可在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中所创建的移动报表中使用。 阅读有关 [报表参数概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)的详细信息。  

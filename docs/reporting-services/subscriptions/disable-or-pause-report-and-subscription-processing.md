@@ -2,9 +2,12 @@
 title: "禁用或暂停报表和订阅处理 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7c8a74891d7629293de30b0929e323febec0ac17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: affe8545e4bf5ab1cd2db4b2ce8ce0addfba8b8a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>禁用或暂停报表和订阅处理
   可采用多种方法禁用或暂停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和订阅处理。 本主题中的方法从禁用订阅延伸到中断数据源连接。 并非所有方法在两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式下都可行。下表概述了各种方法以及支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式：  

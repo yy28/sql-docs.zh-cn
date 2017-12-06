@@ -2,9 +2,12 @@
 title: "表达式中的数据类型（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  

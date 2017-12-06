@@ -2,9 +2,12 @@
 title: "表达式中的内置集合（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 36edefef85ac163d9755328752af05563691cc17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b92f8a42033da33b867393b67b26efaaaf9899af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>表达式中的内置集合（报表生成器）
   在报表的表达式中，可以包含对以下内置集合的引用：ReportItems、Parameters、Fields、DataSets、DataSources、Variables 和全局信息的内置字段（如报表名称）。 并非所有集合都显示在 **“表达式”** 对话框中。 DataSets 和 DataSources 集合只有在运行时报表将发布到报表服务器之后才可用。 ReportItems 集合是报表区域中的文本框集合，例如页面或页眉中的文本框。  

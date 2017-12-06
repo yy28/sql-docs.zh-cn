@@ -2,9 +2,12 @@
 title: "更改报表服务器上的时区和时钟设置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ce0f42a909f61530da5c614a87fb6633001fa903
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7dd8d5966c884df463ec42116368ac3fd0183f9e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>更改报表服务器上的时区和时钟设置
   报表服务器始终使用其所在计算机的本地时间。 您不能将它配置为使用其他时区。 如果客户端应用程序指向位于其他时区中的报表服务器，则将按该报表服务器所在时区的时间来执行计划操作。 在报表管理器和 SharePoint 管理页中，每个计划页上都标有时区，这样您可以确切知道执行计划操作的时间。 例如，用于创建自定义计划的页将注明“时间用 (UTC-08:00) 太平洋时间（美国和加拿大）来表示”。  

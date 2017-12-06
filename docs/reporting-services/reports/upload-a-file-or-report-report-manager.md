@@ -2,9 +2,12 @@
 title: "上传文件或报表（报表管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4c41372d28a94a2e8bf0ea86a750c15ea29b2abd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c5934844dd9570ab95ab5641d66a465f57725e55
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上载文件或报表（报表管理器）
   报表管理器提供上载功能，因而您可以将报表、模型以及其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  

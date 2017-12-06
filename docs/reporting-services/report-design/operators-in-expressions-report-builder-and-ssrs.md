@@ -2,9 +2,12 @@
 title: "表达式中的运算符（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6444394f781003b7a2c3b508ed1959eb0b565eea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0507f28c6850aeab6a691ec594bdbf7e02423c81
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
   运算符是一种符号，用来表示要应用到表达式中一个或多个字词的操作。 表达式中支持下列类别的运算符：算术、比较、串联、逻辑或位，以及移位。  

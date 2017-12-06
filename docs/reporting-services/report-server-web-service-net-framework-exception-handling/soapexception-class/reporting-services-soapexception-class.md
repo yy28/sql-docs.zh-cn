@@ -2,9 +2,12 @@
 title: "Reporting Services SoapException 类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-exception-handling
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 18fc1caebfceff356a28bfdfdf91d402d2bd6180
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7b2e5015be3a9044469057b1ff498ddc09f42e8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 类
   您应该解决已知可能会发生的特定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 错误。 例如，在您要求用户创建某一文件夹的应用程序中，该用户可能尝试创建已存在的文件夹。 作为开发人员，您无法控制用户在您的应用程序的文件夹名称和路径字段中输入的内容，但可以控制当某人无意中尝试创建已存在的项时的用户体验。  

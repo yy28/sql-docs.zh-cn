@@ -2,9 +2,12 @@
 title: "Reporting Services 的服务器和数据库连接问题疑难解答 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services 的服务器和数据库连接问题疑难解答
 使用本主题可以排除在连接到报表服务器时所遇到的故障。 本主题还提供了与错误消息有关的信息。 有关数据源配置和配置报表服务器连接信息的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  

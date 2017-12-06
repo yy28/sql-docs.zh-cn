@@ -2,9 +2,12 @@
 title: "新建共享计划 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 37e0b1a6b2e64de4d63456050b094113e288c434
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f0c57efec1f1e0c06f516cef9d53bae19272d568
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-shared-schedule-management-studio"></a>新建共享计划 (Management Studio)
   使用此页可以创建一个共享计划来运行已发布的报表和订阅。 共享计划可以用于替代报表特定计划或订阅特定计划。 集中的计划信息与能够暂停和恢复计划操作的功能是共享计划区别于项特定计划的两个关键功能。  

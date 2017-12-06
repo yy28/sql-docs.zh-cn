@@ -2,9 +2,12 @@
 title: "Analysis Services DMX 查询设计器用户界面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 159e9cfcd9adcb8bd67d04401dcd0861cf3f094e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b700fa12cce715af2c5c188ca7453eb12daf5ce2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源生成数据挖掘表达式 (DMX) 查询和多维表达式 (MDX) 查询。 该主题介绍了 DMX 查询设计器。 有关 MDX 查询设计器的详细信息，请参阅 [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)。  
