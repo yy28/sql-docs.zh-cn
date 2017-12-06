@@ -2,9 +2,12 @@
 title: "重播跟踪数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7b49bfa52216022fdc65ccb8f9c34ea82b0efcd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e890b0d0dcaca33dcae4c7731cec7f32b89fff56
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
-  准备好输入跟踪数据之后，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能启动分布式重播。 有关详细信息，请参阅 [准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以开始分布式的重播[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分布式重播功能后已准备好输入的跟踪数据。 有关详细信息，请参阅 [准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)。  
   
  使用管理工具 **replay** 选项启动分布式重播的事件重播阶段。 此阶段包含两个部分：跟踪数据调度和分布式重播的启动与同步。  
   

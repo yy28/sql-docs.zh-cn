@@ -2,9 +2,12 @@
 title: "报表服务器属性 （选项卡上的日志） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134c8ff1760e2c56c8d5298015dc56dbbbddbc98
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e326dd97af3e3fbd8580bc5b624c6957a711293
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-properties-log-on-tab"></a>报表服务器属性（“登录”选项卡）
-  使用 **“报表服务器属性”** 对话框中的 **“登录”** 选项卡可以指定报表服务器服务使用的帐户，还可以启动和停止该服务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**Log On**选项卡**报表服务器属性**对话框中，可以指定报表服务器服务使用的帐户，还可以启动和停止服务。  
   
 ## <a name="options"></a>选项  
  **本地系统帐户**  

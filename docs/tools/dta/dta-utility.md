@@ -2,9 +2,12 @@
 title: "dta 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>dta 实用工具
-  **dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta**实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
   
  与数据库引擎优化顾问一样， **dta** 实用工具可以分析工作负荷，并可为该工作负荷推荐可改进服务器性能的物理设计结构。 工作负荷可以是计划缓存、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件或跟踪表，也可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 物理设计结构包括索引、索引视图和分区。 分析了工作负荷后， **dta** 实用工具将生成数据库物理设计结构建议，并可生成实现该建议所需的脚本。 可以在命令提示符处，使用 **-if** 或 **-it** 参数指定工作负荷。 也可以在命令提示符处，使用 **-ix** 参数指定 XML 输入文件。 在这种情况下，在 XML 输入文件中指定工作负荷。  
   

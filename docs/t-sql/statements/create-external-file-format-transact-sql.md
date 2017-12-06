@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>创建外部文件格式 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER ="0x7E0x7E"-两个 tildas (例如 ~ ~)
   
  DATE_FORMAT = *datetime_format*  
- 指定分隔的文本文件可能会出现的所有日期和时间数据的自定义格式。 如果源文件使用默认 datefime 格式，则不需要此选项。 只有一个自定义 datetime 格式允许每个文件中。 不能指定每个文件的多个自定义 datetime 格式。 但是，你可以使用多个日期时间格式，如果每个外部表定义中其各自的数据类型的默认格式。
+ 指定分隔的文本文件可能会出现的所有日期和时间数据的自定义格式。 如果源文件使用默认日期时间格式，则不需要此选项。 只有一个自定义 datetime 格式允许每个文件中。 不能指定每个文件的多个自定义 datetime 格式。 但是，你可以使用多个日期时间格式，如果每个外部表定义中其各自的数据类型的默认格式。
  
  
 PolyBase 仅用于自定义日期格式将数据导入。 它不将数据写入到外部文件使用自定义格式。

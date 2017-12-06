@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_DEFAULTS (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a06170bd4a52708c5a3a88cfc12fe56204a6ddc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 53cf9bcaa8ca044ea53becea4d1bf0bb701f62f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -38,21 +38,21 @@ ms.lasthandoff: 11/21/2017
   控制一组可共同指定某种 ISO 标准行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>语法  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_DEFAULTS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_DEFAULTS ON;  
-```  
-  
+
+## <a name="syntax"></a>语法
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_DEFAULTS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_DEFAULTS ON
+```
+
 ## <a name="remarks"></a>注释  
  SET ANSI_DEFAULTS 是客户端不会修改的服务器端设置。 客户端管理自己的设置。 在默认情况下，这些设置与服务器设置相反。 用户不应修改服务器设置。 若要更改客户端行为，用户应使用 SQL_COPT_SS_PRESERVE_CURSORS。 有关详细信息，请参阅[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   

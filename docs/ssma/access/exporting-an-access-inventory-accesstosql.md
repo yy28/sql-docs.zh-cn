@@ -1,10 +1,13 @@
 ---
 title: "导出访问清单 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d4c6fb051f37d02875070eeef6709cba84ae452
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ec72d4137f8fcee6b600783988981f24b108f1d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出访问清单 (AccessToSQL)
 如果有多个访问数据库，并且你不确定要将迁移到哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以将导出的项目中的所有访问数据库的清单。 然后，你可以查看和查询的清单元数据，以确定哪些数据库和要迁移这些数据库中的对象。 此清单，它使你能够快速地查找诸如以下问题的答案：  

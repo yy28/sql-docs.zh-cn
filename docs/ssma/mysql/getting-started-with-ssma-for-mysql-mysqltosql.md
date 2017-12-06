@@ -1,10 +1,13 @@
 ---
 title: "Getting Started with SSMA mysql (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dd175faf728f44c4d29c1097d876b52210aec992
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ea110b9e1b4708dfbd37965d3c7f0de48f1b9f2b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Getting Started with SSMA mysql (MySQLToSQL)
 SQL Server 迁移助手 (SSMA) mysql 允许您快速将 MySQL 数据库架构转换为 SQL Server 或 Azure SQL DB 架构，将生成的架构上载到 SQL Server 或 Azure SQL DB，以及将数据从 MySQL 迁移到 SQL Server 或 Azure SQL DB。  

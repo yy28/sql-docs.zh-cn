@@ -2,9 +2,12 @@
 title: "SQL Server 属性 （启动参数选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc88c227ddad0cabd100e78d4424375399aa5fb6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
-  使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此对话框添加或删除的启动参数[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
   
 ## <a name="options"></a>选项  
  **指定启动参数**  

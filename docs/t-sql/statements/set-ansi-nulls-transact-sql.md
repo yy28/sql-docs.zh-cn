@@ -1,7 +1,7 @@
 ---
 title: "设置 ANSI_NULLS (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 19f61f2ba3274bb854f60073408cbceea9f4def7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a6ef51bb13ae7372175a390a3d8c5509550a3ad1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,24 +42,24 @@ ms.lasthandoff: 11/21/2017
   指定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中与 Null 值一起使用等于 (=) 和不等于 (<>) 比较运算符时采用符合 ISO 标准的行为。  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_NULLS 将始终为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
+>  未来版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ANSI_NULLS 将为 ON，任何应用程序显式将选项设置为 OFF 将生成错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>语法  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_NULLS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULLS ON;  
-```  
-  
+
+## <a name="syntax"></a>语法
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_NULLS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULLS ON
+```
+
 ## <a name="remarks"></a>注释  
  当 SET ANSI_NULLS 为 ON，可使用 WHERE 的 SELECT 语句*column_name* = **NULL**即使有中的 null 值，则返回零行*column_name*。 使用 WHERE 的 SELECT 语句*column_name* <> **NULL**即使有中的非 null 值，则返回零行*column_name*。  
   
@@ -73,7 +73,7 @@ SET ANSI_NULLS ON;
   
  在执行分布式查询时应将 SET ANSI_NULLS 设置为 ON。  
   
- 对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误消息，该错误消息会列出所有违反所需值的 SET 选项。 另外，在执行 SELECT 语句时，如果 SET ANSI_NULLS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将忽略计算列或视图的索引值并解析选择操作，就好像表或视图没有这样的索引一样。  
+ 对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回一个错误，其中列出所有违反所需的值的 SET 选项。 此外，当你执行 SELECT 语句，如果 SET ANSI_NULLS 为 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]忽略计算的列或视图上的索引值并解决选择操作，好像没有此类索引的表或视图上。  
   
 > [!NOTE]  
 >  ANSI_NULLS 是在处理计算列或索引视图的索引时必须设置为所需值的七个 SET 选项之一。 还必须将选项 ANSI_PADDING、ANSI_WARNINGS、ARITHABORT、QUOTED_IDENTIFIER 和 CONCAT_NULL_YIELDS_NULL 设置为 ON，而必须将 NUMERIC_ROUNDABORT 设置为 OFF。  
@@ -84,7 +84,7 @@ SET ANSI_NULLS ON;
   
  SET ANSI_NULLS 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- 要查看此设置的当前设置，请运行以下查询。  
+ 若要查看此设置的当前设置，请运行以下查询：
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  

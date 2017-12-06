@@ -2,9 +2,12 @@
 title: "osql 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: osql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="osql-utility"></a>osql 实用工具
-  使用 **osql** 实用工具可以输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**实用工具可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
   
 > [!IMPORTANT]  
 >  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中将删除此功能。 请避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 改用 **sqlcmd** 。 有关详细信息，请参阅 [sqlcmd Utility](../tools/sqlcmd-utility.md)。  

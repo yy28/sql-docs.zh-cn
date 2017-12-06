@@ -2,9 +2,12 @@
 title: "使用 SQL Server Profiler 分析死锁 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 71f9af15e8cfeaccabc87be787172fed44246967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
-  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]以确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
   
  若要跟踪死锁事件，请将 **Deadlock graph** 事件类添加到跟踪。 此事件类会在跟踪中的 **TextData** 数据列中填充有关死锁中涉及的进程和对象的 XML 数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可将 XML 文档提取到死锁 XML (.xdl) 文件，你稍后可在 SQL Server Management Studio 中查看该文件。 您可以配置 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，将 **Deadlock graph** 事件提取到一个包含了所有 **Deadlock graph** 事件的文件中，或提取到多个单独的文件中。 可以通过下列任一方法进行提取：  
   

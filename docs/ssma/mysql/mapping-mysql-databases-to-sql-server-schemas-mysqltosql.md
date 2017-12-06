@@ -1,10 +1,13 @@
 ---
 title: "将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98cdf5f72a4c4767ac468b5c2c062e4d3b23d68b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77a150ac9568f614869b3e6f168c96eb47d2e764
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL)
 默认情况下，SSMA for MySQL 将迁移到 MySQL 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或架构名为的 SQL Azure 数据库。 但是，你可以自定义 MySQL 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库。  

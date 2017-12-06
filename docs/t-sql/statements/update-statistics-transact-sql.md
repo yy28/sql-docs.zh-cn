@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = {ON |关闭}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)和[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)公开选定的统计数据的持久化的示例百分比值。
  
- **适用于**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
+ **适用于**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
  
  ON PARTITIONS ({ \<partition_number > |\<范围 >}[，… n])] 强制涵盖 ON PARTITIONS 子句重新计算，并然后合并，以生成全局统计信息中指定的分区的叶级统计信息。 需要 WITH RESAMPLE，因为使用不同抽样率生成的分区统计信息不能合并在一起。  
   

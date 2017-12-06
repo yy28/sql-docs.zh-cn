@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**ScriptErrorHandlingMode**|确定错误处理。 选项**IgnoreNone**或**IgnoreAll**|  
 |**数据源**|显示用于多维数据集的数据源视图|  
 |**StorageLocation**|指定多维数据集的文件系统存储位置。 如果未指定任何位置，则从包含多维数据集对象的数据库中继承位置。|  
-|**StorageMode**|指定多维数据集的存储模式。 值为**MOLAP**， **ROLAP**，或**HOLAP * * *。**|  
+|**StorageMode**|指定多维数据集的存储模式。 值为 **MOLAP** ， **ROLAP** ，或 **HOLAP。**|  
 |**Visible**|确定多维数据集的可见性。|  
   
 > [!NOTE]  

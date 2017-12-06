@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON |关闭}  
  当**ON**，统计信息将保留不显式指定抽样百分比的后续更新创建抽样百分比。 当**OFF**，将获取统计信息抽样百分比重置为默认采样中未显式指定抽样百分比的后续更新。 默认值是**OFF**。 
  
- **适用于**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。    
+ **适用于**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

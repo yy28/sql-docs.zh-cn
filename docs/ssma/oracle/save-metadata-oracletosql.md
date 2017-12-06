@@ -1,10 +1,13 @@
 ---
 title: "保存元数据 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: a05d0fe7b8e458e5e4eaa2af7963dc4ae89c44e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f2c16ccca8371f88985da3841e0c5b5fd6a0a672
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-metadata--oracletosql"></a>保存元数据 (OracleToSQL)
 **保存元数据**对话框会提示您以在保存它之前将元数据加载到你的 SSMA 项目。 这样，你已可以脱机使用，还可以发送给他人，请与技术支持人员如完成的项目文件。  

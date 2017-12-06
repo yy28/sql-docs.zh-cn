@@ -2,9 +2,12 @@
 title: "保存跟踪和跟踪模板 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>保存跟踪和跟踪模板
-  区分保存跟踪文件和保存跟踪模板很重要。 保存跟踪文件是指将捕获的事件数据保存到指定位置。 保存跟踪模板是指保存跟踪定义，例如指定的数据列、事件类或筛选器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]请务必区分保存跟踪文件和保存跟踪模板。 保存跟踪文件是指将捕获的事件数据保存到指定位置。 保存跟踪模板是指保存跟踪定义，例如指定的数据列、事件类或筛选器。  
   
 ## <a name="saving-traces"></a>保存跟踪  
  如果需要在以后分析或重播捕获数据，请将捕获的事件数据保存到文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 使用跟踪文件可以执行下列操作：  

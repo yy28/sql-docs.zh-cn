@@ -2,9 +2,12 @@
 title: "协议&lt;服务器&gt;（SQL Server 配置管理器） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1f6dbb16c60165c80aacecc5b162847b41885ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e65d516b569cd0e59e3fe01e1074c2c6171c448
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>协议&lt;服务器&gt;（SQL Server 配置管理器）
-  若要配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)]使用的协议，可以在控制台窗格中为所需服务器实例选择 **“协议”** ，在详细信息窗格中右键单击相应协议，然后单击 **“属性”**。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要配置使用的协议[!INCLUDE[ssDE](../../includes/ssde-md.md)]，选择**协议**对于在控制台窗格中的所需的服务器实例，右键单击详细信息窗格中，在适当的协议，然后单击**属性**.  
   
   

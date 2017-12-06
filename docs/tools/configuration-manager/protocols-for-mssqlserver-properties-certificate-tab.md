@@ -2,9 +2,12 @@
 title: "MSSQLSERVER 的协议属性 （证书选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4d1f8c396155a371e96255503844e6bdf0d16d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 906539a3d5bf160a7d4eae77f5503830becb0b72
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 属性的协议（“证书”选项卡）
-  使用 **“MSSQLSERVER 协议的属性”** 对话框中的 **“证书”** 选项卡可以选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]证书，也可以查看证书的属性。 在选择证书之前，所有字段均为空。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**证书**选项卡上**MSSQLSERVER 的协议属性**对话框中选择的证书[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或若要查看证书的属性。 在选择证书之前，所有字段均为空。  
   
  用户的证书存储在本地计算机上。 若要加载供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的证书，您必须在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所用的同一用户帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   

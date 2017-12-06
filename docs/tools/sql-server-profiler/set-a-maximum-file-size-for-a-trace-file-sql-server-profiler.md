@@ -2,9 +2,12 @@
 title: "设置跟踪文件 （SQL Server 事件探查器） 的最大文件大小 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7373a20063a25c679afa2a82f5931fd4893d6ecd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9651782247d8ec98956bc2e62c7149d68c76ad4e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>设置跟踪文件的最大文件大小 (SQL Server Profiler)
-  使用以下步骤可设置跟踪文件的最大文件大小。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用以下过程设置跟踪文件的最大文件大小。  
   
 ### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>设置跟踪文件的最大文件大小  
   

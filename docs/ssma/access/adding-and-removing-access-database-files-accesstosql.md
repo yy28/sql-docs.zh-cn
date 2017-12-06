@@ -1,10 +1,13 @@
 ---
 title: "添加和删除访问数据库文件 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,11 +39,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b20565329e899f2f54784533ad9efc977e3ab5af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除访问数据库文件 (AccessToSQL)
 若要迁移 Access 数据移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，必须将一个或多个访问数据库添加到 SSMA 项目。 这些数据库必须 Access 97 或更高版本。 如果你的数据库从早期版本的访问，你必须将数据库转换为较新版本。 通过打开并将数据库保存 Access 97 或更高版本中，添加到 SSMA 之前执行此操作。  

@@ -2,9 +2,12 @@
 title: "SQL Server Integration Services 属性 （高级选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 623be6f340b5943e0cb99deaa54b36ef92c7d1ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d488a2c4856d96a0214b8366d4ebe7bd937f9832
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>SQL Server Integration Services 属性（“高级”选项卡）
-  Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 以 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务的形式实现。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]作为实现[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  
   
   

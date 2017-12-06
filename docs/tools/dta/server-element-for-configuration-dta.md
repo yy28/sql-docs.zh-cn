@@ -2,9 +2,12 @@
 title: "配置 (DTA) 的服务器元素 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a09d30108c727fb7a51d2d62bc86a1795658a35b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 98d5e308830cf8ba07553b4abb3c1ffa1de37d84
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="server-element-for-configuration-dta"></a>配置的服务器元素 (DTA)
-  包含需要数据库引擎优化顾问评估其假设配置（由 **配置** 元素指定）的服务器的标识信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含的数据库引擎优化顾问来评估其假设配置的服务器的标识信息 (通过指定**配置**元素)。  
   
 ## <a name="syntax"></a>语法  
   

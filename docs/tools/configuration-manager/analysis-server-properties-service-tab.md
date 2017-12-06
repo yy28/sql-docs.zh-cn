@@ -2,9 +2,12 @@
 title: "分析服务器属性 （服务选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c87e7964ebdc5fda49b1a0d902e92e3cbc72cc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 12775be4c4468eb778d7c5cf1d36fe2fda8b640e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analysis-server-properties-service-tab"></a>分析服务器属性（“服务”选项卡）
-  此服务是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 若要使 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 正常运行，则必须运行此服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此服务是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 若要使 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 正常运行，则必须运行此服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  

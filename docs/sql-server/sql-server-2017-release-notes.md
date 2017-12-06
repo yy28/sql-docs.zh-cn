@@ -2,10 +2,10 @@
 title: "SQL Server 2017 发行说明 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]本主题介绍 SQL Server 2017 的限制和问题。 若要了解相关信息，请参阅：
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **问题和客户影响：**在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项*。系统找不到指定文件。
+- **问题和客户影响：**在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项*。系统找不到指定文件。*
 
    此外，尝试重新安装 2016 版 TSqlLanguageService.msi 也会失败，并且会看到以下消息：无法安装 Microsoft SQL Server 2016 T-SQL 语言服务，因为计算机上已安装更高版本。
 

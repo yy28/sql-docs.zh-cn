@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  例如，如果嵌套表包含 **Product**、 **ProductQuantity**和 **ProductPrice**列，则可以选择 **Product** 作为嵌套表键，但可将 **ProductQuantity** 添加到挖掘结构中以用作输入内容。  
   
 ## <a name="filtering-nested-table-data"></a>筛选嵌套表数据  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以对用于定型或测试数据挖掘模型的数据创建筛选器。 筛选器可用于影响模型的构成或用于针对事例子集测试模型。 筛选器还可应用于嵌套表。 但对于可用于嵌套表的语法有一些限制。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以对用于定型或测试数据挖掘模型的数据创建筛选器。 可以使用筛选器，以影响组合的模型，或者测试的事例子集的模型。 筛选器还可应用于嵌套表。 但对于可用于嵌套表的语法有一些限制。  
   
  而上述情况通常发生在将筛选器应用于要测试是否存在某个属性的嵌套表时。 例如，可将限制模型中使用的事例的筛选器仅用于那些在嵌套表中具有指定值的事例。 或者，可将模型中使用的事例限制为未购买某个特定项目的客户。  
   

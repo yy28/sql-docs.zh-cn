@@ -3,8 +3,11 @@ title: "原子化 (XQuery) |Microsoft 文档"
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6be2574663ce5b8f2cb51161033799543f4ca2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b35d5e55a2d0e913586e7c60d161e4e2e85c6cb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="atomization-xquery"></a>原子化 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   原子化是提取项的类型化值的过程。 在某些环境下，此进程是隐式进行的。 某些 XQuery 运算符（如算术运算符和比较运算符）依赖于此进程。 例如，当你算术运算符将直接应用于节点，则节点的类型化的值第一次检索通过隐式调用[数据函数](../xquery/data-accessor-functions-data-xquery.md)。 这将把原子值作为操作数传递给算术运算符。  
   
@@ -47,7 +50,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 隐式原子化的另一个示例是使用算术运算符。 **+** 运算符要求原子值，和**data （)**隐式应用检索 LaborHours 属性的原子值。 针对 Instructions 列指定的查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
+ 隐式原子化的另一个示例是使用算术运算符。  **+** 运算符要求原子值，和**data （)**隐式应用检索 LaborHours 属性的原子值。 针对 Instructions 列指定的查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
   
 -   构造 OrignialLaborHours 属性时，原子化隐式应用于 `$WC/@LaborHours` 返回的单独序列。 LaborHours 属性的类型化值被分配给 OrignialLaborHours。  
   
