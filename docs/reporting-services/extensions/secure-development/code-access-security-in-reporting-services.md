@@ -2,9 +2,12 @@
 title: "Reporting Services 中的代码访问安全性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 61c41adbb135d869af923efae932f6bed8a94935
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的代码访问安全性
   代码访问安全性以下面几个核心概念为中心：证据、代码组和命名权限集。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，报表管理器、报表设计器和报表服务器组件均有一个策略文件，该文件用来为自定义程序集配置代码访问安全性，还用来配置数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 下面几节提供了代码访问安全性的概述。 有关本节中所涵盖主题的更详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文档中的“安全策略模型”。  

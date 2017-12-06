@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af636e20cc2da22adf0607529f29959c1a005c9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 可将作用域为整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的权限（例如 **CREATE ENDPOINT** 权限）授予一个登录名。  
   
-> **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+> **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ##  <a name="Security"></a> Security  
 

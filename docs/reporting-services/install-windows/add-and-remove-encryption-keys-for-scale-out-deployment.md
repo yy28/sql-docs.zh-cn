@@ -2,9 +2,12 @@
 title: "添加和删除扩展部署的加密密钥 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a23fb6852d37ecfd760d2238b189383c3cfd1f00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee524d36f62b65fc4a74d33f0815ecea1ce92c6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>添加和删除扩展部署的加密密钥
   通过将多个报表服务器配置为使用一个共享的报表服务器数据库，可以在扩展部署模型中运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 扩展部署中的成员身份是基于报表服务器是否将加密密钥存储在报表服务器数据库中。 通过为特定的报表服务器实例添加和删除加密密钥，可以控制扩展部署成员身份。 如果要从部署中删除节点，则可以按任意顺序进行删除。 如果要向部署中添加节点，则必须联接已作为部署的一部分的报表服务器中的所有新实例。  

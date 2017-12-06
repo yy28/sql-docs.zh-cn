@@ -2,9 +2,12 @@
 title: "“数据集属性”对话框 ->“查询”（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d803a7ebaa7b33333d3b20b280af354b80d640e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03a8561e921834373686c6582f6630c8047417b4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>“数据集属性”对话框 -&gt;“查询”（报表生成器）
   选择 **“数据集属性”** 对话框中的 **“查询”** 可以从报表服务器选择共享数据集或创建嵌入数据集。 对于嵌入数据集，必须选择一个数据源并生成查询。  
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/09/2017
  键入查询在多长时间后超时（秒）。默认值为 30 秒。 **“超时值”** 的值必须为空或大于零。 如果该值为空，则查询将不会超时。  
   
  **刷新字段**  
- 运行查询命令来更新[“数据集属性”对话框 -&gt;“字段”](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页中的字段列表。  
+ 运行查询命令来更新[“数据集属性”对话框 -&gt;“字段”](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 页中的字段列表。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   

@@ -2,9 +2,12 @@
 title: "将外部数据集用于 Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd33f6f7d6d664ce5d3affea0cb9fdab1b1992ae
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>将外部数据集用于 Reporting Services
   DataSet 对象是支持具有 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 的断开连接的、分布式数据方案的核心。 DataSet 对象是数据的驻留内存表示形式，提供与数据源无关的一致的关系编程模型。 它可用于具有 XML 数据的多种不同的数据源，或者用于管理应用程序的本地数据。 DataSet 对象表示完整的数据集合，包括相关表、约束以及表之间的关系。 由于 DataSet 对象既存储数据、又公开数据，因此，数据可能会经常被处理并转换为 DataSet，然后发生针对这些数据的报告。  

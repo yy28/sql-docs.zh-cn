@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="json-data-sql-server"></a>JSON 数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   如果行分隔的 JSON 文件存储在 Azure Blob 存储或 Hadoop 文件系统中，你可以使用 Polybase 来加载 JSON 文本，在 Transact-SQL 代码中分析文本，然后将其载入表中。  
   
 ## <a name="test-drive-built-in-json-support"></a>测试驱动内置的 JSON 支持  
- **使用 AdventureWorks 示例数据库测试驱动内置 JSON 支持。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/en-us/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，请解压缩示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据运行示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
+ **使用 AdventureWorks 示例数据库测试驱动内置 JSON 支持。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，请解压缩示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据运行示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
   
  下面是你可以对该文件中包含的脚本执行的操作。  
   
