@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -161,7 +161,7 @@ SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_gr
 
 你可以选择重写默认行为，并防止设置可用性组资源`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`自动。
 
-以下脚本集`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`可用性组上的 0 到名为`<**ag1**>`。 在运行替换之前`<**ag1**>`替换为你的可用性组的名称。
+以下脚本集`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`可用性组上的 0 到名为`<**ag1**>`。 运行前，将 `<**ag1**>` 替换为可用性组的名称。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

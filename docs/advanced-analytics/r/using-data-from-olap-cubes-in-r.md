@@ -1,31 +1,36 @@
 ---
 title: "在 R 中使用来自 OLAP 多维数据集的数据 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.date: 11/29/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs: r-services
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 1c55a5b834cd91478a87ded7ebb86884117c7bfb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60e95f4c101a4afe2a8161ba40df7b27bd85f602
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
 
-**OlapR**包是一个 R 程序包时，提供用于机器学习服务器和 SQL Server R Services 的 microsoft，它允许你运行 MDX 查询以从 OLAP 多维数据集获取数据。 此程序包，你不需要创建链接的服务器或清理平展行集;你可以使用 OLAP 数据直接中。
+**OlapR**包是一个 R 程序包时，提供用于机器学习 Server 和 SQL Server 的 microsoft，它允许你运行 MDX 查询以从 OLAP 多维数据集获取数据。 此程序包，你不需要创建链接的服务器或清理平展行集;你可以使用 OLAP 数据直接中。
 
-本文介绍的 API，以及概述 fo OLAP 和 R 用户这些用户可能不熟悉多维数据集数据库的 MDX。
+本文介绍的 API，以及为这些用户可能不熟悉多维数据集数据库 R 用户 OLAP 和 MDX 的概述。
+
+> [!IMPORTANT]
+> Analysis Services 的实例可以支持常规多维数据集或表格模型中，但实例不能支持两种类型的模型。 因此，在创建针对 Analysis Services 数据库的查询之前，请验证它包含多维模型。
+> 
+> 尽管可以使用 MDX 查询表格模型**olapR**包不支持表格模型实例的连接。 如果你需要从表格模式下获取数据，更好的选择是启用[DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular)模型，并进行可用作 SQL Server 中的链接服务器实例上。 
 
 ## <a name="what-is-an-olap-cube"></a>什么是 OLAP 多维数据集？
 
@@ -35,7 +40,7 @@ Microsoft 提供了[Analysis Services](https://docs.microsoft.com/sql/analysis-s
 
 出于性能原因，OLAP 数据库通常计算摘要 (或_聚合_) 提前，然后将其存储进行更快地检索。 摘要基于*度量值*，分别表示可应用于数值数据的公式。 使用维度定义的数据子集，然后对该数据计算度量值。 例如，你将使用度量值计算税收，以报告特定供应商、 年度截止到现在累积工资支付，等的平均传送成本减去的多个季度的某些产品系列的总销售额。
 
-MDX，短的多维表达式，是用于查询多维数据集的语言。 MDX 查询通常包含包含一个或多个维度和至少一个度量值的数据定义，获取复杂得多，并包括滚动窗口、 累计平均值或 sum、 百评分 thogh MDX 查询。 
+MDX，短的多维表达式，是用于查询多维数据集的语言。 MDX 查询通常包含包含一个或多个维度和至少一个度量值，但 MDX 查询可以获取复杂得多，并包含滚动窗口、 累计平均值、 sum、 排名或百评分的数据定义。 
 
 以下是当你开始生成 MDX 查询时，可能很有帮助的一些其他词：
 
@@ -51,17 +56,19 @@ MDX，短的多维表达式，是用于查询多维数据集的语言。 MDX 查
 
 + “透视”旋转多维数据集或数据选择。
 
-本主题提供用于多维数据集上的查询的基本语法的更多示例： 
+## <a name="how-to-use-olapr-to-create-mdx-queries"></a>如何使用 olapR 创建 MDX 查询
 
-+ [如何创建使用 R 的 MDX 查询](../../advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md)
+以下文章提供了用于创建或对多维数据集执行查询的语法的详细的示例：
+
++ [如何创建使用 R 的 MDX 查询](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)
 
 ## <a name="olapr-api"></a>olapR API
 
 **olapR** 包支持两种创建 MDX 查询的方法：
 
-- **使用 MDX 生成器。** 使用包中的 R 函数来生成简单的 MDX 查询，通过选择多维数据集，并设置轴和切片器。 这是轻松生成有效的 MDX 查询，如果您没有访问传统 OLAP 工具，或者没有了解 MDX 语言的深入知识。
+- **使用 MDX 生成器。** 使用包中的 R 函数来生成简单的 MDX 查询，通过选择多维数据集，然后再设置轴和切片器。 这是轻松生成有效的 MDX 查询，如果您没有访问传统 OLAP 工具，或者没有了解 MDX 语言的深入知识。
 
-    可以通过使用此方法，创建不是所有可能的 MDX 查询，因为 MDX 可以很复杂。 但是，此 API 支持的最常见和有用的操作，包括 N 维度中的切片、 切块、 深化、 rollup 和透视的大部分。
+    可以通过使用此方法，创建不是所有 MDX 查询，因为 MDX 可以很复杂。 但是，此 API 支持的最常见和有用的操作，包括 N 维度中的切片、 切块、 深化、 rollup 和透视的大部分。
 
 + **复制和粘贴格式正确的 MDX。** 手动创建，然后粘贴在所有 MDX 查询中。 此选项是最佳，如果你有现有的 MDX 查询你想要重复使用，或者如果你想要生成的查询太过复杂， **olapR**来处理。 
 
@@ -71,19 +78,46 @@ MDX，短的多维表达式，是用于查询多维数据集的语言。 MDX 查
 
 ## <a name="known-issues"></a>已知问题
 
-### <a name="tabular-models-not-supported"></a>不支持的表格模型
+本部分列出了一些已知的问题和常见问题有关**olapR**包。
 
-+ 如果你连接到 Analysis Services 的表格实例`explore`函数报告成功并返回值为 TRUE。 但是，表格模型对象不为某个兼容类型，并且无法解决。
+### <a name="tabular-models-are-not-supported"></a>不支持表格模型
 
-+ 可以使用 DAX 或 MDX 查询表格模型。 如果你在设计有效的 MDX 查询针对表格模型使用外部工具，然后将查询粘贴到此 API，查询将返回 NULL 结果，并不会报告错误。
+如果你连接到包含表格模型的 Analysis Services 的实例`explore`函数报告成功并返回值为 TRUE。 但是，表格模型对象不为某个兼容类型，并且无法解决。
+
+此外，如果你在设计有效的 MDX 查询针对表格模型 （通过使用外部工具），然后将查询粘贴到此 API，查询将返回 NULL 结果，并不会报告错误。
+
+如果你需要从使用 R 中的表格模型中提取数据，请考虑下列选项：
+
++ 对模型启用 DirectQuery 和将服务器添加为 SQL Server 中的链接服务器。 
++ 如果关系的数据市场上生成表格模型时，请直接从源获取数据。
+
+### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>如何确定实例是否包含表格或多维模型
+
+没有表格模型之间的基本差异，并且会影响数据的方式的多维模型是存储和处理。 例如，表格模型存储在内存中，并利用列存储索引来执行非常快速地计算。 在多维模型中，数据存储在磁盘上并聚合是预先定义和使用 MDX 查询中检索。
+
+为此，单个 Analysis Services 实例可以包含一种类型的模型。 请参阅有关如何区分两种类型的模型的更多技巧的以下文章：
+
++ [比较多维和表格模型](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+
+如果你连接到 Analysis Services 使用 SQL Server Management Studio 等客户端，可让一眼支持哪种模型类型，通过查看数据库的图标。
+
+你还可以查看服务器属性。 **服务器模式**属性支持两个值：_多维_或_表格_。
+
+有关如何验证使用的服务器的属性的服务器类型的详细信息，请参阅[OLE DB for OLAP 架构行集](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
+
+### <a name="writeback-is-not-supported"></a>不支持写回
+
+不能将自定义 R 计算的结果写回到该多维数据集。
+
+一般情况下，即使写回功能启用了多维数据集，支持仅有限的操作，并可能需要其他配置。 我们建议你对这些操作使用 MDX。
+
++ [写入的维度](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [写入的分区](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [设置对单元数据的自定义的访问](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ## <a name="resources"></a>Resources
 
-如果不熟悉 OLAP 或 MDX 查询，请参阅以下 Wikipedia 文章： [OLAP 多维数据集](https://en.wikipedia.org/wiki/OLAP_cube)
-[MDX 查询](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)
+如果你不熟悉到 OLAP 或 MDX 查询，请参阅以下 Wikipedia 文章： 
 
-### <a name="samples"></a>示例
-
-如果想要了解有关多维数据集的详细信息，可以参考 Analysis Services 教程第 4 课 [创建 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)，创建用在这些示例中的多维数据集
-
-还可将现有多维数据集作为备份下载，然后将其还原为 Analysis Services 的实例。 例如，可下载 [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)的完全处理多维数据集（压缩格式），并将其还原为 SSAS 实例。 有关详细信息，请参阅 [备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)或 [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ [OLAP 多维数据集](https://en.wikipedia.org/wiki/OLAP_cube)
++ [MDX 查询](https://en.wikipedia.org/wiki/MultiDimensional_eXpressions)

@@ -2,7 +2,7 @@
 title: "将 R 模型部署和使用在 SQL （演练） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1f0d2f1a003b54856645dd4ec740de64464436b
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，在 SQL 中使用它
 

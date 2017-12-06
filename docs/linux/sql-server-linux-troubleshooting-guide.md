@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -149,7 +149,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    ```
   
 > [!WARNING]  
->  在 Linux 上的 SQL Server 启动与"mssql"的用户，以防止将来启动问题。 示例"sudo-u mssql /opt/mssql/bin/sqlservr [启动选项]" 
+>  使用“mssql”用户启动 Linux 上的 SQL Server 以防止将来的启动问题。 例如，“sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]” 
 
 如果你意外已经与另一个用户启动 SQL Server，你将需要改回为之前从 SQL Server 开始 systemd mssql 用户的 SQL Server 数据库文件的所有权。 例如，若要将 /var/opt/mssql 下的所有数据库文件的所有权更改为 mssql 的用户，请运行以下命令
 
@@ -157,7 +157,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
-## <a name="common-issues"></a>常见的问题
+## <a name="common-issues"></a>常见问题
 
 1. 无法连接到远程 SQL Server 实例。
 

@@ -1,10 +1,13 @@
 ---
 title: "映射源和目标数据库 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3871ac3aa30e788841b0fef27d4134640aac5ad4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 30bd89da25adeabe2ef4ce3d0d0da249515595c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源和目标数据库 (AccessToSQL)
 当您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你需要指定用于迁移的目标数据库。 如果你有多个访问数据库可以将它们映射到多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库 （或架构） 或连接的 SQL Azure 数据库下的多个架构。  

@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a9253b744e337a69a86e6562156806d59b8f66a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4235f142dbe0a0022ba8b6af4fb2d3c981fae709
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>适用于 SUSE Linux Enterprise Server 的示例： 无人参与的 SQL Server 安装脚本
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="prerequisites"></a>先决条件
 
-- 你需要至少 3.25 GB 的内存来运行在 Linux 上的 SQL Server。
+- 你需要至少 2 GB 的内存来运行在 Linux 上的 SQL Server。
 - 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 - 其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
 

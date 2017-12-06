@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b171317170d9144edb71dfb29b36940ce6d7ee31
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,12 +282,12 @@ GO
 |FT_RESTART_CRAWL |在全文爬网需要从上一个已知可用点重新启动以便从暂时故障中恢复时出现。 等待使当前正在此总体中工作的工作线程任务完成或退出当前步骤。| 
 |FULLTEXT GATHERER |在同步全文操作期间发生。| 
 |GDMA_GET_RESOURCE_OWNER |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |GHOSTCLEANUPSYNCMGR |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|GLOBAL_QUERY_CANCEL |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|GLOBAL_QUERY_CANCEL |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |GLOBAL_QUERY_CLOSE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|GLOBAL_QUERY_CONSUMER |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|GLOBAL_QUERY_PRODUCER |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|GLOBAL_QUERY_CONSUMER |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|GLOBAL_QUERY_PRODUCER |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |GLOBAL_TRAN_CREATE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |GUARDIAN |标识为仅供参考。 不提供支持。 不保证以后的兼容性。| 
@@ -346,9 +346,9 @@ GO
 |HADR_TDS_LISTENER_SYNC |启动或停止侦听器，将请求内部 Always On 系统或 WSFC 群集。 对此请求的处理始终是异步的，并且存在删除冗余请求的机制。 还存在此进程由于配置更改而挂起的时刻。 与此侦听器同步机制相关的所有等待都使用此等待类型。 仅限内部使用。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |在需要启动和/或停止 anavailability 组侦听器始终在 TRANSACT-SQL 语句的末尾使用。 启动/停止操作以异步方式完成，因为用户线程将阻止使用该等待类型之前已知的侦听器的情况。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_TIMER_TASK |正在等待获取计时器任务对象上的锁，并且还可用于正在执行工作的时间之间的实际等待。 例如，任务运行一个执行示例后，每隔 10 秒 Alwayson 可用性组将等待大约 10 秒对要重新计划任务，并在等待此列出是为了。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_TRANSPORT_DBRLIST |正在等待访问传输层的数据库副本列表。 用于授予对其的访问旋转锁。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_TRANSPORT_FLOW_CONTROL |等待未完成未确认 Always On 消息的数量时通过扩展流控制阈值。 这是根据可用性副本之间 （不基于数据库到数据库）。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -471,9 +471,9 @@ GO
 |MD_AGENT_YIELD |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |MD_LAZYCACHE_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |MEMORY_ALLOCATION_EXT |从内部 SQL Server 内存池或操作系统分配内存时出现。， <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|MEMORY_GRANT_UPDATE |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|MEMORY_GRANT_UPDATE |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |METADATA_LAZYCACHE_RWLOCK |TBD <br /> **适用于**:[!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]仅。 |  
-|MIGRATIONBUFFER |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|MIGRATIONBUFFER |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |MISCELLANEOUS |标识为仅供参考。 不提供支持。 不保证以后的兼容性。| 
 |MISCELLANEOUS |标识为仅供参考。 不提供支持。 不保证以后的兼容性。| 
 |MSQL_DQ |当某任务正在等待分布式查询操作完成时出现。 它用于检测潜在的多个活动的结果集 (MARS) 应用程序死锁。 该等待将在分布式查询调用完成时结束。| 
@@ -733,12 +733,12 @@ GO
 |PWAIT_MD_RELATION_CACHE |在表或索引的元数据内部同步期间出现。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_MD_SERVER_CACHE |在链接服务器的元数据内部同步期间出现。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_MD_UPGRADE_CONFIG |升级服务器范围的配置中的内部同步期间出现。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|PWAIT_SBS_FILE_OPERATION |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|PWAIT_SBS_FILE_OPERATION |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -752,7 +752,7 @@ GO
 |QDS_DB_DISK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QDS_DYN_VECTOR |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QDS_EXCLUSIVE_ACCESS |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|QDS_HOST_INIT |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|QDS_HOST_INIT |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QDS_LOADDB |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QDS_QDS_CAPTURE_INIT |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -777,12 +777,12 @@ GO
 |QUERY_OPTIMIZER_PRINT_MUTEX |在查询优化器诊断信息输出生成的同步期间出现。 该等待类型时才会出现下的 Microsoft 产品支持的方向启用了诊断设置。| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |QUERY_TRACEOUT |标识为仅供参考。 不提供支持。 不保证以后的兼容性。| 
-|RBIO_WAIT_VLF |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|RBIO_WAIT_VLF |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |RECOVER_CHANGEDB |在备用数据库中同步数据库状态期间出现。| 
 |RECOVERY_MGR_LOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REDO_THREAD_SYNC |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|REMOTE_BLOCK_IO |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|REMOTE_BLOCK_IO |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -812,12 +812,12 @@ GO
 |SATELLITE_CARGO |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SATELLITE_SERVICE_SETUP |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SATELLITE_TASK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|SBS_DISPATCH |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|SBS_RECEIVE_TRANSPORT |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|SBS_TRANSPORT |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|SBS_DISPATCH |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|SBS_RECEIVE_TRANSPORT |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|SBS_TRANSPORT |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SEC_DROP_TEMP_KEY |在尝试删除临时安全密钥失败之后并在重试之前出现。| 
-|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SECURITY_DBE_STATE_MUTEX |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SECURITY_KEYRING_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -852,7 +852,7 @@ GO
 |SNI_HTTP_WAITFOR_0_DISCON |在 SQL Server 关闭，等待未完成 HTTP 连接退出时期间发生。| 
 |SNI_LISTENER_ACCESS |当等待非一致性内存访问 (NUMA) 节点更新状态更改时出现。 已序列化对状态更改的访问。| 
 |SNI_TASK_COMPLETION |当在 NUMA 节点状态更改期间等待所有任务完成时出现。| 
-|SNI_WRITE_ASYNC |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|SNI_WRITE_ASYNC |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |SOAP_READ |在等待 HTTP 网络读取完成时出现。| 
 |SOAP_WRITE |在等待 HTTP 网络写入完成时出现。| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -903,7 +903,7 @@ GO
 |TDS_INIT |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |TDS_PROXY_CONTAINER |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |TEMPOBJ |在临时对象删除同步时出现。 该等待很少出现，仅在任务已请求 temp 表的独占访问删除时出现。| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |TERMINATE_LISTENER |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |THREADPOOL |当某任务正在等待工作线程运行时出现。 这可能指示最大工作线程数设置过低，或批处理执行时间过长，从而减少可满足其他批处理的工作线程数。| 
 |TIMEPRIV_TIMEPERIOD |在扩展事件计时器进行内部同步期间出现。| 
@@ -933,13 +933,13 @@ GO
 |WAIT_FOR_RESULTS |在等待查询通知触发时出现。| 
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|WAIT_XLOGREAD_SIGNAL |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|WAIT_XLOGREAD_SIGNAL |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_CKPT_CLOSE |等待完成检查点时出现。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_CKPT_ENABLED |已禁用，并等待进行的检查点，若要启用检查点时将发生。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_CKPT_STATE_LOCK |当同步检查的检查点状态时发生。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_GUEST |数据库内存分配器需要停止接收低内存通知时发生。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_HOST_WAIT |个等待由数据库引擎触发并且由主机实现。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -947,7 +947,7 @@ GO
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |脱机检查点正在等待新的日志记录，可供扫描时发生。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_PROCEDURE_ENTRY |放置过程等待要完成该过程的所有当前执行时发生。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_RECOVERY |当数据库恢复等待恢复的内存优化对象完成时出现。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_TASK_SHUTDOWN |当等待内存中 OLTP 线程完成时出现。， <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XTP_TRAN_DEPENDENCY |当等待事务依赖项时出现。， <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -996,10 +996,10 @@ GO
 |XE_TIMER_TASK_DONE |TBD| 
 |XIO_CREDENTIAL_MGR_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |XIO_CREDENTIAL_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|XIO_EDS_MGR_RWLOCK |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|XIO_EDS_RWLOCK |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
+|XIO_EDS_MGR_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|XIO_EDS_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |XTP_HOST_DB_COLLECTION |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |XTP_HOST_LOG_ACTIVITY |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 

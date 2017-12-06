@@ -1,9 +1,9 @@
 ---
 title: "使用 SQL Server 特性和功能 |Microsoft 文档"
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9179b95331ddcad4a704feadae2aa3f9211f8dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 功能和功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW 旨在展示许多适用于数据仓库和分析 SQL Server 的主要功能。 下面是 SQL Server 功能和功能，以及如何在 WideWorldImportersDW 中使用的说明的列表。

@@ -2,7 +2,7 @@
 title: "SQL 客户端编程的主页 |Microsoft 文档"
 description: "使用带批注的链接下载和文档的语言和操作系统，用于连接到 SQL Server 或 Azure SQL 数据库的多个组合的中心页面。"
 author: MightyPen
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -14,11 +14,11 @@ ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: dbbb2e06521b364de7d8de1b32869380fbc2772a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>客户端编程到 Microsoft SQL Server 主页
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/18/2017
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp;[ ![C# 徽标][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM 实体框架中的，.NET framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 徽标][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Node.js 徽标][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加号][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 徽标][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp;[ ![Python 徽标][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby 徽标][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -184,7 +184,7 @@ JDBC 文档包括以下几个主要方面：
 
 ## <a name="odbc-for-c"></a>C + + 的 ODBC 
 
-![ODBC 徽标][image-ref-350-odbc]
+![ODBC 徽标][image-ref-350-odbc] ![cpp 大加号][image-ref-322-cpp]
 
 开放式数据库连接 (ODBC) 年代开发的它早于.NET Framework。 ODBC 被旨在作为独立于任何特定的数据库系统，并独立于操作系统。
 
@@ -364,7 +364,6 @@ JDBC 文档包括以下几个主要方面：
 
 <!-- Image references. -->
 
-[image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an51.png
 [image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
 [image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
 [image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png

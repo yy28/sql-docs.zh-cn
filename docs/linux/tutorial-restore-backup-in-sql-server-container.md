@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>还原 Linux Docker 容器中的 SQL Server 数据库
 
@@ -36,12 +36,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="prerequisites"></a>先决条件
 
 * 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅[安装 Docker](https://docs.docker.com/engine/installation/)。
-* 至少 4 GB 的磁盘空间
-* 至少 4 GB 的 RAM
+* 至少 2 GB 的磁盘空间
+* 至少 2 GB 的 RAM
 * [在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
-
-> [!IMPORTANT]
-> Docker for Mac 和 Docker for Windows 的 Moby VM 默认大小为 2 GB，因此必须将其更改为 4 GB。 如果你在 Mac 或 Windows 上运行，增加你使用的内存设置[Docker 快速入门中的说明](quickstart-install-connect-docker.md)。
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 

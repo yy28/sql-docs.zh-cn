@@ -6,14 +6,16 @@ ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 0bc304b50930f8c8de5d244ea0b606add5f24d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>在云中运行 SQL Server 2017
 
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/09/2017
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## <a name="amazon-web-services"></a>Amazon Web 服务
-1.  在至少具有 3.25 GB 的内存来自应用商店创建 Linux AMI 
+1.  在至少具有 2 GB 的内存来自应用商店创建 Linux AMI 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="digital-ocean"></a>数字海洋
 1. 登录到[控制面板](https://cloud.digitalocean.com/login)单击创建快捷批处理
-1. 选择 Ubuntu 16.04 快捷批处理在至少具有 3.25 GB 的内存
+1. 选择 Ubuntu 16.04 快捷批处理在至少具有 2 GB 的内存
 1. 连接到与快捷批处理 ssh
 1. 请按照[Ubuntu 快速入门](quickstart-install-connect-ubuntu.md)
 1. 为远程连接配置：
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/09/2017
     * 添加入站的规则以允许 SQL Server 在其侦听 （默认 TCP 端口 1433年） 的端口上的流量
     
 ## <a name="google-cloud-platform"></a>Google 云平台
-1.  在至少具有 3.25 GB 的内存从云启动器创建 Linux 映像 
+1.  在至少具有 2 GB 的内存从云启动器创建 Linux 映像 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

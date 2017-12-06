@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: cdc32cffd67c794f5ec2d04ac7410892475f4f7f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.openlocfilehash: 3e4a3e19fd9d03d3f6e4dd4a68a5a15b922f348d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的新增功能
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/29/2017
 本文介绍在 Linux 上运行的 SQL Server 2017 的主要功能和可用服务。
 
 > [!NOTE]
-> 除了这些功能在本文中，累积更新定期发布后 GA 版。 这些累积更新提供了许多改进和修补程序。 有关最新 CU 版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
+> 除了这些功能在本文中，累积更新定期发布后 GA 版。 这些累积更新提供许多改进和修复。 有关最新 CU 版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
 

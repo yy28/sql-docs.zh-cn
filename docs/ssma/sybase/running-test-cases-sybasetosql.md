@@ -3,8 +3,11 @@ title: "运行测试用例 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  

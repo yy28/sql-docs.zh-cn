@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec112810e691aceac5085f3ded941564331f74b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  打开一个游标。 sp_cursoropen 定义与游标和游标选项相关联的 SQL 语句，然后填充游标。 等效于的组合 sp_cursoropenis[!INCLUDE[tsql](../../includes/tsql-md.md)]语句 DECLARE_CURSOR 和打开。 此过程通过在表格格式数据流 (TDS) 数据包中指定 ID = 2 来调用。  
+  打开一个游标。 sp_cursoropen 定义与游标和游标选项相关联的 SQL 语句，然后填充游标。 sp_cursoropen 相当于的组合[!INCLUDE[tsql](../../includes/tsql-md.md)]语句 DECLARE_CURSOR 和打开。 此过程通过在表格格式数据流 (TDS) 数据包中指定 ID = 2 来调用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

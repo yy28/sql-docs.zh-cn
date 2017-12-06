@@ -2,7 +2,7 @@
 title: "引入 revoscalepy |Microsoft 文档"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -11,11 +11,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="introducing-revoscalepy"></a>引入 revoscalepy
 
@@ -89,7 +89,7 @@ SQL Server 2017，开头 CTP 2.0 中包含的以下机器学习算法和摘要�
 |`rx_predict` | 从训练的模型生成预测|`rx_predict_ex`在 CTP 2.0|
 |`rx_summary` | 生成模型的摘要||
 
-新的机器学习算法还提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+新的机器学习算法还提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | 函数| Description|
 | ------ | ------ |

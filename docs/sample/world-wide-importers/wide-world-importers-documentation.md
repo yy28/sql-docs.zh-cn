@@ -1,9 +1,9 @@
 ---
 title: "宽 World Importers 文档 |Microsoft 文档"
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 367581f176b148fe65f8fee44bfdbb7a6eb5e8ec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2510ee889f57f7ab51c0f45574a8fa6e86abb47
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-documentation"></a>宽 World Importers 文档
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers 是 SQL Server 2016 的新示例数据库和 Azure SQL 数据库。 它阐释了 SQL Server 2016 和 Azure SQL 数据库的事务处理 (OLTP)、 数据仓库和分析 (OLAP) 工作负荷，以及混合事务和分析处理 (HTAP) 工作负荷的核心功能。

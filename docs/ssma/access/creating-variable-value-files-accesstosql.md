@@ -1,10 +1,13 @@
 ---
 title: "创建变量值文件 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a04787fdf99c804a7ec304ae4f022583a192508f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef98e5026d0cb488f0edfc4fccd386c0b1539bcd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
 变量的值文件是 XML 文件包含频繁更改跨服务器迁移的命令 （例如源或目标服务器名称） 的参数值。 大量的数据库迁移发生时，多个变量的文件，用于存储每个源服务器的值都是创建，并且在主脚本文件与引用**– v**切换在命令行。 此行为有助于维护几个脚本文件中的多个变量的文件中的变量值的静态值。  

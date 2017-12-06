@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>使用 Docker 运行 SQL Server 2017 容器映像
 
@@ -35,31 +35,9 @@ ms.lasthandoff: 11/20/2017
 ## <a id="requirements"></a> 先决条件
 
 - 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅[安装 Docker](https://docs.docker.com/engine/installation/)。
-- 至少 4 GB 的磁盘空间
-- 至少 4 GB 的 RAM
+- 至少 2 GB 的磁盘空间
+- 至少 2 GB 的 RAM
 - [在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
-
-> [!IMPORTANT]
-> Docker for Mac 和 Docker for Windows 的 Moby VM 默认大小为 2 GB，因此必须将其更改为 4 GB。 如果你在 Mac 或 Windows 上运行，请使用以下过程来增加内存。
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>Docker 将内存增加为 4 GB (Mac)
-
-以下步骤适用于为 4 GB 的 Mac for Docker 增加内存。
-
-1. 单击顶部状态栏上的 Docker 徽标。
-1. 选择**首选项**。
-1. 将内存指示器移到 4 GB 或以上。
-1. 单击**重新启动**在屏幕的按钮的按钮。
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>Docker 将内存增加为 4 GB (Windows)
-
-以下步骤来增加为用于 Windows 的 Docker 为 4 GB 内存。
-
-1. 右键单击任务栏中的 Docker 图标。
-1. 单击**设置**该菜单下。
-1. 单击**高级**选项卡。
-1. 将内存指示器移到 4 GB 或以上。
-1. 单击**应用**按钮。
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 

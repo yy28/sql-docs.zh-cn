@@ -1,31 +1,27 @@
 ---
-title: "更新的 SSMA for SQL Server 文档 |Microsoft 文档"
-description: "显示有关最近更改中的文档，为 SQL Server 迁移助手 (SSMA) 的 Microsoft SQL Server 的更新内容的代码段。"
+title: "已更新-SQL Server 文档 DMA |Microsoft 文档"
+description: "显示有关最近更改中的文档，有关数据迁移助手 (DMA) 的 Microsoft SQL Server 的更新内容的代码段。"
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: 
-ms.component: ssma
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
 ms.author: genemi
-ms.workload: ssma-sql-server-migration-assistant
-ms.openlocfilehash: 09241fa3982b70a7795d4072bd840a1dc12b0089
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>新的和最近的更新： SQL Server Migration Assistant (SSMA)
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>新的和最近的更新： 的 SQL Server 的数据迁移助手 (DMA)
 
 
 
@@ -38,7 +34,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 - *日期范围的更新：* &nbsp; **自 2017 年 1-09-28** &nbsp;到&nbsp;**自 2017 年 1-12-02**
-- *主题区域：* &nbsp; **SQL Server Migration Assistant**。
+- *主题区域：* &nbsp; **数据迁移助手 (DMA) for SQL Server**。
 
 
 
@@ -50,7 +46,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [将 Oracle 架构迁移到使用 SQL Server Migration Assistant Linux 上的 SQL Server 2017](oracle/sql-server-linux-convert-from-oracle.md)
+暂时无新文章列出。
 
 
 

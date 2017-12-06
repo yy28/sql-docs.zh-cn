@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -75,21 +75,36 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 
 ## <a name="character-set-support"></a>字符集支持
 
-编码的客户端可以是以下项之一：
+该驱动程序支持以下字符集之一的 SQLCHAR 数据：
+
   -  UTF-8
-  -  ISO 8859-1
-  -  ISO 8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO 8859-1 / CP1252
+  -  ISO 8859-2 / CP1250
   -  ISO 8859-3
   -  ISO 8859-4
   -  ISO 8859-5
   -  ISO 8859-6
   -  ISO 8859-7
-  -  ISO 8859-8
-  -  ISO 8859-9
+  -  ISO 8859-8 / CP1255
+  -  ISO 8859-9 / CP1254
   -  ISO 8859-13
   -  ISO 8859-15
-  
-SQLCHAR 数据必须是支持的字符集。 SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。  
+
+在连接时该驱动程序检测到的进程中加载的当前区域设置。 如果它是上述受支持的编码之一，该驱动程序将使用 SQLCHAR （窄字符） 数据; 该编码否则，它默认为 utf-8。 由于所有进程启动的"C"区域设置中，默认情况下 （并因此导致为 utf-8 的驱动程序添加到默认），如果应用程序需要使用上面的编码之一，它应使用**setlocale**函数适当之前设置的区域设置连接;通过显式指定所需的区域设置或使用空字符串，例如`setlocale(LC_ALL, "")`，若要使用环境的区域设置。
+
+SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
 
 如果 SQLDescribeParameter 没有在服务器上指定 SQL 类型，驱动程序将使用在 SQLBindParameter 的 *ParameterType* 参数中指定的 SQL 类型。 如果在 SQLBindParameter 指定窄字符 SQL 类型，如 SQL_VARCHAR，驱动程序将转换所提供的数据从客户端代码页为默认值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]代码页。 (默认值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]代码页通常是 1252年。)如果不支持的客户端代码页，则它将设置为 utf-8。 在这种情况下，该驱动程序然后将 utf-8 数据转换为默认代码页。 但这样可能会发生数据丢失。 如果代码页 1252 无法表示某个字符，驱动程序会将该字符转换为一个问号 ('?')。 为避免此数据丢失，请在 SQLBindParameter 中指定一种 Unicode SQL 字符类型（例如 SQL_NVARCHAR）。 在这种情况下，该驱动程序将转换 utf-8 编码为 utf-16 而不会丢失数据中提供的 Unicode 数据。
 

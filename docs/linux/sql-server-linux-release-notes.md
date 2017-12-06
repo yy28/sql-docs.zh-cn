@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
-ms.translationtype: HT
+ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/29/2017
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a name="how-to-install-cumulative-updates"></a>如何安装累积更新
+## <a id="cuinstall"></a>如何安装累积更新
 
 如果你配置了累积更新存储库，然后将执行新安装时获取最新的累积 SQL Server 包更新。 在 Linux 上的 SQL Server 的所有包安装项目默认值为累积更新存储库。 有关存储库配置的详细信息，请参阅[源存储库](sql-server-linux-setup.md#repositories)。
 

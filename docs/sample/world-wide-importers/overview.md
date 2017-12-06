@@ -1,9 +1,9 @@
 ---
 title: "概述 |Microsoft 文档"
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: ff91724bead3e6b1aa96962bd5bb801afe3af950
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-overview"></a>宽 World 导入程序概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]这是虚构的公司 Wide World importers 计划和 SQL Server 和 Azure SQL 数据库进行寻址 WideWorldImporters 示例数据库中的工作流的概述。  
