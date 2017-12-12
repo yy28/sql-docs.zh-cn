@@ -42,13 +42,13 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
   
 -   若要下载并安装 SQL Server 2016 Express，请转到 [SQL Server 下载](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则选择“Express Advanced”或“LocalDB”包。 
   
--   是否拥有 Azure 帐户？  转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 登陆已安装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。  
+-   已经拥有 Azure 帐户？ 转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 创建已安装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。   
   
  
 ## <a name="install-localdb"></a>安装 LocalDB  
  通过安装向导或使用 SqlLocalDB.msi 程序安装 **LocalDB**。 **LocalDB** 是安装 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 时的一个选项。 
  
-在安装过程中，在“功能选择/共享功能”页上选择 **LocalDB**。 对于每个主要版本，只能存在一个 LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二进制文件的安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的**LocalDB** 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]具有相同限制。  
+在安装过程中，在“功能选择/共享功能”页上选择 **LocalDB**。 对于每个主要版本，只能存在一个 LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二进制文件的安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。作为**LocalDB** 的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]具有相同限制。   
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的实例通过 **SqlLocalDB.exe** 实用工具进行托管。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 应该用于代替已弃用的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 用户实例功能。 
   
 ## <a name="description"></a>说明  
@@ -60,7 +60,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
   
  SqlLocalDb 实用工具可以创建 **LocalDB**的新实例，启动和停止 **LocalDB**的实例，并且包含可帮助你管理 **LocalDB**的选项。  有关 SqlLocalDb 实用工具的详细信息，请参阅 [SqlLocalDB 实用工具](../../tools/sqllocaldb-utility.md)。  
   
- **LocalDB** 的实例排序规则被设置为 SQL_Latin1_General_CP1_CI_AS，并且不能被更改。 正常支持数据库级、列级和表达式级排序规则。 包含的数据库遵循 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)所定义的元数据和 tempdb 排序规则。  
+ **LocalDB** 的实例排序规则被设置为 SQL_Latin1_General_CP1_CI_AS，并且不能更改。 一般支持数据库级、列级和表达式级排序规则。 包含的数据库遵循 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) 所定义的元数据和 tempdb 排序规则。  
   
 ### <a name="restrictions"></a>限制  
  **LocalDB** 不能是合并复制订阅服务器。  
@@ -122,10 +122,10 @@ REM Gather information about the instance of LocalDB
 >  如果您的应用程序使用早于 .NET 4.0.2 的版本，您必须直接连接到 **LocalDB**的命名管道。 实例管道名称值为 **LocalDB** 的实例正在侦听的命名管道。 LOCALDB# 之后的实例管道名称部分将在每次启动 **LocalDB** 实例时更改。 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 连接到 **LocalDB** 实例，请在“连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]”对话框的“服务器名称”框中键入实例管道名称。 从您的自定义程序，您可以通过使用类似于 **LocalDB** LocalDB `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
   
 ### <a name="connecting-to-a-shared-instance-of-localdb"></a>连接到 LocalDB 的共享实例  
- 若要连接到某一 **LocalDB** 共享实例，请将“.\\”（句点 + 反斜杠）添加到连接字符串以便引用为共享实例保留的命名空间。 例如，若要连接到名为`AppData`的 **LocalDB** 的共享实例，可使用连接字符串（例如 `(localdb)\.\AppData` ）作为连接字符串的一部分。 连接到用户不拥有的 **LocalDB** 共享实例的用户必须具有 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。  
+ 若要连接到某一 LocalDB 共享实例，请将“.\\”（句点 + 反斜杠）添加到连接字符串以便引用为共享实例保留的命名空间。 例如，若要连接到名为 `AppData` 的 LocalDB 的共享实例，可使用连接字符串（例如 `(localdb)\.\AppData` ）作为连接字符串的一部分。 连接到用户不拥有的 LocalDB 共享实例的用户必须具有 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名。  
   
 ## <a name="troubleshooting"></a>故障排除  
- 有关排除 **LocalDB** 问题的信息，请参阅 [排除 SQL Server 2012 Express LocalDB 问题](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)。  
+ 有关排除 **LocalDB** 问题的信息，请参阅 [Troubleshooting SQL Server 2012 Express LocalDB]（排除 SQL Server 2012 Express LocalDB 问题）  
   
 ## <a name="permissions"></a>权限  
  由于 Windows 文件系统重定向，NT AUTHORITY\SYSTEM 等内置帐户拥有的 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] **LocalDB** 的实例是用户为其使用而创建的实例。 计算机上的任何用户都可以使用 **LocalDB** 实例创建数据库，在用户配置文件下存储文件并使用凭据来运行进程。 默认情况下，对 **LocalDB** 实例的访问仅限于其所有者。 **LocalDB** 中包含的数据受到对数据库文件的文件系统访问的保护。 如果用户数据库文件存储于某一共享位置，则通过使用他们自己拥有的 **LocalDB** 实例对该位置具有文件系统访问权限的任何人都可以打开该数据库。 如果数据库文件处于某一受保护的位置，例如用户数据文件夹，则只有该用户以及有权访问该文件夹的任何管理员才能打开该数据库。 **LocalDB** 文件只能一次通过一个 **LocalDB** 实例来打开。  
