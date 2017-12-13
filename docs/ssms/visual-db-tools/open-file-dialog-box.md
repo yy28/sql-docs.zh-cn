@@ -3,8 +3,11 @@ title: "“打开文件”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
-使用“打开文件”对话框打开磁盘中的现有文件。 还可以使用此对话框打开已通过其他语言编码选项打开的文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“打开文件”对话框打开磁盘中的现有文件。 还可以使用此对话框打开已通过其他语言编码选项打开的文件。  
   
 若要访问此对话框，请在“文件”菜单中，选择“打开”，然后选择“文件”。 从诸如“外部工具”对话框等其他元素中打开文件时，也将显示此对话框。 在“文件”菜单中，选择“打开”，然后选择“项目/解决方案”以打开类似的“打开项目”对话框。  
   

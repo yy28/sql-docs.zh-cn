@@ -3,8 +3,11 @@ title: "“选择名称”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b77cc551ac361367c4007669f46a672fca7d11fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 12ffe1100786f9e31c7036f6a7efb8e79542ca21
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>“选择名称”对话框 (Visual Database Tools)
-从“文件”菜单中选择“保存 \<TableName>”、“保存 <DiagramName>”或“保存 <ViewName>”时，该对话框随即出现。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 从“文件”菜单中选择“保存 \<TableName>”、“保存 <DiagramName>”或“保存 <ViewName>”时，该对话框随即出现。  
   
 **输入表、关系图或视图的名称。**  
 提供一个文本框，您可以在其中为表、关系图或视图键入名称。  

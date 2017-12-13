@@ -3,8 +3,11 @@ title: "为组指定条件 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb01fbc4f3824fa8f064e5b99b22fc7c82ba1e1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83c0a7bd21d7af608a3d8f31a2eeb9e08554d20b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>为组指定条件 (Visual Database Tools)
-可以通过指定应用于整个组的条件（HAVING 子句）来限制查询中出现的组。 对数据进行分组和聚合后，将应用 HAVING 子句中的条件。 只有满足条件的组才会出现在查询中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以通过指定应用于整个组的条件（HAVING 子句）来限制查询中出现的组。 对数据进行分组和聚合后，将应用 HAVING 子句中的条件。 只有满足条件的组才会出现在查询中。  
   
 例如，您可能希望看到 `titles` 表中每个出版商出版的所有书籍的平均价格，但只显示平均价格超过 10.00 美元的部分。 在这种情况下，您可以为 HAVING 子句指定如下条件： `AVG(price) > 10`。  
   

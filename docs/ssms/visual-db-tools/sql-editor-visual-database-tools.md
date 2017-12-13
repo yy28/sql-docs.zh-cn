@@ -3,8 +3,11 @@ title: "SQL 编辑器 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b5c0c123950f5314a0f6fce46c92d64b20821df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
-使用 SQL 编辑器可以编辑现有的存储过程、函数、触发器和 SQL 脚本。 当您打开上述任何对象时，此窗口将打开。 若要创建要对数据源运行的新 SQL 语句，请使用查询设计器的 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 SQL 编辑器可以编辑现有的存储过程、函数、触发器和 SQL 脚本。 当您打开上述任何对象时，此窗口将打开。 若要创建要对数据源运行的新 SQL 语句，请使用查询设计器的 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 。  
   
 SQL 编辑器提供了许多有用的 SQL 文本编辑功能，包括：  
   

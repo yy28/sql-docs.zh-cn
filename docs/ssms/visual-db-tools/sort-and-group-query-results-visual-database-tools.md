@@ -3,8 +3,11 @@ title: "对查询结果进行排序和分组 (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fac8b9afe78f60e6cc58a84269ef7d3144da27c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0977a1822b0dc2eec81254e3cc09f103640f5de6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>对查询结果进行排序和分组 (Visual Database Tools)
-您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。  
   
 若要了解有关创建这种查询的详细信息，请参阅下表中所列的主题：  
   

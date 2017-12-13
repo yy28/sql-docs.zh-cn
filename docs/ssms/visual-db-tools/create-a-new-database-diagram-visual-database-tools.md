@@ -3,8 +3,11 @@ title: "创建新的数据库关系图 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbffc3ea565ac6ccebcb13a4b5977f825908b541
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>创建新的数据库关系图 (Visual Database Tools)
-您可以使用服务器资源管理器创建新的数据库关系图。 数据库关系图以图形方式显示数据库的结构。 使用数据库关系图可以创建和修改表、列、关系和键。 此外，还可以修改索引和约束。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用对象资源管理器创建新的数据库关系图。 数据库关系图以图形方式显示数据库的结构。 使用数据库关系图可以创建和修改表、列、关系和键。 此外，还可以修改索引和约束。  
   
 ### <a name="to-create-a-new-database-diagram"></a>创建新的数据库关系图  
   

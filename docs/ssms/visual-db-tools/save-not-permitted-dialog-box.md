@@ -3,8 +3,11 @@ title: "“保存(不允许)”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 324818ce1166c360715493f324a6fda7c70b45a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1224061affb1882d717f184f974a176d30a24a8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-not-permitted-dialog-box"></a>“保存”（不允许）对话框
-“保存”（不允许）对话框警告不允许保存更改，因为所做的更改要求删除并重新创建列出的表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“保存”（不允许）对话框警告不允许保存更改，因为所做的更改要求删除并重新创建列出的表。  
   
 以下操作可能要求重新创建表：  
   

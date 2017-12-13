@@ -3,8 +3,11 @@ title: "Management Studio 中的自定义报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
-在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)]创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]创建的自定义报表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，许多对象资源管理器节点显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]创建的自定义报表。  
   
 ## <a name="implementation"></a>实现  
 自定义报表是使用报表定义语言 (RDL) 创建的，并存储为报表定义 (.rdl) 文件。 RDL 包含 XML 格式的报表的数据检索和布局信息。 RDL 是一个开放式架构。 开发人员可以使用其他属性和元素来扩展 RDL。 报表可以执行位于报表内部的任何有效的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句。  

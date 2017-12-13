@@ -3,8 +3,11 @@ title: "在关系图中更改字体颜色、大小和样式 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a4dc93c6b56c1ab9578bb759a57935d5f14d333
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb0f8bdb8cdb830825b419321ed15fe6557e1193
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>在关系图中更改字体颜色、大小和样式（可视化数据库工具）
-您可以通过更改字体颜色、大小和样式，自定义文本在数据库关系图中的显示方式。 当修改新关系图和现有关系图时，可对这些关系图应用上述更改。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以通过更改字体颜色、大小和样式，自定义文本在数据库关系图中的显示方式。 当修改新关系图和现有关系图时，可对这些关系图应用上述更改。  
   
 ### <a name="to-change-the-font-color-size-and-style-in-diagrams"></a>在关系图中更改字体颜色、大小和样式  
   

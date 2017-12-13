@@ -3,8 +3,11 @@ title: "解决方案资源管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c561819367b6e61a1ccfc977a9533efdc95009e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solution-explorer"></a>解决方案资源管理器
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
   
 “解决方案”包含一个或多个项目，以及定义整个解决方案所需的文件和元数据。 “项目”是一组文件和相关的元数据（如连接信息）。 解决方案和项目所包含的“项”表示创建数据库解决方案所需的脚本、查询、连接信息和文件。  
   

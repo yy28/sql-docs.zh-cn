@@ -3,8 +3,11 @@ title: "“选择插入值的目标表”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0a85c2a077e8ebfbff90dc5e8eb41f741d8cbb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 122a85ded88a961a7c39945d5db88e1f2b128140
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>“选择插入值的目标表”对话框 (Visual Database Tools)
-使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
   
 选择要向其中添加数据的表，再单击“确定”。  
   

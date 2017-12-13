@@ -3,8 +3,11 @@ title: "更改项目的默认位置 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07946eac3644f969f89ebc1eeb2d112924eead83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eafe0cdf17d433e821e78128dcc30b1eff83cfae
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="change-the-default-location-for-projects"></a>更改项目的默认位置
-文件和项目的默认位置为“我的文档”文件夹中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 项目文件夹。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 文件和项目的默认位置为“我的文档”文件夹中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 项目文件夹。  
   
 ### <a name="to-change-the-default-location-for-projects"></a>更改项目的默认位置  
   

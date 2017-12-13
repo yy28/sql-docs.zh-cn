@@ -3,8 +3,11 @@ title: "为 SQL Server 代理服务选择帐户 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
-服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务选择一个帐户，可选帐户如下：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 服务启动帐户可以定义运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务选择一个帐户，可选帐户如下：  
   
 -   **内置帐户**。 可以从下列内置 Windows 服务帐户的列表中选择：  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
 目标服务器可能无法登记到主服务器，并出现以下错误信息：“登记操作失败”。  
   
-若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务。 有关详细信息，请参阅 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)。  
+若要解决该错误，请重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 服务和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务。 有关详细信息，请参阅 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：针对多服务器管理使用本地系统帐户  
 仅当主服务器和目标服务器位于同一台计算机中，并在本地系统帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服务时，才支持多服务器管理。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下消息：  
@@ -115,13 +118,13 @@ ms.lasthandoff: 11/09/2017
   
 **指定 SQL Server 代理的邮件配置文件**  
   
--   [如何配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [如何配置 SQL Server 代理邮件以使用数据库邮件 (SQL Server Management Studio)](http://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器可以指定启动操作系统时必须启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理。  
   
 ## <a name="see-also"></a>另请参阅  
-[设置 Windows 服务帐户](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
-[使用 SQL 计算机管理器管理服务](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[设置 Windows 服务帐户](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
+[使用 SQL 计算机管理器管理服务](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   

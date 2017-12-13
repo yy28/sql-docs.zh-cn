@@ -1,11 +1,9 @@
-# [下载 SSMS](download-sql-server-management-studio-ssms.md)
 # [什么是 SSMS？](sql-server-management-studio-ssms.md)
-
-# 新增功能
+# [下载 SSMS](download-sql-server-management-studio-ssms.md)
 ## [SSMS 更改日志和以前的版本](sql-server-management-studio-changelog-ssms.md)
 ## [发行说明](download-sql-server-management-studio-ssms.md#release-notes)
+## [安装非英语版 SSMS](install-other-languages.md)
 ## [新的和已更新的项目](new-updated-ssms.md)
-
 # [下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)
 
 # [SQL Server 代理 +](../ssms/agent/sql-server-agent.md)

@@ -1,10 +1,13 @@
 ---
 title: "连接到服务器（“登录”页）数据库引擎 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5d251082f7a98a075593274d34d600556dca1f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 29528a0e9409ea44ec1d7b60a611db3c9d8712c3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>连接到服务器（“登录”页）数据库引擎
-连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]时，使用此选项卡可查看或指定选项。 大多数情况下，可以通过在“服务器名称”框中输入数据库服务器的计算机名称并单击“连接”来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如， `mycomputer\myinstance`。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress**的计算机名称。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 时，使用此选项卡可查看或指定选项。 大多数情况下，可以通过在“服务器名称”框中输入数据库服务器的计算机名称并单击“连接”来进行连接。 如果连接到命名实例，请使用计算机名称后跟反斜杠，然后是实例名。 例如， `mycomputer\myinstance`。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，请使用后面跟有 **\sqlexpress**的计算机名称。  
   
 许多因素都会对您能否连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]产生影响。 有关详细信息，请参阅以下资源：  
 - [教程第 1 课：连接到数据库引擎](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  

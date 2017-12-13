@@ -3,8 +3,11 @@ title: "在查询中指定 TOP 子句 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5eda1f2951cc09dda0b30e203c90703be88d8e5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 169a3a633c25a1c902e5242f848816c7f37749d8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查询中指定 TOP 子句 (Visual Database Tools)
-TOP 子句仅返回查询的前 *n* 行或 *n percent* 的行。 在需要检查部分结果以核实查询是否按预期执行时，TOP 子句十分有用，这样就不会占用返回所有查询结果所需的资源。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] TOP 子句仅返回查询的前 n 行或 n percent 的行。 在需要检查部分结果以核实查询是否按预期执行时，TOP 子句十分有用，这样就不会占用返回所有查询结果所需的资源。  
   
 ### <a name="to-specify-the-top-clause-in-queries"></a>在查询中指定 TOP 子句  
   

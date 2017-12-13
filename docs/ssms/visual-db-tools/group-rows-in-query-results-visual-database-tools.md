@@ -3,8 +3,11 @@ title: "对查询结果中的行进行分组 (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a879bdc95cda0812fcc7d3f43f4d7e99c183337f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>对查询结果中的行进行分组 (Visual Database Tools)
-如果希望创建小计或显示表的子集的其他摘要信息，可使用聚合查询创建组。 各组可对表中具有相同值的所有行的数据进行汇总。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果希望创建小计或显示表的子集的其他摘要信息，可使用聚合查询创建组。 各组可对表中具有相同值的所有行的数据进行汇总。  
   
 例如，假设希望看到 `titles` 表中某书籍的平均价格，并将结果按出版商分组。 为此，需要按出版商（例如 `pub_id`）对查询进行分组。 声称的查询输出结果可能类似以下形式：  
   

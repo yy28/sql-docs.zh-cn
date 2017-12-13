@@ -3,8 +3,11 @@ title: "用于更新结果的规则 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a4c523c915ec236189f9b97104fcd78c725b4fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e40ed53f2d9b239e5bc565533fda84882a8a030
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
-在许多情况下，都可以更新显示在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在许多情况下，都可以更新显示在[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  
   
 一般而言，若要更新结果， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 必须具备足够的信息来唯一标识表中的行。 例如，查询在输出列表中包括主键。 此外，您还必须有足够的权限才能更新数据库。  
   

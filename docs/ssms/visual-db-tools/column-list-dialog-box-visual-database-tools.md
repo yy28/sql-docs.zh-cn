@@ -3,8 +3,11 @@ title: "“列列表”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bcc0686b1d0cca66764bde9dffe7ab725fd6e50f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7347d75f3f213cb5b39fa753fc33a184a36b29cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>“列列表”对话框 (Visual Database Tools)
-编写查询时，查看所选表值对象中的可用列的列表会非常有用。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 编写查询时，查看所选表值对象中的可用列的列表会非常有用。  
   
 若要访问此对话框，请在“查询设计器”菜单的“关系图”窗格中，右键单击某表值对象的标题，再单击“属性”。 在“属性”窗口中，单击“列列表”字段。 随后单击该字段右侧的省略号 **(…)**。  
   

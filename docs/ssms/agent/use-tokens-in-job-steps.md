@@ -3,8 +3,11 @@ title: "在作业步骤中使用标记 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a4cef9cc3d5a72bba4b818c89acfe6e15878ebff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 通过代理，你可以在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql_md.md)] 子系统执行作业步骤之前替换此不标记。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 通过代理，可以在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql_md.md)] 子系统执行作业步骤之前替换此不标记。  
   
 > [!IMPORTANT]  
 > 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的标记语法已发生更改。 因此，作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 下列部分说明了使用转义宏和更新使用标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤：“了解标记用法”、“[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记和宏”以及“更新作业步骤以使用宏”。 此外，使用方括号调用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] 代理作业步骤标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 语法（例如，“`[DATE]`”）也已发生更改。 现在，必须用括号将令牌名称括起来，并在令牌语法的开头加上美元符号 (`$`)。 例如：  

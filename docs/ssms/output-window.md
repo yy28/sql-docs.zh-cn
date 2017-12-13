@@ -3,8 +3,11 @@ title: "SSMS 输出窗口 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: shueybubbles
 ms.author: davidshi
 manager: kenvh
 ms.workload: Inactive
-ms.openlocfilehash: 3f080cb10b5dd78078eddf6dce6e94fe72ac8d99
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 68fedd92d79f508e0b85f369019a886356ed8475
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio 中的输出窗口
-可从视图菜单或使用组合键 Ctrl+Alt+O 打开输出窗口。 可用的输出通道有多个。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可从“视图”菜单或使用组合键 Ctrl+Alt+O 打开输出窗口。 可用的输出通道有多个。
 
 下表概述与各输出通道相关联的消息类型。
 

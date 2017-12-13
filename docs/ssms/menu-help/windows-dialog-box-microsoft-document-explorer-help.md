@@ -3,8 +3,11 @@ title: "Windows 对话框（Microsoft 文档资源管理器的帮助）| Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b84b957abb58629d8d722dcae65cb934cab969a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2078ea79f44f7dbc8a1072497a6c9aea9538db6c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
-使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”菜单上的 **Windows** 可以显示此对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”菜单上的 **Windows** 可以显示此对话框。  
   
 ## <a name="options"></a>选项  
 **名称**  

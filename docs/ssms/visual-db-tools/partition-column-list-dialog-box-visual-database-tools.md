@@ -3,8 +3,11 @@ title: "“分区列列表”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a23fcd46b6f3619695e6e192376214591925786c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>“分区列列表”对话框 (Visual Database Tools)
-如果表具有关联的分区方案，则可以使用此对话框选择将分区函数应用于哪一列或哪些列。 要切换到的列的数据类型必须与分区函数中定义的列的数据类型相同，该函数才会有效。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果表具有关联的分区方案，则可以使用此对话框选择将分区功能应用于哪一列或哪些列。 要切换到的列的数据类型必须与分区函数中定义的列的数据类型相同，该函数才会有效。  
   
 有关分区方案和函数的详细信息，请参阅 SQL Server 联机丛书。  
   

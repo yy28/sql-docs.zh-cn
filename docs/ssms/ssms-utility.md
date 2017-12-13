@@ -2,9 +2,12 @@
 title: "Ssms 实用工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4afda7e4549efc45b2d07fe2737326d2b38a0539
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssms-utility"></a>Ssms 实用工具
-  **Ssms**实用工具打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果指定， **Ssms** 还可以与服务器建立连接并打开查询、脚本、文件、项目和解决方案。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ssms 实用工具打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果指定， **Ssms** 还可以与服务器建立连接并打开查询、脚本、文件、项目和解决方案。  
   
  可以指定包含查询、项目或解决方案的文件。 如果提供了连接信息并且文件类型与服务器类型关联，则包含查询的文件将自动连接到该服务器。 例如，sql 文件将在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中打开一个 SQL 查询编辑器窗口，.mdx 文件将在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中打开一个 MDX 查询编辑器窗口。 **“SQL Server 解决方案和项目”** 将在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中打开。  
   

@@ -3,8 +3,11 @@ title: "选择对象（对象资源管理器）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-objects-object-explorer"></a>选择对象（对象资源管理器）
-使用“选择对象”对话框可以向另一个对话框的列表中添加对象。 对话框的标题以及对话框中可用的选项取决于该对话框的打开方式。 只显示可用的选项，例如，当您为新对象选择所有者时，只有登录名选项可用。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“选择对象”对话框可以向另一个对话框的列表中添加对象。 对话框的标题以及对话框中可用的选项取决于该对话框的打开方式。 只显示可用的选项，例如，当您为新对象选择所有者时，只有登录名选项可用。  
   
 ## <a name="options"></a>选项  
 **选择这些对象类型**  

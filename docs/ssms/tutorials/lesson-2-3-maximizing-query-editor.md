@@ -2,9 +2,12 @@
 title: "最大化查询编辑器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d265d008c019ccc03aed0a212bf632962d04ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2abd1efbec2221c9f909a79b21df27b6869e828e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>课程 2-3 - 最大化查询编辑器
-程序员通常会问：“我如何才能获得更多的代码编写空间？” 有两种简单的方式可以解决此问题：一种是最大化查询编辑器窗口，另一种是隐藏不使用的工具窗口。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 程序员通常会问：“我如何才能获得更多的代码编写空间？” 有两种简单的方式可以解决此问题：一种是最大化查询编辑器窗口，另一种是隐藏不使用的工具窗口。  
   
 ## <a name="maximizing-the-query-editor-window"></a>最大化查询编辑器窗口  
   

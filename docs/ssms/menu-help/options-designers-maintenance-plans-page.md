@@ -3,8 +3,11 @@ title: "选项（“设计器”-“维护计划”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>选项（“设计器” - “维护计划”页）
-使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **将新形状连接到默认选中的形状**  

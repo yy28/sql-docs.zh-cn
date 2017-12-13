@@ -3,8 +3,11 @@ title: "使用联接进行查询 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用联接进行查询 (Visual Database Tools)
-查询结果可包含来自多个表或表值对象的数据。 若要组合来自多个表值对象的数据，可使用 SQL 的 JOIN 操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询结果可包含来自多个表或表值对象的数据。 若要组合来自多个表值对象的数据，可使用 SQL 的 JOIN 操作。  
   
 有关使用多个表创建查询的信息，请参阅以下主题：  
   

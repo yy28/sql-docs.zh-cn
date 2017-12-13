@@ -2,9 +2,12 @@
 title: "设置启动选项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,13 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2591464744621eaf94e9367ab88152019aaf534c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11ad1af74c3db5dfcf05e37e0f6fef598435cfde
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>课程 1-7 - 设置启动选项
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可配置为在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时打开首选配置的设计图面。 通过将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 配置为打开首选配置，您可以节省时间。  
   
 ## <a name="configuring-startup-options"></a>配置启动选项  

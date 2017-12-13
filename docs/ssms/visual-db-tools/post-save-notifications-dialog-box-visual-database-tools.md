@@ -3,8 +3,11 @@ title: "“保存后的通知”对话框 (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25036c1b2e6ffef3108fe409128d38f4552528a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef2947ba3f63c75bef2f4f15822743b16f88d07a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>“保存后的通知”对话框 (Visual Database Tools)
-如果在尝试保存对表的更改遇到错误，则会显示此对话框。 此对话框将列出已成功保存在数据库中的对象、未保存的对象以及遇到的错误。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果在尝试保存对表的更改时遇到错误，则会显示此对话框。 此对话框将列出已成功保存在数据库中的对象、未保存的对象以及遇到的错误。  
   
 ## <a name="options"></a>选项  
 **保存文本文件**  

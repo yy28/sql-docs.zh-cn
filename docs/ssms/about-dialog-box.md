@@ -3,8 +3,11 @@ title: "“关于”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 168e3d0313a2bd94538f06d1fdca7fd95758bb51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e3a56399db397a6415a96b887b007504a063c738
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="about-dialog-box"></a>“关于”对话框
-“关于”对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”菜单中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“关于”对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中， [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”菜单中。  
   
 ## <a name="options"></a>选项  
 **组件名称**  

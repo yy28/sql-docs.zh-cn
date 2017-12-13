@@ -2,9 +2,12 @@
 title: "移动已注册的服务器或已注册的服务器组 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61e9c463554b142b052a5a7d1b40d6905d30c178
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>移动已注册的服务器或已注册的服务器组
-  本主题说明如何通过在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中移动已注册服务器或服务器组来整理服务器。 服务器组可以包括注册服务器，也可以包含其他服务器组。 服务器和服务器组都可以从一个服务器组移动到另一个服务器组。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主题说明如何通过在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中移动已注册服务器或服务器组来整理已注册服务器中的服务器。 服务器组可以包括注册服务器，也可以包含其他服务器组。 服务器和服务器组都可以从一个服务器组移动到另一个服务器组。  
   
 ##  <a name="SSMSProcedure"></a>  
   

@@ -3,8 +3,11 @@ title: "打印查询结果 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>打印查询结果 (Visual Database Tools)
-若要打印查询结果，可以将 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 中的内容复制到另一 Windows 程序中，例如字处理程序，然后在其中设置格式并进行打印。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 要打印查询结果，可以将[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的内容复制到另一 Windows 程序中，例如字处理程序，然后在其中设置格式并进行打印。  
   
 查询和视图设计器在将查询结果放入剪贴板时，使用制表符作为列之间的分隔符，使用回车符和换行符作为行之间的分隔符。  
   

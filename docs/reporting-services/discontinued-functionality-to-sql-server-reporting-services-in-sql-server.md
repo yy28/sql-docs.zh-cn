@@ -1,9 +1,13 @@
 ---
 title: "SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能 | Microsoft Docs"
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,13 +22,13 @@ ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe01a4073387eadc7d4a07bb993bdfb7263c3fe4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fec8386b7fea6d2655ddf3dd06e1ee4a8a4e6afd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能
 
@@ -40,6 +44,7 @@ ms.lasthandoff: 11/09/2017
 |-|-|
 |通过 Web 门户上传报表模型|这仍可以通过 SOAP API 完成。|
 |通过 Web 门户管理报表模型|这仍可以通过 SOAP API 完成。|
+|自定义 HTML 查看器和报表管理器的样式表|仍可以[使 Web 门户的外观与众不同](branding-the-web-portal.md)。|
 
 ## <a name="next-steps"></a>后续步骤
 

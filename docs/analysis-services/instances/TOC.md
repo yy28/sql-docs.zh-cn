@@ -15,7 +15,7 @@
 ## [Kerberos 身份验证](configure-analysis-services-for-kerberos-constrained-delegation.md)  
 ## [SPN 注册](spn-registration-for-an-analysis-services-instance.md)  
 ## [HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)  
-## [数据提供程序](data-providers-used-for-analysis-services-connections.md)  
+## [客户端库（数据提供程序）](data-providers-used-for-analysis-services-connections.md)  
 ## [断开用户和会话的连接](disconnect-users-and-sessions-on-analysis-services-server.md)  
 # [监视 Analysis Services 实例](monitor-an-analysis-services-instance.md)  
 ## [SQL Server 事件探查器](use-sql-server-profiler-to-monitor-analysis-services.md)  

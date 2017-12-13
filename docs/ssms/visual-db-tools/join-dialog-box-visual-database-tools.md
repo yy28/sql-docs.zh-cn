@@ -3,8 +3,11 @@ title: "“联接”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33fea037e80f2baf12d3b4ded38b1d9e989a4403
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3d463f00d5c86368858f18d2dfc3d72f989de88e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
-使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 **(…)**。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 **(…)**。  
   
 默认情况下，相关表使用内部联接进行联接，内部联接可基于联接列中包含匹配信息的行创建结果集。 通过在“联接”对话框中设置选项，可以指定基于不同运算符的联接，还可以指定外部联接。  
   

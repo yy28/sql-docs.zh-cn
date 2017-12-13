@@ -2,9 +2,12 @@
 title: "显示“对象资源管理器详细信息”页 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,13 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cd84b6f12a797177d11bda12c4998eec4473ff41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9dcd0a63047fdb9a5bb1398b996b3aac85ca4c97
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-5---show-the-object-explorer-details-page"></a>课程 1-5 - 显示“对象资源管理器详细信息”页
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以为对象资源管理器中选定的每个对象显示一个报表。 该报表称为“对象资源管理器详细信息”页，它由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建，并可在文档窗口中打开。  
   
 ## <a name="showing-the-object-explorer-details-page"></a>显示“对象资源管理器详细信息”页  
