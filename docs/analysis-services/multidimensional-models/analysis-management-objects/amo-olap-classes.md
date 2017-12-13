@@ -2,12 +2,12 @@
 title: "AMO OLAP 类 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 837acf180e08c995461a96ae027480f5175e17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d2d64c16bac9814a78a525c43693c6fb10507b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 类
-  分析管理对象 (AMO) OLAP 类可帮助您创建、修改、删除和处理多维数据集、维度以及相关对象，如关键绩效指标 (KPI)、操作和主动缓存。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理对象 (AMO) OLAP 类可帮助你创建、 修改、 删除和处理多维数据集、 维度和相关的对象，如关键绩效指标 (Kpi)、 操作和主动缓存。  
   
  有关设置 AMO 编程环境的详细信息，如何建立与访问数据库或数据定义的服务器的连接源和数据源视图，请参阅[AMO 基础类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)。  
   

@@ -2,12 +2,12 @@
 title: "Naive Bayes 模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 622eaa381d4507cb75d66a93916743af40e73932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 模型查询示例
-  在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 您还可以通过使用针对数据挖掘架构行集的查询来检索元数据。 本节说明如何创建针对基于 Microsoft Naive Bayes 算法的模型的查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建任一内容查询，提供了有关分析过程中发现的模式的详细信息，也可以创建预测查询，使用在模型中的模式来对新数据进行预测。 您还可以通过使用针对数据挖掘架构行集的查询来检索元数据。 本节说明如何创建针对基于 Microsoft Naive Bayes 算法的模型的查询。  
   
  **内容查询**  
   

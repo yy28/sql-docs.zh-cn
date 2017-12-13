@@ -2,12 +2,12 @@
 title: "计划 SSAS Administrative Tasks with SQL Server 代理 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
-  使用 SQL Server 代理服务，你可以根据所需顺序和时间来计划要运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理任务。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 SQL Server 代理服务，你可以计划[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理任务，以你运行的顺序和时间的需要。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
   
  使用作业步骤，可以控制执行流。 如果一个作业失败，则可以配置 SQL Server 代理以继续运行剩下的任务或停止执行。 也可以配置 SQL Server 代理以发送有关作业执行成功或失败的通知。  
   

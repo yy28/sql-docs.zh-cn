@@ -2,12 +2,12 @@
 title: "挖掘模型 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
-  “挖掘模型”是通过将算法应用于数据创建的  ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*挖掘模型*创建的应用某种算法来数据，但它多个算法或元数据容器： 它是一系列数据、 统计信息，以及可以应用于新数据以便生成预测和进行推断的模式有关关系。  
   
  本节解释什么是数据挖掘模型以及它可用于的对象：模型和结构的基本体系结构、挖掘模型的属性以及创建和使用挖掘模型的方式。  
   

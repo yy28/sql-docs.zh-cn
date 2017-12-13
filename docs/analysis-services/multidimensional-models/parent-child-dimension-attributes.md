@@ -2,12 +2,12 @@
 title: "父-子层次结构中的特性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edadec950e3a3e38ff235bf20d05b5a1e8b15f2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f61c234b79d57db0873ce09ace882bc44c054f9b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension-attributes"></a>父-子维度属性
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，通常会对维度中成员的内容做出常规假设。 叶成员包含直接派生自基础数据源的数据；非叶成员包含派生自对子成员所执行的聚合的数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，常规假设通常由有关的内容的维度中的成员。 叶成员包含直接派生自基础数据源的数据；非叶成员包含派生自对子成员所执行的聚合的数据。  
   
  但是在父子层次结构中，一些非叶成员除包含通过子成员聚合的数据外，还可能包含派生自基础数据源的数据。 对于父子层次结构中的这些非叶成员，可创建包含基础事实数据表数据的系统生成的特殊子成员。 这些成员称为“数据成员 ”，它们包含与非叶成员直接相关的值，而非叶成员独立于通过该非叶成员的后代计算的汇总值。  
   

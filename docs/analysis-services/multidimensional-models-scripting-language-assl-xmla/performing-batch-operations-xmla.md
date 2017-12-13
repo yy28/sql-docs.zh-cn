@@ -2,12 +2,12 @@
 title: "执行批处理操作 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 509554d21fc56088d5be341cd828b8b8ed8e3d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09f95f71f20800f5a0250aec83c505e8aaf99be1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
-  你可以使用[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML 用于 Analysis (XMLA) 若要运行多个 XMLA 命令使用的单个 XMLA 命令[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 你可以运行多个命令中包含**批处理**是作为单个事务或在为每个命令的单个事务、 以串行或并行命令。 你还可以指定的外部绑定和其他属性**批处理**命令处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML 用于 Analysis (XMLA) 若要运行多个 XMLA 命令使用的单个 XMLA 命令[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 你可以运行多个命令中包含**批处理**是作为单个事务或在为每个命令的单个事务、 以串行或并行命令。 你还可以指定的外部绑定和其他属性**批处理**命令处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>运行事务性和非事务性 Batch 命令  
  **批处理**命令在两种方式之一执行命令：  

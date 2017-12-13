@@ -2,12 +2,12 @@
 title: "Naive Bayes 模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdf21e47900f66d564ff209261fb0b3533f2d9cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0e6fb2186671be3fee4132ee67d39e7ea2c8c824
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用的模型特有的挖掘模型内容[!INCLUDE[msCoName](../../includes/msconame-md.md)]Naive Bayes 算法。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>了解 Naive Bayes 模型的结构  
  Naive Bayes 模型具有表示该模型及其元数据的单一父节点，并且在该父节点下，还存在任意数目的表示所选可预测属性的独立树。 除表示属性的树以外，每个模型还包含一个提供有关定型事例集的说明性统计信息的边际统计信息节点 (NODE_TYPE = 26)。 有关详细信息，请参阅 [边际统计信息节点中的信息](#bkmk_margstats)。  

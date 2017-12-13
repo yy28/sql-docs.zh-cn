@@ -3,8 +3,11 @@ title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
 ms.date: 10/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6a1531fb335269f3b02b512a75750ebb188c82c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
-本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
 ## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
@@ -571,7 +573,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [新身份验证选项**“Active Directory 通用身份验证”**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 这是一种由 Azure Active Directory 驱动的基于令牌的身份验证机制，支持多重身份验证、密码身份验证和集成身份验证机制。
 
-* 新扩展事件模板匹配 SQL Server Profiler 模板的功能 [（Microsoft Connect 项目 #2543925）。](../tools/sql-server-profiler/sql-server-profiler-templates.md)。
+* 新扩展事件模板匹配 SQL Server Profiler 模板的功能[（Microsoft Connect 项目 #2543925）。](../tools/sql-server-profiler/sql-server-profiler-templates.md)
 
 * Azure SQL 数据库的新的“创建数据库和数据库属性”对话框。
 

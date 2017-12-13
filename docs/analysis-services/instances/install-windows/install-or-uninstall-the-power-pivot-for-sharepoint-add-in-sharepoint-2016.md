@@ -2,12 +2,12 @@
 title: "安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2016) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 712d9538d03c656a346f9e179a38abdd84aacd7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a4ecab616136579c5a97b92a39ba2e2a2f5c7f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>安装或卸载 Power Pivot for SharePoint 加载项 (SharePoint 2016)
-  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 场中提供 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 数据访问的应用程序服务器组件和后端服务的集合。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 加载项 (**spPowerpivot16.msi**) 是用于安装应用程序服务器组件的安装程序包。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]是应用程序服务器组件和后端服务提供的集合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的数据访问[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]场。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 加载项 (**spPowerpivot16.msi**) 是用于安装应用程序服务器组件的安装程序包。  
   
  **注意：** 本主题介绍如何安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 解决方案文件和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置工具。 安装后，请参阅以下主题以了解有关配置工具和附加功能的信息：[配置 Power Pivot 和部署解决方案 (SharePoint 2013)](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)。  
   

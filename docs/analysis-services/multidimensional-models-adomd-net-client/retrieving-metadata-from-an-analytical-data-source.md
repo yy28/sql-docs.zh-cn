@@ -2,12 +2,12 @@
 title: "从分析的数据源中检索元数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c432c699cd0a924b0624d98b0e7f97323718f3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>从分析数据源检索元数据
-  对于检索和使用分析数据的应用程序，元数据是非常重要的。 从关系数据源检索数据时，这些数据的维数是可预测的，即使对嵌套数据集也是如此。 关系数据库的结果集的结构通常是二维的或为标量。 但是，从分析数据源检索的数据的维数是可变的，组织的层次结构可能会很深。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]元数据是重要的应用程序检索和使用分析数据。 从关系数据源检索数据时，这些数据的维数是可预测的，即使对嵌套数据集也是如此。 关系数据库的结果集的结构通常是二维的或为标量。 但是，从分析数据源检索的数据的维数是可变的，组织的层次结构可能会很深。  
   
  为了应对从分析数据源检索元数据的复杂性，ADOMD.NET 提供了两种形式的元数据检索：  
   

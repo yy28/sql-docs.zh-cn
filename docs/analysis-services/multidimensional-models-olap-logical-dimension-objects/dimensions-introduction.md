@@ -2,12 +2,12 @@
 title: "维度 (Analysis Services-多维数据) 简介 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb0acf4e658ca1184cfb7a019454b89e72221e46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 726344198c74d36a0d31368980f305c1426f1607
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions---introduction"></a>维度-简介
-  所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是基于从表或视图中的数据源视图的列的属性的组合。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是基于从表或视图中的数据源视图的列的属性的组合。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>基于星型架构设计的维度  
  维度的结构主要由一个或多个基础维度表的结构决定。 最简单的结构称为星型架构，在该架构中，每个维度均基于一个通过主键-外键关系直接链接到事实数据表的维度表。  

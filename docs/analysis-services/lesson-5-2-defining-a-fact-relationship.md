@@ -2,12 +2,12 @@
 title: "定义事实关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb3d67744b5616a031beee8ec3f329ed02f73c48
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lesson 5-2-定义事实关系
-用户有时需要按事实数据表中的数据项定义度量值的维度，或者查询事实数据表中其他特定的相关信息，例如与特定销售情况有关的发票号或采购订单号。 当根据此类事实数据表项定义维度时，则将该维度称为“事实维度”。 事实维度也称为退化维度。 若要将相关的事实数据表行（例如所有与特定发票号有关的行）组合在一起，事实维度将非常有用。 尽管可以将此信息置于关系数据库中一个单独的维度表内，但为此信息创建单独的维度表没有任何益处，因为维度表与事实数据表按照同一速度增长，只会创建重复的数据并增加不必要的复杂性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]用户有时想要能够通过在事实数据表中的数据项目的维度度量值或要查询特定的其他相关信息，如发票号的事实数据表或购买与特定的销售事实相关的订单号。 当根据此类事实数据表项定义维度时，则将该维度称为“事实维度”。 事实维度也称为退化维度。 若要将相关的事实数据表行（例如所有与特定发票号有关的行）组合在一起，事实维度将非常有用。 尽管可以将此信息置于关系数据库中一个单独的维度表内，但为此信息创建单独的维度表没有任何益处，因为维度表与事实数据表按照同一速度增长，只会创建重复的数据并增加不必要的复杂性。  
   
 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]内，您可以确定是否在 MOLAP 维度结构中复制事实维度数据以提高查询性能，或者是否将事实维度定义为 ROLAP 维度，以节省存储空间，但要牺牲查询性能。 以 MOLAP 存储模式存储维度时，除了在度量值组的分区中存储维度成员外，所有维度成员还都存储在高度压缩的 MOLAP 结构的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例内。 以 ROLAP 存储模式存储维度时，只有维度定义存储在 MOLAP 结构中，而维度成员本身则在查询时从基础关系事实数据表中查询。 可以根据事实维度的查询频率、典型查询返回的行数、查询的性能以及处理成本来确定适当的存储模式。 将维度定义为 ROLAP 时，并不要求使用该维度的所有多维数据集也以 ROLAP 存储模式进行存储。 可以对每个维度的存储模式单独进行配置。  
   

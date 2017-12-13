@@ -2,12 +2,12 @@
 title: "数据挖掘概念 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
-  数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘是发现可行信息从大型数据集的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
   
  这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
   

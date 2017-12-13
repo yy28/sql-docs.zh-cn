@@ -2,12 +2,12 @@
 title: "挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
-  使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]设计和处理挖掘模型使用基础挖掘结构中的数据后，挖掘模型已完成，并且包含*挖掘模型内容*。 可以使用此内容来预测或分析您的数据。  
   
  挖掘模型内容包含关于模型的元数据、关于数据的统计信息以及挖掘算法发现的模式。 模型内容可能包括回归公式、规则和项集的定义或权重和其他统计信息，具体取决于所使用的算法。  
   

@@ -2,12 +2,12 @@
 title: "在查询 (MDX) 中建立多维数据集上下文 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08eee9eb06b6e69e5681f5d88ac3f9c7f7a29d27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1b8d97b906a0ef1121daac5379f4938dfe4b2466
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>在查询中建立多维数据集上下文 (MDX)
-  每个 MDX 查询都是在指定的多维数据集上下文中运行的。 此上下文定义了查询中的表达式求值的成员。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在指定的多维数据集的上下文中运行的每个 MDX 查询。 此上下文定义了查询中的表达式求值的成员。  
   
  在 SELECT 语句中，FROM 子句用于确定多维数据集上下文。 此上下文可以是整个多维数据集，也可以只是该多维数据集的一个子多维数据集。 如果通过 FROM 子句指定了多维数据集上下文，就可以使用其他函数来扩展或限制该上下文。  
   

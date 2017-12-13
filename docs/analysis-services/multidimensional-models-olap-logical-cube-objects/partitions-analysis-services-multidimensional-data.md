@@ -2,12 +2,12 @@
 title: "分区 (Analysis Services-多维数据) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>分区（Analysis Services - 多维数据）
-  分区是一部分度量值组数据的容器。 从 MDX 查询是看不到分区的，任何查询反映的均是度量值组的全部内容，这与为度量值组定义的分区数量无关。 分区的数据内容由分区的查询绑定和切片表达式定义。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分区是度量值组数据的一部分的容器。 从 MDX 查询是看不到分区的，任何查询反映的均是度量值组的全部内容，这与为度量值组定义的分区数量无关。 分区的数据内容由分区的查询绑定和切片表达式定义。  
   
  简单 <xref:Microsoft.AnalysisServices.Partition> 对象由基本信息、切片定义、聚合设计等组成。 基本信息包括分区的名称、存储模式和处理模式等。 切片定义是指定元组或集的 MDX 表达式。 切片定义具有的限制与 StrToSet MDX 函数相同。 借助 CONSTRAINED 参数，切片定义可使用多维数据集中的维度、层次结构、级别和成员名称、键、唯一名称或其他命名对象，但不能使用 MDX 函数。 聚合设计是可由多个分区共享的聚合定义的集合。 默认聚合设计取自父多维数据集的聚合设计。  
   

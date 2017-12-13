@@ -2,12 +2,12 @@
 title: "编程 AMO OLAP Basic Objects |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bebff2d4f64f26f0f1824042512534c5459f2872
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e92a5a964dc95906cc6d74e983723868e7b48c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本对象的编程
-  创建复杂 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象是一个简单直接的过程，但需要注意细节。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]创建复杂[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象是简单明了，但需要注意到详细信息。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  
   
 -   [维度对象](#Dim)  
   

@@ -2,12 +2,12 @@
 title: "建立 Connections in ADOMD.NET |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcda3b90d2157869be1c187e8c6d86449790f7b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet"></a>Connections in ADOMD.NET
-  ADOMD.NET，在你使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象打开连接与分析数据源，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 不再需要连接时，应显式关闭该连接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET，在你使用<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象打开连接与分析数据源，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 不再需要连接时，应显式关闭该连接。  
   
 ## <a name="opening-a-connection"></a>打开连接  
  若要在 ADOMD.NET 中打开连接，您必须首先指定一个指向有效分析数据源和数据库的连接字符串。 然后，必须显式打开与该数据源的连接。  

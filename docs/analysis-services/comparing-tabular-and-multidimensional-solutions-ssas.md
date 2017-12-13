@@ -2,12 +2,12 @@
 title: "比较表格和多维解决方案 (SSAS) |Microsoft 文档"
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
-  SQL Server Analysis Services 提供用于创建商业智能语义模型的几种方法： 表格、 多维和 Power Pivot for SharePoint。
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 提供用于创建商业智能语义模型的几种方法： 表格、 多维和 Power Pivot for SharePoint。
   
  可以使用多种方法来实现针对不同业务和用户需求量身定制的建模体验。 “多维”是建立在开放标准基础之上的成熟技术，已由 BI 软件的众多供应商采用，但难以驾驭。 “表格”提供一种关系建模方法，很多开发人员认为它更加直观。 PowerPivot 更简单，它在 Excel 中提供可视化数据建模，并通过 SharePoint 提供服务器支持。  
   

@@ -2,12 +2,12 @@
 title: "写入的分区 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>分区-写入的分区
-  多维数据集中的数据通常为只读数据。 但在某些情况下，可能需要为分区启用写入。 使用可写入的分区，业务用户可以通过更改单元值并分析更改对多维数据集数据所产生的影响来研究方案。 向分区中写入时，客户端应用程序可以记录对分区中的数据所做的更改。 这些更改（称为写回数据）存储在单独的表中，并且不会覆盖度量值组中的任何现有数据。 但是，它们被作为多维数据集数据的一部分合并到了查询结果中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集中的数据是通常是只读的。 但在某些情况下，可能需要为分区启用写入。 使用可写入的分区，业务用户可以通过更改单元值并分析更改对多维数据集数据所产生的影响来研究方案。 向分区中写入时，客户端应用程序可以记录对分区中的数据所做的更改。 这些更改（称为写回数据）存储在单独的表中，并且不会覆盖度量值组中的任何现有数据。 但是，它们被作为多维数据集数据的一部分合并到了查询结果中。  
   
  可以对整个多维数据集或仅对多维数据集中的某些分区启用写操作。 启用写操作的维度各不相同但可以互补。 使用可写入的分区，用户可以更新分区单元，而启用写操作的维度则允许用户更新维度成员。 还可以组合使用这两个功能。 例如，启用写操作的多维数据集或可写入的分区可以不必包括任何启用写操作的维度。 **相关的主题：**[Write-Enabled 维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   

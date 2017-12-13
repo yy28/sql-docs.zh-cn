@@ -2,12 +2,12 @@
 title: "对象命名规则 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
-  本主题介绍对象命名约定，以及不能在任何对象名称、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的代码或脚本中使用的保留字和字符。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题介绍对象命名约定，以及保留的字和字符，不能在任何对象名称，在代码中的或在脚本[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ##  <a name="bkmk_Names"></a>命名约定  
  每个对象具有**名称**和**ID**在父集合的作用域必须是唯一的属性。 例如，只要两个维度分别驻留在不同的数据库中，这两个维度就能具有相同的名称。  

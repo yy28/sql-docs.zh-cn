@@ -2,12 +2,12 @@
 title: "基本 MDX 查询 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91f450be525f7ec0d019a3f17f28ee25886c44aa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX 查询的基本查询
-  基本多维表达式 (MDX) 查询就是 SELECT 语句 - MDX 中最常用的查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基本的多维表达式 (MDX) 查询是 SELECT 语句-最常在 MDX 中使用查询。 通过了解 MDX SELECT 语句如何指定结果集、SELECT 语句的语法是怎样的以及如何使用 SELECT 语句创建简单查询，您将切实理解如何使用 MDX 来查询多维数据。  
   
 ## <a name="specifying-a-result-set"></a>指定结果集  
  在 MDX 中，SELECT 语句可指定一个结果集，其中包含从多维数据集中返回的多维数据子集。 若要指定结果集，MDX 查询必须包含以下信息：  

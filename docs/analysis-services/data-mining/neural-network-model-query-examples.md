@@ -2,12 +2,12 @@
 title: "神经网络模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d13b5801cbf011723fa0ec9272819a83364f3f8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
-  在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来对新数据进行预测。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建内容查询，提供了有关分析过程中发现的模式的详细信息或在模型中使用的模式，来对新数据进行预测的预测查询。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的模型创建查询。  
   

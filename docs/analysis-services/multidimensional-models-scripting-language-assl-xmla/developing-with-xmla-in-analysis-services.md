@@ -2,12 +2,12 @@
 title: "使用 Analysis Services 中的 XMLA 开发 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71df2a16685019e6b1117dee995d5499711625eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 440464913f4dc6e38ca1da47dc4045f4249656f7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 开发
-  XML for Analysis (XMLA) 是一种基于 SOAP 的 XML 协议，它专门设计用于可通过 HTTP 连接访问的任何标准多维数据源的通用数据访问。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 XMLA 作为与客户端应用程序通信的唯一协议。 从根本上说，Analysis Services 支持的所有客户端库都可以采用 XMLA 来表示请求和响应。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML 用于 Analysis (XMLA) 是一种基于 SOAP 的 XML 协议，专为对任何标准多维数据源，可通过 HTTP 连接访问的通用数据访问。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 XMLA 作为与客户端应用程序通信的唯一协议。 从根本上说，Analysis Services 支持的所有客户端库都可以采用 XMLA 来表示请求和响应。  
   
  作为开发人员，您可以使用 XMLA 将客户端应用程序与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集成，而不必依赖 .NET Framework 或 COM 接口。 通过使用 XMLA 并与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立 HTTP 连接，可以满足包括在众多平台上托管在内的应用程序要求。  
   

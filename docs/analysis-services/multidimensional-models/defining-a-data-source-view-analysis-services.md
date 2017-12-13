@@ -2,12 +2,12 @@
 title: "定义数据源视图 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4331bf4de9efa68338e509976b534549bd3506d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
-  数据源视图包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据库对象（即多维数据集、维度和挖掘结构）使用的架构的逻辑模型。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据源视图包含使用的架构的逻辑模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据库对象 — 即多维数据集、 维度和挖掘结构。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  
   
 -   包含表示一个或多个基础数据源中选定对象的元数据，或者包含在您按照自上而下方法生成架构时将用于生成基础关系数据存储的元数据。  
   

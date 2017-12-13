@@ -2,12 +2,12 @@
 title: "备份、 还原和同步数据库 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d23fcaca8e9ad0d73d1e79566d2fa11348382a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>备份、还原和同步数据库 (XMLA)
-  在 XML for Analysis 中，有三个命令分别用于备份、还原和同步数据库：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 XML for Analysis，有三个命令的备份、 还原和同步数据库：  
   
 -   [备份](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令备份[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]备份文件 (.abf)，部分中所述[备份数据库](#backing_up_databases)。  
   

@@ -2,12 +2,12 @@
 title: "编程 AMO Fundamental Objects |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82ab6322367b9aaac757e9444d98a30401d42b06
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基础对象的编程
-  基础对象通常是简单直接的对象。 通常会创建和实例化这些对象，然后在不再需要它们时，用户可以断开与它们的连接。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 AMO 基础对象中的唯一一个复杂对象是 <xref:Microsoft.AnalysisServices.DataSourceView>，它需要详细信息来生成表示数据源视图的抽象模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基本对象通常是简单明了的对象。 通常会创建和实例化这些对象，然后在不再需要它们时，用户可以断开与它们的连接。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 AMO 基础对象中的唯一一个复杂对象是 <xref:Microsoft.AnalysisServices.DataSourceView>，它需要详细信息来生成表示数据源视图的抽象模型。  
   
  将所包含对象用作 OLAP 对象或者数据挖掘对象通常需要 <xref:Microsoft.AnalysisServices.Server> 和 <xref:Microsoft.AnalysisServices.Database> 对象。  
   

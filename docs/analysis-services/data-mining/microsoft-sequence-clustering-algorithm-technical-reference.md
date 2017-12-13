@@ -2,12 +2,12 @@
 title: "Microsoft 顺序分析算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
-  Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Markov 链分析来识别有序序列，并会综合利用此分析结果和聚类分析技术基于模型中的序列和其他属性生成分类。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Microsoft 序列聚类分析算法是一种混合算法，使用 Markov 链分析来识别有序的序列，并将此分析的结果组合使用聚类分析技术生成基于序列和其他属性的分类在模型中。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
   
  有关该算法的详细常规信息，包括如何浏览和查询顺序分析和聚类分析模型，请参阅 [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
   

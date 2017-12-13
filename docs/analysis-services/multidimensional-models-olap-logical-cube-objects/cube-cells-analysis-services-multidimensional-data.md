@@ -2,12 +2,12 @@
 title: "多维数据集单元格 (Analysis Services-多维数据) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -36,14 +36,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d7b596c1434dce62dfd9013f277b182f5ff4c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b00c3a74eaf73e19a1665080e5ab7bc91e3b6375
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>多维数据集单元（Analysis Services - 多维数据）
-  多维数据集由单元组成，单元按度量值组和维度进行组织。 单元表示多维数据集中来自多维数据集内每个维度的一个成员的唯一逻辑交集。 例如，以下关系图说明的多维数据集包含了一个有两个度量值的度量值组，它们通过三个名为“源”、“路线”和“时间”的维度组织在一起。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集组成单元格，按度量值组和维度进行组织。 单元表示多维数据集中来自多维数据集内每个维度的一个成员的唯一逻辑交集。 例如，以下关系图说明的多维数据集包含了一个有两个度量值的度量值组，它们通过三个名为“源”、“路线”和“时间”的维度组织在一起。  
   
  ![标识一个单元格的多维数据集关系图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "标识单个单元格的多维数据集关系图")  
   

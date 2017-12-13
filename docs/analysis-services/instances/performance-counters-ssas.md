@@ -2,12 +2,12 @@
 title: "性能计数器 (SSAS) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
-  使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用性能监视器，你可以使用性能计数器来监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
   
  性能监视器是用于跟踪资源使用情况的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制 (MMC) 管理单元。 您可以通过以下方式启动此 MMC 管理单元：在命令提示符下键入 **PerfMon** ，或从“控制面板”依次单击 **“管理工具”**和 **“性能监视器”**。 性能监视器使您可以通过使用预定义对象和计数器来跟踪服务器和进程的性能和活动，以及通过使用用户定义的计数器来监视事件。 性能监视器收集有关事件的计数而非数据，例如，内存使用量、活动事务数或 CPU 活动。 您还可以对特定计数器设置阈值以生成通知操作员的警报。  
   

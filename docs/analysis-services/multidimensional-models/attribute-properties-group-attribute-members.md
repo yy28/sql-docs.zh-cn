@@ -2,12 +2,12 @@
 title: "对属性成员 （离散化） 进行分组 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>属性组属性成员的属性-
-  成员组是系统生成的连续维度成员的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]成员组是连续的维度成员的系统生成的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
   
  特性的 **DiscretizationMethod** 属性控制成员的分组方式。  
   

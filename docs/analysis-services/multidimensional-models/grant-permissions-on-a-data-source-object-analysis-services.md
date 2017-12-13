@@ -2,12 +2,12 @@
 title: "授予对数据源对象 (Analysis Services) 的权限 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c774f7711a32eb512c28914146b05f2db52f4b2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授予数据源对象的权限 (Analysis Services)
-  通常，大多数 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用户无需访问作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目基础的数据源。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md) 或 [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md) 子句的数据挖掘扩展插件 (DMX) 查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]通常情况下，大多数用户的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不需要对基础数据源访问[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md) 或 [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md) 子句的数据挖掘扩展插件 (DMX) 查询。  
   
  若要执行连接到数据源的 DMX 查询，用户必须能访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的数据源对象。 默认情况下，只有数据库管理员或服务器管理员具有访问数据源对象的权限。 这意味着，除非管理员授予权限，否则用户将不能访问数据源对象。  
   

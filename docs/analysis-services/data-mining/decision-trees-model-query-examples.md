@@ -2,12 +2,12 @@
 title: "决策树模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1b441eb4718e5f362fb1ef6f6a3a889cf5dc812
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="decision-trees-model-query-examples"></a>决策树模型查询示例
-  在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当您创建针对数据挖掘模型的查询时，你可以创建内容查询，提供了有关分析过程中发现的模式的详细信息，也可以创建预测查询，使用在模型中的模式来对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型创建查询。  
   

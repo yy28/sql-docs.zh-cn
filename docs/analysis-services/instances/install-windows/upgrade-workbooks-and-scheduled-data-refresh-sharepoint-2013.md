@@ -2,12 +2,12 @@
 title: "升级工作簿和计划的数据刷新 (SharePoint 2013) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
-  本主题说明了在以前的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 环境中创建的工作簿的用户体验，以及如何升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题说明在以前创建的工作簿的用户体验[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]环境以及如何升级[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
   
 > [!WARNING]  
 >  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](http://go.microsoft.com/fwlink/?LinkId=238669)。  

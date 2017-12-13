@@ -2,12 +2,12 @@
 title: "插入、 更新和删除成员 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d98ad262e92a1da61c6ac3dda67aaac871dabd1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e7a4600dc6a3a0a9b32db40d0d9111907510768
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和删除成员 (XMLA)
-  你可以使用[插入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，和[删除](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)XML 中的命令为 Analysis (XMLA) 来分别插入、 更新或从允许写维度中删除成员。 关于启用写功能的维度的详细信息，请参阅[Write-Enabled 维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用[插入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，和[删除](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)XML 中的命令为 Analysis (XMLA) 来分别插入、 更新或从允许写维度中删除成员。 关于启用写功能的维度的详细信息，请参阅[Write-Enabled 维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
 ## <a name="inserting-new-members"></a>插入新成员  
  **插入**命令将新成员插入到写入的维度中的指定属性。  

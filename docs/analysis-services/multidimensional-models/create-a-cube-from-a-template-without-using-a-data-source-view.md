@@ -2,12 +2,12 @@
 title: "从模板创建多维数据集，而不使用数据源视图 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
-  在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]选择**不使用数据源生成多维数据集**多维数据集向导创建多维数据集，而不使用数据源视图的第一页。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>选择生成方法  
  在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 。 如果您不选择使用模板，则必须手动设置选项。  

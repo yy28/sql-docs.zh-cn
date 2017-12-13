@@ -2,12 +2,12 @@
 title: "Microsoft 决策树算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e78baa62709d39d61fb1592eab794dbccb458d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5b1fd05f99d361aabc8e5f340cd3d013475203d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 决策树算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是分类和回归算法，用于对离散和连续属性进行预测性建模。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是使用的离散和连续属性的预测性建模的分类和回归算法。  
   
  对于离散属性，该算法根据数据集中输入列之间的关系进行预测。 它使用这些列的值（也称之为状态）预测指定为可预测的列的状态。 具体地说，该算法标识与可预测列相关的输入列。 例如，在预测哪些客户可能购买自行车的方案中，假如在十名年轻客户中有九名购买了自行车，但在十名年龄较大的客户中只有两名购买了自行车，则该算法从中推断出年龄是自行车购买情况的最佳预测因子。 决策树根据朝向特定结果发展的趋势进行预测。  
   

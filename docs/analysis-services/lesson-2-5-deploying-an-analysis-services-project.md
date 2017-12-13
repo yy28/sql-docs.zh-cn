@@ -2,12 +2,12 @@
 title: "部署 Analysis Services 项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>课程 2-5-部署 Analysis Services 项目
-若要查看位于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象的多维数据集和维度数据，必须将该项目部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中，然后再处理该多维数据集及其维度。 部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建定义的对象。 处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中的对象会将基础数据源中的数据复制到多维数据集对象中。 有关详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)和[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]若要查看中的对象的多维数据集和维度数据[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程中的多维数据集[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程的项目，必须将项目部署到的指定实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，然后处理该多维数据集和其维度。 部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建定义的对象。 处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中的对象会将基础数据源中的数据复制到多维数据集对象中。 有关详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)和[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
 在开发过程中的这个阶段通常将此多维数据集部署到开发服务器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 完成业务智能项目的开发时，通常会使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 开发向导将项目从开发服务器部署到生产服务器。 有关详细信息，请参阅 [多维模型解决方案部署](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) 和 [使用部署向导部署模型解决方案](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
   

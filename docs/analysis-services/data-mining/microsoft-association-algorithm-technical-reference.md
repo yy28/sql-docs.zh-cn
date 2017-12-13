@@ -2,12 +2,12 @@
 title: "Microsoft 关联算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e639fac7981f92f91b2beef0b57c190ce834f14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c1fcc5b1089397672226b526654f611147e81e99
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]关联规则算法是众所周知的 Apriori 算法的简单实现。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法均可用于分析关联，但每种算法找到的规则可能不同。 在决策树模型中，导致特定规则的拆分基于信息获取，而在关联模型中，规则完全基于置信度。 因此，在关联模型中，强规则或具有高置信度的规则由于不提供新信息，可能不一定会受到关注。  
   

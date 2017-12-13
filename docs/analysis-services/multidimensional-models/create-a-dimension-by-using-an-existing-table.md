@@ -2,12 +2,12 @@
 title: "通过使用现有表创建维度 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeabc8b64e3d5450373fb1235a78a27a8aff5a5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，你可以使用中的维度向导[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]从现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
   
  如果您要使用现有表来创建维度，则维度向导将指导您执行以下操作：  
   

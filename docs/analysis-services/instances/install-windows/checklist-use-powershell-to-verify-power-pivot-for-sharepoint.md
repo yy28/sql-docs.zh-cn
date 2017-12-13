@@ -2,12 +2,12 @@
 title: "清单： 使用 PowerShell 验证 Power Pivot for SharePoint |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 98c99d91fcbd0452f0873c32e2ef6f4fbe7d356d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
-  若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]不[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]安装或恢复操作已完成，而无需实体的验证测试通过，其中确认你的服务和数据运行正常。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
   
 |||  
 |-|-|  
-|![PowerShell 相关内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")|本主题下方包含了一个完整的 PowerShell 脚本。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。|  
+|![与 PowerShell 相关的内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")|本主题下方包含了一个完整的 PowerShell 脚本。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。|  
   
 ||  
 |-|  

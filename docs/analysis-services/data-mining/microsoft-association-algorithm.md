@@ -2,12 +2,12 @@
 title: "Microsoft 关联算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是常用于建议引擎的算法。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]关联算法是一种算法通常用于推荐引擎。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
   
  关联模型基于包含各事例的标识符及各事例所包含项的标识符的数据集生成。 事例中的一组项称为“项集 ”。 关联模型由一系列项集和说明这些项在事例中如何分组的规则组成。 算法标识的规则可用于根据客户购物车中已有的项来预测客户将来可能购买的产品。 以下关系图显示了项集中的一系列规则。  
   

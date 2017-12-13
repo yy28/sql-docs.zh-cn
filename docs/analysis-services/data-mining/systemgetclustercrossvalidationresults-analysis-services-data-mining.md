@@ -2,12 +2,12 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a741805b22296232bffdc881ba4105243ea92506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）
-  将挖掘结构分区为指定数目的交叉部分，并对每个分区为模型定型，然后返回每个分区的准确性指标。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]为指定数量的剖面，挖掘结构的分区训练模型为每个分区，然后返回每个分区的准确性度量值。  
   
  **注意** ：此存储过程只能用于包含至少一个聚类分析模型的挖掘结构。 若要对非聚类模型进行交叉验证，必须使用 [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   

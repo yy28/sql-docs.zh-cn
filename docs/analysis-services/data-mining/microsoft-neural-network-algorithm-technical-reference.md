@@ -2,12 +2,12 @@
 title: "Microsoft 神经网络算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器）组成的“多层感知器”网络（也称为“反向传播 Delta 法则”网络）。 这些层分别是输入层、可选隐藏层和输出层。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络使用*多层感知器*网络，也称为*Back-Propagated Delta 法则网络*、 组成的神经元，最多三个层或*感知*。 这些层分别是输入层、可选隐藏层和输出层。  
   
  有关多层感知器神经网络的详细探讨不属于本文档的讨论范围。 本主题介绍该算法的基本实现，包括用于规范化输入值与输出值的方法以及用于缩减属性基数的功能选择方法。 本主题介绍可用于自定义该算法行为的参数和其他设置，并提供与查询该模型有关的其他信息的链接。  
   

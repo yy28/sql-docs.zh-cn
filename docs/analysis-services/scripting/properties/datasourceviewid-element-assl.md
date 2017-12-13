@@ -2,12 +2,12 @@
 title: "DataSourceViewID 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64aa61d22ba55ef2e44d6631fc6b1b1d0df471c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e28df2b53c961d712a21c4c1bf96a5b6e19399af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasourceviewid-element-assl"></a>DataSourceViewID 元素 (ASSL)
-  标识[DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md)元素与关联[绑定](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)父元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]标识[DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md)元素与关联[绑定](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)父元素。  
   
 ## <a name="syntax"></a>语法  
   

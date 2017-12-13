@@ -2,12 +2,12 @@
 title: "安装或卸载 Power Pivot 有关 SharePoint 外接程序 (SharePoint 2013) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a94b1c1aceedeba319b4d3ededc34d8de7f38c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f5f899bb9902c06d1288db8d94d719c27c250112
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)
-  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 场中提供 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 数据访问的应用程序服务器组件和后端服务的集合。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerpivot.msi**) 是用于安装应用程序服务器组件的安装程序包。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]是应用程序服务器组件和后端服务提供的集合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的数据访问[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]场。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerpivot.msi**) 是用于安装应用程序服务器组件的安装程序包。  
   
 -   该外接程序对于 SharePoint 2010 部署不是必需的。  
   

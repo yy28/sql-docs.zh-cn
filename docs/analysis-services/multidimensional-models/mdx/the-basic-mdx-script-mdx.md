@@ -2,12 +2,12 @@
 title: "基本 MDX 脚本 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5c97c821496ed4d81539c7b6f3659734f70ab21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a045281cf1d089ce46909d29d22cdd107747035
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 脚本 (MDX)
-  多维表达式 (MDX) 脚本定义 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的多维数据集的计算过程。 有两种类型的 MDX 脚本：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多维表达式 (MDX) 脚本定义多维数据集的计算过程[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 有两种类型的 MDX 脚本：  
   
  **默认 MDX 脚本**  
  当创建多维数据集时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将为该多维数据集创建一个默认的 MDX 脚本。 此脚本定义整个多维数据集的计算过程。  

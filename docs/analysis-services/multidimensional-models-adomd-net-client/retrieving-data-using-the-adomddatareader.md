@@ -2,12 +2,12 @@
 title: "检索数据使用 AdomdDataReader |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1e086fd6662a00e79b87a02fbaf3528b08895de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9c02bc400a7d1b3d9bec1a42f6ee43045616e3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 检索数据
-  在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象可在开销和交互功能之间实现较好的平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象将从分析数据源检索只读、只进的平展数据流。 此未经缓冲的数据流使过程逻辑能够有效地按顺序处理分析数据源的结果。 当检索大量数据用于显示时，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是一个不错的选择，因为这些数据未在内存中缓存。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]检索分析数据时<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>对象提供了很好地兼顾开销和交互的能力。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象将从分析数据源检索只读、只进的平展数据流。 此未经缓冲的数据流使过程逻辑能够有效地按顺序处理分析数据源的结果。 当检索大量数据用于显示时，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是一个不错的选择，因为这些数据未在内存中缓存。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 还可通过在数据可用后随即对数据进行检索（而不是等待返回查询的完整结果）来提高应用程序的性能。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 还可减少系统开销，因为默认情况下，此读取器一次仅在内存中存储一行。  
   

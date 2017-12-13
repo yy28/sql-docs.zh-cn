@@ -2,12 +2,12 @@
 title: "在 IIS 8.0 上配置对 Analysis Services 的 HTTP 访问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 02c1e956d40ed9a4b69e0606f5a273ecab814e83
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2926b71ccc00d178c9a60aa5c8fc9856e6c8a81
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>在 IIS 8.0 上配置对 Analysis Services 的 HTTP 访问
-  此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此文章介绍了如何设置访问 Analysis Services 实例的 HTTP 终结点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
   
 -   客户端访问通过 Internet 或 extranet 连接进行，并且对可以启用的端口有限制。  
   

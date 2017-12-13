@@ -2,12 +2,12 @@
 title: "修改日期维度 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ce770ce3ac600e086ea0b6d1ed03ed1b26b4ee3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lesson 3-4-修改日期维度
-在本主题的各任务中，将创建用户定义的层次结构，并更改为“日期”、“月份”、“日历季度”以及“日历半期”等属性显示的成员名称。 还将为属性定义组合键，控制维度成员的排序顺序以及定义属性关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本主题中的任务，你创建用户定义的层次结构，并将更改为日期、 月、 日历季度和日历半期属性显示的成员名称。 还将为属性定义组合键，控制维度成员的排序顺序以及定义属性关系。  
   
 ## <a name="adding-a-named-calculation"></a>添加命名计算  
 可以向数据源视图的表中添加命名计算，命名计算是一个表示为计算列的 SQL 表达式。 该表达式的显示形式和工作方式类似于表中的列。 通过命名计算，不必修改基础数据源中的表即可扩展数据源视图中现有表的关系架构。 有关详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  

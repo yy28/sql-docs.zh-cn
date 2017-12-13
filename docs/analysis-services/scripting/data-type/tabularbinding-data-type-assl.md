@@ -2,12 +2,12 @@
 title: "TabularBinding 数据类型 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03a430bab078154d65fc69d85dcf178fe4496909
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ac660d88de27b399ec9d174182a90b23e425d84b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabularbinding-data-type-assl"></a>TabularBinding 数据类型 (ASSL)
-  定义一个抽象的派生数据类型，该类型表示与表格格式项（如表或多维数据集维度）的绑定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义表示表格的项，如表或多维数据集维度绑定的抽象派生的数据类型。  
   
 ## <a name="syntax"></a>语法  
   

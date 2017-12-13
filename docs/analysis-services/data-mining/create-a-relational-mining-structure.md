@@ -2,12 +2,12 @@
 title: "创建关系挖掘结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
-  大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]大多数数据挖掘模型基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
   
  关系挖掘结构可从不同源绘制数据。 只要原始数据可定义为数据源视图的一部分，就可以将该数据存储在表、文件或关系数据库系统中。 例如，如果数据位于 Excel、SQL Server 数据仓库或 SQL Server 报表数据库中，或位于通过 OLE DB 或 ODBC 访问接口访问的外部源中，则应使用关系挖掘结构。  
   

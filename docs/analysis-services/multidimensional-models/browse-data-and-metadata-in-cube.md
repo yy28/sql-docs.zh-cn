@@ -2,12 +2,12 @@
 title: "浏览数据和多维数据集中的元数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>浏览多维数据集中的数据和元数据
-  可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集数据。 您可以使用此视图查看多维数据集的结构和数据库对象的数据、计算、格式设置和安全性。 可以像最终用户在报告工具或其他客户端应用程序中查看多维数据集一样来快速查看它。 浏览多维数据集数据时，可以查看不同的维度、深化到成员以及通过维度进行切片。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用**浏览器**多维数据集设计器来浏览多维数据集数据选项卡。 您可以使用此视图查看多维数据集的结构和数据库对象的数据、计算、格式设置和安全性。 可以像最终用户在报告工具或其他客户端应用程序中查看多维数据集一样来快速查看它。 浏览多维数据集数据时，可以查看不同的维度、深化到成员以及通过维度进行切片。  
   
  在浏览多维数据集之前，必须对其进行处理并且重新连接到该多维数据集。 处理后，打开多维数据集设计器的 **“浏览器”** 选项卡。 单击工具栏上的“重新连接”按钮以便刷新连接。  
   

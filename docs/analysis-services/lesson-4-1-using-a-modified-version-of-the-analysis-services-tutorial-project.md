@@ -2,12 +2,12 @@
 title: "使用修改后的版本的 Analysis Services Tutorial 项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lesson 4-1-使用 Analysis Services 教程项目的修改的版本
-本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到**  Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本教程中剩下的课程基于的增强版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程前三个课程中完成的项目。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到**  Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
   
 在继续本教程之前，必须下载、解压缩、加载和处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。  请使用本课程中的说明以确保您已执行了所有步骤。  
   

@@ -2,12 +2,12 @@
 title: "AMO 概念和对象模型 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c61b7e481b68e7aec256d81a391089f07963509f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 概念和对象模型
-  本主题提供的分析管理对象 (AMO) 的定义如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主对象的概念说明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题提供的分析管理对象 (AMO) 的定义如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主对象的概念说明。  
   
  AMO 是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的管理类的完整集合，可在托管环境中，在 <xref:Microsoft.AnalysisServices> 命名空间下以编程方式使用。 类包含在 AnalysisServices.dll 文件中，通常可找到 where[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序安装文件，在文件夹 \100\SDK\Assemblies\\。 若要使用 AMO 类，请将对此程序集的引用包含在项目中。  
   

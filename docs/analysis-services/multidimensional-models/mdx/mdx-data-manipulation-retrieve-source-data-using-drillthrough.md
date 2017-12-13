@@ -2,12 +2,12 @@
 title: "使用 DRILLTHROUGH 检索源数据 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d7eecd743e66ad33e029e5d575b9ab4a8b2a988
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 30587e46a4ac54d2ac2825649f25cb321c05eba4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX 数据操作-使用 DRILLTHROUGH 检索源数据
-  多维表达式 (MDX) 使用 [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)语句从多维数据集单元的源数据中检索行集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多维表达式 (MDX) 使用[钻取](../../../mdx/mdx-data-manipulation-drillthrough.md)语句从多维数据集单元的源数据中检索行集。  
   
  为了对多维数据集运行 **DRILLTHROUGH** 语句，必须为该多维数据集定义钻取操作。 若要定义钻取操作，请在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]的多维数据集设计器中，在 **“操作”** 窗格的工具栏上单击 **“新建钻取操作”**。 在新的钻取操作中，指定 **DRILLTHROUGH** 语句返回的操作名称、目标、条件以及列。  
   

@@ -2,12 +2,12 @@
 title: "设计聚合 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
-  聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 为分区使用相同的存储结构可让你轻松地定义可以使用更高版本合并的分区[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]聚合设计都要确保分区存储聚合时使用相同的结构的特定度量值组分区与关联。 为分区使用相同的存储结构可让你轻松地定义可以使用更高版本合并的分区[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
  若要定义的聚合设计的聚合，可以使用[DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) XML Analysis (XMLA) 命令。 **DesignAggregations**命令具有标识要用作引用以及如何控制基于该引用的设计过程的聚合设计的属性。 使用**DesignAggregations**命令并将其属性，您可以以迭代方式或批处理中，设计聚合，然后查看生成的设计统计信息来评估设计过程。  
   

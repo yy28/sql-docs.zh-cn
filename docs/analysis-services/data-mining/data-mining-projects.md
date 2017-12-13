@@ -2,12 +2,12 @@
 title: "数据挖掘项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ae03bc24451bb038581c53d5830c54a49f9c7d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
-  数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘项目属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]解决方案。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
  本主题为您提供了理解和创建数据挖掘项目所需的基本信息。  
   

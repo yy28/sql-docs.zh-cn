@@ -2,12 +2,12 @@
 title: "使用成员、 元组和集 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 56f991716d78e8b4638ab57e7dc981c5942d81b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 63b558fadebc2598da0969e13eac04d75aa4ef94
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成员、元组和集 (MDX)
-  MDX 提供多个可返回一个或多个成员、元组或集的函数，或对成员、元组或集进行操作的函数。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX 提供多个函数将返回一个或多个成员、 元组或集;或者，处理对成员、 元组，或设置。  
   
 ## <a name="member-functions"></a>成员函数  
  MDX 提供多个用于从其他 MDX 实体（如从维度、级别、集或元组）检索成员的函数。 例如， [FirstChild](../../../mdx/firstchild-mdx.md) 函数是一个对成员进行操作的函数，该函数返回一个成员。  

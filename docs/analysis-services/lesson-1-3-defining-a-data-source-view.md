@@ -2,12 +2,12 @@
 title: "定义数据源视图 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb0297f91f6a7b3cac69e262eac707cdc59040bd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>课程 1-3-定义数据源视图
-定义了将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中使用的数据源后，下一步通常是定义项目的数据源视图。 数据源视图是元数据的单个统一视图，这些元数据来自数据源在项目中定义的指定表和视图。 通过在数据源视图中存储元数据，可以在开发过程中使用元数据，而无需打开与任何基础数据源的连接。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]定义将在中使用的数据源后[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中下, 一步是通常定义项目的数据源视图。 数据源视图是元数据的单个统一视图，这些元数据来自数据源在项目中定义的指定表和视图。 通过在数据源视图中存储元数据，可以在开发过程中使用元数据，而无需打开与任何基础数据源的连接。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
 在以下任务中，定义一个数据源视图，其中包括来自 **AdventureWorksDW2012** 数据源的五个表。  
   

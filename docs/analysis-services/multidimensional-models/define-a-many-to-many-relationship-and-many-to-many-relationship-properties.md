@@ -2,12 +2,12 @@
 title: "定义多对多关系和多对多关系属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f9f9807ecfe195dc38d1d953092775e1b648adb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
-  本主题介绍 Analysis Services 中的多对多维度，包括何时使用它们以及如何创建它们。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍在 Analysis Services 中，包括何时使用它们以及如何创建它们的多对多维度。  
   
 ## <a name="introduction"></a>简介  
  Analysis Services 支持多对多维度，并且允许更复杂的分析，从而超越了传统的星型架构所能提供的功能。 在传统的星型架构中，所有维度都具有针对事实表的一对多关系。 每个事实都联接到一个维度成员；单个维度成员与多个事实相关联。  

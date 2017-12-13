@@ -2,12 +2,12 @@
 title: "授予数据库权限 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
-  如果你在介绍关系数据库中具有后台的 Analysis Services 数据库管理，则需要理解的首要事项为在数据访问方面，数据库不是 Analysis Services 中的主要安全对象。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果正接近饱和关系数据库中具有后台的 Analysis Services 数据库管理，你需要了解的第一件事是，在数据访问方面数据库不是 Analysis Services 中的主要安全对象。  
   
  Analysis Services 中的主要查询结构为多维数据集（或表格模型），且这些特定对象设置了用户权限。 与相关的数据库引擎（数据库从此登录并且在此对数据库自身设置用户权限（通常是 **db_datareader**））比较，Analysis Services 数据库主要用作数据模型中的主要查询对象的容器。 如果你的近期目标是为多维数据集或表格模型启用数据访问，那么你现在可以不使用数据库权限，请直接进入此主题：[授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   

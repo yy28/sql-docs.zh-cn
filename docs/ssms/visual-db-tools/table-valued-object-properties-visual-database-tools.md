@@ -3,8 +3,11 @@ title: "表值对象属性 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9ee522227473617b98b60691599b42ec7f8d35c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>表值对象属性 (Visual Database Tools)
-在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”窗口中为只读。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在“查询和视图设计器”中选择表值对象时，将在“属性”窗口中显示这些属性。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”窗口中为只读。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  

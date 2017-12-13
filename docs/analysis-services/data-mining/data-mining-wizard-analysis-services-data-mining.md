@@ -2,12 +2,12 @@
 title: "数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffd9987c39cdffda3052ed075cb3abb137e4d1b2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
-  每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中的数据挖掘向导[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]启动每次向数据挖掘项目中添加新的挖掘结构。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
   
  在该向导的最后阶段，您可以选择将数据划分为定型集和测试集，并启用钻取等功能。  
   

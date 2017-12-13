@@ -2,12 +2,12 @@
 title: "自动对属性成员进行分组 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee0e07b5154afdcbca46c8c59965c3c374a01f25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d787f200287979270ce8ffe818c3375878fc284
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-自动分组属性成员
-在浏览多维数据集时，通常根据一个属性层次结构的成员来确定另一个属性层次结构的成员的维度。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，如果由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性层次结构中的成员分布自动创建属性成员分组，将会很有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]浏览多维数据集时，你通常维度通过另一个属性层次结构的成员的一个属性层次结构成员。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，如果由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性层次结构中的成员分布自动创建属性成员分组，将会很有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。  
   
 **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：  
   

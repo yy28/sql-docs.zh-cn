@@ -2,12 +2,12 @@
 title: "定型集和测试数据集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
-  将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将数据分为定型集和测试集是评估数据挖掘模型的重要组成部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
   
  使用定型集处理模型后，可通过对测试集进行预测来测试该模型。 由于测试集内的数据已经包含要预测属性的已知值，因此可以方便地确定模型的预测准确性。  
   

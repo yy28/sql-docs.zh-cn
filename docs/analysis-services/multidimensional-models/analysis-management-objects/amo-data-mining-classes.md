@@ -2,12 +2,12 @@
 title: "AMO 数据挖掘类 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14895a6d8ac42c49902a7315ae2afc53ce24902f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-data-mining-classes"></a>AMO 数据挖掘类
-  数据挖掘类可帮助您创建、修改、删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]数据挖掘类可帮助你创建、 修改、 删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  
   
  有关如何设置环境，和有关的详细信息<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>对象，请参阅[AMO 基础类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)。  
   

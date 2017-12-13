@@ -2,12 +2,12 @@
 title: "关联模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25c3f04c7ae61788f10cc488e5680107fb4e9a3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="association-model-query-examples"></a>关联模型查询示例
-  在对数据挖掘模型创建查询时，可以创建内容查询，也可创建预测查询。内容查询提供有关在分析过程中发现的规则和项集的详细信息，预测查询使用在数据中发现的关联来做出预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建任一内容查询，提供了有关规则和项集在分析过程发现的详细信息，或者可以创建预测查询，使用在数据中发现的关联来进行预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
   
  本节讲述如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则的算法的模型创建这些类型的查询。  
   

@@ -2,12 +2,12 @@
 title: "Microsoft 时序算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 245c39d7ff9366e43b1faad07fec64befa5aea0e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法提供了一些针对连续值（例如一段时间内的产品销售额）预测进行了优化的多种算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法提供多个针对预测连续值，如产品销量，随着时间的推移进行了优化的算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
   
  下面的关系图显示了一个用于预测一段时间内某一产品在四个不同销售区域的销售额的典型模型。 该关系图中的模型以红色、黄色、紫色和蓝色线条分别显示每个区域的销售额。 每个区域的线条都分为两部分：  
   

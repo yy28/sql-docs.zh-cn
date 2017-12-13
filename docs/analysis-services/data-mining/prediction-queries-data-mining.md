@@ -2,12 +2,12 @@
 title: "预测查询 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
-  典型数据挖掘项目的目标是使用挖掘模型来进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]典型的数据挖掘项目的目标是使用挖掘模型进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  
   
  就功能而言，SQL Server 中支持不同类型的预测查询，具体取决于查询的输入类型：  
   

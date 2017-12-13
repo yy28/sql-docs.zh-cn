@@ -2,12 +2,12 @@
 title: "多维数据集存储 (Analysis Services-多维数据) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>多维数据集存储（Analysis Services - 多维数据）
-  存储可能仅包括多维数据集元数据，也可能包括事实数据表中的所有源数据以及通过与度量值组相关的维度所定义的聚合。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尽量减少存储的多维数据集数据和聚合所需的空间使用几种方法：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]存储可能包括只有多维数据集元数据，或可能包括所有事实数据表和维度与度量值组进行定义的聚合中的源数据。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尽量减少存储的多维数据集数据和聚合所需的空间使用几种方法：  
   
 -   使用存储选项，您可以选择最适合于多维数据集数据的存储模式和位置。  
   

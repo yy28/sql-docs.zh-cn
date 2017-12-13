@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  索引的名称。 索引名称在表或视图中必须唯一，但在数据库中不必唯一。 索引名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- *列*  
+ column  
  索引所基于的一列或多列。 指定两个或多个列名，可为指定列的组合值创建组合索引。 列出要包含在复合索引，按排序优先级顺序，在后括号内的列*table_or_view_name*。  
   
  可以成为单个组合索引键组合最多 32 列。 组合索引键中的所有列必须在同一个表或视图中。 组合的索引值的最大大小是聚集索引为 900 字节或非聚集索引为 1,700 字节。 限制为 16 个列和之前的版本为 900 字节[!INCLUDE[ssSDS](../../includes/sssds-md.md)]V12 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  如果不支持每个分区统计信息，将忽略该选项并生成警告。 对于以下统计信息类型，不支持增量统计信息：  
   
 -   使用未与基表的分区对齐的索引创建的统计信息。  
-  
 -   对 Always On 可读辅助数据库创建的统计信息。  
-  
 -   对只读数据库创建的统计信息。  
-  
 -   对筛选的索引创建的统计信息。  
-  
 -   对视图创建的统计信息。  
-  
 -   对内部表创建的统计信息。  
-  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
  DROP_EXISTING = {ON |**OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  可以联机创建包括全局临时表上的索引在内的索引，但下列索引例外：  
   
 -   XML 索引  
-  
 -   对局部临时表的索引。  
-  
 -   视图唯一的初始聚集索引。  
-  
 -   已禁用的聚集索引。  
-  
 -   如果基础表包含 LOB 数据类型的聚集的索引：**映像**， **ntext**，**文本**，和空间类型。  
-  
 -   **varchar （max)**和**varbinary （max)**列不能为索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) 并在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，当表包含**varchar （max)**或**varbinary （max)**列，包含其他列的聚集索引可以是生成或重新生成使用**联机**选项。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允许**联机**选项时基表包含**varchar （max)**或**varbinary （max)**列。  
   
  有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 重写[配置 max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)索引操作的持续时间的配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
  *max_degree_of_parallelism*可以是：  
   

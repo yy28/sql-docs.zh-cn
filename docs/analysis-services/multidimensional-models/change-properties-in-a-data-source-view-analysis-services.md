@@ -2,12 +2,12 @@
 title: "更改数据源视图 (Analysis Services) 中的属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
-  在使用数据源视图向导定义数据源视图并将表、视图、命名计算和命名查询添加到数据源视图后，可能需要更改与下列各项相关的属性：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]定义数据源视图使用数据源视图向导，添加表、 视图、 命名计算，并查看对数据源的命名的查询后，你可能想要更改与相关的属性：  
   
 -   数据源视图匹配条件  
   

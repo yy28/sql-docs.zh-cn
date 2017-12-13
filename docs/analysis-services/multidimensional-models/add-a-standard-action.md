@@ -2,12 +2,12 @@
 title: "添加标准操作 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed8e041cef62cb1782d0f00a90fe5c09986c7d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 542b50ce2d0e9f3bee53fd6fa5290a152dd03edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
-  您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]通过使用多维数据集设计器中的操作视图，可以向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 ### <a name="to-create-an-action"></a>创建操作  
   

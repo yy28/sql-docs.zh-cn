@@ -2,12 +2,12 @@
 title: "在嵌套 select 语句和子多维数据集中计算成员 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
-  计算成员是在运行时从表达式计算其值的维度成员，可用在嵌套 select 语句和子多维数据集中，以便更精确地定义查询的 cubespace。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]计算的成员是在运行时，表达式中计算其值，并且可以在嵌套 select 语句中使用的维度成员和子多维数据集更精确地定义查询的 cubespace。  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>启用子空间中的计算成员  
  **子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROPMSMDSUBQUERIES**中的属性[支持 XMLA 属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)在嵌套 select 语句中定义的行为或计算的成员或计算的集的宽限期或子多维数据集。 在本文档的上下文中，如果没有特别指明，则嵌套 select 表示嵌套 select 和子多维数据集。  

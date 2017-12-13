@@ -2,12 +2,12 @@
 title: "Monitor Analysis Services with SQL Server 扩展事件 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0fc2147822a5377f3ff3a3d60475225cf0e80c03
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 扩展事件监视 Analysis Services
-  扩展事件 (xEvents) 是一种占用系统资源非常少的轻量跟踪和性能监视系统，因此成为诊断生产和测试服务器问题的理想工具。 它还是高度可扩展、可配置的，且位于 SQL Server 2016 中，可通过新的内置工具支持更轻松地使用。 在 SQL Server Management Studio 中，连接到 Analysis Services 实例后，你可配置、运行及监视实时跟踪，类似于使用 SQL Server Profiler。 添加了更好的工具应使 xEvents 成为 SQL Server Profiler 更合理的替代，并且在如何诊断数据库引擎问题和 Analysis Services 工作负荷问题中创建更多对称。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]扩展事件 (*xEvents*) 是一种轻量跟踪和性能监视使用系统资源非常少的系统，这使它进行诊断生产和测试服务器上的问题的理想工具。 它还是高度可扩展、可配置的，且位于 SQL Server 2016 中，可通过新的内置工具支持更轻松地使用。 在 SQL Server Management Studio 中，连接到 Analysis Services 实例后，你可配置、运行及监视实时跟踪，类似于使用 SQL Server Profiler。 添加了更好的工具应使 xEvents 成为 SQL Server Profiler 更合理的替代，并且在如何诊断数据库引擎问题和 Analysis Services 工作负荷问题中创建更多对称。  
   
  除了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，还可以通过 XMLA 脚本、按照原有方式配置  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 扩展事件会话，如同早期版本中支持的一样。  
   

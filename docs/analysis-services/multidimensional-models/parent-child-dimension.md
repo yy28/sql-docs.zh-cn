@@ -2,12 +2,12 @@
 title: "父子维度 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6835612c0b7ea9a6e42217366e8d745897300bfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 982fbe970e85718c943ab0c8e31077f90d291606
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension"></a>父-子维度
-  父子层次结构是标准维度中包含父属性的层次结构。 父属性用于说明维度主表内部的自引用关系或自联接。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构内成员的位置由父特性的 **KeyColumns** 和 **RootMemberIf** 属性确定，而级别内成员的位置则由父特性的 **OrderBy** 属性确定。 有关特性属性的详细信息，请参阅 [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]父-子层次结构是标准维度包含父属性中的层次结构。 父属性用于说明维度主表内部的自引用关系或自联接。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构内成员的位置由父特性的 **KeyColumns** 和 **RootMemberIf** 属性确定，而级别内成员的位置则由父特性的 **OrderBy** 属性确定。 有关特性属性的详细信息，请参阅 [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
  由于父子层次结构中各级别之间均存在父子关系，因此一些非叶成员除了包含从子成员聚合的数据外，还可以包含派生自基础数据源的数据。  
   

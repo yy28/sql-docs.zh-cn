@@ -2,12 +2,12 @@
 title: "序列聚类分析模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
-  在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关模型中存储的信息的详细信息，预测查询使用模型中的模式并基于您提供的新数据进行预测。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建任一内容查询，提供了有关存储在模型中的信息的详细信息，或者可以创建预测查询，使用在模型中的模式来进行基于新数据的预测你提供。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
   
  针对顺序分析和聚类分析模型的预测查询通常是基于序列和转换、基于模型中包含的非序列属性或基于序列属性和非序列属性的组合来提出建议。  
   

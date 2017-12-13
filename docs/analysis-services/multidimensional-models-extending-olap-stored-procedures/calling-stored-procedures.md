@@ -2,12 +2,12 @@
 title: "调用存储的过程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 48c35e5583369335f5d9ab6215faa4fd86d66f6a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calling-stored-procedures"></a>调用存储的过程
-  可以在服务器上或从客户端应用程序中调用存储过程。 在任何一种情况下，存储过程都始终运行于服务器上，或者使用服务器的上下文，或者使用数据库的上下文。 执行存储过程时，不需要具备特殊的权限。 存储过程由程序集添加到服务器或数据库上下文后，只要用户的角色允许执行存储过程所执行的操作，则任何用户均可执行该存储过程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在服务器上或从客户端应用程序，可以调用存储的过程。 在任何一种情况下，存储过程都始终运行于服务器上，或者使用服务器的上下文，或者使用数据库的上下文。 执行存储过程时，不需要具备特殊的权限。 存储过程由程序集添加到服务器或数据库上下文后，只要用户的角色允许执行存储过程所执行的操作，则任何用户均可执行该存储过程。  
   
  调用 MDX 中的存储过程是按照与调用内部 MDX 函数相同的方式来完成的。 对于不带参数的存储过程，则使用过程名和一对空括号，如下所示：  
   

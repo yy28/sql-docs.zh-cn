@@ -2,12 +2,12 @@
 title: "全球化提示和最佳做法 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c7d23f5c48505bb91db780ee2aaf742c7c1e22
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 596601d9cc3ddc0ef4b799d7beb1c6e9b6f1af1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
-  [!INCLUDE[applies](../includes/applies-md.md)] 多维  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多维仅  
   
  这些提示和准则有助于提高你的商业智能解决方案的可移植性，并避免直接与语言和排序规则设置相关的错误。  
   

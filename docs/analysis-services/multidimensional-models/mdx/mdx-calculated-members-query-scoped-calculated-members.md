@@ -2,12 +2,12 @@
 title: "创建查询作用域的计算成员 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8a621061e7b9b04dfea37443c631ae611ee031ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 727a5b86e983d499e63c07a30392363e89046c7b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 计算成员的查询作用域的计算成员
-  如果某个计算成员仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字定义该计算成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]如果计算的成员仅需要一个多维表达式 (MDX) 查询，您可以通过使用 WITH 关键字定义该计算的成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
   
  如本主题中所述，WITH 关键字的语法非常灵活，甚至允许一个计算成员基于另一个计算成员。  
   

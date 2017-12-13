@@ -2,12 +2,12 @@
 title: "使用 Analysis Services 项目和在生产环境中的数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec62b7e30c7060a92b4ccfb36a8e5bfa2a0e6520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 196cc5ba851b93ee5db8522cfd3b3fe49b198a24
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-production"></a>使用 Analysis Services 项目和在生产环境中的数据库
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中开发 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并将其部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之后，必须确定要如何对已部署数据库中的对象进行更改。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]进行与安全角色、分区和存储设置相关的特定更改。 其他更改则只能使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在项目模式或联机模式下进行（例如添加属性或用户定义层次结构）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在开发和部署后你[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库从你[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目合并为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，你必须决定你想要对已部署的数据库中的对象进行更改。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]进行与安全角色、分区和存储设置相关的特定更改。 其他更改则只能使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在项目模式或联机模式下进行（例如添加属性或用户定义层次结构）。  
   
  一旦使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在联机模式下对已部署的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库进行更改，部署所用的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目便会立即成为过时项目。 如果开发人员在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中进行了更改并尝试部署已修改的项目，则系统将会提示开发人员覆盖整个数据库。 如果开发人员覆盖整个数据库，则还必须对数据库进行处理。 如果生产人员在未与开发小组沟通的情况下直接对已部署的数据库进行更改，则此问题会变得更为复杂，因为生产人员将不理解为何他们的更改不再显示在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中。  
   

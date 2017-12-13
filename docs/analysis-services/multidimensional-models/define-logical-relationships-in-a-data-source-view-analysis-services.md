@@ -2,12 +2,12 @@
 title: "数据源视图 (Analysis Services) 中定义逻辑关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7ebf28e254d90e0d617c2b3319770e91c54e9a16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑关系 (Analysis Services)
-  数据源视图向导和数据源视图设计器自动定义添加到数据源视图 (DSV) 的表之间的关系，定义过程基于基础数据库关系或指定的名称匹配条件。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中的数据源视图向导和数据源视图设计器自动定义添加到数据源视图 (DSV) 基于基础数据库关系或您指定的条件匹配的名称的表之间的关系。  
   
  如果您在使用来自多个数据源的数据，则可能需要在 DSV 中手动定义逻辑关系，以便对自动定义的这些关系进行补充。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，需要使用关系来标识事实数据表和维度表，以构建用于从基础数据源检索数据和元数据的查询，以及利用高级业务智能功能。  
   

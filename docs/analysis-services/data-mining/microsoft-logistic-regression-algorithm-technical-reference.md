@@ -2,12 +2,12 @@
 title: "Microsoft 逻辑回归算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cfb1b20bed865c750ed5a29ff94fd4136830c18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体，其中， *HIDDEN_NODE_RATIO* 参数设置为 0。 这样设置以后，所创建的神经网络模型就不包含隐藏层，因此等效于逻辑回归。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]逻辑回归算法是一种变体[!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法，其中*HIDDEN_NODE_RATIO*参数设置为 0。 这样设置以后，所创建的神经网络模型就不包含隐藏层，因此等效于逻辑回归。  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法的实现  
  假定可预测列仅包含两个状态，但您仍希望进行回归分析，以将输入列与可预测列包含特定状态的概率关联起来。 下图展示了将可预测列的状态设置为 1 和 0，计算该列包含特定状态的概率以及对输入变量执行线性回归时将获得的结果。  

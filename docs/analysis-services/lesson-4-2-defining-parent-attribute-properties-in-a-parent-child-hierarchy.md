@@ -2,12 +2,12 @@
 title: "在父-子层次结构中定义父特性属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e742a280ac4828cd708a3702545e9168cf8b0f73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7d8a8e45d9785d9eb4b449ad36689aadd8e454c6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>父-子层次结构中的课程 4-2-定义父特性属性
-父子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”，用于标识每个维度成员。 另一列称为“父列”，用于标识每个维度成员的父项。 父特性的“NamingTemplate”属性决定父子层次结构中的每个级别的名称，而“MembersWithData”属性则决定是否应显示父成员的数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]父-子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”，用于标识每个维度成员。 另一列称为“父列”，用于标识每个维度成员的父项。 父特性的“NamingTemplate”属性决定父子层次结构中的每个级别的名称，而“MembersWithData”属性则决定是否应显示父成员的数据。  
   
 有关详细信息，请参阅[父子维度](../analysis-services/multidimensional-models/parent-child-dimension.md)、[父子层次结构中的属性](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   

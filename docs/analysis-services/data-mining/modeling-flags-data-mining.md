@@ -2,12 +2,12 @@
 title: "建模标志 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用中的建模标志[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供到数据挖掘算法在事例表中定义的数据有关的其他信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
   
  某些建模标志是在挖掘结构级别定义的，而其他标志则是在挖掘模型列级别定义的。 例如，可以将 **NOT NULL** 建模标志与挖掘结构列一起使用。 您可以根据用于创建模型的算法，在挖掘模型列上定义其他建模标志。  
   

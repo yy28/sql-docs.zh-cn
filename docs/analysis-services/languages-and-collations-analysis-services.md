@@ -2,12 +2,12 @@
 title: "语言和排序规则 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 **Language** 和 **Collation** 属性首次在安装过程中的实例级别进行设置，但以后可在对象层次结构的不同级别更改。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的语言和排序规则由[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 操作系统。 **Language** 和 **Collation** 属性首次在安装过程中的实例级别进行设置，但以后可在对象层次结构的不同级别更改。  
   
  在多维模型中（仅），你可在数据库或多维数据集上设置这些属性 - 你还可在多维数据集中你为对象创建的翻译上对其进行设置。 在表格模型中，语言和排序规则均继承于主机操作系统。  
   

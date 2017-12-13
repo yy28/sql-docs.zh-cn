@@ -2,12 +2,12 @@
 title: "授予维度 (Analysis Services) 的权限 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授予维度的权限 (Analysis Services)
-  维度安全用于设置维度对象（而非其数据）的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]维度安全用于设置维度对象，而非其数据的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
   
  但是，也许你的目标不是控制处理操作，而是控制维度的数据访问或其包含的属性和层次结构。 例如，具有不同地区销售部门的公司可能想要部门外人员不得接触销售绩效信息。 为了允许或拒绝不同组成人员访问某部分的维度数据，可以对属性和维度成员设置权限。 请注意，你无法拒绝对单个维度对象本身的访问，仅可拒绝对其数据的访问。 如果近期目标是允许或拒绝访问维度中的成员（包括对单个属性结构层次的访问权限），请参阅 [授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 了解更多信息。  
   

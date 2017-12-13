@@ -2,12 +2,12 @@
 title: "交叉验证 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 89484271e1424efafef7e5b1956c4d0ec4825efa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉验证（Analysis Services – 数据挖掘）
-  交叉验证是分析中的一个标准工具，同时也是一项重要的功能，有助于开发和优化数据挖掘模型。 在创建了一个挖掘结构及其关联的挖掘模型之后，可使用交叉验证来确定该模型的有效性。  交叉验证具有以下应用：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*交叉验证*是在分析中的标准工具，帮助你开发并优化数据挖掘模型的一个重要功能。 在创建了一个挖掘结构及其关联的挖掘模型之后，可使用交叉验证来确定该模型的有效性。  交叉验证具有以下应用：  
   
 -   验证特定挖掘模型的可靠性。  
   

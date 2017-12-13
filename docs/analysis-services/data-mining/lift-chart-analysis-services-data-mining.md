@@ -2,12 +2,12 @@
 title: "提升图 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
-  A  *chart* 以图形形式表示与随机推测相比挖掘模型带来的改进，并且根据“提升”  分数度量变化。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*提升图*以图形方式表示挖掘模型提供相比，针对随机推测的改进和度量值方面的更改*提升*分数。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，提升图可比较多个具有相同预测属性的模型的准确性。 您还可为单个结果（可预测属性的单个值）或所有结果（指定属性的所有值）评估预测的准确性。  
   

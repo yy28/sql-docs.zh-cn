@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8aa36adac3f7be50105a387dc3d39fca208eaba8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>性能最佳实践和 SQL Server 自 2017 年在 Linux 上的配置指南
 
@@ -55,7 +55,6 @@ ms.lasthandoff: 12/01/2017
 请考虑使用以下 Linux 操作系统配置设置体验安装 SQL Server 的最佳性能。
 
 ### <a name="kernel-settings-for-high-performance"></a>为了获得高性能的内核设置
-
 这些是建议的 Linux 操作系统设置为高相关的性能和吞吐量的 SQL Server 安装。 请参阅你的 Linux 操作系统文档，了解过程配置这些设置。
 
 
@@ -92,7 +91,7 @@ sysctl -w kernel.numa_balancing=0
 默认设置**vm.max_map_count** （这是 65536） 可能不是足够高的 SQL Server 安装。 将此值 （这是一个上限） 更改为 256k。
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>禁用上次访问的日期/时间的文件系统上的 SQL Server 数据和日志文件

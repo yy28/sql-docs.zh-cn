@@ -2,12 +2,12 @@
 title: "挖掘结构 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c228c4db6aff3eca771e3c4e5aacbbfc3e2aa2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
-  挖掘结构定义生成挖掘模型时依据的数据：它指定源数据视图、列数量和类型以及分为定型集和测试集的可选分区。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]挖掘结构定义从中生成挖掘模型的数据： 它指定的源数据视图、 数量和类型的列，和的可选分区为定型集和测试设置。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
   
  ![处理的数据： 源模型的结构到](../../analysis-services/data-mining/media/dmcon-modelarch.gif "处理的数据： 源到模型的结构")  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
  如果您希望查看挖掘结构中的数据，则可以使用数据挖掘扩展插件 (DMX) 来创建查询。 例如， `SELECT * FROM <structure>.CASES` 语句返回挖掘结构中的所有数据。 若要检索此信息，必须处理挖掘结构，并且必须缓存处理结果。  
   
- `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 &#有关详细信息，请参阅 [SELECT FROM &#60;结构&#62;.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM &#60;模型&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md)。  
+ `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM &#60;结构&#62;.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM &#60;模型&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>在挖掘结构中使用数据挖掘模型  
  数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名 。 有关为结构列创建别名的详细信息，请参阅[为模型列创建别名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)和[挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)。  

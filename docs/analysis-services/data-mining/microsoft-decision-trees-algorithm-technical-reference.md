@@ -2,12 +2,12 @@
 title: "Microsoft 决策树算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是一种混合算法，包含不同的方法，用于创建一个树中，并支持多种分析任务，包括回归、 分类和关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
   
  本主题说明此算法的实现，介绍如何针对不同的任务自定义算法行为，并提供指向有关决策树模型查询的其他信息的链接。  
   

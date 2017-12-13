@@ -2,12 +2,12 @@
 title: "修改客户维度 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 44e30a4b743bad8022446bb04b86d0c3002c3fb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lesson 3-2-修改客户维度
-可以使用许多不同的方式提高多维数据集中的维度的可用性和功能。 在本主题的各任务中，您将修改“客户”维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]有多种不同的方法，可以增加的可用性和多维数据集中的维度的功能。 在本主题的各任务中，您将修改“客户”维度。  
   
 ## <a name="renaming-attributes"></a>重命名属性  
 可以使用维度设计器的“维度结构”选项卡更改属性名称。  

@@ -2,12 +2,12 @@
 title: "度量值和度量值组 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
-  多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集包括*度量值*中*度量值组*，业务逻辑和给出上下文用于计算度量值提供的数值数据的维度的集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
   
  本主题将介绍 [Measures](#bkmk_measure) 和 [Measure Groups](#bkmk_mg)。 它还包含以下表格，以及指向有关创建和配置度量值和度量值组的过程步骤的链接。  
   

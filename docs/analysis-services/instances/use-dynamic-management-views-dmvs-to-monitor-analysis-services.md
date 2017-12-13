@@ -2,12 +2,12 @@
 title: "使用动态管理视图 (Dmv) 监视 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5df4b77f4a373a69360c8e51f9c3f1362a4bf904
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6969869d6f4a7c10303838d2e3e696ae577fe180
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
-  Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 动态管理视图 (DMV) 是公开有关本地服务器操作和服务器运行状况信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
   
  对于大多数 DMV 查询，你会使用 **SELECT** 语句以及具有 XML/A 架构行集的 **$System** 架构。  
   

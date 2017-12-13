@@ -2,12 +2,12 @@
 title: "在 Power Pivot 模式下安装 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 - setup-install
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
-  本主题中的过程将指导你以适用于 SharePoint 部署的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式在单台服务器上安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题中的过程将指导你通过单台服务器上安装的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的服务器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]适用于 SharePoint 部署模式。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
   
 ||  
 |-|  
@@ -310,7 +310,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [管理 Excel Services 数据模型设置 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))。  
   
- ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置") [通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 Power Pivot 迁移到 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

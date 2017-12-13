@@ -2,12 +2,12 @@
 title: "多维模型中的透视 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9961af8c7f6edef8ed330d70df42dc63ff5b9d9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 65c85b108905cbfecd1f52234af7d33745e8e681
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多维模型中的透视
-  透视是为特定应用程序或用户组创建的多维数据集的子集。 多维数据集本身是一个默认的透视。 透视针对客户端显示为一个多维数据集。 当用户查看透视时，该透视看上去像另一个多维数据集。 在透视中通过写回对多维数据集数据所做的任何更改也会作用于原始多维数据集。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中视图的详细信息，请参阅 [透视图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]透视是为特定应用程序或用户组创建的多维数据集的子集。 多维数据集本身是一个默认的透视。 透视针对客户端显示为一个多维数据集。 当用户查看透视时，该透视看上去像另一个多维数据集。 在透视中通过写回对多维数据集数据所做的任何更改也会作用于原始多维数据集。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中视图的详细信息，请参阅 [透视图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
   
  使用多维数据集设计器的 **“透视”** 选项卡，可以创建或修改多维数据集中的透视。 **“透视”** 选项卡的第一列是 **“多维数据集对象”** 列，该列列出多维数据集中的所有对象。 这对应于多维数据集的默认透视，该透视是多维数据集本身。  
   

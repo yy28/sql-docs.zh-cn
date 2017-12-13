@@ -2,12 +2,12 @@
 title: "创建和管理本地分区 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf08f0031c6e805b5677a0e551a20c941d0dce34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>创建和管理本地分区 (Analysis Services)
-  您可以为度量值组创建更多分区以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以创建其他分区的度量值组，以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。  
   
  可以在模型设计期间在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中创建分区，或在部署解决方案后使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 来创建分区。 建议您仅选择一种方法。 如果您交替使用这些工具，可能会发现，在随后从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署该解决方案时，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中对已部署的数据库所进行的更改将被覆盖。  
   

@@ -2,12 +2,12 @@
 title: "创建 OLAP 挖掘结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
-  基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有很多好处创建数据挖掘模型基于 OLAP 多维数据集或其他多维数据存储区。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
   
  本主题介绍如何基于现有多维解决方案中的维度和相关度量值创建 OLAP 挖掘结构。  
   

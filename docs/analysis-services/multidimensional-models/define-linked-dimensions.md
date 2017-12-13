@@ -2,12 +2,12 @@
 title: "定义链接的维度 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 261ba3bea0256789df5f6ad72cff553c6ed253f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
-  链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]链接的维度基于维度创建和存储的同一版本和兼容性级别的另一个 Analysis Services 数据库中。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
   
  链接文档是只读的。 如果您想要修改维度或创建新关系，则必须更改源维度，然后删除后再重新创建链接的维度及其关系。 不能刷新某一链接的维度以便从源项目中提取更改。  
   

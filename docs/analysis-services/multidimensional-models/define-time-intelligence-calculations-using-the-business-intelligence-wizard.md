@@ -2,12 +2,12 @@
 title: "定义时间智能计算使用商业智能向导 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d40605d85444307073de84d7fb8c8e4bbeea163d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
-  时间智能增强功能是一项多维数据集增强功能，它可以将时间计算（或时间视图）添加到所选层次结构中。 此增强功能支持以下计算类别：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]时间智能增强功能是添加时间计算 （或时间视图） 的多维数据集增强到所选的层次结构。 此增强功能支持以下计算类别：  
   
 -   到现在为止时间段。  
   

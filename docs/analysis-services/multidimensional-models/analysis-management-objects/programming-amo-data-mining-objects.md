@@ -2,12 +2,12 @@
 title: "编程 AMO 数据挖掘对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO 数据挖掘对象的编程
-  使用 AMO 对数据挖掘对象进行编程非常简单直接。 第一步是创建数据结构模型以支持挖掘项目。 然后创建数据挖掘模型，该模型支持您要用于预测或查找数据下未看到的关系的挖掘算法。 创建挖掘项目（包括结构和算法）后，可以处理挖掘模型以获取定型的模型，稍后从客户端应用程序进行查询和预测时将使用该模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]数据挖掘对象编程的使用 AMO 是简单明了。 第一步是创建数据结构模型以支持挖掘项目。 然后创建数据挖掘模型，该模型支持您要用于预测或查找数据下未看到的关系的挖掘算法。 创建挖掘项目（包括结构和算法）后，可以处理挖掘模型以获取定型的模型，稍后从客户端应用程序进行查询和预测时将使用该模型。  
   
  请记住 AMO 不用于查询，而是用于管理挖掘结构和模型。 若要查询你的数据，使用[使用 ADOMD.NET 开发](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   

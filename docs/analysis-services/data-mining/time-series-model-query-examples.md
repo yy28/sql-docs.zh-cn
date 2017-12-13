@@ -2,12 +2,12 @@
 title: "时序模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="time-series-model-query-examples"></a>时序模型查询示例
-  在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建任一内容查询，提供了有关分析过程中发现的模式的详细信息，也可以创建预测查询，使用在模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
   
  本节介绍如何为基于 Microsoft 时序算法的模型创建这两种查询。  
   

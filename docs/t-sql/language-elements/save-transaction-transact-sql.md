@@ -31,11 +31,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6489bd5ca7b8b82b7211bc77414335e6e62bd7
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>参数  
  *savepoint_name*  
- 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 *transaction_name*是始终案例敏感，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
+ 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 *savepoint_name*是始终案例敏感，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
   
  @*savepoint_variable*  
  包含有效保存点名称的用户定义变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  

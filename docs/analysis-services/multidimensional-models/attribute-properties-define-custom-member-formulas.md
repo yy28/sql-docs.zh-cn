@@ -2,12 +2,12 @@
 title: "定义自定义成员公式 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82a27d94e0a964921bc54918e4d0e54a9eba35f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>特性属性-定义自定义成员公式
-  可以定义称为自定义成员公式的多维表达式 (MDX) 表达式，以便为指定属性的成员提供值。 数据源视图内表中的列为属性中的每个成员提供了用于为其提供值的表达式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以定义多维表达式 (MDX) 表达式，调用自定义成员公式，若要为指定属性的成员提供值。 数据源视图内表中的列为属性中的每个成员提供了用于为其提供值的表达式。  
   
  自定义成员公式确定与成员相关的单元值，并替代度量值的聚合函数。 自定义成员公式是以 MDX 编写的。 每个自定义成员公式应用于一个成员。 自定义成员公式存储在维度表中，或者存储在与维度表具有外键关系的其他表中。  
   

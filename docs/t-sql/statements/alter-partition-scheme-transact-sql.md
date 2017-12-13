@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df341bb5d66c8f88e5090e31014a5db5a1ff75c0
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: f339a83559e565d5046c721657becd6cf6a5940d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -39,8 +39,8 @@ ms.lasthandoff: 12/06/2017
 
   向分区方案中添加文件组或更改分区方案中 NEXT USED 文件组的指定。 
 
-[!NOTE]
-在 Azure SQL 数据库支持仅对主文件组。  
+>[!NOTE]
+>在 Azure SQL 数据库支持仅对主文件组。  
   
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

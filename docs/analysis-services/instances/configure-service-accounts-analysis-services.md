@@ -2,12 +2,12 @@
 title: "配置服务帐户 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
-  产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中记录了产品级帐户预配[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)，提供所有的全面的服务帐户信息的主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务，包括[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
   
  该主题提供了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的补充信息，包括表格和群集安装的必要附加权限。 它也介绍了支持服务器操作所需的权限。 例如，你可以配置要在服务账户下执行的处理和查询操作，在这种情况下，你需要授予附加权限使其运作。  
   

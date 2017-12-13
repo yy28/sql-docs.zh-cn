@@ -2,12 +2,12 @@
 title: "配置 Power Pivot 和部署解决方案 (SharePoint 2016) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0e3fa74aed98e00a64a155a8fb43d2cc6db3e1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2016)
-  本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此主题介绍如何部署和配置的中间层增强功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]库、 计划数据刷新、 管理仪表板和数据访问接口。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
   
 -   部署 SharePoint 解决方案文件。  
   

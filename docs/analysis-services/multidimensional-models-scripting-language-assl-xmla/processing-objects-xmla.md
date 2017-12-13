@@ -2,12 +2,12 @@
 title: "处理对象 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d255485b2aca60d4ea2500abef45939729af962
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9d4b3c24a3bfe2b9babcc13d9e9263a4457676bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
   
  到进程[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象时，可以使用[过程](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)命令。 **过程**命令可以处理以下对象上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例：  
   

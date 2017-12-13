@@ -2,12 +2,12 @@
 title: "配置 Windows 防火墙以允许 Analysis Services 访问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>将 Windows 防火墙配置为允许 Analysis Services 访问
-  使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 可在网络上使用的至关重要的第一步是确定您是否需要在防火墙中取消阻止端口。 大多数安装都要求您至少创建一个允许连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站防火墙规则。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在进行中的重要第一步[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]或[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]确定是否需要取消阻止在防火墙中的端口是在网络上可用。 大多数安装都要求您至少创建一个允许连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站防火墙规则。  
   
  根据您安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的方式，防火墙配置要求会有所不同。  
   

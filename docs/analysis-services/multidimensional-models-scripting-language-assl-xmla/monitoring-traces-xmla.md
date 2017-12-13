@@ -2,12 +2,12 @@
 title: "监视跟踪 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
-  你可以使用[订阅](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML 用于 Analysis (XMLA) 监视的实例上定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **订阅**命令返回的结果作为行集跟踪。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用[订阅](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML 用于 Analysis (XMLA) 监视的实例上定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **订阅**命令返回的结果作为行集跟踪。  
   
 ## <a name="specifying-a-trace"></a>指定跟踪  
  [对象](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)属性**订阅**命令必须包含对象引用为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例或上的跟踪[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 如果**对象**未指定属性，或在未指定跟踪标识符**对象**属性，**订阅**命令监视的默认会话跟踪该命令的 SOAP 标头中指定的显式会话。  

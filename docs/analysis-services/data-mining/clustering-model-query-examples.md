@@ -2,12 +2,12 @@
 title: "聚类分析模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
-  依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在创建针对数据挖掘模型的查询时，你可以检索有关模型的元数据或创建内容查询，提供有关分析过程中发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的模型创建查询。  
   

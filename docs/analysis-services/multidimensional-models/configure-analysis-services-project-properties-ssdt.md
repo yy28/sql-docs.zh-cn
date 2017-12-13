@@ -2,12 +2,12 @@
 title: "配置 Analysis Services 项目属性 (SSDT) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 310906f7fa8ddc07f5643121e5120acf1135cb39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
-  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目是使用特定默认属性定义的，这些属性影响 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的生成和部署。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用构建和部署会影响某些默认属性定义项目[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。  
   
  若要更改项目属性，请右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象，再单击“属性”。 或者，您可以单击“项目”菜单上的 **“属性”** 。  
   

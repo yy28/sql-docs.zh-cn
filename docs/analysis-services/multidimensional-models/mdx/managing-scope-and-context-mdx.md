@@ -2,12 +2,12 @@
 title: "管理作用域和上下文 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388156b160cbc63c2a101bf9f7c7e39f8f6baa36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ceb78ab6b4ee006784660dbeeaa71558c565aa6c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理作用域和上下文 (MDX)
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多维表达式 (MDX) 脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，多维表达式 (MDX) 脚本可以应用于整个多维数据集，或多维数据集在脚本的执行中的特定点上的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
   
 > [!NOTE]  
 >  有关计算传递如何影响计算的详细信息，请参阅[理解传递次序和求解次序 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  

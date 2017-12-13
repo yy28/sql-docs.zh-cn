@@ -2,12 +2,12 @@
 title: "定义被引用的关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fd440e03226082527441116517bb511b25099101
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8dd3250558baf193890bee80ca272de30510dc5b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lesson 5-1-定义被引用的关系
-在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]本教程中到目前为止，你定义每个多维数据集维度基于直接链接到度量值组的事实数据表了一个主键到外键关系的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>按地域定义分销商销售维度  
   

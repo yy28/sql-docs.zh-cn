@@ -2,12 +2,12 @@
 title: "在数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7459e3a65eb93aba62719d9357daa2d4b1c3ea65
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c26c579a59d101f36907599b29ea31d6624b09b2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
-  命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]命名的计算是 SQL 表达式表示为计算列。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
   
 -   创建从事实表的多个列派生的单个命名计算（例如，通过将税率与销售价格相乘创建“税额”）。  
   

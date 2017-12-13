@@ -2,12 +2,12 @@
 title: "用户层次结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 069f68e31f516a7f90a07cd462b70e0b455ab800
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71c8f644f19236e9507b37ebdd75f1bcde7299eb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-hierarchies"></a>用户层次结构
-  用户定义层次结构是用户定义的层次结构中使用的特性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将维度的成员组织为分层结构并提供多维数据集中的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]用户定义层次结构是用户定义的层次结构中使用的特性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将维度的成员组织为分层结构并提供多维数据集中的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
   
 |Year|季度|Month|  
 |----------|-------------|-----------|  

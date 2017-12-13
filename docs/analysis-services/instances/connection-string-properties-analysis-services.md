@@ -2,12 +2,12 @@
 title: "连接字符串属性 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
-  本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍您可能在设计器或管理工具，之一中设置，或者查看生成的客户端应用程序连接到并查询 Analysis Services 数据连接字符串中的连接字符串属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
   
  在应用程序代码中生成自定义连接字符串的开发人员应查看 ADOMD.NET 客户端的 API 文档，以查看更详细的列表： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

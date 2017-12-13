@@ -2,12 +2,12 @@
 title: "在 SQL Server Management Studio 中使用 Analysis Services 模板 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 模板
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供一组模板来帮助你快速创建 XMLA 脚本、 DMX 或 MDX 查询，在多维数据集或表格模型、 脚本备份中创建 Kpi 和还原操作，并执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
   
  本主题包括多维模型和表格模型的模板列表，并且提供如何通过使用元数据资源管理器和模板资源管理器生成 MDX 查询和 XMLA 语句的示例。  
   

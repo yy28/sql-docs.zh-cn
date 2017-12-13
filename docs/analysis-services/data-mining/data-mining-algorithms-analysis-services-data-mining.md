@@ -2,12 +2,12 @@
 title: "数据挖掘算法 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
-  数据挖掘（或机器学习）中的算法是根据数据创建模型的一组试探法和计算。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析在许多次迭代中的结果来查找用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*算法*在数据挖掘 （或机器学习） 是从数据创建模型的启发式技术并计算一组。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析在许多次迭代中的结果来查找用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
   
  算法根据您的数据创建的挖掘模型可以采用多种形式，这包括：  
   

@@ -2,12 +2,12 @@
 title: "数据库一致性检查 (DBCC) Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的数据库一致性检查 (DBCC)
-  DBCC 为 Analysis Services 实例上的多维数据库和表格数据库提供按需数据库验证。 你可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查询窗口中执行 DBCC，并在 SQL Server Profiler 或 SSMS 的 xEvent 会话中跟踪 DBCC 输出。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC 的 Analysis Services 实例上提供按需数据库验证的多维和表格数据库。 你可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查询窗口中执行 DBCC，并在 SQL Server Profiler 或 SSMS 的 xEvent 会话中跟踪 DBCC 输出。  
 命令采用对象定义，如果对象已损坏，则返回空结果集或详细的错误信息。   在本文中，你将了解如何运行命令、解释结果以及解决出现的任何问题。  
   
  对于表格数据库，DBCC 执行的一致性检查相当于你每次加载、同步或还原数据库时自动进行的内置验证。  相比之下，对于多维数据库的一致性检查仅当你按需运行 DBCC 时才发生。  

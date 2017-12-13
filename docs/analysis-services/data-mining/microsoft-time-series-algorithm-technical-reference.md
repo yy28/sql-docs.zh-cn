@@ -2,12 +2,12 @@
 title: "Microsoft Time Series Algorithm Technical Reference |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -36,14 +36,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1109ae6cf12199d9e38d231497b8126b8fa0ebe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a38c2585e2da3c1086ce15f220e13741bd7e9e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 时序算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法包括两个用于分析时序的独立的算法：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法包括两个单独的算法，来分析时间序列：  
   
 -   ARTXP 算法是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的，针对预测序列中的下一个可能值进行了优化。  
   

@@ -2,12 +2,12 @@
 title: "创建计算的成员 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-calculated-members"></a>创建计算成员
-  可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以创建自定义度量值或维度成员，调用通过组合多维数据集数据、 算术运算符、 数字和函数的计算的成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
   
  计算成员的定义将存储起来，而它们的值则只存在于内存中。 在上面的示例中，虽然马克的值会显示给最终用户，但这些值并没有存储为多维数据集数据。  
   

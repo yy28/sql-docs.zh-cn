@@ -2,12 +2,12 @@
 title: "SystemGetAccuracyResults (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cef352e37903dd18048f7496928f9e96faaba26c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults（Analysis Services - 数据挖掘）
-  返回挖掘结构和所有相关模型（不包括聚类分析模型）的交叉验证准确性指标。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]返回挖掘结构和所有相关的模型，不包括聚类分析模型的交叉验证准确性度量。  
   
  此存储过程将为作为单个分区的整个数据集返回指标。 若要将数据集分区为交叉部分，并返回每个分区的度量值，请使用 [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   

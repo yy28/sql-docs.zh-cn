@@ -2,12 +2,12 @@
 title: "时序模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有挖掘模型都使用相同的结构来存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
   
  有关适用于所有模型类型的一般挖掘模型内容的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
