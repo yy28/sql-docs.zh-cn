@@ -2,12 +2,12 @@
 title: "授予处理权限 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccb2f4ebb1db848d62f470ed2e37230a95916cb9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
-  作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]作为管理员，你可以创建专用于 Analysis Services 处理操作的角色允许你委派对特定任务到其他用户，或用于无人参与的预定处理应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
   
  权限通过角色授予，将对象与权限以及 Windows 用户或组帐户进行关联。 请记住，权限是可以累加的。 如果一个角色授予处理多维数据集的权限，同时另一个角色授予同一用户处理维度的权限，那么两个不同角色的权限会合并以授予用户在该数据库内的处理多维数据集和处理特定维度的权限。  
   

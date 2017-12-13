@@ -2,12 +2,12 @@
 title: "刷新数据源视图 (Analysis Services) 中的架构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e2cfa87e6eca8ee933fa42686f12070ce9dca7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 365363d74cd937156e609f8a76caee745d45122f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>刷新数据源视图中的架构 (Analysis Services)
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中定义数据源视图 (DSV) 后，基础数据源中的架构可能会更改。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在定义数据源视图 (DSV) 后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或数据库，可能会更改基础数据源中的架构。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
   
  为了更新 DSV 以便它与外部数据源匹配，您可以在 Business Intelligence Development Studio (BIDS) 中刷新 DSV。 刷新 DSV 会检测 DSV 所基于的外部数据源的更改，并生成枚举外部数据源中的添加或删除操作的更改列表。 然后您可以将这些更改集应用到 DSV，以便它与基础数据源重新对齐。 请注意，在使用 DSV 的项目中，通常需要做其他工作以进一步更新多维数据集和维度。  
   

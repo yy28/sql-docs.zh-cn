@@ -2,12 +2,12 @@
 title: "使用聚合函数 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
-  使用维度来切分度量值时，按该维度中包含的层次结构汇总该度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 **Sum**。 度量值的值的总和将根据活动的层次结构的级别而异。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当使用一个维度时进行切片的度量值时，该维度中包含的层次结构被汇总度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 **Sum**。 度量值的值的总和将根据活动的层次结构的级别而异。  
   
  在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括 **Sum**、 **Min**、 **Max**、 **Count**、 **Distinct Count**以及几个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](../../mdx/mdx-data-definition-create-member.md)。  
   

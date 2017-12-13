@@ -2,12 +2,12 @@
 title: "分区 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions"></a>分区
-  分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 通过使用 SSDT 中的分区对话框在模型创作期间创建的分区将应用于模型工作区数据库。 部署模型时，在已部署的模型数据库中将复制为模型工作区数据库定义的分区。 你可以进一步创建并管理通过使用 SSMS 中的分区对话框为已部署的模型数据库的分区。  本主题中提供的信息描述使用 SSDT 中的分区管理器对话框模型创作期间创建的分区。 有关创建和管理为部署的模型的分区的信息，请参阅[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]分区将表划分为逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 通过使用 SSDT 中的分区对话框在模型创作期间创建的分区将应用于模型工作区数据库。 部署模型时，在已部署的模型数据库中将复制为模型工作区数据库定义的分区。 你可以进一步创建并管理通过使用 SSMS 中的分区对话框为已部署的模型数据库的分区。  本主题中提供的信息描述使用 SSDT 中的分区管理器对话框模型创作期间创建的分区。 有关创建和管理为部署的模型的分区的信息，请参阅[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
   
 ##  <a name="bkmk_benefits"></a> 优势  
  表格模型中的分区将一个表划分为各个逻辑分区对象。 然后，每个分区可独立于其他分区进行处理。 例如，表可能包含某些行集，这些行集的数据很少更改；但是也包含另一些行集，这些行集的数据则经常更改。 在这些情况中，如果您只想处理某一部分数据，没有必要处理所有数据。 通过分区，您可以将需要经常处理的那部分数据与很少处理的那部分数据分开。  

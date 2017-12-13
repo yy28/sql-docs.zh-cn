@@ -2,12 +2,12 @@
 title: "使用 SQL Server 事件探查器监视数据挖掘 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a8a59a9bea7f2e11d4ec3d68d5ad2dcd28ec6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 98bafd9d594d06ea85330d8affc47969bbcab43f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
-  如果您具有必要的权限，可以使用 SQL Server Profiler 监视作为请求发送到 SQL Server Analysis Services 实例的数据挖掘活动。 数据挖掘活动可以包括处理模型或结构、预测查询或内容查询或者创建新模型或结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果你具有必需的权限，你可以使用 SQL Server Profiler 监视作为请求发送到的 SQL Server Analysis Services 实例发出的数据挖掘活动。 数据挖掘活动可以包括处理模型或结构、预测查询或内容查询或者创建新模型或结构。  
   
  SQL Server Profiler 使用 **跟踪** 监视多个客户端发来的请求，其中包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web 服务或 Excel 数据挖掘外接程序，但前提是这些活动均使用同一 SQL Server Analysis Services 实例。 必须为要监视的每个 SQL Server Analysis Services 实例创建一个单独的跟踪。 有关跟踪的常规信息和如何使用 SQL Server Profiler，请参阅[使用 SQL Server Profiler 监视 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   

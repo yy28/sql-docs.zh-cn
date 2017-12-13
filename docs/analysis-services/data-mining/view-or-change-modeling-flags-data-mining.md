@@ -2,12 +2,12 @@
 title: "查看或更改建模标志 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98ec1ace5b819a123fd4a8949c92caa5e3be4e5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8403832c9a88002512ceaf67ce841f48c23fbdd8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>查看或更改建模标志（数据挖掘）
-  建模标志是在挖掘结构列或挖掘模型列上设置的属性，用于控制分析期间算法处理数据的方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建模标志是在挖掘结构设置属性的列或要在分析期间算法如何处理数据挖掘模型列。  
   
  在数据挖掘设计器中，通过查看结构或模型的属性，可以查看和修改与挖掘结构或挖掘列关联的建模标志。 还可以通过使用 DMX、AMO 或 XMLA 设置建模标志。  
   

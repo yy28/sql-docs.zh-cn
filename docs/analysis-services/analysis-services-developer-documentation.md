@@ -2,12 +2,12 @@
 title: "Analysis Services 开发人员文档 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 开发人员文档
-在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有可供选择的多个方法。  选项包括编写托管代码、 脚本或使用开放标准，如 XMLA 和 MSOLAP，如果你的解决方案要求不使用.NET framework。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有可供选择的多个方法。  选项包括编写托管代码、 脚本或使用开放标准，如 XMLA 和 MSOLAP，如果你的解决方案要求不使用.NET framework。
 
 ## <a name="what-you-can-accomplish-in-code"></a>可以在代码中完成的新增功能
 典型的编程方案包括服务器和数据库部署、 管理、 模型和数据库创建和从你的自定义应用程序和使用 Analysis Services 数据的报表的数据访问。 所有这些情况下是固定体系结构和对象定义层次结构，与跨数据定义、 处理和查询工作负荷的易于理解操作。

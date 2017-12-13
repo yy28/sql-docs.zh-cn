@@ -2,12 +2,12 @@
 title: "数据定义查询 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04237bba7622a7b6745ff8768ea7a1bc5feda2b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cd48ec51a292b00aedec899503e302572a4ce183
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-definition-queries-data-mining"></a>数据定义查询（数据挖掘）
-  对于数据挖掘，“数据定义查询”  类别是指执行以下操作的 DMX 语句或 XMLA 命令：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]对于数据挖掘，类别*数据定义查询*意味着 DMX 语句或执行以下的 XMLA 命令：  
   
 -   创建、更改或操作数据挖掘对象（如模型）。  
   

@@ -2,12 +2,12 @@
 title: "序列命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fe2e7416c4c86b926f30295b6fe2f75a334751f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41e12acf7e785ecb65629ff89a5cfbaf7875f07d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-command-tmsl"></a>Sequence 命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  使用**序列**命令来运行一组连续的操作在批处理模式下的 Analysis Services 实例上。  整个命令和所有其组成部分必须完成事务后，若要成功执行顺序。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使用**序列**命令来运行一组连续的操作在批处理模式下的 Analysis Services 实例上。  整个命令和所有其组成部分必须完成事务后，若要成功执行顺序。  
   
  可以运行以下命令除外的按顺序，**刷新**并行同时处理多个对象运行的命令。  
   

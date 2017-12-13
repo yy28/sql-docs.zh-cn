@@ -2,12 +2,12 @@
 title: "启用维度写回 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 015ecb28286589516d78476caf0f12938980ad5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8f2ddac65e4ffbb24118a498f96dad83c2c138d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>BI 向导-启用维度写回
-  通过为多维数据集或维度添加维度写回增强功能，可以使用户手动修改维度结构和成员。 对允许写维度的更新直接记录在该维度表中。 此增强功能更改了维度的 **WriteEnabled** 属性设置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将维度写回增强功能添加到多维数据集或维度中，允许用户手动修改维度结构和成员。 对允许写维度的更新直接记录在该维度表中。 此增强功能更改了维度的 **WriteEnabled** 属性设置。  
   
  若要添加维度写回，请使用商业智能向导，然后在 **“选择增强功能”** 页中选择 **“启用维度写回”** 选项。 然后，此向导将指引您完成相应的步骤，以选择要应用维度写回的维度，并为所选维度设置此选项。  
   

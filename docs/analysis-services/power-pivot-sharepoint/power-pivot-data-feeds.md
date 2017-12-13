@@ -2,12 +2,12 @@
 title: "Power Pivot 数据馈送 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-feeds"></a>Power Pivot 数据馈送
-  数据馈送从联机数据源按需向客户端应用程序提供数据流。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用数据馈送将来自 Atom 感知的 Web 服务或应用程序的数据添加到 Excel 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据馈送提供按需从联机数据源向客户端应用程序数据的流。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用数据馈送将来自 Atom 感知的 Web 服务或应用程序的数据添加到 Excel 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源。  
   
  本节中提供的信息可帮助你充分利用数据馈送，将现有的公司或工作组数据提取到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中。 它还提供有关如何与组织中的其他人共享数据馈送以及在需要解决出现的任何问题时如何构造和使用数据馈送的信息。  
   

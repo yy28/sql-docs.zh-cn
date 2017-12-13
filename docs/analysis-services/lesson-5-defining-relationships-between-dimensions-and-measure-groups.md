@@ -2,12 +2,12 @@
 title: "第 5 课： 定义维度和度量值组之间的关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 课：定义维度和度量值组之间的关系
-在本教程前面的课程中，您已了解到可以将添加到多维数据集中的数据库维度作为一个或多个多维数据集维度的基础。 在本课中，您将了解如何定义多维数据集维度和度量值组之间的各种关系类型，以及如何指定这些关系的属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在前面的课程，在本教程中，您学习了可以为一个或多个多维数据集维度作为基础使用添加到多维数据集的数据库维度。 在本课中，您将了解如何定义多维数据集维度和度量值组之间的各种关系类型，以及如何指定这些关系的属性。  
   
 有关详细信息，请参阅 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   

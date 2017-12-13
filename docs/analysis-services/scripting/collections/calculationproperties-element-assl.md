@@ -2,12 +2,12 @@
 title: "CalculationProperties 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8258a225109044f8941306ef37de6ca9d084c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a53b11f83a0ab5103ac27e9b2a33ae277b8d9ef6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculationproperties-element-assl"></a>CalculationProperties 元素 (ASSL)
-  包含的集合[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)与关联的元素[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的集合[CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)与关联的元素[MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

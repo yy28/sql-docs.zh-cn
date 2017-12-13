@@ -2,12 +2,12 @@
 title: "配置 Power View 报表 (SSAS 表格) 的默认字段集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b357d75c87cc9a2a086382bbbf65079b31b59b52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View-配置报表的默认字段集
-  默认字段集是一个列和度量值的预定义列表，当您选择报表字段列表中的表时，这些列和度量值会自动添加到 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表画布中。 表格模型作者可以创建默认字段集，使得将模型用于其报表的报表作者无需执行冗余步骤。 例如，如果您知道大多数使用客户联系信息的报表作者总是希望查看联系人姓名、主要电话号码、电子邮件地址和公司名称，您可以预先选择这些列，以便在作者单击客户联系表时，这些列总是会添加到报表画布中。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]默认字段集是预定义的列和度量值会自动添加到列表[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]报表画布时在报表字段列表中选择表。 表格模型作者可以创建默认字段集，使得将模型用于其报表的报表作者无需执行冗余步骤。 例如，如果您知道大多数使用客户联系信息的报表作者总是希望查看联系人姓名、主要电话号码、电子邮件地址和公司名称，您可以预先选择这些列，以便在作者单击客户联系表时，这些列总是会添加到报表画布中。  
   
 > [!NOTE]  
 >  默认字段集仅应用于 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中用作数据模型的表格模型。 Excel 透视报表不支持默认字段集。  

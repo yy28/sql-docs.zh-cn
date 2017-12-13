@@ -2,12 +2,12 @@
 title: "DISCOVER_DIMENSION_STAT 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed2707a9ee417f8e019137034e90f1a9132948e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 行集
-  提供有关维度的信息，包括维度所在的数据库的名称、维度名称、维度的属性以及每个属性的成员计数。 在表格模型中，这对应于表中的列和每个列中的值数。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有关维度，包括它、 维度名称、 及其属性和每个属性的成员的计数包含的数据库的名称的信息。 在表格模型中，这对应于表中的列和每个列中的值数。  
   
  **适用于：**表格模型、 多维模型  
   

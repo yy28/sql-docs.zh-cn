@@ -2,12 +2,12 @@
 title: "连接到 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>连接到 Analysis Services
-  使用本部分中的信息，了解连接字符串属性、用于连接的客户端库、Analysis Services 支持哪些身份验证方法以及如何在使用脱机服务器前设置或清除连接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用本节中的信息，若要了解有关连接字符串属性，用于的连接，Analysis Services，以及如何设置或清除连接，然后使服务器脱机支持的身份验证方法的客户端库。  
   
 ## <a name="analysis-services-connections"></a>Analysis Services 连接  
  Analysis Services 使用 TCP 作为网络协议，使用 XML for Analysis (XMLA) 作为通信协议。 在最底层，与 Analysis Services 一起提供的所有客户端库都实现了 XMLA-over-TCP。 尽管可以基于原始 XMLA 生成应用程序，但是大多数应用程序和应用程序开发人员都使用客户端库以利用它们提供的对象模型和代码编写效率。 对于客户端与 Analysis Services 的连接，如果无法跨堆栈使用 TCP，则可以使用 IIS 作为中间连接。 通过 IIS 使用 HTTP 访问的一个优点就是，能够从传递连接字符串上凭据的应用程序连接。  

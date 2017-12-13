@@ -2,12 +2,12 @@
 title: "管理数据挖掘解决方案和对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
   
  除了这些工具之外，还可以使用 AMO 以编程方式管理数据挖掘对象，或使用连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的其他客户端，如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的数据挖掘外接程序。  
   

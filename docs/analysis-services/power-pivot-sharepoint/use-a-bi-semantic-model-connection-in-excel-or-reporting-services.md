@@ -2,12 +2,12 @@
 title: "在 Excel 中使用 BI 语义模型连接或 Reporting Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 556b0370cb61af9c5c9716ec74b62a32cabe3f21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85e68ac15941f538fc1d68331cc9d005f424540c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 中使用 BI 语义模型连接
-  本主题说明如何使用 BI 语义模型连接，这些连接是使用其他主题中的说明创建的。 如果尚未创建 BI 语义模型，请参阅 [创建与 PowerPivot 工作簿的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 和 [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题说明如何使用你创建使用其他主题中说明的 BI 语义模型连接。 如果尚未创建 BI 语义模型，请参阅 [创建与 PowerPivot 工作簿的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 和 [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
 ##  <a name="bkmk_connect"></a> 从 Excel 进行连接  
  您可以将 BI 语义模型连接指定为 Excel 中的数据源或使用 Analysis Services 表格模型数据的任何其他业务应用程序。 本节介绍使用 Excel 连接到 BI 语义模型数据的两种方法。  

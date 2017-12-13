@@ -2,12 +2,12 @@
 title: "第 2 课： 定义和部署多维数据集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c09c3c4ce31c969b4ec6096a19e53cd2b225de04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1daca588189dfd90ba4d1a238f17d7b3aa5757e8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 课：定义和部署多维数据集
-在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义数据源视图后，便可以定义一个初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在定义中的数据源视图后你[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中，你就可以定义一个初始[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多维数据集。  
   
 可以使用多维数据集向导，通过单个步骤定义一个多维数据集及其维度。 也可以先定义一个或多个维度，然后使用多维数据集向导定义一个使用这些维度的多维数据集。 如果要设计一个复杂的解决方案，通常是先定义维度。 有关详细信息，请参阅 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) 或 [多维模型中的多维数据集](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)。  
   

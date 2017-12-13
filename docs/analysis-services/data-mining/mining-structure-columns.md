@@ -2,12 +2,12 @@
 title: "挖掘结构列 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11ccfc309d772d3b26a5a0e72a77c094e2624282
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-structure-columns"></a>挖掘结构列
-  创建挖掘结构时，通过选择外部数据的列，然后指定如何将数据用于建模来定义挖掘结构中的列。 因此，挖掘结构列不仅仅是数据源的数据副本：它们定义挖掘模型要如何使用数据源的数据。 您可以分配确定数据如何离散化的属性以及说明数据值如何分布的属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]通过选择外部数据的列，然后指定如何将数据用于建模创建挖掘结构时，可定义挖掘结构中的列。 因此，挖掘结构列不仅仅是数据源的数据副本：它们定义挖掘模型要如何使用数据源的数据。 您可以分配确定数据如何离散化的属性以及说明数据值如何分布的属性。  
   
  挖掘结构列设计得很灵活且可扩展，这是因为用于生成挖掘模型的每种算法可以使用该结构中的不同列来解释数据。 不需要为每个模型提供一个数据集，您可以使用单个挖掘结构并使用其中的列来自定义每个模型的数据。  
   

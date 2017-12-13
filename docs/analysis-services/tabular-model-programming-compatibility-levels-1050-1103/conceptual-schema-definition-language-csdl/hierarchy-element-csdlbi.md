@@ -2,12 +2,12 @@
 title: "层次结构元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: acffabef75c9d62bc0f28c993c12577c03bbb434
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 53d88729411c0a353b82923d3f4a3337647902ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
-  Hierarchy 元素是表中可彼此链接以形成层次结构的各个字段的逻辑容器。 Hierarchy 元素派生自 CSDL 的 Member 元素，并已扩展为支持在商业智能数据模型中创建的层次结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]该层次结构元素是可链接在一起以形成一个层次结构的表中的字段的逻辑容器。 Hierarchy 元素派生自 CSDL 的 Member 元素，并已扩展为支持在商业智能数据模型中创建的层次结构。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 Hierarchy 元素的元素和属性。  

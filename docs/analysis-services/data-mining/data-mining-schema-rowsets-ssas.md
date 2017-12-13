@@ -2,12 +2,12 @@
 title: "数据挖掘架构行集 (SSAs) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afa0eedc469956d5b3e8886775feaf8f61a36328
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23f8b63c593e1269624905caf8809ac5afefd1d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>数据挖掘架构行集 (SSA)
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，许多现有 OLE DB 数据挖掘架构行集已作为可以使用数据挖掘扩展插件 (DMX) 语句轻松查询的一组系统表公开。 通过针对数据挖掘架构行集创建查询，可以标识可用的服务，获取您的模型和结构的状态更新，并查找有关模型内容或参数的详细信息。 有关数据挖掘架构行集的说明，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，许多现有的 OLE DB 数据挖掘架构行集公开为一组你可以使用查询的数据挖掘扩展插件 (DMX) 语句的系统表。 通过针对数据挖掘架构行集创建查询，可以标识可用的服务，获取您的模型和结构的状态更新，并查找有关模型内容或参数的详细信息。 有关数据挖掘架构行集的说明，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
   
 > [!NOTE]  
 >  还可以使用 XMLA 来查询数据挖掘架构行集。 有关如何在 SQL Server Management Studio 中执行此操作的详细信息，请参阅 [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  

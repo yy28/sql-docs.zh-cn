@@ -2,12 +2,12 @@
 title: "Analysis Services 中的翻译支持 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻译支持
-  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据模型中，可以嵌入描述文字或说明的多个翻译，从而根据 LCID 提供特定于区域性的字符串。 对于多维模型，你可以为数据库名称、多维数据集对象和数据库维度对象添加翻译。 对于表格模型，你可以为表和列的描述文字和说明添加翻译。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据模型，您可将多个翻译的标题或说明，以便提供基于 LCID 的特定于区域性的字符串。 对于多维模型，你可以为数据库名称、多维数据集对象和数据库维度对象添加翻译。 对于表格模型，你可以为表和列的描述文字和说明添加翻译。  
   
  虽然定义翻译会在模型内创建元数据和已翻译的描述文字，但若要在客户端应用程序中呈现本地化字符串，则必须在对象上设置 **Language** 属性，或在连接字符串上传递 **Culture** 或 **Locale Identifier** 参数（例如，通过设置 `LocaleIdentifier=1036` 返回法语字符串）。  
   

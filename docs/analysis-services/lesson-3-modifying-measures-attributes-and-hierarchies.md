@@ -2,12 +2,12 @@
 title: "第 3 课： 修改度量值、 属性和层次结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、属性和层次结构
-在定义初始多维数据集后，即可开始提高多维数据集的有用性和友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]定义初始多维数据集之后, 你就可以提高的有用性和多维数据集的友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  
   
 > [!NOTE]  
 > 本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](http://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  

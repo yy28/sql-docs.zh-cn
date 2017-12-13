@@ -2,12 +2,12 @@
 title: "钻取查询 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41a3c89638b1fc9cc7e95fa13baeac93eb20c683
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0d8a4cc823298eb1e1e36dce0141507dc4be05a1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drillthrough-queries-data-mining"></a>钻取查询（数据挖掘）
-  “钻取查询”  让您通过将查询发送到挖掘模型，检索基础事例或结构数据中的详细信息。 如果您希望查看用来为模型定型的事例以及用来测试模型的事例，或者如果您希望查看事例数据的详细信息，则钻取会非常有用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*钻取查询*可用于检索基础事例的详细信息，或通过将查询发送到挖掘模型结构数据中。 如果您希望查看用来为模型定型的事例以及用来测试模型的事例，或者如果您希望查看事例数据的详细信息，则钻取会非常有用。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘提供了两种不同的钻取选项：  
   

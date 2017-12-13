@@ -2,12 +2,12 @@
 title: "AttributePermission 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3db75bf8a3517fe9c3296036cf164979e0299e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 833333f42279ebe90c5c3e2595521a5ccb5f582a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributepermission-element-assl"></a>AttributePermission 元素 (ASSL)
-  定义的权限的成员[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素对中的各个维度的特性[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义的权限的成员[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素对中的各个维度的特性[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

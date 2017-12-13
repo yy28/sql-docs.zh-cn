@@ -2,12 +2,12 @@
 title: "挖掘模型的筛选器 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bf35c6bd8086ba6fc61dce76853308c9cb34e2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: de1d81ae0dba51e98cb8d883ca5e7ae22eb4314b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
-  基于数据的模型筛选有助于创建利用挖掘结构中的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]基于数据的模型筛选可帮助你创建挖掘结构中使用的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
   
  例如，针对 Customers 表和相关表定义数据源视图。 随后，定义一个包括所需的全部字段的挖掘结构。 最后，创建一个针对特定的客户属性（如 Region）进行筛选的模型。 随后，您即可以方便地创建该模型的副本，而且只需更改筛选条件即可基于不同的区域生成新模型。  
   

@@ -2,12 +2,12 @@
 title: "选择和映射为预测查询的输入的数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
-  在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]从挖掘模型创建预测时，你通常执行此操作将新数据传送到模型。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
  有时候，您所需的数据可能包含在一对多联接中的多个表内。 用于关联模型或顺序分析和聚类分析模型的数据便是这种情况，它们将使用链接到包含产品或事务详细信息的嵌套表的事例表。 如果您的模型使用事例嵌套表结构，则您用于预测的数据也必须具有事例嵌套表结构。  
   

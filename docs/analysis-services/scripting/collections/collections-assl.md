@@ -2,12 +2,12 @@
 title: "集合 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68be246ab77c93a910a4d37b40808a42adecb8ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be1fe8952758379ec471b22e60c2c643f87013c4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="collections-assl"></a>集合 (ASSL)
-  本参考部分包含在 Analysis Services 脚本语言 (ASSL) 架构中作为集合的每个元素的语法和用法信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此引用部分包含的每个元素，它就像在 Analysis Services 脚本语言 (ASSL) 架构的集合的语法和用法的信息。  
   
  尽管 ASSL 架构仅包含 XML 元素，从开发人员的角度来看，本部分中描述的元素对应于集合的对象，如**维度**和**多维数据集**集合。  
   

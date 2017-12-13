@@ -2,12 +2,12 @@
 title: "创建和管理层次结构 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 813d48fcb964fc82c3dd9b1b72a70d0f1385f35c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c8e53bd34427fa3aa556163f0e1fd4205c77953e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>创建和管理层次结构（SSAS 表格）
-  可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]可以创建并在模型设计器中，在关系图视图中管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
   
  本主题包括以下任务：  
   

@@ -2,12 +2,12 @@
 title: "Power Pivot 配置使用 Windows PowerShell |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff0decfe7bfe8ba1d93c4b722fecbc50c0d86ed1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf814ab826f373ff4266206e6e4c0becda187bca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 配置 Power Pivot
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 Windows PowerShell cmdlet，您可以使用这些 cmdlet 配置安装的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 使用 PowerShell 完全配置已安装的软件需要使用 SharePoint cmdlet 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint cmdlet。 大多数配置可使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具之一来完成。 有关这些工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]包括可用于配置的安装的 Windows PowerShell cmdlet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 使用 PowerShell 完全配置已安装的软件需要使用 SharePoint cmdlet 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint cmdlet。 大多数配置可使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具之一来完成。 有关这些工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
 > [!IMPORTANT]  
 >  对于 SharePoint 2010 场，必须首先安装 SharePoint 2010 SP1，然后才能配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 或配置使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 数据库服务器的 SharePoint 场。 如果您尚未安装 Service Pack，则应首先安装 Service Pack，然后再开始配置服务器。  

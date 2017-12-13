@@ -2,12 +2,12 @@
 title: "对属性成员进行排序基于辅助属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lesson 4-5-基于辅助属性排序属性成员
-在第 3 课中，您已了解了如何根据属性成员的名称或键值对属性成员进行排序。 您还了解了如何使用组合成员键影响属性成员和排序顺序。 有关详细信息，请参阅 [修改日期维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 但是，如果属性的名称或键都无法提供所需的排序顺序时，您可以使用辅助属性来获取所需的排序顺序。 通过定义属性之间的关系，您可以使用第二个属性来对第一个属性的成员进行排序。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在第 3 课，你学习了如何对基于其名称或键的值的属性成员进行排序。 您还了解了如何使用组合成员键影响属性成员和排序顺序。 有关详细信息，请参阅 [修改日期维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 但是，如果属性的名称或键都无法提供所需的排序顺序时，您可以使用辅助属性来获取所需的排序顺序。 通过定义属性之间的关系，您可以使用第二个属性来对第一个属性的成员进行排序。  
   
 属性关系定义属性之间的关系或依赖关系。 在基于单个关系表的维度中，通常所有属性都通过键属性彼此相关。 这是因为维度的所有属性均提供有关成员的信息，这些成员通过键属性链接到每个相关度量值组的事实数据表中的事实数据。 在基于多个表的维度中，属性通常根据表之间的联接键进行链接。 如果基础数据支持，则可以使用相关属性来指定排序顺序。 例如，您可以创建为相关属性提供排序逻辑的新属性。  
   

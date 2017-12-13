@@ -2,12 +2,12 @@
 title: "部署 PowerPivot 和 Power View 的多层 SharePoint 2016 场 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 290c8d09fbb59ec8b7c6db580946fa7ee6f45806
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e17d5872e57af56e895f5879d9b8dd194576cd3e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>部署 PowerPivot 和 Power View 的多层 SharePoint 2016 场
-  **摘要：** 摘要：此白皮书基于 SharePoint Server 2016、Office Online Server 和用于 SharePoint 2016 的 SQL Server 2016 BI 堆栈的预览版本，为 SharePoint 管理员和架构师提供了有关在包含多个服务器的 SharePoint 场中部署和配置 Microsoft BI 演示环境详细的分步说明。 在简要介绍重要架构更改和相应系统依赖项之后，它概述了通过三个主要阶段启用并验证 BI 功能所需的软件和配置要求以及建议部署路径。 此白皮书还解决了在 SharePoint Server 2016 Beta 2、Office Online Server 预览版和 SQL Server 2016 CTP 3.1 版本中存在的已知问题，并推荐了相应的解决方法。 在这些产品的最终版本中将无需这些解决方法。 部署 RTM 版本时，请检查这份白皮书的更新版本。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**摘要：**摘要： 此白皮书提供了 SharePoint 管理员和架构师用于部署和配置 Microsoft BI 演示环境在包含多个服务器的 SharePoint 场中进行详细的分步说明基于 SharePoint Server 2016、 Office Online Server 和 SharePoint 2016 的 SQL Server 2016 BI 堆栈的预览版本。 在简要介绍重要架构更改和相应系统依赖项之后，它概述了通过三个主要阶段启用并验证 BI 功能所需的软件和配置要求以及建议部署路径。 此白皮书还解决了在 SharePoint Server 2016 Beta 2、Office Online Server 预览版和 SQL Server 2016 CTP 3.1 版本中存在的已知问题，并推荐了相应的解决方法。 在这些产品的最终版本中将无需这些解决方法。 部署 RTM 版本时，请检查这份白皮书的更新版本。  
   
  **作者：**Kay Unkroth、Jason Haak  
   

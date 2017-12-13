@@ -2,12 +2,12 @@
 title: "度量值 |Microsoft 文档"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures"></a>度量值组
-  在表格模型中，度量值是使用 DAX 公式创建的计算，以便用于报表客户端中。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，度量值是使用中报告的客户端使用的 DAX 公式创建计算。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
   
 ##  <a name="bkmk_understanding"></a> 优势  
  度量值可以基于标准聚合函数，如 AVERAGE、COUNT 或 SUM；或者，您可以使用 DAX 定义自己的公式。 除了公式之外，每个度量值都具有属性（由度量值数据类型定义），如“名称”、“表详细信息”、“格式”和“小数位数”。  

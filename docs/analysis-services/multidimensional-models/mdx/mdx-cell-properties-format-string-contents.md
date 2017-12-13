@@ -2,12 +2,12 @@
 title: "FORMAT_STRING 内容 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 单元格属性-FORMAT_STRING 内容
-  **FORMAT_STRING** 单元属性格式化 **VALUE** 单元属性以生成 **FORMATTED_VALUE** 单元属性的值。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**单元格属性格式**值**单元格属性，创建的值**FORMATTED_VALUE**单元属性。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
   
 ## <a name="string-values"></a>字符串值  
  字符串的格式表达式可以是一部分，也可以是由分号 (;) 分隔开的两部分。  

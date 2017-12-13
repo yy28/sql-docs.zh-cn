@@ -2,12 +2,12 @@
 title: "使用架构生成向导 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a52799da2610aa55a0e045b2192b46ffd5f85f15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用架构生成向导 (Analysis Services)
-  架构生成向导在生成阶段需要数量有限的信息。 架构生成向导在生成关系架构时所需的大多数信息都是从您已在项目中创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度中提取的。 此外，您可以自定义主题区域数据库架构的生成方式以及架构中对象的命名方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]架构生成向导需要数量有限的信息在生成阶段。 架构生成向导在生成关系架构时所需的大多数信息都是从您已在项目中创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度中提取的。 此外，您可以自定义主题区域数据库架构的生成方式以及架构中对象的命名方式。  
   
 ## <a name="start-the-wizard"></a>启动向导  
  您可以使用下列几种不同的方法从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开架构生成向导：  

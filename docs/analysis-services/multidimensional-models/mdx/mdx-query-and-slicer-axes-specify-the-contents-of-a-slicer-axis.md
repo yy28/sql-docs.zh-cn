@@ -2,12 +2,12 @@
 title: "指定切片器轴 (MDX) 的内容 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c88d724873a7e2a7e811a4a28c9b76b5c9b12ccd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX 查询轴和切片器轴-指定切片器轴的内容
-  切片器轴将对多维表达式 (MDX) SELECT 语句返回的数据进行筛选，限定返回的数据，从而只返回与指定成员相关的数据。 可以将其看成是在查询中不可见的多余的轴。 切片器轴是在 MDX 中 SELECT 语句的 WHERE 子句中定义的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]切片器轴筛选多维表达式 (MDX) SELECT 语句，限制返回的数据，以便将返回与指定的成员相交的唯一数据返回的数据。 可以将其看成是在查询中不可见的多余的轴。 切片器轴是在 MDX 中 SELECT 语句的 WHERE 子句中定义的。  
   
 ## <a name="slicer-axis-syntax"></a>切片器轴的语法  
  若要显式指定切片器轴，请使用 MDX 中的 `<SELECT slicer axis clause>` ，如以下语法所述。  

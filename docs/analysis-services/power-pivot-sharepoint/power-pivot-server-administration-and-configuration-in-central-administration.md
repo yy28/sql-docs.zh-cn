@@ -2,12 +2,12 @@
 title: "Power Pivot 服务器管理和在管理中心的配置 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a414e1d07c7a8789ed0c91db91cc3af4009c417b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dff0e2f3dda0e4fc568f04787c4056ab27611a18
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>在管理中心中管理和配置 Power Pivot 服务器
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务器管理和配置由 SharePoint 服务应用程序管理员使用 SharePoint 管理中心来执行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]由 SharePoint 服务应用程序管理员，使用 SharePoint 管理中心执行管理和配置服务器。  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 必须先进行配置，然后才能使用。 使用 SQL Server 安装程序安装 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 后，你可以使用以下任意方法来配置它：  
   

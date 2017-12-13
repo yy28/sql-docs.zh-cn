@@ -2,12 +2,12 @@
 title: "管理连接和会话 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52392cf2a1af25e0f67634286e371fb2bef408f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
-  *Statefulness*是在此期间服务器将保留的标识和方法调用之间的客户端的上下文的条件。 *无状态*是在此期间服务器不会记住的标识和客户端上下文方法调用完成后的条件。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Statefulness*是在此期间服务器将保留的标识和方法调用之间的客户端的上下文的条件。 *无状态*是在此期间服务器不会记住的标识和客户端上下文方法调用完成后的条件。  
   
  若要提供 statefulness，XML Analysis (XMLA) 支持*会话*允许一系列语句一起执行。 例如，创建要在后续查询中使用的计算成员就是这样的一系列语句。  
   

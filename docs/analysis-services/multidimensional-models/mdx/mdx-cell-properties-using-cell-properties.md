@@ -2,12 +2,12 @@
 title: "使用单元属性 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52ef98613eceec0356317f1cd578ac63506d6815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81d09a847b9bb405cd028eaa8cd1b4cb9feac9a1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 单元属性的使用单元属性
-  多维表达式 (MDX) 中的单元属性包含有关多维数据源（如多维数据集）中的单元的内容和格式的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]单元属性多维表达式 (MDX) 中包含的内容和格式中的多维数据源，如多维数据集的单元格的信息。  
   
  MDX 支持使用 MDX SELECT 语句中的 CELL PROPERTIES 关键字来检索内部单元属性。 内部单元属性通常用于协助单元数据的直观显示。  
   

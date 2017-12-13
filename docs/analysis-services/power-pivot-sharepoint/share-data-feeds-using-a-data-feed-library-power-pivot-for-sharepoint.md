@@ -2,12 +2,12 @@
 title: "共享数据馈送使用数据馈送的库 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b345b289e396d62565f9fee76a72c0cf9cb9d04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (Power Pivot for SharePoint)
-  数据馈送是从以 Atom 线路格式显示数据的服务或应用程序中生成的 XML 数据流。 它越来越多地用于在应用程序之间传输数据以及将数据传输到客户端查看器。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，数据馈送的作用是使用识别 Atom 的应用程序或服务中的数据填充 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据馈送是从服务或应用程序公开 Atom 线路格式中的数据生成的 XML 数据流。 它越来越多地用于在应用程序之间传输数据以及将数据传输到客户端查看器。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，数据馈送的作用是使用识别 Atom 的应用程序或服务中的数据填充 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源。  
   
  如果您已使用识别 Atom 的应用程序组合，则可能始终不需要知道如何生成和使用馈送，因为数据传输是在应用程序之间无缝进行的。 但是，使用自定义解决方案发布 Atom 馈送的组织通常需要一种方法使信息工作者可以获得馈送。 一种方法是创建并共享数据服务文档 (.atomsvc) 文件，此类文件提供到生成馈送的联机源之间的连接。 一个名为数据馈送库的特殊用途库支持在 SharePoint Web 应用程序中创建和共享数据服务文档。  
   

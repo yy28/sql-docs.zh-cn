@@ -2,12 +2,12 @@
 title: "AggregationID 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 586dccadb5eabbf14fecd5e1434a830e54a2e8c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 63cc1d6583738cb33828eecf29038b05ad05eb23
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID 元素 (ASSL)
-  标识从聚合定义[AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)元素，用于创建聚合实例。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]标识从聚合定义[AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)元素，用于创建聚合实例。  
   
 ## <a name="syntax"></a>语法  
   

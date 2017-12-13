@@ -2,12 +2,12 @@
 title: "第 1 课： 定义数据源视图中分析服务项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a8a8a672919d2ee1fde9497dbdd9260362e3b537
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae0bf6f8f74711407a33f5b32929bfb62d75423c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：在 Analysis Services 项目中定义数据源视图
-若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中设计商业智能应用程序，请先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]设计业务智能应用程序中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]开头创建[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
   
 本课程包含以下任务：  
   

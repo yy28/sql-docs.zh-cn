@@ -2,12 +2,12 @@
 title: "数据挖掘查询工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tools"></a>数据挖掘查询工具
-  所有数据挖掘查询都使用数据挖掘扩展插件 (DMX) 语言。 DMX 可以用于为所有种类的机器学习任务创建模型，包括分类、风险分析、建议生成和线性回归。 还可以编写 DMX 查询以获取有关在处理模型时生成的模式和统计信息的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有数据挖掘查询都使用数据挖掘扩展插件 (DMX) 语言。 DMX 可以用于为所有种类的机器学习任务创建模型，包括分类、风险分析、建议生成和线性回归。 还可以编写 DMX 查询以获取有关在处理模型时生成的模式和统计信息的信息。  
   
  可以编写自己的 DMX，也可以使用某种工具（如 **预测查询生成器** ）生成基本 DMX，然后进行修改。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 均提供了有助于生成 DMX 预测查询的工具。 本主题介绍如何使用这些工具创建和执行数据挖掘查询。  
   

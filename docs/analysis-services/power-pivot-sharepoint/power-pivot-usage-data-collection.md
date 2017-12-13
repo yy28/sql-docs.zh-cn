@@ -2,12 +2,12 @@
 title: "Power Pivot 使用情况数据收集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7f443e4ecb0d6bb16eaf582c89b98af9eb35a25a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-usage-data-collection"></a>Power Pivot 使用情况数据收集
-  使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用情况数据收集是场级别 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
   
  有关 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板中使用情况数据的信息，请参阅 [PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   

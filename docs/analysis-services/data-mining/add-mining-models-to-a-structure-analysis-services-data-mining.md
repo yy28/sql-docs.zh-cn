@@ -2,12 +2,12 @@
 title: "向结构中添加挖掘模型 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>向结构中添加挖掘模型（Analysis Services - 数据挖掘）
-  挖掘结构旨在支持多个挖掘模型。 因此，在完成向导后，您可以打开结构并添加新的挖掘模型。 每当您创建模型时，可以使用一个不同的算法、更改参数或应用筛选器，以使用不同的数据子集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]挖掘结构旨在支持多个挖掘模型。 因此，在完成向导后，您可以打开结构并添加新的挖掘模型。 每当您创建模型时，可以使用一个不同的算法、更改参数或应用筛选器，以使用不同的数据子集。  
   
 ## <a name="adding-new-mining-models"></a>添加新的挖掘模型  
  使用数据挖掘向导创建新的挖掘模型时，默认情况下，您必须总是先创建一个挖掘结构。 然后，该向导会为您提供用于向结构中添加初始挖掘模型的选项。 但是，不需要立即创建模型。 如果仅仅创建结构，则不需要决定将哪一列用作可预测的属性，或者如何在特定模型中使用这些数据。 您只需设置要在将来使用的通用数据结构，之后即可使用 [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) 来添加基于此结构的新挖掘模型。  

@@ -2,12 +2,12 @@
 title: "创建命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae07d8b17fc659bb8a8bc2bef1cdcb6421606c29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc53ca0e029bd4873ea5ff408ed30472640c9959
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-command-tmsl"></a>创建命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  创建指定的对象和的所有子代指定的对象。 如果该对象已存在，该命令将引发错误。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]创建指定的对象和的所有子代指定的对象。 如果该对象已存在，该命令将引发错误。  
   
 ## <a name="request"></a>请求  
  根据对象的请求的结构而有所不同。 一个对象，它父级必须包括的所有子级，尽管同级及其父对象的完整对象定义不是必需的。  

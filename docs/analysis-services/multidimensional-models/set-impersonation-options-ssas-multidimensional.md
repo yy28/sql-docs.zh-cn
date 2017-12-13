@@ -2,12 +2,12 @@
 title: "设置模拟选项 (SSAS-多维) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
-  在 Analysis Services 模型中创建 **data source** 对象时，您必须配置的一个设置是模拟选项。 此选项确定 Analysis Services 在执行与连接相关的本地操作（如加载 OLE DB 数据访问接口或在支持漫游配置文件的环境中解析用户配置文件信息）时是否采用特定 Windows 用户帐户的标识。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在创建时**数据源**对象在 Analysis Services 模型中，你必须配置的设置之一是模拟选项。 此选项确定 Analysis Services 在执行与连接相关的本地操作（如加载 OLE DB 数据访问接口或在支持漫游配置文件的环境中解析用户配置文件信息）时是否采用特定 Windows 用户帐户的标识。  
   
  对于使用 Windows 身份验证的连接，模拟选项还确定对外部数据源执行查询的用户标识。 例如，如果你将模拟选项设置为 **contoso\dbuser**，则在处理期间用于检索数据的查询将以数据库服务器上的 **contoso\dbuser** 身份执行。  
   

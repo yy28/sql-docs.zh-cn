@@ -2,12 +2,12 @@
 title: "Analysis Services 脚本语言 XML 数据类型 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 脚本语言 XML 数据类型 (ASSL)
-  本参考部分包含在 Analysis Services 脚本语言 (ASSL) 架构中作为类型的每个元素的语法和用法信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此引用部分包含每个元素，它就像 Analysis Services 脚本语言 (ASSL) 架构中的类型的语法和用法的信息。  
   
  尽管 ASSL 架构仅包含 XML 元素，从开发人员的角度来看，本部分中描述的元素对应于的类型，如**绑定**和**权限**，这是用于定义的子元素和其他对象的属性。  
   

@@ -2,12 +2,12 @@
 title: "CubeDimensionPermission 数据类型 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a62d5f6ca15122a2f71f842946e2a964e7740da3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a2720972e89c41af585de2f4e95e109c15b44030
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>CubeDimensionPermission 数据类型 (ASSL)
-  定义一个基元数据类型，该类型表示单个角色针对多维数据集中的某个特定维度具有的权限。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义表示多维数据集中的特定维度上的单个角色的权限的基元数据类型。  
   
 ## <a name="syntax"></a>语法  
   

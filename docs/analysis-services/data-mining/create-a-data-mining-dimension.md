@@ -2,12 +2,12 @@
 title: "创建数据挖掘维度 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ef93928dc29375ae047560bfde0bc79ccd7e108
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e4b9351e6ef83e1fbfea89ffd1130db2879d7559
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-mining-dimension"></a>创建数据挖掘维度
-  如果挖掘结构基于 OLAP 多维数据集，则可以创建包含挖掘模型内容的维度。 然后可以将维度合并回源多维数据集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您的挖掘结构基于 OLAP 多维数据集，你可以创建包含挖掘模型的内容的维度。 然后可以将维度合并回源多维数据集。  
   
  还可以浏览维度、使用维度浏览模型结果或使用 MDX 查询维度。  
   

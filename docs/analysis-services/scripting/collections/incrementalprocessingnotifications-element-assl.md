@@ -2,12 +2,12 @@
 title: "IncrementalProcessingNotifications 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d8603e76e26b9197cbbc17021bb0a254de96abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 78d7a029468a2ab6787820ba807e1ce6b29b2dc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="incrementalprocessingnotifications-element-assl"></a>IncrementalProcessingNotifications 元素 (ASSL)
-  包含的集合[IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)元素信息提供给[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)有关查询执行以确定的进度的元素增量处理。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的集合[IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)元素信息提供给[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)有关查询执行以确定的进度的元素增量处理。  
   
 ## <a name="syntax"></a>语法  
   

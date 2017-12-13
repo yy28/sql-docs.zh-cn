@@ -2,12 +2,12 @@
 title: "确定服务器模式的 Analysis Services 实例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 05e11407da93e269ca8766d94df4820e54e43ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7242643ec7ac3869f245b069218205ad425692a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
-  Analysis Services 可以在以下三种服务器模式之一下安装：多维和数据挖掘（默认模式）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]可以在三种服务器模式之一中安装 analysis Services： 多维和数据挖掘 （默认值）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
   
  服务器模式确定您创建和部署的解决方案的类型。 如果您没有安装服务器软件并且想要知道服务器安装在哪一模式下，则可以使用本主题中的信息确定该模式。 有关特定模式中功能可用性的详细信息，请参阅[比较表格和多维解决方案 (SSAS)](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   

@@ -2,12 +2,12 @@
 title: "多维数据集属性的多维模型编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -41,14 +41,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc44854185830f93ff672cae6a0ebc68a88aa80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>多维数据集属性的多维模型编程
-  可以在多维数据集中设置很多属性以影响整个多维数据集的行为。 下表总结了这些属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集具有多个属性，可设置为会影响多维数据集范围的行为。 下表总结了这些属性。  
   
 > [!NOTE]  
 >  某些属性是在创建多维数据集时自动设置的，不能更改。  

@@ -2,12 +2,12 @@
 title: "使用 XMLA 创建数据挖掘查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78037aa620ae5a0ed6861d55503e96fd5bb2fb18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c2f5e3fd04ae0552ef9e8c7cae54e98bc7e46981
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 创建数据挖掘查询
-  可以使用 AMO、DMX 或 XML/A 创建针对数据挖掘对象的各种查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用 AMO、 DMX 或 XML 来创建针对数据挖掘对象的查询的各种/A.  
   
  XML 用于 Analysis Services 服务器和所有客户端之间的通信。 因此，尽管使用 DMX 创建内容查询通常会更轻松，但还可使用 XML/A 中的 DISCOVER 和 COMMAND 语句编写这些查询，其间您既可以使用支持 SOAP 协议的客户端，也可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建 XML/A 查询。  
   

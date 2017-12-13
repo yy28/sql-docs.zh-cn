@@ -2,12 +2,12 @@
 title: "锁定和解锁数据库 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c47c9c9b1b875cd7290df53ab27c59251a56783
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47b88aa52aba52f2919d41cba462323e5b061bdf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>锁定数据库和解除数据库锁定 (XMLA)
-  你可以锁定和解锁分别使用的数据库，则[锁](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解锁](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML Analysis (XMLA) 中的命令。 通常，其他 XMLA 命令会在执行期间根据需要自动锁定对象和解除对象锁定，从而完成命令。 你可以显式锁定或解锁数据库执行多个命令在单个事务中，如[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，同时防止从提交到数据库写入事务的其他应用程序。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以锁定和解锁分别使用的数据库，则[锁](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解锁](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML Analysis (XMLA) 中的命令。 通常，其他 XMLA 命令会在执行期间根据需要自动锁定对象和解除对象锁定，从而完成命令。 你可以显式锁定或解锁数据库执行多个命令在单个事务中，如[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，同时防止从提交到数据库写入事务的其他应用程序。  
   
 ## <a name="locking-databases"></a>锁定数据库  
  **锁**命令锁定的对象，供共享或独占使用，在当前活动事务的上下文中。 对象上的锁将阻止提交事务，直到删除该锁为止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持两种类型的锁、 共享的锁和排他锁。 有关支持的锁类型的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[模式元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  

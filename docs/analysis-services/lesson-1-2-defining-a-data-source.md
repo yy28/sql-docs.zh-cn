@@ -2,12 +2,12 @@
 title: "定义了一个数据源 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d54f8f04c4e67a81fc1da4c47c6e995ac98ff84d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>课程 1-2-定义了一个数据源
-在创建 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目后，通常通过定义项目使用的一个或多个数据源来开始使用项目。 定义数据源时，将定义要用于连接此数据源的连接字符串信息。 有关详细信息，请参阅 [创建数据源（SSAS 多维）](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在创建后[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中，您通常工作的项目开始通过定义该项目将使用的一个或多个数据源。 定义数据源时，将定义要用于连接此数据源的连接字符串信息。 有关详细信息，请参阅 [创建数据源（SSAS 多维）](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
   
 在以下任务中，您将把 AdventureWorksDWSQLServer2012 示例数据库定义为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的数据源。 为了实现本教程教学目的，此数据库位于您的本地计算机上，而源数据库通常驻留在一台或多台远程计算机中。  
   

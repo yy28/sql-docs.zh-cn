@@ -2,12 +2,12 @@
 title: "在分析中的表格对象模型 (TOM) 简介服务 AMO |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格对象模型 (TOM) 简介
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
   
 TOM 公开本机表格元数据，如**模型**，**表**，**列**，和**关系**对象。  对象模型树中，下面提供的高级视图说明了如何关联组件的各部分。  
   

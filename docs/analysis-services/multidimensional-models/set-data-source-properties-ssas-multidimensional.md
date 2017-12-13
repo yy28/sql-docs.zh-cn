@@ -2,12 +2,12 @@
 title: "设置数据源属性 (SSAS 多维) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>设置数据源属性（SSAS 多维）
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据源对象指定与向多维模型提供数据的外部数据仓库或关系数据库的连接。 针对数据源的属性确定连接字符串、超时间隔、连接的最大数目以及事务隔离级别。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，数据源对象指定与外部数据仓库或向多维模型提供数据的关系数据库的连接。 针对数据源的属性确定连接字符串、超时间隔、连接的最大数目以及事务隔离级别。  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置数据源属性  
   

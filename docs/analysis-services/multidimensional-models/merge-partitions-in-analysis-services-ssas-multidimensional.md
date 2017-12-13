@@ -2,12 +2,12 @@
 title: "在 Analysis Services (SSAS-多维) 中合并分区 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d4e5ae92e7352d3b7a37516d57bb34e70388542
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6eb1eaef5274537720663a67bfb4521dfc94ec9d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
-  您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以合并现有的分区[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库以整合来自相同的度量值组的多个分区的事实数据。  
   
  [常见情况](#bkmk_Scenario)  
   

@@ -2,12 +2,12 @@
 title: "在依赖关系网络中查找特定的节点 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f95a58a73030375534a202dd0c6a6d24a449e373
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在依赖关系网络中查找特定节点
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 挖掘模型中的依赖关系网络可包含许多节点，因此很难找到您感兴趣的数据。 若要解决此问题，请使用数据挖掘设计器的 **“依赖关系网络”** 选项卡上的 **“查找节点”** 对话框来搜索特定节点。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中的依赖关系网络[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]挖掘模型可以包含许多节点，因此很难找到数据你感兴趣。 若要解决此问题，请使用数据挖掘设计器的 **“依赖关系网络”** 选项卡上的 **“查找节点”** 对话框来搜索特定节点。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>在依赖关系网络中查找特定节点  
   

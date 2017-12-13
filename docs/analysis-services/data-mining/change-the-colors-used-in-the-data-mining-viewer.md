@@ -2,12 +2,12 @@
 title: "更改数据挖掘查看器中使用的颜色 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f2cbde3cff67fc89cdedd4dab37183389f5796d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>更改数据挖掘查看器中使用的颜色
-  您可以更改数据挖掘查看器中使用的颜色以显示数据序列、节点或群集。 可以通过设置 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的选项来执行此操作。 更改这些设置之后，颜色选择将应用于使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]查看的所有模型；但是您必须关闭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 并在查看器中重新打开模型才能看到新颜色。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以更改用于数据挖掘查看器中显示数据序列、 节点或群集的颜色。 可以通过设置 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的选项来执行此操作。 更改这些设置之后，颜色选择将应用于使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]查看的所有模型；但是您必须关闭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 并在查看器中重新打开模型才能看到新颜色。  
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>更改数据挖掘查看器中使用的颜色  
   

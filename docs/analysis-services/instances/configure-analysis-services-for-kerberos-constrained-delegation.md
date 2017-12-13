@@ -2,12 +2,12 @@
 title: "为 Kerberos 约束委派配置 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>针对 Kerberos 约束委派对 Analysis Services 进行配置
-  在配置 Analysis Services 以使用 Kerberos 身份验证时，您很可能希望实现以下两个结果中的一个或全部两个：在查询数据时让 Analysis Services 模拟某个用户标识；或者让 Analysis Services 将某个用户标识委托给下级服务。 每个方案都具有稍有不同的配置要求。 这两个方案都要求进行验证，以便确保正确完成配置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在配置 Analysis Services for Kerberos 身份验证时，你有很可能兴趣实现一个或两个以下结果： 具有 Analysis Services 在查询数据; 时模拟用户标识或具有 Analysis Services 委托用户标识设置为低级别服务。 每个方案都具有稍有不同的配置要求。 这两个方案都要求进行验证，以便确保正确完成配置。  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  

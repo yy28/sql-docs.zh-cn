@@ -2,12 +2,12 @@
 title: "调试存储的过程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e8a7802551181de7292650ec806eeb85a06140c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9e786c2885f12ceba82d3f49526a1f15f42fb8ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="debugging-stored-procedures"></a>调试存储的过程
-  实际上，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程是使用 C#（或任何其他 CLR 或 COM 语言）编写的 CLR 或 COM 库（通常为 DLL）。 因此，调试存储过程类似于在 Visual Studio 调试环境中调试任何其他应用程序。 您可以使用集成调试功能在 Visual Studio 开发环境中调试存储过程。 您可以使用这些功能执行下列操作：在过程位置停止、检查内存和注册值、更改变量、观察消息流量以及密切监视代码的运行状况。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]存储的过程是实际 CLR 或 COM 库 (通常 Dll 编写的 C# （或任何其他 CLR 或 COM 语言）)。 因此，调试存储过程类似于在 Visual Studio 调试环境中调试任何其他应用程序。 您可以使用集成调试功能在 Visual Studio 开发环境中调试存储过程。 您可以使用这些功能执行下列操作：在过程位置停止、检查内存和注册值、更改变量、观察消息流量以及密切监视代码的运行状况。  
   
 ### <a name="to-debug-a-stored-procedure"></a>调试存储过程  
   

@@ -2,12 +2,12 @@
 title: "QueryDefinition 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35f71810388221724cd364ffadcab6f14f0be655
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dae9a5e0988ec65649ede10c1367601ec99d6c41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querydefinition-element-assl"></a>QueryDefinition 元素 (ASSL)
-  包含关联的查询的不透明表达式[数据源](../../../analysis-services/scripting/objects/datasource-element-assl.md)中的元素[QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含关联的查询的不透明表达式[数据源](../../../analysis-services/scripting/objects/datasource-element-assl.md)中的元素[QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

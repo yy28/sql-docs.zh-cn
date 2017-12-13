@@ -2,12 +2,12 @@
 title: "Microsoft 序列聚类分析算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种结合了顺序分析和聚类分析的唯一算法。 你可以使用该算法来研究包含可在“顺序”中链接的事件的数据。 该算法可查找最常见的顺序，并且通过执行聚类分析来查找相似的顺序。 下面的示例说明了可以将其作为机器学习的数据捕获的顺序类型，从而提供有关常见问题或业务方案的建议：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]序列聚类分析算法是一种结合顺序分析群集的唯一算法。 你可以使用该算法来研究包含可在“顺序”中链接的事件的数据。 该算法可查找最常见的顺序，并且通过执行聚类分析来查找相似的顺序。 下面的示例说明了可以将其作为机器学习的数据捕获的顺序类型，从而提供有关常见问题或业务方案的建议：  
   
 -   用户在导航或浏览网站时生成的点击流或单击路径  
   

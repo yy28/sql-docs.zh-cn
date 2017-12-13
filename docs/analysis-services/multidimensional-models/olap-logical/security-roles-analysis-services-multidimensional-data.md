@@ -2,12 +2,12 @@
 title: "安全角色 (Analysis Services-多维数据) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全角色（Analysis Services - 多维数据）
-  中使用角色[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]可管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象和数据。 在基本术语中，角色相关联的 Microsoft Windows 用户和具有特定访问权限和权限定义对象的实例由管理组的安全标识符 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供了两种类型的角色[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]中使用角色[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]可管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象和数据。 在基本术语中，角色相关联的 Microsoft Windows 用户和具有特定访问权限和权限定义对象的实例由管理组的安全标识符 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供了两种类型的角色[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   

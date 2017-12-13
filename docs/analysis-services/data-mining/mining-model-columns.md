@@ -2,12 +2,12 @@
 title: "挖掘模型列 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d248c8c2e0394a73ff815730ced125176a23893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0acbc12c9aa0d553bfee5e9e11dcb098547288c7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-columns"></a>挖掘模型列
-  数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 如挖掘结构一样，挖掘模型也包含列。 挖掘模型包含在挖掘结构之内，继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘模型适用于由挖掘结构的数据挖掘模型算法。 如挖掘结构一样，挖掘模型也包含列。 挖掘模型包含在挖掘结构之内，继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。  
   
  您还可以为挖掘模型列定义另外两条信息：用法和建模标志。  
   

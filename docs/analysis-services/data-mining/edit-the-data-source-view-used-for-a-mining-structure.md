@@ -2,12 +2,12 @@
 title: "编辑用于挖掘结构的数据源视图 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce91b871387f8f289dc3f95ca1eb2b18acaa2d57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b248144eb0e5ce7f30bad2836698004b058bd8ee
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>编辑用于挖掘结构的数据源视图
-  可以从数据挖掘设计器中打开数据源视图，以便对其进行修改。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以打开从数据挖掘设计器中的数据源视图，以便可以修改它。  
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>从数据挖掘设计器的“挖掘结构”选项卡访问数据源视图设计器  
   

@@ -2,12 +2,12 @@
 title: "多维数据集、 分区和维度处理的错误配置 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
-  有关多维数据集、分区或维度对象的错误配置属性决定了当处理过程中出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在多维数据集、 分区或维度对象上的错误配置属性确定在处理期间出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
   
  本主题包含以下各节：  
   

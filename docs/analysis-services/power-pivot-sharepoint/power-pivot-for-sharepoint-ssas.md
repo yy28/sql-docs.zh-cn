@@ -2,12 +2,12 @@
 title: "Power Pivot for SharePoint (SSAS) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dca0aeaa2aa97ebbfe49e3caf8af712ac8795e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6661b744ba630607b237f2754e9c22b1a5ec91df
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
-  处于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器在 SharePoint 场中为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据提供服务器托管服务。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据是使用以下工具之一生成的分析数据模型：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的服务器[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]模式提供服务器托管的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint 场中的数据。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据是使用以下工具之一生成的分析数据模型：  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For Excel 2010 外接程序  
   

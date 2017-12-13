@@ -2,12 +2,12 @@
 title: "AttributeAllMemberTranslation 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 844e9544d196a55b1afea8f532a706964b48e745
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: adba703ca3e7dc6d1f1bee3ec97ae859cfd9027a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributeallmembertranslation-element-assl"></a>AttributeAllMemberTranslation 元素 (ASSL)
-  包含的转换是为标题**所有**的成员[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的转换是为标题**所有**的成员[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   

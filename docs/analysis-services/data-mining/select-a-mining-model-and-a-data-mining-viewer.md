@@ -2,12 +2,12 @@
 title: "选择挖掘模型和数据挖掘查看器 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 712e8e501d3f1a8a37b2627d2356ff542af8bd08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>选择挖掘模型和数据挖掘查看器
-  可以使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡中的一种查看器来浏览挖掘模型。 可以轻松切换模型或更改使用的浏览器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以通过使用上一个查看器浏览挖掘模型**挖掘模型查看器**数据挖掘设计器选项卡。 可以轻松切换模型或更改使用的浏览器。  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘模型查看器”选项卡上，“挖掘模型”下拉列表框包含当前挖掘结构中的所有挖掘模型的列表。  
   

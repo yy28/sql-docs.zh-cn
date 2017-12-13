@@ -2,12 +2,12 @@
 title: "ADOMD.NET 客户端功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 客户端功能
-  与其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 数据访问接口一样，ADOMD.NET 也用作应用程序与数据源之间的桥梁。 但 ADOMD.NET 与其他 .NET Framework 数据访问接口的不同之处在于 ADOMD.NET 处理的是分析数据。 为了处理分析数据，ADOMD.NET 支持的功能与其他 .NET Framework 数据访问接口所支持的功能差异很大。 ADOMD.NET 不仅可检索数据，还可检索元数据并更改分析数据存储区的结构：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET，与其他[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 数据提供程序，用作应用程序和数据源之间的桥梁。 但 ADOMD.NET 与其他 .NET Framework 数据访问接口的不同之处在于 ADOMD.NET 处理的是分析数据。 为了处理分析数据，ADOMD.NET 支持的功能与其他 .NET Framework 数据访问接口所支持的功能差异很大。 ADOMD.NET 不仅可检索数据，还可检索元数据并更改分析数据存储区的结构：  
   
  **检索元数据**  
  应用程序可使用架构行集或对象模型，进一步了解通过元数据检索从数据源检索的数据。 如可用的关键绩效指标 (KPI) 的类型、多维数据集中的维度和挖掘模型所需的参数等信息都可以发现。 元数据是对最重要*动态*需要用户输入，以确定类型、 深度和作用域的数据要检索的应用程序。 此类应用程序的例子有查询分析器、Microsoft Excel 以及其他查询工具。 元数据不太重要到*静态*执行一组预定义的操作的应用程序。  

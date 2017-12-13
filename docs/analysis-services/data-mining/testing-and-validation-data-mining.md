@@ -2,12 +2,12 @@
 title: "测试和验证 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
-  验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]验证是评估挖掘模型对实际数据执行的程度的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
   
  本节将介绍与模型质量有关的一些基本概念，还将介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中提供的模型验证的策略。 有关模型验证如何适合更大数据挖掘过程的概述，请参阅 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
   

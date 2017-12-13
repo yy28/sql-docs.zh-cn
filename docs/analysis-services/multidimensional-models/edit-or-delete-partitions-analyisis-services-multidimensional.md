@@ -2,12 +2,12 @@
 title: "编辑或删除分区 (Analyisis Services-多维) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7c951e3abb2fffc3882869e31570342e7647bd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa03c1bad296f60526ac390cb19d15c174706da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>编辑或删除分区（Analysis Services - 多维）
-  多维数据集分区可在 **中使用多维数据集设计器中的** “分区” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]选项卡来修改。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在使用修改多维数据集分区**分区**多维数据集设计器中的选项卡[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。  
   
  若要编辑任何度量值组的分区，请在 **“分区”** 选项卡上展开该度量值组。度量值组的分区按照序号以表的形式列出，表中使用了下表中列出的列。  
   

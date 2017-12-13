@@ -2,12 +2,12 @@
 title: "对挖掘模型应用筛选器 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/19/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3beab78045a254a30e398928cd262785703df4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85bbd59ae0e5de9dea2fb042fc0c67610864ec0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
-  如果挖掘结构包含嵌套表，则可以对事例表、嵌套表或两者同时应用筛选器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您的挖掘结构包含嵌套的表，你可以对事例表和 / 或嵌套的表中，应用筛选器。  
   
  以下过程说明了如何创建两种筛选器：事例筛选器和嵌套表行筛选器。  
   

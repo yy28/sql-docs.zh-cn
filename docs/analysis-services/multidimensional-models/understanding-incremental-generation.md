@@ -2,12 +2,12 @@
 title: "了解增量生成 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
-  在生成初始架构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]更改多维数据集定义和维度定义，然后返回架构生成向导。 向导会更新主题区域数据库和相关数据源视图中的架构以反映所做的更改，并且尽可能保留当前存在于要重新生成的表中的数据。 如果在初始生成之后更改表，则架构生成向导会使用下列规则在可能的情况下保留这些更改：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]以下生成初始架构中，你可以更改多维数据集和维度定义使用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，然后重新运行架构生成向导。 向导会更新主题区域数据库和相关数据源视图中的架构以反映所做的更改，并且尽可能保留当前存在于要重新生成的表中的数据。 如果在初始生成之后更改表，则架构生成向导会使用下列规则在可能的情况下保留这些更改：  
   
 -   如果表由向导在先前生成，则会被覆盖。 通过将数据源视图中表的 **AllowChangesDuringGeneration** 属性更改为 **false**，可以防止覆盖由向导生成的表。 如果可对表进行控制，则该表与任何其他用户定义表的处理方式相同，并且在重新生成过程中不受影响。 从生成中删除表之后，您可以稍后将数据源视图中表的 **AllowChangesDuringGeneration** 属性更改为 **true** ，并重新打开该表以便向导对其进行更改。 有关详细信息，请参阅[在数据源视图中更改属性 (Analysis Services)](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)。  
   

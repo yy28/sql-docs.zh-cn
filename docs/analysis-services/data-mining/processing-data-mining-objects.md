@@ -2,12 +2,12 @@
 title: "处理数据挖掘对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06346679653136a2efa0fc228405e3282078b279
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b25fae3fd5c17b93cc17ce2a3f7ea6d6059aa0fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-data-mining-objects"></a>处理数据挖掘对象
-  数据挖掘对象在处理之前只是一个空容器。 “处理 ”数据挖掘模型也称为“定型 ”。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在处理完之前，数据挖掘对象是仅一个空容器。 “处理 ”数据挖掘模型也称为“定型 ”。  
   
  **处理挖掘结构：** 挖掘结构从列绑定和使用情况元数据定义的外部数据源获取数据，并读取此数据。 挖掘结构将完全读取此数据，然后对这些数据进行分析以提取各种统计信息。 Analysis Services 在本地缓存中存储数据的简洁表示形式，此形式适合于由数据挖掘算法进行分析。 处理模型之后，您可以保留或删除此缓存。 默认情况下，将存储此缓存。 有关详细信息，请参阅 [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md)。  
   

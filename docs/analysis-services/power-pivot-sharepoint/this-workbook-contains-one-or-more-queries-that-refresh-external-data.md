@@ -2,12 +2,12 @@
 title: "此工作簿包含一个或多个刷新外部数据的查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 882a0dca2f6c2c443507bc5b4d54820711e55ae7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3ceac22e878f93a5c7b8c9a1545d60f513684805
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此工作簿包含一个或多个刷新外部数据的查询
-  对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 检测到连接信息，则将显示此警告，并提示你为此工作簿启用或禁用查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]包含的 Excel 工作簿的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据，Excel Services 将显示此警告，如果它检测到连接信息并且可以启用或禁用此工作簿的查询提示。  
   
 ## <a name="details"></a>详细信息  
   

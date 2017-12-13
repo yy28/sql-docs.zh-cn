@@ -2,12 +2,12 @@
 title: "了解数据库架构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
-  架构生成向导为基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的维度和度量值组的主题区域数据库生成一个非规范化的关系架构。 该向导为每个维度生成一个用于存储维度数据的关系表（该表称为维度表）；为每个度量值组生成一个用于存储事实数据的关系表（该表称为事实数据表）。 该向导在生成这些关系表时，会忽略链接维度、链接度量值组以及服务器时间维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]架构生成向导都会生成主题区域数据库基于的维度和度量值组中的非规范化关系架构[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该向导为每个维度生成一个用于存储维度数据的关系表（该表称为维度表）；为每个度量值组生成一个用于存储事实数据的关系表（该表称为事实数据表）。 该向导在生成这些关系表时，会忽略链接维度、链接度量值组以及服务器时间维度。  
   
 ## <a name="validation"></a>验证  
  在架构生成向导开始生成基础关系架构之前，它会验证 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度。 如果该向导检测到错误，它便会停止并将错误报告到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“任务列表”窗口。 阻止生成的错误示例包括：  

@@ -2,12 +2,12 @@
 title: "维度类型 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimension-properties---types"></a>数据库维度属性的类型
-  **类型**属性设置可以提供的服务器和客户端应用程序到维度内容的相关信息。 在某些情况下，**类型**仅提供客户端应用程序的指南，是可选的设置。 在其他情况下，如**帐户**或**时间**维度，**类型**属性设置为维度及其属性确定特定的基于服务器的行为并且可能需要实现的多维数据集中的某些行为。 例如，**类型**维度的属性可以设置为**帐户**以指示客户端应用程序的标准维度包含帐户属性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父-子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**类型**属性设置可以提供的服务器和客户端应用程序到维度内容的相关信息。 在某些情况下，**类型**仅提供客户端应用程序的指南，是可选的设置。 在其他情况下，如**帐户**或**时间**维度，**类型**属性设置为维度及其属性确定特定的基于服务器的行为并且可能需要实现的多维数据集中的某些行为。 例如，**类型**维度的属性可以设置为**帐户**以指示客户端应用程序的标准维度包含帐户属性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父-子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  维度类型的默认设置**正则**，这使得内容的相关维度的任何假设。 这是所有维度的默认设置，除非另行指定，最初定义维度时**时间**时定义使用维度向导的维度。 您还应该保留**正则**作为维度类型，如果维度向导未列出适当类型的维度类型。  
   

@@ -2,12 +2,12 @@
 title: "生成 MDX (MDX) 中的子多维数据集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d56fe149317939cfb0b184dcd20b1411514f2ca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a84f574abdac7490ce4dad5683dd800f474ca59c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中生成子多维数据集 (MDX)
-  子多维数据集是多维数据集的子集，用于表示基础数据的筛选视图。 通过将多维数据集限制为一个子多维数据集，可以改善查询的性能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]子多维数据集是多维数据集表示基础数据的筛选的视图的子集。 通过将多维数据集限制为一个子多维数据集，可以改善查询的性能。  
   
  若要定义子多维数据集，请按照本主题所述使用 [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) 语句。  
   

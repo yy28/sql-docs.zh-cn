@@ -2,12 +2,12 @@
 title: "Power Pivot 数据刷新 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c5bc570e1f4f72fe932a8e5b2d0fa08c32f7949
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37a3129ca08e2301753d95452beed79e153bf27e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-refresh"></a>Power Pivot 数据刷新
-  在你创建包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的某一工作簿后，可能希望通过重新运行查询或命令从你最初用于创建该工作簿的数据源获取更新的信息，从而定期刷新数据。 此过程称作 **数据刷新**，并且可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]中按需刷新数据，或者作为在 SharePoint 场中的应用程序服务器上以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程形式运行的定期操作来刷新数据。 有关详细信息，请参阅：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]创建包含工作簿后[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据，你可能想要定期刷新数据，通过重新运行查询或命令以从来源获取更新的信息你最初用来创建工作簿。 此过程称作 **数据刷新**，并且可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]中按需刷新数据，或者作为在 SharePoint 场中的应用程序服务器上以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程形式运行的定期操作来刷新数据。 有关详细信息，请参阅：  
   
 -   [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)  
   

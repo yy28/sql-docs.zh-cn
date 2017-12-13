@@ -2,12 +2,12 @@
 title: "嵌套表 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，数据必须为一系列的情况下在事例表包含提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
   
  ![通过使用嵌套的表的两个表组合](../../analysis-services/data-mining/media/nested-tables.gif "两个表组合使用嵌套的表")  
   

@@ -2,12 +2,12 @@
 title: "处理 Analysis Services 对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>处理 Analysis Services 对象
-  处理影响下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]处理影响下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象类型：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库、 多维数据集、 维度、 度量值组、 分区和数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
  应注意处理行为的后果以减少负面影响。 例如，完全处理某个维度会将所有依赖于此维度的分区自动设置为未处理状态。 这将使受影响的多维数据集在依赖分区得到处理之前变得无法查询。  
   

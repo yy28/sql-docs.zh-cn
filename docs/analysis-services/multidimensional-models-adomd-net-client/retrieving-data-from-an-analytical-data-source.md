@@ -2,12 +2,12 @@
 title: "从分析数据源检索数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2dbd10be43b0d0e64b4068e6f93c0bba2457d4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f8d2c400fc82852333b64d9bd89b2e7c74190061
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>从分析数据源检索数据
-  在建立连接并创建查询后，您可以检索任何数据。 In ADOMD.NET，您可以使用三个不同的对象数据 (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，和<xref:System.Xml.XmlReader>) 通过调用之一**执行**方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>对象。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]一旦建立连接并创建查询，你可以检索任何数据。 In ADOMD.NET，您可以使用三个不同的对象数据 (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，和<xref:System.Xml.XmlReader>) 通过调用之一**执行**方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>对象。  
   
  这三个对象中的每个对象都可平衡交互功能和开销：  
   

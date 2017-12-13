@@ -2,12 +2,12 @@
 title: "RegularMeasureGroupDimension 数据类型 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b144c665c26a56e6ad7042f066753450fd90e798
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5ea868b276a682a362d10608a58849e1f2cf99a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>RegularMeasureGroupDimension 数据类型 (ASSL)
-  定义一个派生数据类型，该类型表示某个维度和度量值组之间的常规关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义表示维度和度量值组之间的正则关系的派生的数据类型。  
   
 ## <a name="syntax"></a>语法  
   

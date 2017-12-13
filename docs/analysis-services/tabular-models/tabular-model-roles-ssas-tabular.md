@@ -2,12 +2,12 @@
 title: "表格模型角色 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b8f6cd589113514e670d7cb08a5015541556acd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca9b0efadcf07deebdc0eb6c19890e41fbc81345
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>表格模型角色（SSAS 表格）
-  本主题中的信息和相关任务面向的是表格模型数据库管理员，这些管理员将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]为已部署的表格模型创建并管理角色。 若要了解有关表格模型中的角色的信息，请参阅[角色（SSAS 表格）](../../analysis-services/tabular-models/roles-ssas-tabular.md)。 若要了解有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用角色管理器创建并管理表格模型项目中的角色的信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在此主题和相关的任务中的信息为了的表格模型数据库管理员将创建并管理的已部署的表格模型角色，通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要了解有关表格模型中的角色的信息，请参阅[角色（SSAS 表格）](../../analysis-services/tabular-models/roles-ssas-tabular.md)。 若要了解有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用角色管理器创建并管理表格模型项目中的角色的信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
 ## <a name="related-tasks"></a>相关任务  
   

@@ -2,12 +2,12 @@
 title: "交叉验证报表中的度量值 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 52d3932d577ed93c3c1ab4122323a04a1c27771e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉验证报表中的度量值
-  在交叉验证过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]交叉验证期间[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将挖掘结构中的数据划分为多个剖面，然后以迭代方式测试的结构和任何关联的挖掘模型。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
   
  该报表包含有关数据中折叠数以及每个折叠中的数据量的一些基本信息，还包含描述数据分布的一组一般性的指标。 通过比较各交叉部分的一般性的指标，您可以评估该结构或模型的可靠性。  
   

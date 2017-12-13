@@ -2,12 +2,12 @@
 title: "数据源多维模型中的视图 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多维模型中的数据源视图
-  数据源视图 (DSV) 是关系数据源的抽象，它成为在多维项目中创建的多维数据集和维度的基础。 DSV 旨在让您控制项目中使用的数据结构，并且独立于基础数据源工作（例如，重命名或连接列，而不必直接修改原始数据源）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据源视图 (DSV) 是一个抽象的关系数据源将成为多维数据集和维度的多维项目中创建的基础。 DSV 旨在让您控制项目中使用的数据结构，并且独立于基础数据源工作（例如，重命名或连接列，而不必直接修改原始数据源）。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，可以根据一个或多个数据源生成多个数据源视图，并构造每一个数据源视图以满足不同解决方案的要求。  
   

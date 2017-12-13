@@ -2,12 +2,12 @@
 title: "处理要求和注意事项 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6916b4808fb115ed0e41ed378b77e6649608e2d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a1fbf79bba09ab6210a8fd4aba51ae2cc6bd99e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
-  本主题介绍了一些处理数据挖掘对象时要记住的技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍在处理数据挖掘对象时，需要注意一些技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
   
  [针对关系存储区的查询](#bkmk_QueryReqs)  
   

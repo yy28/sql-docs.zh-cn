@@ -2,12 +2,12 @@
 title: "附加和分离 Analysis Services 数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f882dfe4979beeb7fa162c7bc649fd01440291d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和分离 Analysis Services 数据库
-  在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在通常情况下时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库管理员 (dba) 需要一段内，使数据库脱机，然后使该数据库重新联机，在相同的服务器实例，或在一个不同。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
   
 ## <a name="attach-and-detach-commands"></a>附加和分离命令。  
  通过 **Attach** 命令可使已脱机的数据库恢复联机。 可以将该数据库附加到原始的服务器实例，也可以附加到另一个实例。 在附加数据库时，用户可以为该数据库指定 **ReadWriteMode** 设置。 使用 **Detach** 命令可使数据库与服务器脱机。  

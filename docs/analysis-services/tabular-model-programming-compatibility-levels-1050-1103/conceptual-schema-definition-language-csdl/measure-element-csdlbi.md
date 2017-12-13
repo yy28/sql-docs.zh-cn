@@ -2,12 +2,12 @@
 title: "测量元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83dc8a37899d510205659b9a017dd6246c9ca695
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0dbdaee8077ccfeb374f1ef360d397fa194dbfca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measure-element-csdlbi"></a>Measure 元素 (CSDLBI)
-  Measure 元素是基于 CSDL 的 Property 元素的复杂类型。 CSDLBI 注释添加了一些属性，以支持要在商业智能数据模型中使用的复杂公式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]该度量值元素是基于 CSDL 属性元素的复杂类型。 CSDLBI 注释添加了一些属性，以支持要在商业智能数据模型中使用的复杂公式。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 Measure 元素的元素和属性，以及适用于 Property 元素的所有属性。  

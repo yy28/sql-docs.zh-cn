@@ -2,12 +2,12 @@
 title: "ADOMD.NET 客户端编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 客户端编程
-  ADOMD.NET 客户端组件驻留在**Microsoft.AnalysisServices.AdomdClient** （中 microsoft.analysisservices.adomdclient.dll) 命名空间。 这些客户端组件提供的功能的客户端和中间层应用程序轻松地查询数据和元数据来自分析数据存储区，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 客户端组件驻留在**Microsoft.AnalysisServices.AdomdClient** （中 microsoft.analysisservices.adomdclient.dll) 命名空间。 这些客户端组件提供的功能的客户端和中间层应用程序轻松地查询数据和元数据来自分析数据存储区，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="using-the-adomdnet-client-objects"></a>使用 ADOMD.NET 客户端对象  
  查询分析数据源时，有一组常见任务需要执行。 下表介绍了这些常见任务，您通常在这些任务中使用 ADOMD.NET 客户端对象执行此类查询。  

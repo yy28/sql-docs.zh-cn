@@ -2,12 +2,12 @@
 title: "使用 XMLA 部署模型解决方案 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb6e34a647d2c241e1a968077c989d17ad5c4e19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 97d6dca54da10d9f917b70cfb78ebf1b070a6bc0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>使用 XMLA 部署模型解决方案
-  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中， **“编写数据库脚本为”** 命令的 **“CREATE 到”** 选项用于创建整个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库或其中一个构成对象的 XML 脚本。 然后，生成的脚本可以在另一台计算机上运行来重新创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的架构（元数据）。 脚本生成整个数据库，而且当使用脚本时，没有用于增量更新已部署对象的机制。 运行脚本并部署数据库之后，必须对新创建的数据库进行处理，然后用户才能浏览该数据库。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、**创建到**选项**脚本的数据库作为**命令创建一个完整的 XML 脚本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库或其中一个其构成对象。 然后，生成的脚本可以在另一台计算机上运行来重新创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的架构（元数据）。 脚本生成整个数据库，而且当使用脚本时，没有用于增量更新已部署对象的机制。 运行脚本并部署数据库之后，必须对新创建的数据库进行处理，然后用户才能浏览该数据库。  
   
  有关“编写数据库脚本为”命令的详细信息，请参阅[记录和编写 Analysis Services 数据库脚本](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)。  
   

@@ -2,12 +2,12 @@
 title: "创建 BI 语义模型连接到表格模型数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: feb8740550ba5488ff07425ce20036140d84e3dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>创建与表格模型数据库的 BI 语义模型连接
-  使用本主题中的信息设置一个 BI 语义模型连接，该连接将重定向到在 SharePoint 场外的 Analysis Services 实例上运行的表格模型数据库。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用本主题中的信息设置将重定向到在 SharePoint 场外的 Analysis Services 实例上运行的表格模型数据库的 BI 语义模型连接。  
   
  在创建 BI 语义模型连接并配置 SharePoint Services 和 Analysis Services 权限后，可将其用作 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报告的数据源。  
   

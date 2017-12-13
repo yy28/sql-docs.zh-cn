@@ -2,12 +2,12 @@
 title: "多维数据集空间 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 724bf10bb30f2f64a34db8f02b984d051ce525a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a9e9eab17c37cee31e0155af8fcb0d2e092e56b3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-space"></a>多维数据集空间
-  “多维数据集空间”是多维数据集属性层次结构的成员与多维数据集的度量值的乘积。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多维数据集空间是与多维数据集的度量值的多维数据集的属性层次结构的成员的产品。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  
   
 ## <a name="autoexists-and-cube-space"></a>Autoexists 和多维数据集空间  
   “autoexists”的概念将此多维数据集空间限制为那些实际存在的单元。 维度中属性层次结构的成员可能不与相同维度中其他属性层次结构的成员共存。  

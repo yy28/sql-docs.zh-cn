@@ -2,12 +2,12 @@
 title: "决策树模型的挖掘模型内容 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用的模型特有的挖掘模型内容[!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
   
 ##  <a name="bkmk_Top"></a> 了解决策树模型的结构  
  决策树模型具有表示该模型及其元数据的单一父节点。 父节点下是表示选择的可预测属性的独立树。 例如，如果设置决策树模型以预测客户是否将购买产品，并为性别和收入提供输入，该模型将为购买属性创建一个树，该树具有大量根据性别和收入相关条件进行划分的分支。  

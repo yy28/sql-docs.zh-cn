@@ -2,12 +2,12 @@
 title: "用户定义的成员属性 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eaeb79931b4c9c57088ada093148047a26b614d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41d93923d60dec00e70d68b1de1779fe97a43da5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 成员属性的用户定义的成员属性
-  用户定义的成员属性可作为属性关系添加到维度的特定命名级别中。 用户定义的成员属性不能添加到层次结构的 **(All)** 级别，也不能添加到层次结构本身中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]可以将用户定义的成员属性添加到特定的命名为属性关系的维度中的级别。 用户定义的成员属性不能添加到层次结构的 **(All)** 级别，也不能添加到层次结构本身中。  
   
 ## <a name="creating-user-defined-member-properties"></a>创建用户定义的成员属性  
  用户定义的成员属性可以通过用户界面或通过编程方式添加到基于服务器的维度或多维数据集中。  

@@ -2,12 +2,12 @@
 title: "分类矩阵 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分类矩阵（Analysis Services - 数据挖掘）
-  “分类矩阵”  通过确定预测值是否与实际值匹配，将模型中的所有事例分为不同的类别。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” 。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*分类矩阵*分类到类别，从模型的所有情况下，通过确定预测的值是否匹配的实际值。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” 。  
   
  在选择 **“分类矩阵”** 选项为每个指定的预测状态将实际值与预测值比较时创建的图表。 矩阵的行表示模型的预测值，而列则表示实际值。 分析中使用的类别为 , , “假负”和   
   

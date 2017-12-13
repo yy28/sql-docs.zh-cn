@@ -2,12 +2,12 @@
 title: "Microsoft 逻辑回归算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a62e3bad1e9bfcae6c929061000ebcc8d3b7af7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b267fa74daf5c8ea83501eb3daadd5b84dc9cb7f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
-  逻辑回归是一种众所周知的统计方法，用于对二进制结果建模。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]逻辑回归是一种众所周知的统计方法用于建模二进制结果。  
   
  通过采用不同的学习方法，可以在统计研究中以各种方式实现逻辑回归。 已通过使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体来实现 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法。 虽然此算法与神经网络算法有许多共性，但逻辑回归算法更易于定型。  
   

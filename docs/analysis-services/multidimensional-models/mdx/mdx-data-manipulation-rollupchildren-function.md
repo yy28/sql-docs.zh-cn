@@ -2,12 +2,12 @@
 title: "使用 RollupChildren 函数 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2b5133c23454a8281e028a848403e18f5d89eae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c913406650e267cb715267f4a2a91235b6259b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 数据操作-RollupChildren 函数
-  多维表达式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 函数可以汇总某个成员的子级（对每个子级应用不同的一元运算符），并以数字的形式返回此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]多维表达式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md)函数汇总将不同的一元运算符应用于每个子成员的子级，并返回数字的形式在此汇总的值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 函数示例  
  **RollupChildren** 函数在多维表达式 (MDX) 语句中的用法很容易理解，但它对 MDX 查询的影响十分广泛。  

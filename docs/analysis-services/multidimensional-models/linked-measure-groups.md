@@ -2,12 +2,12 @@
 title: "链接度量值组 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d83878543d1c749757b2603a3fe3001fb6b1581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
-  链接度量值组基于同一数据库内不同多维数据集中的另一度量值组，或基于一个不同的 Analysis Services 数据库。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]链接度量值组基于同一数据库或其他 Analysis Services 数据库内不同多维数据集中的另一个度量值组。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
   
  Microsoft 建议原始和链接度量值组驻留于在同一台服务器上运行的解决方案中。 链接到位于远程服务器上的度量值组在未来版本中计划不推荐使用（请参阅 [SQL Server 2016 中不推荐使用的 Analysis Services 功能](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)）。  
   

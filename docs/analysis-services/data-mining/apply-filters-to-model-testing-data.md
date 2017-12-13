@@ -2,12 +2,12 @@
 title: "应用筛选器以测试数据创建模型 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0a9ffaeaeaffb9a93e36f865a6b3e7a0647befa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>将筛选器应用于模型测试数据
-  在指定测试模型时使用的外部数据源时，可以选择应用筛选器以限制输入数据。 例如，您可能想要专门针对有关某一收入范围的客户的预测来测试模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]指定要在测试模型中使用的外部数据源时，可以选择应用筛选器以限制输入的数据。 例如，您可能想要专门针对有关某一收入范围的客户的预测来测试模型。  
   
  例如，在 Adventure Works 目标邮件方案中，你可以对 ProspectiveBuyer（这是包含测试数据的表）创建一个如下的筛选表达式并按收入范围来限制测试事例：  
   

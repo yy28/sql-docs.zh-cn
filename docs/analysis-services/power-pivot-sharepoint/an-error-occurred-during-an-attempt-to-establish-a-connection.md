@@ -2,12 +2,12 @@
 title: "在尝试建立连接的过程出错 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbc70ccf710772ba1b32abe5b65858d95ef2b38e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0f5cf8de15fdbb9eed6fae4cf4ccd17c3d99e56d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>在尝试建立连接的过程时出错
-  如果你在未安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器上查询 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据，则系统会生成此错误。 如果 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务停止运行，或想要尝试查看旧版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据，则系统也会生成此错误。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果你查询，则会发生此错误[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]不具有的服务器上的数据[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 安装。 如果 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务停止运行，或想要尝试查看旧版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据，则系统也会生成此错误。  
   
 ## <a name="details"></a>详细信息  
   

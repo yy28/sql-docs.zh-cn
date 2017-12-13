@@ -2,12 +2,12 @@
 title: "启动或停止 Power Pivot for SharePoint Server |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a262f8ac21748942f36a74773eab898ee321ae57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cceb9ce47e059750e1d4cb8dc3fe3b1d45444f82
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>启动或停止 Power Pivot for SharePoint Server
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务和 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例在同一台本地应用程序服务器上一起运行，以支持 SharePoint 场内协调一致的请求和数据处理。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]系统服务和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]实例上相同的本地应用程序服务器，以支持 SharePoint 场中协调一致的请求和数据处理一起运行。  
   
  本主题包含以下各节：  
   

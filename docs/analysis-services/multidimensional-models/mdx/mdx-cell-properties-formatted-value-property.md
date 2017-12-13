@@ -2,12 +2,12 @@
 title: "基于 LANGUAGE 和 FORMAT_STRING 上 FORMATTED_VALUE |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 757e4e6dd284117d0e686e7908c7c71e1ba28636
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX 单元格属性-FORMATTED_VALUE 属性
-  FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]FORMATTED_VALUE 属性基于单元格的值、 FORMAT_STRING 和语言属性的交互。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
   
 ## <a name="value-formatstring-language-properties"></a>VALUE、FORMAT_STRING、LANGUAGE 属性  
  下表说明了这些属性的定义，可为我们将来合并使用这些属性提供帮助。  

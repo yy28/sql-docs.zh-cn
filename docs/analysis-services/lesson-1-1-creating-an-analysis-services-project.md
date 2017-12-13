@@ -2,12 +2,12 @@
 title: "创建 Analysis Services 项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>课程 1-1-创建 Analysis Services 项目
-在以下任务中，将使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 根据 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板创建名为 **Analysis Services Tutorial**的新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目。 “  项目”是相关对象的集合。 项目存在于解决方案中，而解决方案包括一个或多个项目。 有关详细信息，请参阅 [创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下面的任务中，你使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]创建新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目名为**Analysis Services Tutorial**，具体取决[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目模板。 “  项目”是相关对象的集合。 项目存在于解决方案中，而解决方案包括一个或多个项目。 有关详细信息，请参阅 [创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>创建新的 Analysis Services 项目  
   

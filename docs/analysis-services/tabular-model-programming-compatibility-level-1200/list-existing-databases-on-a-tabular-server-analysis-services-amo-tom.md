@@ -2,12 +2,12 @@
 title: "列出在表格服务器 (Analysis Services AMO-TOM) 上的现有数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79563e4a6bcbcbf5aa52e903b81cb9c3fcb9639c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>列出在表格服务器 (Analysis Services AMO-TOM) 上的现有数据库
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-如果你具有**服务器**对象，该对象连接到 Analysis Services 实例，可以循环访问**Server.Databases**列出 Anlaysis Services 实例所承载的所有数据库的集合。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果你具有**服务器**对象，该对象连接到 Analysis Services 实例，可以循环访问**Server.Databases**列出 Anlaysis Services 实例所承载的所有数据库的集合。 
 
 **Server.Databases**集合包含一个**数据库**托管在服务器上，而不考虑服务器模式 （Multidimensional 或 Tabular） 或数据库类型 （多维，每个数据库对象以前的 1200 表格或表格 1200年和更高版本）。 
 

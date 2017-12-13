@@ -2,12 +2,12 @@
 title: "创建两个表 (SSAS 表格) 之间的关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7580e80413bc84d67ae6cc65c9a6c3d86f3f1603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79aa7bc1e5dff61693c4d7f5a671bffa49416bf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
-  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果您的数据源中的表没有现有关系，或添加新表，可以使用在模型设计器中的工具以创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>创建两个表之间的关系  
   

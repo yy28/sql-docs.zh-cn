@@ -2,12 +2,12 @@
 title: "AssociationSet 元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae30edd006aa425ddd4f574ceb67f0534674f93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
-  **AssociationSet** 元素是一种用于定义关联的复杂类型。 在 CSDLBI 数据模型中，关联是指两个表之间的关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet**元素是用于定义关联的复杂类型。 在 CSDLBI 数据模型中，关联是指两个表之间的关系。  
   
  必须为模型中的每个唯一关系指定一个 **AssociationSet**。 **AssociationSet** 通过使用 **Association** 元素来定义端点。 **AssociationSet** 元素还定义有关数据模型中的关系及其使用情况的元数据。  
   

@@ -2,12 +2,12 @@
 title: "Microsoft 线性回归算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 455b2434c80491024b4e04ae5a807b3b2aa28b1c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 07588cbc2548028565db1f0d6da706d48bf0540b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体，有助于计算依赖变量和独立变量之间的线性关系，然后使用该关系进行预测。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]线性回归算法是一种变体[!INCLUDE[msCoName](../../includes/msconame-md.md)]有助于计算依赖和独立变量之间的线性关系，然后使用该关系进行预测的决策树算法。  
   
  该关系采用的表示形式是最能代表数据序列的线的公式。 例如，以下关系图中的线是数据最可能的线性表示形式。  
   

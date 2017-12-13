@@ -2,12 +2,12 @@
 title: "将属性绑定到名称列 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2866844f0004bc37c7bead147a88dbf009199495
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 819c027aa1adfbfae7d6057e988b1d93327233f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>特性属性-将属性绑定到名称列
-  此过程介绍如何使用维度设计器的 **“属性”** 窗格以及 **“对象绑定”** 对话框将属性手动绑定到名称列。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此过程描述如何将属性绑定到名称列手动使用**属性**窗格在维度设计器以及通过使用**对象绑定**对话框。  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>将属性绑定到名称列  
   

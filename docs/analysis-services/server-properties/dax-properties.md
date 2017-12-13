@@ -2,12 +2,12 @@
 title: "DAX 属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a48b3f89da00437cec8781e1ea35b6ea87f0c300
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8a94cb71ab8625a2a546e62f5dc828b605aeaa2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-properties"></a>DAX 属性
-   msmdsrv.ini 的 DAX 区域包含用于控制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中某些查询行为的设置，例如 DAX 查询结果集中返回行数量的上限。 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Msmdsrv.ini 的 DAX 部分包含用于控制中的某些查询行为的设置[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，例如 DAX 查询结果集中返回的行数的上限。 
   
   对于非常大的行集，例如 DirectQuery 模型中返回的行集，默认值 100 万行可能会不够。 如果出现这个错误：“外部数据源的查询结果集已超过了允许的最大行数(1000000) 行”，你就知道是否需要调整限制。
  

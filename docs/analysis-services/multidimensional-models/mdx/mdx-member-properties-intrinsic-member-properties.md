@@ -2,12 +2,12 @@
 title: "内部成员属性 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性的内部成员属性
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]公开内部属性，可以在查询返回其他数据或元数据用于在自定义应用程序，或以帮助进行模型调查或构造包含的维度成员。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
   
  内部属性包括 **ID**、 **KEY**、 **KEYx**和 **NAME**，这些是每个成员在任意级别公开的属性。 还可以返回位置信息，如 **LEVEL_NUMBER** 或 **PARENT_UNIQUE_NAME**等等。  
   

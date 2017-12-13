@@ -2,12 +2,12 @@
 title: "XML for Analysis 架构行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 架构行集
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口包括返回有关服务器状态、活动和对象的元数据的多个架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供程序包括返回有关服务器状态、 活动和对象元数据的架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
   
  通过架构行集还可以深入了解内部进程和操作，帮助您监视服务器并解决问题。 为了更好地支持即席管理任务，您可以对大多数架构行集运行动态管理视图 (DMV) 查询。 DMV 查询以易读的表格格式返回结果，方便您在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中查看。  
   

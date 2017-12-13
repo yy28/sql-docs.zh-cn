@@ -2,12 +2,12 @@
 title: "多维模型编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 25171096f715c5fc9aee4f9c4346a70508fa8f7d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-programming"></a>多维模型编程
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多个 API，您可以使用这些 API 对 Analysis Services 实例及其提供的多维数据进行编程。 本节介绍想要创建使用 Analysis Services 多维解决方案的自定义应用程序的开发人员可以使用的方法。 您可以使用这些信息来选择最能满足特定项目要求的编程接口。 Analysis Services 开发项目可基于在 Windows 平台或支持 HTTP 访问的其他平台上运行的托管或非托管代码。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供了几个 Api，你可以使用编程的 Analysis Services 实例和多维数据库它使可用。 本节介绍想要创建使用 Analysis Services 多维解决方案的自定义应用程序的开发人员可以使用的方法。 您可以使用这些信息来选择最能满足特定项目要求的编程接口。 Analysis Services 开发项目可基于在 Windows 平台或支持 HTTP 访问的其他平台上运行的托管或非托管代码。  
   
 ## <a name="in-this-section"></a>本节内容  
  [了解 Microsoft OLAP 体系结构](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  

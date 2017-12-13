@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3383f50142e04966a24515adcf08efbc4c5c60bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: HT
+ms.openlocfilehash: 64ce16cd3b23c1c0bf0526619f90c7028ff80df6
+ms.sourcegitcommit: 0431de135547f5aff48d6cad57090717f27bc063
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_replcounters
 |**复制速率 trans 数/秒**|**float**|平均每秒传送到分发数据库的事务数。|  
 |**复制延迟**|**float**|事务在分发前位于日志中的平均时间（秒）。|  
 |**Replbeginlsn**|**binary(10)**|日志中当前截断点的日志序列号 (LSN)。|  
-|**Replendlsn**|**binary(10)**|等待传送到分发数据库的下一个提交记录的 LSN。|  
+|**Replnextlsn**|**binary(10)**|等待传送到分发数据库的下一个提交记录的 LSN。|  
   
 ## <a name="remarks"></a>注释  
  **sp_replcounters**事务复制中使用。  

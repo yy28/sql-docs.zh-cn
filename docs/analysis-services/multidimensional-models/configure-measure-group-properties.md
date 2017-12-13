@@ -2,12 +2,12 @@
 title: "配置度量值组属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce67fa290953d89353fb1031fc0ca1ddfd5ea72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f650fd897c68e10044a02d55c08f9545a0e6046
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-measure-group-properties"></a>配置度量值组属性
-  通过使用度量值组属性，您可以定义度量值组的工作方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]度量值组具有使您能够定义度量值组的工作的属性。  
   
 ## <a name="measure-group-properties"></a>度量值组属性  
  度量值组属性确定整个度量值组的行为，并设置度量值组内度量值的某些属性的默认行为。  

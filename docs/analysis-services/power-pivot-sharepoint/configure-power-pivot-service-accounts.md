@@ -2,12 +2,12 @@
 title: "配置 Power Pivot 服务帐户 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>配置 Power Pivot 服务帐户
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服务是一种 Windows 服务，它提供应用程序服务器上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据处理和查询支持。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服务是一种 Windows 服务，它提供应用程序服务器上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据处理和查询支持。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
   
  必须为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序指定第二个帐户，这是在 SharePoint 场中基于应用程序池标识运行的共享 Web 服务。 在你使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]配置工具或 PowerShell 配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装时指定此帐户。  
   

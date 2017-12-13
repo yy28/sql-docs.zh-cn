@@ -2,12 +2,12 @@
 title: "数据挖掘体系结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-architecture"></a>数据挖掘体系结构
-  本节介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中托管的数据挖掘解决方案的体系结构。 本节中的主题介绍支持数据挖掘的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的逻辑和物理体系结构，并提供可用于与数据挖掘服务器通信以及通过本地或远程方式处理数据挖掘对象的客户端、访问接口和协议的相关信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本部分介绍的实例中托管的数据挖掘解决方案的体系结构[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 本节中的主题介绍支持数据挖掘的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的逻辑和物理体系结构，并提供可用于与数据挖掘服务器通信以及通过本地或远程方式处理数据挖掘对象的客户端、访问接口和协议的相关信息。  
   
  通常，SQL Server 数据挖掘作为一个服务来操作，该服务作为以多维模式运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的一部分来提供；因此，我们建议您还要查看“联机丛书”中介绍 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维解决方案的操作、维护和配置的以下各节。  
   

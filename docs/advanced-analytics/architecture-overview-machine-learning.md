@@ -3,8 +3,11 @@ title: "对 SQL Server 机器学习服务的体系结构概述 |Microsoft 文档
 ms.custom: 
 ms.date: 11/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9726ba8958f623d3c3c92d18f59f4c25d18fb0b0
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 6904c963c6178db530248f6189906e71df25308a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的体系结构概述 
 

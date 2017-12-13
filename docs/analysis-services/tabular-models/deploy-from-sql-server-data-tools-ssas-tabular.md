@@ -2,12 +2,12 @@
 title: "从 SQL Server Data Tools (SSAS 表格) 部署 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fb6f353bfe4cb3d116da7fa9cab5edaad3d4f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c74177752bf4a880f6857b987abfdc050a2f252
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>从 SQL Server Data Tools 进行部署
-  使用本主题中的任务在 SSDT 中使用部署命令部署表格模型解决方案。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使用本主题中的任务在 SSDT 中使用部署命令部署表格模型解决方案。  
   
 ##  <a name="bkmk_deploy"></a> 配置“部署选项”和“部署服务器”属性  
  在您部署表格模型解决方案之前，必须首先指定“部署选项”属性和“部署服务器”属性。 有关部署属性和设置的详细信息，请参阅[表格模型解决方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  

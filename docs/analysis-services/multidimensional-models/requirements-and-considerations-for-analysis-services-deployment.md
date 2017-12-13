@@ -2,12 +2,12 @@
 title: "要求和注意事项 Analysis Services 部署 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的要求和注意事项
-  解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]性能和可用性的解决方案取决于许多因素，包括基础硬件、 服务器部署拓扑、 你的解决方案 （例如，具有分区分布的特征的功能多个服务器或使用 ROLAP 存储需要直接访问关系引擎），服务级别协议和你的数据模型的复杂性。  
   
 ## <a name="memory-and-processor-requirements"></a>内存和处理器要求  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在以下情况下需要更多的内存和处理器资源：  

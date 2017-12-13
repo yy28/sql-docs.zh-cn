@@ -2,12 +2,12 @@
 title: "挖掘结构和结构列的属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>挖掘结构和结构列的属性
-  可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以设置或通过更改挖掘结构以及其关联的列和嵌套的表的属性**挖掘结构**数据挖掘设计器选项卡。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
   
 > [!NOTE]  
 >  如果更改挖掘结构中的任何属性的值，即使是名称或说明等元数据，也必须首先重新处理该挖掘结构及其模型，然后才能查看或查询模型。  

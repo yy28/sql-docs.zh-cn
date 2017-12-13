@@ -2,12 +2,12 @@
 title: "Microsoft 聚类分析算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 聚类分析算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种“分段”或“聚类分析”算法，它遍历数据集中的事例，以将它们分组到包含相似特征的分类中。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法是*分段*或*群集*循环访问数据集将它们分组到包含类似的特征的群集中的用例的算法。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
   
  聚类分析模型标识数据集中可能无法通过随意观察在逻辑上得出的关系。 例如，轻松就能猜想到，骑自行车上下班的人的居住地点通常离其工作地点不远。 但该算法可以找出有关骑自行车上下班人员的其他并不明显的特征。 在下面的关系图中，分类 A 表示有关通常开车上班人员的数据，而分类 B 表示通常骑自行车上班人员的数据。  
   

@@ -2,12 +2,12 @@
 title: "编程 AMO 安全对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b81d5b81df182309384c5d647a4251688bb1489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8733a0255c22701009baf79892d7ff6f83b9c87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-security-objects"></a>AMO 安全对象编程
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，编程安全对象或运行使用 AMO 安全对象的应用程序需要是服务器管理员组或数据库管理员组的成员。 服务器管理员和数据库管理员将访问级别由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，编程安全对象或运行使用 AMO 安全对象的应用程序需要是服务器管理员组或数据库管理员组的成员。 服务器管理员和数据库管理员将访问级别由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，对所有对象的用户访问权限是通过分配给该对象的角色和权限的组合获得的。 有关详细信息，请参阅[AMO 安全类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)。  
   

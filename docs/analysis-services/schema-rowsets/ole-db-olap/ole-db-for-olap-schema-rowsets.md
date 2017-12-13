@@ -2,12 +2,12 @@
 title: "OLE DB for OLAP 架构行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f06af3341034ccc9ddebe1ac6a130be705bdd0cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ef17308efb95b03a96a37089d3870e97d1bd7dad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB for OLAP 架构行集
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持下列 OLE DB for OLAP 架构行集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供程序支持以下 OLE DB OLAP 架构行集。  
   
 > [!NOTE]  
 >  若要检查特定数据源提供程序是否支持行集，请使用**DISCOVER_ENUMERATIONS**行集[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  

@@ -2,12 +2,12 @@
 title: "使用 AMO 的管理任务进行编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e585db13b3c3562cd454ef41fdbb7d60bbd94c26
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72c1e8f8b21dbdaed355bd72fe89dc9976a49137
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>使用 AMO 对管理任务进行编程
-  分析管理对象 (AMO) 是在客户端应用程序中用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的编程库。 在本节中，您将了解如何使用 AMO 对象进行编程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理对象 (AMO) 是从客户端应用程序用于管理一个编程库[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 在本节中，您将了解如何使用 AMO 对象进行编程。  
   
  可以将 AMO 库视为用于完成特定任务的逻辑相关对象组。  
   

@@ -2,12 +2,12 @@
 title: "Microsoft 线性回归算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 线性回归算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 Microsoft 决策树算法的特殊版本，该线性回归算法针对连续属性的建模对进行了优化。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]线性回归算法是 Microsoft 决策树算法针对连续属性的建模对进行了优化的特殊版本。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>线性回归算法的实现  
  Microsoft 决策树算法可用于多种任务：线性回归、分类或关联分析。 若要为进行线性回归而实现此算法，应控制算法的参数以限制树的增长，并使模型中的所有数据都位于单个节点中。 也就是说，虽然线性回归基于决策树，但该树仅包含一个根节点而没有任何分支：所有数据都位于根节点中。  

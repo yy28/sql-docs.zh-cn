@@ -2,12 +2,12 @@
 title: "在查询中的嵌套 select 语句 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
-  嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]嵌套 select 语句表达式是用于从计算外部的外部 SELECT 的位置来限制的多维数据集空间的嵌套 SELECT 表达式。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
   
 ## <a name="subselects-by-example"></a>嵌套 select 语句示例  
  让我们从一个示例开始，了解嵌套 select 语句如何帮助生成我们想要显示的结果。 假定要求您生成一个表，该表显示前 10 种产品在几年中的销售行为。  

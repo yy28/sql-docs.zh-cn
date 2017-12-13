@@ -2,12 +2,12 @@
 title: "从客户端应用程序 (Analysis Services) 连接 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
-  如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果你不熟悉 Analysis Services，信息用于本主题中连接到的现有实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用常用工具和应用程序。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
   
 -   [使用 SQL Server Management Studio (SSMS) 进行连接](#bkmk_SSMS)  
   

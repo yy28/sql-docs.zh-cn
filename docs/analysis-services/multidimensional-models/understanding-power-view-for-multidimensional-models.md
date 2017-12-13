@@ -2,12 +2,12 @@
 title: "了解多维模型的 Power View |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35ac97b27348e930bdf69a7aaf0d15c3f2728de6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f12f3aaada759d91c77d56bb4fc199d2b038eab4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
-  本文介绍 SQL Server 中用于多维模型的 Power View 功能，并为希望在组织中实施多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本文介绍 SQL Server 中的多维模型功能 Power View 和 BI 专业人员想要在其组织中实现适用于多维模型的 Power View 和管理员提供重要信息。  
   
  多维模型提供业界领先的 OLAP 数据建模、存储和分析解决方案。 SQL Server 中的多维模型通过使用 Microsoft Power View 支持即席数据分析、探索和可视化。  
   

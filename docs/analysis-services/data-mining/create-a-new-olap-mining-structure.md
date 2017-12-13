@@ -2,12 +2,12 @@
 title: "创建新的 OLAP 挖掘结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1aceaa55b007eaf43a9a44540284ba95786fca63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构
-  您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导来创建使用来自多维模型的数据的挖掘结构。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用中的数据挖掘向导[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]来创建挖掘结构使用多维模型中的数据。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构  
   

@@ -2,12 +2,12 @@
 title: "配置设置参考 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>配置设置参考 (Power Pivot for SharePoint)
-  本主题提供有关 SharePoint 场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序使用的配置设置的参考文档。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题提供使用配置设置的参考文档[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务在 SharePoint 场中的应用程序。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
   
  配置设置是针对每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序进行设置的。 在场中，可以创建多个服务应用程序，从而配置同一物理服务实例的独立逻辑实例。 配置设置存储在为你配置的每个服务应用程序创建的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 应用程序数据库中。  
   

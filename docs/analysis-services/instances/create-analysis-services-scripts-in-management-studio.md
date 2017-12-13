@@ -2,12 +2,12 @@
 title: "在 Management Studio 中创建 Analysis Services 脚本 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 22811448d173c9f55229557dfed64e16ead18706
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55f3f1485ba2e684371444ec6f40696b3f853fcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中创建 Analysis Services 脚本
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包括您可以用来对 Analysis Services 对象和任务编写脚本的脚本生成功能、模板和编辑器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]包括脚本生成功能、 模板和可用于脚本 Analysis Services 对象和任务的编辑器。  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>在 Management Studio 中编写 Analysis Services 任务的脚本  
  通过单击面向任务的对话框中的某一个脚本选项，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写任务脚本。 用来执行备份或还原数据库、处理对象或设计聚合之类的任务的所有对话框都在顶部包括一个脚本选项。 选择其中一个选项可以根据对话框中的信息和设置生成一个 XMLA 脚本。  

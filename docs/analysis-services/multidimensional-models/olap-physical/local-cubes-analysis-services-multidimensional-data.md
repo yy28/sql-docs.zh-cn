@@ -2,12 +2,12 @@
 title: "本地多维数据集 (Analysis Services-多维数据) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5872bd5a1efda8d8add71bc1ce0e089785352e11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06178b8d1023a95433d76543ff05db4d9c654a27
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
-  若要创建、更新或删除本地多维数据集，必须编写并执行 ASSL 脚本或 AMO 程序。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]若要创建、 更新或删除本地多维数据集，你必须编写和执行 ASSL 脚本或 AMO 程序。  
   
  本地多维数据集和本地挖掘模型允许在客户端工作站与网络的连接断开时对该工作站进行分析。 例如，客户端应用程序可能调用 OLE DB for OLAP 9.0 访问接口 (MSOLAP.3)，该接口将加载本地多维数据集引擎以创建和查询本地多维数据集，如下图所示：  
   

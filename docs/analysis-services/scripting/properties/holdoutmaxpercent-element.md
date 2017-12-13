@@ -2,12 +2,12 @@
 title: "HoldoutMaxPercent 元素 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4edfc8e9942dbbfd8408949ed03ee3de366c32dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5b68420b936ca796cea7fcd267c99d455bf16d88
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 元素
-  指定数据源中将用于维持部分包含的测试组的事例的最大百分比[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定数据源中将用于维持部分包含的测试组的事例的最大百分比[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
   
 ## <a name="syntax"></a>语法  
   

@@ -2,12 +2,12 @@
 title: "多维模型中的分区 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，“分区”  提供加载到度量值组中的事实数据的物理存储。 对于每个度量值组都会自动创建一个分区，但是，常见的情况是创建更多分区以进一步对数据进行分段，从而使处理更高效，查询性能更佳。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、*分区*提供事实数据加载到度量值组的物理存储。 对于每个度量值组都会自动创建一个分区，但是，常见的情况是创建更多分区以进一步对数据进行分段，从而使处理更高效，查询性能更佳。  
   
  处理更高效是因为分区可以在一个或多个服务器上以并行方式独立处理。 查询运行得更快是因为每个分区都可配置为具有存储模式和聚合优化，从而缩短响应时间。 例如，为包含较新数据的分区选择 MOLAP 存储通常比选择 ROLAP 存储要快。 同样，如果您按日期选择分区，则包含较新数据的分区比包含较旧数据且较少访问的分区可进行更多优化。 请注意，不断变化的存储和按分区的聚合设计对以后的合并操作有不利影响。 在优化各个分区之前，请务必考虑合并操作对于您的分区管理策略而言是否是必要的。  
   

@@ -2,12 +2,12 @@
 title: "Analysis Services 实例管理 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7768246432f2711f7e3d99c046493e39b7e4ecf9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6bdd35da02c1679607ce89002a6a2c3edc569c0c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 实例管理
-  Analysis Services 的实例是作为操作系统服务运行的 **msmdsrv.exe** 可执行程序的副本。 每个实例完全独立于同一服务器上的其他实例，且有自己的配置设置、权限、端口、启动帐户、文件存储和服务器模式属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 的实例是一份**msmdsrv.exe**作为操作系统服务运行的可执行文件。 每个实例完全独立于同一服务器上的其他实例，且有自己的配置设置、权限、端口、启动帐户、文件存储和服务器模式属性。  
   
  每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都作为 Windows 服务 (Msmdsrv.exe) 在定义的登录帐户的安全上下文中运行。  
   

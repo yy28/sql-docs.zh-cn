@@ -2,12 +2,12 @@
 title: "数据挖掘编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93e263ee6ed7e8b3eb5bdf0f6596f5ddf636f199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7deb7ccd395a6dda75ac443f17f4e2b516b99c11
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
-  如果您觉得 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的内置工具和查看器不符合您的要求，您可以编写自己的扩展插件代码来扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 如果采用这种方法，您有两种选择：  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]如果你发现的内置工具和中的查看者[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不能满足你的要求，你可以扩展的能力[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]通过编码自己的扩展。 如果采用这种方法，您有两种选择：  
   
 -   **XMLA**  
   

@@ -2,12 +2,12 @@
 title: "Power 查看报表属性 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>Power View 的报表属性 (SSAS 表格)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 为数据分析员、业务决策者和信息工作者之类的业务用户提供直观的即席生成报表功能。 用户可轻松地从基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的表格模型或使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建然后部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 实例的表格模型中创建数据视图，并与之交互。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一种从 SharePoint Server 2010 或更高版本启动的基于浏览器的 Silverlight 应用程序。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]提供直观即席报告为业务用户，例如数据分析师，业务决策制定者和信息工作者。 用户可轻松地从基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的表格模型或使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建然后部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 实例的表格模型中创建数据视图，并与之交互。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一种从 SharePoint Server 2010 或更高版本启动的基于浏览器的 Silverlight 应用程序。  
   
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创建表格模型项目时，可以配置一些对于 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报告来说唯一的报告属性。 本节中的主题说明如何优化模型，以提高 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中的报表体验。  
   

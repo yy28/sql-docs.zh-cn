@@ -2,12 +2,12 @@
 title: "MDX (Analysis Services) 中的重要概念 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
-  在使用多维表达式 (MDX) 查询多维数据或创建多维数据集中的 MDX 表达式之前，有必要了解多维的概念和术语。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]你可以使用多维表达式 (MDX) 查询多维数据，或者创建多维数据集中的 MDX 表达式之前，它有助于了解多维概念和术语。  
   
  最好从已了解的数据汇总示例开始，然后查看 MDX 如何与之相关。 这是一个在 Excel 中创建的数据透视表，由 Analysis Services 示例多维数据集中的数据填充。  
   

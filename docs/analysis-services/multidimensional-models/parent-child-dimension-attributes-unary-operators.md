@@ -2,12 +2,12 @@
 title: "父子维度中的一元运算符 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ceea7fc4a5d84d571a45c00f2e6291405544f3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae826437d790e807998d223f9c8999582311fe7a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>父-子维度属性的一元运算符
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中包含父子关系的维度中，可以为父属性的所有非计算成员指定将确定其自定义汇总的一元（或自定义汇总）运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]维度包含中的父-子关系中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您指定一元 （或自定义汇总） 的父属性的所有非计算成员确定自定义汇总运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
   
  可以在数据源视图的维度表中创建和指定作为一元运算符列的命名计算。 最简单的表达式（如“+”）对所有成员都将返回相同的运算符。 但是，可以使用任何表达式，只要它为每个成员都返回运算符。  
   

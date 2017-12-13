@@ -2,12 +2,12 @@
 title: "数据挖掘模型查看器 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d511fe97903969218f9f052132fc0521baa976b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b065a7c059cf4c3e7ba79c0c03ef7b96d4928bf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-model-viewers"></a>数据挖掘模型查看器
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中对数据挖掘模型进行定型后，可以浏览该模型以查找所关注的趋势。 由于挖掘模型的结果比较复杂并且原始格式的结果难以理解，因此以可视化方式调查数据通常是了解算法在该数据内部发现的规则和关系的最简单方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]训练中的数据挖掘模型后[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，你可以浏览该模型以查找所关注的趋势。 由于挖掘模型的结果比较复杂并且原始格式的结果难以理解，因此以可视化方式调查数据通常是了解算法在该数据内部发现的规则和关系的最简单方法。  
   
  用于生成模型的每种算法将返回不同类型的结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为每种算法提供单独的查看器。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览挖掘模型时，该模型会使用模型的相应查看器，显示在数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。  
   

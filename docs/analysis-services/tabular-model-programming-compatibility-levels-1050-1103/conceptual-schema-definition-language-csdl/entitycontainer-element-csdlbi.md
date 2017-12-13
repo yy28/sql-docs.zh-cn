@@ -2,12 +2,12 @@
 title: "EntityContainer 元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
-  EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContainer，用于定义单个数据模型中的实体集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntityContainer 元素是一个复杂类型，基于 CSDL 类型，EntityContainer，定义单个数据模型中实体的集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
   
  EntityContainer 必须指定数据模型中包含的每种实体类型，包括表和关系。 有关这些模型实体的信息是通过列出此类型的 Entity 元素的子实体指定的。 有关详细信息，请参阅 [EntityType 元素 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)。  
   

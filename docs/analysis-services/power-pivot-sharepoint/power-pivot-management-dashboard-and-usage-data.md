@@ -2,12 +2,12 @@
 title: "Power Pivot 管理仪表板和使用情况数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0d275e7cbe68ddd7dca965d50d05d1777711b48e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理仪表板和使用情况数据
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板是 SharePoint 管理中心中预定义报表和 Web 部件的集合，可以帮助你管理 SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理仪表板是预定义的报表的集合和在 SharePoint 管理中心的 web 部件，可帮助你管理 SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
   
   
 ##  <a name="prereq"></a> 先决条件  

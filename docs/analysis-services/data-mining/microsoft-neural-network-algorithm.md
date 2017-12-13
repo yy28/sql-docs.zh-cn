@@ -2,12 +2,12 @@
 title: "Microsoft 神经网络算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 神经网络算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法是用于机器学习的流行且适应性强的神经网络体系结构实现。  该算法的工作原理是针对可预测属性的每个可能状态来测试输入属性的每个可能状态，并基于定型数据计算每个组合的概率。 可以将这些概率用于分类或回归任务，以便基于某些输入属性来预测结果。 神经网络还可以用于关联分析。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法是机器学习的常用和自适应神经网络体系结构的实现。  该算法的工作原理是针对可预测属性的每个可能状态来测试输入属性的每个可能状态，并基于定型数据计算每个组合的概率。 可以将这些概率用于分类或回归任务，以便基于某些输入属性来预测结果。 神经网络还可以用于关联分析。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建挖掘模型时，可以包含多个输出，该算法会创建多个网络。 包含在单个挖掘模型中的网络数取决于 输入列中的状态（或属性值）数，以及挖掘模型使用的可预测列数和这些列中的状态数。  
   

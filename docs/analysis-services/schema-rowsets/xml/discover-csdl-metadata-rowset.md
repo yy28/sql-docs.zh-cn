@@ -2,12 +2,12 @@
 title: "DISCOVER_CSDL_METADATA 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行集
-  返回有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据模型（表格或多维）的信息，同时提供 CSDLBI 格式（带 BI 注释的概念性架构定义语言）的模型定义。 CSDLBI 基于 CSDL，CSDL 是实体数据框架使用的 XML 架构，用于在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器和 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 客户端之间进行通信。 商业智能 (BI) 注释提供有关表格模型以及其中对象的其他元数据。 有关表格数据模型的详细信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回有关的信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据模型 （表格或多维），提供 CSDLBI 格式 （概念性架构定义语言带 BI 注释） 中的模型的定义。 CSDLBI 基于 CSDL，CSDL 是实体数据框架使用的 XML 架构，用于在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器和 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 客户端之间进行通信。 商业智能 (BI) 注释提供有关表格模型以及其中对象的其他元数据。 有关表格数据模型的详细信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
   
  该命令的安全上下文影响返回的行集。 对于 Analysis Services 实例的读取权限是从服务器获取 CSDL 定义所必需的。  
   

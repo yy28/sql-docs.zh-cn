@@ -2,12 +2,12 @@
 title: "运行状况规则参考 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>运行状况规则参考 (Power Pivot for SharePoint)
-  本参考主题说明由 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 安装添加的 SharePoint 运行状况规则。 这些规则用于报告有关 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务应用程序或其关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器运行状况、可用性或配置问题。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本参考主题介绍 SharePoint 运行状况规则是通过添加[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint 安装。 这些规则用于报告有关 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务应用程序或其关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器运行状况、可用性或配置问题。  
   
  下表按规则在 SharePoint 管理中心的“运行状况分析器规则定义”页中显示的顺序列出这些规则。 对于可配置的规则，您可以更改触发规则的阈值。 有关详细信息，请参阅 [配置 PowerPivot 运行状况规则](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。 “自动修复”指示有内置解决方法可以解决问题，您可以从“问题报告”页单击该方法。  
   

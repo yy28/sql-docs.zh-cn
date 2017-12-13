@@ -2,12 +2,12 @@
 title: "IntermediateGranularityAttributeID 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: abc20aa4225846d039346f56b762875efcc5cfae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0c30785a5f0c46894dd65c1d28cd7cd3f67cd7e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="intermediategranularityattributeid-element-assl"></a>IntermediateGranularityAttributeID 元素 (ASSL)
-  包含中间多维数据集维度中的粒度属性的标识符 (ID)，该标识符用于将引用维度与中间维度相关联。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含用于与引用维度的中间维度的中间多维数据集维度中的粒度属性的标识符 (ID)。  
   
 ## <a name="syntax"></a>语法  
   

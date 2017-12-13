@@ -2,12 +2,12 @@
 title: "Microsoft Naive Bayes 算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种基于贝叶斯定理的分类算法，可用于探索性和预测性建模。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是基于 Bayes 的定理分类算法，它可以用于探索和预测建模。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。  
   
  和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法相比，此算法所需运算量较少，因而有助于快速生成挖掘模型，从而发现输入列与可预测列之间的关系。 可以使用该算法进行初始数据探测，然后根据该算法的结果使用其他运算量较大、更加精确的算法创建其他挖掘模型。  
   

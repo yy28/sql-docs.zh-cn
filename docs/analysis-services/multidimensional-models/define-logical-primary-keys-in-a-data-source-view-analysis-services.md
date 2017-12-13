@@ -2,12 +2,12 @@
 title: "在数据源视图 (Analysis Services) 中定义逻辑主键 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6ba2ab3a2fb37400a47b9d54981d48190f7f0e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d38773feb45ada119da338ccf022630b4a781b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑主键 (Analysis Services)
-  数据源视图向导和数据源视图设计器自动根据基础数据库表为添加到数据源视图的表定义主键。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据源视图向导和数据源视图设计器自动定义的表添加到数据源视图基于基础数据库表的主键。  
   
  有时，您可能需要在数据源视图中手动定义主键。 例如，出于性能或设计方面的原因，数据源中的表可能没有显式定义的主键列。 命名查询和视图也可能遗漏表的主键列。 如果表、视图或命名查询未定义物理主键，则可以在数据源视图设计器中为表、视图或命名查询手动定义一个逻辑主键。  
   

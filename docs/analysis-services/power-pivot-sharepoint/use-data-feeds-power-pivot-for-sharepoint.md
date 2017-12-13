@@ -2,12 +2,12 @@
 title: "使用数据馈送 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用数据馈送 (Power Pivot for SharePoint)
-  数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，数据馈送可帮助你将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据馈送是一个或多个数据流从联机数据源生成并流向目标文档或应用程序。 如果使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，数据馈送可帮助你将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
   
  数据馈送的使用方式取决于您使用的是支持 Atom 数据馈送的应用程序中的内置导出功能，还是创建并使用自定义数据服务。 能够发布并读取 Atom XML 数据的应用程序提供了无缝的数据传输，可对用户隐藏数据源和数据服务的机制。 对于用户而言，他或她只是将数据从一个应用程序移到另一个应用程序。  
   

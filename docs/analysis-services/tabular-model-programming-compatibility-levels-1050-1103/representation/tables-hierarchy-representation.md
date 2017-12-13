@@ -2,12 +2,12 @@
 title: "层次结构表示形式 （表格） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 843a0f870ad9b30ad4746bbe9913de845bfc30e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 58ee908dc3dbf745a15c8dfa5f44d711f91c392b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---hierarchy-representation"></a>表的层次结构表示形式
-  在表格模型中，层次结构是根据用户选定的值从一个属性导航到另一个属性的路径。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在表格模型层次结构是一个属性从到另一个用户选择的值为基础的导航路径。  
   
 ## <a name="hierarchy-representation"></a>层次结构表示形式  
   

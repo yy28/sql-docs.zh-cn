@@ -2,12 +2,12 @@
 title: "通过使用本机查询 (Analysis Services) 导入数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,17 +16,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b4d0672b30747729d324386e1f761a377e15ad2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50db699cc1db1af428524c3f9c263569d7a7bbc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用本机查询导入数据
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-对于表格 1400年模型中，Visual Studio 的 Analysis Services 项目中的新获取数据体验提供巨大的灵活性，可以混合应用程序如何在你的数据导入过程中。 本指南介绍了创建到数据源的连接，然后创建本机 SQL 查询，以便指定数据导入。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]对于表格 1400年模型中，Visual Studio 的 Analysis Services 项目中的新获取数据体验提供巨大的灵活性，可以混合应用程序如何在你的数据导入过程中。 本指南介绍了创建到数据源的连接，然后创建本机 SQL 查询，以便指定数据导入。
 
 若要完成本文中所述的任务，请确保使用最新版本的 SSDT。 如果你使用 Visual Studio 2017，请确保你已下载并安装年 9 月 2017年或更高版本的 Microsoft Analysis Services 项目 VSIX。
 

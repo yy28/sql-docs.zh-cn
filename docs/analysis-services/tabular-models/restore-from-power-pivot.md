@@ -2,12 +2,12 @@
 title: "从 Power Pivot 还原 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88cd0379f0d23f819ab362a273c58bb40db81fa9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restore-from-power-pivot"></a>从 Power Pivot 还原
-  你可以使用 SQL Server Management Studio 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”功能针对 Analysis Services 实例（在表格模式下运行）创建新的表格模型数据库，或从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿 (.xlsx) 还原到现有数据库。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]你可以使用从还原[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]功能在 SQL Server Management Studio （在表格模式下运行），Analysis Services 实例上创建新的表格模型数据库或还原到现有数据库从[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿 (.xlsx)。  
   
 > [!NOTE]  
 >  SQL Server Data Tools 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入”项目模板提供了类似功能。 有关详细信息，请参阅 [从 PowerPivot 导入（SSAS 表格）](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)。  

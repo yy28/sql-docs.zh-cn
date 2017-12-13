@@ -2,12 +2,12 @@
 title: "支持的数据源 (SSAS-多维) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69f1519d6b3c03294469707a7e1485955f864a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 774c6a7a3de377c9bfa6073b26e8ce45d7b3477e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>支持的数据源（SSAS - 多维）
-  本主题介绍可以在多维模型中使用的数据源的类型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍你可以使用多维模型中的数据源的类型。  
   
 ##  <a name="bkmk_supported_ds"></a> 支持的数据源  
  可以从下表的数据源中检索数据。 在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，安装程序不安装对每种数据源列出的访问接口。 某些访问接口可能已随其他应用程序安装在您的计算机上；否则您需要下载并安装这些访问接口。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |数据源|版本|文件类型|提供程序*|  
 |Access 数据库|Microsoft Access 2010、2013、2016|.accdb 或 .mdb|Microsoft Jet 4.0 OLE DB 访问接口|  
-|SQL Server 关系数据库*|Microsoft SQL Server 2008、2008 R2、2012、2014、2016、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 、Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 注意：有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请访问 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)。<br /><br /> 注意：Analytics Platform System (APS) 旧称为 SQL Server 并行仓库一体机 (PDW)。 最初，从 Analysis Services 连接到 PDW 需要特殊的数据提供程序。 在 SQL Server 2012 中，此提供程序进行了替换。 对于 SQL Server 2012 及更高版本，需要使用 SQL Server Native Client 连接到 PDW/APS。 有关 APS 的详细信息，请访问网站 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)。|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 11.0 Client OLE DB 访问接口<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
+|SQL Server 关系数据库*|Microsoft SQL Server 2008、 2008 R2、 2012年、 2014年、 2016， [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，Azure SQL 数据仓库，Microsoft Analytics Platform System (AP)<br /><br /> <br /><br /> 注意：有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的详细信息，请访问 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)。<br /><br /> 注意： 分析平台系统 (AP) 是以前的名称作为 SQL Server 并行数据仓库 (PDW)。 最初，从 Analysis Services 连接到 PDW 需要特殊的数据提供程序。 在 SQL Server 2012 中，此提供程序进行了替换。 对于 SQL Server 2012 及更高版本，需要使用 SQL Server Native Client 连接到 PDW/APS。 有关 APS 的详细信息，请访问网站 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)。|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 11.0 Client OLE DB 访问接口<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |Oracle 关系数据库|Oracle 9i、10g、11g、12g|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据访问接口<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 关系数据库|Teradata V2R6、V12|（不适用）|TDOLEDB OLE DB 访问接口<br /><br /> Teradata 的 .NET 数据访问接口|  
 |Informix 关系数据库|V11.10|（不适用）|Informix OLE DB 访问接口|  

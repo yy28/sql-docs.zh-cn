@@ -2,12 +2,12 @@
 title: "属性 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efb844dd4888a93bf805a7b22a278366bdf5d388
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c17ebbb2e4e2e7d128c866ad9f38284a3166e1a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-ssas-tabular"></a>属性（SSAS 表格）
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的表格模型项目具有不同的属性，这些属性定义项目、模型、报告和部署的行为。 属性设置以 XML 格式存储于 Model.bim 文件中，但是，本节中描述的所有属性都可以在 **的** “属性” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]窗口中配置。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]中的表格模型项目[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]具有定义的项目、 模型、 报告和部署行为的各种属性。 属性设置以 XML 格式存储于 Model.bim 文件中，但是，本节中描述的所有属性都可以在 **的** “属性” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]窗口中配置。  
   
 ## <a name="related-tasks"></a>相关任务  
   

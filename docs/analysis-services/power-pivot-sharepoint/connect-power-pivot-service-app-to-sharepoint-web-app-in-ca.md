@@ -2,12 +2,12 @@
 title: "Power Pivot 服务应用程序连接到 CA 中的 SharePoint Web 应用 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 673a35deddae2b67e6dfcdee51ecb1d9ca666cdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Power Pivot 服务应用程序连接到 CA 中的 SharePoint Web 应用
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可由场中任意数目的 SharePoint Web 应用程序使用。 若要使 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可用，请将其添加到服务关联列表中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序可由任意数量的场中的 SharePoint Web 应用程序。 若要使 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可用，请将其添加到服务关联列表中。  
   
 > [!IMPORTANT]  
 >  默认组中必须有一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，以确保 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板正常工作。 不要向默认组添加多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 添加同一服务应用程序类型的多个条目是不支持的配置并且可能导致错误。 如果您要创建其他服务应用程序，请将它们添加到自定义列表。  

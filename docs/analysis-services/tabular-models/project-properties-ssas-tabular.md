@@ -2,12 +2,12 @@
 title: "项目属性 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66a5bfd14d877229f51a257c4775cf9873b854db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aeddf6f4c7739f86bf7d5c597684d084a7227848
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="project-properties-ssas-tabular"></a>项目属性（SSAS 表格）
-  本主题介绍模型项目属性。 每个表格模型项目都具有一些指定如何部署项目和模型的部署选项和部署服务器属性。 例如，模型将要部署到的服务器和已部署的模型数据库名称。 这些设置与影响模型工作区数据库的模型属性不同。 此处所述的项目属性位于模式属性对话框中，不同于用于显示其他属性类型的属性窗口。 若要显示模式项目属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击该项目，然后单击“属性”。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍模型项目属性。 每个表格模型项目都具有一些指定如何部署项目和模型的部署选项和部署服务器属性。 例如，模型将要部署到的服务器和已部署的模型数据库名称。 这些设置与影响模型工作区数据库的模型属性不同。 此处所述的项目属性位于模式属性对话框中，不同于用于显示其他属性类型的属性窗口。 若要显示模式项目属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击该项目，然后单击“属性”。  
   
  本主题的内容：  
   

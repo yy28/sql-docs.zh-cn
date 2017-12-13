@@ -2,12 +2,12 @@
 title: "Power Pivot 身份验证和授权 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 身份验证和授权
-  在 SharePoint 2010 场中运行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 内容和操作，因为所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务执行所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的 SharePoint 2010 场中运行的部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 内容和操作，因为所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务执行所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
   
  因为自助式数据分析需要与 Excel Services 进行集成，所以，为了确保 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的安全，还需要了解 Excel Services 安全性。 当用户查询与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据具有数据连接的数据透视表时，Excel Services 将数据连接请求转发给场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器以加载数据。 服务器之间的这种交互要求您了解如何配置两个服务器的安全设置。  
   

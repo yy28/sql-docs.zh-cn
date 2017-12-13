@@ -2,12 +2,12 @@
 title: "计算上下文 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 961f989f2b1973c162f08a89d083c947e56871de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fe1f8809fc966d9801a17dee7cd7960116fa331
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculation-context"></a>计算上下文
-  计算上下文是多维数据集的已知子空间，在其中，将对表达式进行计算，并且所有坐标或者是显式已知的，或者可以从表达式派生。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]计算上下文是已知子空间，其中计算表达式，所有坐标或者是显式已知或可从表达式派生的多维数据集。  
   
 ## <a name="determining-the-calculation-context"></a>确定计算上下文  
  每个集、成员、元组或数值函数均在整个 MDX 表达式或语句的上下文中执行。 当参数（例如元组）传递到函数时，仅显式提供多维数据集空间中的若干个坐标。 其他坐标根据当前计算上下文来获取。  

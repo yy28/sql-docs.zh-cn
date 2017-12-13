@@ -2,12 +2,12 @@
 title: "第 6 课： 定义计算 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 124ccfaa310ac6bc356cfaf30a7dc5c331b563a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
-在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本课程中，你学习如何定义计算的多维表达式 (MDX) 表达式或脚本。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
   
 在“多维数据集设计器”中定义新的计算时，会将该计算添加到“多维数据集设计器”的“计算”选项卡上的“脚本组织程序”窗格中，并在“计算表达式”窗格中的计算窗体内显示特定计算类型的字段。 计算将按照它们在“脚本组织程序”窗格中列出的顺序执行。 可以重新排列计算，方法是右键单击特定计算，再选择“上移”或“下移”，或者单击特定的计算，再使用“计算”选项卡的工具栏上的“上移”或“下移”图标。  
   

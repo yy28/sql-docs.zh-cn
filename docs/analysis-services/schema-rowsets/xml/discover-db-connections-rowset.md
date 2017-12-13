@@ -2,12 +2,12 @@
 title: "DISCOVER_DB_CONNECTIONS 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6c6fbeac76e14dd410ed8dafcb739e5797cc270
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dba000772382088eccc9c4e4e3771d7918ee305d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS 行集
-  提供当前打开的服务器到数据库连接的资源使用情况和活动信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有关当前打开的连接，可从服务器到数据库的资源使用情况和活动信息。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_DB_CONNECTIONS**行集包含以下各列。  

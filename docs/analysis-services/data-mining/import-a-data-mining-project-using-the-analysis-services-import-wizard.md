@@ -2,12 +2,12 @@
 title: "导入数据挖掘项目使用 Analysis Services 导入向导 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5111073e53da22a27edfe9d3f3c13985236c0b15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
-  本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的模板“从服务器导入（多维和数据挖掘）项目”从另一台服务器上的现有数据挖掘项目导入元数据，来创建新的数据挖掘项目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍如何通过从现有数据挖掘项目在另一个服务器上，使用该模板后，导入元数据创建新的数据挖掘项目**从服务器 （多维和数据挖掘） 项目导入**，中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>从现有数据挖掘项目导入数据源、挖掘结构和挖掘模型  
  在使用模板“从服务器导入（多维和数据挖掘）项目”时，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 会创建一个新的数据挖掘项目，然后从指定的数据挖掘项目复制元数据。 该新项目包含与从中进行导入的 ssASnoversion 数据库相同的数据源、数据源视图、挖掘结构和挖掘模型。 但是，在您更新特定属性并处理对象之前将无法使用该项目，如下所述：  

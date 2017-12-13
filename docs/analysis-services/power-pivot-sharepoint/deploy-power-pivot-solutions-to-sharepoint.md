@@ -2,12 +2,12 @@
 title: "将 Power Pivot 解决方案部署到 SharePoint |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 206b31adec86e7ea2213746687d535d56ca3b617
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>将 Power Pivot 解决方案部署到 SharePoint
-  使用以下说明可手动部署两个解决方案包，这两个解决方案包将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能添加到 SharePoint Server 2010 环境中。 部署解决方案是在 SharePoint 2010 服务器上配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所需的步骤。 若要查看所需步骤的完整列表，请参阅 [在管理中心中管理和配置 PowerPivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用以下说明手动部署添加的两个解决方案包[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到 SharePoint Server 2010 环境的功能。 部署解决方案是在 SharePoint 2010 服务器上配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所需的步骤。 若要查看所需步骤的完整列表，请参阅 [在管理中心中管理和配置 PowerPivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
  此外，可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具来部署解决方案。 对于单服务器部署来说，使用配置工具更为容易且效率更高，但如果您喜欢使用熟悉的工具或者同时配置多个功能，则最好使用管理中心和 PowerShell。 有关使用配置工具的详细信息，请参阅 [PowerPivot 配置工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

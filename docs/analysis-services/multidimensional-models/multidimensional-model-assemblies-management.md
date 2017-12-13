@@ -2,12 +2,12 @@
 title: "多维模型程序集管理 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一些可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数，这些内部函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供大量用于的多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 的语言，旨在完成从到标准统计计算的所有内容的内部函数通过遍历层次结构中的成员。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
   
  因此，通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以将程序集添加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或数据库。 使用程序集，您可以使用任何公共语言运行时 (CLR) 语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）来创建用户定义的外部函数。 还可以使用组件对象模型 (COM) 自动化语言，如 Microsoft Visual Basic 或 Microsoft Visual C++。  
   

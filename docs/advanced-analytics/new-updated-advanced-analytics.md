@@ -6,20 +6,24 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: advanced-analytics
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
+ms.prod: sql-non-specified
+ms.prod_service: r-services
 ms.author: genemi
 ms.workload: advanced-analytics
-ms.openlocfilehash: 636e243f1f39f0bfa688c6caada1e03078de9a32
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: HT
+ms.openlocfilehash: 840e34eee090d9fba2ec25e10375a8b0c375fea4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新的和最近的更新： SQL Server 的高级分析
 
@@ -33,7 +37,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- *日期范围的更新：* &nbsp; **自 2017 年 1-09-28** &nbsp;到&nbsp;**自 2017 年 1-12-02**
+- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
 - *主题区域：* &nbsp; **for SQL Server 的高级分析**。
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -741,7 +745,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 
 ### <a name="14-nbsp-step-3-explore-and-visualize-the-datatutorialssqldev-py3-explore-and-visualize-the-datamd"></a>14.&nbsp;[步骤 3： 浏览和可视化数据](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 
-*更新时间： 自 2017 年 1-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_13))
+更新日期：2017-11-30 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_13)）
 
 <!-- Source markdown line 66.  ms.author= "jeannt".  -->
 
@@ -791,26 +795,26 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新 + 更新 (3 + 14): **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (87 + 0): **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (5 + 4):**连接到 SQL**文档](../connect/new-updated-connect.md)
-- [新 + 更新 (0 + 1): **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (2 + 2): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (10 + 9): **sql Linux**文档](../linux/new-updated-linux.md)
-- [新 + 更新 (2 + 4): **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (4 + 2): **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (0 + 1): **SQL 的示例**文档](../sample/new-updated-sample.md)
-- [新 + 更新 (21 + 0): **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (5 + 1): **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
 - [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (1 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
+- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2): **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
-- [新 + 更新 (0 + 0):**数据迁移助手 (DMA) sql**文档](../dma/new-updated-dma.md)
+- [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)

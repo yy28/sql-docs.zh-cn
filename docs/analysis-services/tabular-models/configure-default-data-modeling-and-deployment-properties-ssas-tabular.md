@@ -2,12 +2,12 @@
 title: "配置默认数据建模和部署属性 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>配置默认数据建模和部署属性（SSAS 表格）
-  本主题介绍如何配置可为在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建的每个新表格模型项目预定义的默认兼容级别、部署和工作区数据库属性设置。 在创建新项目之后，根据您的特定需求，仍可以更改这些属性。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何配置的默认兼容级别，在创建部署和工作区数据库属性设置，这对于每个新的表格模型项目可以是预定义[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 在创建新项目之后，根据您的特定需求，仍可以更改这些属性。  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>为新模型项目配置默认的兼容级别属性  
   

@@ -2,12 +2,12 @@
 title: "使用从模型查看器的钻取 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 548c2c51dc0df576e5334dba2f7b17a838b19cb3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>从模型查看器使用钻取
-  根据模型类型，您可以从数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上的浏览查看器中使用钻取功能，以便浏览在挖掘模型中使用的事例或查看挖掘结构中的其他列。 尽管因为模型中的模式无法直接链接到特定事例，导致许多模型类型不支持钻取功能，但以下模型类型是支持钻取功能的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]根据模型类型中，你可以上使用的浏览查看器从钻取**挖掘模型查看器**以浏览挖掘模型中使用的事例或查看挖掘结构中的其他列的数据挖掘设计器选项卡。 尽管因为模型中的模式无法直接链接到特定事例，导致许多模型类型不支持钻取功能，但以下模型类型是支持钻取功能的。  
   
  请注意，必须对模型启用钻取，并且您必须拥有适当的权限。 如果模型处于未处理状态，钻取选项也可能会被禁用；而与模型是否以前已处理和具有内容无关。 若要通过使用钻取功能检索模型事例数据，结构和模型的缓存必须是当前的。  
   

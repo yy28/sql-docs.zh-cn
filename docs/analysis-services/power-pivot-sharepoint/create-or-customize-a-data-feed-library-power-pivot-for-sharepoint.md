@@ -2,12 +2,12 @@
 title: "创建或自定义数据馈送的库 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>创建或自定义数据馈送库 (Power Pivot for SharePoint)
-  *数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*数据馈送库*是一个特殊用途 SharePoint 库，使您能够注册并共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
   
 -   创建或编辑“数据服务文档” ，用于指定与特定馈送的 HTTP 连接。  
   
