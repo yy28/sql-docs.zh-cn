@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE 兼容级别 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62a9e4eec99073e63d53c2d610a7527fbe5f9c91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact SQL) 兼容性级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,15 +102,7 @@ SELECT name, compatibility_level FROM sys.databases;
  如果现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过你的版本中的行为差异会影响应用程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，将转换应用程序可以无缝的新的兼容性模式。 然后使用**ALTER DATABASE**兼容性级别更改为 130。 新数据库的兼容性设置时才生效**USE Database**发出或使用该数据库作为默认数据库处理新的登录名。  
   
 ## <a name="best-practices"></a>最佳实践  
- 如果在用户连接到数据库时更改兼容性级别，可能会使活动查询产生不正确的结果集。 例如，如果在编写查询计划时兼容性级别发生更改，则编写后的计划可能同时基于旧的和新的兼容性级别，从而造成计划不正确，并可能导致结果不准确。 此外，如果将计划放在计划缓存中供后续的查询重用，则问题可能更加复杂。 为了避免查询结果不准确，建议您使用以下过程来更改数据库的兼容性级别：  
-  
-1.  通过使用 ALTER DATABASE SET SINGLE_USER，将数据库设置为单用户访问模式。  
-  
-2.  更改数据库的兼容性级别。  
-  
-3.  通过使用 ALTER DATABASE SET MULTI_USER，将数据库设为多用户访问模式。  
-  
-4.  有关设置数据库的访问模式的详细信息，请参阅[ALTER DATABASE &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+有关升级兼容性级别的建议工作流，请参阅[更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>兼容性级别和存储过程  
  执行某一存储过程时，该存储过程将使用定义它的数据库的当前兼容性级别。 在更改某一数据库的兼容性设置时，该数据库的所有存储过程都将随之自动重新编写。  

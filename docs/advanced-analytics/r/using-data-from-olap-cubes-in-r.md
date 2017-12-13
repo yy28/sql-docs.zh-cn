@@ -2,7 +2,7 @@
 title: "在 R 中使用来自 OLAP 多维数据集的数据 |Microsoft 文档"
 ms.custom: 
 ms.prod: sql-non-specified
-ms.date: 11/29/2017
+ms.date: 12/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,22 +15,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 60e95f4c101a4afe2a8161ba40df7b27bd85f602
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 21bb48b26b7bf8e755ba85a16fb25676bbff4363
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
 
-**OlapR**包是一个 R 程序包时，提供用于机器学习 Server 和 SQL Server 的 microsoft，它允许你运行 MDX 查询以从 OLAP 多维数据集获取数据。 此程序包，你不需要创建链接的服务器或清理平展行集;你可以使用 OLAP 数据直接中。
+**OlapR**包是一个 R 程序包时，提供用于机器学习 Server 和 SQL Server 的 microsoft，它允许你运行 MDX 查询以从 OLAP 多维数据集获取数据。 此程序包，你不需要创建链接的服务器或清理平展行集;你可以获取 OLAP 数据直接从。
 
 本文介绍的 API，以及为这些用户可能不熟悉多维数据集数据库 R 用户 OLAP 和 MDX 的概述。
 
 > [!IMPORTANT]
-> Analysis Services 的实例可以支持常规多维数据集或表格模型中，但实例不能支持两种类型的模型。 因此，在创建针对 Analysis Services 数据库的查询之前，请验证它包含多维模型。
-> 
-> 尽管可以使用 MDX 查询表格模型**olapR**包不支持表格模型实例的连接。 如果你需要从表格模式下获取数据，更好的选择是启用[DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular)模型，并进行可用作 SQL Server 中的链接服务器实例上。 
+> Analysis Services 的实例可以支持常规多维数据集或表格模型中，但实例不能支持两种类型的模型。 因此，你尝试生成针对多维数据集的 MDX 查询之前，请验证 Analysis Services 实例，包含多维模型。
 
 ## <a name="what-is-an-olap-cube"></a>什么是 OLAP 多维数据集？
 
@@ -70,9 +68,9 @@ MDX，短的多维表达式，是用于查询多维数据集的语言。 MDX 查
 
     可以通过使用此方法，创建不是所有 MDX 查询，因为 MDX 可以很复杂。 但是，此 API 支持的最常见和有用的操作，包括 N 维度中的切片、 切块、 深化、 rollup 和透视的大部分。
 
-+ **复制和粘贴格式正确的 MDX。** 手动创建，然后粘贴在所有 MDX 查询中。 此选项是最佳，如果你有现有的 MDX 查询你想要重复使用，或者如果你想要生成的查询太过复杂， **olapR**来处理。 
++ **复制和粘贴格式正确的 MDX。** 手动创建，然后粘贴在所有 MDX 查询中。 此选项是最佳，如果你有现有的 MDX 查询你想要重复使用，或者如果你想要生成的查询太过复杂， **olapR**来处理。
 
-    生成使用任何客户端实用工具，如 SSMS 或 Excel，你 MDX，然后保存定义 MDX 查询的字符串。 你提供此 MDX 字符串的自变量作为*SSAS 查询处理程序*中**olapR**包。 该函数将查询发送到指定的 Analysis Services 服务器，并将结果传递回 R，假设您有权当然查询多维数据集。
+    生成使用任何客户端实用工具，如 SSMS 或 Excel，你 MDX 后保存的查询字符串。 提供此 MDX 字符串的自变量作为*SSAS 查询处理程序*中**olapR**包。 提供将查询发送到指定的 Analysis Services 服务器，并将结果传递回。 
 
 有关如何生成 MDX 的示例查询，或运行现有 MDX 查询，请参阅[如何创建使用 R 的 MDX 查询](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md)。
 
@@ -80,40 +78,50 @@ MDX，短的多维表达式，是用于查询多维数据集的语言。 MDX 查
 
 本部分列出了一些已知的问题和常见问题有关**olapR**包。
 
-### <a name="tabular-models-are-not-supported"></a>不支持表格模型
+### <a name="tabular-model-support"></a>表格模型支持
 
-如果你连接到包含表格模型的 Analysis Services 的实例`explore`函数报告成功并返回值为 TRUE。 但是，表格模型对象不为某个兼容类型，并且无法解决。
+如果你连接到包含表格模型的 Analysis Services 的实例`explore`函数报告成功并返回值为 TRUE。 但是，表格模型对象与多维对象不同，多维数据库的结构是不同的表格模型。
 
-此外，如果你在设计有效的 MDX 查询针对表格模型 （通过使用外部工具），然后将查询粘贴到此 API，查询将返回 NULL 结果，并不会报告错误。
+尽管 DAX （数据分析表达式） 是通常与表格模型使用的语言，你可以设计有效的 MDX 查询针对表格模型中，如果你已了解如何使用 MDX。 不能使用 olapR 构造函数来生成有效的 MDX 查询针对表格模型。
 
-如果你需要从使用 R 中的表格模型中提取数据，请考虑下列选项：
+但是，MDX 查询是从表格模型检索数据的效率低下方法。 如果你需要在 R 中使用从表格模型获取数据，请改为考虑以下方法：
 
 + 对模型启用 DirectQuery 和将服务器添加为 SQL Server 中的链接服务器。 
 + 如果关系的数据市场上生成表格模型时，请直接从源获取数据。
 
 ### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>如何确定实例是否包含表格或多维模型
 
-没有表格模型之间的基本差异，并且会影响数据的方式的多维模型是存储和处理。 例如，表格模型存储在内存中，并利用列存储索引来执行非常快速地计算。 在多维模型中，数据存储在磁盘上并聚合是预先定义和使用 MDX 查询中检索。
-
-为此，单个 Analysis Services 实例可以包含一种类型的模型。 请参阅有关如何区分两种类型的模型的更多技巧的以下文章：
-
-+ [比较多维和表格模型](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+单个 Analysis Services 实例可以包含模型，只有一个的类型，但它可以包含多个模型。 原因是表格模型和控制的方式存储和处理数据的多维模型之间的基本差异。 例如，表格模型存储在内存中，并利用列存储索引来执行非常快速地计算。 在多维模型中，数据存储在磁盘上并聚合是预先定义和使用 MDX 查询中检索。
 
 如果你连接到 Analysis Services 使用 SQL Server Management Studio 等客户端，可让一眼支持哪种模型类型，通过查看数据库的图标。
 
-你还可以查看服务器属性。 **服务器模式**属性支持两个值：_多维_或_表格_。
+你还可以查看和查询以确定哪种类型的模型该实例支持的服务器属性。 **服务器模式**属性支持两个值：_多维_或_表格_。
 
-有关如何验证使用的服务器的属性的服务器类型的详细信息，请参阅[OLE DB for OLAP 架构行集](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
+请参阅以下文章有关模型的两种类型的常规信息：
+
++ [比较多维和表格模型](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+
+请参阅以下文章了解有关查询服务器属性：
+
++ [OLE DB for OLAP 架构行集](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### <a name="writeback-is-not-supported"></a>不支持写回
 
 不能将自定义 R 计算的结果写回到该多维数据集。
 
-一般情况下，即使写回功能启用了多维数据集，支持仅有限的操作，并可能需要其他配置。 我们建议你对这些操作使用 MDX。
+一般情况下，即使写回功能启用了多维数据集，支持仅有限的操作，并可能需要其他配置。 我们建议你执行诸如操作使用 MDX。
 
 + [写入的维度](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
 + [写入的分区](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
 + [设置对单元数据的自定义的访问](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
+
+### <a name="long-running-mdx-queries-block-cube-processing"></a>长时间运行 MDX 查询阻止多维数据集处理
+
+尽管**olapR**包执行仅读的操作，可长时间运行 MDX 查询可以创建阻止从正在处理多维数据集的锁。 始终测试 MDX 查询提前，以便你知道应返回的数据量。
+
+如果你尝试连接到已锁定的多维数据集，你可能会无法访问 SQL Server 数据仓库的错误。 建议的解决方法包括启用远程连接，检查的服务器或实例名称和等;但是，请考虑以前的打开连接的可能性。
+
+SSAS 管理员可阻止通过识别并终止打开的会话锁定问题。 超时属性也可以应用于在服务器级别强制终止的长时间运行的所有查询的 MDX 查询。
 
 ## <a name="resources"></a>Resources
 

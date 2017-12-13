@@ -2,12 +2,12 @@
 title: "数据源对象 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasources-object-tmsl"></a>数据源对象 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
   
  除非您要创建的更换，或更改数据的源对象本身，任何在脚本 （如分区脚本） 中引用的数据源必须是现有**数据源**模型中的对象。  
   

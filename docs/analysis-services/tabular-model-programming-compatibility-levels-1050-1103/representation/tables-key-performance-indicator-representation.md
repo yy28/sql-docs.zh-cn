@@ -2,12 +2,12 @@
 title: "关键绩效指标表示形式 （表格） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dc4f526fa88d678305afdf5c21623b19aaa5190
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42c48fb77362c07e31bf73517bb72ad82954d8cc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---key-performance-indicator-representation"></a>表的关键绩效指标表示形式
-  KPI 用于根据目标值度量由基础度量值定义的值的性能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KPI 用于衡量性能的基础度量值，对目标值由定义的值  
   
 ## <a name="key-performance-indicator-representation"></a>关键绩效指标表示形式  
  在表格对象模型中，关键绩效指标 KPI 是一个度量值，该值带有可在客户端应用程序中以图形方式显示的附加信息。 KPI 通常包含关于要实现的目标和度量值相对于目标的状态的信息，以及客户端工具如何以图形方式显示状态的信息。  

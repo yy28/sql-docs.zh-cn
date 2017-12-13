@@ -2,8 +2,8 @@
 title: "SUSE Linux Enterprise Server 上的 SQL Server 的无人参与的安装 |Microsoft 文档"
 description: "SQL Server 脚本示例的 SUSE Linux Enterprise Server 上的无人参与安装"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4235f142dbe0a0022ba8b6af4fb2d3c981fae709
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: c2a77abb7a86806281de3a84687f02c7c0b8fd7a
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>适用于 SUSE Linux Enterprise Server 的示例： 无人参与的 SQL Server 安装脚本
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="sample-script"></a>示例脚本
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

@@ -2,12 +2,12 @@
 title: "安装、 分发和引用表格对象模型 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安装、 分发和引用表格对象模型
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-此文章介绍了如何下载、 引用和重新分发 Analysis Services 表格对象模型 (TOM)，用于创建和管理表格模型和托管代码中的数据库的 C# 库。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]此文章介绍了如何下载、 引用和重新分发 Analysis Services 表格对象模型 (TOM)，用于创建和管理表格模型和托管代码中的数据库的 C# 库。  
   
 TOM 是附带 SQL Server 2016 的 AMO 客户端库 (Microsoft.AnalysisServices.dll) 的扩展。 它适用于表格模型以在 SQL Server 2016 版本表格元数据引擎为目标。 若要使用 TOM，模型和数据库必须处于兼容性级别为 1200年或更高版本。  
 

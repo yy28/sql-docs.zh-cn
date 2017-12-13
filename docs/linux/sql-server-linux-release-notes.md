@@ -4,7 +4,7 @@ description: "本主题包含的发行说明，并支持在 Linux 上运行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -148,7 +148,7 @@ Linux 目前不支持以下功能和服务。 将随着时间的推移越来越�
 
 ### <a name="known-issues"></a>已知问题
 
-以下部分介绍在 Linux 上的 SQL Server 2017 生成正式版 (GA) 推出的已知的问题。
+下列各节描述在 Linux 上的 SQL Server 2017 正式版 (GA) 发布的已知的问题。
 
 #### <a name="general"></a>常规
 
@@ -178,7 +178,7 @@ Linux 目前不支持以下功能和服务。 将随着时间的推移越来越�
 
 - 还原已在 Windows 上的 SQL 服务器备份数据库时，必须使用**WITH MOVE** Transact SQL 语句中的子句。
 
-- 在 Linux 上运行的 SQL Server 上不支持需要 Microsoft 分布式事务处理协调器服务的分布式事务。 支持从 SQL Server 到 SQL Server 的分布式事务。
+- 在 Linux 上运行的 SQL Server 上不支持需要 Microsoft 分布式事务处理协调器服务的分布式事务。 SQL Server 到 SQL Server，除非它们涉及 DTC 支持链接的服务器。 有关详细信息，请参阅[在 Linux 上运行的 SQL Server 上不支持需要 Microsoft 分布式事务处理协调器服务的分布式事务](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)。
 
 - 某些算法 （密码套件） 用于传输层安全性 (TLS) 与在 Linux 上的 SQL Server 工作不正常。 这会导致连接失败后尝试连接到 SQL Server，以及建立高可用性组中的副本之间的连接的问题。
 

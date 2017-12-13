@@ -2,12 +2,12 @@
 title: "双向交叉筛选器的表格模型的 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>双向交叉筛选器的表格模型的 Analysis Services
-  SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用“双向交叉筛选器”，从而无需手动制定 DAX 解决方法来传播跨表上下文的筛选器上下文。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]新 SQL Server 2016 中用于内置方法使*双向交叉筛选器*在表格模型中，消除了对跨表关系传播筛选器上下文手工编写 DAX 解决方法需要。  
   
  让我们分解这一概念的各个组成部分：“交叉筛选”是指能够基于相关表中的值对表设置筛选器上下文，“双向”是指将筛选器上下文传输到位于表关系另一端的另一个相关表。 顾名思义，你可以朝关系的两个方向而不只是一个方向切片。  在内部，双向筛选可以扩展筛选器上下文以查询数据的超集。  
   

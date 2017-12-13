@@ -2,8 +2,8 @@
 title: "无人参与的安装在 Ubuntu 上的 SQL Server |Microsoft 文档"
 description: "SQL Server 脚本示例-Ubuntu 上的无人参与安装"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 29da4f824b83a09ed839e469a4788ce42e7d92a4
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 507d136d24a9c9b7b68435a46952b79aecb1f688
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例： 适用于 Ubuntu 的无人参与的 SQL Server 安装脚本
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="sample-script"></a>示例脚本
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

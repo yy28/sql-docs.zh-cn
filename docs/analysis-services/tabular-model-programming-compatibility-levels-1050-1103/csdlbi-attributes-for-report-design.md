@@ -2,12 +2,12 @@
 title: "报表设计的 CSDLBI 属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>用于报表设计的 CSDLBI 属性
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  本节介绍用于表格建模的 CSDL 扩展插件中将会影响 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查询设计的属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本部分介绍在 CSDL 的扩展属性表格建模的影响[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]查询设计。  
   
 ## <a name="model-attributes"></a>模型属性  
  子元素的 CSDL 定义了这些属性[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)元素。  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**对齐**|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值为**默认**， **Center**，**左**，**右**。 如果省略，则默认值将基于字段的数据类型确定对齐方式。|  
 |**FormatString**|Text|一个 .NET 格式字符串，指示默认应该如何设置字段值的格式。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域的短日期或"d"<br /><br /> 的浮点字段和整数字段的默认聚合函数： 区域数或"n"<br /><br /> 的无默认值为整数聚合函数： 区域的十进制数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
 |**单位**|Text|适用于字段值以便表示单位的符号。 如果省略，则假定单位未知。|  
-|**宽度**|Integer|应为在表格显示中显示字段值而保留的字符的首选宽度。 如果省略，则默认宽度将基于字段的数据类型。|  
+|宽度|Integer|应为在表格显示中显示字段值而保留的字符的首选宽度。 如果省略，则默认宽度将基于字段的数据类型。|  
 |**SortDirection**|Enum|指示通常如何对字段值进行排序的一个值。 可能的值为**默认**，**升序**，**降序**。 如果省略，则分配排序方向的默认值将基于字段的数据类型。|  
 |**IsRightToLeft**|Boolean|指示字段是否包含应该从右向左读取的文本。 如果省略，则假定采用模型设置。|  
 |**OrderBy**|MemberRef|对模型内用于定义该字段值的排序顺序的其他字段的引用。 这两个字段的值必须具有 1:1 映射，否则排序行为是未定义的。 如果省略，则基于字段自己的值对字段进行排序。|  

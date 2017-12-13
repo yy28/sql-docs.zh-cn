@@ -2,12 +2,12 @@
 title: "DirectQuery 模式下 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,17 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9bd8eb8e3bd0f313fec3e2d0228fb04e08cb6199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="directquery-mode"></a>DirectQuery 模式
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  本主题介绍*DirectQuery 模式下*对 1200年和更高版本的兼容性级别的 Analysis Services 表格模型。 你可以为正在 SSDT 中设计的模型打开 DirectQuery 模式；对于已部署的表格模型，你可以在 SSMS 中更改为 DirectQuery 模式。 在选择 DirectQuery 模式之前，务必先了解其优势和限制。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍*DirectQuery 模式下*对 1200年和更高版本的兼容性级别的 Analysis Services 表格模型。 你可以为正在 SSDT 中设计的模型打开 DirectQuery 模式；对于已部署的表格模型，你可以在 SSMS 中更改为 DirectQuery 模式。 在选择 DirectQuery 模式之前，务必先了解其优势和限制。
   
 ##  <a name="bkmk_Benefits"></a> 优势
  默认情况下，表格模型使用内存中缓存来存储和查询数据。 当表格模型查询内存中驻留的数据时，即使是复杂查询也可以非常快地执行。 但是，使用缓存数据存在许多限制。 也就是说，如果无法按计划定期进行处理，大型数据集可能会超出可用内存，并且可能难以达到数据刷新要求。  

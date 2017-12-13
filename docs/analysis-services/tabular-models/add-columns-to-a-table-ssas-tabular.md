@@ -2,12 +2,12 @@
 title: "将列添加到表 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef9aaa80dba9212e9fb22af7a1701bb6b3f17eb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>将列添加到表（SSAS 表格）
-  本主题介绍如何向现有表中添加列。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何将列添加到现有表。  
   
 ## <a name="add-columns-from-the-data-source"></a>从数据源添加列  
  使用表导入向导从数据源表导入数据时，将在模型中创建一个新表，该表包含源表中的所有列，如果您选择使用“预览并筛选”功能来筛选出某些列，则仅包含您选择的那些列和已筛选数据。 您还可以编写一个指定要导入的那些列的 SQL 查询。 但是，您可能以后决定源表具有要添加到模型表的其他列，或需要添加其值从 DAX 公式派生的计算列。  

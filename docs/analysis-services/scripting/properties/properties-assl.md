@@ -2,12 +2,12 @@
 title: "属性 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff1e43f8fd1242b8ac314b49268ec8c86e7cb907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10cd57d39845f67fe8e447a1c95a5e412709409d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-assl"></a>属性 (ASSL)
-  本参考部分包含作为 Analysis Services 脚本语言 (ASSL) 架构中的对象属性的所有元素的语法和用法信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此参考部分包含的每个元素，它就像 Analysis Services 脚本语言 (ASSL) 架构中的对象属性的语法和用法的信息。  
   
  尽管 ASSL 架构只包含 XML 元素，但是从开发人员的角度来说，本节中介绍的元素是与介绍对象的属性对应的。  
   

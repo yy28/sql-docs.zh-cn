@@ -2,12 +2,12 @@
 title: "工作区数据库 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作区数据库（SSAS 表格）
-  当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时，将创建在模型创作期间使用的表格模型工作区数据库。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]创建新的表格模型项目中时，创建表格模型工作区数据库，在模型创作过程中使用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。
   
 ## <a name="specifying-a-workspace-instance"></a>指定工作区实例  
   在 SSDT 中创建新的表格模型项目时，可以指定一个 Analysis Services 实例，以便在创作项目时使用。 从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 2016 年 9 月版 (14.0.60918.0) 开始，将引入用于在创建新的表格模型项目时指定工作区实例的两种模式。 

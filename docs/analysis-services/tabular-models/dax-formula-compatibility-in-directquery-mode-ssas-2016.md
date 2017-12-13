@@ -2,12 +2,12 @@
 title: "在 DirectQuery 模式下 (SSAS 2016) 的 DAX 公式兼容性 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,16 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ab540d2806d6afb75eab3890fdad605a7b34a71c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 模式下的 DAX 公式兼容性 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-对于在 DirectQuery 模式下的表格 1200年和更高版本模型，在早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]对于在 DirectQuery 模式下的表格 1200年和更高版本模型，在早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
 
 - DirectQuery 现在会生成更简单的查询，从而提供改进的性能。
 - 行级别安全性 (RLS) 现在支持在 DirectQuery 模式下。

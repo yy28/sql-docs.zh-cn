@@ -2,12 +2,12 @@
 title: "表格模型 (Analysis Services) 中的翻译 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表格模型 (Analysis Services) 中的翻译
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]将添加翻译字符串支持的表格模型。 该模型中的单个对象可以拥有多个名称或说明翻译，使其可以在模型定义中支持多种语言。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]添加翻译字符串支持的表格模型。 该模型中的单个对象可以拥有多个名称或说明翻译，使其可以在模型定义中支持多种语言。  
   
  已翻译的字符串仅适用于出现在客户端工具（如 Excel 数据透视表列表）中的对象元数据（表和列的名称及说明）。  若要使用已翻译的字符串，客户端连接需指定区域性。 在“在 Excel 中分析”功能中，可以从下拉列表中选择语言。 对于其他工具，可能需要在连接字符串中指定区域性。  
   

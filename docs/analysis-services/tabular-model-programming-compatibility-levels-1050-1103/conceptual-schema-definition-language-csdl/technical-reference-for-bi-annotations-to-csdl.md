@@ -2,12 +2,12 @@
 title: "BI 批注的 CSDL 的技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>用于商业智能的 CSDL 注释技术参考
-  本部分列出了 CSDL 中用于表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 表格模型的元素、特性和属性。 某些元素是新增的：其他属性已添加批注或扩展，以支持商业智能建模。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本部分列出元素、 属性和 CSDL 中的属性，用于表示[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]表格模型。 某些元素是新增的：其他属性已添加批注或扩展，以支持商业智能建模。  
   
  表格模型和实体、 关系和公式 CSDL 中的表示方式的概述，请参阅[的 Business Intelligence &#40; 的 CSDL 批注CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

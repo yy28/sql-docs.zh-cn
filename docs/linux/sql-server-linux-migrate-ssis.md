@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>提取、 转换和加载使用 SSIS 的 Linux 上的数据
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主题介绍如何在 Linux 上运行 SQL Server Integration Services (SSIS) 包。 SSIS 从多个源和格式，提取数据，从而解决了复杂的数据集成问题转换和清理数据，并将数据加载到多个目标。 
+本文介绍如何在 Linux 上运行 SQL Server Integration Services (SSIS) 包。 SSIS 从多个源和格式，提取数据，从而解决了复杂的数据集成问题转换和清理数据，并将数据加载到多个目标。 
 
 在 Linux 上运行的 SSIS 包可以连接到 Windows 本地或云中，在 Linux 上，或在 Docker 中运行的 Microsoft SQL Server。 它们还可以连接到 Azure SQL 数据库、 Azure SQL 数据仓库、 ODBC 数据源、 平面文件和其他数据源，包括 ADO.NET 源、 XML 文件和 OData 服务。
 
@@ -47,17 +47,17 @@ ms.lasthandoff: 12/01/2017
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>其他常见的 SSIS 任务
+## <a name="design-packages"></a>设计包
 
--   **设计包**。
+**连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
 
-    -   **连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+**路径**。 提供 Windows 样式在 SSIS 包的路径。 在 Linux 上的 SSIS 不支持 Linux 样式路径，但在运行时将 Windows 样式路径映射到 Linux 样式路径。 然后，例如，在 Linux 上的 SSIS 映射 Windows 样式路径`C:\test`到 Linux 样式路径`/test`。
 
-    -   **路径**。 提供 Windows 样式在 SSIS 包的路径。 在 Linux 上的 SSIS 不支持 Linux 样式路径，但在运行时将 Windows 样式路径映射到 Linux 样式路径。 然后，例如，在 Linux 上的 SSIS 映射 Windows 样式路径`C:\test`到 Linux 样式路径`/test`。
+## <a name="deploy-packages"></a>部署包
+仅可以在此版本在 Linux 上文件系统中存储包。 SSIS 目录数据库和旧的 SSIS 服务不在 Linux 上可用于包部署和存储。
 
--   **部署包**。 仅可以在此版本在 Linux 上文件系统中存储包。 SSIS 目录数据库和旧的 SSIS 服务不在 Linux 上可用于包部署和存储。
-
--   **计划包**。 你可以使用计划工具，如 Linux 系统`cron`计划包。 不能使用在 Linux 上的 SQL 代理用于计划在此版本的包执行。 有关详细信息，请参阅[计划 SSIS 包在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)。
+## <a name="schedule-packages"></a>计划包
+你可以使用计划工具，如 Linux 系统`cron`计划包。 不能使用在 Linux 上的 SQL 代理用于计划在此版本的包执行。 有关详细信息，请参阅[计划 SSIS 包在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)。
 
 ## <a name="limitations-and-known-issues"></a>限制和已知的问题
 
