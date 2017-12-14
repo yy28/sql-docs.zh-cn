@@ -2,9 +2,12 @@
 title: "创建 DML 触发器以处理多行数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 55a772a063a33749af39f43d6a070bfdf8216796
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9b20cb4324e252d3de3c15ceb67e5f6ac7b1dd4e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>创建 DML 触发器以处理多行数据
-  为 DML 触发器编写代码时，请考虑导致触发器激发的语句可能是影响多行数据（而不是单行）的单个语句。 这对于 UPDATE 和 DELETE 触发器很常见，因为这些语句经常影响多行。 而这对于 INSERT 触发器比较少见，因为基本 INSERT 语句仅添加单行。 但是，由于 INSERT 触发器可以通过 INSERT INTO (*table_name*) SELECT 语句触发，因此插入多行可能导致调用单个触发器。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]为 DML 触发器编写代码时，请考虑导致触发器激发的语句可能是影响多行数据（而不是单行）的单个语句。 这对于 UPDATE 和 DELETE 触发器很常见，因为这些语句经常影响多行。 而这对于 INSERT 触发器比较少见，因为基本 INSERT 语句仅添加单行。 但是，由于 INSERT 触发器可以通过 INSERT INTO (*table_name*) SELECT 语句触发，因此插入多行可能导致调用单个触发器。  
   
  在下列情况下关于多行的注意事项尤为重要：DML 触发器的功能自动重新计算一个表中的汇总值，并将结果存储在另一个表中以继续进行计数。  
   

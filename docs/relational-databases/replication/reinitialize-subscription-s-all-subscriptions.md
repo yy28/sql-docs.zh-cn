@@ -2,9 +2,12 @@
 title: "重新初始化订阅 - 所有订阅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83cbe8c753c2a62da4b87c0c7773885de91bed94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e3aa8eaf14f556f7b8e0808ea8be652b27444cdb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>重新初始化订阅 - 所有订阅
-  使用 **“重新初始化订阅”** 对话框，可以将发布的所有订阅都标记为需要重新初始化。 重新初始化涉及向每个订阅服务器应用快照；对于事务发布的订阅，这是由分发代理执行的，而对于合并发布的订阅，这是由合并代理执行的。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“重新初始化订阅”对话框，可以将发布的所有订阅都标记为需要重新初始化。 重新初始化涉及向每个订阅服务器应用快照；对于事务发布的订阅，这是由分发代理执行的，而对于合并发布的订阅，这是由合并代理执行的。  
   
 ## <a name="options"></a>选项  
  **使用当前快照**  

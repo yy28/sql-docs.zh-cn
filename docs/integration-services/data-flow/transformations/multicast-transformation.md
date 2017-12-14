@@ -1,5 +1,5 @@
 ---
-title: "多播的转换 |Microsoft 文档"
+title: "多播转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 7747ab82ad5a0c46c7cac4b874239b45d8902194
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="multicast-transformation"></a>多播转换
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
@@ -60,9 +58,8 @@ ms.lasthandoff: 08/19/2017
  **属性**  
  除了“名称”和“说明”外，所有列出的输出属性都是只读的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "以编程方式添加任务 |Microsoft 文档"
+title: "以编程方式添加任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
   可在运行时引擎中将任务添加到下列对象类型中：  
@@ -50,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  每个容器都有一个包含各个 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 集合。 每个可执行任务都继承并实现 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 方法。 运行时引擎会调用这两个方法来处理每个 <xref:Microsoft.SqlServer.Dts.Runtime.Executable>。  
   
- 若要向包中添加任务，您需要一个具有现有 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合的容器。 大多数情况下，要添加到该集合中的任务为包。 若要添加新的任务可执行文件到该容器的集合，请调用<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>方法。 该方法只有一个参数，是个字符串，它包含要添加的任务的 CLSID、PROGID、STOCK 名字对象或 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>。  
+ 若要向包中添加任务，您需要一个具有现有 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合的容器。 大多数情况下，要添加到该集合中的任务为包。 若要向容器的该集合中添加新任务可执行文件，可以调用 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法。 该方法只有一个参数，是个字符串，它包含要添加的任务的 CLSID、PROGID、STOCK 名字对象或 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>。  
   
 ## <a name="task-names"></a>任务名称  
- 虽然可以指定一个任务，按名称或 ID， **STOCK**名字对象是中最经常使用的参数<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>方法。 若要将任务添加到可执行文件由标识**STOCK**标记时，使用以下语法：  
+ 虽然可以通过名称或 ID 指定任务，但 STOCK 名字对象是 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 方法中最常用的参数。 若要向 STOCK 名字对象所标识的可执行文件添加任务，请使用下列语法：  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +62,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- 以下列表显示之后使用的每个任务的名称**STOCK**名字对象。  
+ 下面列出了在 STOCK 名字对象后使用的每个任务的名称。  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +124,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- 你可以以编程方式，获取任务的长名称而无需通过使用指定的任务版本中， **AssemblyQualifiedName**类，如下面的示例中所示的属性。 此示例需要引用 Microsoft.SqlServer.SQLTask 程序集。  
+ 可以使用类的 AssemblyQualifiedName 属性，以编程方式获取任务的长名称，而无须指定任务版本，如下面的示例所示。 此示例需要引用 Microsoft.SqlServer.SQLTask 程序集。  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- 下面的代码示例演示如何创建<xref:Microsoft.SqlServer.Dts.Runtime.Executables>集合从新的包，然后将添加一个文件系统任务和大容量插入任务到该集合，通过使用其**STOCK**名字对象。 此示例需要引用 Microsoft.SqlServer.FileSystemTask 和 Microsoft.SqlServer.BulkInsertTask 程序集。  
+ 下面的代码示例演示如何从新包创建 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 集合，并使用相应任务的 STOCK 名字对象向该集合添加一个文件系统任务和一个大容量插入任务。 此示例需要引用 Microsoft.SqlServer.FileSystemTask 和 Microsoft.SqlServer.BulkInsertTask 程序集。  
   
 ```csharp  
 using System;  
@@ -321,19 +318,19 @@ End Module
   
  若要对新对象设置属性或调用方法，您有两种选择：  
   
-1.  使用 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 集合。 例如，若要从对象获取一个属性，请使用`th.Properties["propertyname"].GetValue(th))`。 若要设置属性，可使用 `th.Properties["propertyname"].SetValue(th, <value>);`。  
+1.  使用 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 集合。 例如，若要从该对象获取属性，可使用 `th.Properties["propertyname"].GetValue(th))`。 若要设置属性，可使用 `th.Properties["propertyname"].SetValue(th, <value>);`。  
   
 2.  将 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.InnerObject%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 转换为任务类。 例如，若要在将大容量插入任务作为 <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask> 添加到包中，然后将其转换为 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 之后，再将其转换为 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>，可使用 `BulkInsertTask myTask = th.InnerObject as BulkInsertTask;`。  
   
  在代码中使用 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 类而不是转换为特定于任务的类具有下列好处：  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A>提供程序不需要对在代码中的程序集的引用。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> 访问接口不要求在代码中引用程序集。  
   
 -   您可以编写适用于任何任务的通用例程，因为您无需在编译时知道任务的名称。 这样的通用例程包含的方法中，您向方法传递任务的名称，因此方法代码适用于所有任务。 这是一种编写测试代码的好方法。  
   
- 从强制转换<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>到特定于任务的类具有以下优点：  
+ 从 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 转换为特定于任务的类具有下列好处：  
   
--   Visual Studio 项目提供了你语句结束 (IntelliSense)。  
+-   Visual Studio 项目提供语句完成 (IntelliSense)。  
   
 -   代码的运行速度可能会更快。  
   
@@ -420,10 +417,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部资源  
- 博客文章[EzAPI – 经过更新以 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)，blogs.msdn.com 上的。  
+ blogs.msdn.com 上的博客文章 [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI – 为 SQL Server 2012 更新）。  
 
 ## <a name="see-also"></a>另请参阅  
  [以编程方式连接任务](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "创建 XML 数据类型的变量和列 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d820e076639a944e216d00d02b90b7f2c63e2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 204c9ecf128f9aea3b520a63f4d001c09e9e9b19
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
-  **xml** 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，有些类似于其他内置类型（如 **int** 和 **varchar**）。 对于其他内置类型，在作为变量类型、参数类型、函数返回类型或在 **CAST 和 CONVERT** 中创建表时，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)数据类型作为列类型。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]xml 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，有些类似于其他内置类型（如 int 和 varchar）。 对于其他内置类型，在作为变量类型、参数类型、函数返回类型或在 **CAST 和 CONVERT** 中创建表时，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)数据类型作为列类型。  
   
 ## <a name="creating-columns-and-variables"></a>创建列和变量  
  若要创建 `xml` 类型列作为表的一部分，请使用 `CREATE TABLE` 语句，如下例所示：  

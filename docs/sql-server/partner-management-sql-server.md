@@ -7,22 +7,26 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: 
+ms.component: sql-non-specified
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 17/09/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 57a35974fdf1182c626b1ac444a8f2086735ba21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: becde7ea17d456f697d247e6b03fe97b3ce74b8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
-要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-management-partners"></a>我们的管理合作伙伴
 | Partner | Description | 链接 |

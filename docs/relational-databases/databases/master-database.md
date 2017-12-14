@@ -2,9 +2,12 @@
 title: "master 数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 69ac660e66f9d997d2b7227d13f9c007dc68d7ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="master-database"></a>master 数据库
-  **master** 数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] master  数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
   
 ## <a name="physical-properties-of-master"></a>master 数据库的物理属性  
  下表列出了 **master** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  

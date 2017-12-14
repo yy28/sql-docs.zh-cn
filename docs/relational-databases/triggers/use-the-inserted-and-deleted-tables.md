@@ -2,9 +2,12 @@
 title: "使用插入的和删除的表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4b9d0889e9e42fc76e1293fe011edbb118be055c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
-  DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
   
  在 DML 触发器中，inserted 和 deleted 表主要用于执行以下操作：  
   

@@ -2,9 +2,12 @@
 title: "移动用户数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2818e3c3008d6c10190d55278feeeb90cef598e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ec85fee12e6cefb7020d02a96a21d54d630d6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-user-databases"></a>移动用户数据库
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，通过在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 FILENAME 子句中指定新的文件位置，可以将用户数据库中的数据、日志和全文目录文件移动到新位置。 此方法适用于在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中移动数据库文件。 若要将数据库移动到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或另一台服务器上，请使用 [备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [分离和附加操作](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，通过在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 FILENAME 子句中指定新的文件位置，可以将用户数据库中的数据、日志和全文目录文件移动到新位置。 此方法适用于在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中移动数据库文件。 若要将数据库移动到另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或另一台服务器上，请使用 [备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [分离和附加操作](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
   
 ## <a name="considerations"></a>注意事项  
  将数据库移动到另一个服务器实例上时，若要为用户和应用程序提供一致的体验，您可能需要为数据库重新创建部分或全部元数据。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  

@@ -2,9 +2,12 @@
 title: "序列属性（“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sequence-numbers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfeb524b88bba6cc71205ce983f2766e08517ca5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f3f667e4beef4a39034066d46258677f2079fe78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
-  创建一个序列对象并指定其属性。 序列是用户定义的绑定到架构的对象，该对象可根据创建序列所依据的规范来生成数值序列。 这组数值以定义的间隔按升序或降序生成，并且可配置为用尽时重新启动（循环）。 序列不与特定表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便检索其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用一个序列对象，并跨多个行和表协调值。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]创建一个序列对象并指定其属性。 序列是用户定义的绑定到架构的对象，该对象可根据创建序列所依据的规范来生成数值序列。 这组数值以定义的间隔按升序或降序生成，并且可配置为用尽时重新启动（循环）。 序列不与特定表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便检索其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用一个序列对象，并跨多个行和表协调值。  
   
  与在插入时生成的标识列值不同，应用程序可以获得下一个序列号，而不必通过调用 [NEXT VALUE FOR 函数](../../t-sql/functions/next-value-for-transact-sql.md)来插入行。 使用 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 同时获取多个序列号。  
   

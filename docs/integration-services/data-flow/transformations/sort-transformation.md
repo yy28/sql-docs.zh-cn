@@ -1,5 +1,5 @@
 ---
-title: "排序转换 |Microsoft 文档"
+title: "排序转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: d7bd6daad055d9fd72d0f67c219499084940501b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-transformation"></a>排序转换
   排序转换按升序或降序对输入数据进行排序，并将排序后的数据复制到转换输出。 您可以对一个输入应用多个排序；每个排序都由确定排序顺序的一个数字来标识。 首先对具有最小数字的列进行排序，然后对具有第二小数字的排序列进行排序，依此类推。 例如，如果名为 **CountryRegion** 的列的排序顺序为 1，而名为 **City** 的列的排序顺序为 2，则输出先按照 country/region（国家/地区）排序，然后按照 city（城市）排序。 正数表示排序为升序排序，负数表示排序为降序排序。 不进行排序的列的排序顺序为 0。 没有选择进行排序的列将与被排序列一起自动被复制到转换输出。  
@@ -95,9 +93,8 @@ ms.lasthandoff: 08/19/2017
  **删除具有重复排序值的行**  
  根据指定的字符串比较选项，指示转换是将重复行复制到转换输出，还是为所有重复项创建单个条目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

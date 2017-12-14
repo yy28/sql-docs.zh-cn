@@ -2,9 +2,12 @@
 title: "“快速监视”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9ef8bb83c91b0f0b7d576c087db2666810a3a5bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 29db30b65a2ec487cfd56a849b82f645e5bb9e4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 调试器 -“快速监视”对话框
-  使用“快速监视”对话框可以在调试 **代码时快速查看一个** 表达式（例如变量或参数）的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 若要监视多个表达式，也可以将这些表达式添加到 **“监视”** 窗口。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“快速监视”对话框可以在调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码时快速查看一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式（例如变量或参数）的数据类型和值。 若要监视多个表达式，也可以将这些表达式添加到 **“监视”** 窗口。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“快速监视”对话框**  

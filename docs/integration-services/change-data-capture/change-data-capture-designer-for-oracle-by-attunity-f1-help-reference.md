@@ -1,5 +1,5 @@
 ---
-title: "更改 Data Capture Designer for Oracle by Attunity F1 帮助参考 |Microsoft 文档"
+title: "Change Data Capture Designer for Oracle by Attunity F1 帮助参考 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- f1Help
+f1_keywords: f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e7ee7e2cd15592db9013ca38ecf71dc3750eaf78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity F1 帮助参考
   Change Data Capture Designer for Oracle by Attunity 用于创建和管理 Oracle CDC 实例。 本节中的主题介绍如何在 CDC 设计器控制台中执行可用任务。  
@@ -50,13 +47,13 @@ ms.lasthandoff: 08/03/2017
   
     -   [为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
-    -   [为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+    -   [对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
     -   [生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
     -   [生成镜像表和 CDC 捕获实例](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [“完成”](../../integration-services/change-data-capture/finish.md)  
+    -   [完成](../../integration-services/change-data-capture/finish.md)  
   
 -   [编辑实例属性](../../integration-services/change-data-capture/edit-instance-properties.md)（或直接转到以下任务之一）  
   
@@ -70,7 +67,6 @@ ms.lasthandoff: 08/03/2017
   
     -   [查看和生成补充日志记录脚本](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
-    -   [编辑高级的属性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
+    -   [编辑高级属性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "错误处理 |Microsoft 文档"
+title: "错误处理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>错误处理
   Oracle CDC 实例从单个 Oracle 源数据库（一个 Oracle RAC 群集被视为单个数据库）挖掘更改并且将提交的更改写入目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 CDC 数据库的更改表中。  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   MSXDBCDC.dbo.xdbcdc_trace 表，用于 Oracle CDC 服务主进程进行的一般日志记录和跟踪。  
   
--   \<Cdc 数据库 >。 cdc.xdbcdc_trace 表，以便进行常规的日志记录和跟踪由 Oracle CDC 实例。 这意味着与特定 Oracle CDC 实例相关的错误将记录到该实例的跟踪表中。  
+-   \<cdc-database>.cdc.xdbcdc_trace 表，用于 Oracle CDC 实例进行的常规日志记录和跟踪。 这意味着与特定 Oracle CDC 实例相关的错误将记录到该实例的跟踪表中。  
   
  在对该服务执行以下操作时 Oracle CDC 服务会将信息记入日志：  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/03/2017
  [Oracle CDC 实例](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

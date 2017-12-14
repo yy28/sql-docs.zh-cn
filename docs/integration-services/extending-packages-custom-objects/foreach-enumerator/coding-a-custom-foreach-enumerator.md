@@ -1,5 +1,5 @@
 ---
-title: "编码的自定义 Foreach 枚举器 |Microsoft 文档"
+title: "编写自定义 Foreach 枚举器代码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,33 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74e6e838c3dcfb18e52a8fbf460a5b71ee25399a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a7b4e876198c38de3b6ead93e3b4c78a08615f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>编写自定义 Foreach 枚举器代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
   
- 有关自定义的枚举器的工作示例，请参阅[开发的自定义的 ForEach 枚举器的用户界面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)。  
+ 若要查看自定义枚举器的工作示例，请参阅[为自定义 ForEach 枚举器开发用户界面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)。  
   
 ## <a name="initializing-the-enumerator"></a>初始化枚举器  
  可以重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A> 方法以缓存对包中定义的连接管理器的引用，和缓存对事件接口（用于引发错误、警告和信息性消息）的引用。  
   
 ## <a name="validating-the-enumerator"></a>验证枚举器  
- 重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 方法以验证枚举器是否正确配置。 如果该方法返回**失败**，将不会执行枚举器和包含枚举器的包。 此方法的实现是特定于每个枚举器的，但如果枚举器依赖于 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象，则应该添加代码以验证这些对象存在于提供给方法的集合中。  
+ 重写 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 方法以验证枚举器是否正确配置。 如果该方法返回“Failure”，则枚举器和包含枚举器的包将不执行。 此方法的实现是特定于每个枚举器的，但如果枚举器依赖于 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象，则应该添加代码以验证这些对象存在于提供给方法的集合中。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> 的实现，该接口用于检查在枚举器的属性中指定的变量。  
   
@@ -119,7 +115,6 @@ End Function
  
 ## <a name="see-also"></a>另请参阅  
  [创建自定义 Foreach 枚举器](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
- [开发的自定义 ForEach 枚举器的用户界面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [为自定义 ForEach 枚举器开发用户界面](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

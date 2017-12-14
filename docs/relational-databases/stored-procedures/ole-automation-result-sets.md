@@ -2,9 +2,12 @@
 title: "OLE 自动化结果集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86a6ef5870af8d4ee2f9151301d560e04de9c11f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: baef4873acc75daecf116f482cb1e1401015e82a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-result-sets"></a>OLE 自动化结果集
-  如果 OLE 自动化属性或方法返回的数据是一维或二维数组，则该数组将作为结果集返回到客户端：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果 OLE 自动化属性或方法返回的一维或二维数组中的数据，则该数组将作为结果集返回到客户端：  
   
 -   一维数组作为单行结果集返回给客户端，其中的列数与数组中的元素数相等。 例如，array(10) 作为 10 列单行返回。  
   

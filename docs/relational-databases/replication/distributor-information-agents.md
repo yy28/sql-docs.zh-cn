@@ -2,9 +2,12 @@
 title: "分发服务器信息，代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 732843c1a3d3e659b08ab5e88bca333aa7e804d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c2b4b54ae1494a72bf86d56f50ace2da6b0a5e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distributor-information-agents"></a>分发服务器信息，代理
-  **“代理”** 选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“代理”选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
   
  在分发服务器视图中分发服务器的 **“代理”** 选项卡中可用的代理包括在发布服务器的 **“代理”** 选项卡中可用的所有代理。 不过，分发服务器视图中分发服务器的 **“代理”** 选项卡还包括一个分发服务器代理和一个合并代理。  
   

@@ -2,9 +2,12 @@
 title: "手动故障转移数据库镜像会话 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a58ce664cd4eca3ef84ceb8549c74d58030753aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f4000d8f7c14b3a3a2cf601411117b1c6479a4ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手动故障转移数据库镜像会话 (SQL Server Management Studio)
-  同步镜像数据库时（即数据库处于 SYNCHRONIZED 状态时），数据库所有者可以启动到镜像服务器的手动故障转移。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]同步镜像数据库时（即数据库处于 SYNCHRONIZED 状态时），数据库所有者可以启动到镜像服务器的手动故障转移。  
   
  在手动故障转移过程中，将交换发生故障转移的数据库的主体服务器和镜像服务器的角色。 镜像数据库变成主体数据库，而主体数据库变成镜像数据库。 例如，下表显示了手动故障转移如何交换下面两个镜像伙伴的角色： `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`。  
   

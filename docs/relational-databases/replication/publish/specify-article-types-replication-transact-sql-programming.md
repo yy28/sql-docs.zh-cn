@@ -2,9 +2,12 @@
 title: "指定项目类型（复制 Transact-SQL 编程）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30aa9302585d7a7eabc8dee8e9a1cd27695e0bab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 75bdae059533adfeebac56b324a3a0c80893cc6d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定项目类型（复制 Transact-SQL 编程）
-  复制的默认项目类型为表项目，但可以将其他数据库对象发布为项目，这些项目包括视图、存储过程、用户定义函数以及存储过程执行。 定义项目时，您可以使用复制存储过程以编程方式指定项目类型。 您要使用的具体过程取决于复制的类型和项目的类型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 复制的默认项目类型为表项目，但可以将其他数据库对象发布为项目，这些项目包括视图、存储过程、用户定义的函数以及存储过程执行。 定义项目时，您可以使用复制存储过程以编程方式指定项目类型。 您要使用的具体过程取决于复制的类型和项目的类型。  
   
 > [!NOTE]  
 >  定义表、视图和存储过程项目时采用仅限架构的设计表示只复制对象定义。  

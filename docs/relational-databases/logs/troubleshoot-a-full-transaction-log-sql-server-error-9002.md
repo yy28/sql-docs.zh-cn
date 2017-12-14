@@ -2,9 +2,12 @@
 title: "解决事务日志已满的问题（SQL Server 错误 9002）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eef4f8e2e3007ec1b5f19bf8176bd7ac6349edfc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 42620b8d28d8a2663d5cb4ddc66f551c8801084d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
-  本主题讨论对已满事务日志可以采取的几种应对措施，并就以后如何避免出现已满事务日志给出建议。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题讨论对已满事务日志可以采取的几种应对措施，并就以后如何避免出现已满事务日志给出建议。 
   
   如果事务日志已满，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会发出 **9002 错误**。 当数据库联机或恢复时，日志可能会满。 如果数据库联机时日志已满，则数据库保持联机状态，但是只能进行读取而不能更新。 如果恢复过程中日志已满，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据库标记为 RESOURCE PENDING。 不管哪种情况，都需要用户执行操作才能使日志空间可用。  
   

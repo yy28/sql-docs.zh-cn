@@ -1,5 +1,5 @@
 ---
-title: "检索和了解变更数据 |Microsoft 文档"
+title: "检索和了解变更数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],retrieving data
+helpviewer_keywords: incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: caf66f974e832fcd1b27caf650d187942b3f19fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d6a3dfdc39808dd1b39ca93fd4dedc0531ed668e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第一个任务是运行查询以检索变更数据。 在数据流任务中在源组件内执行此查询。 然后，使用下游转换和目标将变更数据应用到目标。  
@@ -68,4 +65,3 @@ ms.lasthandoff: 08/03/2017
  **下一个主题：**[处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   
-

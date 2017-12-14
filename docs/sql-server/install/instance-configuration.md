@@ -2,9 +2,12 @@
 title: "安装向导帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 2017-04-21
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,15 +21,14 @@ ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: bf24705838daf5ed120fa279a9b5742d3b8d0ed0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5bed6d3c6538e0a6d9dacea134d854233a578de2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
-
-本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的一些配置页。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的一些配置页。 
 
 ## <a name="instance-configuration"></a>实例配置
 使用 **安装向导的** “实例配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页面可指定是创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是其命名实例。 如果尚未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则除非您指定命名实例，否则将创建默认实例。  

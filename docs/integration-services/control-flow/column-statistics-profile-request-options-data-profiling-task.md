@@ -1,5 +1,5 @@
 ---
-title: "列统计信息配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+title: "列统计信息配置文件请求选项（数据事件探查任务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10b9dd217872c27b6192bde49bfaf18fbd2f511b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35fb822b8eb40af45d8816e93bd35144c5237f43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>列统计信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选择的 **“列统计信息配置文件请求”** 设置选项。 列统计信息配置文件报告以下统计信息：数值列的最小值、最大值、平均值和标准偏差以及 **datetime** 列的最小值和最大值。 此配置文件可以帮助您识别数据中的问题，如无效日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。  
@@ -78,8 +75,7 @@ ms.lasthandoff: 08/03/2017
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

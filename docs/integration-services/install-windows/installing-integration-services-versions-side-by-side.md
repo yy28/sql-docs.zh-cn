@@ -1,5 +1,5 @@
 ---
-title: "安装 Integration Services 版本并行 |Microsoft 文档"
+title: "并行安装 Integration Services 版本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,27 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: cbd0a16ec79df06780e4156a23c7b8767a6db5e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>并行安装 Integration Services 版本
   你可以安装   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS) 的并行与早期版本的 SSIS。 本主题介绍并行安装的一些限制。  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS)，与早期版本的 SSIS 并行使用。 本主题介绍并行安装的一些限制。  
   
 ## <a name="designing-and-maintaining-packages"></a>设计和维护包  
  若要设计和维护面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包，请使用 SQL Server Data Tools (SSDT) for Visual Studio 2015。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/27/2017
  你可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 **dtexec** 实用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行早期版本的开发工具所创建的 Integration Services 包。 当这些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 工具加载早期版本的开发工具开发的包时，该工具暂时将内存中的包转换为 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 使用的包格式。 如果包存在问题导致无法转换成功，则在这些问题解决之前， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 工具将无法运行该包。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
   
-

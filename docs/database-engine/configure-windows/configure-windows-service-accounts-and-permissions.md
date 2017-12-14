@@ -1,10 +1,13 @@
 ---
 title: "配置 Windows 服务帐户和权限 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/24/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -51,17 +54,17 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: "207"
 author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+ms.author: BYHAM
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 665144f239aab08583a1444e48e851965262bf97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [配置 Windows 服务帐户和权限](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx)。
 
 
@@ -76,9 +79,7 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
- 
- 
-  
+
 ##  <a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的服务  
  根据您决定安装的组件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将安装以下服务：  
   
@@ -96,20 +97,24 @@ ms.lasthandoff: 11/09/2017
   
 -   **全文搜索** - 对结构化和半结构化数据的内容和属性快速创建全文索引，从而为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供文档筛选和断字功能。  
   
--   **SQL 编写器** - 允许备份和还原应用程序在卷影复制服务 (VSS) 框架中运行。  
+-   **SQL 编写器** - 允许备份和还原应用程序在卷影复制服务 (VSS) 框架中运行。
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器** - 跨多个分布式重播客户端计算机提供跟踪重播业务流程。  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端** - 与 Distributed Replay 控制器一起来模拟针对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的并发工作负荷的一台或多台 Distributed Replay 客户端计算机。  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - 用于托管 Microsoft 提供的外部可执行文件的可信服务，例如作为 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的一部分安装的 R 运行时。 附属进程可由启动板进程启动，但将根据单个实例的配置进行资源调控。 启动板服务在其自己的用户帐户下运行，特定注册运行时的各个附属进程将继承启动板的用户帐户。 附属进程将在执行过程中按需创建和销毁。  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - 用于托管 Microsoft 提供的外部可执行文件的可信服务，例如作为 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的一部分安装的 R 运行时。 附属进程可由启动板进程启动，但将根据单个实例的配置进行资源调控。 启动板服务在其自己的用户帐户下运行，特定注册运行时的各个附属进程将继承启动板的用户帐户。 附属进程将在执行过程中按需创建和销毁。
+
+    如果安装 SQL Server 的计算机同时用作域控制器，则启动板无法创建其自己使用的帐户。 因此无法在作用域控制器上安装 R Services（数据库内）或机器学习服务（数据库内）。
+
   
  - **SQL Server PolyBase 引擎** - 提供对外部数据源的分布式查询功能。
  
  - **SQL Server Polybase 数据移动服务** - 支持在 SQL Server 和外部数据源之间以及在 PolyBase 扩展组中的 SQL 节点之间移动数据。
   
-##  <a name="Serv_Prop"></a> 服务属性和配置  
- 用于启动和运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的启动帐户可以是 [域用户帐户](#Domain_User)、 [本地用户帐户](#Local_User)、 [托管服务帐户](#MSA)、 [虚拟帐户](#VA_Desc)或 [内置系统帐户](#Local_Service)。 若要启动和运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每项服务，这些服务都必须有一个在安装过程中配置的启动帐户。  
+##  <a name="Serv_Prop"></a> 服务属性和配置
+
+用于启动和运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的启动帐户可以是 [域用户帐户](#Domain_User)、 [本地用户帐户](#Local_User)、 [托管服务帐户](#MSA)、 [虚拟帐户](#VA_Desc)或 [内置系统帐户](#Local_Service)。 若要启动和运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每项服务，这些服务都必须有一个在安装过程中配置的启动帐户。
   
  此部分介绍可配置为启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序使用的默认值、Per-service SID 的概念、启动选项以及配置防火墙。  
   
@@ -121,10 +126,11 @@ ms.lasthandoff: 11/09/2017
   
 -   [防火墙端口](#Firewall)  
   
-###  <a name="Default_Accts"></a> 默认服务帐户  
- 下表列出了安装程序在安装所有组件时使用的默认服务帐户。 列出的默认帐户是建议使用的帐户，但特殊注明的除外。  
+###  <a name="Default_Accts"></a> 默认服务帐户
+
+下表列出了安装程序在安装所有组件时使用的默认服务帐户。 列出的默认帐户是建议使用的帐户，但特殊注明的除外。
   
- **独立服务器或域控制器**  
+ **独立服务器或域控制器**
   
 |组件|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 及更高版本|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
@@ -144,7 +150,7 @@ ms.lasthandoff: 11/09/2017
   
  *当需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机外部的资源时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用配置了必需的最小特权的托管服务帐户 (MSA)。  
   
- **SQL Server 故障转移群集实例**  
+ **SQL Server 故障转移群集实例**
   
 |组件|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
@@ -156,8 +162,8 @@ ms.lasthandoff: 11/09/2017
 |FD 启动器（全文搜索）|[LOCAL SERVICE](#Local_Service)|[虚拟帐户](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
-  
-####  <a name="Changing_Accounts"></a> 更改帐户属性  
+
+####  <a name="Changing_Accounts"></a> 更改帐户属性
   
 > [!IMPORTANT]  
 >  -   始终使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）来更改 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务使用的帐户，或更改帐户的密码。 除了更改帐户名称以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器还可以执行其他配置，例如，更新保护 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服务主密钥的 Windows 本地安全存储区。 其他工具（例如 Windows 服务控制管理器）可以更改帐户名称，但不更改所有必需的设置。  
@@ -206,8 +212,9 @@ ms.lasthandoff: 11/09/2017
   
  **安全说明** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 就会使用 [MSA](#MSA) 或 [virtual account](#VA_Desc) 。 当无法使用 MSA 和虚拟帐户时，将使用特定的低特权用户帐户或域帐户，而不将共享帐户用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 对不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用单独的帐户。 不要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户或服务组授予其他权限。 在支持服务 SID 的情况下，将通过组成员身份或直接将权限授予服务 SID。  
   
-###  <a name="Auto_Start"></a> 自动启动  
- 除了具有用户帐户外，每项服务还有用户可控制的三种可能的启动状态：  
+###  <a name="Auto_Start"></a> 自动启动
+
+除了具有用户帐户外，每项服务还有用户可控制的三种可能的启动状态：
   
 -   **已禁用** 服务已安装但当前未运行。  
   
@@ -217,8 +224,9 @@ ms.lasthandoff: 11/09/2017
   
  在安装过程中，启动状态处于选中状态。 当安装命名实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务应设置为自动启动。  
   
-###  <a name="Configure_services"></a> 在无人参与的安装过程中配置服务  
- 下表显示了可以在安装过程中配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 对于无人参与的安装，可以在配置文件中或在命令提示符下使用开关。  
+###  <a name="Configure_services"></a> 在无人参与的安装过程中配置服务
+
+下表显示了可以在安装过程中配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 对于无人参与的安装，可以在配置文件中或在命令提示符下使用开关。  
   
 |SQL Server 服务名称|无人参与安装的开关*|  
 |-----------------------------|---------------------------------------------|  
@@ -229,18 +237,22 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT、ISSVCPASSWORD、ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS|
+|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS***|
 |PolyBase 引擎| PBENGSVCACCOUNT、PBENGSVCPASSWORD、PBENGSVCSTARTUPTYPE、PBDMSSVCACCOUNT、PBDMSSVCPASSWORD、PBDMSSVCSTARTUPTYPE、PBSCALEOUT、PBPORTRANGE
   
  *有关无人参与安装的详细信息和示例语法，请参阅 [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
- ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例和具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例上处于禁用状态。
+
+ ***当前不支持仅通过交换机设置启动板帐户。 请使用 SQL Server 配置管理器更改帐户或其他服务设置。
+
+###  <a name="Firewall"></a> 防火墙端口
+
+在大多数情况下，首次安装时，可以通过与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安装在相同计算机上的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 等此类工具连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不会在 Windows 防火墙中打开端口。 在将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为侦听 TCP 端口，并且在 Windows 防火墙中打开适当的端口进行连接之前，将无法从其他计算机建立连接。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
-###  <a name="Firewall"></a> 防火墙端口  
- 在大多数情况下，首次安装时，可以通过与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安装在相同计算机上的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 等此类工具连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不会在 Windows 防火墙中打开端口。 在将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为侦听 TCP 端口，并且在 Windows 防火墙中打开适当的端口进行连接之前，将无法从其他计算机建立连接。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
-  
-##  <a name="Serv_Perm"></a> 服务权限  
- 此部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Per-service SID 配置的权限。  
+##  <a name="Serv_Perm"></a> 服务权限
+
+此部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Per-service SID 配置的权限。  
   
 -   [服务配置和访问控制](#Serv_SID)  
   
@@ -260,27 +272,28 @@ ms.lasthandoff: 11/09/2017
   
 -   [命名管道](#Pipes)  
   
-###  <a name="Serv_SID"></a> 服务配置和访问控制  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 会为其每项服务启用 Per-service SID，以提供深层服务隔离与防御。 Per-service SID 从服务名称派生得到，对该服务是唯一的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的服务 SID 名称可能是 **NT Service\MSSQL$***\<InstanceName>*。 通过服务隔离，可直接访问特定的对象，而无需运行高特权帐户，也不会削弱为对象提供的安全保护水平。 通过使用包含服务 SID 的访问控制项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可限制对其资源的访问。  
+###  <a name="Serv_SID"></a> 服务配置和访问控制
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 会为其每项服务启用 Per-service SID，以提供深层服务隔离与防御。 Per-service SID 从服务名称派生得到，对该服务是唯一的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的服务 SID 名称可能是 **NT Service\MSSQL$***\<InstanceName>*。 通过服务隔离，可直接访问特定的对象，而无需运行高特权帐户，也不会削弱为对象提供的安全保护水平。 通过使用包含服务 SID 的访问控制项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可限制对其资源的访问。
   
 > [!NOTE]  
->  在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2（及更高版本）上，Per-service SID 可以是服务使用的虚拟帐户。  
+>  在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2（及更高版本）上，Per-service SID 可以是服务使用的虚拟帐户。
   
- 对于大多数组件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直接为 Per-service 帐户配置 ACL，因此，无需重复资源 ACL 过程即可更改此服务帐户。  
+ 对于大多数组件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直接为 Per-service 帐户配置 ACL，因此，无需重复资源 ACL 过程即可更改此服务帐户。
   
- 当安装 [!INCLUDE[ssAS](../../includes/ssas-md.md)]时，将创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的 Per-service SID。 创建了本地 Windows 组，其命名格式为 **SQLServerMSASUser$***computer_name***$***instance_name*。 Per-service SID **NT SERVICE\MSSQLServerOLAPService** 已被授予本地 Windows 组中的成员资格，而本地 Windows 组在 ACL 中被授予了适当的权限。 如果更改了用来启动 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的帐户， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器必须更改某些 Windows 权限（如作为服务登录的权限），但分配给本地 Windows 组的权限将仍可用且没有任何更新，因为 Per-service SID 没发生变化。 此方法允许在升级过程中重命名 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务。  
+ 当安装 [!INCLUDE[ssAS](../../includes/ssas-md.md)]时，将创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的 Per-service SID。 创建了本地 Windows 组，其命名格式为 **SQLServerMSASUser$***computer_name***$***instance_name*。 Per-service SID **NT SERVICE\MSSQLServerOLAPService** 已被授予本地 Windows 组中的成员资格，而本地 Windows 组在 ACL 中被授予了适当的权限。 如果更改了用来启动 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的帐户， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器必须更改某些 Windows 权限（如作为服务登录的权限），但分配给本地 Windows 组的权限将仍可用且没有任何更新，因为 Per-service SID 没发生变化。 此方法允许在升级过程中重命名 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务。
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务创建一个本地 Windows 组。 对于这些服务， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为此本地 Windows 组配置 ACL。  
   
- 在安装或升级期间，系统可能会将服务或服务 SID 的服务帐户添加为服务组的成员，具体取决于服务配置。  
+ 在安装或升级期间，系统可能会将服务或服务 SID 的服务帐户添加为服务组的成员，具体取决于服务配置。
   
 ###  <a name="Windows"></a> Windows 特权和权限  
- 为启动服务分配的帐户需要对于服务的 **启动、停止和暂停权限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将自动分配此权限。  首先，安装远程服务器管理工具 (RSAT)。 请参阅 [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)（Windows 7 的远程服务器管理工具）。  
+ 为启动服务分配的帐户需要对于服务的 **启动、停止和暂停权限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将自动分配此权限。  首先，安装远程服务器管理工具 (RSAT)。 请参阅 [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)（Windows 7 的远程服务器管理工具）。
   
- 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的 Per-service SID 或本地 Windows 组请求的权限。  
+ 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的 Per-service SID 或本地 Windows 组请求的权限。
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序授予的权限|  
-|---------------------------------------|------------------------------------------------------------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序授予的权限|
+|---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT SERVICE\MSSQLSERVER**。 命名实例： **NT SERVICE\MSSQL$**InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：**\*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT Service\SQLSERVERAGENT**。 命名实例： **NT Service\SQLAGENT$***InstanceName*。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例： **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**。 命名实例： **SQLServerMSASUser$***ComputerName***$***InstanceName*。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例： **SQLServerMSASUser$***ComputerName***$***PowerPivot*。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)<br /><br /> **锁定内存中的页** (SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> **提高计划优先级** (SeIncreaseBasePriorityPrivilege)|  
@@ -388,7 +401,8 @@ ms.lasthandoff: 11/09/2017
  当数据库文件存储在用户定义的位置时，您必须授予每个服务 SID 访问该位置的权限。 有关将文件系统权限授予 Per-service SID 的详细信息，请参阅 [配置数据库引擎访问的文件系统权限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。  
   
 ###  <a name="File_System_Other"></a> 授予其他 Windows 用户帐户或组的文件系统权限  
- 可能还必须向内置帐户或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户授予某些访问控制权限。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序设置的其他 ACL。  
+
+可能还必须向内置帐户或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户授予某些访问控制权限。 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序设置的其他 ACL。  
   
 |请求组件|帐户|资源|权限|  
 |--------------------------|-------------|--------------|-----------------|  
@@ -414,7 +428,8 @@ ms.lasthandoff: 11/09/2017
  *这是 WMI 提供程序命名空间。  
   
 ###  <a name="Unusual_Locations"></a> 与非寻常磁盘位置相关的文件系统权限  
- 当安装 tempdb 或用户数据库时，默认的安装位置驱动器为 **systemdrive**，通常是驱动器 C。  
+
+默认的作为安装位置的驱动器为 systemdrive，通常是驱动器 C。本部分介绍当将 tempdb 或用户数据库安装到非常用位置时要考虑的注意事项。  
   
  **非默认的驱动器**  
   
@@ -428,7 +443,8 @@ ms.lasthandoff: 11/09/2017
 >  虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 *<domain_name>***\\***<computer_name>***$** 格式设置计算机帐户。  
   
 ###  <a name="Review_additional_considerations"></a>查看其他注意事项  
- 下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供其他功能时所需的权限：  
+
+下表显示了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供其他功能时所需的权限：  
   
 |服务/应用程序|功能|必需的权限|  
 |--------------------------|-------------------|-------------------------|  
@@ -458,7 +474,8 @@ ms.lasthandoff: 11/09/2017
 -   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\RS] "InstanceName"="MSRSSQL13"**  
   
 ###  <a name="WMI"></a> WMI  
- Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 为了支持这一点，需在**中预配 Windows WMI 提供程序 (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的 per-service SID。  
+
+Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 为了支持这一点，需在**中预配 Windows WMI 提供程序 (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的 per-service SID。  
   
  SQL WMI 提供程序需要以下权限：  
   
@@ -473,7 +490,8 @@ ms.lasthandoff: 11/09/2017
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会创建一个 SQL WMI 命名空间，并向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务 SID 授予读取权限。  
   
 ###  <a name="Pipes"></a> 命名管道  
- 在所有安装中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序都通过共享内存协议（这是一种本地命名管道）提供针对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。  
+
+在所有安装中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序都通过共享内存协议（这是一种本地命名管道）提供针对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。  
   
 ##  <a name="Provisioning"></a> 预配  
  此部分介绍如何在各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件内设置帐户。  

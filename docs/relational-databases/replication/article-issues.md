@@ -2,9 +2,12 @@
 title: "项目问题 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7840d17929da4b25bdab26ba98cba4fc92f1c60c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a92717aaa6a367fb7ce357aa379d159beb62fb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="article-issues"></a>项目问题
-  **“项目问题”** 页列出了已发现的项目情况以及这些情况导致的所有必需更改。 下表列出了可能出现的问题以及确保复制和现有应用程序正常运行所必需的操作：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“项目问题”页列出了已发现的项目情况以及这些情况导致的所有必需更改。 下表列出了可能出现的问题以及确保复制和现有应用程序正常运行所必需的操作：  
   
 |项目问题|详细信息|必需的操作|  
 |-------------------|-------------|---------------------|  

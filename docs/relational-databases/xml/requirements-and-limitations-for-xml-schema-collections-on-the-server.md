@@ -2,9 +2,12 @@
 title: "在服务器上使用 XML 架构集合的要求和限制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a168e76435ae4e88f716c6fccca1d39432283c86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5cd69a363f823d5d5ef197524d2fe5a3f393d438
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
-  XML 架构定义语言 (XSD) 验证对使用 **xml** 数据类型的 SQL 列具有某些限制。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]XML 架构定义语言 (XSD) 验证对使用 xml 数据类型的 SQL 列具有某些限制。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
   
 |项|限制|  
 |----------|----------------|  

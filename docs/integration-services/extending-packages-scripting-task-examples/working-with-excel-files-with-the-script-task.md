@@ -1,5 +1,5 @@
 ---
-title: "使用脚本任务处理 Excel 文件 |Microsoft 文档"
+title: "使用脚本任务处理 Excel 文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,108 +8,104 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], Excel files
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46bf53c35663393ad600f02600961cf0295386bf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cb50dc174d4a1763416b4ccc313db56f26a5b1b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
   
- [将包配置为测试示例](#configuring)  
+ [配置用于测试示例的包](#configuring)  
   
- [示例 1： 检查 Excel 文件是否存在](#example1)  
+ [示例 1：检查 Excel 文件是否存在](#example1)  
   
- [示例 2： 检查的 Excel 表是否存在](#example2)  
+ [示例 2：检查 Excel 表是否存在](#example2)  
   
- [示例 3： 获取文件夹中的 Excel 文件的列表](#example3)  
+ [示例 3：获取文件夹中的 Excel 文件的列表](#example3)  
   
- [示例 4： 在 Excel 文件中获取表的列表](#example4)  
+ [示例 4：获取 Excel 文件中的表的列表](#example4)  
   
  [显示示例的结果](#testing)  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="configuring"></a>将包配置为测试示例  
+##  <a name="configuring"></a> 配置用于测试示例的包  
  您可以配置单个包来测试本主题中的所有示例。 这些示例使用许多相同的包变量和相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类。  
   
 #### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>将包配置为用于本主题中的示例  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目，并打开默认的包进行编辑。  
   
-2.  **变量**。 打开**变量**窗口，并定义以下变量：  
+2.  变量。 打开“变量”窗口并定义以下变量：  
   
-    -   `ExcelFile`类型的**字符串**。 输入现有 Excel 工作簿的完整路径和文件名。  
+    -   `ExcelFile`，类型为字符串。 输入现有 Excel 工作簿的完整路径和文件名。  
   
-    -   `ExcelTable`类型的**字符串**。 输入以 `ExcelFile` 变量值命名的工作簿中的现有工作簿或指定范围的名称。 此值区分大小写。  
+    -   `ExcelTable`，类型为字符串。 输入以 `ExcelFile` 变量值命名的工作簿中的现有工作簿或指定范围的名称。 此值区分大小写。  
   
-    -   `ExcelFileExists`类型的**布尔**。  
+    -   `ExcelFileExists`，类型为布尔。  
   
-    -   `ExcelTableExists`类型的**布尔**。  
+    -   `ExcelTableExists`，类型为布尔。  
   
-    -   `ExcelFolder`类型的**字符串**。 输入至少包含一个 Excel 工作簿的文件夹的完整路径。  
+    -   `ExcelFolder`，类型为字符串。 输入至少包含一个 Excel 工作簿的文件夹的完整路径。  
   
-    -   `ExcelFiles`类型的**对象**。  
+    -   `ExcelFiles`，类型为对象。  
   
-    -   `ExcelTables`类型的**对象**。  
+    -   `ExcelTables`，类型为对象。  
   
-3.  **导入语句**。 多数代码示例都要求您在脚本文件的开头处导入一个或两个下列 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间：  
+3.  Imports 语句。 多数代码示例都要求您在脚本文件的开头处导入一个或两个下列 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间：  
   
-    -   **System.IO**，文件系统操作。  
+    -   System.IO，用于文件系统操作。  
   
-    -   **System.Data.OleDb**，若要打开 Excel 文件保存为数据源。  
+    -   System.Data.OleDb，用于将 Excel 文件作为数据源打开。  
   
-4.  **引用**。 从 Excel 文件读取架构信息的代码示例需要的脚本项目中的其他引用**System.Xml**命名空间。  
+4.  引用。 从 Excel 文件读取构架信息的代码示例在脚本项目中需要对 System.Xml 命名空间的附加引用。  
   
-5.  通过设置脚本组件的默认脚本语言**脚本语言**选项**常规**页**选项**对话框。 有关详细信息，请参阅 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+5.  设置脚本组件的默认脚本语言，方法是使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
   
-##  <a name="example1"></a>示例 1 描述： 检查 Excel 文件是否存在  
+##  <a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  向包中添加新的脚本任务和其将名称更改为**ExcelFileExists**。  
+1.  将新的脚本添加到包中，并将其名称更改为 ExcelFileExists。  
   
-2.  在**脚本任务编辑器**上**脚本**选项卡上，单击**ReadOnlyVariables**并输入属性值使用以下方法之一：  
+2.  在“脚本任务编辑器”的“脚本”选项卡上，单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
   
-    -   类型**ExcelFile**。  
-  
-         - 或 -  
-  
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框中，选择**ExcelFile**变量。  
-  
-3.  单击**ReadWriteVariables**并输入属性值使用以下方法之一：  
-  
-    -   类型**ExcelFileExists**。  
+    -   键入 ExcelFile。  
   
          - 或 -  
   
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框中，选择**ExcelFileExists**变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
   
-4.  单击**编辑脚本**以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
-5.  添加**导入**语句**System.IO**在脚本文件的顶部的命名空间。  
+    -   键入 ExcelFileExists。  
+  
+         - 或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFileExists”变量。  
+  
+4.  单击“编辑脚本”以打开脚本编辑器。  
+  
+5.  在脚本文件的顶部添加针对 System.IO 命名空间的 Imports 语句。  
   
 6.  添加以下代码。  
   
@@ -154,38 +150,38 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a>示例 2 描述： 检查的 Excel 表是否存在  
+##  <a name="example2"></a> 示例 2 说明：检查 Excel 表是否存在  
  本示例可确定 `ExcelTable` 变量中指定的 Excel 工作表或命名范围是否存在于 `ExcelFile` 变量中指定的 Excel 工作簿文件中，然后根据该结果设置 `ExcelTableExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  向包中添加新的脚本任务和其将名称更改为**ExcelTableExists**。  
+1.  将新的脚本任务添加到包，并将其名称更改为 ExcelTableExists。  
   
-2.  在**脚本任务编辑器**上**脚本**选项卡上，单击**ReadOnlyVariables**并输入属性值使用以下方法之一：  
+2.  在“脚本任务编辑器”的“脚本”选项卡上，单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
   
-    -   类型**ExcelTable**和**ExcelFile**用逗号分隔**。**  
-  
-         - 或 -  
-  
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框中，选择**ExcelTable**和**ExcelFile**变量。  
-  
-3.  单击**ReadWriteVariables**并输入属性值使用以下方法之一：  
-  
-    -   类型**ExcelTableExists**。  
+    -   键入用逗号. 分隔的 ExcelTable 和 ExcelFile。  
   
          - 或 -  
   
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框中，选择**ExcelTableExists**变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTable”和“ExcelFile”变量。  
   
-4.  单击**编辑脚本**以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
-5.  添加对的引用**System.Xml**脚本项目中的程序集。  
+    -   键入 ExcelTableExists。  
   
-6.  添加**导入**语句**System.IO**和**System.Data.OleDb**在脚本文件的顶部的命名空间。  
+         - 或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选“ExcelTableExists”变量。  
+  
+4.  单击“编辑脚本”以打开脚本编辑器。  
+  
+5.  在脚本项目中添加对 System.Xml 程序集的引用。  
+  
+6.  在脚本文件的顶部添加针对 System.IO 和 System.Data.OleDb 命名空间的 Imports 语句。  
   
 7.  添加以下代码。  
   
-### <a name="example-2-code"></a>代码示例 2  
+### <a name="example-2-code"></a>示例 2 代码  
   
 ```vb  
 Public Class ScriptMain  
@@ -261,32 +257,32 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a>示例 3 描述： 获取文件夹中的 Excel 文件的列表  
+##  <a name="example3"></a> 示例 3 说明：获取文件夹中的 Excel 文件的列表  
  本示例使用由 `ExcelFolder` 变量值指定的文件夹中找到的 Excel 文件的列表来填充数组，然后将该数组复制到 `ExcelFiles` 变量。 您可以使用 Foreach 源变量枚举器循环访问数组中的文件。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  向包中添加新的脚本任务和其将名称更改为**GetExcelFiles**。  
+1.  将新的脚本任务添加到包，并将其名称更改为 GetExcelFiles。  
   
-2.  打开**脚本任务编辑器**上**脚本**选项卡上，单击**ReadOnlyVariables**并输入属性值使用以下方法之一：  
+2.  打开“脚本任务编辑器”，在“脚本”选项卡上单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
   
-    -   类型**ExcelFolder**  
-  
-         - 或 -  
-  
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框框中，选择 ExcelFolder 变量。  
-  
-3.  单击**ReadWriteVariables**并输入属性值使用以下方法之一：  
-  
-    -   类型**ExcelFiles**。  
+    -   键入 ExcelFolder  
   
          - 或 -  
   
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框框中，选择 ExcelFiles 变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFolder 变量。  
   
-4.  单击**编辑脚本**以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
-5.  添加**导入**语句**System.IO**在脚本文件的顶部的命名空间。  
+    -   键入 ExcelFiles。  
+  
+         - 或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFiles 变量。  
+  
+4.  单击“编辑脚本”以打开脚本编辑器。  
+  
+5.  在脚本文件的顶部添加针对 System.IO 命名空间的 Imports 语句。  
   
 6.  添加以下代码。  
   
@@ -331,9 +327,9 @@ public class ScriptMain
 ```  
   
 ### <a name="alternate-solution"></a>备用解决方案  
- 如果不使用脚本任务将 Excel 文件列表收集到数组中，则还可以使用 ForEach 文件枚举器来循环访问文件夹中的所有 Excel 文件。 有关详细信息，请参阅[通过 Excel 文件和表使用 Foreach 循环容器循环](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
+ 如果不使用脚本任务将 Excel 文件列表收集到数组中，则还可以使用 ForEach 文件枚举器来循环访问文件夹中的所有 Excel 文件。 有关详细信息，请参阅[使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-##  <a name="example4"></a>示例 4 描述： 在 Excel 文件中获取表的列表  
+##  <a name="example4"></a> 示例 4 说明：获取 Excel 文件中的表的列表  
  本示例使用在 Excel 工作簿文件中找到的由 `ExcelFile` 变量值指定的工作表和指定范围列表来填充数组，然后将该数组复制到 `ExcelTables` 变量。 您可以使用 Foreach 源变量枚举器循环访问数组中的表。  
   
 > [!NOTE]  
@@ -341,29 +337,29 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  向包中添加新的脚本任务和其将名称更改为**GetExcelTables**。  
+1.  将新的脚本任务添加到包中，并将其名称更改为 GetExcelTables。  
   
-2.  打开**脚本任务编辑器**上**脚本**选项卡上，单击**ReadOnlyVariables**并输入属性值使用以下方法之一：  
+2.  打开“脚本任务编辑器”，在“脚本”选项卡上单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
   
-    -   类型**ExcelFile**。  
-  
-         - 或 -  
-  
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框框中，选择 ExcelFile 变量。  
-  
-3.  单击**ReadWriteVariables**并输入属性值使用以下方法之一：  
-  
-    -   类型**ExcelTables**。  
+    -   键入 ExcelFile。  
   
          - 或 -  
   
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框框中，选择 ExcelTablesvariable。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFile 变量。  
   
-4.  单击**编辑脚本**以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
   
-5.  添加对的引用**System.Xml**脚本项目中的命名空间。  
+    -   键入 ExcelTables。  
   
-6.  添加**导入**语句**System.Data.OleDb**在脚本文件的顶部的命名空间。  
+         - 或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelTablesvariable。  
+  
+4.  单击“编辑脚本”以打开脚本编辑器。  
+  
+5.  在脚本项目中添加对 System.Xml 命名空间的引用。  
+  
+6.  在脚本文件的顶部添加针对 System.Data.OleDb 命名空间的 Imports 语句。  
   
 7.  添加以下代码。  
   
@@ -443,30 +439,30 @@ public class ScriptMain
 ```  
   
 ### <a name="alternate-solution"></a>备用解决方案  
- 如果不使用脚本任务将 Excel 表列表收集到数组中，则还可以使用 ForEach ADO.NET 架构行集枚举器来循环访问 Excel 工作簿文件中的所有表（即，工作表和指定范围）。 有关详细信息，请参阅[通过 Excel 文件和表使用 Foreach 循环容器循环](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
+ 如果不使用脚本任务将 Excel 表列表收集到数组中，则还可以使用 ForEach ADO.NET 架构行集枚举器来循环访问 Excel 工作簿文件中的所有表（即，工作表和指定范围）。 有关详细信息，请参阅[使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-##  <a name="testing"></a>显示示例的结果  
+##  <a name="testing"></a> 显示示例的结果  
  如果已在同一个包中配置本主题的所有示例，则可以将所有脚本任务连接到用于显示所有示例输出的其他脚本任务。  
   
 #### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>配置用于显示本主题中的示例输出的脚本任务  
   
-1.  向包中添加新的脚本任务和其将名称更改为**DisplayResults**。  
+1.  将新的脚本任务添加到包中，并将其名称更改为 DisplayResults。  
   
-2.  将每个四个示例脚本任务连接到另，以便每个任务运行在前面任务完成后成功，并连接到第四个示例任务**DisplayResults**任务。  
+2.  将四个示例脚本任务彼此连接，以便每个任务在前一个任务成功完成后运行，然后将第四个示例任务连接到 DisplayResults 任务。  
   
-3.  打开**DisplayResults**任务中**脚本任务编辑器**。  
+3.  在“脚本任务编辑器”中打开 DisplayResults 任务。  
   
-4.  上**脚本**选项卡上，单击**ReadOnlyVariables**并使用以下方法之一添加中列出的所有七个变量[将包配置为测试示例](#configuring):  
+4.  在“脚本”选项卡中单击“ReadOnlyVariables”然后使用下列任一方法添加[配置用于测试示例的包](#configuring)中列出的七个变量：  
   
     -   键入用逗号分隔的每个变量的名称。  
   
          - 或 -  
   
-    -   单击省略号 (**...**) 到属性字段中，然后在下一步按钮**选择变量**对话框中，选择变量。  
+    -   单击属性字段旁的省略号 (**…**) 按钮，然后在“”选择变量对话框中选择变量。  
   
-5.  单击**编辑脚本**以打开脚本编辑器。  
+5.  单击“编辑脚本”以打开脚本编辑器。  
   
-6.  添加**导入**语句**Microsoft.VisualBasic**和**System.Windows.Forms**在脚本文件的顶部的命名空间。  
+6.  在脚本文件的顶部添加针对 Microsoft.VisualBasic 和 System.Windows.Forms 命名空间的 Imports 语句。  
   
 7.  添加以下代码。  
   
@@ -556,4 +552,3 @@ public class ScriptMain
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   
-

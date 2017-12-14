@@ -1,5 +1,5 @@
 ---
-title: "合并联接转换 |Microsoft 文档"
+title: "合并联接转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 7e9daf9c88882acb90097ce12495db9cab775290
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-join-transformation"></a>合并联接转换
   合并联接转换提供了一个输出，该输出是通过使用 FULL、LEFT 或 INNER 联接将两个已排序数据集进行联接而生成的。 例如，可使用 LEFT 联接来联接包含产品信息的表与列出产品的制造国家/地区的表。 结果是一个列出所有产品及其产地国家/地区的表。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [合并和合并联接转换对数据进行排序](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="merge-join-transformation-editor"></a>合并联接转换编辑器
   可以使用 **“合并联接转换编辑器”** 对话框指定联接类型、联接列和输出列，以合并通过联接组合的两个输入。  
@@ -96,8 +94,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>另请参阅  
  [合并转换](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

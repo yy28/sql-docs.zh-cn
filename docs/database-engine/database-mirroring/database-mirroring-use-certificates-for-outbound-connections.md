@@ -2,9 +2,12 @@
 title: "数据库镜像 - 使用证书进行出站连接 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 442135ac804feff215bb3eab09bbf7ee3464af4e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b67769fce7a6516e3bd8d0a76eb70ef3d0365d4a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>数据库镜像 - 使用证书进行出站连接
-  本主题说明配置服务器实例以使用证书对数据库镜像的出站连接进行身份验证的步骤。 必须配置出站连接，才可以设置入站连接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明配置服务器实例以使用证书对数据库镜像的出站连接进行身份验证的步骤。 必须配置出站连接，才可以设置入站连接。  
   
 > [!NOTE]  
 >  服务器实例上的所有镜像连接都使用单个数据库镜像端点，必须在创建端点时指定服务器实例的身份验证方法。  

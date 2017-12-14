@@ -2,9 +2,12 @@
 title: "将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7c5fdeab2db45330177e8d4144af5acd39dc355
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0d79ce2573aa1a9a4400a9e46cdcacf73c388f8a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）
-  本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将实用工具控制点 (UCP) 从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的一个实例移到另一个实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将实用工具控制点 (UCP) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个实例移到另一个实例。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

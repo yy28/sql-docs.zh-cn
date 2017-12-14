@@ -2,9 +2,12 @@
 title: "增强常规复制性能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 23abb406368b5a5a038af7542f36ae9f2a2f8c42
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b1f9c651b9b0ffc41af0beec6ace0a570f02d09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
-  按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
   
 ## <a name="server-and-network"></a>服务器和网络  
   

@@ -1,5 +1,5 @@
 ---
-title: "示例的高级 Integration Services 表达式 |Microsoft 文档"
+title: "高级 Integration Services 表达式的示例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 819cf75cbfe7dba1bbd0c81d18ecc8db138b01f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e8bcc03027fcb965979e557e97afb186069fd51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>高级 Integration Services 表达式的示例
   本节提供合并多个运算符和函数的高级表达式示例。 如果表达式用于优先约束或有条件拆分转换中，则其计算结果必须为布尔值。 但是，这一限制并不适用于属性表达式、变量、派生列转换或 For 循环容器中使用的表达式。  
@@ -114,4 +112,3 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   
-

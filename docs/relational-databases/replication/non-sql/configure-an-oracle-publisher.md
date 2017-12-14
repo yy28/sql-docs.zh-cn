@@ -2,9 +2,12 @@
 title: "配置 Oracle 发布服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66977f7eeb747d77d8f0db82b76b307e1aff2cca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
-  Oracle 发布服务器中的发布的创建方法与典型快照和事务发布相同，但在创建 Oracle 发布服务器中的发布之前，必须先完成下列步骤（本主题详细介绍步骤 1、步骤 3 和步骤 4）：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 发布服务器中的发布的创建方法与典型快照和事务发布相同，但在创建 Oracle 发布服务器中的发布之前，必须先完成下列步骤（本主题详细介绍步骤一、步骤三和步骤四）：  
   
 1.  使用提供的脚本在 Oracle 数据库中创建复制管理用户。  
   

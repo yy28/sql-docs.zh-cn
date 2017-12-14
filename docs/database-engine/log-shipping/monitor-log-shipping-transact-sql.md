@@ -2,9 +2,12 @@
 title: "监视日志传送 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d1ed3b2823e6de0f4afe534398c40ec461e59850
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>监视日志传送 (Transact-SQL)
-  配置日志传送后，就可以监视有关所有日志传送服务器状态的信息。 日志传送操作的历史记录和状态始终由日志传送作业保存在本地。 备份操作的历史记录和状态存储在主服务器上，复制和还原操作的历史记录和状态存储在辅助服务器上。 如果使用了远程监视服务器，此信息还将存储在监视服务器上。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]配置日志传送后，就可以监视有关所有日志传送服务器状态的信息。 日志传送操作的历史记录和状态始终由日志传送作业保存在本地。 备份操作的历史记录和状态存储在主服务器上，复制和还原操作的历史记录和状态存储在辅助服务器上。 如果使用了远程监视服务器，此信息还将存储在监视服务器上。  
   
  您可以配置警报，当日志传送操作无法按计划发生时激发该警报。 监视备份和还原操作状态的警报作业将引发错误。 您可以定义警报，以便在引发这些错误时通知操作员。 如果配置了监视服务器，该监视服务器上将运行一个警报作业，它可以引发日志传送配置中所有操作的错误。 如果未指定监视服务器，警报作业将在主服务器实例上运行，以便监视备份操作。 警报作业还将在每个辅助服务器实例上运行，以便监视本地复制和还原操作。  
   

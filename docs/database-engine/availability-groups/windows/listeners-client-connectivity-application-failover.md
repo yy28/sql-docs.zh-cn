@@ -2,9 +2,12 @@
 title: "侦听器、客户端连接、应用程序故障转移 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: af6a6732a78007d51221cff6c6fb386e3abe48f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>侦听器、客户端连接、应用程序故障转移
-  本主题包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
   
 > [!NOTE]  
 >  对于绝大多数常见的侦听器配置，只需通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或 PowerShell cmdlet 即可创建第一个可用性组侦听器。 有关详细信息，请参阅本主题后面的 [相关任务](#RelatedTasks)。  

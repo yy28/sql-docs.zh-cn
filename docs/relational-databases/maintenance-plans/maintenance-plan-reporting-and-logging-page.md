@@ -2,9 +2,12 @@
 title: "维护计划（“报告和记录”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b94a7b05ebe694c668bfb9e8763e1be479cddf51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6c3a26d6e0cdf6e356fa65035cff28f99b86bbb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>维护计划（“报告和记录”页）
-  使用 **“报告和记录”** 对话框可以配置在执行维护计划时生成的报告和日志。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“报告和记录”对话框可以配置在执行维护计划时生成的报告和日志。  
   
 ## <a name="options"></a>选项  
  **生成文本文件报告**  

@@ -1,5 +1,5 @@
 ---
-title: "创建新的 InfoObject |Microsoft 文档"
+title: "新建 InfoObject | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-new-infoobject"></a>新建 InfoObject
   使用 **“新建 InfoObject”** 对话框在 SAP Netweaver BW 系统中创建新的 InfoObject。  
@@ -161,11 +159,10 @@ ms.lasthandoff: 08/03/2017
  从“属性”列表删除选择的 InfoObject。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建事务数据的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
- [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)   
+ [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+ [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
  [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

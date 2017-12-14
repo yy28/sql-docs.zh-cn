@@ -1,5 +1,5 @@
 ---
-title: "数据事件探查任务 |Microsoft 文档"
+title: "数据事件探查任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.f1
+f1_keywords: sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about Data Profiling task
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: cb13596ddd01922f10632ccb3e1b801937c9941a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2c047b4a34bc300c7caacd020dd4c1833077dd5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
@@ -163,4 +160,3 @@ ms.lasthandoff: 08/03/2017
 -   [值包含配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
   
-

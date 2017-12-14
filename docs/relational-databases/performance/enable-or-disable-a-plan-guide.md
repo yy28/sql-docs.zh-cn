@@ -2,9 +2,12 @@
 title: "启用或禁用计划指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5811b25a16f0024c51e4667f7265f40d3cd223d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bc2185e7ece0af55344e248abe8f3c6b6b591b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>启用或禁用计划指南
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 禁用和启用 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的计划指南。 无论是数据库中的单个计划指南还是所有计划指南都可以启用或禁用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 禁用和启用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的计划指南。 无论是数据库中的单个计划指南还是所有计划指南都可以启用或禁用。  
   
  **本主题内容**  
   

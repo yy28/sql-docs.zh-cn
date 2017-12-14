@@ -2,9 +2,12 @@
 title: "数据库属性（“镜像”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47f75acd0677fb838304de87cd9216671d019131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 267091bc845fdcbfa1c2eafd49bca20c673f966b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
-  从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
   
 > **重要说明！！！** 开始镜像前必须先配置安全性。 如果镜像尚未开始，则必须使用此向导来开始。 **“镜像”** 页文本框将被禁用，直到向导完成为止。  
   

@@ -1,5 +1,5 @@
 ---
-title: "如何查看 CDC 实例属性 |Microsoft 文档"
+title: "如何查看 CDC 实例属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 022b2b25d055e25dbfcc62ba494e5e6564dc4cd5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何查看 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台查看与您创建的实例有关的信息，以便帮助管理实例操作。  
@@ -51,4 +49,3 @@ ms.lasthandoff: 08/03/2017
      此选项卡显示在属性编辑器中定义的高级属性的列表。 有关此选项卡中显示的内容的信息，请参阅 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)。  
   
   
-

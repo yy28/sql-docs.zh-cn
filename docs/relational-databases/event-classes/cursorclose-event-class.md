@@ -2,9 +2,12 @@
 title: "CursorClose 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa3d628acdf6665c102b0315d1fc532e02fd6d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 654126766b8ca24ecfed775253c616d7947bc619
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 事件类
-  当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 关闭并释放游标时，便会发生游标关闭事件。 **CursorClose** 事件类描述发生在应用程序编程接口 (API) 游标中的游标关闭事件。 此事件类发生在由 ODBC、OLE DB 或 DB-Library 打开的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标语句关闭时。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 关闭并释放游标时，便会发生游标关闭事件。 **CursorClose** 事件类描述发生在应用程序编程接口 (API) 游标中的游标关闭事件。 此事件类发生在由 ODBC、OLE DB 或 DB-Library 打开的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标语句关闭时。  
   
  **CursorClose** 事件类包括在记录游标性能的跟踪中。 引起的开销量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪将会显著地降低性能。  
   

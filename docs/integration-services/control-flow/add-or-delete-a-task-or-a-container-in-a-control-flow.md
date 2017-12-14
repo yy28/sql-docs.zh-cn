@@ -1,5 +1,5 @@
 ---
-title: "添加或删除任务或控制流中的容器 |Microsoft 文档"
+title: "在控制流中添加或删除任务或容器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流中添加或删除任务或容器
   在控制流设计器中工作时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的工具箱会列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 为在包中生成控制流而提供的任务。 有关这些工具箱的详细信息，请参阅 [SSIS Toolbox](../../integration-services/ssis-toolbox.md)。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 09/26/2017
   
  下面的过程介绍如何在包的控制流中添加或删除任务或容器。  
   
-## <a name="add-a-task-or-a-container-to-a-control-flow"></a>将任务或容器添加到控制流  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>向控制流添加任务或容器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>从控制流删除任务或容器  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>从控制流中删除任务或容器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
  下面的过程介绍如何使用 **“属性”** 窗口或者任务或容器编辑器来设置相应任务或容器的属性。  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>设置任务或容器，其中包含属性窗口的属性  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>使用“属性”窗口设置任务或容器的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>设置任务或使用任务或容器编辑器的容器的属性  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>使用任务或容器编辑器设置任务或容器的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/26/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 源编辑器 （高级页） |Microsoft 文档"
+title: "SAP BW 源编辑器（“高级”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwsource.advanced.f1
+f1_keywords: sql13.dts.designer.sapbwsource.advanced.f1
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac7757987c169f803f3b0adda7f27c94f090d7db
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f668984bd924267d1d7cb98f1fb2db4c021018d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
   使用“SAP BW 源编辑器”的“高级”页指定字符串转换规则和超时时间，还可重置特定请求 ID 的状态。  
@@ -74,9 +71,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [SAP BW 源编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

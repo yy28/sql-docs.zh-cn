@@ -2,9 +2,12 @@
 title: "维护计划（子计划属性）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e97a88a9ab7a57a41c6a3b8ac2b6ae2c98736d04
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2951f131e6579ac0fb5f7ecc831114123c106dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
-  使用“维护计划(子计划属性)”对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”选项卡上单击“子计划属性”，或者在设计器网格中双击某子计划可显示此对话框。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“维护计划（子计划属性）”对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”选项卡上单击“子计划属性”，或者在设计器网格中双击某子计划可显示此对话框。  
   
 ## <a name="options"></a>选项  
  **名称**  

@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 开发人员文档 |Microsoft 文档"
+title: "Integration Services 开发人员文档 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,19 +21,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-developer-documentation"></a>集成服务开发人员文档
+# <a name="integration-services-developer-documentation"></a>Integration Services 开发人员文档
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含一个完全重写的对象模型，已使用使用功能改善了该模型，以使包扩展和编程更加方便、灵活和强大。 开发人员几乎可以对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行全方位的扩展和编程。  
   
  作为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 开发人员，您有两种基本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 编程方法可选用：  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
   
 -   您可以用编程方式从您自己的应用程序创建、配置和运行包。  
   
- 如果你发现中的内置组件[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]不能满足你的要求，你可以扩展的能力[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]通过编码自己的扩展。 如果采用这种方法，则有两种不同的选择：  
+ 如果觉得 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的内置组件不能满足要求，可以编写自己的扩展代码来扩展 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的功能。 如果采用这种方法，则有两种不同的选择：  
   
 -   对于单个包中的即席使用，可以通过在脚本任务中编写代码来创建自定义任务，或通过在脚本组件中编写代码来创建可配置为源、转换或目标的自定义数据流组件。 这些功能强大的包装可为您编写基础结构代码，使您可将注意力集中于开发您自己的自定义功能；但这些代码较难在别处重用。  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  介绍同步输出与异步输出之间的重要差异以及在数据流中使用这些输出的组件。  
   
  [以编程方式使用连接管理器](../integration-services/working-with-connection-managers-programmatically.md)  
- 列出的连接管理器可以使用从托管代码，以及在连接管理器时，该代码调用返回的值**AcquireConnection**方法。  
+ 列出可从托管代码使用的连接管理器以及代码调用 AcquireConnection 方法时连接管理器返回的值。  
   
  [用脚本扩展包](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  介绍如何使用脚本任务扩展控制流或使用脚本组件扩展数据流。  
@@ -84,7 +81,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="reference"></a>参考  
  [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)  
- 列出预定义[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]错误代码，以及它们的符号名称和说明。  
+ 列出预定义的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误代码及其符号名称和说明。  
   
 ## <a name="related-sections"></a>相关章节  
  [包开发的疑难解答工具](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
@@ -92,10 +89,9 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="external-resources"></a>外部资源  
   
--   CodePlex 示例[Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204)，www.codeplex.com/MSFTISProdSamples 上  
+-   www.codeplex.com/MSFTISProdSamples 上的 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204) 中的 CodePlex 示例  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

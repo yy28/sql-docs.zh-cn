@@ -2,9 +2,12 @@
 title: "监视本机编译存储过程的执行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8db102af60a736dd0e971a1799508188a8332dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b49994a3167ad8639b537279085e16ef2c7ccb1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
-  本主题论述如何监视本机编译的存储过程的性能  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本主题论述如何监视本机编译的存储过程的性能  
   
 ## <a name="using-extended-events"></a>使用扩展事件  
  使用 **sp_statement_completed** 扩展事件可以跟踪查询的执行情况。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  

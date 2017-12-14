@@ -2,9 +2,12 @@
 title: "Object:Deleted 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c43e82f21e7b29d84ad7b758992b47e38af98ecf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c7b0dda763f7b24c8ad45b816b5d12ad50fddc4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件类
-  Object:Deleted 事件类指示对象已删除，例如由 DROP INDEX 和 DROP TABLE 语句删除。 此事件类可用于确定是否正在删除对象，例如由通常创建临时存储过程的 ODBC 应用程序删除。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Object:Deleted 事件类指示对象已删除，例如由 DROP INDEX 和 DROP TABLE 语句删除。 此事件类可用于确定是否正在删除对象，例如由通常创建临时存储过程的 ODBC 应用程序删除。  
   
  通过监视 LoginName 和 NTUserName 默认数据列以及 Objects 事件类，可以确定正在创建、删除或访问对象的用户的名称。  
   

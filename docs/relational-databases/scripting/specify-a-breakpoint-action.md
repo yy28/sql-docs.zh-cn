@@ -2,9 +2,12 @@
 title: "指定断点操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05021a400801a1cae9edbd5e5f9443ff3bd89a63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a4f2df0116147c4c4093762e91274d01dfe1610c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-breakpoint-action"></a>指定断点操作
-  断点 **“命中条件”** 操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]断点“命中条件”操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
   
 ##  <a name="BKMK_ActionConsiderations"></a> 操作注意事项  
  当命中计数和断点条件都得到满足时，断点的默认操作为中断执行。 **调试器中** “命中条件” [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的主要用途是通过指定打印消息，将信息打印到调试器的 **“输出”** 窗口。  

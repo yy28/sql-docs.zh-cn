@@ -1,5 +1,5 @@
 ---
-title: "在包中使用属性表达式 |Microsoft 文档"
+title: "在包中使用属性表达式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -183,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

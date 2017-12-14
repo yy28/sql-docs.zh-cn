@@ -1,5 +1,5 @@
 ---
-title: "在 SQL Server Data Tools 中创建包 |Microsoft 文档"
+title: "在 SQL Server Data Tools 中创建包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 26fe270767369de22f7a5b87f34a92fce2b1c2bd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建包
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，可以使用以下方法之一来创建新包：  
@@ -77,9 +75,8 @@ ms.lasthandoff: 09/27/2017
   
 2.  在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
-     ![在项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion 属性在项目属性对话框中")  
+     ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  你可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
   
   
-

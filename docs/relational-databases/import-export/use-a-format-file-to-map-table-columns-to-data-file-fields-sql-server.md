@@ -2,9 +2,12 @@
 title: "使用格式化文件将表列映射到数据文件字段 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b20798245fbc18e8796887cfeff23a512ba923bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4173b586c90346e31f2a03833e3a37bc2ddbce7c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
-数据文件中包含的字段的排列顺序可能不同于表中相应列的顺序。 本主题介绍了非 XML 格式化文件和 XML 格式化文件，它们经过修改可容纳字段排列顺序不同于表列顺序的数据文件。 修改后的格式化文件可将数据字段映射到与之相应的表列。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]数据文件中包含的字段的排列顺序可能不同于表中相应列的顺序。 本主题介绍了非 XML 格式化文件和 XML 格式化文件，它们经过修改可容纳字段排列顺序不同于表列顺序的数据文件。 修改后的格式化文件可将数据字段映射到与之相应的表列。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
 
 |轮廓|
 |---|

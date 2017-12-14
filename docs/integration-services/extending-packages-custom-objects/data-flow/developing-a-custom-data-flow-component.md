@@ -1,5 +1,5 @@
 ---
-title: "开发自定义数据流组件 |Microsoft 文档"
+title: "开发自定义数据流组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,22 +21,21 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f25c74b52eaccb6c7b0e92cb7dace3d56f3cdd83
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 015f4a6df784666e03203790aca090f6fc2eb39a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-data-flow-component"></a>开发自定义数据流组件
-  数据流任务由一些组件组成，这些组件用于连接各种数据源，然后快速转换和路由数据。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供可扩展的对象模型，以让开发人员创建自定义源、 转换和目标可以在中使用[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]在部署包。 本节包含的主题将指导您开发自定义数据流组件。  
+  数据流任务由一些组件组成，这些组件用于连接各种数据源，然后快速转换和路由数据。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一个可扩展的对象模型，该模型允许开发人员创建可在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和已部署的包中使用的自定义源、转换和目标。 本节包含的主题将指导您开发自定义数据流组件。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [创建自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
  介绍创建自定义数据流组件的初始步骤。  
   
@@ -51,7 +48,7 @@ ms.lasthandoff: 08/03/2017
  [执行计划和缓冲区分配](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
  介绍数据流执行计划和数据缓冲区的分配。  
   
- [使用数据流中的数据的数据类型](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
+ [在数据流中使用数据类型](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
  介绍数据流如何将 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型映射到 .NET Framework 托管数据类型。  
   
  [验证数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
@@ -60,25 +57,25 @@ ms.lasthandoff: 08/03/2017
  [实现外部元数据](../../../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md)  
  介绍如何使用外部元数据列进行数据验证。  
   
- [引发并在数据中定义的事件流组件](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
+ [在数据流组件中引发和定义事件](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
  介绍如何引发预定义事件和自定义事件。  
   
- [日志记录和在数据中定义日志项流组件](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [在数据流组件中记录和定义日志条目](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  介绍如何创建和写入自定义日志条目。  
   
  [在数据流组件中使用错误输出](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
  介绍如何将错误行重定向到备用输出。  
   
- [数据流组件的版本升级](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
+ [升级数据流组件的版本](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
  介绍如何在首次使用新版本的组件时更新已保存的组件元数据。  
   
  [为数据流组件开发用户界面](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
  介绍如何实现组件的自定义编辑器。  
   
- [开发的特定类型的数据的数据流组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
+ [开发特定类型的数据流组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  包含开发三种类型的数据流组件（源、转换和目标）的相关信息。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>参考  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  包含用于创建自定义数据流组件的类和接口。  
   
@@ -93,11 +90,11 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-sections"></a>相关章节  
   
-### <a name="information-common-to-all-custom-objects"></a>对自定义的所有对象都通用的信息  
+### <a name="information-common-to-all-custom-objects"></a>所有自定义对象的通用信息  
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：  
   
  [开发 Integration Services 的自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- 描述中实现的自定义对象的所有类型的基本步骤[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。  
+ 介绍实现 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的所有自定义对象类型的基本步骤。  
   
  [使自定义对象持久化](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
  介绍自定义持久性并在必要时作出解释。  
@@ -106,7 +103,7 @@ ms.lasthandoff: 08/03/2017
  介绍生成、签名、部署和调试自定义对象的技术。  
   
 ### <a name="information-about-other-custom-objects"></a>其他自定义对象的信息  
- 有关可以在中创建的自定义对象的其他类型的信息[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]，请参阅以下主题：  
+ 有关可在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的其他自定义对象类型的信息，请参阅以下主题：  
   
  [开发自定义任务](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  讨论如何对自定义任务进行编程。  
@@ -120,9 +117,8 @@ ms.lasthandoff: 08/03/2017
  [开发自定义 ForEach 枚举器](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  讨论如何对自定义枚举器进行编程。  
   
-## <a name="see-also"></a>另請參閱  
- [扩展 with the Script Component 数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用脚本组件扩展数据流](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [比较脚本解决方案和自定义对象](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

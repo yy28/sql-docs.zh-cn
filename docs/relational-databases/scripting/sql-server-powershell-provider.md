@@ -2,9 +2,12 @@
 title: "SQL Server PowerShell 提供程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fe5587212030b01ec03aa357e3bf4ff7f6ac0e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4aa7050589878d109ef826bad2c9385abc00b5f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供程序
-  用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序用类似于文件系统路径的路径公开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的层次结构。 可以使用路径来查找对象，然后使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型中的方法来针对对象执行操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序用类似于文件系统路径的路径公开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的层次结构。 可以使用路径来查找对象，然后使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型中的方法来针对对象执行操作。  
   
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>SQL Server PowerShell 提供程序的优点  
  通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序实现的路径有助于轻松地以交互方式查看 SQL Server 实例中的所有对象。 您可以使用与您通常用于导航文件系统路径的命令相似的 Windows PowerShell 别名来导航路径。  

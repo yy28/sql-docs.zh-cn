@@ -1,5 +1,5 @@
 ---
-title: "缓存连接管理器 |Microsoft 文档"
+title: "缓存连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords:
-- Cache connection manager
+f1_keywords: sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords: Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
   缓存连接管理器从缓存转换或从缓存文件 (.caw) 中读取数据，并可将数据保存到缓存文件。 无论是否将缓存连接管理器配置为使用缓存文件，数据都会始终存储在内存中。  
@@ -59,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  可以通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关如何以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[添加连接以编程方式](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关如何以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
   缓存连接管理器从缓存转换或缓存文件 (.caw) 中读取引用数据集，并且可以将数据保存到缓存文件中。 这些数据始终存储在内存中。  
@@ -138,4 +134,3 @@ ms.lasthandoff: 08/09/2017
  [在完全缓存模式下使用缓存连接管理器实现查找转换](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

@@ -1,34 +1,34 @@
 ---
 title: "在本机编译的存储过程中实现 CASE 表达式 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/24/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 350e9a3e8605aedec6791d135d08127a14d72c8a
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 CASE 表达式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本机编译的存储过程中支持 CASE 表达式。 下面的示例演示了在查询中使用 CASE 表达式的方法。 将不再需要本机编译模块中针对 CASE 表达式所介绍的解决方法。
+适用于：[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server
+
+本机编译的 T-SQL 模块支持 CASE 表达式。 下面的示例演示了在查询中使用 CASE 表达式的方法。 
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.
@@ -47,12 +47,11 @@ GO
   
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
-```  
+``` 
 
+适用于：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 开始的 SQL Server
 
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
-
-  本机编译的存储过程中 *不* 支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
+  本机编译的 T-SQL 模块不支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
   
  代码示例使用表变量构造单个结果集。 这仅适合当于处理有限行数，因为它涉及到创建数据行的额外副本。  
   
@@ -112,4 +111,3 @@ GO
  [内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
-

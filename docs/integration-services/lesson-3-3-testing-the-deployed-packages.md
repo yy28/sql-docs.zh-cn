@@ -1,5 +1,5 @@
 ---
-title: "步骤 3： 测试已部署的包 |Microsoft 文档"
+title: "步骤 3：测试已部署的包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Lesson 3-3-测试已部署的包
-在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例的包。  
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>第 3-3 课 — 测试已部署的包
+在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。  
   
 在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的包。 这一次，将以不同方式运行包。  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     > 如果无法连接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，则 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务可能未运行。 若要了解该服务的状态，请单击 **“开始”**，依次指向 **“所有程序”**、 **Microsoft SQL Server**和 **“配置工具”**，再单击 **“SQL Server 配置管理器”**。 在左窗格中，单击 **“SQL Server 服务”**。 在右窗格中，查找 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务。 如果该服务尚未运行，请启动该服务。  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将打开。 默认情况下，对象资源管理器窗口是打开的，且位于 Studio 的右上角。 如果对象资源管理器未打开，请单击 **“视图”** 菜单上的 **“对象资源管理器”** 。  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。 默认情况下，对象资源管理器窗口是打开的，且位于 Studio 的右上角。 如果对象资源管理器未打开，请单击 **“视图”** 菜单上的 **“对象资源管理器”** 。  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>使用执行包实用工具运行包  
   
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

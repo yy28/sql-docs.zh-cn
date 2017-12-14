@@ -2,9 +2,12 @@
 title: "计划指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d012220d8d6328c8ec93e1aa10e23c59461ce082
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-guides"></a>计划指南
-  如果您无法或不希望直接在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中更改实际查询文本，则可以使用计划指南来优化查询性能。 计划指南通过将查询提示或固定的查询计划附加到查询来影响查询的优化。 当第三方供应商提供的数据库应用程序中的一个小的查询子集没有按预期执行时，计划指南将很有用。 在计划指南中，您需要指定要优化的 Transact-SQL 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当执行查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 Transact-SQL 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果你无法或不希望直接在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中更改实际查询文本，则可以使用计划指南来优化查询性能。 计划指南通过将查询提示或固定的查询计划附加到查询来影响查询的优化。 当第三方供应商提供的数据库应用程序中的一个小的查询子集没有按预期执行时，计划指南将很有用。 在计划指南中，您需要指定要优化的 Transact-SQL 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当执行查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 Transact-SQL 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
   
  可创建的计划指南总数仅受可用系统资源的限制。 尽管如此，计划指南还是应当限于针对提高或稳定性能的关键查询。 计划指南不应用来影响已部署应用程序的大部分查询负荷。  
   

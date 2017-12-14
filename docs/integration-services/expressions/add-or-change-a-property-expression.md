@@ -1,5 +1,5 @@
 ---
-title: "添加或更改属性表达式 |Microsoft 文档"
+title: "添加或更改属性表达式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d3be6cd239d59bbed67e335ddc7f828567535c2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-change-a-property-expression"></a>添加或更改属性表达式
   可以为包、任务、Foreach 循环容器、For 循环容器、序列容器、事件处理程序、包和项目级别连接管理器以及日志提供程序创建属性表达式。  
@@ -73,14 +71,13 @@ ms.lasthandoff: 08/03/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS &#41;包](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services &#40;SSIS &#41;事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services &#40;SSIS &#41;日志记录](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services (SSIS) 事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

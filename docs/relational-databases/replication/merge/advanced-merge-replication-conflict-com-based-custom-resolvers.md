@@ -2,9 +2,12 @@
 title: "基于 COM 的自定义冲突解决程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d2b075d4880ddff279df4f578c23fe4424628ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 389e7b9b83ee1f9dda06e8338f9b4c7b34f18a12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>高级合并复制冲突 - 基于 COM 的自定义解决程序
-  与默认解决机制相比，自定义冲突解决程序提供了更大的灵活性，可以实现使用复制数据的应用程序所需的业务逻辑。 基于 COM 的自定义冲突解决程序是一个动态链接库 (DLL)，它实现了 **ICustomResolver** COM 接口、方法、属性以及其他专为解决冲突设计的支持接口和类型定义。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]与默认解决机制相比，自定义冲突解决程序提供了更大的灵活性，可以实现使用复制数据的应用程序所需的业务逻辑。 基于 COM 的自定义冲突解决程序是一个动态链接库 (DLL)，它实现了 **ICustomResolver** COM 接口、方法、属性以及其他专为解决冲突设计的支持接口和类型定义。  
   
 > [!NOTE]  
 >  如果可能，建议使用业务逻辑处理程序而非基于 COM 的自定义冲突解决程序。 有关业务逻辑处理程序的详细信息，请参阅[合并同步期间执行业务逻辑](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  

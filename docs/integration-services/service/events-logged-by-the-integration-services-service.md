@@ -1,5 +1,5 @@
 ---
-title: "由 Integration Services 服务记录的事件 |Microsoft 文档"
+title: "由 Integration Services 服务记录的事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>由 Integration Services 服务记录的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务将各种消息记入 Windows 应用程序事件日志。 该服务会在服务启动时、服务停止时和特定问题出现时记录这些消息。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="settings-file-messages"></a>设置文件消息  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的设置存储在一个 XML 文件中，您可以修改该文件。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
-|事件識別碼|符号名称|Text|说明|  
+|事件 ID|符号名称|Text|说明|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务: %n指定配置文件的注册表设置不存在。 %n正尝试加载默认的配置文件。|包含配置文件路径的注册表项不存在或为空。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务配置文件不存在。%n正在使用默认设置加载。|在指定位置不存在配置文件自身。|  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>相关任务  
  有关如何查看日志项的信息，请参阅 [Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

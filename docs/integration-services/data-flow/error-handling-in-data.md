@@ -1,5 +1,5 @@
 ---
-title: "数据中的错误处理 |Microsoft 文档"
+title: "数据中的错误处理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
   数据流组件将转换应用到列数据、从源提取数据或将数据加载到目标中时，可能会发生错误。 错误常因意外数据值而发生。 例如，如果列包含字符串而不是数字，数据转换将失败；在数据库列中执行插入操作时，如果数据是日期而列的数据类型为数值，此操作将失败；如果因列值为零而导致数学运算无效，表达式将无法计算。  
@@ -57,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  下列关系图显示包含错误输出的简单数据流。  
   
- ![使用错误输出的数据流](../../integration-services/data-flow/media/mw-dts-11.gif "与错误输出的数据流")  
+ ![具有错误输出的数据流](../../integration-services/data-flow/media/mw-dts-11.gif "Data flow with error output")  
   
  有关详细信息，请参阅 [数据流](../../integration-services/data-flow/data-flow.md) 和 [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md)。  
 
-## <a name="configure-error-output-dialog-box"></a>配置错误输出对话框中
+## <a name="configure-error-output-dialog-box"></a>“配置错误输出”对话框
 可以使用 **“配置错误输出”** 对话框，为支持错误输出的数据流转换配置错误处理选项。  
   
  若要了解有关使用错误输出的详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
@@ -154,10 +151,9 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../integration-services/data-flow/data-flow.md)   
- [数据进行转换](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
+ [使用转换对数据进行转换](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [使用路径连接组件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [数据流任务](../../integration-services/control-flow/data-flow-task.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

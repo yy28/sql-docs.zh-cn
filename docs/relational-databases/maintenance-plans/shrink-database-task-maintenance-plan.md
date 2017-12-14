@@ -2,9 +2,12 @@
 title: "“收缩数据库”任务（维护计划）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2dc6184a59756901c55bc15177914e9e08767da2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 977d851af5e4b044527a196417ea32504a44a65f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>“收缩数据库”任务（维护计划）
-  使用 **“‘收缩数据库’任务”** 对话框可以创建一个任务，尝试减小所选数据库的大小。 使用下面的选项可以确定数据库收缩后在数据库中保留的未使用空间量（该百分比越大，数据库可收缩的量越小）。 该数值取决于数据库中实际数据的百分比。 例如，某个 100 MB 数据库包含 60 MB 的数据和 40 MB 的可用空间，当可用空间百分比为 50% 时，则将保留 60 MB 的数据和 30 MB 的可用空间（因为 60 MB 的 50% 是 30 MB）。 只会去除数据库中的多余空间。 有效值为 0 到 100。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“收缩数据库任务”对话框可以创建一个任务，尝试减小所选数据库的大小。 使用下面的选项可以确定数据库收缩后在数据库中保留的未使用空间量（该百分比越大，数据库可收缩的量越小）。 该数值取决于数据库中实际数据的百分比。 例如，某个 100 MB 数据库包含 60 MB 的数据和 40 MB 的可用空间，当可用空间百分比为 50% 时，则将保留 60 MB 的数据和 30 MB 的可用空间（因为 60 MB 的 50% 是 30 MB）。 只会去除数据库中的多余空间。 有效值为 0 到 100。  
   
  收缩数据文件通过将数据页从文件末尾移动到更靠近文件开头的未占用的空间来恢复空间。 在文件末尾创建足够的可用空间后，可以取消对文件末尾的数据页的分配并将它们返回给文件系统。  
   

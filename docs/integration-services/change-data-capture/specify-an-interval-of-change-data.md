@@ -1,5 +1,5 @@
 ---
-title: "指定间隔的变更数据 |Microsoft 文档"
+title: "指定变更数据的间隔 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],specifying interval
+helpviewer_keywords: incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbe685552f38f7da644d4e57d63fe47a1c400da6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 36436fea4ef1c63c59dba3df0af6d3e54ec03774
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 **datetime** 值，将存储在包变量中以供以后在包中使用。  
@@ -117,9 +114,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md)   
  [脚本任务](../../integration-services/control-flow/script-task.md)  
   
   
-

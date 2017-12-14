@@ -2,9 +2,12 @@
 title: "教程：使用移动客户端复制数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 642f2fa95b2ff69f11a10f7bbaae6e184928c7b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 71c17f687aa2cd8fb83dba65c91d4b049f19e220
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>教程：使用移动客户端复制数据
-复制是解决中央服务器和偶尔连接的移动客户端之间的数据移动问题的好方法。 使用复制向导可以轻松地配置和管理复制拓扑。 本教程演示如何为移动客户端配置复制拓扑。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制是解决中央服务器和偶尔连接的移动客户端之间的数据移动问题的好方法。 使用复制向导可以轻松地配置和管理复制拓扑。 本教程演示如何为移动客户端配置复制拓扑。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
 在本教程中，您将使用合并复制将数据从中央数据库发布到一个或多个移动用户，以便每个用户都能获得唯一筛选的数据子集。 第一课介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建发布。 后面几课演示如何创建和同步订阅。  

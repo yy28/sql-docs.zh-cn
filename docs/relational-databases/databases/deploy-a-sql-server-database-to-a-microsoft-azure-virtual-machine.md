@@ -1,9 +1,13 @@
 ---
 title: "将 SQL Server 数据库部署到 Microsoft Azure 虚拟机 | Microsoft Docs"
 ms.date: 07/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +41,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f2595d826f1922e497e9774d67afc7e6741d15bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a571327d912f4b9f8ee96477db49be0ffa69e829
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
-  使用“将数据库部署到 Microsoft Azure VM”向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Microsoft Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导使用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“将数据库部署到 Windows Azure VM”向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Windows Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导使用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
   
  不能使用此向导进行差异备份。 此向导不会覆盖具有相同数据库名称的现有数据库。 若要替换 VM 上的现有数据库，必须先删除现有数据库或更改数据库名称。 如果在未提交的部署操作的数据库名称与 VM 上的现有数据库之间存在命名冲突，此向导将建议为未提交的数据库追加数据库名称以便您能完成操作。  
   

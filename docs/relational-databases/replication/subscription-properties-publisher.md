@@ -2,9 +2,12 @@
 title: "订阅属性 - 发布服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e23aa71ea138af1689a60a44f00424a4158906c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f971a24eaa58022a12a139bc6a6bd960b0dec76
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-properties---publisher"></a>订阅属性 - 发布服务器
-  使用发布服务器上的 **“订阅属性”** 对话框可以查看和设置推送订阅的属性。 您还可以查看请求订阅的某些属性，订阅服务器上的 **“订阅属性”** 对话框可以显示其他属性，并允许修改属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用发布服务器上的“订阅属性”对话框可以查看和设置推送订阅的属性。 您还可以查看请求订阅的某些属性，订阅服务器上的 **“订阅属性”** 对话框可以显示其他属性，并允许修改属性。  
   
  **“订阅属性”** 对话框中的每一个属性都包含相应的说明。 单击一个属性可以查看该属性的说明（显示于对话框的底部）。 本主题提供许多属性的其他相关信息，大多数属性只能在发布服务器上针对推送订阅显示。 属性分为以下类别：  
   

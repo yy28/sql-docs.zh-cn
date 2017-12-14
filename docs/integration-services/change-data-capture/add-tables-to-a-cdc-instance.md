@@ -1,5 +1,5 @@
 ---
-title: "将表添加到 CDC 实例 |Microsoft 文档"
+title: "将表添加到 CDC 实例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- addTabs
+f1_keywords: addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee8cd785cdb0facdba880ee0502ec51508bca618
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7181d4abc4a8a395ad0b34c3d015f4c2ee4810cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>将表添加到 CDC 实例
   使用“表选择”对话框可以将 Oracle 源中的附加表添加到 CDC 实例。 选定的表将添加到属性编辑器的 **“表”** 选项卡的列表中。  
@@ -61,4 +58,3 @@ ms.lasthandoff: 08/03/2017
  [为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   
-

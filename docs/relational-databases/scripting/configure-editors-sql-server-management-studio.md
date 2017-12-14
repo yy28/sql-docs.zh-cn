@@ -2,9 +2,12 @@
 title: "配置编辑器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 490371ad28d81368a3cd4fad5246285094545c54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a6b2127ade3299cab4ae71a42f9601c4742f9d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>配置编辑器 (SQL Server Management Studio)
-  您可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
   
 ## <a name="settng-editor-options"></a>设置编辑器选项  
  通过使用 **“工具”** 菜单，然后选择 **“选项…”** 以便显示 **“选项”** 对话框，可设置大多数编辑器选项。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  

@@ -1,5 +1,5 @@
 ---
-title: "编辑 Oracle 数据库属性 |Microsoft 文档"
+title: "编辑 Oracle 数据库属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraProp
+f1_keywords: oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3519bfc323bc4a9b19e32a171b5aa08f719062fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
   使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
@@ -56,4 +53,3 @@ ms.lasthandoff: 08/03/2017
  [连接到 Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   
-

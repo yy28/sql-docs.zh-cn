@@ -2,9 +2,12 @@
 title: "快照文件夹 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6b7087b1b44f127a00346583790b572908dd5634
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fa90f8478ab76abf1579adc3498bb99185430b88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="snapshot-folder"></a>快照文件夹
-  **“快照文件夹”** 页出现在配置分发向导和新建发布向导中。 为快照文件夹指定的位置将用作此向导中启用的所有发布服务器的默认位置（默认快照文件夹无法应用到以后使用 **“分发服务器属性”** 对话框启用的发布服务器）。 对于配置分发向导的 **“发布服务器”** 页上或 **“分发服务器属性”** 对话框上的任何发布服务器，您均可以覆盖此默认值。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“快照文件夹”页显示在“配置分发向导”和“新建发布向导”中。 为快照文件夹指定的位置将用作此向导中启用的所有发布服务器的默认位置（默认快照文件夹无法应用到以后使用 **“分发服务器属性”** 对话框启用的发布服务器）。 对于配置分发向导的 **“发布服务器”** 页上或 **“分发服务器属性”** 对话框上的任何发布服务器，您均可以覆盖此默认值。  
   
  快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。 在实现复制之前，请测试复制代理是否能够连接到快照文件夹。 以每个代理所使用的帐户登录，再尝试访问快照文件夹。  
   

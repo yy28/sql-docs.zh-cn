@@ -2,9 +2,12 @@
 title: "使用结果列表搜索文档 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a1db7c29119e1d1f1fb2cad559c559287817f57
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b47e823091e48f25000f9d7fe1d1b927017a657c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-documents-using-results-lists"></a>使用结果列表搜索文档
-  使用 **“查找和替换”** 对话框，可以搜索和替换项目或解决方案中或文件系统文件夹中的所有文件中的文本（即使这些文件未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开）。 使用 **“查找和替换”** 对话框执行的搜索返回的匹配项将显示在“查找结果 1”和“查找结果 2”窗口中。这样，您可以查看包含匹配项的行中的完全匹配文本。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”对话框，可以搜索和替换项目、解决方案或文件系统文件夹中的所有文件中的文本（即使这些文件未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开）。 使用 **“查找和替换”** 对话框执行的搜索返回的匹配项将显示在“查找结果 1”和“查找结果 2”窗口中。这样，您可以查看包含匹配项的行中的完全匹配文本。  
   
 ### <a name="to-search-in-multiple-files"></a>在多个文件中搜索  
   

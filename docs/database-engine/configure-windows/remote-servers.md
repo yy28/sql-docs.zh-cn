@@ -2,9 +2,12 @@
 title: "远程服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="remote-servers"></a>远程服务器
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
  远程服务器配置使客户端能够连接到一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便在没有建立单独的连接的情况下在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行存储过程。 此时，客户端所连接的服务器接受客户端的请求，并代表客户端将该请求发送到远程服务器。 远程服务器处理请求，并将所有结果返回到原始的服务器。 服务器再将那些结果传递给客户端。 当设置远程服务器配置时，还应考虑如何建立安全性。  
   

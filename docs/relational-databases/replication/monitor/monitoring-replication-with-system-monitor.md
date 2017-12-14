@@ -2,9 +2,12 @@
 title: "使用系统监视器监视复制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc9b09e9e089f9282ab60eb6e727e65ed7988f93
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c4cfd607d49e4a9e3c5534eef93bdd773e774f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系统监视器监视复制
-  通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系统监视器，您可以使用图形、图表和报告来测量计算机的效率，确定并解决可能的问题（如资源使用不平衡、硬件不足或程序设计有问题等），以及针对其他硬件需求制定计划。 有关详细信息，请参阅[监视资源使用情况（系统监视器）](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系统监视器，可以使用图形、图表和报告来测量计算机的效率，确定并解决可能的问题（如资源使用不平衡、硬件不足或程序设计有问题等），以及针对其他硬件需求制定计划。 有关详细信息，请参阅[监视资源使用情况（系统监视器）](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
   
  系统监视器使用性能对象和计数器，它们提供各种进程的性能信息。 您可以通过与复制代理相关联的计数器来测量复制的性能：  
   

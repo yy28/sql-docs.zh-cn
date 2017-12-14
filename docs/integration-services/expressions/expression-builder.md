@@ -1,5 +1,5 @@
 ---
-title: "表达式生成器 |Microsoft 文档"
+title: "表达式生成器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords:
-- Expression Builder dialog box
+f1_keywords: sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords: Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-builder"></a>表达式生成器
   可以使用“表达式生成器”对话框创建和编辑属性表达式，或者编写使用图形用户界面设置变量值的表达式，此类表达式列出不同的变量并提供对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言包含的函数、类型转换和运算符的内置引用。  
@@ -55,10 +51,9 @@ ms.lasthandoff: 08/03/2017
 |**计算表达式**|单击 **“计算表达式”** 可以查看表达式的计算结果。|  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式页](../../integration-services/expressions/expressions-page.md)   
+ [“表达式”页](../../integration-services/expressions/expressions-page.md)   
  [属性表达式编辑器](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [系统变量](../../integration-services/system-variables.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Hadoop 配置单元任务 |Microsoft 文档"
+title: "Hadoop Hive 任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoophivetask.f1
+f1_keywords: sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bfd2e1fcda13aed2d95bed0ec780ff4d3372b94
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 48fadf9351c58d93e157a8d3a46d6d962d1798d2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 配置单元任务
   使用 Hadoop 配置单元任务可以在 Hadoop 群集上运行配置单元脚本。  
   
  要添加 Hadoop 配置单元任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop 配置单元任务编辑器”对话框。  
   
- ![Hadoop 配置单元任务编辑器](../../integration-services/control-flow/media/hadoop-hive-task.png "Hadoop 配置单元任务编辑器")  
+ ![Hadoop Hive 任务编辑器](../../integration-services/control-flow/media/hadoop-hive-task.png "Hadoop Hive Task Editor")  
   
 ## <a name="options"></a>选项  
  配置“Hadoop 配置单元任务编辑器”对话框  中的下列选项。  
@@ -49,4 +46,3 @@ ms.lasthandoff: 08/03/2017
  [Hadoop 连接管理器](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   
-

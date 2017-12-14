@@ -1,5 +1,5 @@
 ---
-title: "CDC 控制任务 |Microsoft 文档"
+title: "CDC 控制任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 99a864cf9f2e8708fa4e605dacaa7ecaf170ef79
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: d098ce43f58a5a65424b536742da199bb162957f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task"></a>CDC 控制任务
   CDC 控制任务用于控制变更数据捕获 (CDC) 包的生命周期。 它处理 CDC 包与初始加载包的同步以及在运行 CDC 包时处理的日志序列号 (LSN) 范围的管理。 此外，CDC 控制任务还处理错误情况和恢复。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="configuring-the-cdc-control-task"></a>配置 CDC 控制任务  
  可以通过 SSIS 设计器或以编程方式来设置属性。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [CDC 控制任务自定义属性](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
@@ -161,4 +159,3 @@ ms.lasthandoff: 08/11/2017
  **状态名称**  
  键入与持久 CDC 状态关联的名称。 使用相同 CDC 上下文的完整负载和 CDC 包将指定一个公共的状态名称。 此名称用于查找状态表中的状态行。  
   
-

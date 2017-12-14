@@ -1,5 +1,5 @@
 ---
-title: "设置包属性 |Microsoft 文档"
+title: "设置包属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [版本](#Version)  
   
- 有关不能在中设置的其他包属性**属性**窗口中，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
+ 有关不能在“属性”窗口中设置的其他包属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性  
   
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|创建包的计算机的名称。|  
 |**CreatorName**|包创建者的姓名。|  
 |**Description**|包功能说明。|  
-|**ID**|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成新的随机值**ID**属性中，选择**\<生成新的 ID\>** 下拉列表中。|  
+|**ID**|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成 **ID** 属性的新随机值，请在下拉列表中选择 \<“生成新 ID”\>。|  
 |**名称**|包的名称。|  
 |**PackageType**|包类型。 其值为： **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此属性的默认值为 **Default**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|包的最新主版本。|  
 |**VersionMinor**|包的最新次版本。|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>在属性窗口中设置包属性 
+## <a name="set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要配置的包所在的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
 2.  在“解决方案资源管理器”中双击此包，将其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开，或者右键单击并选择“视图设计器”。  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  在 **“文件”** 菜单上单击 **“保存选定项”** ，保存已更新的包。  
   
-

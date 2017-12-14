@@ -1,5 +1,5 @@
 ---
-title: "脚本组件 |Microsoft 文档"
+title: "脚本组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-component"></a>脚本组件
   脚本组件承载脚本，并使包能够包含和运行自定义的脚本代码。 可以将包中的脚本组件用于下列目的：  
@@ -119,7 +117,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="select-script-component-type"></a>选择脚本组件类型
   可以使用 **“选择脚本组件类型”** 对话框，指定是否创建预配置为源、转换或目标的脚本转换。  
   
- 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ### <a name="options"></a>选项  
  选择 **“源”**、 **“目标”**或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  
@@ -127,7 +125,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
   可以使用 **脚本转换编辑器** 的 **“连接管理器”** 页指定脚本将使用的任何连接。  
   
- 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ### <a name="options"></a>选项  
  **Connection managers**  
@@ -137,7 +135,7 @@ ms.lasthandoff: 08/19/2017
  为连接键入唯一的描述性名称。  
   
  **连接管理器**  
- 从可用的连接管理器中，列表中选择或选择**\<新连接 >**以打开**添加 SSIS 连接管理器**对话框。  
+ 从可用的连接管理器列表中选择，或选择“\<新建连接>”以打开“添加 SSIS 连接管理器”对话框。  
   
  **Description**  
  输入连接的说明。  
@@ -154,7 +152,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  由于源组件只有输出而没有输入，因此对于源组件不能显示“输入列”页。  
   
- 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ### <a name="options"></a>选项  
  **输入名称**  
@@ -178,7 +176,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  源组件有输出但没有输入，而目标组件有输入但没有输出。 转换既有输入，也有输出。  
   
- 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ### <a name="options"></a>选项  
  **Inputs and outputs**  
@@ -203,7 +201,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  
   
- 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ### <a name="options"></a>选项  
  **属性**  
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/19/2017
  [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   
-

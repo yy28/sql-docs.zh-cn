@@ -1,5 +1,5 @@
 ---
-title: "步骤 3： 测试第 6 课包 |Microsoft 文档"
+title: "步骤 3：测试第 6 课包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0b97045d3916f7e3831bc1711e8657eecc58bdc0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c49bdaac8214e2ae34af24d0fd243c252b986f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-3---testing-the-lesson-6-package"></a>课程 6-3-测试第 6 课包
+# <a name="lesson-6-3---testing-the-lesson-6-package"></a>第 6-3 课 - 测试第 6 课包
 在运行时，包从 VarFolderName 参数获取 Directory 属性的值。  
   
 若要验证该包在运行时是否使用新值更新了 Directory 属性，只需执行该包。 由于只向新目录中复制了三个示例数据文件，因此该数据流将只运行三次，而不遍历原始文件夹中的 14 个文件。  
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

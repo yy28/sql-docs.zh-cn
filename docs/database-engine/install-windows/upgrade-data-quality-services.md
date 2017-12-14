@@ -2,11 +2,12 @@
 title: "升级 Data Quality Services | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc1b70a3c4707976539d13222b088bd744e2d436
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
-本主题的信息介绍如何升级现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) 安装。 升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的过程中，还必须升级 DQS 数据库架构。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题的信息介绍如何升级现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) 安装。 升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的过程中，还必须升级 DQS 数据库架构。  
   
 > [!IMPORTANT]  
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  

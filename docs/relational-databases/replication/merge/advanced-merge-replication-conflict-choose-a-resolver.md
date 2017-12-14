@@ -2,9 +2,12 @@
 title: "选择冲突解决程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cba1ee9c5659d84f4fbe5a1c6ac5957794df0a88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>高级合并复制冲突 - 选择解决程序
-  在选择冲突解决程序时，请考虑冲突解决在您的应用程序中的重要性，以及是否可以使用基于优先级的默认冲突解决程序或是否需要使用项目冲突解决程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在选择冲突解决程序时，请考虑冲突解决在应用程序中的重要性，以及是否可以使用基于优先级的默认冲突解决程序或是否需要使用项目冲突解决程序。  
   
  如果数据是分区的，没有多用户写入相同的分区，并且复制拓扑也相对简单（一个发布服务器和几个订阅服务器），则冲突将极少发生或根本不存在冲突。 在这些环境中，可能不需要复杂的冲突解决策略。 推荐使用默认冲突解决设置，即使用客户端订阅和首次更改入选的策略。 如果拓扑较复杂（例如，使用重新发布订阅服务器），则具有特定优先级的服务器订阅可能比较合适。  
   

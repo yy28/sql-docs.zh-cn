@@ -2,9 +2,12 @@
 title: "配置 SQL Server 代理邮件以使用数据库邮件 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15fafd5b18011c54aee21daeaf9bc4ae295ea205
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d568bd30597377e0d8fdd8affea3c0212977ada6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
-  本主题说明如何配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用数据库邮件通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发送 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的通知和警报。  有关如何启用和配置数据库邮件的信息，请参阅 [配置数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的示例，请参阅 [创建数据库邮件配置文件](../../relational-databases/database-mail/create-a-database-mail-profile.md)。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用数据库邮件发送 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的通知和警报。  有关如何启用和配置数据库邮件的信息，请参阅 [配置数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的示例，请参阅 [创建数据库邮件配置文件](../../relational-databases/database-mail/create-a-database-mail-profile.md)。
   
 -   **开始之前：**  
   

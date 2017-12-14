@@ -1,25 +1,27 @@
 ---
-title: "SQL Server 目标自定义属性 |Microsoft 文档"
+title: "SQL Server 目标自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29337e20ed16ab60fc3ec55968a351dc527e2c6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 61f7caddb59fc68399b274a71db5ee740d0f21c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目标自定义属性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标具有自定义属性和所有数据流组件共有的属性。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 08/03/2017
 |BulkInsertTablock|Boolean|一个值，指定大容量插入期间是否锁定表。 此属性的默认值为 **True**。|  
 |DefaultCodePage|Integer|当数据源中的代码页信息不可用时要使用的代码页。|  
 |MaxInsertCommitSize|Integer|一个值，指定一批可以插入的最大行数。 当值为零时，可一批插入所有的行。|  
-|超时|Integer|一个值，指定如果没有数据需要插入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标终止前等待的秒数。 值 0 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标将不会超时。 此属性的默认值为 30。|  
+|超时|Integer|一个值，指定如果没有数据需要插入， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标终止前等待的秒数。 值 0 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标将不会超时。此属性的默认值为 30。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标的输入和输入列没有自定义属性。  
   

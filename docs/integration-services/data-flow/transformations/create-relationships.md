@@ -1,5 +1,5 @@
 ---
-title: "创建关系 |Microsoft 文档"
+title: "创建关系 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.createrelationships.f1
+f1_keywords: sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9f511b91e0e085c07dcf4dfb7742514ddad6070
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 651ad318f4bc55291eab79041c41167b9ee08e0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-relationships"></a>创建关系
   可以使用 **“创建关系”** 对话框，编辑源列与在模糊查找转换编辑器、查找转换编辑器或字词查找转换编辑器中配置的查找表列之间的映射。  
@@ -58,9 +55,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [模糊查找转换编辑器 &#40;列选项卡 &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [查找转换编辑器 &#40;列页 &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [字词查找转换编辑器 &#40;字词查找选项卡 &#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
+ [模糊查找转换编辑器（“列”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [查找转换编辑器（“列”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
+ [字词查找转换编辑器（“字词查找”选项卡）](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
   
-

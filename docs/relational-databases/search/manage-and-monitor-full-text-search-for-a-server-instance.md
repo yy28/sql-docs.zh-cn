@@ -1,10 +1,13 @@
 ---
 title: "管理和监视服务器实例的全文搜索 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d6f184f66b02ef2f92c9593001edc3364f4d62a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d5d37441c773b2934b544734889a9d7c86cbdfa2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
-  针对服务器实例的全文管理包括：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]针对服务器实例的全文管理包括：  
   
 -   诸如管理 FDHOST Launcher 服务 (MSSQLFDLauncher)、重新启动筛选器后台程序宿主进程（如果您更改服务帐户凭据）、配置服务器范围内的全文属性以及备份全文目录之类的系统管理任务。 例如，在服务器级，您可以指定在整体上与服务器实例的默认语言不同的默认全文语言。  
   

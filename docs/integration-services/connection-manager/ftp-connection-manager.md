@@ -1,31 +1,32 @@
 ---
-title: "FTP 连接管理器 |Microsoft 文档"
+title: "FTP 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.ftpconnectionmanager.f1
+f1_keywords: sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4ff7c6e45082cff952c8d5e9df711884019000e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
   FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
  提供用于访问 FTP 服务器的密码。  
   
  **超时值(秒)**  
- 指定任务超时之前经过的秒数。 如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
+ 指定任务超时之前经过的秒数。如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
   
  **使用被动模式**  
  指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。   
@@ -99,8 +100,8 @@ ms.lasthandoff: 08/09/2017
  **测试连接**  
  在配置 FTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [FTP 任务](../../integration-services/control-flow/ftp-task.md)   
- [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

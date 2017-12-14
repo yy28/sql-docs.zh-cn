@@ -1,5 +1,5 @@
 ---
-title: "负载平衡远程服务器上的包通过使用 SQL Server 代理 |Microsoft 文档"
+title: "使用 SQL Server 代理在远程服务器上平衡包的负载 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server 代理在远程服务器上平衡包的负载
   在必须运行很多包时，方便的做法是使用其他可用的服务器。 这种当所有包都处于一个父包控制下时使用其他服务器来运行这些包的方法称为负载平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，负载平衡是必须由包的所有者构建的手动过程。 服务器不自动执行负载平衡。 而且，在远程服务器上运行的包必须是整个包，而不能是其他包中的单个任务。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>负载平衡的图例  
  以下关系图显示了服务器上的父包。 父包包含多个“执行 SQL 作业代理”任务。 父包中的每项任务都会调用远程服务器上的 SQL Server 代理。 这些远程服务器包含 SQL Server 代理作业，而作业中包括调用该服务器上的包的步骤。  
   
- ![SSIS 负载平衡体系结构概述](../../integration-services/packages/media/loadbalancingoverview.gif "概述的 SSIS 负载平衡体系结构")  
+ ![SSIS 负载平衡体系结构概览](../../integration-services/packages/media/loadbalancingoverview.gif "Overview of SSIS load balancing architecture")  
   
  在此体系结构中的负载平衡所需的步骤不是新的概念。 实际上，负载平衡是通过一种新的方式使用现有概念和通用 SSIS 对象实现的。  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>调试 SQL Server 代理作业和子包  
  通过使用下列方法之一，可以测试 SQL Server 代理作业及其子包：  
   
--   通过单击在 SSIS 设计器中运行每个子包**调试** / **启动但不调试**。  
+-   通过单击“调试” / “开始执行(不调试)”在 SSIS 设计器中运行每个子包。  
   
 -   通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在远程计算机上运行单个 SQL Server 代理作业，以确保包运行。  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>列出子包  
  如果将包含父包和子包的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，则可以查看由父包执行的子包的列表。 运行父包时， **中将自动生成父包** “概述” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]报表。 该报表列出了由父包中包含的执行包任务执行的子包，如下图所示。  
   
- ![子包的列表概述报表](../../integration-services/packages/media/overviewreport-childpackagelisting.png "子包的列表概述报表")  
+ ![包含子包列表的概述报告](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
   
  有关访问 **“概述”** 报表的信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
@@ -132,10 +130,9 @@ ms.lasthandoff: 08/03/2017
   
  若要查看日志文件，管理员只须登录到单个服务器上，即可查看所有子包的日志文件。  
   
- 有关如何启用日志记录在包中的信息，请参阅[Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 有关如何在包中启用日志记录的信息，请参阅[Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
 
 ## <a name="related-tasks"></a>相关任务  
  [包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

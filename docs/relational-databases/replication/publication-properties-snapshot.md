@@ -2,9 +2,12 @@
 title: "发布属性 - 快照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c0927c53dff6dc6bd14d93029cd49c376ae46bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 26335cccf77aced43c3db73976bccde394b766d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-snapshot"></a>发布属性，快照
-  可以使用 **“发布属性”** 对话框的 **“快照”** 页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“发布属性”对话框的“快照”页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 > [!NOTE]  
 >  若要进行更改，则需要发布的新快照。 有关详细信息，请参阅[更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  

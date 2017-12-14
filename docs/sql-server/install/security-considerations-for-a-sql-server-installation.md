@@ -2,11 +2,12 @@
 title: "安装 SQL Server 的安全注意事项 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +32,14 @@ caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 9f2669116da566511273ca482f801bd2762ced09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbb5675b3429f73a83fa7cda214d90666a674541
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>安装 SQL Server 的安全注意事项
- 安全对于每个产品和每家企业都很重要。 遵循简单的最佳做法，可以避免很多安全漏洞。 本主题讨论安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后应考虑采用的一些最佳安全做法。 功能的参考主题中包括了特定功能的安全指南。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]安全对于每个产品和每家企业都很重要。 遵循简单的最佳做法，可以避免很多安全漏洞。 本主题讨论安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后应考虑采用的一些最佳安全做法。 功能的参考主题中包括了特定功能的安全指南。  
   
 ## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  设置服务器环境时，请遵循以下最佳做法：  

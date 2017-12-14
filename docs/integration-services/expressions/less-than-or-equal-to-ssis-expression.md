@@ -1,5 +1,5 @@
 ---
-title: "&lt;= （小于或等于） （SSIS 表达式） |Microsoft 文档"
+title: "&lt;=（小于或等于）（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 975fffa437744be85fc351ff075b41edb09df4ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b6b428b4a902662a2fdd384fc5c9298738d83d79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= （小于或等于） （SSIS 表达式）
+# <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;=（小于或等于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
   
 > [!NOTE]  
@@ -111,11 +109,10 @@ ListPrice <= 500
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#62;&#40;大于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#60;&#40;小于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62; = &#40;大于或等于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [>（大于）（SSIS 表达式）](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [>（小于）（SSIS 表达式）](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [>=（大于或等于）（SSIS 表达式）](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

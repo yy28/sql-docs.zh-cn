@@ -2,9 +2,12 @@
 title: "导航 SQL Server PowerShell 路径 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2912bbd9a87e03d261f128ce64af60bcc0905f39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4caf4b8db104a553904213319d58fb4ea558d40a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 提供程序在与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 提供程序与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
   
 ## <a name="before-you-begin"></a>开始之前  
  Windows PowerShell 实现 cmdlet 以便导航表示 PowerShell 提供程序支持的对象层次结构的路径结构。 在您导航到该路径中的节点时，可以使用其他 cmdlet 以便针对当前对象执行基本操作。 由于 cmdlet 会经常用到，因此它们具有简短的规范别名。 还有一组将 cmdlet 映射到类似命令提示符命令的别名，以及另一组用于 UNIX shell 命令的别名。  

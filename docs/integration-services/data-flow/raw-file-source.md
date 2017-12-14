@@ -1,5 +1,5 @@
 ---
-title: "原始文件源 |Microsoft 文档"
+title: "原始文件源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 14608c3bbf570ecfa4cbc0d45d2961ea7ab48a4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 07a436d27cdfd65c77878e5a2abf636235117f9d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raw-file-source"></a>原始文件源
   原始文件源从文件中读取原始数据。 因为数据的表示方式是源所固有的，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件源可以比其他源（如平面文件和 OLE DB 源）更快地读取数据。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/17/2017
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

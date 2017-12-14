@@ -2,9 +2,12 @@
 title: "减轻生产服务器优化负荷 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 860458ebec0954d872b31bceb4443450bf96ad21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0da94113a0d79705e95790584302e6c17e6f9970
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>减轻生产服务器优化负荷
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问依赖于查询优化器分析工作负荷并提供优化建议。 在生产服务器上执行此分析会增加服务器负荷，并且可能会在优化会话过程中影响服务器的性能。 通过除了使用生产服务器以外，再使用一台测试服务器，可以减小在优化会话过程中对服务器负荷的影响。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问依赖于查询优化器分析工作负荷并提供优化建议。 在生产服务器上执行此分析会增加服务器负荷，并且可能会在优化会话过程中影响服务器的性能。 通过除了使用生产服务器以外，再使用一台测试服务器，可以减小在优化会话过程中对服务器负荷的影响。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>数据库引擎优化顾问如何使用测试服务器  
  使用测试服务器的传统方法是将所有数据从生产服务器复制到测试服务器，优化测试服务器，然后在生产服务器上实现建议。 此过程可以消除对生产服务器的性能影响，但这不是最佳解决方案。 例如，将大量数据从生产服务器复制到测试服务器可能消耗大量时间和资源。 此外，测试服务器硬件很少像生产服务器中部署的硬件那样功能强大。 优化进程依赖于查询优化器，而它生成的建议部分依赖于基础硬件。 如果测试服务器的硬件和生产服务器的硬件不相同， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议的质量就会降低。  

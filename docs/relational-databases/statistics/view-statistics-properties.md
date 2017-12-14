@@ -2,9 +2,12 @@
 title: "查看统计信息属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fe7b9e53632ab7d0bdc020e0c333ffcd12305c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4928ecf4b276072b7b8ad4e68deeb4bace7fc672
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)]中表或索引视图的当前查询优化统计信息。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度向量。 有关直方图和密度向量的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL) ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的表或索引视图的当前查询优化统计信息 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 统计信息对象包含一个带有统计信息的相关元数据的标题、一个带有统计信息对象第一个键列中的值的分布的直方图，以及一个用于度量各列之间的相关性的密度向量。 有关直方图和密度向量的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL) ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
  **本主题内容**  
   

@@ -1,5 +1,5 @@
 ---
-title: "步骤 1： 复制第 3 课包 |Microsoft 文档"
+title: "步骤 1：复制第 3 课包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c578fc6154a2a78e223bc1a920669228776e689
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 435147a234c6d6ddc6d1efc09e5b02de4e9e5e4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Lesson 4-1-复制第 3 课包
+# <a name="lesson-4-1---copying-the-lesson-3-package"></a>第 4-1 课 - 复制第 3 课包
 在本任务中，将为第 3 课中创建的 Lesson 3.dtsx 包创建一个副本。 或者，如果未完成第 3 课，则可以向项目添加本教程中附带的已完成的第 3 课包，然后再对其进行复制以供使用。 将使用这一新副本来完成第 4 课剩余部分。  
   
 ### <a name="to-create-the-lesson-4-package"></a>创建 Lesson 4 包  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 2：创建损坏的文件](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
-

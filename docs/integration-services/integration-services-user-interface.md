@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 用户界面 |Microsoft 文档"
+title: "Integration Services 用户界面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 用户界面
   除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器选项卡上的设计图面外，还可通过用户界面访问下面的窗口和对话框，以便向包添加功能以及配置包对象的属性。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 |**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”**。<br /><br /> - 或 -<br /><br /> 右键单击“控制流”选项卡的设计图面上任意位置，再单击“数字签名”。|  
 |**设置断点**|对任务启用断点，并设置断点属性。|在“控制流”选项卡的设计图面上，右键单击任务或容器，再单击“编辑断点”。 若要对包设置断点，请右键单击“控制流”选项卡的设计图面上的任意位置，再单击“编辑断点”。|  
   
- **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议你修改\<GettingStartedSamples > 元素值，该值指定 RSS 源 URL。 该文件位于*\<驱动器 >*: files\microsoft SQL server\110\dts\binn 中文件夹。 在 64 位计算机上，该文件位于*\<驱动器 >*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn 文件夹  
+ **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中。 在 64 位计算机上，该文件位于 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中。  
   
  如果 SamplesSites.xml 文件确已损坏，请用下面的默认 xml 替换该文件中的 xml。  
   
@@ -128,4 +126,3 @@ ms.lasthandoff: 08/03/2017
  [SSIS 设计器](../integration-services/ssis-designer.md)  
   
   
-

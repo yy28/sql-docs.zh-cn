@@ -2,9 +2,12 @@
 title: "管理代码格式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae6040d1ba9e14a4e77135a1f1f99ebf350aa33d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2cb1fae41c5a5eeb3b977d5a7d82ccf496053818
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-code-formatting"></a>管理代码格式
-  使用编辑器可以用缩进、隐藏文本、URL 等来设置代码的格式。 还可以使用智能缩进在键入时自动格式化代码。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用编辑器可以通过缩进、隐藏文本、URL 等来设置代码的格式。 还可以使用智能缩进在键入时自动格式化代码。  
   
 ## <a name="indenting"></a>缩进  
  可以选择三种不同样式的文本缩进。 此外，还可以指定由多少个空格组成一个缩进或制表符，以及在缩进时编辑器是使用制表符，还是使用空格。  

@@ -1,5 +1,5 @@
 ---
-title: "数据流任务 |Microsoft 文档"
+title: "数据流任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataflowtask.f1
+f1_keywords: sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
 - data flow task [Integration Services]
 - performance [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3021aa51460aee1d74acdaa383aeca6ca4edd534
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  以下关系图显示具有多个数据流的数据流任务。  
   
- ![数据流](../../integration-services/control-flow/media/mw-dts-09.gif "数据流")  
+ ![数据流](../../integration-services/control-flow/media/mw-dts-09.gif "Data flows")  
   
 ## <a name="log-entries"></a>日志项  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。 数据流任务包括下列自定义日志项：  
@@ -125,4 +122,3 @@ ms.lasthandoff: 08/03/2017
  technet.microsoft.com 上的视频 [平衡的数据分发服务器](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
   
-

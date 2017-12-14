@@ -2,9 +2,12 @@
 title: "数据库镜像会话期间的角色切换 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1e6c0b04fcc7b143bcdba71cb6e015f47f7f6717
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 61c067e2ece8cc222a281e48ebfa9026c48f9ae9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
-  在数据库镜像会话上下文中，通常可以使用一个称为“角色切换” 的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在数据库镜像会话上下文中，通常可以使用一个称为“角色切换”的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
   
 > [!NOTE]  
 >  本主题假定您熟悉数据库镜像运行模式。 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  

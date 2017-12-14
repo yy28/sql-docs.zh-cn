@@ -2,9 +2,12 @@
 title: "实现 DDL 触发器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5def307824891a2560d9b49ccc3b7b5bab03fcc6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b300e398f618d5f6f147282045beef3926f1cf15
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implement-ddl-triggers"></a>实现 DDL 触发器
-  本主题介绍了有助于创建 DDL 触发器，修改 DDL 触发器以及禁用或删除 DDL 触发器的信息。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]本主题介绍了有助于创建 DDL 触发器，修改 DDL 触发器以及禁用或删除 DDL 触发器的信息。  
   
 ## <a name="creating-ddl-triggers"></a>创建 DDL 触发器  
  DDL 触发器是使用 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER 语句创建的。  

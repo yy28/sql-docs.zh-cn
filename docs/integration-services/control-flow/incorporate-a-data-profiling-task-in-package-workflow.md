@@ -1,5 +1,5 @@
 ---
-title: "合并的数据事件探查任务在包工作流 |Microsoft 文档"
+title: "合并包工作流中的数据事件探查任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling task [Integration Services], using output in workflow
+helpviewer_keywords: Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3712f432207551dac0d14666b01ad8d8e2f8fc0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
   数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
@@ -93,7 +90,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  向该包添加一个 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。 对此连接管理器进行配置，以使用 NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 并连接到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的可用实例。  
   
-     默认情况下，连接管理器具有以下名称：\<服务器名称 >。AdventureWorks1。  
+     默认情况下，该连接管理器的名称为：\<服务器名称>.AdventureWorks1。  
   
 3.  向该包添加一个文件连接管理器。 对此连接管理器进行配置，以便为数据事件探查任务创建输出文件。  
   
@@ -340,4 +337,3 @@ ms.lasthandoff: 08/03/2017
  [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "原始文件目标 |Microsoft 文档"
+title: "原始文件目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 07c73cd80417c61f8231932376173adb304cf1af
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raw-file-destination"></a>原始文件目标
   原始文件目标将原始数据写入文件。 因为数据的格式是目标的本机格式，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件目标可以比其他目标（如平面文件和 OLE DB 目标）更快地写入数据。  
@@ -231,4 +229,3 @@ ms.lasthandoff: 08/17/2017
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

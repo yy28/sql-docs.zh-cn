@@ -1,5 +1,5 @@
 ---
-title: "部署包使用 SSIS |Microsoft 文档"
+title: "使用 SSIS 部署包 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0dd4e2e79166b803cc70220bcad12dc422eed337
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 26a983c967941ef068600cd6b7efc115aba14515
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供将包轻松部署到其他计算机的工具。 部署工具还管理任何依赖项，如包需要的配置和文件。 在本教程中，您将了解如何使用这些工具在目标计算机上安装包及其依赖项。    
@@ -90,5 +88,4 @@ ms.lasthandoff: 09/27/2017
 [第 3 课：安装 SSIS 包](../integration-services/lesson-3-install-ssis-packages.md)    
 在本课中，将部署捆绑复制到目标计算机，安装包，再运行包。    
     
-
 

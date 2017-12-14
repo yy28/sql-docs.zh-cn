@@ -2,9 +2,12 @@
 title: "QN:Parameter Table 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e19fa279cda3a65a610d0de8d08129f27e3ab0e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc1ebd3985e0620cf72bb23bdfad2ff6c068008e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件类
-  QN:Parameter table 事件报告有关创建、删除存储参数信息的内部表和为其保留引用计数所需操作的信息。 另外，此事件还报告重置参数表的使用计数的内部活动。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]QN:Parameter table 事件报告有关创建、删除存储参数信息的内部表和为其保留引用计数所需操作的信息。 另外，此事件还报告重置参数表的使用计数的内部活动。  
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>QN:Parameter table 事件类的数据列  
   

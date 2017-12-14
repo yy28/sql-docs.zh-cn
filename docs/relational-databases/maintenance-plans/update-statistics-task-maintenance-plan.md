@@ -2,9 +2,12 @@
 title: "“更新统计信息”任务（维护计划）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f8f8e5ff41a47d8c0b09e570f69e0d8a3532c3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 74685382e97db6911db1b45ca778099c921c562a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>“更新统计信息”任务（维护计划）
-  使用 **“‘更新统计信息’任务”** 对话框可以更新与表和索引中的数据有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 此任务实现对数据库中的用户表创建的每个索引的分发统计信息进行重新抽样。 分发统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，以便在处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句期间优化在各表之间的导航。 为了自动生成分布统计信息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期从每个索引所对应的表中抽样数据。 此样本的大小取决于表中的行数和数据修改的频率。 使用此选项可以利用表中指定的数据百分比执行另一次抽样。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此信息来创建更好的查询计划。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“更新统计信息任务”对话框可以更新与表和索引中的数据有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 此任务实现对数据库中的用户表创建的每个索引的分发统计信息进行重新抽样。 分发统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用，以便在处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句期间优化在各表之间的导航。 为了自动生成分布统计信息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期从每个索引所对应的表中抽样数据。 此样本的大小取决于表中的行数和数据修改的频率。 使用此选项可以利用表中指定的数据百分比执行另一次抽样。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此信息来创建更好的查询计划。  
   
  此任务执行 UPDATE STATISTICS 语句。  
   

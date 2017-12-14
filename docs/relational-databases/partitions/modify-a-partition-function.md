@@ -2,9 +2,12 @@
 title: "修改分区函数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6951b2a5363c78238c38956fa90d0cfd107f919
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
-  通过通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表或索引的分区方式。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可改变 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中表或索引的分区方式，方法是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在已分区的表或索引的分区函数中增加或减少指定分区的数量（增量为 1）。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
   
 > [!CAUTION]  
 >  多个表或索引可以使用同一分区函数。 在修改分区函数时，将影响单个事务中的所有表或索引。 在修改分区函数之前，先检查其依赖关系。  

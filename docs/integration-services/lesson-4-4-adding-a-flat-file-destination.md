@@ -1,5 +1,5 @@
 ---
-title: "步骤 4： 添加平面文件目标 |Microsoft 文档"
+title: "步骤 4：添加平面文件目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ff4badae70e5762f51003c0d3edae3ad1fb3907b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lesson 4-4-添加平面文件目标
+# <a name="lesson-4-4---adding-a-flat-file-destination"></a>第 4-4 课 - 添加平面文件目标
 Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数据行重定向到脚本转换。 为了突显相关错误的信息，脚本转换将运行可获取错误说明的脚本。  
   
 在本任务中，请将有关失败行的所有这些信息保存到分隔的文件中，以便进行后续处理。 若要保存失败的行，必须为将包含错误数据和平面文件目标的文本文件添加并配置平面文件连接管理器。 通过设置平面文件目标所用平面文件连接管理器的属性，可以指定平面文件目标如何格式化和写入文本文件。 有关详细信息，请参阅 [平面文件连接管理器](../integration-services/connection-manager/flat-file-connection-manager.md) 和 [平面文件目标](../integration-services/data-flow/flat-file-destination.md)。  
@@ -73,4 +70,3 @@ Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "catalog.rename_folder （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.rename_folder（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8320f1a4d4fb08e206e2dcde2e5158b5dd0729aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8cc91bd37682f929d69f12185fa3646d972c31e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @old_name =] *old_name*  
- 文件夹的原始名称。 *Old_name*是**nvarchar （128)**。  
+ [ @old_name = ] old_name  
+ 文件夹的原始名称。 old_name 为 nvarchar(128)。  
   
- [ @new_name =] *new_name*  
- 文件夹的新名称。 *New_name*是**nvarchar （128)**。  
+ [ @new_name = ] new_name  
+ 文件夹的新名称。 new_name 为 nvarchar(128)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  无  
@@ -52,9 +50,9 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
@@ -64,4 +62,3 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 -   新名称已用于现有文件夹  
   
   
-

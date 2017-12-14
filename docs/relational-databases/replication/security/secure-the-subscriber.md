@@ -2,9 +2,12 @@
 title: "保护订阅服务器的安全 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a589852adf45de4200a87fe99c3fbc087f74479c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eab9cb8f16911076421ac1c230de2a7d3f176f84
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-the-subscriber"></a>保护订阅服务器的安全
-  合并代理和分发代理连接到订阅服务器。 这些连接可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录或 Windows 登录上下文环境中建立。 在遵循授予必要的最小权限并且保护所有密码的存储的原则下，为这些代理提供合适的登录名十分重要。 有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]合并代理和分发代理连接到订阅服务器。 这些连接可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录或 Windows 登录上下文环境中建立。 在遵循授予必要的最小权限并且保护所有密码的存储的原则下，为这些代理提供合适的登录名十分重要。 有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 ## <a name="distribution-agent"></a>分发代理  
  可以是每个订阅一个分发代理（独立代理，对于新建发布向导中创建的发布是默认设置），也可以是每个发布数据库和订阅数据库对一个分发代理（共享代理）。 T  

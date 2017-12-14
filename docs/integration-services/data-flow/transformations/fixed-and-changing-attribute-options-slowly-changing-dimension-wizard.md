@@ -1,5 +1,5 @@
 ---
-title: "固定和变化的属性选项 (渐变维度向导 |Microsoft 文档"
+title: "固定和变化的属性选项（渐变维度向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.loaddimwizard.attriboption.f1
+f1_keywords: sql13.dts.loaddimwizard.attriboption.f1
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e248bb1fc4e5f4d638f1cbd417cc243c59bbd5d4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cba9d1a061016f2c886fb1e611a3c38aa91bbfa3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>固定的属性选项和变化的属性选项（渐变维度向导）
   可以使用 **“固定的属性选项和变化的属性选项”** 对话框，指定如何对固定的属性和变化的属性中的更改进行响应。  
@@ -43,4 +40,3 @@ ms.lasthandoff: 08/03/2017
  [使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

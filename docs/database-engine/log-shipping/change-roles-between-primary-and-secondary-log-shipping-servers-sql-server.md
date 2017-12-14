@@ -2,9 +2,12 @@
 title: "交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 422bd4f0108d26c3e68a226af38cab16d84e83a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1db9a711e770bc21c3917816010e3810da240d9a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)
-  在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置故障转移到辅助服务器后，可以将辅助数据库配置为主数据库。 然后，就可以根据需要交换主数据库和辅助数据库。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置故障转移到辅助服务器后，可以将辅助数据库配置为主数据库。 然后，就可以根据需要交换主数据库和辅助数据库。  
   
 ## <a name="performing-the-initial-role-change"></a>执行初始角色交换  
  当初次将故障转移到辅助数据库并将其用作新的主数据库时，必须执行一系列步骤。 按照这些初始步骤操作后，就可以轻松地交换主数据库和辅助数据库的角色。  

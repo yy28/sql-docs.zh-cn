@@ -2,9 +2,12 @@
 title: "Deprecation Announcement 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ab108ddb69d1de2859d80ba0c158d11c9ddb991
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 62f19f19df184eb1c8e95d18bb5af265550ff375
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件类
-  当使用的功能将从 **的未来版本中删除、但不会从下一主版本中删除时，将发生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件类。 为了使您的应用程序使用得最久，应避免使用会导致 **Deprecation Announcement** 事件类或 **Deprecation Final Support** 事件类的功能。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]当使用的功能将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除、但不会从下一主版本中删除时，将发生 Deprecation Announcement 事件类。 为了使您的应用程序使用得最久，应避免使用会导致 **Deprecation Announcement** 事件类或 **Deprecation Final Support** 事件类的功能。  
   
 ## <a name="deprecation-announcement-event-class-data-columns"></a>Deprecation Announcement 事件类的数据列  
   

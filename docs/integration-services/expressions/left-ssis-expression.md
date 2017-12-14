@@ -1,5 +1,5 @@
 ---
-title: "LEFT （SSIS 表达式） |Microsoft 文档"
+title: "LEFT（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aad5c2de4903b5ad79fd5087be7801a8195e943f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88edf86e9f00e890f3e390f801ae208be3bb2799
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="left-ssis-expression"></a>LEFT（SSIS 表达式）
   返回从给定字符表达式最左侧开始的指定数量的字符。  
@@ -66,8 +64,7 @@ LEFT("Mountain Bike", 8)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [右 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/right-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [RIGHT（SSIS 表达式）](../../integration-services/expressions/right-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

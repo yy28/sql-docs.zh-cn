@@ -2,9 +2,12 @@
 title: "CursorUnprepare 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e14b95896487273bac6e2c4bcc28b9c582c8e6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef10f0eee4c9c710f68c5dcea60cabcdf5c9d51a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件类
-  **CursorUnprepare** 事件类提供了与应用程序编程接口 (API) 游标中发生的游标撤消事件相关的信息。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 放弃执行计划时，将发生游标撤消事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]CursorUnprepare 事件类提供了与应用程序编程接口 (API) 游标中发生的游标撤消事件相关的信息。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 放弃执行计划时，将发生游标撤消事件。  
   
  将 **CursorUnprepare** 事件类包括到记录游标性能的跟踪中。 当跟踪中包括 **CursorUnprepare** 事件时，引发的开销量取决于跟踪过程中对数据库使用游标的频率。 如果广泛使用游标，则跟踪将会显著地降低性能。  
   

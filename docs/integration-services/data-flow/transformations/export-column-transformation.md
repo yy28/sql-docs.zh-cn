@@ -1,5 +1,5 @@
 ---
-title: "导出列转换 |Microsoft 文档"
+title: "导出列转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 36acf4ee08879bec3ac12600ea7369b1db3803ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/19/2017
  将错误处理选项应用到选定的单元格。  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "为捕获更改选择 Oracle 表 |Microsoft 文档"
+title: "为捕获更改选择 Oracle 表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- selOraTabDia
+f1_keywords: selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af36432c89c6ac031f3275eebcdf3f1a7b56e481
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c33ac62353d2417a930886c203465c5ca5c0a4b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>为捕获更改选择 Oracle 表
   使用此对话框可选择在 CDC 实例中包含的表。 所选表将添加到新建实例向导的 **“选择表和列”** 页的列表中。 可以在此对话框中执行以下操作。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 08/03/2017
  [选择 Oracle 表和列](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   
-

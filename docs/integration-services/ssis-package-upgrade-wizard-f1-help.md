@@ -1,5 +1,5 @@
 ---
-title: "SSIS 包升级向导的 F1 帮助 |Microsoft 文档"
+title: "SSIS 包升级向导 F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,20 +20,19 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
-  使用 SSIS 包升级向导升级包的早期版本创建的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到当前版本的包格式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
+  使用 SSIS 包升级向导可将由较早版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建的包升级到当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的包格式。  
   
  **运行 SSIS 包升级向导**  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/26/2017
  **不再显示此页。**  
  下次打开向导时跳过“欢迎”页。  
  
-## <a name="select-source-location-page"></a>选择源位置页
+## <a name="select-source-location-page"></a>“选择源位置”页
  使用 **“选择源位置”** 页可指定从中升级包的源。  
   
 > [!NOTE]  
@@ -90,14 +88,14 @@ ms.lasthandoff: 09/26/2017
  **密码**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证用于连接到服务器的密码。  
  
-## <a name="select-destination-location-page"></a>选择目标位置页
+## <a name="select-destination-location-page"></a>“选择目标位置”页
  使用 **“选择目标位置”** 页可以指定要将升级包保存到的目标位置。  
   
 > [!NOTE]  
 >  仅当通过 [!INCLUDE[ssIS](../includes/ssis-md.md)] 或命令提示符运行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包升级向导时，此页才可用。  
  
 ### <a name="static-options"></a>静态选项  
- **将保存到源位置**  
+ **保存到源位置**  
  将升级的包保存到在向导的“选择源位置”页上指定的位置。  
   
  如果原始包存储在文件系统中，并且您希望向导备份这些包，请选择 **“保存到源位置”** 选项。 有关详细信息，请参阅 [使用 SSIS 包升级向导升级 Integration Services 包](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
@@ -142,7 +140,7 @@ ms.lasthandoff: 09/26/2017
  **密码**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器时使用的密码。  
  
-## <a name="select-package-management-options-page"></a>选择包管理选项页
+## <a name="select-package-management-options-page"></a>“选择包管理选项”页
   使用 **“选择包管理选项”** 页指定用于对包进行升级的选项。  
   
  **运行 SSIS 包升级向导**  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/26/2017
  **更新连接字符串以使用新的提供程序名称**  
  更新连接字符串以使用当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的下列提供程序的名称：  
   
--   OLE DB Provider for[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   用于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 OLE DB 提供程序  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
@@ -166,16 +164,16 @@ ms.lasthandoff: 09/26/2017
   
  验证会延长升级过程的时间。 对于可能成功升级的大型包，建议不要选择此选项。  
   
- **创建新的包 Id**  
+ **创建新的包 ID**  
  为升级包创建新的包 ID。  
   
- **包升级失败时继续升级过程**  
+ **包升级失败时继续执行升级过程**  
  指定当无法升级某个包时 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导继续升级剩余包。  
   
  **包名称冲突**  
  指定向导应如何处理同名的包。 此选项具有下表所列的值。  
   
- **覆盖现有的包文件**  
+ **覆盖现有包文件**  
  使用同名的升级包替换现有包。  
   
  **添加数值后缀以升级包名称**  
@@ -195,7 +193,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  仅当指定将原始包和升级的包都存储在文件系统中且在同一文件中时，此选项才可用。  
 
-## <a name="select-packages-page"></a>选择包页
+## <a name="select-packages-page"></a>“选择包”页
   可以使用 **“选择包”** 页选择要升级的包。 此页列出了在向导的 **“选择源位置”** 页上指定的位置中存储的包。  
   
 ### <a name="options"></a>选项  
@@ -214,14 +212,14 @@ ms.lasthandoff: 09/26/2017
  **应用于所选内容**  
  应用指定密码来解密选定的升级包。  
  
-## <a name="complete-the-wizard-page"></a>完成向导页
+## <a name="complete-the-wizard-page"></a>“完成向导”页
   可以使用 **“完成该向导”** 页查看并确认所选的包升级选项。 这是向导的最后一页，您可以返回并更改向导此会话的选项。  
   
 ### <a name="options"></a>选项  
  **选项摘要**  
  查看您在向导中选择的升级选项。 若要更改任意选项，请单击 **“上一步”** 返回到向导前面的页
  
-## <a name="upgrading-the-packages-page"></a>升级包页
+## <a name="upgrading-the-packages-page"></a>“正在升级包”页
   可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
   
 ### <a name="options"></a>选项  
@@ -251,12 +249,12 @@ ms.lasthandoff: 09/26/2017
   
 -   将报告作为电子邮件发送。  
 
-## <a name="view-upgraded-packages"></a>查看已升级的包
-### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>查看已升级到 SQL Server 数据库或包存储区已保存的包
+## <a name="view-upgraded-packages"></a>验证升级的包
+### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>查看保存到 SQL Server 数据库或包存储区的升级包
   
 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中的对象资源管理器中，连接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的本地实例，然后展开 **“已存储的包”** 节点查看已升级的包。  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>查看已从 SQL Server Data Tools 升级的升级的包  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>查看从 SQL Server Data Tools 升级的升级包  
   
 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的解决方案资源管理器中，打开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，然后展开 **“SSIS 包”** 节点查看已升级的包。  
   
@@ -264,4 +262,3 @@ ms.lasthandoff: 09/26/2017
  [升级 Integration Services 包](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

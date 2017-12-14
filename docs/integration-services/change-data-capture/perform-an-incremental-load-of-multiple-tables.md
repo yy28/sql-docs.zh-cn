@@ -1,5 +1,5 @@
 ---
-title: "执行多个表的增量加载 |Microsoft 文档"
+title: "执行多个表的增量加载 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],multiple tables
+helpviewer_keywords: incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75aa5ac19aa1bfca6f35f709b26bc4561eec1642
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>执行多个表的增量加载
   在主题 [通过变更数据捕获改善增量加载](../../integration-services/change-data-capture/change-data-capture-ssis.md)中，关系图演示的是仅对一个表执行增量加载的基本包。 但是，加载一个表并不像执行多个表的增量加载那样常见。  
@@ -111,4 +108,3 @@ ms.lasthandoff: 08/03/2017
          有关如何使用此转换来应用更新和删除操作的示例，请参阅 [将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)。  
   
   
-

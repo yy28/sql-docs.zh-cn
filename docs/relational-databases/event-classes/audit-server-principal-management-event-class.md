@@ -2,9 +2,12 @@
 title: "Audit Server Principal Management 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5db0334339a34dbd2b0efb3ad4c8a4c94e430dd4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83d9662428963b8b5ed34e208015aa93c7c3370a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 事件类
-  创建、更改或删除服务器主体时，会发生 **Audit Server Principal Management** 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]创建、更改或删除服务器主体时，会发生 Audit Server Principal Management 事件类。  
   
 ## <a name="audit-server-principal-management-event-class-data-columns"></a>Audit Server Principal Management 事件类的数据列  
   

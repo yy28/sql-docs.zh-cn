@@ -2,9 +2,12 @@
 title: "CursorPrepare 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6fcbca475c65b6fb1b3aed42f49bfa7dace3cea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 事件类
-  **CursorPrepare** 事件类描述了应用程序编程接口 (API) 游标中发生的游标准备事件。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将与游标关联的 SELECT 语句编译到执行计划中但不创建该游标时，就会发生游标准备事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]CursorPrepare 事件类描述了应用程序编程接口 (API) 游标中发生的游标准备事件。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将与游标关联的 SELECT 语句编译到执行计划中但不创建该游标时，就会发生游标准备事件。  
   
  **CursorPrepare** 事件类包括在记录游标性能的跟踪中。 当跟踪中包括 **CursorPrepare** 事件类时，所造成的开销数量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  
   

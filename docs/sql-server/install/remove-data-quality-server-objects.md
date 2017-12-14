@@ -2,9 +2,12 @@
 title: "删除数据质量服务器对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3521e36d5001823c0700e2b13a17d20898f2049
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 81551447d7f0bc7707593ba0447649ef4e58f710
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
-  从 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例中卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或者完全删除具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例并不删除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象，包括 DQS 数据库。 这意味着，如果您使用 SQL Server 安装程序卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，并不会丢失您的 DQS 数据。 在卸载过程完成后，您必须手动删除这些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 或者完全删除具有 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并不删除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象，包括 DQS 数据库。 这意味着，如果您使用 SQL Server 安装程序卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，并不会丢失您的 DQS 数据。 在卸载过程完成后，您必须手动删除这些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  
   
 > [!NOTE]  
 >  -   在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]前，请考虑通过将所有现有知识库导出到 .dqsb 文件来备份这些知识库，以供以后使用该文件来将所有知识库导入回新的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 只能从命令提示符使用适当的命令行参数来运行 DQSInstaller.exe，以导出和导入所有 DQS 知识库。 有关详细信息，请参阅 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。  

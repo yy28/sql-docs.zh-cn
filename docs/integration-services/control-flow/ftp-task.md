@@ -1,5 +1,5 @@
 ---
-title: "FTP 任务 |Microsoft 文档"
+title: "FTP 任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords:
-- FTP task [Integration Services]
+helpviewer_keywords: FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -89,7 +86,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>选项  
  **FtpConnection**  
- 选择一个现有的 FTP 连接管理器，或单击\<**新的连接...**> 若要创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -152,33 +149,32 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- 选择一个现有的用户定义变量，或单击\<**新变量...**> 若要创建用户定义的变量。  
+ 选择现有的用户定义变量，或单击“\<新建变量...>”以创建用户定义变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- 选择一个现有的 FTP 连接管理器，或单击\<**新的连接...**> 若要创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题**：[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- 选择一个现有的用户定义变量，或单击\<**新变量...**> 创建变量。  
+ 选择现有的用户定义变量，或单击“\<新建变量...>”以创建变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- 选择一个现有的文件连接管理器，或单击\<**新的连接...**> 若要创建连接管理器。  
+ 选择现有文件连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题**:[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ 相关主题：[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

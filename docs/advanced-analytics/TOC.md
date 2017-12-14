@@ -3,7 +3,7 @@
 # 概述
 ## [Microsoft 机器学习服务介绍](r/r-services.md)
 ## [机器学习中的新增功能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新的和最近更新的文章](new-updated-advanced-analytics.md)
+## [新的和已更新的项目](new-updated-advanced-analytics.md)
 ## [体系结构和概述](architecture-overview-machine-learning.md)
 ## [不同 SQL Server 版本中机器学习功能的差异](r/differences-in-r-features-between-editions-of-sql-server.md)
 

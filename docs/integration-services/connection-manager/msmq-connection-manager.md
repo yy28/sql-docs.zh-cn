@@ -1,5 +1,5 @@
 ---
-title: "MSMQ 连接管理器 |Microsoft 文档"
+title: "MSMQ 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 连接管理器
   MSMQ 连接管理器使包能够连接到使用“消息队列”（也称为 MSMQ）的消息队列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的消息队列任务使用 MSMQ 连接管理器。  
@@ -47,8 +44,8 @@ ms.lasthandoff: 08/09/2017
   
 |队列类型|示例路径|  
 |----------------|-----------------|  
-|公共|\<计算机名称 >\\< 队列名称\>|  
-|Private|\<计算机名称 > \Private$\\< 队列名称\>|  
+|公共|\<computer name>\\<queue name\>|  
+|Private|\<computer name>\Private$\\<queue name\>|  
   
  可以用句点 (.) 代表本地计算机。  
   
@@ -71,7 +68,7 @@ ms.lasthandoff: 08/09/2017
  **名称**  
  为工作流中的 MSMQ 连接管理器提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
- **描述**  
+ **Description**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **路径**  
@@ -79,17 +76,16 @@ ms.lasthandoff: 08/09/2017
   
 |队列类型|示例路径|  
 |----------------|-----------------|  
-|公共|\<计算机名称 >\\< 队列名称\>|  
-|Private|\<计算机名称 > \Private$\\< 队列名称\>|  
+|公共|\<computer name>\\<queue name\>|  
+|Private|\<computer name>\Private$\\<queue name\>|  
   
  可以用“.”代表本地计算机。  
   
  **测试**  
  在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [消息队列任务](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

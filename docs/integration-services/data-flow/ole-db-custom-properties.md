@@ -1,25 +1,27 @@
 ---
-title: "OLE DB 自定义属性 |Microsoft 文档"
+title: "OLE DB 自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b10906c0cb7ba618c029bc79f9c5918a936dc918
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0b501e22b3112a130e6ea5c931fc2b3e2f9f2e40
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自定义属性
   **源自定义属性**  
@@ -32,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问数据库的模式。 可能的值包括： **“打开行集”**、 **“从变量打开行集”**、 **“SQL 命令”**和 **“变量中的 SQL 命令”**。 默认值为 **“打开行集”**。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  
-|CommandTimeOut|Integer|命令超时之前的秒数。 如果值为 0，则表示无限期超时。<br /><br /> 注意：此属性未在 **OLE DB 源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
+|CommandTimeOut|Integer|命令超时之前的秒数。如果值为 0，则表示无限期超时。<br /><br /> 注意：此属性未在 **OLE DB 源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的代码页。|  
 |OpenRowset|字符串|用来打开行集的数据库对象的名称。|  
 |OpenRowsetVariable|字符串|该变量包含用来打开行集的数据库对象的名称。|  
@@ -57,7 +59,7 @@ ms.lasthandoff: 08/03/2017
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个指定目标如何访问其目标数据库的值。<br /><br /> 此属性可以具有下列值之一：<br /><br /> <br /><br /> **OpenRowset** (0) - 需要提供表或视图的名称。<br /><br /> **OpenRowset from Variable** (1) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **OpenRowset Using Fastload** (3) - 需要提供表或视图的名称。<br /><br /> **OpenRowset Using Fastload from Variable** (4) - 需要提供包含表或视图名称的变量的名称。<br /><br /> **SQL 命令** (2) - 需要提供 SQL 语句。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 **DefaultCodePage** 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 **False**。|  
-|CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。 如果值为 0，则表示不限制时间。 此属性的默认值为 0。<br /><br /> 注意：此属性在 **OLE DB 目标编辑器**中不可用，但可以使用 **高级编辑器**进行设置。|  
+|CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。如果值为 0，则表示不限制时间。 此属性的默认值为 0。<br /><br /> 注意：此属性在 **OLE DB 目标编辑器**中不可用，但可以使用 **高级编辑器**进行设置。|  
 |DefaultCodePage|Integer|与 OLE DB 目标关联的默认代码页。|  
 |FastLoadKeepIdentity|Boolean|该值指定加载数据时是否复制标识值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 **False**。 此属性对应 OLE DB [IRowsetFastLoad (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 属性 **SSPROP_FASTLOADKEEPIDENTITY**。|  
 |FastLoadKeepNulls|Boolean|一个值，指定加载数据时是否复制 Null 值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 **False**。 此属性对应 OLE DB [IRowsetFastLoad (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 属性 **SSPROP_FASTLOADKEEPNULLS**。|  

@@ -2,9 +2,12 @@
 title: "序列号 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sequence-numbers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f9ea8bee30f70c215c6ea73caba5d44dff37aa22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2d9ff3876144ce984c29e804016ec9a69bbd38b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-numbers"></a>序列号
-  序列是一种用户定义的架构绑定对象，它根据创建该序列时采用的规范生成一组数值。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。 序列不与表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便接收其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用某一序列对象并且跨多行和表协调值键。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]序列是用户定义的绑定到架构的对象，该对象可根据创建序列所依据的规范来生成数值序列。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。 序列不与表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便接收其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用某一序列对象并且跨多行和表协调值键。  
   
  序列是通过使用 **CREATE SEQUENCE** 语句独立于表来创建的。 其选项使您可以控制增量、最大值和最小值、起始点、自动重新开始功能和缓存以便改进性能。 有关这些选项的信息，请参阅 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。  
   

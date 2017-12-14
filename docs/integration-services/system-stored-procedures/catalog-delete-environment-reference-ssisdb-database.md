@@ -1,5 +1,5 @@
 ---
-title: "catalog.delete_environment_reference （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.delete_environment_reference（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd452dfb87037e7aee2001f66a6884a66743697b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 09ba41e69a2011745b5966fa5803dd797075c111
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +35,8 @@ delete_environment_reference [ @reference_id = ] reference_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @reference_id =] *reference_id*  
- 环境引用唯一标识符。 *Reference_id*是**bigint**。  
+ [ @reference_id = ] reference_id  
+ 环境引用的唯一标识符。 reference_id 为 bigint。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -51,16 +49,15 @@ delete_environment_reference [ @reference_id = ] reference_id
   
 -   针对项目的 MODIFY 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
   
 -   环境引用标识符无效  
   
--   用户没有适当的权限  
+-   用户没有相应的权限  
   
   
-

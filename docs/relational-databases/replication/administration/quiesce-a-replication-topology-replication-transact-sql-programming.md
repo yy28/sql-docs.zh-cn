@@ -2,9 +2,12 @@
 title: "停止复制拓扑（复制 Transact-SQL 编程）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 229eb94b4ee1bb49f8b3b58ca5bb5e66de9ff463
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 828609b3acc355bb6b4a553304cdd1ee5fb810d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>静止复制拓扑（复制 Transact-SQL 编程）
-   为了“停止”系统，需要停止所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 本主题说明了如何停止复制拓扑（这是许多管理任务所必需的操作），以及如何确保节点收到来自其他节点的全部更改。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“停止”系统，需要停止所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 本主题说明了如何停止复制拓扑（这是许多管理任务所必需的操作），以及如何确保节点收到来自其他节点的全部更改。  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>停止包含只读订阅的事务复制拓扑  
   

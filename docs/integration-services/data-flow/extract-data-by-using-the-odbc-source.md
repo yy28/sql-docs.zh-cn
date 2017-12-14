@@ -1,5 +1,5 @@
 ---
-title: "使用 ODBC 源提取数据 |Microsoft 文档"
+title: "使用 ODBC 源提取数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8f11c1c0304fe1ac2a6dcba55e409bde1319c706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
   本过程说明如何通过使用 ODBC 源来提取数据。 若要添加和配置 ODBC 源，包中必须已经包含至少一个数据流任务。  
@@ -59,9 +57,8 @@ ms.lasthandoff: 08/03/2017
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+ [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 源编辑器（“列”页）](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [ODBC 源编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
-

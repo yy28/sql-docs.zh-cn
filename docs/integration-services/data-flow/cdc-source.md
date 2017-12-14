@@ -1,5 +1,5 @@
 ---
-title: "CDC 源 |Microsoft 文档"
+title: "CDC 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/17/2017
   
 -   基于所确定的 CDC 处理范围的 CDC 状态包变量的名称。 CDC 源不修改该变量。  
   
- 返回由 CDC 源的数据是返回的相同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CDC 函数**cdc.fn_cdc_get_all_changes_\<捕获实例名称 >**或**cdc.fn_cdc_get_net_changes_\<捕获实例名称 >** （如果可用）。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
+ CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_\<capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
   
  CDC 源有一个常规输出和一个错误输出。  
   
@@ -86,20 +84,20 @@ use <cdc-enabled-database-name>
   
  其中：  
   
--   \<cdc 的启用数据库的名称-> 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包含更改表的数据库。  
+-   \<cdc-enabled-database-name> 是包含更改表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
   
--   \<值从状态 cs > 是作为 CS 的 CDC 状态变量中显示的值 /\<值从状态 cs > / （CS 代表当前处理范围开始）。  
+-   \<value-from-state-cs> 是在 CDC 状态变量中以 CS/\<value-from-state-cs>/（CS 表示 Current-processing-range-Start）形式出现的值。  
   
--   \<值从状态 ce > 是作为 CE 的 CDC 状态变量中显示的值 /\<值从状态 cs > / （CE 代表当前处理范围结束）。  
+-   \<value-from-state-ce> 是在 CDC 状态变量中以 CE/\<value-from-state-cs>/（CE 表示 Current-processing-range-End）形式出现的值。  
   
--   \<模式 > CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”**和 **“净值且具有合并”**。  
+-   \<mode> 是 CDC 处理模式。 处理模式具有以下值之一： **“全部”**、 **“全部且具有旧值”**、 **“净值”**、 **“具有更新掩码的净值”**和 **“净值且具有合并”**。  
   
  此脚本可通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中复现问题（在其中可以轻松地复现和标识错误），有助于标识问题。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 错误消息  
  下面是可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息：  
   
- **为过程或函数 cdc.fn_cdc_get_net_changes_ 提供的参数数目不足\<...>。**  
+ 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足。  
   
  此错误并不表示缺少参数。 这意味着 CDC 状态变量中的开始或结束 LSN 值无效。  
   
@@ -110,7 +108,7 @@ use <cdc-enabled-database-name>
   
 -   [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC 源编辑器（“列”页）](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [CDC 源编辑器（“错误输出”页）](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -122,7 +120,7 @@ use <cdc-enabled-database-name>
   
  有关可在 **“高级编辑器”** 对话框中设置的属性的详细信息，请参阅 [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [CDC 源自定义属性](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
@@ -155,7 +153,7 @@ use <cdc-enabled-database-name>
  **捕获实例**  
  选择或键入具有要读取的 CDC 表的“CDC 捕获实例”的名称。  
   
- 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [架构] 默认捕获实例名称。[表] 是\<架构 > _\<表 >，但在使用实际的捕获实例名称可能不同。 从读取的实际表是 CDC 表**cdc。\<捕获实例 > _CT**。  
+ 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .\<capture-instance>_CT。  
   
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
@@ -166,7 +164,7 @@ use <cdc-enabled-database-name>
   
 -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
--   **具有更新掩码的净值**： 这种模式十分类似于常规 Net 模式，但它还添加了具有名称模式的布尔值列**__ $\<列名称 >\__Changed** ，可指示在当前已更改的列更改行。  
+-   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$\<column-name>\__Changed 的布尔值列（指示当前更改行中已更改的列）。  
   
 -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   
@@ -174,7 +172,7 @@ use <cdc-enabled-database-name>
 >  对于所有净更改选项，源表必须具有主键或唯一索引。 对于不具有主键或唯一索引的表，您必须选择 **“全部”** 选项。  
   
  **包含 CDC 状态的变量**  
- 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅[定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
+ 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  **包括重新处理指示器列**  
  选中此复选框可以创建称作 **__$reprocessing**的特殊输出列。  
@@ -256,4 +254,3 @@ use <cdc-enabled-database-name>
 -   mattmasson.com 上的博客文章 [CDC 源的处理模式](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
   
   
-

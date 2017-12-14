@@ -2,9 +2,12 @@
 title: "添加发布服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 935f2674f68b0873748871f3bbba7b8ac06678d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e03e3af1548fa02ab81a310130b326a6f5aa21d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-publisher"></a>添加发布服务器
-  可以使用 **“添加发布服务器”** 对话框，将一个或多个发布服务器添加到复制监视器的左窗格中。 添加发布服务器之后，如果在左窗格中选择发布服务器，将在右窗格中显示该发布服务器的有关信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“添加发布服务器”对话框，将一个或多个发布服务器添加到复制监视器的左窗格中。 添加发布服务器之后，如果在左窗格中选择发布服务器，将在右窗格中显示该发布服务器的有关信息。  
   
 ## <a name="options"></a>选项  
  **添加**  

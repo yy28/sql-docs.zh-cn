@@ -1,5 +1,5 @@
 ---
-title: "Azure 数据湖存储目标 |Microsoft 文档"
+title: "Azure Data Lake Store 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSDEST.F1
 - sql14.dts.designer.afpadlsdest.f1
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f8cfa5230a36a27a7e98fa6f336bcee56fa062e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9ef3c09f3afffd8a770f7279da734611216b7177
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目标
   “Azure Data Lake Store 目标”组件允许 SSIS 包将数据写入 Azure Data Lake Store。 支持的文件格式：文本、Avro 和 ORC。 
   
- **Azure 数据湖存储目标**的组成部分[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。
+ “Azure Data Lake Store 目标”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。
  
  >   [!NOTE]
  > 若要确保 Azure Data Lake Store 连接管理器和使用它的组件（即 Azure Data Lake Store 源和 Azure Data Lake Store 目标）可连接到服务，请确保在 [此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/26/2017
 3.  指定连接信息后，切换到“列”  页，将源列映射到 SSIS 数据流的目标列。  
   
   
-

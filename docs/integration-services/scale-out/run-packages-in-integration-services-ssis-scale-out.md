@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Integration Services (SSIS) 中的运行的包向外扩展 |Microsoft 文档"
+title: "在 SQL Server Integration Services (SSIS) Scale Out 中运行包 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) 的横向扩展运行包
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
 包部署到 Integration Services 服务器后，可在 Scale Out 中执行包。
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>使用执行包中向外扩展对话框运行包 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>通过“在 Scale Out 中执行包”对话框运行包 
 
 1. 打开“在 Scale Out 中执行包”对话框
 
@@ -43,7 +39,7 @@ ms.lasthandoff: 08/03/2017
     在“高级”  选项卡中，设置名为“重试计数” 的 Scale Out 选项。 该选项设置包执行失败后将重试的次数。
 
     > [!Note]
-    > **出错时转储**选项时运行缩放出 Worker 服务的帐户是本地计算机的管理员才能起作用。
+    > “出错时转储”选项仅在运行 Scale Out Worker 服务的帐户是本地计算机管理员时生效。
 
 3. 选择计算机
 
@@ -53,7 +49,7 @@ ms.lasthandoff: 08/03/2017
    > 使用 Scale Out Worker 服务的用户帐户的凭据执行包，该服务显示在“计算机选择”  页上。 默认情况下，该帐户是 NT Service\SSISScaleOutWorker140。 可能需要更改为自己的实验室帐户。
 
    >[!WARNING]
-   >由同一个辅助角色上的不同用户触发的包执行将在使用同一帐户运行。 在它们之间没有安全边界。 
+   >同一辅助角色上不同用户触发的包执行使用同一帐户运行。 它们之间没有安全边界。 
 
 4. 运行包和查看报表 
 
@@ -110,15 +106,14 @@ GO
 -   **sysadmin** 服务器角色中的成员资格  
 
 ## <a name="set-default-execution-mode"></a>设置默认执行模式
-若要设置默认执行模式为"横向扩展"，右键单击**SSISDB** SSMS 并选择的对象资源管理器中的节点**属性**。
-在**目录属性**对话框中，将**服务器范围内默认的执行模式**到**向外扩展**。
+若要将默认执行模式设置为“Scale Out”，右键单击 SSMS 对象资源管理器中的“SSISDB”节点并选择“属性”。
+在“目录属性”对话框中，将“服务器范围内的默认执行模式”设置为“Scale Out”。
 
-在此设置后，没有无需指定 **@runinscaleout**  [目录] 的参数。 [create_execution]。 执行在中执行的向外扩展自动。 
+在此设置后，无需为 [catalog].[create_execution] 指定 @runinscaleout 参数。 执行会在 Scale Out 中自动进行。 
 
-![Exe 模式](media\exe-mode.PNG)
+![执行模式](media\exe-mode.PNG)
 
-若要切换回非-向外扩展模式的默认执行模式下，只需设置**服务器范围内默认的执行模式**到**服务器**。
+若要将默认执行模式切换回非 Scale Out 模式，只需将“服务器范围内的默认执行模式”设置为“服务器”。
 
 ## <a name="run-package-in-sql-agent-job"></a>在 SQL 代理作业中运行包
-在 Sql 代理作业中，你可以选择一个步骤的作业以运行 SSIS 包。 若要运行包中向外扩展，你可以利用更高版本的默认执行模式。 设置默认执行模式为"横向扩展"后, 将在向外扩展中运行 Sql 代理作业中的包。
-
+在 SQL 代理作业中，可以选择运行 SSIS 包，作为作业的一个步骤。 若要在 Scale Out 中运行包，可利用上述默认执行模式。 将默认执行模式设置为“Scale Out”后，SQL 代理作业中的包将在 Scale Out 中运行。

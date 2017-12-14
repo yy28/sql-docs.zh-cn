@@ -2,9 +2,12 @@
 title: "PowerShell 中的 SQL Server 标识符 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdc0185b9ac8564a47ca6e4e51b8fdb76e63a653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 标识符
-  用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序使用 Windows PowerShell 路径中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符可包含 Windows PowerShell 不支持在路径中使用的字符。 在 Windows PowerShell 路径中使用标识符时，必须对这些字符进行转义或者对它们使用特殊的编码。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序使用 Windows PowerShell 路径中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符可包含 Windows PowerShell 不支持在路径中使用的字符。 在 Windows PowerShell 路径中使用标识符时，必须对这些字符进行转义或者对它们使用特殊的编码。  
   
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Windows PowerShell 路径中的 SQL Server 标识符  
  Windows PowerShell 提供程序使用类似于 Windows 文件系统路径的路径结构来公开数据层次结构。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序实现了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的路径。 对于 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，驱动器设置为 SQLSERVER:，第一个文件夹设置为 \SQL，数据库对象作为容器和项来引用。 这是 Purchasing 架构中 Vendor 表的路径，该架构位于默认 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 实例的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]数据库中：  

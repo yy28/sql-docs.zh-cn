@@ -2,9 +2,12 @@
 title: "以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/28/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4b1dab5e822c5ef2f9ac580f4d4cd2e5b43b7ae6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2b6362b3ce5bfcde50854fe2fe78273d1adae699
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
-
-SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库、Analysis Services 模型、Reporting Services 报表和 Integration Services 包）提供项目模板和设计图面。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库、Analysis Services 模型、Reporting Services 报表和 Integration Services 包）提供项目模板和设计图面。  
   
 它基于 Visual Studio shell，并随 SQL Server 一起发布。 新版本的 SSDT 将集成 SQL Server 的最新功能。 较早的版本包括该版本当时的模板和设计环境。  
   

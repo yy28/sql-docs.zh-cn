@@ -1,6 +1,6 @@
 
 # [SQL Server 工具和实用工具概述](../tools/overview-sql-tools.md)
-# [新的和最近更新的文章](new-updated-tools.md)
+# [新的和已更新的项目](new-updated-tools.md)
 
 # [SQL Operations Studio（预览版）](../sql-operations-studio/what-is.md)
 

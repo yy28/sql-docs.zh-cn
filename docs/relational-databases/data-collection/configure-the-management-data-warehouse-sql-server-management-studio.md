@@ -2,9 +2,12 @@
 title: "配置管理数据仓库 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4165c8b8e8e11b281a31e04a3b0fd402146d4e71
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fee53d75e2c41949d1e07f30b2ab751bb6ca322
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
-  本主题介绍如何配置管理数据仓库以支持使用数据收集器的单个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据存储。 这些实例可能位于相同或不同的服务器上。 本主题还提供针对 [配置管理数据仓库向导](#Wizard) 对话框的用户界面的说明。 有关配置数据收集器的信息，请参阅 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍如何配置管理数据仓库以支持使用数据收集器的单个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据存储。 这些实例可能位于相同或不同的服务器上。 本主题还提供针对 [配置管理数据仓库向导](#Wizard) 对话框的用户界面的说明。 有关配置数据收集器的信息，请参阅 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)。  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用其中一个系统服务帐户（Local System、Network Service 或 Local Service）运行，且创建管理数据仓库的实例与数据收集器的实例不同，则必须将收集组配置为使用代理将数据上载到管理数据仓库。  

@@ -1,5 +1,5 @@
 ---
-title: "EXP （SSIS 表达式） |Microsoft 文档"
+title: "EXP（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ad14b1426435034ef5f4371cc8bb6904b536798
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 396e229d5d8d6940c2ef4bd110a8c5f19aa8f2b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="exp-ssis-expression"></a>EXP（SSIS 表达式）
   返回数值表达式以 e 为基的指数。 EXP 函数是对 LN 函数操作的补充，有时称为反对数。  
@@ -72,8 +70,7 @@ EXP(0)
  返回 1。  
   
 ## <a name="see-also"></a>另请参阅  
- [日志 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/log-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [LOG（SSIS 表达式）](../../integration-services/expressions/log-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

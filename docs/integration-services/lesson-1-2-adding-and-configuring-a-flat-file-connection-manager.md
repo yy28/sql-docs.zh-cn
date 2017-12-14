@@ -1,5 +1,5 @@
 ---
-title: "步骤 2： 添加和配置平面文件连接管理器 |Microsoft 文档"
+title: "步骤 2：添加和配置平面文件连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0b3ebf32ebaa03f1dbb1aa1c52234b56fa8de16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>课程 1-2-添加和配置平面文件连接管理器
+# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>第 1-2 课 — 添加和配置平面文件连接管理器
 在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
   
 必须为要使用的每种文件格式创建一个新的平面文件连接管理器。 因为本教程从多个数据格式完全相同的平面文件提取数据，所以只需为您的包添加和配置一个平面文件连接管理器。  
@@ -117,4 +114,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

@@ -2,9 +2,12 @@
 title: "完成单词 (IntelliSense) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1fbc08fbc46e0518c32ef048db34237016e0417
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3a453cb71890b50d770f13dd56f6fcab97fbddaf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="complete-word-intellisense"></a>完成单词 (IntelliSense)
-  在您输入足够多的字符来唯一标识变量、命令或函数名后， [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 完成单词选项可以键入该术语的其余部分。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在输入足够多的字符来对变量、命令或函数名进行唯一标识后，[!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 完成单词选项可以键入该术语的其余部分。  
   
  有四种方式可用来调用完成单词功能：  
   

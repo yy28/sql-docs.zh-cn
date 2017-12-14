@@ -2,9 +2,12 @@
 title: "复制代理管理 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7a5005b9e2d201d8ba53e7b4e7eaa0986043eb0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 634f38525ab7809da0ade7f002312cb203b767ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
-  复制代理执行许多与复制有关的任务，其中包括创建架构和数据副本、检测发布服务器或订阅服务器上的更新以及在服务器之间传播更改。 默认情况下，复制代理在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业步骤下运行。 由于这些代理完全是可执行文件，因此可以从命令行和批处理脚本直接调用它们。 每个复制代理支持一组运行时参数，用于控制代理的运行方式；这些参数在代理配置文件或命令行中指定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制代理执行许多与复制有关的任务，其中包括创建架构和数据副本、检测发布服务器或订阅服务器上的更新以及在服务器之间传播更改。 默认情况下，复制代理在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业步骤下运行。 由于这些代理完全是可执行文件，因此可以从命令行和批处理脚本直接调用它们。 每个复制代理支持一组运行时参数，用于控制代理的运行方式；这些参数在代理配置文件或命令行中指定。  
   
 > [!IMPORTANT]  
 >  默认情况下，安装完 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务处于禁用状态，除非在安装过程中明确选择自动启动该服务。  

@@ -1,5 +1,5 @@
 ---
-title: "Excel 源 |Microsoft 文档"
+title: "Excel 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="excel-source"></a>Excel 源
   Excel 源从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿的工作表或范围中提取数据。  
@@ -107,7 +105,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [循环遍历 Excel 文件和表使用 Foreach 循环容器](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 ## <a name="excel-source-editor-connection-manager-page"></a>Excel 源编辑器（“连接管理器”页）
   使用 **“Excel 源编辑器”** 对话框的 **“连接管理器”** 节点可以为源选择要使用的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作簿。 Excel 源从现有工作簿中的工作表或指定范围中读取数据。  
@@ -216,4 +214,3 @@ ms.lasthandoff: 08/17/2017
 -   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 3 部分（共 3 部分）：问题和替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
   
   
-

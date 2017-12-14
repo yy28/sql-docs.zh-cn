@@ -1,25 +1,27 @@
 ---
-title: "SQL Server Connection for Instance Creation |Microsoft 文档"
+title: "用于实例创建的 SQL Server 连接 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65f20b235b6a3c4bd22ce754467f36a9b03fdaab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6991ee669e72d3410392700f19ae57ed0cb6fca7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>用于实例创建的 SQL Server 连接
   创建 Oracle CDC 实例时首先要执行的步骤之一是在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上创建 CDC 数据库。 将为 SQL Server CDC 启用该 CDC 数据库，并且此启用将要求作为 `sysadmin` 固定服务器角色的成员的登录名。  
@@ -44,9 +46,9 @@ ms.lasthandoff: 08/03/2017
  **选项**  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
--   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。 默认值为 **15**。  
+-   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
   
--   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。 默认值为 **30**。  
+-   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
 -   **加密连接**：选择 **“加密连接”** 将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间的通信。  
   
@@ -56,6 +58,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建 SQL Server 更改数据库](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [针对 CDC 设计器 SQL Server 连接所需的权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [针对 CDC 设计器的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

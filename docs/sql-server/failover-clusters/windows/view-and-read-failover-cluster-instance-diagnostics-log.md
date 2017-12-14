@@ -2,9 +2,12 @@
 title: "查看和读取故障转移群集实例诊断日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 71fdb740e3951004e32d85708e89de956844a4d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 853edff8b7e7e0713b3133d8819fa4537caea48a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
-  将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
 -   **开始之前：**  [建议](#Recommendations)、 [安全性](#Security)  
   

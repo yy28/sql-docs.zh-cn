@@ -2,9 +2,12 @@
 title: "批量导入数据时保留标识值 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4eaed7f393eaf022482ae585cd5691834fa39881
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95788f86ca16782ed8e51f888004926bf174e950
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>批量导入数据时保留标识值 (SQL Server)
-可以将包含标识值的数据文件批量导入到 Microsoft SQL Server 的实例中。  默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。  这些唯一值基于在表创建期间指定的种子和增量值。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可以将包含标识值的数据文件批量导入到 Microsoft SQL Server 的实例中。  默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。  这些唯一值基于在表创建期间指定的种子和增量值。
 
 如果该数据文件表中的标识符列不包含值，则使用格式化文件来指定导入数据时应跳过表中的标识符列。  有关详细信息，请参阅 [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) 。
 

@@ -2,9 +2,12 @@
 title: "安全开发（复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee3091a5770bded35490db2ec8db6f0e86ba8994
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 70f8828cd4d9d17caa449bbfa912982d33e15834
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="secure-development-replication"></a>安全开发（复制）
-  本节提供可帮助您规划更安全的复制拓扑的相关信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本节提供可帮助规划更安全的复制拓扑的相关信息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [复制代理安全性模式](../../../relational-databases/replication/security/replication-agent-security-model.md)  

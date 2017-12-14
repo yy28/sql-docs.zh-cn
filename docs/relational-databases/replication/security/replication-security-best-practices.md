@@ -2,9 +2,12 @@
 title: "复制安全最佳做法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c3a7593fc934487d0726128c22de4654cf036961
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c2ef09b09e2505d8771d5e16d7b9bea9b97308b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-security-best-practices"></a>复制安全最佳实践
-  复制在分布式环境（从单个域中的 Intranet 到在不受信任的域之间通过 Internet 访问数据的应用程序）中移动数据。 理解在这些不同环境下保护复制连接的最佳方法非常重要。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制在分布式环境（从单个域中的 Intranet 到在不受信任的域之间通过 Internet 访问数据的应用程序）中移动数据。 理解在这些不同环境下保护复制连接的最佳方法非常重要。  
   
  下面是在所有环境中均与复制相关的信息：  
   

@@ -1,5 +1,5 @@
 ---
-title: "&lt;（小于）（SSIS 表达式） |Microsoft 文档"
+title: "&lt;（小于）（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb12a0ff651cf50c5208bae6ba0229d1e6be85f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 70beda46c67a7d0683dcdba23a1244857821ffb9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;（小于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -108,11 +106,10 @@ ListPrice < 500
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#62;&#40;大于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#62; = &#40;大于或等于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60; = &#40;小于或等于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [>（大于）（SSIS 表达式）](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [>=（大于或等于）（SSIS 表达式）](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [<=（小于或等于）（SSIS 表达式）](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

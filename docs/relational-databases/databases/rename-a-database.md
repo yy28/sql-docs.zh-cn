@@ -1,10 +1,13 @@
 ---
 title: "重命名数据库 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e1fcae408b1c5617e39b835d82f7895635bd07ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5470b86096170410b88c6a8e8a596fe608d33cc7
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-a-database"></a>重命名数据库
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
   
  **本主题内容**  
   
@@ -41,6 +44,9 @@ ms.lasthandoff: 11/09/2017
      [Transact-SQL](#TsqlProcedure)  
   
 -   **跟进：**  [在重命名数据库之后](#FollowUp)  
+
+> [!NOTE]
+> 若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 语句。 若要重命名 Azure SQL 数据仓库或并行数据仓库中的数据库，可使用 [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql) 语句。
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

@@ -1,5 +1,5 @@
 ---
-title: "列 Null 比率配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+title: "列 Null 比率配置文件请求选项（数据事件探查任务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0cfbec0b81d1a80a813d8fc2c7e7212b33b77a4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a5c596bcff44f87086e26bb7a263af1f421636c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>列 Null 比率配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列 Null 比率请求”** 设置选项。 列 Null 比率配置文件报告选定列中 null 值的百分比。 此配置文件可以帮助您识别数据中的问题，例如，列中 null 值的比率以外偏高。 例如，列 Null 比率配置文件对邮政编码列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。  
@@ -78,8 +75,7 @@ ms.lasthandoff: 08/03/2017
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

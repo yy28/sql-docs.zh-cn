@@ -24,5 +24,6 @@
 ## [Transact-SQL 参考](../t-sql/language-reference.md)
 ## [SQL Operations Studio（预览版）GitHub 存储库](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server 博客](https://blogs.technet.microsoft.com/dataplatforminsider/)
+## [新的和已更新的项目](new-updated-sql-operations-studio.md)
 # [常见问题解答](faq.md)
 # [报告问题并提供建议](https://github.com/microsoft/sqlopsstudio/issues)

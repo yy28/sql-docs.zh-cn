@@ -2,9 +2,12 @@
 title: "Showplan XML 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813e54cf56af7b0d0b465e474582ea16d9fea16a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38dd57838cab286714f85716e71b617e493c551c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 事件类
-  当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan XML 事件类。 包括 Showplan XML 事件类以标识 Showplan 运算符。 此事件类将每个事件存储为定义完善的 XML 文档。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan XML 事件类。 包括 Showplan XML 事件类以标识 Showplan 运算符。 此事件类将每个事件存储为定义完善的 XML 文档。  
   
  当跟踪中包含 Showplan XML 事件类时，其开销将明显影响性能。 查询优化后，Showplan XML 将存储查询计划。 若要将引起的开销降到最低，请将此事件类的使用范围限制在监视主要时段内的特定问题的跟踪中。  
   

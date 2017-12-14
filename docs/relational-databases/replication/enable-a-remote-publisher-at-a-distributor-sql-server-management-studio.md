@@ -2,9 +2,12 @@
 title: "在分发服务器上启用远程发布服务器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bb96426bd783a9ff8298930e260c88d1ad491b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6e8132de2283faa5880e64092cd3d03cf07c5bb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在分发服务器上启用远程发布服务器 (SQL Server Management Studio)
-  可以在 **“发布服务器”** 页上允许发布服务器使用远程分发服务器。 可以在配置分发向导中通过“分发服务器属性 - \<分发服务器>”对话框访问此页。 有关使用该向导和访问该对话框的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)和[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可在“发布服务器”页上允许发布服务器使用远程分发服务器。 可以在配置分发向导中通过“分发服务器属性 - \<分发服务器>”对话框访问此页。 有关使用该向导和访问该对话框的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)和[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>在配置分发向导中启用发布服务器  
   

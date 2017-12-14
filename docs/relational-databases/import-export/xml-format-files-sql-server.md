@@ -2,9 +2,12 @@
 title: "XML 格式化文件 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a644a346778191ed0e9d748fbf0418ab9ca07d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 463309bd69a31ab54458095ef98f591b7474eee2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了一个 XML 架构，该架构定义了编写“XML 格式化文件”（用于将数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中）的语法。 XML 格式化文件必须符合用 XML 架构定义语言 (XSDL) 定义的这种架构。 只有当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
   
  可以结合使用 XML 格式化文件和 **bcp** 命令、BULK INSERT 语句或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 语句。 使用 **bcp** 命令，你可以自动生成表的 XML 格式化文件；有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   

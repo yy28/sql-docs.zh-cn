@@ -1,5 +1,5 @@
 ---
-title: "聚合转换 |Microsoft 文档"
+title: "聚合转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="aggregate-transformation"></a>聚合转换
   聚合转换将聚合函数（如 Average）应用于列值，并将结果复制到转换输出。 除聚合函数以外，转换还提供 GROUP BY 子句，用于指定所要聚合的组。  
@@ -135,7 +133,7 @@ ms.lasthandoff: 08/19/2017
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>相关任务  
- [通过使用聚合转换数据集中的聚合值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [使用聚合转换来聚合数据集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
@@ -244,9 +242,8 @@ ms.lasthandoff: 08/19/2017
  **自动扩展系数**  
  使用一个 1 到 100 之间的值指定在聚合过程中内存可扩展的百分比。 默认情况下，此选项的值为 **25%**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

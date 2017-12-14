@@ -2,9 +2,12 @@
 title: "预处理架构以便合并包括的架构 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08a839ccc5aae2426af36dc5bcef27e33406a343
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>预处理架构以便合并包括的架构
-  W3C XSD **include** 元素支持架构模块性，通过功能可以将 XML 架构分区到多个物理文件中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前尚不支持此元素。 服务器将拒绝包含此元素的 XML 架构。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]W3C XSD include 元素支持架构模块性，通过该功能可以将 XML 架构分区到多个物理文件中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前尚不支持此元素。 服务器将拒绝包含此元素的 XML 架构。  
   
  一种解决方法是，可以预处理包括 \<xsd:include> 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 以下 C# 代码可用于预处理。 代码前面部分的注释提供了有关如何使用代码的信息。  
   

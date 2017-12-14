@@ -1,5 +1,5 @@
 ---
-title: "值包含配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+title: "值包含配置文件请求选项（数据事件探查任务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“值包含配置文件请求”** 设置选项。 值包含配置文件计算两列或列集之间的值的重叠 因此，它可以确定一个列或列集是否适于用作两个选定表之间的外健。 此配置文件还有助于标识数据中的问题，如值无效。 例如，使用值包含配置文件对 Sales 表中的 ProductID 列进行事件探查。 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。  
@@ -162,8 +159,7 @@ ms.lasthandoff: 08/03/2017
  指定要在输出中报告的最大包含冲突数。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **InclusionThresholdSetting**时，才会禁用该选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

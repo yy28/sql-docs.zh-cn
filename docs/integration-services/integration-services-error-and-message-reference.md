@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 错误和消息引用 |Microsoft 文档"
+title: "Integration Services 错误和消息引用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -619,12 +617,12 @@ ms.lasthandoff: 09/26/2017
 |0xC00291EF|-1073573393|DTS_E_SQLTASKCONN_ERR_NO_DISCONNECTED_RS|没有用于 Transact-SQL 语句的断开连接的记录集。|  
 |0xC00291F0|-1073573392|DTS_E_SQLTASKCONN_ERR_UNSUPPORTED_TYPE|不支持的类型。|  
 |0xC00291F1|-1073573391|DTS_E_SQLTASKCONN_ERR_UNKNOWN_TYPE|未知类型。|  
-|0xC00291F2|-1073573390|DTS_E_SQLTASKCONN_ERR_PARAM_DATA_TYPE|不支持参数绑定上的数据类型\\"%s\\"。|  
+|0xC00291F2|-1073573390|DTS_E_SQLTASKCONN_ERR_PARAM_DATA_TYPE|参数绑定 \\"%s\\" 不支持的数据类型。|  
 |0xC00291F3|-1073573389|DTS_E_SQLTASKCONN_ERR_PARAM_NAME_MIX|参数名称不能由序号和已命名类型混合组成。|  
-|0xC00291F4|-1073573388|DTS_E_SQLTASKCONN_ERR_PARAM_DIR|参数绑定的参数方向\\"%s\\"无效。|  
-|0xC00291F5|-1073573387|DTS_E_SQLTASKCONN_ERR_RESULT_DATA_TYPE|结果集绑定中的数据类型\\"%s\\"不支持。|  
+|0xC00291F4|-1073573388|DTS_E_SQLTASKCONN_ERR_PARAM_DIR|参数绑定 \\"%s\\" 的参数方向无效。|  
+|0xC00291F5|-1073573387|DTS_E_SQLTASKCONN_ERR_RESULT_DATA_TYPE|不支持结果集绑定 \\"%s\\" 的数据类型。|  
 |0xC00291F6|-1073573386|DTS_E_SQLTASKCONN_ERR_RESULT_COL_INDEX|结果列索引 %d 无效。|  
-|0xC00291F7|-1073573385|DTS_E_SQLTASKCONN_ERR_UNKNOWN_RESULT_COL|找不到列\\"%s\\"在结果集中。|  
+|0xC00291F7|-1073573385|DTS_E_SQLTASKCONN_ERR_UNKNOWN_RESULT_COL|在该结果集中找不到列 \\"%s\\"。|  
 |0xC00291F9|-1073573383|DTS_E_SQLTASKCONN_ERR_NOROWSET|没有与执行此查询相关联的结果行集。|  
 |0xC00291FA|-1073573382|DTS_E_SQLTASKCONN_ERR_ODBC_DISCONNECTED|无法通过 ODBC 连接获得已断开连接的记录集。|  
 |0xC00291FB|-1073573381|DTS_E_SQLTASKCONN_ERR_RESULT_SET_DATA_TYPE|不支持该结果集内列 %hd 中的数据类型。|  
@@ -2345,4 +2343,3 @@ ms.lasthandoff: 09/26/2017
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 不允许插入外部元数据列。|  
   
   
-

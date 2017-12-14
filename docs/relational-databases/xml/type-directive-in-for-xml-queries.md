@@ -2,9 +2,12 @@
 title: "FOR XML 查询中的 TYPE 指令 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9c7c87b5ab05ac170f9c6291c8b8147e20e71762
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e30226fae64fab358a113ba82abefca113b2a2ca
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)，这样便可以选择通过指定 TYPE 指令请求将 FOR XML 查询结果作为 **xml** 数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 Xquery，将结果分配给 **xml** 类型变量，或编写 [嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)，这样便可以选择通过指定 TYPE 指令请求将 FOR XML 查询结果作为 xml 数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 Xquery，将结果分配给 **xml** 类型变量，或编写 [嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 XML 数据类型实例数据作为不同服务器构造（如使用 TYPE 指令的 FOR XML 查询，或在其中使用 **xml** 数据类型返回 SQL 表列和输出参数中的 XML 实例数据值的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 提供程序请求从服务器以二进制编码发送此 XML 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将以字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。 请注意，不带 TYPE 指令的顶级 FOR XML 不能与游标一起使用。  

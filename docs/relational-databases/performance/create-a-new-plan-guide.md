@@ -2,9 +2,12 @@
 title: "创建新的计划指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea94e6214729ba4bf5c5e39c25cdd8119d261a3e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 67925edbbf7a3e914f598fc3532e2571d928fe76
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
-计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，需要指定要优化的语句以及包含要使用的查询提示的 OPTION 子句。 或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，需要指定要优化的语句以及包含要使用的查询提示的 OPTION 子句。 或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
 
 计划指南将固定查询计划和/或查询提示应用于查询。
   

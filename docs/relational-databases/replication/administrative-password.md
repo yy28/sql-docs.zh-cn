@@ -2,9 +2,12 @@
 title: "管理密码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592f3db3d5340f29832c29e1fcca7a2d46a7033f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e197fb3bcaee9bba96de0dc6dd6519a01e5a13b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-password"></a>管理密码
-  如果在此向导的 **“分发服务器”** 页上为此发布服务器选择了远程分发服务器，则必须输入复制使用 **distributor_admin** 登录名在发布服务器和分发服务器之间所建立的连接的密码。 该密码必须与在配置分发向导的 **“分发服务器密码”** 页上或在 **“分发服务器属性”** 对话框的 **“发布服务器”** 页上指定的密码相匹配。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果在此向导的“分发服务器”页上为此发布服务器选择了远程分发服务器，则必须输入复制使用 distributor_admin 登录名在发布服务器和分发服务器之间所建立的连接的密码。 该密码必须与在配置分发向导的 **“分发服务器密码”** 页上或在 **“分发服务器属性”** 对话框的 **“发布服务器”** 页上指定的密码相匹配。  
   
 ## <a name="options"></a>选项  
  **密码**  

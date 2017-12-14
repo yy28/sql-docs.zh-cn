@@ -2,9 +2,12 @@
 title: "SQL 编写器服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f55a266912244261966dbe590070d98954ea5136
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c8ba5cd5b5b2ad9d18668d8c6d4065391160e13
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-writer-service"></a>SQL 编写器服务
-  SQL 编写器服务通过卷影复制服务框架，提供了用来备份和还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的附加功能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL 编写器服务通过卷影复制服务框架，提供了用来备份和还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的附加功能。  
   
  SQL 编写器服务是自动安装的。 在卷影复制服务 (VSS) 应用程序请求备份或还原时，必须运行该服务。 若要配置该服务，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服务小程序。 SQL 编写器服务可安装在所有操作系统上。  
   

@@ -1,5 +1,5 @@
 ---
-title: "开发具有异步输出的自定义转换组件 |Microsoft 文档"
+title: "开发具有异步输出的自定义转换组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,26 +26,25 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>开发具有异步输出的自定义转换组件
-  如果某个转换直到组件收到其所有输入行后才输出行，或者该转换不是为收到的每个输入行生成一个输出行，则可以使用具有异步输出的组件。 例如，聚合转换只有在它读取所有行之后才能计算各行的总和。 与之相反，如果可以在每个数据行传递给组件时就修改该行，则可以使用具有同步输出的组件。 您可以就地修改每行的数据，或者创建一个或多个新列，其中每一列的值与每个输入行对应。 有关同步和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
+  如果某个转换直到组件收到其所有输入行后才输出行，或者该转换不是为收到的每个输入行生成一个输出行，则可以使用具有异步输出的组件。 例如，聚合转换只有在它读取所有行之后才能计算各行的总和。 与之相反，如果可以在每个数据行传递给组件时就修改该行，则可以使用具有同步输出的组件。 您可以就地修改每行的数据，或者创建一个或多个新列，其中每一列的值与每个输入行对应。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
   
  具有异步输出的转换组件非常独特，因为它们既充当目标组件又充当源组件。 此类组件从上游组件接收行，然后添加下游组件所使用的行。 其他任何数据流组件都不同时执行这两个操作。  
   
  对于具有同步输出的组件，如果来自其上游组件的列可用于该组件，则对于该组件下游的组件，这些列是自动可用的。 因此，具有同步输出的组件不一定要定义输出列，以便为下一组件提供列和行。 而具有异步输出的组件则必须定义输出列并向下游组件提供行。 因此，具有异步输出的组件在设计时和执行时要执行更多的任务，而组件开发人员要实现更多的代码。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包含与异步输出的多个转换。 例如，排序转换需要收到所有行才能对这些行进行排序，这是通过异步输出完成的。 该转换收到所有行之后，对这些行进行排序，然后将这些行添加到其输出。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含多个具有异步输出的转换。 例如，排序转换需要收到所有行才能对这些行进行排序，这是通过异步输出完成的。 该转换收到所有行之后，对这些行进行排序，然后将这些行添加到其输出。  
   
  本节详细说明如何开发具有异步输出的转换。 有关源组件开发的详细信息，请参阅[开发自定义源组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)。  
   
@@ -151,7 +148,7 @@ Public Overrides Sub OnInputPathAttached(ByVal inputID As Integer)
 End Sub  
 ```  
   
-## <a name="run-time"></a>运行时间  
+## <a name="run-time"></a>运行时  
  具有异步输出的组件在运行时执行的一系列方法也与其他类型的组件不同。 首先，只有这种组件既接受对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法的调用又接受对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法的调用。 其次，具有异步输出的组件还需要在开始处理前访问所有传入行；因此，这些组件必须在内部缓存输入行直到读取所有行为止。 最后，与其他组件不同，具有异步输出的组件既接收输入缓冲区又接收输出缓冲区。  
   
 ### <a name="understanding-the-buffers"></a>了解缓冲区  
@@ -334,4 +331,3 @@ End Namespace
  [使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

@@ -2,11 +2,12 @@
 title: "SQL Server 中的本地语言版本 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 59bccb3bef14b779a017567211148096d2cb6c35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 17c5b8c1fae4c997f4d3a7f84ba353291296f85f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的本地语言版本
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 操作系统所支持的所有语言。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Windows 操作系统所支持的所有语言。  
   
 ## <a name="cross-language-support"></a>跨语言支持  
   

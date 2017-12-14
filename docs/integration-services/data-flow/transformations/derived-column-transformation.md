@@ -1,5 +1,5 @@
 ---
-title: "派生列转换 |Microsoft 文档"
+title: "派生列转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 40d4bf147d712fac833ba9aa7542529cf0e26253
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: edd73fe8a391928eb895ba7feb9dc55e8472fb4e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="related-content"></a>相关内容  
  social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
-

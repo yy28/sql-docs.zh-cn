@@ -2,9 +2,12 @@
 title: "查找搜索属性的属性集 GUID 和属性整数 ID | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf8b11f86a4d95d2518d85d79df2a53c900b9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 881c663038225af57b33aeb655306f6ef1d1f1f4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
-  本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
   
  可对由 IFilter 从二进制数据 – 即从存储在 **varbinary**、 **varbinary(max)** （包括 **FILESTREAM**）或 **image** 数据类型列中的数据中 – 提取的文档属性进行全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   

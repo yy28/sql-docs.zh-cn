@@ -2,11 +2,12 @@
 title: "向 SQL Server 的实例添加功能（安装程序）| Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: eb201c27f255ac57c667c3a727c2b4c1551f37fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9dae46b18a46e4457bfe999f9cfdb71d60ec6651
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
-  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题提供向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  若要从命令提示符向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加功能，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   

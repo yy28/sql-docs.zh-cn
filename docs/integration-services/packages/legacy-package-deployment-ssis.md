@@ -1,5 +1,5 @@
 ---
-title: "旧的包部署 (SSIS) |Microsoft 文档"
+title: "早期包部署 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,17 +33,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>注册表项  
  如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 使用的注册表项必须具有名为 **Value**的值。 该值可以是 DWORD 或一个字符串。  
   
- 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式是\<注册表项 >。 如果你想要使用不是根目录下的 HKEY_CURRENT_USER 注册表项，使用格式\<key\registry 注册表\\...> 若要标识的密钥。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 **SSISPackages\MyPackage**。  
+ 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 **SSISPackages\MyPackage**。  
   
 #### <a name="sql-server"></a>SQL Server  
  如果选择 **SQL Server** 配置类型，则需指定到要存储这些配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。 可以将配置保存到现有表，也可以在指定数据库中新建表。  
@@ -364,7 +362,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |“值”|Description|  
 |-----------|-----------------|  
-|**注册表项**|键入包含配置信息的注册表项。 格式是\<注册表项 >。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果你想要使用的注册表项不是根目录下的 HKEY_CURRENT_USER，使用格式\<key\registry 注册表\\...> 若要标识的密钥。|  
+|**注册表项**|键入包含配置信息的注册表项。 格式为 \<registry key>。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
@@ -492,7 +490,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 **True** 才能创建部署实用工具。|  
 |DeploymentOutputPath|部署实用工具的位置，相对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。|  
   
- 当生成[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目，将一个清单文件，\<项目名称 >。SSISDeploymentManifest.xml，被创建并添加，以及项目包和包的依赖项，到在项目中，bin\Deployment 文件夹或 DeploymentOutputPath 属性中指定的位置的副本。 该清单文件列出了项目中的包、包配置和所有杂项文件。  
+ 在生成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目时，除了创建项目包的副本和包依赖项外，还会创建一个清单文件 \<project name>.SSISDeploymentManifest.xml，并将它们都添加到项目的 bin\Deployment 文件夹中，或添加到 DeploymentOutputPath 属性中所指定的位置。 该清单文件列出了项目中的包、包配置和所有杂项文件。  
   
  每次生成项目时将刷新部署文件夹的内容。 这意味着系统将删除所有已保存到此文件夹中但未由生成进程再次复制到该文件夹中的文件。 例如，将删除保存到部署文件夹中的包配置文件。  
   
@@ -502,7 +500,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  右键单击该项目，再单击“属性”。  
   
-3.  在**\<项目名称 > 属性页**对话框中，单击**部署实用工具**。  
+3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”。  
   
 4.  若要在部署包时更新包配置，请将 **AllowConfigurationChanges** 设置为 **True**。  
   
@@ -521,7 +519,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  部署文件夹的路径是在为其创建部署实用工具的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 DeploymentOutputPath 属性中指定的。 默认路径为 bin\Deployment，它相对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 有关详细信息，请参阅 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)。  
   
- 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件命名为\<项目名称 >。SSISDeploymentManifest，并可在目标计算机上的部署文件夹中找到。  
+ 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件名为 \<项目名称>.SSISDeploymentManifest，可以在目标计算机上的部署文件夹找到它。  
   
 > [!NOTE]  
 >  如果并行安装了不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，根据你部署的包的版本，可能会遇到错误。 因为 .SSISDeploymentManifest 文件扩展名对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的所有版本是相同的，因此可能出现此错误。 针对最近安装的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本双击该文件调用安装程序 (dtsinstall.exe)，它的版本可能与部署实用工具文件的版本不同。 若要解决这个问题，请从命令行运行正确的 dtsinstall.exe 版本，并且提供部署实用工具文件的路径。  
@@ -544,7 +542,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  在目标计算机上打开部署文件夹。  
   
-2.  双击该清单的文件，\<项目名称 >。SSISDeploymentManifest，以启动包安装向导。  
+2.  双击清单文件（\<项目名称>.SSISDeploymentManifest），以启动包安装向导。  
   
 3.  在 **“部署 SSIS 包”** 页上，选择 **“SQL Server 部署”** 选项。  
   
@@ -705,5 +703,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **“完成”**  
  单击“完成”即可退出该向导。  
-
 

@@ -2,9 +2,12 @@
 title: "对表和列启用语义搜索 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: caca4cf61fe71392178f3243928888cd2ba51225
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
-  介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
   
  统计语义搜索使用全文搜索创建的索引并创建其他索引。 作为全文搜索上的此依赖关系的结果，您可在定义新的全文索引或更改现有全文索引时创建一个新的语义索引。 可以按本主题中所述使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的全文索引向导和其他对话框创建新的语义索引。  
   

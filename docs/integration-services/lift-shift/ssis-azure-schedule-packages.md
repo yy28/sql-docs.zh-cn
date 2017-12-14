@@ -1,5 +1,5 @@
 ---
-title: "计划在 Azure 上的 SSIS 包执行 |Microsoft 文档"
+title: "计划安排 Azure 上的 SSIS 包执行 | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,44 +8,42 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>计划在 Azure 上的 SSIS 包的执行
-你可以计划的执行的包存储在 SSISDB 目录数据库上的 Azure SQL 数据库服务器中通过选择以下的计划选项之一：
+# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>计划安排 Azure 上的 SSIS 包执行
+可以通过选择以下计划安排选项之一，计划安排存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的包的执行。
 -   [SQL Server 代理](#agent)
 -   [SQL 数据库弹性作业](#elastic)
 -   [Azure 数据工厂 SQL Server 存储过程活动](#sproc)
 
-## <a name="agent"></a>计划 SQL Server 代理的包
+## <a name="agent"></a> 使用 SQL Server 代理计划安排一个包
 
 ### <a name="prerequisite"></a>前提条件
 
-你可以使用在本地 SQL Server 代理用于计划执行的 Azure SQL 数据库服务器上存储的包之前，必须将 SQL 数据库服务器添加为链接服务器。 有关详细信息，请参阅[创建链接服务器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[链接服务器](../../relational-databases/linked-servers/linked-servers-database-engine.md)。
+必须先将 SQL 数据库服务器添加为链接服务器，才能在本地使用 SQL Server 代理来计划安排存储在 Azure SQL 数据库服务器上的包的执行。 有关详细信息，请参阅[创建链接服务器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[链接服务器](../../relational-databases/linked-servers/linked-servers-database-engine.md)。
 
 ### <a name="create-a-sql-server-agent-job"></a>创建 SQL Server 代理作业
 
-若要计划在本地 SQL Server 代理的包，创建一个作业具有作业步骤调用 SSIS 目录存储过程`[catalog].[create_execution]`然后`[catalog].[start_execution]`。 有关详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
+若要在本地使用 SQL Server 代理来计划安排一个包，请创建一个具有作业步骤的作业，该作业依次调用 SSIS 目录存储过程 `[catalog].[create_execution]` 和 `[catalog].[start_execution]`。 有关详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
 
-1.  在 SQL Server Management Studio，连接到你要在其创建作业在本地 SQL Server 数据库。
+1.  在 SQL Server Management Studio 中，连接到要在其中创建作业的本地 SQL Server 数据库。
 
-2.  右键单击**SQL Server 代理**节点中，选择**新建**，然后选择**作业**以打开**新作业**对话框。
+2.  右键单击“SQL Server 代理”节点，选择“新建”，然后选择“作业”以打开“新建作业”对话框。
 
-3.  在**新作业**对话框中，选择**步骤**页上，然后选择**新建**以打开**新建作业步骤**对话框。
+3.  在“新建作业”对话框中，选择“步骤”页，然后选择“新建”以打开“新建作业步骤”对话框。
 
-4.  在**新建作业步骤**对话框中，选择`SSISDB`作为**数据库。**
+4.  在“新建作业步骤”对话框中，选择 `SSISDB` 作为  **数据库。**
 
-5.  在命令字段中，输入类似于下面的示例所示的脚本的 Transact SQL 脚本：
+5.  在命令字段中，输入与下列示例所示的脚本类似的 Transact-SQL 脚本：
 
     ```sql
     DECLARE @return_value int, @exe_id bigint 
@@ -60,23 +58,23 @@ ms.lasthandoff: 10/18/2017
     GO
     ```
 
-6.  完成配置和计划作业。
+6.  完成配置并计划作业。
 
-## <a name="elastic"></a>计划 SQL 数据库弹性作业的包
+## <a name="elastic"></a> 使用 SQL 数据库弹性作业计划安排一个包
 
-有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
+有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
 
 ### <a name="prerequisites"></a>先决条件
 
-你可以使用弹性作业计划的 Azure SQL 数据库服务器上的 SSISDB 目录数据库中存储的 SSIS 包之前，你必须执行以下操作：
+在可以使用弹性作业来计划存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的 SSIS 包之前，必须先完成以下操作：
 
-1.  安装和配置弹性数据库作业组件。 有关详细信息，请参阅[安装弹性数据库作业概述](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)。
+1.  安装并配置弹性数据库作业组件。 有关详细信息，请参阅[安装弹性数据库作业概述](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)。
 
-2. 创建作业可用于将命令发送到 SSIS 目录数据库的数据库范围凭据。 有关详细信息，请参阅[CREATE DATABASE SCOPED CREDENTIAL (Transact SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
+2. 创建数据库范围的凭据，作业可使用该凭据将命令发送到 SSIS 目录数据库。 有关详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL（创建数据库范围的凭据）(Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
 ### <a name="create-an-elastic-job"></a>创建弹性作业
 
-创建作业通过使用类似于下面的示例所示的脚本的 Transact SQL 脚本：
+使用与下列示例所示的脚本类似的 Transact-SQL 脚本来创建作业：
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -108,25 +106,25 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>计划 Azure 数据工厂 SQL Server 存储过程活动的包
+## <a name="sproc"></a> 使用 Azure 数据工厂 SQL Server 存储过程活动计划安排一个包
 
 > [!IMPORTANT]
-> 使用下面的示例使用 Azure 数据工厂版本 1 中的 JSON 脚本存储过程活动。
+> 将下例中的 JSON 脚本与 Azure 数据工厂版本 1 存储过程活动结合使用。
 
-若要计划的 Azure 数据工厂 SQL Server 存储过程活动的包，请执行以下操作：
+若要使用 Azure 数据工厂 SQL Server 存储过程活动来计划包，请完成以下操作：
 
 1.  创建数据工厂。
 
-2.  创建 SQL 数据库的链接的服务承载 SSISDB。
+2.  为承载 SSISDB 的 SQL 数据库创建一个链接服务。
 
-3.  创建驱动器计划的一个输出数据集。
+3.  创建用于驱动计划的输出数据集。
 
-4.  创建使用 SQL Server 存储过程活动来运行 SSIS 包的数据工厂管道。
+4.  创建数据工厂管道，该管道使用 SQL Server 存储过程活动来运行 SSIS 包。
 
-本部分概述了这些步骤。 完整的数据工厂教程不在本文的范围。 有关详细信息，请参阅[SQL Server 存储过程活动](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
+本部分概括介绍了这些步骤。 本文不提供完整的数据工厂教程。 如需了解详细信息，请参阅 [SQL Server 存储过程活动](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
 
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>创建承载 SSISDB 的 SQL 数据库的链接的服务
-链接的服务，可以连接到 SSISDB 的数据工厂。
+### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>创建用于承载 SSISDB 的 SQL 数据库的链接服务
+借助此链接服务，数据工厂可连接到 SSISDB。
 
 ```json
 {
@@ -141,8 +139,8 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 
-### <a name="create-an-output-dataset"></a>创建一个输出数据集
-输出数据集包含的计划信息。
+### <a name="create-an-output-dataset"></a>创建输出数据集
+输出数据集包含计划信息。
 
 ```json
 {
@@ -161,7 +159,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 ### <a name="create-a-data-factory-pipeline"></a>创建数据工厂管道
-管道使用 SQL Server 存储过程活动来运行 SSIS 包。
+管道使用 SQL Server 存储过程活动运行 SSIS 包。
 
 ```json
 {
@@ -191,7 +189,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 
-你无需创建新的存储的过程来封装需创建并启动 SSIS 包执行的 TRANSACT-SQL 命令。 你可以作为值提供整个脚本`stmt`在前面的 JSON 示例的参数。 下面是示例脚本：
+不必创建新的存储过程来封装创建和启动 SSIS 包执行时所需的 Transact-SQL 命令。 可提供整个脚本，作为前述 JSON 示例中 `stmt` 参数的值。 下面是一个示例脚本：
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
@@ -227,10 +225,9 @@ END
 GO
 ```
 
-有关此脚本中的代码的详细信息，请参阅[部署和使用存储过程执行 SSIS 包](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)。
+有关此脚本中代码的详细信息，请参阅[使用存储过程部署和执行 SSIS 包](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)。
 
 ## <a name="next-steps"></a>后续步骤
-有关 SQL Server 代理的详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
+有关 SQL Server 代理的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
 
-有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
-
+有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。

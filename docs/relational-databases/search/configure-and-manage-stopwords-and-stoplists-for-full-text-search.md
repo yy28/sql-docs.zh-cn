@@ -2,9 +2,12 @@
 title: "为全文搜索配置和管理非索引字和非索引字表 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3e72ed3be5d089e5b38c1a33d3772919981f7f99
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 524988d25f9517d32729b7f10a238c3ece02f243
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
-  为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” 。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” 。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
    
 **非索引字**。 非索引字可以是特定语言中具有含义的单词。 例如，在英语中，诸如“a”、“and”、“is”和“the”之类的词将被排除在全文检索之外，这是因为已经知道它们对搜索没有用处。 非索引字也可以是没有语言含义的“令牌”。  
 

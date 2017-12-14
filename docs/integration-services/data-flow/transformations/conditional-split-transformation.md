@@ -1,5 +1,5 @@
 ---
-title: "有条件拆分转换 |Microsoft 文档"
+title: "有条件拆分转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 02909ff454816119e2dfbdfeb1090d0f7e9587be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 84791cd0513a4da1dae8befe6168180a4b7ce6cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="conditional-split-transformation"></a>有条件拆分转换
   有条件拆分转换可以根据数据内容将数据行路由到不同的输出。 有条件拆分转换的实现类似于编程语言中的 CASE 决策结构。 此转换将计算表达式，并且根据结果将数据行定向到指定输出。 此转换还提供默认输出，因此如果某个行与任何表达式都不匹配，则它将被定向到默认输出。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 08/19/2017
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>相关任务  
- [通过使用有条件拆分转换拆分数据集](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [使用有条件拆分转换拆分数据集](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 ## <a name="conditional-split-transformation-editor"></a>有条件拆分转换编辑器
   可以使用 **“有条件拆分转换编辑器”** 对话框创建表达式，设置表达式计算顺序，以及对有条件拆分输出进行命名。 此对话框包含可以用于生成表达式的数学、字符串和日期/时间函数及运算符。 计算结果为 True 的第一个条件确定了行定向到的输出。  
@@ -102,9 +100,8 @@ ms.lasthandoff: 08/19/2017
  **配置错误输出**  
  使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理错误的方式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

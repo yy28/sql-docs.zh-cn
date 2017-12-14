@@ -1,5 +1,5 @@
 ---
-title: "步骤 5： 测试第 4 课教程包 |Microsoft 文档"
+title: "步骤 5：测试第 4 课教程包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68e4545ee2eae96664007a8dc69c9953c0351107
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Lesson 4-5-测试第 4 课教程包
+# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>第 4-5 课 - 测试第 4 课教程包
 在运行时，损坏的文件 Currency_BAD.txt 将无法在 Currency Key 查找转换中生成匹配。 由于 Currency Key 查找的错误输出现在已配置为将失败的行重定向到新的失败的行目标，因此该组件不会失败，并且包会成功地运行。 所有失败的错误行都将写入 ErrorOutput.txt。  
   
 在此任务中，您将通过运行该包对已修改的错误输出配置进行测试。 包成功执行后，您将查看 ErrorOutput.txt 文件的内容。  
@@ -40,11 +37,11 @@ ms.lasthandoff: 09/26/2017
   
 **控制流**  
   
-![控制包中的流](../integration-services/media/task4lesson2control.gif "控制包中的流")  
+![包中的控制流](../integration-services/media/task4lesson2control.gif "Control flow in package")  
   
 **数据流**  
   
-![包中的数据流](../integration-services/media/task5lesson5data.gif "包中的数据流")  
+![包中的数据流](../integration-services/media/task5lesson5data.gif "Data flow in package")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>运行第 4 课教程包  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

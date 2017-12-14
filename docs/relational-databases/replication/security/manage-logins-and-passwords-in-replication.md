@@ -2,9 +2,12 @@
 title: "管理复制中的登录名和密码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9cc7e3877356a9b56082e8be8c061d38ec91ad6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aeaee4699357e109f375276781cc9372fbec46bb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-logins-and-passwords-in-replication"></a>管理复制中的登录名和密码
-  在配置复制时，为复制代理指定登录名和密码。 配置复制后，可以更改登录名和密码。 有关详细信息，请参阅 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。 若要更改复制代理所使用的帐户的密码，请执行 [sp_changereplicationserverpasswords (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在配置复制时，为复制代理指定登录名和密码。 配置复制后，可以更改登录名和密码。 有关详细信息，请参阅 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。 若要更改复制代理所使用的帐户的密码，请执行 [sp_changereplicationserverpasswords (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制代理安全模式](../../../relational-databases/replication/security/replication-agent-security-model.md)   

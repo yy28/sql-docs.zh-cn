@@ -2,9 +2,12 @@
 title: "监视数据层应用程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5760acc8966ee698f20e7aa714abbe7d2e691f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cb93f6f2644966696f7d7c48f2dac7f72cde06b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-data-tier-applications"></a>监视数据层应用程序
-  可以从 **(SSMS) 中的** 实用工具资源管理器 **和** 对象资源管理器 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以及系统视图和表中监视数据层应用程序 (DAC)。 此外，可以使用标准数据库和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 监视技术监视 DAC 中包含的数据库中的所有对象。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中的实用工具资源管理器和对象资源管理器以及系统视图和表中监视数据层应用程序 (DAC)。 此外，可以使用标准数据库和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 监视技术监视 DAC 中包含的数据库中的所有对象。  
   
 ## <a name="before-you-begin"></a>开始之前  
  如果您将 DAC 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的托管实例，在下次将实用工具收集组从该实例发送到实用工具控制点时，与部署的 DAC 有关的信息将合并到 SQL Server 实用工具中。 然后，您可以通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **实用工具资源管理器**，查看与该 DAC 有关的基本运行状况信息。  

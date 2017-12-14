@@ -1,5 +1,5 @@
 ---
-title: "高级连接属性 |Microsoft 文档"
+title: "高级连接属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 856dce7d9b5c984407e7c03cee56013d22103fec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fa850af1ac88785ce64d848052b1aa299d7d06b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="advanced-connection-properties"></a>高级连接属性
   使用 **“高级连接属性”** 对话框可以将更多连接参数添加到连接字符串。  
@@ -41,7 +39,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [访问 CDC 设计器控制台](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [用于实例创建的 SQL Server 连接](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   
-

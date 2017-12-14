@@ -1,5 +1,5 @@
 ---
-title: "平面文件连接管理器 |Microsoft 文档"
+title: "平面文件连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 2b3f4c303b1d60cbbe23c639c36a6336ca07447f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
   平面文件连接管理器使包可以访问平面文件中的数据。 例如，平面文件源和目标可以使用平面文件连接管理器提取和加载数据。  
@@ -248,10 +246,10 @@ ms.lasthandoff: 08/09/2017
  **连接管理器名称**  
  为工作流中的平面文件连接管理器提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
- **描述**  
+ **Description**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
- **配置每个列的属性**  
+ **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表以了解数据类型属性的说明。 列出的部分属性仅对某些平面文件格式是可配置的。  
   
 |属性|Description|  
@@ -262,11 +260,11 @@ ms.lasthandoff: 08/09/2017
 |**TextQualified**|指示文本数据周围是否有文本限定符（例如引号字符）。<br /><br /> True：平面文件中的文本数据是受限定的。 False：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动创建名称，格式为“列 0”、“列 1”，依此类推。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {&#124;}**。 列由竖线分隔。|  
+|**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {|}**。 列由竖线分隔。|  
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
- **新增功能**  
+ **新建**  
  单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
 |“值”|Description|  
@@ -279,7 +277,7 @@ ms.lasthandoff: 08/09/2017
  选择一列，然后单击“删除”来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以计算文件中的示例数据，并获取关于每列的数据类型和长度的建议。 有关详细信息，请参阅[“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以计算文件中的示例数据，并获取关于每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
 ## <a name="flat-file-connection-manager-editor-preview-page"></a>平面文件连接管理器编辑器（“预览”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“预览”** 节点，按表格格式查看源文件的内容。  
   
@@ -301,4 +299,3 @@ ms.lasthandoff: 08/09/2017
  **预览行**  
  查看平面文件中的示例数据，这些数据已按所选的选项划分为列和行。  
  
-

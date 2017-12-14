@@ -1,5 +1,5 @@
 ---
-title: "Oracle CDC 数据库 |Microsoft 文档"
+title: "Oracle CDC 数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/03/2017
  在创建 CDC 数据库和设置 CDC 源 Oracle 表时，CDC 数据库所有者可授予镜像表的 SELECT 权限并且定义 SQL Server CDC 访问控制角色以便控制谁可以访问更改数据。  
   
 ## <a name="mirror-tables"></a>镜像表  
- 对于每个捕获的表，\<架构名称 >。\<表名 >，在 Oracle 源数据库中，在 CDC 数据库中，具有相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
+ 对于 Oracle 源数据库中的每个捕获表 \<架构名称>.\<表名称>，都将在 CDC 数据库中使用相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
   
  镜像表是空的；在其中不存储任何数据。 它们用于启用 Oracle CDC 实例使用的标准 SQL Server CDC 基础结构。 为了防止数据插入或更新到镜像表中，对于 PUBLIC 将拒绝所有 UPDATE、DELETE 和 INSERT 操作。 这将确保不能修改镜像表。  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_Change_Tables_CT"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- **[cdc]。[\<捕获实例 > _CT]**  
+ [cdc].[\<capture-instance>_CT]  
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
@@ -197,4 +195,3 @@ ms.lasthandoff: 08/03/2017
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   
-

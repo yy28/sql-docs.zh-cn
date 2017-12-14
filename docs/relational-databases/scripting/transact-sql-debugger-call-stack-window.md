@@ -2,9 +2,12 @@
 title: "“调用堆栈”窗口 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c0f984d7e59d71f46843dc8a2bef1295943fb3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 403dbe97619340a3075792b999b54500ab79d4fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 调试器 -“调用堆栈”窗口
-  **“调用堆栈”** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“调用堆栈”窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“调用堆栈”窗口**  

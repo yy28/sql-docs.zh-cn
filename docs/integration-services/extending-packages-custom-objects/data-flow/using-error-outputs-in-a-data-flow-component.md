@@ -1,5 +1,5 @@
 ---
-title: "在数据流组件中使用错误输出 |Microsoft 文档"
+title: "在数据流组件中使用错误输出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,25 +26,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>在数据流组件中使用错误输出
   称为错误输出的特殊的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 对象可添加到组件中，以使组件重定向无法在执行期间处理的行。 组件可能遇到的问题通常分为错误或截断，这些问题特定于每个组件。 提供错误输出的组件为组件用户处理错误条件提供了灵活性，既可以筛选出结果集中的错误行，也可以在出现问题时中止组件运行，还可以忽略错误并继续。  
   
- 若要实现和组件中支持错误输出，必须首先设置<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A>到组件属性**true**。 然后，必须将输出添加到组件具有其<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>属性设置为**true**。 最后，该组件必须包含在出现错误或截断时将行重定位到错误输出的代码。 本主题将介绍这三个步骤，并说明同步和异步错误输出之间的差异。  
+ 若要实现和支持组件中的错误输出，首先必须将组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> 属性设置为 true。 然后必须向其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 属性已设置为 true 的组件添加一个输出。 最后，该组件必须包含在出现错误或截断时将行重定位到错误输出的代码。 本主题将介绍这三个步骤，并说明同步和异步错误输出之间的差异。  
   
 ## <a name="creating-an-error-output"></a>创建错误输出  
- 通过调用创建一个错误输出<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>，然后再设置<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A>到新的输出属性**true**。 如果是异步输出，则无需再对该输出执行任何操作。 如果是同步输出，并且还存在与同一输入同步的另一输出，则还必须设置 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 属性。 这两个属性的值应该和与同一输入同步的另一输出的值相同。 如果这些属性未设置为非零值，则输入提供的行将发送到与该输入同步的两个输出。  
+ 创建错误输出的方法为调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> 方法，然后将新输出的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> 属性设置为 true。 如果是异步输出，则无需再对该输出执行任何操作。 如果是同步输出，并且还存在与同一输入同步的另一输出，则还必须设置 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> 属性。 这两个属性的值应该和与同一输入同步的另一输出的值相同。 如果这些属性未设置为非零值，则输入提供的行将发送到与该输入同步的两个输出。  
   
  组件在执行期间遇到错误或截断时，将基于出现错误的输入或输出或者输入列或输出列的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> 属性继续执行。 这些属性的值在默认情况下应设置为 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>。 组件的错误输出连接到下游组件时，此属性由组件用户设置，并允许用户控制组件处理错误或截断的方式。  
   
@@ -283,7 +280,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>重定向具有异步输出的行  
- 与对同步错误输出那样将行定向到输出不同，具有异步输出的组件通过向输出 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 显式添加行来将行发送到错误输出。 实现使用异步错误输出的组件需要在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法中将列添加到为下游组件提供的错误输出，并缓存为组件提供的错误输出的输出缓冲区。 实现具有异步输出的组件的详细信息中将主题中详细介绍[开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。 如果列未显式添加到错误输出，则添加到输出缓冲区的缓冲区行只包含两个错误列。  
+ 与对同步错误输出那样将行定向到输出不同，具有异步输出的组件通过向输出 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 显式添加行来将行发送到错误输出。 实现使用异步错误输出的组件需要在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法中将列添加到为下游组件提供的错误输出，并缓存为组件提供的错误输出的输出缓冲区。 [开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)主题中详细介绍了实现具有异步输出的组件的详细信息。 如果列未显式添加到错误输出，则添加到输出缓冲区的缓冲区行只包含两个错误列。  
   
  若要将行发送到异步错误输出，必须将行添加到错误输出缓冲区。 有时，行可能已经添加到非错误输出缓冲区，所以您必须使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A> 方法删除此行。 然后设置输出缓冲区列的值，最后调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A> 方法以提供特定于组件的错误代码和错误列的值。  
   
@@ -445,4 +442,3 @@ End Sub
  [使用错误输出](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
-

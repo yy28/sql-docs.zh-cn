@@ -1,5 +1,5 @@
 ---
-title: "catalog.folders （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.folders（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9622bd1a5f1415c9f506a00a63441081154b53ff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5a439659dd93bdcd4d6c627782de8772adfe6466
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/26/2017
 |name|**sysname(nvarchar(128)**|文件夹的名称，此名称在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中是唯一的。|  
 |description|**nvarchar(1024)**|文件夹的说明。|  
 |created_by_sid|**varbinary(85)**|创建了文件夹的用户的安全标识符 (SID)。|  
-|created_by_name|**nvarchar （128)**|创建文件夹的用户名。|  
+|created_by_name|**nvarchar(128)**|创建文件夹的用户名。|  
 |created_time|**datetimeoffset(7)**|创建文件夹的日期和时间。|  
   
 ## <a name="remarks"></a>注释  
@@ -47,12 +45,11 @@ ms.lasthandoff: 09/26/2017
   
 -   针对文件夹的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
-

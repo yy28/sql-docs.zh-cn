@@ -2,9 +2,12 @@
 title: "合并复制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 124940d2506986fb9e14f6508d159b2d861cf7ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9302f0ffba5a3ae8276b3ad3e5878c4f6bc8dafa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="merge-replication"></a>合并复制
-  与事务复制相同，合并复制通常也是从发布数据库对象和数据的快照开始， 并且用触发器跟踪在发布服务器和订阅服务器上所做的后续数据更改和架构修改。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]与事务复制相同，合并复制通常也是从发布数据库对象和数据的快照开始。 并且用触发器跟踪在发布服务器和订阅服务器上所做的后续数据更改和架构修改。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。  
   
  合并复制通常用于服务器到客户端的环境中。 合并复制适用于下列各种情况：  
   

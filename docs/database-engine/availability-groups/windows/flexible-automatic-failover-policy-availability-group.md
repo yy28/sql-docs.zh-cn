@@ -2,9 +2,12 @@
 title: "灵活的自动故障转移策略 - 可用性组 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f80c2603b7b67908a4c3e0d7bdea8c48c0582ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e23a4e8d2e814f2dba9217b891672d469251882d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>灵活的自动故障转移策略 - 可用性组
-  灵活的故障转移策略提供了对导致可用性组 [自动执行故障转移](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]灵活的故障转移策略提供了对导致可用性组[自动执行故障转移](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
   
  可用性组的灵活的故障转移策略是由其失败条件级别和运行状况检查超时阈值定义的。 在检测到某个可用性组已超出其失败条件级别或其运行状况检查超时阈值时，该可用性组的资源 DLL 会响应 Windows Server 故障转移群集 (WSFC) 群集。 之后，WSFC 群集会启动到辅助副本的自动故障转移。  
   

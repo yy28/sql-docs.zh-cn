@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP2 发行说明 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71bde30cb5cefaf1c60bcbd5a5de08b84b3975b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 31f86cebfc5dc23aac8d56a1a9c75d140b744063
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>SQL Server 2012 SP2 Release Notes
-这些发行说明介绍了在安装 SQL Server 2012 Service Pack 2 或者解决其相关问题之前需要了解的问题。 发行说明仅在线提供，不提供相关安装介质。 发行说明会在发现问题时定期更新。 有关详细信息，请查阅 [SQL Server 2012 Service Pack 2 中修复的 Bug](http://support.microsoft.com/KB/2958429) 。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]这些发行说明介绍安装 SQL Server 2012 Service Pack 2 或者解决其相关问题之前需要了解的问题。 发行说明仅在线提供，不提供相关安装介质。 发行说明会在发现问题时定期更新。 有关详细信息，请查阅 [SQL Server 2012 Service Pack 2 中修复的 Bug](http://support.microsoft.com/KB/2958429) 。  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>正确选择要下载及安装的文件  
 使用下表，基于您当前安装的版本识别要下载的文件的位置和名称。 下载页包含系统要求和基本安装说明。  

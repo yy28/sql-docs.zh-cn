@@ -1,5 +1,5 @@
 ---
-title: "保持的自定义对象 |Microsoft 文档"
+title: "使自定义对象持久化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom objects [Integration Services], persisting
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="persisting-custom-objects"></a>使自定义对象持久化
-  不需要实现自定义暂留的自定义对象创建，只要它们的属性使用仅简单数据类型，如**整数**和**字符串**。 持久性的默认实现可保存对象的元数据及其所有属性的值。  
+  只要所创建的自定义对象的属性仅使用简单数据类型（如整数和字符串），就不需要为其实现自定义持久性。 持久性的默认实现可保存对象的元数据及其所有属性的值。  
   
  但是，如果您的对象具有使用复杂数据类型的属性，或您希望在加载和保存属性值时对其执行自定义处理，则可以实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 接口及其 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> 方法。 在这些方法中，可以从包的 XML 定义加载包含这些对象属性及其当前值的 XML 片段，或将这些片段保存到包的 XML 定义中。 此 XML 片段的格式未定义；只要求必须是格式正确的 XML。  
   
@@ -38,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 >  实现自定义持久性时，必须使对象的所有属性持久化，包括继承的属性和添加的自定义属性。  
   
 ## <a name="example"></a>示例  
- 虽然 Sql Server 自定义连接管理器示例中不需要其三个属性的类型的自定义暂留**字符串**，下面的代码演示将需要以持久保存的连接管理器和其属性的自定义代码的示例。 包含此代码的类必须实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 接口。  
+ 尽管 SQL Server 自定义连接管理器示例不要求对其字符串类型的三个属性实现自定义持久性，但以下代码演示了使连接管理器及其属性持久化所需的自定义代码的示例。 包含此代码的类必须实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> 接口。  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -163,8 +159,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 ```  
  
 ## <a name="see-also"></a>另请参阅  
- [Integration services 的开发自定义对象](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
+ [开发 Integration Services 的自定义对象](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [生成、部署和调试自定义对象](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

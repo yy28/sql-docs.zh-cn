@@ -2,9 +2,12 @@
 title: "空间索引概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae93cf0e3211b9068de0b3dc512f7a59a3f0fd9c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d312b518c0dd48cbdf2a536ee02391ba77ba447f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 **geometry** 或 **geography**）的数据的表列。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 **geometry** 或 **geography**）的数据的表列。  
   
 > [!IMPORTANT]  
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括影响空间索引的功能），请下载白皮书 [SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  

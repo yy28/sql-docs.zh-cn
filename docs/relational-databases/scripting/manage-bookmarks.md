@@ -2,9 +2,12 @@
 title: "管理书签 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-bookmarks"></a>管理书签
-  在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在代码编辑器中工作时，使用“书签”窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
   
  若要创建书签并在书签中导航，请单击位于“文本编辑器”工具栏上和“书签”窗口顶部的按钮。 可以添加和删除书签、激活或禁用书签以及按文件夹组织书签。 还可以从 **“书签”** 窗口的快捷菜单中使用某些命令。 若要添加或删除书签，请将插入点放到编辑器内所需的行中，再单击 **“切换书签”**。 若要激活某个书签，请在“书签”窗口中选中其复选框；若要禁用（但不删除）某个书签，请清除其复选框。  
   

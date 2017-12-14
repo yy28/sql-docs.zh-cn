@@ -1,5 +1,5 @@
 ---
-title: "步骤 3： 测试第 3 课教程包 |Microsoft 文档"
+title: "步骤 3：测试第 3 课教程包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fa344530396b13defc44680a1232a3d6a1c39b42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lesson 3-3-测试第 3 课教程包
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>第 3-3 课 - 测试第 3 课教程包
 在该任务中，将运行 Lesson 3.dtsx 包。 在包运行时，“日志事件”窗口将列出写入日志文件中的日志条目。 执行完包之后，将验证日志提供程序所生成的日志文件的内容。  
   
 ## <a name="checking-the-package-layout"></a>检查包布局  
@@ -35,7 +32,7 @@ ms.lasthandoff: 09/26/2017
   
 **控制流**  
   
-![控制包中的流](../integration-services/media/task4lesson2control.gif "控制包中的流")  
+![包中的控制流](../integration-services/media/task4lesson2control.gif "包中的控制流")  
   
 **数据流**  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

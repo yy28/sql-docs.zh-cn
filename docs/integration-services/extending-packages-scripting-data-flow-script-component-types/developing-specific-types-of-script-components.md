@@ -1,5 +1,5 @@
 ---
-title: "开发特定类型的脚本组件 |Microsoft 文档"
+title: "开发特定类型的脚本组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Script component [Integration Services], examples
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Script component [Integration Services], examples
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 458ba4be689ed976a5948380d35f38020f7dd4dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 40797e78a6229c063e634cd152daf3108f6340ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-specific-types-of-script-components"></a>开发特定类型的脚本组件
   脚本组件是一个可配置的工具，您可以在包的数据流中使用，它可以满足几乎所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 附带的源、转换和目标所无法满足的要求。 本节包含一些脚本组件代码示例，这些示例演示了用于配置脚本组件的四个选项：  
@@ -40,7 +36,7 @@ ms.lasthandoff: 09/26/2017
   
 -   作为目标。  
   
- 脚本组件的其他示例，请参阅[Additional Script Component Examples](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。  
+ 有关脚本组件的其他示例，请参阅[其他脚本组件示例](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [使用脚本组件创建源](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
@@ -57,7 +53,6 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>另请参阅  
  [比较脚本解决方案和自定义对象](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
- [开发的特定类型的数据的数据流组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
+ [开发特定类型的数据流组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
   
   
-

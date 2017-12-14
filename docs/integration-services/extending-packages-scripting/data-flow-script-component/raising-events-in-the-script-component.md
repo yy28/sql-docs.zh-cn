@@ -1,5 +1,5 @@
 ---
-title: "在脚本组件中引发事件 |Microsoft 文档"
+title: "在脚本组件中引发事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Script component [Integration Services], raising events
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Script component [Integration Services], raising events
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 505855e82b683fc15ca00073f58e1f9cb348f830
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 62a4772efb1d5b70277882c460ea20d753a56b86
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-events-in-the-script-component"></a>在脚本组件中引发事件
-  事件提供向包含包报告错误、警告和其他信息（如任务进度或状态）的方式。 包为管理事件通知提供事件处理程序。 脚本组件可以通过在调用方法来引发事件<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>属性**ScriptMain**类。 详细了解如何[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包处理事件，请参阅[Integration Services &#40;SSIS &#41;事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)。  
+  事件提供向包含包报告错误、警告和其他信息（如任务进度或状态）的方式。 包为管理事件通知提供事件处理程序。 脚本组件可通过对 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性调用方法来引发事件。 有关 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包如何处理事件的详细信息，请参阅 [Integration Services (SSIS) 事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)。  
   
  事件可以记录到包中已启用的任何日志提供程序中。 日志提供程序在数据存储区中存储有关事件的信息。 脚本组件还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法将信息记录到日志提供程序中而不引发事件。 有关如何使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法的详细信息，请参阅以下内容。  
   
@@ -53,8 +49,7 @@ ms.lasthandoff: 08/03/2017
  `myMetaData.FireError(...)`  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services &#40;SSIS &#41;事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [将事件处理程序添加到包](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Integration Services (SSIS) 事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [在包中添加事件处理程序](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

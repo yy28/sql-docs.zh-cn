@@ -1,5 +1,5 @@
 ---
-title: "创建自定义数据流组件 |Microsoft 文档"
+title: "创建自定义数据流组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,20 +22,19 @@ helpviewer_keywords:
 - data flow components [Integration Services]
 - data flow components [Integration Services], developing
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 565a2b8e48537cea20a8e509cf5b6d7b59cc12f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c081005af99b0090d452f8d17afa73b08f05645d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-data-flow-component"></a>创建自定义数据流组件
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]，数据流任务将让开发人员创建自定义数据流组件对象模型公开-源、 转换和目标 — 通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]和托管代码。  
+  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，数据流任务公开一个对象模型，该对象模型允许开发人员使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 和托管代码创建自定义数据流组件：源、转换和目标。  
   
  数据流任务由包含 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 对象集合的组件组成，这些对象定义组件之间的数据移动。  
   
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/03/2017
 |运行时|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |运行时包装|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  
   
- 下面的代码示例演示了一个简单的组件，该组件从基类派生，并应用 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>。 你需要添加对 Microsoft.SqlServer.DTSPipelineWrap 程序集的引用。  
+ 下面的代码示例演示了一个简单的组件，该组件从基类派生，并应用 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>。 需要添加对 Microsoft.SqlServer.DTSPipelineWrap 程序集的引用。  
   
 ```csharp  
 using System;  
@@ -96,4 +93,3 @@ End Class
  [为数据流组件开发用户界面](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
   
   
-

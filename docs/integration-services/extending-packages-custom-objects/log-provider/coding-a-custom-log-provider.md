@@ -1,5 +1,5 @@
 ---
-title: "编码的自定义日志提供程序 |Microsoft 文档"
+title: "编写自定义日志提供程序代码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>编写自定义日志提供程序代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
   
- 有关自定义日志提供程序的工作示例，请参阅[开发的自定义日志提供程序的用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)。  
+ 有关自定义日志提供程序的工作示例，请参阅[为自定义日志提供程序开发用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)。  
   
 ## <a name="configuring-the-log-provider"></a>配置日志提供程序  
   
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
  重写 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> 方法以缓存对连接集合和事件接口的引用。 可以稍后在日志提供程序的其他方法中使用这些缓存的引用。  
   
 ### <a name="using-the-configstring-property"></a>使用 ConfigString 属性  
- 在设计时，日志提供程序接收的配置信息**配置**列。 此配置信息与日志提供程序的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性对应。 默认情况下，此列包含一个文本框，您可以从该文本框中检索任何字符串信息。 随 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的大部分日志提供程序都使用此属性存储连接管理器的名称，以供提供程序连接外部数据源时使用。 如果日志提供程序使用<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>属性，请使用<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>方法以验证此属性并确保已正确设置了该属性。  
+ 在设计时。日志提供程序从“配置”列接收配置信息。 此配置信息与日志提供程序的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性对应。 默认情况下，此列包含一个文本框，您可以从该文本框中检索任何字符串信息。 随 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的大部分日志提供程序都使用此属性存储连接管理器的名称，以供提供程序连接外部数据源时使用。 如果日志提供程序使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性，可使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法验证此属性，并确保此属性已正确设置。  
   
 ### <a name="validating-the-log-provider"></a>验证日志提供程序  
  重写 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法以确保提供程序已正确配置并且可以执行。 通常，最低级别的验证应确保 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 已正确设置。 在日志提供程序从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> 方法返回 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 之前，执行不能继续。  
@@ -87,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>使日志提供程序持久化  
- 通常无需实现对连接管理器的自定义暂留。 自定义持久性仅在对象的属性使用复杂数据类型时才需要。 有关详细信息，请参阅[Integration services 开发自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
+ 通常不需要对连接管理器实现自定义持久性。 自定义持久性仅在对象的属性使用复杂数据类型时才需要。 有关详细信息，请参阅[开发用于 Integration Services 的自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
   
 ## <a name="logging-with-the-log-provider"></a>使用日志提供程序进行日志记录  
  有三个所有日志提供程序都必须重写的运行时方法：<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>。  
@@ -142,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>写入日志条目  
- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>方法调用每个包中的对象通过调用火灾引发事件的时间\<事件 > 上的一个事件接口方法。 每次引发事件时，都会提供其上下文的相关信息，通常是说明性消息。 但是，并非所有对 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法的调用都包含每个方法参数的信息。 例如，一些具有自我说明性名称的标准事件不提供 MessageText，并且 DataCode 和 DataBytes 只提供可选的补充信息。  
+ 每次包中的对象通过对某一事件接口调用 Fire\<event> 方法来引发事件时，都会调用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法。 每次引发事件时，都会提供其上下文的相关信息，通常是说明性消息。 但是，并非所有对 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法的调用都包含每个方法参数的信息。 例如，一些具有自我说明性名称的标准事件不提供 MessageText，并且 DataCode 和 DataBytes 只提供可选的补充信息。  
   
  下面的代码示例实现了 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，并将事件写入前述打开的流中。  
   
@@ -200,7 +196,6 @@ End Sub
  
 ## <a name="see-also"></a>另请参阅  
  [创建自定义日志提供程序](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [开发的自定义日志提供程序的用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+ [为自定义日志提供程序开发用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

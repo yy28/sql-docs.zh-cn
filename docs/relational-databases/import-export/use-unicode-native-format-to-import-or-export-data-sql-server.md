@@ -2,9 +2,12 @@
 title: "使用 Unicode 本机格式导入或导出数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0d6a9d104b6dccc05ca4f4a9c97118d252966a8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8301c9cf1b0e3494a6a146f16b4f9a86ba0926e1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 本机格式导入或导出数据 (SQL Server)
-当必须将信息从一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制到另一个时，Unicode 本机格式将非常有用。 为非字符数据使用本机格式可以节省时间，并消除与字符格式之间不必要的数据类型转换。 在使用不同代码页的服务器之间大容量传输数据时，为所有字符数据使用 Unicode 字符格式可以防止丢失任何扩展字符。 可以通过任何批量导入方法读取 Unicode 本机格式的数据文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]当必须将信息从一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装复制到另一个时，Unicode 本机格式非常有用。 为非字符数据使用本机格式可以节省时间，并消除与字符格式之间不必要的数据类型转换。 在使用不同代码页的服务器之间大容量传输数据时，为所有字符数据使用 Unicode 字符格式可以防止丢失任何扩展字符。 可以通过任何批量导入方法读取 Unicode 本机格式的数据文件。  
   
  通过使用包含扩展字符或 DBCS 字符的数据文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例之间大容量传输数据时，建议使用 Unicode 本机格式。 对于非字符数据，Unicode 本机格式使用本机（数据库）数据类型。 对于字符数据（如 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)和 [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)），Unicode 本机格式使用 Unicode 字符数据格式。  
   

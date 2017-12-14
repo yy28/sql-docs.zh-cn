@@ -1,5 +1,5 @@
 ---
-title: "传输错误消息任务 |Microsoft 文档"
+title: "传输错误消息任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
 - sql13.dts.designer.transfererrormessagestask.general.f1
 - sql13.dts.designer.transfererrormessagestask.errormessages.F1
-helpviewer_keywords:
-- Transfer Error Messages task [Integration Services]
+helpviewer_keywords: Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 17d64ff71608c6e3bc4a260ab1c0538b7997a288
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
@@ -104,10 +101,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
   
  **IfObjectExists**  
  选择在目标服务器上已存在同名的错误消息时，该任务是应该覆盖现有的用户定义错误消息还是跳过现有消息，或是失败。  
@@ -139,4 +136,3 @@ ms.lasthandoff: 08/11/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

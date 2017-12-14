@@ -2,9 +2,12 @@
 title: OPENXML (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e181c623bfaa6c19c2567c6a1e904b5314e327ae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-  OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
   
  无论行集提供程序（视图或 OPENROWSET）可以在何处作为源出现，都可以在 SELECT 和 SELECT INTO 语句中使用 OPENXML。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
   

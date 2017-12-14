@@ -2,9 +2,12 @@
 title: "Microsoft 复制冲突查看器（合并复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2f4a72c3792d2274a4bad98d5ad8914549ad242
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2fdedf349961105e1c979b87c0876150acbf04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
-  使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  
   
 -   更新冲突。 在两个位置更改相同的数据时会发生更新冲突。 一个更改入选，而另一个更改落选。 您可以选择保留现有数据（入选数据），使用与现有数据冲突的数据（落选数据）来覆盖现有数据，或合并入选数据和落选数据并更新现有数据。  
   

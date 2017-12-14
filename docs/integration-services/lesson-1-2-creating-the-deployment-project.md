@@ -1,5 +1,5 @@
 ---
-title: "步骤 2： 创建部署项目 |Microsoft 文档"
+title: "步骤 2：创建部署项目 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e92d8018d600c88e444cebd4623d290e24c0a779
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: da96393429cf37224ef609b1ed1de52f41704015
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-2---creating-the-deployment-project"></a>课程 1-2-创建部署项目
+# <a name="lesson-1-2---creating-the-deployment-project"></a>第 1-2 课 - 创建部署项目
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，可部署的单元是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 必须先创建一个新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，再将所有包和要与包一起部署的任何辅助文件添加到该项目，才能部署包。  
   
 ### <a name="to-create-the-integration-services-project"></a>创建 Integration Services 项目  
@@ -56,5 +53,4 @@ ms.lasthandoff: 09/26/2017
   
   
   
-
 

@@ -2,9 +2,12 @@
 title: "数据库镜像监视器（“状态”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58634269a34ed091c99954435d93df892fa4d7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 658cb8a6783afc9b01259e8cf2e8915659550867
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
-  该只读页面显示导航树中当前选定数据库的主体和镜像服务器实例的最新镜像状态。 如果有关某一实例的信息当前不可用，则 **“状态”** 网格与该实例对应的一些单元格将呈灰色并显示 **“未知”**。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]该只读页面显示导航树中当前选定数据库的主体和镜像服务器实例的最新镜像状态。 如果有关某一实例的信息当前不可用，则 **“状态”** 网格与该实例对应的一些单元格将呈灰色并显示 **“未知”**。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   

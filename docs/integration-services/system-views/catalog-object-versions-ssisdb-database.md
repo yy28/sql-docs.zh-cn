@@ -1,5 +1,5 @@
 ---
-title: "catalog.object_versions （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.object_versions（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3ea7c5ae054a002b9bb4f150e60f323ae03d702a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b50e91381182bf2462c8f784a71e811f3bb8efe9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +35,9 @@ ms.lasthandoff: 09/26/2017
 |object_type|**int**|对象的类型。 将针对项目显示值 `20`。|  
 |object_name|**sysname(nvarchar(128))**|对象的名称。|  
 |description|**nvarchar(1024)**|项目的说明。|  
-|created_by|**nvarchar （128)**|向目录添加对象的用户名。|  
+|created_by|**nvarchar(128)**|向目录添加对象的用户名。|  
 |created_time|**datetimeoffset**|将对象添加到目录中的日期和时间。|  
-|restored_by|**nvarchar （128)**|还原对象的用户名。|  
+|restored_by|**nvarchar(128)**|还原对象的用户名。|  
 |last_restored_time|**datetimeoffset**|上次还原对象的日期和时间。|  
   
 ## <a name="remarks"></a>注释  
@@ -50,12 +48,11 @@ ms.lasthandoff: 09/26/2017
   
 -   针对对象的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   中的成员身份**sysadmin**服务器角色。  
+-   sysadmin 服务器角色中的成员资格。  
   
 > [!NOTE]  
 >  将实施行级安全性；只显示您有权查看的行。  
   
   
-

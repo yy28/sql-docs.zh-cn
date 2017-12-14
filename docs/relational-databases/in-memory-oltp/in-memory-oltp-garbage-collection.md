@@ -2,9 +2,12 @@
 title: "内存中 OLTP 垃圾回收 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7afe19b74f6ee1d36767fca1fe44b0ace0a6820f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 65212125bf5ad0d8b0908a23bd399d524de5d078
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>内存中 OLTP 垃圾回收
-  如果数据行已被一个不再活动的事务删除，则该数据行被视为是陈旧的。 可对陈旧的行进行垃圾回收。 下面是 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中垃圾收集的特征：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]如果数据行已被一个不再活动的事务删除，则该数据行被视为是陈旧的。 可对陈旧的行进行垃圾回收。 下面是 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中垃圾收集的特征：  
   
 -   不产生阻塞。 垃圾收集随着时间推移进行分布，对工作负荷的影响极小。  
   

@@ -2,9 +2,12 @@
 title: "使用全文搜索查询 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
-
-结合 **SELECT** 语句使用全文谓词 **CONTAINS** 和 **FREETEXT** 以及行集值函数 **CONTAINSTABLE** 和 **FREETEXTTABLE** 编写全文查询。 本主题提供每个谓词和函数的示例，并帮助你选择要使用的最佳谓词和函数。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 结合 SELECT 语句使用全文谓词 CONTAINS 和 FREETEXT 以及行集值函数 CONTAINSTABLE 和 FREETEXTTABLE 编写全文查询。 本主题提供每个谓词和函数的示例，并帮助你选择要使用的最佳谓词和函数。
 
 -   使用 **CONTAINS** 和 **CONTAINSTABLE** 可匹配单词和短语。
 -   使用 **FREETEXT** 和 **FREETEXTTABLE** 可匹配含义，但无法匹配确切的措辞。

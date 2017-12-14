@@ -2,9 +2,12 @@
 title: "使用字符格式导入或导出数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5dd9155a7cc669a5f7a62036bb42410dced9c48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
-将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
 
 采用字符格式后，所有列均应用字符数据格式。 如果要将数据用于其他程序（如电子表格程序），或需要通过其他数据库供应商（如 Oracle）将数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，则以字符格式存储信息会非常有用。  
   

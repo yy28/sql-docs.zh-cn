@@ -2,9 +2,12 @@
 title: "将多宿主计算机配置为允许 SQL Server 访问 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 153525785a354d9a730bee4fff48d0562a2e48e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 84f16134ecc701df0422263eb9c324aeb6bc3099
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
-  当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
   
 > [!NOTE]  
 >  多宿主计算机有多个网络适配器或者已配置为一个网络适配器使用多个 IP 地址。 双宿主计算机有两个网络适配器或者已配置为一个网络适配器使用两个 IP 地址。  

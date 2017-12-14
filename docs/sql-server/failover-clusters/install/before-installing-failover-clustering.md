@@ -2,9 +2,12 @@
 title: "安装故障转移群集前的准备工作 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ee39b07f117a70c4de03d921cf2c751913e70c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
-  安装 SQL Server 故障转移群集之前，必须选择运行 SQL Server 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]安装 SQL Server 故障转移群集之前，必须选择运行 SQL Server 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
   
  如果 Windows 群集具有本地磁盘驱动器，且同一盘符还在一个或多个群集节点上作为共享驱动器使用，则不能在该驱动器上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   

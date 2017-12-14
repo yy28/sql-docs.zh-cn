@@ -2,9 +2,12 @@
 title: "登录到 SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7d7c2aa416af62d1ffba8af688f2fbabf8a2aa3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-to-sql-server"></a>登录到 SQL Server
-  使用任何图形管理工具或从命令提示符处，都可以登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用任何图形管理工具或从命令提示符处，都可以登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  使用图形管理工具（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）登录到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例时，系统将会提示您提供服务器名称、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码（如果需要）。 如果使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则不必在每次访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时都提供 SQL Server 登录名。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户自动登录。 如果在混合模式身份验证（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和Windows 身份验证模式）下运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录，则必须提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。 请尽可能使用 Windows 身份验证。  
   

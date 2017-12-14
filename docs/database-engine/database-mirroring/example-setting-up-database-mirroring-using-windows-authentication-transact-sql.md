@@ -2,9 +2,12 @@
 title: "示例：使用 Windows 身份验证设置数据库镜像 (T-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5781ef19a87b40099fcd0057eec210e0a718eb1b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 916d40e39c099692ddae99f68bcb52236f9590c3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
-  此示例说明使用 Windows 身份验证来创建带有见证服务器的数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 注意，可以不使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，而使用配置数据库镜像安全向导来设置数据库镜像。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此示例说明使用 Windows 身份验证来创建带有见证服务器的数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 注意，可以不使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，而使用配置数据库镜像安全向导来设置数据库镜像。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
  该示例使用了 **AdventureWorks** 示例数据库，在默认情况下该数据库使用简单恢复模式。 若要对此数据库进行数据库镜像，必须将它更改为使用完整恢复模式。 若要用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实现此目的，请使用 ALTER DATABASE 语句，如下所示：  

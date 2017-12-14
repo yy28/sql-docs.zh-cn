@@ -2,9 +2,12 @@
 title: "比较用于存储 Blob 的选项 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1cc4faaa92e5e42ce16f385e7d9e9a3a87c65a2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d50be48fe1f6c1b57da6171e0bfaee8c8b23a1fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
-  讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储文件和文档的选项。  
   
 ##  <a name="Expectations"></a> 在数据库中存储文件 - 好处和期望  
  很大比例的企业数据本质上是非结构化的，通常作为文件和文档存储在文件系统中。 大多数此类数据由应用程序生成、管理和使用，应用程序通过 Windows API 访问这些文件。 企业通常将此类数据保存在文件系统中，同时将文件的相关元数据存储在关系数据库中。  

@@ -2,11 +2,12 @@
 title: "重命名托管 SQL Server 独立实例的计算机 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +25,14 @@ caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdac38824bdab5723c42435e5321f1a124fc397c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
-如果更改了运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称，则会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间识别新名称。 不必再次运行安装程序以重置计算机名称。 只需使用以下步骤对存储在 sys.servers 中并由系统函数 @@SERVERNAME 报告的系统元数据进行更新。 更新系统元数据，以反映出使用 @@SERVERNAME 或从 sys.servers 中查询服务器名称的远程连接或应用程序的计算机名称的变化。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果更改了运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的名称，则会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间识别新名称。 不必再次运行安装程序以重置计算机名称。 只需使用以下步骤对存储在 sys.servers 中并由系统函数 @@SERVERNAME 报告的系统元数据进行更新。 更新系统元数据，以反映出使用 @@SERVERNAME 或从 sys.servers 中查询服务器名称的远程连接或应用程序的计算机名称的变化。  
   
 不能通过以下步骤重命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 这些步骤只能用于重命名实例名中与计算机名称对应的部分。 例如，可以将承载名为 Instance1 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机称（名为 MB1）更改为其他名称，例如 MB2。 但是，名称中的实例部分 Instance1 将保持不变。 在此示例中， \\\\*ComputerName*\\*InstanceName* 将从 \\\MB1\Instance1 更改为 \\\MB2\Instance1。  
   

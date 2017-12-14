@@ -2,9 +2,12 @@
 title: "备份数据库（“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 13b0f7f81e96861fd9f18fc78cc65bce3343fed3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6096d9cbe627276898de55425c60b98a327de947
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
-  使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“备份数据库”对话框中的“常规”页可以查看或修改数据库备份操作的设置。  
   
  有关基本备份概念的详细信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   

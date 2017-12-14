@@ -1,5 +1,5 @@
 ---
-title: "调试数据流 |Microsoft 文档"
+title: "调试数据流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1780b770f45bd53f8f0735c092f2859593f9fa5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-data-flow"></a>调试数据流
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
@@ -176,7 +174,7 @@ order by source_component_name desc
   
 4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”。  
   
-5.  单击**输入和输出属性**卡，展开**\<组件名称 > 错误输出**然后展开**输出列**。  
+5.  单击“输入和输出属性”选项卡并展开“\<组件名称> 错误输出”，然后展开“输出列”。  
   
 6.  单击某列，然后更新其属性。  
   
@@ -253,7 +251,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 存储过程的 dataflow_path_id_string 参数对应于您要添加数据分流点的数据流路径的 IdentificationString 属性。 若要获取 dataflow_path_id_string，请单击数据流路径（数据流中任务间的箭头），并记下“属性”窗口中 **IdentificationString** 属性的值。  
   
- 当执行脚本时，输出文件存储在\<程序文件 > \Microsoft SQL Server\110\DTS\DataDumps。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
+ 执行脚本时，输出文件存储在 \<程序文件>\Microsoft SQL Server\110\DTS\DataDumps 中。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
   
  如前所述，也可使用 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)存储过程代替使用 add_data_tap 存储过程。 此存储过程将数据流任务的 ID 用作参数，而不使用 task_package_path。 您可以从 Visual Studio 中的属性窗口获取数据流任务的 ID。  
   
@@ -283,4 +281,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

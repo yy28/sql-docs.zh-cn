@@ -2,9 +2,12 @@
 title: "卸载 SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5356cb28fee023ed1bb99285eb8898128e1690aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ed0d929eaddd1bc4a324a30c47af87164c290b3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="uninstall-sql-server"></a>卸载 SQL Server 
-  按照下面的主题执行可以完全卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例，并且对系统进行准备以便您可以重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]按照下面的主题执行可以完全卸载 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例，并且对系统进行准备以便你可以重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
  [卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  

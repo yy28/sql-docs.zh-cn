@@ -2,9 +2,12 @@
 title: "“执行 T-SQL 语句”任务（维护计划）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25bddcdc576a6d436fc507bee6601fe21723c5d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b26175cca19d94ba8d5cf0d9c6cf4f34a03fdf15
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>“执行 T-SQL 语句”任务（维护计划）
-  使用“执行 T-SQL 语句任务”对话框，可以通过向此维护计划添加所选择的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来自定义维护计划。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“执行 T-SQL 语句任务”对话框，可以通过向此维护计划添加所选择的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来自定义维护计划。  
   
 ## <a name="options"></a>选项  
  **连接**  

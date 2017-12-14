@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_customized_logging_level_description |Microsoft 文档"
+title: catalog.set_customized_logging_level_description | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3899e02c6b1eaa2cc76ad4411d9be3aded817728
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b34947928641a8d421a38a4524988c25b33a0319
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetcustomizedloggingleveldescription"></a>catalog.set_customized_logging_level_description
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  更改现有的自定义日志记录级别的说明。 有关自定义日志记录级别的详细信息，请参阅[Integration Services &#40;SSIS &#41;日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
+  更改现有自定义日志记录级别的相关说明。 有关自定义日志记录级别的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +36,15 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @level_name =] *level_name*  
- 现有的名称的自定义日志记录级别。  
+ [ @level_name = ] *level_name*  
+ 现有自定义日志记录级别的名称。  
   
- *Level_name*是**nvarchar （128)**。  
+ *level_name* 为 **nvarchar(128)**。  
   
- [ @level_description =] *level_description*  
- 指定的新说明自定义日志记录级别。  
+ [ @level_description = ] *level_description*  
+ 指定的自定义日志记录级别的新说明。  
   
- *Level_description*是**nvarchar(1024)**。  
+ *level_description* 为 **nvarchar(1024)**。  
   
 ## <a name="remarks"></a>注释  
   
@@ -68,7 +66,6 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致存储过程失败的情况。  
   
--   用户没有所需的权限。  
+-   用户没有必需的权限。  
   
   
-

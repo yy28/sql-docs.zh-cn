@@ -1,10 +1,13 @@
 ---
 title: "Query Store 最佳做法 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题概述使用 Query Store 处理工作负荷的最佳实践。  
   
-##  <a name="SSMS"></a> 使用最新版 SQL Server Management Studio  
+##  <a name="SSMS"></a>使用最新 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计各种用户界面的目的是方便用户对查询存储进行配置和使用收集的工作负荷数据。  
 单击[此处](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 导航到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中数据库节点下的 Query Store 子文件夹，以便打开特定方案的故障排除视图。   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查询存储视图在操作时使用一组执行度量值，每个度量值都表示为下述任意统计函数：  
   
-|执行度量值|统计函数|  
-|----------------------|------------------------|  
-|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗和物理读取次数|平均值、最大值、最小值、标准偏差、总数|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|执行度量值|统计函数|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度 (DOP) 和行计数|平均值、最大值、最小值、标准偏差、总数|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度 (DOP)、行计数、日志内存、TempDB 内存和等待时间|平均值、最大值、最小值、标准偏差、总数|
   
  下图显示了如何查找 Query Store 视图：  
   
@@ -172,7 +176,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   重写有问题的查询。 这样有很多好处，例如可以充分利用查询参数化或实现更优化的逻辑。  
   
-##  <a name="Verify"></a> 确保查询存储持续收集查询数据  
+##  <a name="Verify"></a>确保查询存储持续收集查询数据  
  Query Store 可通过无提示方式更改操作模式。 你应该定期监视 Query Store 的状态以确保 Query Store 正常运行，并采取相应措施，避免那些本来可以避免的因素造成故障。 执行以下查询，以便确定操作模式并查看最相关的参数：  
   
 ```tsql
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- 在应用这两项步骤或其中一项步骤时，可以执行以下语句，通过显式方式将操作模式改回为读写：  
+在应用这两项步骤或其中一项步骤时，可以执行以下语句，通过显式方式将操作模式改回为读写：  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

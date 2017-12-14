@@ -2,9 +2,12 @@
 title: "实现合并项目的业务逻辑处理程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a497eb370a69b36ca0ab5b84b8f3809f0e6dd8b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3355b1aa21c41653106818ef1bd212322b03ca53
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
-  本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中实现合并项目的业务逻辑处理程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中实现合并项目的业务逻辑处理程序。  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个可编写复杂业务逻辑以处理合并复制同步期间发生的事件的接口。 复制进程可以针对同步期间复制的每个已更改行调用业务逻辑处理程序中的方法。  
   

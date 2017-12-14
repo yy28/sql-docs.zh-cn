@@ -1,5 +1,5 @@
 ---
-title: "以编程方式添加数据流组件 |Microsoft 文档"
+title: "以编程方式添加数据流组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cef868a3eef5413777e8bd05101311931df9e191
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
-  若要生成数据流，则可以先添加组件。 然后配置这些组件并将它们连接在一起，以便在运行时建立数据流。 本节将介绍如何向数据流任务添加组件、如何创建组件的设计时实例以及配置该组件。 有关如何连接组件的信息，请参阅[连接数据数据流组件以编程方式](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
+  若要生成数据流，则可以先添加组件。 然后配置这些组件并将它们连接在一起，以便在运行时建立数据流。 本节将介绍如何向数据流任务添加组件、如何创建组件的设计时实例以及配置该组件。 有关如何连接组件的详细信息，请参阅[以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
 ## <a name="adding-a-component"></a>添加组件  
  对 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> 集合调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A> 方法可创建新组件并将其添加到数据流任务。 此方法将返回组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口。 但是，此时 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 不包含特定于任一组件的信息。 设置 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性可标识组件的类型。 数据流任务将使用此属性的值在运行时创建组件的实例。  
   
- 在 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性中指定的值可为 CLSID、PROGID 或组件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 属性。 CLSID 通常作为组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性值显示在“属性”窗口中。 有关获取此属性和其他属性可用组件的信息，请参阅[发现数据数据流组件以编程方式](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)。  
+ 在 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性中指定的值可为 CLSID、PROGID 或组件的 <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> 属性。 CLSID 通常作为组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> 属性值显示在“属性”窗口中。 有关获取可用组件的此属性和其他属性的信息，请参阅[以编程方式查找数据流组件](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)。  
   
 ## <a name="adding-a-managed-component"></a>添加托管组件  
- 您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 你可以改用**CreationName**属性或**AssemblyQualifiedName**属性，如下面的示例中所示。  
+ 您不能使用 CLSID 或 PROGID 向数据流添加一个托管数据流组件，因为这些值指向包装而不是组件本身。 可以改用 CreationName 属性或 AssemblyQualifiedName 属性，如以下示例中所示。  
   
- 如果你想要使用**AssemblyQualifiedName**属性，则你必须添加中的引用你[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]包含托管的组件的程序集的项目。 这些程序集未列出的.NET 选项卡上**添加引用**对话框。 通常你必须浏览以查找中的程序集**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**文件夹。  
+ 若要使用 AssemblyQualifiedName 属性，则必须在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目中添加对包含托管组件的程序集的引用。 这些程序集没有在“添加引用”对话框的 .NET 选项卡上列出。 通常需要浏览至 C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents 文件夹查找程序集。  
   
  内置托管数据流组件包括：  
   
@@ -145,7 +142,7 @@ End Module
  应尽可能使用设计时实例的方法而不是通过直接修改组件元数据来修改组件。 尽管元数据中存在必须直接设置的项（如连接），但是通常不建议直接修改元数据，因为这样将跳过组件监视和验证更改的功能。  
   
 ## <a name="assigning-connections"></a>分配连接  
- 某些组件（如 OLE DB 源组件）需要连接到外部数据并使用包中的现有 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象来实现此分配目的。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性指示组件所需的运行时 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的数量。 如果该计数大于零，则组件需要连接。 可通过指定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> 中的第一个连接的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性，将包中的连接管理器分配给组件。 请注意，在运行时连接集合中的连接管理器的名称必须匹配连接 managerreferenced 从包的名称。  
+ 某些组件（如 OLE DB 源组件）需要连接到外部数据并使用包中的现有 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象来实现此分配目的。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性指示组件所需的运行时 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的数量。 如果该计数大于零，则组件需要连接。 可通过指定 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> 中的第一个连接的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性，将包中的连接管理器分配给组件。 请注意，运行时连接集合中的连接管理器的名称必须与从包中引用的连接管理器的名称匹配。  
   
 ## <a name="setting-the-values-of-custom-properties"></a>设置自定义属性的值  
  创建组件的设计时实例后，可调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> 方法。 此方法类似于构造函数，因为该方法通过创建其自定义属性及其输入和输出对象来初始化新创建的组件。 请不要对组件多次调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A>，因为该组件可能会对自己进行重置，从而丢失之前对其元数据所做的所有修改。  
@@ -158,7 +155,7 @@ End Module
  调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> 方法可初始化源组件的输出中的列。 由于组件不会自动连接到外部数据源，所以应先调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> 方法，然后再调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A>，以提供对其外部数据源的组件访问以及填充组件列元数据的功能。 最后，调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> 方法以释放连接。  
   
 ## <a name="next-step"></a>下一步  
- 添加和配置后该组件下, 一步是创建组件，这些主题中所述，组件之间的路径[创建路径之间两个组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
+ 添加并配置组件之后，下一步是创建组件之间的路径，这将在[在两个组件之间创建路径](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)主题中讨论。  
   
 ## <a name="sample"></a>示例  
  下面的代码示例向数据流任务添加 OLE DB 源组件、创建组件的设计时实例并配置组件的属性。 此示例需要对 Microsoft.SqlServer.DTSRuntimeWrap 程序集的附加引用。  
@@ -290,10 +287,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部资源  
- 博客文章[EzAPI – 经过更新以 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)，blogs.msdn.com 上的。  
+ blogs.msdn.com 上的博客文章 [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI – 为 SQL Server 2012 更新）。  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

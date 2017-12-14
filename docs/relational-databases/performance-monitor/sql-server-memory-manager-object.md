@@ -2,9 +2,12 @@
 title: "SQL Server - Memory Manager 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6ec8688bb10331cf10ef7ebec337c03f96a45305
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c4994f77321278c9f923cb5899e70c10a688d95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
-  Microsoft **中的** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了监视总体的服务器内存使用情况的计数器。 监视总体的服务器内存使用情况，以估计用户活动和资源使用，有助于查明性能瓶颈。 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例使用的内存有助于确定：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 Memory Manager 对象提供了监视总体的服务器内存使用情况的计数器。 监视总体的服务器内存使用情况，以估计用户活动和资源使用，有助于查明性能瓶颈。 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例使用的内存有助于确定：  
   
 -   瓶颈的存在是否是因为物理内存不足以存储缓存中被频繁访问的数据。 如果内存不足， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须从磁盘检索数据。  
   

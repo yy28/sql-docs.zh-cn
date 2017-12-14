@@ -2,9 +2,12 @@
 title: "验证已复制的数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 257cb487ad0609a334a17604485a1941d4382373
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9834f7c0d65ab05a7dda5f68b05438760abef21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
-  通过事务复制和合并复制，您可以验证订阅服务器中的数据与发布服务器中的数据是否匹配。 可以对特定订阅或某一发布的所有订阅执行验证。 指定下列验证类型之一，分发代理或合并代理便会在下次运行时验证数据：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]通过事务复制和合并复制，可以验证订阅服务器中的数据与发布服务器中的数据是否匹配。 可以对特定订阅或某一发布的所有订阅执行验证。 指定下列验证类型之一，分发代理或合并代理便会在下次运行时验证数据：  
   
 -   仅行计数。 此选项将验证订阅服务器上的表与发布服务器上的表的行数是否相同，但不验证行内容是否匹配。 行计数验证是一种简易验证方法，可帮助您了解数据是否存在问题。  
   

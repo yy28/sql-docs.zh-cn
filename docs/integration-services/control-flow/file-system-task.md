@@ -1,5 +1,5 @@
 ---
-title: "文件系统任务 |Microsoft 文档"
+title: "文件系统任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords:
-- File System task [Integration Services]
+helpviewer_keywords: File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 63fb21cae5f8df981f243035fc7b34e53fa4d0bd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-system-task"></a>文件系统任务
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  
@@ -148,13 +145,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- 在列表中，选择的变量名称或单击\<**新变量...**> 若要创建新变量。  
+ 在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -162,13 +159,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- 在列表中，选择的变量名称或单击\<**新变量...**> 若要创建新变量。  
+ 在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -196,4 +193,3 @@ ms.lasthandoff: 08/11/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -1,35 +1,35 @@
 ---
-title: "数据流目标 |Microsoft 文档"
-ms.custom:
-- SQL2016_New_Updated
+title: "数据流目标 | Microsoft Docs"
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
+f1_keywords: SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f6b5a6b41776010d957f149a28cd74d51a3b35b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-streaming-destination"></a>数据流目标
   “数据流目标”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目标组件，它能让 **OLE DB Provider for SSIS** 将 SSIS 包的输出作为表格结果集使用。 可以创建使用 OLE DB Provider for SSIS 的链接服务器，然后在链接服务器上运行 SQL 查询以显示由 SSIS 包返回的数据。  
   
  在下面的示例中，以下查询从 SSIS 目录的 Power BI 文件夹中的 SSISPackagePublishing 项目中的 Package.dtsx 包返回输出。 此查询使用名为 [Integration Services 的默认链接服务器] 的链接服务器，该服务器会反过来使用新的 OLE DB Provider for SSIS。 该查询包括 SSIS 目录中的文件夹名称、项目名称和包名称。 OLE DB Provider for SSIS 运行你在查询中指定的包，并返回表格结果集。  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  
@@ -82,9 +82,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  在此选项卡的顶部窗格中，你会看到所有可用输入列。 选择你想要在此组件的输出中包含的列。 所选的列会显示在底部窗格的列表中。 可以通过在列表中 **输出别名** 字段中输入新名称来更改输出列名。  
   
 ## <a name="input-output-properties-tab"></a>“输入属性和输出属性”选项卡  
- 类似于“输入列”选项卡，可以在此选项卡中更改输出列的名称。 在左侧树视图中，展开“数据流目标输入”  ，然后展开“输入列” 。 在右窗格中单击输入列名称并更改输出列名称。  
+ 类似于“输入列”选项卡，可以在此选项卡中更改输出列的名称。在左侧树视图中，展开“数据流目标输入”  ，然后展开“输入列” 。 在右窗格中单击输入列名称并更改输出列名称。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [将 SSIS 包作为 OData 馈送源发布](http://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

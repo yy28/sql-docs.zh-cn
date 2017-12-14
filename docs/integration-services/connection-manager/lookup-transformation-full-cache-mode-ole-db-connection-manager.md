@@ -1,5 +1,5 @@
 ---
-title: "查找转换完全缓存模式下的 OLE DB 连接管理器 |Microsoft 文档"
+title: "查找转换完全缓存模式 - OLE DB 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e038db8132d3c57a16af2a68ba9e6b57e890a444
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25e4840c5fa2b9ae98c172549467811150ec0217
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式下的 OLE DB 连接管理器
+# <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查找转换完全缓存模式 - OLE DB 连接管理器
   可以将查找转换配置为使用完全缓存模式和 OLE DB 连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。 有关详细信息，请参阅 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)。  
@@ -91,8 +88,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [在完全缓存模式下使用缓存连接管理器实现查找转换](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [在不缓存或部分缓存模式下实现查找](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [在不缓存模式或部分缓存模式下实现查找](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

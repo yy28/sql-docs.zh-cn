@@ -2,9 +2,12 @@
 title: "镜像状态 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 62690acf5d9e89f1d89aece14514385193057c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4321216ddefa8ac3a3e6335a2432244f342c12da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
-  数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  
   
  在整个数据库镜像会话期间，服务器实例相互监视。 伙伴使用镜像状态监视数据库。 除 PENDING_FAILOVER 状态外，主体数据库和镜像数据库始终处于同一状态。 如果为会话设置一个见证服务器，则每个伙伴都将使用其连接状态（CONNECTED 或 DISCONNECTED）监视该见证服务器。  
   

@@ -1,12 +1,13 @@
 ---
 title: "计划 SQL Server 安装 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -16,14 +17,14 @@ caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 21f4d7344c22a3426e343ff6e3682029a863369f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 199ba3b531fd06ba0b87c8a929c7fef96cbc7c99
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
-  若要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请按下列步骤操作：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请按下列步骤操作：  
   
 -   查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的安装要求、系统配置检查和安全注意事项。  
   

@@ -1,5 +1,5 @@
 ---
-title: "分区处理目标 |Microsoft 文档"
+title: "分区处理目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
   分区处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分区。 有关分区的详细信息，请参阅[分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
   
 ### <a name="options"></a>选项  
- **连接管理器**  
+ **“ODBC 目标编辑器”**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
@@ -188,4 +186,3 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
-

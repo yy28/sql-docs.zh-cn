@@ -1,5 +1,5 @@
 ---
-title: "引发和定义自定义任务中的事件 |Microsoft 文档"
+title: "在自定义任务中引发和定义事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 44e27c1ff000046744aa78479b73cc8ef39d6f2e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f71ff29b7e029bc52fd6ffe243b4279e6caf08b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>在自定义任务中引发和定义事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎提供了一组事件，这些事件提供验证和执行任务时任务进度的状态。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 接口用于定义这些事件，并且该接口可作为 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的参数提供给任务。  
@@ -47,13 +44,13 @@ ms.lasthandoff: 08/03/2017
  此外，还有另一组在 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口中定义的事件，<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 可代表任务引发这些事件。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 将引发在验证和执行之前或之后发生的事件，而任务则引发在执行和验证期间发生的事件。  
   
 ## <a name="creating-custom-events"></a>创建自定义事件  
- 自定义任务开发人员可通过在其 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 方法的重写实现中创建新的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A> 来定义新的自定义事件。 后<xref:Microsoft.SqlServer.Dts.Runtime.EventInfo>是创建，将其添加到**EventInfos**使用进行收集<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>方法。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法的方法签名如下所示：  
+ 自定义任务开发人员可通过在其 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 方法的重写实现中创建新的 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A> 来定义新的自定义事件。 创建 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 后，可使用 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法将其添加到 **EventInfos** 集合。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 方法的方法签名如下所示：  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  下面的代码示例介绍了自定义任务的 **InitializeTask** 方法，在该自定义任务中，创建了两个自定义事件并设置了其属性。 然后，将新事件添加到 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一个自定义事件的事件名为 “**OnBeforeIncrement**”，说明为“**更新初始值后触发**”。 下一个参数为 **true** 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当*此*参数是**true**，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>对象创建的事件。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
+ 第一个自定义事件的事件名为 “**OnBeforeIncrement**”，说明为“**更新初始值后触发**”。 下一个参数为 **true** 值，指示此事件应允许创建用于处理事件的事件处理程序容器。 事件处理程序是一个可向任务提供包和服务中的结构的容器，像其他诸如包、序列、ForLoop 和 ForEachLoop 的其他容器一样。 当 *allowEventHandlers* 参数为 **true** 时，会为该事件创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象。 为事件定义的所有参数现在均可在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的变量集合中用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -127,7 +124,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>示例  
- 下面的示例演示定义中的自定义事件的任务**InitializeTask**方法，将添加到自定义事件<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>集合，然后引发自定义事件在其**执行**方法通过调用<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>方法。  
+ 下面的示例演示了一个任务，该任务在 **InitializeTask** 方法中定义一个自定义事件，再将该自定义事件添加到 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合，然后通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 方法在其 **Execute** 方法中引发该自定义事件。  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -199,9 +196,8 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [将事件处理程序添加到包](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+## <a name="see-also"></a>另请参阅  
+ [Integration Services (SSIS) 事件处理程序](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [在包中添加事件处理程序](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

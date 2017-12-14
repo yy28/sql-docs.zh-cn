@@ -1,5 +1,5 @@
 ---
-title: "加载的本地包输出 |Microsoft 文档"
+title: "加载本地包的输出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,23 +19,22 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 66
+caps.latest.revision: "66"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 41de742c987d9f043f3dd247ee84af6a3eaf365b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 58548ba72a81257c14b2db3535fd1131c4983099
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loading-the-output-of-a-local-package"></a>加载本地包的输出
-  客户端应用程序可以读取输出的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包时的输出将保存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用目标[!INCLUDE[vstecado](../../includes/vstecado-md.md)]，或通过使用中的类到平面文件目标保存输出时**System.IO**命名空间。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键是**Microsoft.SqlServer.Dts.DtsClient**命名空间，其中包含的专用的实现**IDbConnection**， **IDbCommand**，和**IDbDataParameter**接口从**System.Data**命名空间。 在默认情况下安装 Microsoft.SqlServer.Dts.DtsClient.dll 的程序集**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**。  
+  使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO 命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键是 Microsoft.SqlServer.Dts.DtsClient 命名空间，该命名空间包含来自 System.Data 命名空间的 IDbConnection、IDbCommand 和 IDbDataParameter 接口的专用实现。 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn 中。  
   
 > [!NOTE]  
->  本主题中所述的过程要求及任何父对象的数据流任务的 DelayValidation 属性将设置为其默认值的**False**。  
+>  本主题介绍的过程要求数据流任务以及所有父对象的 DelayValidation 属性均设置为其默认值 False。  
   
 ## <a name="description"></a>Description  
  本过程说明如何使用托管代码开发客户端应用程序，该应用程序使用 DataReader 目标直接从内存加载包的输出。 此处总结的步骤在随后的代码示例中演示。  
@@ -46,40 +43,40 @@ ms.lasthandoff: 09/26/2017
   
 1.  在包中，配置 DataReader 目标，以接收要读入到客户端应用程序中的输出。 使用说明性的名称为 DataReader 目标命名，因为您稍后将在客户端应用程序中使用此名称。 请记录 DataReader 目标的名称。  
   
-2.  在开发项目中，将引用设置为**Microsoft.SqlServer.Dts.DtsClient**命名空间中查找程序集**Microsoft.SqlServer.Dts.DtsClient.dll**。 默认情况下，此程序集安装在**C:\Program Files\Microsoft SQL Server\100\DTS\Binn**。 导入到你的代码通过使用 C# 命名空间**使用**或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**导入**语句。  
+2.  在开发项目中，通过查找程序集 Microsoft.SqlServer.Dts.DtsClient.dll 设置对 Microsoft.SqlServer.Dts.DtsClient 命名空间的引用。 默认情况下，此程序集安装在 C:\Program Files\Microsoft SQL Server\100\DTS\Binn 中。 使用 C# Using 或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Imports 语句将该命名空间导入到代码中。  
   
-3.  在代码中，创建类型的对象**DtsClient.DtsConnection**使用连接字符串包含所需的命令行参数**dtexec.exe**运行包。 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。 然后，使用此连接字符串打开连接。 你还可以使用**dtexecui**实用工具可以直观地创建所需的连接字符串。  
+3.  在代码中，创建类型为 DtsClient.DtsConnection 的对象，该对象具有一个连接字符串，其中包含 dtexec.exe 运行包时所需的命令行参数。 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。 然后，使用此连接字符串打开连接。 还可以使用 dtexecui 实用工具直观地创建所需的连接字符串。  
   
     > [!NOTE]  
     >  该示例代码演示如何使用 `/FILE <path and filename>` 语法从文件系统加载包。 但您也可以使用 `/SQL <package name>` 语法从 MSDB 数据库加载包，或者使用 `/DTS \<folder name>\<package name>` 语法从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包存储区加载包。  
   
-4.  创建类型的对象**DtsClient.DtsCommand**使用以前创建**DtsConnection**并设置其**CommandText** DataReader 的名称的属性包中的目标。 然后调用**ExecuteReader**要加载到新的 DataReader 包结果的命令对象的方法。  
+4.  创建类型为 DtsClient.DtsCommand 的对象，该对象使用先前创建的 DtsConnection，并将该对象的 CommandText 属性设置为包中 DataReader 目标的名称。 然后调用命令对象的 ExecuteReader 方法以将包结果加载到新的 DataReader 中。  
   
-5.  （可选） 可以间接参数化包的输出通过使用集合**DtsDataParameter**对象上**DtsCommand**对象来将值传递到的包中定义的变量。 在包中，您可以使用这些变量作为查询参数或在表达式中使用这些变量以影响返回给 DataReader 目标的结果。 你必须在包中定义这些变量**DtsClient**命名空间，然后才能使用它们与**DtsDataParameter**从客户端应用程序的对象。 (你可能需要单击**选择变量列**中的工具栏按钮**变量**窗口以显示**Namespace**列。)在客户端代码中，当你将添加**DtsDataParameter**到**参数**集合**DtsCommand**，省略变量名的 DtsClient 命名空间引用. 例如：  
+5.  还可以通过对 DtsCommand 对象使用 DtsDataParameter 对象的集合来间接参数化包的输出，以将值传递给在包中定义的变量。 在包中，您可以使用这些变量作为查询参数或在表达式中使用这些变量以影响返回给 DataReader 目标的结果。 必须先在 DtsClient 命名空间中的包中定义这些变量，然后才能将这些变量用于客户端应用程序的 DtsDataParameter 对象。 （可能需要单击“变量”窗口中的“选择变量列”工具栏按钮才会显示“命名空间”列。）在客户端代码中，将 DtsDataParameter 添加到 DtsCommand 的参数集合时，可省略变量名称的 DtsClient 命名空间引用。 例如：  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
     ```  
   
-6.  调用**读取**方法 DataReader 重复所需循环访问的行的输出数据。 使用这些数据，或将这些数据保存在客户端应用程序，以供将来使用。  
+6.  根据需要重复调用 DataReader 的 Read 方法以遍历输出数据的各行。 使用这些数据，或将这些数据保存在客户端应用程序，以供将来使用。  
   
     > [!IMPORTANT]  
-    >  **读取**DataReader 此实现的方法返回**true**读取数据的最后一行后的一个更多时间。 这使得难以将循环访问 DataReader 时的常用代码**读取**返回**true**。 如果你的代码尝试关闭了 DataReader 或在读取的行，而无需对的其他、 最终调用预期的数后连接**读取**方法，代码将引发未处理的异常。 但是，如果你的代码尝试读取循环，此最终迭代上的数据时**读取**仍会返回**true**但已传递的最后一行时，代码会引发未处理**ApplicationException**并显示消息"SSIS IDataReader 是结果集的末尾。" 此行为与其他 DataReader 实现的行为不同。 因此，当使用循环访问 DataReader 时中的行读取**读取**返回**true**，你需要编写代码以捕获，测试和放弃这预期**ApplicationException**上上次成功调用**读取**方法。 或者，如果您事先知道的预期的行数，可以处理的行，然后调用**读取**方法前关闭了 DataReader 和连接的一个更多时间。  
+    >  读取最后一行数据后，此 DataReader 实现的 Read 方法将再返回一次 true。 因此在 Read 返回 true 时很难使用遍历 DataReader 的常规代码。 如果代码在读取预期行数后尝试关闭 DataReader 或连接，而不对 Read 方法进行附加的最终调用时，该代码将引发未处理的异常。 但是，如果代码尝试在此循环的最后一轮操作中读取数据，在 Read 仍返回 true 而最后一行已传递时，该代码将引发未处理的 ApplicationException并包含消息“SSIS IDataReader 已到达结果集末尾”。 此行为与其他 DataReader 实现的行为不同。 因此，使用循环读取 DataReader 中的各行，而 Read 返回 true 时，需要针对上次成功调用 Read 方法编写代码以捕获、测试和放弃此预期的 ApplicationException。 或者，如果事先知道应读取的行数，则可以处理这些行，然后在关闭 DataReader 和连接之前再调用一次 Read 方法。  
   
-7.  调用**释放**方法**DtsCommand**对象。 这一点特别重要，如果你使用任何**DtsDataParameter**对象。  
+7.  调用 DtsCommand 对象的 Dispose 方法。 如果已使用任何 DtsDataParameter 对象，这样做尤其重要。  
   
 8.  关闭 DataReader 和连接对象。  
   
 ## <a name="example"></a>示例  
  下面的示例将运行一个包，用于计算单个聚合值并将该值保存到 DataReader 目标，然后从 DataReader 读取此值，并在 Windows 窗体的文本框中显示该值。  
   
- 在将包的输出加载到客户端应用程序时不一定要使用参数。 如果您不想要使用参数，则可以省略中变量的使用**DtsClient**命名空间，并且省略了使用的代码， **DtsDataParameter**对象。  
+ 在将包的输出加载到客户端应用程序时不一定要使用参数。 如果不希望使用参数，可在 DtsClient 命名空间中省略变量的使用，并省略使用 DtsDataParameter 对象的代码。  
   
 #### <a name="to-create-the-test-package"></a>创建测试包  
   
 1.  创建新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 示例代码使用“DtsClientWParamPkg.dtsx”作为包的名称。  
   
-2.  在 DtsClient 命名空间中添加类型为 String 的变量。 示例代码使用 Country 作为该变量的名称。 (你可能需要单击**选择变量列**中的工具栏按钮**变量**窗口以显示**Namespace**列。)  
+2.  在 DtsClient 命名空间中添加类型为 String 的变量。 示例代码使用 Country 作为该变量的名称。 （可能需要单击“变量”窗口中的“选择变量列”工具栏按钮才会显示“命名空间”列。）  
   
 3.  添加用于连接 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 OLE DB 连接管理器。  
   
@@ -91,7 +88,7 @@ ms.lasthandoff: 09/26/2017
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  单击**参数**并在**设置查询参数**对话框框中，在查询中，Parameter0，将单个输入的参数映射到 DtsClient::Country 变量。  
+6.  单击“参数”并在“设置查询参数”对话框中，将单个输入参数 Parameter0 映射到 DtsClient::Country 变量。  
   
 7.  向数据流添加聚合转换，并将 OLE DB 源的输出连接到该转换。 打开聚合转换编辑器，将其配置为对所有输入列 (*) 执行“COUNT ALL”运算，并以别名 CustomerCount 输出聚合值。  
   
@@ -103,15 +100,15 @@ ms.lasthandoff: 09/26/2017
   
 1.  创建新的 Windows 窗体应用程序。  
   
-2.  添加对的引用**Microsoft.SqlServer.Dts.DtsClient**通过浏览到中的相同名称的程序集的命名空间**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**。  
+2.  通过浏览到 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn 中的相名程序集，添加对 Microsoft.SqlServer.Dts.DtsClient 命名空间的引用。  
   
 3.  复制以下示例代码并将其粘贴到窗体的代码模块中。  
   
-4.  修改的值**dtexecArgs**变量作为必需因此它都包含所需的命令行参数**dtexec.exe**运行包。 示例代码从文件系统加载包。  
+4.  根据需要修改 dtexecArgs 变量的值，以使该变量包含 dtexec.exe 运行包时所需的命令行参数。 示例代码从文件系统加载包。  
   
-5.  修改的值**dataReaderName**变量作为必需因此它都包含在包中 DataReader 目标的名称。  
+5.  根据需要修改 dataReaderName 变量的值，以使该变量包含包中的 DataReader 目标的名称。  
   
-6.  在窗体中放入一个按钮和一个文本框。 示例代码使用**btnRun**作为名称的按钮，和**txtResults**作为名称的文本框。  
+6.  在窗体中放入一个按钮和一个文本框。 示例代码使用 btnRun 作为按钮的名称，使用 txtResults 作为文本框的名称。  
   
 7.  运行该应用程序并单击按钮。 在短暂运行包后，您应能够看到在窗体的文本框中显示由包计算的聚合值（Canada 的客户计数）。  
   
@@ -304,9 +301,8 @@ namespace DtsClientWParamCS
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [了解本地和远程执行之间的差异](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [加载和以编程方式运行本地包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+ [了解本地和远程执行之间的区别](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [以编程方式加载和运行本地包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [以编程方式加载和运行远程包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
   
-

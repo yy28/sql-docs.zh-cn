@@ -1,5 +1,5 @@
 ---
-title: "清除维护任务 |Microsoft 文档"
+title: "“清除维护”任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.maintenancecleanuptask.f1
+f1_keywords: sql13.dts.designer.maintenancecleanuptask.f1
 helpviewer_keywords:
 - deleting files
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19ea8533605a0507db4ba6ac566c585d3746cc37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 33ccccdfbbeb2af306f049c5d525a7d28d711dbe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="maintenance-cleanup-task"></a>“清除维护”任务
   “清除维护”任务将删除与维护计划相关的文件，包括维护计划所创建的数据库备份文件和报表。 有关详细信息，请参阅 [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md) 和 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
@@ -57,4 +54,3 @@ ms.lasthandoff: 08/03/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

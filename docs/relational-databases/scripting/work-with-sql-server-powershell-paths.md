@@ -2,9 +2,12 @@
 title: "使用 SQL Server PowerShell 路径 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e42b8172f1993b22a50c53e61b93ff8223da063
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
-  在您导航到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径中的某一节点后，可通过使用与该节点相关联的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理对象中的方法和属性，执行工作或检索信息。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在你导航到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径中的某一节点后，可通过使用与该节点相关联的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理对象中的方法和属性，执行工作或检索信息。  
   
 1.  [开始之前](#BeforeYouBegin)  
   

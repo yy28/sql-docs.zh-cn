@@ -2,9 +2,12 @@
 title: "SQL Server - SQL Statistics 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
-  **中的** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器来监视编译和发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的请求类型。 通过监视查询编译和重新编译的次数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收到的批数，可了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理用户查询的速度，以及查询优化器处理查询的效率。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:SQL Statistics 对象提供计数器来监视编译和发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求类型。 通过监视查询编译和重新编译的次数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收到的批数，可了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理用户查询的速度，以及查询优化器处理查询的效率。  
   
  编译时间在查询总时间中占到很大一部分。 为节省编译开销， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将编译过的查询计划保存在一个查询缓存中。 缓存的目标是通过存储编译过的查询以便再次使用来减少编译，从而在将来执行查询时，不需重新编译它。 但是，每个唯一的查询至少需要编译一次。 以下因素可造成重新编译查询：  
   

@@ -2,9 +2,12 @@
 title: SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2007b572b659f5fe9371618b667bb27a43bc70c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 Windows PowerShell，Windows PowerShell 是一个功能强大的脚本 shell，管理员和开发人员可以通过它自动执行服务器管理和应用程序部署。 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本相比，Windows PowerShell 语言能够支持更复杂的逻辑，这使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员能够生成强大的管理脚本。 Windows PowerShell 脚本还可用来管理其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 服务器产品， 这为管理员提供一个跨服务器的公用脚本语言。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 Windows PowerShell，Windows PowerShell 是一个功能强大的脚本 shell，管理员和开发人员可以通过它自动执行服务器管理和应用程序部署。 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本相比，Windows PowerShell 语言能够支持更复杂的逻辑，这使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员能够生成强大的管理脚本。 Windows PowerShell 脚本还可用来管理其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 服务器产品， 这为管理员提供一个跨服务器的公用脚本语言。  
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 组件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一个名为 **sqlps** 的 Windows PowerShell 模块，用于将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件导入 Windows PowerShell 环境或脚本中。 **sqlps** 模块加载两个可用来实现以下内容的 Windows PowerShell 管理单元：  

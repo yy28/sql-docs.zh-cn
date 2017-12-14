@@ -2,9 +2,12 @@
 title: "事务日志备份 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 22d43525383511ac5af79b9b356c280478c79d28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 472cbfe4f302e349a7acf182e804756be599de35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
-  本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。 本主题讨论备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的事务日志。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。 本主题讨论备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的事务日志。  
   
  在创建任何日志备份之前，您必须至少创建一个完整备份。 然后，可以随时备份事务日志，除非已备份此日志。 
  

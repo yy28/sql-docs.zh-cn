@@ -2,9 +2,12 @@
 title: "查找和替换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-and-replace"></a>查找和替换
-  使用 **“查找和替换”** 对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  
   
  您也可使用工具栏按钮和快捷键打开 **“查找和替换”** 对话框。  
   

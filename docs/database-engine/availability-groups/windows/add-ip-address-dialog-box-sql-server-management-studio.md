@@ -2,9 +2,12 @@
 title: "“添加 IP 地址”对话框 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5dc81d9853fd9d7b1a3b3a12acdba9bf2cc5df7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 382a75d2feee74e820250ca11a07ecfb4e652422
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>“添加 IP 地址”对话框 (SQL Server Management Studio)
-  本 F1 帮助主题介绍 **“添加 IP 地址”** 对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和   或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]选项卡访问此对话框。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本 F1 帮助主题介绍“添加 IP 地址”对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和   或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]选项卡访问此对话框。  
   
 ## <a name="prerequisites"></a>先决条件  
  开始向可用性组侦听器添加子网之前，确保了解每个子网的 IP 地址以及子网掩码（对于 IPv4 地址）。  

@@ -1,5 +1,5 @@
 ---
-title: "查找 RFC 目标 |Microsoft 文档"
+title: "查找 RFC 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c9db6a056a69d502b4a93b9575cb565da798adf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c20bfd1e81c9a13a0fb84cc35f04245698f8b1f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="look-up-rfc-destination"></a>查找 RFC 目标
   使用 **“查找 RFC 目标”** 对话框查找在 SAP Netweaver BW 系统中定义的 RFC 目标。 当可用 RFC 目标列表显示时，选择您需要的目标，然后组件将使用需要的值填充关联的选项。  
@@ -59,9 +57,8 @@ ms.lasthandoff: 08/03/2017
  查看与 RFC 目标关联的程序 ID。  
   
 ## <a name="see-also"></a>另请参阅  
- [SAP BW 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 源编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

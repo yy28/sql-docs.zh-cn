@@ -2,9 +2,12 @@
 title: "注册镜像数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54c3b97e6def24984564729293a0b37ff093c044
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e967a036c5dd230c2ea5c84d0a69b98b368a0ec7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="register-mirrored-database"></a>注册镜像数据库
-  使用此对话框，通过向数据库镜像监视器添加一个或多个数据库，可在给定的服务器实例中注册一个或多个镜像数据库。 添加数据库时，数据库镜像监视器会在本地缓存有关数据库及其伙伴的信息，以及如何将数据库连接到伙伴的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此对话框，通过向数据库镜像监视器添加一个或多个数据库，可在给定的服务器实例中注册一个或多个镜像数据库。 添加数据库时，数据库镜像监视器会在本地缓存有关数据库及其伙伴的信息，以及如何将数据库连接到伙伴的信息。  
   
 > [!IMPORTANT]  
 >  如果是主体服务器实例而不是镜像服务器实例上的 **sysadmin** 固定服务器角色的成员，那么只能查看主体服务器实例上的状态。  

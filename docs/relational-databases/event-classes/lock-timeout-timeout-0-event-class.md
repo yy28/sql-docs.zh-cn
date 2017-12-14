@@ -2,9 +2,12 @@
 title: "Lock:Timeout (timeout &gt; 0) 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f27e3ade16f666c8f07b7b74789a3ed007b0ffbf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7a88b0bd22adc4e39e17a0b4353d80962a1970a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件类
-  **Lock:Timeout (timeout > 0)** 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 此事件类除了不包括超时值为 0 的任何事件外，其行为与 **Lock:Timeout** 事件类相同。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Lock:Timeout (timeout > 0) 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 此事件类除了不包括超时值为 0 的任何事件外，其行为与 **Lock:Timeout** 事件类相同。  
   
  包括你正在其中使用超时值为零的锁探测或其他进程的跟踪中的 **Lock:Timeout (timeout > 0)** 事件类。 这样您可以查看实际超时发生的位置而无需查看超时值是否为零。  
   

@@ -2,9 +2,12 @@
 title: "设置警告阈值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
-  使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用该对话框可为在“数据库镜像监视器”对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
   
  该对话框尝试连接到两个服务器实例上。 将异步建立这两个连接。 对话框显示每个伙伴的连接状态。 如果伙伴没有连接，则可单击 **“连接”**。  
   

@@ -2,9 +2,12 @@
 title: "Audit Database Scope GDR 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c09f44d3cdd376f5c727d1d2bb22acd4c21a7f62
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef5786b65cfc6a8718ed01a5df4f6741c422b8c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件类
-  每当  中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据库操作，例如针对某个数据库授予权限），都会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 每当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据操作，例如针对某个数据库授予权限），都会发生 Audit Database Scope GDR 事件类。  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Audit Database Scope GDR 事件类的数据列  
   

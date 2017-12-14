@@ -1,27 +1,28 @@
 ---
-title: "访问 CDC 设计器控制台 |Microsoft 文档"
+title: "访问 CDC 设计器控制台 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- accMsDes
+f1_keywords: accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e1266809582119e6316b821c54f93f4217c21316
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 73cb730a75ad1707f763dca6a64857837cf35bc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
   您可以从安装了 CDC 设计器控制台的计算机访问该控制台。 有关安装的详细信息，请参阅“安装”。  
@@ -48,10 +49,10 @@ ms.lasthandoff: 08/03/2017
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
  **连接超时值**  
- 键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。 默认值为 **15**。  
+ 键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
   
  **执行超时值**  
- 键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。 默认值为 **30**。  
+ 键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
  **加密连接**  
  选择“加密连接”将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间的通信。**高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
@@ -62,6 +63,6 @@ ms.lasthandoff: 08/03/2017
  有关“高级连接属性”对话框的信息，请参阅[高级连接属性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [针对 CDC 设计器 SQL Server 连接所需的权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [针对 CDC 设计器的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

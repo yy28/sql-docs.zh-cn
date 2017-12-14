@@ -2,9 +2,12 @@
 title: "角色切换后登录名和作业的管理 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d08e404267babd8fcc17ad6863ebf9c1ca71d93
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切换后登录名和作业的管理 (SQL Server)
-  在为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署高可用性或灾难恢复解决方案时，重新生成为 **master** 或 **msdb** 数据库中的数据库存储的相关信息十分重要。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署高可用性或灾难恢复解决方案时，重新生成为 master 或 msdb 数据库中的数据库存储的相关信息十分重要。 通常，相关信息包括主/主体数据库的作业以及连接到数据库所需的用户或进程的登录名。 您应该在承载辅助/镜像数据库的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上复制此信息。 如果可能，角色切换后最好在新的主/主体数据库中以编程方式重新生成此信息。  
   
 ## <a name="logins"></a>登录名  
  在承载数据库副本的每个服务器实例上，您都应该重新生成有权访问主体数据库的登录名。 当主/主体角色切换时，只有其登录名在新的主/主体服务器实例上存在的用户才可以访问新的主/主体数据库。 其登录名未在新的主/主体服务器实例上定义的用户是孤立用户，并且无法访问该数据库。  

@@ -2,9 +2,12 @@
 title: "限制跟踪文件和表的大小 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>限制跟踪文件和表的大小
-  SQL 跟踪结果的大小依赖于跟踪中包括的事件类和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用法。 如果跟踪经常出现的事件类，则可以通过设置最大文件大小或最大行数来最小化跟踪收集的数据量。 通过指定最大文件大小或行数，可以确保跟踪文件或表不会增长到超出指定范围。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL 跟踪结果的大小依赖于跟踪中包括的事件类和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用法。 如果跟踪经常出现的事件类，则可以通过设置最大文件大小或最大行数来最小化跟踪收集的数据量。 通过指定最大文件大小或行数，可以确保跟踪文件或表不会增长到超出指定范围。  
   
 > [!NOTE]  
 >  如果将跟踪数据保存到已经存在的文件，则可以向该文件追加数据或覆盖该文件。 如果选择向该文件追加数据，而此跟踪文件已经达到或超过指定的最大文件大小，则会通知您，并提示您可以增加最大文件大小或指定新文件。 对跟踪表也是如此。  

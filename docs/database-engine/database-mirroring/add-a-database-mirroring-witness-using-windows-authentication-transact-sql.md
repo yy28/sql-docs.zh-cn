@@ -2,9 +2,12 @@
 title: "使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8257ba0c95d4c0eadb1230902a6674086352c7dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2a06664255adcadccb6e5d16373ab097916e5026
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
-  为了给数据库设置见证服务器，数据库所有者为见证服务器的角色分配数据库引擎实例。 见证服务器实例可以与主体服务器实例或镜像服务器实例运行于同一台计算机上，但这样会明显降低自动故障转移的可靠性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]为了给数据库设置见证服务器，数据库所有者为见证服务器的角色分配数据库引擎实例。 见证服务器实例可以与主体服务器实例或镜像服务器实例运行于同一台计算机上，但这样会明显降低自动故障转移的可靠性。  
   
  极力建议见证服务器应位于另外一台计算机上。 给定的服务器可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 给定的服务器在某些会话中可能是伙伴，而在其他会话中则是见证服务器。  
   

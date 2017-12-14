@@ -2,9 +2,12 @@
 title: "SQL Server 和数据库加密密钥（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee3fe7a3feeaf400fea2a982d1813f0c9296e0ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 当第一次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例时，将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化过程中创建对称密钥。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用此密钥来加密存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的敏感数据。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在数据库中存储敏感数据的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，都要创建一个公钥私钥对。  
   

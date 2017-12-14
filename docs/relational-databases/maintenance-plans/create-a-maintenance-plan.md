@@ -2,9 +2,12 @@
 title: "创建维护计划 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a1a70635f7c2918de6dd2a9f2c3f1c85a26ab569
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5aa6ab0202c1afedfa7d9da5a64f17102da7e60f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-maintenance-plan"></a>创建维护计划
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建单服务器或多服务器维护计划。 通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，您可以通过以下两种方式之一创建这些维护计划：使用维护计划向导或设计图面。 向导是创建基本维护计划的最佳方法，而使用设计图面创建计划允许您使用增强的工作流。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建单服务器或多服务器维护计划。 通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，您可以通过以下两种方式之一创建这些维护计划：使用维护计划向导或设计图面。 向导是创建基本维护计划的最佳方法，而使用设计图面创建计划允许您使用增强的工作流。  
   
  **本主题内容**  
   

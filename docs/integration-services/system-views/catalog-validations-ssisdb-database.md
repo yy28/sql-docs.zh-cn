@@ -1,5 +1,5 @@
 ---
-title: "catalog.validations （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.validations（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d799fd23c2adef75e3dcf4543e9e0ee6271c9b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 87e8082e110053c9ec8405c2ec1bb544c1c91f47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +31,14 @@ ms.lasthandoff: 09/26/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|验证的唯一标识符 (ID)。|  
-|environment_scope|**Char （1)**|指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。|  
-|validate_type|**Char （1)**|要执行的验证类型。 可能的验证类型为依赖项验证 (`D`） 或完整验证 (`F`)。 包验证始终是完整验证。|  
-|folder_name|**nvarchar （128)**|包含对应项目的文件夹的名称。|  
-|文件的内容|**nvarchar （128)**|项目的名称。|  
+|environment_scope|**Char(1)**|指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。|  
+|validate_type|**Char(1)**|要执行的验证类型。 可能的验证类型为依赖项验证 (`D`） 或完整验证 (`F`)。 包验证始终是完整验证。|  
+|folder_name|**nvarchar(128)**|包含对应项目的文件夹的名称。|  
+|project_name|**nvarchar(128)**|项目的名称。|  
 |project_lsn|**bigint**|要对照其进行验证的项目版本。|  
-|use32bitruntime|**bit**|指示是否应使用 32 位运行时在 64 位操作系统上运行包。 当值是`1`，默认情况下，执行与 32 位运行时。 如果值为 `0`，则使用 64 位运行库来运行执行过程。|  
+|use32bitruntime|**bit**|指示是否应使用 32 位运行时在 64 位操作系统上运行包。 如果值为 `1`则使用 32 位运行时进行执行。 如果值为 `0`，则使用 64 位运行库来运行执行过程。|  
 |reference_id|**bigint**|项目用来引用环境的项目环境引用的唯一 ID。|  
-|operation_type|**int**|操作的类型。 在此视图中显示的操作包括项目验证 (`300`) 和包验证 (`301`)。|  
+|operation_type|**int**|运算类型。 在此视图中显示的操作包括项目验证 (`300`) 和包验证 (`301`)。|  
 |object_name|**nvarhcar(260)**|对象的名称。|  
 |object_type|**int**|对象的类型。 该对象可能是一个项目 (`20`) 或包 (`30`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
@@ -48,12 +46,12 @@ ms.lasthandoff: 09/26/2017
 |end_time|**datetimeoffsset(7)**|操作结束的时间。|  
 |status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |caller_sid|**varbinary(85)**|如果是使用 Windows 身份验证进行登录的，则为用户的安全 ID (SID)。|  
-|呼叫|**nvarchar （128)**|执行备份操作的帐户的名称。|  
+|caller_name|**nvarchar(128)**|执行备份操作的帐户的名称。|  
 |process_id|**int**|外部进程的进程 ID（如果适用）。|  
 |stopped_by_sid|**varbinary(85)**|停止操作的用户的 SID。|  
-|stopped_by_name|**nvarchar （128)**|停止操作的用户名。|  
-|server_name|**nvarchar （128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定实例的 Windows 服务器和实例信息。|  
-|machine_name|**nvarchar （128)**|运行服务器实例的计算机名称。|  
+|stopped_by_name|**nvarchar(128)**|停止操作的用户名。|  
+|server_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定实例的 Windows 服务器和实例信息。|  
+|machine_name|**nvarchar(128)**|运行服务器实例的计算机名称。|  
 |dump_id|**uniqueidentifier**|执行转储的 ID。|  
   
 ## <a name="remarks"></a>注释  
@@ -64,12 +62,11 @@ ms.lasthandoff: 09/26/2017
   
 -   针对相应操作的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
-

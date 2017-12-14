@@ -2,9 +2,12 @@
 title: "将数据库注册为 DAC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f79711d831a0f92805f8a9c59b003aed3fe1c63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
-  使用“注册数据层应用程序向导”  或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序 (DAC) 定义，并在 **msdb** 系统数据库（**中为** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]）中注册 DAC 定义。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“注册数据层应用程序向导” 或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序 (DAC) 定义，并在 msdb 系统数据库（[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中为 master中注册 DAC 定义。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
   
 -   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)、[PowerShell](#RegisterDACPowerShell)  
   

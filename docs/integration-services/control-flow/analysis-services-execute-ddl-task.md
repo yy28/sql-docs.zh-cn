@@ -1,5 +1,5 @@
 ---
-title: "Analysis Services 执行 DDL 任务 |Microsoft 文档"
+title: "Analysis Services 执行 DDL 任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 908b95b4020cb20e02bb2d196d95860ddca27049
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
   “ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务运行数据定义语言 (DDL) 语句，这些语句可以创建、删除或更改挖掘模型和多维对象，如多维数据集和维度。 例如，DDL 语句可在 **Adventure Works** 多维数据集中创建分区，或删除 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]（即 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库）中的维度。  
@@ -257,7 +255,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>静态选项  
  **连接**  
- 选择[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]连接管理器中的列表或单击\<**新的连接...**> 并使用**添加 Analysis Services 连接管理器**对话框中，若要创建新的连接。  
+ 在列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击“\<新建连接...>”并使用“添加 Analysis Services 连接管理器”对话框新建一个连接。  
   
  **相关主题：**[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -278,14 +276,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="sourcetype--file-connection"></a>SourceType = 文件连接  
  **数据源**  
- 在列表中，选择一个文件连接或单击\<**新的连接...**> 并使用**文件连接管理器**对话框中，若要创建新的连接。  
+ 在列表中选择“文件连接”，或单击“\<新建连接...>”并使用“文件连接管理器”对话框新建一个连接。  
   
  **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = 变量  
  **数据源**  
- 在列表中，选择变量，或单击\<**新变量...**> 并使用**添加变量**对话框中，若要创建新变量。  
+ 在列表中选择一个变量，或单击“\<新建变量...>”并使用“添加变量”对话框新建一个变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  
   
-

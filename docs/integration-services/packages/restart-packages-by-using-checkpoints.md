@@ -1,5 +1,5 @@
 ---
-title: "通过使用检查点重新启动包 |Microsoft 文档"
+title: "使用检查点重启包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以从失败点重新启动失败的包，而不是重新运行整个包。 如果包配置为使用检查点，则关于包执行的信息会写入检查点文件中。 当重新运行失败的包时，可以使用检查点文件从失败点重新启动该包。 如果包成功运行，则会删除该检查点文件，然后在下次运行包时会重新创建相应的检查点文件。  
@@ -123,4 +121,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com 上的技术文章： [在故障转移或失败后自动重新启动 SSIS 包](http://go.microsoft.com/fwlink/?LinkId=200407)  
   
 -   support.microsoft.com 上的支持文章： [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](http://go.microsoft.com/fwlink/?LinkId=241633)。  
-

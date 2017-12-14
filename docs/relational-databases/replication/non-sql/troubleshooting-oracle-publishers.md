@@ -2,9 +2,12 @@
 title: "对 Oracle 发布服务器进行故障排除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2796e5af63fb0fcce047baab1895a4ac58a64f65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1878b377957022e672dfec13f51e8f54e009c36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
-  本主题列出配置和使用 Oracle 发布服务器时可能会引发的一系列问题。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题列出配置和使用 Oracle 发布服务器时可能会引发的一系列问题。  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>引发关于 Oracle 客户端和网络软件的错误  
  用来在分发服务器上运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的帐户必须具有对 Oracle 客户端网络软件安装目录（以及所有子目录）的读取和执行权限。 如果未授予权限或者未正确安装 Oracle 客户端组件，您将接收到下列错误消息：  

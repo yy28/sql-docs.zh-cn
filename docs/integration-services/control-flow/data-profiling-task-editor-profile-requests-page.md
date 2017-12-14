@@ -1,5 +1,5 @@
 ---
-title: "数据事件探查任务编辑器 （配置文件请求页） |Microsoft 文档"
+title: "数据事件探查任务编辑器（“配置文件请求”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页，选择和配置需要计算的配置文件。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  
@@ -138,25 +134,24 @@ ms.lasthandoff: 08/03/2017
   
  这些选项根据选定的配置文件而有所差异。 有关单个配置文件类型选项的详细信息，请参阅下面主题：  
   
--   [候选键配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候选键配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [列 Null 比率配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [列 Null 比率配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列统计信息配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列统计信息配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [列值分布配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [列值分布配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列长度分布配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [列长度分布配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列模式配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [列模式配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [功能依赖关系配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [函数依赖关系配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含配置文件请求选项 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

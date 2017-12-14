@@ -2,9 +2,12 @@
 title: "自动页修复（可用性组：数据库镜像）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35a71754742484b4a1cdf35f5b28526e6e12309b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自动页修复（可用性组：数据库镜像）
-  数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
   
  一般来说，数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 以等效方式处理 I/O 错误。 下面将具体介绍几个差异。  
   

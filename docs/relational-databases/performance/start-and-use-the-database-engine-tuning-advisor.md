@@ -2,9 +2,12 @@
 title: "启动并使用数据库引擎优化顾问 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24e2347ba4cc496fcbb985f4a47bed8022b2c8c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21efab98503bc82485097c87b04623bf38366a68
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
   
 ##  <a name="Initialize"></a> 初始化数据库引擎优化顾问  
  第一次使用时，作为 **sysadmin** 固定服务器角色成员的用户必须初始化数据库引擎优化顾问。 这是因为必须在 **msdb** 数据库中创建多个系统表才能支持优化操作。 如果用户是 **db_owner** 固定数据库角色的成员，初始化还可以使他们能够优化数据库（他们拥有的数据库）中的表的工作负荷。  

@@ -2,9 +2,12 @@
 title: "更改用于美国英语和英国英语的断字符 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e05164fa73d36e4efa96b1f4543feaf31a24fd1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f6af23630a01f510b7e345cce694d5d675c95742
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>更改用于美国英语和英国英语的断字符
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 针对英语安装断字符和词干分析器的新版本（版本 14.0.4999.1038），以替换这些组件的以前版本（版本 12.0.6828.0）。 有关新组件的更改的行为的信息，请参阅 [全文搜索的行为更改](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)。 本主题说明如何在这些组件的新版本和以前的版本间切换。 对于群集安装，应对所有主节点和被动节点进行这些更改。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 针对英语安装断字符和词干分析器的新版本（版本 14.0.4999.1038），以替换这些组件的以前版本（版本 12.0.6828.0）。 有关新组件的更改的行为的信息，请参阅 [全文搜索的行为更改](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)。 本主题说明如何在这些组件的新版本和以前的版本间切换。 对于群集安装，应对所有主节点和被动节点进行这些更改。  
   
  以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同 CLSID 所表示的不同断字符，这些 CLSID 分别用于美国英语 (LCID 1033) 和英国英语 (LCID 2057)。 在此发行版中，这两个 LCID 使用具有相同 CLSID 的相同组件，如下表中所示：  
   

@@ -2,9 +2,12 @@
 title: "管理 suspect_pages 表 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 726a96b1ca958cf7ecb3254a6d038972d3e6e4b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b58f7ba5799384276fb39c8490d933ed4f63469
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
-  本主题介绍如何使用 **或** 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表位于 [msdb 数据库](../../relational-databases/databases/msdb-database.md)中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 **suspect_pages** 表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表位于 [msdb 数据库](../../relational-databases/databases/msdb-database.md)中。  
   
  如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在试图读取某个数据页时遇到下列错误之一，该页面将被视为“可疑”：  
   

@@ -1,5 +1,5 @@
 ---
-title: "数据挖掘查询 |Microsoft 文档"
+title: "数据挖掘查询 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
   设计窗格包含数据挖掘预测查询生成器，可用于生成数据挖掘预测查询。 您可以基于输入表设计预测查询，也可以设计单独预测查询。 切换到结果视图可运行查询并查看结果。 查询视图将显示由预测查询生成器创建的数据挖掘扩展插件 (DMX) 查询。  
@@ -34,9 +31,9 @@ ms.lasthandoff: 08/03/2017
  “切换视图”按钮  
  单击图标可以在设计窗格和查询窗格之间切换。 默认情况下，设计窗格处于打开状态。  
   
- 若要切换到设计窗格，请单击![设计图标](../../integration-services/control-flow/media/ssis-designicon.gif "设计图标")图标。  
+ 若要切换到设计窗格，请单击![设计图标](../../integration-services/control-flow/media/ssis-designicon.gif "Design icon")图标。  
   
- 若要切换到查询窗格中，单击![SQL 图标](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 图标")图标。  
+ 若要切换到查询窗格，请单击 ![SQL 图标](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL icon")图标。  
   
  **挖掘模型**  
  显示所选的挖掘模型，您希望利用该模型来进行预测。  
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/03/2017
  **显示**  
  选择此项将返回列或只使用 WHERE 子句中的列。  
   
- **组**  
+ **分组**  
  与“和/或”列一起使用，将表达式组合到一起。 例如，(expr1 OR expr2) AND expr3。  
   
  **和/或**  
@@ -72,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

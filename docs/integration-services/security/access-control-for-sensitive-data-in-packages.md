@@ -1,5 +1,5 @@
 ---
-title: "在包中的敏感数据的访问控制 |Microsoft 文档"
+title: "对包中敏感数据的访问控制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd057df624f83e6a43bd7ed13d8f7c98e462c698
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
   为了保护 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据，可以设置保护级别，以帮助仅保护包中的敏感数据或包中的所有数据。 另外，可以采用密码或用户密钥对数据加密，或依靠数据库对数据进行加密。 另外，您对包所采用的保护级别不一定是静态的，而是在包的整个生命周期内可能变化。 通常，您可以在包开发阶段设置一个保护级别，在包部署阶段设置另一个保护级别。  
@@ -118,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示符下设置或更改包的保护级别  
   
-1.  查看的可用值**ProtectionLevel**的部分中，属性[设置包保护级别](#set_protection)，并确定你的程序包的相应值。  
+1.  在[设置包的保护级别](#set_protection)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在主题 **dtutil Utility** 中查看 [Encrypt](../../integration-services/dtutil-utility.md)选项的映射，然后确定要用作所选 **ProtectionLevel** 属性的值的相应整数。  
   
@@ -140,10 +138,10 @@ ms.lasthandoff: 08/03/2017
   
          如果您在批文件中使用类似的命令，则请输入文件占位符“%f”作为批文件中的“%%f”。  
 
-## <a name="protection_dialog"></a>包项目保护级别对话框
+## <a name="protection_dialog"></a>“包项目保护级别”对话框
   可以使用 **“包保护级别”** 对话框更新包的保护级别。 保护级别决定保护包时所使用的方法、密码或用户密钥以及作用域。 可以保护所有数据，也可以只保护敏感数据。  
   
- 若要了解要求和有关包安全的选项，你可能发现很有用若要查看[安全概述 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)。  
+ 若要了解包安全性的要求和选项，参阅[安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md) 可能有所帮助。  
   
 ### <a name="options"></a>选项  
  **Package protection level**  
@@ -155,7 +153,7 @@ ms.lasthandoff: 08/03/2017
  **重新键入密码**  
  再次键入该密码。  
 
-## <a name="password_dialog"></a>包密码对话框
+## <a name="password_dialog"></a>“包密码”对话框
   可以使用 **“包密码”** 对话框为使用密码加密的包提供包密码。 如果包使用 **“使用密码加密敏感数据”**或 **“使用密码加密所有数据”** 保护级别，则必须提供密码。  
   
 ### <a name="options"></a>选项  
@@ -164,7 +162,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
- [安全概述 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil 实用工具](../../integration-services/dtutil-utility.md)  
   
-

@@ -2,9 +2,12 @@
 title: "创建 SQL Server 代理作业以存档数据库邮件和事件日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cace8601462fd2469d7cdbfb4cce168111d42d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
-  数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 msdb 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
   
 -   **开始之前：**[先决条件](#Prerequisites)、[建议](#Recommendations)、[权限](#Permissions)  
   

@@ -1,10 +1,13 @@
 ---
 title: "第 7 课：将数据库还原到某个时点 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 479f890cd6623b457b53cc0024691f9169937538
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b321e64b93a696f9a21ceef3279a6b89bea90974
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>第 7 课：将数据库还原到时间点
-在本课程中，需将 AdventureWorks2014 数据库还原到两个事务日志备份之间的时间点。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程中，需将 AdventureWorks2014 数据库还原到两个事务日志备份之间的时间点。  
   
 借助传统备份来完成时间点还原，需要使用完整数据库备份（可能是差异备份）以及所有达到以及刚刚超过想要还原到的时间点的事务日志文件。 借助文件快照备份，则只需要两个相邻日志备份文件，文件提供想要还原的时间前后的目标帖子。 由于每个日志备份会创建每个数据库文件（每个数据文件和日志文件）的文件快照，因此只需要两个日志文件快照备份集。  
   

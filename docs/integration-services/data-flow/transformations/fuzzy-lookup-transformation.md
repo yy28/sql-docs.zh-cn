@@ -1,5 +1,5 @@
 ---
-title: "模糊查找转换 |Microsoft 文档"
+title: "模糊查找转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,17 +35,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
@@ -221,10 +219,9 @@ ms.lasthandoff: 08/19/2017
  **标记分隔符**  
  指定转换用来对列值进行词汇切分的分隔符。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [查找转换](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

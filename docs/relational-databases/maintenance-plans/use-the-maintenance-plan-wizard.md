@@ -1,9 +1,13 @@
 ---
 title: "使用维护计划向导 | Microsoft Docs"
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +41,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 64d2ad2fb4f75d69244ffad6e76c3cef6274309d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
-  本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
     
  
 ##  <a name="Restrictions"></a> 限制和局限  

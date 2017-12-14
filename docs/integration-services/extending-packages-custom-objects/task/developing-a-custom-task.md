@@ -1,5 +1,5 @@
 ---
-title: "开发自定义任务 |Microsoft 文档"
+title: "开发自定义任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,42 +26,41 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6f9c16453365ce5b7a278f352c8cec8d86c2780
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 265f05d748398eb4a219899681c0bf71eb481b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-task"></a>开发自定义任务
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]使用任务执行工作单元，从而支持数据的提取、转换和加载。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含多种任务，这些任务可执行从执行 SQL 语句到从 FTP 站点下载文件的大部分常用操作。 如果包含的任务和支持的操作不能完全满足您的要求，您可以创建自定义任务。  
   
  若要创建自定义任务，必须创建从 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类继承的类，再将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性应用到新类，然后重写基类的重要方法和属性，包括 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  本节介绍如何创建、配置和编写自定义任务及其可选自定义用户界面的代码。  
   
  [创建自定义任务](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  
  介绍第一个步骤，即创建自定义任务。  
   
- [编码的自定义任务](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
+ [编写自定义任务代码](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
  介绍如何编写自定义任务的主要方法的代码。  
   
- [连接到自定义任务中的数据源](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [在自定义任务中连接数据源](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
  介绍如何将自定义任务连接到数据源。  
   
- [引发和定义自定义任务中的事件](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
+ [在自定义任务中引发和定义事件](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
  介绍如何从自定义任务引发事件和定义自定义事件。  
   
- [添加自定义任务中进行调试的支持](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
+ [在自定义任务中添加对调试的支持](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
  介绍如何在自定义任务中创建断点目标。  
   
- [开发的自定义任务的用户界面](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [为自定义任务开发用户界面](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
  介绍如何创建显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中用于配置自定义任务属性的用户界面。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -95,9 +92,8 @@ ms.lasthandoff: 08/03/2017
  [开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  讨论如何对自定义数据流源、转换和目标进行编程。  
   
-## <a name="see-also"></a>另請參閱  
- [Extending the Package with the Script Task](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用脚本任务扩展包](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [比较脚本解决方案和自定义对象](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

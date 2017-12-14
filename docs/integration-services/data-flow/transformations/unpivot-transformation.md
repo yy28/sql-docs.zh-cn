@@ -1,5 +1,5 @@
 ---
-title: "逆透视转换 |Microsoft 文档"
+title: "逆透视转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,28 +20,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 559bfa5d851d3a40d1ed691ea4023acb3d6eb731
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
   逆透视转换将来自单个记录中多个列的值扩展为单个列中具有同样值的多个记录，使得非规范的数据集成为较规范的版本。 例如，每个客户在列出客户名的数据集中各占一行，在该行的各列中显示购买的产品和数量。 逆透视转换将数据集规范之后，客户购买的每种产品在该数据集中各占一行。  
   
  下面的关系图显示对 Product 列逆透视数据之前的数据集。  
   
- ![数据集后逆透视](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "后逆透视数据集")  
+ ![逆透视后的数据集](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Dataset after it is unpivoted")  
   
  下面的关系图显示对 Product 列逆透视数据之后的数据集。  
   
- ![数据集之前逆透视](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "之前逆透视数据集")  
+ ![逆透视前的数据集](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Dataset before it is unpivoted")  
   
  在某些情况下，逆透视结果可能包含具有意外值的行。 例如，如果关系图中显示的要逆透视的示例数据在 Fred 的所有 Qty 列中都具有空值，则输出将只包括 Fred 的一行，而非五行。 Qty 列将为空或包含零，具体取决于列数据类型。  
   
@@ -104,4 +102,3 @@ ms.lasthandoff: 08/19/2017
  [透视转换](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "SQL Server - Access Methods 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1b594d608fc266567c0a5c86a24f8130c3b6c4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 771047d7d21f79827c9ca073d22f2094f8603f0f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
-  **中的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供用于监视如何访问数据库中的逻辑数据的计数器。 用 **Buffer Manager** 计数器监视对磁盘上的数据库页的物理访问。 监视用于访问数据库中存储的数据的方法有助于确定是否可以通过添加或修改索引、添加或移动分区、添加文件或文件组、对索引进行碎片整理或者重写查询来提高查询性能。 **Access Methods** 计数器也可用于监视数据库中数据、索引和可用空间的数量，从而指示每个服务器实例的数据卷和碎片。 索引的碎片过多会降低性能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 Access Methods 对象提供用于监视如何访问数据库中的逻辑数据的计数器。 用 **Buffer Manager** 计数器监视对磁盘上的数据库页的物理访问。 监视用于访问数据库中存储的数据的方法有助于确定是否可以通过添加或修改索引、添加或移动分区、添加文件或文件组、对索引进行碎片整理或者重写查询来提高查询性能。 **Access Methods** 计数器也可用于监视数据库中数据、索引和可用空间的数量，从而指示每个服务器实例的数据卷和碎片。 索引的碎片过多会降低性能。  
   
  有关数据卷、碎片和用法的详细信息，请使用下列动态管理视图：  
   

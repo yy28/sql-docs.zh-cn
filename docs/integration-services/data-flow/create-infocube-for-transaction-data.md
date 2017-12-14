@@ -1,5 +1,5 @@
 ---
-title: "创建事务数据的 InfoCube |Microsoft 文档"
+title: "创建事务数据的 InfoCube | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4b08a3aceff35ab0d2473e5b0629c866220066fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-infocube-for-transaction-data"></a>创建事务数据的 InfoCube
   使用 **“创建事务数据的 InfoCube”** 对话框为 SAP Netweaver BW 系统中的事务数据创建一个新的 InfoCube。  
@@ -92,4 +90,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

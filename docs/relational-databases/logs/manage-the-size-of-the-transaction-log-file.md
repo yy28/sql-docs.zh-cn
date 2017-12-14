@@ -2,9 +2,12 @@
 title: "管理事务日志文件大小 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3b0a01269443e7d2c66f200c165409bb72404849
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a77aa280acd7a8b6525ac5c17d209b384a7fbed8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
-本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长。  
 
   ##  <a name="MonitorSpaceUse"></a> 监视日志空间使用情况  
 使用 [DBCC SQLPERF (LOGSPACE)](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql) 监视日志空间使用情况。 此命令返回有关当前使用的日志空间量的信息，并指示何时需要截断事务日志。 有关详细信息，请参阅 [DBCC SQLPERF Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 若要了解有关日志文件的当前大小、最大大小以及文件的自动增长选项的信息，还可以在 sys.database_files 中针对此日志文件使用 size、max_size 和 growth 等列。 有关详细信息，请参阅 [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。  

@@ -2,9 +2,12 @@
 title: "管理 Tab 填写功能 (SQL Server PowerShell) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e530ca4c5ebfc751fc760e22055b07af065545e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97a58c82d7108c040d391537804ea34920312df4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理 Tab 填写功能 (SQL Server PowerShell)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量 (**$SqlServerMaximumTabCompletion**、 **$SqlServerMaximumChildItems**和 **$SqlServerIncludeSystemObjects**) 来控制 Windows PowerShell Tab 补全。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量（$SqlServerMaximumTabCompletion、$SqlServerMaximumChildItems 和 $SqlServerIncludeSystemObjects）来控制 Windows PowerShell Tab 补全。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  
   
 ## <a name="before-you-begin"></a>开始之前  
  使用 Windows PowerShell 的 Tab 填写功能，在键入路径或 cmdlet 名称的一部分之后，可以按 Tab 键获得其名称与已键入内容相匹配的项列表。 之后，可以从该列表中选择所需的项，而不必键入该名称的其余部分。  

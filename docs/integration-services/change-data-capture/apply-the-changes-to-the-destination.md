@@ -1,5 +1,5 @@
 ---
-title: "将更改应用于目标 |Microsoft 文档"
+title: "将变更应用到目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],applying changes
+helpviewer_keywords: incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9edb9959d4d72e6f18d8949cfe5b311cf9a0a131
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="apply-the-changes-to-the-destination"></a>将变更应用到目标
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第三个任务（即最后一个任务）是将变更应用到目标。 您将需要一个组件应用插入操作、一个组件应用更新操作以及一个组件应用删除操作。  
@@ -113,4 +110,3 @@ ms.lasthandoff: 08/03/2017
  在用于检索变更数据的 Transact-SQL 语句中，调用 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函数时可以将 all with merge 指定为 row_filter_option 参数的值。 当此变更数据捕获函数不需要执行用于区分插入操作和更新操作的额外处理时，它的操作效率会大大提高。 将 all with merge 指定为参数值时，对于删除操作来说，变更数据的 **__$operation** 值为 1，而对于插入操作或更新操作引起的变更来说，该值为 5。 有关用于检索变更数据的 Transact-SQL 函数的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。使用 all with merge 参数值检索变更之后，可以应用删除操作，并将剩余行输出到临时表或中间临时表中。 然后，在下游执行 SQL 任务中，可以使用一个 MERGE 语句将所有插入操作或更新操作从中间临时表应用到目标中。  
   
   
-

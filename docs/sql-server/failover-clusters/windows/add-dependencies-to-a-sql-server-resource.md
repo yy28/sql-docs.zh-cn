@@ -2,9 +2,12 @@
 title: "向 SQL Server 资源添加依赖项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc39f8d8bc454006432c3be42d536e4fa027cdc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ab2f55e272b4d882ea867cfc210eae24c542da38
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>向 SQL Server 资源添加依赖项
-  本主题介绍了如何使用故障转移群集管理器管理单元向 AlwaysOn 故障转移群集实例 (FCI) 资源添加依赖项。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了如何使用故障转移群集管理器管理单元向 AlwaysOn 故障转移群集实例 (FCI) 资源添加依赖项。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
   
 -   **准备工作：**[限制和局限](#Restrictions)、[先决条件](#Prerequisites)  
   

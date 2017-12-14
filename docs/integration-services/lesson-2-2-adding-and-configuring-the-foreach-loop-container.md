@@ -1,5 +1,5 @@
 ---
-title: "步骤 2： 添加和配置 Foreach 循环容器 |Microsoft 文档"
+title: "步骤 2：添加和配置 Foreach 循环容器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 315933379f0ec61453fa0fd783686f9446a977c0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>课程 2-2-添加和配置 Foreach 循环容器
+# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>第 2-2 课 — 添加和配置 Foreach 循环容器
 在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
   
 所添加的 Foreach 循环容器必须能够连接到该文件夹中的每个平面文件。 由于该文件夹中的所有文件都具有相同的格式，因此，Foreach 循环容器可以使用同一平面文件连接管理器来连接其中的每个文件。 该容器所使用的平面文件连接管理器与您在第 1 课中创建的平面文件连接管理器相同。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/03/2017
 在对该包进行这些修改后，当该包运行时，Foreach 循环容器将循环访问示例数据文件夹中的文件集合。 每次找到一个与条件相匹配的文件时，Foreach 循环容器都会用文件名填充用户定义的变量，将用户定义的变量映射到 Sample Currency Data 平面文件连接管理器的 **ConnectionString** 属性，然后对该文件运行数据流。 因此，在 Foreach 循环的每次迭代中，数据流任务都将使用一个不同的平面文件。  
   
 > [!NOTE]  
-> 因为[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]离职控制从数据流的流，你将添加到控制流任何循环将不需要这些数据对数据流的修改。 因此，无需更改在第 1 课中创建的数据流。  
+> 由于 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 区分控制流和数据流，因此添加到控制流的任何循环都不需要对数据流进行修改。 因此，无需更改在第 1 课中创建的数据流。  
   
 ### <a name="to-add-a-foreach-loop-container"></a>添加 Foreach 循环容器  
   
@@ -75,7 +72,7 @@ ms.lasthandoff: 08/03/2017
   
     2.  单击 **“下载”** 选项卡。  
   
-    3.  单击链接获取[SQL2012。Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031)文件。  
+    3.  单击 [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) 文件的链接。  
   
 6.  在“文件”框中，键入 **Currency_\*.txt**。  
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  单击“变量映射”。  
   
-2.  上**变量映射**页上，在**变量**列中，单击空单元格，然后选择**\<新建变量...>**。  
+2.  在“变量映射”页的“变量”列中，单击空单元，然后选择“\<新建变量…>”。  
   
 3.  在“添加变量”对话框中，为“名称”键入 **varFileName**。  
   
@@ -99,7 +96,7 @@ ms.lasthandoff: 08/03/2017
 -   将“Extract Sample Currency Data”数据流任务拖到现已重命名为 **Foreach File in Folder** 的 Foreach 循环容器中。  
   
 ## <a name="next-lesson-task"></a>下一课程任务  
-[步骤 3： 修改平面文件连接管理器](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[步骤 3：修改平面文件连接管理器](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
@@ -107,4 +104,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

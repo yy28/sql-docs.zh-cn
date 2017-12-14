@@ -1,5 +1,5 @@
 ---
-title: "扩展的自定义对象的包 |Microsoft 文档"
+title: "用自定义对象扩展包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e10fbab75eca8556e36734c1c0ad3828b8b09404
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 40903d65bfbd65c78951f0954d3e5bd7380afa98
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extending-packages-with-custom-objects"></a>用自定义对象扩展包
   如果觉得 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 内提供的组件不能满足您的需求，可以通过编写自己的扩展插件代码来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 对于扩展包，您有两种不同的选择：可以在脚本任务和脚本组件提供的功能强大的包装中编写代码，或者通过从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型提供的基类进行派生，完全重新创建自定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 扩展插件。  
@@ -59,12 +56,12 @@ ms.lasthandoff: 08/03/2017
  [开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  讨论如何对自定义数据流源、转换和目标进行编程。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>参考  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)  
  列出预定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码及其符号名称和说明。  
   
 ## <a name="related-sections"></a>相关章节  
- [使用脚本扩展包](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [用脚本扩展包](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  讨论如何使用脚本任务扩展控制流，或使用脚本组件扩展数据流。  
   
  [以编程方式生成包](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
@@ -75,4 +72,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

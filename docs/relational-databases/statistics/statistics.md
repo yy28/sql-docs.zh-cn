@@ -1,10 +1,13 @@
 ---
 title: "统计信息 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,21 +30,63 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statistics"></a>统计信息
-  查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询优化器使用统计信息来创建可提供查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
   
 ##  <a name="DefinitionQOStatistics"></a> 组件和概念  
 ### <a name="statistics"></a>统计信息  
  查询优化的统计信息是一些对象，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，根据谓词，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
   
- 每个统计信息对象都在包含一个或多个表列的列表上创建，并且包括显示值在第一列中的分布的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 有关统计信息对象的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
+ 每个统计信息对象都在包含一个或对个表列的列表上创建，并且包括将值的分布显示在第一列的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 
+
+#### <a name="histogram"></a>直方图  
+直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的直方图仅为单个列生成 — 统计信息对象键列集的第一列。
   
+若要创建直方图，查询优化器将对列值进行排序，计算与每个非重复列值匹配的值数，然后将列值聚合到最多 200 个连续直方图梯级中。 每个直方图梯级都包含一个列值范围，后面跟着上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
+
+有关详细信息，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三个步骤从已排序的列值集创建直方图：
+
+- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 的始终为零）。 已用尽所有输入或已找到 200 个值时，结束第一步。 有关此步骤的详细信息，请参阅 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。 
+- **使用 Bucket 合并进行扫描**：第二步中，按排序顺序处理从统计信息键前导列算起的每个额外值；将每个相继值添加到最后一个范围或在末尾创建一个新范围（这可能是因输入值已排序所致）。 如果创建了一个新范围，则一对现有相邻范围折叠为单个范围。 选择这对范围以最小化信息丢失。 此方法使用最大差异算法使直方图中的梯级数减至最少，并同时最大化边界值之间的差异。 折叠后，梯级数在整个步骤中保持为 200。
+- **直方图合并**：第三步中，如果未丢失大量信息，可能折叠更多范围。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 因此，即使列包含超过 200 个唯一值，直方图具有的梯级数可能少于 200。 对于仅包含唯一值的列，合并的直方图具有三个梯级（最小梯级数）。
+
+> [!NOTE]
+> 如果是使用示例而非全扫描生成直方图，则估计 equal_rows、range_rows、distinct_range_rows 和 average_range_rows 的值，因此它们无需为整数。
+
+下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
+  
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+  
+对于以上每个直方图步骤：
+-   粗线表示上限值 (range_high_key) 和上限值的出现次数 (equal_rows)  
+  
+-   range_high_key 左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows)。 第一个直方图梯级的 average_range_rows 始终是 0。  
+  
+-   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，且不存储抽样值。   
+  
+#### <a name="density-vector"></a>密度向量  
+密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 
+
+> [!NOTE]
+> 频率是有关统计信息对象第一个键列中每个非重复值出现次数的信息，其计算公式为行计数 * 密度。 最大频率 1 出现在具有唯一值的列中。
+
+例如，如果统计信息对象包含键列 `CustomerId`、`ItemId` 和 `Price`，则根据以下每个列前缀计算密度。
+  
+|列前缀|计算密度所基于的对象|  
+|---|---|
+|(CustomerId)|具有与 CustomerId 匹配的值的行|  
+|(CustomerId, ItemId)|具有与 CustomerId 和 ItemId 匹配的值的行|  
+|(CustomerId, ItemId, Price)|具有与 CustomerId、ItemId 和 Price 匹配的值的行| 
+
 ### <a name="filtered-statistics"></a>筛选的统计信息  
  筛选统计信息可以提高以下从定义完善的数据子集选择数据的查询的查询性能。 筛选统计信息使用筛选器谓词来选择统计信息中包括的数据子集。 与全表统计信息相比，设计完美的筛选统计信息可以改进查询执行计划。 有关筛选器谓词的详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。 有关何时创建筛选的统计信息的详细信息，请参阅本主题中的 [何时创建统计信息](#CreateStatistics) 部分。  
   
@@ -53,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
  查询优化器通过使用 AUTO_CREATE_STATISTICS 选项创建统计信息时，统计信息名称以 `_WA` 开头。 可以使用下面的查询来确定查询优化器是否为查询谓词列创建了统计信息。  
   
-```tsql  
+```t-sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -147,7 +192,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
   
  为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，以下内容在列 `LastName`、 `MiddleName`和 `FirstName`上创建多列统计信息对象。  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -174,7 +219,7 @@ GO
   
  查询优化器可使用 `BikeWeights` 筛选的统计信息来改进下面这个查询的查询计划，此查询选择重量超过 `25` 的所有自行车。  
   
-```tsql  
+```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -268,7 +313,7 @@ GO
   
      例如，以下存储过程 `Sales.GetRecentSales` 将在 `@date` 为 NULL 时更改参数 `@date` 的值。  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -287,7 +332,7 @@ GO
   
      如果对存储过程 `Sales.GetRecentSales` 的首次调用为 `@date` 参数传递了 NULL，则查询优化器将使用针对 `@date = NULL` 的基数估计编译存储过程，即使查询谓词不是使用 `@date = NULL`调用的。 此基数估计可能与实际查询结果中的行数差别很大。 因此，查询优化器可能会选择非最佳查询计划。 若要避免此情况发生，您可以按如下所示将存储过程重新编写成两个过程：  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -317,7 +362,7 @@ GO
   
  对于某些应用程序，每次执行查询时都重新编译查询可能会占用过多时间。 `OPTIMIZE FOR` 查询提示可对此给予帮助，即使不使用 `RECOMPILE` 选项。 例如，可以将 `OPTIMIZE FOR` 选项添加到存储过程 Sales.GetRecentSales，以便指定一个特定的日期。 以下示例将 `OPTIMIZE FOR` 选项添加到 Sales.GetRecentSales 过程。  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -349,6 +394,6 @@ GO
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)   
- [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171)
-  
+ [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171) [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

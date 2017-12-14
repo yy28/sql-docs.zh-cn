@@ -2,9 +2,12 @@
 title: "配置数据库引擎访问的文件系统权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3c785cf6ee2c27cf0817659008aa1d293221fd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3c16fe40753700a0f8e6d89c403b7a96324d366
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>配置数据库引擎访问的文件系统权限
-  本主题说明如何授予 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]对存储数据库文件的位置的文件系统访问权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务必须具有 Windows 文件系统的权限才能访问存储数据库文件的文件夹。 在安装过程中配置对默认位置的权限。 如果您将数据库文件放在其他位置，可能需要按照这些步骤授予 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对该位置的完全控制权限。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何授予 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 对存储数据库文件的位置的文件系统访问权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务必须具有 Windows 文件系统的权限才能访问存储数据库文件的文件夹。 在安装过程中配置对默认位置的权限。 如果您将数据库文件放在其他位置，可能需要按照这些步骤授予 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对该位置的完全控制权限。  
   
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，将权限分配给每个服务的服务 SID。 此系统可帮助提供更好的服务隔离和安全保护。 每个服务 SID 从服务名称派生得到，对每个服务是唯一的。 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 主题介绍了每个服务 SID，并提供 **Windows 特权和权限**一节中所述的名称。 必须为每个服务 SID 分配对文件位置的访问权限。  
   

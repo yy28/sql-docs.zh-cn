@@ -2,9 +2,12 @@
 title: "确定是否已安装并启动数据库引擎 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7c44c520498ca4e542739bdee87712a18c0f3ce9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7056f7f04b56b2414ab1b03c8753b5dee7fe6ffc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>确定是否已安装并启动数据库引擎
-  成功安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 后可将文件安装到文件系统，在注册表中创建注册表项并安装数个工具。 本主题说明如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器来确定是否已在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中安装并启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]成功安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 后可将文件安装到文件系统，在注册表中创建注册表项并安装数个工具。 本主题说明如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器来确定是否已在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中安装并启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 配置管理器  
   

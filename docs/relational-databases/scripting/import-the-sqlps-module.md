@@ -2,9 +2,12 @@
 title: "导入 SQLPS 模块 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-the-sqlps-module"></a>导入 SQLPS 模块
-  从 PowerShell 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的建议方法是将 **sqlps** 模块导入到 Windows PowerShell 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  从 Windows PowerShell 3.0 开始，在命令中使用模块的任意 cmdlet 或函数时会自动导入该模块。 此功能对目录中的任何模块均有效，该目录包含在 PSModulePath 环境变量的值中。  有关其他信息，请参阅 [导入 PowerShell 模块](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]从 PowerShell 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的建议方法是将 sqlps 模块导入到 Windows PowerShell 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  从 Windows PowerShell 3.0 开始，在命令中使用模块的任意 cmdlet 或函数时会自动导入该模块。 此功能对目录中的任何模块均有效，该目录包含在 PSModulePath 环境变量的值中。  有关其他信息，请参阅 [导入 PowerShell 模块](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
   
 1.  **开始之前：**  [安全性](#Security)  
   

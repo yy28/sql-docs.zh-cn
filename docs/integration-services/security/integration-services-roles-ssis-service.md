@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 角色 （SSIS 服务） |Microsoft 文档"
+title: "Integration Services 角色（SSIS 服务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dtsserver.packageroles.f1
+f1_keywords: sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - security [Integration Services], roles
 - db_ssisoperator role
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0fa2a9cbc44c9f934ddde096cf22be56bf705a67
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3e618908333f48e0a86fa7974ce82f0a48293c5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了某些固定数据库级角色，以帮助安全访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的包。 可用的角色有所不同，具体取决于是将包保存在 SSIS 目录数据库 (SSISDB) 中还是 msdb 数据库中。  
@@ -138,7 +135,7 @@ ms.lasthandoff: 08/03/2017
   
 11. 单击 **“确定”**。
 
-## <a name="roles_dialog"></a>包角色对话框 UI 参考
+## <a name="roles_dialog"></a>“包角色”对话框 UI 参考
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 数据库中存储的包。  
   
  该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator**以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
@@ -154,4 +151,3 @@ ms.lasthandoff: 08/03/2017
   
  **写入者角色**  
  从列表中选择一个角色  
-

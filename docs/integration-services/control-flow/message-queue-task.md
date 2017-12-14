@@ -1,5 +1,5 @@
 ---
-title: "消息队列任务 |Microsoft 文档"
+title: "消息队列任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cc23a330f63d67cef6a5e12df9bf3b6ca82dcff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="message-queue-task"></a>消息队列任务
   通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -124,9 +122,9 @@ ms.lasthandoff: 08/11/2017
  指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 **False**。  
   
  **MSMQConnection**  
- 选择一个现有的 MSMQ 连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
   
- **相关主题**：[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **相关主题**： [MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、 [MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **消息**  
  指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”**，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”**，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”**。  
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/11/2017
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
   
  **变量**  
- 键入变量的名称，或单击\<**新变量...**>，然后配置一个新的变量。  
+ 键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。  
   
  **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -279,7 +277,7 @@ ms.lasthandoff: 08/11/2017
  除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
   
  **变量**  
- 键入要保存对收到的消息，或单击的变量名称\<**新变量...**>，然后配置一个新的变量。  
+ 键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。  
   
  **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -303,9 +301,8 @@ ms.lasthandoff: 08/11/2017
  创建新变量。  
   
  **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "外围应用配置器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97c76061aac16fa1f0f71e2f2f68fa06d56cdc0d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e16dac870c31a7d409189d29b84f88686a71db21
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="surface-area-configuration"></a>外围应用配置器
-  在新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认配置中，许多功能并未启用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只是有选择地安装和启动关键服务和功能，以最大限度地减少可能受到恶意用户攻击的功能数。 系统管理员可以在安装时更改这些设置，也可以有选择地启用或禁用运行中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的功能。 此外，如果从其他计算机进行连接，则在配置协议之前某些组件可能不可用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认配置中，许多功能并未启用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只是有选择地安装和启动关键服务和功能，以最大限度地减少可能受到恶意用户攻击的功能数。 系统管理员可以在安装时更改这些设置，也可以有选择地启用或禁用运行中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的功能。 此外，如果从其他计算机进行连接，则在配置协议之前某些组件可能不可用。  
   
 > [!NOTE]  
 >  与新安装不同，升级期间不会关闭任何现有服务或功能；但在升级完成后可应用其他外围应用配置器选项。  

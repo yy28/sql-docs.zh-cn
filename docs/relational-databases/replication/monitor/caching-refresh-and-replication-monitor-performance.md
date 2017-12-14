@@ -2,9 +2,12 @@
 title: "缓存、刷新和复制监视器性能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a14000889013e94cdf73a1ee88009f898021ecd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a564b6b253365200f1cfeeee61750f945c84bc88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>缓存、刷新和复制监视器性能
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器旨在有效地监视生产系统中的大量计算机。 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器旨在有效地监视生产系统中的大量计算机。 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  
   
  缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器” 进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
   

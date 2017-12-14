@@ -2,9 +2,12 @@
 title: "第 3 课：验证订阅和测量滞后时间 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f7c1bf454cc4b195e18b9260dd14ebbb7c954da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4acce1ec9e266be8e9471c12f75d2ef59de74046
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>第 3 课：验证订阅和测量滞后时间
-在本课中，将使用跟踪令牌验证将更改复制到订阅服务器并确定滞后时间，即，发布服务器上所做的更改出现在订阅服务器中所需的时间。 本课程要求已完成上一课， [第 2 课：创建事务发布的订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，使用跟踪令牌验证将更改复制到订阅服务器并确定滞后时间，即，发布服务器上所做的更改出现在订阅服务器中所需的时间。 本课程要求已完成上一课， [第 2 课：创建事务发布的订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
   
 ### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>插入跟踪令牌并查看有关令牌的信息  
   

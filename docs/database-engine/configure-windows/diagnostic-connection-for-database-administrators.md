@@ -1,10 +1,13 @@
 ---
 title: "用于数据库管理员的诊断连接 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/16/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 68bdec09d782634723b2136757a62ea60cc3d66d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27e43fe72eefa18e7e42dea1a18b63a7005074fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为管理员提供了一种特殊的诊断连接，以供在无法与服务器建立标准连接时使用。 即使在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不响应标准连接请求时，管理员也可以使用此诊断连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便执行诊断查询并解决问题。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为管理员提供了一种特殊的诊断连接，以供在无法与服务器建立标准连接时使用。 即使在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不响应标准连接请求时，管理员也可以使用此诊断连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便执行诊断查询并解决问题。  
   
  此专用管理员连接 (DAC) 支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的加密功能和其他安全功能。 DAC 只允许将用户上下文切换到其他管理用户。  
   

@@ -2,9 +2,12 @@
 title: "日志文件查看器 F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8738a1e4cdab8b4d07ec3e33dcba98d395126dde
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 36d31e8fe3a5403342c244df36810de2e76f8cb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="log-file-viewer-f1-help"></a>日志文件查看器 F1 帮助
-  日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。  
   
  日志是否可用取决于日志文件查看器的打开方式。 有关详细信息，请参阅 [打开日志文件查看器](../../relational-databases/logs/open-log-file-viewer.md)。  
   

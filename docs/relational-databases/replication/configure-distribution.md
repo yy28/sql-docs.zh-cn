@@ -2,9 +2,12 @@
 title: "配置分发 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d918c562b15d6b6ed75f3f87d5b43fcdac7a81aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2aa81e571c53a0271b1c795198f206735abb3f32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-distribution"></a>配置分发
-  分发服务器是指包含分发数据库的服务器，其中存储所有类型复制的元数据和历史记录数据以及事务复制的事务。 若要建立复制，必须配置分发服务器。 只能为每台发布服务器分配一个分发服务器实例，但是多台发布服务器可共享一台分发服务器。 分发服务器在其所在服务器上使用以下附加资源：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]分发服务器是指包含分发数据库的服务器，其中存储所有类型复制的元数据和历史记录数据以及事务复制的事务。 若要建立复制，必须配置分发服务器。 只能为每台发布服务器分配一个分发服务器实例，但是多台发布服务器可共享一台分发服务器。 分发服务器在其所在服务器上使用以下附加资源：  
   
 -   额外的磁盘空间，如果发布的快照文件存储在分发服务器上（通常如此）。  
   

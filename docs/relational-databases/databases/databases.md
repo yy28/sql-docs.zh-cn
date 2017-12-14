@@ -2,9 +2,12 @@
 title: "数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8610ef88d11d41536ad2cca8f3eb9ab9418692b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databases"></a>“数据库”
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库由表的集合组成，这些表用于存储一组特定的结构化数据。 表中包含行（也称为记录或元组）和列（也称为属性）的集合。 表中的每一列都用于存储某种类型的信息，例如，日期、名称、金额和数字。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库由表的集合组成，这些表用于存储一组特定的结构化数据。 表中包含行（也称为记录或元组）和列（也称为属性）的集合。 表中的每一列都用于存储某种类型的信息，例如，日期、名称、金额和数字。  
   
 ## <a name="basic-information-about-databases"></a>有关数据库的基本信息  
  一台计算机可以安装一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以包含一个或多个数据库。  在数据库中，有一个或多个对象所有权组（称为架构）。 在每个架构中，都存在数据库对象，如表、视图和存储过程。 某些对象（如证书和非对称密钥）包含在数据库中，但不包含在架构中。 有关创建表的详细信息，请参阅 [Tables](../../relational-databases/tables/tables.md)。  

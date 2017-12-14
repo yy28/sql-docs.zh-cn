@@ -2,9 +2,12 @@
 title: "User-Configurable 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff6cce49cb06cf6d102be1cf7c5dc93abff1fc2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76c62dfdfecf2aa657d64f6bc6209749ea8bff35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 事件类
-  User-Configurable 事件类别可用于监视用户定义事件。 创建用户定义事件类来监视不能由其他事件类别中系统提供的事件类监视的事件。 例如，可以创建用户定义事件来监视测试应用程序的进度。 应用程序运行时，用户定义事件可以在预定义点生成事件，使您能够确定应用程序的当前执行点。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]User-Configurable 事件类别可用于监视用户定义事件。 创建用户定义事件类来监视不能由其他事件类别中系统提供的事件类监视的事件。 例如，可以创建用户定义事件来监视测试应用程序的进度。 应用程序运行时，用户定义事件可以在预定义点生成事件，使您能够确定应用程序的当前执行点。  
   
 ## <a name="user-configurable-event-class-data-columns"></a>User-Configurable 事件类的数据列  
   

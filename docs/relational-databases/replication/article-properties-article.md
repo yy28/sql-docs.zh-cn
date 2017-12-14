@@ -2,9 +2,12 @@
 title: "项目属性 - &lt;项目&gt; | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
-  可通过新建发布向导和 **“发布属性”** 对话框访问 **“项目属性”** 对话框。 使用该对话框可以查看和设置所有类型项目的属性。 对于某些属性来说，只有在创建了发布时才能设置；而对于其他属性，只有在发布没有活动订阅时才能设置。 无法设置的属性将显示为只读。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可通过新建发布向导和“发布属性”对话框访问“项目属性”对话框。 使用该对话框可以查看和设置所有类型项目的属性。 对于某些属性来说，只有在创建了发布时才能设置；而对于其他属性，只有在发布没有活动订阅时才能设置。 无法设置的属性将显示为只读。  
   
 > [!NOTE]  
 >  创建发布之后，某些属性更改要求新的快照。 如果发布具有多个订阅，某些更改还会要求重新初始化所有订阅。 有关详细信息，请参阅[更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  

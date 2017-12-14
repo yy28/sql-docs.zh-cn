@@ -1,5 +1,5 @@
 ---
-title: "使用 Oracle CDC 服务 |Microsoft 文档"
+title: "使用 Oracle CDC 服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69eb7087530b82c7ba75a9d8ff87fd8fff815f16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
   本节介绍 Oracle CDC 服务的一些重要概念。 本节中包含的概念是：  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |ref_count|此项对安装了同一个 Oracle CDC 服务的计算机的数目进行计数。 每增加一个同名的 Oracle CDC 服务，该计数就会递增，并且在删除此类服务时该计数将递减。 当该计数器达到零时，将删除此行。|  
 |active_service_node|当前正处理 CDC 服务的 Windows 节点的名称。 在该服务正确停止后，该列将设置为 Null，指示不再有处于活动状态的服务。|  
 |active_service_heartbeat|此项跟踪当前 CDC 服务以便确定该服务是否仍处于活动状态。<br /><br /> 此项将定期使用处于活动状态的 CDC 服务的当前数据库 UTC 时间戳进行更新。 默认时间间隔为 30 秒，但可以配置该时间间隔。<br /><br /> 在某一挂起的 CDC 服务检测到在经过了配置的时间间隔后检测信号未更新，则该挂起的服务将尝试接管处于活动状态的 CDC 服务角色。|  
-|选项|此项指定辅助选项，例如，跟踪或优化。 它是以 **name[=value][; ]**的形式编写的。 该选项字符串使用与 ODBC 连接字符串相同的语义。 如果该选项为布尔值（值为 yes/no），则该值只能包含名称。<br /><br /> 跟踪具有以下可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<类名称 > [，类名称 >]**<br /><br /> <br /><br /> 默认值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是服务更新 active_service_heartbeat 列的时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服务检查配置更改的轮询时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **sql_command_timeout** 是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令超时值。 默认值是 **1**秒。 最大值为 **3600**。|  
+|选项|此项指定辅助选项，例如，跟踪或优化。 它是以 **name[=value][; ]**的形式编写的。 该选项字符串使用与 ODBC 连接字符串相同的语义。 如果该选项为布尔值（值为 yes/no），则该值只能包含名称。<br /><br /> 跟踪具有以下可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> \<class name>[,class name>]<br /><br /> <br /><br /> 默认值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是服务更新 active_service_heartbeat 列的时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服务检查配置更改的轮询时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **sql_command_timeout** 是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令超时值。 默认值是 **1**秒。 最大值为 **3600**。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 数据库存储过程  
@@ -165,7 +163,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 过程将一个条目添加到 **MSXDBCDC.xdbcdc_services** 表，并且以 1 为增量加到 **MSXDBCDC.xdbcdc_services** 表中该服务名称的 ref_count 列上。 当 **ref_count** 为 0 时，将删除该行。  
   
- 若要使用**dbo.xcbcdc_add_service\<服务名称、 用户名 >**过程中，用户必须是属于**db_owner**正在名为的 CDC 实例数据库的数据库角色或成员的**sysadmin**或**serveradmin**固定的服务器角色。  
+ 要使用 dbo.xcbcdc_add_service\<service name, username> 过程，用户必须是具有要命名的 CDC 实例数据库的 db_owner 数据库角色的成员，或者是具有 sysadmin 或 serveradmin 固定服务器角色的成员。  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 过程将一个开始请求发送到处理所选 CDC 实例的 CDC 服务，以便开始更改处理。  
@@ -273,4 +271,3 @@ ms.lasthandoff: 08/03/2017
  [如何为 CDC 准备 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "包执行的故障排除工具 |Microsoft 文档"
+title: "包执行的疑难解答工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用于在包完成和部署以后的执行过程中进行故障排除的功能和工具。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **使用事务帮助确保数据的完整性**。 有关详细信息，请参阅 [Integration Services 事务](../../integration-services/integration-services-transactions.md)。  
   
--   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件处理程序捕获和处理包错误  
  通过使用事件处理程序，您可以响应许多由包和包中的对象引发的事件。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，你还可以添加错误消息和列名称以便更容易分析错误输出。 有关如何通过使用脚本添加这两个附加列的示例，请参阅 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
--   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
+-   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
      **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。  
   
@@ -118,4 +116,3 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="related-content"></a>相关内容  
  dougbert.com 上的博客文章： [向错误输出中添加错误列名](http://go.microsoft.com/fwlink/?LinkId=261546)。  
-

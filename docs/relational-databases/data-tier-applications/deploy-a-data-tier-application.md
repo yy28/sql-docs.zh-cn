@@ -2,9 +2,12 @@
 title: "部署数据层应用程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21bcace1cd6c05ac3516095aff955e24ff016967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d65afb41e160671afa9466f648a08e49937e3b6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
-  使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到数据库引擎或 Azure SQL 数据库的现有实例。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到数据库引擎或 Azure SQL 数据库的现有实例。 
   
  该部署过程通过在 **msdb** 系统数据库（在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中为 **master**）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
  

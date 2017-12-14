@@ -2,9 +2,12 @@
 title: "管理数据库引擎服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,14 +31,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d37d9c4769544d597c3fa63bc488a99c5a1b5fd8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77501642cb7f3cf7067d8ea51bcb5a7beed9eaa0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-the-database-engine-services"></a>管理数据库引擎服务
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行在操作系统上。 服务是一种在系统后台运行的应用程序。 服务通常提供一些核心操作系统功能，例如 Web 服务、事件日志或文件服务。 运行的服务可以不在计算机桌面上显示用户界面。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和一些其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都作为服务运行。 这些服务通常会在操作系统启动时自动启动。 但是，也有些服务默认情况下不会自动启动，这取决于安装过程中如何进行指定。 本部分说明了如何管理各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之前，您需要了解如何启动、停止、暂停、恢复和重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 登录成功之后，就可以执行各种任务，如管理服务器或查询数据库。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行在操作系统上。 服务是一种在系统后台运行的应用程序。 服务通常提供一些核心操作系统功能，例如 Web 服务、事件日志或文件服务。 运行的服务可以不在计算机桌面上显示用户界面。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理和一些其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都作为服务运行。 这些服务通常会在操作系统启动时自动启动。 但是，也有些服务默认情况下不会自动启动，这取决于安装过程中如何进行指定。 本部分说明了如何管理各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之前，您需要了解如何启动、停止、暂停、恢复和重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 登录成功之后，就可以执行各种任务，如管理服务器或查询数据库。  
   
 ## <a name="using-the-sql-server-service"></a>使用 SQL Server 服务  
  启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例时即启动了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务之后，用户便可以与服务器建立新的连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可以在本地或远程作为服务来启动和停止。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务若是默认实例，则被称为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)；若是命名实例，则被称为 MSSQL$\<实例名>。  

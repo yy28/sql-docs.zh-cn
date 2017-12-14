@@ -2,9 +2,12 @@
 title: "Oracle 发布服务器的管理注意事项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80e61dbe67613d0ca7fecb6d39746812203a5d11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4793c95c2e266e945ea1d32c65aeed83998fd656
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 发布服务器的管理注意事项
-  在配置 Oracle 发布服务器并实施复制更改跟踪机制后，Oracle 数据库系统管理员仍然可以使用标准 Oracle 数据库实用工具并执行典型的系统管理任务。 但是，应该了解执行某些管理任务对已发布数据的影响。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在配置 Oracle 发布服务器并实施复制更改跟踪机制后，Oracle 数据库系统管理员仍然可以使用标准 Oracle 数据库实用工具并执行典型的系统管理任务。 但是，应该了解执行某些管理任务对已发布数据的影响。  
   
  除了删除或修改为复制发布的列或者任意复制对象，这些注意事项不适用于快照发布。  
   

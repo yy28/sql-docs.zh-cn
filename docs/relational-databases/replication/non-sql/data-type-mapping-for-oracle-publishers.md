@@ -2,9 +2,12 @@
 title: "Oracle 发布服务器的数据类型映射 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d692a102043f78c7c62674843bed4228445ba7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
-  Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 数据类型并非与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
   
  下表显示了将数据从 Oracle 发布服务器移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时，在 Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间数据类型的默认映射情况。 “备用”列指示备用映射是否可用。  
   

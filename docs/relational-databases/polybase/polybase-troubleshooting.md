@@ -8,31 +8,27 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
-helpviewer_keywords:
-- PolyBase, troubleshooting
+helpviewer_keywords: PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
-
-  若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
   
 ## <a name="catalog-views"></a>目录视图  
  使用此处列出的目录视图来管理 PolyBase 操作。  
@@ -248,4 +244,3 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="see-also"></a>另请参阅
 [PolyBase Kerberos 连接疑难解答](polybase-troubleshoot-connectivity.md)
-

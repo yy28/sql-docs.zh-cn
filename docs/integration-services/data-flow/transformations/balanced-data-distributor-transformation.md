@@ -1,5 +1,5 @@
 ---
-title: "平衡数据分发器转换 |Microsoft 文档"
+title: "平衡数据分发器转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.balanceddatadistributor.f1
+f1_keywords: sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a148470ac38ee6168d5c6a245899d629a0e3250
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c625840d537599994213b51cfd0d53601f904ed6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡的数据分发服务器转换
   平衡的数据分发服务器 (BDD) 转换可利用新型 CPU 的并发处理能力。 它可将传入行的缓冲区均匀分布到各个独立线程的输出上。 通过对每个输出路径使用独立线程，BDD 组件提升了运行在多核和多处理器服务器上的 SSIS 包的性能。  
   
- 下图展示了一个使用 BDD 转换的简单示例。 在该示例中，BDD 转换从平面文件源的输入数据中每次挑选一个管道缓冲区并以循环方式将其向下发送至三个输出路径之一。 在 SQL Server Data Tools，你可以检查的值<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>（默认管道缓冲区的大小） 和<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>（默认最大管道缓冲区中的行数） 中**属性**窗口中显示的数据流任务的属性。  
+ 下图展示了一个使用 BDD 转换的简单示例。 在该示例中，BDD 转换从平面文件源的输入数据中每次挑选一个管道缓冲区并以循环方式将其向下发送至三个输出路径之一。 在 SQL Server Data Tools 中显示数据流任务属性的“属性”窗口中，可查看 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>（管道缓冲区默认大小）和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>（管道缓冲区默认最大行数）的值。  
   
- ![平衡数据分发器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "平衡数据分发服务器")  
+ ![平衡数据分发器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "Balanced Data Distributor")  
   
  平衡的数据分发服务器转换可在满足以下条件的方案中提升包的性能：  
   
@@ -48,4 +45,3 @@ ms.lasthandoff: 08/03/2017
 >  有关使用该转换的演示，请观看 TechNet Library 上 [平衡的数据分发服务器视频](http://go.microsoft.com/fwlink/?LinkID=226278) 。  
   
   
-

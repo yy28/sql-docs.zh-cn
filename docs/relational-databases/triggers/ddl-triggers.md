@@ -2,9 +2,12 @@
 title: "DDL 触发器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ebc22f2c34fbfa6e45874ee90cfb1fd8344e5c31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6e2dea1e93b07c728120c9043b41ab9e03596420
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-triggers"></a>DDL 触发器
-  DDL 触发器将激发，以响应各种数据定义语言 (DDL) 事件。 这些事件主要与以关键字 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对应。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]DDL 触发器将激发，以响应各种数据定义语言 (DDL) 事件。 这些事件主要与以关键字 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对应。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  
   
  如果要执行以下操作，请使用 DDL 触发器：  
   

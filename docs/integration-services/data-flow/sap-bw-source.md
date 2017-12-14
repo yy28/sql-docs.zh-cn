@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 源 |Microsoft 文档"
+title: "SAP BW 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e7a2f3ea58e0237ce5e037306223c6231fd12fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
   SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本 7 系统提取数据，并将这些数据提供给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据流。  
@@ -127,13 +125,13 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 设计器配置源  
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的 SAP BW 源属性的详细信息，请单击以下主题之一：  
   
--   [SAP BW 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 源编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 源编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 源编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  在配置 SAP BW 源的同时，您还可使用各种对话框查找 SAP Netweaver BW 对象或预览源数据。 有关这些对话框的详细信息，请单击以下主题之一进行了解：  
   
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW 组件](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

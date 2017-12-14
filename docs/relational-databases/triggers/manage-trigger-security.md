@@ -2,9 +2,12 @@
 title: "管理触发器安全性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: edc234ca0770cd639ab3fc5d0bf7ca65f3cb0ed2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba64e3958c9bd8bb9873dec29016c56bb718e94c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-trigger-security"></a>管理触发器安全性
-  默认情况下，在调用触发器的用户的上下文中执行 DML 和 DDL 触发器。 触发器的调用方是执行使触发器运行的语句的用户。 例如，如果用户 **Mary** 执行可以使 DML 触发器 **DML_trigMary** 运行的 DELETE 语句，则 **DML_trigMary** 中的代码将在 **Mary**的用户特权上下文中执行。 希望向数据库或服务器实例中引入恶意代码的用户可以使用此默认行为。 例如，用户 `JohnDoe`创建以下 DDL 触发器：  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]默认情况下，在调用触发器的用户的上下文中执行 DML 和 DDL 触发器。 触发器的调用方是执行使触发器运行的语句的用户。 例如，如果用户 **Mary** 执行可以使 DML 触发器 **DML_trigMary** 运行的 DELETE 语句，则 **DML_trigMary** 中的代码将在 **Mary**的用户特权上下文中执行。 希望向数据库或服务器实例中引入恶意代码的用户可以使用此默认行为。 例如，用户 `JohnDoe`创建以下 DDL 触发器：  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   

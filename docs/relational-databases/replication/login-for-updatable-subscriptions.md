@@ -2,9 +2,12 @@
 title: "可更新订阅的登录名 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 906d464c7e3f345c21034cffcd51e1494c0724c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0ae8beff6dc6f55ea6db9ce23c9f582e1fa108be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
-  若要立即更新，如果在此向导的“可更新订阅”页上选择了“复制”，则必须为订阅服务器指定用来与发布服务器建立连接的帐户。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]对于立即更新，如果在此向导的“可更新订阅”页上选择了“复制”，则必须为订阅服务器指定用来与发布服务器建立连接的帐户。 
   
  连接由在订阅服务器上激发的触发器使用，这些触发器将更改传播到发布服务器。 即使在“可更新订阅”页上选择了“对更改进行排队并在可能时提交”，此帐户也是必需的。 默认情况下，“新建订阅向导”会为排队更新配置在需要时切换到立即更新的能力。  
   

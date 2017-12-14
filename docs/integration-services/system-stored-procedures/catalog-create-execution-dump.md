@@ -1,5 +1,5 @@
 ---
-title: "catalog.create_execution_dump |Microsoft 文档"
+title: catalog.create_execution_dump | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  导致暂停正在运行的包并创建转储文件。 文件存储在*\<驱动器 >*: files\microsoft SQL Server\130\Shared\ErrorDumps 文件夹。  
+  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,8 +36,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id =] *execution_id*  
- 正在运行的包的执行 ID。 *Execution_id*是**bigint**。  
+ [ @execution_id = ] execution_id  
+ 正在运行的包的执行 ID。 execution_id 为 bigint。  
   
 ## <a name="example"></a>示例  
  在以下示例中，系统提示将为正在运行的执行 ID 为 88 的包创建转储文件。  
@@ -57,7 +55,7 @@ EXEC create_execution_dump @execution_id = 88
  无  
   
 ## <a name="permissions"></a>Permissions  
- 此存储的过程要求用户是的成员**ssis_admin**数据库角色。  
+ 此存储过程要求用户为具有 ssis_admin 数据库角色的成员。  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致存储过程失败的情况。  
@@ -72,4 +70,3 @@ EXEC create_execution_dump @execution_id = 88
  [生成包执行的转储文件](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

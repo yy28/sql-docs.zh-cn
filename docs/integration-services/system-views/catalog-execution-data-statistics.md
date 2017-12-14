@@ -1,5 +1,5 @@
 ---
-title: "catalog.execution_data_statistics |Microsoft 文档"
+title: catalog.execution_data_statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: fa1d87489ff6d0a10d95bf160ded3d038ca39d81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd542c253583fe1513947475dfca65db686fab5c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +48,18 @@ ms.lasthandoff: 08/03/2017
   
 -   默认情况下，开始执行时，不记录有关发送的行数的信息。  
   
--   若要查看此数据用于执行给定的包，请将日志记录级别设置为**详细**。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
+-   要查看给定包执行的这些数据，请将日志记录级别设置为“详细”。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
-

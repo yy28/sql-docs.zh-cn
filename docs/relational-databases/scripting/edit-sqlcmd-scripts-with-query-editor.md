@@ -2,9 +2,12 @@
 title: "使用查询编辑器编辑 SQLCMD 脚本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cdd88c8bccec6251872c3ebd0095bd00d3e6ee72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 44b90c0b7ce2e12e973e6145551bbb3af4c16e3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查询编辑器编辑 SQLCMD 脚本
-  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，可以将查询作为 SQLCMD 脚本来进行编写和编辑。 当必须处理同一脚本中的 Windows 系统命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，使用的是 SQLCMD 脚本。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器，可以将查询作为 SQLCMD 脚本来进行编写和编辑。 当必须处理同一脚本中的 Windows 系统命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，使用的是 SQLCMD 脚本。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 模式  
  若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器编写或编辑 SQLCMD 脚本，您必须启用 SQLCMD 脚本撰写模式。 默认情况下，查询编辑器中将不启用 SQLCMD 模式。 可以通过在工具栏中单击 **“SQLCMD 模式”** 图标或从 **“查询”** 菜单中选择 **“SQLCMD 模式”** 来启用脚本撰写模式。  

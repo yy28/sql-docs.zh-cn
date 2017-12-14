@@ -2,9 +2,12 @@
 title: "增量搜索活动文档 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5dc7edb7f8d5bc8c0696534ddff7782a9c805503
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b5308e98da83b0478d911ca83c56b8e0df73af5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-an-active-document-incrementally"></a>增量搜索活动文档
-  您可以通过输入文字来对单个文档或窗口执行渐进式搜索。 搜索操作会突出显示与在文档或窗口的渐进式搜索过程中输入的字符相匹配的第一个字符集。 渐进式搜索会自动搜索文档或窗口内的所有文字，但隐藏文字除外。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以通过输入文字，对单个文档或窗口执行渐进式搜索。 搜索操作会突出显示与在文档或窗口的渐进式搜索过程中输入的字符相匹配的第一个字符集。 渐进式搜索会自动搜索文档或窗口内的所有文字，但隐藏文字除外。  
   
  对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”对话框跨多个文件执行搜索，并选择“大小写匹配”，然后执行渐进式搜索，则此搜索将区分大小写。  
   

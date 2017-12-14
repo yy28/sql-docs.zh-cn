@@ -2,9 +2,12 @@
 title: "指定如何传播事务项目的更改 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9cee636f1b2188ddf72d63feeaedc7b955446ea3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>事务项目 - 指定如何传播更改
-  通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  
   
 -   指定事务复制应编写出脚本，并随后调用存储过程以将更改传播到订阅服务器（默认方法）。  
   

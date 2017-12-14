@@ -2,9 +2,12 @@
 title: "刷新复制监视器中的数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4e33a56ef2012f82d4578e4327bcfd985c00524
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4d1a2cd6083e3c3243d1a4930499851fc74b491e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
-  在复制监视器中，可以自动或手动刷新主窗口和详细信息窗口（从主窗口启动的那些窗口）。 若要手动刷新窗口，请按 F5 键。 默认情况下，主窗口每五分钟自动刷新一次。每个发布服务器的刷新速率均可以自定义。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在复制监视器中，可以自动或手动刷新主窗口和详细信息窗口（从主窗口启动的那些窗口）。 若要手动刷新窗口，请按 F5 键。 默认情况下，主窗口每五分钟自动刷新一次。每个发布服务器的刷新速率均可以自定义。  
   
  从缓存查询复制监视器中显示的数据。有关缓存和刷新复制监视器之间的关系的信息，请参阅[缓存、刷新和复制监视器性能](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   

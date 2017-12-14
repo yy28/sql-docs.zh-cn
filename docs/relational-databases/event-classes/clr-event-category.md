@@ -2,9 +2,12 @@
 title: "CLR 事件类别 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2db22c7db02b28fd3b281a1d901ea3e910ad2dab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 48f2d0be0235dfce085e5bc8304e2b022423a46c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clr-event-category"></a>CLR 事件类别
-  **CLR** 事件类别包括由于在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时 (CLR) 对象而生成的事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]CLR 事件类别包括由于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内执行 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 对象而生成的事件类。  
  
  ## <a name="assembly-load-event-class"></a>Assembly Load 事件类 
   执行加载程序集的请求时，会发生 **Assembly Load** 事件类。  

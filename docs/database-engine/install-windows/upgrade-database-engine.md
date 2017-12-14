@@ -2,11 +2,12 @@
 title: "升级数据库引擎 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 11bf3a52f7c528fca881c7dd3262c5a1ce09589e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 49b515f9a46e0d6196762181f19500d2d06e4b33
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
-  本部分中的主题将帮助你将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎从先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本部分中的主题可帮助将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎从先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 1.  [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) 开始升级之前，你需要了解各种不同的升级方法。 本主题讨论升级方法和每个升级方法所涉及的步骤。  
   

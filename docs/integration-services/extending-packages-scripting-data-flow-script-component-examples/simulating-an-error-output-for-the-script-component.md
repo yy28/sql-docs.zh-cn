@@ -1,5 +1,5 @@
 ---
-title: "为脚本组件模拟错误输出 |Microsoft 文档"
+title: "模拟脚本组件的错误输出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script component [Integration Services], error output
 - error outputs [Integration Services], Script component
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0af8434531660958557928376cf8a4fd19ca9e68
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7a802bffc3178cecd58279fed0d93ad55bcdc0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模拟脚本组件的错误输出
   虽然您无法在脚本组件中直接将输出配置为错误输出，以便自动处理错误行，但必要时可通过创建附加输出并在脚本中使用条件逻辑将行定向到此输出，以再现内置错误输出的功能。 您可能希望通过添加两个用于接收错误号以及出现错误的列的 ID 的附加输出列，以模拟内置错误输出的行为。  
@@ -44,27 +40,27 @@ ms.lasthandoff: 08/03/2017
   
 1.  创建新脚本组件之前，先创建一个连接管理器，并配置一个从 AdventureWorks 示例数据库选择地址数据的数据流源。 对于此示例，由于仅查看 CountryRegionName 列，所以只需使用 Person.vStateCountryProvinceRegion 视图，或通过联接 Person.Address、Person.StateProvince 和 Person.CountryRegion 表来选择数据。  
   
-2.  向数据流设计器图面添加新的脚本组件并将其配置为转换。 打开**脚本转换编辑器**。  
+2.  向数据流设计器图面添加新的脚本组件并将其配置为转换。 打开“脚本转换编辑器”。  
   
-3.  上**脚本**页上，设置**ScriptLanguage**属性设置为你想要用于代码脚本的脚本语言。  
+3.  在“脚本”页中，将 **ScriptLanguage** 属性设置为要用于编写脚本代码的脚本语言。  
   
 4.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
   
-5.  在**Input0_ProcessInputRow**方法中，键入或粘贴如下所示的示例代码。  
+5.  在 **Input0_ProcessInputRow** 方法中，键入或粘贴如下所示的示例代码。  
   
 6.  关闭 VSTA。  
   
-7.  上**输入列**页上，选择你想要在脚本转换中处理的列。 此示例仅使用 CountryRegionName 列。 您未选择的可用列将不进行任何更改，原封不动地在数据流中传递。  
+7.  在“输入列”页中，选择要在脚本转换中处理的列。 此示例仅使用 CountryRegionName 列。 您未选择的可用列将不进行任何更改，原封不动地在数据流中传递。  
   
-8.  上**输入和输出**页上，添加新，第二个输出，并设置其**SynchronousInputID**输入，这也为此值的 id 值的**SynchronousInputID**默认输出的属性。 设置**ExclusionGroup**的这两个输出到相同的非零值 (例如，1)，以指示每个行都将定向到两个输出之一的属性。 以不同名称为新的错误输出命名，如“MyErrorOutput”。  
+8.  在“输入和输出”页中，添加第二个新输出，并将其 **SynchronousInputID** 值设置为输入的 ID，这同时也是默认输出的 **SynchronousInputID** 属性的值。 将两个输出的 **ExclusionGroup** 属性都设置为同一非零值（例如 1），以指示每一行都将仅定向到两个输出中的一个。 以不同名称为新的错误输出命名，如“MyErrorOutput”。  
   
 9. 向新错误输出中添加其他输出列，以捕获所需的错误信息，其中包括错误代码、出现错误的列的 ID，可能还有错误说明。 此示例将创建新列：ErrorColumn 和 ErrorMessage。 若要在自己的实现中捕获预定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误，请确保为错误号添加了 ErrorCode 列。  
   
 10. 记下脚本组件将查找其错误情况的一个或多个输入列的 ID 值。 本示例使用此列标识符填充 ErrorColumn 值。  
   
-11. 关闭**脚本转换编辑器。**  
+11. 关闭“脚本转换编辑器”。  
   
-12. 将脚本组件的输出附加到合适的目标。 平面文件目标是最容易为临时测试配置。  
+12. 将脚本组件的输出附加到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
   
 13. 运行包。  
   
@@ -115,4 +111,3 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
  [使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

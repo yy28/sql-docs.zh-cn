@@ -2,9 +2,12 @@
 title: "以编程方式监视复制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
-  复制监视器是一种可用于监视复制拓扑的图形化工具。 可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 复制存储过程或复制管理对象 (RMO) 以编程方式访问相同的监视数据。 您可以利用这些对象对以下任务进行编程：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制监视器是一种可用于监视复制拓扑的图形化工具。 可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 复制存储过程或复制管理对象 (RMO) 以编程方式访问相同的监视数据。 您可以利用这些对象对以下任务进行编程：  
   
 -   监视发布服务器、发布和订阅的状态。  
   

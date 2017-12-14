@@ -2,9 +2,12 @@
 title: "在 OPENXML 中指定元属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
-  XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
   
  可以使用 *ColPattern* 参数将这些元属性映射到 OPENXML 语句中的行集列。 这些列将包含它们所映射到的元属性的值。 有关 OPENXML 语法的详细信息，请参见 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
   

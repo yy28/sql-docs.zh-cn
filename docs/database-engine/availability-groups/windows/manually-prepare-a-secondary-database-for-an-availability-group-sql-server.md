@@ -2,11 +2,12 @@
 title: "为可用性组手动准备辅助数据库 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +24,14 @@ caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 63ef60586a8fd776cc31a331c677760705974f21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b5a8152042d85f7e3025c0f1cdfc5acc534bfbad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>为可用性组手动准备数据库 (SQL Server)
-本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备数据库需要两个步骤： 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备数据库需要两个步骤： 
 
 1. 使用 RESTORE WITH NORECOVERY，将主数据库的最近数据库备份和后续日志备份还原到托管次要副本的每个服务器实例
 2. 将还原的辅助数据库联接到可用性组。  

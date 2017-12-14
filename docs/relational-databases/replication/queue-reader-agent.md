@@ -2,9 +2,12 @@
 title: "队列读取器代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5525abd1716e7eb896d9cfe7fa846abd62dd7778
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2bf6f3f133c480315373f73665858c21088cfa37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="queue-reader-agent"></a>队列读取器代理
-  **“队列读取器代理”** 对话框显示有关队列读取器代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“队列读取器代理”对话框显示有关队列读取器代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
   
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看的队列读取器代理会话，然后在标记为 **“队列读取器代理的会话”**的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”**的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  

@@ -2,9 +2,12 @@
 title: "OLEDB Call 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0d6544c97f10b3132e69ffbfa89023e1e1bf12c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52b44fe50eac1dfbab29aeeebe9cc5f82107bcd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件类
-  **为分布式查询和远程存储过程调用 OLE DB 访问接口时，会发生** OLEDB Call [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为分布式查询和远程存储过程调用 OLE DB 提供程序时，会发生 OLEDB Call 事件类。  
   
  将 **OLEDB Call** 事件类包括在跟踪中可以只监视那些不请求数据的调用或未对 **QueryInterface** 方法进行的调用。 跟踪中包括 **OLEDB Call** 事件类时，引发的开销量取决于跟踪过程中针对数据库调用 OLE DB 的频率。 如果调用频繁发生，则跟踪可能会显著地降低性能。  
   

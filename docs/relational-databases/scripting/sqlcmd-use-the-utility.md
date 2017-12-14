@@ -2,9 +2,12 @@
 title: "使用 sqlcmd 实用工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
-  **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]sqlcmd 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
   
 -   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   

@@ -2,9 +2,12 @@
 title: "重新编译存储过程 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec48fb989e7735b52603aecc2059d0806cbf9c53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d2f173b7e4c88182846f2613e24933ae4a470edb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 完成此项工作有三种方法：过程定义中的 **WITH RECOMPILE** 选项，或在调用过程时，各个语句上的 **RECOMPILE** 查询提示，或者使用 **sp_recompile** 系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 重新编译存储过程。 完成此项工作有三种方法：过程定义中的 **WITH RECOMPILE** 选项，或在调用过程时，各个语句上的 **RECOMPILE** 查询提示，或者使用 **sp_recompile** 系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
   
  **本主题内容**  
   

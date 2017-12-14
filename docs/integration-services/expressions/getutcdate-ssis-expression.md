@@ -1,5 +1,5 @@
 ---
-title: "GETUTCDATE （SSIS 表达式） |Microsoft 文档"
+title: "GETUTCDATE（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd7919482026f85d9261c2a36d16defdf6b59cd9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 626ac3a41c17ad5dd7c0458d728d6b21a1c70741
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE（SSIS 表达式）
   使用 DT_DBTIMESTAMP 格式返回以 UTC 时间（协调世界时或格林尼治标准时间）表示的系统当前日期。 GETUTCDATE 函数不带参数。  
@@ -66,8 +64,7 @@ DATEADD("Month",3,GETUTCDATE())
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GETDATE &#40;SSIS 表达式 &#41;](../../integration-services/expressions/getdate-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [GETDATE（SSIS 表达式）](../../integration-services/expressions/getdate-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

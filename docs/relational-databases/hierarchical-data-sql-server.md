@@ -2,9 +2,12 @@
 title: "层次结构数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2127532c0e60feba9cff8f2f986260ac8179e6d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
-  内置的 **hierarchyid** 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对**hierarchyid** 进行了优化。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]内置的 hierarchyid 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对**hierarchyid** 进行了优化。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
   

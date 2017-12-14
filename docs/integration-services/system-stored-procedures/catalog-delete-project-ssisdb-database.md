@@ -1,5 +1,5 @@
 ---
-title: "catalog.delete_project （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.delete_project（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c09d08c3b115a3d5171d368aba7373240458cd48
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 包含项目的文件夹的名称。 *folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] folder_name  
+ 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @project_name =]*文件的内容*  
- 要删除的项目的名称。 *文件的内容*是**nvarchar （128)**。  
+ [ @project_name = ] project_name  
+ 要删除的项目的名称。 project_name 为 nvarchar(128)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -54,21 +52,20 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   针对项目的 READ 和 MODIFY 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
- 下面介绍了一些条件会导致引发错误的 delete_project 存储过程：  
+ 下面的列表描述了一些可能导致 delete_project 存储过程引发错误的情况：  
   
 -   项目不存在。  
   
 -   文件夹不存在  
   
--   用户没有适当的权限  
+-   用户没有相应的权限  
   
 ## <a name="remarks"></a>注释  
  对应项目的所有对象和环境引用将与项目一起删除。 但是，直到下次运行操作清除作业之前，将保留项目版本和相关的操作记录。  
   
   
-

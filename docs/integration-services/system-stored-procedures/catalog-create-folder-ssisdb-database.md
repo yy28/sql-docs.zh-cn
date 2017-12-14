@@ -1,5 +1,5 @@
 ---
-title: "catalog.create_folder （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.create_folder（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 43d128f9dcc4cea632c810a13d21eb5e1ddb61df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: d909a3596dd260065904f0d4e8413978288cc9fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 ```  
   
 ## <a name="arguments"></a>参数  
- [@folder_name =] *folder_name*  
- 新文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [@folder_name =] folder_name  
+ 新文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [@folder_name =] *folder_id*  
- 文件夹的唯一标识符 (ID)。 *Folder_id*是**bigint**。  
+ [@folder_name =] folder_id  
+ 文件夹的唯一标识符 (ID)。 folder_id 为 bigint。  
   
 ## <a name="return-code-value"></a>返回代码值  
  返回文件夹标识符。  
@@ -52,12 +50,11 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 ## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
-如果已存在具有相同名称的文件夹，存储的过程将返回错误。  
+如果已存在同名的文件夹，改存储过程返回错误。  
   
   
-

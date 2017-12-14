@@ -1,5 +1,5 @@
 ---
-title: "确定变更数据是否准备就绪 |Microsoft 文档"
+title: "确定变更数据是否已准备就绪 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],determining readiness
+helpviewer_keywords: incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dff547a6882d13763b471185f9ac486facc946b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
@@ -345,4 +342,3 @@ ms.lasthandoff: 08/03/2017
  **下一主题：**[准备查询变更数据](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   
-

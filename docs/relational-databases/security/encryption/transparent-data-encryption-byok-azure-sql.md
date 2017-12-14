@@ -1,11 +1,11 @@
 ---
-title: "TDE - 自带密钥 - Azure SQL |Microsoft Docs"
-description: "SQL 数据库和数据仓库的 Azure Key Vault 中用于透明数据加密的自带密钥的概述。 本文档介绍此功能的优点、它的工作原理、注意事项以及建议。"
+title: "TDE - 自带密钥 (BYOK) - Azure SQL | Microsoft Docs"
+description: "SQL 数据库和数据仓库的 Azure Key Vault 中用于透明数据加密 (TDE) 的自带密钥 (BYOK) 支持。 支持 BYOK 的 TDE 的概述、优点、工作原理、注意事项和建议。"
 keywords: 
 services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -14,26 +14,25 @@ ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
-ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.date: 11/15/2017
+ms.author: aliceku
+ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+用于[透明数据加密 (TDE)](transparent-data-encryption.md) 的自带密钥 (BYOK) 支持允许用户控制其 TDE 加密密钥并限制访问人员和访问时间。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的基于云的外部密钥管理系统，是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 使用 BYOK 时，数据库加密密钥受存储在 Key Vault 中的非对称密钥保护。 非对称密钥设置为服务器级别，并由该服务器下的所有数据库继承该密钥。 
 
-用于[透明数据加密 (TDE)](transparent-data-encryption.md) 的自带密钥 (BYOK) 支持允许用户控制其 TDE 加密密钥以及访问人员和访问时间。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的基于云的外部密钥管理系统，是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 使用 BYOK 时，数据库加密密钥受存储在 Key Vault 中的非对称密钥保护。 非对称密钥设置为服务器级别，并由该服务器下的所有数据库继承该密钥。 
-
-通过使用 BYOK 支持，用户现可控制密钥管理任务（包括密钥轮换、密钥保管库权限、删除密钥），并且可以对所有加密密钥启用审核/报告。 Key Vault 提供中心密钥管理，利用严格监控的硬件安全模块 (HSM)，并促进分离密钥和数据的管理以帮助满足监管符合性。 
+通过使用 BYOK 支持，用户现可控制密钥管理任务（包括密钥轮换、密钥保管库权限、删除密钥），并且可以对所有加密密钥启用审核/报告。 Key Vault 提供中心密钥管理，利用严格监控的硬件安全模块 (HSM)，并支持分离密钥和数据管理之间的职责以帮助满足监管符合性。 
 
 使用 BYOK 的 TDE 具有下列优点：
 - 提高了透明度和细化控制能力，能够自助管理 TDE 保护程序   
 - 因为在 Key Vault 中承载，可以集中管理 TDE 加密密钥（以及在其他其他 Azure 服务中使用的其他密钥和机密）
-- 在组织内分离密钥和数据的管理，以支持角色分离
+- 在组织内分离密钥和数据的管理角色，以支持职责分离
 - 使用自己的客户端，更值得信赖。因为 Key Vault 旨在避免 Microsoft 看到或提取任何加密密钥。 
 - 支持密钥轮换
 
@@ -56,9 +55,9 @@ ms.lasthandoff: 11/09/2017
 ### <a name="key-management-responsibilities"></a>密钥管理职责
 
 接管应用程序资源的加密密钥管理是一项很重要的职责。 通过 Key Vault 将 BYOK 用于 TDE，以下是假定的密钥管理任务：
-- 密钥轮换：TDE 保护程序应根据内部规定或符合性要求轮换。 密钥轮换可以通过 TDE 保护程序的密钥保管库完成。  
+- **密钥轮换：**TDE 保护程序应根据内部策略或符合性要求轮换。 密钥轮换可以通过 TDE 保护程序的密钥保管库完成。  
 - 密钥保管库权限：Key Vault 内跨密钥保管库和服务器级别预配的权限。 密钥保管库的服务器权限可以随时使用密钥保管库的访问策略撤销。
-- 删除键：密钥可能从 Key Vault 和 SQL 服务器中删除，以获取更多安全性或满足符合性。
+- **删除键：**密钥可能从 Key Vault 和 SQL 服务器中删除，以获取更多安全性或满足符合性要求。
 - 审核/报告所有加密密钥：Key Vault 提供了可轻松注入到其他安全信息和事件管理 (SIEM) 工具的日志。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 是一个已集成的示例服务。
 
 ### <a name="pricing-considerations"></a>定价注意事项 
@@ -72,11 +71,11 @@ ms.lasthandoff: 11/09/2017
 
 ### <a name="loss-of-access-to-keys"></a>无法访问密钥
 
-一旦服务器（不论是通过删除 Key Vault 权限或已删除的密钥）无法再访问 TDE 保护程序，在服务器下的所有加密数据库连接都受到阻止，这些数据库会脱机并在 24 小时内被删除。 使用不可用的密钥加密的旧备份将无法再访问。 如果在极端情况下，密钥怀疑被泄露（使得服务或用户未经授权可访问密钥），最好的方法是通过[删除可能被泄露的密钥](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)中的以下指南删除密钥。 在删除活动的 TDE 保护程序之前必须删除数据库，可防止最多 10 分钟的数据丢失。  
+一旦服务器（不论是通过删除 Key Vault 权限或已删除的密钥）无法再访问 TDE 保护程序，在服务器下的所有加密数据库连接都受到阻止，这些数据库会脱机并在 24 小时内被删除。 使用不可用的密钥加密的旧备份将无法再访问。 如果出现密钥泄露的可能性（使得服务或用户未经授权可访问密钥），最好的方法是通过[删除可能已泄露的密钥](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)中的指南删除密钥。 在删除活动的 TDE 保护程序之前必须删除数据库，可防止最多 10 分钟的数据丢失。  
 
 ### <a name="expired-keys"></a>已过期的密钥
 
-因为 TDE 保护程序的可用性直接影响数据库可用性，所以含过期日期的密钥不能添加到 SQL 服务器。 如果已经密钥用作服务器的 TDE 保护程序，后来又添加了 Azure Key Vault 中的过期数据，一旦密钥过期，加密的数据库将无法再访问其 TDE 保护程序，并会在 24 小时内删除。
+因为 TDE 保护程序的可用性直接影响数据库可用性，所以含过期日期的密钥不能添加到 SQL 服务器。 如果密钥已经用作服务器的 TDE 保护程序，后来又配置了 Azure Key Vault 中的过期数据，一旦密钥过期，加密的数据库将无法再访问其 TDE 保护程序，并会在 24 小时内删除。
 
 ### <a name="deleted-server-identities"></a>已删除的服务器标识 
 
@@ -92,7 +91,7 @@ ms.lasthandoff: 11/09/2017
 
 ### <a name="high-availability-and-disaster-recovery"></a>高可用性和灾难恢复
   
-有两种方法可以使用 Key Vault 为服务器配置异地复制： 
+可以通过两种方法使用 Key Vault 为服务器配置异地复制： 
 
 - 单独的密钥保管库：每个服务器有权访问单独的密钥保管库（理想情况下在各自的 Azure 区域内都有一个）。 这是推荐的配置，因为每个服务器自己具有用于加密异地复制数据库的 TDE 保护程序副本。 如果其中一个服务器的 Azure 区域处于脱机状态，其他服务器可以继续访问异地复制数据库。   
 
@@ -154,5 +153,5 @@ ms.lasthandoff: 11/09/2017
 ## <a name="next-steps"></a>后续步骤
 
 - 开始使用 TDE 的自带密钥支持：[通过 PowerShell 使用 Key Vault 的自有密钥启用 TDE](transparent-data-encryption-byok-azure-sql-configure.md)
-- 了解如何轮换服务器的 TDE 保护程序以符合安全要求：[使用 PowerShell 轮换透明数据加密保护程序](transparent-data-encryption-byok-azure-sql-key-rotation.md)
-- 如果存在安全风险，了解如何删除可能已泄露的 TDE 保护程序：[删除可能已泄露的密钥](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 
+- 了解如何轮换服务器的 TDE 保护程序以符合安全策略：[使用 PowerShell 轮换透明数据加密保护程序](transparent-data-encryption-byok-azure-sql-key-rotation.md)
+- 以防出现安全事故，了解如何删除可能已泄露的 TDE 保护程序：[删除可能已泄露的密钥](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 

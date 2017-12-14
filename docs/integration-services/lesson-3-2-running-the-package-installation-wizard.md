@@ -1,5 +1,5 @@
 ---
-title: "步骤 2： 运行包安装向导 |Microsoft 文档"
+title: "步骤 2：运行包安装向导 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lesson 3-2-运行包安装向导
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>第 3-2 课 — 运行包安装向导
 在此任务中，将运行包安装向导，将包从 Deployment Tutorial 项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例。 只能将包安装在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 sysssispackages 表中，而部署捆绑包括的支持文件将被部署到文件系统。  
   
 包安装向导将引导您完成安装和配置包的步骤。 将包安装到目标计算机（向其复制部署捆绑的计算机）上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 您还将创建文件夹 C:\DeploymentTutorialInstall，向导将在该文件夹中安装非包文件。  
@@ -113,4 +110,3 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>另请参阅  
 [Integration Services 服务（SSIS 服务）](../integration-services/service/integration-services-service-ssis-service.md)  
-

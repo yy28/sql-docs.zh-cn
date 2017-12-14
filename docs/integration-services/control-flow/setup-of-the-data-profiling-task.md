@@ -1,5 +1,5 @@
 ---
-title: "安装程序的数据事件探查任务 |Microsoft 文档"
+title: "设置数据事件探查任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling task [Integration Services], configuring
+helpviewer_keywords: Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b6b75462db3e9245644c2ee0f0c667183ea9ace9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  
@@ -111,4 +108,3 @@ ms.lasthandoff: 08/03/2017
  [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
   
-

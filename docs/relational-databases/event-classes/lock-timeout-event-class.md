@@ -2,9 +2,12 @@
 title: "Lock:Timeout 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db75a1766177f5aa96600249289f1eb97dd9c19c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2523de44f225c1429453362067c7a859e6a17b56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 事件类
-  Lock:Timeout 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 超时由 @@LOCK_TIMEOUT 系统函数确定，并可用 SET LOCK_TIMEOUT 语句设置。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Lock:Timeout 事件类指示由于其他事务持有所需资源的阻塞锁，导致对资源（例如页）锁的请求超时。 超时由 @@LOCK_TIMEOUT 系统函数确定，并可用 SET LOCK_TIMEOUT 语句设置。  
   
  超时情况出现时，使用 Lock:Timeout 事件类进行监视。 此信息有助于确定超时是否对应用程序的性能造成重大影响，以及涉及哪些对象。 您可以检查修改这些对象的应用程序代码，以确定是否可以进行更改以将超时减到最小。  
   

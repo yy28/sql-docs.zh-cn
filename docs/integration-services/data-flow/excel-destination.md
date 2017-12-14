@@ -1,5 +1,5 @@
 ---
-title: "Excel 目标 |Microsoft 文档"
+title: "Excel 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ee5bd643443aca136883e94a768fca60960c869
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -216,9 +214,8 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Excel 源](../../integration-services/data-flow/excel-source.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)   
- [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [使用脚本任务处理 Excel 文件](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
-

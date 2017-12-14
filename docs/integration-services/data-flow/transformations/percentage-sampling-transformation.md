@@ -1,5 +1,5 @@
 ---
-title: "百分比抽样转换 |Microsoft 文档"
+title: "百分比抽样转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: c9c91f3b95c49d333bc9f3fc581d722577328450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="percentage-sampling-transformation"></a>百分比抽样转换
   百分比抽样转换通过选择转换输入行的百分比来创建样本数据集。 样本数据集是从转换输入中随机选择的行，这使得结果样本可以代表输入。  
@@ -84,4 +82,3 @@ ms.lasthandoff: 08/19/2017
  指定随机数生成器的抽样种子，转换将使用该种子来创建样本。 建议只在开发和测试过程中使用此选项。 如果未指定随机种子，转换将使用 Microsoft Windows 的时钟周期计数。  
   
   
-

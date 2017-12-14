@@ -2,9 +2,12 @@
 title: "启用和配置 FILESTREAM | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6839f11d9375fad6c2672b760bec3d5edee031d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 28de8df00cc2a98756492b7ae434838d04a4e53c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
-  在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
   
 ##  <a name="enabling"></a> 启用 FILESTREAM  
   

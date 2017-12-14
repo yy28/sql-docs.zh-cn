@@ -2,9 +2,12 @@
 title: "在 SQL Server 故障转移群集上安装客户端工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a7fb2b3b58322a3d7eb000d7d913df391ff8e3d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6ceab14497f719a8bac3ee44c855f7f1f870d0d6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
-  诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  
   
  如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群集的第一个节点上进行安装时安装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具，它们将自动添加到稍后可能使用“添加节点”功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的任何节点。  
   

@@ -2,9 +2,12 @@
 title: "链接服务器（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linked-servers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1ad56cbb1df58df74bd72fac4f0f916dff0e7eb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0a89b626213f961b23b75f4958c87016d525940f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
-  配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：  
   
 -   能够访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外的数据。  
   

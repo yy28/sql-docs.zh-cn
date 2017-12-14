@@ -1,5 +1,5 @@
 ---
-title: "数据截断 (SSIS) |Microsoft 文档"
+title: "数据截断 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b81910c1b53898137153ac1abbe2cf9b7ac4924d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-truncation-ssis"></a>数据截断 (SSIS)
   将值从一种数据类型转换成另一种数据类型可能导致值被截断。  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/03/2017
  有关如何处理数据截断的详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

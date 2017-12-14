@@ -2,9 +2,12 @@
 title: "监视 CPU 使用率 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad8ff221557c1ecbfe1d8fe5cf453c7b99e96203
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
-  定期监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以确定 CPU 使用率是否在正常范围内。 持续的高 CPU 使用率可能表明需要升级 CPU 或需要增加多个处理器。 或者，高 CPU 使用率也可能表明应用程序的调整或设计不良。 优化应用程序可以降低 CPU 的使用率。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]定期监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以确定 CPU 使用率是否在正常范围内。 持续的高 CPU 使用率可能表明需要升级 CPU 或需要增加多个处理器。 或者，高 CPU 使用率也可能表明应用程序的调整或设计不良。 优化应用程序可以降低 CPU 的使用率。  
   
  一个确定 CPU 使用率的有效方法是使用系统监视器中的 **Processor:% Processor Time** 计数器。 该计数器监视 CPU 执行非闲置线程所用的时间。 持续 80% 到 90% 的状态可能表明需要升级 CPU 或需要增加更多的处理器。 对于多处理器系统，应为每个处理器监视一个该计数器的独立实例。 这一值代表了在一个特定处理器上的处理器时间之和。 若要确定所有处理器的平均时间，请改用 **System: %Total Processor Time** 计数器。  
   

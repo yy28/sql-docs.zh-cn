@@ -1,5 +1,5 @@
 ---
-title: "创建自定义任务 |Microsoft 文档"
+title: "创建自定义任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom tasks [Integration Services], creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3d804ae69154913f4c5239a6bec304f14c4b856d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35352549dbbd4e91a18826a771a09ec6d689de3a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-task"></a>创建自定义任务
   创建自定义任务的步骤与创建其他任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似：  
@@ -36,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 -   将标识对象类型的属性应用于该类。 对于任务，该属性是 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>。  
   
--   重写基类的方法和属性的实现。 对于任务，这些方法包括 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>。  
+-   替代基类的方法和属性的实现。 对于任务，这些方法包括 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>。  
   
 -   可以选择开发自定义用户界面。 对于任务，这需要实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 接口的类。  
   
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="applying-the-dtstask-attribute"></a>应用 DtsTask 属性  
  将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性应用于您创建的类以将其标识为任务。 此属性提供设计时信息，例如任务的名称、说明和任务类型。  
   
- 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A> 属性链接任务与其自定义用户界面。 若要获取此属性，你使用需要的公钥令牌**sn.exe-t**以显示从你想要用于对用户接口程序集进行签名的密钥对 (.snk) 文件的公钥令牌。  
+ 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A> 属性链接任务与其自定义用户界面。 若要获取此属性所需的公钥令牌，使用 sn.exe -t 显示要用于对用户界面程序集签名的密钥对 (.snk) 文件中的公钥标记。  
   
 ```csharp  
 using System;  
@@ -99,12 +95,11 @@ End Class 'MyTask
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-task"></a>生成、部署和调试自定义任务  
- 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义任务的步骤与其他自定义对象类型所需的步骤相似。 有关详细信息，请参阅[构建，Deploying，and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义任务的步骤与其他自定义对象类型所需的步骤相似。 有关详细信息，请参阅[生成、部署和调试自定义对象](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [创建自定义任务](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
- [编码的自定义任务](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [开发的自定义任务的用户界面](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [编写自定义任务代码](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
+ [为自定义任务开发用户界面](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

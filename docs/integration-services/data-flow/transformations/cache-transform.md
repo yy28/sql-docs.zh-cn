@@ -1,5 +1,5 @@
 ---
-title: "缓存转换 |Microsoft 文档"
+title: "缓存转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
 - sql13.dts.designer.cachetranscon.f1
 - sql13.dts.designer.cachetransmap.f1
-helpviewer_keywords:
-- Cache transform
+helpviewer_keywords: Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: b1120ee2702b4951c91717a108997253de023d9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-transform"></a>缓存转换
   “缓存转换”转换通过将所连接数据源中的数据写入流入缓存连接管理器的数据流，可以为查找转换生成一个引用数据集。 查找转换通过将所连接数据源输入列中的数据与引用数据库中的列进行联接来执行查找。  
@@ -85,4 +82,3 @@ ms.lasthandoff: 08/19/2017
  [数据流](../../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Execution Warnings 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件类
-  Execution Warnings 事件类指示在执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句或存储过程期间出现的内存授予警告。 监视此事件类可确定查询在继续进行之前是否必须等待一秒或几秒再获取内存，或确定获取内存的初始尝试是否失败。 查询等待时间的信息有助于揭示影响性能的系统争用问题。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Execution Warnings 事件类指示在执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句或存储过程期间出现的内存授予警告。 监视此事件类可确定查询在继续进行之前是否必须等待一秒或几秒再获取内存，或确定获取内存的初始尝试是否失败。 查询等待时间的信息有助于揭示影响性能的系统争用问题。  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Execution Warnings 事件类的数据列  
   

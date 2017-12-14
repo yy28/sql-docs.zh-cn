@@ -2,11 +2,12 @@
 title: "从命令提示符安装更新 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 1fe67da5b3be2804b802e68927a6e7b48090de7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c04481fbe3cb71606509483e542747140b565ca8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
-请根据您所在单位的需要测试并修改安装脚本。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]请根据你所在单位的需要测试并修改安装脚本。 
  
 ## <a name="sample-syntax-for-installation"></a>安装的示例语法 
 更新包的名称可能会有变化，可能包含语言、版本和处理器组件。 在命令提示符下应用更新，将 <包名称> 替换为更新包的名称： 

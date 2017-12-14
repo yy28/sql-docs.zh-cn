@@ -2,9 +2,12 @@
 title: "将 sqlcmd 与脚本变量结合使用 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c538749543f55e0f78485f7bbd2d801275aeb82b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 与脚本变量结合使用
-  脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
   
  可以使用 **setvar** 命令显式定义脚本变量，也可以使用 **sqlcmd-v** 选项隐式定义脚本变量。  
   

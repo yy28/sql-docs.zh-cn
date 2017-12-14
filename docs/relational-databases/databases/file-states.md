@@ -2,9 +2,12 @@
 title: "文件状态 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -32,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a63a9e927ce2768a3ce7a5b96d29e58bf39a5034
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1888b2ab14fd40edd57438ea98dde15adc4efb80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="file-states"></a>文件状态
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，数据库文件的状态独立于数据库的状态。 文件始终处于一个特定状态，例如 ONLINE 或 OFFLINE。 若要查看文件的当前状态，请使用 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图。 如果数据库处于离线状态，则可以从 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 目录视图中查看文件的状态。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，数据库文件的状态独立于数据库的状态。 文件始终处于一个特定状态，例如 ONLINE 或 OFFLINE。 若要查看文件的当前状态，请使用 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图。 如果数据库处于离线状态，则可以从 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 目录视图中查看文件的状态。  
   
  文件组中文件的状态决定整个文件组的可用性。 文件组中的所有文件都必须联机，文件组才可用。 若要查看文件组的当前状态，请使用 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 目录视图。 如果文件组处于离线状态，而您尝试使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句访问该文件组，则操作将失败并显示一条错误。 当查询优化器生成 SELECT 语句的查询计划时，它将避免使用位于离线文件组中的非聚集索引和索引视图，从而使这些语句成功。 但是，如果脱机文件组包含目标表的堆或聚集索引，SELECT 语句将失败。 此外，如果 INSERT、UPDATE 或 DELETE 语句修改的表的索引包含在脱机文件组中，这些语句将失败。  
   

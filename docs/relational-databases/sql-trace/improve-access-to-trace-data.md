@@ -2,9 +2,12 @@
 title: "改进对跟踪数据的访问 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 278e0177a7afcc9c0726b3a14ba7173bfa2d0a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3b344853ea205f3c3b380dcaad010e881dbb80a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="improve-access-to-trace-data"></a>改进对跟踪数据的访问
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用 **temp** 目录中的空间来改进对跟踪数据的访问。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 需要至少 10 兆字节 (MB) 的可用空间。 如果在使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时可用空间低于 10 MB，则所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能都将会停止。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用 temp 目录中的空间来改进对跟踪数据的访问。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 需要至少 10 兆字节 (MB) 的可用空间。 如果在使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时可用空间低于 10 MB，则所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能都将会停止。  
   
  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用 **temp** 目录的空间时，对该空间的使用可能导致 **temp** 目录所包含的数据量迅速增长。 为了避免出现文件增大的问题，可以通过更改 TEMP 环境变量的值，将 **temp** 目录放在非系统驱动器的驱动器上。  
   

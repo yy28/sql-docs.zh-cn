@@ -2,9 +2,12 @@
 title: "默认情况下包含 Null 值的列 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 889980adad1b296d691edd2dc43464e430fb02e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fad422b56b69359c6954588fd0e6ef07cb1e794a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>默认情况下包含 Null 值的列
-  默认情况下，列中的 Null 值映射为“缺少相应的属性、节点或元素”。 通过使用 ELEMENTS 指令请求以元素为中心的 XML 并指定 XSINIL 来请求为 NULL 值添加元素，可以覆盖此默认行为，如以下查询所示：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]默认情况下，列中的 Null 值映射为“缺少相应的属性、节点或元素”。 通过使用 ELEMENTS 指令请求以元素为中心的 XML 并指定 XSINIL 来请求为 NULL 值添加元素，可以覆盖此默认行为，如以下查询所示：  
   
 ```  
 SELECT EmployeeID as "@EmpID",   

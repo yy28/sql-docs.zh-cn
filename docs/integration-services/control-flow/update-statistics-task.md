@@ -1,5 +1,5 @@
 ---
-title: "更新统计信息任务 |Microsoft 文档"
+title: "“更新统计信息”任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.updatestatisticstask.f1
+f1_keywords: sql13.dts.designer.updatestatisticstask.f1
 helpviewer_keywords:
 - updating statistics
 - Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2bc31c420204eb13766ef54f63bb6852dfffe0fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: daae142be528b1918f7f77cab89650efd807cb40
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
   “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
@@ -67,4 +64,3 @@ ms.lasthandoff: 08/03/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

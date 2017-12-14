@@ -2,9 +2,12 @@
 title: "在文件中替换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27f72fee58d96813be7d6ab6146ebeb58a2af9e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af5bcdfec2471f5d3cd384225250efb979cfec79
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replace-in-files"></a>在文件中替换
-  使用“查找和替换”窗口的 **“在文件中替换”** 选项卡可以在指定文件集的代码中搜索某个字符串或表达式，并且可以更改找到的部分匹配或全部匹配项。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”窗口的“在文件中替换”选项卡，可以在指定文件集的代码中搜索某个字符串或表达式，并且可以更改找到的部分匹配或全部匹配项。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
   
  您也可使用工具栏按钮和快捷键打开 **“查找和替换”** 对话框。  
   

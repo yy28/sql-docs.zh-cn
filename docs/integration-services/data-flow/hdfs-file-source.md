@@ -1,5 +1,5 @@
 ---
-title: "HDFS 文件源 |Microsoft 文档"
+title: "HDFS 文件源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hdfsfilesrc.f1
+f1_keywords: sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b7ed3c3789b7c28476719422f600106a73bfebd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b51169029f95c084907d614fae60ea6b78acb502
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hdfs-file-source"></a>HDFS 文件源
   “HDFS 文件源”组件允许 SSIS 包从 HDFS 文件中读取数据。 支持的文件格式有文本和 Avro。 （不支持 ORC 源。）  
   
  若要配置“HDFS 文件源”，请将“HDFS 文件源”拖放到数据流设计器中，然后双击该组件打开编辑器。  
   
- ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS 文件源编辑器")  
+ ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
   
 ## <a name="options"></a>选项  
  在“Hadoop 文件源编辑器”  对话框的“常规”  选项卡上配置以下选项。  
@@ -47,9 +44,8 @@ ms.lasthandoff: 08/03/2017
   
  配置这些选项后，选择“列”  选项卡，将源列映射到数据流中的目标列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Hadoop 连接管理器](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [HDFS 文件目标](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

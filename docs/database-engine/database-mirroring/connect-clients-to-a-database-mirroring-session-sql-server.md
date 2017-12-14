@@ -2,9 +2,12 @@
 title: "将客户端连接到数据库镜像会话 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fa71b2a2dfa009bae1614942873d45309348223
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
-  若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅[孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .NET Framework 数据提供程序。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅[孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
   
   
 ##  <a name="InitialConnection"></a> 建立到数据库镜像会话的初始连接  

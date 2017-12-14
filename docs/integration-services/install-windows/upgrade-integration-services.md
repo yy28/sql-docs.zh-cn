@@ -1,5 +1,5 @@
 ---
-title: "升级 Integration Services |Microsoft 文档"
+title: "升级 Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,24 +17,23 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: ac549895dbe211f38529f657caa58fc766f911f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
   如果计算机上当前安装了 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本，可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
   
  当您在已安装了这些 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 早期版本之一的计算机上升级到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时， [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 将与该早期版本并行安装。  
   
- 通过采用这一并行安装，将安装 dtexec 实用工具的多个版本。 若要确保运行正确版本的工具，并在命令提示符处运行该实用程序通过输入完整路径 (\<驱动器 >: files\microsoft SQL Server\\< 版本\>\DTS\Binn)。 有关 dtexec 的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
+ 通过采用这一并行安装，将安装 dtexec 实用工具的多个版本。 若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径 (\<驱动器>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具。 有关 dtexec 的详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   
 > [!NOTE]  
 >  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员必须运行 DCOM 配置工具 (Dcomcnfg.exe) 以便授予特定用户对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的访问权限。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 09/26/2017
   
 -   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，然后选择“从 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级 **”选项**。  
   
--   在命令提示符处运行 **setup.exe**，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中“的安装脚本”部分。  
+-   在命令提示符处运行 **setup.exe**，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装脚本”部分。  
   
  不能通过升级执行下列操作：  
   
@@ -155,4 +153,3 @@ ms.lasthandoff: 09/26/2017
  blogs.msdn.com 上的博客文章： [使您的现有自定义 SSIS 扩展插件和应用程序在 Denali 下工作](http://go.microsoft.com/fwlink/?LinkId=238157)。  
   
   
-

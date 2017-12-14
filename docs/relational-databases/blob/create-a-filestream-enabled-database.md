@@ -2,9 +2,12 @@
 title: "创建启用了 FILESTREAM 的数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617fa6dead904b1143bb4ac017f658d68cfe3b92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3520460d89ed8365f01b4b83e9338af35d74c8f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
-  本主题说明如何创建支持 FILESTREAM 的数据库。 由于 FILESTREAM 使用一种特殊类型的文件组，因此，在创建数据库时，必须至少为一个文件组指定 CONTAINS FILESTREAM 子句。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何创建支持 FILESTREAM 的数据库。 由于 FILESTREAM 使用一种特殊类型的文件组，因此，在创建数据库时，必须至少为一个文件组指定 CONTAINS FILESTREAM 子句。  
   
  一个 FILESTREAM 文件组可以包含多个文件。 有关演示如何创建包含多个文件的 FILESTREAM 文件组的代码示例，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   

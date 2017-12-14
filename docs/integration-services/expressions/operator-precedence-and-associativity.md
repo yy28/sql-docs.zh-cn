@@ -1,5 +1,5 @@
 ---
-title: "运算符优先级和结合性 |Microsoft 文档"
+title: "运算符优先级和结合性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - associativity [Integration Services]
 - precedence [Integration Services]
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b6f1c3252fb8a2f68fae20a67cc6174ea41924a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0f0c07966fb3de75df9477bcd2fdc5ecd9aad5f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operator-precedence-and-associativity"></a>运算符优先级和结合性
   表达式计算器支持的运算符集中的每个运算符在优先级层次结构中具有指定的优先级，并包含计算方向。 运算符的计算方向就是运算符结合性。 具有高优先级的运算符先于低优先级的运算符进行计算。 如果复杂的表达式有多个运算符，则运算符优先级将确定执行操作的顺序。 执行顺序可能对结果值有明显的影响。 某些运算符具有相等的优先级。 如果表达式包含多个具有相等的优先级的运算符，则按照从左到右或从右到左的方向进行运算。  
@@ -53,4 +51,3 @@ ms.lasthandoff: 08/03/2017
  [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

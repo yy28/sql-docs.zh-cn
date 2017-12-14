@@ -1,10 +1,13 @@
 ---
 title: "选择加密算法 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d54be210c6a9d791bc27afbad436c2ea5f69fee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b0c946ccc0547e3efadf26f78bb66fcdd3feb517
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choose-an-encryption-algorithm"></a>选择加密算法
-  加密是希望保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例安全的管理员可以采用的多种深度防御方法之一。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]加密是希望保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例安全的管理员可以采用的多种深度防御方法之一。  
   
  加密算法定义了未经授权的用户无法轻易逆转的数据转换。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许管理员和开发人员从多种算法中进行选择，其中包括 DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 位 RC4、DESX、128 位 AES、192 位 AES 和 256 位 AES。  
   

@@ -2,9 +2,12 @@
 title: "管理数据仓库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f31923e866b45951e3758d3f1e35aa542117ad2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
-  管理数据仓库是一种关系数据库，其中包含从身为数据收集目标的服务器收集来的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 管理数据仓库是一种关系数据库，其中包含从作为数据收集目标的服务器中收集的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  
   
  数据收集器基础结构定义了实现保留策略所需的作业和维护计划，而保留策略是由数据库管理员定义的。  
   

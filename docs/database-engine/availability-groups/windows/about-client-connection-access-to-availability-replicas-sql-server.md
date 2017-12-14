@@ -2,9 +2,12 @@
 title: "关于对可用性副本的客户端连接访问 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a06ad7142fa98b0a5e0a1ab1af0a98863744fa3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
-  在 AlwaysOn 可用性组中，你可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为次要副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 AlwaysOn 可用性组中，你可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为次要副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
   
  为了便于客户端访问给定可用性组的主数据库或辅助数据库，您应该定义可用性组侦听器。 默认情况下，可用性组侦听器将传入连接定向到主副本。 不过，您可以对可用性组进行配置以便支持只读路由，这使其可用性组侦听器能够将读意向应用程序的连接请求重定向到可读取的辅助副本。 有关详细信息，请参阅 [为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。  
   

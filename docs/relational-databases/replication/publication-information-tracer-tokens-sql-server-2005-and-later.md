@@ -2,9 +2,12 @@
 title: "发布信息，跟踪令牌（SQL Server 2005 和更高版本）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1ce3e9daad991b8e6e9f70c3b120012dd4a3dea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 28ea5f20bb9f71a0362756ca05be8ce189ecbcd3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>发布信息，跟踪令牌（SQL Server 2005 和更高版本）
-  可以使用 **“跟踪令牌”** 选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“跟踪令牌”选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
   
 -   计算在发布服务器上提交事务和在分发服务器上将相应命令插入分发数据库之间所间隔的时间。  
   

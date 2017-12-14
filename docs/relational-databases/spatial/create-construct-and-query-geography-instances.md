@@ -2,9 +2,12 @@
 title: "创建、构造和查询地理实例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c2e82fe7f8bf955b8283f204f60549268ac6f85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9f981407068d6a1d526581de6c2250f71825c64b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
-  地理空间 **geography**数据类型表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 地理空间数据类型、地理表示圆形地球坐标系统中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
   
  **geography** 类型已进行预定义，可在每个数据库中使用。 你可以创建 **geography** 类型的表列并对 **geography** 数据进行操作，就像使用其他系统提供的数据类型一样。  
   

@@ -1,5 +1,5 @@
 ---
-title: "开发自定义连接管理器 |Microsoft 文档"
+title: "开发自定义连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - packages [Integration Services], connections
 - custom connection managers [Integration Services], about custom connection managers
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1297f0123a896003e2dbca5f01a05fffbf18b23d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b34531a1c303d28584faea0918ae89994f3df8c0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-connection-manager"></a>开发自定义连接管理器
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用连接管理器封装连接到外部数据源所需的信息。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括可支持与常用数据源（从企业数据库到文本文件和 Excel 工作表）的连接的各种连接管理器。 如果 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支持的连接管理器和外部数据源不能完全满足您的需要，则可以创建自定义连接管理器。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  内置于 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的大多数任务、源和目标都只能与特定类型的内置连接管理器一起工作。 在开发用于内置任务和组件的自定义连接管理器之前，请检查这些组件是否将可用连接管理器的列表限制为特定类型的连接管理器。 如果您的解决方案需要自定义连接管理器，则还可能必须开发自定义任务或自定义源或目标以与连接管理器一起使用。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  本节介绍如何创建、配置和编写自定义连接管理器及其可选自定义用户界面的代码。 本节中演示的代码段来自 SQL Server 自定义连接管理器示例。  
   
  [创建自定义连接管理器](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
@@ -61,7 +58,7 @@ ms.lasthandoff: 08/03/2017
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：  
   
  [开发 Integration Services 的自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
- 描述中实现的自定义对象的所有类型的基本步骤[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。  
+ 介绍实现 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的所有自定义对象类型的基本步骤。  
   
  [使自定义对象持久化](../../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)  
  介绍自定义持久性并在必要时作出解释。  
@@ -70,7 +67,7 @@ ms.lasthandoff: 08/03/2017
  介绍生成、签名、部署和调试自定义对象的技术。  
   
 ### <a name="information-about-other-custom-objects"></a>其他自定义对象的信息  
- 有关可以在中创建的自定义对象的其他类型的信息[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]，请参阅以下主题：  
+ 有关可在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的其他自定义对象类型的信息，请参阅以下主题：  
   
  [开发自定义任务](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  讨论如何对自定义任务进行编程。  
@@ -84,4 +81,3 @@ ms.lasthandoff: 08/03/2017
  [开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  讨论如何对自定义数据流源、转换和目标进行编程。  
   
-

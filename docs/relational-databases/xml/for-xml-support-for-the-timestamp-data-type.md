@@ -2,9 +2,12 @@
 title: "timestamp 数据类型的 FOR XML 支持 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5c40d3f480861e98ef0cdf3f40a6ff22a739de6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dbdcaf1874dbd9bd4bc514da7fbf2b5e07e2d49
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>timestamp 数据类型的 FOR XML 支持
-  在 FOR XML 转换中， **timestamp** 类型值被视为 **varbinary(8)** 数据，并且始终为 Base64 编码。 XSD 架构或 XDR 架构反映此类型（如果请求）。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]在 FOR XML 转换中，timestamp 类型值被视为 varbinary(8) 数据，并且始终为 Base64 编码。 XSD 架构或 XDR 架构反映此类型（如果请求）。  
   
 ```  
 drop table t  

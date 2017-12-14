@@ -1,5 +1,5 @@
 ---
-title: "发送邮件任务 |Microsoft 文档"
+title: "发送邮件任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a810d72817ebdf5a1078e95315adb755a2d42891
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -109,14 +107,14 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>选项  
  **SMTPConnection**  
- 在列表中，选择 SMTP 连接管理器或单击**\<新连接 … >**创建新的连接管理器。  
+ 从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
  **相关主题：**[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
- **从**  
+ **From**  
  指定发件人的电子邮件地址。  
   
  **若要**  
@@ -157,19 +155,18 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 选择列表中的文件连接管理器或单击\<**新的连接...**> 创建新的连接管理器。  
+ 从列表中选择一个文件连接管理器，或单击 **“新建连接…”\<**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 在列表中选择变量，或单击\<**新变量...**> 若要创建新变量。  
+ 从列表中选择一个变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "运行和管理包以编程方式 |Microsoft 文档"
+title: "以编程方式运行和管理包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以编程方式运行和管理包
   如果您需要在开发环境之外管理和运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，可以采用编程方式对包进行操作。 如果采用这种方法，则您有多种选择：  
@@ -38,14 +35,14 @@ ms.lasthandoff: 09/26/2017
   
  您可以只编写几行代码，从客户端应用程序加载和运行现有包。  
   
- 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为一个高级的编程选项，你可以以编程方式创建[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包逐行主题中所述[按编程方式生成包](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)。  
+ 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[以编程方式生成包](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)主题中的说明，已编程方式逐行创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
  本节还讨论其他可以用编程方式执行的管理任务，用于管理存储的包、正在运行的包和包角色。  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>在 Integration Services 服务器上运行包  
  将包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器时，可以使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间以编程方式运行包。 使用 .NET Framework 3.5 编译 Microsoft.SqlServer.Management.IntegrationServices 程序集。 如果您正在生成 .NET Framework 4.0 应用程序，可能需要将程序集引用直接添加到项目文件。  
   
- 您还可以使用该命名空间在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 命名空间和代码段的概述，请参阅博客文章[SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=253122)，blogs.msdn.com 上的。  
+ 您还可以使用该命名空间在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上部署和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 有关命名空间和代码片段的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=253122)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [了解本地执行与远程执行之间的差异](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [以编程方式管理正在运行的包](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  介绍如何列出当前正在运行的包，如何检查其属性以及如何停止正在运行的包。  
   
- [以编程方式管理包角色 &#40;SSIS 服务 &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [以编程方式管理包角色（SSIS 服务）](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  介绍如何获取或设置有关分配给包或文件夹的角色的信息。  
   
 ## <a name="reference"></a>参考  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

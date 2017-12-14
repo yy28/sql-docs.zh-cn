@@ -1,5 +1,5 @@
 ---
-title: "catalog.validate_package （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.validate_package（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - validate_package stored procedure [Integration Services]
 - catalog.validate_package stored procedure [Integration Services]
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 7e4bfde2a35b234e5a48f96d1d5632316a3b2af9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +44,26 @@ catalog.validate_package [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 包含包的文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] folder_name  
+ 包含包的文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @project_name =]*文件的内容*  
- 包含此包的项目的名称。 *文件的内容*是**nvarchar （128)**。  
+ [ @project_name = ] project_name  
+ 包含此包的项目的名称。 project_name 为 nvarchar(128)。  
   
- [ @package_name =]*包名称*  
- 包的名称。 *Package_name*是**nvarchar(260)**。  
+ [ @package_name = ] package_name  
+ 包的名称。 package_name 为 nvarchar(260)。  
   
- [ @validation_id =] *validation_id*  
- 返回验证的唯一标识符 (ID)。 *Validation_id*是**bigint**。  
+ [ @validation_id = ] validation_id  
+ 返回验证的唯一标识符 (ID)。 validation_id 为 bigint。  
   
- [ @use32bitruntime =] *use32bitruntime*  
- 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用的值`1`时要执行与 32 位运行时包在 64 位操作系统上运行。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 *Use32bitruntime*是**位**。  
+ [ @use32bitruntime = ] use32bitruntime  
+ 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 use32bitruntime 为 bit。  
   
- [ @environment_scope =] *environment_scope*  
- 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数可选。 字符`D`默认情况下使用。 *Environment_scope*是**char （1)**。  
+ [ @environment_scope = ] environment_scope  
+ 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数可选。 默认情况下使用字符 `D`。 environment_scope 为 Char(1)。  
   
- [ @reference_id =] *reference_id*  
- 环境引用的唯一 ID。 此参数是必需的仅当单个环境引用包含在验证中，当*environment_scope*是`S`。 *Reference_id*是**bigint**。  
+ [ @reference_id = ] reference_id  
+ 环境引用的唯一 ID。 如果 environment_scope 为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  
@@ -76,18 +74,18 @@ catalog.validate_package [ @folder_name = ] folder_name
 ## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
--   项目的读取的权限，如果适用，在引用环境上的读取权限  
+-   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
   
 -   项目名称或包名称无效  
   
--   用户没有适当的权限  
+-   用户不具备适当的权限  
   
 -   验证中包含的一个或多个引用环境不包含引用的变量  
   
@@ -100,7 +98,6 @@ catalog.validate_package [ @folder_name = ] folder_name
 -   包参数中引用了变量，但验证中不包括任何引用的环境  
   
 ## <a name="remarks"></a>注释  
- 验证可帮助识别可能会阻止包成功运行的问题。 使用[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)或[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图来验证状态的监视器。  
+ 验证有助于识别可能阻止包成功运行的问题。 使用 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 或 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图以监视验证状态。  
   
   
-

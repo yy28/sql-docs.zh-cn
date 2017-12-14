@@ -1,5 +1,5 @@
 ---
-title: "分析非标准的文本文件格式 with the Script Component |Microsoft 文档"
+title: "使用脚本组件分析非标准文本文件格式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,48 +8,45 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - text file reading [Integration Services]
 - Script component [Integration Services], non-standard text file formats
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c6bf6a70027da7804e2fdca998948d44c9a26097
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 71d6dc8817b80e99fa5aece9fd5c581f22c69c4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用脚本组件分析非标准文本文件格式
   当源数据以非标准格式排列时，您可能会发现在一个脚本中合并所有分析逻辑要比将多个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换链接在一起以实现相同结果更方便。  
   
- [示例 1： 分析行分隔记录](#example1)  
+ [示例 1：分析以行分隔的记录](#example1)  
   
- [示例 2： 拆分父和子记录](#example2)  
+ [示例 2：拆分父记录和子记录](#example2)  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
-##  <a name="example1"></a>示例 1： 分析行分隔记录  
+##  <a name="example1"></a> 示例 1：分析以行分隔的记录  
  本示例演示如何采用其中包含的每列数据显示在单独一行中的文本文件，并使用脚本组件对该文件进行分析，分析结果写入目标表。  
   
- 有关如何将使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 有关如何将脚本组件配置为用作数据流中的转换的详细信息，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
-1.  创建并保存一个名为文本文件**rowdelimiteddata.txt**包含以下源数据：  
+1.  创建并保存包含以下源数据且名为 **rowdelimiteddata.txt** 的文本文件：  
   
     ```  
     FirstName: Nancy  
@@ -94,17 +91,17 @@ ms.lasthandoff: 09/26/2017
   
 6.  向包中添加 OLE DB 连接管理器，并配置其连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和在其中创建了目标表的数据库。  
   
-7.  将数据流任务添加到包并单击**数据流**SSIS 设计器选项卡。  
+7.  向包中添加数据流任务并单击 SSIS 设计器的“数据流”选项卡。  
   
-8.  向数据流添加平面文件源，并将其配置为使用 RowDelimitedData 连接管理器。 上**列**页**平面文件源编辑器**，选择单个可用外部列。  
+8.  向数据流添加平面文件源，并将其配置为使用 RowDelimitedData 连接管理器。 在“平面文件源编辑器”的“列”页中，选择可用的单一外部列。  
   
 9. 向数据流添加脚本组件并将其配置为转换。 将平面文件源的输出连接到脚本组件。  
   
-10. 双击要显示的脚本组件**脚本转换编辑器**。  
+10. 双击脚本组件，显示“脚本转换编辑器”。  
   
-11. 上**输入列**页**脚本转换编辑器**，选择单个可用输入的列。  
+11. 在“脚本转换编辑器”的“输入列”页中，选择可用的单一输入列。  
   
-12. 上**输入和输出**页**脚本转换编辑器**，选择输出 0 并设置其**SynchronousInputID**为 None。 创建 5 个输出列，所有 [DT_STR] 类型字符串的长度为 32：  
+12. 在“脚本转换编辑器”的“输入和输出”页中，选择“输出 0”并将其 **SynchronousInputID** 设置为 None。 创建 5 个输出列，所有 [DT_STR] 类型字符串的长度为 32：  
   
     -   FirstName  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 09/26/2017
   
     -   StateProvince  
   
-13. 上**脚本**页**脚本转换编辑器**，单击**编辑脚本**然后输入中所示的代码**ScriptMain**类该示例。 关闭脚本开发环境和**脚本转换编辑器**。  
+13. 在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”，然后输入在示例的 **ScriptMain** 类中显示的代码。 关闭脚本开发环境和“脚本转换编辑器”。  
   
 14. 向数据流添加 SQL Server 目标。 将该目标配置为使用 OLE DB 连接管理器和 RowDelimitedData 表。 将脚本组件的输出连接到此目标。  
   
@@ -197,17 +194,17 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a>示例 2： 拆分父和子记录  
+##  <a name="example2"></a> 示例 2：拆分父记录和子记录  
  本示例演示如何采用格式为父记录行的前面有一个分隔符行，父记录行后跟任意个子记录行的文本文件，并使用脚本组件对其进行分析，分析结果写入已适当规范化的父目标表和子目标表中。 这是一个简单的示例，它易于调整以适合每个父记录和子记录使用多行或多列的源文件，只要有办法识别每个记录的开始和结尾。  
   
 > [!CAUTION]  
 >  此示例仅供演示之用。 如果多次运行该示例，则会在目标表中插入重复的键值。  
   
- 有关如何将使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 有关如何将脚本组件配置为用作数据流中的转换的详细信息，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
-1.  创建并保存一个名为文本文件**parentchilddata.txt**包含以下源数据：  
+1.  创建并保存包含以下源数据且名为 **parentchilddata.txt** 的文本文件：  
   
     ```  
     **********  
@@ -228,7 +225,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 2.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
-3.  选择目标数据库，并打开新查询窗口。 在查询窗口中，执行以下用于创建目标表的脚本：  
+3.  选择目标数据库，并打开新查询窗口。 在该查询窗口中，执行以下脚本以创建目标表：  
   
     ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
@@ -253,23 +250,23 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 6.  向包中添加 OLE DB 连接管理器，并配置其连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和在其中创建目标表的数据库。  
   
-7.  将数据流任务添加到包并单击**数据流**SSIS 设计器选项卡。  
+7.  向包中添加数据流任务并单击 SSIS 设计器的“数据流”选项卡。  
   
-8.  向数据流添加平面文件源，并将其配置为使用 ParentChildData 连接管理器。 上**列**页**平面文件源编辑器**，选择单个可用外部列。  
+8.  向数据流添加平面文件源，并将其配置为使用 ParentChildData 连接管理器。 在“平面文件源编辑器”的“列”页中，选择可用的单一外部列。  
   
 9. 向数据流添加脚本组件并将其配置为转换。 将平面文件源的输出连接到脚本组件。  
   
-10. 双击要显示的脚本组件**脚本转换编辑器**。  
+10. 双击脚本组件，显示“脚本转换编辑器”。  
   
-11. 上**输入列**页**脚本转换编辑器**，选择单个可用输入的列。  
+11. 在“脚本转换编辑器”的“输入列”页中，选择可用的单一输入列。  
   
-12. 上**输入和输出**页**脚本转换编辑器**、 选择输出 0，将它重命名为 ParentRecords，并设置其**SynchronousInputID**为 None。 创建 2 输出列：  
+12. 在“脚本转换编辑器”的“输入和输出”页中，选择“输出 0”，将其重命名为 ParentRecords，并将其 **SynchronousInputID** 设置为 None。 创建 2 个输出列：  
   
     -   ParentID（主键），类型为四字节有符号整数 [DT_I4]  
   
     -   ParentRecord，类型为长度为 32 的字符串 [DT_STR]。  
   
-13. 创建第二个输出，并将其命名为 ChildRecords。 **SynchronousInputID**的新输出已设置为 None。 创建 3 个输出列：  
+13. 创建第二个输出，并将其命名为 ChildRecords。 新输出的 **SynchronousInputID** 已设置为 None。 创建 3 个输出列：  
   
     -   ChildID（主键），类型为四字节有符号整数 [DT_I4]  
   
@@ -277,7 +274,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord，类型为长度为 50 的字符串 [DT_STR]  
   
-14. 上**脚本**页**脚本转换编辑器**，单击**编辑脚本**。 在**ScriptMain**类中，输入的代码示例所示。 关闭脚本开发环境和**脚本转换编辑器**。  
+14. 在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”。 在 **ScriptMain** 类中，输入在示例中显示的代码。 关闭脚本开发环境和“脚本转换编辑器”。  
   
 15. 向数据流添加 SQL Server 目标。 将脚本组件的 ParentRecords 输出连接到此目标。将此目标配置为使用 OLE DB 连接管理器和 Parents 表。  
   
@@ -361,4 +358,3 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
  [使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Showplan 逻辑运算符和物理运算符参考 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -139,14 +142,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
-  运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
   
  运算符分为逻辑运算符和物理运算符。  
   

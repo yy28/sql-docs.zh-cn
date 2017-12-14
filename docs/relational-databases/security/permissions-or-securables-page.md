@@ -2,9 +2,12 @@
 title: "“权限”或“安全对象”页 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: "39"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
-  使用 **“权限”** 或 **“安全对象”** 页可以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“权限”页或“安全对象”页以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  
   
  若要了解安全对象和主体的可能组合，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md) 主题中特定于安全对象的语法链接。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   

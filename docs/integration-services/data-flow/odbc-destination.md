@@ -1,5 +1,5 @@
 ---
-title: "ODBC 目标 |Microsoft 文档"
+title: "ODBC 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -70,11 +68,11 @@ ms.lasthandoff: 08/17/2017
   
  有关详细信息，请参阅下列主题之一：  
   
--   [ODBC 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器（“映射”页）](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -84,9 +82,9 @@ ms.lasthandoff: 08/17/2017
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
--   [通过使用 ODBC 目标加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [通过使用 ODBC 目标来加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 目标自定义属性](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
   
 #### <a name="input-column"></a>输入列  
- 查看选定的输入列。 你可以通过选择移除映射**\<忽略 >**输出中排除列。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
   
 #### <a name="destination-column"></a>目标列  
  查看所有可用目标列（包括映射和未映射的列）。  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>重定向流  
  将引起错误或截断的行定向到 ODBC 目标的错误输出。 有关详细信息，请参阅 ODBC 目标。  
   
-

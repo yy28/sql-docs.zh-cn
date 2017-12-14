@@ -1,5 +1,5 @@
 ---
-title: "catalog.deny_permission （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.deny_permission（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,28 +38,28 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @object_type =] *object_type*  
- 安全对象类型。 安全对象类型包括文件夹 (`1`)，项目 (`2`)，环境 (`3`)，和操作 (`4`)。*Object_type*是**smallint***。*  
+ [ @object_type = ] *object_type*  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint***。*  
   
- [ @object_id =] *object_id*  
- 唯一标识符 (ID) 或安全对象的主键。 *Object_id*是**bigint**。  
+ [ @object_id = ] *object_id*  
+ 安全对象的唯一标识符 (ID) 或主键。 *object_id* 为 **bigint**。  
   
- [ @principal_id =] *principal_id*  
- 被拒绝的主体的 ID。 *Principal_id*是**int**。  
+ [ @principal_id = ] *principal_id*  
+ 被拒绝的主体的 ID。 *principal_id* 为 **int**。  
   
- [ @permission_type =] *permission_type*  
- 要被拒绝的权限类型。 *Permission_type*是**smallint**。  
+ [ @permission_type = ] *permission_type*  
+ 要被拒绝的权限类型。 *permission_type* 为 **smallint**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  
   
- 1 （object_class 不是有效的）  
+ 1（object_class 无效）  
   
- 2 （object_id 不存在）  
+ 2（object_id 不存在）  
   
- 3 （主体不存在）  
+ 3（主体不存在）  
   
- 4 （权限不是有效的）  
+ 4（权限无效）  
   
  5（其他错误）  
   
@@ -73,9 +71,9 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   针对对象的 MANAGE_PERMISSIONS 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="remarks"></a>注释  
  通过此存储过程可以拒绝下表中所示的权限类型：  
@@ -95,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
   
--   如果指定 permission_type，则该过程将拒绝指定显式分配给指定的对象的指定主体的权限。 即使不发生此类情况，该过程也仍将返回成功代码值 (`0`)。  
+-   如果指定 permission_type，此过程会拒绝显式分配给指定主体的针对指定对象的指定权限。 即使不发生此类情况，该过程也仍将返回成功代码值 (`0`)。  
   
--   如果省略 permission_type，过程将拒绝对指定的对象指定的主体的所有权限。  
+-   如果忽略 permission_type，此过程会拒绝指定主体针对指定对象的所有权限。  
   
   
-

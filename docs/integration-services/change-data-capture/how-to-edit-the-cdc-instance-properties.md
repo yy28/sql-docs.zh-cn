@@ -1,5 +1,5 @@
 ---
-title: "如何编辑 CDC 实例属性 |Microsoft 文档"
+title: "如何编辑 CDC 实例属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09474650ff16a5b6a11ad9d02154d9f2a4261ea7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a5203794c19f7049b340edc47ba911bc34e93afc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台编辑 CDC 实例的配置属性。  
@@ -59,4 +57,3 @@ ms.lasthandoff: 08/03/2017
          有关可在此选项卡中执行的操作的信息，请参阅 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)。  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "升级 Integration Services 包 |Microsoft 文档"
+title: "升级 Integration Services 包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c82382c5948f6f81b5b3e80bc6fe9fd76eb23942
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
   在将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本时，现有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包不会自动升级到当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的包格式。 您必须选择一种升级方法并手动升级包。  
   
- 在将项目转换为项目部署模型时升级包的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)
+ 有关在将项目转换为项目部署模型时升级包的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。
   
 ## <a name="selecting-an-upgrade-method"></a>选择升级方法  
  可以使用各种方法来升级 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包。 对于某些方法，升级只是临时的。 对于其他方法，升级将是永久的。 下表描述了每种升级方法以及升级是临时的还是永久的。  
@@ -62,14 +60,14 @@ ms.lasthandoff: 08/03/2017
   
 -   DTExecUI.exe.config  
   
- 若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]设计包中包括到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，或[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]自定义组件，你需要修改位于的 devenv.exe.config 文件*\<驱动器 >*: files\microsoft Visual Studio 10.0\Common7\IDE。  
+ 若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 设计包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 自定义组件的包，需要修改位于 \<drive>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE 的 devenv.exe.config 文件。  
   
- 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅[ \<assemblyBinding > 元素\<运行时 >](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>定位程序集  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 没有单独的全局程序集缓存中，以便.NET 4 中，位于*\<驱动器 >*: \Windows\Microsoft.NET\assembly。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
   
- 与以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，核心[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]扩展性.dll 文件也位于*\<驱动器 >*: files\microsoft SQL Server\130\SDK\Assemblies。  
+ 与之前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一样，核心 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 扩展性 .dll 文件也位于 \<drive>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies 中。  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>了解 SQL Server 包升级结果  
  在包升级过程中， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包中的大部分组件和功能都无缝地转换为其在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的对应部分。 但是，有一些组件和功能，它们要么无法升级，要么升级的结果值得引起您的注意。 下表确定了这些组件和功能。  
@@ -79,10 +77,9 @@ ms.lasthandoff: 08/03/2017
   
 |组件或功能|升级结果|  
 |--------------------------|---------------------|  
-|连接字符串|对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> 使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择 **“更新连接字符串以使用新的提供程序名称”** 选项。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，在“选项”对话框的“常规”页上，选择 **“更新连接字符串以使用新的提供程序名称”** 选项。 有关此选项的详细信息，请参阅常规页。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：在连接字符串存储于配置文件或数据源文件中，或表达式设置了 **ConnectionString** 属性时，不能使用上述过程更新连接字符串。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅 [数据源](../../integration-services/connection-manager/data-sources.md)。|  
+|连接字符串|对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> 使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择 **“更新连接字符串以使用新的提供程序名称”** 选项。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，在“选项”对话框的“常规”页上，选择 **“更新连接字符串以使用新的提供程序名称”** 选项。 有关此选项的详细信息，请参阅“常规页”。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：在连接字符串存储于配置文件或数据源文件中，或表达式设置了 **ConnectionString** 属性时，不能使用上述过程更新连接字符串。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅 [数据源](../../integration-services/connection-manager/data-sources.md)。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>依赖于 ADODB.dll 的脚本  
  在未安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的计算机上，可能不能升级或运行显式引用 ADODB.dll 的“脚本任务”和“脚本组件”脚本。 为了升级这些“脚本任务”或“脚本组件”脚本，建议你删除对 ADODB.dll 的依赖关系。  Ado.Net 是建议用于托管代码（如 VB 和 C# 脚本）的替代项。  
   
   
-

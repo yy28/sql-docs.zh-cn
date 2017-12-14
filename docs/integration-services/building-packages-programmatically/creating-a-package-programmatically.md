@@ -1,5 +1,5 @@
 ---
-title: "以编程方式创建包 |Microsoft 文档"
+title: "以编程方式创建包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b16b2cc623c44884e088168e3c16ccb412dd88b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-package-programmatically"></a>以编程方式创建包
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 对象是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 项目解决方案中的所有其他对象的顶级容器。 作为顶级容器，包是第一个创建的对象，并将后续对象添加到该包，然后在包的上下文中执行这些对象。 包本身并不移动或转换数据。 包依靠自己包含的任务执行工作。 任务执行大多数由包执行的工作，并定义包的功能。 只需三行代码即可完成包的创建和执行，但需要向包中添加各种任务和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象以增加其功能。 本节讨论如何以编程方式创建包。 不提供有关如何创建任务或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的信息。 有关信息，请参阅后续相关章节。  
@@ -73,15 +70,15 @@ Module Module1
 End Module  
 ```  
   
- 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要生成使用 C# 编译器，代码**csc.exe**、 在命令提示符下进行编译，使用以下命令和文件引用，替换 *\<filename >* .cs 或.vb 文件中，并为其提供的名称与 *\<outputfilename >*所选。  
+ 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 \<filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个 \<outputfilename>。  
   
- **csc /target: library /out: \<outputfilename >.dll\<文件名 >.cs /r:Microsoft.SqlServer.Managed DTS.dll"/r:System.dll**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 若要生成使用 Visual Basic.NET 编译器中，代码**vbc.exe**、 在命令提示符下进行编译，使用以下命令和文件引用。  
+ 若要使用 Visual Basic .NET 编译器 (vbc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用。  
   
- **vbc /target: library /out: \<outputfilename >.dll\<文件名 >.vb /r:Microsoft.SqlServer.Managed DTS.dll"/r:System.dll**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 差异在于<xref:Microsoft.SqlServer.Dts.Runtime.Application>首次创建对象，和包对象内容由应用程序的重载方法之一： **LoadPackage**平面文件的**LoadFromSQLServer**包保存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>包保存到文件系统。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
+ 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：LoadPackage 用于平面文件，LoadFromSQLServer 用于保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包，<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用于保存到文件系统的包。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
   
 ```csharp  
 using System;  
@@ -160,12 +157,11 @@ End Module
   
 ## <a name="external-resources"></a>外部资源  
   
--   博客文章[API 示例-OleDB 源和 OleDB 目标](http://go.microsoft.com/fwlink/?LinkId=220824)，blogs.msdn.com 上的。  
+-   blogs.msdn.com 上的博客文章 [API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824)（API 示例 - OleDB 源和 OleDB 目标）。  
   
--   博客文章[EzAPI – 经过更新以 SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)，blogs.msdn.com 上的。  
+-   blogs.msdn.com 上的博客文章 [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI – 为 SQL Server 2012 更新）。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [以编程方式添加任务](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

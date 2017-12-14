@@ -1,5 +1,5 @@
 ---
-title: "控制流 |Microsoft 文档"
+title: "控制流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,26 +16,25 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="control-flow"></a>控制流
-  包由一个控制流以及一个或多个数据流（可选）组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供三种不同类型的控制流元素： 提供包、 任务提供功能和将可执行文件、 容器和任务连接到有序的控制流的优先约束中的结构的容器。  
+  包由一个控制流以及一个或多个数据流（可选）组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了三种不同类型的控制流元素：提供包中结构的容器、提供功能的任务以及将可执行文件、容器和任务连接为已排序控制流的优先约束。  
   
  有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)、 [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)和 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
  下面的关系图显示具有一个容器和六项任务的控制流。 这些任务中有五项定义于包级别，还有一项定义于容器级别。 任务位于容器内。  
   
- ![控制流与六项任务和容器](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "控制流与六项任务和容器")  
+ ![具有六项任务和一个容器的控制流](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "Control flow with six tasks and a container")  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 体系结构支持容器的嵌套，且一个控制流可以包含多级嵌套容器。 例如，一个包可以包含一个容器（如 Foreach 循环容器），此容器转而又能包含另一个 Foreach 循环容器，如此逐层嵌套。  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
  下面的关系图显示了控制流设计器中简单包的控制流。 此关系图中显示的控制流由三个包级任务和一个包含三个任务的包级容器组成。 通过使用优先约束将任务和容器连接起来。  
   
- ![与包的控制流设计器的屏幕截图](../../integration-services/connection-manager/media/samplecontrolflow.gif "与包的控制流设计器的屏幕截图")  
+ ![具有包的控制流设计器的屏幕快照](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot of control flow designer with package")  
   
  创建控制流包含下列任务：  
   
@@ -67,15 +65,14 @@ ms.lasthandoff: 08/03/2017
   
      多个任务需要连接到数据源，因此必须将任务需要的连接管理器添加到包。 根据所使用的枚举器类型，Foreach 循环容器可能也需要连接管理器。 可以在逐项构造控制流时或开始构造控制流前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器还包括许多可用于管理设计图面并使控制流自行记录的设计时功能。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也包含多个设计时功能，这些功能可用于管理设计图面以及使控制流自文档化。  
   
 ## <a name="related-tasks"></a>相关任务  
   
--   [添加或删除任务或控制流中的容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [对组件分组或取消分组](../../integration-services/group-or-ungroup-components.md)  
   
   
-

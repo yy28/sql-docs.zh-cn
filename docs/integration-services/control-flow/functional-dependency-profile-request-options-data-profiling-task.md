@@ -1,5 +1,5 @@
 ---
-title: "函数依赖关系配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+title: "函数依赖关系配置文件请求选项（数据事件探查任务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0958bc22c6ed4a6790145a430fefbe68312cd634
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“函数依赖关系配置文件请求”** 设置选项。 函数依赖关系配置文件报告一个列（依赖列）中的值对另一个列或另一个列集（决定列）中的值的依赖程度。 此配置文件还有助于标识数据中的问题，如值无效。 例如，您对邮政编码列与美国的州列之间的依赖关系进行事件探查， 在此配置文件中，同一邮政编码应始终对应相同的州，但配置文件发现依赖关系冲突。  
@@ -128,8 +125,7 @@ ms.lasthandoff: 08/03/2017
  指定要在输出中报告的函数依赖关系冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **ThresholdSetting**时，才会禁用该选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

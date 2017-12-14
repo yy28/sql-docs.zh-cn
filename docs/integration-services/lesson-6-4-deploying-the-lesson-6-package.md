@@ -1,5 +1,5 @@
 ---
-title: "步骤 4： 部署第 6 课包 |Microsoft 文档"
+title: "步骤 4：部署第 6 课包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d9be296088cf3f455f8790ff013ab0c1df14b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>课程 6-4-第 6 课包部署
+# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>第 6-4 课 — 部署第 6 课包
 部署包涉及将包添加到 SQL Server 实例上 Integration Services 中的 SSISDB 目录。 在本课程中，你会将第 6 课包添加到 SSISDB 目录，设置参数，然后执行该包。 对于本课程，你将使用 SQL Server Management Studio 将第 6 课包添加到 SSISDB 目录，然后部署该包。 部署该包之后，你会修改参数以指向新位置，然后执行该包。  
   
 在本课程中，你将：  
@@ -130,4 +127,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

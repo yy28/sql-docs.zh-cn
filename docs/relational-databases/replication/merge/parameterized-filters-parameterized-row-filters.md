@@ -2,9 +2,12 @@
 title: "参数化行筛选器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
-  参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  
   
  可以在订阅之间共享不重叠的分区，也可以对其进行限制，使得一个给定分区只有一个订阅。 本主题后面的“使用适当的筛选选项”部分介绍了控制分区行为的设置。 通过这些设置，可以根据应用程序和性能要求来调整参数化筛选。 通常，重叠分区的灵活性更大，而复制到单个订阅的不重叠分区的性能则更佳。  
   

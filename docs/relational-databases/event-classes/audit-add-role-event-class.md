@@ -2,9 +2,12 @@
 title: "Audit Add Role 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99f91cb628e60b2646b39091f4ac53cd8d4c9a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9b4cbc6c52d893a90251ef785f878efccf11e36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 事件类
-  当向数据库中添加角色或从中删除角色时，将发生 **Audit Add Role** 事件类。 此事件类用于 **sp_addrole** 和 **sp_droprole** 存储过程。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]向数据库中添加角色或从中删除角色时，将发生 Audit Add Role 事件类。 此事件类用于 **sp_addrole** 和 **sp_droprole** 存储过程。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
   

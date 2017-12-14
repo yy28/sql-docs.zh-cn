@@ -1,5 +1,5 @@
 ---
-title: "编码自定义连接管理器 |Microsoft 文档"
+title: "编写自定义连接管理器代码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab9cc5d32606564b4b79ac5270217fd849e97fd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-connection-manager"></a>编写自定义连接管理器代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
   
- 有关自定义连接管理器的示例，请参阅[开发的自定义连接管理器的用户界面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)。 本主题中演示的代码示例来自 SQL Server 自定义连接管理器示例。  
+ 有关自定义连接管理器的示例，请参阅[为自定义连接管理器开发用户界面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)。 本主题中演示的代码示例来自 SQL Server 自定义连接管理器示例。  
   
 > [!NOTE]  
 >  内置于 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的大多数任务、源和目标都只能与特定类型的内置连接管理器一起工作。 因此，不能使用内置任务和组件测试这些示例。  
@@ -196,13 +192,13 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
 ```  
   
 ### <a name="persisting-the-connection-manager"></a>使连接管理器持久化  
- 通常不需要对连接管理器实现自定义持久性。 自定义持久性仅在对象的属性使用复杂数据类型时才需要。 有关详细信息，请参阅[Integration services 开发自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
+ 通常不需要对连接管理器实现自定义持久性。 自定义持久性仅在对象的属性使用复杂数据类型时才需要。 有关详细信息，请参阅[开发用于 Integration Services 的自定义对象](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)。  
   
 ## <a name="working-with-the-external-data-source"></a>使用外部数据源  
  用于支持与外部数据源连接的方法是自定义连接管理器的最重要方法。 会在设计时和运行时期间的不同时间调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> 方法。  
   
 ### <a name="acquiring-the-connection"></a>获取连接  
- 您需要决定哪种类型的对象适合由 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法从自定义连接管理器返回。 例如，文件连接管理器只返回包含路径和文件名的字符串，而 ADO.NET 连接管理器则返回已打开的托管连接对象。 OLE DB 连接管理器返回本机 OLE DB 连接对象，这些对象不能从托管代码使用。 自定义 SQL Server 连接管理器中，本主题中的代码段的取出顺序返回打开**SqlConnection**对象。  
+ 您需要决定哪种类型的对象适合由 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> 方法从自定义连接管理器返回。 例如，文件连接管理器只返回包含路径和文件名的字符串，而 ADO.NET 连接管理器则返回已打开的托管连接对象。 OLE DB 连接管理器返回本机 OLE DB 连接对象，这些对象不能从托管代码使用。 自定义 SQL Server 连接管理器（从中获取本主题中的代码段）返回打开的 SqlConnection 对象。  
   
  连接管理器用户需要事先了解所需的对象类型，以便可以将返回的对象转换为合适的类型并访问其方法和属性。  
   
@@ -268,9 +264,8 @@ public override void ReleaseConnection(object connection)
 }  
 ```  
  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [创建自定义连接管理器](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
  [为自定义连接管理器开发用户界面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

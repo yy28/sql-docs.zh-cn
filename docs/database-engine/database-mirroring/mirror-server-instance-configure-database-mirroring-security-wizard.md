@@ -2,9 +2,12 @@
 title: "镜像服务器实例（配置数据库镜像安全向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a1a1b795e571ea783618a2a8a75111b420ecc99
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f88d0c71337f7b4c4fc1e26c2c483b26723c073
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>镜像服务器实例（配置数据库镜像安全向导）
-  使用此页可以指定有关具有镜像数据库的服务器实例的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以指定有关具有镜像数据库的服务器实例的信息。  
   
 > [!IMPORTANT]  
 >  镜像服务器实例必须与主体服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（Standard 或 Enterprise）。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  

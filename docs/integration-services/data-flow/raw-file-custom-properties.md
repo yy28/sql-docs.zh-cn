@@ -1,5 +1,5 @@
 ---
-title: "原始文件自定义属性 |Microsoft 文档"
+title: "原始文件自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a364ae62ebc8823f9d57fb44ef99b7b14469c608
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e347cdfd00f6e9e06ab8de49a4db3a382ae4eba7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raw-file-custom-properties"></a>原始文件自定义属性
   **源自定义属性**  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/03/2017
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer（枚举）|一个值，指定 FileName 属性是包含文件名还是包含变量（包含文件名）名。 选项为“文件名”(0) 和“来自变量的文件名”(1)。|  
 |FileName|字符串|原始文件目标要写入的文件的名称。|  
-|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为“始终创建”(0)、“创建一次”(1)、“截断和追加”(3)、“追加”(2)。 此属性的默认值是**始终创建**(0)。|  
+|WriteOption|Integer（枚举）|一个指定原始文件目标是否删除具有相同名称的现有文件的值。 选项为“始终创建”(0)、“创建一次”(1)、“截断和追加”(3)、“追加”(2)。 此属性的默认值为“始终创建”(0)。|  
   
 > [!NOTE]  
 >  追加操作要求追加数据的元数据与文件中已有数据的元数据匹配。  
@@ -64,4 +62,3 @@ ms.lasthandoff: 08/03/2017
  [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

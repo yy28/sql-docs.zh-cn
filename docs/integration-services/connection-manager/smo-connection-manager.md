@@ -1,5 +1,5 @@
 ---
-title: "SMO 连接管理器 |Microsoft 文档"
+title: "SMO 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.smoconnection.f1
+f1_keywords: sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: d1f03b27dd5dca9e9a2940abf3731a2f5cefe0af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eace0d881304757c067c95a30fadb2bc0e960641
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="smo-connection-manager"></a>SMO 连接管理器
   SMO 连接管理器使得包能够连接到 SQL 管理对象 (SMO) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括的传输任务使用 SMO 连接管理器。 例如，传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的传输登录任务使用 SMO 连接管理器。  
@@ -76,8 +73,7 @@ ms.lasthandoff: 08/09/2017
  **测试连接**  
  根据配置测试连接。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

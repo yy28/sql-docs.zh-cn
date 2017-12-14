@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 目标编辑器 （连接管理器页） |Microsoft 文档"
+title: "SAP BW 目标编辑器（“连接管理器”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
   使用 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页，选择 SAP BW 目标要使用的 SAP BW 连接管理器。 在该页中，您还可选择用于向 SAP Netweaver BW 系统加载数据的参数。  
@@ -120,10 +117,9 @@ ms.lasthandoff: 08/03/2017
 |**InfoPackage**|使用 **“创建 InfoPackage”** 对话框创建新的 InfoPackage。 有关此对话框的详细信息，请参阅 [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [SAP BW 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW 目标编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [SAP BW 目标编辑器（“映射”页）](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目标编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 目标编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

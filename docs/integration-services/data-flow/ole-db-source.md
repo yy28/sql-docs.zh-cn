@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 源 |Microsoft 文档"
+title: "OLE DB 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -132,7 +130,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  OLE DB 源的 **CommandTimeout** 属性未在 **“OLE DB 源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关此属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“Excel 源”部分。  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>打开 OLE DB 源编辑器 （连接管理器页）  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>打开“OLE DB 源编辑器”（“连接管理器”页）  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，向 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包添加 OLE DB 源。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/17/2017
  通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
->  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 改为值\<值太大，无法显示 > 或 System.Byte [] 显示。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -213,7 +211,7 @@ ms.lasthandoff: 08/17/2017
  **输入/输出**  
  查看数据源的名称。  
   
- **Column**  
+ **列**  
  查看在“OLE DB 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
@@ -235,8 +233,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB 目标](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

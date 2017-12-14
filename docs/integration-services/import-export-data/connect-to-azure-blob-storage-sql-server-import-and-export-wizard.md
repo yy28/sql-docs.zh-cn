@@ -1,5 +1,5 @@
 ---
-title: "连接到 Azure Blob 存储 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "连接到 Azure Blob 存储（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,40 +8,38 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 36b992b5141799d4e168b2e990643e6a515a8d69
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7f586df639ab239539f21f1d94155b589cd9c865
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>连接到 Azure Blob 存储 （SQL Server 导入和导出向导）
-本主题演示如何连接到**Azure Blob 存储**数据源从**选择数据源**或**选择目标**SQL Server 导入和导出向导中的页。
+# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>连接到 Azure Blob 存储（SQL Server 导入和导出向导）
+本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Azure Blob 存储数据源。
 
 >   [!NOTE]
-> 若要使用的 Azure Blob 源或目标，必须安装用于 SQL Server Integration Services 的 Azure 功能包。
-> - 若要下载功能包，请参阅[Microsoft SQL Server 2016 Integration Services 功能包 azure](https://www.microsoft.com/download/details.aspx?id=49492)。
+> 要使用 Azure Blob 源或目标，必须安装用于 SQL Server Integration Services 的 Azure 功能包。
+> - 要下载功能包，请参阅[用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。
 >
 > - 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。
 
-下面的屏幕快照显示的选项配置与 Azure Blob 存储的连接。
+以下屏幕截图显示了配置与 Azure Blob 存储的连接的选项。
 
 ![Azure Blob 存储 连接](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
-## <a name="options-to-specify"></a>若要指定的选项
+## <a name="options-to-specify"></a>要指定的选项
 
 > [!NOTE]
-> Azure Blob 存储是否您的源或目标，此数据提供程序的连接选项都是相同的。 你看到的选项，即是上都相同**选择数据源**和**选择目标**向导页。
+> 无论 Azure Blob 存储是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的。
 
  **使用 Azure 帐户**  
  指定是否使用联机帐户。
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/03/2017
  选择文本或 Avro 文件格式。  
   
  **列分隔符字符**  
- 如果您选择文本格式，输入列分隔符字符。  
+ 如果选择文本格式，请输入列分隔符字符。  
   
  **使用第一行作为列名称**  
  指定第一行数据是否包含列名称。  
@@ -73,5 +71,4 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>另请参阅
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

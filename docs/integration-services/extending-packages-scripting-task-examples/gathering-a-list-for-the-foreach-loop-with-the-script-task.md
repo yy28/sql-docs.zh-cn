@@ -1,5 +1,5 @@
 ---
-title: "与脚本任务的 ForEach 循环收集列表 |Microsoft 文档"
+title: "使用脚本任务为 ForEach 循环收集列表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8abf9b5440cb59319b7d827a406efd900ac689bb
+ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>使用脚本任务为 Foreach 循环收集列表
-  变量枚举器的 Foreach 枚举通过变量传递给它的各列表项，并对每一项执行相同的任务。 您可以在脚本任务中使用自定义代码来填充用于此目的的列表。 有关枚举器的详细信息，请参阅[Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。  
+  变量枚举器的 Foreach 枚举通过变量传递给它的各列表项，并对每一项执行相同的任务。 您可以在脚本任务中使用自定义代码来填充用于此目的的列表。 有关枚举器的详细信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>Description  
- 下面的示例使用从方法**System.IO**命名空间是早于用户在变量中指定的天数或更高版本的计算机上收集的 Excel 工作簿的列表。 它会以递归方式搜索驱动器 C 的各目录中扩展名为 .xls 的文件，并检查每个文件的最新修改日期，以确定该文件是否属于此列表。 它将添加到符合规则的文件**ArrayList** ，并将保存**ArrayList**到 Foreach 循环容器中的更高版本使用的变量。 Foreach 循环容器配置为使用变量枚举器的 Foreach。  
+ 下面的示例使用 **System.IO** 命名空间中的方法，收集计算机中 Excel 工作簿的一个列表，其中的工作簿存在天数大于或小于用户在变量中指定的天数。 它会以递归方式搜索驱动器 C 的各目录中扩展名为 .xls 的文件，并检查每个文件的最新修改日期，以确定该文件是否属于此列表。 它会将符合要求的文件添加到 **ArrayList** 中，并将 **ArrayList** 保存到一个变量中，供以后在 Foreach 循环容器中使用。 Foreach 循环容器配置为使用变量枚举器的 Foreach。  
   
 > [!NOTE]  
->  使用 Foreach 源变量枚举器使用的变量必须为类型**对象**。 你将放在变量的对象必须实现以下接口之一： **System.Collections.IEnumerable**， **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**， **System.ComponentModel IListSource**，或**Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 **数组**或**ArrayList**常用。 **ArrayList**需要引用和**导入**语句**System.Collections**命名空间。  
+>  用于变量枚举器的 Foreach 的变量必须为 **Object** 类型。 放入该变量中的对象必须实现以下接口之一：**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource** 或 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 通常会使用 **Array** 或 **ArrayList**。 **ArrayList** 需要引用 **System.Collections** 命名空间，因此需要针对该命名空间的 **Imports** 语句。  
   
  您可以对 `FileAge` 包变量使用不同的正值和负值来试用此任务。 例如，可以输入 5 以搜索最近 5 天内创建的文件，或者输入 -3 以搜索 3 天以前创建的文件。 对于要搜索较多文件夹的驱动器，此任务可能会花费一两分钟时间。  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  创建一个名为 `FileAge` 的 Integer 类型包变量，并输入一个正整数值或负整数值。 该值为正时，代码将搜索指定天数之内创建的文件；该值为负时，代码将搜索指定天数之前创建的文件。  
   
-2.  创建一个名为的包变量`FileList`类型的**对象**接收从变量枚举器中，以更高版本供 Foreach 脚本任务所收集的文件的列表。  
+2.  创建一个名为 `FileList` 的 **Object** 类型的包变量，以接收脚本任务收集的文件列表，供变量枚举器的 Foreach 以后使用。  
   
-3.  添加`FileAge`变量与脚本任务的**ReadOnlyVariables**属性，并添加`FileList`变量**ReadWriteVariables**属性。  
+3.  将 `FileAge` 变量添加到脚本任务的 **ReadOnlyVariables** 属性中，将 `FileList` 变量添加到 **ReadWriteVariables** 属性中。  
   
-4.  在代码中，导入**System.Collections**和**System.IO**命名空间。  
+4.  在代码中，导入 **System.Collections** 和 **System.IO** 命名空间。  
   
 ### <a name="code"></a>代码  
   
@@ -183,7 +180,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    ArrayList listForEnumerator = new ArrayList();  
+    listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -260,4 +257,3 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
  [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

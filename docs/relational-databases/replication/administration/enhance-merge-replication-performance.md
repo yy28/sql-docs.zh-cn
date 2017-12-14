@@ -2,9 +2,12 @@
 title: "增强合并复制性能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6589d1fc212f1169fa645fdb9c02ac9627597ef7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
-  在考虑 [增强事务复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于合并复制的其他几个方面。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在考虑[增强常规复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于合并复制的其他几个方面。  
   
 ## <a name="database-design"></a>数据库设计  
   

@@ -1,5 +1,5 @@
 ---
-title: "步骤 1： 创建工作文件夹和环境变量 |Microsoft 文档"
+title: "步骤 1：创建工作文件夹和环境变量 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: de69cfa9d63daa6cd5638774aba2540fd2ffdbaa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8ee63b1546b182cad4e0bb2b137c1bad51f15032
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>课程 1-1-创建工作文件夹和环境变量
+# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>第 1-1 课 - 创建工作文件夹和环境变量
 在此任务中，您将创建工作文件夹 (C:\DeploymentTutorial) 和新的系统环境变量（`DataTransfer` 和 `LoadXMLData`），在后面的教程任务中您将使用它们。  
   
 工作文件夹位于 C 驱动器的根目录。 如果必须使用其他驱动器或位置，也可以使用其他驱动器或位置。 但是，您需要记下此位置；然后，只要教程引用 DeploymentTutorial 工作文件夹的位置，就使用它。  
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

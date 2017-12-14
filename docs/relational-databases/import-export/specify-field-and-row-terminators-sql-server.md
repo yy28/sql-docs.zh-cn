@@ -2,9 +2,12 @@
 title: "指定字段终止符和行终止符 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 63039f63f52131c942f76e069514fa90d46a1701
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b6239b8e7ad2f4383eac1764a211880325eedf3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
-  对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”标记每个字段的结尾，以及使用“行终止符”标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
   
 > [!IMPORTANT]  
 >  使用本机格式或 Unicode 本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能与终止符冲突，因为本机格式的数据文件是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式存储的。  

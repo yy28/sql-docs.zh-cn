@@ -2,9 +2,12 @@
 title: "Showplan Statistics Profile 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fce31743a7bb66586b414d2e4b720bd70216d379
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: acf72e8f528b80074ec964b375c00e172119bbed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile 事件类
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  
   
  Showplan Statistics Profile 事件类显示完整的编写时数据；包含 Showplan Statistics Profile 的跟踪可能会使性能明显降低。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。  
   

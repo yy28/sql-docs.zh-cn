@@ -2,9 +2,12 @@
 title: "使用数据库引擎 cmdlet | Microsoft Docs"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f73610b00bc4c7dd6e68128f841a3c7a1e6ed691
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用数据库引擎 cmdlet
-  Windows PowerShell cmdlet 是单函数命令，通常采用“动词-名词”形式的命名约定，如 **Get-Help** 或 **Set-MachineName**。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 cmdlet。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Windows PowerShell cmdlet 是单函数命令，通常采用“动词-名词”形式的命名约定，如 Get-Help 或 Set-MachineName。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 cmdlet。  
   
 ## <a name="database-engine-cmdlets"></a>数据库引擎 cmdlet  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现了一小部分用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的 cmdlet。 这些 cmdlet 主要用于从新的 PowerShell 脚本运行现有的 Transact-SQL 脚本，评估基于策略的管理策略并帮助在 SQL Server 提供程序路径中指定 SQL Server 标识符。  

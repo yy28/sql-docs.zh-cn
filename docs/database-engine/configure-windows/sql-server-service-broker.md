@@ -2,9 +2,12 @@
 title: SQL Server Service Broker | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c25c1fd1780e090a47e85264f4c579f52cdf0d5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: be698f252ad69b10178777216fe6e9b1ab789e81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中的消息和队列应用程序提供本机支持。 这使开发人员可以更轻松地创建使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在完全不同的数据库之间进行通信的复杂应用程序。 开发人员可以使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 轻松生成可靠的分布式应用程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中的消息和队列应用程序提供本机支持。 这使开发人员可以更轻松地创建使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 组件在完全不同的数据库之间进行通信的复杂应用程序。 开发人员可以使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 轻松生成可靠的分布式应用程序。  
   
  使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的应用程序开发人员无需编写复杂的内部通信和消息，即可跨多个数据库分发数据工作负荷。 因为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会处理会话上下文中的通信路径，所以这就减少了开发和测试工作。 同时还提高了性能。 例如，支持网站的前端数据库可以记录信息，并发送处理密集型任务以便在后端数据库中进行排队。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 确保在事务上下文中管理所有任务，以确保可靠性和技术一致性。  
   

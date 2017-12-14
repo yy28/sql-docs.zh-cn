@@ -2,9 +2,12 @@
 title: "通过 Internet 复制 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8715b7410c6a73e79c8f07d48f46e1bf5c517383
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fd7b2400e4f50cf139c388a9043380c247a09167
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-over-the-internet"></a>通过 Internet 复制
-  通过 Internet 复制数据，可以使断开连接的远程用户在需要时使用到 Internet 的连接访问数据。 使用以下方式在 Internet 上复制数据：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过 Internet 复制数据，可以使断开连接的远程用户在需要时使用到 Internet 的连接访问数据。 使用以下方式在 Internet 上复制数据：  
   
 -   虚拟专用网络 (VPN)。 有关详细信息，请参阅[使用 VPN 通过 Internet 发布数据](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md)。  
   

@@ -2,9 +2,12 @@
 title: "发布服务器属性 - 发布服务器，订阅服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c671522b75f0794874fe911e0c52b7f79d84678d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd2f8ef154f1fb1f2bb0c81e84965d6c86c13e3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>发布服务器属性 - 发布服务器，订阅服务器
-  “发布服务器属性”对话框的“订阅服务器”页用于运行早于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的发布服务器。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“发布服务器属性面板”对话框的“订阅服务器”页用于运行版本早于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 使用此页，可以启用订阅服务器以接收此发布服务器上发布的数据。 启用订阅服务器接收此发布服务器的数据，并不会创建对此发布服务器上的发布的订阅。 若要创建订阅，必须使用新建订阅向导。  
   
 ## <a name="options"></a>选项  
  **“发布服务器属性”**  

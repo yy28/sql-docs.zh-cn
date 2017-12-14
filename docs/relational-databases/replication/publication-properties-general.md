@@ -2,9 +2,12 @@
 title: "发布属性 - 常规 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09c13abf3bb8bf742187a4d925ff96047639c0d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8bbcc75b2e04f5bfa9e96fa0f0b39099eaa9872a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-general"></a>发布属性，常规
-  **“发布属性”** 对话框的 **“常规”** 页包含发布的基本信息，包括名称、说明和订阅过期策略。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“发布属性”对话框的“常规”页包含发布的基本信息，包括名称、说明和订阅过期策略。  
   
 ## <a name="options"></a>选项  
  **名称**  

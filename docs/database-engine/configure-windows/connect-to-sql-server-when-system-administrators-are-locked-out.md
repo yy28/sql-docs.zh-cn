@@ -2,9 +2,12 @@
 title: "在系统管理员被锁定时连接到 SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 851ca8cf8c899f5028c2de73e59186000ee93abf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9291c06a2e21ab760e68874d7bd584b2d56571a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
-  本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
   
 -   作为 sysadmin 固定服务器角色成员的所有登录名都已经被误删除。  
   

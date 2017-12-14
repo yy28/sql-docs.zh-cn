@@ -3,8 +3,11 @@ title: "调整可用性组的压缩 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3710e208a767a2291da6f27f9266f0729a5c239
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad722c68fa1cf60e8b253892f093fcdae24b751a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tune-compression-for-availability-group"></a>调整可用性组的压缩
-
-默认情况下，SQL Server 将在适用时压缩可用性组的数据流。 压缩会减少网络流量，增加 CPU 负载，还可能导致延迟。 必须是 sysadmin 固定服务器角色的成员才能启用压缩。 下表显示 SQL Server 何时对可用性组日志流使用压缩：
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]默认情况下，SQL Server 在适用时压缩可用性组的数据流。 压缩会减少网络流量，增加 CPU 负载，还可能导致延迟。 必须是 sysadmin 固定服务器角色的成员才能启用压缩。 下表显示 SQL Server 何时对可用性组日志流使用压缩：
 
 | 应用场景 | 压缩设置
 | ---- | ----

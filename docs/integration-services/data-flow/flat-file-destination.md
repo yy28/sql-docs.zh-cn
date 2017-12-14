@@ -1,5 +1,5 @@
 ---
-title: "平面文件目标 |Microsoft 文档"
+title: "平面文件目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 14de99532df85ad2d65d28bdeeccfcbd8fa3d039
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-destination"></a>平面文件目标
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  
@@ -95,14 +93,13 @@ ms.lasthandoff: 08/17/2017
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
  **输入列**  
- 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。 选择**\<忽略 >**来排除输出中的列。  
+ 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [平面文件源](../../integration-services/data-flow/flat-file-source.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

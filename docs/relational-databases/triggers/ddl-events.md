@@ -2,9 +2,12 @@
 title: "DDL 事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3da22dbb1f2887bf25690ea96fd0dcfcdf3cb8a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a9d0788789ff16b6f3fad859c13d690f87220a9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-events"></a>DDL 事件
-  下表列出了可用于激发 DDL 触发器或事件通知的 DDL 事件。 注意，每个事件都对应于一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或存储过程，并且语句语法修改为在关键字之间加入了一个下划线字符 (_)。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]下表列出了可用于激发 DDL 触发器或事件通知的 DDL 事件。 注意，每个事件都对应于一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或存储过程，并且语句语法修改为在关键字之间加入了一个下划线字符 (_)。  
   
 > [!IMPORTANT]  
 >  执行类似 DDL 的操作的系统存储过程也可以激发 DDL 触发器和事件通知。 请测试您的 DDL 触发器和事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器或事件通知。  

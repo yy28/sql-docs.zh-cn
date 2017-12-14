@@ -1,5 +1,5 @@
 ---
-title: "OData 源 |Microsoft 文档"
+title: "OData 源 | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>OData 源
 在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。 该组件支持 OData v3 和 v4 协议。  
@@ -38,18 +36,18 @@ ms.lasthandoff: 08/23/2017
 -   对于 OData V4 协议，该组件支持 JSON 数据格式。  
 
 OData 源包括对以下数据源的支持：
--   Microsoft Dynamics AX 联机和 Microsoft Dynamics CRM Online
--   SharePoint 列表。 若要查看在 SharePoint 服务器上的所有列表，请使用以下 URL: http://\<服务器 > / _vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。
+-   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
+-   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL：http://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。
   
 ## <a name="odata-format-and-performance"></a>OData 格式和性能
- 大多数 OData 服务可能以多种格式返回结果。 您可以指定的结果集通过使用格式`$format`查询选项。 JSON 和 JSON 轻型这类格式比 ATOM 或 XML 更高效，并且在传输大量数据时的性能更佳。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换至 JSON 后，性能提高 30-53%，从 ATOM 切换至新的 JSON 轻型格式（WCF Data Services 5.1 中提供）后，性能提高 67%。  
+ 大多数 OData 服务都可以多种格式返回结果。 可以使用 `$format` 查询选项指定结果集的格式。 JSON 和 JSON 轻型这类格式比 ATOM 或 XML 更高效，并且在传输大量数据时的性能更佳。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换至 JSON 后，性能提高 30-53%，从 ATOM 切换至新的 JSON 轻型格式（WCF Data Services 5.1 中提供）后，性能提高 67%。  
   
 |行|ATOM|JSON|JSON（轻型）|  
 |-|-|-|-|  
 |10000|113 秒|74 秒|68 秒|  
 |1000000|1110 秒|853 秒|665 秒|  
   
-## <a name="related-topics-in-this-section"></a>本部分中的相关的主题  
+## <a name="related-topics-in-this-section"></a>本节中的相关主题  
   
 -   [教程：使用 OData 源](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
@@ -81,7 +79,7 @@ OData 源包括对以下数据源的支持：
  为查询指定选项。 例如： `$top=5` 
   
  **馈送 url**  
- 显示只读的源 URL 基于此对话框您选定的选项。  
+ 基于在此对话框中选择的选项显示只读馈送 URL。  
   
  **预览**  
  通过使用“预览”对话框预览结果。 **“预览”** 最多可以显示 20 行。  
@@ -101,7 +99,7 @@ OData 源包括对以下数据源的支持：
   
 ### <a name="options"></a>选项  
  **可用外部列**  
- 查看数据源中可用源列的列表。 使用列表中的复选框可向页底部的表添加或删除列。 所选的列添加到输出中。  
+ 查看数据源中可用源列的列表。 使用列表中的复选框可向页底部的表添加或删除列。 所选列会添加到输出中。  
   
  **“外部列”**  
  查看您选择包含在输出中的源列。  
@@ -140,4 +138,3 @@ OData 源包括对以下数据源的支持：
  [OData 连接管理器](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

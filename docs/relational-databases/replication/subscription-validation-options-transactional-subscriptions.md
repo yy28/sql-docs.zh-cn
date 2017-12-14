@@ -2,9 +2,12 @@
 title: "订阅验证选项（事务订阅）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8568415890bcf6a205051c0c2cea7f11358c5ada
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77e1e620f4adc3fc44a937a12b2ab74dc3302bc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>订阅验证选项（事务订阅）
-  使用 **“订阅验证选项”** 对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用“订阅验证选项”对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
   
 ## <a name="options"></a>选项  
  **验证订阅服务器与发布服务器具有相同的复制数据行数**  

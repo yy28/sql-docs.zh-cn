@@ -2,9 +2,12 @@
 title: "XML 索引 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +40,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89cddd8c4eabe6b8c1888df909da934350dfae09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b9dccca2e644bf5d02d47165b02d75241e40695
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-  可以对 **xml** 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]可以对 xml 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
   
 -   对 XML 列进行查询在您的工作负荷中很常见。 必须考虑数据修改过程中的 XML 索引维护开销。  
   

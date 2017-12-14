@@ -2,9 +2,12 @@
 title: "卸载和删除 Master Data Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7e664af4bd45e1fc8a7bd6abc4b43b45a69b5b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4934ba6f54b7bcd5270f69b860b291903cba5556
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>卸载和删除 Master Data Services
-  若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中卸载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能，请按照[卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)中的步骤执行，并且在“选择功能”页上将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 指定为要删除的功能。 卸载过程将从本地计算机删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，然后卸载 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中卸载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能，请按照[卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)中的步骤执行，并且在“选择功能”页上将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 指定为要删除的功能。 卸载过程将从本地计算机删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，然后卸载 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
   
  为了防止数据丢失或避免影响系统中的其他计算机，卸载过程将不删除或更改某些项。 请查看下表确定是保留还是删除项。  
   

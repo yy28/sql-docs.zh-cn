@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 目标 |Microsoft 文档"
+title: "SQL Server 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: ff9e0b26ec409940e08fd1e3161add395d00b524
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
   SQL Server 目标连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，并将数据大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表和视图中。 如果包访问远程服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则不能在包中使用 SQL Server 目标。 相反，包应使用 OLE DB 目标。 有关详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
@@ -211,4 +209,3 @@ ms.lasthandoff: 08/17/2017
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

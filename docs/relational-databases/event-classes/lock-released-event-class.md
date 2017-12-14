@@ -2,9 +2,12 @@
 title: "Lock:Released 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbcd710794e737b9be172f17756bd79aa1acaa34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ec7889b8ba842cb837e1d318a67360b960e5547
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 事件类
-  Lock:Released 事件类指示已释放某个资源（例如页）的锁。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Lock:Released 事件类指示已释放某个资源（例如页）的锁。  
   
  Lock:Acquired 和 Lock:Released 事件类可以用于监视锁定对象的时间、使用的锁类型以及锁保留的时间。 保留较长时间的锁可能导致争用问题，应进行调查。 例如，应用程序可以为表中的行获取锁，然后等待用户输入。 由于用户输入可能需要较长时间，所以锁可能会阻塞其他用户。 在这种情况下，应重新设计应用程序，以便只在需要时才请求锁，并且在获取锁后不需要用户输入。  
   

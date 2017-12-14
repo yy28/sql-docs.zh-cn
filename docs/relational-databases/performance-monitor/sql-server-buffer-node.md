@@ -2,9 +2,12 @@
 title: SQL Server:Buffer Node | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: feeb41a69f4895e678aae568afb0f53d66367647
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0816436579ba30ed65c844960b61c70656f09cfd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
-  **Buffer Node** 对象提供了对 **Buffer Manager** 对象所提供的计数器进行补充的计数器。 通过它，您可以监视每个非一致性内存访问 (NUMA) 节点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池页分布。 对于正在使用的每个 NUMA 节点，都有一个 **Buffer Node** 对象实例。 在非 NUMA 体系结构上，将存在一个单独的 **Buffer Node** 对象实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Buffer Node 对象提供了对 Buffer Manager 对象所提供的计数器进行补充的计数器。 通过它，您可以监视每个非一致性内存访问 (NUMA) 节点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池页分布。 对于正在使用的每个 NUMA 节点，都有一个 **Buffer Node** 对象实例。 在非 NUMA 体系结构上，将存在一个单独的 **Buffer Node** 对象实例。  
   
 ## <a name="buffer-node-performance-objects"></a>缓冲区节点性能对象  
  此表说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 性能对象。  

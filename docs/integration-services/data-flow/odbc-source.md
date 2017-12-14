@@ -1,5 +1,5 @@
 ---
-title: "ODBC 源 |Microsoft 文档"
+title: "ODBC 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-source"></a>ODBC 源
   ODBC 源通过使用数据库表、视图或 SQL 语句，从支持 ODBC 的数据库中提取数据。  
@@ -87,11 +85,11 @@ ms.lasthandoff: 08/17/2017
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [使用 ODBC 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [ODBC 源的自定义属性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC 源自定义属性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>ODBC 源编辑器（“连接管理器”页）
   可以使用 **“ODBC 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -200,4 +198,3 @@ ms.lasthandoff: 08/17/2017
  将引起错误或截断的行定向到 ODBC 源的错误输出。  
   
   
-

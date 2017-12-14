@@ -1,5 +1,5 @@
 ---
-title: "TRIM （SSIS 表达式） |Microsoft 文档"
+title: "TRIM（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b543848947186903eddfe6bad310697fb513ad24
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 48ed42d0e12ed6b3d80c61a392b50a529813899e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="trim-ssis-expression"></a>TRIM（SSIS 表达式）
   返回删除了前导空格和尾随空格的字符表达式。  
@@ -68,9 +66,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [LTRIM &#40;SSIS 表达式 &#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [RTRIM &#40;SSIS 表达式 &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [LTRIM（SSIS 表达式）](../../integration-services/expressions/ltrim-ssis-expression.md)   
+ [RTRIM（SSIS 表达式）](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

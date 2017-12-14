@@ -2,9 +2,12 @@
 title: "示例：指定 ELEMENT 指令和实体编码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a386d65bc4a0c6b807f8e8b072bc48b1c50bd689
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77479634b0dd40933ed42b79183806ff06cbdf1f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>示例：指定 ELEMENT 指令和实体编码
-  下面的这个示例说明了 **ELEMENT** 和 **XML** 指令之间的差异。 **ELEMENT** 指令会实体化数据，但 **XML** 指令则不会。 在查询中向 \<Summary> 元素分配了 XML `<Summary>This is summary description</Summary>`。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]下面的这个示例说明了 ELEMENT 和 XML 指令之间的差异。 **ELEMENT** 指令会实体化数据，但 **XML** 指令则不会。 在查询中向 \<Summary> 元素分配了 XML `<Summary>This is summary description</Summary>`。  
   
  请看下面的查询：  
   

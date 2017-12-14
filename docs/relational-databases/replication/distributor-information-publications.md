@@ -2,9 +2,12 @@
 title: "分发服务器信息，发布 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d63066b06de5fbba75c42d948a2d1852b4efabdb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7028cc00bd715609bc9b498c94413dd6299162a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distributor-information-publications"></a>分发服务器信息，发布
-  **“发布”** 选项卡提供左窗格中所选分发服务器的所有发布的摘要信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“发布”选项卡提供左窗格中所选分发服务器的所有发布的摘要信息。  
   
 ## <a name="options"></a>选项  
  显示的有关分发服务器支持的发布信息包括一个列，该列包含发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 否则，发布信息与您在复制监视器的发布服务器视图中查看发布时提供的发布信息相同。 有关 **“发布”** 选项卡中的列的详细信息，请参阅 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)。  

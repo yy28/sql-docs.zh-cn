@@ -2,9 +2,12 @@
 title: "将 value() 和 nodes() 方法用于 OPENXML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8179f3147e201b6ab0f99c1177a6dbe0905ab6b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82e2e1da18b277dc23ab249505e27907ab8d39e0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
-  你可以在 **SELECT** 子句中对 **xml** 数据类型使用多个 **value()** 方法以生成所提取值的行集。 **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]你可以在 SELECT 子句中对 xml 数据类型使用多个 value() 方法以生成所提取值的行集。 **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  
   
  **nodes()** 方法生成特殊的 **xml** 数据类型的实例，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()**、**value()**、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  
   

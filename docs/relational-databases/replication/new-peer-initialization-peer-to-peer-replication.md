@@ -2,9 +2,12 @@
 title: "新对等方的初始化（对等复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b1a95473ec9f9c8233af4b499a52603848946c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6931c2e03243f2f655dbf181512ac6447223a8ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>新对等方的初始化（对等复制）
-  可以使用 **“新对等方初始化”** 页指定如何初始化对等数据库。 （在完成此向导之前，必须初始化对等方。）可以采用手动方式来初始化对等方，或使用事务复制提供的 **initialize with backup** 功能来初始化对等方。 （对等事务复制不支持使用快照初始化对等方。）如果必须使用其他方法来初始化其他对等方，则必须分别运行几次向导来添加对等方。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“新对等方初始化”页指定如何初始化对等数据库。 （在完成此向导之前，必须初始化对等方。）可以采用手动方式来初始化对等方，或使用事务复制提供的 **initialize with backup** 功能来初始化对等方。 （对等事务复制不支持使用快照初始化对等方。）如果必须使用其他方法来初始化其他对等方，则必须分别运行几次向导来添加对等方。  
   
 ## <a name="options"></a>选项  
  **指定如何初始化新的对等数据库**  

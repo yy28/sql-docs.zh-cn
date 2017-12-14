@@ -2,9 +2,12 @@
 title: "可用性副本之间的会话期间的可能故障 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性副本之间的会话期间的可能故障 (SQL Server)
-物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障都可能导致两个可用性副本之间的会话失败。 可用性副本不会定期检查 Sqlservr.exe 所依赖的组件来验证这些组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能忽略的其他故障，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实施了自己的会话超时机制。 以秒为单位指定会话超时期限。 此超时期限是一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。 两个可用性副本之间发生会话超时时，可用性副本将假定已发生故障并声明一个“软错误 ”。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]物理、操作系统或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 方面的问题可能导致两个可用性副本之间的会话失败。 可用性副本不会定期检查 Sqlservr.exe 所依赖的组件来验证这些组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能忽略的其他故障，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实施了自己的会话超时机制。 以秒为单位指定会话超时期限。 此超时期限是一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。 两个可用性副本之间发生会话超时时，可用性副本将假定已发生故障并声明一个“软错误 ”。  
   
 > [!IMPORTANT]  
 >  无法检测到主数据库之外的数据库中的故障。 此外，也不太可能检测到数据磁盘故障，除非数据库因为数据磁盘故障而重新启动。  

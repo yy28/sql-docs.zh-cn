@@ -2,9 +2,12 @@
 title: "运行 Transact-SQL 调试器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
-  在打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在打开 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。  
   
 ## <a name="starting-and-stopping-the-debugger"></a>启动和停止调试器  
  启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的要求如下：  

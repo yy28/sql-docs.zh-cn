@@ -2,9 +2,12 @@
 title: "获取 SQL Server PowerShell 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0a1c7d0f50f672bedd2f3c4d375bfef983f7a5e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 815fab8fa577dad6ee4ef34388c65a1ed3c4b63d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-help-sql-server-powershell"></a>获取 SQL Server PowerShell 帮助
-  有关使用 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序和 cmdlet 的信息有多个来源， 这包括 Windows PowerShell 环境中提供的帮助。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]有关使用 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序和 cmdlet 的信息有多个来源。 这包括 Windows PowerShell 环境中提供的帮助。  
   
 ## <a name="before-you-begin"></a>开始之前  
  若要了解有关 Windows PowerShell 的信息，请参阅 [Windows PowerShell 入门指南](http://go.microsoft.com/fwlink/?LinkId=217083)。  

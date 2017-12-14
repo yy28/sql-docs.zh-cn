@@ -1,5 +1,5 @@
 ---
-title: "ADO NET 源 |Microsoft 文档"
+title: "ADO NET 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-source"></a>ADO NET 源
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
@@ -128,7 +126,7 @@ ms.lasthandoff: 08/17/2017
  通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
->  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 改为值\<值太大，无法显示 > 或 System.Byte [] 显示。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -212,4 +210,3 @@ ms.lasthandoff: 08/17/2017
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

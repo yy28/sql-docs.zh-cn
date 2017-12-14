@@ -2,9 +2,12 @@
 title: "Transact-SQL 中的 OLE 自动化对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7946a30f2d87cbbee4dd1f71e7fac192469052f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 45a3d8533f8f56d0cf2f143780b86f9bd68e8707
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL 中的 OLE 自动化对象
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 包括一些系统存储过程，这些存储过程允许在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器中引用 OLE 自动化对象。 这些系统存储过程作为扩展存储过程运行，而且通过存储过程执行的 OLE 自动化对象在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的地址空间中的运行方式与扩展存储过程的运行方式相同。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 包括一些系统存储过程，这些存储过程允许在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器中引用 OLE 自动化对象。 这些系统存储过程作为扩展存储过程运行，而且通过存储过程执行的 OLE 自动化对象在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的地址空间中的运行方式与扩展存储过程的运行方式相同。  
   
  OLE 自动化存储过程使 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理能够引用 SQL-DMO 对象和自定义 OLE 自动化对象，例如公开 **IDispatch** 接口的对象。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 创建的自定义进程内 OLE 服务器必须有一个用于 **On Error GoTo** 子例程和 **On Error GoTo** 子例程的错误处理程序（使用 **On Error GoTo** 语句指定）。 **Class_Initialize** 子例程和 **Class_Terminate** 子例程中未处理的错误可能导致不可预知的错误，例如 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的访问冲突。 建议其他子例程也有错误处理程序。  
   

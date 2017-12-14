@@ -1,5 +1,5 @@
 ---
-title: "Oracle CDC 实例 |Microsoft 文档"
+title: "Oracle CDC 实例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e34f2e09e740e44566fb6081ebfe1dcd5842d97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 实例
   Oracle CDC 实例是 Oracle CDC 服务为处理从单个 Oracle 源数据库捕获的更改而创建的进程。 Oracle CDC 实例从 **cdc.xdbcdc_config** 表检索其配置并且在 **cdc.xdbcdc_state** 表中维护其状态。 这些表是用于定义 Oracle CDC 实例的 CDC 数据库的一部分。 有关 xdbcdc 数据库和表的详细信息，请参阅 [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)。  
@@ -54,4 +52,3 @@ ms.lasthandoff: 08/03/2017
  [错误处理](../../integration-services/change-data-capture/error-handling.md)  
   
   
-

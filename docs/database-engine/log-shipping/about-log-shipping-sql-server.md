@@ -2,9 +2,12 @@
 title: "关于日志传送 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2aaf014db77119937d57d04c1eb5951243e687f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0ee7521e7b1e43a0e37c6dfdf87e744eee86dd99
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器 ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送，可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器 ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
   
  **本主题内容：**  
   

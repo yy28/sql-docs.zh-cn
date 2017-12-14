@@ -1,5 +1,5 @@
 ---
-title: "数据挖掘查询转换 |Microsoft 文档"
+title: "数据挖掘查询转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 0a9182fa318301a36198d38191eb64ef403c48bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
   数据挖掘查询转换针对数据挖掘模型执行预测查询。 此转换包含用于创建数据挖掘扩展 (DMX) 查询的查询生成器。 使用查询生成器可创建自定义语句来使用 DMX 语言针对现有挖掘模型计算转换输入数据。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](../../../dmx/data-mining-extensions-dmx-reference.md)。  
@@ -78,4 +76,3 @@ ms.lasthandoff: 08/19/2017
  **生成新查询**  
  单击“生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
   
-

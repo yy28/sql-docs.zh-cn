@@ -2,9 +2,12 @@
 title: "客户端网络配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 86acaf42c34d0d3e190f80fd6d5cdd234300e944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: da5be764397fd6a2542676235af6276636bdadbb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="client-network-configuration"></a>客户端网络配置
-  借助客户端软件，客户端计算机能够连接到网络上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 “客户端”是前端应用程序，它使用服务器（如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]）提供的服务。 这种应用程序所驻留的计算机称为“客户端计算机” 。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]借助客户端软件，客户端计算机能够连接到网络上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 “客户端”是前端应用程序，它使用服务器（如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]）提供的服务。 这种应用程序所驻留的计算机称为“客户端计算机” 。  
   
  在最简单的情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端可与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例驻留在同一计算机上。 而通常一个客户端通过网络可以连接到一个或多个远程服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的客户端/服务器体系结构允许通过网络无缝地管理多个客户端和服务器。 默认的客户端配置可以满足大多数情况。  
   

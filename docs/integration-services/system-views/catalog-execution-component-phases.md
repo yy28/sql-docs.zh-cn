@@ -1,5 +1,5 @@
 ---
-title: "catalog.execution_component_phases |Microsoft 文档"
+title: catalog.execution_component_phases | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b3459ce6d7e9eb0b9580ffa54e3b87e16f3e8fb0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1cbf125c6e69af8faac15d0aa0fe5a11afe72e41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/03/2017
 |package_name|**nvarchar(260)**|在执行过程中启动的第一个包的名称。|  
 |task_name|**nvarchar(4000)**|数据流任务的名称。|  
 |subcomponent_name|**nvarchar(4000)**|数据流组件的名称。|  
-|phase|**nvarchar （128)**|执行阶段的名称。|  
+|phase|**nvarchar(128)**|执行阶段的名称。|  
 |start_time|**datetimeoffset(7)**|阶段开始的时间。|  
 |end_time|**datetimeoffset(7)**|阶段结束的时间。|  
 |execution_path|**nvarchar(max)**|数据流任务的执行路径。|  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/03/2017
  此视图显示数据流组件的每个执行阶段（如 Validate、Pre-Execute、Post-Execute、PrimeOutput 和 ProcessInput）对应的行。 每行显示特定执行阶段的开始时间和结束时间。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用 catalog.execution_component_phases 视图来查找特定包所用在所有阶段中执行的总时间量 (**active_time**)，以及为包的总已用时间 (**total_time**)。  
+ 下面的示例使用 catalog.execution_component_phases 视图查看特定包在所有阶段花在执行上的总时间 (**active_time**) 以及包的总运行时间 (**total_time**)。  
   
 > [!WARNING]  
 >  如果包执行的日志记录级别设置为“性能”或“详细”，则 catalog.execution_component_phases 视图将提供此信息。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
@@ -62,17 +60,16 @@ group by package_name, task_name, subcomponent_name, execution_path
 order by package_name, task_name, subcomponent_name, execution_path  
 ```  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   **sysadmin** 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
-

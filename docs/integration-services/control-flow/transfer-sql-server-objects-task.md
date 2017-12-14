@@ -1,5 +1,5 @@
 ---
-title: "传输 SQL Server 对象任务 |Microsoft 文档"
+title: "传输 SQL Server 对象任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
 - sql13.dts.designer.transfersqlserverobjects.general.f1
 - sql13.dts.designer.transfersqlserverobjects.objects.f1
-helpviewer_keywords:
-- Transfer SQL Server Objects task [Integration Services]
+helpviewer_keywords: Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: fd7916034970aba3a64d66ee2b59a1661d8a9515
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 05b3013e4e0328766b0131d41d0fd9b6cd38148b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
   传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中一种或多种类型的对象。 例如，该任务可以复制表和存储过程。 可以复制的对象的类型会因用作源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而异。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库包括架构和用户定义聚合。  
@@ -152,13 +149,13 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="static-options"></a>静态选项  
  **SourceConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **SourceDatabase**  
  选择要从源服务器上的哪个数据库复制对象。  
   
  **DestinationConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **DestinationDatabase**  
  选择对象要复制到目标服务器上的哪个数据库。  
@@ -334,8 +331,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
- [传输 SQL Server 对象任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
- [表达式页](../../integration-services/expressions/expressions-page.md)   
+ [传输 SQL Server 对象任务编辑器（“常规”页）](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [“表达式”页](../../integration-services/expressions/expressions-page.md)   
  [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-

@@ -2,9 +2,12 @@
 title: "配置和管理断字符和词干分析器以便搜索 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,15 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29c3477e0a53e78727eb95423158e550328cbfe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
-
-断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析执行下述两项操作：
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]断字符和词干分析器用于对所有全文检索数据执行语言分析。 语言分析执行下述两项操作：
 
 -   **查找词边界（断字）**。 “断字符”根据语言的词法规则确定词的边界位置，从而标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。
 

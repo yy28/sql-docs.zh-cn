@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP4 发行说明 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b09784b129109f907c19a56a2a6fadcba119e73d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>SQL Server 2012 SP4 发行说明
-本主题总结了 SQL Server 2012 SP4 中所包含的改进。 该主题还描述了安装 SP4 或对其安装进行故障排除之前需要查看的问题。 发行说明仅在线提供，不提供相关安装介质。 本主题会在发现问题时定期更新。 有关 SP4 中修补程序的详细列表，请参阅 [SQL Server 2012 SP4 版本信息](https://go.microsoft.com/fwlink/?linkid=846937)。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]本主题总结了 SQL Server 2012 SP4 中所包含的改进。 该主题还描述了安装 SP4 或对其安装进行故障排除之前需要查看的问题。 发行说明仅在线提供，不提供相关安装介质。 本主题会在发现问题时定期更新。 有关 SP4 中修补程序的详细列表，请参阅 [SQL Server 2012 SP4 版本信息](https://go.microsoft.com/fwlink/?linkid=846937)。  
 
 > 服务包 4 包含所有 SQL Server 2012 SP3 累积更新。
   

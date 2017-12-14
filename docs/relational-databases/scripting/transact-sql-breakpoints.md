@@ -2,9 +2,12 @@
 title: "Transact-SQL 断点 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 957fd2b889a268d16c2846b25004d4f399f7e959
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f45a852838d3e54f994a55b29e3dcf64eaab8240
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 断点
-  断点指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句处暂停执行，这样您就可以查看该点的代码元素状态。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]断点指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句处暂停执行，这样就可以查看该点的代码元素状态。  
   
 ## <a name="breakpoints"></a>断点  
  在运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器时，您可以切换特定语句上的断点。 在执行到达具有断点的语句时，调试器将暂停执行，以便您可以查看调试信息，例如在变量和参数中存在的值。  

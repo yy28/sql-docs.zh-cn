@@ -2,9 +2,12 @@
 title: "Audit Object Derived Permission 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec371bcc5f0dcc972a2f612d1c5fa628b6d09bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 50db4ef7828f6b564c56b3512ff2f1223544b330
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 事件类
-  当为某个指定的对象发出了 CREATE、ALTER 或 DROP 命令时，会发生 **Audit Object Derived Permission** 事件类。 只有在对象没有与其直接关联的权限或所有者时，才会发生此事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 当为某个指定的对象发出 CREATE、ALTER 或 DROP 命名时，会记录 Audit Object Derived Permission 事件类。 只有在对象没有与其直接关联的权限或所有者时，才会发生此事件。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的将来版本中可能会删除此事件类。 建议您改用 **Audit Schema Object Management** 事件类。  
   

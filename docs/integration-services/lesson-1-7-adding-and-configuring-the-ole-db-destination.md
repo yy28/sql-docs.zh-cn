@@ -1,5 +1,5 @@
 ---
-title: "步骤 7： 添加和配置 OLE DB 目标 |Microsoft 文档"
+title: "步骤 7：添加和配置 OLE DB 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e50d2f6d1622cc124cf8b55fbd1ae14811d5cc9c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>课程 1-7-添加和配置 OLE DB 目标
+# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>第 1-7 课 - 添加和配置 OLE DB 目标
 现在，您的包可以从平面文件源中提取数据，并将数据转换为与目标兼容的格式。 下一个任务是将已转换的数据实际加载到目标。 若要加载数据，您必须将 OLE DB 目标添加到数据流。 OLE DB 目标可以使用数据库表、视图或 SQL 命令将数据加载到各种 OLE DB 兼容的数据库中。  
   
 在此过程中，您将添加和配置 OLE DB 目标以使用以前创建的 OLE DB 连接管理器。  
@@ -70,4 +67,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

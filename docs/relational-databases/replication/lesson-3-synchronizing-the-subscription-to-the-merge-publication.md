@@ -2,9 +2,12 @@
 title: "第 3 课：同步合并发布订阅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2309fd6c194dba691f32a1f6384b0cd9ad1ab6b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c0e328499c4ed59f55ee29fa57261da898750a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>第 3 课：使订阅与合并发布同步
-在本课中，您将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动合并代理以初始化订阅。 您还将使用此过程与发布服务器同步。 本课程要求已完成上一课， [第 2 课：创建合并发布订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动合并代理以初始化订阅。 您还将使用此过程与发布服务器同步。 本课程要求已完成上一课， [第 2 课：创建合并发布订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ### <a name="to-start-synchronization-and-initialize-the-subscription"></a>启动同步并初始化订阅  
   

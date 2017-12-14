@@ -2,9 +2,12 @@
 title: "筛选跟踪 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53f0f6ea6b12c702cadcacebe8deb87f45b48aa7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 49755f29a54164f008e19bc542a9ca650e54b37b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
-  筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
   
  并不一定要为跟踪设置筛选器。 但是，筛选器会将跟踪过程中的开销降到最低。 筛选器将返回有针对性的数据，这样会使性能分析和审核变得更容易。  
   

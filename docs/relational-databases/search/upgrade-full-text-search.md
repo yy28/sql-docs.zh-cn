@@ -2,9 +2,12 @@
 title: "升级全文搜索 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19ef4422f1afa9af64f2e735941dc343390d3959
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e544e5cefe8b935086b93ac7f30acd033a8462aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
-  将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
   
   
 ##  <a name="Upgrade_Server"></a> 升级服务器实例  

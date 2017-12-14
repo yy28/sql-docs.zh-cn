@@ -1,5 +1,5 @@
 ---
-title: "catalog.explicit_object_permissions （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.explicit_object_permissions（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0923ea0cb6262a3a45530d0c2aa513312e566597
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 09/26/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|object_type|**int**|安全对象类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`） 和操作 (`4`)。|  
+|object_type|**int**|安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`） 和操作 (`4`)。|  
 |object_id|**bigint**|安全对象的唯一标识符 (ID) 或主键。|  
 |principal_id|**int**|数据库主体的 ID。|  
 |permission_type|**int**|权限的类型。|  
@@ -58,4 +56,3 @@ ms.lasthandoff: 09/26/2017
  此视图并不显示当前主体的完整权限视图。 用户还必须检查主体是否为已分配了权限的角色和组的成员。  
   
   
-

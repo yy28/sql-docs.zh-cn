@@ -2,9 +2,12 @@
 title: "复制队列读取器代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a0c0fcae1a5f2a63a40da76bfb3e676f03d96fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16e9a3a11396c67d2afa1fa8368812a700c48590
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
-  复制队列读取器代理是一个可执行文件，该文件读取存储在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 消息队列中的消息，然后将这些消息应用于发布服务器。 队列读取器代理与允许排队更新的快照发布和事务发布一起使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制队列读取器代理是一个可执行文件，该文件读取存储在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 消息队列中的消息，然后将这些消息应用于发布服务器。 队列读取器代理与允许排队更新的快照发布和事务发布一起使用。  
   
 > [!NOTE]  
 >  可以按任意顺序指定参数。 如果没有指定可选参数，会使用基于默认代理配置文件的预定义值。  

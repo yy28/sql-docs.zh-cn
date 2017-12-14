@@ -2,9 +2,12 @@
 title: "打印代码和结果 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 493a87b6a78fbc1918c86852999afbb9bc557be3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="print-code-and-results"></a>打印代码和结果
-  在打印查询或文件时，如果打印机支持彩色打印，并且打印机设置中启用了彩色打印功能，则以彩色打印方式打印设定了颜色的元素。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在打印查询或文件时，如果打印机支持彩色打印，并且打印机设置中启用了彩色打印功能，则以彩色打印方式打印设定了颜色的元素。  
   
  不过，文本在编辑器中的字体和着色与文本在打印机上打印出的效果可能有所不同。 从 **“工具”** 菜单中，选择 **“选项”**。 在 **“环境”**选项下，单击 **“字体和颜色”**，然后选择各项在编辑器中所要显示的字体和颜色，以及在打印时生效的字体和颜色。 由于上述设置可能有所差异，因此输出结果可能与在编辑器中看到的效果有所差异。  
   

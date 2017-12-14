@@ -3,8 +3,11 @@ title: "数据库运行状况检测故障转移选项 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
-
-从 SQL Server 2016 开始，配置 AlwaysOn 可用性组时可使用数据库级别运行状况检测 (DB_FAILOVER) 选项。 数据库级别运行状况检测可检测到数据库不再处于联机状态以及其他问题，然后将触发可用性组的自动故障转移。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从 SQL Server 2016 开始，配置 AlwaysOn 可用性组时可使用数据库级别运行状况检测 (DB_FAILOVER) 选项。 数据库级别运行状况检测可检测到数据库不再处于联机状态以及其他问题，然后将触发可用性组的自动故障转移。 
 
 数据库级别运行状况检测针对整个可用性组启用，因此数据库级别运行状况检测会监视可用性组中的每一个数据库。 不能针对可用性组中的特定数据库有选择地启用此选项。 
 
@@ -120,7 +122,7 @@ name  |  db_failover
 >
 >2016-04-25 12:20:21.15 spid79      错误: 41653，严重性: 21，状态: 1。
 >
->2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。**
+>2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >

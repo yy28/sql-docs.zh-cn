@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 数据类型 |Microsoft 文档"
+title: "Integration Services 数据类型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 98
+caps.latest.revision: "98"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 272d0442798d1968a50c124e8422011c2f174718
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d255bfaa20012bce9104aad8e56611163d1c462a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -267,4 +265,3 @@ ms.lasthandoff: 09/26/2017
  [数据流中的数据](../../integration-services/data-flow/data-in-data-flows.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Microsoft 复制冲突查看器（事务复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 722eb49c197d4ba80049115cd8c6a2484ef27a51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cfb8b69c3bc8da0edc49d3444e18067a675ba353
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 复制冲突查看器（事务复制）
-  利用复制冲突查看器，您可以查看同步期间对等事务复制和具有排队更新订阅的事务复制发生的冲突。 有关详细信息，请参阅[查看事务发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]利用复制冲突查看器，可以查看同步期间对等事务复制和具有排队更新订阅的事务复制发生的冲突。 有关详细信息，请参阅[查看事务发布的数据冲突 (SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
   
 > [!NOTE]  
 >  复制冲突查看器显示在合并复制和事务复制中发生的冲突。 对于事务复制，可以使用复制冲突查看器查看冲突数据，但无法为冲突选择不同的解决方法。  

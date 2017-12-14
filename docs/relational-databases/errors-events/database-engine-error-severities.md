@@ -2,9 +2,12 @@
 title: "数据库引擎错误严重性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac34636ce0b0d4dff468218d9883f5f225b3940c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-engine-error-severities"></a>数据库引擎错误严重性
-  当错误是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]引起时，此错误的严重性可说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所遇到问题的类型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当错误是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 引起时，此错误的严重性可说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所遇到问题的类型。  
   
 ## <a name="levels-of-severity"></a>严重性级别  
  下表列出并说明 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所引起错误的严重级别。  

@@ -1,5 +1,5 @@
 ---
-title: "提供源查询 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "提供源查询（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.providesourcequery.f1
+f1_keywords: sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190c39de92d8fc1b559f43c90c95e446ccc87272
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 11ce97439baf73614bda8b2bd57c412790876189
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
-如果指定要提供查询以选择要复制的数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“提供源查询” 。 在此页上，可编写并测试选择要从数据源复制到目标的数据的 SQL 查询。 你还可以将已保存的查询，该文本粘贴或从文件加载查询文本。
+如果指定要提供查询以选择要复制的数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“提供源查询” 。 在此页上，可编写并测试选择要从数据源复制到目标的数据的 SQL 查询。 还可以粘贴已保存的查询的文本或从文件加载它。
 
 ## <a name="screen-shot-of-the-source-query-page"></a>“源查询”页的屏幕截图  
 以下屏幕截图显示向导的“提供源查询”  页。
  
-用户在此简单示例中，输入查询`SELECT * FROM Sales.Customer`将所有行和中的所有列复制**Sales.Customer**源数据库中的表。
--   `SELECT *`表示将复制所有列。
--   缺少`WHERE`子句意味着复制所有行。
+在此简单示例中，用户输入了查询 `SELECT * FROM Sales.Customer`，用于从源数据库中的 Sales.Customer 表复制所有行和所有列。
+-   `SELECT *` 表示复制所有列。
+-   缺少 `WHERE` 子句表示复制所有行。
   
- ![导入和导出向导的源查询页](../../integration-services/import-export-data/media/source-query.png "导入和导出向导的源查询页")  
+ ![导入和导出向导的“源查询”页](../../integration-services/import-export-data/media/source-query.png "Source query page of the Import and Export Wizard")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>提供查询，并检查其语法
 **SQL 语句**  
- 键入 SELECT 查询以从源数据库中检索特定的行和列的数据。 也可以将已保存的查询，该文本粘贴，或从文件加载查询，通过单击**浏览**。 
+ 输入 SELECT 查询，以便从源数据库中检索特定数据行和数据列。 还可以粘贴已保存查询的文本，或通过单击“浏览”从文件加载它。 
   
- 例如，以下查询会检索**SalesPersonID**， **SalesQuota**，和**SalesYTD**从 AdventureWorks 示例数据库的销售人员其提成比例超过 1.5%。  
+ 例如，以下查询可以从 AdventureWorks 示例数据库中检索提成比例超过 1.5% 的销售人员的 SalesPersonID、SalesQuota 和 SalesYTD。  
   
 ```sql
 SELECT SalesPersonID, SalesQuota, SalesYTD  
@@ -62,7 +59,7 @@ WHERE CommissionPct > 0.015
 > 如果检查语句的语法所需的时间超过超时值（30 秒），则将停止分析并引发错误。 在成功完成分析之前，无法跳过向导的这一页。 避免超时的一种解决方案是基于要使用的查询创建数据库视图，然后从向导查询该视图，而不是直接输入查询文本。  
   
  **浏览**  
- 选择已保存的文件使用包含 SQL 查询的文本**打开**对话框。 选择一个文件可以将该文件中的文本复制到“SQL 语句”  文本框中。  
+ 使用“打开”对话框选择包含 SQL 查询的文本的已保存文件。 选择一个文件可以将该文件中的文本复制到“SQL 语句”  文本框中。  
  
 ## <a name="excelQueries"></a> 为 Excel 提供源查询
 ### <a name="specify-excel-objects-in-queries"></a>在查询中指定 Excel 对象
@@ -94,6 +91,5 @@ WHERE CommissionPct > 0.015
 -   对于大多数目标，下一页是“选择源表和源视图” 。 在此页上，可查看提供的查询以及（可选）选择要复制的列和预览示例数据。 有关详细信息，请参阅 [选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。  
   
 -   如果目标是平面文件，则下一页是“配置平面文件目标” 。 在此页上，可为目标平面文件指定格式设置选项。 （配置平面文件之后，随后下一页是“选择源表和源视图”。）有关详细信息，请参阅[配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
-
 
 

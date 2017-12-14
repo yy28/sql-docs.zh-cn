@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 转换 |Microsoft 文档"
+title: "Integration Services 转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3e4ed1c7f0497f8be036b258f35d7a003db00d1f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transformations"></a>Integration Services 转换
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换是包的数据流中对数据进行聚合、合并、分发和修改的组件。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  
@@ -104,4 +102,3 @@ ms.lasthandoff: 08/03/2017
  还可以编写自定义转换。 有关详细信息，请参阅 [开发具有同步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) 和 [开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
   
   
-

@@ -2,9 +2,12 @@
 title: "SQL Server 资源运行状况故障排除（SQL Server 实用工具）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb34d944331312c4833d8b73d431288e2f604bfd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb7cb98417cf8eaf78647f4a52fd984be6c338d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>SQL Server 资源运行状况故障排除（SQL Server 实用工具）
-  排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 标识的资源运行状况问题可能包括缓解计算机上或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上使用过度的 CPU，或者缓解数据层应用程序的使用过度的 CPU。 其他问题可能包括解决数据库文件的使用过度的文件空间或者解决存储卷上分配的磁盘空间的使用过度问题。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 标识的资源运行状况问题可能包括缓解计算机上或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例上使用过度的 CPU，或者缓解数据层应用程序的使用过度的 CPU。 其他问题可能包括解决数据库文件的使用过度的文件空间或者解决存储卷上分配的磁盘空间的使用过度问题。  
   
  注意，如果数据库处于“紧急”状态，则运行状态将显示日志文件空间使用过度。  
   

@@ -1,5 +1,5 @@
 ---
-title: "开发的自定义连接管理器的用户界面 |Microsoft 文档"
+title: "为自定义连接管理器开发用户界面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>为自定义连接管理器开发用户界面
   重写基类的属性和方法的实现以提供自定义功能后，您可能需要为连接管理器创建自定义用户界面。 如果未创建自定义用户界面，用户只能使用“属性”窗口配置连接管理器。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/03/2017
  在自定义用户界面项目或程序集中，通常有两个类，实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的类以及为收集用户信息而显示的 Windows 窗体。  
   
 > [!IMPORTANT]  
->  签名以及构建自定义用户界面和中所述在全局程序集缓存中安装后[编码自定义连接管理器](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)，请记得提供中此类的完全限定的名称<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>属性<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>。  
+>  在按照[编写自定义连接管理器代码](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 属性中提供此类的完全限定名称。  
   
 > [!NOTE]  
 >  内置于 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的大多数任务、源和目标都只能与特定类型的内置连接管理器一起工作。 因此，不能使用内置任务和组件测试这些示例。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 >  如果在用户删除连接管理器实例时不需要执行清除操作，则可能不需要为 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> 方法编写任何代码。  
   
 ### <a name="initializing-the-user-interface"></a>初始化用户界面  
- 在 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> 方法中，设计器将提供对正在配置的连接管理器的引用，以便用户界面类可以修改连接管理器的属性。 下面的代码中所示，你的代码需要缓存连接 managerfor 参考稍后使用。  
+ 在 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> 方法中，设计器将提供对正在配置的连接管理器的引用，以便用户界面类可以修改连接管理器的属性。 如下面的代码所示，代码需要缓存对连接管理器的引用，以便稍后使用。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  在创建用于实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 接口的方法的用户界面类后，必须创建用户可在其中配置连接管理器的属性的 Windows 窗体。  
   
 ### <a name="initializing-the-user-interface-form"></a>初始化用户界面窗体  
- 显示用于编辑的自定义窗体后，可以传递对正在编辑的连接管理器的引用。 可以通过使用自定义的构造函数，为窗体类，或通过创建你自己传递此引用**初始化**方法如下所示。  
+ 显示用于编辑的自定义窗体后，可以传递对正在编辑的连接管理器的引用。 可以使用窗体类的自定义构造函数传递此引用，也可以按如下所示创建自己的 Initialize 方法来传递此引用。  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -299,4 +296,3 @@ private void ConfigureControlsFromConnectionManager()
  [编写自定义连接管理器代码](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

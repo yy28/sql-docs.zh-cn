@@ -1,5 +1,5 @@
 ---
-title: "字词查找转换 |Microsoft 文档"
+title: "字词查找转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
   字词查找转换将从转换输入列的文本中提取的字词与引用表中的字词进行匹配， 然后计算出查找表中的字词在输入数据集中出现的次数，并将计数与引用表中的此字词一并写入转换输出的列中。 此转换对于创建基于输入文本并带有词频统计信息的自定义词列表很有用。  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/19/2017
 |引用字词|Windows、Windows 7 Professional|  
 |输出|Windows|  
   
- 字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下所示: %，@，&、 $、 #、 \*，:，;，。， **，** ，！，？， \<，>，+，=，^，~，|， \\，/，（、）、 [、]、 {、}、"，和。  
+ 字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下：%、@、&、$、#、\*、:、;、.、“、”、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“ 和 ‘。  
   
 ## <a name="data-types"></a>数据类型  
  字词查找转换只能使用数据类型为 DT_WSTR 或 DT_NTEXT 的列。 如果列包含文本，但不具有这两种数据类型之一，则数据转换可以将数据类型为 DT_WSTR 或 DT_NTEXT 的列添加到数据流，并将列值复制到新列。 然后，数据转换的输出就可以用作字词查找转换的输入。 有关详细信息，请参阅 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
@@ -160,4 +158,3 @@ ms.lasthandoff: 08/19/2017
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
  [字词提取转换](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

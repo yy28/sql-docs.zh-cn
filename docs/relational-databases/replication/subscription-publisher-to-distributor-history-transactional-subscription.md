@@ -2,9 +2,12 @@
 title: "订阅，发布服务器到分发服务器的历史记录（事务订阅）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04d085f176c0750221c496cfc9fe0ed7832573a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 35dd5cf9bbcdabe1ee9d0b2097808617b3e243a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>订阅，发布服务器到分发服务器的历史记录（事务订阅）
-  **“发布服务器到分发服务器的历史记录”** 选项卡显示日志读取器代理的相关详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“发布服务器到分发服务器的历史记录”选项卡显示日志读取器代理的相关详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
   
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看的日志读取器代理会话，然后在标记为 **“日志读取器代理的会话”**的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”**的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  

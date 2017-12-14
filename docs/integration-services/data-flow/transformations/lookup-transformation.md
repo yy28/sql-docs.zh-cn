@@ -1,5 +1,5 @@
 ---
-title: "查找转换 |Microsoft 文档"
+title: "查找转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
+caps.latest.revision: "106"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 316fa73c7acd3e66a21ae285217c8ec917c7afbc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
@@ -183,7 +181,7 @@ ms.lasthandoff: 08/19/2017
 ### <a name="options"></a>选项  
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 和 **“缓存连接管理器”** 时，下列选项可用：  
   
- **缓存连接管理器**  
+ **“完全缓存”**  
  从列表中选择现有的缓存连接管理器，或单击“新建”创建一个新连接。  
   
  **新建**  
@@ -288,4 +286,3 @@ ms.lasthandoff: 08/19/2017
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

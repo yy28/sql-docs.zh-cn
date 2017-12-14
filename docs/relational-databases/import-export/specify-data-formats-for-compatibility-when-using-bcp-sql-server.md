@@ -2,9 +2,12 @@
 title: "在使用 bcp 时指定数据格式以获得兼容性 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 92a08de69c1ab4db893a2d14b6c4fffd3d350b59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 719cd41fd6bf7597593edeceba69e45da9441940
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)
-  本主题说明数据格式属性、特定于字段的提示，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** 命令的非 xml 格式化文件中逐个字段地存储数据。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]本主题说明数据格式属性、特定于字段的提示，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp 命令的非 xml 格式化文件中逐个字段地存储数据。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
   
 > [!NOTE]  
 >  如果不熟悉导入或导出数据的数据格式，请参阅 [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  

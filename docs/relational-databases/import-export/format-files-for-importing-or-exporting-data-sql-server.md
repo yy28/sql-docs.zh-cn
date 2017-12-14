@@ -2,9 +2,12 @@
 title: "用于导入或导出数据的格式化文件 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 47bda013e165fb5907257642a023ae8455d5e413
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c37783bc1baedf61b61553ad46066b0730b2f18
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>用来导入或导出数据的格式化文件 (SQL Server)
-  当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量导入数据或从该表中大容量导出数据时，可以使用格式化文件  存储大容量导入数据或大容量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中批量导入数据或从该表中批量导出数据时，可以使用格式化文件存储批量导入数据或批量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件：XML 格式化文件和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   

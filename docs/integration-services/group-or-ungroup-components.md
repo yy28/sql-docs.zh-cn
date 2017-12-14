@@ -1,5 +1,5 @@
 ---
-title: "分组或取消分组组件 |Microsoft 文档"
+title: "对组件分组或取消分组 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: af643174ce7a9b4e7a9b0748429af2351287e953
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="group-or-ungroup-components"></a>对组件分组或取消分组
   **设计器中的**“控制流” **、**“数据流” **和** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡支持可折叠的分组。 如果包包含许多组件，这些选项卡可能变得很拥挤，使您很难一次查看所有组件并找到要使用的项。 可折叠的分组功能可节省工作图面空间，从而简化大型包的处理。  
@@ -68,8 +66,7 @@ ms.lasthandoff: 08/03/2017
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [添加或删除任务或控制流中的容器](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [通过使用默认优先约束连接任务和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [在控制流中添加或删除任务或容器](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [使用默认优先约束来连接任务和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   
-

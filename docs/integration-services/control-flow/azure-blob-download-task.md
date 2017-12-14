@@ -1,5 +1,5 @@
 ---
-title: "Azure Blob 下载任务 |Microsoft 文档"
+title: "Azure Blob 下载任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2016
 ms.prod: sql-non-specified
@@ -8,32 +8,30 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobdltask.f1
 - sql14.dts.designer.afpblobdltask.f1
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95ea7de4600551cc994e82dd3408cb4ea608685c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 85e4c6ad22eb18288376d05e8d9477aec025f7a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下载任务
 Azure Blob 下载任务启用了一个 SSIS 包来从 Azure blob 存储区下载文件。
 
-若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，  以查看以下 **Azure Blob 下载任务编辑器** 对话框。  
+若要添加 **Azure Blob 下载任务**，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”，以查看以下“Azure Blob 下载任务编辑器”对话框。  
   
- **Azure Blob 下载任务**的组成部分[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ “Azure Blob 下载任务”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。  
   
  下表提供了此对话框中的字段说明。  
   
@@ -43,9 +41,8 @@ Azure Blob 下载任务启用了一个 SSIS 包来从 Azure blob 存储区下载
 |AzureStorageConnection|选择一个现有的 Azure 存储连接管理器或创建一个新的连接管理器，用于引用指向在其中托管 blob 文件的 Azure 存储帐户。|  
 |BlobContainer|指定包含要下载的 blob 文件的 blob 容器的名称。|  
 |BlobDirectory|指定包含要下载的 blob 文件的 blob 目录。 Blob 目录是虚拟的层次结构。|  
-|LocalDirectory|指定存储下载的 blob 文件的本地目录。|  
-|FileName|指定用于选择具有指定名称模式的文件的名称筛选器。 例如，`MySheet*.xls\*`包括文件，如`MySheet001.xls`和`MySheetABC.xlsx`。|  
-|TimeRangeFrom/TimeRangeTo|指定时间范围筛选器。 文件后，将修改**TimeRangeFrom**和之前**TimeRangeTo**包括。|  
+|LocalDirectory|指定用于存储下载的 blob 文件的本地目录。|  
+|FileName|指定用于选择具有指定名称模式的文件的名称筛选器。 例如，`MySheet*.xls\*` 包括 `MySheet001.xls` 和 `MySheetABC.xlsx` 等文件。|  
+|TimeRangeFrom/TimeRangeTo|指定时间范围筛选器。 将包括在 **TimeRangeFrom** 之后以及 **TimeRangeTo** 之前修改的文件。|  
   
   
-

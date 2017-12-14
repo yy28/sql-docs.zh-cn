@@ -2,9 +2,12 @@
 title: "仲裁：见证服务器如何影响数据库可用性（数据库镜像） | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d3842e229c3b8070c715dd7e215944a50711e787
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dae91182bc6cbfc48f06ebfa8b079969a088e86b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性（数据库镜像）
-  每当为数据库镜像会话设置见证服务器时，都需要“仲裁  ”。 仲裁是数据库镜像会话中两个或多个服务器实例彼此连接时存在的一种关系。 仲裁通常包括三个互连的服务器实例。 设置见证服务器时，必须具有仲裁才能使用数据库。 仲裁旨在用于具有自动故障转移功能的高安全性模式，可确保一个数据库一次只属于一个伙伴。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]每当为数据库镜像会话设置见证服务器时，都需要“仲裁”。 仲裁是数据库镜像会话中两个或多个服务器实例彼此连接时存在的一种关系。 仲裁通常包括三个互连的服务器实例。 设置见证服务器时，必须具有仲裁才能使用数据库。 仲裁旨在用于具有自动故障转移功能的高安全性模式，可确保一个数据库一次只属于一个伙伴。  
   
  如果特定的服务器实例与镜像会话断开连接，则该实例将失去仲裁。 如果没有连接任何服务器实例，则会话将失去仲裁，并无法使用数据库。 可以进行的仲裁有三种：  
   

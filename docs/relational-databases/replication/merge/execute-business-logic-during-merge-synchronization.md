@@ -2,9 +2,12 @@
 title: "在合并同步期间执行业务逻辑 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 548e2938004ad5969a4702f1829079242d30ed64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2b5ba4a4f8b3a52859e4873e8f3eb9f76ea5e579
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合并同步期间执行业务逻辑
-  通过使用业务逻辑处理程序框架，您可以编写合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 业务逻辑处理程序框架提供了一个简单的编程模型，且合并进程提供给程序集的数据的形式是 ADO.NET 数据集，因此可以充分利用了解的 ADO.NET 知识，而不必学习专有接口。 有关如何对业务逻辑处理程序进行编程的详细信息，请参阅：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用业务逻辑处理程序框架，可编写合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 业务逻辑处理程序框架提供了一个简单的编程模型，且合并进程提供给程序集的数据的形式是 ADO.NET 数据集，因此可以充分利用了解的 ADO.NET 知识，而不必学习专有接口。 有关如何对业务逻辑处理程序进行编程的详细信息，请参阅：  
   
 -   应用程序编程接口 (API) 引用： <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   

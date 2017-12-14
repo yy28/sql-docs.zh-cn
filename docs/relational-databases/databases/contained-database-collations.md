@@ -2,9 +2,12 @@
 title: "包含数据库的排序规则 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 514b16de05b03b43f8187f66e06cf6ff9f94209c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
-  许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
  排序规则不仅适用于用户表中存储的数据，还适用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理的所有文本，包括元数据、临时对象、变量名称等。在这些内容的处理方面，包含数据库和非包含数据库采用不同的方式。 此更改不会影响很多用户，而且有助于提供独立而统一的实例。 但是，此更改也可能导致某些混淆，并可能使同时访问包含数据库和非包含数据库的会话出现问题。  
   

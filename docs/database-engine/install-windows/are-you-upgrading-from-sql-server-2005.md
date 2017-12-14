@@ -1,12 +1,13 @@
 ---
 title: "是否从 SQL Server 2005 进行升级？ | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 930b38a7cf74f6f5fca26ec97fb5510a1ad31b6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0d0f68c51cfc99f8ff6b6af2e048fbbb7f951ae9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
- 需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
   
  有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
   

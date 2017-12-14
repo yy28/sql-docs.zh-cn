@@ -1,5 +1,5 @@
 ---
-title: "步骤 8： 使 Lesson 1 包更易于理解 |Microsoft 文档"
+title: "步骤 8：使第 1 课包更易于理解 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55bd386054f3a7d066dc8c28c13e22ae82e9f0cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac8c3fa9e34de95c826c6c89a0356ac4797bd638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>课程 1-8-使 Lesson 1 包更方便地了解
+# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>第 1-8 课 - 使第 1 课包更易于理解
 因为您已完成了 Lesson 1 包的配置，所以整理包布局是很必要的。 如果控制流和数据流布局中的形状大小不一，或者如果形状未对齐或未进行分组，则可能很难理解包功能。  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 提供了可轻松、快速设置包布局格式的工具。 格式设置功能包括使形状大小统一，对齐各个形状，并控制形状之间的水平间距和垂直间距。  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

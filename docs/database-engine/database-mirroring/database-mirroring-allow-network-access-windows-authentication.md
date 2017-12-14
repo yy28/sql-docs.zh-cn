@@ -2,9 +2,12 @@
 title: "数据库镜像 - 允许网络访问 - Windows 身份验证 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 377a35a86cf6db66711f65bb8a8f5e3ca7da28ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4120379703be697d47ed46659fcaba5f9e7a514e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>数据库镜像 - 允许网络访问 - Windows 身份验证
-  将 Windows 身份验证用于连接两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库镜像端点在以下条件下要求手动配置登录帐户：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]将 Windows 身份验证用于连接两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库镜像端点在以下条件下要求手动配置登录帐户：  
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例基于不同的域帐户（在相同的域或受信任的域中）作为服务运行，则必须在每个远程服务器实例上的 **master** 中创建各帐户的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。  
   

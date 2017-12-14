@@ -2,9 +2,12 @@
 title: "“管理分区向导”的 F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89d561c68a324e4760c8b093ba641dc7ea3453e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
-  使用 **管理分区向导** 可以通过分区切换或实现可调窗口应用场景来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用管理分区向导可以通过分区切换或实现滑动窗口方案来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>启动管理分区向导  
   

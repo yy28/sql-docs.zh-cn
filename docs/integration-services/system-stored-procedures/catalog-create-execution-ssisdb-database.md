@@ -1,5 +1,5 @@
 ---
-title: "catalog.create_execution （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.create_execution（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,40 +44,40 @@ catalog.create_execution [@folder_name = folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [@folder_name =] *folder_name*  
- 包含要执行的包的文件夹名称。 *Folder_name*是**nvarchar （128)**。  
+ [@folder_name =] folder_name  
+ 包含要执行的包的文件夹名称。 folder_name 为 nvarchar(128)。  
   
- [@project_name =]*文件的内容*  
- 包含要执行的包的项目的名称。 *文件的内容*是**nvarchar （128)**。  
+ [@project_name =] project_name  
+ 包含要执行的包的项目的名称。 project_name 为 nvarchar(128)。  
   
- [@package_name =]*包名称*  
- 包含要执行的包的名称。 *Package_name*是**nvarchar(260)**。  
+ [@package_name =] package_name  
+ 包含要执行的包的名称。 package_name 为 nvarchar(260)。  
   
- [@reference_id =] *reference_id*  
- 环境引用的唯一标识符。 此参数可选。 *Reference_id*是**bigint**。  
+ [@reference_id =] reference_id  
+ 环境引用的唯一标识符。 此参数可选。 reference_id 为 bigint。  
   
- [@use32bitruntime =] *use32bitruntime*  
- 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用值为 1 来执行与 32 位运行时包，在 64 位操作系统上运行时。 使用值 0 表示在 64 位操作系统上运行时，使用 64 位运行时执行此包。 此参数可选。 *Use32bitruntime*是**位**。  
+ [@use32bitruntime =] use32bitruntime  
+ 指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用值 1 表示在 64 位操作系统上运行时，使用 32 位运行时执行此包。 使用值 0 表示在 64 位操作系统上运行时，使用 64 位运行时执行此包。 此参数可选。 Use32bitruntime 为 bit。  
  
- [@runinscaleout =] *runinscaleout*  
- 指示是否正在执行向外扩展。使用值为 1 来向外扩展在执行包。使用值为 0 来执行软件包，无需向外扩展。此参数可选。 如果未指定，则会将其值设置为 DEFAULT_EXECUTION_MODE [SSISDB] 中。[目录]。[catalog_properties]。 *Runinscaleout*是**位**。 
+ [@runinscaleout =] runinscaleout  
+ 指示执行是否在 Scale Out 中进行。使用值 1 在 Scale Out 中执行包。使用值 0 执行包，而无需 Scale Out。此参数可选。 如果未指定，其值在 [SSISDB].[catalog].[catalog_properties] 中设置为 DEFAULT_EXECUTION_MODE。 runinscaleout 为 bit。 
  
- [@useanyworker =] *useanyworker*  
-  指示是否允许辅助出任何规模进行执行。 使用值为 1 来执行辅助出任何规模的包。 使用值 0 指示不所有横向扩展辅助进程都才能执行包。 此参数可选。 如果未指定，则将其值设置为 1。 *Useanyworker*是**位**。 
+ [@useanyworker =] useanyworker  
+  指示是否允许任何 Scale Out Worker 执行相应操作。 借助任何 Scale Out Worker 使用值 1 执行包。 使用值 0 指示并非允许所有 Scale Out Workers 执行包。 此参数可选。 如果未指定，其值设置为 1。 useanyworker 为 bit。 
   
- [@execution_id =] *execution_id*  
- 返回执行实例的唯一标识符。 *Execution_id*是**bigint**。  
+ [@execution_id =] execution_id  
+ 返回执行实例的唯一标识符。 execution_id 为 bigint。  
 
   
 ## <a name="remarks"></a>注释  
  使用执行来指定参数值，包在单个包执行实例中将使用这些参数值。  
   
- 如果使用指定的环境引用*reference_id*参数，该存储过程填充文本值或从相应的环境变量中引用的值作为项目和包参数。 如果指定了环境引用，则在包执行过程中将使用默认参数值。 若要确定完全将哪些值用于执行的特定实例，请使用*execution_id*输出参数值从此存储的过程和查询[execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)视图。  
+ 如果使用 reference_id 参数指定某个环境引用，则该存储过程将使用对应环境变量中的文本值或引用值填充项目和包参数。 如果指定了环境引用，则在包执行过程中将使用默认参数值。 若要精确确定将哪些值用于特定执行实例的值，应使用此存储过程中的 execution_id 输出参数值，并查询 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 视图。  
   
  在执行中只能指定标记为入口点包的包。 如果指定的包不是入口点，则执行失败。  
   
 ## <a name="example"></a>示例  
- 下面的示例调用 catalog.create_execution 创建了不在向外扩展的 Child1.dtsx 包执行的实例。Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  
+ 以下示例调用 catalog.create_execution 来创建 Child1.dtsx 包（不在 Scale Out 中）的执行实例。Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  
   
 ```sql  
 Declare @execution_id bigint  
@@ -106,26 +104,26 @@ GO
   
 -   针对项目的 READ 和 EXECUTE 权限，如果适用，则需要针对引用环境的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
 
- 如果@runinscaleout为 1，存储的过程需要以下权限之一：
+ 如果 @runinscaleout 为 1，则此存储过程需要下列权限之一：
  
--   成员资格**ssis_admin**数据库角色
+-   ssis_admin 数据库角色的成员资格
 
--   成员资格**ssis_cluster_executor**数据库角色
+-   ssis_cluster_executor 数据库角色的成员资格
 
--   成员资格**sysadmin**服务器角色
+-   sysadmin 服务器角色的成员资格
   
 ## <a name="errors-and-warnings"></a>错误和警告  
- 以下列表描述某些可能会发出错误或警告的情况：  
+ 下面的列表描述了一些可引发错误或警告的情况：  
   
 -   该包不存在。  
   
 -   用户不具备适当的权限。  
   
--   环境引用， *reference_id*，而无效。  
+-   环境引用 reference_id 无效。  
   
 -   指定的包不是入口点包。  
   
@@ -133,11 +131,10 @@ GO
   
 -   项目或包包含需要值的参数，但尚未分配任何值。  
   
--   环境引用，该环境中找不到引用的环境变量*reference_id*，指定。  
+-   无法在环境引用 reference_id 所指定的环境中找到引用的环境变量。  
   
 ## <a name="see-also"></a>另请参阅  
- [catalog.start_execution &#40;SSISDB 数据库 &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
+ [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
- [catalog.add_execution_worker &#40;SSISDB 数据库 &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
+ [catalog.add_execution_worker（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "步骤 3： 添加和配置 OLE DB 连接管理器 |Microsoft 文档"
+title: "步骤 3：添加和配置 OLE DB 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>课程 1-3-添加和配置 OLE DB 连接管理器
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>第 1-3 课 - 添加和配置 OLE DB 连接管理器
 添加了用于连接到数据源的平面文件连接管理器以后，下一个任务是添加用于连接到目标的 OLE DB 连接管理器。 通过 OLE DB 连接管理器，包可以在任何 OLE DB 兼容的数据源中提取数据或加载数据。 使用 OLE DB 连接管理器，可以为连接指定服务器、身份验证方法和默认数据库。  
   
 在本课中，将创建使用 Windows 身份验证的 OLE DB 连接管理器，以连接到 **AdventureWorksDB2012**的本地实例。 本教程以后要创建的其他组件（如查找转换和 OLE DB 目标）也将引用此处创建的 OLE DB 连接管理器。  
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>另请参阅  
 [OLE DB 连接管理器](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

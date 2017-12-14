@@ -2,9 +2,12 @@
 title: "数据收集器的安全性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d73cb275dcc7b9473038a04253cee06ddb88876
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2987b90e60eb9edea9de888569ffa2e7d204526f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
-  数据收集器使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实现的基于角色的安全模式。 在此模式下，数据库管理员能够在只拥有执行相应任务所需的权限的安全上下文中运行各种数据收集器任务。 执行涉及内部表的操作时也采用这种方法，内部表只能通过存储过程或视图进行访问。 不会向内部表授予任何权限。 但是，还要对使用存储过程或视图访问表的用户进行权限检查。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据收集器使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实现的基于角色的安全模式。 在此模式下，数据库管理员能够在只拥有执行相应任务所需的权限的安全上下文中运行各种数据收集器任务。 执行涉及内部表的操作时也采用这种方法，内部表只能通过存储过程或视图进行访问。 不会向内部表授予任何权限。 但是，还要对使用存储过程或视图访问表的用户进行权限检查。  
   
 > [!IMPORTANT]  
 >  此安全模式的另一个关键点是同心权限。 在同心权限下，特权较高的角色继承特权较低的角色对对象（包括警报、运算符、作业、计划和代理）的权限。 有关详细信息，请参阅 [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  

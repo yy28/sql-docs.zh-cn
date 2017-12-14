@@ -2,9 +2,12 @@
 title: "使用格式化文件跳过数据字段 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 404ce71e0f35de64ba31cb45d28a606a0e512763
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fbe24a2b8a4865121a3bf949be1434a23c0383de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
-数据文件所包含的字段数可能大于表中的列数。 本主题说明了通过修改非 XML 和 XML 格式化文件，将表中的列映射到相应的数据字段并忽略额外字段，从而能够使用具有较多字段的数据文件。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]数据文件所包含的字段数可能大于表中的列数。 本主题说明了通过修改非 XML 和 XML 格式化文件，将表中的列映射到相应的数据字段并忽略额外字段，从而能够使用具有较多字段的数据文件。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
 
 |轮廓|
 |---|

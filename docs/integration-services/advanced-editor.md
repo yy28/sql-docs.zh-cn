@@ -1,5 +1,5 @@
 ---
-title: "高级编辑器 |Microsoft 文档"
+title: "“高级编辑器” | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +18,18 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="advanced-editor"></a>高级编辑器
+# <a name="advanced-editor"></a>“高级编辑器”
   使用 **“高级编辑器”** 对话框可为所选 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象配置属性。  
   
  对于具有可配置属性的大多数 **对象，** “高级编辑器” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 都是可用的。 对于未公开自定义用户界面的对象，它是唯一可用的编辑器。  
@@ -64,4 +62,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "数据源 |Microsoft 文档"
+title: "数据源 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [Integration Services], about data sources
+helpviewer_keywords: data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a9bdd1ee95d794dc02851da35beff5ce4ea88243
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>数据源
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包括一个可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的设计时对象：数据源。  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/27/2017
  在数据源和引用它的连接管理器之间没有依赖关系。 即使数据源不再是项目的一部分，包仍然有效，因为有关该数据源的信息（例如其连接类型和连接字符串）已包括在包定义中。  
   
   
-

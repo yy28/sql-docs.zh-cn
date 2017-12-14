@@ -2,9 +2,12 @@
 title: "升级复制脚本（复制 Transact-SQL 编程）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c19ed05d9f7a324d8e6ae834c9c1528b3249625
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83f7b41bb5c2ad54f4b095a7d30aa2879688d2a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升级复制脚本（复制 Transact-SQL 编程）
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件可用于以编程方式配置复制拓扑。 有关详细信息，请参阅[复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件可用于以编程方式配置复制拓扑。 有关详细信息，请参阅[复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)。  
   
 > [!IMPORTANT]  
 >  虽然不需要升级由 **sysadmin** 角色的成员执行的脚本，我们仍建议您按照本主题中的说明修改现有脚本。 按照 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)主题的“代理所需权限”部分的说明为每个复制代理指定一个具有最低权限的帐户。  

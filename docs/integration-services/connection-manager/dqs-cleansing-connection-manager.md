@@ -1,5 +1,5 @@
 ---
-title: "DQS 清理连接管理器 |Microsoft 文档"
+title: "DQS 清理连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1a2e49092a7bf8e8428edad9c246ee2bda4d650f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8d6368c520e8ddf7f14a9d01605624687badbf03
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理连接管理器
   使用 DQS 清除连接管理器可将包连接到 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 数据库。 DQS 清除转换使用 DQS 清除连接管理器。  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/03/2017
  有关以编程方式配置连接管理器的信息，请参阅开发人员指南中针对 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类的文档。  
   
   
-

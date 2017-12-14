@@ -1,5 +1,5 @@
 ---
-title: "重新生成索引任务 |Microsoft 文档"
+title: "“重新生成索引”任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.rebuildindextask.f1
+f1_keywords: sql13.dts.designer.rebuildindextask.f1
 helpviewer_keywords:
 - rebuilding indexes
 - indexes [Integration Services]
 - Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 514473610c4e1ba415e1f663a2abf52616cd23ab
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 712bea6bd65d313ee3fb038e429d00c28fbf68d1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rebuild-index-task"></a>“重新生成索引”任务
   “重新生成索引”任务重新生成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表和视图中的索引。 有关管理索引的详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/26/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

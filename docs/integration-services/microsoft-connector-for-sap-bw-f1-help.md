@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Connector for SAP BW F1 帮助 |Microsoft 文档"
+title: "Microsoft Connector for SAP BW F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.dts.designer.sapbw.f1
+f1_keywords: sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51b1f3bfd75179ec1a66d31d167a1827e8bf8d5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: af4b72d2ec634d8ae71a607c6a7c4d6b17254599
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 帮助
   此部分包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 三个组件的 F1 帮助主题。 也可以按 F1 键或在向导页和对话框中单击“帮助”，从用户界面中查看这些主题。  
@@ -41,13 +38,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 源 F1 帮助  
   
--   [SAP BW 源编辑器 &#40;连接管理器页 &#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 源编辑器（“连接管理器”页）](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 源编辑器 &#40;列页 &#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 源编辑器（“列”页）](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 源编辑器 &#40;错误输出页 &#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 源编辑器（“错误输出”页）](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 源编辑器 &#40;高级页 &#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 源编辑器（“高级”页）](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [查找 RFC 目标](../integration-services/data-flow/look-up-rfc-destination.md)  
   
@@ -59,21 +56,21 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 目标 F1 帮助  
   
--   [SAP BW 目标编辑器 &#40;连接管理器页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目标编辑器（“连接管理器”页）](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目标编辑器 &#40;映射页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目标编辑器（“映射”页）](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目标编辑器 &#40;错误输出页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目标编辑器（“错误输出”页）](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目标编辑器 &#40;高级页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目标编辑器（“高级”页）](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [查找 Infopackage](../integration-services/data-flow/look-up-infopackage.md)  
+-   [查找 InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
--   [创建新的 InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
+-   [新建 InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [创建事务数据的 InfoCube](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [查找 Infoobject](../integration-services/data-flow/look-up-infoobject.md)  
+-   [查找 InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [创建 InfoSource](../integration-services/data-flow/create-infosource.md)  
   
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW 组件](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

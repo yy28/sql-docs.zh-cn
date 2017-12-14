@@ -1,5 +1,5 @@
 ---
-title: "表达式任务 |Microsoft 文档"
+title: "表达式任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
+f1_keywords: sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be307c3568b28ecf30e590d32e02748e494caf4e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7cd191799c66267eb9a0fae14729412168aa61df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-task"></a>表达式任务
   表达式任务使用表达式生成器创建和计算在运行时设置变量值的表达式。 在您编辑该任务时， [Expression Builder](../../integration-services/expressions/expression-builder.md) 将启动。  
@@ -44,4 +41,3 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   
-

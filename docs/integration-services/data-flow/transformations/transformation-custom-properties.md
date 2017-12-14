@@ -1,12 +1,14 @@
 ---
-title: "转换自定义属性 |Microsoft 文档"
+title: "转换自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,16 +43,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>转换自定义属性
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|字符串|转换所使用的标记分隔符。 默认分隔符包含以下字符： 空间 （）、 逗号 （，），句点 （.）、 分号 （;），冒号 （:），连字符 （-），双击直双引号 （"），单个的直引号 （'），& 符 (&)、 斜杠标记 （/），反斜杠 (\\)，at 符号 (@)，惊叹号 （！）、 问号 （？），左括号 （（） 右括号 （）），小于 (\<)、 大于号 (>)，打开方括号 ([) 的右括号 (])，左大括号 （{}），关闭大括号 （}）、 管道 (&#124;)，数字符号 （#），星号 （*）、 脱字号 (^) 和百分号 （%）。|  
+|Delimiters|字符串|转换所使用的标记分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左括号 (()、右括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、数字符号 (#)、星号 (*)、脱字号 (^) 和百分号 (%)。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在“模糊分组转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |MaxMemoryUsage|Integer|转换所使用的最大内存量。 此属性的默认值为 **0**，该值将启用动态内存使用。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性在“模糊分组转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |MinSimilarity|双精度|转换用来标识重复值的相似性阈值，以 0 和 1 之间的值表示。  此属性的默认值为 0.8。|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|指定是否应为模糊查找索引结构和后续查找生成引用表副本。 此属性的默认值为 **True**。|  
-|Delimiters|字符串|转换用来标记列值的分隔符。 默认分隔符包含以下字符： 空间 （）、 逗号 （，）、 句点 （.） 分号 （;）、 冒号 （:） 连字符 （-），双击直双引号 （"），单个的直引号 （'），& 符 (&)、 斜杠标记 （/），反斜杠 (\\)，at 符号 (@)，惊叹号 （！）、 问号 （？）、 左括号 （（） 右括号 （）），小于 (\<)、 大于号 (>)，打开方括号 ([) 的右括号 (])，左大括号 （{}），关闭大括号 （}）、 管道 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
+|Delimiters|字符串|转换用来标记列值的分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左小括号 (()、右小括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
 |DropExistingMatchIndex|Boolean|一个值，用于指定当 MatchIndexOptions 未设置为 ReuseExistingIndex 时是否删除 MatchIndexName 中指定的匹配索引。 此属性的默认值为 **True**。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在“模糊查找转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |MatchIndexName|字符串|匹配索引的名称。 匹配索引是转换在其中创建和保存所使用的索引的表。 如果重复使用匹配索引，MatchIndexName 将指定要重复使用的索引。 MatchIndexName 必须是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识符名称。 例如，如果名称包含空格，则必须用方括号将名称括起来。|  
@@ -398,7 +400,7 @@ ms.lasthandoff: 08/03/2017
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。 值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  
+|CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的代码页。|  
 |SqlCommand|字符串|转换针对数据流中的每一行运行的 Transact-SQL 语句。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
@@ -634,6 +636,6 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [路径属性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [可以通过使用表达式设置数据流属性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [可以使用表达式设置的数据流属性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

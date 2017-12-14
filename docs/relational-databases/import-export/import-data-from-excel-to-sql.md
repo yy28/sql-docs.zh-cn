@@ -2,9 +2,12 @@
 title: "将 Excel 数据导入 SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,14 +15,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3541efebe50e19ce56e528dc575084c2c5bb1d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: efa9c31464572543c67edde5fa6a740d659d4d48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
-将 Excel 文件中的数据导入 SQL Server 或 Azure SQL 数据库的方法有多种。 本文总结了每个选项，并提供了更为详细说明的链接。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]将 Excel 文件中的数据导入 SQL Server 或 Azure SQL 数据库的方法有多种。 本文总结了每个选项，并提供了更为详细说明的链接。
 -   可通过使用以下工具之一从 Excel 到 SQL 一步导入数据：
     -   SQL Server 导入和导出向导
     -   SQL Server Integration Services (SSIS)

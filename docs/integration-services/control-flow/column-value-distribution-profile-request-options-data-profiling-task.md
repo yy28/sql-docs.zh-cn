@@ -1,5 +1,5 @@
 ---
-title: "列的值分布配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+title: "列值分布配置文件请求选项（数据事件探查任务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79ce587ac6e1f0da8bf0c2ae237b6b9c3ae2623f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 261a970e305400a70f784057a700b5e262618896
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>列值分布配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列值分布配置文件请求”** 设置选项。 列值分布配置文件将报告选定列中的所有非重复值以及表中每个值表示的行的百分比。 该配置文件还可以报告其表示内容超过表中指定的行百分比的值。 此配置文件可帮助您识别数据中的问题，例如，列中非重复值的数目不正确。 例如，对表示美国州的列进行事件探查，发现有 50 多个非重复值。  
@@ -110,8 +107,7 @@ ms.lasthandoff: 08/03/2017
  使用 0 到 1 之间的值指定阈值，超过该阈值将报告列值。 当选择 **AllValues** 作为 **ValueDistributionOption**时，将禁用此选项。 此选项的默认值为 0.001。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

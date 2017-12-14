@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 中合并包 |Microsoft 文档"
+title: "在 Integration Services 包中执行 MERGE | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>在 Integration Services 包中执行 MERGE
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，执行 SQL 任务中的 SQL 语句可以包含 MERGE 语句。 使用此 MERGE 语句可以在一个语句中完成多个 INSERT、UPDATE 和 DELETE 操作。  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  Inventory 数据库具有一个 ProductsInventory 表，该表具有 ProductID 列和 StockOnHand 列。 具有 ProductID、CustomerID 和 Quantity 列的 Shipments 表跟踪对客户的产品发货情况。 ProductInventory 表应根据 Shipments 表中的信息每天更新。 根据发货情况，一个 MERGE 语句可以降低 ProductInventory 表中的库存。 如果某产品的库存已降低为 0，该 MERGE 语句还可以从 ProductInventory 表中删除该产品行。  
   
   
-

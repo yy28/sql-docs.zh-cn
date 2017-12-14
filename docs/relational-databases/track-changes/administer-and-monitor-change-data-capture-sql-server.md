@@ -2,9 +2,12 @@
 title: "管理和监视变更数据捕获 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
-  本主题介绍如何管理和监视变更数据捕获。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]本主题介绍如何管理和监视变更数据捕获。  
   
 ##  <a name="Capture"></a> 捕获作业  
  可通过运行无参数的存储过程 **sp_MScdc_capture_job**来启动捕获作业。 此存储过程启动时，将从 msdb.dbo.cdc_jobs 中为捕获作业提取 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的配置值。 然后，这些配置值会作为参数传递到存储过程 **sp_cdc_scan**中。 该存储过程用于调用 **sp_replcmds** 以执行日志扫描。  

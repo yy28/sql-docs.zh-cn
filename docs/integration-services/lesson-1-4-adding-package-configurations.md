@@ -1,5 +1,5 @@
 ---
-title: "步骤 4： 添加包配置 |Microsoft 文档"
+title: "步骤 4：添加包配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>课程 1-4-添加包配置
+# <a name="lesson-1-4---adding-package-configurations"></a>第 1-4 课 — 添加包配置
 在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了各种配置类型。 您可以将配置存储在环境变量、注册表项、用户定义变量、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表和 XML 文件中。 为了提供更大的灵活性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持使用间接配置。 这意味着可使用环境变量指定配置的位置，而配置又指定实际值。 Deployment Tutorial 项目中的包使用 XML 配置文件和间接配置的组合。 一个 XML 配置文件可以包括多个属性的配置，并且在适当的时候还可以被多个包引用。 在本教程中，对于每个包都将使用单独的配置文件。  
@@ -38,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
 您将创建两个配置文件，即 DataTransferConfig.dtsConfig 和 LoadXMLData.dtsConfig。 这些文件包含更新包中属性（指定包所用的数据文件和日志文件的位置）的“名称-值”对。 稍后，作为部署过程中的一个步骤，您将更新配置文件中的值，以反映文件在目标计算机上的新位置。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 识别出 DataTransferConfig.dtsConfig 和 LoadXMLData.dtsConfig 是 DataTransfer 和 LoadXMLData 包的依赖项，当您在下一课中创建部署捆绑时它会自动包括配置文件。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 识别出 DataTransferConfig.dtsConfig 和 LoadXMLData.dtsConfig 是 DataTransfer 和 LoadXMLData 包的依赖项，在下一课中创建部署捆绑包时它会自动包括配置文件。  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>为 DataTransfer 包创建间接配置  
   
@@ -145,4 +142,3 @@ ms.lasthandoff: 08/03/2017
 [包配置](../integration-services/packages/package-configurations.md)  
 [创建包配置](../integration-services/packages/create-package-configurations.md)  
 [访问包使用的文件](../integration-services/security/security-overview-integration-services.md#files)  
-

@@ -2,9 +2,12 @@
 title: "Audit Server Object Management 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c60337afceca8e605e35d42a2604a423172f5d27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a4f492a25865f40ac6bc2081f5f3ddcfd1674dff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 事件类
-  在对服务器对象执行 CREATE、ALTER 或 DROP 的情况下，会发生 **Audit Server Object Management** 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]在对服务器对象执行 CREATE、ALTER 或 DROP 的情况下，会发生 Audit Server Object Management 事件类。  
   
 ## <a name="audit-server-object-management-event-class-data-columns"></a>Audit Server Object Management 事件类的数据列  
   

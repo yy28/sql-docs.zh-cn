@@ -2,9 +2,12 @@
 title: "对复制代理事件使用警报 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67c68cfcba51bcd9bd2dfb8512108766fe1240e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e6eb5aeb5cf36a9c93259f6ee216a76c5ef4634
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
   
  将计算机配置为分发服务器时，会安装下列警报：  
   

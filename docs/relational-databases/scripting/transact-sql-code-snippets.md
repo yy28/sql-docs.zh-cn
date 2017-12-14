@@ -2,9 +2,12 @@
 title: "Transact-SQL 代码片段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d3c7b87cbf1ee3a61fa783a8f113b87fcb5d5cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 代码段
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]代码段是一个模板，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句块的基本结构。 当您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中添加语句时，可以将该代码段用作起点。 您可以插入随 SQL Server 一起提供的预定义代码段，也可以创建您自己的代码段。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段是一个模板，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句块的基本结构。 当您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中添加语句时，可以将该代码段用作起点。 您可以插入随 SQL Server 一起提供的预定义代码段，也可以创建您自己的代码段。  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Transact-SQL 代码段任务  
   

@@ -1,5 +1,5 @@
 ---
-title: "执行包实用工具 (dtexecui) |Microsoft 文档"
+title: "执行包实用工具 (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,20 +22,18 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
@@ -147,7 +144,7 @@ ms.lasthandoff: 08/03/2017
  **删除**  
  在列表中选择配置文件，再单击“删除”。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -169,7 +166,7 @@ ms.lasthandoff: 08/03/2017
  **删除**  
  在文本框中选择命令文件，然后使用“删除”按钮删除该文件。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -182,7 +179,7 @@ ms.lasthandoff: 08/03/2017
  **连接管理器**  
  选中其复选框后，“连接字符串”列即会变为可编辑状态。  
   
- **说明**  
+ **Description**  
  查看每个连接管理器的说明。 无法编辑说明。  
   
  **连接字符串**  
@@ -368,7 +365,7 @@ ms.lasthandoff: 08/03/2017
  **手动编辑命令行**  
  单击此项可在“命令行”文本框中编辑命令行。  
   
- **Command line**  
+ **命令行**  
  显示当前的命令行。 如果您选择了手动编辑命令行的选项，则可编辑该命令行。  
   
  **Execute**  
@@ -381,4 +378,3 @@ ms.lasthandoff: 08/03/2017
  [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)  
   
   
-

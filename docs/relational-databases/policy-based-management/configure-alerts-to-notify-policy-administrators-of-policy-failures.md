@@ -2,9 +2,12 @@
 title: "配置警报以通知策略管理员策略失败情况 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adbe312250edc287a20bad8f37fb74244474c273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 10112a53641de916431546ef0d25ef1f32d2fd81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>配置警报以通知策略管理员策略失败情况
-  在使用三种自动评估模式之一的模式执行基于策略的管理策略时，如果发生违反策略的情况，则会在事件日志中写入消息。 若要在事件日志中写入此消息时得到通知，您可以创建一个警报以检测此消息并执行操作。 该警报应检测下表所示的消息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在使用三种自动评估模式之一的模式执行基于策略的管理策略时，如果发生违反策略的情况，则会在事件日志中写入消息。 若要在事件日志中写入此消息时得到通知，您可以创建一个警报以检测此消息并执行操作。 该警报应检测下表所示的消息。  
   
 |执行模式|消息号|  
 |--------------------|--------------------|  

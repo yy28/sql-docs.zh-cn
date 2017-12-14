@@ -1,5 +1,5 @@
 ---
-title: "传输数据库任务 |Microsoft 文档"
+title: "传输数据库任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +17,18 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords:
-- Transfer Database task [Integration Services]
+helpviewer_keywords: Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
   传输数据库任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两个实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 与只通过复制方式传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的其他任务相比，传输数据库任务既可以复制也可以移动数据库。 此任务还可以用来复制同一个服务器上的数据库。  
@@ -112,10 +109,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
@@ -214,4 +211,3 @@ ms.lasthandoff: 08/11/2017
  请输入网络文件共享位置，或单击“浏览”以找到网络文件共享位置。  
   
  以脱机模式传输数据库时，数据库文件先复制到 **“网络文件共享”** 位置，然后才会传输到 **“目标文件夹”** 位置。  
-

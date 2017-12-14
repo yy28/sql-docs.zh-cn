@@ -2,9 +2,12 @@
 title: "OLE 自动化返回代码和错误信息 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0db7fd283f74b6235cd771da246006dbba1cdb80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 自动化返回代码和错误信息
-  OLE 自动化系统存储过程返回一个 **int** 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码，其形式为十六进制 0x800*nnnnn*，但是当作为存储过程返回代码中的一个 **int** 值返回时，HRESULT 的形式为 214*nnnnnnn*。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]OLE 自动化系统存储过程返回一个 int 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码，其形式为十六进制 0x800*nnnnn*，但是当作为存储过程返回代码中的一个 **int** 值返回时，HRESULT 的形式为 214*nnnnnnn*。  
   
  例如，向 sp_OACreate 传递一个无效的对象名 (SQLDMO.Xyzzy) 会导致该过程返回一个值为 2147221005 的 **int** HRESULT，该值用十六进制表示则为 0x800401f3。  
   

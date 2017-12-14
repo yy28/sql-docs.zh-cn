@@ -2,9 +2,12 @@
 title: "在 ASP.NET 中使用嵌套 FOR XML 查询 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab179ed990361c62144a2f2aa14c1e62692e223b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4ca31af103f0a620f854f6516a59937afbf1917b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>在 ASP.NET 中使用嵌套 FOR XML 查询
-  在此示例中，ASP.NET 应用程序通过在 SQL Server 中执行存储过程将 XML 返回至浏览器。 该存储过程使用嵌套查询生成 XML。 [使用嵌套 AUTO 模式查询生成同级](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)主题中显示了一个类似的 SELECT 语句。 本示例演示了一种在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用嵌套的 FOR XML 查询来生成以元素为中心的 XML 的方法。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]在此示例中，ASP.NET 应用程序通过在 SQL Server 中执行存储过程将 XML 返回至浏览器。 该存储过程使用嵌套查询生成 XML。 [使用嵌套 AUTO 模式查询生成同级](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)主题中显示了一个类似的 SELECT 语句。 本示例演示了一种在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用嵌套的 FOR XML 查询来生成以元素为中心的 XML 的方法。  
   
 ## <a name="example"></a>示例  
   

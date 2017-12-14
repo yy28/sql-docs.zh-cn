@@ -2,9 +2,12 @@
 title: "联机还原 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f17516a1a1ac2d07da67ee4688703ef0a5ee5611
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
-  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
  数据库联机时还原数据的过程称为“联机还原” 。 只要主文件组处于联机状态，就将数据库视为联机，即使有一个或多个辅助文件组处于脱机状态。 在任何恢复模式下，您都可以在数据库联机时还原处于脱机状态的文件。 在完整恢复模式下，您还可以在数据库联机时还原页。  
   

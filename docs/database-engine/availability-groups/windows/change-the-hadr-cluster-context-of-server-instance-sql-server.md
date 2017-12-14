@@ -2,9 +2,12 @@
 title: "更改服务器实例的 HADR 群集上下文 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 756e9af84a88e6cdb0e3e411167928cd1eed12c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 296d664edfdbf31110aab41c140735271920c832
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>更改服务器实例的 HADR 群集上下文 (SQL Server)
-  本主题介绍如何通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更高版本中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，切换 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的 HADR 群集上下文。 *HADR 群集上下文* 用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理服务器实例所承载的可用性副本的元数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何通过在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 和更高版本中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，切换 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的 HADR 群集上下文。 *HADR 群集上下文* 用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理服务器实例所承载的可用性副本的元数据。  
   
  仅在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的过程中切换 HADR 群集上下文。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间将操作系统升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 。 有关详细信息，请参阅 [针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
   

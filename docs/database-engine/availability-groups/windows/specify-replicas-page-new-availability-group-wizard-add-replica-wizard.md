@@ -2,9 +2,12 @@
 title: "“指定副本”页（新建可用性组向导：添加副本向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: daabab1d4122ce132579f399a4ea6c923477da35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9e6deec0c8993271ec1c5bf02101516585faeaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
-  本主题介绍 **“指定副本”** 页的选项。 本页适用于 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 的 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍“指定副本”页的选项。 本页适用于 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 的 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
   
 |选项卡|简短说明|  
 |---------|-----------------------|  

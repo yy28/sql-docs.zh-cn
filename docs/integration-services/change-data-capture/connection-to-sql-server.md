@@ -1,5 +1,5 @@
 ---
-title: "连接到 SQL Server |Microsoft 文档"
+title: "连接到 SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f2c0ec017651177fe6bb78d7aef5df35a27b5b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ec5be00d83b0630754456bc3cde7a20678959496
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-to-sql-server"></a>连接到 SQL Server
   在不含对 MSXDBCDC 数据库具有写入权限的数据库角色（例如 **db_owner** 角色）的登录名尝试创建某一 Oracle CDC 实例时，“连接到 SQL Server”对话框将显示。  
@@ -54,7 +52,6 @@ ms.lasthandoff: 08/03/2017
 -   **高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 服务所需的 SQL Server 连接权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+ [针对 CDC 服务的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   
-

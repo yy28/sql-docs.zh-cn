@@ -2,9 +2,12 @@
 title: "CursorExecute 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6756b69213e3c9cd9d8f27eeab02f662445751c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3c6c48706f855065e96ebcd6c254dd2856c3e15d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件类
-  **CursorExecute** 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]CursorExecute 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  
   
  将 **CursorExecute** 事件类包括在记录游标性能的跟踪中。 如果 **CursorExecute** 事件类包含在跟踪中，它引起的开销量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  
   

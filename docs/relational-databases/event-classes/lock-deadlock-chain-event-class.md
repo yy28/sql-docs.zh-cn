@@ -2,9 +2,12 @@
 title: "Lock:Deadlock Chain 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7edf2d9fc188d897dfd3142a184b01980fa16f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f2719ef1fde703553617170a99f57f31897484e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 事件类
-  对于死锁中的每个参与者都会发生 Lock:Deadlock Chain 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]对于死锁中的每个参与者，都会发生 Lock:Deadlock Chain 事件类。  
   
  使用 Lock:Deadlock Chain 事件类可以监视何时出现死锁情况。 此信息有助于确定死锁是否会对应用程序的性能造成重大影响，以及会涉及哪些对象。 可以检查用于修改这些对象的应用程序代码，以便确定是否可以做出更改以便将死锁的情况减到最少。  
   

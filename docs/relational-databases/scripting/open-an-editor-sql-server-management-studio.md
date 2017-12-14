@@ -2,9 +2,12 @@
 title: "打开编辑器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 561ddee283355b308e58cd5e0aa5eb66c29b1c47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd3905d6c9f0db1081b9d2cf96450a0405fb4da8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
-  本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]本主题介绍如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
   
 ## <a name="before-you-begin"></a>开始之前  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 支持四种编辑器：用于编辑 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器、用于编辑使用相应语言的脚本的 DMX 和 MDX 编辑器、以及用于编辑 XML/A 脚本或 XML 文件的 XML/A 编辑器。 任何编辑器都还可以用于编辑文本文件。  

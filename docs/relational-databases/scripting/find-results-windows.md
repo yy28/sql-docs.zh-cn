@@ -2,9 +2,12 @@
 title: "“查找结果”窗口 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 739ebc9657fa81650ab57a95d057dc3cc674ebf9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ca6d03068225909a645b05059a3da15893604821
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-results-windows"></a>“查找结果”窗口
-  两个“查找结果”窗口显示通过使用 **“查找和替换”** 对话框中的 **“在文件中查找”** 或 **“在文件中替换”** 选项卡找到的匹配项。 **“在文件中查找”** 和 **“在文件中替换”** 选项卡中的 **“结果选项”** 命令允许您选择“查找结果”窗口，其中显示找到的所有匹配项。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 两个“查找结果”窗口显示通过使用“查找和替换”对话框中的“在文件中查找”或“在文件中替换”选项卡找到的匹配项。 **“在文件中查找”** 和 **“在文件中替换”** 选项卡中的 **“结果选项”** 命令允许您选择“查找结果”窗口，其中显示找到的所有匹配项。  
   
  只要找到匹配项，即会自动打开所选的“查找结果”窗口。 若要手动显示“查找结果”窗口，请单击 **“视图”** 菜单上的 **“其他窗口”** ，再单击 **“查找结果 1”** 或 **“查找结果 2”**。  
   

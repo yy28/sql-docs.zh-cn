@@ -2,9 +2,12 @@
 title: "数据库镜像配置故障排除 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 23f685d4e5a32dc99fdf41e9a8db7c0deb8063a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8bbf78a982b6f0f4742722ec368119c33cbc330d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
-  本主题提供有关信息以帮助您解决设置数据库镜像会话时遇到的问题。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题提供有关信息以帮助解决设置数据库镜像会话时遇到的问题。  
   
 > [!NOTE]  
 >  请确保满足所有 [数据库镜像的先决条件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  

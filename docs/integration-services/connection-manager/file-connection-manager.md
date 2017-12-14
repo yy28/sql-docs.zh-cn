@@ -1,5 +1,5 @@
 ---
-title: "文件连接管理器 |Microsoft 文档"
+title: "文件连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.fileconnectionmanager.f1
+f1_keywords: sql13.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 674252aaf1932465e2727ee3842dfc0031587042
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="file-connection-manager"></a>文件连接管理器
   文件连接管理器使包可以在运行时引用现有的文件或文件夹，或者创建文件或文件夹。 例如，您可以引用 Excel 文件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的某些组件使用文件中的信息来执行其工作。 例如，执行 SQL 任务可以引用包含该任务执行的 SQL 语句的文件。 其他组件对文件执行操作。 例如，文件系统任务可以引用一个文件，以便将其复制到新的位置。  
@@ -99,4 +96,3 @@ ms.lasthandoff: 08/09/2017
  通过使用“选择文件”或“查找文件夹”对话框选择文件或文件夹。  
   
   
-

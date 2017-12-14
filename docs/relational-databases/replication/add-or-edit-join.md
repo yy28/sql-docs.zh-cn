@@ -2,9 +2,12 @@
 title: "添加或编辑联接 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ef3cc313a76a26f075ab295a5559792dd872e32
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 09a75529623523ea12d51263ef6fede558840410
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
-  可以使用 **“添加联接”** 和 **“编辑联接”** 对话框为合并发布添加和编辑联接筛选器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“添加联接”和“编辑联接”对话框为合并发布添加和编辑联接筛选器。  
   
 > [!NOTE]  
 >  编辑现有发布中的筛选器需要为该发布创建新的快照。 如果发布有订阅，则必须重新初始化这些订阅。 有关属性更改的详细信息，请参阅[更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  

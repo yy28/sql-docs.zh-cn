@@ -1,5 +1,5 @@
 ---
-title: "数据配置文件查看器 |Microsoft 文档"
+title: "数据配置文件查看器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.dataprofileviewer.f1
+f1_keywords: sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 78476021d8f54edb0f26748e6d610f9590bee037
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
   数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 08/11/2017
   
 -   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”任务，然后单击“编辑”。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”**。  
   
--   在文件夹中， *\<驱动器 >*: \Program Files (x86) |计划 Files\Microsoft SQL server\110\dts\binn 中，运行 DataProfileViewer.exe。  
+-   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-length-distribution-profile"></a>配置文件类型 = 列长度分布配置文件  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>列长度分布配置文件-\<列 > 窗格  
+##### <a name="column-length-distribution-profile---column-pane"></a>列长度分布配置文件 - \<列> 窗格  
  **最小长度**  
  显示此列中值的最小长度。  
   
@@ -118,7 +115,7 @@ ms.lasthandoff: 08/11/2017
  **长度**  
  显示在进行事件探查的列中找到的列长度。  
   
- **计数**  
+ **Count**  
  显示进行事件探查的列的值为“长度”列中显示的长度的行数。  
   
  **百分比**  
@@ -126,7 +123,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-null-ratio-profile"></a>配置文件类型 = 列 Null 比率配置文件  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>列 Null 比率配置文件-\<列 > 窗格  
+##### <a name="column-null-ratio-profile---column-pane"></a>列 Null 比率配置文件 - <列\< 窗格  
  **Null 计数**  
  显示进行事件探查的列为 Null 值的行数。  
   
@@ -138,7 +135,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-pattern-profile"></a>配置文件类型 = 列模式配置文件  
   
-##### <a name="column-pattern-profile---column-pane"></a>列模式配置文件-\<列 > 窗格  
+##### <a name="column-pattern-profile---column-pane"></a>列模式配置文件 - \<列> 窗格  
  **行计数**  
  显示表或视图中的行数。  
   
@@ -151,7 +148,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-statistics-profile"></a>配置文件类型 = 列统计信息配置文件  
   
-##### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件-\<列 > 窗格  
+##### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件 - \<列> 窗格  
  **最低要求**  
  显示在进行事件探查的列中发现的最小值。  
   
@@ -166,7 +163,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--column-value-distribution-profile"></a>配置文件类型 = 列值分布配置文件  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件-\<列 > 窗格  
+##### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件 - \<列> 窗格  
  **非重复值数目**  
  显示在进行事件探查的列中发现的非重复值的计数。  
   
@@ -177,7 +174,7 @@ ms.lasthandoff: 08/11/2017
  **“值”**  
  显示在进行事件探查的列中发现的非重复值。  
   
- **计数**  
+ **Count**  
  显示进行事件探查的列具有“值”列中显示的值的行数。  
   
  **百分比**  
@@ -185,7 +182,7 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="profile-type--candidate-key-profile"></a>配置文件类型 = 候选键配置文件  
   
-##### <a name="candidate-key-profile---table-pane"></a>候选键配置文件-\<表 > 窗格  
+##### <a name="candidate-key-profile---table-pane"></a>候选键配置文件 - \<表> 窗格  
  **键列**  
  显示为作为候选键进行事件探查所选择的列。  
   
@@ -193,7 +190,7 @@ ms.lasthandoff: 08/11/2017
  显示候选键列或候选键列组合的强度（按百分比）。 键强度小于 100% 指示存在重复值。  
   
 ##### <a name="key-violations-pane"></a>“键冲突”窗格  
- **\<column1 >， \<column2 >，等等。**  
+ \<column1>、\<column2> 等  
  显示进行事件探查的列中找到的重复值。  
   
  **Count**  
@@ -216,17 +213,17 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  数据中的错误值的高百分比可能导致函数依赖关系配置文件产生意外结果。 例如，在 90% 的行中，与邮政编码值“98052”对应的州值为“WI”。 配置文件将包含正确州值“WA”的行报告为冲突。  
   
- **\<决定列名称 >**  
+ \<决定列名称>  
  显示在此函数依赖关系冲突实例中决定列或决定列组合的值。  
   
- **\<依赖列名称 >**  
+ \<依赖列名称>  
  显示在此函数依赖关系冲突实例中依赖列的值。  
   
  **支持计数**  
  显示决定列值决定依赖列的行数。  
   
  **冲突计数**  
- 显示决定列值不能决定依赖列的行数。 (这些是其中从属的值是中所示的值的行**\<依赖列名称 >**列。)  
+ 显示决定列值不能决定依赖列的行数。 （在这些行中，依赖值是 \<dependent column name> 列中显示的值。）  
   
  **支持百分比**  
  显示决定列决定依赖列的行数的百分比。  
@@ -244,10 +241,9 @@ ms.lasthandoff: 08/11/2017
  显示列之间的重叠强度（按百分比）。 键强度小于 100% 指示存在在超集值中找不到子集值的情况。  
   
 ##### <a name="inclusion-violations-pane"></a>“包含冲突”窗格  
- **\<column1 >， \<column2 >，等等。**  
+ \<column1>、\<column2> 等  
  显示在单个或多个超集列中找不到的单个或多个子集列中的值。  
   
  **Count**  
  显示指定的列具有第一列中显示的值的行数。  
   
-

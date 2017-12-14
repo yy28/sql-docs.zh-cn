@@ -1,12 +1,14 @@
 ---
-title: "WMI 事件观察器任务 |Microsoft 文档"
+title: "WMI 事件观察器任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +19,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 5fcd6a9dedff32597209c837d4aa5d9471ff6d37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
   WMI 事件观察器任务以使用 Management Instrumentation 查询语言 (WQL) 事件查询指定所关注事件的方式来监视 Windows Management Instrumentation (WMI) 事件。 可以将 WMI 事件观察器任务用于下列目的：  
@@ -81,9 +83,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   定义任务对事件的响应方式。 可根据事件的不同将任务配置为成功或失败，或只是让任务重新监视事件。  
   
--   指定当 WMI 查询超时的时候任务所执行的操作。 可以记录超时和超时后的状态，也可以引发自定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，以指示 WMI 事件已超时并记录超时和超时状态。  
+-   指定当 WMI 查询超时的时候任务所执行的操作。可以记录超时和超时后的状态，也可以引发自定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，以指示 WMI 事件已超时并记录超时和超时状态。  
   
--   定义任务对超时的响应方式。 可将任务配置为成功或失败，或只是让任务重新监视事件。  
+-   定义任务对超时的响应方式。可将任务配置为成功或失败，或只是让任务重新监视事件。  
   
 -   指定任务监视事件的次数。  
   
@@ -130,7 +132,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 ### <a name="static-options"></a>静态选项  
  **WMIConnectionName**  
- 在列表中，选择 WMI 连接管理器，或单击\<**新的 WMI 连接...**> 创建新的连接管理器。  
+ 从列表中选择 WMI 连接管理器，或单击“\<新建 WMI 连接…>”，新建一个连接管理器。  
   
  **相关主题：**[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)和 [WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -169,14 +171,13 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = 文件连接  
  **WQLQuerySource**  
- 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = 变量  
  **WQLQuerySource**  
- 在列表中，选择变量，或单击\<**新变量...**> 若要创建新变量。  
+ 在列表中选择变量，或单击“\<新建变量...>”，创建一个新变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-

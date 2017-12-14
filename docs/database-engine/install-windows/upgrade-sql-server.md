@@ -1,12 +1,13 @@
 ---
 title: "升级 SQL Server | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -16,14 +17,14 @@ caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 101a7a8e9094b6d676de8acfcb3cca4702e930d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 406ae798a766e1eb22c51e8c34da1661acd71627
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
- 可以将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，请先查看以下有关升级过程和发行说明的主题。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，请先查看以下有关升级过程和发行说明的主题。  
   
    - 有关从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级的详细信息，请参阅 [是否正在从 SQL Server 2005 进行升级？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)。  
    - [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md) 

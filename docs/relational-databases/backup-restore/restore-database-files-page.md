@@ -2,9 +2,12 @@
 title: "还原数据库（“文件”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba9c9c5c060122e4b0d0ee1e1bc33084951a20c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 43c7026aa357587fea7d4a9611b88237ed7896fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
-  使用 **“还原数据库”** 对话框的 **“文件”** 页可以管理数据库中您选择要还原的特定文件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“还原数据库”对话框的“文件”页以管理数据库中已选择要还原的特定文件。  
   
 ## <a name="options"></a>选项  
   

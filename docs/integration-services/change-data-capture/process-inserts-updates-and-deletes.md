@@ -1,5 +1,5 @@
 ---
-title: "过程插入、 更新和删除 |Microsoft 文档"
+title: "处理插入、更新和删除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],processing data
+helpviewer_keywords: incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 689250d9870fb1c4e590f66d2736234eae2a00ef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="process-inserts-updates-and-deletes"></a>处理插入、更新和删除
   在用于执行变更数据的增量加载的 Integration Services 包的数据流中，第二个任务是分隔插入、更新和删除操作。 然后，可以使用相应的命令将它们应用到目标。  
@@ -77,9 +74,8 @@ select
   
  **下一主题：**[将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [有条件拆分转换](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [通过使用有条件拆分转换拆分数据集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [使用有条件拆分转换拆分数据集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   
-

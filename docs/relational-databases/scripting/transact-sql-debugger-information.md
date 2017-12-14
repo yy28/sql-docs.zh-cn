@@ -2,9 +2,12 @@
 title: "Transact-SQL 调试器信息 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 调试器 - 信息
-  每次当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，您可以使用不同调试器窗口来查看当前执行状态。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]每次当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，可以使用不同调试器窗口来查看当前执行状态。  
   
 ## <a name="debugger-windows"></a>调试器窗口  
  在调试器模式下，调试器会在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主窗口底部打开两个窗口。 调试器在这两个窗口中显示其所有信息。 每个调试器窗口都有选项卡，可选择这些选项卡以控制在窗口中显示哪些信息。 左侧调试器窗口包含 **“局部变量”**、 **“监视1”**、 **“监视2”**、 **“监视3”**和 **“监视4”** 选项卡。 右侧调试器窗口包含 **“调用堆栈”**、 **“线程”**、 **“断点”**、 **“命令窗口”**和 **“输出”** 选项卡。  

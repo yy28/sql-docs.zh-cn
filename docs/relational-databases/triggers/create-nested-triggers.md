@@ -2,9 +2,12 @@
 title: "创建嵌套触发器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e1320a9a1e3670c6d5cfc04d4b56f9d3ba51cc6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c00fc71fb0d0bd5dadd986b14d140e1293bcafba
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-nested-triggers"></a>创建嵌套触发器
-  当触发器执行启动其他触发器的操作时，DML 和 DDL 触发器都是嵌套触发器。 这些操作都可以启动其他触发器等。 DML 触发器和 DDL 触发器最多可以嵌套 32 层。 可以通过 **nested triggers** 服务器配置选项来控制是否可以嵌套 AFTER 触发器。 但不管此设置是什么，都可以嵌套 INSTEAD OF 触发器（只有 DML 触发器可以为 INSTEAD OF 触发器）。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]当触发器执行启动其他触发器的操作时，DML 和 DDL 触发器都是嵌套触发器。 这些操作都可以启动其他触发器等。 DML 触发器和 DDL 触发器最多可以嵌套 32 层。 可以通过 **nested triggers** 服务器配置选项来控制是否可以嵌套 AFTER 触发器。 但不管此设置是什么，都可以嵌套 INSTEAD OF 触发器（只有 DML 触发器可以为 INSTEAD OF 触发器）。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器中对托管代码的任何引用均计为 32 层嵌套限制中的一层。 从托管代码内部调用的方法不根据此限制进行计数。  

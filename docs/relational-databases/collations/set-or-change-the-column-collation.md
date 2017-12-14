@@ -2,9 +2,12 @@
 title: "设置或更改列排序规则 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3d16e4c40ceb37e5d4b54a8c5baec0605704ae60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 83ee5eb3d4513aba3a8ed126b766a0ee0a91c7f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
-  可以覆盖 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**和 **ntext** 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 可以替代字符型、varchar、文本、nchar、nvarchar 和 ntext 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)的 COLLATE 子句。 例如：  
   

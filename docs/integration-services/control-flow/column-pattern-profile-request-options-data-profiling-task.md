@@ -1,5 +1,5 @@
 ---
-title: "列模式配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+title: "列模式配置文件请求选项（数据事件探查任务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/05/2017
-
+ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列模式信息配置文件请求”** 设置选项。 列模式配置文件报告一组涵盖指定字符串列中值的百分比的正则表达式。 此配置文件可以帮助您识别数据中的问题（如无效字符串），还可以建议可用于以后验证新值的正则表达式。 例如，美国邮政编码列的模式配置文件可能会生成正则表达式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他的正则表达式，则数据有可能包含无效或格式不正确的值。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 10/05/2017
   
 -   **分隔符** 默认情况下，分隔符列表包含下列字符：空格、水平制表符 (\t)、换行符 (\n) 和回车符 (\r)。 可以指定其他分隔符，但不能删除默认分隔符。  
   
--   **符号**默认情况下，列表**符号**包含以下字符：`,.;:-"'~=&/@!?()<>[]{}|#*^%`以及刻度线。 例如，如果符号为“`()-`”，则值“(425) 123-4567”将标记为 ["(", "425", ")", "123", "-", "4567", ")"]。  
+-   **符号**：默认情况下，“符号”列表包含字符 `,.;:-"'~=&/@!?()<>[]{}|#*^%` 以及刻度线。 例如，如果符号为“`()-`”，则值“(425) 123-4567”将标记为 ["(", "425", ")", "123", "-", "4567", ")"]。  
   
  一个字符不能同时作为分隔符和符号。  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
  **“符号”**  
- 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“ @ ”。 默认情况下，列表**符号**包含以下字符： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
+ 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“@”。 默认情况下，“符号”列表包含以下字符：`,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
   
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
@@ -152,7 +149,6 @@ ms.lasthandoff: 10/05/2017
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

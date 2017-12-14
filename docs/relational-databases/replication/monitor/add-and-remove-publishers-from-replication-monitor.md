@@ -2,9 +2,12 @@
 title: "从复制监视器中添加和删除发布服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fd06f71bd65e1731ab53924e03e756044e505ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e36b7c4ca6eeb4ab5ec74407dfd0bd3ba4d6f745
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
-  如果从中启动复制监视器的服务器是发布服务器，则会自动将其添加到监视器中。 其他发布服务器可以通过 **“添加发布服务器”** 对话框来添加。 添加发布服务器后，该服务器便会显示在监视器左窗格中的某个组中。 默认情况下，包括 **“我的发布服务器”** 组，但还可以创建新组来管理一个或多个复制拓扑。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果是发布服务器，则启动复制监视器的服务器可自动添加到监视器。 其他发布服务器可以通过 **“添加发布服务器”** 对话框来添加。 添加发布服务器后，该服务器便会显示在监视器左窗格中的某个组中。 默认情况下，包括 **“我的发布服务器”** 组，但还可以创建新组来管理一个或多个复制拓扑。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 ### <a name="to-add-a-sql-server-publisher"></a>添加 SQL Server 发布服务器  
   

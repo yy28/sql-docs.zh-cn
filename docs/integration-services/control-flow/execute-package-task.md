@@ -1,5 +1,5 @@
 ---
-title: "执行包任务 |Microsoft 文档"
+title: "执行包任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -195,16 +193,16 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
  **连接**  
- 在列表中，选择一个 OLE DB 连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
   
- **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ 相关主题：[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  键入子包的名称，或单击省略号 (…) 再定位到包。  
   
 ##### <a name="location--file-system"></a>位置 = 文件系统  
  **连接**  
- 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  单击此选项可删除参数或变量与子包参数之间的映射。  
   
   
-

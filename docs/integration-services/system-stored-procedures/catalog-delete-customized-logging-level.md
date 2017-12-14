@@ -1,5 +1,5 @@
 ---
-title: "catalog.delete_customized_logging_level |Microsoft 文档"
+title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5268aa751ca177158cbcb3627aa5dd61473f5e06
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  删除现有的自定义日志记录级别。 有关自定义日志记录级别的详细信息，请参阅[Integration Services &#40;SSIS &#41;日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
+  删除现有的自定义日志记录级别。 有关自定义日志记录级别的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,10 +36,10 @@ delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @level_name =] *level_name*  
- 现有的名称自定义要删除的日志记录级别。  
+ [ @level_name = ] *level_name*  
+ 要删除的现有自定义日志记录级别的名称。  
   
- *Level_name*是**nvarchar （128)**。  
+ *level_name* 为 **nvarchar(128)**。  
   
 ## <a name="remarks"></a>注释  
   
@@ -63,7 +61,6 @@ delete_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致存储过程失败的情况。  
   
--   用户没有所需的权限。  
+-   用户没有必需的权限。  
   
   
-

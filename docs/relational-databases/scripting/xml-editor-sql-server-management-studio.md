@@ -2,9 +2,12 @@
 title: "XML 编辑器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bc3cfd22e1bff42f4ea4730337d01da0c2d5f6a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c7f2e3e338e1d8d2bc7df6cc8fb344213e05ed4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
-  提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
   
  若要显示该设计器，请向您的项目中添加数据集、XML 架构或 XML 文件，或打开下表中列出的任何类型的文件。  
   

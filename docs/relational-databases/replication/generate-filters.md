@@ -2,9 +2,12 @@
 title: "生成筛选器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa276ac1c58809cb97ef0ce002de76db32e1fa3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d3e86760f99dd98a405ec4e0efcdf0516485a09b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="generate-filters"></a>生成筛选器
-  使用 **“生成筛选器”** 对话框，可以对合并发布中某一个表定义行筛选器；然后，复制会自动将筛选器扩展到通过外键关系相关的其他表。 例如，如果对 Customer 表定义筛选器，使其仅包含与法国客户有关的数据，则复制将扩展该筛选器，以便相关的 Orders 表和 Order Details 表仅包含与法国客户相关的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“生成筛选器”对话框，可以对合并发布中某一个表定义行筛选器；然后，复制会自动将筛选器扩展到通过外键关系关联的其他表。 例如，如果对 Customer 表定义筛选器，使其仅包含与法国客户有关的数据，则复制将扩展该筛选器，以便相关的 Orders 表和 Order Details 表仅包含与法国客户相关的信息。  
   
 ## <a name="options"></a>选项  
  使用此对话框可以创建表的行筛选器，包括三个步骤。 然后，将筛选器扩展到与筛选的表通过主键和外键关系相关的表。 例如，假设有三个表： **Customer**、 **SalesOrderHeader**和 **SalesOrderDetail**，其中 **Customer** 表与 **SalesOrderHeader**表之间有关系， **SalesOrderHeader** 表与 **SalesOrderDetail**表之间有关系，将行筛选器应用于 **Customer**表，则复制会将该筛选器扩展到 **SalesOrderHeader** 表和 **SalesOrderDetail**表。  

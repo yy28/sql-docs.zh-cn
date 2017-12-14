@@ -1,5 +1,5 @@
 ---
-title: "catalog.environments （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.environments（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e7ba1ba0bd8a444e4609a2f3d011da9cd233b73
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: edb3360d05e44131d6f30b510ed5dd120e2aeae7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/26/2017
 |folder_id|**bigint**|环境位于其中的文件夹的唯一 ID。|  
 |description|**nvarchar(1024)**|环境的说明。 该值是可选的。|  
 |created_by_sid|**varbinary(85)**|创建了环境的用户的安全标识符 (SID)。|  
-|created_by_name|**nvarchar （128)**|创建环境的用户名。|  
+|created_by_name|**nvarchar(128)**|创建环境的用户名。|  
 |created_time|**datetimeoffset**|创建环境的日期和时间。|  
   
 ## <a name="remarks"></a>注释  
@@ -48,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   针对环境的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  将实施行级安全性；只显示您有权查看的行。  
   
   
-

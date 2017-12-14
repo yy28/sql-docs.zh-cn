@@ -2,9 +2,12 @@
 title: "数据库属性（“文件组”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f255edfb8c5a07df31622cc19c1484d36ccd24a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 12c30e38d6f10e519cb4c635a5a23c561dc3ad93
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
-  使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
   
  行文件组包含常规数据和日志文件。 FILESTREAM 数据文件组包含 FILESTREAM 数据文件。 这些数据文件存储有关在使用 FILESTREAM 存储时二进制大型对象 (BLOB) 数据在文件系统中的存储方式的信息。 两种类型的文件组具有相同的选项。  
   

@@ -2,9 +2,12 @@
 title: "Degree of Parallelism (7.0 Insert) 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95729129949c05a1432930f370f97303400671cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3d3e4fa041793a60425121fa9abd2a920d9eab35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件类
-  每次 **执行 SELECT、INSERT、UPDATE 或 DELETE 语句时都会发生** Degree of Parallelism (7.0 Insert) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SELECT、INSERT、UPDATE 或 DELETE 语句时都会发生 Degree of Parallelism (7.0 Insert)  事件类。  
   
  当该事件包含在跟踪中时，如果经常发生这些事件则所引起的开销可能会明显影响性能。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间内监视特定问题的跟踪操作。  
   

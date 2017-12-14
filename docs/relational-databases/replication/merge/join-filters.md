@@ -2,9 +2,12 @@
 title: "联接筛选器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a5ad5306cd055f5c31148168167dda555c561dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7873edc14c20b25cefa66a7c1602c056ab7b978f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="join-filters"></a>联接筛选器
-  联接筛选器允许根据发布中相关表的筛选方式对表进行筛选。 通常用参数化筛选器筛选父表，然后采用与定义各表之间联接完全相同的方式来定义联接筛选器。 联接筛选器扩展了参数化筛选器，以便仅复制与联接筛选器子句匹配的相关表中的数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]联接筛选器允许根据发布中相关表的筛选方式对表进行筛选。 通常用参数化筛选器筛选父表，然后采用与定义各表之间联接完全相同的方式来定义联接筛选器。 联接筛选器扩展了参数化筛选器，以便仅复制与联接筛选器子句匹配的相关表中的数据。  
   
  联接筛选器通常遵循为其应用到的表定义的主键/外键关系，但并不严格受限于主键/外键关系。 联接筛选器可以基于任何逻辑比较两表中相关数据。  
   

@@ -2,9 +2,12 @@
 title: "定义和修改合并项目的参数化行筛选器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b8a2d2676e0dc97183303c3ab5371792d8c6762
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b1bf6db754bdc9e0bfb9e43578ebf54cee13e082
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改参数化行筛选器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中定义和修改参数化行筛选器。  
   
  在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](../../../t-sql/queries/where-transact-sql.md) 子句来选择要发布的相应数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数： [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) 和 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md)。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   

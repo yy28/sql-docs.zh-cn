@@ -1,5 +1,5 @@
 ---
-title: "表达式页 |Microsoft 文档"
+title: "“表达式”页 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionspage.f1
-helpviewer_keywords:
-- Expressions Page dialog box
+f1_keywords: sql13.dts.designer.expressionspage.f1
+helpviewer_keywords: Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2517f3b049261614a219d64698a99bd82e14915d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8ea1c1154819e58814a0c2f83c8f246e0588e967
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expressions-page"></a>“表达式”页
   可以使用 **“表达式”** 页编辑属性表达式以及访问 **“属性表达式编辑器”** 和 **“属性表达式生成器”** 对话框。  
@@ -40,13 +36,12 @@ ms.lasthandoff: 08/03/2017
  **表达式 (...)**  
  单击省略号可以打开 **“属性表达式编辑器”** 对话框。 有关详细信息，请参阅 [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)。  
   
- **\<属性名称 >**  
+ **\<属性名称>**  
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [系统变量](../../integration-services/system-variables.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

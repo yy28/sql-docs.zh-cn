@@ -1,5 +1,5 @@
 ---
-title: "传输登录名任务 |Microsoft 文档"
+title: "传输登录名任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
 - sql13.dts.designer.transferloginstask.general.f1
 - sql13.dts.designer.transferloginstask.logins.f1
-helpviewer_keywords:
-- Transfer Logins task [Integration Services]
+helpviewer_keywords: Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 93192dbbae84bb86732ca8fd0a5de3bbd320aac7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
   传输登录名任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输一个或多个登录名。  
@@ -110,10 +107,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **LoginsToTransfer**  
  选择要从源服务器复制到目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此属性具有下表所列的选项：  
@@ -144,4 +141,3 @@ ms.lasthandoff: 08/11/2017
  **CopySids**  
  选择是否应将与登录名相关联的安全标识符复制到目标服务器。 如果传输登录名任务与传输数据库任务一起使用，则必须将**CopySids** 设置为 **True** 。 否则，传输的数据库将不能识别复制的登录名。  
   
-

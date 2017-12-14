@@ -2,9 +2,12 @@
 title: "减少 CPU 使用策略中的干扰（SQL Server 实用工具）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1c076cc3e503a1417cec2fd9704cae29e0bb8a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bb9460eb2dee21369bac8920dcc77a64e98b9857
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>减少 CPU 使用策略中的干扰（SQL Server 实用工具）
-  使用以下策略可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源使用策略中报告的干扰和意外的策略违反情况。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用以下策略可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源使用策略中报告的干扰和意外的策略违反情况。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>违反处理器使用率策略的频度有多高后才应报告为使用过度？  
  评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”**。 您还可以使用显示底部的按钮还原默认值或放弃更改。  

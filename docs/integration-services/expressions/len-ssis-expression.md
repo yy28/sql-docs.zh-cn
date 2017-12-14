@@ -1,5 +1,5 @@
 ---
-title: "LEN （SSIS 表达式） |Microsoft 文档"
+title: "LEN（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - LEN function
 - number of characters
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f36997cd3b698d5853a79ac14fccc8072adbf08
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dba697545c46a5060de3e10bec146a1b1c845753
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="len-ssis-expression"></a>LEN（SSIS 表达式）
   返回字符表达式中的字符数。 如果字符串中包含前导空格和尾随空格，则函数会将它们包含在计数内。 LEN 对相同的单字节和双字节字符串返回相同的值。  
@@ -74,7 +72,6 @@ LEN(@MachineName)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

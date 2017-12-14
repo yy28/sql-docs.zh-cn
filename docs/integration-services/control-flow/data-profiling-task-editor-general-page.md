@@ -1,5 +1,5 @@
 ---
-title: "数据事件探查任务编辑器 （常规页） |Microsoft 文档"
+title: "数据事件探查任务编辑器（常规页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.general.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe778df2be9b176d95ef78d52daf1bd4ef8bd7e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
@@ -66,9 +62,9 @@ ms.lasthandoff: 08/03/2017
  **目标**  
  指定哪个文件连接管理器或包变量包含数据配置文件输出：  
   
--   如果将 **“目标类型”** 选项设置为 **“文件连接”**，则 **“目标”** 选项显示可用文件连接服务器。 选择一个这些连接管理器中，或选择\<新文件连接 > 创建新的文件连接管理器。  
+-   如果将 **“目标类型”** 选项设置为 **“文件连接”**，则 **“目标”** 选项显示可用文件连接服务器。 选择这些连接管理器中的一个，或选择“\<新建文件连接>”创建新的文件连接管理器。  
   
--   如果将 **“目标类型”** 选项设置为 **“变量”**，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择其中一个变量，或选择\<新变量 > 若要创建新变量。  
+-   如果将 **“目标类型”** 选项设置为 **“变量”**，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择这些变量中的一个，或选择“\<新建变量>”创建新变量。  
   
  **OverwriteDestination**  
  如果输出文件已经存在，则指定是否将其覆盖。 默认值为 **False**。 只有在“目标类型”选项设置为“文件连接”时才使用此属性的值。 当“目标类型”选项设置为变量时，任务将始终覆盖该变量以前的值。  
@@ -84,11 +80,10 @@ ms.lasthandoff: 08/03/2017
  打开数据配置文件查看器。 独立数据配置文件查看器显示数据事件探查任务的数据配置文件输出。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些数据配置文件输出。  
   
 > [!NOTE]  
->  你也可以通过以下方式打开数据配置文件查看器通过在文件夹中，运行 DataProfileViewer.exe *\<驱动器 >*: \Program Files (x86) |程序 Files\Microsoft SQL server\110\dts\binn。  
+>  还可以通过在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe 来打开数据配置文件查看器。  
   
 ## <a name="see-also"></a>另请参阅  
  [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
- [数据事件探查任务编辑器 &#40;配置文件请求页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

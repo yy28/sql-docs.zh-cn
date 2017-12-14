@@ -2,9 +2,12 @@
 title: "数据收集 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d554a001c8375a6ad619f4ed00e362a64fa279b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e2ba0a8ac11577590da78a5975a9447f3478709b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-collection"></a>数据收集
-  数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 数据收集器是[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
   
 ## <a name="what-is-data-collector"></a>什么是数据收集器？ 
  数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据收集平台的核心组件，是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提供的工具。 数据收集器为在数据库服务器和应用程序范围内的数据收集提供了一个中心点。 与 SQL 跟踪不同，此收集点可获取来自多种来源的数据而不仅限于性能数据。  

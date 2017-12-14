@@ -2,9 +2,12 @@
 title: "可扩展的密钥管理 (EKM) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33c468cb6c8f2a8437e9922203afb14ae513f2c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c642ca8448624c79b77f84c71619439918856767
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extensible-key-management-ekm"></a>可扩展的密钥管理 (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及*可扩展的密钥管理* (EKM)，同时使用“Microsoft 加密 API”(MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及可扩展的密钥管理 (EKM)，同时使用 Microsoft 加密 API (MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
   
  随着法规遵从性和数据隐私问题方面的需求不断增长，组织正利用加密方法来提供“深度防御”解决方案。 如果仅使用数据库加密管理工具，则这种方法通常是不切实际的。 硬件供应商通过使用“硬件安全模块”(HSM) 来提供能解决企业密钥管理的产品。 HSM 设备在硬件或软件模块上存储加密密钥。 由于加密密钥与加密数据分开存储，因此这是一种更安全的解决方案。  
   

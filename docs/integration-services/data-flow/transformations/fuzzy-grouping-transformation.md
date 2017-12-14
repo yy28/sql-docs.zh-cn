@@ -1,5 +1,5 @@
 ---
-title: "模糊分组转换 |Microsoft 文档"
+title: "模糊分组转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 817cb1690c8b166a0e1760c3e3bb298dfd130278
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/19/2017
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

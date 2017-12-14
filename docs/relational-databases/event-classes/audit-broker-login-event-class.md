@@ -2,9 +2,12 @@
 title: "Audit Broker Login 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab223279ee3854e7071248959f2c48b37c855a35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 05ce6fba0a4c447b270bbb9e5cb831f4a4c1d146
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 事件类
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建 **Audit Broker Login** 事件以报告与 Service Broker 传输安全相关的审核消息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建 Audit Broker Login 事件，报告与 Service Broker 传输安全相关的审核消息。  
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login 事件类的数据列  
   

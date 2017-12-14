@@ -1,5 +1,5 @@
 ---
-title: "Hadoop 文件系统任务 |Microsoft 文档"
+title: "Hadoop 文件系统任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoopfiletask.f1
+f1_keywords: sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9cc77b27b5e2b53b8790cdbd99324166f4ca659
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 文件系统任务
   Hadoop 文件系统任务允许 SSIS 包在 Hadoop 群集之间或内部复制文件。  
   
  要添加 Hadoop 文件系统任务，请将其拖放到设计器。 然后双击该任务，或右键单击，然后单击“编辑”，以打开“Hadoop 文件系统任务编辑器”对话框。  
   
- ![Hadoop 文件系统任务编辑器](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Hadoop 文件系统任务编辑器")  
+ ![Hadoop 文件系统任务编辑器](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Hadoop File System Task Editor")  
   
 ## <a name="options"></a>选项  
  配置“Hadoop 文件系统任务编辑器”对话框  中的下列选项。  
@@ -52,4 +49,3 @@ ms.lasthandoff: 08/03/2017
  [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
   
-

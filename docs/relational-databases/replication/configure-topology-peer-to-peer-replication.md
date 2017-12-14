@@ -2,9 +2,12 @@
 title: "配置拓扑（对等复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
-  可以使用 **“配置拓扑”** 页执行常见的配置任务，如添加新节点、删除节点，以及在现有节点之间添加新连接。 在此向导的 **“发布”** 页上选定的节点会显示在设计图面上。 若要指定配置选项，请右键单击某个节点、连接或者设计图面。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可使用“配置拓扑”页执行常见的配置任务，如添加新节点、删除节点，以及在现有节点之间添加新连接。 在此向导的 **“发布”** 页上选定的节点会显示在设计图面上。 若要指定配置选项，请右键单击某个节点、连接或者设计图面。  
   
 > [!NOTE]  
 >  配置对等拓扑向导关闭时请求拓扑信息。 如果该向导在所有节点响应信息请求之前关闭并重新打开，则该向导可能会显示部分网络。  

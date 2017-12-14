@@ -1,5 +1,5 @@
 ---
-title: "属性表达式编辑器 |Microsoft 文档"
+title: "属性表达式编辑器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.propertyexpressionseditor.f1
-helpviewer_keywords:
-- Property Expressions Editor dialog box
+f1_keywords: sql13.dts.designer.propertyexpressionseditor.f1
+helpviewer_keywords: Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dffc58ddd7cae6136f22a8d9db8126730071e990
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47edc5634e3471028914114662cb0cf06265c84f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
   可以使用 **“属性表达式编辑器”** 对话框创建、编辑或删除用于更新属性值的属性表达式。  
@@ -49,11 +45,10 @@ ms.lasthandoff: 08/03/2017
  选择一个属性，再单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式页](../../integration-services/expressions/expressions-page.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [“表达式”页](../../integration-services/expressions/expressions-page.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [系统变量](../../integration-services/system-variables.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   
   
-

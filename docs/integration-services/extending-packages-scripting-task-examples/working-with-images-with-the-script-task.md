@@ -1,5 +1,5 @@
 ---
-title: "使用 with the Script Task 图像 |Microsoft 文档"
+title: "使用脚本任务处理图像 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - graphics [Integration Services]
 - Script task [Integration Services], images
@@ -28,48 +25,47 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c86c8f11ec6351882ccb4b152b4254bad70210f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
-  除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 **System.Drawing** Microsoft.NET Framework 中的命名空间提供用于操作图像的类。  
+  除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 System.Drawing 命名空间提供用于操作图像的类。  
   
- [示例 1： 将图像转换为 JPEG 格式](#example1)  
+ [示例 1：将图像转换为 JPEG 格式](#example1)  
   
- [示例 2： 创建和保存缩略图图像](#example2)  
+ [示例 2：创建并保存缩略图图像](#example2)  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="example1"></a>示例 1 说明： 将图像转换为 JPEG 格式  
+##  <a name="example1"></a>示例 1 说明：将图像转换为 JPEG 格式  
  下面的示例打开一个由变量指定的图像文件，并使用编码器将其保存为压缩后的 JPEG 文件。 检索编码器信息的代码封装在一个私有函数中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>将此脚本任务示例配置为用于单个图像文件  
   
 1.  创建一个名为 `CurrentImageFile` 的字符串变量，并将其值设置为一个现有图像文件的路径和名称。  
   
-2.  上**脚本**页**脚本任务编辑器**，添加`CurrentImageFile`变量**ReadOnlyVariables**属性。  
+2.  在“脚本任务编辑器”的“脚本”页，将 `CurrentImageFile` 变量添加到 ReadOnlyVariables 属性中。  
   
-3.  在脚本项目中，将引用设置为**System.Drawing**命名空间。  
+3.  在脚本项目中，设置对 System.Drawing 命名空间的引用。  
   
-4.  在代码中，使用**导入**语句以导入**System.Drawing**和**System.IO**命名空间。  
+4.  在代码中，使用 Imports 语句导入 System.Drawing 和 System.IO 命名空间。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>将此脚本任务示例配置为用于多个图像文件  
   
 1.  将脚本任务放入 Foreach 循环容器。  
   
-2.  上**集合**页**Foreach 循环编辑器**，选择**Foreach 文件枚举器**作为枚举数，并指定源的路径和文件名掩码文件，如为"*.bmp。"  
+2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”。  
   
-3.  上**变量映射**页上，映射`CurrentImageFile`变量到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -159,7 +155,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a>示例 2 说明： 创建和保存缩略图图像  
+##  <a name="example2"></a>示例 2 说明：创建并保存缩略图图像  
  下面的示例打开一个由变量指定的图像文件，在保持宽高比不变的情况下创建一个该图像的缩略图，并将此缩略图以修改后的名称保存。 在保持宽高比不变的情况下计算缩略图的高度和宽度的代码封装在一个私有子例程中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>将此脚本任务示例配置为用于单个图像文件  
@@ -168,24 +164,24 @@ End Function
   
 2.  再创建整数变量 `MaxThumbSize`，并赋值（单位为像素），例如 100。  
   
-3.  上**脚本**页**脚本任务编辑器**，添加到两个变量**ReadOnlyVariables**属性。  
+3.  在“脚本任务编辑器”的“脚本”页，将这两个变量添加到 ReadOnlyVariables 属性中。  
   
-4.  在脚本项目中，将引用设置为**System.Drawing**命名空间。  
+4.  在脚本项目中，设置对 System.Drawing 命名空间的引用。  
   
-5.  在代码中，使用**导入**语句以导入**System.Drawing**和**System.IO**命名空间。  
+5.  在代码中，使用 Imports 语句导入 System.Drawing 和 System.IO 命名空间。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-multiple-image-files"></a>将此脚本任务示例配置为用于多个图像文件  
   
 1.  将脚本任务放入 Foreach 循环容器。  
   
-2.  上**集合**页**Foreach 循环编辑器**，选择**Foreach 文件枚举器**作为**枚举器**，并指定源文件，例如"*.jpg。"的路径和文件掩码  
+2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”。  
   
-3.  上**变量映射**页上，映射`CurrentImageFile`变量到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
   
-### <a name="example-2-code"></a>代码示例 2  
+### <a name="example-2-code"></a>示例 2 代码  
   
 ```vb  
 Public Sub Main()  
@@ -300,4 +296,3 @@ bool ThumbnailCallback()
 ```  
   
   
-

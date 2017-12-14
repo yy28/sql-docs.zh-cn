@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 变量 |Microsoft 文档"
+title: "Integration Services (SSIS) 变量 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
  有关变量的实际使用情况的详细信息，请参阅 [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## <a name="properties-of-variables"></a>变量的属性  
+## <a name="properties-of-variables"></a>变量属性  
  你可通过在“变量”窗口或“属性”窗口中设置以下属性来配置用户定义变量。 某些属性仅在“属性”窗口中提供。  
   
 > [!NOTE]  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  指定变量名称。  
   
  **命名空间**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供两个命名空间，**用户**和**系统**。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了两个命名空间：User 和 System。 默认情况下，自定义变量位于 **User** 命名空间中，系统变量位于 **System** 命名空间中。 你可以为用户定义变量创建其他命名空间，并可以更改 **User** 命名空间的名称，但不能更改 **System** 命名空间的名称，也不能向 **System** 命名空间添加变量或将系统变量分配给其他命名空间。  
   
 **RaiseChangedEvent**  
  将此属性设置为 **True**时，变量值的改变将会引发 **OnVariableValueChanged** 事件。  
@@ -111,7 +109,7 @@ ms.lasthandoff: 08/03/2017
  **ReadOnly**  
  将此属性设置为 **False**时，该变量可读\写。  
   
-**作用域**    
+**范围**    
  > [!NOTE]  
 >  可通过单击“变量”窗口中的“移动变量”来更改此属性设置。  
   
@@ -145,7 +143,7 @@ ms.lasthandoff: 08/03/2017
   
  指定变量值的数据类型。  
 
-## <a name="scenarios-for-using-variables"></a>使用的变量的方案  
+## <a name="scenarios-for-using-variables"></a>变量使用方案  
  变量在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中有多种不同的使用方式。 您会发现，如果不向包中添加用户定义的变量以实现解决方案所要求的灵活性和可管理性，包的开发将无法进行下去。 根据方案的不同，通常还会用到系统变量。  
   
  **属性表达式** ：在设置包和包对象属性的属性表达式中使用变量来提供值。 例如，表达式 `SELECT * FROM @varTableName` 中包含变量 `varTableName` ，该变量可更新“执行 SQL 任务”所运行的 SQL 语句。 表达式 `DATEPART("d", GETDATE()) == 1? @[User::varPackageFirst]:@[User::varPackageOther]`" 通过在月份的第一天运行 `varPackageFirst` 变量指定的包而在其他天中运行 `varPackageOther` 变量指定的包，来更新“执行包”任务所运行的包。 有关详细信息，请参阅 [在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。  
@@ -196,7 +194,7 @@ ms.lasthandoff: 08/03/2017
  **名称**  
  键入变量名称。  
   
- **Namespace**  
+ **命名空间**  
  指定变量的命名空间。 默认情况下，用户定义变量位于 **User** 命名空间中。  
   
  **值类型**  
@@ -248,9 +246,9 @@ ms.lasthandoff: 08/03/2017
 -   属性窗口。 “属性”窗口中列出了用于配置“变量”窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]此外提供了一组无法更新其属性，除了 RaiseChangedEvent 属性的系统变量。  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了一组无法更新属性的系统变量，但 RaiseChangedEvent 属性例外。  
   
-### <a name="set-expressions-on-variables"></a>在变量上的集表达式  
+### <a name="set-expressions-on-variables"></a>对变量设置表达式  
   
  使用“属性”窗口对用户定义变量设置表达式时：  
   
@@ -270,7 +268,7 @@ ms.lasthandoff: 08/03/2017
   
  在 **“变量”** 和 **“属性”** 窗口中，如果为变量分配了表达式，并且 **EvaluateAsExpression** 设置为 **True**，则无法更改变量数据类型。  
   
-### <a name="set-the-namespace-and-name-properties"></a>设置 Namespace 和名称属性
+### <a name="set-the-namespace-and-name-properties"></a>设置 Namespace 和 Name 属性
   
  **Name** 和 **Namespace** 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
@@ -308,15 +306,14 @@ ms.lasthandoff: 08/03/2017
   
 7.  在“属性”窗口中，更改读/写变量属性。 对于用户定义的变量而言，某些属性为可读/只读。  
   
-     有关属性的详细信息，请参阅[Integration Services &#40;SSIS &#41;变量](../integration-services/integration-services-ssis-variables.md)。  
+     有关属性的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>配置使用动态更新变量  
- 若要动态更新变量，可以为变量创建配置，将这些配置部署到包中，然后在部署包时更新配置文件中的变量值。 在运行时，包使用更新后的变量值。 有关详细信息，请参阅[创建包配置](../integration-services/packages/create-package-configurations.md)。  
+## <a name="update-a-variable-dynamically-with-configurations"></a>使用配置以动态方式更新变量  
+ 若要动态更新变量，可以为变量创建配置，将这些配置部署到包中，然后在部署包时更新配置文件中的变量值。 在运行时，包使用更新后的变量值。 有关详细信息，请参阅 [创建包配置](../integration-services/packages/create-package-configurations.md)。  
 
 ## <a name="related-tasks"></a>相关任务  
  [在子包中使用变量和参数的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [将查询参数映射到数据流组件中的变量](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

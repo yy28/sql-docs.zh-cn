@@ -2,9 +2,12 @@
 title: "表和存储过程的本机编译 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
-
-内存中 OLTP 引入了本机编译的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以本机编译访问内存优化表的存储过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以本机编译内存优化表。 与解释型（传统） [!INCLUDE[tsql](../../includes/tsql-md.md)]相比，本机编译可提高访问数据的速度和执行查询的效率。 表和存储过程的本机编译生成 DLL。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]内存中 OLTP 引入了本机编译的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以本机编译访问内存优化表的存储过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以本机编译内存优化表。 与解释型（传统） [!INCLUDE[tsql](../../includes/tsql-md.md)]相比，本机编译可提高访问数据的速度和执行查询的效率。 表和存储过程的本机编译生成 DLL。
 
 还支持内存优化表类型的本机编译。 有关详细信息，请参阅 [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)（通过使用内存优化更快获得临时表和表变量）。
 

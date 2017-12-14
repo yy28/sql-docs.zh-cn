@@ -1,5 +1,5 @@
 ---
-title: "步骤 1： 复制第 5 课包 |Microsoft 文档"
+title: "步骤 1：复制第 5 课包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6de5c21ac26411f39ae6d46a1fd1824f73d5c3b7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 92e846a42325d0c30388e7524e86a3ad715fa8fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-1---copying-the-lesson-5-package"></a>课程 6-1-复制第 5 课包
+# <a name="lesson-6-1---copying-the-lesson-5-package"></a>第 6-1 课 - 复制第 5 课包
 在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>复制 Lesson 5 包  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 2：将项目转换为项目部署模型](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-

@@ -2,9 +2,12 @@
 title: "默认 SQL Server 网络协议配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a988fcab5de7d5d21246ce82684213afed0c7fbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
-为了增强安全性， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将对某些新的安装禁用网络连接。 如果你使用的是 Enterprise Edition、Standard Edition、Evaluation Edition 或 Workgroup Edition，或者存在以前安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，则不禁用 TCP/IP 网络连接。 对于所有的安装，将启用 shared memory 协议以允许本地到服务器的连接。 根据安装情况和安装选项， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务可能会停止。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]为了增强安全性，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将对某些新的安装禁用网络连接。 如果你使用的是 Enterprise Edition、Standard Edition、Evaluation Edition 或 Workgroup Edition，或者存在以前安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，则不禁用 TCP/IP 网络连接。 对于所有的安装，将启用 shared memory 协议以允许本地到服务器的连接。 根据安装情况和安装选项， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务可能会停止。
 
 安装之后，使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 配置管理器的“ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 网络配置”节点来配置网络协议。 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 配置管理器的“ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务”节点以将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务配置为自动启动。 有关详细信息，请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 

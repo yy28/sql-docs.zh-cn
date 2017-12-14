@@ -7,22 +7,26 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: sql-server
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: 
 ms.date: 17/09/2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
 ms.author: mikeray
-ms.openlocfilehash: e07cf9de9a3526d018e3ce552bf40e21971bdd72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 037864b77e9b807d593a3d9d2425acf507b3c11f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 开发合作伙伴
-要支持开发 SQL Server 数据库解决方案，请从各种行业领先工具中进行选择。  本文重点介绍提供 Microsoft SQL Server 开发解决方案的 Microsoft 合作伙伴公司。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]要支持开发 SQL Server 数据库解决方案，请从各种行业领先工具中进行选择。  本文重点介绍提供 Microsoft SQL Server 开发解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-development-partners"></a>我们的开发合作伙伴
 | Partner | Description | 链接 |

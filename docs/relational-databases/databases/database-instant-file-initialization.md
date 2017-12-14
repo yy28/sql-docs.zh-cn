@@ -1,10 +1,13 @@
 ---
 title: "数据库实例文件初始化 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,36 +22,36 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c1e3fb032916c235cff2dfaf9b0bf8a88d4dec82
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
-  初始化数据和日志文件以覆盖之前删除的文件遗留在磁盘上的任何现有数据。 执行以下其中一项操作时，应首先通过用零填充数据和日志文件来初始化这些文件：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]初始化数据和日志文件以覆盖之前删除的文件遗留在磁盘上的任何现有数据。 执行以下其中一项操作时，应首先通过用零填充数据和日志文件来初始化这些文件：  
   
--   创建数据库。  
+- 创建数据库。  
   
--   向现有数据库添加数据或日志文件。  
+- 向现有数据库添加数据或日志文件。  
   
--   增大现有文件的大小（包括自动增长操作）。  
+- 增大现有文件的大小（包括自动增长操作）。  
   
--   还原数据库或文件组。  
+- 还原数据库或文件组。  
   
- 文件初始化会导致这些操作花费更多时间。 但是，首次将数据写入文件后，操作系统就不必用零来填充文件。  
+文件初始化会导致这些操作花费更多时间。 但是，首次将数据写入文件后，操作系统就不必用零来填充文件。  
   
 ## <a name="instant-file-initialization"></a>即时文件初始化  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以在瞬间对数据文件进行初始化。 即时文件初始化可以快速执行上述文件操作。 即时文件初始化功能将回收使用的磁盘空间，而无需使用零填充空间。 相反，新数据写入文件时会覆盖磁盘内容。 日志文件不能立即初始化。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以在瞬间对数据文件进行初始化。 即时文件初始化可以快速执行上述文件操作。 即时文件初始化功能将回收使用的磁盘空间，而无需使用零填充空间。 相反，新数据写入文件时会覆盖磁盘内容。 日志文件不能立即初始化。  
   
 > [!NOTE]  
 >  只有在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 或 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 或更高版本中才可以使用即时文件初始化功能。  
   
- 即时文件初始化功能仅在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 服务帐户授予了 SE_MANAGE_VOLUME_NAME 之后才可用。 Windows Administrator 组的成员拥有此权限，并可以通过将其他用户添加到 **执行卷维护任务** 安全策略中来为其授予此权限。 有关分配用户权限的详细信息，请参阅 Windows 文档。  
+即时文件初始化功能仅在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 服务帐户授予了 SE_MANAGE_VOLUME_NAME 之后才可用。 Windows Administrator 组的成员拥有此权限，并可以通过将其他用户添加到 **执行卷维护任务** 安全策略中来为其授予此权限。 有关分配用户权限的详细信息，请参阅 Windows 文档。  
   
-某些条件（如 TDE）可以防止即时文件初始化。  
+某些功能使用情况（如 [TDE](../../relational-databases/security/encryption/transparent-data-encryption.md)）可以防止即时文件初始化。  
   
- 要向一个帐户授予 `Perform volume maintenance tasks` 权限：  
+要向一个帐户授予 `Perform volume maintenance tasks` 权限：  
   
 1.  在将要创建备份文件的计算机上打开**本地安全策略**应用程序 (`secpol.msc`)。  
   
@@ -65,9 +68,9 @@ ms.lasthandoff: 11/09/2017
   
  如果担心可能会泄漏删除的内容，则应执行以下两种或其中一种操作：  
   
--   请始终确保所有分离的数据文件和备份文件都具有限制性的 DACL。  
+- 请始终确保所有分离的数据文件和备份文件都具有限制性的 DACL。  
   
--   通过从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户中撤消 SE_MANAGE_VOLUME_NAME 来禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的即时文件初始化功能。  
+- 通过从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户中撤消 SE_MANAGE_VOLUME_NAME 来禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的即时文件初始化功能。  
   
 > [!NOTE]  
 >  禁用即时文件初始化功能只会影响在用户权限撤消之后创建的文件或其大小增大的文件。  

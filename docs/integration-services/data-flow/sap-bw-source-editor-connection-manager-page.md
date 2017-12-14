@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 源编辑器 （连接管理器页） |Microsoft 文档"
+title: "SAP BW 源编辑器（“连接管理器”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.sapbwsource.connection.f1
+f1_keywords: sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: eba966d7321d44088c197d0f5a8829ff591a9bdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
@@ -132,10 +129,9 @@ ms.lasthandoff: 08/03/2017
  输入与提取关联的请求 ID。  
   
 ## <a name="see-also"></a>另请参阅  
- [SAP BW 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 源编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 源编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

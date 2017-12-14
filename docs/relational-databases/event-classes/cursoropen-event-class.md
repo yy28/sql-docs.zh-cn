@@ -2,9 +2,12 @@
 title: "CursorOpen 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef99bb8938a8a565d98fe624567a08502a2d2f0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 276c1b736886099672a38b85e48f982291e8ae1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件类
-  **CursorOpen** 事件类说明在应用程序编程接口 (API) 游标中发生的游标打开事件。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定义与游标和游标选项相关联的 SQL 语句时发生游标打开事件，然后填充游标。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] CursorOpen  事件类说明在应用程序编程接口 (API) 游标中发生的游标打开事件。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定义与游标和游标选项相关联的 SQL 语句时发生游标打开事件，然后填充游标。  
   
  在记录游标性能的跟踪中包括 **CursorOpen** 事件类。 在跟踪中包括 **CursorOpen** 事件类时，产生的开销取决于跟踪期间数据库中使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  
   

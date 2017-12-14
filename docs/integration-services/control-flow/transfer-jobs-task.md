@@ -1,5 +1,5 @@
 ---
-title: "传输作业任务 |Microsoft 文档"
+title: "传输作业任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
 - sql13.dts.designer.transferjobstask.general.f1
 - sql13.dts.designer.transferjobstask.jobs.f1
-helpviewer_keywords:
-- Transfer Jobs task [Integration Services]
+helpviewer_keywords: Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 985e707cf0865a012076a1161a3eff9a7e73b032
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-jobs-task"></a>传输作业任务
   传输作业任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业。  
@@ -107,10 +104,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+ 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
   
  **TransferAllJobs**  
  选择该任务是应将全部的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业还是仅将指定的作业从源服务器复制到目标服务器。  
@@ -156,4 +153,3 @@ ms.lasthandoff: 08/11/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "暂停和恢复数据库镜像 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暂停和恢复数据库镜像 (SQL Server)
-  数据库所有者可以暂停并在以后随时恢复数据库镜像会话。 执行暂停操作将保留在挂起镜像时的会话状态。 当出现瓶颈时，暂停可能有利于提高主体服务器的性能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库所有者可以暂停并在以后随时恢复数据库镜像会话。 执行暂停操作将保留在挂起镜像时的会话状态。 当出现瓶颈时，暂停可能有利于提高主体服务器的性能。  
   
  会话暂停后，主体数据库仍然可用。 暂停操作将镜像会话的状态设置为 SUSPENDED，并且镜像数据库不再与主体数据库保持一致，从而导致主体数据库公开运行。  
   

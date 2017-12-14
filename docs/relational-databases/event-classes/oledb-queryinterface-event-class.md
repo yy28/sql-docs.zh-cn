@@ -2,9 +2,12 @@
 title: "OLEDB QueryInterface 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a675719a1c034127bce3afc1bee730cc2221dd53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 54ea634acb632f76d6d74aa192fb89e4b3f8af94
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件类
-  **发出 OLE DB** QueryInterface [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来调用分布式查询和远程存储过程时，会发生 **OLEDB QueryInterface** 事件类。 包括跟踪（这些跟踪监视与分布式查询和远程存储过程相关的问题）中的事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发出 OLE DB QueryInterface 来调用分布式查询和远程存储过程时，会发生 OLEDB QueryInterface 事件类。 包括跟踪（这些跟踪监视与分布式查询和远程存储过程相关的问题）中的事件类。  
   
  如果包括 **OLEDB QueryInterface** 事件类，开销量将变高。 如果此类事件频繁发生，则跟踪可能会显著地降低性能。 若要最大限度地降低引起的开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪操作。  
   

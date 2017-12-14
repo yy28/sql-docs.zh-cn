@@ -2,9 +2,12 @@
 title: "订阅过期和停用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24341df9b17ed7e98b9a9c095e4874b05df4376b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a5568d5e75605430ad78fd38c5832971f2e2ae8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-expiration-and-deactivation"></a>订阅过期和停用
-  如果在指定的“保持期” 内未同步订阅，订阅可能会停用或过期。 发生什么操作取决于复制的类型和所超过的保持期。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]如果在指定的“保持期”内未同步订阅，订阅可能会停用或过期。 发生什么操作取决于复制的类型和所超过的保持期。  
   
  若要设置保持期，请参阅[设置订阅的过期期限](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)、[设置事务发布的分发保持期 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) 以及[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: "标识使用数字签名的包源 |Microsoft 文档"
+title: "使用数字签名标识包的源 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.digitalsigning.f1
+f1_keywords: sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
   可以使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行签名以标识其来源。 使用数字证书对包进行签名后，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在加载包之前先检查数字签名。 若要让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能够检查签名，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 实用工具 (dtexec.exe) 中设置一个选项，或设置一个可选的注册表值。  
@@ -141,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
      虽然已对包进行了签名，您现在必须配置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，以便在加载该包之前检查或验证数字签名。  
 
-## <a name="signing_dialog"></a>数字签名对话框 UI 参考
+## <a name="signing_dialog"></a>“数字签名”对话框 UI 参考
   使用 **“数字签名”** 对话框可以使用数字签名对包进行签名或删除签名。 在 **中，** SSIS **菜单的** “数字签名” **选项中提供了** “数字签名” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]对话框。  
   
  有关详细信息，请参阅 [使用数字证书对包签名](#cert)。  
@@ -155,7 +152,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
- [安全概述 &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "步骤 3： 修改目录属性配置值 |Microsoft 文档"
+title: "步骤 3：修改目录属性配置值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 881aab31aab8cc4dc339b5f399f8cd207feb6ebb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 28a85b62c9aacb842c296a2f383963e318570610
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Lesson 5-3-修改目录属性配置值
+# <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>第 5-3 课 - 修改目录属性配置值
 在此任务中，将针对包级变量 `User::varFolderName`的 Value 属性，修改存储在 SSISTutorial.dtsConfig 文件中的配置设置。 该变量可以更新 Foreach 循环容器的 Directory 属性。 修改后的值将指向前一个任务中创建的 **New Sample Data** 文件夹。 修改了配置设置并运行包以后，该变量将使用从配置文件填充的值（而不是包中最初配置的目录值），来更新 Directory 属性。  
   
 ### <a name="to-modify-the-configuration-setting-of-the-directory-property"></a>修改目录属性的配置设置  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

@@ -1,6 +1,6 @@
 ---
-title: "已更新-Integration Services 的 SQL Server 文档 |Microsoft 文档"
-description: "显示更新内容的 Microsoft SQL Server 的集成服务在最近更改文档的代码的段。"
+title: "已更新 - 适用于 SQL Server 的 Integration Services 文档 | Microsoft Docs"
+description: "显示 Microsoft SQL Server Integration Services 文档中最近更新内容的片段。"
 services: na
 documentationcenter: 
 author: MightyPen
@@ -19,14 +19,13 @@ ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.author: genemi
 ms.workload: integration-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3c5da14b7a65f8a3eb1eb253d685a146d813868a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
-
+ms.openlocfilehash: b4f4ec841a9f815ddbe0558154ec8ea692683c11
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新的和最近的更新： 针对 SQL Server 的集成服务
+# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新增内容和最近更新内容：适用于 SQL Server 的 Integration Services
 
 
 
@@ -38,8 +37,8 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- *日期范围的更新：* &nbsp; **自 2017 年 1-09-11** &nbsp;到&nbsp;**自 2017 年 1-09-27**
-- *主题区域：* &nbsp; **for SQL Server Integration Services**。
+- 更新日期范围：从 2017-09-11 到 2017-09-27&nbsp;&nbsp;&nbsp;
+- 主题区域：SQL Server Integration Services&nbsp;。
 
 
 
@@ -52,22 +51,22 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 1. [连接到 Azure 上的 SSISDB 目录数据库](lift-shift/ssis-azure-connect-to-catalog-database.md)
-2. [连接到本地数据源使用 Windows 身份验证](lift-shift/ssis-azure-connect-with-windows-auth.md)
-3. [部署、 运行和监视在 Azure 上的 SSIS 包](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-4. [提升和移动到云中的 SQL Server Integration Services 工作负荷](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-5. [计划在 Azure 上的 SSIS 包的执行](lift-shift/ssis-azure-schedule-packages.md)
-6. [部署从 ISDeploymentWizard.exe 在命令提示符的 SSIS 项目](ssis-quickstart-deploy-cmdline.md)
-7. [部署包含 C# 代码在.NET 应用程序中的 SSIS 项目](ssis-quickstart-deploy-dotnet.md)
-8. [部署具有 PowerShell 的 SSIS 项目](ssis-quickstart-deploy-powershell.md)
-9. [部署的 SSIS 项目与 SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md)
-10. [部署的 SSIS 项目，从 SSMS 使用 TRANSACT-SQL](ssis-quickstart-deploy-tsql-ssms.md)
-11. [部署 SSIS 项目从 Visual Studio 代码使用 TRANSACT-SQL](ssis-quickstart-deploy-tsql-vscode.md)
-12. [与 DTExec.exe 的命令提示符下运行 SSIS 包](ssis-quickstart-run-cmdline.md)
-13. [使用 C# 代码在.NET 应用程序中运行 SSIS 包](ssis-quickstart-run-dotnet.md)
+2. [使用 Windows 身份验证连接到本地数据源](lift-shift/ssis-azure-connect-with-windows-auth.md)
+3. [在 Azure 上部署、运行和监视 SSIS 包](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+4. [将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+5. [计划安排 Azure 上的 SSIS 包执行](lift-shift/ssis-azure-schedule-packages.md)
+6. [使用 ISDeploymentWizard.exe 从命令提示符部署 SSIS 项目](ssis-quickstart-deploy-cmdline.md)
+7. [使用 .NET 应用中的 C# 代码部署 SSIS 项目](ssis-quickstart-deploy-dotnet.md)
+8. [使用 PowerShell 部署 SSIS 项目](ssis-quickstart-deploy-powershell.md)
+9. [使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目](ssis-quickstart-deploy-ssms.md)
+10. [使用 Transact-SQL 从 SSMS 部署 SSIS 项目](ssis-quickstart-deploy-tsql-ssms.md)
+11. [使用 Transact-SQL 从 Visual Studio Code 部署 SSIS 项目](ssis-quickstart-deploy-tsql-vscode.md)
+12. [使用 DTExec.exe 从命令提示符运行 SSIS 包](ssis-quickstart-run-cmdline.md)
+13. [使用 .NET 应用中的 C# 代码运行 SSIS 包](ssis-quickstart-run-dotnet.md)
 14. [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
-15. [运行 SSIS 包与 SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
-16. [运行 SSIS 包从 SSMS 使用 TRANSACT-SQL](ssis-quickstart-run-tsql-ssms.md)
-17. [从 Visual Studio Code 使用 TRANSACT-SQL 运行 SSIS 包](ssis-quickstart-run-tsql-vscode.md)
+15. [使用 SQL Server Management Studio (SSMS) 运行 SSIS 包](ssis-quickstart-run-ssms.md)
+16. [使用 Transact-SQL 从 SSMS 运行 SSIS 包](ssis-quickstart-run-tsql-ssms.md)
+17. [使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包](ssis-quickstart-run-tsql-vscode.md)
 
 
 
@@ -117,20 +116,20 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新 + 更新 (0 + 1): **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1): **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (4 + 1): **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (17 + 0): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (3 + 0): **sql Linux**文档](../linux/new-updated-linux.md)
-- [新 + 更新 (1 + 1): **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (2 + 0): **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 1): **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (0+1)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (4+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (17+0)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章 (3+0)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (1+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章 (2+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章 (0+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新 + 更新 (0 + 0):**连接到 SQL**文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
@@ -138,11 +137,10 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
 - [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新 + 更新 (0 + 0): **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章 (0+0)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
 - [新的和更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 0): **SQL 的工具**文档](../tools/new-updated-tools.md)
+- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: "第 6 课： 项目部署模型在 SSIS 中使用参数 |Microsoft 文档"
+title: "第 6 课：在 SSIS 中对项目部署模型使用参数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 547da852d6a52393be8e0adf53b4aa18955a6cad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7f44e93c4fa879a8717b0af33e6071fcc0d53368
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 课：在 SSIS 中对项目部署模型使用参数
 SQL Server 2012 引入了一个新的部署模型，可用于将您的项目部署到 Integration Services 服务器。 通过 Integration Services 服务器，您可以管理和运行包，以及为包配置运行时值。  
@@ -37,7 +34,7 @@ SQL Server 2012 引入了一个新的部署模型，可用于将您的项目部�
 再次运行包时，Integration Services 服务使用参数填充变量的值，而变量又会更新 Directory 属性。 结果，包将遍历该参数值指定的新数据文件夹中的文件，而不是遍历在包配置文件中设置的文件夹。  
   
 > [!IMPORTANT]  
-> 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [安装 SQL Server 示例和示例数据库的注意事项](http://technet.microsoft.com/en-us/library/ms161556%28v=sql.105%29)。  
+> 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012** 的详细信息，请参阅[安装 SQL Server 示例和示例数据库的注意事项](http://technet.microsoft.com/library/ms161556%28v=sql.105%29)。  
   
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
@@ -53,4 +50,3 @@ SQL Server 2012 引入了一个新的部署模型，可用于将您的项目部�
 ## <a name="start-the-lesson"></a>开始课程  
 [步骤 1：复制第 5 课包](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
-

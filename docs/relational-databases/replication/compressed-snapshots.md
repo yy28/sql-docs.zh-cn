@@ -2,9 +2,12 @@
 title: "压缩的快照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13f3bde8699bb77fd733604d81ddf65000cc55ca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83920f660f6899419cb11aca4b80e6f0839916f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compressed-snapshots"></a>压缩的快照
-  如果要在慢速网络上传输快照，或者将快照存储到可移动介质上而未压缩的快照太大而不适于存储在介质上，则应该压缩快照文件。 在这些情况下，压缩快照文件很有用，但压缩增加了生成和应用快照的时间。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果要在慢速网络上传输快照，或者将快照存储到可移动介质上而未压缩的快照太大而不适于存储在介质上，则应该压缩快照文件。 在这些情况下，压缩快照文件很有用，但压缩增加了生成和应用快照的时间。  
   
  压缩快照文件采用了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 文件格式，这种格式可以压缩不超过 2 GB 的文件（无法压缩超过 2 GB 的快照文件）。 若要压缩文件，必须将这些文件写入一个备用快照文件夹（无法压缩写入默认快照文件夹中的文件）。 有关备用快照文件夹的详细信息，请参阅[备用快照文件夹位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
   

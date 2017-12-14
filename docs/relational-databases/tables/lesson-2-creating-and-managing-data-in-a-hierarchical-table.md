@@ -2,9 +2,12 @@
 title: "第 2 课：创建和管理层次结构表中的数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36428e80f9a3b6378bc9d95c20eae0fbf64a9218
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c72f77d11dbc52f29d503b03624e2d3503cc616
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
-在第 1 课中，你修改了一个现有表以使用 **hierarchyid** 数据类型，并采用现有数据的表示形式填充 **hierarchyid** 列。 在本课程中，您将由新表开始，使用分层方法插入数据。 然后，您将使用分层方法查询和操作数据。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]在第 1 课中，你修改了一个现有表以使用 hierarchyid 数据类型，并采用现有数据的表示形式填充 hierarchyid 列。 在本课程中，您将由新表开始，使用分层方法插入数据。 然后，您将使用分层方法查询和操作数据。  
   
 本课程包含以下主题：  
   

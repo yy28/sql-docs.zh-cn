@@ -2,9 +2,12 @@
 title: "教程：将 SQL Server 备份和还原到 Azure Blob 存储服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a59c1224d71e9c8a8626c325dbef600c19078e38
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 87ab0fafc43294cd0d9178f966fd7e819a2416d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教程：将 SQL Server 备份和还原到 Azure Blob 存储服务
-本教程将帮助您了解如何将备份写入 Azure Blob 存储服务以及如何从中还原。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本教程介绍如何将备份写入 Azure Blob 存储服务以及如何从中还原。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程演示如何创建存储帐户和 Blob 容器、创建用于访问存储帐户的凭据、将备份写入 Blob 服务和执行简单还原。 本教程分为四课：  

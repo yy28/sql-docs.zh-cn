@@ -1,5 +1,5 @@
 ---
-title: "catalog.clear_object_parameter_value （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.clear_object_parameter_value（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 包含项目的文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] *folder_name*  
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
- [ @project_name =]*文件的内容*  
- 项目的名称。 *文件的内容*是**nvarchar （128)**。  
+ [ @project_name = ] *project_name*  
+ 项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
- [ @object_type =] *object_type*  
- 对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 *Object_type*是**smallInt**。  
+ [ @object_type = ] *object_type*  
+ 对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 *object_type* 为 **smallInt**。  
   
- [@ 对象 _name =]*对象 _name*  
- 包的名称。 *对象 _name*是**nvarchar(260)**。  
+ [ @ object _name = ] *object _name*  
+ 包的名称。 *object _name* 为 **nvarchar(260)**。  
   
- [@parameter_名称 =] *parameter_name*  
- 参数名。 *Parameter_ 名称*是**nvarchar （128)**。  
+ [ @parameter_ name = ] *parameter_name*  
+ 参数名。 *parameter_ name* 为 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -67,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   针对项目的 READ 和 MODIFY 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
- 下面介绍了一些条件会导致引发错误的 clear_object_parameter 存储过程：  
+ 下面的列表描述了一些可能导致 clear_object_parameter 存储过程引发错误的情况：  
   
 -   指定了无效的对象类型，或在项目中找不到对象名称。  
   
@@ -83,4 +81,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   用户不具备适当的权限。  
   
   
-

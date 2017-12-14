@@ -1,5 +1,5 @@
 ---
-title: "运行时方法的数据进行流处理组件 |Microsoft 文档"
+title: "数据流组件的运行时方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>数据流组件的运行时方法
   在运行时，数据流任务将检查一系列组件、准备执行计划以及管理执行工作计划的工作线程池。 任务先从源加载数据行，再通过转换处理这些行，然后将它们保存到目标。  
@@ -167,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- 有关开发组件，用于添加输出缓冲区的行的详细信息，请参阅[开发自定义源组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)和[开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
+ 有关开发用于向输出缓冲区添加行的组件的详细信息，请参阅[开发自定义源组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)和[开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
   
 ### <a name="receiving-rows"></a>接收行  
- 组件在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象中接收来自上游组件的行。 数据流任务将 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象作为参数提供给 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，该对象包含上游组件添加到数据流的行。 此输出缓冲区可用于检查和修改缓冲区中的行和列，但不能用于添加或删除行。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法可重复调用，直到没有可用的缓冲区为止。 最后一次调用时，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>属性是**true**。 可使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 方法（可将缓冲区移至下一行）循环访问缓冲区中的行集合。 此方法返回**false**缓冲区时位于集合中的最后一行。 您不必检查 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性，除非在处理最后一行数据后需要执行其他操作。  
+ 组件在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象中接收来自上游组件的行。 数据流任务将 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象作为参数提供给 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法，该对象包含上游组件添加到数据流的行。 此输出缓冲区可用于检查和修改缓冲区中的行和列，但不能用于添加或删除行。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法可重复调用，直到没有可用的缓冲区为止。 最后一次调用时，<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性为 **true**。 可使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 方法（可将缓冲区移至下一行）循环访问缓冲区中的行集合。 当缓冲区位于集合中的最后一行时，此方法返回 **false**。 您不必检查 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性，除非在处理最后一行数据后需要执行其他操作。  
   
  下面的文本显示了 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> 方法和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性的正确用法：  
   
@@ -216,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- 有关开发接收的输入缓冲区中的行的组件的详细信息，请参阅[开发自定义目标组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)和[开发具有同步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)。  
+ 有关开发用于接收输入缓冲区中的行的组件的详细信息，请参阅[开发自定义目标组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)和[开发具有同步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流组件的设计时方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

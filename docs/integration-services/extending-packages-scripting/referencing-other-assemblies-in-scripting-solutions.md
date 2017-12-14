@@ -1,5 +1,5 @@
 ---
-title: "引用脚本解决方案中的其他程序集 |Microsoft 文档"
+title: "引用脚本解决方案中的其他程序集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SSIS Script task, .NET Framework
 - Script task [Integration Services], adding references
@@ -29,26 +26,25 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - referencing Web services
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3deb13c7e3aeb2e974ac6e6582555a617346a298
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1e90784bab93fa79b02add5223bebea08113a70c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>引用脚本解决方案中的其他程序集
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]类库提供用于实现中的自定义功能的脚本开发人员，使用一套强大的工具[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包。 脚本任务和脚本组件还可以使用自定义托管程序集。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库为脚本开发人员提供了一组强大的工具，用于在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中实现自定义功能。 脚本任务和脚本组件还可以使用自定义托管程序集。  
   
 > [!NOTE]  
->  若要启用你的包以使用的对象和从 Web 服务的方法，使用**添加 Web 引用**命令中提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的早期版本中，必须生成代理类才能使用 Web 服务。  
+>  若要使包能够使用 Web 服务中的对象和方法，可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中提供的“添加 Web 引用”命令。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的早期版本中，必须生成代理类才能使用 Web 服务。  
   
 ## <a name="using-a-managed-assembly"></a>使用托管程序集  
- 有关[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]若要查找在设计时的托管程序集，必须执行以下步骤：  
+ 对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，若要在设计时查找托管程序集，必须执行以下步骤：  
   
 1.  将托管程序集存储在计算机上的任何文件夹中。  
   
@@ -57,7 +53,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  添加对托管程序集的引用。  
   
-     若要添加的引用，在 VSTA，在**添加引用**对话框中，在**浏览**选项卡上，找到并添加的托管程序集。  
+     若要添加引用，请在 VSTA 的“添加引用”对话框的“浏览”选项卡中查找和添加托管程序集。  
   
  对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，若要在运行时查找托管程序集，必须执行以下步骤：  
   
@@ -65,35 +61,34 @@ ms.lasthandoff: 08/03/2017
   
 2.  将程序集安装到运行包的计算机的全局程序集缓存中。  
   
-     有关详细信息，请参阅[构建，Deploying，and Debugging Custom Objects](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
+     有关详细信息，请参阅[生成、部署和调试自定义对象](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
   
 ## <a name="using-the-microsoft-net-framework-class-library"></a>使用 Microsoft .NET Framework 类库  
  脚本任务和脚本组件能够利用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库公开的所有其他对象和功能。 例如，使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可以检索有关环境的信息，并与运行包的计算机进行交互。  
   
  下表介绍了一些比较常用的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类：  
   
--   **System.Data**包含 ADO.NET 体系结构。  
+-   System.Data 包含 ADO.NET 体系结构。  
   
--   **System.IO**提供与文件系统和流的接口。  
+-   System.IO 提供文件系统和流的接口。  
   
--   **System.Windows.Forms**提供窗体创建。  
+-   System.Windows.Forms 提供窗体创建。  
   
--   **System.Text.RegularExpressions**提供用于使用正则表达式的类。  
+-   System.Text.RegularExpressions 提供处理正则表达式的类。  
   
--   **System.Environment**返回有关本地计算机、 当前用户和计算机和用户设置的信息。  
+-   System.Environment 返回有关本地计算机、当前用户以及计算机和用户设置的信息。  
   
--   **System.Net**提供网络通信。  
+-   System.Net 提供网络通信。  
   
--   **System.DirectoryServices**公开 Active Directory。  
+-   System.DirectoryServices 公开 Active Directory。  
   
--   **System.Drawing**提供了大量图像操作库。  
+-   System.Drawing 提供丰富的图像处理库。  
   
--   **System.Threading**能够多线程的编程。  
+-   System.Threading 启用多线程编程。  
   
  有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的详细信息，请参阅 MSDN Library。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用脚本扩展包](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [用脚本扩展包](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
-

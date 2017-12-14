@@ -1,5 +1,5 @@
 ---
-title: "导入列转换 |Microsoft 文档"
+title: "导入列转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.importcolumntrans.f1
+f1_keywords: sql13.dts.designer.importcolumntrans.f1
 helpviewer_keywords:
 - Import Column transformation [Integration Services]
 - columns [Integration Services], importing
 - importing data, SSIS packages
 - inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13d509e0a064b7f8e831e41825496e745d88f831
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e130dfcda0f37318acb3805c67ab640e3cfb2621
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="import-column-transformation"></a>导入列转换
   导入列转换从文件中读取数据并将数据添加到数据流中的列中。 通过此转换，包可将存储于各个单独文件中的文本和图像添加到数据流中。 例如，如果某个数据流将数据加载到存储产品信息的表中，则它可包含导入列转换以便从文件中导入每个产品的客户评论并将评论添加到数据流中。  
@@ -66,4 +63,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

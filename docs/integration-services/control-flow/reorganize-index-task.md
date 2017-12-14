@@ -1,5 +1,5 @@
 ---
-title: "重新组织索引任务 |Microsoft 文档"
+title: "“重新组织索引”任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.reorganizeindextask.f1
+f1_keywords: sql13.dts.designer.reorganizeindextask.f1
 helpviewer_keywords:
 - reorganizing indexes
 - Reorganize Index task [Integration Services]
 - indexes [Integration Services]
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6b9cdd0be56414ccc4e80b4657bd33045b8ad931
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1b26f5ea9c244876b87283e0aa05a204e616a46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reorganize-index-task"></a>“重新组织索引”任务
   “重新组织索引”任务重新组织 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表和视图中的索引。 有关管理索引的详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
@@ -56,4 +53,3 @@ ms.lasthandoff: 08/03/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

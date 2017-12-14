@@ -1,5 +1,5 @@
 ---
-title: "更改 SSIS 的横向扩展日志记录的帐户 |Microsoft 文档"
+title: "更改 SSIS Scale Out 日志记录的帐户 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,34 +8,32 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ec785459e5f9585776d83cde3f460c1e79367e46
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dcedbe0d2c2ef2c2089af1e2a8b31fbeb75ce2fc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="change-the-account-for-scale-out-logging"></a>更改的帐户向外扩展日志记录。
-在向外扩展中执行包，事件消息将记录到 SSISDB 与自动创建用户**# # MS_SSISLogDBWorkerAgentLogin # #**。 此用户的登录使用 SQL Server 身份验证。 若要更改的帐户，如下所示执行以下步骤：
+# <a name="change-the-account-for-scale-out-logging"></a>更改 Scale Out 日志记录的帐户
+在 Scale Out 中执行包时，会使用自动创建的用户 ##MS_SSISLogDBWorkerAgentLogin## 将事件消息记录到 SSISDB 中。 此用户使用 SQL Server 身份验证登录。 要更改帐户，请执行以下步骤：
 
-## <a name="1-create-a-user-of-ssisdb"></a>1.创建 SSISDB 的用户
-创建数据库用户的说明，请参阅[创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)。
+## <a name="1-create-a-user-of-ssisdb"></a>1.创建 SSISDB 用户
+有关创建数据库用户的说明，请参阅[创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)。
 
-## <a name="2-add-the-user-to-database-role-ssisclusterworker"></a>2.将用户添加到数据库角色 ssis_cluster_worker
+## <a name="2-add-the-user-to-database-role-ssisclusterworker"></a>2.向数据库角色 ssis_cluster_worker 添加用户
 
-联接数据库角色的说明，请参阅[加入角色](../../relational-databases/security/authentication-access/join-a-role.md)。
+有关加入数据库角色的说明，请参阅[加入角色](../../relational-databases/security/authentication-access/join-a-role.md)。
 
-## <a name="3-update-logging-information-in-ssisdb"></a>3.更新在 SSISDB 中的日志记录信息
-调用存储的过程 [目录]。[update_logdb_info] 使用作为参数的 Sql Server 名称和连接字符串。
+## <a name="3-update-logging-information-in-ssisdb"></a>3.在 SSISDB 中更新日志记录信息
+调用存储过程 [catalog].[update_logdb_info]，并使用 SQL 服务器名称和连接字符串作为参数。
 
 #### <a name="example"></a>示例
 ```sql
@@ -45,8 +43,7 @@ EXEC [internal].[update_logdb_info] @serverName, @connectionString
 GO
 ```
 
-## <a name="4-restart-scale-out-worker-service"></a>4.重新启动横向扩展辅助服务
+## <a name="4-restart-scale-out-worker-service"></a>4.重启 Scale Out Worker 服务
 
 > [!NOTE]
-> 如果你使用的日志记录的 Windows 用户帐户，则它必须运行缩放出 Worker 服务的相同帐户。 否则，登录到 SQL Server 将失败。
-
+> 如果使用 Windows 用户帐户进行日志记录，该帐户须为运行 Scale Out Worker 服务的帐户。 否则，SQL Server 登录将失败。

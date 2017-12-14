@@ -2,9 +2,12 @@
 title: "将 URN 转换为 SQL Server 提供程序路径 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faef6d3756049ae24d2c48e5c7cbd1e73a267565
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d74b81da835b5ce9791123be2ada5d9316ae23e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>将 URN 转换为 SQL Server 提供程序路径
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型 (SMO) 为其对象生成统一资源名称 (URN)。 每个 URN 都唯一标识一个 SMO 对象，并且可通过使用 **Convert-UrnToPath** cmdlet 转换为 SQL Server PowerShell 提供程序路径。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型 (SMO) 为其对象生成统一资源名称 (URN)。 每个 URN 都唯一标识一个 SMO 对象，并且可通过使用 **Convert-UrnToPath** cmdlet 转换为 SQL Server PowerShell 提供程序路径。  
   
 ## <a name="converting-urns-to-paths"></a>将 URN 转换为路径  
  每个对象的 URN 都有与其路径相同的信息，但是它们的格式有所不同。 例如，下面是一个表的路径：  

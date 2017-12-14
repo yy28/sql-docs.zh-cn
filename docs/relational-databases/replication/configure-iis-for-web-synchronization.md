@@ -2,9 +2,12 @@
 title: "配置 IIS 以实现 Web 同步 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
-  本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何配置订阅以使用 Web 同步 \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   

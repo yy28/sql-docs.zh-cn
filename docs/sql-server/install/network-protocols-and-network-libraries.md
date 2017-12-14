@@ -2,9 +2,12 @@
 title: "网络协议和网络库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1f07cf2c53676a37f2c26dfebfd3ed623ec7a8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
-  服务器可以同时监听或监视多个网络协议。 但必须对每个协议都进行配置。 如果没有配置某个协议，则服务器将无法监听该协议。 安装完成后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改这些协议配置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]服务器可以同时监听或监视多个网络协议。 但必须对每个协议都进行配置。 如果没有配置某个协议，则服务器将无法监听该协议。 安装完成后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改这些协议配置。  
   
 ## <a name="default-sql-server-network-configuration"></a>默认 SQL Server 网络配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例针对 TCP/IP 端口 1433 进行配置，并命名为管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例配置为采用 TCP 动态端口，其端口号由操作系统分配。  

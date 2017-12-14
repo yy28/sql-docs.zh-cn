@@ -1,5 +1,5 @@
 ---
-title: "对数据进行排序的合并和合并联接转换 |Microsoft 文档"
+title: "为合并和合并联接转换排序数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
@@ -79,7 +77,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击**\<组件名称 > 输出**，并设置**IsSorted**属性**True**。  
+6.  单击“\<组件名称> 输出”，将“IsSorted”属性设置为 True。  
   
     > [!NOTE]  
     >  如果手动将输出的 **IsSorted** 属性设置为 **True** 且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
@@ -122,4 +120,3 @@ ms.lasthandoff: 08/03/2017
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

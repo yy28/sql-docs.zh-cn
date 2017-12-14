@@ -2,9 +2,12 @@
 title: "查询最近的邻域的空间数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d2cb970b15ae4d310f5fb835da67886a0200108a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc20a0bfe85f4e4f1a507554ec6e34e98274d624
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
-  Nearest Neighbor 查询是用于空间数据的常用查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]与空间数据一起使用的常用查询是 Nearest Neighbor 查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  
   
  可以用多种有效查询格式编写 Nearest Neighbor 查询，但是要使 Nearest Neighbor 查询使用空间索引，则必须使用下面的语法。  
   

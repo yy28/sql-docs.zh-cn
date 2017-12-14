@@ -1,5 +1,5 @@
 ---
-title: "转换类型检查 （SQL Server 导入导出向导） 的任何转换 |Microsoft 文档"
+title: "转换类型时不进行转换检查（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.nomappingfile.f1
+f1_keywords: sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4b3bfd3d61282ba7a4d7363ef02b05c5c23ac20
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c912d48ddf69360d4ac02549a0556fed85f5b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>转换类型时不进行转换检查（SQL Server 导入和导出向导）
   选择现有表和视图进行复制或查看提供的查询之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导可能会显示“转换类型时不进行转换检查” 。 当向导找不到在源和目标之间映射数据类型所需的一个或多个数据类型转换和映射文件时，将显示此页。 此页包含的信息可帮助你了解缺少的内容。
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 导入和导出向导中的数据类型映射](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-

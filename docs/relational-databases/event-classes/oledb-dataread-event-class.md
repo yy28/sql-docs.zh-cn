@@ -2,9 +2,12 @@
 title: "OLEDB DataRead 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cf914267c6cd1e859d7f2ab5fed7c02895f879e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 事件类
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为分布式查询和远程存储过程调用 OLE DB 访问接口时，会发生 OLEDB DataRead 事件类。 请在监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 何时向 OLE DB 访问接口发出数据请求调用的跟踪中包括此事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为分布式查询和远程存储过程调用 OLE DB 访问接口时，会发生 OLEDB DataRead 事件类。 请在监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 何时向 OLE DB 访问接口发出数据请求调用的跟踪中包括此事件类。  
   
  跟踪中包括 OLEDB DataRead 事件类后，将造成很大的开销。 建议您只对短时间内监视特定问题的跟踪使用此事件类。  
   

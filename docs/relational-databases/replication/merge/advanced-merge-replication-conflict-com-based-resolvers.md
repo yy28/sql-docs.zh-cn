@@ -2,9 +2,12 @@
 title: "Microsoft 基于 COM 的冲突解决程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01b82214e9d862bcd12b031a6cea6184a48ddabb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 198d50f997ae034c1377dfb1d340a1e0d46949f1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>高级合并复制冲突 - 基于 COM 的解决程序
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 附带的所有基于 COM 的解决程序都处理更新冲突，并且在得到指示时，它们还会处理插入和删除冲突。 所有冲突解决程序都能处理列跟踪，大多数还能处理行跟踪。 这些冲突解决程序及所有其他基于 COM 的冲突解决程序都声明它们能处理的冲突类型，而合并复制代理使用默认的冲突解决程序处理所有其他冲突类型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 附带的所有基于 COM 的解决程序都处理更新冲突，并且在得到指示时，它们还会处理插入和删除冲突。 所有冲突解决程序都能处理列跟踪，大多数还能处理行跟踪。 这些冲突解决程序及所有其他基于 COM 的冲突解决程序都声明它们能处理的冲突类型，而合并复制代理使用默认的冲突解决程序处理所有其他冲突类型。  
   
  冲突解决程序在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时安装。 可执行存储过程 **sp_enumcustomresolvers** 查看计算机上注册的所有冲突解决程序。 执行此过程将在一个单独的结果集中显示每个冲突解决程序的说明和全局唯一标识符 (GUID)。  
   

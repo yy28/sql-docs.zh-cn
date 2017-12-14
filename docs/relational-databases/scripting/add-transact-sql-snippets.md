@@ -2,9 +2,12 @@
 title: "添加 Transact-SQL 代码段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: be592feef35a8cf875d9dce783f5843979d4f835
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dd782cbd60c23d139a980bbf943b158cb38561b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
-  您可以将自己的 Transact-SQL 代码段添加到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括的一组预定义的代码段中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]你可以将自己的 Transact-SQL 代码段添加到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包括的一组预定义的代码段中。  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>创建 Transact-SQL 代码段文件  
  创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](http://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  

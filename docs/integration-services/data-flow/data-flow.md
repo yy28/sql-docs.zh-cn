@@ -1,5 +1,5 @@
 ---
-title: "数据流 |Microsoft 文档"
+title: "数据流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  以下关系图显示的数据流具有一个源、带有一个输入和一个输出的转换以及一个目标。 除了输入列、输出列和外部列之外，该关系图还包含输入、输出和错误输出。  
   
- ![数据流组件其输入和输出](../../integration-services/data-flow/media/mw-dts-dataflow.gif "数据流组件其输入和输出")  
+ ![数据流组件及其输入和输出](../../integration-services/data-flow/media/mw-dts-dataflow.gif "数据流组件及其输入和输出")  
   
 ## <a name="data-flow-implementation"></a>数据流实现  
  将数据流任务添加到包的控制流是在包中实现数据流的第一步。 包可以包含多个数据流任务，每个数据流任务有自己的数据流。 例如，如果包需要按指定顺序运行数据流，或需要在数据流之间执行其他任务，则必须对每个数据流使用单独的数据流任务。  
@@ -224,4 +222,3 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkID=210369)。  
-

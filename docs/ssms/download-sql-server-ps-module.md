@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
+ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>下载 SQL Server PowerShell 模块
 SQL Server PowerShell 模块是 17.0 版本 SQL Server Management Studio 的一部分，现通过 PowerShell 库提供。  该模块不再随附在 SSMS 安装包中。 若要将 PowerShell 与 SSMS 17.0 及更新版本配合使用，必须执行额外步骤 - 在计算机上安装 SQL Server 模块。

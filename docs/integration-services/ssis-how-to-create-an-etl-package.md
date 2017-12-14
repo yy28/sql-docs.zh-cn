@@ -1,5 +1,5 @@
 ---
-title: "SSIS 如何创建 ETL 包 |Microsoft 文档"
+title: "SSIS 如何创建 ETL 包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b14d05d686b26aaad7e6de24c9b445e0c4b1abf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何创建 ETL 包
 
- > 与以前版本的 SQL Server 相关的内容，请参阅[SSIS 教程： 创建一个简单的 ETL 包](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx)。
+ > 如需与以前版本的 SQL Server 相关的内容，请参阅[教程：创建简单的 ETL 包](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx)。
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一个可用于生成高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载 (ETL) 包。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 若要使用本教程，系统中必须安装下列组件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]与**AdventureWorksDW2012**数据库。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026)。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 **数据库的** 。 为了增强安全性，默认情况下不会安装示例数据库。 要下载 **AdventureWorksDW2012** 数据库，请参阅 [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026)。  
   
     > [!IMPORTANT]  
     > 附加数据库 (\*.mdf file) 时，默认情况下 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将搜索 .ldf 文件。 在 **“附加数据库”** 对话框中单击“确定”前，您必须手动删除 .ldf 文件。  
@@ -88,4 +85,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

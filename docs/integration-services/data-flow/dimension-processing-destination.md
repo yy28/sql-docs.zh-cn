@@ -1,5 +1,5 @@
 ---
-title: "维度处理目标 |Microsoft 文档"
+title: "维度处理目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: b2f91bc4c236d2593bf3779968a0c27e0b9d68c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
   维度处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 维度。 有关维度的详细信息，请参阅[维度（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/17/2017
   可以使用 **“维度处理目标编辑器”** 对话框的 **“连接管理器”** 页指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之间的连接。  
   
 ### <a name="options"></a>选项  
- **连接管理器**  
+ **“ODBC 目标编辑器”**  
  从列表中选择现有连接管理器，或单击“新建”创建新的连接管理器。  
   
  **新建**  
@@ -173,9 +171,8 @@ ms.lasthandoff: 08/17/2017
  **浏览(...)**  
  选择错误日志的路径。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

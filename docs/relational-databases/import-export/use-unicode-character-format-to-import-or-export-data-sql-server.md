@@ -2,9 +2,12 @@
 title: "使用 Unicode 字符格式导入或导出数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44f3402f2ba874e741c3d191a96535e8204ec368
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
-使用包含扩展/DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用 Unicode 字符格式。 从服务器导出数据时，Unicode 字符数据格式允许使用与执行该操作的客户端不同的代码页。 在这种情况下，使用 Unicode 字符格式有下列优点：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用包含扩展/DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用 Unicode 字符格式。 从服务器导出数据时，Unicode 字符数据格式允许使用与执行该操作的客户端不同的代码页。 在这种情况下，使用 Unicode 字符格式有下列优点：  
   
 * 如果源数据和目标数据的类型为 Unicode，则使用 Unicode 字符格式可以保留所有的字符数据。  
   

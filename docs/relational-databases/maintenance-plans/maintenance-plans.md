@@ -2,9 +2,12 @@
 title: "维护计划 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abd4882c905f18643da40892c4cbf200091d5363
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plans"></a>维护计划
-  维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  
   
 ## <a name="benefits-of-maintenance-plans"></a>维护计划的优点  
  在 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]中，维护计划将创建由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 可以按预订的时间间隔手动或自动运行维护计划。  

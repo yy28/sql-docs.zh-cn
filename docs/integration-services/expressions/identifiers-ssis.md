@@ -1,5 +1,5 @@
 ---
-title: "标识符 (SSIS) |Microsoft 文档"
+title: "标识符 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 819dc582a8c30c4758399c3d7d07184a65b72b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
   在表达式中，标识符是可供运算使用的列和变量。 表达式可以使用常规标识符和限定标识符。  
@@ -93,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 >  如果点分表示法中的两个元素括在一对方括号中，则表达式计算器会将此元素对解释为单个标识符，而不是源-列组合。  
   
 ## <a name="variables-in-expressions"></a>表达式中的变量  
- 变量在表达式中引用时必须包含 @ 前缀。 例如，**计数器**使用引用变量@Counter。 @ 字符不是变量名的一部分，它仅为表达式计算器标识变量。 如果使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框生成表达式，则 @ 字符将自动添加到变量名中。 @ 字符和变量名间包含空格无效。  
+ 变量在表达式中引用时必须包含 @ 前缀。 例如，使用 @Counter 来引用 Counter 变量。 @ 字符不是变量名的一部分，它仅为表达式计算器标识变量。 如果使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框生成表达式，则 @ 字符将自动添加到变量名中。 @ 字符和变量名间包含空格无效。  
   
  变量名和其他常规标识符遵循同样的规则：  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/03/2017
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   
-

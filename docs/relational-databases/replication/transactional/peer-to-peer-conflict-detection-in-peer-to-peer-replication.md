@@ -2,9 +2,12 @@
 title: "对等复制中的冲突检测 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a2c2b23d8fd86531e7a29707f1b0930b3c794f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0d27cca1b3e5a35dfcf405b8f10cd0e099e2a756
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>对等 - 对等复制中的冲突检测
-  通过对等事务复制，可以在拓扑中的任何节点插入、更新或删除数据并将数据更改传播到其他节点。 由于可在任何节点上更改数据，因此在不同节点上进行的数据更改可能会相互冲突。 如果在多个节点上修改了某一行，则将该行传播给其他节点时会导致冲突甚至丢失更新。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过对等事务复制，可以在拓扑中的任何节点插入、更新或删除数据并将数据更改传播到其他节点。 由于可在任何节点上更改数据，因此在不同节点上进行的数据更改可能会相互冲突。 如果在多个节点上修改了某一行，则将该行传播给其他节点时会导致冲突甚至丢失更新。  
   
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更高版本中的对等复制提供了在对等拓扑中启用冲突检测的选项。 此选项将有助于防止出现因未检测到的冲突而引发的各种问题，包括不一致的应用程序行为和丢失的更新。 启用该选项后，默认情况下，发生冲突的更改将被视为导致分发代理失败的关键错误。 发生冲突时，拓扑将始终处于不一致的状态，直至冲突得以解决而且拓扑中的数据保持一致。  
   

@@ -1,5 +1,5 @@
 ---
-title: "如何管理 CDC 实例 |Microsoft 文档"
+title: "如何管理 CDC 实例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 582c5f02f3d3e019e9b77a80d43355a4f9f83504
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>如何管理 CDC 实例
   本过程介绍如何使用 CDC 设计器控制台在运行时管理 CDC 实例操作。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **删除**：删除 CDC 实例。  
   
-    -   **Oracle 日志记录脚本**： 单击**Oracle 日志记录脚本**以显示 Oracle 日志记录脚本对话框中使用 Oracle 补充日志记录脚本。 有关可以在此对话框中执行的操作的信息，请参阅 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)。  
+    -   **Oracle 日志记录脚本**：单击“Oracle 日志记录脚本”将显示具有 Oracle 补充日志记录脚本的“Oracle 日志记录脚本”对话框。 有关可以在此对话框中执行的操作的信息，请参阅 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)。  
   
          **注意**：在您运行补充日志记录脚本时，“用于运行脚本的 Oracle 凭据”对话框将打开，您可以在其中提供有效的 Oracle 用户名和密码。 有关如何提供适当的 Oracle 凭据的信息，请参阅 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)。  
   
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/03/2017
  您还可以选择 **“属性”** 来编辑 CDC 实例的配置属性。 有关编辑 CDC 实例属性的详细信息，请参阅 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)。  
   
   
-

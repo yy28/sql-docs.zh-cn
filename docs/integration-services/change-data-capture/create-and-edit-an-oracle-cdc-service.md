@@ -1,5 +1,5 @@
 ---
-title: "创建和编辑 Oracle CDC 服务 |Microsoft 文档"
+title: "创建和编辑 Oracle CDC 服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- createSrv
+f1_keywords: createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
   您从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  在“新 Oracle CDC Windows 服务”对话框或“CDC 服务属性”对话框中输入以下信息。  
   
-* * 服务名称 * *  
+** 服务名称 **  
  键入新的 Oracle CDC Windows 服务的名称。 如果可能，不应使用长名称。 在服务名称中不能使用字符 / 和 \。  
   
 > [!NOTE]  
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      可以将本地或域 Windows 帐户用于该服务帐户。 在此情况下，必须为该帐户输入 **“密码”** 。 该帐户可以用于本地主机或域帐户。 请确保在 Windows 控制面板中使用本地服务更改帐户时更新密码。  
   
- **服务器名称**： 选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到实例 (例如，  **\\ \\< 计算机名 >\\< 实例名称 >**)。 默认情况下，显示上次连接到的服务器实例。  
+ **服务器名称**：选择要连接到的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（例如 \\<computer_name>\\<instance_name>\\）。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
  选择下列选项之一：  
@@ -99,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [如何创建和编辑 CDC 服务](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

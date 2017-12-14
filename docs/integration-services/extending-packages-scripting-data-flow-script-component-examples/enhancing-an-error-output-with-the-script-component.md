@@ -1,5 +1,5 @@
 ---
-title: "Enhancing an Error Output with the Script Component |Microsoft 文档"
+title: "使用脚本组件增强错误输出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f6058a8d8a12b9004cb42d26753a1fc7cee7181
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用脚本组件增强错误输出
-  默认情况下中的两个额外列[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ErrorCode 和 ErrorColumn，错误输出包含仅数字代码，可表示的错误号和发生错误的列的 ID。 这些数字的值可以是使用的有限，不必进行相应的错误说明和列的名称。  
+  默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误输出中的另外两列 ErrorCode 和 ErrorColumn 只包含表示错误号的数值代码以及出现错误的列的 ID。 如果没有相应的错误说明和列名称，这些数值可能没有多大用处。  
   
- 本主题介绍如何通过使用脚本组件添加到数据流中的数据的现有错误输出数据的错误说明和列名称。 示例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法添加与特定预定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。 然后该示例通过将对应的列名称添加到捕获的沿袭 ID<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>同一接口的方法。  
+ 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据添加错误说明和列名称。 示例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法添加与特定预定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。 然后，示例通过使用同一接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法，添加与捕获的沿袭 ID 对应的列名称。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="example"></a>示例  
- 此处显示的示例使用配置转换为脚本组件将错误说明和列名称添加到数据流中的数据的现有错误输出数据。  
+ 下面显示的示例使用一个配置为转换的脚本组件向数据流中的现有错误输出数据添加错误说明和列名称。  
   
- 有关如何将使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
+ 有关如何将脚本组件配置为用作数据流中的转换的详细信息，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用脚本组件创建异步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
@@ -53,23 +50,23 @@ ms.lasthandoff: 08/03/2017
   
 3.  将错误输出从上游组件连接到新脚本组件。  
   
-4.  打开**脚本转换编辑器**，然后在**脚本**页上，为**ScriptLanguage**属性，选择的脚本语言。  
+4.  打开“脚本转换编辑器”，在“脚本”页中，为 **ScriptLanguage** 属性选择脚本语言。  
   
-5.  单击**编辑脚本**以打开[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 并添加下面显示的示例代码。  
+5.  单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，并添加下面的示例代码。  
   
 6.  关闭 VSTA。  
   
-7.  在脚本转换编辑器中，在**输入列**页上，选择错误代码和 ErrorColumn 列。  
+7.  在脚本转换编辑器的“输入列”页中，选择 ErrorCode 列和 ErrorColumn 列。  
   
-8.  上**输入和输出**页上，添加两个新列。  
+8.  在“输入和输出”页中，添加两个新列。  
   
-    -   添加新的输出列的类型**字符串**名为**ErrorDescription**。 将新列的默认长度提高到 255 以支持长消息。  
+    -   添加一个名为 **ErrorDescription** 的 **String** 类型的新输出列。 将新列的默认长度提高到 255 以支持长消息。  
   
-    -   添加另一个新的输出列的类型**字符串**名为**ColumnName**。 增加到 255 之间以支持较长的值的新列的默认长度。  
+    -   添加另一个名为 **ColumnName** 的 **String** 类型的新输出列。 将新列的默认长度提高到 255 以支持长值。  
   
-9. 关闭**脚本转换编辑器。**  
+9. 关闭“脚本转换编辑器”。  
   
-10. 将脚本组件的输出连接到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
+10. 将脚本组件的输出附加到合适的目标。 对于即席测试，平面文件目标是最容易配置的。  
   
 11. 运行包。  
   
@@ -116,4 +113,3 @@ public class ScriptMain:
  [使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
-
