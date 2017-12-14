@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_部署 Pacemaker 群集](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_创建和配置可用性组](sql-server-linux-create-availability-group.md)
 
 # 概念
 ## Install
@@ -51,6 +53,7 @@
 ### [使用 PowerShell 进行管理](sql-server-linux-manage-powershell.md)
 ### [使用日志传送](sql-server-linux-use-log-shipping.md)
 ### [使用 DB 邮件和电子邮件警报](sql-server-linux-db-mail-sql-agent.md)
+### [创建多个子网以提高可用性](sql-server-linux-configure-multiple-subnet.md)
 
 ## [迁移](sql-server-linux-migrate-overview.md)
 ### [从 Windows 导出和导入 BACPAC](sql-server-linux-migrate-ssms.md)
@@ -63,19 +66,20 @@
 ### [计划 SSIS 包](sql-server-linux-schedule-ssis-packages.md)
 
 ## [配置业务连续性](sql-server-linux-business-continuity-dr.md)
+### [可用性基础知识](sql-server-linux-ha-basics.md)
 ### [备份和还原](sql-server-linux-backup-and-restore-database.md)
 #### [虚拟设备接口 - Linux](sql-server-linux-backup-vdi-specification.md)
 ### [故障转移群集实例](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+#### [Red Hat Enterprise Linux (RHEL)]()
 ##### [配置（HA 加载项）](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [操作（HA 加载项）](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server (SLES)]()
 ##### [配置（HA 加载项）](sql-server-linux-shared-disk-cluster-sles-configure.md)
 ### [可用性组](sql-server-linux-availability-group-overview.md)
 #### [针对高可用性创建](sql-server-linux-availability-group-ha.md)
 ##### [配置 AG](sql-server-linux-availability-group-configure-ha.md)
 ##### [在 RHEL 上配置](sql-server-linux-availability-group-cluster-rhel.md)
-##### [在 SUSE 上配置](sql-server-linux-availability-group-cluster-sles.md)
+##### [在 SLES 上配置](sql-server-linux-availability-group-cluster-sles.md)
 ##### [在 Ubuntu 上配置](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
 #### [仅为读取缩放创建]()
@@ -91,8 +95,8 @@
 
 # 示例
 ## 无人参与安装
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Resources
