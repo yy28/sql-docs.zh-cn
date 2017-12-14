@@ -2,9 +2,12 @@
 title: "Showplan All for Query Compile 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ae3b7c3f1711ff1987628ef7bf4f9f0a8513451
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c57d6ba87f0333b8436ad7135d1c789c460a65d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 事件类
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译 SQL 语句时，会发生 Showplan All for Query Compile 事件类。 包括此事件类以标识 Showplan 运算符。 此事件类所包括的信息是 Showplan XML For Query Compile 事件类所包括信息的一部分。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译 SQL 语句时，会发生 Showplan All for Query Compile 事件类。 包括此事件类以标识 Showplan 运算符。 此事件类所包括的信息是 Showplan XML For Query Compile 事件类所包括信息的一部分。  
   
  由于 Showplan All for Query Compile 事件类显示完整的编译时数据，因此包含 Showplan All for Query Compile 的跟踪会产生性能系统开销。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。  
   

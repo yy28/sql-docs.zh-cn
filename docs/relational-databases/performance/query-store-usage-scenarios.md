@@ -1,31 +1,27 @@
 ---
 title: "Query Store 使用方案 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  转到最新兼容性级别：向工作负荷显示最新的查询优化器更改，让其创建可能的新计划。  
   
-5.  使用查询存储进行分析并解决回归问题：大多数情况下，新查询优化器更改会生成更好的计划。 不过，查询存储可以让你轻松识别计划选择回归并使用计划强制机制对其进行修复。  
+5.  使用查询存储进行分析并解决回归问题：大多数情况下，新查询优化器更改会生成更好的计划。 不过，查询存储可以让你轻松识别计划选择回归并使用计划强制机制对其进行修复。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，使用[自动计划更正](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction)功能时，此步骤可自动进行。  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>识别并提高即席工作负荷  
  某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对较大的不同查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”（[强烈建议](best-practice-with-the-query-store.md)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
@@ -229,4 +225,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

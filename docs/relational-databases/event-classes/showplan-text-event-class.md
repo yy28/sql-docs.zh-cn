@@ -2,9 +2,12 @@
 title: "Showplan Text 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aec356e361b78a2ca35b646ee0514081b4ada6b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e92f26c7ea3c3cdeb2aa5140a6900e1e36ac0397
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 事件类
-  Showplan Text 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时发生。 所包含的信息是 Showplan All、Showplan XML Statistics Profile 或 Showplan XML 事件类中可用信息的子集。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Showplan Text 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时发生。 所包含的信息是 Showplan All、Showplan XML Statistics Profile 或 Showplan XML 事件类中可用信息的子集。  
   
  Showplan Text 事件类包含于跟踪时，开销量将显著妨碍性能。 若要最大限度地降低此开销，请仅将此事件类用于在短时间段内监视特定问题的跟踪。 Showplan Text 将不会引起如其他 Showplan 事件类一样大的开销。  
   

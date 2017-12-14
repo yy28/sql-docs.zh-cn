@@ -2,9 +2,12 @@
 title: "OLEDB Provider Information 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 51a72f6c28d36e67542b65022f8281b4ee418678
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 47fb7bc4b716676d1970dfd78f9c4cf36ecb6b45
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 事件类
-  当某个分布式查询运行和收集与访问接口连接对应的信息时，会发生 **OLEDB Provider Information** 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]当某个分布式查询运行和收集与访问接口连接对应的信息时，会发生 OLEDB Provider Information 事件类。  
   
  此事件类包含使用各种属性集从远程访问接口收集的所有属性，包括：  
   

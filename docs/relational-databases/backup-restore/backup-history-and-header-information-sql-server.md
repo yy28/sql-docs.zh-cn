@@ -2,9 +2,12 @@
 title: "备份历史记录和标头信息 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +40,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a7f37ca2ef38feed107028015ce8dc6ffd60c77c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c7f10d27faf1c0fc658550f962c71c2419ff8607
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
-  服务器实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作的完整历史记录存储在 **msdb** 数据库中。 本主题介绍备份和还原历史记录表以及用于访问备份历史记录的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 本主题还讨论何时列出数据库和事务日志文件有用，以及何时使用介质标头信息与何时使用备份标头信息的比较。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]服务器实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作的完整历史记录存储在 msdb 数据库中。 本主题介绍备份和还原历史记录表以及用于访问备份历史记录的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 本主题还讨论何时列出数据库和事务日志文件有用，以及何时使用介质标头信息与何时使用备份标头信息的比较。  
   
 > [!IMPORTANT]  
 >  为了规避丢失对备份和还原历史记录的最新更改的风险，请经常备份 **msdb** 。 有关必须备份哪些系统数据库的信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  

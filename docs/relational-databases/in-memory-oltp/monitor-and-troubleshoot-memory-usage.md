@@ -2,9 +2,12 @@
 title: "内存使用情况的监视和故障排除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d5606c5733472e462b74d32a8ff4598f52ebcf90
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 使用内存的模式与针对基于磁盘的表的模式不同。 您可以使用为内存和垃圾回收子系统提供的 DMV 或性能计数器，监视数据库中内存优化表和索引分配和使用的内存量。  这使您在系统和数据库级别都获得可见性，并允许防止由于内存用尽而导致的问题。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[hek_1](../../includes/hek-1-md.md)] 使用内存的模式与针对基于磁盘的表的模式不同。 您可以使用为内存和垃圾回收子系统提供的 DMV 或性能计数器，监视数据库中内存优化表和索引分配和使用的内存量。  这使您在系统和数据库级别都获得可见性，并允许防止由于内存用尽而导致的问题。  
   
  本主题介绍如何监视 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存使用量。  
   

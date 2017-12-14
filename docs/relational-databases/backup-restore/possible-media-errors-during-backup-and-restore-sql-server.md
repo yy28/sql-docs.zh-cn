@@ -2,9 +2,12 @@
 title: "在备份和还原期间可能的介质错误 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39ab370ba08f99d15e43ad88429e1cb72946562b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8bf78aac25b2d9ab927dfe822f140c8dac7bcb9d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 允许您在恢复数据库时不必顾及检测到的错误。 一个重要的新错误检测机制是创建备份校验和（可选），可以通过备份操作创建并通过还原操作验证。 您可以控制操作是否检查错误，以及遇到错误时是停止操作还是继续操作。 如果备份包含备份校验和，则 RESTORE 和 RESTORE VERIFYONLY 语句可以检查错误。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 允许在恢复数据库时不必顾及检测到的错误。 一个重要的新错误检测机制是创建备份校验和（可选），可以通过备份操作创建并通过还原操作验证。 您可以控制操作是否检查错误，以及遇到错误时是停止操作还是继续操作。 如果备份包含备份校验和，则 RESTORE 和 RESTORE VERIFYONLY 语句可以检查错误。  
   
 > [!NOTE]  
 >  镜像备份最多提供 4 个介质集的副本（镜像），提供备用副本以便从损坏介质导致的错误中恢复。 有关详细信息，请参阅 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  

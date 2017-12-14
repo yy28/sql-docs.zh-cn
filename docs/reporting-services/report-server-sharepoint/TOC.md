@@ -18,6 +18,7 @@
 ### [将报表查看器 Web 部件添加到网页](add-report-viewer-web-part-to-page.md)
 ### [连接筛选器或文档 Web 部件](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [自定义报表查看器 Web 部件](customize-the-report-viewer-web-part.md)  
+### [用于报表查看器 Web 部件的 SharePoint 网站设置](report-viewer-web-part-sharepoint-site-settings.md)
 # [高可用性](high-availability-reporting-services.md)  
 # [启用和禁用 RDL 沙盒](enable-and-disable-rdl-sandboxing.md)  
 # [配置 Reporting Services 以使用使用者可选名称](configure-reporting-services-to-use-a-subject-alternative-name.md)  

@@ -2,9 +2,12 @@
 title: "SQL Server - Transactions 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 711aaff1e0692bcf377117026692f508fd881798
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
-  Microsoft **中的** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中处于活动状态的事务的数量，以及这些事务对资源（如 **tempdb**中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft 中的“Transactions”对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中处于活动状态的事务的数量，以及这些事务对资源（如 tempdb 中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  
   
  当数据库设置为允许快照隔离级别时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须保留对数据库中每行进行修改的记录。 每次修改行时，由于在修改前行已存在，所以行的副本将记录在 **tempdb**中的行版本存储区。 **Transaction** 对象中的许多计数器可用来监视 **tempdb**中的行版本存储区的大小和增长速率。  
   

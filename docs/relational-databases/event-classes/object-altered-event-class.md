@@ -2,9 +2,12 @@
 title: "Object:Altered 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd36a75d1672a25cd2a8571d0b9d6c240088065f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a7c43fda5f0543e51a835f70dbee5be6b94ad1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件类
-  Object:Altered 事件类指示一个对象已更改，例如通过 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 语句更改对象。 此事件类可用来确定是否正在更改对象；例如通常用来创建临时存储过程的 ODBC 应用程序正在更改对象。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Object:Altered 事件类指示一个对象已更改，例如通过 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 语句更改对象。 此事件类可用来确定是否正在更改对象；例如通常用来创建临时存储过程的 ODBC 应用程序正在更改对象。  
   
  Object:Altered 事件类发生时总是有两个事件。 第一个事件指示“开始”阶段。 第二个事件指示“回滚”或“提交”阶段。  
   

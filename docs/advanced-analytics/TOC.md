@@ -122,6 +122,7 @@
 
 ### [避免用户 R 包库出错](r/packages-installed-in-user-libraries.md)
 
+### [将 SQLRUserGroup 添加为数据库用户](r/add-sqlrusergroup-to-database.md)
 
 ## 数据探索和建模
 

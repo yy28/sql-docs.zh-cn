@@ -2,9 +2,12 @@
 title: "非 XML 格式化文件 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41b6275ea6a6b19b608104a898e2aff363ee9cc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a5c74d49ff35255399caf10a74bffa91c3edc2b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件和 XML 格式化文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，批量导出和导入支持两种类型的格式化文件：非 XML 格式化文件和 XML 格式化文件。  
   
  **本主题内容：**  
   

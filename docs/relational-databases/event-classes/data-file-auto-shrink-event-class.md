@@ -2,9 +2,12 @@
 title: "Data File Auto Shrink 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b30109dc3f7ea8eed7e819c3fb7654aff5fc9ea1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 47c05cf969cf8b76f8905b097bd07d86fc0baa4b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 事件类
-  **Data File Auto Shrink** 事件类指明数据文件已收缩。 如果通过显式 ALTER DATABASE 语句使数据文件收缩，则不会触发此事件。 **Data File Auto Shrink** 事件类包括在监视数据文件大小变化的跟踪中。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Data File Auto Shrink 事件类指明数据文件已收缩。 如果通过显式 ALTER DATABASE 语句使数据文件收缩，则不会触发此事件。 **Data File Auto Shrink** 事件类包括在监视数据文件大小变化的跟踪中。  
   
  **Data File Auto Shrink** 事件类包括在跟踪中后，引发的开销量较低，除非数据文件频繁地收缩。  
   

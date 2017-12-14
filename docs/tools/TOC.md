@@ -2,6 +2,8 @@
 # [SQL Server 工具和实用工具概述](../tools/overview-sql-tools.md)
 # [新的和最近更新的文章](new-updated-tools.md)
 
+# [SQL Operations Studio（预览版）](../sql-operations-studio/what-is.md)
+
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

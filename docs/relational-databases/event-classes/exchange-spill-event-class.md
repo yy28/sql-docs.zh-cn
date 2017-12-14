@@ -2,9 +2,12 @@
 title: "Exchange Spill 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbbac6c6e2fd126ab40cddf9b21aa426b69d04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件类
-  **Exchange Spill** 事件类指示并行查询计划中的通信缓冲区已暂时写入 **tempdb** 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Exchange Spill 事件类指示并行查询计划中的通信缓冲区已暂时写入 tempdb 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
   
  一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，可以使用表达式来获取多个范围，例如 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120)。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
   

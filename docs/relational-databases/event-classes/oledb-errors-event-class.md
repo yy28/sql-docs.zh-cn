@@ -2,9 +2,12 @@
 title: "OLEDB Errors 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b574cbcd6f8c6f93a87cb7bd9f1223808e508a2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10abdfd9ab278115d8f82e84e21036249de7558
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件类
-  如果在调用 OLE DB 访问接口时出错，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就会发生 OLEDB Errors 事件类。 请在跟踪中包括此事件类，以便查看 OLE DB 访问接口中失败的 HRESULT。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]如果在调用 OLE DB 访问接口时出错，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就会发生 OLEDB Errors 事件类。 请在跟踪中包括此事件类，以便查看 OLE DB 访问接口中失败的 HRESULT。  
   
  当跟踪中包含 OLEDB Errors 事件类时，开销量取决于跟踪过程中 OLE DB 访问接口针对数据库发生错误的频率。 如果此类错误频繁发生，跟踪的性能可能会显著降低。  
   

@@ -2,9 +2,12 @@
 title: "Hash Warning 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8743fe8a2905eeff25a806d08e6dd7e076c3c60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0e96888456d728f0ac572e526fdc00218d6e3b7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件类
-  Hash Warning 事件类可用于监视在哈希操作过程中何时发生哈希递归或哈希终止（哈希释放）。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Hash Warning 事件类可用于监视在哈希操作过程中何时发生哈希递归或哈希终止（哈希释放）。  
   
  当生成输入无法装入可用内存时，会发生哈希递归，这将导致输入分割成单独处理的多个分区。 如果这些分区中任何一个仍然大于可用内存，则该分区再拆分成子分区分别进行处理。 此拆分过程将一直继续到每个分区都小于可用内存，或达到最大递归级数（显示在 IntegerData 数据列）。  
   

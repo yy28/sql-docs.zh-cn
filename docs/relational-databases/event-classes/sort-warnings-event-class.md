@@ -2,9 +2,12 @@
 title: "Sort Warnings 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0f67e978040b0efbb440b1d31055ff4058c53e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d24e294e048d5673e9ed4e51cfb20fce153e9e67
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件类
-  Sort Warnings 事件类指示排序操作的内存不足。 这不包括与创建索引有关的排序操作，只包括某查询内的排序操作（如 SELECT 语句中使用的 ORDER BY 子句）。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Sort Warnings 事件类指示排序操作的内存不足。 这不包括与创建索引有关的排序操作，只包括某查询内的排序操作（如 SELECT 语句中使用的 ORDER BY 子句）。  
   
  如果涉及排序操作的查询生成 EventSubClass 数据列值为 2 的 Sort Warnings 事件类，则需要多次传递数据才能排序数据，因此可能会影响查询性能。 进一步调查查询以确定是否可以消除排序操作。  
   

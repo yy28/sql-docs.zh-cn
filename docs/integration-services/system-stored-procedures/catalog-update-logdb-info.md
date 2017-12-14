@@ -1,30 +1,28 @@
 ---
-title: "catalog.update_logdb_info （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.update_logdb_info（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a898be08859230ab873fd8e358b892789aaed043
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fad30ab7de9b608a79a8df9269dd84dabcf47418
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info （SSISDB 数据库）
+# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-更新[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]缩放出日志记录信息。
+更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 日志记录信息。
 
 ## <a name="syntax"></a>语法
 
@@ -33,23 +31,22 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ```
 
 ## <a name="arguments"></a>参数
-[ @server_name =] *server_name*  
- 可以用来向外扩展登录 Sql Server。 *Server_name*是**nvarchar**。  
+[ @server_name = ] server_name  
+ 用于 Scale Out 日志记录的 SQL Server。 server_name 为 nvarchar。  
 
- [ @connection_string =] *connection_string*  
- 用于横向扩展日志记录的连接字符串。 *Connection_string*是**nvarchar**。
+ [ @connection_string = ] connection_string  
+ 用于 Scale Out 日志记录的连接字符串。 connection_string 为 nvarchar。
 
  ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ 无  
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
    
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
  
-

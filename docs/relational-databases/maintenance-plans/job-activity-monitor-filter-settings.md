@@ -2,9 +2,12 @@
 title: "作业活动监视器（筛选设置）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6bafbf3db207d6ef185a6866de2b66015236c0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作业活动监视器（筛选设置）
-  使用此页可以减少作业活动监视器中可见的行数。 在一个或多个可用框中输入条件，以便仅显示符合指定值的行。 其中某些框（如“状态”或“阻塞类型”）通过下拉列表提供有限数量的可能值。 其他框（如 **“应用程序”** ）则允许以逗号分隔的列表形式输入不限数量的任意值。 使用工具栏图标，可以按类别或按字母顺序对可用的框进行排序。 单击各个条件可以显示该条件的简短说明。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以减少作业活动监视器中可见的行数。 在一个或多个可用框中输入条件，以便仅显示符合指定值的行。 其中某些框（如“状态”或“阻塞类型”）通过下拉列表提供有限数量的可能值。 其他框（如 **“应用程序”** ）则允许以逗号分隔的列表形式输入不限数量的任意值。 使用工具栏图标，可以按类别或按字母顺序对可用的框进行排序。 单击各个条件可以显示该条件的简短说明。  
   
  若要筛选作业活动监视器，请提供所需数量的筛选条件，单击 **“应用筛选器”**，再单击 **“确定”**。  
   

@@ -2,9 +2,12 @@
 title: "第 1 课：创建并应用 Off By Default 策略 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40c9434ae693dfe71e97a389ac4c8b500154112a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85ecfe90f8821623156f5a343197cc7b20ce8802
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 课：创建并应用 Off By Default 策略
-通过使用基于策略的管理策略，您可以管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例、一个或多个实例对象、服务器实例、一个或多个数据库或者一个或多个数据库对象。 作为数据库管理员，您需要确保某些服务器没有启用数据库邮件。 在本课中，将创建一个条件以及设置此服务器选项的策略。 测试服务器以检查其是否符合该策略； 然后使用该策略重新配置服务器，以使服务器符合该策略。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用基于策略的管理策略，可管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、一个或多个实例对象、服务器实例、一个或多个数据库或者一个或多个数据库对象。 作为数据库管理员，您需要确保某些服务器没有启用数据库邮件。 在本课中，将创建一个条件以及设置此服务器选项的策略。 测试服务器以检查其是否符合该策略； 然后使用该策略重新配置服务器，以使服务器符合该策略。  
   
 本课程包含以下主题：  
   

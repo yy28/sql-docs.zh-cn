@@ -2,9 +2,12 @@
 title: "段落还原 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f5ff052d1d6981fe0383ac75c38fc643565d4430
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="piecemeal-restores-sql-server"></a>段落还原 (SQL Server)
-  本主题仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 中包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 中包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
- 有关段落还原和内存优化表的信息，请参阅[对具有内存优化表的数据库进行段落还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
+ 有关段落还原和内存优化表的信息，请参阅 [对具有内存优化表的数据库进行段落还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
   
   “段落还原”允许分阶段还原和恢复包含多个文件组的数据库。 段落还原包括从主文件组开始（有时也从一个或多个辅助文件组开始）的一系列还原顺序。 段落还原保持进行检查，以便确保数据库在结束时将是一致的。 在还原顺序结束后，如果恢复的文件有效并且与数据库一致，则恢复的文件将直接变为联机状态。  
   

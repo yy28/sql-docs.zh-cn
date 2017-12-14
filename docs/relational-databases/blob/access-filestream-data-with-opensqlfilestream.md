@@ -2,9 +2,12 @@
 title: "使用 OpenSqlFilestream 访问 FILESTREAM 数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79b38894d27f78edf353dd251549c3c6fee6cbf8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7952076c536818d8a272a6eed35566c3e413ed21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 访问 FILESTREAM 数据
-  OpenSqlFilestream API 为文件系统中存储的 FILESTREAM 二进制大型对象 (BLOB) 获取与 Win32 兼容的文件句柄。 可以将该句柄传递给以下任意 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]OpenSqlFilestream API 为文件系统中存储的 FILESTREAM 二进制大型对象 (BLOB) 获取与 Win32 兼容的文件句柄。 可以将该句柄传递给以下任意 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
   
  你必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中执行所有 FILESTREAM 数据容器访问。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句也可以在同一事务中执行。 这样可保持 SQL 数据与 FILESTREAM BLOB 数据之间的一致性。  
   

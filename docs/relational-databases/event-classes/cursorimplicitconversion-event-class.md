@@ -2,9 +2,12 @@
 title: "CursorImplicitConversion 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0df0c49826717dbfedc3875f91e634c4ae0b8d87
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4c5582a8f136ddcc9d8d1135fd00c27a4dfe817
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件类
-  **CursorImplicitConversion** 事件类描述了应用程序编程接口 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标中发生的游标隐式转换事件。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 执行所请求类型的服务器游标不支持的 Transact-SQL 语句时，就会发生游标隐式转换事件。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一个指示游标类型已更改的错误。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]CursorImplicitConversion 事件类描述了应用程序编程接口 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标中发生的游标隐式转换事件。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 执行所请求类型的服务器游标不支持的 Transact-SQL 语句时，就会发生游标隐式转换事件。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一个指示游标类型已更改的错误。  
   
  将 **CursorImplicitConversion** 事件类包括在记录游标性能的跟踪内。  
   

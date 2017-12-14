@@ -2,9 +2,12 @@
 title: "Plan Guide Successful 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9290fbb46884fd2a42c4017739d894c299ff8ea6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 56071f62a6de2d2d2c438a26d3dc07c7ca22a6a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 事件类
-  Plan Guide Successful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功为包含计划指南的查询或批处理生成执行计划。 当满足下列条件时，事件将激发：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Plan Guide Successful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功为包含计划指南的查询或批处理生成执行计划。 当满足下列条件时，事件将激发：  
   
 -   计划指南定义中的批处理或模块与正在执行的批处理或模块相匹配。  
   

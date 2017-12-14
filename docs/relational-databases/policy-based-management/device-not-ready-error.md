@@ -2,9 +2,12 @@
 title: "设备未就绪错误 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 858d72cc4567b0de67f67a67bc397fd3213ad4af
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dffc42e358023b7011e54e1794cfcb9c3db920ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="device-not-ready-error"></a>设备未就绪错误
-  此规则检查系统事件日志中是否存在 EventId 15。 此错误可能是由 SCSI 主机适配器配置问题或相关问题引起的。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此规则检查系统事件日志中是否存在 EventId 15。 此错误可能是由 SCSI 主机适配器配置问题或相关问题引起的。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  
  请查看以下 Microsoft 知识库文章，了解有关如何纠正此错误的详细信息：  

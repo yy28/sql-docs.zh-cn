@@ -2,9 +2,12 @@
 title: "从 Microsoft Azure 中存储的备份还原 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 78d2478bd6946134cad847c653c7cdfe35e4326f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ec144412cdbf8207ad318b39aefcbe2a39fcba4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>从 Microsoft Azure 中存储的备份还原
-  本主题概述在使用存储在 Windows Azure Blob 存储服务中的备份还原数据库时的注意事项。 这适用于使用“SQL Server 备份到 URL”备份或由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的备份。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题概述在使用存储在 Windows Azure Blob 存储服务中的备份还原数据库时的注意事项。 这适用于使用“SQL Server 备份到 URL”备份或由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的备份。  
   
  如果在 Windows Azure Blob 存储服务中存储了要还原的备份，则我们建议查看本主题，然后查看介绍关于如何还原数据库的步骤的主题，本地和 Azure 备份的还原步骤相同。  
   

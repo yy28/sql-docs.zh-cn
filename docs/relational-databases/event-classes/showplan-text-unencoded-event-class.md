@@ -2,9 +2,12 @@
 title: "Showplan Text (Unencoded) 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdbd698b1ee7ac3273a2ecc4c52e0c8b5659e41a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b5d4d061f83114b9b1d5eb31f1a09e6901f565f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 事件类
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
   
  所包含的信息是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件类中可用信息的子集。  
   
