@@ -2,9 +2,12 @@
 title: "还原数据库（“选项”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9b4290a3e3a3a43e09dc4837542185e7256962ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83d6c271c6d346881f7d1e7fdc7a0c3e4e0a5c25
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
-  使用 **“还原数据库”** 对话框的 **“选项”** 页可修改还原操作的行为和结果。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“还原数据库”对话框的“选项”页可修改还原操作的行为和结果。  
   
  **使用 SQL Server Management Studio 还原数据库备份**  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
  若要在完成存储操作后确定数据库的状态，则必须选择 **“恢复状态”** 面板中的选项之一。  
   
  **RESTORE WITH RECOVERY**  
- 在还原了在[“常规”](../../relational-databases/backup-restore/restore-database-general-page.md)页的**“用于还原的备份集”**网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
+ 在还原了在[常规](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
   
 > [!NOTE]  
 >  在完整恢复模式或大容量日志恢复模式下，只有在需要还原所有日志文件时才选择此选项。  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
  选中此复选框可以指定应执行结尾日志备份。  
   
 > [!NOTE]  
->  如果你在[“备份时间线”](../../relational-databases/backup-restore/backup-timeline.md) 对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
+>  如果你在[备份时间线](../../relational-databases/backup-restore/backup-timeline.md) 对话框中选择的时间点要求结尾日志备份，则将选择此框并且你将不能对其进行编辑。  
   
  **备份文件**  
  为日志的结尾指定备份文件。 您可以浏览备份文件，也可以在文本框中直接输入其名称。  

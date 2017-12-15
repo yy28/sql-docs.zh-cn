@@ -1,5 +1,5 @@
 ---
-title: "字词提取转换 |Microsoft 文档"
+title: "字词提取转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/19/2017
   
 -   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   字符 %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 ‘。  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  
@@ -204,7 +202,7 @@ ms.lasthandoff: 08/19/2017
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  
- 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>字词提取转换编辑器（“排除”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“排除”** 选项卡，建立与排除表的连接并指定包含排除字词的列。  
@@ -213,10 +211,10 @@ ms.lasthandoff: 08/19/2017
  **使用排除字词**  
  指示在字词提取过程中是否通过指定包含排除字词的列来排除特定的字词。 如果选择要排除字词，则必须指定以下源属性：  
   
- **OLE DB 连接管理器**  
+ **“无缓存”**  
  选择现有的 OLE DB 连接管理器，或通过单击“新建”创建新的连接。  
   
- **“新建”**  
+ **新建**  
  通过使用“配置 OLE DB 连接管理器”对话框创建与数据库的新连接。  
   
  **表或视图**  
@@ -226,7 +224,7 @@ ms.lasthandoff: 08/19/2017
  在表或视图中选择包含排除字词的列。  
   
  **配置错误输出**  
- 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
@@ -245,7 +243,7 @@ ms.lasthandoff: 08/19/2017
  指定分数为字词的频率。  
   
  **TFIDF**  
- 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )  
+ 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )。  
   
  **频率阈值**  
  指定某个词或短语必须出现多少次以后才对其进行提取。 默认值为 2。  
@@ -257,10 +255,9 @@ ms.lasthandoff: 08/19/2017
  指定是否将提取设置为区分大小写。 默认值为 **False**。  
   
  **配置错误输出**  
- 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
  [字词查找转换](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
 

@@ -1,5 +1,5 @@
 ---
-title: "设置数据流组件的属性 |Microsoft 文档"
+title: "设置数据流组件的属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
   若要设置数据流组件（包括源、目标和转换）的属性，请使用下列功能之一：  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 -   通过 **“高级编辑器”** 对话框可以访问每个组件的自定义属性。 通过 **“高级编辑器”** 对话框，还可以访问所有数据流组件通用的属性，包括输入属性、输出属性、错误输出属性、列属性和外部列属性。  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>设置使用组件编辑器数据流组件的属性  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>使用组件编辑器设置数据流组件的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   
-## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>在属性窗口中设置数据流组件的属性  
+## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>在“属性”窗口中设置数据流组件的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>设置使用高级编辑器数据流组件的属性  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>使用高级编辑器设置数据流组件的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -110,7 +107,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
 
-## <a name="common-properties-of-data-flow-components"></a>数据流组件通用的属性
+## <a name="common-properties-of-data-flow-components"></a>数据流组件的通用属性
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
   
  本主题列出并描述了数据流对象的通用属性。  
@@ -146,7 +143,7 @@ ms.lasthandoff: 09/26/2017
 |ValidateExternalMetadata|Boolean|指示外部列的元数据是否经过验证。 此属性的默认值为 **True**。|  
 |版本|Integer|组件的版本。|  
   
-###  <a name="inputs"></a>输入的属性  
+###  <a name="inputs"></a>输入属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，转换和目标都具有输入。 数据流中的组件的输入实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 接口。  
   
  下表描述了数据流中的组件的输入属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
@@ -166,7 +163,7 @@ ms.lasthandoff: 09/26/2017
   
  目标以及某些转换不支持错误输出，这些组件的 ErrorRowDisposition 和 TruncationRowDisposition 属性是只读的。  
   
-###  <a name="inputcolumns"></a>输入的列属性  
+###  <a name="inputcolumns"></a>输入列属性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中，输入包含输入列集合。 数据流中的组件的输入列实现了 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> 接口。  
   
  下表描述了数据流中的组件的输入列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
@@ -206,7 +203,7 @@ ms.lasthandoff: 09/26/2017
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|字符串|用于标识输出的字符串。|  
 |IsErrorOut|Boolean|指示输出是否为错误输出。|  
-|IsSorted|Boolean|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\*重要\* \*** 的值设置**IsSorted**属性**True**数据不排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|Boolean|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\* 重要提示\*\*** 将 IsSorted 属性的值设置为 True 时，不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名称|字符串|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
@@ -335,7 +332,7 @@ ms.lasthandoff: 09/26/2017
     > [!NOTE]  
     >  如果该表达式无效，则会出现一个警告，描述表达式中的语法错误。  
 
-## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>您可以使用表达式设置数据流属性
+## <a name="data-flow-properties-that-you-can-set-with-an-expression"></a>可以使用表达式设置的数据流属性
 可以使用数据流任务容器上的可用属性表达式来指定数据流对象的某些属性的值。  
   
  有关使用属性表达式的信息，请参阅 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
@@ -380,5 +377,4 @@ ms.lasthandoff: 09/26/2017
 |平面文件目标|Header 属性|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 目标|TableName 属性|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
-
 
