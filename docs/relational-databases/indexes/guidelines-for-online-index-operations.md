@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ ms.lasthandoff: 11/17/2017
 - 从索引重新生成故障（如数据库故障转移或磁盘空间不足）恢复。
 - 索引操作暂停时，原始索引和新创建的索引都需要磁盘空间，并且都需要在 DML 操作期间更新。
 
-- 在索引重新生成操作期间对截断日志启用截断（不能对常规联机索引操作执行此操作）。
+- 启用在索引重新生成操作期间截断事务日志（无法对常规联机索引操作执行此操作）。
 - 不支持 SORT_IN_TEMPDB=ON 选项
 
 > [!IMPORTANT]
-> 可恢复重新生成不需要始终打开长时间运行的截断，因此可在此操作期间执行日志截断并实现更好的日志空间管理。 采用新设计后，我们可以将数据库中的所有必要数据和重启可恢复操作所需的所有引用存放在一起。
+> 可恢复重新生成操作不要求长时间运行的事务一直处于打开状态，允许在此操作期间执行日志截断，并提升日志空间管理效果。 采用新设计后，我们可以将数据库中的所有必要数据和重启可恢复操作所需的所有引用存放在一起。
 >
 
 通常情况下，可恢复和非可恢复的联机索引重新生成之间没有性能差异。 如果在索引重新生成操作暂停时更新可恢复索引：

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e122b8b8aba89b971407c43c35715a387a687e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be67496825da165dca22ed5074e0e1ee67a32a56
+ms.sourcegitcommit: d8d602898e80797e330aab54e53ee7dde8282e21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="configure-distributed-availability-group"></a>配置分布式可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,6 +209,12 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a> 联接第二个可用性组的辅助数据库
+在第二个可用性组的辅助数据库进入还原状态后，必须手动将它联接到可用性组。
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a>故障转移到次要可用性组  
 此时仅支持手动故障转移。 以下 Transact-SQL 语句将故障转移名为 `distributedag` 的分布式可用性组：  
