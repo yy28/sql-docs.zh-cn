@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询优化器使用统计信息来创建可提供查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/22/2017
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的直方图仅为单个列生成 — 统计信息对象键列集的第一列。
   
-若要创建直方图，查询优化器将对列值进行排序，计算与每个非重复列值匹配的值数，然后将列值聚合到最多 200 个连续直方图梯级中。 每个直方图梯级都包含一个列值范围，后面跟着上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
+若要创建直方图，查询优化器将对列值进行排序，计算与每个非重复列值匹配的值数，然后将列值聚合到最多 200 个连续直方图梯级中。 每个直方图梯级都包含一个列值范围，后跟上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
 
 有关详细信息，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三个步骤从已排序的列值集创建直方图：
 
-- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 的始终为零）。 已用尽所有输入或已找到 200 个值时，结束第一步。 有关此步骤的详细信息，请参阅 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。 
-- **使用 Bucket 合并进行扫描**：第二步中，按排序顺序处理从统计信息键前导列算起的每个额外值；将每个相继值添加到最后一个范围或在末尾创建一个新范围（这可能是因输入值已排序所致）。 如果创建了一个新范围，则一对现有相邻范围折叠为单个范围。 选择这对范围以最小化信息丢失。 此方法使用最大差异算法使直方图中的梯级数减至最少，并同时最大化边界值之间的差异。 折叠后，梯级数在整个步骤中保持为 200。
+- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 的始终为零）。 已用尽所有输入或已找到 200 个值时，结束第一步。 
+- **使用 Bucket 合并进行扫描**：第二步中，按排序顺序处理从统计信息键前导列算起的每个额外值；将每个相继值添加到最后一个范围或在末尾创建一个新范围（这可能是因输入值已排序所致）。 如果创建了一个新范围，则一对现有相邻范围折叠为单个范围。 选择这对范围以最大限度减少信息丢失。 此方法使用最大差异算法使直方图中的梯级数减至最少，并同时最大化边界值之间的差异。 折叠后，梯级数在整个步骤中保持为 200。
 - **直方图合并**：第三步中，如果未丢失大量信息，可能折叠更多范围。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 因此，即使列包含超过 200 个唯一值，直方图具有的梯级数可能少于 200。 对于仅包含唯一值的列，合并的直方图具有三个梯级（最小梯级数）。
 
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/22/2017
   
 -   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，且不存储抽样值。   
   
-#### <a name="density-vector"></a>密度向量  
+#### <a name="density"></a>密度向量  
 密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 
 
 > [!NOTE]
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/22/2017
  可以设置三个选项来影响何时以及如何创建和更新统计信息。 这些选项仅在数据库级别设置。  
   
 #### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS 选项  
- 在自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。 AUTO_CREATE_STATISTICS 选项不确定是否为索引创建了统计信息。 此选项也不生成筛选统计信息。 它严格应用于全表的单列统计信息。  
+ 在自动创建统计信息选项 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有[直方图](#histogram)的列上创建。 AUTO_CREATE_STATISTICS 选项不确定是否为索引创建了统计信息。 此选项也不生成筛选统计信息。 它严格应用于全表的单列统计信息。  
   
  查询优化器通过使用 AUTO_CREATE_STATISTICS 选项创建统计信息时，统计信息名称以 `_WA` 开头。 可以使用下面的查询来确定查询优化器是否为查询谓词列创建了统计信息。  
   
@@ -102,20 +102,24 @@ ms.lasthandoff: 11/22/2017
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
-FROM sys.stats AS s JOIN sys.stats_columns AS sc  
+FROM sys.stats AS s 
+INNER JOIN sys.stats_columns AS sc  
     ON s.stats_id = sc.stats_id AND s.object_id = sc.object_id  
 WHERE s.name like '_WA%'  
 ORDER BY s.name;  
 ```  
   
 #### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS 选项  
- 在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。  
+ 在自动更新统计信息选项 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。  
   
 * 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于更改行的百分比使用阈值。 这与表中的行数无关。 阈值是：
     * 如果在评估时间统计信息时表基数为 500 或更低，则每达到 500 次修改时更新一次。
     * 如果在评估时间统计信息时表基数大于 500，则每达到 500 + 修改次数的百分之二十时更新一次。
 
-* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果兼容性级别为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 乘以当前的表基数所得结果的平方根。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
+* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 乘以当前的表基数所得结果的平方根。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
+
+  > [!IMPORTANT]
+  > 从 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 开始到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低于 130，且使用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
@@ -124,7 +128,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 有关控制 AUTO_UPDATE_STATISTICS 的详细信息，请参阅[控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171)。
   
 #### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- 异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项被关闭，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
+ 异步统计信息更新选项 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项为 OFF 状态，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
  
  > [!NOTE]
  > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”窗口的“选项”页中同时将“自动更新统计信息”和“自动异步更新统计信息”选项设置为“True”。
@@ -167,7 +171,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
   
 1.  在创建索引时，查询优化器为表或视图上的索引创建统计信息。 这些统计信息将创建在索引的键列上。 如果索引是一个筛选索引，则查询优化器将在为该筛选索引指定的行的同一子集上创建筛选统计信息。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
-2.  在 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器为查询谓词中的单列创建统计信息。  
+2.  在 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 为 ON 时，查询优化器为查询谓词中的单列创建统计信息。  
   
 对于大多数查询，用于创建统计信息的这两个方法就可以确保高质量的查询计划；但在很少的情况下，可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建附加的统计信息来改进查询计划。 这些附加的统计信息可以捕获查询优化器在为索引或单列创建统计信息时并未考虑的统计关联。 应用程序可能在表数据中具有附加的统计关联，如果在统计信息对象中计入这些关联，可能会令查询优化器改进查询计划。 例如，针对数据行子集的筛选统计信息或针对查询谓词列的多列统计信息可改进查询计划。  
   
@@ -184,13 +188,13 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 * 查询缺少统计信息。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查询谓词包含多个相关列  
- 在某一查询谓词包含具有跨列关系和相关性的多列时，针对多列的统计信息可能会改进查询计划。 针对多列的统计信息包含称作密度的跨列相关统计信息，这些统计信息不可用于单列统计信息。 在查询结果依赖于多列之间的数据关系时，密度可以改进基数估计。  
+在某一查询谓词包含具有跨列关系和相关性的多列时，针对多列的统计信息可能会改进查询计划。 针对多列的统计信息包含称作密度的跨列相关统计信息，这些统计信息不可用于单列统计信息。 在查询结果依赖于多列之间的数据关系时，密度可以改进基数估计。  
   
- 如果多个列已处于同一索引中，则多列统计信息对象已存在并且不必手动创建它。 如果这些列尚未处于同一索引中，则可以通过对多个列创建索引或通过使用 CREATE STATISTICS 语句，创建多列统计信息。 与统计信息对象相比，它要求更多的系统资源来维护索引。 如果应用程序不要求多列索引，您可以通过创建统计信息对象但不创建索引，有效地利用系统资源。  
+如果多个列已处于同一索引中，则多列统计信息对象已存在并且不必手动创建它。 如果这些列尚未处于同一索引中，则可以通过对多个列创建索引或通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句，创建多列统计信息。 与统计信息对象相比，它要求更多的系统资源来维护索引。 如果应用程序不要求多列索引，您可以通过创建统计信息对象但不创建索引，有效地利用系统资源。  
   
- 在创建多列统计信息时，统计信息对象定义中列的顺序将影响生成基数估计的密度的效率。 统计信息对象在统计信息对象定义中存储键列的每个前缀的密度。 有关密度的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
+在创建多列统计信息时，统计信息对象定义中列的顺序将影响生成基数估计的密度的效率。 统计信息对象在统计信息对象定义中存储键列的每个前缀的密度。 有关密度的详细信息，请参阅此页中的[密度](#density)部分。  
   
- 为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，以下内容在列 `LastName`、 `MiddleName`和 `FirstName`上创建多列统计信息对象。  
+为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，以下内容在列 `LastName`、 `MiddleName`和 `FirstName`上创建多列统计信息对象。  
   
 ```t-sql  
 USE AdventureWorks2012;  
@@ -204,20 +208,20 @@ CREATE STATISTICS LastFirst ON Person.Person (LastName, MiddleName, FirstName);
 GO  
 ```  
   
- 在此示例中，统计信息对象 `LastFirst` 具有以下列前缀的密度：`(LastName)`、`(LastName, MiddleName)` 和 `(LastName, MiddleName, FirstName)`。 密度不可用于 `(LastName, FirstName)`。 如果查询使用 `LastName` 和 `FirstName` ，并且没有使用 `MiddleName`，则密度不可用于基数估计。  
+在此示例中，统计信息对象 `LastFirst` 具有以下列前缀的密度：`(LastName)`、`(LastName, MiddleName)` 和 `(LastName, MiddleName, FirstName)`。 密度不可用于 `(LastName, FirstName)`。 如果查询使用 `LastName` 和 `FirstName` ，并且没有使用 `MiddleName`，则密度不可用于基数估计。  
   
 ### <a name="query-selects-from-a-subset-of-data"></a>查询从数据的子集中选择数据  
- 在查询优化器为单个列和索引创建统计信息时，它为所有行中的值创建统计信息。 在查询从行的某一子集中选择数据时，这一行子集具有唯一的数据分布，筛选统计信息可以改进查询计划。 可以通过使用 CREATE STATISTICS 语句并在此语句中用 WHERE 子句定义筛选器谓词表达式来创建筛选统计信息。  
+在查询优化器为单个列和索引创建统计信息时，它为所有行中的值创建统计信息。 在查询从行的某一子集中选择数据时，这一行子集具有唯一的数据分布，筛选统计信息可以改进查询计划。 可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句并在此语句中用 [WHERE](../../t-sql/queries/where-transact-sql.md) 子句定义筛选器谓词表达式来创建筛选统计信息。  
   
- 例如，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 时，`Production.Product` 表中的每种产品属于 `Production.ProductCategory` 表中的以下四个类别之一：Bikes（自行车）、Components（部件）、Clothing（服装）和 Accessories（附件）。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
+例如，使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 时，`Production.Product` 表中的每种产品属于 `Production.ProductCategory` 表中的以下四个类别之一：Bikes（自行车）、Components（部件）、Clothing（服装）和 Accessories（附件）。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
   
- 使用自行车为例，针对所有自行车重量的筛选统计信息将向查询优化器提供更精确的统计信息，并且与全表统计信息或者针对 Weight 列的不存在的统计信息相比，可以改进查询计划质量。 该自行车重量列很适合于筛选统计信息，但如果重量查找的数目相对较少，则不见得适合于筛选索引。 筛选索引所提供的在查找方面的性能提升可能抵不上将筛选索引添加到数据库所导致的额外维护和存储成本。  
+使用自行车为例，针对所有自行车重量的筛选统计信息将向查询优化器提供更精确的统计信息，并且与全表统计信息或者针对 Weight 列的不存在的统计信息相比，可以改进查询计划质量。 该自行车重量列很适合于筛选统计信息，但如果重量查找的数目相对较少，则不见得适合于筛选索引。 筛选索引所提供的在查找方面的性能提升可能抵不上将筛选索引添加到数据库所导致的额外维护和存储成本。  
   
- 以下语句对自行车的所有子类别创建 `BikeWeights` 筛选统计信息。 筛选的谓词表达式通过使用比较 `Production.ProductSubcategoryID IN (1,2,3)`枚举所有自行车子类别，对自行车进行定义。 该谓词无法使用“自行车”类别名称，因为它存储于 Production.ProductCategory 表中，并且筛选表达式中的所有列都必须位于相同的表中。  
+以下语句对自行车的所有子类别创建 `BikeWeights` 筛选统计信息。 筛选的谓词表达式通过使用比较 `Production.ProductSubcategoryID IN (1,2,3)`枚举所有自行车子类别，对自行车进行定义。 该谓词无法使用“自行车”类别名称，因为它存储于 Production.ProductCategory 表中，并且筛选表达式中的所有列都必须位于相同的表中。  
   
- [!code-sql[StatisticsDDL#FilteredStats2](../../relational-databases/statistics/codesnippet/tsql/statistics_1.sql)]  
+[!code-sql[StatisticsDDL#FilteredStats2](../../relational-databases/statistics/codesnippet/tsql/statistics_1.sql)]  
   
- 查询优化器可使用 `BikeWeights` 筛选的统计信息来改进下面这个查询的查询计划，此查询选择重量超过 `25` 的所有自行车。  
+查询优化器可使用 `BikeWeights` 筛选的统计信息来改进下面这个查询的查询计划，此查询选择重量超过 `25` 的所有自行车。  
   
 ```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
@@ -230,31 +234,30 @@ GO
 ```  
   
 ### <a name="query-identifies-missing-statistics"></a>查询识别缺少的统计信息  
- 如果错误或其他事件阻止查询优化器创建统计信息，则查询优化器将不使用统计信息创建查询计划。 查询优化器将统计信息标记为缺失，并且在下次执行查询时尝试重新生成统计信息。  
+如果错误或其他事件阻止查询优化器创建统计信息，则查询优化器将不使用统计信息创建查询计划。 查询优化器将统计信息标记为缺失，并且在下次执行查询时尝试重新生成统计信息。  
   
- 在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以图形方式显示查询的执行计划时，缺少的统计信息将予以警告显示（表名称以红色文本显示）。 另外，使用 **监视** Missing Column Statistics [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件类可以指明何时缺少统计信息。 有关详细信息，请参阅 [Errors and Warnings 事件类别（数据库引擎）](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)。  
+在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以图形方式显示查询的执行计划时，缺少的统计信息将予以警告显示（表名称以红色文本显示）。 另外，使用 **监视** Missing Column Statistics [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件类可以指明何时缺少统计信息。 有关详细信息，请参阅 [Errors and Warnings 事件类别（数据库引擎）](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)。  
   
  如果缺少统计信息，则执行以下步骤：  
   
-* 确认 AUTO_CREATE_STATISTICS 和 AUTO_UPDATE_STATISTICS 为 ON。  
+* 确认 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 和 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 为 ON。  
   
 * 请确保数据库不是只读的。 如果数据库是只读的，则无法保存新统计信息对象。  
   
-* 通过使用 CREATE STATISTICS 语句创建缺少的统计信息。  
+* 通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建缺少的统计信息。  
   
- 当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
+当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
   
- 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
+只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
   
-* 使用 [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md) 语句创建的统计信息。  
+* 使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 语句删除临时统计信息。  
   
-* 使用 **sys.stats** 和 **sys.stats_columns** 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
+* 使用 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 和 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
-  
-  
+    
 ## <a name="UpdateStatistics"></a> 何时更新统计信息  
- 查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 AUTO_UPDATE_STATISTICS 设置为 ON 时，可以通过频繁更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
+ 查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 设置为 ON 时，可以通过更频繁地更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
   
  更新统计信息可确保查询使用最新的统计信息进行编译。 不过，更新统计信息会导致查询重新编译。 我们建议不要太频繁地更新统计信息，因为需要在改进查询计划和重新编译查询所用时间之间权衡性能。 具体的折衷方案取决于你的应用程序。  
   
@@ -281,7 +284,7 @@ GO
 ### <a name="after-maintenance-operations"></a>在维护操作后  
  考虑在执行维护过程（例如截断表或对很大百分比的行执行大容量插入）后更新统计信息。 这可以避免在将来查询等待自动统计信息更新时在查询处理中出现延迟。  
   
- 索引的重新生成、碎片整理或重新组织之类的操作不会更改数据的分布。 因此，在执行 ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，您无需更新统计信息。 查询优化器将在使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 对表或视图重新生成索引时更新统计信息，但是，此统计信息更新是重新创建索引的副产品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，查询优化器并不更新统计信息。 
+ 索引的重新生成、碎片整理或重新组织之类的操作不会更改数据的分布。 因此，在执行 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)、[DBCC REINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)、[DBCC INDEXDEFRAG](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md) 或 [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md#reorganizing-indexes) 操作后，无需更新统计信息。 查询优化器将在使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 对表或视图重新生成索引时更新统计信息，但是，此统计信息更新是重新创建索引的副产品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，查询优化器并不更新统计信息。 
  
 > [!TIP]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 开始，使用 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) 或 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md) 的 PERSIST_SAMPLE_PERCENT 选项设置和保留未显式指定采样百分比的后续统计信息更新的特定采样百分比。
@@ -289,7 +292,7 @@ GO
 ##  <a name="DesignStatistics"></a> 高效使用统计信息的查询  
  某些查询实现（如查询谓词中的局部变量和复杂的表达式）可能导致查询计划不是最佳的。 遵循有关高效使用统计信息的查询设计指导原则可以避免这种情况。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- 您可以通过应用查询设计指导原则来改进查询计划，这些查询设计指导原则高效地使用统计信息，以便改进在查询谓词中使用的表达式、变量和函数的 *基数估计* 。 在查询优化器不知道表达式、变量或函数的值时，它并不知道在直方图中要查找的值，因此无法从直方图检索最佳的基数估计。 查询优化器而是为直方图中所有取样行，在每个不同值的平均行数的基础上执行基数估计。 这将导致不是最佳的基数估计并且可能影响查询性能。 有关直方图的详细信息，请参阅 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。
+ 您可以通过应用查询设计指导原则来改进查询计划，这些查询设计指导原则高效地使用统计信息，以便改进在查询谓词中使用的表达式、变量和函数的 *基数估计* 。 在查询优化器不知道表达式、变量或函数的值时，它并不知道在直方图中要查找的值，因此无法从直方图检索最佳的基数估计。 查询优化器而是为直方图中所有取样行，在每个不同值的平均行数的基础上执行基数估计。 这将导致不是最佳的基数估计并且可能影响查询性能。 有关直方图的详细信息，请参阅本页的[直方图](#histogram)部分或 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。
   
  下面的指导原则描述如何编写查询以便通过改进基数估计来改进查询计划。  
   
@@ -394,6 +397,8 @@ GO
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)   
- [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171) [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)   
- [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
+ [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行为](http://support.microsoft.com/help/2754171)   
+ [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

@@ -3,8 +3,11 @@ title: "下载 SQL Server PowerShell 模块 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
-ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.openlocfilehash: 83b535f97682334f6a83f3eb58e2f673c2040b4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>下载 SQL Server PowerShell 模块
-SQL Server PowerShell 模块是 17.0 版本 SQL Server Management Studio 的一部分，现通过 PowerShell 库提供。  该模块不再随附在 SSMS 安装包中。 若要将 PowerShell 与 SSMS 17.0 及更新版本配合使用，必须执行额外步骤 - 在计算机上安装 SQL Server 模块。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]SQL Server PowerShell 模块是 17.0 版本 SQL Server Management Studio 的一部分，现通过 PowerShell 库提供。  该模块不再随附在 SSMS 安装包中。 若要将 PowerShell 与 SSMS 17.0 及更新版本配合使用，必须执行额外步骤 - 在计算机上安装 SQL Server 模块。
 
 有关安装最新版本 Windows Management Framework 和安装 PowerShell 模块的常规方法的完整文档，请在 [PowerShell 库](https://www.powershellgallery.com/)网站中查找。
 

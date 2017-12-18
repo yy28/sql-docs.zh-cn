@@ -1,19 +1,19 @@
 ---
 title: "在本地和 Azure 中存储和检索文件共享上的文件 | Microsoft Docs"
 description: "本文介绍如何将本地和 Azure 中的文件系统和文件共享与 SSIS 结合使用。"
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>借助 SSIS 存储和检索本地和 Azure 中文件共享上的文件
 本文介绍将使用本地文件系统的包提升和迁移到 Azure 中的 SSIS 时，如何更新 SQL Server Integration Services (SSIS) 包。
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/16/2017
 > 目前，SSIS 目录数据库 (SSISDB) 仅支持一组访问凭据。 因此 Azure-SSIS Integration Runtime (IR) 不能使用不同的凭证连接到多个本地文件共享和 Azure 文件共享。
 
 ## <a name="store-temporary-files"></a>存储临时文件
-如果在单个包执行期间需存储和处理临时文件，包可以使用 Azure-SSIS Integration Runtime 节点的临时文件夹 `(.)/temp` 或 `%TEMP%`。
+如果在单个包执行期间需存储和处理临时文件，包可以使用 Azure-SSIS Integration Runtime 节点的当前工作目录 (`.`) 或临时文件夹 (`%TEMP%`)。
 
 ## <a name="store-files-across-multiple-package-executions"></a>跨多个包执行操作存储文件
 如果需要存储和处理永久性文件并跨多个包执行保存它们，可以使用本地文件共享或 Azure 文件。

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本主题介绍全文索引和查询性能不佳的常见原因。 此外，还提供了有关缓解这些问题和提高性能的一些建议。
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  `F = 8*10*8=640`  
   
- 然后，计算出 **最大服务器内存**的最佳值*M*。 该系统的可用物理内存总量（以 MB 为单位）—*T*—是 `8192`。  
+ 然后，计算出 **最大服务器内存**的最佳值*M*。 该系统的可用物理内存总量（以 MB 为单位）—T— 为 `8192`。  
   
  `M = 8192-640-500=7052`  
   

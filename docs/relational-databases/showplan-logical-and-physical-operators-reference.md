@@ -142,11 +142,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e90365c7328e85782a818b3dc07462ef185c9ec
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
 |![Arithmetic Expression 运算符图标](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic Expression 运算符图标")|**Arithmetic Expression**|**Arithmetic Expression** 运算符根据行中的现有值计算新值。 **中未使用** 算术表达式 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|  
 |![Assert 运算符图标](../relational-databases/media/assert-32x.gif "Assert 运算符图标")|**ActualRebinds**|**Assert** 运算符用于验证条件。 例如，验证引用完整性或确保标量子查询返回一行。 对于每个输入行， **Assert** 运算符都要计算执行计划的 **Argument** 列中的表达式。 如果此表达式的值为 NULL，则通过 **Assert** 运算符传递该行，并且查询执行将继续。 如果此表达式的值非 Null，则将产生相应的错误。 **Assert** 运算符是一个物理运算符。|  
 |![Assign 语言元素图标](../relational-databases/media/assign-32.gif "Assign 语言元素图标")|**Assign**|**Assign** 运算符将表达式的值或常量分配给变量。 **Assign** 是一个语言元素。|  
-|无|**Asnyc Concat**|**Asnyc Concat** 运算符仅用于远程查询中（分布式查询）。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 **Asnyc Concat** 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。|  
+|无|**Async Concat**|Async Concat 运算符仅用于远程查询中（分布式查询）。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 Asnyc Concat 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。|  
 |![Bitmap 运算符图标](../relational-databases/media/bitmap-32x.gif "Bitmap 运算符图标")|**Bitmap**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 **Bitmap** 运算符来实现并行查询计划中的位图筛选。 在将行传递给另一个运算符（如 **Parallelism** 运算符）之前，通过消除无法生成任何联接记录的键值的行，位图筛选可提高查询的执行速度。 位图筛选器使用运算符树某部分的表中一组值的简洁表示形式来筛选位于该树另一部分的第二张表中的行。 通过在查询中预先删除不必要的行，后续运算符将处理较少的行，从而提高查询的整体性能。 优化器将确定位图的选择性何时可满足使用条件以及在哪些运算符上应用筛选器。 **Bitmap** 是一个物理运算符。|  
 |![Bitmap 运算符图标](../relational-databases/media/bitmap-32x.gif "Bitmap 运算符图标")|**Bitmap Create**|**Bitmap Create** 运算符出现在创建位图的显示计划输出中。 **Bitmap Create** 是一个逻辑运算符。|  
 |![Bookmark Lookup 运算符图标](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 运算符图标")|**Bookmark Lookup**|**Bookmark Lookup** 运算符使用书签（行 ID 或聚集键）在表或聚集索引中查找相应的行。 **Argument** 列包含书签标签，用于在表或聚集索引内查找行。 **Argument** 列还包含要查找的行所在的表或聚集索引的名称。 如果 **Argument** 列中出现 WITH PREFETCH 子句，则表示查询处理器已决定在表或聚集索引中查找书签时将使用异步预提取（预读）作为最佳选择。<br /><br /> **Bookmark Lookup** 中不使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 而由 **Clustered Index Seek** 和 **RID Lookup** 提供书签查找功能。 **Key Lookup** 运算符也提供此功能。|  

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ddfcca6408a64b2c2875aaa625c275899e8c85f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 现在，可将 SQL Server Integration Services (SSIS) 包和工作负荷移到 Azure 云。
@@ -55,7 +55,7 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 数据工厂还支持其他类型的 Integration Runtime。 若要了解关于 SSIS IR 和其他类型 Integration Runtime 的详细信息，请参阅 [Azure 数据工厂中的 Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)。
 
 ## <a name="prerequisites"></a>先决条件
-本主题中介绍的功能不需要 SQL Server 2017 或 SQL Server 2016。
+本文中介绍的功能不需要 SQL Server 2017 或 SQL Server 2016。
 
 这些功能需要以下版本的 SQL Server Data Tools (SSDT)：
 -   对于 Visual Studio 2017，需要版本 15.3（预览版）或更高版本。
