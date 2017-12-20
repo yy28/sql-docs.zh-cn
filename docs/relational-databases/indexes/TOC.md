@@ -26,11 +26,9 @@
 ## [配置并行索引操作](configure-parallel-index-operations.md)  
 ## [“索引属性”对话框的 F1 帮助](index-properties-f1-help.md)  
 
-
-
 # 列存储索引
 ## [概述](columnstore-indexes-overview.md)  
-## [体系结构](columnstore-indexes-architecture.md)  
+## [体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
 ## [设计指南](columnstore-indexes-design-guidance.md)  
 ## [数据加载指南](columnstore-indexes-data-loading-guidance.md)  
 ## [新增功能](columnstore-indexes-what-s-new.md)  
