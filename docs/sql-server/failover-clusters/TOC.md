@@ -25,3 +25,4 @@
 ### [更改故障转移群集实例的 IP 地址](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [升级 SQL Server 故障转移群集实例](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
 ### [升级 SQL Server 故障转移群集实例（安装程序）](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)
+### [升级 SQL Server 故障转移群集实例 (Windows Server 2008/2008 R2/2012)](windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
