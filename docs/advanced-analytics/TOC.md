@@ -122,8 +122,6 @@
 
 ### [避免用户 R 包库出错](r/packages-installed-in-user-libraries.md)
 
-### [将 SQLRUserGroup 添加为数据库用户](r/add-sqlrusergroup-to-database.md)
-
 ## 数据探索和建模
 
 ### [R 库和数据类型](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [SQL Server 中 R 运行时的安全注意事项](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [修改 SQL Server 机器学习服务的用户帐户池](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [将 SQLRUserGroup 添加为数据库用户](r/add-sqlrusergroup-to-database.md)
+
 ### [通过 Web 服务部署和使用模型](operationalization-with-mrsdeploy.md)
+
 ### [管理和监视机器学习解决方案](r/managing-and-monitoring-r-solutions.md)
 ### [机器学习服务的资源调控](r/resource-governance-for-r-services.md)
 ### [为机器学习创建资源池](r/how-to-create-a-resource-pool-for-r.md)
