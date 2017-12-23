@@ -100,6 +100,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Resources
+## [常见问题解答](sql-server-linux-faq.md)
 ## [故障排除](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 文档](../sql-server/sql-server-technical-documentation.md)
 ## 伙伴
