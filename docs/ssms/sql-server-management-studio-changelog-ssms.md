@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -17,17 +17,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dde2d7831a7bc75f9873efedcddb0bf6134669d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+正式发布版 | 内部版本号：14.0.17213.0
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+漏洞评估：
+- 添加了一个新的 SQL 漏洞评估服务，以扫描数据库的潜在漏洞和最佳方案偏差，如配置错误、权限过多和敏感数据公开。 
+- 评估结果包括旨在解决每个问题的可操作步骤，并提供自定义修正脚本（若适用）。 可以为每个环境自定义评估报表并进行调整以满足特定需求。 访问 [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)了解详细信息。
+
+SMO：
+- 修复了 HasMemoryOptimizedObjects 在 Azure 上引发异常的问题。
+- 添加了对新 CATALOG_COLLATION 功能的支持。
+
+AlwaysOn 仪表板：
+- 可用性组中的延迟分析有所改进。
+- 添加了两个新报表：AlwaysOn\_Latency\_Primary 和 AlwaysOn\_Latency\_Secondary。
+
+Showplan：
+- 已更新指向正确文档的链接。
+- 允许直接从生成的实际计划进行单个计划分析。
+- 新图标集。
+- 添加了对识别 GbApply、InnerApply 等“应用逻辑运算符”的支持。
+        
+XE 探查器：
+- 更名为 XEvent 探查器。
+- 默认情况下，停止/启动菜单命令会立即停止/启动会话。
+- 已启用键盘快捷方式（例如，用于搜索的 CTRL-F）。
+- 向 XEvent 探查器会话中的相应事件添加了 database\_name 和 client\_hostname 操作。 为了使更改生效，你可能需要删除服务器上现有 QuickSessionStandard 或 QuickSessionTSQL 会话实例 - [连接 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+命令行：
+- 添加了新的命令行选项 (“-G”)，可以用于自动将 SSMS 连接到使用 Active Directory 身份验证（“集成”或“密码”）的服务器/数据库。 有关详细信息，请参阅 [Ssms 实用工具](ssms-utility.md)。
+
+导入平面文件向导：
+- 添加了一种方式，以在创建表时选择默认名称 (“dbo”) 以外的架构名称。
+
+查询存储：
+- 在展开查询存储可用报表列表时，还原了“回归查询”报表。
+
+**Integration Services (IS)**
+- 在部署向导中添加了包验证函数，可帮助用户找出 SSIS 包内在 Azure SSIS IR 中不受支持的组件。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+
+- 对象资源管理器：
+    - 修复了表值函数节点未显示在数据库快照中的问题 - [连接 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)。
+    - 在服务器具有 autoclose 数据库的情况下，提高了在展开“数据库”节点时的性能。
+- 查询编辑器：
+    - 修复了 IntelliSense 对于无权访问 master 数据库的用户不可用的问题。
+    - 修复在远程计算机连接关闭时导致 SSMS 在某些情况下崩溃的问题 - [连接 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)。
+- XEvent 查看器：
+    - 重新启用了该功能，以便导出到 XEL。
+    - 修复了在某些情况下用户无法加载整个 XEL 文件的问题。
+- XEvent 探查器：
+    - 修复了在用户没有“查看服务器状态”权限时，导致 SSMS 崩溃的问题。
+    - 修复了在关闭 XE 探查器实时数据窗口时未停止基础会话的问题。
+- 已注册的服务器：
+    - 修复了“移动到...” 命令停止工作的问题 - [连接 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和[连接 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+- SMO：
+    - 修复了 Transfer 对象上 TransferData 方法不工作的问题。
+    - 修复了 Server 数据库引发暂停 SQL DW 数据库异常的问题。
+    - 修复了在编写针对 SQL DW 的 SQL 数据库脚本时生成了不正确的 T-SQL 参数值的问题。
+    - 修复了在编写延伸 DB 脚本时，错误发出“DATA\_COMPRESSION”选项的问题。
+- 作业活动监视器：
+    - 修复了在用户尝试按类别进行筛选时收到“索引已超出范围。 必须为非负数且小于集合大小。 
+        参数名称：索引 (System.Windows.Forms)”错误的问题 - [连接 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
+- 连接对话框：
+    - 修复了对读/写域控制器不具备访问权限的域用户无法使用 SQL 身份验证登录到 SQL Server 的问题 - [连接 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)。
+- 复制：
+    - 修复了在查看 SQL Server 中的请求订阅属性时，显示一个类似于“无法将值 'null' 应用到属性 ServerInstance”的错误的问题。
+- SSMS 安装：
+    - 修复了 SSMS 安装错误导致计算机上所有已安装产品都要进行重新配置的问题。
+- 用户设置：
+   - 美国政府 sovereign 云用户可以利用此修复，通过通用身份验证和 Azure Active Directory 登录，使用 SSMS 不间断地访问其 Azure SQL 数据库和 ARM 资源。  使用以前版本 SSMS 的用户将需要打开“工具”|“选项”|“Azure 服务”并在“资源管理”下，将“Active Directory 颁发机构”属性的配置更改为 https://login.microsoftonline.us。
+
+**Analysis Services (AS)**
+
+- 探查器：修复了尝试使用 Window 身份验证连接 Azure AS 时的问题。
+- 修复了在取消有关 1400 模型的连接详细信息时可能会导致崩溃的问题。
+- 刷新凭据时，在连接属性对话框中设置 Azure blob 密钥，它将被直观屏蔽。
+- 修复了在搜索时，Azure Analysis Services 用户选择对话框显示应用程序 ID guid 而不是对象 ID 的问题。
+- 修复了浏览数据库\MDX 查询设计器工具栏中导致图标不正确地映射到某些按钮的问题。
+- 修复了阻止通过 msmdpump IIS http/https 地址连接到 SSAS 的问题。
+- Azure Analysis Services 用户选取器对话框中的多个字符串现在均已转换为其他语言。
+- MaxConnections 属性现对表格模型中的数据源可见。
+- 现在，部署向导将为 Azure AS 角色成员生成正确的 JSON 定义。
+- 修复了在 SQL 探查器中当选择针对 Azure AS 的 Windows 身份验证时仍会提示登录的问题。
+
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![下载](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 正式发布版 | 内部版本号：14.0.17199.0
 
 ### <a name="enhancements"></a>增强功能
@@ -117,10 +213,6 @@ ms.lasthandoff: 12/05/2017
 
 - 对于 Scale Out 中的包执行，[catalog].[event_messagea] 中的 [execution_path] 不正确。[execution_path] 以“\Package”开头，而不是以包可执行文件的对象名称开头。 在 SSMS 中查看包执行的概述报表时，执行概述中“执行路径”的链接不起作用。 解决方法是，在概述报表上单击“查看消息”，检查所有事件消息。
 
-
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 公开发布 | 版本号：14.0.17177.0

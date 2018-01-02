@@ -1,7 +1,7 @@
 ---
 title: "Ssms 实用工具 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="ssms-utility"></a>Ssms 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ssms 实用工具打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果指定， **Ssms** 还可以与服务器建立连接并打开查询、脚本、文件、项目和解决方案。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -58,27 +58,34 @@ Ssms
  指定要打开的解决方案。 该参数必须包含解决方案文件的完整路径。  
   
  [**-S** *servername*]  
- 服务器名称  
+  服务器名称  
   
  [**-d** *databasename*]  
- 数据库名称  
+  数据库名称  
+
+ [-G] 使用 Active Directory 身份验证进行连接。 连接类型的确定取决于是否包含 -P 和/或 -U。
+ - 如果不包含 -U 和 -P，则使用“Active Directory - 集成”，且不会出现对话框。
+ - 如果 -U 和 -P 都包含在内，则使用“Active Directory - 密码”。 不建议使用此选项，因为你必须在命令行上指定明文密码，而这种操作是应当避免的。
+ - 如果包含 -U，但缺失 -P，将弹出身份验证对话框，但所有登录尝试将都失败。 
+
+  请注意，当前不支持“Active Directory - 通用且具有 MFA 支持”。 
   
- [**-U** *username*]  
- 通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证进行连接时的用户名  
+[**-U** *username*]  
+ 使用“SQL 身份验证”或“Active Directory - 密码”进行连接时的用户名称  
   
- [**-P** *password*]  
- 通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证进行连接时的密码  
+[**-P** *password*]  
+ 使用“SQL 身份验证”或“Active Directory - 密码”进行连接时的密码
   
- [**-E**]  
+[**-E**]  
  使用 Windows 身份验证进行连接  
   
- [**-nosplash**]  
+[**-nosplash**]  
  阻止 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 在打开时显示初始屏幕。 在带宽有限的情况下，通过终端服务连接到运行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的计算机上时，使用此选项。 该参数不区分大小写，并且可放在其他参数前后  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  将 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活动记录到指定的文件中以便进行故障排除  
   
- [**-?**]  
+[**-?**]  
  显示命令行帮助  
   
 ## <a name="remarks"></a>注释  
@@ -96,20 +103,28 @@ Ssms
 |SQL Server Analysis Services|.mdx<br /><br /> .xmla|  
   
 ## <a name="examples"></a>示例  
- 以下脚本将在命令指示符下使用默认设置打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ：  
+ 以下脚本将在命令指示符下使用默认设置打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：  
   
 ```  
 Ssms  
   
 ```  
   
- 以下脚本将在命令指示符下，使用 Windows 身份验证打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，其中代码编辑器设置为 `ACCTG and the database AdventureWorks2012,` ，并且不显示初始屏幕：  
+ 以下脚本将在命令提示符下，使用“Active Directory - 集成”打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
+ 以下脚本将在命令指示符下，使用 Windows 身份验证打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，其中代码编辑器设置为 `ACCTG and the database AdventureWorks2012,`，并且不显示初始屏幕：  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  以下脚本将在命令指示符下打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，并打开 MonthEndQuery 脚本。  
   
 ```  
@@ -130,7 +145,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
