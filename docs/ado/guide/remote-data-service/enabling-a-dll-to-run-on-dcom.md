@@ -3,7 +3,7 @@ title: "启用到 DCOM 上运行的 DLL |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 338956898cd000448d547d23f18b649ee36cfe7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4cff076bcec382e3c05917d0a7916d04fc28c8e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>启用在 DCOM 上运行的 DLL
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  安装到包中的业务对象。  
   
-     - 或 -  
+     -或 -  
   
      导入[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)到包中的对象。  
   

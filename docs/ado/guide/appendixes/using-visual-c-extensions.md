@@ -3,7 +3,7 @@ title: "使用 Visual c + + 扩展 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da6cd44f389b059a897ec464e1848cd9660b6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
@@ -122,7 +122,7 @@ Update(CADORecordBinding *binding)
 |*数据类型*|等效的 C/c + + 变量的 ADO 数据类型 (请参阅[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)有关有效的数据类型的列表)。 值**记录集**字段将被转换为此数据类型，如有必要。|
 |*缓冲区*|C/c + + 变量的名称其中**记录集**将存储字段。|
 |*Size*|最大大小 （字节）*缓冲区*。 如果*缓冲区*将包含可变长度字符串，留出空间的终止字符的零。|
-|*状态*|将指示的变量名称是否的内容*缓冲区*有效，以及是否的字段的转换*DataType*成功。<br /><br /> 此变量的两个最重要值是**adFldOK**，这意味着转换成功，则和**adFldNull**，这意味着字段的值将是一个变体类型 VT_NULL 并不是仅仅为空。<br /><br /> 可能的值有*状态*列出在下一步的表中，"状态值"。|
+|*“状态”*|将指示的变量名称是否的内容*缓冲区*有效，以及是否的字段的转换*DataType*成功。<br /><br /> 此变量的两个最重要值是**adFldOK**，这意味着转换成功，则和**adFldNull**，这意味着字段的值将是一个变体类型 VT_NULL 并不是仅仅为空。<br /><br /> 可能的值有*状态*列出在下一步的表中，"状态值"。|
 |*修改*|布尔型标志。如果为 TRUE，指示允许 ADO 更新相应**记录集**字段中包含的值与*缓冲区*。<br /><br /> 设置布尔值*修改*若要启用 ADO 更新绑定的字段中，为 TRUE 和 FALSE 如果你想要检查该字段，但不是能更改参数。|
 |*精度*|可在一个数值变量中表示的数字个数。|
 |*小数位数*|一个数值变量中的小数位数的数。|
@@ -133,10 +133,10 @@ Update(CADORecordBinding *binding)
 
  当设置数据，*状态*可能设置为**adFldNull**以指示**记录集**字段应设置为 null。
 
-|常量|值|Description|
+|常量|ReplTest1|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|返回一个非 null 字段值。|
-|**adFldBadAccessor**|1|绑定句柄无效。|
+|**adFldBadAccessor**|@shouldalert|绑定句柄无效。|
 |**adFldCantConvertValue**|2|符号不匹配或数据溢出之外的原因，无法转换值。|
 |**adFldNull**|3|获取字段，指示返回了 null 值。<br /><br /> 当设置字段时，该值指示字段应设置为**NULL**字段不能进行编码时**NULL**本身 （例如，字符数组或一个整数）。|
 |**adFldTruncated**|4|长度可变的数据或数字被截断。|

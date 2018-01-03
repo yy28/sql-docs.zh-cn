@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb2b7ee8d96fe02383647345aad7bcf4562ad6f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c962285d10ca05434deafc9cf1d071a09f8cca65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包
 本快速入门演示如何使用 Visual Studio Code 连接到 SSIS 目录数据库，然后使用 Transact-SQL 语句运行存储在 SSIS 目录中的 SSIS 包。
 
 Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS 和 Linux，其支持的扩展包括用于连接到 Microsoft SQL Server、Azure SQL 数据库或 Azure SQL 数据仓库的 `mssql` 扩展。 有关 VS Code 的详细信息，请参阅 [Visual Studio Code](https://code.visualstudio.com/)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 在开始之前，请确保已安装最新版本的 Visual Studio Code 并已加载 `mssql` 扩展。 若要下载这些工具，请参阅以下页面：
 -   [下载 Visual Studio Code](https://code.visualstudio.com/Download)
@@ -57,10 +57,10 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
    | 设置       | 建议的值 | 详细信息 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **服务器名称** | 完全限定服务器名称 | 如果正在连接到 Azure SQL 数据库服务器，名称按以下格式：`<server_name>.database.windows.net`。 |
+   | **服务器名称** | 完全限定的服务器名称 | 如果要连接到 Azure SQL 数据库服务器，该名称为以下格式：`<server_name>.database.windows.net`。 |
    | **数据库名称** | **SSISDB** | 要连接到的数据库的名称。 |
    | **身份验证** | SQL 登录名| 本快速入门使用 SQL 身份验证。 |
-   | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
+   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
    | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 

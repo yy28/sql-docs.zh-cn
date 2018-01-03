@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库至少具有两个操作系统文件：一个数据文件和一个日志文件。 数据文件包含数据和对象，例如表、索引、存储过程和视图。 日志文件包含恢复数据库中的所有事务所需的信息。 为了便于分配和管理，可以将数据文件集合起来，放到文件组中。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="database-files"></a>数据库文件  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库具有三种类型的文件，如下表所示：  
   
-|文件|说明|  
+|文件|Description|  
 |----------|-----------------|  
 |主|主要数据文件包含数据库的启动信息，并指向数据库中的其他文件。 用户数据和对象可存储在此文件中，也可以存储在次要数据文件中。 每个数据库有一个主要数据文件。 主要数据文件的建议文件扩展名是 .mdf。|  
 |辅助副本|次要数据文件是可选的，由用户定义并存储用户数据。 通过将每个文件放在不同的磁盘驱动器上，次要文件可用于将数据分散到多个磁盘上。 另外，如果数据库超过了单个 Windows 文件的最大大小，可以使用次要数据文件，这样数据库就能继续增长。<br /><br /> 次要数据文件的建议文件扩展名是 .ndf。|  
@@ -97,7 +97,7 @@ SQL Server 文件可从其最初指定的大小开始自动增长。 在定义�
   
  下表列出了存储在文件组中的所有数据文件。  
   
-|文件组|说明|  
+|文件组|Description|  
 |---------------|-----------------|  
 |主|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
 |用户定义|用户首次创建数据库或以后修改数据库时明确创建的任何文件组。|  
@@ -110,7 +110,7 @@ SQL Server 文件可从其最初指定的大小开始自动增长。 在定义�
 ### <a name="file-and-filegroup-example"></a>文件和文件组示例
  以下示例在 SQL Server 实例上创建了一个数据库。 该数据库包括一个主数据文件、一个用户定义文件组和一个日志文件。 主数据文件在主文件组中，而用户定义文件组包含两个次要数据文件。 ALTER DATABASE 语句将用户定义文件组指定为默认文件组。 然后通过指定用户定义文件组来创建表。 （此示例使用通用路径 `c:\Program Files\Microsoft SQL Server\MSSQL.1` 来避免指定 SQL Server 版本。）
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

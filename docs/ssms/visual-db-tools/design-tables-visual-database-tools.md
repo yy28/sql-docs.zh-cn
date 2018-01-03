@@ -3,7 +3,7 @@ title: "创建和更新表 (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e181751426bf7169693973ca9c974e1d130e9f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-update-database-tables"></a>创建和更新数据库表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 表设计器是一种可视化工具，用于设计和直观呈现[数据库表](../../relational-databases/tables/tables.md)。 使用 SQL Server Management Studio (SSMS) 表设计器创建、编辑或删除表、列、键、索引、关系和约束。  
@@ -65,6 +65,6 @@ ms.lasthandoff: 12/05/2017
 [列属性](column-properties-visual-database-tools.md)  
 [向表中添加列](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
 [主键和外键](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[索引](../../relational-databases/indexes/indexes.md)  
+[“索引”](../../relational-databases/indexes/indexes.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [下载 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  

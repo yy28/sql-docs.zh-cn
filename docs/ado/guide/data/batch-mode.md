@@ -3,7 +3,7 @@ title: "批处理模式 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f763d43aed3312a87fb4c4a16b3ad28b77f0efaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9070a483570ec496740b16a20f080514b9d23f75
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batch-mode"></a>批处理模式
 批处理模式，则当**LockType**属性设置为**adLockBatchOptimistic**和提供程序支持批处理更新。 某些锁类型设置不可用，具体取决于游标位置。 例如，保守式锁定类型不可用时**CursorLocation**设置为**adUseClient**。 相反，提供程序不能支持批处理乐观锁定，当光标位置位于服务器上时。 你应使用批处理使用的键集或仅静态游标更新。  

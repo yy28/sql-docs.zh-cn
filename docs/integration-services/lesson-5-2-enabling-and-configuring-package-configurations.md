@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>第 5-2 课 - 启用和配置包配置
 在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 将使用此向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 **Directory** 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击“控制流”选项卡的背景。  
   
-4.  在 **SSIS** 菜单上，单击“包配置” 。  
+4.  在 **SSIS** 菜单上，单击 **“包配置”**。  
   
 5.  在“包配置组织程序”对话框中，选择“启用包配置”，然后单击“添加”。  
   

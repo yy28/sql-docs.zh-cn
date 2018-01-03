@@ -3,7 +3,7 @@ title: "ActiveCommand 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c65e508d22fc6b144a0a4cb130b700d91e224cc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e5384aff9ee8646493d26272cdeaae33ab49157
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 属性 (ADO)
 指示[命令](../../../ado/reference/ado-api/command-object-ado.md)创建关联的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回**Variant**包含**命令**对象。 默认值为空对象引用。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ActiveCommand**属性是只读的。  
   
  如果**命令**对象未用于创建当前**记录集**，则**Null**返回对象引用。  

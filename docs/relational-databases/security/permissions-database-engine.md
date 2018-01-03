@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 [![数据库引擎权限](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 了解权限后，通过 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 语句，将服务器级别权限应用于登录名和数据库级别权限用户。 例如：   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -110,8 +110,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |----------------|----------------|  
 |ALTER|除 TYPE 外的所有对象类。|  
 |CONTROL|所有对象类： <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW 和<br />XML SCHEMA COLLECTION|  
-|DELETE|除 DATABASE SCOPED CONFIGURATION 和 SERVER 外的所有对象类。|  
-|EXECUTE|CLR 类型、外部脚本、过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）、标量和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）以及同义词|  
+|删除|除 DATABASE SCOPED CONFIGURATION 和 SERVER 外的所有对象类。|  
+|在运行 CREATE 语句前执行|CLR 类型、外部脚本、过程（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）、标量和聚合函数（[!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR）以及同义词|  
 |IMPERSONATE|登录名和用户|  
 |Insert|同义词、表和列、视图和列。 可以在数据库、架构或对象级别授予权限。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列|  
@@ -217,8 +217,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
+|DATABASE|删除|DL|SERVER|CONTROL SERVER|  
+|DATABASE|在运行 CREATE 语句前执行|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
 |DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
@@ -264,9 +264,9 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
-|OBJECT|Insert|IN|SCHEMA|Insert|  
+|OBJECT|DELETE|DL|SCHEMA|删除|  
+|OBJECT|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
+|OBJECT|Insert|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
@@ -294,8 +294,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
+|SCHEMA|删除|DL|DATABASE|删除|  
+|SCHEMA|在运行 CREATE 语句前执行|EX|DATABASE|在运行 CREATE 语句前执行|  
 |SCHEMA|Insert|IN|DATABASE|Insert|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
@@ -352,7 +352,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
-|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -362,7 +362,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
+|XML SCHEMA COLLECTION|在运行 CREATE 语句前执行|EX|SCHEMA|在运行 CREATE 语句前执行|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -424,7 +424,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="secial-considerations-for-column-level-permissions"></a>列级权限的 Secial 注意事项
 
 授予列级权限语法 *<table_name>(\<column _name>)*。 例如：
-```tsql
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 表上的 DENY 被列中的 GRANT 替代。 但是，表上的后续 DENY 将删除 GRANT 列。 
@@ -435,7 +435,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 返回可授予权限的完整列表  
  下列语句使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 函数返回所有 `fn_builtin_permissions` 权限。 有关详细信息，请参阅 [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. 返回针对某类对象的权限  
  下面的示例使用 `fn_builtin_permissions` 查看可用于安全对象类别的所有权限。 此示例将返回对程序集的权限。  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. 返回授予对象的执行主体的权限  
  以下示例使用 `fn_my_permissions` 返回指定安全对象的调用主体所具有的有效权限列表。 此示例将返回对名为 `Orders55` 的对象的权限。 有关详细信息，请参阅 [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,7 +459,7 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. 返回适用于指定对象的权限  
  以下示例将返回适用于名为 `Yttrium`的对象的权限。 请注意，使用了内置函数 `OBJECT_ID` 来检索对象 `Yttrium`的 ID。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  

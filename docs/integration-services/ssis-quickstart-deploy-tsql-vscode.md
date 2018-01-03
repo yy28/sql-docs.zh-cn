@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41996c43919714a222fa3a453a943529315f957b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9f4e5d15cc4ef8c7b51f2fa79e0ff35e7f53d9df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 TRANSACT-SQL 从 Visual Studio Code 部署 SSIS 项目
 本快速入门演示如何使用 Visual Studio Code 连接到 SSIS 目录数据库，然后使用 TRANSACT-SQL 语句将 SSIS 项目部署到 SSIS 目录。
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/20/2017
 
 Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS 和 Linux，其支持的扩展包括用于连接到 Microsoft SQL Server、Azure SQL 数据库或 Azure SQL 数据仓库的 `mssql` 扩展。 有关 VS Code 的详细信息，请参阅 [Visual Studio Code](https://code.visualstudio.com/)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 在开始之前，请确保已安装最新版本的 Visual Studio Code 并已加载 `mssql` 扩展。 若要下载这些工具，请参阅以下页面：
 -   [下载 Visual Studio Code](https://code.visualstudio.com/Download)
@@ -52,7 +52,7 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
 1. 在 VS Code 中，按 CTRL+SHIFT+P（或 F1）打开命令面板。
 
-2. 键入 sqlcon，然后按 Enter。
+2. 键入 sqlcon，然后按 ENTER。
 
 3. 按 ENTER 以选择“创建连接配置文件”。 本步骤是为 SQL Server 实例创建连接配置文件。
 
@@ -60,15 +60,15 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 
    | 设置       | 建议的值 | 详细信息 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **服务器名称** | 完全限定服务器名称 |  |
+   | **服务器名称** | 完全限定的服务器名称 |  |
    | **数据库名称** | **SSISDB** | 要连接到的数据库的名称。 |
    | **身份验证** | SQL 登录名| 本快速入门使用 SQL 身份验证。 |
-   | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
+   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
    | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
 
-5. 按 Esc 键关闭提示配置文件已创建并连接的提示消息。
+5. 按 ESC 键关闭提示配置文件已创建并连接的提示消息。
 
 6. 在状态栏中验证连接。
 
@@ -101,8 +101,8 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
 - 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
-    - [使用 Transact-SQL (SSMS) 运行 SSIS 包](./ssis-quickstart-run-tsql-ssms.md)
-    - [使用 Transact-SQL (VS Code) 运行 SSIS 包](ssis-quickstart-run-tsql-vscode.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [从命令提示符运行 SSIS 包](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
     - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 

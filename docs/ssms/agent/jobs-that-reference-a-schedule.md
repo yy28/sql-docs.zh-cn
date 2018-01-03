@@ -3,7 +3,7 @@ title: "引用计划的作业 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3212c569168c7eb1ecba2ceb85e17899e3f300c6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c9188b1b33eac136f2bc1a59b04aa2af1716d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jobs-that-reference-a-schedule"></a>引用计划的作业
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此对话框可以查看有关引用特定计划的作业的信息。  
   
-## <a name="options"></a>选项  
-**计划**  
+## <a name="options"></a>“常规”  
+**“计划”**  
 显示要查看的计划的名称。  
   
 **所选**  

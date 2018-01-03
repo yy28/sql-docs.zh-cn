@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f432097d86740e5da191a7d741ca430a1cf4a5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>第 1-3 课 - 添加和配置 OLE DB 连接管理器
 添加了用于连接到数据源的平面文件连接管理器以后，下一个任务是添加用于连接到目标的 OLE DB 连接管理器。 通过 OLE DB 连接管理器，包可以在任何 OLE DB 兼容的数据源中提取数据或加载数据。 使用 OLE DB 连接管理器，可以为连接指定服务器、身份验证方法和默认数据库。  
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/20/2017
   
 6.  单击“测试连接”，验证指定的连接设置是否有效。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 在“配置 OLE DB 连接管理器”对话框的“数据连接”窗格中，确认选择了“localhost.AdventureWorksDW2012”。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 4：将数据流任务添加到包](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  

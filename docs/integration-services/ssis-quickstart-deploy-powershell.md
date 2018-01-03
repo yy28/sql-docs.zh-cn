@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa8e562bc16cdb6430ad0c8eff8b48b0d0b861b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d23639aa98492228fdec5d45799718f59b809425
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 项目
 本快速入门教程演示了如何使用 PowerShell 脚本连接到数据库服务器，并将 SSIS 项目部署到 SSIS 目录。
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/20/2017
 为以下脚本顶部的变量提供适当的值，然后运行脚本以部署 SSIS 项目。
 
 > [!NOTE]
-> 以下示例使用 Windows 身份验证。 要使用 SQL Server 身份验证，请将 `Integrated Security=SSPI;` 参数替换为 `User ID=<user name>;Password=<password>;`。
+> 下面的示例使用 Windows 身份验证。 要使用 SQL Server 身份验证，请将 `Integrated Security=SSPI;` 参数替换为 `User ID=<user name>;Password=<password>;`。
 
 ```powershell
 # Variables
@@ -72,7 +72,7 @@ Write-Host "Done."
     - [使用 Transact-SQL 部署 SSIS 包 (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [从命令提示符部署 SSIS 包](./ssis-quickstart-deploy-cmdline.md)
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
-- 运行已部署的包。 要运行包，可从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
+- 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)

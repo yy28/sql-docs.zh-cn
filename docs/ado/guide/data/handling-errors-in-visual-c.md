@@ -3,7 +3,7 @@ title: "在 Visual c + + 中处理错误 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28fede6d2d3b59ca0427fa8392ebf8cfcb1af7a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c7ea661c0254246c3288396d0c5ee6495ca41a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-errors-in-visual-c"></a>在 Visual c + + 中处理错误
 在 COM 中，大多数操作返回一个 HRESULT 返回代码指示函数是否已成功完成。 #Import 指令生成每个"原始"方法或属性周围的包装代码，并检查返回的 HRESULT。 如果 HRESULT 指示失败，包装代码会引发 COM 错误通过，HRESULT 返回代码的调用 _com_issue_errorex() 作为自变量中。 COM 错误对象可捕获在**try catch**块。 （为效率的起见，捕获 _com_error 对象的引用。）  

@@ -3,9 +3,9 @@ title: "在文件中查找 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1dfff51fc9ff9be167aee8263ede15e944eb1bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5aea89ee7bcf2410908b9a544fc8cf8134a514b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-in-files"></a>在文件中查找
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”窗口的“在文件中查找”选项卡，可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  **包括子文件夹**  
  指定将搜索在“查找范围”中指定的文件夹的子文件夹。 它需要指定自定义目录集。  
   
- **浏览**  
+ **“浏览”**  
  单击此按钮将显示“自定义目录集”对话框，在其中可以汇编、编辑、保存和选择要输入到“查找范围”框中的命名目录集。  
   
 ## <a name="find-options"></a>查找选项  

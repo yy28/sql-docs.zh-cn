@@ -3,7 +3,7 @@ title: "用于 OLE DB （ADO 服务组件） 的 Microsoft 游标服务 |Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概述的 Microsoft 光标服务
 OLE DB Microsoft 游标服务将补充数据提供程序的光标支持函数。 因此，用户可以体验相对统一的功能，从所有数据提供程序。

@@ -3,7 +3,7 @@ title: "最小化日志文件空间使用情况 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddb41dbe5a2d76bb26d1830d1b659dbd99ca1c21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1363381e5cf3e4f3f48498883cb6806759a5c44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minimizing-log-file-space-usage"></a>最小化日志文件空间使用情况
 日志文件可能很快用完 （从而停止服务器） 是否有大量的 SQL Server 数据库上的活动。 你可以将日志文件设置为**在检查点截断**以显著延长的数据库的日志文件的生存期。  

@@ -3,7 +3,7 @@ title: "命名空间 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,19 +18,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d32b2d51454f48d4ef164058abbf08d06859a281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b5921d1c91ee326810041c612097c41e9e099e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces"></a>命名空间
 ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
-|前缀|Description|  
+|Prefix|Description|  
 |------------|-----------------|  
 |s|表示"XML 数据"命名空间包含的元素和属性定义当前记录集的架构。|  
 |dt|引用数据类型定义规范。|  

@@ -3,7 +3,7 @@ title: "Ssms 实用工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/08/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: a69ee6a0f66529c6cfb08216643d9c2a6c2a1482
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssms-utility"></a>Ssms 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ssms 实用工具打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果指定， **Ssms** 还可以与服务器建立连接并打开查询、脚本、文件、项目和解决方案。  
@@ -88,7 +88,7 @@ Ssms
 [**-?**]  
  显示命令行帮助  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  上述所有开关都是可选的，并用空格分隔，但文件用逗号分隔。 如果不指定任何开关，则 **Ssms** 将按照“工具”菜单的“选项”设置中指定的方式打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果“环境/常规”页的“启动时”选项指定了“打开新查询窗口”，**Ssms** 则会在打开时显示一个空白的查询编辑器。  
   
  **-log** 开关必须出现在命令行的末尾，位于所有其他开关的后面。 文件名参数是可选的。 如果指定了一个文件名，并且该文件不存在，则创建该文件。 如果无法创建该文件 – 例如，由于没有足够的写访问权限，日志将改为写入非本地化的 APPDATA 位置（见下文）。 如果未指定该文件名参数，则两个文件将写入当前用户的非本地化的应用程序数据文件夹。 SQL Server 的非本地化的应用程序数据文件夹可以从 APPDATA 环境变量中找到。 例如，对于 SQL Server 2012，文件夹为 \<system drive>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 默认情况下，这两个文件分别命名为 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活动日志数据，后者是一种 XML 样式表，提供了更方便的方法来查看 XML 文件。 按照下列步骤操作，在默认 XML 查看器（如 Internet Explorer）中查看日志文件：依次单击“开始”和“运行...”，在提供的字段中键入“\<system drive>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml”，再按 Enter。  
@@ -103,7 +103,7 @@ Ssms
 |SQL Server Analysis Services|.mdx<br /><br /> .xmla|  
   
 ## <a name="examples"></a>示例  
- 以下脚本将在命令指示符下使用默认设置打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：  
+ 以下脚本将在命令指示符下使用默认设置打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ：  
   
 ```  
 Ssms  
@@ -118,7 +118,7 @@ Ssms.exe -S servername.database.windows.net -G
 ``` 
 
 
- 以下脚本将在命令指示符下，使用 Windows 身份验证打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，其中代码编辑器设置为 `ACCTG and the database AdventureWorks2012,`，并且不显示初始屏幕：  
+ 以下脚本将在命令指示符下，使用 Windows 身份验证打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，其中代码编辑器设置为 `ACCTG and the database AdventureWorks2012,` ，并且不显示初始屏幕：  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  

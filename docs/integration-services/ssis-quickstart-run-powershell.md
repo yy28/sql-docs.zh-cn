@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e8dc5d5ef9aaebced036db796e1518bcf929dfef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 运行 SSIS 包
 本快速入门教程演示如何使用 PowerShell 脚本连接到数据库服务器并运行 SSIS 包。
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/20/2017
 为以下脚本顶部的变量提供相应的值，然后运行脚本以运行 SSIS 包。
 
 > [!NOTE]
-> 下面的示例使用 Windows 身份验证。 若要使用 SQL Server 身份验证，请将 `Integrated Security=SSPI;` 参数替换为 `User ID=<user name>;Password=<password>;`。
+> 下面的示例使用 Windows 身份验证。 要使用 SQL Server 身份验证，请将 `Integrated Security=SSPI;` 参数替换为 `User ID=<user name>;Password=<password>;`。
 
 ```powershell
 # Variables
@@ -70,7 +70,7 @@ Write-Host "Done."
 ## <a name="next-steps"></a>后续步骤
 - 考虑运行包的其他方式。
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
-    - [使用 Transact-SQL (SSMS) 运行 SSIS 包](./ssis-quickstart-run-tsql-ssms.md)
-    - [使用 Transact-SQL (VS Code) 运行 SSIS 包](ssis-quickstart-run-tsql-vscode.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [从命令提示符运行 SSIS 包](./ssis-quickstart-run-cmdline.md)
     - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 

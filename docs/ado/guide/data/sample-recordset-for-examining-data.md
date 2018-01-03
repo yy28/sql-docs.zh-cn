@@ -3,7 +3,7 @@ title: "记录集的示例性检查的数据 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eada9043dfd5ac890fe6e742bcac44d6f13d28c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c03e0c912234a73bc62a5b4916367a2583a9c71c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sample-recordset-for-examining-data"></a>示例以检查数据的记录集
 首先，让我们看一下**记录集**对象，如使用以下 SQL 查询中，执行针对 Microsoft SQL Server 中的基的 Northwind 示例数据返回。  

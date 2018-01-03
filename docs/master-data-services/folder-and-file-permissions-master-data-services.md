@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38835ec5dd79b28f009c4471f5723ea3e2cae7a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a8793f71d09da12c30a5e79989f5d87d5b5b8e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
   在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能的默认安装路径，则 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的安装路径为驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 ###### <a name="program-files-default-permissions"></a>程序文件默认权限  
   
-|组或帐户名称|Permissions|  
+|组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊权限|  
 |SYSTEM|特殊权限|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 权限  
   
-|组或帐户名称|Permissions|  
+|组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |SYSTEM|修改、读取和执行、列出文件夹内容、读取、写入|  
 |管理员|修改、读取和执行、列出文件夹内容、读取、写入|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 ###### <a name="webconfig-permissions"></a>Web.config 权限  
   
-|组或帐户名称|Permissions|  
+|组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |SYSTEM|完全控制、修改、读取和执行、读取、写入|  
 |管理员|完全控制、修改、读取和执行、读取、写入|  

@@ -3,7 +3,7 @@ title: "架构部分 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出详细的元数据有关每一列来保留的数据值语义尽可能多地更新。 但是，若要在 XML 中加载，ADO 仅需要的列和它们所属的行集的名称。 下面是架构的最小的示例：  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
  同样，因为没有定义任何别名为`CompanyName`在前面的示例中，`CompanyName`必须使用在整个文档的一致。  
   
 ## <a name="data-types"></a>数据类型  
- 你可以应用到具有 dt: type 属性的列数据类型。 允许的 XML 类型的权威指南，请参阅的数据类型部分[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)。 你可以通过两种方式指定数据类型： 直接在列定义本身上指定 dt: type 属性或 s:datatype 构造用作列定义的嵌套元素。 例如：  
+ 你可以应用到具有 dt: type 属性的列数据类型。 允许的 XML 类型的权威指南，请参阅的数据类型部分[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)。 你可以通过两种方式指定数据类型： 直接在列定义本身上指定 dt: type 属性或 s:datatype 构造用作列定义的嵌套元素。 例如，  
   
 ```  
 <s:AttributeType name="Phone" >  

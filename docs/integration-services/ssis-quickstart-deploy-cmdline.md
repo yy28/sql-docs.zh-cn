@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3e7f7e3fa870c7aa5b30a5a4a324f0cef7f6ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>使用 ISDeploymentWizard.exe 从命令提示符部署 SSIS 项目
 本快速入门教程演示如何通过运行 Integration Services 部署向导 (`ISDeploymentWizard.exe`) 从命令提示符部署 SSIS 项目。
@@ -56,14 +56,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="next-steps"></a>后续步骤
 - 考虑部署包的其他方式。
     - [使用 SSMS 部署 SSIS 包](./ssis-quickstart-deploy-ssms.md)
-    - [使用 Transact-SQL (SSMS) 部署 SSIS 包](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [使用 Transact-SQL (VS Code) 部署 SSIS 包](ssis-quickstart-deploy-tsql-vscode.md)
+    - [使用 Transact-SQL 部署 SSIS 包 (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [使用 Transact-SQL 部署 SSIS 包 (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [使用 PowerShell 部署 SSIS 包](ssis-quickstart-deploy-powershell.md)
     - [使用 C# 部署 SSIS 包](./ssis-quickstart-deploy-dotnet.md) 
 - 运行已部署的包。 若要运行包，可以从多个工具和语言中进行选择。 有关详细信息，请参阅下文：
     - [使用 SSMS 运行 SSIS 包](./ssis-quickstart-run-ssms.md)
-    - [使用 Transact-SQL (SSMS) 运行 SSIS 包](./ssis-quickstart-run-tsql-ssms.md)
-    - [使用 Transact-SQL (VS Code) 运行 SSIS 包](ssis-quickstart-run-tsql-vscode.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [使用 Transact-SQL 运行 SSIS 包 (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [从命令提示符运行 SSIS 包](./ssis-quickstart-run-cmdline.md)
     - [使用 PowerShell 运行 SSIS 包](ssis-quickstart-run-powershell.md)
     - [使用 C# 运行 SSIS 包](./ssis-quickstart-run-dotnet.md) 

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-and-user-defined-variables"></a>系统变量和用户定义变量  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支持两种类型的变量：用户定义变量和系统变量。 用户定义变量由包开发人员定义，系统变量由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定义。 可以创建包所需数量的用户定义变量，但不能另外创建系统变量。  
   
- 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅 [执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 在执行 SQL 任务用来在 SQL 语句中将变量映射到参数的参数绑定中，可以使用所有变量（系统和用户定义）。 有关详细信息，请参阅[执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md)和[执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
 > [!NOTE]  
 >  用户定义变量和系统变量的名称是区分大小写的。  
@@ -187,20 +187,20 @@ ms.lasthandoff: 11/20/2017
 ### <a name="add-variable-dialog-box"></a>“添加变量”对话框
 可以使用 **“添加变量”** 对话框指定新变量的属性。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **容器**  
  在列表中选择容器。 容器定义了变量的作用域。 容器可以是包，也可以是包中的可执行文件。  
   
  **名称**  
  键入变量名称。  
   
- **命名空间**  
+ **Namespace**  
  指定变量的命名空间。 默认情况下，用户定义变量位于 **User** 命名空间中。  
   
  **值类型**  
  选择数据类型。  
   
- **值**  
+ **ReplTest1**  
  键入值。 该值必须与 **“值类型”** 选项中指定的数据类型相符。  
   
  **只读**  
@@ -313,7 +313,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="update-a-variable-dynamically-with-configurations"></a>使用配置以动态方式更新变量  
  若要动态更新变量，可以为变量创建配置，将这些配置部署到包中，然后在部署包时更新配置文件中的变量值。 在运行时，包使用更新后的变量值。 有关详细信息，请参阅 [创建包配置](../integration-services/packages/create-package-configurations.md)。  
 
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在子包中使用变量和参数的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [将查询参数映射到数据流组件中的变量](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

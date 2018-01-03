@@ -3,7 +3,7 @@ title: "编辑数据 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89d3f549d52b522cdd6668599e114997bd908511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-data"></a>编辑数据
 我们已介绍了如何使用 ADO 连接到数据源、 执行命令和获取结果中**记录集**对象，并在中导航**记录集**。 本部分重点介绍下一步的基本 ADO 操作： 编辑数据。  

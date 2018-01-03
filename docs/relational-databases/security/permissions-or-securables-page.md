@@ -3,7 +3,7 @@ title: "“权限”或“安全对象”页 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: security
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“权限”页或“安全对象”页以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="effective-tab"></a>“有效”选项卡  
  主体所拥有的与安全对象相关的权限可能来自为多个不同的主体设置的权限。 例如，对于某个登录名，可以为其单独授予权限，也可以将其作为组的成员授予权限。 **“有效”** 选项卡中显示从组或角色成员身份接收的权限与显式权限的组合结果。 将对授予权限进行聚合， 拒绝权限会覆盖所有的授予权限。  
   
- **“权限”**  
+ **权限**  
  权限的名称。  
   
  **列**  

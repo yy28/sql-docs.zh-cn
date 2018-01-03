@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和旧的包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
 有关本部分中描述的错误和 SSIS 服务帐户所需权限的详细信息，请参阅以下博客文章。  
 [System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端不具有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
-## <a name="deploy-projects-to-integration-services-server"></a>将项目部署到 Integration Services 服务器
+## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  若要将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，请完成以下任务：  
   
-1.  创建一个 SSISDB 目录（如果您尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/service/ssis-catalog.md)。  
+1.  创建一个 SSISDB 目录（如果您尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明： [将项目转换为项目部署模型](#convert)  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”。  
   
-     -或-  
+     -或 -  
   
      从 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”节点并选择“导入包”。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”**。  
   
-     - 或 -  
+     -或 -  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > SSISDB 节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”文件夹，然后单击“部署项目”。  
   
@@ -291,7 +291,7 @@ static void Main()
 
  - 在 Windows Search 中键入 **“SQL Server 部署向导”** 
 
-**或**
+**OR**
 
  - 在 SQL Server 安装文件夹下搜索可执行文件 **ISDeploymentWizard.exe** ；例如：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
@@ -341,7 +341,7 @@ static void Main()
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
   
- 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的“服务器环境、服务器变量和服务器环境引用”一节。  
+ 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) 中的“服务器环境、服务器变量和服务器环境引用”一节。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
@@ -361,13 +361,13 @@ static void Main()
   
     3.  输入环境变量的 **“值”** 。  
   
-         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的“环境变量”一节。  
+         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) 中的“环境变量”一节。  
   
     4.  通过选中或取消选中 **“敏感”** 复选框，指示该变量是否包含敏感值。  
   
          如果您选择 **“敏感”**，则变量值不会显示在 **“值”** 字段中。  
   
-         敏感值在 SSISDB 目录中进行加密。 有关加密的详细信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md)。  
+         敏感值在 SSISDB 目录中进行加密。 有关加密的详细信息，请参阅 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md)。  
   
 6.  在 **“权限”** 页上，通过执行以下操作，授予或拒绝所选用户和角色的权限。  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **使用 SQL Server 身份验证**  
  当户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，对该连接进行身份验证。 如果未设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户，则身份验证失败，并且用户会收到一条错误消息。  
   
- **用户名**  
+ **User name**  
  使用 SQL Server 身份验证时，指定用户名。  
   
  **密码**  
@@ -590,7 +590,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **包名称**  
  列出包文件。  
   
- **状态**  
+ **“状态”**  
  指示包是否已准备好转换为项目部署模型。  
   
  **消息**  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **应用于所选内容**  
  单击以将“密码”文本框中的密码应用于一个或多个所选包。  
   
- **刷新**  
+ **“刷新”**  
  刷新包的列表。  
   
 ###  <a name="destination"></a> 设置“选择目标”页上的选项  
@@ -664,13 +664,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **配置字符串**  
  列出配置文件的路径。  
   
- **状态**  
+ **“状态”**  
  显示配置的状态消息。 单击该消息可以查看整个消息文本。  
   
  **添加配置**  
  将在其他项目中包含的包配置添加到要用参数替换的可用配置的列表中。 您可以选择存储在文件系统或 SQL Server 中的配置。  
   
- **刷新**  
+ **“刷新”**  
  单击以刷新配置列表。  
   
  **在转换后删除所有包的配置**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **范围**  
  列出参数的作用域。  
   
- **“值”**  
+ **ReplTest1**  
  列出参数值。  
   
  单击值字段旁边的省略号按钮以配置参数属性。  

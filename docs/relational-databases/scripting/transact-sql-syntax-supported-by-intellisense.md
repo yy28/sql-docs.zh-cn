@@ -3,9 +3,9 @@ title: "IntelliSense 支持的 Transact-SQL 语法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6316251928dd147230e0849f0468a3848ef7d779
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]本主题介绍了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 IntelliSense 支持的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和语法元素。  
@@ -52,17 +52,17 @@ ms.lasthandoff: 11/17/2017
   
 |Transact-SQL 语句|支持的语法|异常|  
 |-----------------------------|----------------------|----------------|  
-|[Insert](../../t-sql/statements/insert-transact-sql.md)|所有语法， *execute_statement* 子句除外。|无|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有语法。|无|  
+|[Insert](../../t-sql/statements/insert-transact-sql.md)|所有语法， *execute_statement* 子句除外。|InclusionThresholdSetting|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
 |[DELETE](../../t-sql/statements/delete-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有语法。|无|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有语法。|无|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|无|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有语法。|无|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有语法。|无|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|InclusionThresholdSetting|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|所有语法。|对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|所有语法|对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|所有语法。|无|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|所有语法。|InclusionThresholdSetting|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense 在支持的语句中  
  当以下语法元素用于受支持的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句之一时， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中的 IntelliSense 提供支持：  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
     -   表、视图、表值函数和表表达式  
   
-    -   列  
+    -   “列”  
   
     -   过程和过程参数  
   

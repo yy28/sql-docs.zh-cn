@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/17/2017
 下面的 T-SQL 脚本通过使用 SSMS 进行反向工程创建。 然后仅通过空格的策略性操作手动修饰该脚本。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ CREATE EVENT SESSION [event_session_test3]
 别害怕！ 以下 T-SQL SELECT 语句很长只是因为它 UNION 了几个小的 SELECT 语句。 任何一个小的 SELECT 语句都可以自己运行。 这些小的 SELECT 语句显示如何将各种系统目录视图 JOIN 在一起。
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -351,7 +351,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>输出
+#### <a name="output"></a>“输出”
 
 
 下面是运行上述 SELECT JOIN UNION 的实际输出结果。 输出参数名称和值与前面的 CREATE EVENT SESSION 语句中的平面文本格式的输出相对应。
@@ -414,7 +414,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 可以在扩展事件区域中使用的所有对象均来自加载到系统的包。 本节将列出所有包及其说明。
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -425,7 +425,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>输出
+#### <a name="output"></a>“输出”
 
 以下是包的列表。
 
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 本节将告诉我们事件包包含的对象类型。 将显示 sys.dm\_xe\_objects 中的所有对象类型的完整列表以及每个类型的计数。
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ Count-of-Type   object_type
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -538,7 +538,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>输出
+#### <a name="output"></a>“输出”
 
 为了激发你的兴趣，下面是前面的 SELECT 语句返回的对象的任意采样。
 
@@ -583,7 +583,7 @@ type           package0       xml                           Well formed XML frag
 - 此外，你需要编辑 WHERE 子句 o.name = 的值。
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -611,7 +611,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>输出
+#### <a name="output"></a>“输出”
 
 以下行由前面的 SELECT 语句返回，其中 `o.name = 'lock_deadlock'`：
 
@@ -661,7 +661,7 @@ sqlserver   lock_deadlock   transaction_id
 - 筛选要将哪些发生的事件发送到目标和从目标中排除。
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -699,7 +699,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>输出
+#### <a name="output"></a>“输出”
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -736,7 +736,7 @@ you could put:
 - 此外，你需要编辑 WHERE 子句 o.name = 的值。
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 - 你需要编辑 WHERE 子句 o.name = 的值。
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
     - 不用在意每次重新启动会话时 SQL 系统在实际的 XEL 文件名称中嵌入的额外的数字。 只需指定一般的根名称和扩展名。
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

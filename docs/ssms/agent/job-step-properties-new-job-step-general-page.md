@@ -3,7 +3,7 @@ title: "作业步骤属性 - 新建作业步骤（“常规”页）| Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的属性或定义新的作业步骤。  
   
 若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **步骤名称**  
 设置作业步骤的名称。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 **运行身份**  
 为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”。  
   
-**数据库**  
+**“数据库”**  
 设置在其中运行作业步骤的数据库。 此选项并不适用于所有作业步骤类型。  
   
 **Command**  
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/05/2017
 粘贴剪贴板的内容。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>复制队列读取器作业步骤的选项  
-**数据库**  
+**“数据库”**  
 用于作业步骤的数据库。  
   
 **全选**  
@@ -221,10 +221,10 @@ ms.lasthandoff: 12/05/2017
 **Server**  
 键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”指定了 **SQL Server** 或“SSIS 包存储区”时，此选项才可用。  
   
-**使用 Windows 身份验证**  
+**Use Windows Authentication**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
-**使用 SQL Server 身份验证**  
+**Use SQL Server Authentication**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”和“密码”。  
   
 > [!IMPORTANT]  
@@ -242,7 +242,7 @@ ms.lasthandoff: 12/05/2017
 **配置文件**  
 列出包的配置文件。  
   
-**添加**  
+**“添加”**  
 添加包的配置文件。  
   
 **删除**  
@@ -260,7 +260,7 @@ ms.lasthandoff: 12/05/2017
 **命令文件**  
 列出包的命令文件。  
   
-**添加**  
+**“添加”**  
 添加命令文件。  
   
 **删除**  
@@ -269,7 +269,7 @@ ms.lasthandoff: 12/05/2017
 **上移**  
 将所选的命令文件上移。  
   
-**下移**  
+**“下移”**  
 将所选的命令文件下移。  
   
 ### <a name="data-sources-tab"></a>“数据源”选项卡  
@@ -329,7 +329,7 @@ ms.lasthandoff: 12/05/2017
 **属性路径**  
 查看或更改属性的路径。  
   
-**“值”**  
+**ReplTest1**  
 查看或更改属性的值。  
   
 **删除**  

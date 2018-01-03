@@ -3,7 +3,7 @@ title: "用于 Internet 发布的 Microsoft OLE DB 提供程序 |Microsoft 文�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bac02557dcc9cf816edfcad5b6cc5d927e42f21a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81b34a20948dc53bb16bdd2c9442895af711adb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 发布概述
 Microsoft OLE DB 提供程序用于 Internet 发布允许 ADO 由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的访问资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。
@@ -46,7 +46,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- - 或 -
+ -或 -
 
 ```
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"

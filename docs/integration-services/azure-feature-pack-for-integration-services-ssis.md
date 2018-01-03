@@ -5,7 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ddaf96b05f2d1b6fc9857faf6309c5bfdd4d449c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/01/2017
 - [用于 Azure 的 SSIS 功能包](http://go.microsoft.com/fwlink/?LinkID=626967)（对于 SQL Server 2016）
 - [用于 Azure 的 SSIS 功能包](https://www.microsoft.com/download/details.aspx?id=54798)（对于 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]）
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  必须在安装此功能包之前安装以下系统必备组件。
 
 -   SQL Server Integration Services

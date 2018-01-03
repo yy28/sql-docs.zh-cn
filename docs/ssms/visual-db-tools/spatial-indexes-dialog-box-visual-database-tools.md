@@ -3,7 +3,7 @@ title: "“空间索引”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“空间索引”对话框可为“几何”或“地理”数据类型的列（空间列）创建索引，不能使用“索引/键”对话框对这些列进行索引。 每个空间列可以有多个空间索引，但一次只能创建一个索引。  
   
 有关创建空间索引时的限制信息，请参阅 [空间索引概述](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **所选空间索引**  
 列出现有空间索引。 选择要显示其属性的索引。 如果该列表为空，则表示尚未为该表定义空间索引。  
   
-**添加**  
+**“添加”**  
 创建一个新的空间索引。  
   
 **删除**  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 如果对象包含的单元格多于 n 指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 这种情况下，最大数量即为顶级网格创建的单元格数，这取决于 **“级别 1”** 的密度。  
   
-**列**  
+**“列”**  
 指示列名和排序顺序。  
   
 **IsSpatialIndex**  

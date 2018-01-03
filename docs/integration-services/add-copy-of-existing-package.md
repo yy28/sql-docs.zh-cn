@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
   可以使用 **“添加现有包的副本”** 对话框，将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、文件系统或 SSIS 包存储区中存储的包副本添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **包位置**  
  选择要从中复制包的存储位置的类型。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **身份验证类型**  
  如果从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中复制，请选择一种身份验证类型。  
   
- **用户名**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  

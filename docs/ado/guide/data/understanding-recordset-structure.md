@@ -3,7 +3,7 @@ title: "了解记录集结构 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d14f7bc8b5130c7779ab4e065b9d2d73ae388bc8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a62175b953f476a6a55ae434e96ff83f2491bb28
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-recordset-structure"></a>了解记录集结构
 每个**记录集**具有**字段**仅包含一个或多个集合，**字段**对象。 A**字段**对象通常表示表列。 以下主题将说明如何浏览**字段**集合并获取有关每个字段的信息。 然后它们将讨论了哪种类型的信息可供你通过**字段**对象以及如何使用它。  

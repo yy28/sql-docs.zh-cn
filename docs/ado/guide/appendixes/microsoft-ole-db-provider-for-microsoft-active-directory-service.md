@@ -3,7 +3,7 @@ title: "Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序 |Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 提供程序允许 ADO 连接到通过 ADSI 异类目录服务。 这可以让 ADO 应用程序只读访问的 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 的目录服务，除了任何 LDAP 兼容目录服务和 Novell 目录服务。 ADSI 本身基于一个提供程序模型，以便如果没有另一个目录到新的提供程序给定访问，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程和启用 Unicode。  
@@ -65,7 +65,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*Root*|指示**ADsPath**从其开始搜索 （即，搜索的根） 的对象。|  
 |*Filter*|指示 RFC 1960 格式中的搜索筛选器。|  
@@ -85,7 +85,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供程序不接受存储的过程调用或简单的表名称 (例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性将始终为**adCmdText**)。 请参阅有关的命令文本元素的更全面说明 Active Directory 服务接口文档。  
   
 ## <a name="recordset-behavior"></a>记录集行为  
@@ -95,7 +95,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **标准 ADO 记录集属性的可用性：**  
   
-|属性|可用性|  
+|“属性”|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
@@ -116,7 +116,7 @@ objectClass='user' AND objectCategory='Person'"
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
-|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
+|[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
   
  **标准 ADO 记录集方法的可用性：**  
   

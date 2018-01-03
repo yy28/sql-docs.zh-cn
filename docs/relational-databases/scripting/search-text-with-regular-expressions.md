@@ -3,9 +3,9 @@ title: "使用正则表达式搜索文本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  下表对 **“引用列表”**中提供的正则表达式进行了说明。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |任何单个字符|中提供的正则表达式进行了说明。|匹配除换行符外的所有单一字符。|  
 |零个或更多|*|匹配零或更多前导表达式的匹配项，执行所有可能的匹配。|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  **“引用列表”** 中只列出了部分可在 **“查找和替换”**操作中使用的正则表达式。 还可以将下列任一正则表达式插入 **“查找内容”** 字符串：  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |最少 - 零个或更多|@|匹配零个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
 |最少 - 一个或更多|#|匹配一个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  下表列出了按标准 Unicode 字符属性匹配时的语法。 双字母缩写和 Unicode 字符属性数据库中列出的缩写相同。 可以将这些缩写指定为字符集的一部分。 例如，表达式 [:Nd:Nl:No] 匹配任何数字。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |大写字母|:Lu|匹配任何单个大写字母。 例如，:Luhe 匹配“The”，但不匹配“the”。|  
 |小写字母|:Ll|匹配任何单个小写字母。 例如，:Llhe 匹配“the”，但不匹配“The”。|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  除了标准的 Unicode 字符属性以外，还可以将下列附加属性指定为字符集的一部分。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|匹配任何单字符。 例如，:Alhe 匹配“The”、“then” 和“reached”之类的字。|  
 |数字|:Nu|匹配任何数字。|  

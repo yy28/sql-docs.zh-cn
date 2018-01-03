@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,16 +17,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e88ddee14ae9f46b79ca771a8879c0ac2c43d5df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a926b66adc2649f05aaab5f452b07faad3c4b062
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系统管理功能区域（主数据管理器）
   在“系统管理”功能区域中，管理员可以创建模型及其所有对象。 他们还可以创建业务规则以及创建和部署模型包。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="model"></a>Model  
+## <a name="model"></a>“模型”  
  [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)  
   
  [创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)  

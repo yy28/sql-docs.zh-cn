@@ -3,7 +3,7 @@ title: "在 XML 中的分层记录集 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb5fb67b0572ea7edea1259ac1314706cc883cd8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9916333a203309d81228c86c019277c9d5515313
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>在 XML 中的分层记录集
 ADO 允许持久性的分层记录集对象转换为 XML。 与层次结构的记录集对象中父记录集的值是字段的另一个记录集。 此类字段将呈现为 XML 流，而不是属性的子元素。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下面的示例演示这种情况下：  
   
 ```  

@@ -3,7 +3,7 @@ title: "OLE DB Provider for Internet 发布 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29dc06f21ef0a20271184ae71ecb9d203897f2aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5731b15274e4d2c1acafec09bd6478fc244a1f59
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet 发布
 ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象可以用于使用 Microsoft OLE DB 提供程序 Internet 发布 （Internet 发布提供程序） 访问和处理资源，如 Web 文件夹或文件由 Microsoft FrontPage 提供服务。 使用 ADO，您可以指定的源**记录**，**流**，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)是 url。 你可以然后上载、 下载、 移动、 复制和删除资源，或直接操作资源属性。  

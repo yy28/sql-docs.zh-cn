@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8ee63b1546b182cad4e0bb2b137c1bad51f15032
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56776e68d9e9ed897bb948ad53e4736c7d1485dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>第 1-1 课 - 创建工作文件夹和环境变量
 在此任务中，您将创建工作文件夹 (C:\DeploymentTutorial) 和新的系统环境变量（`DataTransfer` 和 `LoadXMLData`），在后面的教程任务中您将使用它们。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在“新建系统变量”对话框中，在“变量名”框中键入 **DataTransfer**，并在“变量值”框中键入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  再次单击“新建”，在“变量名”框中键入 **LoadXMLData**，并在“变量值”框中键入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在“新建系统变量”对话框中，在“变量名”框中键入 **DataTransfer**，并在“变量值”框中键入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig**。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  再次单击“新建”，在“变量名”框中键入 **LoadXMLData**，并在“变量值”框中键入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
   

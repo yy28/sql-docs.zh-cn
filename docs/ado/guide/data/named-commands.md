@@ -3,7 +3,7 @@ title: "名为命令 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6830fefa2e01cf03466ae0b28dc8b132ad6a7149
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="named-commands"></a>命名的命令
-[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法执行命令。 还有一种方法： 你可以使其命名的命令，，然后调用此命名的命令是直接对**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 命名命令意味着分配到名称**名称**属性**命令**对象。 例如：  
+[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法执行命令。 还有一种方法： 你可以使其命名的命令，，然后调用此命名的命令是直接对**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 命名命令意味着分配到名称**名称**属性**命令**对象。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  

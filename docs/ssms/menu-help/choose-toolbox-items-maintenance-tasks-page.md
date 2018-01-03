@@ -3,7 +3,7 @@ title: "选择工具箱项（“维护任务”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ead6bf455f4fd80da564f55a5a6dd183a773116
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>选择工具箱项（“维护任务”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“自定义工具箱”对话框的此选项卡可显示已经在你的计算机上注册的所有维护任务组件的列表，可以通过此选项卡更改工具箱中所显示的组件。 可以从“工具”菜单中打开“自定义工具箱”对话框。 若要对组件列表排序，请选择相应的列标题。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 “维护任务”选项卡包括以下信息列。  
   
 **名称**  
@@ -44,10 +44,10 @@ ms.lasthandoff: 12/05/2017
   
 单击某个名称，在“语言”和“版本”框中显示相应组件的属性，同时显示相应的图标。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **语言**  
 组件的语言。  
   
-**版本**  
+**版本(Version)**  
 组件的版本。  
   

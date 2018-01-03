@@ -3,7 +3,7 @@ title: "保存更改 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 132a5f61c658d410af36efe597bb48d64c4f3da8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d771efdee7eaa700897ac9614d27c602e59d34e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-changes"></a>保存更改
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 注意，只有单击“是”之后才会保存对所列项的更改。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 对以前保存的项的更改会自动保存到其在存储区中的相应保存位置。 如果尚未保存项，则将显示“文件另存为”对话框，提示你指定新的保存位置。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **是否保存对下列各项的更改?**  
 将保存所选项。 可以选中和清除项。  
   

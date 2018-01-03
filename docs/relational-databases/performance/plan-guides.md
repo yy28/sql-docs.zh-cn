@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>计划指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果你无法或不希望直接在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中更改实际查询文本，则可以使用计划指南来优化查询性能。 计划指南通过将查询提示或固定的查询计划附加到查询来影响查询的优化。 当第三方供应商提供的数据库应用程序中的一个小的查询子集没有按预期执行时，计划指南将很有用。 在计划指南中，您需要指定要优化的 Transact-SQL 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当执行查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 Transact-SQL 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  假设下面的存储过程采用 `@Country_region`参数，位于对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库部署的数据库应用程序中：  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  您可以通过修改存储过程以将 `OPTIMIZE FOR` 查询提示添加到查询中来解决这一问题。 但是，因为存储过程在部署应用程序中，所以您不能直接修改应用程序代码。 不过，您可以在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中创建下面的计划指南。  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>SQL 计划指南  
  SQL 计划指南与在独立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和不属于数据库对象的批处理上下文中执行的查询匹配。 基于 SQL 的计划指南还可用于与参数化为指定形式的查询匹配。 SQL 计划指南适用于独立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和批处理。 通常，这些语句由应用程序使用 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 系统存储过程来提交。 以下面的独立批处理为例：  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  为了防止对该查询生成并行执行计划，请创建以下计划指南并在 `MAXDOP` 参数中将 `1` 查询提示设置为 `@hints` 。  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>符合要求的计划指南  
  计划指南的作用域是在其中创建这些计划指南的数据库。 因此，执行查询时，只有处于当前状态的数据库中的计划指南可以与该查询匹配。 例如，如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是当前数据库并执行下面的查询：  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  则只有 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的计划指南可以与此查询匹配。 但是，如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是当前数据库并运行下列语句：  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -144,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>计划指南对计划缓存的影响  
  对模块创建计划指南将会从计划缓存中删除该模块的查询计划。 对批处理创建类型为 OBJECT 或 SQL 的计划指南会删除具有相同哈希值的批处理的查询计划。 创建类型为 TEMPLATE 的计划指南会从该数据库中的计划缓存中删除所有单语句批处理。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务|主题|  
 |----------|-----------|  

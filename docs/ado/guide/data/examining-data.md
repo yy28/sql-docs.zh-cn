@@ -3,7 +3,7 @@ title: "检查数据 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f05ca08a88951de138f094fbcac1dd9a31bfdfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22b4be4e37ebebcf2edd2bf4e6403c589d5ee181
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examining-data"></a>检查数据
 [获取数据](../../../ado/guide/data/getting-data.md)部分介绍了如何从数据源检索数据，用作一个或多**记录集**对象。 本部分将讨论**记录集**中更多详细信息，包括如何浏览**记录集**和查看其数据。  

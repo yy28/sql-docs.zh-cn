@@ -3,7 +3,7 @@ title: "自动执行管理任务（SQL Server 代理）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f0f4c265373ba1496cb5e0882c5bd2217f2bf786
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ee6f0fc99f3355dab6d1e2ad0508543f19e1505c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自动执行管理任务（SQL Server 代理）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允许用户自动执行管理任务。 若要自动进行管理，您需要先定义可预测的管理任务，然后再指定每个任务发生的条件。 使用自动管理来处理日常事务和事件，使您有时间执行其他管理功能。  

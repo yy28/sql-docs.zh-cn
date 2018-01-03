@@ -3,7 +3,7 @@ title: "DataFactory 自定义 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53054c25f273acc4e5c91e8641dfe50d94b5d115
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11a52b760227f8dad9400c24fe6118703aea3f5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datafactory-customization"></a>DataFactory 自定义项
 远程数据服务 (RDS) 使您能够轻松地在三层客户端/服务器系统中执行数据访问。 客户端数据控件指定连接和命令字符串参数在远程数据源或连接字符串上执行查询和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象参数，以便执行更新。  

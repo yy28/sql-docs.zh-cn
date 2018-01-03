@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aada9589beecbd40470ff590a8f67cfd069c49f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 210fd9bd79fa84ac5a1a2fcaaca2144a393ab585
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,10 +176,10 @@ ms.lasthandoff: 12/05/2017
   
 同义词库的标注字符设置是在单个 `<diacritics_sensitive>` 元素中指定的。 此元素包含一个控制重音区分设置的整数值，如下所示：  
   
-|标注字符设置|值|XML|  
+|标注字符设置|ReplTest1|XML|  
 |------------------------|-----------|---------|  
 |不区分重音|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|区分重音|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|区分重音|@shouldalert|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  只能在文件中应用一次此设置，它适用于文件中的所有搜索模式。 不能为各个模式单独指定此设置。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  使用 [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) 将同义词库文件内容加载到 tempdb 中，并指定对应于同义词库文件语言的本地标识符 (LCID)。 例如，对于英语同义词库文件 tsenu.xml，对应的 LCID 为 1033。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO

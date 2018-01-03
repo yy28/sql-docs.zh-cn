@@ -3,7 +3,7 @@ title: "地址簿数据绑定对象 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表格中），在应用程序的客户端 HTML 页中的对象。 事件驱动的 VBScript 程序逻辑使用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  

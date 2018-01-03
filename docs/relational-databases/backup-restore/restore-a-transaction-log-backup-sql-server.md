@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076c1c9a78441473fccd0435980ecfc4e735803c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e2c0047ec80addecb0825a7c8b85409ef62a0e5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [先决条件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要还原事务日志备份，请使用：**  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -104,12 +104,12 @@ ms.lasthandoff: 11/17/2017
   
      下表列出了网格的列标题并对列值进行了说明。  
   
-    |标题|值|  
+    |标题|ReplTest1|  
     |------------|-----------|  
     |**还原**|如果复选框处于选中状态，则指示要还原相应的备份集。|  
     |**名称**|备份集的名称。|  
     |**组件**|已备份的组件：**数据库**、**文件**或 \<blank>（用于事务日志）。|  
-    |**数据库**|备份操作中涉及的数据库的名称。|  
+    |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间（按客户端的区域设置显示）。|  
     |**完成日期**|备份操作完成的日期和时间（按客户端的区域设置显示）。|  
     |**“第一个 LSN”**|备份集中第一个事务的日志序列号。 对于文件备份为空。|  
@@ -136,12 +136,12 @@ ms.lasthandoff: 11/17/2017
   
          下表列出了网格的列标题并对列值进行了说明。  
   
-        |标题|“值”|  
+        |标题|ReplTest1|  
         |------------|-----------|  
         |\<blank>|显示一个用于选择标记的复选框。|  
         |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
-        |**日期**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
-        |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
+        |**Date**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
+        |**Description**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
         |**LSN**|所标记事务的日志序列号。|  
         |**“数据库”**|提交标记的事务时所在数据库的名称。|  
         |**用户名**|提交标记事务的数据库用户的名称。|  
@@ -245,14 +245,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  默认情况下， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库使用简单恢复模式。 以下示例要求修改数据库以使用完整恢复模式，如下所示：  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. 应用单个事务日志备份  
  以下示例开始时使用名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 备份设备上的完整数据库备份来还原 `AdventureWorks2012_1`数据库。 然后该示例应用名为 `AdventureWorks2012_log`备份设备上的第一个事务日志备份。 最后，该示例恢复数据库。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -270,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. 应用多个事务日志备份  
  以下示例开始时使用名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 备份设备上的完整数据库备份来还原 `AdventureWorks2012_1`数据库。 然后该示例逐一使用名为 `AdventureWorks2012_log`备份设备上的前三个事务日志备份。 最后，该示例恢复数据库。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -308,7 +308,7 @@ GO
 -   [将数据库还原到标记的事务 (SQL Server Management Studio)](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

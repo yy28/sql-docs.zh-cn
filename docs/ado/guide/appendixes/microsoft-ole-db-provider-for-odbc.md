@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for ODBC |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调入数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源不尚未公开这种方式。 但是，可以通过 ODBC 访问当今使用的大多数 DBMS 系统。
@@ -86,7 +86,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
  如果你使用**DSN**或**FileDSN**，必须定义通过 ODBC 数据源管理器在 Windows 控制面板中。 在 Microsoft Windows 2000 中，ODBC 管理器位于管理工具。 在早期版本的 Windows 中，名为 ODBC 管理器图标**32 位 ODBC**或仅仅称为**ODBC**。
 
  作为设置的替代方法**DSN**，你可以指定的 ODBC 驱动程序 (**驱动程序 =**)，例如"SQL Server;"服务器名称 (**SERVER =**); 和数据库名称 (**数据库 =**)。
@@ -178,7 +178,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  标准 ADO 可用性**记录集**属性：
 
-|属性|ForwardOnly|Dynamic|Keyset|静态|
+|“属性”|ForwardOnly|Dynamic|Keyset|静态|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
@@ -198,7 +198,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
-|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
+|[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)和[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性是只写，如果 ADO 用于用于 ODBC 的 Microsoft OLE DB 提供程序的 1.0 版。
 
@@ -266,7 +266,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在选择的最大表|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|“模式”|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -279,7 +279,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |打开行集支持|DBPROP_OPENROWSETSUPPORT|
 |通过选择列表中的列进行排序|DBPROP_ORDERBYCOLUMNSINSELECT|
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|密码|DBPROP_AUTH_PASSWORD|
+|Password|DBPROP_AUTH_PASSWORD|
 |通过 Ref 访问器|DBPROP_BYREFACCESSORS|
 |持久性安全信息|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |持久性 ID 类型|DBPROP_PERSISTENTIDTYPE|

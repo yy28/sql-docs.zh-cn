@@ -3,7 +3,7 @@ title: "Internet 信息服务错误代码 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8a273d40b63766b8eb4910ed85fbfdcdbd769dde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 491449f8cf0a2d65edf9b063fd826e716b9fc5bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>适用于远程数据服务的 Internet 信息服务错误代码
 下表列出了与远程数据服务使用情况相关的 Microsoft® Internet 信息服务 (IIS) 错误代码。 低两个字节的正十进制转换，显示完整的错误代码和十六进制值的负十进制转换。

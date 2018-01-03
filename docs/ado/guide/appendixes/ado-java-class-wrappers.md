@@ -3,7 +3,7 @@ title: "ADO Java 类包装 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44a9b6f6eeedd29bf8dacd69e07bc0d64c7161c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9fa7bcb09520fba5a43223abb63b317a3d4434be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java 类包装
 此代码声明的 ADO 实例[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装并初始化它，在相同的代码行上。 此外，它声明的变量中的自变量的每个[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)和[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)（因为不支持 Java 枚举类型）。 打开，并关闭**记录集**对象。 只设置为 NULL 的 Rs1 计划以 Java 执行其系统和间歇性版本的未使用的对象时释放该变量。  

@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,7 +210,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="bkmk_AccessInMemTables"></a> 访问辅助副本上的内存优化表  
  次要副本上的事务隔离级别与主要副本上的事务隔离级别相同，都可以与内存优化表结合使用。 建议你将会话级的隔离级别设置为 READ COMMITTED，将数据库级选项 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设置为 ON。 例如：  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -237,12 +237,12 @@ GO
   
     |可读辅助副本？|启用了快照隔离或 RCSI 级别隔离？|主数据库|辅助数据库|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |否|否|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
+    |是|是|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
     |否|是|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
-    |是|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |是|是|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
     |是|是|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
-##  <a name="bkmk_RelatedTasks"></a> 相关任务  
+##  <a name="bkmk_RelatedTasks"></a>相关任务  
   
 -   [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   

@@ -3,8 +3,11 @@ title: "SQL Server 2016 Integration Services 中的新增功能 | Microsoft Docs
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -157,16 +160,16 @@ ms.lasthandoff: 12/04/2017
   
 -   从旧版 SQL Server 还原数据库。  
   
--   在升级 SQL Server 实例之前，未从 AlwaysOn 可用性组中删除数据库。 这样可以防止数据库自动升级。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)。  
+-   在升级 SQL Server 实例之前，未从 AlwaysOn 可用性组中删除数据库。 这样可以防止数据库自动升级。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)。  
   
- 有关详细信息，请参阅 [SSIS 目录 (SSISDB)](../integration-services/service/ssis-catalog.md)。 
+ 有关详细信息，请参阅 [SSIS 目录 (SSISDB)](../integration-services/catalog/ssis-catalog.md)。 
 
 ####  <a name="AlwaysOn"></a> 支持 SSIS 目录中的 AlwaysOn  
  AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组支持的故障转移环境适用于一组可以共同进行故障转移的离散用户数据库（称为可用性数据库）。 有关详细信息，请参阅 [AlwaysOn 可用性组](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  SSIS 在 SQL Server 2016 中引入了新功能，可以轻松地将其部署到集中式 SSIS 目录（即 SSISDB 用户数据库）。 为了确保 SSISDB 数据库及其内容（项目、包、执行日志等）的高可用性，可以将 SSISDB 数据库添加到 AlwaysOn 可用性组（其他用户数据库也是如此）。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
   
- 有关如何为 SSISDB 启用 Always On 的详细概述和分步说明，请参阅 [SSIS 目录](../integration-services/service/ssis-catalog.md)。  
+ 有关如何为 SSISDB 启用 Always On 的详细概述和分步说明，请参阅 [SSIS 目录](../integration-services/catalog/ssis-catalog.md)。  
 
 ####  <a name="IncrementalDeployment"></a> 增量包部署  
 增量包部署功能允许你将一个或多个包部署到现有的或新的项目，无需部署整个项目。 可使用下述工具以增量方式部署包。  
@@ -316,7 +319,7 @@ ms.lasthandoff: 12/04/2017
 ### <a name="better-install-experience"></a>改进安装体验
 
 ####  <a name="Upgrade"></a> 当 SSISDB 属于某个可用性组时，会阻止升级  
- 如果 SSIS 目录数据库 (SSISDB) 属于某个 AlwaysOn 可用性组，则必须从该可用性组中删除 SSISDB，升级 SQL Server，然后再将 SSISDB 重新添加到该可用性组。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)。  
+ 如果 SSIS 目录数据库 (SSISDB) 属于某个 AlwaysOn 可用性组，则必须从该可用性组中删除 SSISDB，升级 SQL Server，然后再将 SSISDB 重新添加到该可用性组。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)。  
 
 ### <a name="better-design-experience"></a>改进设计体验
 

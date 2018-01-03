@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,21 +20,21 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252c78c0d21d6a7bc20a969713f265735f4f9dfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dd2fb33456c14e995a5fb323d4e5bbe56f5c10d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>创建和发布业务规则  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在“业务规则”页上，从“模型”下拉列表中选择一个模型。  
   
-4.  从“实体”下拉列表中选择一个实体。  
+4.  从  “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  仅针对包括验证操作的规则发送通知。  
   
-10. 在“If”  块下，单击“添加” 。 此时，系统会显示一个面板。  
+10. 在“If”  块下，单击“添加” 。 此时将显示一个面板。  
   
-11. 从“属性”下拉列表中选择一个属性。  
+11. 从  “属性”下拉列表中选择一个属性。  
   
 12. 从“运算符”下拉列表中选择一个条件。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 15. 也可以向规则添加多个条件。 有关详细信息，请参阅[向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)。  
   
-16. 在“Then”  块下，单击“添加”  。 此时，系统会显示一个面板。  
+16. 在“Then”  块下，单击“添加”  。 此时将显示一个面板。  
   
 17. 从“属性”下拉列表中选择一个属性。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 21. （可选）若要添加“Else”  操作，请完成以下步骤。  
   
-    1.  在“Else”  块下，单击“添加” 。 此时，系统会显示一个面板。  
+    1.  在“Else”  块下，单击“添加” 。 此时将显示一个面板。  
   
     2.  从“属性”下拉列表中选择一个属性。  
   
@@ -105,16 +105,16 @@ ms.lasthandoff: 11/20/2017
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个业务规则，系统都会在网格中添加一行（其中包含六列）。 下面介绍了这些列。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
-|状态|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Name|业务规则名称。|  
+|“登录属性”|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|“属性”|业务规则名称。|  
 |Description|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
 |通知|指定要向其发送电子邮件通知的选定用户或组。|  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
   
 -   通过以下过程之一将业务规则应用到数据：  
   

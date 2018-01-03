@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e21ab2cdfc462485bf15b741dbe6e795c0833de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  下表列出了值的类型。  
   
-|值名称|说明|值的类型|  
+|值名称|Description|值的类型|  
 |----------------|-----------------|-------------------|  
 |执行值|针对包执行的特定实例赋予的值。 此赋值将覆盖所有其他值，但仅应用于包执行的单个实例。|文字|  
 |服务器值|在将项目部署到 Integration Services 服务器后在项目范围内赋予参数的值。 此值将覆盖设计默认值。|文字或环境变量引用|  
@@ -122,13 +122,13 @@ ms.lasthandoff: 11/20/2017
   
 3.  为列表自身中或 **“属性”**窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |属性|Description|  
+    |“属性”|Description|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |“值”|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必需|需要首先指定并非设计默认值的值，包才能执行。|  
+    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
     |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
     > **注意：**在向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
@@ -153,13 +153,13 @@ ms.lasthandoff: 11/20/2017
   
 4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”**和 **“必需”** 属性输入值。  
   
-    |属性|Description|  
+    |“属性”|Description|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |“值”|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必需|需要首先指定并非设计默认值的值，包才能执行。|  
+    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
     |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 “参数化”对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **属性**  
  选择要与参数相关联的任务属性。 此列表包含可参数化的所有属性。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/20/2017
  **Description**  
  指定参数的说明。  
   
- **值**  
+ **ReplTest1**  
  指定参数的默认值。 这也称作设计默认值，以后在部署时可以覆盖该值。  
   
  **范围**  

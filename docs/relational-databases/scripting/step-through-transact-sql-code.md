@@ -3,9 +3,9 @@ title: "逐句通过 Transact-SQL 代码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,13 +22,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc1cc4305f53fe709a984f9cb16776c2f911b8cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8225e6152e33690fc2a3853d4ed79fc9606c8f9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="step-through-transact-sql-code"></a>逐句通过 Transact-SQL 代码
+# <a name="step-through-transact-sql-code"></a>Transact-SQL 代码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，可以控制在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中运行哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 可在各个语句上暂停调试器，然后查看该位置的代码元素的状态。  
   
 ## <a name="breakpoints"></a>断点  

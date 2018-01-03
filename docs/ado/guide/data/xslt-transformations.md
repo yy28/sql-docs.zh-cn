@@ -3,7 +3,7 @@ title: "XSLT 转换 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fb8a2fc948c7793ed07076f338c230350d6abb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c06ce17a1f239589f1274e1efa930d8142a63118
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 可将 XSLT 应用到生成的 XML 将其转换为另一种格式。 了解在 ADO 中的 XML 格式可帮助在开发可以将它转换为更加友好的用户的窗体的 XSLT 模板。  
   
  例如，你知道记录集的每个行被另存为 rs： 数据元素内的 z： 行元素。 同样，每个字段的记录集保存为此元素的属性值对。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  以下的 XSLT 脚本可以应用到显示上一节中将其转换成 HTML 表的 XML，在浏览器中显示：  
   
 ```  

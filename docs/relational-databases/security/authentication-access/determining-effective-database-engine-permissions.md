@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>确定有效的数据库引擎权限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 >  * 旧系统和新系统有类似之处。 例如，`sysadmin` 固定服务器角色中的成员身份就类似于拥有 `CONTROL SERVER` 权限。 但是，这两个系统并不完全相同。 例如，如果某个登录名仅拥有 `CONTROL SERVER` 权限，而某个存储过程检查 `sysadmin` 固定服务器角色中的成员身份，则权限检查将会失败。 反之亦然。 
 
 
-## <a name="summary"></a>摘要   
+## <a name="summary"></a>“摘要”   
 * 服务器级权限可以来自于固定服务器角色或用户定义的服务器角色中的成员身份。 每个人都属于 `public` 固定服务器角色，接收其中分配的任何权限。   
 * 服务器级权限可以来自于授予登录名或用户定义的服务器角色的权限。   
 * 数据库级权限可以来自于固定数据库角色中的成员身份，或者每个数据库中用户定义的数据库角色中的成员身份。 每个人都属于 `public` 固定数据库角色，接收其中分配的任何权限。   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 固定服务器角色和固定数据库角色拥有不可更改的预先配置的权限。 若要确定谁是固定服务器角色的成员，请执行以下查询。    
 >  [!NOTE] 
 >  不适用于无法使用服务器级权限的 SQL 数据库或 SQL 数据仓库。 SQL Server 2012 中已添加 `sys.server_principals` 的 `is_fixed_role` 列。 更低版本的 SQL Server 不需要此列。  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * 此查询将检查 master 数据库中的表，但可以在本地产品上的任何数据库中执行此查询。 
 
 若要确定谁是固定数据库角色的成员，请在每个数据库中执行以下查询。
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ SELECT DP1.name AS DatabaseRoleName,
 以下查询返回在服务器级别授予或拒绝的权限列表。 只能在 master 数据库中执行此查询。   
 >  [!NOTE] 
 >  不能在 SQL 数据库或 SQL 数据仓库中授予或查询服务器级权限。   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>数据库权限
 
 以下查询返回在数据库级别授予或拒绝的权限列表。 只能在每个数据库中执行此查询。   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 可将权限表中的每个权限类联接到其他提供有关该安全对象类的信息的系统视图。 例如，以下查询提供受权限影响的数据库对象的名称。    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -152,7 +152,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
 使用 `HAS_PERMS_BY_NAME` 函数可以确定某个特定用户（在本例中为 `TestUser`）是否拥有某个权限。 例如：   
-```tsql
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

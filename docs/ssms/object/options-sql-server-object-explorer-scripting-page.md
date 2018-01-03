@@ -3,7 +3,7 @@ title: "选项（SQL Server 对象资源管理器 -“脚本”页）| Microsoft
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b49bce06a339326d1458827f2712130c725453d3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd88ab1a30053aed5bbf012b95dfde6dbf888d68
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>选项（SQL Server 对象资源管理器 -“脚本”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此页可设置脚本选项，以应用于对象资源管理器中对象上下文菜单上的以下命令：  
@@ -37,10 +37,10 @@ ms.lasthandoff: 12/05/2017
   
 -   本页也可用于设置“生成 SQL Server 脚本向导”的脚本选项默认值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 “编辑”和“修改”命令产生的结果可能与相同选项设置的“生成 <object> 脚本”命令产生的结果不同。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
   
 ### <a name="general-scripting-options"></a>常规脚本选项  

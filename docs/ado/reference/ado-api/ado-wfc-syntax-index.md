@@ -1,11 +1,13 @@
 ---
 title: "ADO-WFC 语法索引 |Microsoft 文档"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -17,11 +19,11 @@ caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 3c8599fd7267367a8e34664c392f04e11f8bebe7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 73b44900658d4923ef56afaa352e88fc36c2e16b
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO-WFC 语法索引
 ADO 语言参考使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 此索引是对基于 ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 语言参考主题的交叉引用。 当在语法差异并出现时，此索引，而不是语言参考主题中的语法列表中使用这些函数的签名。  

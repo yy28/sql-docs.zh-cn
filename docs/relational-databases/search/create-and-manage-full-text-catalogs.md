@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]全文目录是适用于一组全文检索的逻辑容器。 在创建全文索引之前，必须创建全文目录。
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>使用 Transact-SQL 创建全文目录
 使用 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。 例如：
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 下表列出了与全文目录相关的属性。 此信息可用于全文搜索的管理和故障排除。 
   
-|属性|说明|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|区分重音设置。|
 |**ImportStatus**|是否将导入全文目录。|  

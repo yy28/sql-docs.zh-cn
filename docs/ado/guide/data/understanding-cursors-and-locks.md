@@ -3,7 +3,7 @@ title: "了解游标和锁定 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 183fb439f3cd120dcc5620c3b2c08bd2788f70d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
 请务必了解让您可以选择应用程序的数据访问要求的最佳和最有效的光标类型游标的工作方式。 小于比最佳的光标配置可以使数据访问操作非常缓慢。  

@@ -21,11 +21,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2f69e34f9d4fbbe6514cc2350ca2b14c2685ce8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 |||  
 |-|-|  
-|视图|说明|  
+|“查看”|Description|  
 |[sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|标识外部表。|  
 |[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|标识外部数据源。|  
 |[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|标识外部文件格式。|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/18/2017
   
      记录运行时间最长的查询的执行 ID。  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/18/2017
   
     -   DMS：表示 PolyBase 数据移动服务操作。 继续执行步骤 3b。  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/18/2017
   
          使用上一步中记录的执行 ID 和步骤索引。 使用上一步中记录的执行 ID 和步骤索引。  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/18/2017
   
          使用上一步中记录的执行 ID 和步骤索引。  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/18/2017
   
      使用上一步中记录的执行 ID 和步骤索引。  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   

@@ -3,9 +3,9 @@ title: "Transact-SQL 代码片段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b893aabd8a6c602b55365e4658f8f02cc4fc30
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 代码段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段是一个模板，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句块的基本结构。 当您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中添加语句时，可以将该代码段用作起点。 您可以插入随 SQL Server 一起提供的预定义代码段，也可以创建您自己的代码段。  
@@ -30,8 +30,8 @@ ms.lasthandoff: 11/17/2017
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何插入现有代码段，如 CREATE TABLE 或 SELECT 代码段。|[插入 Transact-SQL 代码段](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|介绍如何在 BEGIN、IF 或 WHILE 块中加入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|[插入外侧 Transact-SQL 代码段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
+|介绍如何插入现有代码段，如 CREATE TABLE 或 SELECT 代码段。|[插入 Transact-SQL 代码片段](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
+|介绍如何在 BEGIN、IF 或 WHILE 块中加入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|[插入外侧 Transact-SQL 代码片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
 |介绍如何在插入代码段后完成生成完整的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句块。|[完成 Transact-SQL 代码段](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |介绍如何生成自己的自定义代码段，并将其添加到一组 SQL Server 代码段。|[添加 Transact-SQL 代码段](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   

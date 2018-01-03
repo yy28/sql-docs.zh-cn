@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 290696ab631e76cca038799cde6973d568f50c0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 13f707d8d745cfcaf5a1dc63ecca96297cb04696
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ ms.lasthandoff: 11/20/2017
 
 2.  在标准工具栏上，单击“新建查询”。
 
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 
   
-```tsql 
+```sql 
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

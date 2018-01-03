@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5af311f2c8957a3d24dfbcaeecf421f04b6467b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcb3ba499f02c5e82bff0027cfa9085e525b681a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="migrating-computed-columns"></a>迁移计算列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="non-persisted-computed-columns"></a>非持久化计算列  
  若要模拟非持久化计算列的效果，请在内存优化的表上创建一个视图。 在定义该视图的 SELECT 语句中，将计算列定义添加到该视图中。 除了在本机编译的存储过程中以外，使用计算列中的值的查询应从该视图进行读取。 在本机编译的存储过程中，应根据计算列定义更新任何 select、update 或 delete 语句。  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -58,7 +58,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>持久化计算列  
  若要模拟持久化计算列的效果，请创建一个存储过程用于插入到表中，创建另一个存储过程用于更新表。 插入或更新表时，调用这些存储过程以执行这些任务。 在存储过程中，根据输入内容算出计算字段的值，方式很像在基于磁盘的原始表上定义计算列。 然后，在存储过程中按需插入或更新表。  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  

@@ -3,7 +3,7 @@ title: "获取数据 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4336c13df5d04f356c83141c5a98653da516a6a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63e18be6bdc2505f939d6d6f7dca4a79bfc96ee2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-data"></a>获取数据
 [ADO 基础知识](../../../ado/guide/data/ado-fundamentals.md)，和[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)示例具体而言，引入中创建 ADO 应用程序涉及四个主要操作： 获取数据、 正在检查的数据、 编辑数据和更新数据。 本部分讨论了更多详细信息中的获取数据。  

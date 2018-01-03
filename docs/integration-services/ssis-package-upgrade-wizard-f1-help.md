@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59869c0fdcb73fc30ee9bc763e8665f05f71df90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
   使用 SSIS 包升级向导可将由较早版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建的包升级到当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的包格式。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS 升级向导
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **不再显示此页。**  
  下次打开向导时跳过“欢迎”页。  
  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
  **包源**  
  选择包含要升级包的存储位置。 此选项具有下表所列的值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**“文件系统”**|指示要升级的包位于本地计算机上的文件夹中。<br /><br /> 若要使向导在升级这些包前备份原始包，必须在文件系统中必须存储原始包。 有关详细信息，请参阅操作指南主题。|  
 |**SSIS 包存储区**|指示要升级的包位于包存储区中。 包存储区由一组 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理的系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **Package source** 。|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
  **文件夹**  
  键入要升级的包所在的文件夹名称或单击“浏览”找到该文件夹。  
   
- **浏览**  
+ **“浏览”**  
  浏览找到要升级的包所在的文件夹。  
   
 ### <a name="package-source-dynamic-options"></a>包源动态选项  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **使用 SQL Server 身份验证**  
  选择此选项可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器。 如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
- **用户名**  
+ **User name**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证用于连接到服务器的用户名。  
   
  **密码**  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **包源**  
  指定存储升级包的位置。 此选项具有下表所列的值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**“文件系统”**|指示将升级的包将保存到本地计算机上的文件夹中。|  
 |**SSIS 包存储区**|指示升级的包将保存到 Integration Services 包存储区中。 包存储区由一组 Integration Services 服务管理的文件系统文件夹组成。 有关详细信息，请参阅[包管理（SSIS 服务）](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 选择此值将显示相应的动态选项 **“包源”** 。|  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
  **文件夹**  
  键入要保存升级包的文件夹的名称，或单击“浏览”找到该文件夹。  
   
- **浏览**  
+ **“浏览”**  
  浏览找到将保存已升级包的文件夹。  
   
 ### <a name="package-source-dynamic-options"></a>包源动态选项  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **使用 SQL Server 身份验证**  
  选择此选项可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器。 如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
- **用户名**  
+ **User name**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到服务器时使用的用户名。  
   
  **密码**  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [使用 SSIS 包升级向导升级 Integration Services 包](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **更新连接字符串以使用新的提供程序名称**  
  更新连接字符串以使用当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的下列提供程序的名称：  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="select-packages-page"></a>“选择包”页
   可以使用 **“选择包”** 页选择要升级的包。 此页列出了在向导的 **“选择源位置”** 页上指定的位置中存储的包。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **现有包名称**  
  选择一个或多个要升级的包。  
   
@@ -215,21 +215,21 @@ ms.lasthandoff: 11/20/2017
 ## <a name="complete-the-wizard-page"></a>“完成向导”页
   可以使用 **“完成该向导”** 页查看并确认所选的包升级选项。 这是向导的最后一页，您可以返回并更改向导此会话的选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **选项摘要**  
  查看您在向导中选择的升级选项。 若要更改任意选项，请单击 **“上一步”** 返回到向导前面的页
  
 ## <a name="upgrading-the-packages-page"></a>“正在升级包”页
   可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **消息窗格**  
  在升级过程中显示进度消息和摘要信息。  
   
  **操作**  
  查看升级中的操作。  
   
- **状态**  
+ **“状态”**  
  查看每个操作的结果。  
   
  **消息**  

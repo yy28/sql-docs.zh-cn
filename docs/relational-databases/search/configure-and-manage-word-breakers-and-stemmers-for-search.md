@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]断字符和词干分析器用于对所有全文检索数据执行语言分析。 语言分析执行下述两项操作：
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 
 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索所支持的语言的列表，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 如果一种语言存在于该列表中，则说明已为该语言注册断字符。 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ SELECT * FROM sys.fulltext_languages
 
 若要查看已注册断字符组件的列表，请使用以下语句。
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ GO
   
 若要查看特定列的断字符语言，请运行以下语句。
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -99,7 +99,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>有关 MSSQLSERVER_30053 错误的信息
   
-|属性|“值”|
+|“属性”|ReplTest1|
 |-|-|
 |产品名称|SQL Server|  
 |事件 ID|30053|  

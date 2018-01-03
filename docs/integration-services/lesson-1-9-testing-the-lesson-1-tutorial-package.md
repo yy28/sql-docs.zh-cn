@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c8cd5718bca93ff1384a2f2df15dac5c80627414
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3e479bd03a7907918b6b09758ae86bf65506ef4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>第 1-9 课 - 测试第 1 课教程包
 在本课中，已经完成了下列任务：  
@@ -40,11 +40,11 @@ ms.lasthandoff: 11/20/2017
   
 **控制流**  
   
-![包中的控制流](../integration-services/media/task9lesson1control.gif "包中的控制流")  
+![包中的控制流](../integration-services/media/task9lesson1control.gif "Control flow in package")  
   
 **数据流**  
   
-![包中的数据流](../integration-services/media/task9lesson1data.gif "包中的数据流")  
+![包中的数据流](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>运行 Lesson 1 教程包  
   

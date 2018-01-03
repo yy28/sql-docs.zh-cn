@@ -3,7 +3,7 @@ title: "还原 SQL Server Management Studio 默认配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f9f8e7064ff8e3735dd31d6727c1cb8329584e89
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b17d30c9849223b3c7ef868ea1a9ca8b45a00663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>课程 1-8 - 还原 SQL Server Management Studio 默认配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 不熟悉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的用户可能会因疏忽而关闭或隐藏窗口，并且无法将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还原为原始布局。 下列步骤可将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还原为默认环境布局。  

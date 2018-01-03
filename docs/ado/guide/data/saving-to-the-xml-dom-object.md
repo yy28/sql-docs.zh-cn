@@ -3,7 +3,7 @@ title: "将保存到 XML DOM 对象 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dbb2e7b73deba13ca20facee3301ea7344b95fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c16e724cd4a6e66d377da20a1b5b575941235b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="saving-to-the-xml-dom-object"></a>保存到 XML DOM 对象
 下面的 Visual Basic 代码中所示，你可以向 MSXML DOM 对象的实例的 XML 格式保存记录集：  

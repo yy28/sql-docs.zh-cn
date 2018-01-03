@@ -3,7 +3,7 @@ title: "设置 DCOM 流封送处理格式 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5addd2044189538b95e4023230653e6011e087b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 370958ce7f66aa7a87296f47884b62a08935fae0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>设置 DCOM 流格式封送处理
 使用组件从 RDS 1.5 或更早版本的客户端计算机不符合使用组件从 RDS 2.0 或更高版本的服务器。 用作基础协议使用 DCOM，RDS 2.0 或更高版本的支持时，更高效地传输[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 如果你的客户端运行组件从 RDS 1.5 或更早版本，则可以设置服务器以使用以前的 RDS 支持 （称为 RDS 1.0） 或更高版本的 RDS 支持 (称为 RDS 2.0 或更高版本)。 设置以下注册表项之一：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 \CLSID\[58ECEE30-E715-11CF-B0E3-00AA003F000F}\ADTGOptions]"MarshalFormat"="RDS10"  
 ```  
   
- - 或 -  
+ -或 -  
   
 ```  
 [HKEY_CLASSES_ROOT]  

@@ -3,7 +3,7 @@ title: "对国际数据使用查询和视图设计器 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 562e347f9f51230c41358545e93cc970743a3f74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>对国际数据使用查询和视图设计器 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
   
 在“条件”窗格中以本地特定格式输入数据时，查询和视图设计器会在 SQL 窗格中将其自动转换为 ANSI 格式。 例如，如果区域设置设置为“标准德语”，则可以在“条件”窗格中以类似于“31.12.96”的格式输入数据。 但是，该日期在 SQL 窗格中将以 ANSI 日期时间格式显示为 `{ ts '1996-12-31 00:00:00' }.` ，如果直接在 SQL 窗格中输入数据，则必须以 ANSI 格式输入。  
   
-## <a name="sort-order"></a>排序顺序  
+## <a name="sort-order"></a>“排序顺序”  
 查询中数据的排序顺序由数据库决定。 Windows“区域设置”对话框中设置的选项不影响查询的排序顺序。 但是，在任何特定查询中，可以请求以特定的顺序返回行。  
   
 ## <a name="using-double-byte-characters"></a>使用双字节字符  

@@ -3,7 +3,7 @@ title: "Visual c + + ADO 编程 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8decc959840898d0b82c86c0d955b29a7affddde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 编程
 ADO API 参考描述 ADO 应用程序编程接口 (API) 使用到 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员虽然目标的受众是所有用户，但采用 Visual Basic，Visual c + + 等各种语言 (具有和没有**#import**指令)，和 Visual J + + （与 ADO/WFC 类包）。  
@@ -226,7 +226,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```  
   
- - 或 -  
+ -或 -  
   
 ```  
 Dim rst As ADODB.Recordset  
@@ -245,14 +245,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```  
   
- - 或 -  
+ -或 -  
   
 ```  
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```  
   
- - 或 -  
+ -或 -  
   
 ```  
 _RecordsetPtr  rs;  

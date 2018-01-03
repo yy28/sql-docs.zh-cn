@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始， **PASSWORD** 和 **MEDIAPASSWORD** 选项不再可用于创建备份。 不过，您仍可以还原使用密码创建的备份。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户 **必须** 具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  展开“数据库”，选择用户数据库，或展开“系统数据库”，选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再单击“备份”。 将出现 **“备份数据库”** 对话框。  
+3.  右键单击数据库，指向 **“任务”**，再单击 **“备份”**。 将出现 **“备份数据库”** 对话框。  
 
   #### <a name="general-page"></a>**“常规”页**
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
 20. 指定备份集何时过期以及何时可以覆盖备份集而不用显式跳过过期数据验证：  
   
-    -   若要使备份集在特定天数后过期，请单击“之后”（默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
+    -   若要使备份集在特定天数后过期，请单击 **“之后”**（默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
          默认值在“服务器属性”对话框（位于“数据库设置”页上）的“默认备份媒体保持期（天）”选项中设置。 若要访问它，请在对象资源管理器中右键单击服务器名称，选择属性，再选择“数据库设置”页。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 12/05/2017
 
 2.  展开“数据库”，右键单击 `Sales`，然后指向“任务”，再单击“备份...”。
 
-3.  单击 **“确定”**。
+3.  单击“确定” 。
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.完整备份到非默认位置的磁盘**
 在此示例中，将 `Sales` 数据库备份到位于 `E:\MSSQL\BAK`的磁盘。  之前已执行 `Sales` 的备份。
@@ -180,9 +180,9 @@ ms.lasthandoff: 12/05/2017
 
 6.  在“文件名”文本框中输入 `E:\MSSQL\BAK\Sales_20160801.bak`。
 
-7.  单击 **“确定”**。
+7.  单击“确定” 。
 
-8.  单击 **“确定”**。
+8.  单击“确定” 。
 
 #### <a name="c--create-an-encrypted-backup"></a>**C.创建加密备份**
 在此示例中，将已加密的 `Sales` 数据库备份到默认备份位置。  已创建  [**数据库主密钥**](../../relational-databases/security/encryption/create-a-database-master-key.md) 。  已创建名为  [**的**](../../t-sql/statements/create-certificate-transact-sql.md) 证书 `MyCertificate`。 可以在[创建加密备份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)中找到有关创建**数据库主密钥**和**证书**的 T-SQL 示例。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 12/05/2017
 
 6.  从“证书”或“非对称密钥”下拉列表中选择 `MyCertificate`。
 
-7.  单击 **“确定”**。
+7.  单击“确定” 。
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.备份到 Azure Blob 存储服务**
 #### <a name="common-steps"></a>**一般步骤**  
@@ -226,7 +226,7 @@ ms.lasthandoff: 12/05/2017
 
     10.  单击“确定” 。
 
-    11.   单击 **“确定”**。
+    11.   单击“确定” 。
 
     **D2.存在共享访问签名，但不存在 SQL Server 凭据**
   5.    在“Azure 存储容器：”文本框中输入 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
@@ -235,7 +235,7 @@ ms.lasthandoff: 12/05/2017
   
   7.    单击“确定” 。
   
-  8.    单击 **“确定”**。
+  8.    单击“确定” 。
 
     **D3.共享访问签名不存在**
   5.    单击“新建容器”按钮，将会打开“连接到 Microsoft 订阅”对话框。  
@@ -244,7 +244,7 @@ ms.lasthandoff: 12/05/2017
   
   7.    单击“选择备份目标”对话框中的“确定”。
   
-  8.    单击 **“确定”**。
+  8.    单击“确定” 。
 
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -268,7 +268,7 @@ ms.lasthandoff: 12/05/2017
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|要备份的数据库。|  
-    |*backup_device* [ **或 PowerShell 在**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
+    |*backup_device* [ **或 PowerShell 在**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项 *o*。 有关某些基本 WITH 选项的信息，请参阅步骤 2。|  
   
 2.  （可选）指定一个或多个 WITH 选项。 下面描述了几个基本 WITH 选项。 有关所有 WITH 选项的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 #### <a name="a-back-up-to-a-disk-device"></a>**A.备份到磁盘设备**  
  下面的示例通过使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建新的介质集，将整个 `FORMAT` 数据库备份到磁盘。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B.备份到磁带设备**  
  下面的示例将完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到磁带上，并将该备份追加到以前的备份中。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C.备份到逻辑磁带设备**  
  下例为某个磁带驱动器创建一个逻辑备份设备， 然后将完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到该设备上。  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

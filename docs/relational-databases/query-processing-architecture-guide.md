@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 
 例如，请看下面的视图：
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 根据此视图，这两个 SQL 语句在基表上执行相同的操作且生成相同的结果：
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ WHERE OrderDate > '20020531';
 
 放置在查询中的视图的提示可能会在视图扩展为访问其基表时与其他提示冲突。 发生这种情况时，查询将返回错误。 例如，请考虑下列视图，它们的定义中包含有表提示：
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 现在假设您输入此查询：
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ WHERE StateProvinceCode = 'WA';
 
 当在包含视图的查询中使用 `FORCE ORDER` 提示时，视图中表的联接顺序将由有序构造中视图的位置决定。 例如，下面的查询将从三个表和一个视图中进行选择：
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 另外， `View1` 的定义显示如下：
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 考虑为在 Server1 上执行的下列查询所生成的执行计划：
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询处理器还可以在查询执行计划中创建动态逻辑，用于必须生成计划时键值未知的 SQL 语句。 例如下面的存储过程：
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法预测每次执行该过程时 `@CustomerIDParameter` 参数将提供什么键值。 因为无法预测键值，所以查询处理器还无法预测必须访问哪个成员表。 为了处理这种情况，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成了具有条件逻辑（称为动态筛选）的执行计划，可基于输入参数值来控制访问哪个成员表。 假设在 Server1 上执行了 `GetCustomer` 存储过程，则执行计划逻辑可以表示如下：
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 该算法将新的 SQL 语句与缓存内现有的未用执行计划相匹配，并要求所有的对象引用完全合法。 例如，在下列 `SELECT` 语句中，第一个语句与现有计划不匹配，而第二个语句匹配：
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ SELECT * FROM Person.Person;
  
 下面两个 `SELECT` 语句之间的唯一区别是 `WHERE` 子句中比较的值不同：
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ WHERE ProductSubcategoryID = 4;
 
 * 在 Transact-SQL 中，使用 `sp_executesql`： 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ WHERE ProductSubcategoryID = 4;
 
 启用强制参数化后，仍会发生简单参数化。 例如，根据强制参数化规则，无法将以下查询参数化：
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ WHERE AddressID = 1 + 2;
 
 请看下面的语句：
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 可以将该语句最后的值 1 指定为一个参数。 关系引擎将假定已指定参数来代替值 1，并在此基础上为此批处理生成执行计划。 由于这种简单参数化，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将认为下列两个语句实质上生成了相同的执行计划，并对第二个语句重用第一个计划：
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ WHERE ProductSubcategoryID = 4;
 
 使用第一种方法，应用程序可以为请求的每个产品执行一个单独的查询：
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 使用第二种方法，应用程序可以执行下列操作： 
 
 1. 准备带参数标记 (?) 的语句：  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ WHERE ProductID = 63;
 
 下例使用理论表名和列名。
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 假设以下索引在 `lineitem` 和 `orders` 表中进行定义：
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用
 * 链接服务器名称  
   系统存储过程 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 用于给 OLE DB 数据源提供服务器名称。 可以在 Transact-SQL 语句中使用由四个部分构成的名称引用这些链接服务器中的对象。 例如，如果 `DeptSQLSrvr` 的一个链接服务器名称是用另一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例定义的，则下面的语句引用该服务器上的一个表： 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用
 * 即席连接器名称  
   在很少引用数据源时， `OPENROWSET` 或 `OPENDATASOURCE` 函数是用连接到链接服务器所需的信息指定的。 之后，可以在 Transact-SQL 语句中使用与引用表相同的方法引用行集： 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` （作为逻辑首列）以及其他可能的索引键列执行某一条件下的查找或扫描操作，然后，对于符合第一级查找操作的条件的每个不同值，再针对一个或多个其他列执行不同条件下的二级查找。 也就是说，这种称为“跳跃扫描”的操作允许查询优化器基于某一条件来执行查找或扫描操作以确定要访问的分区，然后在该运算符内执行一个二级索引查找操作以返回这些分区中符合另一个不同条件的行。 例如，请考虑以下查询。
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 对于本示例，假设定义为 `T(a, b, c)`的表 T 在 a 列进行了分区，并在 b 列有聚集索引。 表 T 的分区边界由以下分区函数定义：
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 为演示此信息在图形执行计划输出和 XML 显示计划输出中的显示方式，请考虑对已分区表 `fact_sales`的以下查询。 此查询将更新两个分区中的数据。 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 > [!NOTE]
 > 本示例要向表中插入超过 100 万行数据。 根据您的硬件情况，运行本示例可能需要几分钟时间。 在执行本示例之前，请确保您有超过 1.5 GB 的可用磁盘空间。 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

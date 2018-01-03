@@ -3,9 +3,9 @@ title: "交互搜索文档 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 894d326c58a11f4c284ef91a3b2ff5bacb4b498b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b85af6717ff7493bdfff482a88015cf47dac1bf9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”对话框，可以搜索一个或多个打开的文件或窗口，并逐个移动到每个搜索匹配项。 该技术允许您在匹配项周围的文本上下文中检查每个单独的搜索匹配项。 **“查找和替换”** 对话框还提供了执行大容量查找操作和在报表格式中检查搜索匹配项的选项。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  单击 **“替换”**，并连续单击 **“替换”** ，直到替换了最后一个文件中的最后一个匹配项。 单击 **“查找下一个”** 可以跳过不想替换的匹配项。  
   
-     - 或 -  
+     -或 -  
   
      选择 **“全部替换”** 以替换所有匹配项。 然后将出现消息框，列出替换的总数。  
   

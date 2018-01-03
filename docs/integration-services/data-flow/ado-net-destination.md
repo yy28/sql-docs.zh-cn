@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  ADO NET 目标具有一个常规输入和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  如果 SQL Server 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标之前使用“执行 SQL 任务”来启用 IDENTITY_INSERT，并在之后再次禁用它。 （标识列属性为列指定一个增量值。 使用 SET IDENTITY_INSERT 语句，可将源表中的显式值插入目标表中的标识列。）  
 >   
->   若要成功运行 SET IDENTITY_INSERT 语句和加载数据，须执行以下操作。 
->       1. 对“执行 SQL 任务”和 ADO NET 目标使用相同的 ADO.NET 连接管理器。 
->       2. 在连接管理器上，将“RetainSameConnection”属性和“MultipleActiveResultSets”属性设置为“True”。 
->       3. 在 ADO.NET 目标上，将“UseBulkInsertWhenPossible”属性设置为“False”。 
+>   若要成功运行 SET IDENTITY_INSERT 语句和加载数据，须执行以下操作。  
+>       1.对“执行 SQL 任务”和 ADO NET 目标使用相同的 ADO.NET 连接管理器。  
+>       2.在连接管理器上，将“RetainSameConnection”属性和“MultipleActiveResultSets”属性设置为“True”。  
+>       3.在 ADO.NET 目标上，将“UseBulkInsertWhenPossible”属性设置为“False”。   
 >
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“ADO NET 目标编辑器”**中，单击 **“映射”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“ADO NET 目标编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入或输出**  
  查看输入的名称。  
   

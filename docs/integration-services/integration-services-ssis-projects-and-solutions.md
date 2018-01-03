@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1b5a5839699b44fe0e5a2ff7d08ea7c663915a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/20/2017
   
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
- ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "项目属性对话框中的 TargetServerVersion 属性")  
+ ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
@@ -117,11 +117,11 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>选择项目的目标版本及其包  
   
-1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”以打开该项目的属性页。  
+1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。  
   
 2.  在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
-     ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "项目属性对话框中的 TargetServerVersion 属性")  
+     ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  你可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
 
@@ -172,7 +172,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  或者，编辑项目的名称和位置。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 ### <a name="add-an-existing-project-to-a-solution"></a>向解决方案添加现有项目  
   

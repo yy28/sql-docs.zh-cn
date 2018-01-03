@@ -3,7 +3,7 @@ title: "保留的分层记录集 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4780fb2fe34b4d742365079eed06885146cbc0a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4922bd5b3166fcb13e0c69f0e226b33656e03a9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persisting-hierarchical-recordsets"></a>持久化分层记录集
 你可以保存分层结构**记录集**到通过调用 ADTG 或 XML 格式的文件中[保存](../../../ado/reference/ado-api/save-method.md)方法。 但是，两个限制适用保存分层时**记录集**以 XML 格式的 s： 如果无法将它们以 xml 格式保存分层**记录集**包含挂起的更新，且不能保存参数化分层**记录集**。  

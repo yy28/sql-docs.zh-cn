@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b7665fa4beaf0dc48f336c7f706f1a12ed4865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 下面是 *YourSession*的 T-SQL CREATE EVENT SESSION 语句，该语句是通过在 UI 中单击生成的：
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 在 CREATE EVENT SESSION 语句之前，你可能想要在名称已存在的情况下有条件地发出 DROP EVENT SESSION。
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 在创建事件会话时，默认为不自动开始运行该会话。 你可以随时使用以下 T-SQL ALTER EVENT SESSION 语句启动或停止事件会话。
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ ALTER EVENT SESSION [YourSession]
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ trace_event_id         3
 > 事件系统始终向你指定的 *.xel* event_file 文件名追加一长串数字。 必须先复制系统提供的完整名称并将其粘贴到 SELECT 中，才能从该文件运行以下 SELECT。
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -430,7 +430,7 @@ SELECT
 下表列出了用于扩展事件的术语，并描述了它们的含义。
 
 
-| 术语 | 说明 |
+| 术语 | Description |
 | :--- | :---------- |
 | 事件会话 | 一种构造，该构造以一个或多个事件为中心，再加上一些支持项（如操作或目标）。 CREATE EVENT SESSION 语句用于构造每个事件会话。 你可以随时使用 ALTER 来启动和停止事件会话。 <br/> <br/> 事件会话有时简称为 *会话*，但前提是上下文表明了它指的是 *事件会话*。 <br/> <br/> 以下文章介绍了有关事件会话的更多详细信息： [SQL Server 扩展事件会话](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
 | 事件 | 系统中发生的由活动事件会话监视的特定事件。 <br/> <br/> 例如， *sql_statement_completed* 事件表示任何给定 T-SQL 语句完成的那一刻。 该事件可以报告其持续时间和其他数据。 |
@@ -446,7 +446,7 @@ SELECT
 以下 T-SQL SELECT 语句将为每个名称中包含“sql”（由三个字符组成的字符串）的可用事件返回一行。 当然，你可以编辑 LIKE 值，以搜索不同的事件名称。 该行还会指定包含该事件的包。
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 S
 以下 SELECT...UNION ALL 语句返回的行显示了具有为扩展事件创建事件会话和查询系统目录视图所需的权限的人员。
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ SELECT
 此外，如果你有权暂时 *模拟* 其他帐户，则可以取消注释 [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) 和 REVERT 语句，以便查询其他帐户。
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

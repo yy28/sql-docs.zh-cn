@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a4eea06466e59b0ddb8344dbba5b7d81bf1e97b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5052c8c5d53cccdbabc91b135d1452f89f573f16
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rules-extension-master-data-services"></a>业务规则扩展 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以将用户定义的 SQL 脚本作为预定义条件和操作的扩展进行应用。  
@@ -73,7 +73,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。  
@@ -98,7 +98,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 7.  执行以下操作以将用户定义脚本创建为条件。  
   
-    1.  在“If”  块下，单击“添加”按钮  。 此时，系统会显示一个面板。  
+    1.  在“If”  块下，单击“添加”按钮  。 此时将显示一个面板。  
   
     2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
   
@@ -110,7 +110,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 8.  执行以下操作以将用户定义脚本用作操作。  
   
-    1.  在“Then”  块下，单击“添加”按钮  。 此时，系统会显示一个面板。  
+    1.  在“Then”  块下，单击“添加”按钮  。 此时将显示一个面板。  
   
     2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
   

@@ -3,9 +3,9 @@ title: "“快速监视”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 29db30b65a2ec487cfd56a849b82f645e5bb9e4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4831c5a62987109aba02f29f540fdff908cee5b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 调试器 -“快速监视”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“快速监视”对话框可以在调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码时快速查看一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式（例如变量或参数）的数据类型和值。 若要监视多个表达式，也可以将这些表达式添加到 **“监视”** 窗口。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   右键单击表达式，然后选择“编辑值”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **表达式列表**  
  显示当前选定的表达式。 该下拉列表包含一组表达式，您可以从中选择要显示的表达式。 该列表中的表达式是在当前从 **“调用堆栈”** 窗口中选择的堆栈帧的范围内可用的表达式。 若要显示另一个表达式，可以输入该表达式或从列表中选择它。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持的表达式有：变量、参数和名称以 @@ 开头的系统函数。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  **名称**  
  正在监视的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。  
   
- **值**  
+ **ReplTest1**  
  显示当前向该表达式分配的值。 如果该表达式当前不具有任何值，则显示空白。  
   
  如果表达式的长度超过了 **“值”** 列的宽度，则将指针移动到该表达式的 **“值”** 单元格上方可显示一条工具提示，指示该表达式的完整值。  

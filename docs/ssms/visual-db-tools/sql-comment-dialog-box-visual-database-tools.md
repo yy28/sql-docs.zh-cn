@@ -3,7 +3,7 @@ title: "“SQL 注释”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 039f84ddff175ae8e2830b7e38ee4fc28b54a307
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395fb96d7c98556d62c17858c549287aa7af3d66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>“SQL 注释”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此对话框提供了一个可编辑区域，可以在其中编写查询的详细说明。 若要访问此对话框，请在查询和视图设计器中打开查询或视图，然后在“属性”窗口中选择“SQL 注释”，再单击该属性字段右侧的省略号 (**…**)。  

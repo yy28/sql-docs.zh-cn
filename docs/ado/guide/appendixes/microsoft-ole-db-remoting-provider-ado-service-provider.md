@@ -3,7 +3,7 @@ title: "Microsoft OLE DB 远程处理提供程序 （ADO 服务提供商） |Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbc0d0060a58d1e73fe2df94c598a1fa054abd15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 远程处理提供程序概述
 Microsoft OLE DB 远程处理提供了让客户端计算机上的本地用户以调用在远程计算机上的数据提供程序。 就像你可以像远程计算机上的本地用户，请指定远程计算机的数据提供程序参数。 然后指定远程处理提供程序用于访问远程计算机的参数。 然后，就可以访问远程计算机，就像是本地用户。
@@ -75,7 +75,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
  在 ADO 2.0 中，OLE DB 远程处理提供程序仅可指定的*ActiveConnection*参数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象**打开**方法。 用 ADO 2.1 从开始，提供程序还可以指定在*ConnectionString*参数[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象**打开**方法。
 
  等效于**rds.DataControl**对象[SQL](../../../ado/reference/rds-api/sql-property.md)属性不可用。 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象**打开**方法*源*改为使用自变量。
