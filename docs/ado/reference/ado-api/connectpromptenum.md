@@ -3,7 +3,7 @@ title: "ConnectPromptEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbb4f3f854f319d31f91f8e7f0d8a15cf4263495
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89c339b294a3afc968a6a9f5307d3a06995a7454
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否应显示一个对话框，打开与数据源的连接时提示输入缺少的参数。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|始终提示。|  
+|**adPromptAlways**|@shouldalert|始终提示。|  
 |**adPromptComplete**|2|如果需要更多信息时将提示。|  
 |**adPromptCompleteRequired**|3|如果详细的信息是必需的但不是允许将可选参数，则将提示。|  
 |**adPromptNever**|4|永远不会提示。|  

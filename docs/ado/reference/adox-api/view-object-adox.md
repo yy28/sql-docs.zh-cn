@@ -3,7 +3,7 @@ title: "查看对象 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74f53494e11f46432b57b07ad0d9f42d6c3773f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63cce5bc12fe78ff57007a5d8531547dc6ff23e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-object-adox"></a>视图对象 (ADOX)
 表示经过筛选的记录或一个虚拟表集。 用 ADO 结合使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**视图**对象可以用于添加、 删除或修改视图。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  视图是从其他数据库表或视图创建一个虚拟表。 **视图**对象允许你创建一个视图，而无需知道，或使用提供程序的"创建视图"语法。  
   
  使用的属性**视图**对象，你可以：  

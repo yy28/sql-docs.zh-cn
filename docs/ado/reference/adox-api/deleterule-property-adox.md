@@ -3,7 +3,7 @@ title: "DeleteRule 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c762a5db10cde6d462c4bd0e70fecdd902557e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf68e37ebe6f112b2b7924c487ccd7eb40369bab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 属性 (ADOX)
 指示删除主键时，将执行的操作。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回**长**值可以是之一[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常量。 默认值是**adRINone**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此属性为只读上[密钥](../../../ado/reference/adox-api/key-object-adox.md)已追加到集合的对象。  
   
 ## <a name="applies-to"></a>适用范围  

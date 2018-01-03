@@ -3,7 +3,7 @@ title: "查询方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-method-rds"></a>查询方法 (RDS)
 使用有效的 SQL 查询字符串来返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -48,10 +48,10 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *连接*  
  A**字符串**值，该值包含服务器连接信息。 它类似于[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性。  
   
- *Query*  
+ *“数据集属性”*  
  A**字符串**，它包含 SQL 查询。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  查询应使用数据库服务器的 SQL 的方言。 如果没有与查询执行错误，则返回结果状态。 **查询**方法不执行任何语法上检查**查询**字符串。  
   
 ## <a name="applies-to"></a>适用范围  

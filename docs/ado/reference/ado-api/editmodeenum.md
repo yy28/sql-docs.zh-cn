@@ -3,7 +3,7 @@ title: "EditModeEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9d1a7543dd09644bbda76a7b3f787479deb6a3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d5f1463191ced2f9e4768193ae5c79c5619896a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 指定的记录的编辑状态。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|指示任何编辑操作正在进行。|  
-|**adEditInProgress**|1|指示当前记录中的数据已修改但尚未保存。|  
+|**adEditInProgress**|@shouldalert|指示当前记录中的数据已修改但尚未保存。|  
 |**adEditAdd**|2|指示[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)已调用方法，并且复制缓冲区中的当前记录是一条新记录，不保存到数据库中。|  
 |**adEditDelete**|4|指示当前记录已被删除。|  
   

@@ -3,7 +3,7 @@ title: "WillExecute 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5988a43be066f61019223eb6a501d1bc73e8bc23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件在连接上执行挂起命令之前调用。  
@@ -63,7 +63,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)对象应用此事件通知。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A **WillExecute**由于连接可能发生的事件。  [执行方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)，[执行方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)，或[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*pConnection*参数应始终包含对的有效引用**连接**对象。 如果事件的原因为**Connection.Execute**、 *pRecordset*和*pCommand*参数设置为**执行任何操作**。 如果事件的原因为**Recordset.Open**、 *pRecordset*参数将引用**记录集**对象和*pCommand*参数设置为**执行任何操作**。 如果事件的原因为**Command.Execute**、 *pCommand*参数将引用**命令**对象和*pRecordset*参数设置为**执行任何操作**。  
   
  **WillExecute**允许你检查和修改挂起的执行参数。 此事件可能会返回挂起命令被取消的请求。  

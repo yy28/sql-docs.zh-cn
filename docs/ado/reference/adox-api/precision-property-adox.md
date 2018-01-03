@@ -3,7 +3,7 @@ title: "精度属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56bec31a20963db16346b3cbe67b01182dd190e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16b8471b83283a95998ca6e58047774678d4db63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precision-property-adox"></a>精度属性 (ADOX)
 指示中的数据值的最大精度[列](../../../ado/reference/adox-api/column-object-adox.md)。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回**长**是列中的数据值的最大精度的值时[类型](../../../ado/reference/adox-api/type-property-column-adox.md)属性为数值类型。 **精度**对于所有其他数据类型，将忽略。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  默认值为 0 (**0**)。  
   
  此属性是只读的[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到集合的对象。  

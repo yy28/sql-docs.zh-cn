@@ -3,7 +3,7 @@ title: "Cancel 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b0112431262f9b120bb3006c07e077e968f79c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b9a22787f40d4ac0104db19db0e95d25999e27c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消挂起的异步方法调用的执行。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**取消**终止执行的异步方法调用的方法： 使用调用了方法，即**adAsyncConnect**， **adAsyncExecute**，或**adAsyncFetch**选项。  
   
  下表显示当你使用终止哪些任务**取消**上特定类型的对象的方法。  

@@ -3,7 +3,7 @@ title: "Index 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e7dac3b9494e2c23de547bdf96ba0079a264af9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-property"></a>索引属性
 指示当前对有效的索引名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，该值是索引的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通过名为索引**索引**属性必须之前已声明对基表基础**记录集**对象。 也就是说，索引必须已经声明以编程方式为 ADOX[索引](../../../ado/reference/adox-api/index-object-adox.md)对象，或创建基本表时。  
   
  如果索引不能设置，将发生运行时错误。 **索引**以下情况下，不能设置属性：  

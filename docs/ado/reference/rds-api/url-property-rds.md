@@ -1,11 +1,13 @@
 ---
 title: "URL 属性 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 85c0e3ee8fe805b0cd8a90651e9de2a0fa7f04c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0181a57f4a76985ef926d2038611c3e6bd864142
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="url-property-rds"></a>URL 属性 (RDS)
 指示一个字符串，包含相对或绝对 URL。  
@@ -45,7 +47,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  表示的对象变量**DataControl**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通常情况下，URL 标识的 Active Server Page (.asp) 文件，可以生成返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 因此，用户可以获取**记录集**而无需调用服务器端[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象，或程序的自定义业务对象。  
   
  如果**URL**已设置属性， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)将将更改提交到 URL 指定的位置。  

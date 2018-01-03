@@ -3,7 +3,7 @@ title: "“排序规则”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a18cb703b8df4ef7017be7be1fe73d39de603940
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc4c9a43c9442bed1c09f259f120b1f54b947013
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文档。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 -   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 **(…)**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **SQL 排序规则**  
 在下拉列表中由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定义的排序规则顺序之间进行选择。  
   

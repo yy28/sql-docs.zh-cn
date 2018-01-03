@@ -3,7 +3,7 @@ title: "“需要更改数据类型”对话框 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 629cd7c93550345eccd5c3b56dafebe91c56aff1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fdd762b2fa0fcd1287ecb4488e5258e78305c72
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>“需要更改数据类型”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 当更改参与关系的列的数据类型、长度、小数位数、精度或排序规则时，将显示此对话框。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **是**  
 更改列表中显示的相关列的数据类型属性，以保留现有的关系。  
   

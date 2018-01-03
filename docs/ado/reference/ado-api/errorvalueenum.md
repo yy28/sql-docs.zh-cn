@@ -3,7 +3,7 @@ title: "ErrorValueEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 330141b69b57eb5eff206706ebd3c3fdf2468734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31ced069917c4ba7c3960d0a9dc5fe382c961a2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]
 >  可在 OLE DB 错误传递到 ADO 应用程序。 通常情况下，可以由 Windows 设施代码的标识这些*4*。 例如，0x800***4***。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|无法更改**ActiveConnection**属性**记录集**具有对象**命令**作为其源的对象。|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|服务器无法完成该操作。|  

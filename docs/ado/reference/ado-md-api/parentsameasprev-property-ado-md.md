@@ -3,7 +3,7 @@ title: "ParentSameAsPrev 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c1c8cd042b673c256906035c3a1fcd4ee863a71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4e33af885d000705596e6c457357b98dbc98255
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev 属性 (ADO MD)
 指示是否的父级的此位置[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)前面紧邻的成员的父级的相同。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-values"></a>返回值  
  返回**布尔**值并且是只读的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  仅在支持此属性[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。 从引用此属性时出现错误**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
   
 ## <a name="applies-to"></a>适用范围  

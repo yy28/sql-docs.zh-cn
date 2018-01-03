@@ -3,7 +3,7 @@ title: "Number 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a479b188bc9bab4af8b248b4c40602bc5f380ff7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0313ce53b07724a41491d5db827fc9deb3dae4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="number-property-ado"></a>Number 属性 (ADO)
 指示唯一标识的数字[错误](../../../ado/reference/ado-api/error-object.md)对象。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回**长**可能与之一相对应的值[ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)常量。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**数**属性以确定哪一类错误发生。 属性的值是唯一的编号对应于错误条件。  
   
  [错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合以十六进制格式 (例如，0x80004005) 或 long 类型的值 (例如，2147467259) 返回的 HRESULT。 可以由基础组件，如 OLE DB 或甚至 OLE 本身引发这些 Hresult。 有关这些编号的详细信息，请参阅[错误 (OLE DB)](http://msdn.microsoft.com/en-us/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd)中[OLE DB 程序员参考](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*。*  

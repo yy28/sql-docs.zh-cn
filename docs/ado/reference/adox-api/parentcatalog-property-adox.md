@@ -3,7 +3,7 @@ title: "ParentCatalog 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -46,11 +46,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d0cdd505a30252b603477499c44176957d1dc45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定用于提供对提供程序特定属性的访问的表、 用户或列的对象的父目录。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回[目录](../../../ado/reference/adox-api/catalog-object-adox.md)对象。 设置**ParentCatalog**向打开**目录**允许访问之前追加的表或列的提供程序特定属性**目录**集合。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  某些数据访问接口允许仅在创建要写入的提供程序特定属性值： 即，当表或列追加到其**目录**集合。 若要访问这些属性追加到这些对象之前**目录**，指定**目录**中**ParentCatalog**属性第一个。  
   
  为另一种追加的表或列时，就会出错**目录**比**ParentCatalog**。  

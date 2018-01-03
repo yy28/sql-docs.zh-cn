@@ -3,7 +3,7 @@ title: "WillChangeRecord 和 RecordChangeComplete 事件 (ADO) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a421ba630b9cb9eeafaa2087144b765a64f78b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 522d2385cc2670ed940768f7584d3c9eb7942748
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**事件调用一个或多个记录 （行） 之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)更改。 **RecordChangeComplete**事件时调用后一个或多个记录更改。  
@@ -66,7 +66,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  A**记录集**对象。 **记录集**此事件发生的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A **WillChangeRecord**或**RecordChangeComplete**事件可能会发生的原因如下行中的第一个已更改字段**记录集**操作： [更新](../../../ado/reference/ado-api/update-method.md)，[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)，[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)。 值**记录集**[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)确定哪些操作会导致要发生的事件。  
   
  期间**WillChangeRecord**事件，**记录集**[筛选器](../../../ado/reference/ado-api/filter-property.md)属性设置为**adFilterAffectedRecords**。 在处理该事件时，无法更改此属性。  

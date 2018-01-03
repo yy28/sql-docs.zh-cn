@@ -3,7 +3,7 @@ title: "控件更改到记录集基表 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 034f0f577201d3f0b3b4e38e78e11acb8649884e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表，唯一的架构，唯一目录属性的动态 (ADO)
 使您能够紧密控制特定基础表中的修改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的组上多个基表的联接操作而形成。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**是表、 架构或目录的名称的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由其目录、 架构和表名称唯一标识所需的基表。 当**唯一表**设置属性，值**唯一架构**或**唯一目录**属性用于查找基表。 这是预期的位置，但不是必需的任一或全部**唯一架构**和**唯一目录**之前设置属性**唯一表**属性设置。  
   
  主键值**唯一表**视为整个的主键**记录集**。 这是可用于任何方法，该方法需要主密钥的密钥。  

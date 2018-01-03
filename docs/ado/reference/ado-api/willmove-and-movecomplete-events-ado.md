@@ -3,7 +3,7 @@ title: "WillMove 和 MoveComplete 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4cf136ccd49b461578f7a34941465a54c4e4183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a80edb11d7c580f444236e32ce80623417360f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 **WillMove**事件时调用之前的挂起操作更改中的当前位置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**中当前的位置后，将调用事件**记录集**更改。  
@@ -64,7 +64,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **记录集**此事件发生的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A **WillMove**或**MoveComplete**事件可能导致以下**记录集**操作：[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)，和[Requery](../../../ado/reference/ado-api/requery-method.md)。 这些事件可能由于以下属性：[筛选器](../../../ado/reference/ado-api/filter-property.md)，[索引](../../../ado/reference/ado-api/index-property.md)，[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，和[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)。 如果子级，也会发生这些事件**记录集**具有**记录集**连接的事件和父**记录集**移动。  
   
  必须设置*adStatus*参数**adStatusUnwantedEvent**对每个可能*adReason*若要完全停止任何事件的事件通知的值，包括*adReason*参数。  

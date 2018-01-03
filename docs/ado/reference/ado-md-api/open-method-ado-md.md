@@ -3,7 +3,7 @@ title: "Open 方法 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b80a0a92956315d7d19db5d17a535b6fe2204b6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 320e408489fa3fc2240aaf1986b2468a92706397
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
 检索多维查询的结果，并返回到结果[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
@@ -45,7 +45,7 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  可选。 A **Variant**计算结果为一个字符串，请指定有效的 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量名或连接的定义。 *ActiveConnection*参数指定要在其中打开连接[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 如果您传入的连接定义为此参数，ADO 将打开一个新的连接，使用指定的参数。 *ActiveConnection*参数对应于[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **打开**方法将生成错误，如果未指定的任一参数和及其对应的属性值未尝试打开之前设置**单元集**。  
   
 ## <a name="applies-to"></a>适用范围  

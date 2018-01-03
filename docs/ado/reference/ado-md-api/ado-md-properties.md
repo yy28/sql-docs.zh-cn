@@ -3,7 +3,7 @@ title: "ADO MD 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 |||  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|指示单元集的当前状态。|  
 |[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)|指示当前的成员的类型。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|指示当前对象的明确名称。|  
-|[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指示当前单元格的值。|  
+|[ReplTest1](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指示当前单元格的值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO MD API 参考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

@@ -3,10 +3,10 @@ title: "用户会话 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
 caps.latest.revision: "15"
-ms.openlocfilehash: 11c9325b6a16f92ca4d39438fef2a829af3c14b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca67e05e5dc087da683109d498c45672720cd2f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-sessions"></a>用户会话
 具有适当的权限的登录名可以管理 SQL Server PDW 设备，包括执行这些操作的所有登录名的会话：  

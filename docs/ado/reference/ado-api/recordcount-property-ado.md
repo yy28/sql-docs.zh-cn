@@ -3,7 +3,7 @@ title: "RecordCount 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 950b53501f84bdaebc1cdc0ce554d13860d894bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f33a73aa4aa322d6eb0a00612789f4048a24e85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
 指示中的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回**长**值，该值指示中的记录数**记录集**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**RecordCount**属性来查明多少个记录位于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或光标类型不支持**RecordCount**。 读取**RecordCount**属性关闭**记录集**会导致错误。  
   
  如果**记录集**对象支持近似定位或创建一个书签，??? 也就是说，**支持 (adApproxPosition)**或**支持 (adBookmark)**分别返回**True**??? 此值将为中的记录的精确数目**记录集**，不管是否它已完全填充。 如果**记录集**对象不支持近似定位，此属性可能是大量消耗资源，因为所有记录都将都具有检索和计数以返回准确**RecordCount**值。  

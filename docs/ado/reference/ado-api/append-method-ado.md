@@ -3,7 +3,7 @@ title: "Append 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 将对象追加到集合。 如果该集合为[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，新[字段](../../../ado/reference/ado-api/field-object.md)追加到集合之前，可以创建对象。  
@@ -62,7 +62,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  可选。 A **Variant** ，表示新字段的值。 如果未指定，字段被追加一个 null 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Parameters 集合  
  必须设置[类型](../../../ado/reference/ado-api/type-property-ado.md)属性[参数](../../../ado/reference/ado-api/parameter-object.md)之前追加到的对象[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 如果你选择的可变长度数据类型，还必须设置[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)属性的值大于零。  

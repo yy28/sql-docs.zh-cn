@@ -3,10 +3,10 @@ title: "使用 DNS 转发器来解析非设备 DNS 名称 (AP)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
 caps.latest.revision: "21"
-ms.openlocfilehash: 6e91828bcc64a47d942959a2522af0e53041e027
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6538ec32f141592b6cf21a325b74f3e451e73092
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>使用 DNS 转发器来解析非设备 DNS 名称
 可以在 Active Directory 域服务节点上配置 DNS 转发器 (***appliance_domain*-AD01**和 ***appliance_domain*-AD02**)你分析平台系统的设备为允许脚本和访问外部服务器的软件应用程序。  

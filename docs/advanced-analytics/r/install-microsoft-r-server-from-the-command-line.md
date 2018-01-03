@@ -2,11 +2,11 @@
 title: "从命令行安装机器学习 Server （独立） 或 Microsoft R Server （独立） |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>从命令行安装机器学习 Server （独立） 或 Microsoft R Server （独立）
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/09/2017
 
 对于 **静默** 安装，提供相同的参数并添加 **/q** 切换。 不提供任何提示，无需交互即可。 如果省略任何所需的参数，但是，安装程序将失败。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 你应知道如何执行 SQL Server 的命令行安装，并熟悉其脚本的自变量。
 

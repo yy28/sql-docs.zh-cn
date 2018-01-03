@@ -3,7 +3,7 @@ title: "状态属性 （ADO 记录集） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0005de0669a2dd68622c2e81c9f7b3be2f912da1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26539c8162d53566c31bde8e8f131f0760aed704
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-ado-recordset"></a>状态属性 （ADO 记录集）
 指示相对于批处理更新的当前记录或其他大容量操作的状态。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回一个或多个总和[RecordStatusEnum](../../../ado/reference/ado-api/recordstatusenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**状态**属性以查看哪些更改处于挂起状态在批更新期间修改的记录。 你还可以使用**状态**属性以查看在大容量操作，例如，当调用期间失败的记录的状态[重新同步](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，或[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或设置[筛选器](../../../ado/reference/ado-api/filter-property.md)属性**记录集**到数组中的书签的对象。 通过此属性，可以确定如何给定的记录失败 ѕ в ѕ ц。  
   
 ## <a name="applies-to"></a>适用范围  

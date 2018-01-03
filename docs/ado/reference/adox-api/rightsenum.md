@@ -3,7 +3,7 @@ title: "RightsEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ff15518703e8e8ec2d2c3ee67df691abb1974ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 02710ace5ce804a6470212de576a8f1aa6cb430b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定对某个对象的权限或组或用户的权限。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (& H4000)|用户或组有权创建此类型的新对象。|  
 |**adRightDelete**|65536 (& H10000)|用户或组有权从对象中删除数据。 如对象**表**，用户有权从记录中删除数据值。|  

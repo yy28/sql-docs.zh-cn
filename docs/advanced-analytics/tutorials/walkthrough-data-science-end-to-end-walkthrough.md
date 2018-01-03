@@ -2,12 +2,14 @@
 title: "R 和 SQL Server 的端到端数据科学演练 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
@@ -15,11 +17,11 @@ caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: f392f7366ffc2504ce2834311b941351ef4e66c2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9d6654109e3cb5ff2e2c174dc37fd02bfc02dcb3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端到端数据科学演练
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/01/2017
 + 将包含所有 SQL 和 R 脚本。
 + 你可能需要修改脚本，在你的环境中运行中的字符串。 你可以使用任何代码编辑器，如[Visual Studio Code](https://code.visualstudio.com/Download)。
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 + 你必须有权的 SQL Server 2016 实例或 SQL Server 自 2017 年的评估版。
 + 在 SQL Server 计算机上必须至少有一个实例已安装 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。

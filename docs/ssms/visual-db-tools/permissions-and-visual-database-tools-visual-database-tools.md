@@ -3,7 +3,7 @@ title: "权限和 Visual Database Tools (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b4c7a9678f0ecf1acf5169e50012ec865ba92ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>权限和 Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 允许用户访问数据源对象的权限是在数据源中授予的，而不是在 Visual Database Tools 中授予的。 所授予的对数据源对象的访问权限由您所安装系统的安全策略进行控制。 如果您没有访问某些数据库对象的权限，则应与数据库管理员联系。  

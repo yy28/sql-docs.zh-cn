@@ -3,7 +3,7 @@ title: "将自定义报表与对象资源管理器节点属性一起使用 | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果自定义报表引用所选对象资源管理器节点的报表参数，则将在此节点的上下文中执行自定义报表。 这样，自定义报表可以使用当前上下文（如当前数据库）或者数据库或服务器对象。  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |参数名称|数据类型|  
 |------------------|-------------|  
 |**ObjectName**|**字符串**|  
-|**ObjectTypeName**|**字符串**|  
+|**ObjectTypeName**|**String**|  
 |**筛选**|**Boolean**|  
-|**ServerName**|**字符串**|  
-|**FontName**|**字符串**|  
-|**DatabaseName**|**字符串**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>对象资源管理器节点的报表参数示例  
 若要运行此示例，请按以下步骤操作。  
@@ -534,7 +534,7 @@ ms.lasthandoff: 12/05/2017
 ```
 
 ## <a name="see-also"></a>另请参阅  
-[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)  
+[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
 [向 Management Studio 添加自定义报表](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[启用运行自定义报表警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[启用运行自定义报告警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
   

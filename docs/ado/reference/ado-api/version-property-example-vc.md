@@ -3,7 +3,7 @@ title: "版本属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96ec6f8b7a30831b9150cdc63d7a21fb9eac8b8b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8b4ca599738ca3509786c7bc13a3c848157ab4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-property-example-vc"></a>版本属性示例 （VC + +）
 此示例使用[版本](../../../ado/reference/ado-api/version-property-ado.md)属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)要显示当前的 ADO 版本对象。 它还使用多个动态属性显示：  

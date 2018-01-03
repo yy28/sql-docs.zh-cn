@@ -3,7 +3,7 @@ title: "轴集合 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f985fe6335dd13e5ef3c8ebb4a6c82bae4e547e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45b8f51cd1eb79a829aaec9236b17af23016dca4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axes-collection-ado-md"></a>轴集合 (ADO MD)
 包含[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)定义是单元集的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象包含**轴**集合。 一次**单元集**是打开，此集合将包含至少一个**轴**。 请参阅[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)对象有关的更多详细说明如何使用**轴**对象。  
   
 > [!NOTE]

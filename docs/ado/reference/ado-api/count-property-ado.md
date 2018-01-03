@@ -3,7 +3,7 @@ title: "Count 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 899b0eab595e939d9a42456785fcea492f1fd606
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 186b8ace444c3e006c3978a1c8f2843bb422601f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="count-property-ado"></a>Count 属性 (ADO)
 指示集合中的对象数。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回**长**值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**计数**属性来确定在给定集合中对象数。  
   
  由于集合的成员计数从零开始，你应始终将循环零成员开始和结束值为**计数**减 1 的属性。 如果你正在使用 Microsoft Visual Basic 并想要循环访问集合的成员，而不会检查**计数**属性，请使用**每个...下一步**命令。  

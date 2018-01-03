@@ -3,10 +3,10 @@ title: "设备配置 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
 caps.latest.revision: "43"
-ms.openlocfilehash: ebb797e3fdb24bad79857f83c163dbf92a439883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05670f1727691b1abc0fd98dd5970c7697725b8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-configuration"></a>设备配置
 提供有关为你自己的环境配置 Analytics Platform System 所需的任务的清单。 你可以使用该设备，还需要执行这些配置任务。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="BeforeTasks"></a>开始之前  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
   
 1.  必须安装在数据中心设备，并将其打开。  
   

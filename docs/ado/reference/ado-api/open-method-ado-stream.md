@@ -3,7 +3,7 @@ title: "Open 方法 （ADO 流） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e93255bf18f91377f8d62400a236208507cb8c8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-stream"></a>Open 方法 （ADO 流）
 打开[流](../../../ado/reference/ado-api/stream-object-ado.md)对象操作的二进制或文本数据的流。  
@@ -54,7 +54,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *密码*  
  可选。 A**字符串**值，该值包含的密码，如果需要将访问**流**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当**记录**作为源参数传入的对象*UserID*和*密码*参数不会使用因为访问**记录**对象已可用。 同样，[模式](../../../ado/reference/ado-api/mode-property-ado.md)的**记录**对象传输到**流**对象。 当*源*未指定，**流**打开不包含任何数据，但[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)为零 (0)。 若要避免丢失任何数据写入到这**流**时**流**是关闭，保存**流**与[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)或[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)方法，或将其保存到另一个内存位置。  
   
  *OpenOptions*值**adOpenStreamFromRecord**标识的内容*源*参数需要已打开**记录**对象。 默认行为是将*源*作为直接指向树状结构，如文件中的节点的 URL。 打开与该节点关联的默认流。  

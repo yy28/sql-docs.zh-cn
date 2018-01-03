@@ -3,7 +3,7 @@ title: "序号属性 （ADO MD 位置） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb6e1c16c0315232c022a08ad53430c5adf8bc08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2102fb9969c3f80f7e62d099f0b13a162a8d127b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ordinal-property-ado-md-position"></a>序号属性 （ADO MD 位置）
 唯一标识[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)沿 x 轴。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-values"></a>返回值  
  返回**长**整数并且是只读的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **序号**属性[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象对应的索引**位置**内[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合。  
   
  快速可以使用检索单元格**序号**的**位置**与每个轴[项](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象.  

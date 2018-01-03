@@ -3,7 +3,7 @@ title: "RDS 的使用情况和阿娜 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d10f7422ca7cf39d343b67a37a6285243248eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 659be3fb60dc311c4fa2d2076cbc90841399c9f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rds-usage-and-security"></a>RDS 的使用情况和阿娜
 使用本节中的信息设置你的服务器和快速使用 RDS。 本部分包括可能需要实现 RDS，介绍了一些 RDS 和其他技术之间的键关系时要执行的特定的配置步骤，并帮助确定设置时可能遇到的问题的解决方案RDS 解决方案。  

@@ -1,11 +1,13 @@
 ---
 title: "记录集，SourceRecordset 属性 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: feb657674ff4d2d8c17b11246407eaf3fba142d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dbe0667cd71609f092e3008bf65d7a5cca2faf37
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>记录集，SourceRecordset 属性 (RDS)
 指示**记录集**从自定义业务对象返回的对象。  
@@ -45,7 +47,7 @@ Recordset = DataControl.Recordset
  *记录集*  
  表示的对象变量**记录集**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  你可以设置**SourceRecordset**属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从自定义业务对象返回。  
   
  这些属性允许应用程序通过自定义过程中处理绑定过程。 它们接收包装在一个行集**记录集**，以便你可以直接与交互**记录集**、 执行操作，例如设置属性或循环访问**记录集**.  

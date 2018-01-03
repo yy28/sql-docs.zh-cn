@@ -3,7 +3,7 @@ title: "StreamTypeEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b652658048661a26ee8ae61801fcea50735d4e3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7934c6d1953e5db36020696af6ad716b3715700c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 指定存储中的数据类型[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adTypeBinary**|1|表示二进制数据。|  
+|**adTypeBinary**|@shouldalert|表示二进制数据。|  
 |**adTypeText**|2|默认值。 指示文本数据，这是在由指定的字符集[Charset](../../../ado/reference/ado-api/charset-property-ado.md)。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  

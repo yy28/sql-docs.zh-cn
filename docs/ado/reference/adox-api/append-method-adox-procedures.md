@@ -3,7 +3,7 @@ title: "Append 方法 （ADOX 过程） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac280aebcf98c593124cabb6876a0dd5b6a56826
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71a98af48fe93c74ce16111b8018fa04764f597d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法 （ADOX 过程）
 添加新[过程](../../../ado/reference/adox-api/procedure-object-adox.md)对象传递给[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  
@@ -45,7 +45,7 @@ Procedures.Append Name, Command
  *Command*  
  ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，表示要创建并追加的过程。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在具有名称和特性中指定的数据源中创建新的过程**命令**对象。  
   
  如果用户指定的命令文本表示视图而不是一个过程，该行为不依赖于正在使用的提供程序。 **追加**如果提供程序不支持保留命令将失败。  

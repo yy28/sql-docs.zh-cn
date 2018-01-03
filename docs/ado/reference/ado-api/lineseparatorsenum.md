@@ -3,7 +3,7 @@ title: "LineSeparatorsEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 094b09ad55dff9ac876b1939ccc148a9f75dd800
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee872d885342202c414cafef682d4e9485b9f81f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 指定用作文本中的行分隔符的字符[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|表示回车。|  
 |**adCRLF**|-1|默认值。 指示回车换行符。|  

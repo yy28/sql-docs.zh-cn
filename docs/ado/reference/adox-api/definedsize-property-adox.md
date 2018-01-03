@@ -3,7 +3,7 @@ title: "DefinedSize 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdbe12a5aa0f1b9b2eb693b673a9371010a3dc7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e0b3941e85a40603b9b0d10f935ad128d2a8cd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 属性 (ADOX)
 指示列的规定的最大大小。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回**长**是以字符为单位的数据值的最大长度的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  默认值为零 (0)。  
   
  此属性是只读的[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到集合的对象。  

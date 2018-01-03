@@ -1,11 +1,13 @@
 ---
 title: "SQL 属性 |Microsoft 文档"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1c6dfe09bf48ca48a9df29d066ef100403f7703
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3488758fb803b33be03a0126b0e514279ea8c4bc
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -45,7 +47,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  表示的对象变量**rds.DataControl**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  一般情况下，这是一个 SQL 语句 （使用数据库服务器的方言），如`"Select * from NewTitles"`。 若要确保记录匹配，并可准确地更新，可更新查询必须包含长二进制字段或计算的字段以外的字段。  
   
  **SQL**属性是可选的如果自定义服务器端业务对象检索数据的客户端。  

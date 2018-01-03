@@ -3,7 +3,7 @@ title: "使用 ADO 的脚本语言 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 的脚本语言
 在一个脚本编写环境 ADO 可以公开通过服务器端脚本的数据。 在此方案中，ADO，基础 OLE DB 提供程序，它使用，并引用给定的数据存储所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 使用 Active Server Pages (ASP)，ADO 是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历，或查看特定的数据。  
   
  在网页中使用 ActiveX 对象之前，务必知道对象是否是可安全执行脚本。 当对象被视为可安全执行脚本时，这意味着控件不能在用户的计算机上执行任何有害的操作，并因此可执行而不请求用户的批准。 下表列出的 ADO 对象，并指示它们是否可安全执行脚本。  
   
-|对象|用于脚本编写的安全？|  
+|Object|用于脚本编写的安全？|  
 |------------|-------------------------|  
 |ADO 连接|是|  
 |ADO 命令|是|  

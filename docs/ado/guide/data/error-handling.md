@@ -1,9 +1,9 @@
 ---
-title: "错误处理 |Microsoft 文档"
+title: "错误处理 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8434e598deba57bf72dfdb8df1c31990113b304c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f62427574d32f7abe95565bd80f2d4dc950f2c1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling"></a>错误处理
 ADO 使用多种不同方法来通知出现的错误的应用程序。 本部分讨论使用 ADO 和如何通知你的应用程序时可能发生的错误的类型。 则可以确定通过进行有关如何处理这些错误的建议。  

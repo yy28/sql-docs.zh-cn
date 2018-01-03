@@ -3,7 +3,7 @@ title: "Delete 方法 （ADO 记录集） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f9494c0675c39b4e6441aa62a66a7b6af7daf15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff78b2827f8bd6aa22ded6429f0468617b7a83d9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-method-ado-recordset"></a>Delete 方法 （ADO 记录集）
 删除当前记录或一组记录。  
@@ -45,7 +45,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll**和**adAffectAllChapters**不是有效的自变量到**删除**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**删除**方法将当前记录或一组中的记录标记[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象以备删除。 如果**记录集**对象不允许记录删除，将会出错。 如果要立即更新模式中，删除数据库中会立即发生。 如果无法成功删除记录 （由于数据库完整性的冲突，例如），该记录将保持处于编辑模式的调用后[更新](../../../ado/reference/ado-api/update-method.md)。 这意味着你必须取消的更新[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)之前离开当前记录 (例如，对于[关闭](../../../ado/reference/ado-api/close-method-ado.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)，或[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
   
  如果要在批处理更新模式下，记录将被标记为从缓存中删除，当你调用，时会发生实际删除[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性以查看已删除的记录。  

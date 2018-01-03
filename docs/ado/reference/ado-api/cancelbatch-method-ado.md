@@ -3,7 +3,7 @@ title: "执行方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5dc5cc6d3047c7dc0804c42c7e8efcc80b64054
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49394c50c0b1265b0948e8d053a201342e44dd2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancelbatch-method-ado"></a>执行方法 (ADO)
 取消挂起的批更新。  
@@ -42,7 +42,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**执行**方法将会影响。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**执行**方法来取消任何挂起的更新中[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)在批处理更新模式下。 如果**记录集**处于立即更新模式，调用**执行**而无需**adAffectCurrent**生成错误。  
   
  如果你正在编辑当前记录或要添加一条新记录，在调用时**执行**，ADO 第一个调用[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法来取消任何缓存的更改。 在此之后，所有挂起的更改在**记录集**则已取消。  

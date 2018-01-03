@@ -3,7 +3,7 @@ title: "记录集对象 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 02d767f733ed8cb3767d49cf092ff67d1e37ef54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示整个组记录从基表或执行命令的结果。 在任何时候，**记录集**对象是指仅为当前记录集内的单个记录。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  你使用**记录集**对象来操作从提供程序的数据。 使用 ADO 时，操作几乎完全使用数据**记录集**对象。 所有**记录集**对象包含的记录 （行） 和字段 （列）。 根据提供程序，支持的功能某些**记录集**方法或属性可能不可用。  
   
  ADODB。记录集是用于创建的 ProgID**记录集**对象。 引用过时的 ADOR 的现有应用程序。记录集 ProgID 将继续工作无需重新编译，但新的开发应引用 ADODB。记录集。  

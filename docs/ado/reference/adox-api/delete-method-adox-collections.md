@@ -3,7 +3,7 @@ title: "Delete 方法 （ADOX 集合） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -36,11 +36,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aae45d1d8f6bc5eb2ab6ebf429d48426cceacf20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea1ef63c7ecf6a9a957542608ec57c057e9b40b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 （ADOX 集合）
 从集合中移除一个对象。  
@@ -56,7 +56,7 @@ Collection.Delete Name
  *名称*  
  A **Variant**指定的名称或序号位置 （索引） 的要删除的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果出现错误，将*名称*集合中不存在。  
   
  有关[表](../../../ado/reference/adox-api/tables-collection-adox.md)和[用户](../../../ado/reference/adox-api/users-collection-adox.md)集合，如果将发生错误的提供程序不支持删除表或多个用户分别。 有关[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)和[视图](../../../ado/reference/adox-api/views-collection-adox.md)集合，**删除**如果提供程序不支持保留命令将失败。  

@@ -3,7 +3,7 @@ title: "FieldAttributeEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70d22ef6ee9ed47b15f7c247b589ca7123556e0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b5a1783b5906b53f1c092418ea22d2cbc0f51e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定一个或多个属性[字段](../../../ado/reference/ado-api/field-object.md)对象。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指示提供程序缓存字段值和从缓存中，这样是后续读取。|  
 |**adFldFixed**|0x10|指示该字段包含固定长度的数据。|  

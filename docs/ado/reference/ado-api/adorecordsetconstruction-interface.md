@@ -3,7 +3,7 @@ title: "ADORecordsetConstruction 接口 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd346172159ac3ee64d2c03a22f2c9a467fc2bcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad2a33da2d2e54f45e765bf21b2bca018128d139
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**接口用于构造 ADO**记录集**从 OLE DB 对象**行集**C/c + + 应用程序中的对象。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供 OLE DB**行集**对象 (`pRowset`)，构造的 ADO**记录集**对象 (`adoRs`) 都可对以下三个基本操作：  
   
 1.  创建 ADO**记录集**对象：  

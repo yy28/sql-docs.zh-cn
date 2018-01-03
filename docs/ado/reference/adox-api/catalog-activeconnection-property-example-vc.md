@@ -3,7 +3,7 @@ title: "目录 ActiveConnection 属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967249a588c89ce3a385fc6692a1cf99b2d8d34c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5be09d926019d43bede94f71e19792aee73bb614
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>目录 ActiveConnection 属性示例 （VC + +）
 设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)有效，打开连接属性"打开"目录。 从打开的目录，你可以访问该目录中包含的架构对象。  

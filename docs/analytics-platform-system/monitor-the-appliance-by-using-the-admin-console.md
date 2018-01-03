@@ -3,10 +3,10 @@ title: "通过使用管理控制台 （分析平台系统） 来监视设备"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
 caps.latest.revision: "26"
-ms.openlocfilehash: c9a2d9e7191a1f362dfc998254f69a2a71e32aac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>通过使用管理控制台监视设备
 管理员控制台是一个 SQL Server PDW web 应用程序呈现的设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过管理控制台。  
@@ -112,7 +112,7 @@ HDFS
 |-|-|  
 |**信息类型**|**如何在管理控制台的访问权限**|  
 |设备的总体状态|单击**装置状态更改为**在顶部菜单中，或**主页**。|  
-|警报|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报 &#40;分析平台系统 &#41;](understanding-admin-console-alerts.md).|  
+|Alerts|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报 &#40;分析平台系统 &#41;](understanding-admin-console-alerts.md).|  
 |设备组件和它们的状态|单击**装置状态更改为**在顶部菜单中，或**主页**。|  
 |监视器请求 （包括查询、 加载、 备份和还原）|单击**会话**若要查看当前活动或新会话。<br /><br />单击**查询**若要查看当前活动或新的查询。 显示查询的信息包括加载、 备份和还原。<br /><br />单击**锁**若要查看活动的锁。|  
 |监视负载、 备份和还原的其他信息。|单击**加载**或**备份/还原**。|  

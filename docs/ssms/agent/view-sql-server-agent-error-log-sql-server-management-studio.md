@@ -3,7 +3,7 @@ title: "查看 SQL Server 代理错误日志 (SQL Server Management Studio) | Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076b87df4f1bde154da48ba960d2919f1c149672
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f3587e7262a4df9d4ce45a89cd925ff74eafb44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理错误日志。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/05/2017
     **导出**  
     打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
   
-    **刷新**  
+    **“刷新”**  
     刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
     **筛选**  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/05/2017
     **实例**  
     发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
   
-    **日期**  
+    **Date**  
     显示事件的日期。  
   
     **数据源**  

@@ -3,7 +3,7 @@ title: "Append 方法 （ADOX 表） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c5ab4e01e7478f1501dc550c8d45a86f5e8a600
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcf41f4e1ad50dc7e698b3f1a7d6eeb241a41dbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-tables"></a>Append 方法 （ADOX 表）
 添加新[表](../../../ado/reference/adox-api/table-object-adox.md)对象传递给[表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  
@@ -42,7 +42,7 @@ Tables.Append Table
  *表*  
  A **Variant**值，该值包含对引用**表**要追加或要创建并追加的表的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果提供程序不支持创建表，将会出错。  
   
 ## <a name="applies-to"></a>适用范围  

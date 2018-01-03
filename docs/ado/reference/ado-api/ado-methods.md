@@ -3,7 +3,7 @@ title: "ADO 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b93fe94c608cce5ca4338e1d0a7ccfbcc834a322
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|此方法不执行任何操作-它始终返回，则为 S_OK。|  
 |[读取](../../../ado/reference/ado-api/read-method.md)|读取指定的数目的字节从**流**对象。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|从文本文件中读取指定的数目的字符**流**对象。|  
-|[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用的对象的集合和特定中的对象，提供程序。|  
+|[“刷新”](../../../ado/reference/ado-api/refresh-method-ado.md)|更新以反映，从可用的对象的集合和特定中的对象，提供程序。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|更新中的数据**记录集**通过重新执行的查询所基于的对象的对象。|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新当前中的数据**记录集**对象，或**字段**集合**记录**对象，从基础数据库。|  
 |[保存](../../../ado/reference/ado-api/save-method.md)|将保存**记录集**文件中或**流**对象。|  

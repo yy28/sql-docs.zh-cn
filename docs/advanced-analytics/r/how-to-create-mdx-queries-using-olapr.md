@@ -1,10 +1,12 @@
 ---
 title: "如何创建 MDX 查询使用 olapR |Microsoft 文档"
 ms.custom: 
-ms.prod: sql-non-specified
 ms.date: 11/29/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology:
 - analysis-services
 - r-services
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 235240ef5b49e0fb08ac86e215e98907dd42880a
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: e7c526a1a273cb00d702a702db1ee4d73ae434d1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>如何创建使用 olapR 的 MDX 查询
 
@@ -202,7 +204,7 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 | 附件|
 |自行车|
 |服装|
-|组件|
+|_组件_|
 |-> 程序集组件|
 |-> 程序集组件|
 

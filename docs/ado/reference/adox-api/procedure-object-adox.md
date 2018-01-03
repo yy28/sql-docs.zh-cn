@@ -3,7 +3,7 @@ title: "过程对象 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20e94b736a73378d5cabc189d56928e6ab0ed8d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: febff0a863fc7bbabec2bed076249366644b84c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-object-adox"></a>过程对象 (ADOX)
 表示存储的过程。 用 ADO 结合使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**过程**对象可以用于添加、 删除或修改存储的过程。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **过程**对象允许你创建存储的过程，而无需知道，或使用提供程序的"CREATE PROCEDURE"语法。  
   
  使用的属性**过程**对象，你可以：  

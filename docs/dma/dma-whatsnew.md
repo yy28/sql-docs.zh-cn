@@ -5,7 +5,7 @@ ms.date: 10/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c94bd5803520aa5424cca837784f8f67382d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>什么是数据迁移助手中的新增功能
 
@@ -84,8 +84,8 @@ DMA v1.0 发布，则初始版本中，并提供用于：
     - 已弃用的功能
 
 - 数据库可以受益于升级的目标 SQL Server 平台中的新功能的发现。 任何发现被称为功能建议和分为以下几个方面：
-    - 性能
-    - 安全性
+    - “性能”
+    - Security
     - 存储器
 
 -   若要执行评估的现代用户体验。

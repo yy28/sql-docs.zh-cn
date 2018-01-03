@@ -3,7 +3,7 @@ title: "Stat 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c33383de27f2685849034cec79c6b4589dfb0a79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31938be266101339d70b820260466263a737f88a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-method"></a>Stat 方法
 有关检索信息[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -46,12 +46,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  指定此方法不返回的某些成员在 STATSTG 结构中，从而节省了内存分配操作。 值，将从 STATFLAG 枚举。 STATFLAG 枚举具有两个值  
   
-|常量|值|  
+|常量|ReplTest1|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
-|STATFLAG_NONAME|1|  
+|STATFLAG_NONAME|@shouldalert|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  Stat 为 ADO 流对象实现的方法的版本填写 STATSTG 结构的以下字段：  
   
  *pwcsName*  

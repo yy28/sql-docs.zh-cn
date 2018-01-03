@@ -3,7 +3,7 @@ title: "表对象 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d4e461d9f63180f1965a5bfdd3034c0dc9ba2d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd6d351f97d2b6357b8d4156c3208fb4f32a4805
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-object-adox"></a>表对象 (ADOX)
 表示包括列、 索引和密钥的数据库表。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下面的代码创建一个新**表**:  
   
 ```  

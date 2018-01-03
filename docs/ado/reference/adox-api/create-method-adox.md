@@ -3,7 +3,7 @@ title: "Create 方法 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b31df006624acdfd66a55c467be5a59dfc6afd1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb1e3dfcf4152060c5828133444ec72ce0994249
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-method-adox"></a>Create 方法 (ADOX)
 创建一个新目录。  
@@ -42,7 +42,7 @@ Catalog.Create ConnectString
  *ConnectString*  
  A**字符串**用于连接到数据源的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **创建**方法创建并打开新的 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)中指定的数据源到*ConnectString*。 如果成功，新**连接**对象分配给[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性。  
   
  如果提供程序不支持创建新的目录，将会出错。  

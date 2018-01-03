@@ -3,7 +3,7 @@ title: "键入属性示例 （属性） (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed5cb366292f87e294576ec880947888631e7a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca949b82660a87d3688bfc18e54fcb61a78b2b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-property-vb"></a>类型属性示例 （属性） (VB)
 此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。 它是一个用于列出的名称和类型的一个集合，如实用程序的模型[属性](../../../ado/reference/ado-api/properties-collection-ado.md)，[字段](../../../ado/reference/ado-api/fields-collection-ado.md)等。  

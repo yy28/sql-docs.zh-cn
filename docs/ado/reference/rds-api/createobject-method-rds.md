@@ -3,7 +3,7 @@ title: "CreateObject 方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 创建用于目标业务对象的代理，并将指针返回到它。 与业务对象的通信，以通过 Internet 发送请求和数据服务器端存根 （stub） 将代理包和封送处理数据。 对于进程内组件的对象，不使用代理、 提供只需指向对象的指针。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  *awebsrvr*或*computername*  
  A**字符串**值，该值表示用于标识 Internet 信息服务 (IIS) Web 服务器创建服务器业务对象的实例所在的 URL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *HTTP 协议*是标准 Web 协议;*HTTPS*是安全的 Web 协议。 使用*DCOM 协议*运行时没有 HTTP 的本地网络。 *进程内*协议是本地的动态链接库 (DLL)，它不使用网络。  
   
 ## <a name="applies-to"></a>适用范围  

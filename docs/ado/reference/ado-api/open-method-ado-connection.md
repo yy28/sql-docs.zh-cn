@@ -3,7 +3,7 @@ title: "Open 方法 （ADO 连接） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 连接）
 打开与数据源的连接。  
@@ -52,7 +52,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *选项*  
  可选。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**打开**方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象建立到数据源的物理连接。 此方法成功完成后，连接处于活动状态并可以发出对其的命令，还可以处理的结果。  
   
  使用可选*ConnectionString*自变量以指定包含一系列的连接字符串*参数* *= value*语句由分号分隔，或提供一个 URL 标识的文件或目录资源。 **ConnectionString**属性都将自动继承的值用于*ConnectionString*自变量。 因此，你可以设置**ConnectionString**属性**连接**对象然后再打开它，或使用*ConnectionString*参数用于设置或重写在当前连接参数**打开**方法调用。  

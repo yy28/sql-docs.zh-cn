@@ -3,7 +3,7 @@ title: "错误对象 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c866f3df4ca51d935fee22327a6196f88635a4ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c1bd19724c3c62503deedc1fa450fde3b4cbcb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-object"></a>错误对象
 包含有关适用于涉及提供程序的单个操作的数据访问错误的详细信息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  涉及 ADO 对象的任何操作可以生成一个或多个提供程序错误。 每个错误发生时，一个或多个**错误**对象都将置于[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 当另一个 ADO 操作生成错误，**错误**集合处于未选中状态，以及新的集**错误**对象放入**错误**集合。  
   
 > [!NOTE]

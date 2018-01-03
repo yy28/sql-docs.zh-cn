@@ -3,7 +3,7 @@ title: "步骤 2： 调用服务器程序 （RDS 教程） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2686f9206b49cd193cda9970aad72a10d75c482
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b660e20a92bdebe80def1d487cfa47b8c79109a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步骤 2： 调用服务器程序 （RDS 教程）
 客户端上的方法的调用时*代理*，实际的程序在服务器上执行该方法。 在此步骤中，将在服务器上执行查询。  

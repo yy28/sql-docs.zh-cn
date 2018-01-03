@@ -3,7 +3,7 @@ title: "ADO 代码示例以 Microsoft JScript |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3387c3cff07fd6399e0bde0539be851521eea130
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a72daedd1b07d55b6308e77765b38f800b62971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>ADO 代码示例以 Microsoft JScript
 使用下面的代码示例以了解如何使用 ADO 方法、 属性和事件时在 JScript 中编写。  

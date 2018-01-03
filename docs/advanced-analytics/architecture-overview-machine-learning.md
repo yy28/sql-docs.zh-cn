@@ -2,10 +2,10 @@
 title: "对 SQL Server 机器学习服务的体系结构概述 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6904c963c6178db530248f6189906e71df25308a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 62bcc1ce7b8dbdbee96b50631644a00afbfd4e78
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的体系结构概述 
 
@@ -60,7 +60,7 @@ SQL Server 2016 数据库引擎，以支持使用 SQL Server 的 R 脚本执行�
 
    此外，Microsoft 提供了一组提供与 SQL Server，包括数据转换、 压缩和优化针对每个受支持的语言集成的专有库。
 
-+ **安全性**
++ **Security**
 
    更佳的安全性意味着支持集成的 Windows 身份验证和基于密码的 SQL 登录名，作为凭据，也为安全处理进行数据保护和使用 SQL Server 受信任的快速启动板来管理外部脚本需依赖于 SQL Server执行和在脚本中使用的安全数据。
 

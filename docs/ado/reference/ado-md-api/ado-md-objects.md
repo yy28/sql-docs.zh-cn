@@ -3,7 +3,7 @@ title: "ADO MD 对象 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f2828b7c39ba721401ad35598a3f0c767b9f6d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b8ce3d80c1648619ffb3190a7330197f4e73b47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
 |||  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  此外，**目录**对象连接到 ADO**连接**对象，它又包括在标准的 ADO 库：  
   
-|对象|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的开放连接。|  
   

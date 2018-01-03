@@ -3,7 +3,7 @@ title: "书签属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b1446203cf866562026219059f7520042b3b25b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 498f1db6216d949663dba9bd22e8066534241605
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-property-ado"></a>书签属性 (ADO)
 指示一个书签，用于唯一标识中的当前记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象或设置当前记录中**记录集**到由有效的书签记录的对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**Variant**计算结果为有效的书签的表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**书签**属性以保存当前记录的位置，并随时返回到该记录。 仅在中可用，书签将变为**记录集**支持书签功能的对象。  
   
  当你打开**记录集**对象时，每个其记录具有一个唯一的书签。 若要保存当前记录的书签，请将值指定**书签**给一个变量的属性。 若要快速返回到该记录移到另一条记录之后，任何时候，设置**记录集**对象的**书签**属性设置为该变量的值。  

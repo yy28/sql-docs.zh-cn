@@ -3,7 +3,7 @@ title: "执行方法 （ADO 连接） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6f8e6c980d8263a5a7076603f447ecc8aa33e00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 071e752063020ace305371f814f1b78224dbb9a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-connection"></a>执行方法 （ADO 连接）
 执行指定的查询、 SQL 语句、 存储的过程或提供程序特定的文本。  
@@ -58,7 +58,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  不要使用与执行 adCmdFile 或 adCmdTableDirect 的 CommandTypeEnum 值。 这些值仅用作选项[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Requery 方法](../../../ado/reference/ado-api/requery-method.md)方法**记录集**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**执行**方法[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)对象执行任何查询，你将传递给方法 CommandText 参数中指定连接上。 如果 CommandText 参数指定返回行的查询，将执行生成任何结果存储在一个新**记录集**对象。 如果该命令不是要返回的结果 （例如，SQL 更新查询） 该提供程序返回**执行任何操作**只要选项**adExecuteNoRecords**指定; 否则将执行返回关闭**记录集**。  
   
  返回**记录集**对象始终是只读的、 只进游标。 如果你需要**记录集**对象具有更多的功能，请首先创建**记录集**对象具有所需的属性设置，然后使用**记录集**对象[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法以执行查询并返回所需的游标类型。  

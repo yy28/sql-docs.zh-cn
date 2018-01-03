@@ -3,7 +3,7 @@ title: "Attributes 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a245de28b8224a9265544d2850f6fdb12dbb1c2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d62e02663cb14c83ec69c467a0fe5e02b04cfa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-property-ado"></a>Attributes 属性 (ADO)
 指示一个或多个特征的对象。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  有关[属性](../../../ado/reference/ado-api/property-object-ado.md)对象，**属性**属性是只读的且其值可以是任何一个或多个总和[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**属性**属性来设置或返回的特征**连接**对象，**参数**对象，**字段**对象，或**属性**对象。  
   
  当你设置多个属性时，你可以总和的相应常量。 如果属性值设置为包括不兼容的常量的总和中时，出现错误。  

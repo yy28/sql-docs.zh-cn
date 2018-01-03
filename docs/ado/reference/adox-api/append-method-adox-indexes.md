@@ -3,7 +3,7 @@ title: "Append 方法 （ADOX 索引） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27ddeee201dba9d1381b31023039256d9e587a1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7630383843d6d057e91c4c2ed88efb2fd0e751e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法 （ADOX 索引）
 添加新[索引](../../../ado/reference/adox-api/index-object-adox.md)对象传递给[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)集合。  
@@ -43,7 +43,7 @@ Indexes.Append Index [,Columns]
  *列*  
  可选。 A **Variant**值，该值指定要编制索引的列的名称。 *列*参数对应的值[名称](../../../ado/reference/adox-api/name-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *列*参数可以采用的列名称或列名称的数组。  
   
  如果提供程序不支持创建索引，将会出错。  

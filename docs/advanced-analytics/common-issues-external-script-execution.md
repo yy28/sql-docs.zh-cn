@@ -2,10 +2,10 @@
 title: "SQL Server 中的外部脚本执行的常见问题 |Microsoft 文档"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部脚本执行的常见问题
 
@@ -191,9 +191,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重新启动服务通常可以解决问题，以便计算机学习脚本可以运行。 如果在重新启动操作未修复问题，请注意的路径和中的自变量**二进制路径**属性，并执行以下：
 
-    a. 查看启动器的.config 文件，并确保工作目录无效。
+    A. 查看启动器的.config 文件，并确保工作目录无效。
 
-    b. 确保使用快速启动板的 Windows 组可以连接到 SQL Server 实例中所述[上一节](#bkmk_LaunchpadTS)。
+    B. 确保使用快速启动板的 Windows 组可以连接到 SQL Server 实例中所述[上一节](#bkmk_LaunchpadTS)。
 
     c. 如果你更改任何服务属性，请重新启动快速启动板服务。
 

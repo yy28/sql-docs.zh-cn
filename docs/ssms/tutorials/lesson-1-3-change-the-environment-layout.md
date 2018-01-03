@@ -3,7 +3,7 @@ title: "更改环境布局 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>课程 1-3 - 更改环境布局
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的组件会争夺屏幕空间。 为了腾出更多空间，可以关闭、隐藏或移动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 组件。 本页的做法是将组件移动到不同的位置。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  右键单击对象资源管理器的标题栏，并注意下列菜单选项：  
   
-    -   Float  
+    -   float  
   
     -   停靠  
   

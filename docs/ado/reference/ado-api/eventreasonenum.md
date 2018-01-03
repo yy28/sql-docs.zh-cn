@@ -3,7 +3,7 @@ title: "EventReasonEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f16c5e9ba0c79a8920c4a7d4c9bcd9171d23ec1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f4f863b81149b2cc8e6166be3cf61621fc1cc98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定导致事件发生的原因。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|操作添加一条新记录。|  
+|**adRsnAddNew**|@shouldalert|操作添加一条新记录。|  
 |**adRsnClose**|9|操作关闭**记录集**。|  
 |**adRsnDelete**|2|操作删除了记录。|  
 |**adRsnFirstChange**|11|操作的记录所做的第一个更改。|  

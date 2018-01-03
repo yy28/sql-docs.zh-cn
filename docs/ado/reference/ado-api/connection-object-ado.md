@@ -3,7 +3,7 @@ title: "连接对象 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9911597512c0172931b940fe463fab90391c2d7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68a54c70eb48a65e5bce6349adf99040945211d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示与数据源的开放连接。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**连接**对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于与服务器的实际网络连接。 具体取决于提供程序、 一些集合、 方法或属性的支持的功能**连接**对象可能不可用。  
   
  使用集合、 方法和属性的**连接**对象，你可以执行以下操作：  

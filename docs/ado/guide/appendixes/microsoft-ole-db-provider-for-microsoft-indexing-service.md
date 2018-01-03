@@ -3,7 +3,7 @@ title: "Microsoft OLE DB Provider for Microsoft 索引服务 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服务概述
 Microsoft OLE DB Provider for Microsoft 索引服务提供编程的只读访问，以文件系统和 Web 数据由 Microsoft 索引服务编制索引。 ADO 应用程序可以发出 SQL 查询以检索内容和文件属性信息。
@@ -72,7 +72,7 @@ MSIDXS
 
  **标准 ADO 记录集属性的可用性：**
 
-|属性|可用性|
+|“属性”|可用性|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|
@@ -93,7 +93,7 @@ MSIDXS
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|
 |[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|
-|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|
+|[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|
 
  \*为了使此功能中的提供程序上存在，必须启用书签**记录集**。
 

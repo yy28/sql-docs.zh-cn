@@ -3,7 +3,7 @@ title: "LoadFromFile 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14124cf39e58cf46c50ae367f68ca61b82bd50e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c50565a087c9323a7f4dbafb9c604a42a19e1179
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 加载到现有文件的内容[流](../../../ado/reference/ado-api/stream-object-ado.md)。  
@@ -40,7 +40,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  A**字符串**值，该值包含要加载到的文件的名称**流**。 *FileName*可以包含任何有效的路径和 UNC 格式的名称。 如果指定的文件不存在，则会发生运行时错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此方法可以用于加载到本地文件的内容**流**对象。 这可以用于将本地文件的内容上载到服务器。  
   
  **流**对象必须是已打开之前调用**LoadFromFile**。 此方法不会更改的绑定**流**对象; 它仍将绑定到 URL 指定的对象或**记录**与其**流**最初打开。  

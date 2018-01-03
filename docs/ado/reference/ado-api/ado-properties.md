@@ -3,7 +3,7 @@ title: "ADO 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>ADO 属性
 |||  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |[类型](../../../ado/reference/ado-api/type-property-ado.md)|指示的操作的类型或数据类型**参数**，**字段**，或**属性**对象。|  
 |[类型 （ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)|指示数据中包含的类型**流**（二进制或文本）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指示的数据库中的当前值**字段**对象。|  
-|[值](../../../ado/reference/ado-api/value-property-ado.md)|指示分配给值**字段**，**参数**，或**属性**对象。|  
+|[ReplTest1](../../../ado/reference/ado-api/value-property-ado.md)|指示分配给值**字段**，**参数**，或**属性**对象。|  
 |[版本](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本号。|  
   
 ## <a name="see-also"></a>另请参阅  

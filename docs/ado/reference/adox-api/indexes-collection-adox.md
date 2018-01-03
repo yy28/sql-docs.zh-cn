@@ -3,7 +3,7 @@ title: "索引集合 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7a162f0a9d995b0ec374368ffdbbb2592f5b49c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08ffb7ade832341b9158164e90d7e601668a7dd6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含所有[索引](../../../ado/reference/adox-api/index-object-adox.md)一个表对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [追加](../../../ado/reference/adox-api/append-method-adox-indexes.md)方法**索引**集合是唯一的 ADOX。 您可以：  
   
 -   将新的索引添加到与集合**追加**方法。  

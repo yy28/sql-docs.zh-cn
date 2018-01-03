@@ -3,7 +3,7 @@ title: "OpenSchema 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b79dcd972c3b14a27cae47cc08893f2266dfd6b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 从提供程序获取数据库架构信息。  
@@ -51,7 +51,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  提供程序架构查询未定义的 OLE DB 规范的 GUID。 此参数是必需的如果*QueryType*设置为**adSchemaProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **OpenSchema**方法返回有关数据源，例如什么表是在数据源，在表中，列中的自我描述的信息和支持数据类型。  
   
  *QueryType*自变量是一个 GUID，指示返回的列 （架构）。 OLE DB 规范有架构的完整列表。  

@@ -3,7 +3,7 @@ title: "处理程序属性 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7b2bdaddbbf0d0cb78627567fc1efeed22593ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handler-property-rds"></a>处理程序属性 (RDS)
 指示扩展的功能的服务器端自定义程序 （处理程序） 名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，和使用的任何参数*处理程序*。  
@@ -47,7 +47,7 @@ DataControl.Handler = String
  *字符串*  
  A**字符串**值，包含名称的处理程序和任何参数，所有其用逗号隔开 (例如， `"handlerName,parm1,parm2,...,parm` *N*`"`)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此属性支持[自定义](../../../ado/guide/remote-data-service/datafactory-customization.md)，一种功能，需要设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性**adUseClient**。  
   
  名称的处理程序，它的参数，如果有的话，之间用逗号 （"，"）。 如果分号，将会导致不可预知的行为 （";"） 中的任何位置显示*字符串*。 你可以编写你自己的处理程序，提供它支持**IDataFactoryHandler**接口。  

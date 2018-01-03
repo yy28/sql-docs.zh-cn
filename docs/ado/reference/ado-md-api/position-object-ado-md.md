@@ -3,7 +3,7 @@ title: "放置对象 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a2ef6f300bee660c3b6c7f5786fb12284650a96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0af353cd84db8dd68c371d49119092c7b971348c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="position-object-ado-md"></a>位置对象 (ADO MD)
 表示一组定义的点沿 x 轴的不同维度的一个或多个成员。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用属性和集合**位置**对象你可以执行以下操作：  
   
 -   使用**序号**属性返回的序号位置**位置**沿[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)。  

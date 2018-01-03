@@ -3,7 +3,7 @@ title: "创建项目 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a95d8c7ecf359e6fc10939759d05d816d91efc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-project"></a>创建项目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以在现有解决方案中创建一个或多个项目。  
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/05/2017
     **位置**  
     输入要创建项目的位置，或者从列表中选择位置。  
   
-    **浏览**  
+    **“浏览”**  
     显示“项目位置”对话框，使用该对话框，可以导航到一个保存项目的新目录。  
   
     **解决方案**  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/05/2017
     **添加到源代码管理**  
     选中此复选框后，在单击“确定”时即会打开源代码管理应用程序。 填写源代码管理应用程序所要求的所有信息以继续进行操作。 必须安装源代码管理客户端应用程序才能使用此选项。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置是 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\。  
   

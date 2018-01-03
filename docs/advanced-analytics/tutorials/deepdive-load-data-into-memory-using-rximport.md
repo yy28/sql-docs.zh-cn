@@ -1,36 +1,42 @@
 ---
-title: "将数据加载到内存中用 rxImport |Microsoft 文档"
+title: "数据加载到内存使用 rxImport （SQL 和 R 深入） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3517ad7bb95f79dc2dec2567ecb88d64e78338bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 71848a5bf0af5b1dcbce24dbd33ba760369f1338
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="load-data-into-memory-using-rximport"></a>使用 rxImport 将数据加载到内存中
+# <a name="load-data-into-memory-using-rximport-sql-and-r-deep-dive"></a>加载到内存使用 rxImport （SQL 和 R 深入） 的数据
 
-rxImport 函数可用于将数据从数据源移到 R 会话内存的数据框或磁盘中的 XDF 文件。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-在此步骤中，你将学习如何将数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后使用 rxImport 函数将感兴趣的数据放入本地文件。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
+[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)函数可以用于将数据从数据源移到数据帧中会话内存或磁盘上的 XDF 文件。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>从 SQL Server 将数据子集提取到本地内存
+在此步骤中，你将学习如何将数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后使用**rxImport**函数将感兴趣的数据放入本地文件。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
 
-你已决定仅详细检查高风险个体。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的源表很大，因此仅获取与高风险客户有关的信息，然后将这些信息加载到本地工作站的内存中的数据框内。
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>从 SQL Server 中提取数据的子集，到本地内存
+
+您已决定你想要检查的高风险个人将更多详细信息中。 中的源表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]很大，因此你想要获取有关只是高风险的客户的信息。 然后将该数据加载到本地工作站的内存中的数据帧。
 
 1. 将计算上下文重置为本地工作站。
 
@@ -47,15 +53,15 @@ rxImport 函数可用于将数据从数据源移到 R 会话内存的数据框�
         connectionString = sqlConnString)
     ```
 
-3. 使用函数 rxImport 可实际上将数据加载到本地 R 会话中的数据框。
+3. 调用函数[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)若要在本地 R 会话中将数据读入数据帧。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    如果该操作成功，应看到一条状态消息：读取的行数：35，处理的总行数：35，区块总时间：0.036 秒
+    如果操作成功，你应看到如下所示的状态消息:"行读取： 35，总的行处理： 35，总区块时间： 0.036 （秒)"
 
-4. 现在，内存中的某个数据框内已拥有高风险观察数据，可使用各种 R 函数来操纵该数据框。 例如，可根据风险评分对客户排序，并打印存在最高风险的客户。
+4. 现在，高风险的观测值也都在内存中数据帧中，你可以使用各种 R 函数来操作数据帧。 例如，你可以通过其风险评分，排序客户和打印造成最高风险的客户的列表。
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -81,21 +87,17 @@ rxImport 函数可用于将数据从数据源移到 R 会话内存的数据框�
 
 ## <a name="more-about-rximport"></a>详细了解 rxImport
 
-你可以使用 rxImport，而不仅仅是来移动数据，但以转换过程中读取的数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
+不仅可以使用 rxImport 来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
 
-RxImport 函数导入过程中，将变量名分配到的列，但你可以通过使用来表示新变量名*colInfo*参数，并可更改数据类型使用*colClasses*参数。
+**RxImport**函数导入过程中，将变量名分配到的列，但你可以通过使用来表示新变量名*colInfo*参数或更改数据类型使用*colClasses*参数。
 
 通过在 *transforms* 参数中指定其他操作，可以对读取的每个数据区块执行基本处理。
 
 ## <a name="next-step"></a>下一步
 
-[创建新的 SQL Server 表使用 rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
+[使用 rxDataStep 创建新的 SQL Server 表](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>上一步
 
-[转换数据使用 R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="see-also"></a>另请参阅
-
-[机器学习教程](../../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
+[使用 R 转换数据](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
 

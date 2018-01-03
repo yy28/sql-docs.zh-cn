@@ -3,10 +3,10 @@ title: "数据类型 dwloader 的转换的规则"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: "30"
-ms.openlocfilehash: 2ac1325b3765bafbe34dc61f65f7641431afdfa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>数据类型 dwloader 的转换的规则
 本主题介绍的输入的数据格式和隐式数据类型转换， [dwloader 命令行加载程序](dwloader.md)时它将数据加载到 PDW 支持。 隐式数据转换发生时输入的数据与 SQL Server PDW 目标表中的数据类型不匹配。 在设计你的加载过程以确保你的数据将载入 SQL Server PDW 成功时，请使用此信息。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="DateFormats"></a>日期时间格式  
 Dwloader 输入数据加载到 SQL Server PDW 支持以下数据格式。 在表后列出了更多详细信息。  
   
-|datetime|smalldatetime|date|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|日期|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M [M]]M-[d] d-[yy] yy hh: mm: [.fff]|[M [M]]M-[d] d-[yy] yy hh: mm [: 00]|[M [M]]M-[d] d-[yy] yy|[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff]|[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff] zzz|  
 |[M [M]]M-[d] d-[yy] yy hh: mm: [.fff] [tt]|[M [M]]M-[d] d-[yy] yy hh: mm [: 00] [tt]||[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt]|[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt] zzz|  

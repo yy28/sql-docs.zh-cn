@@ -3,7 +3,7 @@ title: "BeginTrans，CommitTrans，如果不事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -29,11 +29,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 782e17249205d2619fc5aa4c0699166fc21f7c78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1ba84d4b168bb90ddc9994fb20080b628cd26c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件 (ADO)
 这些事件将在关联的操作之后调用上[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象完成执行。  
@@ -68,7 +68,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  **连接**对象发生此事件。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  Visual c + + 中多个**连接**可以共享相同的事件处理方法。 该方法使用返回**连接**对象确定哪些对象引发事件的原因。  
   
  如果[属性](../../../ado/reference/ado-api/attributes-property-ado.md)属性设置为**adXactCommitRetaining**或**adXactAbortRetaining**，一个新的事务启动后提交或回滚事务。 使用**BeginTransComplete**事件，若要忽略所有但第一个事务开始事件。  

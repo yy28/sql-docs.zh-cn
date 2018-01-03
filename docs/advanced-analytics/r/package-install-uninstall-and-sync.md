@@ -2,9 +2,11 @@
 title: "SQL Server 的 R 包同步 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb56ffa08160934e1a3eac340a81ba7d6427ad49
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a7530d67c2c74b4918228ea91597f1667c0abbd6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server 的 R 包同步
 
@@ -60,7 +62,7 @@ SQL Server 2017 包括可进行同步的文件系统和实例和数据库之间�
 
 > [!NOTE]
 > 如果你具有已安装 R 包的传统方法，使用 R 工具直接到文件系统中安装包，则无法使用包同步。
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 + 执行包同步函数的人员必须是安全主体对 SQL Server 实例和数据库的包。
 

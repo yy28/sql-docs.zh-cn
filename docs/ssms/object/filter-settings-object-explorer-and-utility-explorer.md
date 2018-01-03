@@ -3,7 +3,7 @@ title: "筛选设置（对象资源管理器和实用工具资源管理器）| M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa2f9375b9fe2883e4dbc2fd69a42f163a6fe386
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebfd7d638615b68d02da5b01c33ce4719cd162b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>筛选设置（对象资源管理器和实用工具资源管理器）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以指定筛选器。 使用筛选器，可以将对象资源管理器和实用工具资源管理器配置为仅显示符合特定条件的项。 例如，可以使用筛选器仅显示名称中包含词语“维护”的作业。 “筛选设置”对话框的标题包含服务器的名称，还可能包含数据库的名称。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 **属性**  
 显示要筛选的属性。  
   
-**运算符**  
+**“运算符”**  
 选择筛选器将值应用于属性的方式。 下面是可用的选项：  
   
 -   **等于**  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     此筛选器适用于日期，将显示日期不介于指定的两个日期之间的项。 选择“不介于”并按 Tab 移出“运算符”列，即可添加另一行，用于指定第二个日期。  
   
-**Value**  
+**ReplTest1**  
 键入要与属性进行比较的值。 对于日期，请单击下箭头显示日历，以选择日期。  
   
 **清除筛选器**  

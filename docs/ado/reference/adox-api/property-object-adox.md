@@ -3,7 +3,7 @@ title: "属性对象 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 444fcb873db39f37aed1d7385027395d54cacffa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0009151b5700cbd262ecf91ed09f325528548ff7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-object-adox"></a>属性对象 (ADOX)
 表示 ADOX 对象的特征。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ADOX 对象具有两种类型的属性： 内置和动态。  
   
  内置属性是立即可供任何新对象，使用 MyObject.Property 语法使用这些属性。 它们不会为属性对象的对象会显示[属性集合](../../../ado/reference/ado-api/properties-collection-ado.md)，因此，尽管您可以更改其值，但不能修改其特征。  

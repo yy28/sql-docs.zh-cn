@@ -3,7 +3,7 @@ title: "打开和配置对象资源管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a3731819860d5936242f6db45383117f503c448
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5991794babadb59ed8d9218b6a348c933add1a65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”菜单上的“选项”配置对象资源管理器选项。  
@@ -37,5 +37,5 @@ ms.lasthandoff: 12/05/2017
 [从对象资源管理器连接到实例](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [使用对象资源管理器管理对象](../../ssms/object/manage-objects-by-using-object-explorer.md)  
 [对象资源管理器详细信息窗格](../../ssms/object/object-explorer-details-pane.md)  
-[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)  
+[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
   

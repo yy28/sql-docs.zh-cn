@@ -3,7 +3,7 @@ title: "在数据库关系图设计器中导航 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2745dbdedeac792e45e9d7c9cc59fb95f7bca7b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bd6aa99f77bd9a2a43e9c910007466beba9bc9f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在数据库关系图设计器中导航 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以在数据库关系图设计器中使用键盘和鼠标来执行操作。 有关数据库关系图设计器中使用的特定方法，请参阅下表：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
 |访问“数据库关系图”菜单|Alt+M|  
 |在表和关系（如果可用）之间移动|Tab 或 Shift+Tab|  
 |在表中的列之间移动|箭头键|  
-|从关系图中移除选定的表|DELETE|  
+|从关系图中移除选定的表|删除|  
 |从数据库中删除表或关系|Shift+Delete|  
 |在关系图面上移动表|Ctrl+向上键或 Ctrl+向下键|  
 |向右/左和向上/下滚动|Page Up/Down 用于垂直滚动，Ctrl+Page Up/Down 用于水平滚动|  

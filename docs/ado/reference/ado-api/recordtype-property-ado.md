@@ -3,7 +3,7 @@ title: "RecordType 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2f08e1f125c2af69e21ef5ba4ba7fb814fadf11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcabced1a513e1c7283aaa74e24cc6943daee908
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordtype-property-ado"></a>RecordType 属性 (ADO)
 指示的一种[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回[RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **RecordType**属性是只读的。  
   
 ## <a name="applies-to"></a>适用范围  

@@ -3,7 +3,7 @@ title: "Clone 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34f8e0161fa85ec497ec6a1e6b414691161ff7a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0fa4429b66b8a43bf2eecccca1fbc94597f07a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 创建副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从现有对象**记录集**对象。 （可选） 指定的克隆是只读的。  
@@ -51,7 +51,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  可选。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值指定与原始的锁类型**记录集**，或只读模式**记录集**。 有效值为**adLockUnspecified**或**adLockReadOnly**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**克隆**方法来创建多个重复**记录集**对象，尤其是如果你想要维护多个给定的一组记录中的当前记录。 使用**克隆**方法是比创建并打开新更高效**记录集**使用相同的定义作为原始的对象。  
   
  [筛选器](../../../ado/reference/ado-api/filter-property.md)属性的原始**记录集**，如果任何，不会应用于克隆。 设置**筛选器**属性的新**记录集**以筛选的结果。 将复制任何现有的最简单方法**筛选器**值是将它分配直接、，如下所示。  

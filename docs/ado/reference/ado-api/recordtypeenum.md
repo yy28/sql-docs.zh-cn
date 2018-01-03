@@ -3,7 +3,7 @@ title: "RecordTypeEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6be2573bbb29379d89eaa26057f00818a31d0da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c371283571fd1712a7d3f0e64b5dd74962ffc455
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 指定的一种[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|指示*简单*（不包含子节点） 的记录。|  
-|**adCollectionRecord**|1|指示*集合*（包含子节点） 的记录。|  
+|**adCollectionRecord**|@shouldalert|指示*集合*（包含子节点） 的记录。|  
 |**adRecordUnknown**|-1|指示此类型**记录**未知。|  
 |**adStructDoc**|2|类型的指示特殊*集合*表示 COM 的记录结构化文档。|  
   

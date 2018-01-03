@@ -3,7 +3,7 @@ title: "用于更新结果的规则 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e40ed53f2d9b239e5bc565533fda84882a8a030
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2894e4f5b670136e1882689758d8c4ce5f580db5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在许多情况下，都可以更新显示在[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 下表汇总了一些特定实例，在这些例子中您也许可以更新“结果”窗格中的查询结果，也许不能。 在许多情况下，所使用的数据库决定了您是否可以更新查询结果。  
   
-|Query|结果是否可更新|  
+|查询|结果是否可更新|  
 |---------|---------------------------|  
 |基于表并且输出列表中包含主键的查询|是（但下面列出的除外）。|  
 |基于无唯一索引和主键的表的查询|取决于查询和数据库。 有些数据库在有足够的信息用于唯一地标识记录时才允许进行更新。|  

@@ -3,7 +3,7 @@ title: "GetRows 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8a80f8619d636c13b8c76b4f867e7cbe6333a742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 317e654699ab6e2c6abc349d91ed58d4c97a7a19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 检索的多个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到一个数组对象。  
@@ -48,10 +48,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  *启动*  
  可选。 A**字符串**值或**Variant**计算结果为记录的书签从其**GetRows**应开始操作。 你还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
- *字段*  
+ Fields  
  可选。 A **Variant**表示单个字段名称或序号位置或数组的字段名称或序号位置编号。 ADO 仅返回的数据在这些字段中。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**GetRows**方法以从记录中复制**记录集**到二维数组。 第一个下标标识字段，第二个标识记录编号。 *数组*变量自动尺寸到正确大小时**GetRows**方法返回的数据。  
   
  如果未指定的值*行*自变量， **GetRows**方法自动检索中的所有记录**记录集**对象。 如果请求更多记录多于可用， **GetRows**返回仅可用的记录数。  

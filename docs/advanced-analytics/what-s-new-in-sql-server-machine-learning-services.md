@@ -1,10 +1,10 @@
 ---
 title: "什么 &#39; 机器学习服务中的新增功能 |Microsoft 文档"
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ff01d46e2ca0aa996d8f582733b24b7560e29b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>什么是 SQL Server 中的机器学习服务中的新增功能
 
@@ -84,7 +84,7 @@ SQL Server 开发人员访问到广泛的 Python 库从开放源生态系统，�
 
     **Mrsdeploy**程序包以进行[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]和[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]支持 Python 模型和脚本作为 web 服务的部署。 它的工作原理的示例，请参阅[发布和使用的 Python 代码](python/publish-consume-python-code.md)。
 
-+ 性能
++ “性能”
 
     Microsoft 已推送的边界进行评分的性能。 与数据库中评分，我们处理每 100 万行倒数第二次使用 R 模型。 在此版本中，为新功能**实时评分**和**本机评分**单行更行和批处理计分中支持更好的性能。
 

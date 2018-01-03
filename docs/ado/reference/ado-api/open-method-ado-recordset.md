@@ -3,7 +3,7 @@ title: "Open 方法 （ADO 记录集） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3f223702a882910354d69fbcbfe5920e444000f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81a22742808fe2663f5601af91cb554764a8e46c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 （ADO 记录集）
 上打开一个游标[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **ExecuteOpenEnum**值**adExecuteNoRecords**或**adExecuteStream**不应与使用**打开**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ADO 的默认光标**记录集**是位于服务器上的只进、 只读游标。  
   
  使用**打开**方法**记录集**对象打开的游标可用于表示从基础表、 查询或以前保存的结果的记录**记录集**。  

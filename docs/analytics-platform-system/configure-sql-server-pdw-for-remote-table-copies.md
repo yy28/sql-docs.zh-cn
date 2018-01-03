@@ -3,10 +3,10 @@ title: "配置 SQL Server PDW 的远程表副本 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
 caps.latest.revision: "11"
-ms.openlocfilehash: 5daa546ed4cf0eeed1c51713fd9e55aa88515380
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08257e4823eed7bf86977ddca1df41eee7f8bda2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-sql-server-pdw-for-remote-table-copies"></a>配置远程表副本的 SQL Server PDW
 描述如何配置 SQL Server PDW，若要使用远程表复制功能将表复制到非设备服务器上的 SMP SQL Server 数据库。  

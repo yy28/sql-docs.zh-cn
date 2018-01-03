@@ -3,7 +3,7 @@ title: "数据部分 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-section"></a>数据部分
 数据部分定义以及任何挂起的更新、 插入或删除的行集的数据。 数据节可以包含零个或多个行。 它只能包含一个行集，其中行定义的架构中的数据。 此外，如前面提到的那样，可以忽略不包含任何数据的列。 如果某个属性或子元素使用的数据部分中，并且未在架构部分中定义该构造，则以无提示方式忽略它。  
   
-## <a name="string"></a>字符串  
+## <a name="string"></a>String  
  文本数据中的 XML 保留的字符必须替换为相应的字符实体。 例如，在公司名称"Joe 的车库"中单引号必须替换由一个实体。 实际行将如下所示：  
   
 ```  

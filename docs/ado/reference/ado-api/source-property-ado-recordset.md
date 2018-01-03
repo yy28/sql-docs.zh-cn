@@ -3,7 +3,7 @@ title: "Source 属性 （ADO 记录集） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36180bafb53d72985c2dc671d80147c8ffaa8588
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f472e37945d56a3c981bacb6a6251350460ecc4f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-property-ado-recordset"></a>源属性 （ADO 记录集）
 指示的数据源[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  集**字符串**值或[命令](../../../ado/reference/ado-api/command-object-ado.md)对象引用; 仅返回**字符串**值，该值指示的源**记录集**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**源**属性指定的数据源**记录集**对象使用以下项之一：**命令**对象变量、 一个 SQL 语句、 存储的过程，或表名称。  
   
  如果你设置**源**属性**命令**对象， [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性**记录集**对象将继承值**ActiveConnection**属性指定**命令**对象。 但是，读取**源**属性不返回**命令**对象; 相反，它将返回[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性**命令**对象转换为其设置**源**属性。  

@@ -3,7 +3,7 @@ title: "定位集合 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e812608f75e885ce933c0aaf252b50e1c9735dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0829260afe4da88c0cb974fb910de36510cb5945
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="positions-collection-ado-md"></a>位置集合 (ADO MD)
 包含[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)轴定义一个点的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **位置**是一个标准的 ADO 集合。 属性和方法的集合，您可以执行以下操作：  
   
 -   获取集合中具有的对象数[计数](../../../ado/reference/ado-api/count-property-ado.md)属性。  

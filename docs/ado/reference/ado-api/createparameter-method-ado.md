@@ -3,7 +3,7 @@ title: "CreateParameter 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 070b1fed1f5d38da0a3f8275abf9933339a8f5dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建一个新[参数](../../../ado/reference/ado-api/parameter-object.md)使用指定的属性的对象。  
@@ -54,10 +54,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Size*  
  可选。 A**长**值，该值指定参数值的最大长度，以字符数或字节。  
   
- *值*  
+ *ReplTest1*  
  可选。 A **Variant** ，指定值**参数**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**CreateParameter**方法来创建一个新**参数**具有指定的名称、 类型、 方向、 大小和值对象。 参数中传递任何值写入到相应**参数**属性。  
   
  此方法不会自动追加**参数**对象传递给**参数**集合[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 这样就可以设置其他属性时将追加将验证其值 ADO**参数**到集合的对象。  

@@ -3,7 +3,7 @@ title: "列集合 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,16 +24,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80ba9e948042538bd2b4c31724defdaf20a44aa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d0d98b31644ef96ac31a1c6bba88d053d677838
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-collection-adox"></a>列集合 (ADOX)
 包含所有[列](../../../ado/reference/adox-api/column-object-adox.md)的表、 索引或键的对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [追加](../../../ado/reference/adox-api/append-method-adox-columns.md)方法**列**集合是唯一的 ADOX。 您可以：  
   
 -   将新列添加到具有集合**追加**方法。  

@@ -3,7 +3,7 @@ title: "CursorLocation 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd17fab34b0534e87eb63de88bee6a113563ebbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbf619a1f3e049d64a86d760ed0de848d4e2e26a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 属性 (ADO)
 指示光标服务的位置。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，可以将设置为其中一个[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此属性，可在各种提供程序访问的光标库中进行选择。 通常情况下，你可以使用在服务器上的客户端游标库或一个位于之间进行选择。  
   
  此属性设置会影响仅后未设置该属性建立的连接。 更改**CursorLocation**属性具有现有连接没有影响。  

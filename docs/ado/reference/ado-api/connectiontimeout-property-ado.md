@@ -3,7 +3,7 @@ title: "ConnectionTimeout 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 17572bfd4ef1de5fa20246f88c8a0187409bbfd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 603158672b81380976224b2d9ff708a27c879ff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 属性 (ADO)
 指示多长时间来建立的连接在终止尝试并生成错误之前，请稍候。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，该值指示，以秒为单位，多长时间等待要打开的连接。 默认值为 15。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**ConnectionTimeout**属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象如果从网络流量或大量服务器，请使用延迟使其成为需放弃的连接尝试。 如果从时间**ConnectionTimeout** ADO 取消尝试和设置的属性经过该连接，在打开之前发生错误。 如果将属性设置为零，ADO 将等到无限期地打开连接。 请确保你编写的代码提供程序支持**ConnectionTimeout**功能。  
   
  **ConnectionTimeout**属性为读/写，当连接已关闭，并且只读打开时。  

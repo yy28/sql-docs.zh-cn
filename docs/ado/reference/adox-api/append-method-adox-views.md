@@ -3,7 +3,7 @@ title: "Append 方法 (ADOX Views) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a30ccf01370b89572697917c4fbbbbf3df11a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb0a9ffbf26ccb0f181e19c54ac906ae7d4754f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-views"></a>Append 方法 （ADOX 视图）
 创建一个新[视图](../../../ado/reference/adox-api/view-object-adox.md)对象，并将其附加到[视图](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
@@ -45,7 +45,7 @@ Views.Append Name, Command
  *Command*  
  ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，表示要创建的视图。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在具有名称和特性中指定的数据源中创建新视图**命令**对象。  
   
  如果用户指定的命令文本表示一个过程，而不是一个视图，则行为将取决于提供程序。 **追加**如果提供程序不支持保留命令将失败。  

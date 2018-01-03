@@ -3,7 +3,7 @@ title: "FormattedValue 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbf0c7a5fc9fc88cc1962ec3414b293c03a41a25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dc60bd0923a37d396c6c181687b2a6091418227
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue 属性 (ADO MD)
 指示格式化的显示的[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)值。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-values"></a>返回值  
  返回**字符串**和是只读的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**FormattedValue**属性来获取的格式化的显示值[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)属性[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)对象。 例如，如果单元格的值为 1056.87，并且此值表示美元金额， **FormattedValue**将是 $1,056.87。  
   
 ## <a name="applies-to"></a>适用范围  

@@ -3,7 +3,7 @@ title: "DeleteRecord 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66d13bc4449bad73b1ab09869a764e6bff533442
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eedc8d14c94ec89554651cdfce03af0eb63315cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 删除所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -45,7 +45,7 @@ Record.DeleteRecord Source, Async
  *异步*  
  可选。 A**布尔**值，当**True**，指定删除操作是异步。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  表示此对象上的操作**记录**此方法完成后可能会失败。 在调用**DeleteRecord**、**记录**应关闭，因为的行为**记录**可能会变得不可预知根据提供程序的更新时**记录**与数据源。  
   
  如果此**记录**通过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，则此操作的结果将不会立即反映到**记录集**。 刷新**记录集**通过关闭并重新打开它，或通过执行**记录集** [Requery](../../../ado/reference/ado-api/requery-method.md)方法，[更新](../../../ado/reference/ado-api/update-method.md)方法，或[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。  

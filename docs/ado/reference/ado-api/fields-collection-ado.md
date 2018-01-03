@@ -3,7 +3,7 @@ title: "字段集合 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 433ce545129e4a0a6ac88238ba3181fade2186bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32b9f8cff20d7b2e82479985af4219439c8b2233
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fields-collection-ado"></a>字段集合 (ADO)
 包含所有[字段](../../../ado/reference/ado-api/field-object.md)的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**记录集**对象具有**字段**组成的集合**字段**对象。 每个**字段**对象中的列对应**记录集**。 你可以填充**字段**集合，然后再打开**记录集**通过调用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)对集合的方法。  
   
 > [!NOTE]

@@ -3,7 +3,7 @@ title: "编写方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd956d5ff536105dc889e89d8f2d80f22db0e9c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aad21aef150d1ea9a176122eb3a0ddfb7dec9708
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="write-method"></a>编写方法
 写入二进制数据保存到[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -42,7 +42,7 @@ Stream.Write Buffer
  *缓冲区*  
  A **Variant** ，其中包含要写入的字节数组。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  指定的字节写入到**流**不含任何干预空格每个字节之间的对象。  
   
  当前[位置](../../../ado/reference/ado-api/position-property-ado.md)设置为以下写入的数据的字节。 **编写**方法不截断流中的数据的其余部分。 如果要进行截断操作这些字节，调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

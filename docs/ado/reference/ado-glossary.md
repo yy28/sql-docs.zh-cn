@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/17/2017
  启动完成之前可能会启动下一步操作的代码的操作。 另请参阅异步操作。  
   
 ## <a name="t-z"></a>T-Z  
- 树  
+ trEE  
  表示元素 （节点） 之间的层次结构关系的结构。 树 （根） 的最高层没有一个节点。 根目录下, 可以有多个子级。 每个子节点又可以是其他的子级，因此如一个树分支的父级。 包含文档和其他文件夹的文件夹是树状结构的典型示例。 另请参阅层次结构、 节点、 根、 子和父级。  
   
  Web 服务器  

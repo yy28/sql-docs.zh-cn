@@ -3,7 +3,7 @@ title: "AppendChunk 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea0599f91817fcefcb35871e41fbd4f727e5d2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 733dbd43501211c631fad51f993b8d663da0d844
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 将数据追加到较大文本或二进制数据[字段](../../../ado/reference/ado-api/field-object.md)，或[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -45,7 +45,7 @@ object.AppendChunk Data
  *数据*  
  A **Variant** ，其中包含要追加到对象的数据。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**AppendChunk**方法**字段**或**参数**填充长二进制或字符数据的对象。 在系统内存有限的情况下，你可以使用**AppendChunk**方法，以操作部分而不是较长的值。  
   
 ## <a name="field"></a>字段  

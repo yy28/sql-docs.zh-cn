@@ -3,7 +3,7 @@ title: "CopyRecordOptionsEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,20 +20,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 018ebb888e190946ebac8e4b19b42302e430e3b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c11976ea9abec1521b9137012694273440cda7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 指定的行为[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)方法。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|指示*源*提供程序尝试模拟副本使用下载和上载操作，如果此方法失败由于*目标*正在不同的服务器上或通过其他服务提供程序比*源*。 请注意，不同提供程序功能可能会导致性能下降，或者会丢失数据。|  
 |**adCopyNonRecursive**|2|将当前目录中，但不及其子目录复制到目标。 复制操作不是递归的。|  
-|**adCopyOverWrite**|1|如果将覆盖文件或目录*目标*指向现有文件或目录。|  
+|**adCopyOverWrite**|@shouldalert|如果将覆盖文件或目录*目标*指向现有文件或目录。|  
 |**adCopyUnspecified**|-1|默认值。 执行默认复制操作： 如果目标文件或目录已存在，则操作将失败并操作副本以递归方式。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  

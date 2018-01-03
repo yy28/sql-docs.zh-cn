@@ -3,7 +3,7 @@ title: "类型属性 （表） (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6de5f65d892bd9cbf78e1564361dc498ff8d131b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad5329e78a883d53eec808b4c3423644a011ad39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-table-adox"></a>类型属性 （表） (ADOX)
 指示表的类型。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-values"></a>返回值  
  返回**字符串**值，该值指定的表; 例如，"TABLE"、"系统表"或"全局临时"的类型。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  该属性为只读。  
   
 ## <a name="applies-to"></a>适用范围  

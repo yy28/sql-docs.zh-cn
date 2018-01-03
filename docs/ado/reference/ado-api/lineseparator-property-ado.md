@@ -3,7 +3,7 @@ title: "LineSeparator 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6eefc91488558d00a58b8d5f1ff5127ec30a5a23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 183f0847a6a70ff5191b7fb0755c928448ffa3ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 属性 (ADO)
 指示要用作文本中的行分隔符的二进制字符[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md)值，该值指示在中使用的行分隔符字符**流**。 默认值是**adCRLF**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **LineSeparator**用于解释行，读取的文本内容时**流**。 可以使用跳过行[SkipLine](../../../ado/reference/ado-api/skipline-method.md)方法。  
   
  **LineSeparator**仅用于文本**流**对象 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。 如果忽略此属性**类型**是**adTypeBinary**。  

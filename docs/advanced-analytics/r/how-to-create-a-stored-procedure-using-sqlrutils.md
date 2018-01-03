@@ -2,9 +2,11 @@
 title: "如何使用 sqlrutils 创建存储过程 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>创建存储过程使用 sqlrutils
 
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 数据帧内的对象以及函数的其他输入参数必须是以下 R 数据类型之一：
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - 逻辑
@@ -87,7 +89,7 @@ R 代码已被清除并可以作为单个函数调用后，你将使用中的函
 
 所有的输入和输出参数准备就绪后，请调用`StoredProcedure`构造函数。
 
-**用法**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

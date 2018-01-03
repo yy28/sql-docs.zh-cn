@@ -3,7 +3,7 @@ title: "支持方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13186c130b85de50bc6cff9487d8fec11359d008
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27c415490b1193a5dcbc8ef20e5975149a8519f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supports-method"></a>支持方法
 确定指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象支持特定类型的功能。  
@@ -45,7 +45,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  A**长**表达式包含一个或多个[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**支持**方法来确定哪些类型的功能**记录集**对象支持。 如果**记录集**对象支持的功能，其相应常量位于*CursorOptions*、**支持**方法返回**True**. 否则，它将返回**False**。  
   
 > [!NOTE]

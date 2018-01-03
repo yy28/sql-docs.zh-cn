@@ -3,7 +3,7 @@ title: "命令对象 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2f4aab59ac3a5296d4dcd75927b632f7a6915d46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc65eed5ff64351932689c2f54d7fab44f7e0915
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-object-ado"></a>命令对象 (ADO)
 定义要对数据源执行的特定命令。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**命令**对象，用于查询数据库并返回中的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，来执行大容量操作，或操作数据库的结构。 一些具体的提供程序的功能取决于**命令**集合、 方法或属性会引用它们时，可能会生成错误。  
   
  使用集合、 方法和属性的**命令**对象，你可以执行以下操作：  

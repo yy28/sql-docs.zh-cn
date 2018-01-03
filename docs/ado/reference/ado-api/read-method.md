@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 740be677f54f8d4b5d30902a792b58d4681df888
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad739a0d3aded4b0bf0458803d9fcdba5b388272
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="read-method"></a>Read 方法
 从二进制文件中读取指定的数目的字节[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -45,7 +45,7 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="return-value"></a>返回值  
  **读取**方法读取指定的数目的字节数或从整个流**流**对象并返回生成的数据作为**Variant**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果*变量*的字节数超过会留在**流**，返回的仅剩余字节数。 读取的数据没有字节可读取指定的长度*变量*。 如果不有任何留下可供读取的字节，则返回具有 null 值的一个变体。 **读取**无法用于向后读取。  
   
 > [!NOTE]

@@ -3,7 +3,7 @@ title: "轴对象 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4164cd36a128de91f42f141db4c04aa7d9a2110c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cccb08756fe6459db87bbbc091700ae333400
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axis-object-ado-md"></a>轴对象 (ADO MD)
 表示一个位置或筛选器轴的单元集，包含所选的成员的一个或多个维度。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **轴**可被包含对象[轴](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)集合，或者由[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)属性[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
   
  使用集合和属性的**轴**对象，你可以执行以下操作：  

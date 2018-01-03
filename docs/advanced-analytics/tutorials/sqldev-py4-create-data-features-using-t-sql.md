@@ -2,12 +2,14 @@
 title: "步骤 4：使用 T-SQL 创建数据功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: df714b03de08a3ed1f149df3f7fc7b40e9b8c270
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8768c420e8cb2911a2e48d93944430e67dceb3fb
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>步骤 4：使用 T-SQL 创建数据功能
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/01/2017
     END
     GO
     ```
-**注意：**
+**说明：**
 
 - 该函数为标量值函数，返回预定义类型的单个数据值。
 - 它将从行程接客位置和落客位置获取的纬度和经度值作为输入。 半正矢公式会将位置转换为弧度值，并使用这些值以英里计算这两个位置之间的直接距离。

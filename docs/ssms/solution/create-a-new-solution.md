@@ -3,7 +3,7 @@ title: "新建解决方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e0e4034f71fa1a6a6c4a9fbad967fd0bc419af9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2039725f0db2279c6385a64c68ed661366b4a80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-solution"></a>新建解决方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  或者在“解决方案名称”文本框中修改解决方案的名称。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

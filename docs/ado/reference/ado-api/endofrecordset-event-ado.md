@@ -3,7 +3,7 @@ title: "EndOfRecordset 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b8c610cc6346e8ec4ec466926d2dc80f45cc77b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9bedfab5204ec93f5f3de8e0f574640e2b04429
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 **EndOfRecordset**尝试移动到末尾的某一行时调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -52,7 +52,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  A**记录集**对象。 **记录集**此事件发生的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **EndOfRecordset**事件可能会发生如果[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作失败。  
   
  此事件处理程序时尝试移动的末尾调用**记录集**对象，可能是由于调用**MoveNext**。 但是，在此事件，你无法从数据库中检索多个记录，将它们追加到末尾**记录集**。 在这种情况下，设置*fMoreData* VARIANT_TRUE，并返回从**EndOfRecordset**。 然后调用**MoveNext**以访问新检索到的记录。  

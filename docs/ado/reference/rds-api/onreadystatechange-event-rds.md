@@ -3,7 +3,7 @@ title: "onReadyStateChange 事件 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7912a623ac6fabbbf2460025f38e2c76238af1e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bfb7ee92573f1e21ecb70f34b73346a0c0303ce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 事件 (RDS)
 **OnReadyStateChange**事件时调用时的值[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性更改。  
@@ -41,7 +41,7 @@ onReadyStateChange
 #### <a name="parameters"></a>Parameters  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ReadyState**属性反映的进度[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象，如它以异步方式检索数据插入其[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 使用**onReadyStateChange**事件来监视中的更改**ReadyState**它们发生的任何时候的属性。 这是比定期检查属性的值更高效。  
   
 ## <a name="applies-to"></a>适用范围  

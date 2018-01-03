@@ -1,12 +1,13 @@
 ---
 title: "SortColumn 属性 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.topic: article
 apitype: COM
 helpviewer_keywords: SortColumn property [RDS]
@@ -16,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8cdd4d854a4328613ab0fd98e8e107e207f2e12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3103fcf5a0ed7df6853c1d8ad2472c0c68ce9260
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 属性 (RDS)
 表示要对记录进行排序的列。  
@@ -42,7 +43,7 @@ DataControl.SortColumn = String
  *字符串*  
  A**字符串**表示的名称或别名所依据的记录进行排序的列的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **SortColumn**， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于时完整的查找条件的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 [重置](../../../ado/reference/rds-api/reset-method-rds.md)方法将执行条件，并将当前**记录集**与可更新**记录集**。  
   
  若要作为排序依据**记录集**，必须先保存任何挂起的更改。 如果你使用**rds.DataControl**，你可以使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法。 例如，如果你**rds.DataControl**是名为 ADC1，你的代码将可能`ADC1.SubmitChanges`。 如果你使用 ADO**记录集**，你可以使用其[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法。 使用**UpdateBatch**是建议的方法**记录集**创建与对象[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)方法。 例如，你的代码可能是`myRS.UpdateBatch`或`ADC1.Recordset.UpdateBatch`。  

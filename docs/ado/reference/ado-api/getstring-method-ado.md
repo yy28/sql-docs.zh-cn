@@ -3,7 +3,7 @@ title: "GetString 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38cfe142f2c8cfc38acd72334ee279d28d83081e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f92e1be67ce0eb26f300cde4b1ef53bfc5dc49c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
 返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)作为字符串。  
@@ -57,7 +57,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NullExpr*  
  可选。 如果指定，否则为空字符串来代替 null 值，用的表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  行数据，但没有架构数据将保存到字符串中。 因此，**记录集**无法使用此字符串重新打开。  
   
  此方法相当于 RDO **GetClipString**方法。  

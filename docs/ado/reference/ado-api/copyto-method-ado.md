@@ -3,7 +3,7 @@ title: "CopyTo 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c59a27806939557b170ae8fc7d3f842afd21f83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 将复制指定的字符或字节数 (具体取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[流](../../../ado/reference/ado-api/stream-object-ado.md)到另一个**流**对象。  
@@ -48,7 +48,7 @@ Stream.CopyTo DestStream, NumChars
  *Numchar*  
  可选。 **整数**值，该值指定的字节或字符从当前源中的位置复制数**流**到目标**流**。 默认值为 1，它指定从当前位置复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此方法会复制指定的字符或从当前指定的位置开始的字节数[位置](../../../ado/reference/ado-api/position-property-ado.md)属性。 如果指定的数量的可用之前的字节数超过了**EOS**，然后仅字符或字节从当前位置到**EOS**复制。 如果值*Numchar*为 1，或省略，所有复制的字符或从当前的位置开始的字节。  
   
  如果存在字符或目标流中的字节，超出复制的结尾处的位置的所有内容保持状态，并不会被截断。 **位置**变得紧跟复制的最后一个字节的字节。 如果要进行截断操作这些字节，调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

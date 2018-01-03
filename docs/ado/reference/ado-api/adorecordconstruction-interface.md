@@ -3,7 +3,7 @@ title: "ADORecordConstruction 接口 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02a70364256177b3df405bac1601128d6df83594
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cedc7639b0b5c1559fe137be96c822287a3ff82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**接口用于构造 ADO**记录**从 OLE DB 对象**行**C/c + + 应用程序中的对象。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  提供 OLE DB**行**对象 (`pRow`)，构造的 ADO**记录**对象 (`adoR`)，都可对以下三个基本操作：  
   
 1.  创建 ADO**记录**对象：  

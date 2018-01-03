@@ -3,7 +3,7 @@ title: "“已注册的服务器”组件的 F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd228d9af6de24bc8e57a1ae640af9fa0e613695
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4902f1e3a7d22fb7ff6b8df884daaa605ddc380b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registered-servers-f1-help"></a>“已注册的服务器”组件的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本节包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“已注册的服务器”组件的 F1 帮助。 它介绍了各种选项。
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  若要访问此页，请在已注册的服务器中，在“已注册的服务器”工具栏上单击“Reporting Services”，右键单击任意已注册的服务器组（如“Reporting Services”），指向“新建”，再单击“服务器注册”。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **服务器类型**  
  从已注册的服务器中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/05/2017
   
  若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击 **Analysis Services**，右键单击任意已注册的服务器组（例如 **Analysis Services**），指向“新建”，再单击“服务器注册”。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **服务器类型**  
  从“已注册的服务器”中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
@@ -116,11 +116,11 @@ ms.lasthandoff: 12/05/2017
  
  ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS 新建或编辑服务器注册（“常规”选项卡） 
  
- 使用此选项卡可以指定注册 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时的选项。  
+ 使用此选项卡可以指定注册 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时的选项。  
   
  若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击“Integration Services”，右键单击任意已注册的服务器组，指向“新建”，然后单击“服务器注册”。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **服务器类型**  
  在“已注册的服务器”中注册服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，在开始注册新服务器之前，请在 **“已注册的服务器”**工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** **、**SQL Server Compact Edition  或 **Integration Services** 。  
   

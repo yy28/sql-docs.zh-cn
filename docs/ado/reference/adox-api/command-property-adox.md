@@ -3,7 +3,7 @@ title: "命令属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57d15d47deaa7a0c150c90b5fe6612fb0a75ffbc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66cf6a70733e4e3188e5dd490ee780d878d42174
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-property-adox"></a>命令属性 (ADOX)
 指定 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)可以用于创建或执行该过程的对象。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回有效的 ADO**命令**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在获取和设置此属性，如果提供程序不支持保留命令时，将会出错。  
   
 ## <a name="applies-to"></a>适用范围  

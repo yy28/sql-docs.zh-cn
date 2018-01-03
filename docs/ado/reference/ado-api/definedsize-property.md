@@ -3,7 +3,7 @@ title: "DefinedSize 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6aed254022d8203487899e2b4b72d6cbe2275eeb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a730e33ba9d3ce73a1178ee38ef1b9a5e58b5965
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property"></a>DefinedSize 属性
 指示数据容量[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  对于不具有长度的数据类型，此值设置为 ~ 0 (按位，该值不是 0; 所有位设置为 1)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**DefinedSize**属性来确定的数据容量**字段**对象。  
   
  **DefinedSize**和[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)所属性不同。 例如，考虑**字段**的声明的类型的对象**以便您可以排除**和**DefinedSize**属性值为 50，包含单个字符。 **ActualSize**它将返回的属性值是单个字符的长度以字节为单位。  

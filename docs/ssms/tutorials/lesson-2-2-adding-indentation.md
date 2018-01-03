@@ -3,7 +3,7 @@ title: "添加缩进 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21b8fbca046e733afd062b07e5316694cb0adc76
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5559f970627449d56863f4c9d933d5e6636f0bd2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-2---adding-indentation"></a>课程 2-2 - 添加缩进
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询编辑器允许用户通过一个步骤缩进大段代码，并允许更改缩进量。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
     ![“制表符”对话框外观](./media/lesson-2-2-adding-indentation/tabsdialog.gif "“制表符”对话框外观")  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [最大化查询编辑器](../../tools/sql-server-management-studio/lesson-2-3-maximizing-query-editor.md)  

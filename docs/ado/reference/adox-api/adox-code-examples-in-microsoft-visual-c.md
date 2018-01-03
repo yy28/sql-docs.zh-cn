@@ -3,7 +3,7 @@ title: "Microsoft Visual c + + 中的 ADOX 代码示例 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dcf0e1bd104d8ecb986bb5e854f17de3d8779fd7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97ac5aa3978ff14f37ec02d72b41982cda2fff5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual c + + 中的 ADOX 代码示例
 这些主题提供有助于您了解如何使用 ADOX 的示例代码。 所有的代码示例是使用 Microsoft Visual c + + 编写的。  

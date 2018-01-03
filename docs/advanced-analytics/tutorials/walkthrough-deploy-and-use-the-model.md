@@ -2,12 +2,14 @@
 title: "将 R 模型部署和使用在 SQL （演练） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
@@ -16,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1f0d2f1a003b54856645dd4ec740de64464436b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7b0514d7b32eec5899ab24450bdfc0c38f141fee
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，在 SQL 中使用它
 
@@ -198,7 +200,7 @@ ms.lasthandoff: 12/01/2017
     >[!TIP]
     > R 工具的 Visual Studio (RTVS) 提供极好的集成与 SQL Server 和。请参阅此文章，以使用 SQL Server 连接使用 RODBC 更多示例：[使用 SQL Server 和 R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>“摘要”
 
 现在，你已了解如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据并将保留到训练的 R 模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，它应为你创建基于此数据集的新模型相对简单。 例如，你可以尝试创建这些其他模型：
 

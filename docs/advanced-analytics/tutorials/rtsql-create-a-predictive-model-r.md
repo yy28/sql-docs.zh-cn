@@ -2,12 +2,14 @@
 title: "创建预测模型 (SQL 快速入门中的 R) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4e0d5dab1f737361a82191b6a3d74561e12722e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6f0117198cd7a548b9e56d228c14231b39ec35a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>创建预测模型 (SQL 快速入门中的 R)
 
@@ -145,7 +147,7 @@ VALUES (' latest model', @model)
 
 ![rslq_basictut_coefficients](media/rslq-basictut-coefficients.PNG)
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>“摘要”
 
 请记住使用 SQL 参数和 R 变量中的这些规则`sp_execute_external_script`:
 

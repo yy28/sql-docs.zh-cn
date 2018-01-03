@@ -3,7 +3,7 @@ title: "参数集合 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9544c12738c3c6f3e4d22a62e26c2654c9ac0edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cceeccbcca886b151dd505881be25687fd26e37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含所有[参数](../../../ado/reference/ado-api/parameter-object.md)的对象[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**命令**对象具有**参数**组成的集合**参数**对象。  
   
  使用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法**命令**对象的**参数**集合检索提供程序的存储的过程或参数化的查询的参数信息指定在**命令**对象。 某些提供程序不支持存储的过程调用或参数化的查询;调用**刷新**方法**参数**集合时使用此类提供程序将返回错误。  

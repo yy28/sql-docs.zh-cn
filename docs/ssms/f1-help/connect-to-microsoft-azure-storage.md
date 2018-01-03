@@ -3,7 +3,7 @@ title: "连接到 Microsoft Azure 存储 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-f1
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b3f4019ad5eadcdd792586598c3cf93a4b0d1ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21933a1a1cad8a6681bf2324cd510290031fa5d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可使用“Windows Azure 存储连接”对话框指定存储帐户并验证与 Windows Azure 的连接。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”继续。  
   
 1.  **存储帐户** - 指定存储帐户名称。

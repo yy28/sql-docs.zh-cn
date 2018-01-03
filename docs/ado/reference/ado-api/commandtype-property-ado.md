@@ -3,7 +3,7 @@ title: "CommandType 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a69692774703950cad8aae7b12dbfc82728157d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d838b150f678fc0ee720a91d2a1de3311a433e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandtype-property-ado"></a>CommandType 属性 (ADO)
 指示的一种[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]
 >  不要使用**CommandTypeEnum**值**adCmdFile**或**adCmdTableDirect**与**CommandType**。 这些值仅用作选项[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Requery](../../../ado/reference/ado-api/requery-method.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**CommandType**属性来优化计算[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性。  
   
  如果**CommandType**属性值设置为默认值， **adCmdUnknown**，你可能会遇到性能降低的程度，因为 ADO 必须进行到提供程序的调用，以确定是否**CommandText**属性是一个 SQL 语句、 存储的过程或表名称。 如果你知道使用什么类型的命令，设置**CommandType**属性指示 ADO 以直接转到相关的代码。 如果**CommandType**属性中的命令类型不匹配**CommandText**属性，当你调用出错时发生[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法。  

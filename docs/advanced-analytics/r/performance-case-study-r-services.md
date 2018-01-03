@@ -2,9 +2,11 @@
 title: "R Services 的结果和资源的性能 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 服务的性能： 结果和资源
 
@@ -95,7 +97,7 @@ metric time pct
 
 第一个测试比较使用压缩和纵栏表的表，以减少数据的大小。
 
-| 表名            | 行     | 保留   | 数据       | index_size | 未使用  | 节省率（保留） |
+| 表名            | “行”     | 保留   | data       | index_size | 未使用  | 节省率（保留） |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -112,11 +114,11 @@ metric time pct
 
 | 表名            | 测试名称       | numTasks | 平均时间 |
 |-----------------------|-----------------|----------|--------------|
-| *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
+| *airlineWithIndex*    | NoCompression   | @shouldalert        | 5.6775       |
 |                       | NoCompression-并行| 4        | 5.1775       |
-| *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
+| *airlineWithPageComp* | PageCompression | @shouldalert        | 6.7875       |
 |                       | PageCompression-并行 | 4        | 5.3225       |
-| *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
+| *airlineWithRowComp*  | RowCompression  | @shouldalert        | 6.1325       |
 |                       | RowCompression-并行  | 4        | 5.2375       |
 
 **结论**
@@ -135,14 +137,14 @@ metric time pct
 
 | 测试名称 | 运行 \# | 占用时间 | 平均时间 |
 |-----------|--------|--------------|--------------|
-| IntCol    | 1      | 3.57 秒 |              |
+| IntCol    | @shouldalert      | 3.57 秒 |              |
 |           | 2      | 3.45 秒 |              |
 |           | 3      | 3.45 秒 |              |
 |           | 4      | 3.55 秒 |              |
 |           | 5      | 3.55 秒 |              |
 |           | 6      | 3.45 秒 |              |
 |           |        |              | 3.475        |
-|           | 1      | 3.45 秒 |              |
+|           | @shouldalert      | 3.45 秒 |              |
 |           | 2      | 3.53 秒 |              |
 |           | 3      | 3.63 秒 |              |
 |           | 4      | 3.49 秒 |              |
@@ -154,14 +156,14 @@ metric time pct
 
 | 测试名称 | 运行 \# | 占用时间 | 平均时间 |
 |-----------|--------|--------------|--------------|
-| IntCol    | 1      | 3.89 秒 |              |
+| IntCol    | @shouldalert      | 3.89 秒 |              |
 |           | 2      | 4.15 秒 |              |
 |           | 3      | 3.77 秒 |              |
 |           | 4      | 5 秒    |              |
 |           | 5      | 3.92 秒 |              |
 |           | 6      | 3.8 秒  |              |
 |           |        |              | 3.91         |
-|           | 1      | 3.82 秒 |              |
+|           | @shouldalert      | 3.82 秒 |              |
 |           | 2      | 3.84 秒 |              |
 |           | 3      | 3.86 秒 |              |
 |           | 4      | 4.07 秒 |              |
@@ -238,9 +240,9 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 测试名称     | 多维数据集参数 | numTasks | 平均时间 | 单行预测 (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
-| CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
+| CubeArgEffect | `cube = F`     | @shouldalert        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
-|               | `cube = T`     | 1        | 21.1125      | 9.959204                        |
+|               | `cube = T`     | @shouldalert        | 21.1125      | 9.959204                        |
 |               |                | 4        | 8.08         | 9.959204                        |
 
 **结论**
@@ -253,7 +255,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | 测试名称       | maxDepth | 平均时间 |
 |-----------------|----------|--------------|
-| TreeDepthEffect | 1        | 10.1975      |
+| TreeDepthEffect | @shouldalert        | 10.1975      |
 |                 | 2        | 13.2575      |
 |                 | 4        | 19.27        |
 |                 | 8        | 45.5775      |
@@ -288,7 +290,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 - 内存中表
 - ssNoVersion
-- 资源调控器
+- Resource Governor
 
 若要评估的软件 NUMA 对 R 脚本执行的影响，数据科学团队，请测试 20 的物理内核数与 Azure 虚拟机上安装解决方案。 在这些物理核心、 四个软件 NUMA 节点中，自动创建： 每个节点包含五个内核。
 

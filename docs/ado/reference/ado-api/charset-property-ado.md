@@ -3,7 +3,7 @@ title: "字符集属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ded981a9ed4905aa607d8b19fe010682b61b5780
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efa963c26617a382270ccf2ed25f1aeb5c9785d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="charset-property-ado"></a>字符集属性 (ADO)
 指示设置到其中的字符文本的内容[流](../../../ado/reference/ado-api/stream-object-ado.md)的内部缓冲区中的存储转换应有**流**对象。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**指定的字符的值设置到其中的内容**流**将转换。 默认值是**Unicode**。 允许的值是该接口通过传递作为 Internet 字符集名称 （例如，"iso-8859-1"、"windows-1252"等） 的典型字符串。 由系统已知的字符组名称的列表，请参阅 HKEY_CLASSES_ROOT\MIME\Database\Charset Windows 注册表中的子项。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在文本中**流**对象，文本数据存储在由指定的字符集**Charset**属性。 默认值为 Unicode。 **Charset**属性用于将数据进入转换**流**或外接下来**流**。 例如，如果**流**包含 ISO 8859-1 数据和数据复制到 BSTR，**流**对象会将数据转换为 Unicode。 反之亦然。  
   
  已打开**流**，当前[位置](../../../ado/reference/ado-api/position-property-ado.md)必须是开头的**流**(0) 若要能够设置**Charset**。  

@@ -3,7 +3,7 @@ title: "Members 集合 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 662e957488b6d7e61428d6d49179930e0e233a81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc86aad4176a2f5bac9e9fd70331109c89aa445c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-collection-ado-md"></a>Members 集合 (ADO MD)
 包含[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象从一个级别或沿 x 轴的位置。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  A**成员**使用集合来包含以下类型的成员：  
   
 -   构成多维数据集中的级别成员。 这些批注包含在**成员**集合[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。 例如，使用从示例[概述多维架构和数据](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)，国家/地区级别的四个成员是加拿大、 美国、 英国，和德国。  

@@ -3,7 +3,7 @@ title: "ObjectStateEnum |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aa1236357042126f60b27f4c6f943ae3c2198bb0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74958339c47cc5fa461fa8571465af4d31a16e36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定的对象是否是打开还是关闭，连接到数据源，执行命令，或检索数据。  
   
-|常量|值|Description|  
+|常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指示对象已关闭。|  
-|**adStateOpen**|1|指示该对象已打开。|  
+|**adStateOpen**|@shouldalert|指示该对象已打开。|  
 |**adStateConnecting**|2|指示连接对象。|  
 |**adStateExecuting**|4|指示对象执行命令。|  
 |**adStateFetching**|8|指示正在检索的对象的行。|  

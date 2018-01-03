@@ -2,9 +2,11 @@
 title: "使用 R 数据类型 | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09ff5069864db36036685c751759cadcf66d6a02
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e72c4a984359230ace9f800e8ac4efbfcfe5f2a1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 库和 R 数据类型
 
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/01/2017
 |**int**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
-|**ssNoversion**|`character`|**varchar(max)**||
+|**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
 |**varbinary(max)**|`raw`|**varbinary(max)**|仅允许作为输入参数和输出|
 |**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/01/2017
 
 + 中列出的数据类型**其他**SQL 类型系统主题的部分：**光标**，**时间戳**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**表**
 + 所有空间类型
-+ **image**
++ **图像**
 
 ## <a name="data-types-that-might-convert-poorly"></a>转换结果可能不佳的数据类型
 
@@ -153,8 +155,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 注意使用 R 中的 `str` 函数可获取输出数据的架构。 此函数返回以下信息：
 

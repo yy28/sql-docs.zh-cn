@@ -3,7 +3,7 @@ title: "WillConnect 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**连接开始之前，将调用事件。  
@@ -63,7 +63,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  [连接](../../../ado/reference/ado-api/connection-object-ado.md)对象应用此事件通知。 更改为的参数**连接**通过**WillConnect**事件处理程序不会有影响**连接**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当**WillConnect**调用时， *ConnectionString*， *UserID*，*密码*，和*选项*参数设置为建立导致此事件 （挂起的连接），并可以更改事件返回之前的操作的值。 **WillConnect**可能会返回取消挂起的连接的请求。  
   
  取消此事件时， **ConnectComplete**将随调用其*adStatus*参数设置为**adStatusErrorsOccurred**。  

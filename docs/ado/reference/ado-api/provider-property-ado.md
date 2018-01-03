@@ -3,7 +3,7 @@ title: "提供程序属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ead9a90e3788efd420251912612de520279b43e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e764a6b8b3a11f6705ce047680e5884aed89bf8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-property-ado"></a>提供程序属性 (ADO)
 指示提供程序名称[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，该值指示提供程序名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**提供程序**属性来设置或返回提供程序的连接的名称。 此属性还可以设置的内容[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性或*ConnectionString*参数[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法; 但是，指定提供程序在多个位置时调用**打开**方法都有不可预知的结果。 如果不指定任何提供程序，则该属性将默认为 MSDASQL ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md))。  
   
  **提供程序**属性为读/写，当连接已关闭，并且只读打开时。 该设置将不会生效之前你任一打开**连接**对象或访问[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合**连接**对象。 如果设置不是有效的就会出错。  

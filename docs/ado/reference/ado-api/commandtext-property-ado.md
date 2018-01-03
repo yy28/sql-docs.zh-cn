@@ -3,7 +3,7 @@ title: "CommandText 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06417277b86fef2652b5fb5911b26f2296008aba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e67ea9d0a7d34477a73c09c99689e0c953f4b905
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
 指示要对提供程序发出命令的文本。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  获取或设置**字符串**值，该值包含提供程序命令，如 SQL 语句、 表名称、 相对 URL 或存储的过程调用。 默认值为空字符串 ("")。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**CommandText**属性来设置或返回表示命令的文本[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 通常这将是一个 SQL 语句，但也可以是任何其他类型的提供程序，如存储的过程调用识别的命令语句。 SQL 语句必须是特定语句或提供程序的查询处理器支持的版本。  
   
  如果[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)属性**命令**对象设置为**True**和**命令**设置时，将对象绑定到打开的连接**CommandText**属性，ADO 准备查询 （即，已编译形式提供程序存储的查询） 当调用[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法。  

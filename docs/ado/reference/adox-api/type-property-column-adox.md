@@ -3,7 +3,7 @@ title: "类型属性 （列） (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d12562a4bfe6fd449009a9db029dcd1f6aab99b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c421f77641a8506da430597f15c419127085cc3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-column-adox"></a>类型属性 （列） (ADOX)
 指示列的数据类型。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值可以是之一[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)常量。 默认值是**adVarWChar**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此属性为读/写直到[列](../../../ado/reference/adox-api/column-object-adox.md)对象追加到集合或另一个对象，此后它是只读的。  
   
 ## <a name="applies-to"></a>适用范围  

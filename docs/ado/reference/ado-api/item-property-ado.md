@@ -3,7 +3,7 @@ title: "项属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -51,11 +51,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bec4236ff89d27a4db3e4606ea95401e75ba2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
 按名称或序号指示集合的特定成员。  
@@ -73,7 +73,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant**表达式计算结果为名称或集合中对象的序号。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**项**属性集合中返回特定对象。 如果**项**在对应的集合中找不到对象*索引*自变量，就会出错。 此外，某些集合不支持命名的对象;对于这些集合中，你必须使用序号引用。  
   
  **项**属性是所有集合的默认属性; 因此，以下语法窗体是可互换：  

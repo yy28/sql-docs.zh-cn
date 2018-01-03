@@ -3,10 +3,10 @@ title: "与 System Center Operations Manager (AP) 的监视设备"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
 caps.latest.revision: "14"
-ms.openlocfilehash: 115d32ab8f633752dacfaf245017803bcdbfb8d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a89b19a93d99bb3e63925b012bb53d169fdf0d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>使用 System Center Operations Manager 来监视设备
 介绍如何使用 System Center Operations Manager 来监视 SQL Server PDW 和 HDInsight。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
   
 1.  System Center Operations Manager 2007 R2、 2012年或 2012 SP1 必须已安装并且正在运行。  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>若要监视 SQL Server PDW 与 SCOM  
 配置 SCOM 管理包之后, 单击监视 SCOM 窗格中，然后深化至**SQL Server 设备**然后**Microsoft SQL Server 并行数据仓库**。 在 Microsoft SQL Server 并行数据仓库，下方，有四个选项： 警报、 设备、 设备图和节点。  
   
-### <a name="alerts"></a>警报  
+### <a name="alerts"></a>Alerts  
 警报是可在其中找到要管理的当前警报。  
   
 ![警报](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  

@@ -3,7 +3,7 @@ title: "键入属性示例 （字段） (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d52947b4401e7344af7b3edceea65b0b483a06ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d95ae2be27cbb842ef09b1db6a73a512bca8e7a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-field-vb"></a>类型属性示例 （字段） (VB)
 此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性[类型](../../../ado/reference/ado-api/type-property-ado.md)的所有属性[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 有关运行此过程需要 FieldType 函数。  

@@ -3,7 +3,7 @@ title: "SQLState 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6709e1e538db77b1aed5b281ffd826d90448daf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9acd68c473f43fcbc4763dc2e76d80015fdca93c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstate-property"></a>SQLState 属性
 指示 SQL 状态给定[错误](../../../ado/reference/ado-api/error-object.md)对象。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>返回值  
  返回五个字符**字符串**遵循 ANSI SQL 标准，表示的错误代码的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用**SQLState**属性来读取该提供程序返回的 SQL 语句在处理过程中发生错误时的五个字符的错误代码。 例如，对于 ODBC 使用 Microsoft SQL Server 数据库的 Microsoft OLE DB 提供程序，当 SQL 状态错误代码来源于 ODBC，根据特定于 ODBC 的错误或错误来源于 Microsoft SQL Server，并为随后映射到 ODBC错误。 这些错误代码记录在 ANSI SQL 标准，但可能由不同的数据源以不同方式实现。  
   
 ## <a name="applies-to"></a>适用范围  

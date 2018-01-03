@@ -3,7 +3,7 @@ title: "“保存”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ecfaae0da3917b08db87173dfc2b7842e2972ae0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 81aa8d84f9ec5546401fc1ae9344ce2cdcee5af1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>“保存”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 当在表设计器中保存工作并且该工作会影响其他表时，将显示此对话框。 使用此对话框可以确认将要保存的表。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > 在保存表之前，您在表设计器中对表做出的更改并不会提交到数据库。 表一旦保存就无法撤消更改。 若要放弃未保存的更改，请关闭所有打开的表而不进行保存。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **表受到影响时警告**  
 指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”对话框中重新选择该选项。  
   

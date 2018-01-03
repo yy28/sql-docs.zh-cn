@@ -3,7 +3,7 @@ title: "ReadText 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readtext-method"></a>ReadText 方法
 读取指定数目的字符来自文本[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -45,7 +45,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>返回值  
  **ReadText**方法读取指定的数目的字符、 一整行或从整个流**流**对象并返回结果字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果*保留的 NumChar*的字符数超过留在流中，将返回仅剩余字符。 读取的字符串没有字节可读取指定的长度*保留的 NumChar*。 如果没有留下可供读取的字符，则返回一个变体，其值为 null。 **ReadText**无法用于向后读取。  
   
 > [!NOTE]
