@@ -3,7 +3,7 @@ title: "安装分布式重播-概述 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,18 +17,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8bb087db8c1ababc89465f0ff901518ff07a759
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f3e79179b53e404105c722055a5e3672e8e8cc2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用以下主题安装 Distributed Replay 功能。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[Distributed Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)|过程主题，其中列出了安装 Distributed Replay 的要求。|  
 |[安装 Distributed Replay](../../tools/distributed-replay/install-distributed-replay.md)|过程主题，该主题提供通过使用“安装程序向导”、用于运行无人参与的安装程序的示例语法和安装参数以及通过配置文件用于运行 Distributed Replay 的示例语法和安装参数所实现的典型的 Distributed Replay 安装。|  

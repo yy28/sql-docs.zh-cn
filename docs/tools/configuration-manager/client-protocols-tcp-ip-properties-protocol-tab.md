@@ -3,7 +3,7 @@ title: "客户端协议-TCP IP 属性 （协议选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99a32647f76a65221f0533e9d0f47021b037efc3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a8d82ee917afc74c5fba0a0bbcc01451b99cb645
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>客户端协议 - TCP/IP 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器中，使用**协议**选项卡上**TCP/IP 属性**对话框中，可以查看或指定以下选项。 若要连接到另一个端口，可以在 **“默认端口”** 框中键入端口号。 有关连接字符串的详细信息，请参阅 [使用 TCP IP 创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **“默认端口”**  
  指定 TCP/IP Net-library 在尝试连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目标实例时将使用的端口。 默认值端口为 1433。  
   

@@ -1,7 +1,7 @@
 ---
 title: "项目设置 （转换） (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4591c2ae6134a210ed4da93d27ed6d7ae6ded05d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 62451526ad29a0aaf2d2cc92e3e439223e6c32d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-oracletosql"></a>项目设置 （转换） (OracleToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 语法的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法。  

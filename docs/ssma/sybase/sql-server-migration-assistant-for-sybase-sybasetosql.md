@@ -3,7 +3,7 @@ title: "SQL Server Migration Assistant 用于 Sybase (SybaseToSQL) |Microsoft �
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: d612e53f05d0add59f50bc4b09fef1e08fa4e938
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2e9c5c0c3b54055a267c4f2e21d1ec8ec1314ca9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant 用于 Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 的 Sybase 自适应 Server Enterprise (ASE) 是一个用于将 ASE 数据库迁移到工具[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 和 Linux （预览版） 上的 2017年或[!INCLUDE[msCoName](../../includes/msconame_md.md)]Azure SQL DB。 用于 Sybase 的 SSMA 将转换到的 ASE 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库对象、 创建中的那些对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL，然后再将数据迁移到的 ASE 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL。  

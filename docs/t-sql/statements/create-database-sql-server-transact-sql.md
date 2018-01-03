@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      指定对数据库的非事务性 FILESTREAM 访问的级别。  
   
-    |值|说明|  
+    |ReplTest1|Description|  
     |-----------|-----------------|  
     |OFF|禁用非事务性访问。|  
     |READONLY|可以通过非事务性进程读取此数据库中的 FILESTREAM 数据。|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  大小不能时指定*os_file_name*指定为 UNC 路径。 SIZE 不适用于 FILESTREAM 文件组。  
   
- *大小*  
+ size  
  文件的初始大小。  
   
  当*大小*对于主文件中，未提供[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用模型数据库中的主文件的大小。 模型的默认大小为 8 MB (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 （对于早期版本） 的 1 MB。 当指定了辅助数据文件或日志文件时，但*大小*没有为文件中，指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]使文件成为 8 MB (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 （对于早期版本） 的 1 MB。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。  
@@ -433,7 +433,7 @@ CREATE DATABASE database_snapshot_name
   
  有关详细信息，请参阅“备注”部分的“数据库快照”。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [Master 数据库](../../relational-databases/databases/master-database.md)应支持的任何时候创建、 修改或删除用户数据库。  
   
  CREATE DATABASE 语句必须以自动提交模式（默认事务管理模式）运行，不允许在显式或隐式事务中使用。  
@@ -489,7 +489,7 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>查看数据库信息  
  可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 创建指定数据和事务日志文件的数据库  
  下面的示例创建数据库`Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 通过指定多个数据和事务日志文件创建数据库  
  以下示例创建数据库 `Archive`，该数据库具有三个 `100-MB` 数据文件和两个 `100-MB` 事务日志文件。 主文件是列表中的第一个文件，并使用 `PRIMARY` 关键字显式指定。 事务日志文件在 `LOG ON` 关键字后指定。 请注意用于 `FILENAME` 选项中各文件的扩展名：`.mdf` 用于主数据文件，`.ndf` 用于辅助数据文件，`.ldf` 用于事务日志文件。 此示例将数据库放置于 `D:` 驱动器上，而非 `master` 数据库中。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  此示例将数据和日志文件放置于不同的磁盘上，以便提高性能。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. 附加数据库  
  以下示例分离在示例 D 中创建的数据库 `Archive`，然后使用 `FOR ATTACH` 子句附加该数据库。 `Archive` 定义为具有多个数据和日志文件。 但是，由于文件的位置自创建后没有发生更改，所以只需在 `FOR ATTACH` 子句中指定主文件。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，要附加的数据库中包含的所有全文文件也将随数据库一起附加。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  该示例的源数据库是在示例 D 中创建的 `Sales` 数据库。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 创建数据库并指定排序规则名称和选项  
  下面的示例创建数据库`MyOptionsTest`。 指定了排序规则名称，并将 `TRUSTYWORTHY` 和 `DB_CHAINING` 选项设置为 `ON`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移动的全文目录  
  以下示例同时附加全文目录 `AdvWksFtCat` 以及 `AdventureWorks2012` 数据和日志文件。 在该示例中，将全文目录从其默认位置移动到新位置 `c:\myFTCatalogs`。 数据和日志文件保留在其默认位置。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes` 包含 FILESTREAM 数据。 它包含一个位于位于 `FSResumes` 中的 FILESTREAM 数据容器 `C:\MyFSfolder\Resumes`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 创建一个数据库，该数据库具有含多个文件的 FILESTREAM 文件组  
  下面的示例将创建数据库 `BlobStore1`。 该数据库在创建之时包含一个行文件组和一个 FILESTREAM 文件组 `FS`。 该 FILESTREAM 文件组包含两个文件：`FS1` 和 `FS2`。 然后，通过将第三个文件 `FS3` 添加到 FILESTREAM 文件组来改变该数据库。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

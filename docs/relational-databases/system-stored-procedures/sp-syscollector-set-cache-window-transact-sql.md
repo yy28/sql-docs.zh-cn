@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c1678c776266b602b227182f5109581851bdd0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f9390255229779d2584fb0176c5651fa06cfb51
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *cache_window*  
  将数据上载到管理数据仓库失败但不丢失数据的重试次数。 *cache_window*是**int**默认值为 1。 *cache_window*可以具有以下值之一：  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |-1|缓存先前上载失败的所有上载数据。|  
 |0|不缓存上载失败的任何数据。|  
@@ -58,16 +58,16 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在更改缓存窗口配置之前，必须禁用数据收集器。 如果数据收集器处于启用状态，此存储过程将失败。 有关详细信息，请参阅[启用或禁用数据收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)，和[管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例禁用数据收集器，配置缓存窗口以最多保留三次上载失败的数据，然后启用数据收集器。  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

@@ -3,7 +3,7 @@ title: "sqllogship 应用程序 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqllogship
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc29db3024f217fc09f283c3310ead6034e5003
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship**应用程序日志传送配置执行备份、 复制或还原操作和关联的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
@@ -58,10 +58,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  指定要添加到日志传送历史记录的消息的级别。 *level* 是以下整数之一：  
   
-|level|说明|  
+|level|Description|  
 |-----------|-----------------|  
 |0|不输出跟踪消息和调试消息。|  
-|1|输出错误处理消息。|  
+|@shouldalert|输出错误处理消息。|  
 |2|输出警告消息和错误处理消息。|  
 |**3**|输出信息性消息、警告和错误处理消息。 这是默认值。|  
 |4|输出所有调试消息和跟踪消息。|  
@@ -72,7 +72,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** *timeout_value*  
  指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int***.*  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 存储过程。  
   
  由 **sqllogship** 创建的日志传送历史记录与由日志传送备份、复制和还原作业创建的历史记录混杂在一起。 如果打算反复使用 **sqllogship** 来执行日志传送配置中的备份、复制或还原操作，请考虑禁用相应的日志传送作业。 有关详细信息，请参阅 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  

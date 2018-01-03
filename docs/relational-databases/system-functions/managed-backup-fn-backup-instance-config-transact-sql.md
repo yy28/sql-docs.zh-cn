@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5731faf0d0625a90b1e8b69672bfb4053804b99b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84fc9ff496b0c25f50771e34e60617732307c685
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config ()  
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -63,9 +63,9 @@ managed_backup.fn_backup_db_config ()
 |encryptor_type|NVARCHAR(32)|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
 |encryptor_name|SYSNAME|证书或非对称密钥的名称。 如果未指定名称，则设置为 NULL|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求的成员身份**db_backupoperator**具有数据库角色**ALTER ANY CREDENTIAL**权限。 该用户不应被拒绝**VIEW ANY DEFINITION**权限。  
   
 ## <a name="examples"></a>示例  

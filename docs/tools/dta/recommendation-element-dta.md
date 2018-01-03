@@ -3,7 +3,7 @@ title: "建议元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd66e29e24e7c72accd55f8e68cf65479cf35561
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8eb0e1bb738e4f84fe537a47d585e384da8609ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendation-element-dta"></a>建议元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含有关属于用户指定配置的一部分的假设索引信息。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 |**父元素**|[架构的表元素 (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
 |**子元素**|[创建元素 (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 有关详细信息，请参阅 [数据库引擎优化顾问 XML 架构](http://go.microsoft.com/fwlink/?linkid=43100)。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **RecommendationTypecomplexType** 。 该元素用于指定假设配置的索引。 不要将此 **Recommendation** 元素与可用于指定分区的其他类型 (**RecommendationPType**) 或视图 (**RecommendationViewType**) 混淆。 有关这些 **Recommendation** 元素其他类型的信息，请参阅 [数据库引擎优化顾问 XML 架构](http://go.microsoft.com/fwlink/?linkid=43100)。  
   
 ## <a name="example"></a>示例  

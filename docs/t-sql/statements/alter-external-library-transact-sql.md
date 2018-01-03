@@ -3,7 +3,7 @@ title: "ALTER 外部库 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -19,15 +19,15 @@ helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8365e364c9769af139be2b8dd4e7f5943afc58ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 28a62f00b479506e919faf2cbdbf1202045192eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部库 (Transact SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 修改现有的外部包库的内容。
 
@@ -88,13 +88,13 @@ WITH ( LANGUAGE = 'R' )
 
 指定内容库的平台。 修改现有的库来添加不同的平台时，此值是必需的。 Windows 是唯一受支持的平台。
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 对于 R 语言中，包必须准备与压缩的存档文件的形式。适用于 Windows 的 ZIP 扩展。 目前，支持仅 Windows 平台。  
 
 `ALTER EXTERNAL LIBRARY`语句仅将库 bits 上载到数据库。 已修改的库用户运行的外部脚本之后，通过执行之前未实际安装[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要`ALTER ANY EXTERNAL LIBRARY`权限。 创建外部库，用户可以更改该外部的库。
 

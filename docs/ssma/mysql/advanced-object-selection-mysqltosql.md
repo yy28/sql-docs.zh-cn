@@ -1,7 +1,7 @@
 ---
 title: "高级对象选择 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a03991486724b9eeefa562279337b990df9317b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d940a606be683a5ae345fb02a214002695e9c050
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>高级的对象选择 (MySQLToSQL)
 **高级对象部分**对话框可以通过使用中的对象名称，字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 使用此对话框之前，你可能想要强制 SSMA 来加载所有元数据转换架构或保存该项目。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **检查所有项**  
 将添加所有项旁边的复选标记。 在元数据资源管理器中，将立即选择这些项。  
   

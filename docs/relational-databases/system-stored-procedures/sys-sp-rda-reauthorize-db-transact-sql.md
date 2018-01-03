@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6e9f73c96cc07bfe442ac3104c4b1f4824596ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55c8e5167997ceb944cdce51b9d73b651c347396
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +58,16 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当你运行[sys.sp_rda_reauthorize_db (Transact SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库，此操作会自动重置的查询模式 LOCAL_AND_REMOTE，到它是 Stretch Database 的默认行为。 也就是说，查询返回结果从本地和远程数据。  
   
 ## <a name="example"></a>示例  
  下面的示例还原之间启用了 Stretch 和远程数据库的本地数据库的经过身份验证的连接。 它将建立 （推荐） 的远程数据的副本并连接到新的副本。  
   
-```tsql  
+```sql  
 DECLARE @credentialName nvarchar(128);   
 SET @credentialName = N'<existing_database_scoped_credential_name>';   
 EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;  

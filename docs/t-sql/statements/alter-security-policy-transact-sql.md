@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b420b7b73af8f32d2de9dac39cc4f57b41680c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>更改安全策略 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -92,14 +92,14 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  是将要应用安全谓词的目标表。 多个禁用的安全策略能以单个表为目标，但是在任何给定时间只能启用一个。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ALTER SECURITY POLICY 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
  安全策略时使用内存优化表的谓词函数，必须包括**SCHEMABINDING**并用**WITH NATIVE_COMPILATION**编译提示。 无法使用 ALTER 语句更改 SCHEMABINDING 参数，因为它将应用于的所有谓词。 若要更改架构绑定必须删除并重新创建安全策略。  
   
  在执行相应的 DML 操作后，将计算阻止谓词。 因此，READ UNCOMMITTED 查询可以看到将回滚的临时值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY SECURITY POLICY 权限。  
   
  另外，每个添加的谓词都需要以下权限：  

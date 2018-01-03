@@ -3,7 +3,7 @@ title: "设置项目选项 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8196130a681a3d01691bae3c863f319005d6bae6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-sybasetosql"></a>设置项目选项 (SybaseToSQL)
 对于每个 SSMA 项目，你可以设置项目级别选项。 这些选项用于指定对象转换、 对象加载、 SQL azure、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，验证是否适用于项目的配置选项。  
@@ -47,7 +47,7 @@ SSMA 有五个集的项目设置：
   
 它还具有用于配置这些设置的四种模式：  
   
-1.  默认  
+1.  ，则“默认”  
   
 2.  Optimistic  
   
@@ -102,7 +102,7 @@ SSMA 有五个集的项目设置：
   
 3.  单击**确定**以保存设置。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 迁移的下一步取决于您的项目需求：  
   
 -   如果你希望的自定义的源和目标数据类型映射，请参阅[映射 Sybase ASE 和 SQL Server 数据类型 &#40;SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  

@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_assignment_history （Azure SQL 数据库） |Microsoft 文档"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -62,7 +61,7 @@ ms.lasthandoff: 11/09/2017
 |error_code|**int**|数据库 SLO 更改请求的错误代码。|  
 |error_desc|**nvarchar**|数据库 SLO 更改请求中错误的说明。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可供所有用户角色有权连接到虚拟**master**数据库。  
   
 ## <a name="examples"></a>示例  

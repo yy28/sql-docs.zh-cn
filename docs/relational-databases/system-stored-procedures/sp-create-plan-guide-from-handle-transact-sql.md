@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  指定 NULL 或未指定语句偏移量时，将使用指定计划句柄的查询计划为批处理中的每个语句创建一个计划指南。 生成的计划指南等同于使用 USE PLAN 查询提示来强制使用特定计划的计划指南。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  无法创建适用于所有语句类型的计划指南。 如果不能为批处理中的某个语句创建计划指南，则存储过程将忽略此语句并继续执行批处理中的下一个语句。 如果在同一批处理中多次出现同一语句，将启用最后一处语句的计划并禁用此语句以前的计划。 如果批处理中没有语句可用于计划指南，将产生错误 10532 并且语句将失败。 建议您始终从 sys.dm_exec_query_stats 动态管理视图获得计划句柄，以帮助避免出现此错误。  
   
 > [!IMPORTANT]  
@@ -67,7 +67,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>为查询计划中的多个语句创建计划指南  
  与 sp_create_plan_guide 一样，sp_create_plan_guide_from_handle 也会从计划缓存中删除目标批处理或模块的查询计划。 这样做是为了确保所有用户都开始使用新的计划指南。 当为单个查询计划中的多个语句创建计划指南时，可以通过在显式事务中创建所有计划指南来推迟从缓存中删除该计划。 使用此方法可在完成事务以及为每个指定语句创建计划指南之前将计划保留在缓存中。 请参阅示例 B。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。 此外，对于使用 sp_create_plan_guide_from_handle 创建的每个计划指南，需要拥有单个权限。 若要创建类型为 OBJECT 的计划指南，需要对被引用对象拥有 ALTER 权限。 若要创建类型为 SQL 或 TEMPLATE 的计划指南，需要对当前数据库拥有 ALTER 权限。 若要确定将要创建的计划指南的类型，请运行以下查询：  
   
 ```  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. 从计划缓存中的查询计划创建计划指南  
  下面的示例通过指定计划缓存中的查询计划为单个 SELECT 语句创建计划指南。 该示例开始先执行将为其创建计划指南的 `SELECT` 语句。 此查询的计划通过使用 `sys.dm_exec_sql_text` 和 `sys.dm_exec_text_query_plan` 动态管理视图检查。 然后，通过指定计划缓存中与此查询相关的查询计划为此查询创建计划指南。 该示例中的最后一个语句用于验证计划指南是否已存在。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

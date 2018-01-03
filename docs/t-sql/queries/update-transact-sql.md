@@ -43,11 +43,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -158,7 +158,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET  
  指定要更新的列或变量名称的列表。  
   
- *column_name*  
+ column_name  
  包含要更改的数据的列。 *column_name*必须存在于*table_or view_name*。 不能更新标识列。  
   
  *expression*  
@@ -464,9 +464,9 @@ ID     Value
 ## <a name="logging-behavior"></a>日志记录行为  
  记录 UPDATE 语句;但是，部分更新到大型值数据类型使用**。**编写子句最小日志记录。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求对目标表具有 UPDATE 权限。 选择的权限时也需要如果 UPDATE 语句包含 WHERE 子句，或者如果正在更新表*表达式*集中子句使用了一个列的表中。  
   
  更新的成员的权限仅默认**sysadmin**固定服务器角色、 **db_owner**和**db_datawriter**固定数据库角色和表所有者。 成员**sysadmin**， **db_owner**，和**db_securityadmin**角色和表所有者可将权限传输到其他用户。  

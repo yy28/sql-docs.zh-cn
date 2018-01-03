@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc9282956afda2a41751dd57c2447da6314fb528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ AS constant_expression [ ; ]
  *constant_expression*  
  是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，其中包含仅常量 （它不能包含任何列或其他数据库对象的名称） 的值。 除了那些包含别名数据类型的表达式，可以使用任何常量、内置函数或数学表达式。 用户定义函数不能使用... 将字符和日期常量括在单引号 (); 资金，整数和浮点常量不需要引号引起来。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只能在当前数据库中创建默认值名称。 按照架构，在数据库内默认值名称必须是唯一的。 当创建默认值时，使用**sp_bindefault**以将其绑定到列或别名数据类型。  
   
  如果默认值与其绑定的列不兼容，则在试图插入默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会生成错误消息。 例如，不适用不能用作默认为**数值**列。  
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
   
  若要重命名默认值，使用**sp_rename**。 对于在默认报表，使用**sp_help**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 CREATE DEFAULT，用户必须至少在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建默认值的架构拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -97,7 +97,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. 创建简单的字符默认值  
  以下示例创建名为 `unknown` 的字符默认值。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,7 +108,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  由于不存在名为 `phonedflt` 的默认值，因此以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将失败。 本例只用于演示。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  

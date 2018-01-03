@@ -3,7 +3,7 @@ title: "从跟踪文件或跟踪表 （SQL Server 事件探查器） 派生模�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14a7fad78bff7c9fcc14afd42e6d0cfda25ec48e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a294c8688f629934b119d505fafdc4f8880eefb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>从跟踪文件或跟踪表派生模板 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何通过从现有的跟踪文件或表创建跟踪模板[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  

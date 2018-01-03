@@ -3,7 +3,7 @@ title: "bcp 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -143,7 +143,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 我们建议你为格式文件中的每个列指定一个排序规则名称，除非你希望 65001 选项优先于排序规则/代码页规范。
   
-|代码页值|说明|  
+|代码页值|Description|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|客户端使用的默认代码页。 未指定 **-C** 时使用的默认代码页。|  
@@ -281,7 +281,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  有关详细信息，请参阅本主题后面的 [备注](#remarks)。  
   
  **-r** ***row_term***<a name="r"></a>  
- 指定行终止符。 默认的行终止符是 **\n** （换行符）。 使用此参数可替代默认行终止符。 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+ 指定行终止符。 默认的行终止符是 **\n** （换行符）。 使用此参数可替代默认行终止符。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定行终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
   
@@ -293,7 +293,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-S** ***server_name*** [\\***instance_name***]<a name="S"> </a>指定的实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]来进行连接。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例，请指定 *server_name***\\***instance_name*。  
   
  **-t** ***field_term***<a name="t"></a>  
- 指定字段终止符。 默认的字段终止符是 **\t** （制表符）。 使用此参数可以替代默认字段终止符。 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+ 指定字段终止符。 默认的字段终止符是 **\t** （制表符）。 使用此参数可以替代默认字段终止符。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定字段终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
   
@@ -339,7 +339,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  有关详细信息，请参阅 [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-x**<a name="x"></a>  
- 结合使用 **format** 和 **-f** format_file 选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时，**-x** 不起作用。 如果不与 **format** 和 **-f** format_file 一起使用，则将生成错误。  
+ 结合使用 **format** 和 **-f** format_file 选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不与 **format** 和 **-f** format_file 一起使用，则将生成错误。  
   
 ## 备注<a name="remarks"></a>
  使用 **bcp** 工具时，将安装 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 客户端。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的工具，你所使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 13.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
@@ -400,7 +400,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。 其效果和指定 **-w** 开关而不指定格式化文件相同。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  **bcp out** 操作要求对源表有 SELECT 权限。  
   
  **bcp in** 操作要求至少对目标表有 SELECT/INSERT 权限。 此外，如果下列任一条件成立，则要求拥有 ALTER TABLE 权限：  

@@ -1,6 +1,6 @@
 ---
 title: "要开始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft 文档"
-description: "此快速入门教程演示如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
+description: "本快速入门演示如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 42bcabc32c3a47c09bc8c3dd116403163faa2071
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 1826b003083d374aa052943016296079491ae158
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安装 SQL Server 和 Red Hat 上创建数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在此快速入门教程中，你首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在本快速入门教程，你首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 你必须 RHEL 7.3 或 7.4 机**至少 2 GB**的内存。
 
@@ -117,6 +117,11 @@ ms.lasthandoff: 12/01/2017
    ```
 
 > [!TIP]
-> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括：
+>
+> * [SQL Server 操作 Studio （预览版）](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> * [mssql cli （预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

@@ -3,7 +3,7 @@ title: "SQL Server 属性 (Always On 高可用性选项卡上） |Microsoft 文�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a28b3c025eb159e3a087b80d29ba738748d1c3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2c6991b8919cf756001cd3f61df396dee8591579
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**Always On 高可用性**选项卡**SQL Server 属性**中的对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器来启用或禁用中的Alwayson可用性组功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  

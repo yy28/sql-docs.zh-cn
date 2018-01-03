@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="translate-transact-sql"></a>翻译 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ inputString
 ## <a name="return-types"></a>返回类型   
 返回与相同的类型的字符表达式`inputString`其中将从第二个参数的字符替换为从第三个自变量匹配的字符。
 
-## <a name="remarks"></a>注释   
+## <a name="remarks"></a>Remarks   
 
 `TRANSLATE`如果字符和翻译具有不同长度，则函数将返回错误。 `TRANSLATE`如果作为字符或替换自变量提供 null 值，函数应返回不变的输入。 行为`TRANSLATE`函数应等于[替换](../../t-sql/functions/replace-transact-sql.md)函数。   
 
@@ -77,7 +77,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. 将 GeoJSON 点转换为 WKT    
 GeoJSON 是一种格式进行编码各种地理数据结构。 与`TRANSLATE`函数，开发人员可以轻松地将转换 GeoJSON 点为 WKT 格式，反之亦然。 下面的查询替换正则大括号中输入的正方形和大括号：   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```

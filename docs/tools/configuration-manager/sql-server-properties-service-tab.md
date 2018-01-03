@@ -3,7 +3,7 @@ title: "SQL Server 属性 （服务选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c041e027aa9e64c70bdea5e1f7e52cf98d9aae8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b66babbd500209c7eece61064fa30a9a4a3a7ee2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**服务**选项卡上**MSSQLSERVER 属性**对话框中，可以查看或指定以下选项。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **二进制路径**  
  列出此服务所使用的程序文件的位置。  
   

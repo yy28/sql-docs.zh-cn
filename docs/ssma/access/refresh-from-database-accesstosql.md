@@ -1,7 +1,7 @@
 ---
 title: "刷新从数据库 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6edfa45a12c2fa251960f8e19aa095f8eefc62e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e9a312f8aef6485c880be227295cde48e2787d6a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-accesstosql"></a>刷新从数据库 (AccessToSQL)
 **从数据库刷新**对话框中，可以选择要从 Access 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  

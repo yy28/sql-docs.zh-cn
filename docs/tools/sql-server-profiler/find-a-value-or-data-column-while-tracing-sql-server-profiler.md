@@ -3,7 +3,7 @@ title: "跟踪 （SQL Server 事件探查器） 时查找值或数据列 |Micros
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 197d74983d179aa8d9504c09d0c21786e7ac27db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe703bd160d698de591cad5ce321c0cdf4b544a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>在跟踪时查找值或数据列 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何为特定值或数据列，在跟踪输出使用运行跟踪时搜索[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  

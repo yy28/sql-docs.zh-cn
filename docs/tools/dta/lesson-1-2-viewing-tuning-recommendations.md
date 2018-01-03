@@ -3,7 +3,7 @@ title: "查看优化建议 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0beed8adb028f43884306b92223a9c3f58db507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edd4b57780ac2df7a8eec09701819b5b44ef19bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>课程 1-2-查看优化建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此任务使用你在中创建的优化会话[优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)。 使用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本优化了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将在“建议”选项卡中显示优化结果。以下任务介绍了[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问图形用户界面 (GUI) 中的“建议”选项卡，并指导你浏览该选项卡中提供的有关优化会话结果的信息。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  输入新的“会话名称”**EvaluateMySession**，然后单击工具栏中的“开始分析”按钮。 可以对新的优化会话重复步骤 2 和步骤 3 以查看其建议。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>“摘要”  
 你已经查看了 MySession 优化会话的“建议”选项卡的内容，并在新的 EvaluateMySession 优化会话中评估了其建议的子集。  
   
 如果在运行会话之后必须更改优化选项，则可能有必要评估优化建议的子集。 例如，如果在指定会话的优化选项时要求[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问考虑索引视图，但在生成了建议后又决定不使用索引视图。 那么，可以使用“操作”菜单上的“评估建议”选项让[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问在不考虑索引视图的情况下重新评估会话。 使用“评估建议”选项时，将假设将以前生成的建议应用于当前物理设计，以获得第二个优化会话的物理设计。  

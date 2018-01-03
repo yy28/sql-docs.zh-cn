@@ -1,7 +1,7 @@
 ---
 title: "链接到 SQL Server 的 Azure SQL 数据库的访问应用程序 |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -33,11 +33,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: b4ac30b2c0275de85f7ebab7cb8c7d0876f3142f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>链接到 SQL Server 的 Azure SQL DB (AccessToSQL) 访问应用程序
 如果你想要使用现有的 Access 应用程序，用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以将原始 Access 表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、 窗体、 报表和数据访问页使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库而不是你的 Access 数据库中的数据。  

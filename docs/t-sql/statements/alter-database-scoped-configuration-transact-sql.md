@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2867f3aff5b8d6d7256d2a9a4ecbe7dcfdccb88c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
 > [!NOTE] 
 > 仅可以为主设置此选项。 有关详细信息，请参阅[标识列](create-table-transact-sql-identity-property.md)。  
 
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  需要更改任何数据库作用域配置   
 对数据库中。 可以通过具有数据库拥有 CONTROL 权限的用户授予此权限。  
   
@@ -194,7 +194,7 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
 此示例将执行 ALTER DATABASE SCOPED CONFIGURATION 所需的权限授予     
 为用户 [Joe]。  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +202,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 此示例将 MAXDOP 设置 = 主数据库和 MAXDOP 1 = 4 异地复制方案中的辅助数据库。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 此示例将辅助数据库的 MAXDOP 会相同，因为它已设置为与其在异地复制方案中的主数据库设置。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +217,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 此示例会将 LEGACY_CARDINALITY_ESTIMATION 的异地复制方案中的辅助数据库设置为开中。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 此示例将 LEGACY_CARDINALITY_ESTIMATION 设置辅助数据库，因为它是用于在异地复制方案中其主数据库。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,20 +231,20 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 此示例会将 PARAMETER_SNIFFING 的异地复制方案中的主数据库设置为 OFF 中。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 此示例会将 PARAMETER_SNIFFING 的异地复制方案中的主数据库设置为 OFF 中。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 此示例将按原样主数据库上的辅助数据库设置 PARAMETER_SNIFFING   
 在异地复制方案。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
@@ -253,7 +253,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 针对主数据库设置为 ON 的 QUERY_OPTIMIZER_HOTFIXES   
 在异地复制方案。  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +261,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 此示例中清除过程缓存 （可能仅对主数据库）。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,7 +271,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 此示例将禁用标识缓存。
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 

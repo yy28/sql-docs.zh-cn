@@ -1,7 +1,7 @@
 ---
 title: "将 MySQL 数据迁移到 SQL Server 的 Azure SQL DB (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d50bf548e5e9d64aef5aa306937b03a9c27c669
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0887825cf16986b78cad5d1889a04d73dacf222a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据迁移到 SQL Server 的 Azure SQL DB (MySQLToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你可以将数据从迁移到的 MySQL[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  

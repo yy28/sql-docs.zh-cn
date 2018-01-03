@@ -3,7 +3,7 @@ title: "配置元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5c2fbe01ba5d00efac6a78a9386cfb0bec73b08
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a9db60913e57a9619a2363b94ed3bdbda87e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuration-element-dta"></a>配置元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定包含的现有和假想的物理设计结构的数据库引擎优化顾问优化工作负荷时进行分析的用户指定配置。  
@@ -44,13 +44,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>元素属性  
   
-|配置属性|说明|  
+|配置属性|Description|  
 |-----------------------------|-----------------|  
 |**SpecificationMode**|可选。 指定数据库引擎优化顾问是依据当前的现有配置分析指定的配置，还是将指定的配置作为一个全新的独立配置进行分析。 使用 string 数据类型将此属性指定为以下允许  值之一：<br /><br /> **相对**：<br />                  依据被优化的数据库中的物理设计结构（索引、索引视图和分区）的当前现有配置来评估指定的配置。 例如：<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **绝对**：<br />                  将指定配置作为独立配置进行评估。 如果指定 Absolute，则数据库引擎优化顾问将不考虑现有配置。 例如：<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

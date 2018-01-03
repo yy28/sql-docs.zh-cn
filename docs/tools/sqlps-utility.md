@@ -3,7 +3,7 @@ title: "sqlps 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlps
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f58173d529ce471e3566de0b7e56d76ad1a67e04
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1869cd0a65ab63d5d579eb8c11b2329a8fbbebe8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**实用工具启动 Windows PowerShell 会话，同时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 提供程序和 cmdlet 加载和注册。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
@@ -80,7 +80,7 @@ sqlps
  [ **-?** | **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **Sqlps** 实用工具启动 PowerShell 环境 (PowerShell.exe) 并加载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 模块。 该模块也命名为 **sqlps**，它将加载并注册以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

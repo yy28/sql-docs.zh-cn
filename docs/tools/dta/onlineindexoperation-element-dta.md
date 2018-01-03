@@ -3,7 +3,7 @@ title: "OnlineIndexOperation 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f1b623107b78bcf9edd3ff101f2faf7831ff3fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd8acd696b9aa2ddfe200adba618d848657df5f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定是否索引、 索引的视图或数据库引擎优化顾问建议的分区可以联机创建。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，无最大长度。|  
 |**允许的值**|**OFF**<br /> 建议的物理设计结构都无法联机创建。<br /><br /> **ON**<br /> 所有建议的物理设计结构都可以联机创建。<br /><br /> **MIXED**<br /> 数据库引擎优化顾问会尝试建议可以联机创建的物理设计结构。<br /><br /> 将这些值中的一个值用于此元素。 如果联机创建索引，则将向其对象定义中追加 **ONLINE = ON** 关键字。|  

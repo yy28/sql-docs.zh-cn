@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>替换函数映射的向后兼容性应用程序
 ODBC 3*.x*应用程序工作到 ODBC 3*.x*对 ODBC 2 起驱动程序管理器。*x*驱动程序，只要使用任何新功能。 同时复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器映射以下 ODBC 3。*x*函数，已替换一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  
@@ -422,7 +422,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLColAttribute**与*ColumnNumber*自变量设置为 0，驱动程序管理器返回*FieldIdentifier*值下表中列出。  
   
-|*FieldIdentifier*|值|  
+|*FieldIdentifier*|ReplTest1|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -454,7 +454,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLDescribeCol**与*ColumnNumber*参数设置为 0，驱动程序管理器会返回下表中列出的值。  
   
-|缓冲区|值|  
+|缓冲区|ReplTest1|  
 |------------|-----------|  
 |ColumnName|""（空字符串）|  
 |* NameLengthPtr|0|  

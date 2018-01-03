@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>编写 ODBC 3.x 驱动程序
 下表显示了 ODBC 3 中的函数的支持。*x*驱动程序和 ODBC 应用程序，以及针对 ODBC 3 调用函数时执行的驱动程序管理器中的映射。*x*驱动程序。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |**SQLError**|是|没有 [1]|是|  
 |**SQLExecDirect**|是|是|是|  
 |**SQLExecute**|是|是|是|  
-|**SQLExtendedFetch**|是|“否”|是|  
+|**SQLExtendedFetch**|是|是|是|  
 |**SQLFetch**|是|是|是|  
 |**SQLFetchScroll**|是|是|是|  
 |**SQLForeignKeys**|是|是|是|  

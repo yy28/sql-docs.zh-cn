@@ -4,7 +4,7 @@ description: "安装、 更新和卸载 Linux 上的 SQL Server。 本主题介�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 本主题说明如何安装、 更新和卸载 Linux 上的 SQL Server 2017。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 支持 SQL Server 自 2017 年。 此外，还可以作为可在 Linux 或 Docker 为 Windows/mac。 上的 Docker 引擎运行的 Docker 映像
 
 > [!TIP]
-> 若要快速开始，跳转到快速入门教程： 之一[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
+> 若要快速开始，跳转到为快速入门之一[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
 
 ## <a id="supportedplatforms"></a>支持的平台
 
@@ -40,6 +40,10 @@ ms.lasthandoff: 12/01/2017
 | **SUSE Linux Enterprise Server** | v12 SP2 | [获取 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [获取 Docker](http://www.docker.com/products/overview)
+
+部署和管理 SQL Server 容器通过 OpenShift 和 Kubernetes，Microsoft 提供支持。
+
+SQL Server 自 2017 年的最新支持策略，请参阅[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
 ## <a id="system"></a>系统要求
 
@@ -62,7 +66,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 
 ## <a id="platforms"></a> 安装 SQL Server
 
-从命令行，可以在 Linux 上安装 SQL Server。 有关说明，请参阅以下快速入门教程之一：
+从命令行，可以在 Linux 上安装 SQL Server。 有关说明，请参阅以下快速入门之一：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ sudo rm -rf /var/opt/mssql/
 若要配置的 CU 或 GDR 存储库，请使用以下步骤：
 
 > [!NOTE]
-> [快速入门教程](#platforms)配置 CU 存储库。 如果你按照这些教程，你不需要使用以下步骤以继续使用 CU 存储库。 这些步骤才需要更改你配置的存储库。
+> [快速入门](#platforms)配置 CU 存储库。 如果你按照这些教程，你不需要使用以下步骤以继续使用 CU 存储库。 这些步骤才需要更改你配置的存储库。
 
 1. 如有必要，删除以前配置的存储库。
 
@@ -202,7 +206,7 @@ sudo rm -rf /var/opt/mssql/
 
 可以按以下方式来执行无人参与的安装：
 
-- 按照初始步骤中[快速入门教程](#platforms)来注册存储库和安装 SQL Server。
+- 按照初始步骤中[快速入门](#platforms)来注册存储库和安装 SQL Server。
 - 当你运行`mssql-conf setup`，将其设置[环境变量](sql-server-linux-configure-environment-variables.md)并用`-n`（无提示） 选项。
 
 下面的示例将配置的 SQL Server 的开发人员版**MSSQL_PID**环境变量。 它还会接受 EULA (**ACCEPT_EULA**) 和设置的 SA 用户密码 (**MSSQL_SA_PASSWORD**)。 `-n`参数执行悄悄地的安装其中的配置值从环境变量中提取。
@@ -266,7 +270,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-连接到 SQL Server 实例以开始创建和管理数据库。 若要开始，请参阅快速入门教程:
+连接到 SQL Server 实例以开始创建和管理数据库。 若要开始，请参阅快速入门：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET 选项 (Transact SQL) |Microsoft 文档"
 description: "了解有关如何设置数据库选项，如自动优化，加密，SQL Server 和 Azure SQL 数据库中查询存储区"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -388,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用于**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]。  
   
  控制更改跟踪选项。 可以启用更改跟踪、设置选项、更改选项以及禁用更改跟踪。 有关示例，请参阅本主题后面的“示例”一节。  
   
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  打开|关闭|清除[全部]  
  控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。  
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |关闭
   
  可通过查看 sys.databases 目录视图中的 is_arithabort_on 列或 DATABASEPROPERTYEX 函数的 IsArithmeticAbortEnabled 属性来确定此选项的状态。  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1223,9 +1223,9 @@ GO
   
  结果集显示快照隔离框架已启用。  
   
- |name |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
- |AdventureWorks2012   |1                        | ON |  
+ |AdventureWorks2012   |@shouldalert                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>D. 启用、修改和禁用更改跟踪  
  下面的示例对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库启用更改跟踪并将保持期设置为 `2` 天。  
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. 启用查询存储  
- **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  下面的示例启用查询存储并配置查询存储参数。  
   

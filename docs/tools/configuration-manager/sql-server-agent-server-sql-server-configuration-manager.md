@@ -3,7 +3,7 @@ title: "SQL Server 代理&lt;服务器&gt;（SQL Server 配置管理器） |Micr
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79f385d0644ace59d7c972d452a0cdbfefc8a086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 95d1ed4efb268ddb5c1ccc7755925ad0cb90ec92
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server 代理&lt;服务器&gt;（SQL Server 配置管理器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]这是支持的服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 若要查看此服务的属性，请在详细信息窗格中右键单击此服务，再单击 **“属性”**。  

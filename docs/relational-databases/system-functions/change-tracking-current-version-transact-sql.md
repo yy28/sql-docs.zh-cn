@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7be2d0c11dbf7537818c658b0a26254c5d7e41ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a560013a52a801b6b2ddf29050218f2370307717
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在没有为数据库启用更改跟踪时返回 NULL。  
   
 ## <a name="examples"></a>示例  
  下面的示例声明本地变量 `@next_baseline`，用于存储所跟踪更改的当前版本，然后使用 `CHANGE_TRACKING_CURRENT_VERSION()` 函数获取该变量的值。  
   
-```tsql  
+```sql  
 DECLARE @next_baseline bigint;  
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  

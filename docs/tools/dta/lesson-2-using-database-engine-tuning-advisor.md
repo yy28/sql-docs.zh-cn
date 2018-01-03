@@ -3,7 +3,7 @@ title: "第 2 课： 使用数据库引擎优化顾问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 707c67f64ac8e074f3f0177733c9119eb9095bc3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7c9ec1efea6c7fa1051e3a527a46236aef21315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 课：使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库引擎优化顾问可以优化数据库、 管理优化会话，并查看优化建议。 对物理设计结构很熟悉的用户可使用此工具执行探索性数据库优化分析。 数据库优化初学者也可使用此工具为其优化的工作负荷找到最佳物理设计结构配置。 本课程为那些对于数据库引擎优化顾问图形用户界面陌生的数据库管理员和不太熟悉物理设计结构的系统管理员提供了基本练习。  

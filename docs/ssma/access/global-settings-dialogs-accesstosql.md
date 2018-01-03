@@ -1,7 +1,7 @@
 ---
 title: "全局设置 （对话框） (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 781df720701bfebc06faa43e782ae98167bd98b5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4493656a3b7e86a9d023edc7cbed1a5387ddf760
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全局设置 （对话框） (AccessToSQL)
 使用的对话框页**全局设置**对话框中指定的默认用户执行任何操作和 SSMA 警告设置。  
   
 若要访问在该对话框设置**工具**菜单上，选择**全局设置**，单击**GUI**底部的左窗格中，，然后选择**对话框**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **在启动时显示迁移向导**  
 SSMA for Access，在你可以选择启用或禁用**迁移向导**SSMA 应用程序启动。 默认情况下，此选项才**True**。  
   

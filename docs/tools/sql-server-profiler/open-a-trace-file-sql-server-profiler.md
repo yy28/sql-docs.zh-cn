@@ -3,7 +3,7 @@ title: "打开跟踪文件 （SQL Server 事件探查器） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6ade1395ab55d1717795087095376723de01ceb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 48b2f47dc77da176247faf46741035f1dc07519b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>打开跟踪文件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何通过使用打开跟踪文件[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  

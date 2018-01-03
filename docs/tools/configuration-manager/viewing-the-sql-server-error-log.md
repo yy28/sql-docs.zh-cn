@@ -3,7 +3,7 @@ title: "查看 SQL Server 错误日志 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f25d82815803d6003d5b9196c4f38caf012beaeb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d1514d7d7be760e3d10a831794210c36eddfe25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-the-sql-server-error-log"></a>查看 SQL Server 错误日志
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]视图[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志，以确保进程已完成成功 （对于示例、 备份和还原操作，批处理命令或其他脚本和进程）。 此功能可用于帮助检测任何当前或潜在的问题领域，包括自动恢复消息（尤其是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已停止并重新启动时）、内核消息或其他服务器级错误消息。  

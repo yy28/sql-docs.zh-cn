@@ -3,7 +3,7 @@ title: "工作负荷元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b4f3f970e0239367de10389f103d74e08f5ae90
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc428a8f44fb2ca88a3aea2c93f9bdaf43b4e4f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="workload-element-dta"></a>工作负荷元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定要用于优化会话的工作负荷。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 |**父元素**|[启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**子元素**|[文件元素 (DTA)](../../tools/dta/file-element-dta.md)<br /><br /> [工作负荷的数据库元素 (DTA)](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 元素 (DTA)](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 数据库引擎优化顾问可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、跟踪文件和跟踪表用作工作负荷。  
   
  如果在 XML 输入文件中指定了一个工作负荷，同时又使用 **dta** 工具在命令行中指定了一个工作负荷，则将使用命令行中指定的工作负荷进行优化。 命令行中指定的所有优化选项的优先级均高于 XML 输入文件中指定的优化选项。 唯一的例外情况是：在计算模式下，在 XML 输入文件中输入用户指定的配置。 例如，如果在 XML 输入文件的 **Configuration** 元素中输入了一个配置，同时在优化选项中指定了 **EvaluateConfiguration** 元素，则 XML 输入文件中指定的优化选项将覆盖命令提示行中输入的任何优化选项。  

@@ -3,7 +3,7 @@ title: "指定跟踪文件 （SQL Server 事件探查器） 的事件和数据�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6dff3a23c831f9d810719939e368884e899684e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 48579626942ccf3e043bcac347e803660ce5592e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定跟踪文件的事件和数据列 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何通过使用指定的跟踪的事件类和数据列[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  

@@ -3,7 +3,7 @@ title: "SQL 全文筛选器后台程序启动器 （选项卡上的日志） |Mi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88b20c4eb7da9731885989284da6f893f4755839
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 816ec9e88b5786ef9fc5c59b17a2ccb4cfcd4934
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>SQL 全文筛选器后台程序启动器（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，SQL 全文筛选器后台程序启动器 (FDHOST Launcher) 服务由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的全文搜索。 如果使用全文搜索，则必须运行此服务。 有关筛选器后台程序主机进程的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“全文搜索体系结构”。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 >   
 >  有关选择帐户以运行服务的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机帮助中的“设置 Windows 服务帐户”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **内置帐户**  
  **Local System**  
  指定本地系统帐户。 该帐户不需要密码。 但是，本地系统帐户可能会阻止该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  

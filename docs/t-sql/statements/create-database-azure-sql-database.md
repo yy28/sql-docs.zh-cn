@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ CREATE DATABASE database_name
   
  有关参数的详细信息和`CREATE DATABASE`语句，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的数据库具有多个在创建数据库时设置的默认设置。 有关这些默认设置的详细信息，请参阅中的值列表[DATABASEPROPERTYEX &#40;Transact SQL &#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
  MAXSIZE 提供限制数据库大小的功能。 如果数据库的大小达到其 MAXSIZE，您将收到错误代码 40544。 如果发生这种情况，您不能插入或更新数据或创建新的对象（如表、存储过程、视图和函数）。 不过，您仍可以读取和删除数据、截断表、删除表和索引以及重新建立索引。 然后，您可以将 MAXSIZE 更新为比当前数据库大小更大的值，或者删除一些数据以释放存储空间。 在您可以插入新数据之前，可能有长达十五分钟的延迟。  
@@ -206,7 +206,7 @@ CREATE DATABASE database_name
   
  有关详细信息，请参阅[创建一份 Azure SQL 数据库使用 TRANSACT-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建数据库登录名必须是以下项之一：  
   
 -   服务器级别主体登录名  
@@ -223,14 +223,14 @@ CREATE DATABASE database_name
 ### <a name="simple-example"></a>简单示例  
  一个简单的示例，用于创建数据库。  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>使用版的简单示例  
  一个简单的示例，用于创建标准数据库。  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>使用其他选项的示例  
  使用多个选项的示例。  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>创建副本  
  示例创建数据库的副本。  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>在弹性池中创建数据库  
  名为 S3M100 池内创建新的数据库：  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>在另一台服务器上创建数据库的副本  
  下面的示例创建名 db_copy P2 性能级别为单个数据库的 db_original 数据库的副本。  这是 true，无论 db_original 是否在弹性池或单个数据库的性能级别。  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  下面的示例创建名为 db_copy 名为 ep1 弹性池中的 db_original 数据库的副本。  这是 true，无论 db_original 是否在弹性池或单个数据库的性能级别。  如果 db_original 处于弹性池的一个不同的名称，然后在 ep1 仍创建 db_copy。  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 下面的示例设置要与数据库排序规则相同的目录排序规则的数据库创建期间将目录排序规则设置为 DATABASE_DEFAULT。
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

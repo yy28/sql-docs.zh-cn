@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6bf90e58d4956877786dd0d247653e8a99480c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d344044a5ce4a0cd995cc1695b69ac9312d4db74
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ END CATCH
  *statement_block*  
  批处理或包含于 BEGIN…END 块中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  TRY…CATCH 构造可对严重程度高于 10 但不关闭数据库连接的所有执行错误进行缓存。  
   
  TRY 块后必须紧跟相关联的 CATCH 块。 在 END TRY 和 BEGIN CATCH 语句之间放置任何其他语句都将生成语法错误。  
@@ -108,7 +108,7 @@ END CATCH
   
  如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY…CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +161,7 @@ END CATCH;
   
  以下示例显示在存储过程中执行相同的 `SELECT` 语句时，由 `TRY…CATCH` 语句生成的对象名解析错误是如何不被 `CATCH` 构造捕捉，却被 `SELECT` 块捕捉的。  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +178,7 @@ END CATCH
   
  在存储过程内运行 `SELECT` 语句将导致错误在低于 `TRY` 块的级别上发生。 该错误将由 `TRY…CATCH` 构造处理。  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +211,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. 使用 TRY…CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +231,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. 在事务内使用 TRY…CATCH  
  以下示例显示 `TRY…CATCH` 块在事务内的工作方式。 `TRY` 块内的语句会生成违反约束的错误。  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +260,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. 将 TRY…CATCH 与 XACT_STATE 配合使用  
  以下示例显示如何使用 `TRY…CATCH` 构造来处理事务内发生的错误。 `XACT_STATE` 函数确定应提交事务还是应回滚事务。 在本示例中，`SET XACT_ABORT` 状态为 `ON`。 在发生违反约束的错误时，这会使事务处于不可提交状态。  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +329,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

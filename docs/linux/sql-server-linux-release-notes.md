@@ -4,7 +4,7 @@ description: "本主题包含的发行说明，并支持在 Linux 上运行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 | Windows、Mac 或 Linux 上的 Docker 引擎 1.8 及更高版本 | N/A | [安装指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> 查看[系统要求](sql-server-linux-setup.md#system)在 Linux 上的 SQL server。
+> 有关详细信息，请查看[系统要求](sql-server-linux-setup.md#system)在 Linux 上的 SQL server。 SQL Server 自 2017 年的最新支持策略，请参阅[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
 ## <a name="supported-client-tools"></a>支持的客户端工具
 
@@ -129,12 +129,12 @@ Linux 目前不支持以下功能和服务。 将随着时间的推移越来越�
 | &nbsp; | 带有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集 |
 | &nbsp; | 缓冲池扩展 |
 | **SQL Server 代理** |  子系统： CmdExec、 PowerShell、 队列读取器、 SSIS、 SSAS、 SSRS |
-| &nbsp; | 警报 |
+| &nbsp; | Alerts |
 | &nbsp; | 日志读取器代理 |
 | &nbsp; | 变更数据捕获 |
 | &nbsp; | 托管备份 |
 | **高可用性** | 数据库镜像  |
-| **安全性** | 可扩展的密钥管理 |
+| **Security** | 可扩展的密钥管理 |
 | &nbsp; | 对于链接服务器的 AD 身份验证 | 
 | &nbsp; | 可用性组 （承载个可用性组） 的的 AD 身份验证 | 
 | &nbsp; | 第三方 AD 工具 (Centrify，Vintela，Powerbroker) | 
@@ -143,7 +143,7 @@ Linux 目前不支持以下功能和服务。 将随着时间的推移越来越�
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
+| &nbsp; | “数据库引擎服务” |
 | &nbsp; | Master Data Services |
 
 ### <a name="known-issues"></a>已知问题
@@ -289,7 +289,7 @@ Linux 目前不支持以下功能和服务。 将随着时间的推移越来越�
 
 ### <a name="next-steps"></a>后续步骤
 
-若要开始，请参阅以下快速入门教程：
+若要开始，请参阅以下快速入门：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)

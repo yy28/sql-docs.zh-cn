@@ -24,11 +24,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 8488ee0a8bb823438071cb912bd56c08af640b42
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/17/2017
 |**reserved_page_count**|**bigint**|保留版本 tempdb 中的页的总数存储的数据库记录。|  
 |**reserved_space_kb**|**bigint**|用在 tempdb 中的千字节为单位的版本的总空间存储的数据库记录。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 
 ## <a name="examples"></a>示例  
  以下查询可以用于确定在 tempdb 中使用的空间的每个数据库中的 SQL Server 实例的版本存储区。 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,

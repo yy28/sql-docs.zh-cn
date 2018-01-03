@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: da7c61f339c0d8d66c8c0bcd00514a6ecf58286f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d362be9a5cf9e3b60f30760073ec4ea30288a61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
 |distribution_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分发与关联的唯一数字 id。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  页计数始终为区级计数。 所以，页计数的值始终为八的倍数。 包含全局分配映射表 (GAM) 和共享全局分配映射表 (SGAM) 分配页的区是已分配的统一区。 它们不包含在上文所述的页计数中。  
   
  当前版本存储区的内容是在[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)。 在文件级而不是会话级和任务级跟踪版本存储页，因为它们是全局资源。 会话会生成版本，但在会话结束时不能删除版本。 版本存储清除必须考虑需要访问特定版本的运行时间最长的事务。 可以通过查看 elapsed_time_seconds 列中的发现最长运行的事务与版本存储区清理相关[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id、file_id|sys.dm_io_virtual_file_stats.database_id、file_id|一对一|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>确定 tempdb 中的可用空间量  
  下面的查询返回的可用页和总可用空间总数以兆字节 (MB) 可用中的所有文件中**tempdb**。  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
@@ -112,7 +112,7 @@ FROM sys.dm_db_file_space_usage;
 ### <a name="determining-the-amount-of-space-used-by-user-objects"></a>确定用户对象使用的空间量  
  下面的查询将返回 tempdb 中用户对象使用的总页数和总空间量。  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  

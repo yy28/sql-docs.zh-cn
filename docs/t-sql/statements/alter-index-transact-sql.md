@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef1bc9e0e99288cb739f53eb42a8e19691a04601
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="syntax"></a>语法  
   
 ```  
--- Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  
@@ -152,7 +152,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```  
--- Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+-- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -488,7 +488,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  *max_degree_of_parallelism*可以是：  
   
- 1  
+ @shouldalert  
  取消生成并行计划。  
   
  \>1  
@@ -556,7 +556,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
   
-```t-sql  
+```sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -634,7 +634,7 @@ PAUSE
 
 中止已声明为可恢复的正在运行或暂停索引操作。 您必须显式执行**中止**命令终止可恢复索引重新生成操作。 故障或暂停可恢复的索引操作不会终止其执行;相反，它留在无限期暂停状态的操作。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组。 此语句不能用于修改索引定义，如添加或删除列，或更改列的顺序。 使用带有 DROP_EXISTING 子句的 CREATE INDEX 执行这些操作。  
   
  未显式指定选项时，则应用当前设置。 例如，如果未在 REBUILD 子句中指定 FILLFACTOR 设置，将在重新生成过程中使用系统目录中存储的填充因子值。 若要查看当前的索引选项设置，请使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -703,9 +703,7 @@ PAUSE
  只有在执行以下操作时，才能对同一个表或表部分执行并发联机索引操作：  
   
 -   创建多个非聚集索引。  
-  
 -   在同一个表中重新组织不同索引。  
-  
 -   在同一个表中重新生成不重叠的索引时，重新组织不同的索引。  
   
  同一时间执行的所有其他联机索引操作都将失败。 例如，您不能在同一个表中同时重新生成两个索引或更多索引，也不能在同一个表中重新生成现有索引时创建新的索引。  
@@ -715,18 +713,17 @@ PAUSE
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 联机索引重新生成被指定为可恢复使用 RESUMABLE = ON 选项。 
--  可恢复的选项不会保存在给定索引的元数据并且仅适用于当前的 DDL 语句的持续时间。 因此，RESUMABLE = ON 子句必须显式指定，若要启用 resumability。
-
+-  可恢复的选项不会保存在给定索引的元数据并且仅适用于当前的 DDL 语句的持续时间。  因此，RESUMABLE = ON 子句必须显式指定，若要启用 resumability。
 -  请注意两个不同的 MAX_DURATION 选项。 一个与 low_priority_lock_wait 相关，它的其他相关 RESUMABLE = ON 选项。
    -  支持为 RESUMABLE MAX_DURATION 选项 = ON 选项或**low_priority_lock_wait**参数选项。 
-   MAX_DURATION 可恢复的选项指定正在重新生成索引的时间间隔。 使用此时间后重新生成索引或者暂停或完成其执行。 用户决定时可以恢复已暂停索引重新生成。 **时间**以分钟为 MAX_DURATION 必须是大于 0 分钟和小于或等于一周 （7 x 24 x 60 = 10080 分钟的时间）。 具有长暂停索引操作可能会影响特定的表上的 DML 性能，以及数据库磁盘容量，因为两个索引原始和新创建的一个需要磁盘空间并需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作将继续，直到其完成或失败为止。 
+   -  MAX_DURATION 可恢复的选项指定正在重新生成索引的时间间隔。 使用此时间后重新生成索引或者暂停或完成其执行。 用户决定时可以恢复已暂停索引重新生成。 **时间**以分钟为 MAX_DURATION 必须是大于 0 分钟和小于或等于一周 （7 * 24 * 60 = 10080 分钟的时间）。 具有长暂停索引操作可能会影响特定的表上的 DML 性能，以及数据库磁盘容量，因为两个索引原始和新创建的一个需要磁盘空间并需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作将继续，直到其完成或失败为止。 
 -   \<Low_priority_lock_wait > 参数选项允许你决定如何在索引操作可以继续执行时在 SCH-M 锁相上被阻止。
  
 -  重新执行具有相同参数的原始 ALTER INDEX REBUILD 语句将恢复暂停的索引重新生成操作。 你可以通过执行 ALTER 索引恢复的语句来恢复已暂停的索引重新生成操作。
 -  SORT_IN_TEMPDB = ON 可恢复的索引不支持选项 
 -  将 DDL 命令与 RESUMABLE = ON 无法执行显式事务中 (不能属于开始 tran... 提交块）。
 -  仅都已暂停的索引操作都是可恢复的。
--   当恢复已暂停某一索引操作，你可以更改为新值的 MAXDOP 值。  如果未指定 MAXDOP 当恢复已暂停某一索引操作，将使用最后一个的 MAXDOP 值。 如果索引重新生成操作未在所有指定 MAXDOP 选项，则采用默认值。
+-  当恢复已暂停某一索引操作，你可以更改为新值的 MAXDOP 值。  如果未指定 MAXDOP 当恢复已暂停某一索引操作，将使用最后一个的 MAXDOP 值。 如果索引重新生成操作未在所有指定 MAXDOP 选项，则采用默认值。
 - 若要暂停立即索引操作，你可以停止正在进行的命令 (CTRL-C)，也可以执行 ALTER INDEX 暂停命令或 KILL *session_id*命令。 一旦命令被暂停它可以恢复使用恢复选项。
 -  中止命令可终止的会话中承载原始索引重新生成，并且将中止此索引操作  
 -  没有额外的资源所需的可恢复索引重新生成除外
@@ -765,31 +762,27 @@ PAUSE
   
  若要评估更改页和行压缩将如何影响表、 索引或分区，使用[sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)存储过程。  
   
- 以下限制适用于已分区索引：  
+以下限制适用于已分区索引：  
   
 -   当你使用`ALTER INDEX ALL ...`，你无法更改的压缩设置的单个分区如果表具有非对齐的索引。  
-  
 -   ALTER INDEX\<索引 >...REBUILD PARTITION ... 语法可重新生成索引的指定分区。  
-  
 -   ALTER INDEX\<索引 >...REBUILD WITH ... 语法可重新生成索引的所有分区。  
   
 ## <a name="statistics"></a>统计信息  
  执行时**ALTER INDEX ALL...** 上表中，更新仅与索引的统计信息关联。 针对表（而不是索引）自动或手动创建的统计信息不会更新。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 ALTER INDEX，至少需要对表或视图具有 ALTER 权限。  
   
 ## <a name="version-notes"></a>版本说明  
   
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不使用文件组和 filestream 选项。  
-  
 -  列存储索引不可用之前[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 
-
 -  可恢复的索引操作都可用开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
 ## <a name="basic-syntax-example"></a>基本语法示例：   
   
-```t-sql 
+```sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -803,7 +796,7 @@ ALTER INDEX ALL ON dbo.table1 REBUILD;
 ### <a name="a-reorganize-demo"></a>A. 重新组织演示  
  此示例演示 ALTER INDEX REORGANIZE 命令的工作原理。  它创建一个表具有多个行组，并且然后演示如何重新合并行组。  
   
-```  
+```sql  
 -- Create a database   
 CREATE DATABASE [ columnstore ];  
 GO  
@@ -848,20 +841,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```t-sql
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
  使用 TABLOCK 选项在并行中插入行。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，INSERT INTO 操作可以并行运行时使用 TABLOCK。  
   
-```t-sql  
+```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  运行此命令可查看打开的增量行组。 行组数取决于并行度。  
   
-```t-sql  
+```sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -869,20 +862,20 @@ WHERE object_id  = object_id('cci_target');
   
  运行此命令以强制到列存储的所有已关闭和打开行组。  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  再次运行此命令，你将看到较小的行组被合并到一个压缩行组。  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. 已关闭的增量行组压缩到列存储  
  此示例使用 REORGANIZE 选项设为压缩每个已关闭的增量行组到列存储为压缩行组。   这不是有必要，但当元组发动机不能压缩已关闭行组的速度不够快时非常有用。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -898,7 +891,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
   
  REORGANIZE 将合并行组来填充最多的最大行数的行组\<= 1,024,576。 因此，压缩所有打开和已关闭行组时你不会得到与大量在它们中只有少量的行的压缩行组。 你想要为已满尽可能减少的压缩的大小并提高查询性能的行组。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -913,9 +906,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
  从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，REORGANIZE 多个未到列存储压缩增量行组。 它还执行联机碎片整理。 首先，它通过以物理方式删除已删除的行，10%或更多行组中的行已被删除时减少列存储的大小。  然后，它将组合在一起以形成更大包含最多为每行组 1,024,576 行的最大值的行组的行组。  将所键入的所有行组被重新压缩。  
   
 > [!NOTE]
->  从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，则重新生成列存储索引不能再在大多数情况下需要因为 REORGANIZE 以物理方式移除已删除的行，并合并行组。 COMPRESS_ALL_ROW_GROUPS 选项强制到其以前仅可以使用重新生成列存储的所有打开或已关闭的增量行组。   REORGANIZE 处于联机状态，并且出现在后台，因此该操作那样可以继续进行查询。  
+> 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，则重新生成列存储索引不能再在大多数情况下需要因为 REORGANIZE 以物理方式移除已删除的行，并合并行组。 COMPRESS_ALL_ROW_GROUPS 选项强制到其以前仅可以使用重新生成列存储的所有打开或已关闭的增量行组。 REORGANIZE 处于联机状态，并且出现在后台，因此该操作那样可以继续进行查询。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -932,7 +925,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
   
  此示例演示如何重新生成聚集列存储索引和所有增量行组都强制转到列存储。 这个第一步将准备具有一个聚集列存储索引的表 FactInternetSales2 并且插入来自前四列的数据。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -953,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  结果显示没有一个打开行组，这意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将等待关闭行组和将数据移到列存储前添加更多的行。 此下一个语句重新生成聚集列存储索引，这会强制到列存储的所有行。  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -965,7 +958,7 @@ SELECT * FROM sys.column_store_row_groups;
  
  若要重新生成大型聚集列存储索引的分区，使用使用分区选项的 ALTER INDEX REBUILD。 此示例重新生成分区 12。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，我们建议将替换 REORGANIZE 重新生成。  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
@@ -978,7 +971,7 @@ REBUILD PARTITION = 12;
   
  下面的示例重新生成一个聚集列存储索引以便使用存档压缩，然后显示如何删除该存档压缩。 最后的结果将仅使用列存储压缩。  
   
-```t-sql  
+```sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1010,7 +1003,7 @@ GO
 ### <a name="a-rebuilding-an-index"></a>A. 重新生成索引  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Employee` 表中重新生成单个索引。  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
@@ -1019,16 +1012,16 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
   
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
   
- 下面的示例添加包含低优先级锁选项的 ONLINE 选项，并添加行压缩选项。  
+下面的示例添加包含低优先级锁选项的 ONLINE 选项，并添加行压缩选项。  
   
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1043,7 +1036,7 @@ REBUILD WITH
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. 通过 LOB 压缩重新组织索引  
  下面的示例重新整理 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的单个聚集索引。 因为该索引在叶级别包含 LOB 数据类型，所以该语句还会压缩所有包含该大型对象数据的页。 注意，不需要指定 WITH (LOB_COMPACTION) 选项，因为默认值为 ON。  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
@@ -1052,7 +1045,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
   
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```t-sql  
+```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1066,37 +1059,37 @@ GO
 ### <a name="e-disabling-an-index"></a>E. 禁用索引。  
  下面的示例禁用了对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Employee` 表的非聚集索引。  
   
-```t-sql  
+```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### <a name="f-disabling-constraints"></a>F. 禁用约束  
  下面的示例通过禁用中的主键索引禁用 PRIMARY KEY 约束[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。 自动禁用对基础表的 FOREIGN KEY 约束，并显示警告消息。  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
- 结果集返回此警告消息。  
+结果集返回此警告消息。  
   
- ```t-sql  
- Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
- on table 'EmployeeDepartmentHistory' referencing table 'Department'  
- was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
- ```  
+```  
+Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
+on table 'EmployeeDepartmentHistory' referencing table 'Department'  
+was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
+```  
   
 ### <a name="g-enabling-constraints"></a>G. 启用约束  
  下面的示例启用在示例 F 中禁用的 PRIMARY KEY 和 FOREIGN KEY 约束。  
   
- 通过重新生成 PRIMARY KEY 索引启用 PRIMARY KEY 约束。  
+通过重新生成 PRIMARY KEY 索引启用 PRIMARY KEY 约束。  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
- 此时，将启用 FOREIGN KEY 约束。  
+此时，将启用 FOREIGN KEY 约束。  
   
-```t-sql  
+```sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1107,7 +1100,7 @@ GO
   
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```t-sql  
+```sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1123,7 +1116,7 @@ GO
 ### <a name="i-changing-the-compression-setting-of-an-index"></a>I. 更改索引的压缩设置  
  下面的示例重新生成未分区行存储表的索引。  
   
-```t-sql
+```sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1131,7 +1124,7 @@ WITH (DATA_COMPRESSION = PAGE);
 GO  
 ```  
   
- 有关其他数据压缩示例，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
+有关其他数据压缩示例，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. 可恢复的联机索引重新生成
 
@@ -1141,7 +1134,7 @@ GO
 
 1. 执行联机索引重新生成作为恢复的挂起操作随 MAXDOP = 1。
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1149,29 +1142,29 @@ GO
 
 3. 作为可恢复操作随 MAX_DURATION 设置为 240 分钟执行联机索引重新生成。
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. 暂停正在运行的可恢复的联机索引重新生成。
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. 恢复已执行，因为 maxdop 指定新值的可恢复操作将设置为 4 索引重新生成联机索引重新生成。
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. 恢复为可恢复执行索引联机重新生成联机索引重新生成操作。 设置为 2 的 MAXDOP 设置为 240 分钟，如果被阻止锁等待 10 分钟索引作为 resmumable 正在运行的索引的执行时间之后, 终止所有阻止程序问题。 
 
-   ```t-sql
+   ```sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. 中止可恢复索引重新生成操作正在运行或已暂停。
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
@@ -1188,5 +1181,3 @@ GO
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
-

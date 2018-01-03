@@ -1,7 +1,7 @@
 ---
 title: "评估报表 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16fb67fed9a8cb8131f7711fae2036cf82f0d6cf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0e12233fc2506d7cbb7fd85b1068053cb26627b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessment-report-mysqltosql"></a>评估报表 (MySQLToSQL)
 评估报表窗口中显示的数据库的对象添加到转换的结果[!INCLUDE[tsql](../../includes/tsql_md.md)]语法，并且还可以帮助您评估的复杂性和成本的迁移项目。  
   
 若要访问评估报表中，选择的对象将转换源元数据资源管理器中右键单击**架构**，然后选择**创建报表**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 |||  
 |-|-|  

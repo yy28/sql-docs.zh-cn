@@ -3,7 +3,7 @@ title: "sqlservr 应用程序 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlservr
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1736e617da17f058e27a970e73e77ada7957876e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlservr**应用程序启动、 停止、 暂停和继续的实例[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]从命令提示符。  
@@ -78,7 +78,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  **-n**  
  用于启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例。 如果不设置 **-s** 参数，则尝试启动默认实例。 必须先在命令提示符处切换到实例的相应 BINN 目录，然后才能启动 **sqlservr.exe**。 例如，如果 Instance1 为其二进制文件使用了 \mssql$Instance1，则用户必须位于 \mssql$Instance1\binn 目录中才能启动 **sqlservr.exe -s instance1**。 如果用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **-n** 实例，则最好也使用 **-e** 选项，否者将不会记录 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
- **-T** *trace#*  
+ **-T** *trace #*  
  指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#*) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  使用低于默认值的值可以增加缓冲池和线程堆栈可用的内存量；在不使用很多扩展存储过程、分布式查询或自动化对象的系统中，这种方法可提高需要大量内存的工作负荷的性能。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  多数情况下，sqlservr.exe 程序只用于故障排除或主要维护。 在命令提示符下使用 sqlservr.exe 启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不作为服务启动，因此无法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 用户可以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具将显示服务的状态，以便 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器正确指示服务已停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以与服务器连接，但它也可以指示服务已停止。  
   
 ## <a name="compatibility-support"></a>兼容性支持  

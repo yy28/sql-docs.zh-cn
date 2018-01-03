@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f4589c45311ad9c1479f97ceb82b38f3e13393e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,13 +48,13 @@ THROW [ { error_number | @local_variable },
  *error_number*  
  表示异常的常量或变量。 *error_number*是**int**并且必须为大于或等于 50000 且小于或等于 2147483647。  
   
- *消息*  
+ message  
  描述异常的字符串或变量。 *消息*是**nvarchar(2048)**。  
   
- *状态*  
+ State  
  在 0 到 255 之间的常量或变量，指示与消息关联的状态。 *状态*是**tinyint**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  THROW 语句前的语句必须后跟分号 (;) 语句终止符。  
   
  如果 TRY…CATCH 构造不可用，则会话结束。 设置引发异常的行号和过程。 将严重性设置为 16。  
@@ -77,7 +77,7 @@ THROW [ { error_number | @local_variable },
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. 使用 THROW 引发异常  
  下面的示例演示如何使用`THROW`语句来引发异常。  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -92,7 +92,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. 使用 THROW 再次引发异常  
  以下示例演示如何使用 `THROW` 语句再次引发上次引发的异常。  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -123,7 +123,7 @@ END CATCH;
 ### <a name="c-using-formatmessage-with-throw"></a>C. 使用带 THROW 的 FORMATMESSAGE  
  下面的示例说明如何使用带 `FORMATMESSAGE` 的 `THROW` 函数来引发自定义错误消息。 该示例首先使用 `sp_addmessage` 创建用户定义的错误消息。 因为 THROW 语句不允许替换中的参数*消息*方式 RAISERROR 执行，而 FORMATMESSAGE 函数的参数用于传递错误消息 60000 所需的三个参数值。  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

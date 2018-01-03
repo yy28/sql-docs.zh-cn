@@ -3,7 +3,7 @@ title: "TCP/IP 属性 （IP 地址选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 018d6474b242e80cfb483fc4ebea76d777af77e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 属性（“IP 地址”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**TCP/IP 属性 （IP 地址选项卡）**对话框配置特定的 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”**。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="dynamic-ports"></a>动态端口  
  如果某个 SQL Server 实例已配置为侦听动态端口，则在启动时，该实例将检查操作系统中的可用端口，并为该端口打开一个端点。 传入连接必须指定要连接的端口号。 由于每次启动 SQL Server 时端口号都可能会改变，因此 SQL Server 提供 SQL Server Browser 服务来监视端口，并将传入连接指向该实例的当前端口。 使用动态端口会增加通过防火墙连接 SQL Server 的复杂性，因为重新启动 SQL Server 时端口号可能会改变，从而需要更改防火墙设置。 若要避免通过防火墙连接的问题，请将 SQL Server 配置为使用静态端口。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **在职**  
  指示该 IP 地址在计算机上处于活动状态。 不适用于 **“IPAll”**。  
   

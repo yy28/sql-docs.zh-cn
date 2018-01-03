@@ -3,7 +3,7 @@ title: "将跟踪结果保存到表 （SQL Server 事件探查器） |Microsoft 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47c21a4e8505dedbb6f9b811aba09302aeaf019b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dad96c512f0cbbd35155568ad2aa63933ccfadc6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>将跟踪结果保存到表 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何将跟踪结果保存到数据库表中，通过使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  

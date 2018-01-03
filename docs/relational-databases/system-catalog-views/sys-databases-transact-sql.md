@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3db3cbecf2486ba4096096b5d70c33eb12f0fc7f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cccac1ba1615e6a825230c3735488e182aeed1e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |**is_read_only**|**bit**|1 = 数据库为 READ_ONLY<br /> 0 = 数据库为 READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE 为 ON<br /> 0 = AUTO_CLOSE 为 OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK 为 ON<br /> 0 = AUTO_SHRINK 为 OFF|  
-|**状态**|**tinyint**|**值 &#124;适用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = RECOVERING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT  <br /> 5 = 紧急情况：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 脱机：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = 复制： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：**刚刚联机后的数据库不是一定准备好接受连接。 若要标识时数据库可以接受连接，请查询 sys.databases collation_name 列或的排序规则属性**DATABASEPROPERTYEX**。 在数据库排序规则返回非 Null 值之后，数据库就可以接受连接了。 对于 Always On 的数据库，查询`database_state`或`database_state_desc`列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
+|State|**tinyint**|**值 &#124;适用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = RECOVERING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT  <br /> 5 = 紧急情况：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 脱机：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = 复制： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：**对于 Always On 的数据库，查询`database_state`或`database_state_desc`列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
 |**state_desc**|**nvarchar(60)**|数据库状态的说明。 请参阅状态。|  
 |**is_in_standby**|**bit**|对于还原日志而言，数据库是只读的。|  
 |**is_cleanly_shutdown**|**bit**|1 = 数据库完全关闭；在启动时不需要恢复<br /> 0 = 数据库并未完全关闭；在启动时需要恢复|  
@@ -103,9 +103,9 @@ ms.lasthandoff: 11/21/2017
 |**group_database_id**|**uniqueidentifier**|Always On 可用性组内，如果有的话，正在参与数据库的数据库的唯一标识符。 **group_database_id**对于此数据库和每个辅助副本在其的数据库是否联接到可用性组主副本上均相同。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**default_language_lcid**|**int**|指示包含数据库的默认语言的本地 ID (lcid)。<br /> **请注意**充当[配置默认语言服务器配置选项](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)的**sp_configure**。 此值是**null**非包含数据库。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**default_language_name**|**nvarchar （128)**|指示包含数据库的默认语言。<br /> 此值是**null**非包含数据库。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**default_language_name**|**nvarchar(128)**|指示包含数据库的默认语言。<br /> 此值是**null**非包含数据库。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|指示包含数据库的默认全文语言的本地 ID (lcid)。<br /> **请注意**函数为默认[配置的默认全文语言服务器配置选项](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)的**sp_configure**。 此值是**null**非包含数据库。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**default_fulltext_language_name**|**nvarchar （128)**|指示包含数据库的默认全文语言。<br /> 此值是**null**非包含数据库。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**default_fulltext_language_name**|**nvarchar(128)**|指示包含数据库的默认全文语言。<br /> 此值是**null**非包含数据库。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_nested_triggers_on**|**bit**|指示包含数据库中是否允许使用嵌套触发器。<br /> 0 = 不允许使用嵌套触发器<br /> 1 = 允许使用嵌套触发器<br /> **请注意**充当[配置 nested 的 triggers 服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)的**sp_configure**。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关进一步信息。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_transform_noise_words_on**|**bit**|指示是否应在包含数据库中转换干扰词。<br /> 0 = 不应转换干扰词。<br /> 1 = 应转换干扰词。<br /> **请注意**充当[transform noise words 服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的**sp_configure**。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关进一步信息。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**two_digit_year_cutoff**|**int**|指示 1753 到 9999 之间的数字值，以表示将两位数的年份解释为四位数的年份的截止年份。<br /> **请注意**充当[配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)的**sp_configure**。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关进一步信息。<br /> **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -115,14 +115,14 @@ ms.lasthandoff: 11/21/2017
 |**delayed_durability**|**int**|延迟持续性设置：<br /> 0 = 已禁用<br /> 1 = 允许<br /> 2 = 强制<br /> 有关详细信息，请参阅[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。<br /> **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**delayed_durability_desc**|**nvarchar(60)**|延迟持续性设置：<br /> DISABLED<br /> ALLOWED<br /> FORCED<br /> **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**is_memory_optimized_elevate_to_snapshot_on**|**bit**|在会话设置 TRANSACTION ISOLATION LEVEL 设置为较低的隔离级别、READ COMMITTED 或 READ UNCOMMITTED 时，使用 SNAPSHOT 隔离访问内存优化表。<br /> 1 = 最低隔离级别为 SNAPSHOT。<br /> 0 = 隔离级别未进行提升。|  
-|**is_federation_member**|**bit**|指示该数据库是否为联合的成员。<br /> **适用于**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_federation_member**|**bit**|指示该数据库是否为联合的成员。<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|指示是否拉伸数据库。<br /> 0 = 数据库不是已启用延伸的。<br /> 1 = 数据库处于已启用延伸的。<br /> **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 有关详细信息，请参阅[Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
 |**is_mixed_page_allocation_on**|**bit**|指示是否数据库中表和索引可以分配初始页从混合区。<br /> 0 = 表和统一区从数据库中的索引始终分配过的初始页面。<br /> 1 = 表和数据库中的索引可以从混合区分配初始页。<br /> **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 有关详细信息，请参阅设置 MIXED_PAGE_ALLOCATION 选项[ALTER DATABASE SET 选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**is_temporal_retention_enabled**|**bit**|指示是否启用临时的保留策略清理任务。<br /> **适用于**: Azure SQL 数据库|
 |**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **适用于**: Azure SQL 数据库|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **适用于**: Azure SQL 数据库|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果调用方`sys.databases`不是数据库的所有者和该数据库未`master`或`tempdb`，请参阅相应的行所需的最小权限是`ALTER ANY DATABASE`或`VIEW ANY DATABASE`服务器级权限，或者`CREATE DATABASE`中的权限`master`数据库。 调用方连接到数据库始终可在`sys.databases`。  
   
 > [!IMPORTANT]  
@@ -158,7 +158,7 @@ WHERE a.state = 7;
 ### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. 请检查中的临时保留策略状态[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  下面的示例查询`sys.databases`返回信息是否启用临时保留清理任务。 请注意，还原操作之后临时保留默认处于禁用状态。 使用`ALTER DATABASE`显式启用它。
   
-**适用于**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```  
 -- Execute from the master database.  

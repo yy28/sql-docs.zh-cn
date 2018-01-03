@@ -1,7 +1,7 @@
 ---
 title: "访问清单架构 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -47,11 +47,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d22835bef06693ecf2fef51240f4bd9d9607a8e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL)
 下列各节描述 SSMA 在导出到的访问架构时创建的表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/05/2017
 |**LinkedTable**|**nvarchar(4000)**|另一个表，如果有的话，链接表。 链接表允许通过使用此表添加、 删除和对其他表的更新。|  
 |**ExternalSource**|**nvarchar(4000)**|数据源中，如果有的话，与该键相关联的表。 如果链接表，它具有在此字段中指定外部数据源。|  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>“列”  
 列元数据导出到**SSMA_Access_InventoryColumns**表。 此表包含以下列：  
   
 |列名|数据类型|Description|  

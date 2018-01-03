@@ -3,7 +3,7 @@ title: "SQL 工具和实用程序可用于 SQL Server、 Azure SQL Database 和 
 ms.custom: 
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: misc
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 792d80357f62fcc76576dad24105edead20dac44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序可用于 SQL Server、 Azure SQL Database 和 Azure SQL 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/12/2017
 
   命令行实用工具使您能够在脚本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]操作。 下表包含了随 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供的命令提示实用工具列表。  
   
-|**实用工具**|**说明**|**安装位置**|  
+|**实用工具**|**Description**|**安装位置**|  
 |-----------------|---------------------|----------------------|  
 |[bcp 实用工具](../tools/bcp-utility.md)|用于在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件之间复制数据。|\<*驱动器*: > \Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
 |[dta 实用工具](../tools/dta/dta-utility.md)|用于分析工作负荷并建议物理设计结构，以优化该工作负荷下的服务器性能。|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  

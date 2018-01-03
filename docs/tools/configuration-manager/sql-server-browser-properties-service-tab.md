@@ -3,7 +3,7 @@ title: "SQL Server 浏览器属性 （服务选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,18 +17,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8543b2ba7e1d9de73e31a93f1740a18be1671f5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f969f20f5e81bee98c79f421fba7dff076b6c48e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序作为服务运行在服务器上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
   
  使用 **“SQL Server 浏览器属性”** 对话框中的 **“服务”** 选项卡可以查看下列选项。 除了 **“启动模式”** 以外，其他所有属性都是只读的。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   

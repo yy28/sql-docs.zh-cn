@@ -33,11 +33,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,12 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **左**|右  
  指定到哪一侧的每个边界值间隔、 左侧或右侧，*小于 boundary_value* [ **，***...n* ] 所属，当间隔值进行排序的[!INCLUDE[ssDE](../../includes/ssde-md.md)]升序顺序从左到右。 如果未指定，则默认值为 LEFT。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  分区函数的作用域被限制为在其中创建该分区函数的数据库。 在数据库中，分区函数驻留在单独的命名空间与其他函数。  
   
  分区列为空值的所有行都放在最左侧分区中，除非将 NULL 指定为边界值并指定了 RIGHT。 在这种情况下，最左侧分区为空分区，NULL 值被放置在后面的分区中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  可以使用下列任何一种权限执行 CREATE PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -97,35 +97,35 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. 对 int 列创建 RANGE LEFT 分区函数  
  以下分区函数将表或索引分为四个分区。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
   
  下表显示如何在分区列使用此分区函数的表**col1**划分。  
   
-|分区|1|2|3|4|  
+|分区|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. 对 int 列创建 RANGE RIGHT 分区函数  
  以下分区函数使用的相同值*小于 boundary_value* [ **，***...n* ] 与前面的示例，但它指定 RANGE RIGHT。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
   
  下表显示如何在分区列使用此分区函数的表**col1**划分。  
   
-|分区|1|2|3|4|  
+|分区|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \<`1`|**col1**  >=  `1` AND **col1** \<`100`|**col1**  >=  `100` AND **col1** \<`1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. 对 datetime 列创建 RANGE RIGHT 分区函数  
  下面的分区函数分区表或索引为 12 个分区，一个用于每个月内年的中值的有价值**datetime**列。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -134,28 +134,28 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  下表显示如何将表或索引分区列上使用此分区函数**datecol**划分。  
   
-|分区|1|2|...|11|12|  
+|分区|@shouldalert|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**值**|**datecol** \<`February 1, 2003`|**datecol**  >=  `February 1, 2003` AND **datecol** \<`March 1, 2003`||**datecol**  >=  `November 1, 2003` AND **col1** \<`December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. 对 char 列创建分区函数  
  下面的分区函数分区为四个分区的表或索引。  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
   
  下表显示如何在分区列使用此分区函数的表**col1**划分。  
   
-|分区|1|2|3|4|  
+|分区|@shouldalert|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \< `EX`...|**col1**  >=  `EX` AND **col1** \< `RXE`...|**col1**  >=  `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. 创建 15,000 个分区  
  以下分区函数将表或索引分为 15,000 个分区。  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +174,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. 为多个年度创建分区  
  下面的分区函数分区表或索引为 50 的分区上**datetime2**列。 对于 2007 年 1 月至 2011 年 1 月之间的每个月，都有一个分区。  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

@@ -3,7 +3,7 @@ title: "查看筛选器信息 （SQL Server 事件探查器） |Microsoft 文档
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cefaebb5096405a7a5b5fad1f009d73ee26c002b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5945e9094a3d17e3436407118074dfa5cc0e4323
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>查看筛选器信息 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何查看数据列的事件类筛选器通过使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  

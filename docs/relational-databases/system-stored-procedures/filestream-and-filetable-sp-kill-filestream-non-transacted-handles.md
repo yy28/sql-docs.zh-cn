@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7958e7a6513363030d8962774a28992bd055661d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d06550f0a9cd322e26acfa8f29890833c15f947
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>Filestream 和 FileTable-sp_kill_filestream_non_transacted_handles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
 ```  
   
@@ -66,15 +66,15 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="metadata"></a>元数据  
  有关打开的非事务性文件句柄的信息，请查询动态管理视图[sys.dm_filestream_non_transacted_handles &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  你必须具有**VIEW DATABASE STATE**权限来获取文件句柄从**sys.dm_FILESTREAM_non_transacted_handles**动态管理视图和运行**sp_kill_filestream_non_transacted_handles**。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用**sp_kill_filestream_non_transacted_handles**关闭 FileTable 数据的非事务性文件句柄。  
   
-```tsql  
+```sql  
 -- Close all open handles in the current database.  
 sp_kill_filestream_non_transacted_handles  
   
@@ -87,7 +87,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @hand
   
  下面的示例演示如何使用脚本来获取*handle_id*并将其关闭。  
   
-```tsql  
+```sql  
 DECLARE @handle_id varbinary(16);  
 DECLARE @table_name sysname;  
   

@@ -3,7 +3,7 @@ title: "客户端协议属性 （顺序选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f376996049408b58d1fd1f207ae331acea1c2a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 306ceeb731627e5cfc5e6fe868920a66d82f76f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="client-protocols-properties-order-tab"></a>客户端协议属性（“顺序”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**顺序**页上**客户端协议属性**对话框中，若要查看和启用客户端协议。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient 不会使用这些设置。 .NET SqlClient 的协议顺序依次为：TCP、命名管道。此顺序不能改变。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **“启用的协议”**  
  列出已安装但当前未使用的协议。  
   

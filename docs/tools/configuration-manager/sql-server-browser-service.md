@@ -3,7 +3,7 @@ title: "SQL Server Browser 服务 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -25,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 928a4cf4d1cef301c0554a5e1b484cb79749e47a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4d3619e88d1211daa32de1c3286fedcfd9eb53a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sql-server-browser-service"></a>SQL Server Browser 服务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序作为 Windows 服务运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可用于执行下列操作：  
+# <a name="sql-server-browser-service"></a>SQL Server Browser Service
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以 Windows 服务的形式运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可用于执行下列操作：  
   
 -   浏览可用服务器列表  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="account-privileges"></a>帐户权限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析协议 (SSRP) 侦听 UDP 端口，并接受未经身份验证的请求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器应该在低特权用户的安全上下文中运行，以将受到恶意攻击的几率降到最低。 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改登录帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器的最小用户权限如下：  

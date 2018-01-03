@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa55f12c6e68df15f1ee9497c28133d4be3470aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f17fa70885b833fcaeabaa221382c738a5885eb6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,18 +57,18 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**fileid**|**int**|文件的数字标识符。 如果不返回*名称*指定*。*|  
 |**文件名**|**nchar(260)**|物理文件名。|  
 |**文件组**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件是一个日志文件。 它决不是文件组的一部分。|  
-|**大小**|**nvarchar(15)**|文件大小 (KB)。|  
+|size|**nvarchar(15)**|文件大小 (KB)。|  
 |**最大大小**|**nvarchar(15)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
 |**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**和日志文件的值是**'仅 log'**。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例返回有关 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的文件的信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfile;  

@@ -3,7 +3,7 @@ title: "EventString 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c130b82b84da5001d6df778713efb6f9bb3c4aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b51de55832ddd13103fb67f41f937a1efdd0b999
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定[!INCLUDE[tsql](../../includes/tsql-md.md)]直接在 XML 输入文件中的脚本工作负荷。  
@@ -41,13 +41,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>元素属性  
   
-|Attribute|说明|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|可选。 为指定的事件指定查询加权系数（重要性系数）。 使用 **float** 数据类型指定加权。 例如， **Weight**="100.01"。 可为 **Weight** 指定的最小值为“0”。|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，无限长。|  
 |**默认值**|无。|  

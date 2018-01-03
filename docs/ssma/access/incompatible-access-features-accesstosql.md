@@ -1,7 +1,7 @@
 ---
 title: "不兼容的访问功能 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59c6c7d0130c93efb7e5d3136deb0edbd5d05ab9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d981889ef89abab5cbf071557b658ae14ae59402
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="incompatible-access-features-accesstosql"></a>不兼容的访问功能 (AccessToSQL)
 并非所有访问数据库功能都都与兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]以及具有不同的保留关键字集的访问权限。 问题如这些可能会阻止成功迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 使用下表来了解可能的迁移问题，有关它们的信息可以执行什么操作。  

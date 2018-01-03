@@ -3,7 +3,7 @@ title: "DiagnosticInformation 元素 (ssbdiagnose) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9660c8661ff83f94a08b79f64ced7fa35df44dad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b61ce88a5dab7e9631f3191211fc22445d56121e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**DiagnosticInformation**元素包含报告实用工具发现的诊断信息的所有元素。 **DiagnosticInformation** 是 **ssbdiagnostic** XML 输出文件的根元素。  
@@ -41,13 +41,13 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>元素属性  
   
-|Attribute|说明|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |**无**|N/A|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
 |**父元素**|无。|  
 |**子元素**|[Banner 元素 (ssbdiagnose)](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue 元素 (ssbdiagnose)](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关 XML namespaces 的详细信息，请参阅 [MSDN Library 中的](http://go.microsoft.com/fwlink/?LinkId=7341) Namespaces in an XML Document [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  

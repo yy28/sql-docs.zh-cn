@@ -33,11 +33,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28de81b28ee31c172d1a31644f6847579af4e961
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  创建、重新生成或删除 XML 索引的脱机索引操作将获取表的架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ALLOW_ROW_LOCKS  **=**  { **ON** |关闭}  
  指定是否允许行锁。 默认值为 ON。  
@@ -227,7 +227,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism*可以是：  
   
- 1  
+ @shouldalert  
  取消生成并行计划。  
   
  \>1  
@@ -241,7 +241,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]  
 >  并行索引操作不可用的每个版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  从派生的计算列**xml**数据类型可以创建索引作为键或包含非键列，只要计算的列数据类型是允许作为索引键列或非键列。 无法对计算创建主 XML 索引**xml**列。  
   
  若要查看有关 XML 索引的信息，请使用[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)目录视图。  
@@ -256,7 +256,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### <a name="a-creating-a-primary-xml-index"></a>A. 创建主 XML 索引  
  下面的示例为 `CatalogDescription` 表的 `Production.ProductModel` 列创建主 XML 索引。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -272,7 +272,7 @@ GO
 ### <a name="b-creating-a-secondary-xml-index"></a>B. 创建辅助 XML 索引  
  下面的示例为 `CatalogDescription` 表的 `Production.ProductModel` 列创建辅助 XML 索引。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  

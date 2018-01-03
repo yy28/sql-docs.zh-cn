@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34badad3134d12a4072c421fd04103ef1859bd33
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f1b2025ee9fdc5ca0aaf4967305db40cb65d038c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ FILE_ID ( file_name )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *file_name*对应于在 sys.master_files 或 sys.database_files 目录视图中的名称列中显示的逻辑文件名称。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 FILE_ID 函数的返回类型是**smallint**，此函数不能用于全文索引文件。 使用[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)相反。  
@@ -66,7 +66,7 @@ FILE_ID ( file_name )
 ## <a name="examples"></a>示例  
  以下示例返回 `AdventureWorks_Data` 文件的文件 ID。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_ID('AdventureWorks2012_Data')AS 'File ID';  

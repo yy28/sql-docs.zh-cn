@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary(64)**|查询计划哈希映射。 可以为 NULL。|
 |query_plan|**xml**|使用部分的统计信息的 Showplan XML。 可以为 NULL。|
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 此系统函数是从开始提供[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。
 
 此系统函数可下都**标准**和**轻型**查询执行统计信息分析基础结构。  
@@ -80,7 +80,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > 与工作负荷测试一样 TPC C，在启用轻量的统计信息分析基础结构中添加开销 1.5 到 2%。 与此相反，标准的统计信息分析基础结构可以添加多达 90%开销为相同的工作负荷方案。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
 ## <a name="examples"></a>示例  
@@ -88,14 +88,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 查看实时查询计划和执行统计信息的正在运行的批处理  
  下面的示例查询**sys.dm_exec_requests**若要查找感兴趣的查询并复制其`session_id`从输出。  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  然后，若要获取的实时查询计划和执行统计信息，请使用复制`session_id`与系统函数**sys.dm_exec_query_statistics_xml**。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +103,7 @@ GO
 
  或组合所有正在运行的请求。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

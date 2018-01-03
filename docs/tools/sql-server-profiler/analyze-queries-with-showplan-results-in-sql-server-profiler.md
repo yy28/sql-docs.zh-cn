@@ -3,7 +3,7 @@ title: "使用在 SQL Server Profiler SHOWPLAN 结果来分析查询 |Microsoft 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf597a585e7fa47f63a7680fb24d76f4bff0331
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以将 Showplan 事件类添加到跟踪定义导致[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]收集和显示在跟踪中的查询计划信息。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="showplan-events"></a>显示计划事件  
  下表中列出并说明了显示计划跟踪事件。  
   
-|事件名称|说明|  
+|事件名称|Description|  
 |----------------|-----------------|  
 |**Performance statistics**|指明编写的显示计划第一次保存到缓存中、何时对其重新编写以及何时将其从计划缓存中删除。 **TextData** 列包含 XML 格式的显示计划。 有关详细信息，请参阅 [Performance Statistics 事件类](../../relational-databases/event-classes/performance-statistics-event-class.md)。|  
 |**Showplan All**|显示查询计划，列出已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的完整编写时详细信息。 例如，可能显示估计开销值和列列表。 有关详细信息，请参阅 [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md)。|  

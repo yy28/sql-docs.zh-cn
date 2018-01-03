@@ -1,7 +1,7 @@
 ---
 title: "映射 DB2 和 SQL Server 数据类型 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>将 DB2 和 SQL Server 数据类型 (DB2ToSQL) 映射
 DB2 数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 当转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你必须指定如何将从到 DB2 的数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
@@ -94,7 +94,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         无法删除继承的映射。 但是，通过上的特定对象或对象类别的自定义映射中重写继承的映射。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 迁移过程的下一步是为[评估报表 &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md)或[转换 DB2 架构 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。 如果创建了一个评估报告，DB2 对象将自动转换此评估过程。  
   
 ## <a name="see-also"></a>另请参阅  

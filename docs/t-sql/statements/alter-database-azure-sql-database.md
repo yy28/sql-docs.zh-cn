@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE （Azure SQL 数据库） |Microsoft 文档"
 ms.custom: 
-ms.date: 09/25/2017
+ms.date: 12/20/2017
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9eef7fb78d8454696b3517b078e9cf01760cb8fc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -78,10 +78,10 @@ ALTER DATABASE { database_name }
 -- Full descriptions of the set options are available in the topic   
 -- ALTER DATABASE SET Options. The supported syntax is listed here.  
 
-<optionspec> ::=   
+<option_spec> ::=   
 {  
     <auto_option>   
-  | <compatibility_level_option>  
+  | <change_tracking_option> 
   | <cursor_option>   
   | <db_encryption_option>  
   | <db_update_option>   
@@ -103,10 +103,23 @@ ALTER DATABASE { database_name }
   | AUTO_UPDATE_STATISTICS { ON | OFF }   
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
-  
-<compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
-  
+
+<change_tracking_option> ::=  
+{  
+  CHANGE_TRACKING   
+   {   
+       = OFF  
+     | = ON [ ( <change_tracking_option_list > [,...n] ) ]   
+     | ( <change_tracking_option_list> [,...n] )  
+   }  
+}  
+
+   <change_tracking_option_list> ::=  
+   {  
+       AUTO_CLEANUP = { ON | OFF }   
+     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
+   }  
+
 <cursor_option> ::=   
 {  
     CURSOR_CLOSE_ON_COMMIT { ON | OFF }   
@@ -162,7 +175,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -308,7 +321,7 @@ ALTER DATABASE current
 > [!IMPORTANT]  
 >  执行 FORCE_FAILOVER_ALLOW_DATA_LOSS 命令的用户必须是主服务器和辅助服务器上的 DBManager。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要删除数据库，使用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
   
  若要减小数据库大小，使用[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
@@ -332,7 +345,7 @@ ALTER DATABASE current
 ## <a name="viewing-database-information"></a>查看数据库信息  
  可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有服务器级主体登录名（由设置过程创建）或 `dbmanager` 数据库角色的成员可以更改数据库。  
   
 > [!IMPORTANT]  

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   服务器级 DDL 触发器  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,13 +99,13 @@ sys.dm_sql_referencing_entities (
   
  当指定的被引用的实体是带编号的存储过程时，将返回错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|视图|是|是|  
+|“查看”|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
@@ -125,7 +125,7 @@ sys.dm_sql_referencing_entities (
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -148,7 +148,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 返回引用给定实体的实体  
  下面的示例返回当前数据库中引用指定表的实体。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 返回引用给定类型的实体  
  下面的示例返回引用别名类型 `dbo.Flag` 的实体。 结果集中显示了使用此类型的两个存储过程。 `dbo.Flag`类型还多个中的列定义中使用`HumanResources.Employee`表; 但是，由于类型不是计算的列、 CHECK 约束，或表中的默认约束定义中，会返回任何行的`HumanResources.Employee`表。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

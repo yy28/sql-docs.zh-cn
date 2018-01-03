@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10f9a117a4ecac05d541ffb004f18106f88dec75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/27/2017
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path*可以具有以下值之一：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
  *@option*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option*可以具有以下值之一：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="best-practices"></a>最佳实践  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，获得的完整路径的文件在运行时通过使用**FileTableRootPath**和**GetFileNamespacePath**函数组合，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
@@ -90,7 +90,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用**GetFileNamespacePath**函数可获取文件或目录在 FileTable 中的 UNC 路径。  

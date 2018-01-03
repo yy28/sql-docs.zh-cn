@@ -1,7 +1,7 @@
 ---
 title: "项目设置 （类型映射） (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -27,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d82b431499de3986f0358074ad96e4acc69fb41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>项目设置 （类型映射） (AccessToSQL)
 类型映射的项目设置，可以设置 SSMA 项目的默认类型映射。 你还可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 -   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的类型映射设置，在**工具**菜单上，选择**默认项目设置**，选择为其设置所需查看 / 更改，不再是迁移项目类型**迁移目标版本**下拉列表中，然后单击**类型映射**的左窗格中。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **源类型**  
 要映射的访问的数据类型。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |**text[\*..\*]**|**nvarchar [\*]**|  
 |**text[\*..\*]** -对于 Access 97|**varchar [\*]**|  
   
-**添加**  
+**“添加”**  
 单击此项可将数据类型添加到映射列表。  
   
 **编辑**  

@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT-OVER 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -195,7 +195,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. 将 OVER 子句与 ROW_NUMBER 函数结合使用  
  下面的示例说明如何将 OVER 子句与 ROW_NUMBER 函数一起使用来显示分区内各行的行号。 在 OVER 子句中指定的 ORDER BY 子句按 `SalesYTD` 列对每个分区中的行进行排序。 SELECT 语句中的 ORDER BY 子句确定按其返回整个查询结果集的顺序。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +235,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. 将 OVER 子句与聚合函数结合使用  
  下面的示例对于查询返回的所有行将 `OVER` 子句与聚合函数一起使用。 在这个示例中，使用 `OVER` 子句与使用子查询相比，可以更高效地派生聚合值。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +278,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  以下示例显示在计算所得值中将 `OVER` 子句与聚合函数结合使用。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +322,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. 生成移动平均值和累计合计  
  下面的示例将 AVG 和 SUM 函数与 OVER 子句结合使用，以便为 `Sales.SalesPerson` 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着，将基于年度销售额为各区域计算 AVG 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的平均销售额，然后在计算中包括表示 2006 年销售额的第三行。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +361,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  在这个例子中，OVER 子句未包含 PARTITION BY。 这意味着该函数将应用于查询所返回的所有行。 在 OVER 子句中指定的 ORDER BY 子句将确定应用 AVG 函数的逻辑顺序。 该查询将按年为在 WHERE 子句中指定的所有销售区域返回销售额的移动平均值。 在 SELECT 语句中指定的 ORDER BY 子句将确定显示查询行的顺序。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  下面的示例使用行子句将定义为当前行的行对其进行计算的窗口和*N*的按照 （在此示例中的 1 行） 的行数。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +428,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  在下面的示例中，使用 UNBOUNDED PRECEDING 指定 ROWS 子句。 结果为窗口在分区中的第一行开始。  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +462,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. 将 OVER 子句与 ROW_NUMBER 函数结合使用  
  下面的示例返回方式基于其分配的销售配额的销售代表。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. 将 OVER 子句与聚合函数结合使用  
  下面的示例演示使用聚合函数的 OVER 子句。 在此示例中，使用 OVER 子句是比使用子查询更加有效。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  下面的示例演示使用 OVER 子句中计算得出的值的聚合函数。 请注意，聚合计算通过`SalesOrderNumber`和总销售订单的百分比计算的每个每行`SalesOrderNumber`。  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   

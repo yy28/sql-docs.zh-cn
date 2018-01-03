@@ -3,7 +3,7 @@ title: "启动数据库引擎优化顾问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 18b2d37a6dac0ca41c8124ad0d006a993d534845
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 17fc87a98c82159dbc3c13d665b78282e652414c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>课程 1-1-启动数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要开始，请打开数据库引擎优化顾问图形用户界面 (GUI)。 第一次使用时，必须由 **sysadmin** 固定服务器角色的成员来启动数据库引擎优化顾问，以初始化应用程序。 初始化后， **db_owner** 固定数据库角色的成员便可使用数据库引擎优化顾问来优化他们拥有的数据库。 有关初始化数据库引擎优化顾问的详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  

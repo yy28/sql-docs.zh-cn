@@ -3,7 +3,7 @@ title: "sqlagent90 应用程序 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlagent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc67b1f9e76169e48262371fd7472a0c2235f4d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d6e8c4de7af24288602d28104be8d8e041238bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlagent90**应用程序启动[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理从命令提示符。 通常，应从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或在应用程序中使用 SQL-SMO 方法来运行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 代理。 只有在诊断 **代理时或主要支持提供商指示你使用命令提示符时，才可以从命令提示符处运行** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
@@ -49,7 +49,7 @@ sqlagent90
  **-i** *instance_name*  
  指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理连接到由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance_name *所指定的*命名实例。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在显示版权消息后，只有在指定了 **-v** 开关时， **sqlagent90** 才会在命令提示符窗口中显示输出。 若要停止 **sqlagent90**，请在命令提示符处按 CTRL+C。 在停止 **sqlagent90**之前，请不要关闭命令提示符窗口。  
   
 ## <a name="see-also"></a>另请参阅  

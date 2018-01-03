@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**文件句柄**|**bigint**|文件句柄的值。|  
 |**BytesOnDisk**|**bigint**|磁盘上的物理文件大小（以字节为单位）。<br /><br /> 对于数据库文件，这将是相同的值**大小**中**sys.database_files**，但是在字节，而不是页表示。<br /><br /> 对于数据库快照备用文件，它是操作系统用于文件的空间。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **fn_virtualfilestats**是提供统计信息，如 I/o 总数的表值函数执行的文件系统。 可使用该函数来帮助跟踪用户读取文件或写入到文件必须等待的时间长度。 该函数还可帮助您识别出发生了大量 I/O 活动的文件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -81,7 +81,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. 显示数据库的统计信息  
  以下示例显示 ID 为 `1` 的数据库中的文件 ID 1 的统计信息。  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 显示命名数据库和文件的统计信息  
  以下示例显示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库中日志文件的统计信息。 系统函数`DB_ID`用于指定*database_id*参数。  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,7 +99,7 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. 显示所有数据库和文件的统计信息  
  以下示例显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内所有数据库中的所有文件的统计信息。  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

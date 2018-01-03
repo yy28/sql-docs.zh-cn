@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bafca706c9fa8aa1f90bfb38b16df067c317a475
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d0f725b1725442ec7853bc4ac130b3d3e1d10fe2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空间数据-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -51,7 +51,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**类**|**int**|1 = 约束<br /><br /> 7 = 索引和堆|  
+|class|**int**|1 = 约束<br /><br /> 7 = 索引和堆|  
 |**class_desc**|**nvarchar(60)**|约束的 OBJECT 或 COLUMN<br /><br /> 索引和堆的 INDEX|  
 |**major_id**|**int**|约束的 OBJECT ID<br /><br /> 包含索引和堆的表的 OBJECT ID|  
 |**minor_id**|**int**|对于约束为 NULL<br /><br /> 索引和堆的 Index_id|  
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: 减少**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>已禁用对象的行为  
- **索引**  
+ **“索引”**  
   
  如果已禁用的聚集的索引，或如果非聚集索引而强制，会引发以下错误:"查询处理器不能生成计划，因为索引 %。\*ls 表或视图 %。\*ls 已禁用。" 若要重新启用这些对象，重新生成索引升级后通过调用**ALTER INDEX ON...重新生成**。  
   
@@ -143,15 +143,15 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  由于无法禁用单个列，因此将通过禁用聚集索引或堆来禁用整个表。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
  下面的示例演示上一个查询查询**sys.dm_db_objects_disabled_on_compatibility_level_change**来查找更改兼容性级别为 120 受影响的对象。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

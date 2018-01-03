@@ -1,10 +1,12 @@
 ---
 title: "安装和配置 Python 机学习服务 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-non-specified
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,15 +14,15 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>设置 Python 机器学习服务 （数据库）
 
-  安装 Python 通过运行所需的组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导中，并遵循交互式提示，如本主题中所述。
+  本文介绍如何安装 Python 通过运行所需的组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导中，并按照交互式提示。
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>机器学习中 SQL Server 安装程序选项
 
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/01/2017
 
 安装完成后，重新配置以允许使用外部的可执行文件的脚本执行的实例。 你可能需要进行其他更改到服务器以支持机器学习工作负荷。 配置更改通常需要重新启动实例或重新启动快速启动板服务。
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 + SQL Server 2017 是必需的。 在以前版本的 SQL Server 上不支持 Python 集成。
 + 请务必安装数据库引擎。 运行 Python 脚本数据库中需要的 SQL Server 实例。
@@ -40,11 +42,12 @@ ms.lasthandoff: 12/01/2017
   一种解决方法，你可以使用复制将必要的表复制到使用 Python 服务的独立 SQL Server 实例。 或者，你可以与使用 AlwaysOn 设置中，并且是可用性组的一部分的独立计算机上的 Python 服务安装机器学习。
 
 + 可能的与其他版本的 Python 通过并行安装是因为 SQL Server 实例使用其自己的 Anaconda 分发副本。 但是，运行 SQL Server 外部 SQL Server 计算机使用 Python 的代码可能导致各种问题：
-    + 你使用不同的库和不同的可执行文件，并获取不同的结果，不是你在 SQL Server 中运行时执行的操作。
-    + 不能由 SQL Server，从而导致资源争用管理外部库中运行的 Python 脚本。
+    
+    - 你使用不同的库和不同的可执行文件，并获取不同的结果，不是你在 SQL Server 中运行时执行的操作。
+    - 不能由 SQL Server，从而导致资源争用管理外部库中运行的 Python 脚本。
   
 > [!IMPORTANT]
-> 安装程序完成后，请务必完成本主题中所述的其他后配置步骤。 其中包括启用 SQL Server 以使用外部脚本和添加 SQL Server 以你的名义运行 Python 作业所需的帐户。
+> 安装程序完成后，请务必完成本文中所述的其他后配置步骤。 这些步骤包括启用 SQL Server 以使用外部脚本和添加 SQL Server 以你的名义运行 Python 作业所需的帐户。
 
 ### <a name="unattended-installation"></a>无人参与的安装
 
@@ -103,7 +106,12 @@ ms.lasthandoff: 12/01/2017
 
 ##  <a name="bkmk_enableFeature"></a>步骤 2： 启用执行 Python 脚本
 
-1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果尚未安装，你可以运行 SQL Server 安装向导，以打开下载链接并将其安装。
+1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
+
+    > [!TIP]
+    > 你可以下载并安装在此页中的相应版本：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 
+    > 你还可以试用的预览版本[SQL 操作 Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)，它支持管理任务和针对 SQL Server 查询。
   
 2. 连接到安装机器学习服务的实例并运行以下命令：
 
@@ -120,7 +128,7 @@ ms.lasthandoff: 12/01/2017
     RECONFIGURE WITH OVERRIDE
     ```
     
-    如果你已启用 R 语言功能，你无需运行第二次重新配置 Python。 基础的扩展性平台支持这两种语言。
+    如果已启用 R 语言功能，如果不是通过运行第二次重新配置 Python。 基础的扩展性平台支持这两种语言。
 
 4. 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例重启 SQL Server 服务。 此外会自动重新启动 SQL Server 服务重启相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服务。
 

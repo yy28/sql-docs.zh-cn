@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,14 +115,14 @@ END
   
 -   如果没有*Boolean_expression*计算结果为 TRUE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回*else_result_expression*如果指定了 ELSE 子句，或如果没有 ELSE 子句指定一个 NULL 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许在 CASE 表达式中嵌套 10 个级别。  
   
  CASE 表达式不能用于控制 Transact-SQL 语句、语句块、用户定义函数以及存储过程的执行流。 控制流方法的列表，请参阅[控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  CASE 语句按顺序评估其条件并在满足第一个条件时停止。 在某些情况下，将会先计算表达式，然后 CASE 语句会将表达式的结果作为其输入接收。 在计算这些表达式时可能会出现错误。 首先计算在 CASE 语句的 WHEN 参数中出现的聚合表达式，然后将结果提供给 CASE 语句。 例如，下面的查询将在生成 MAX 聚合的值时生成被零除错误。 在计算 CASE 表达式之前会出现这种情况。  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   

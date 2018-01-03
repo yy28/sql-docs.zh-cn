@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant mysql (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: ff51f4a7e7c59bc04418782564dc8cf410fa695d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e52a544559d47f118839d68838fe7b43507d8585
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant mysql (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) mysql 是一个用于将 MySQL 数据库迁移到工具[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 和 Linux （预览版） 上的自 2017 年 1 / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB。 SSMA 为 MySQL 将 MySQL 数据库对象转换为 SQL Server 数据库对象，创建这些对象中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然后再将数据迁移从 MySQL 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

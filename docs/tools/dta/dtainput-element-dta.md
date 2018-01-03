@@ -3,7 +3,7 @@ title: "DTAInput 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 909d363e64a0f71cea0f52d1a716bba2f1c37070
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0ee58e6b5ec7215353296a1b17151b2354eb5e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含的数据库引擎优化顾问的 XML 输入的定义。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |---------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 |**父元素**|[DTAXML 元素 (DTA)](../../tools/dta/dtaxml-element-dta.md)|  
 |**子元素**|[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)<br /><br /> [工作负荷元素 (DTA)](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [配置元素 (DTA)](../../tools/dta/configuration-element-dta.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此元素是数据库引擎优化顾问输入架构层次结构的根元素。 数据库引擎优化顾问的输入可以是各种参数，这些参数指定了要优化其数据库的服务器、工作负荷、优化选项或用户指定配置。  
   
 ## <a name="example"></a>示例  

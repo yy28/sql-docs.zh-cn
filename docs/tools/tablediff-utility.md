@@ -3,7 +3,7 @@ title: "tablediff 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**实用工具用于比较两个非收敛表中的数据和进行故障排除复制拓扑中的非收敛特别有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
@@ -170,13 +170,13 @@ tablediff
   
 ## <a name="return-value"></a>返回值  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|严重错误|  
 |**2**|存在表差异|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 **sql_variant** 数据类型列的表。  
@@ -186,7 +186,7 @@ tablediff
 |源数据类型|目标数据类型|  
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**、 **int**或 **bigint**|  
-|**smallint**|**int** 或 **bigint**|  
+|**int**|**int** 或 **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  

@@ -38,11 +38,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3e872d63c71817e8f79e261598875840ccb65f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a218d6f89ee2c190361441a6922770e770ec11a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大容量加载示例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]下面的示例演示在 Microsoft 中的 XML 大容量加载功能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 每个示例都提供了 XSD 架构及其等效的 XDR 架构。  
@@ -123,7 +123,7 @@ End Function
   
 1.  创建下表：  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Cust(CustomerID  int PRIMARY KEY,  
                       CompanyName varchar(20),  
                       City        varchar(20));  
@@ -281,7 +281,7 @@ End Function
   
 1.  创建两个表中的**tempdb**数据库：  
   
-    ```tsql  
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
            CustomerID  int PRIMARY KEY,  
@@ -396,7 +396,7 @@ End Function
   
 1.  创建三个表：  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Ord (  
              OrderID     int  PRIMARY KEY,  
              CustomerID  varchar(5));  

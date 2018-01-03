@@ -1,7 +1,7 @@
 ---
 title: "创建服务器连接文件 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef64fe70b398331a621d5d9a255055e6b211d0f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a03351f51de739913f46ad3ac720cc676710ccfd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>创建服务器连接文件 (DB2ToSQL)
 脚本文件的服务器部分中，也可在单独的服务器连接文件，可以指定服务器信息。 服务器连接文件的命令行参数， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  

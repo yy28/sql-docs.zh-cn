@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ad511e008e2d2c1d975f54a03db8290b26e527
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|供内部使用。|  
 |**tds_collation_sort_id**|**tinyint NULL**|供内部使用。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_describe_first_result_set**保证，如果该过程返回 （一个假想） 的第一个结果集元数据批处理 A 和该批处理 （A） 是否随后执行然后批处理将任一 (1) 引发优化时间错误，(2)引发运行时错误，(3) 返回任何结果集，或者 (4) 返回的第一个结果集所描述的相同元数据与**sp_describe_first_result_set**。  
   
  名称、为 Null 性和数据类型可能不同。 如果**sp_describe_first_result_set**返回空结果集，保证是批处理执行将返回任何结果集。  
@@ -157,7 +157,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**不支持间接递归。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要有权执行@tsql自变量。  
   
 ## <a name="examples"></a>示例  
@@ -186,7 +186,7 @@ WHERE object_id = @id1'
   
  以下示例使用 0，指示无信息返回。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
 GO  
 CREATE VIEW dbo.v AS SELECT b1 AS b2 FROM dbo.t;  
@@ -196,36 +196,36 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|NULL|NULL|NULL|NULL|  
+|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
   
  以下示例使用 1，指示它将返回信息，就好像它在查询中包含 FOR BROWSE 选项一样。  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|dbo|t|B1|0|  
-|1|2|（英文）。|dbo|t|（英文）。|1|  
+|0|@shouldalert|b3|dbo|t|B1|0|  
+|@shouldalert|2|（英文）。|dbo|t|（英文）。|@shouldalert|  
   
  以下示例使用 2，指示执行分析，就好像您在准备游标一样。  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|B3|dbo|v|B2|0|  
-|1|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|@shouldalert|B3|dbo|v|B2|0|  
+|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>问题示例  
  下面的示例对所有示例使用两个表。 请执行以下语句以创建示例表。  

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0bc7681bdb3404f3b6114d0725cbed7ef8f388e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,7 +209,7 @@ ALTER LOGIN login_name
   
 删除从登录名的可扩展密钥管理 (EKM) 提供程序凭据。 有关详细信息请参阅[可扩展密钥管理 &#40;Ekm&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果 CHECK_POLICY 设置为 ON，则无法使用 HASHED 参数。  
   
  如果 CHECK_POLICY 更改为 ON，则将出现以下行为：  
@@ -238,7 +238,7 @@ ALTER LOGIN login_name
   
 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 登录数据需要进行身份验证连接和服务器级防火墙规则暂时缓存在每个数据库。 定期刷新此缓存。 若要强制执行身份验证缓存的刷新，并确保数据库具有登录名表的最新版本，执行[DBCC FLUSHAUTHCACHE &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。  
   
  如果使用 CREDENTIAL 选项，则还需要 ALTER ANY CREDENTIAL 权限。  
@@ -262,28 +262,28 @@ ALTER LOGIN login_name
 ### <a name="a-enabling-a-disabled-login"></a>A. 启用已禁用的登录名  
  以下示例将启用 `Mary5` 登录名。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### <a name="b-changing-the-password-of-a-login"></a>B. 更改登录密码  
  以下示例将登录名 `Mary5` 的密码更改为强密码。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### <a name="c-changing-the-name-of-a-login"></a>C. 更改登录名称  
  以下示例将 `Mary5` 登录名称更改为 `John2`。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### <a name="d-mapping-a-login-to-a-credential"></a>D. 将登录名映射到凭据  
  以下示例将登录名 `John2` 映射到凭据 `Custodian04`。  
   
-```tsql  
+```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
@@ -293,7 +293,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -303,7 +303,7 @@ GO
  若要解除锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，请执行以下语句，并将 **** 替换为所需帐户密码。  
   
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
 
 GO  
@@ -311,7 +311,7 @@ GO
   
  若要在不更改密码的情况下解除锁定登录名，请关闭检查策略，然后再打开此检查策略。  
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -322,7 +322,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql  
+```sql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  

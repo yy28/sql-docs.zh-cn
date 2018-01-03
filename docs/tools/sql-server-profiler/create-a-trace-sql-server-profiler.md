@@ -3,7 +3,7 @@ title: "创建跟踪 （SQL Server 事件探查器） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fccb9c899fd26666d22cf900cb431bf33f2f87
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec32b39644d4e01ca5d7b168b5d0909f6d9a6f7c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建跟踪。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>另请参阅  
  [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

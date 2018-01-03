@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8798d626a64a56d1dd57222abea1458347b01f5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2778e08e3af0682d3fcc099cacb498fb3e267524
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -67,15 +67,15 @@ GO
 ## <a name="metadata"></a>元数据  
  有关安装的实例上的语义语言统计数据库信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查询目录视图[sys.fulltext_semantic_language_statistics_database &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何通过调用取消注册语义语言统计数据库**sp_fulltext_semantic_unregister_language_statistics_db**。  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  

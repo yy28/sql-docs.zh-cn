@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f57ab46aee2ab6784179fa495d96afb45c3751d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 539b5c0bba5597f872f1a651701dcf325ca9d8e2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_backup_on_demand   
 [@database_name  =]  'database name',[@type = ] { 'Database' | 'Log' }  
   
@@ -63,9 +63,9 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求的成员身份**db_backupoperator**与数据库角色， **ALTER ANY CREDENTIAL**权限，和**执行**权限**sp_delete_backuphistory**存储过程。  
   
 ## <a name="examples"></a>示例  

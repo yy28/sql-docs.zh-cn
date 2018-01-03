@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 将一个行存储表转换为聚集列存储索引，或创建一个非聚集列存储索引。 使用列存储索引，以便高效运行对 OLTP 工作负载的实时运行分析，或以提高数据仓库工作负荷的数据压缩和查询性能。  
   
 > [!NOTE]  
->  从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，你可以将表创建为聚集列存储索引。   不再需要先创建行存储表，然后将其转换为聚集列存储索引。  
-  
+> 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，你可以将表创建为聚集列存储索引。   不再需要先创建行存储表，然后将其转换为聚集列存储索引。  
+
+> [!TIP]
+> 有关索引设计指南的信息，请参阅[SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)。
+
 跳过对示例：  
 -   [用于将行存储表转换为列存储的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [对于非聚集列存储索引的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ ON
   
 在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符和必须分隔，如下所示 ON **"**默认**"**或亮**[**默认**]**。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  需要对表的 ALTER 权限。  
   
 ##  <a name="GenRemarks"></a>一般备注  
@@ -272,7 +275,7 @@ ON
 - INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。  
 - 查询优化器使用筛选的索引来生成查询计划。  
   
-    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
+    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -299,20 +302,20 @@ ON
 **列存储索引中的每个列必须是以下常见业务数据类型之一：** 
 -   datetimeoffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   日期  
 -   时间 [(  *n*  )]  
 -   float [(  *n*  )]  
 -   实际 [(  *n*  )]  
 -   十进制 [(*精度*[ *，缩放*] **)** ]
 -   数字 [(*精度*[ *，缩放*] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)   
@@ -619,7 +622,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有插入、 更新、 删除或合并的查询将失败并返回一条错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：  
   
--   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如：  
+-   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如，  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

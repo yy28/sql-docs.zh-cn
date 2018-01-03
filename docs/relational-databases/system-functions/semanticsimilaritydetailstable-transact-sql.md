@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f7ea0123e9d5c86bdd6b3983d0b6c20ceed59c0e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c602d6119bba1b828c9c68853c2ed60249e33c60
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYDETAILSTABLE  
     (  
     table,  
@@ -90,15 +90,15 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 -   [sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例检索 5 个关键短语具有最高的相似性得分中指定的候选人间**HumanResources.JobCandidate** AdventureWorks2012 示例数据库的表。 @CandidateId和@MatchedID变量表示全文索引的键列的值。  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROMSEMANTICSIMILARITYDETAILSTABLE  
     (  

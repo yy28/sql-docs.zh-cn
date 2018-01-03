@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be1a2ce0aea9d34ee1fcb8c1f26c5b5147105819
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 207415fc333cbc4373454b815ad27431c07c8d61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqltables-function"></a>SQLTables 函数
 **一致性**  
@@ -154,7 +154,7 @@ SQLRETURN SQLTables(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
+|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有架构这些表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|表名。|  
 |TABLE_TYPE (ODBC 1.0)|4|Varchar|表类型名称;以下项之一:"表"、"视图"、"系统表"、"全局临时"、"本地临时"、"别名"、"同义词"或数据源 – 特定的类型名称。<br /><br /> "别名"和"同义词"的意义进行了特定于驱动程序。|  

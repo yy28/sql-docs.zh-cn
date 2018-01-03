@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/27/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar （128)**|属性的名称。 不可为 null。|  
+|parameter_name|**nvarchar(128)**|属性的名称。 不可为 null。|  
 |parameter_value|**sql_variant**|属性的实际值。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求视图的 SELECT 权限或者 dc_operator、dc_proxy 或 dc_admin 固定数据库角色的成员身份。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可用属性的列表是固定的，这些属性的值只能使用适当的存储过程来更改。 下表描述了通过此视图公开的属性。  
   
 |属性名称|Description|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>示例  
  下面的示例查询 syscollector_config_store 视图。  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

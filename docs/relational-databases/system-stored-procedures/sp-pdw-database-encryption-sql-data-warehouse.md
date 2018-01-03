@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e70d3a09e94a5e54f119934ec2c63ea90fa932f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5baf00f93d6105b4da137d4d8d6eff4035c6f2e4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
@@ -50,16 +50,16 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当使用启用 TDE **sp_pdw_database_encryption**，tempdb 数据库进行删除、 重新创建和加密。 为此，TDE 时不能启用在设备上使用 tempdb 其他活动会话。 启用或禁用设备上的 TDE 是设备的操作更改状态，在大多数情况下应执行一次中的设备生存期内，和在设备上没有流量时应执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定数据库角色或**CONTROL SERVER**权限。  
   
 ## <a name="example"></a>示例  
  下面的示例在设备上启用 TDE。  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   

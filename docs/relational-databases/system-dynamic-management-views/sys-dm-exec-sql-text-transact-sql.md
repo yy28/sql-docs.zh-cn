@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,10 +77,10 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |**加密**|**bit**|1 = SQL 文本已加密。<br /><br /> 0 = SQL 文本未加密。|  
 |**text**|**nvarchar (max** **)**|SQL 查询的文本。<br /><br /> 对于已加密对象为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 针对即席查询，SQL 句柄是基于提交到服务器，SQL 文本的哈希值，并可来自任何数据库。 
 
 对于诸如存储过程、触发器或函数之类的数据库对象，SQL 句柄派生自数据库 ID、对象 ID 和对象编号。 
@@ -96,7 +96,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 以下是一个基本的示例来演示传递**sql_handle**直接或与**CROSS APPLY**。
   1.  创建活动。  
 在新查询窗口中执行以下 T-SQL [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  使用**跨应用**。  
     从的 sql_handle **sys.dm_exec_requests**将传递给**sys.dm_exec_sql_text**使用**CROSS APPLY**。 打开新查询窗口并传递步骤 1 中确定的 spid。 在此示例中 spid 恰好是`59`。
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  传递**sql_handle**直接。  
 获取**sql_handle**从**sys.dm_exec_requests**。 然后，将传递**sql_handle**直接**sys.dm_exec_sql_text**。 打开新查询窗口并将传递到步骤 1 中确定的 spid **sys.dm_exec_requests**。 在此示例中 spid 恰好是`59`。 然后返回值传递**sql_handle**的自变量作为**sys.dm_exec_sql_text**。
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. 获取有关前五个查询按平均 CPU 时间的信息  
  以下示例返回前五个查询的 SQL 语句文本和平均 CPU 时间。  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. 提供批处理执行统计信息  
  以下示例返回按批执行的 SQL 查询的文本，并提供有关它们的统计信息。  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

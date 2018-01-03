@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ CREATE STATISTICS statistics_name
   
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要下列权限之一：  
   
 -   ALTER TABLE  
@@ -234,7 +234,7 @@ CREATE STATISTICS statistics_name
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. 将 CREATE STATISTICS 与 SAMPLE number PERCENT 一起使用  
  下面的示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ContactMail1` 表的 `BusinessEntityID` 和 `EmailPromotion` 列的 5% 作为随机抽样来创建 `Contact` 统计信息。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
@@ -243,7 +243,7 @@ CREATE STATISTICS ContactMail1
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. 将 CREATE STATISTICS 与 FULLSCAN 和 NORECOMPUTE 一起使用  
  以下示例对 `ContactMail2` 表的 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `Contact` 统计信息，并禁用自动重新计算统计信息。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
@@ -252,7 +252,7 @@ CREATE STATISTICS NamePurchase
 ### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. 使用 CREATE STATISTICS 创建筛选统计信息  
  以下示例创建筛选统计信息 `ContactPromotion1`。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]对 50% 的数据进行采样，然后选择 `EmailPromotion` 等于 2 的行。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -265,7 +265,7 @@ GO
   
  由于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入到临时表创建统计信息，完全扫描选项外部表中的数据需要更长的时间。 对于大型表，默认采样方法就足够了。  
   
-```t-sql  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
@@ -276,7 +276,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. 使用指定 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 创建统计信息  
  下面的示例创建`ContactMail2`中的所有行的统计信息`BusinessEntityID`和`EmailPromotion`列`Contact`表，然后执行不明确的所有后续更新指定采样设置的 100%采样百分比百分比。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
@@ -287,14 +287,14 @@ CREATE STATISTICS NamePurchase
 ### <a name="f-create-statistics-on-two-columns"></a>F. 两个列创建统计信息  
  下面的示例创建`CustomerStats1`统计信息，基于`CustomerKey`和`EmailAddress`列`DimCustomer`表。 统计信息基于中的行具有统计学意义采样创建`Customer`表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 通过使用完全扫描创建统计信息  
  下面的示例创建`CustomerStatsFullScan`基于扫描的所有行中的统计信息`DimCustomer`表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
@@ -302,7 +302,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 通过指定抽样百分比创建统计信息  
  下面的示例创建`CustomerStatsSampleScan`基于扫描中的行的 50%的统计信息`DimCustomer`表。  
   
-```t-sql  
+```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  

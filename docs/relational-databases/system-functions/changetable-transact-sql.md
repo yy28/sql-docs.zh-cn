@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ CHANGETABLE (
  *表*  
  是用户定义的从中获取更改跟踪信息的表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
- *column_name*  
+ column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
- *值*  
+ *ReplTest1*  
  是主键的值。 与列显示的对话框中，如果有多个主键列，必须以相同的顺序中指定的值*column_name*列表。  
   
  [一样]*table_alias* [(*column_alias* [，...*n* ] ) ]  
@@ -117,7 +117,7 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|更改可以在 INSERT、UPDATE 或 DELETE 语句中使用 WITH 子句选择指定的上下文信息。|  
 |\<主键列值 >|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  CHANGETABLE 函数通常在对表的查询的 FROM 子句中使用。  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -146,7 +146,7 @@ CHANGETABLE (
   
  如果未进行更改的时间超过保持期（例如，清除操作删除了更改信息），或者在为表启用更改跟踪后从未更改行，则 SYS_CHANGE_VERSION 的值可能为 NULL。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要以下权限由对表*表*值以获取更改跟踪信息：  
   
 -   主键列的 SELECT 权限  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. 返回数据初始同步的行  
  下面的示例演示了如何获取表数据的初始同步的数据。 该查询返回所有行数据及其关联的版本。 您可以随后将此数据插入或添加到要包含同步数据的系统中。  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. 列出自特定版本起进行的所有更改  
  下面的示例列出了从指定的版本 (`@last_sync_version)`) 起在表中进行的所有更改。 [Emp ID] 和 SSN 是组合主键中的列。  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. 获取同步的所有已更改数据  
  下面的示例演示如何获取所有已更改数据。 此查询将更改跟踪信息与用户表联接，以便返回用户表信息。 使用 `LEFT OUTER JOIN` 以便为删除的行返回一行。  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. 使用 CHANGETABLE(VERSION...) 检测冲突  
  下面的示例演示了如何只更新在上次同步之后未更改的行。 使用 `CHANGETABLE` 获取特定行的版本号。 如果行已经更新，则不进行更改，并且查询将返回有关对行的最近更改的信息。  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

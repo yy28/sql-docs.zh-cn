@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bb9716ab3b40ba0ef79e5346999115b8dbf2498
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9abdf15e501c014a53c587799c6f246113567cb9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/17/2017
   
  CLR 返回类型：**对**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOGRAPHY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

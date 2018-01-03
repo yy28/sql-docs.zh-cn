@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a7820a1592d8d7f2b600e8d53f59faf625d60bd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902a28f31abdc9dd501c6352acd4b2bee4042fd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,17 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergearticle**合并复制中使用。 有关删除的项目的详细信息，请参阅[添加项目和从现有发布删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
  执行**sp_dropmergearticle**以从发布删除项目不会删除该对象从发布数据库或从订阅数据库的相应对象。 如果需要，可以使用 `DROP <object>` 手动删除这些对象。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergearticle**。  
   
 ## <a name="example"></a>示例  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @article1 AS sysname;  
 DECLARE @article2 AS sysname;  
@@ -111,7 +111,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-```tsql  
+```sql  
 DECLARE @publication AS sysname;  
 DECLARE @table1 AS sysname;  
 DECLARE @table2 AS sysname;  

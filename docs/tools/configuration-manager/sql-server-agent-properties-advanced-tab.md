@@ -3,7 +3,7 @@ title: "SQL Server 代理属性 （高级选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44ab270aef5436ced00f4f8289ece1e0adefb62e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1446ea1a5ec5d950e0a2873f39de4c4a8d2072cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server 代理属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在显示五个属性**高级**默认情况下的选项卡。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **群集**  
  指示此服务是否作为群集服务器的资源进行安装。  
   

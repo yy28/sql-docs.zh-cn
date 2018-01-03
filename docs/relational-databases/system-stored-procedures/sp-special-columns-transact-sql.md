@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fee0eefa43553f1e942abc2c7797d2dd487891d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  所使用的 ODBC 版本。 *ODBCVer*是**int (**4**)**，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 版本 2.0 和 ODBC 版本 3.0 之间的差异的详细信息，请参阅 ODBC 版本 3.0 的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -88,16 +88,16 @@ sp_special_columns [ @table_name = ] 'table_name'
 |SCALE|**int**|数据源中列的小数位数。 对于不适用小数位数的数据类型，返回 NULL。|  
 |PSEUDO_COLUMN|**int**|指示列是否为伪列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  sp_special_columns 相当于 SQLSpecialColumns ODBC 中。 返回的结果按 SCOPE 排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例将返回有关特定列的信息，该列唯一标识了 `HumanResources.Department` 表中的行。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   

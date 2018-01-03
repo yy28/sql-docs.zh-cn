@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE 兼容级别 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact SQL) 兼容性级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  执行以下查询以确定的版本[!INCLUDE[ssDE](../../includes/ssde-md.md)]连接到。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -88,12 +88,13 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  若要确定当前的兼容性级别，请查询**compatibility_level**列[sys.databases &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
-## <a name="remarks"></a>注释  
- 对于的所有安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，默认兼容级别设置为的新版[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 数据库设置为此级别，除非**模型**数据库具有较低的兼容性级别。 当从任何早期版本升级数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，数据库将保留其现有的兼容性级别，如果它是至少最小实例允许[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 升级的数据库的兼容性级别低于允许的级别，可将数据库设置为级别允许的最低兼容性。 这既适用于系统数据库也适用于用户数据库。 使用**ALTER DATABASE**若要更改数据库的兼容性级别。 若要查看数据库的当前兼容级别，查询**compatibility_level**中的列**sys.databases**目录视图。  
+## <a name="remarks"></a>Remarks  
+
+对于的所有安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，默认兼容级别设置为的新版[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 数据库设置为此级别，除非**模型**数据库具有较低的兼容性级别。 当从任何早期版本升级数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，数据库将保留其现有的兼容性级别，如果它是至少最小实例允许[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 升级的数据库的兼容性级别低于允许的级别，可将数据库设置为级别允许的最低兼容性。 这既适用于系统数据库也适用于用户数据库。 使用**ALTER DATABASE**若要更改数据库的兼容性级别。 若要查看数据库的当前兼容级别，查询**compatibility_level**中的列**sys.databases**目录视图。  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>利用兼容性级别获得向后兼容  
@@ -136,7 +137,8 @@ SELECT name, compatibility_level FROM sys.databases;
 | 跟踪 2371年在默认情况下为 OFF [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 | [跟踪 2371年](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)在默认情况下为 ON [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 跟踪标志 2371年告知自动统计信息更新程序要采样的行，具有很好的许多行的表中的较小但丝毫子集。 <br/> <br/> 一项重要改进是在此示例中包括更多最近插入的行。 <br/> <br/> 另一改进是让运行而更新统计信息过程是运行，而不阻塞查询的查询。 |  
 | 级别 120，统计信息通过采样*单个*-线程过程。 | 对于级别 130，统计信息通过采样*多*-线程过程。 |  
 | 253 传入的外键是的上限。 | 可以按最多 10,000 个传入的外键或类似引用引用某一给定的表。 有关限制，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
-|允许使用不推荐使用的 MD2、 MD4、 MD5、 SHA 和 SHA1 哈希算法。|允许使用唯一 SHA2_256 和 SHA2_512 哈希算法。|  
+|允许使用不推荐使用的 MD2、 MD4、 MD5、 SHA 和 SHA1 哈希算法。|允许使用唯一 SHA2_256 和 SHA2_512 哈希算法。|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]在某些数据类型转换和一些 （通常不常见） 的操作包括改进。 有关详细信息，请参阅[中处理某些数据类型和常见操作的 SQL Server 2016 改进](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
   
   
 修补程序时在跟踪标志 4199 在早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]现在默认启用。 兼容性模式下 130。 跟踪标志 4199 仍将适用于之后发布的新查询优化器修补[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 若要使用在较旧的查询优化器[!INCLUDE[ssSDS](../../includes/sssds-md.md)]必须选择兼容性级别为 110。 跟踪标志 4199 有关的信息，请参阅[Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006)。  
@@ -146,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
   
 |兼容性级别设置为 110 或更低|兼容性级别设置为 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括了对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在设置之前数据库兼容性级别为 110 由于性能问题，请参阅的查询计划部分中的建议[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [What's New in 数据库引擎](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题。|  
+|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]包括对创建并优化查询计划的组件的大量改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在设置之前数据库兼容性级别为 110 由于性能问题，请参阅的查询计划部分中的建议[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [What's New in 数据库引擎](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题。|  
 |在兼容性级别低于 120，语言设置时，将忽略转换**日期**为字符串值的值。 请注意，此行为是仅特定于**日期**类型。 请参阅下面的示例部分中的示例 B。|转换时，将不会忽略语言设置**日期**为字符串值的值。|  
 |EXCEPT 子句右侧的递归引用产生无限循环。 下面的示例部分中的示例 C 演示此行为。|EXCEPT 子句中的递归引用产生遵从 ANSI SQL 标准的错误。|  
 |递归 CTE 允许列名重复。|递归 CTE 不允许列名重复。|  
@@ -186,7 +188,7 @@ SELECT name, compatibility_level FROM sys.databases;
 |严格验证应用到的 XML 元素**anyType**类型。|宽松验证应用到的元素**anyType**类型。 有关详细信息，请参阅[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)。|Low|  
 |特殊属性**xsi: nil**和**xsi: type**无法查询或修改的数据操作语言语句。<br /><br /> 这意味着，`/e/@xsi:nil`失败时`/e/@*`忽略**xsi: nil**和**xsi: type**属性。 但是，`/e`返回**xsi: nil**和**xsi: type**属性的一致性`SELECT xmlCol`，即使`xsi:nil = "false"`。|特殊属性**xsi: nil**和**xsi: type**作为正则属性存储，并可以查询和修改。<br /><br /> 例如，执行查询`SELECT x.query('a/b/@*')`返回所有属性，包括**xsi: nil**和**xsi: type**。 若要排除这些类型在查询中的，替换`@*`与`@*[namespace-uri(.) != "`*插入 xsi 命名空间 uri* `"`和 not`(local-name(.) = "type"`或`local-name(.) ="nil".`|Low|  
 |用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为确定的。|用于将 XML 常量字符串值转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 类型的用户定义函数被标记为不确定的。|Low|  
-|不完全支持 XML 联合和列表类型。|完全支持联合和列表类型，包括以下功能：<br /><br /> 列表的联合<br /><br /> 联合的联合<br /><br /> 原子类型的列表<br /><br /> 联合的列表|低|  
+|不完全支持 XML 联合和列表类型。|完全支持联合和列表类型，包括以下功能：<br /><br /> 列表的联合<br /><br /> 联合的联合<br /><br /> 原子类型的列表<br /><br /> 联合的列表|Low|  
 |当视图或内联表值函数中包含 xQuery 方法时，不对该方法所需的 SET 选项进行验证。|当视图或内联表值函数中包含 xQuery 方法时，对该方法所需的 SET 选项进行验证。 如果该方法的 SET 选项设置不正确，将引发一个错误。|Low|  
 |包含行尾字符（回车符和换行符）的 XML 属性值不根据 XML 标准进行规范化。 即返回回车符和换行符，而不是单个换行符。|包含行尾字符（回车符和换行符）的 XML 属性值会根据 XML 标准进行规范化。 也就是说，外部已分析实体（包括文档实体）中的所有换行符都会在输入时进行规范化，方法是将两字符序列 #xD #xA 和后面没有跟 #xA 的所有 #xD 都转换为单个 #xA 字符。<br /><br /> 使用属性来传输包含行尾字符的字符串值的应用程序接收到的这些字符将和提交时有所不同。 若要避免规范化过程，请使用 XML 数字字符实体对所有行尾字符进行编码。|Low|  
 |ROWGUIDCOL 和 IDENTITY 列属性可能错误地命名为约束。 例如，`CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` 语句可以执行，但约束名不会保留，也无法让用户访问。|ROWGUIDCOL 和 IDENTITY 列属性不能命名为约束。 返回错误 156。|Low|  
@@ -214,7 +216,7 @@ SELECT name, compatibility_level FROM sys.databases;
   
  有关详细信息，请参阅[保留关键字 (Transact-SQL) ](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -222,7 +224,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ### <a name="a-changing-the-compatibility-level"></a>A. 更改兼容性级别  
  下面的示例更改的兼容级别[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库到`110,` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  下面的示例返回当前数据库的兼容性级别。  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. 忽略除兼容性级别 120 下的 SET LANGUAGE 语句  
  以下查询将忽略除兼容性级别 120 下的 SET LANGUAGE 语句。  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>C.  
  对于兼容级别设置为 110 或更低，EXCEPT 子句右侧的递归引用创建无限循环。  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -270,7 +272,7 @@ FROM r;
 ### <a name="d"></a>D.  
  此示例显示样式 0 和 121 之间的差异。 有关日期和时间的样式的详细信息，请参阅[CAST 和 CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>E.  
  在包含顶级 UNION 运算符的语句中，允许使用变量赋值，但会返回意外的结果。 例如，在以下语句中，将来自两个表的联合的 `@v` 列的值赋给局部变量 `BusinessEntityID`。 按照定义，如果 SELECT 语句返回多个值，则将返回的最后一个值赋给变量。 在这种情况下，会正确地将最后一个值赋给变量，但还会返回 SELECT UNION 语句的结果集。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>F.  
  在包含顶级 UNION 运算符的语句中不允许变量赋值。 返回错误 10734。 若要纠正该错误，请重写查询，如下例所示。  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

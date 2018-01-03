@@ -3,7 +3,7 @@ title: "筛选跟踪 （SQL Server 事件探查器） 中的事件 |Microsoft �
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2111de43f590ebae4a89252b17a2ae8a40be0050
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa5c7ca6a19c0ae5d7afb854645a99fb2aed6131
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>在跟踪中筛选事件 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 并不一定要为跟踪设置筛选器。 但筛选器可使跟踪过程中造成的开销最小化。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 并不一定要为跟踪设置筛选器。 但筛选器可使跟踪过程中造成的开销最小化。  
   
  可以使用 **“跟踪属性”** 或 **“跟踪模板属性”** 对话框中的 **“事件选择”** 选项卡向跟踪定义中添加筛选器。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  若要应用筛选器，请单击比较运算符，再键入要用于该筛选器的值。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
  **注意事项：**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
     -   输入的日期符合此格式： `YYYY/MM/DD HH:mm:sec`。  
   
-         -或者-  
+         -或-  
   
     -   在**“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 若要查看**常规选项**对话框中，在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**工具**菜单上，单击**选项**。  
   

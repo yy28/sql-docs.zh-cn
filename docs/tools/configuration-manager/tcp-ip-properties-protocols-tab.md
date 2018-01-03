@@ -3,7 +3,7 @@ title: "TCP/IP 属性 （协议选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe54bf4b1cb0d2e99b5276b440bf30374e788954
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e090b89ed827e1ea8a7700a2503fed95ace84501
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**TCP/IP 属性**对话框配置 TCP/IP 协议的选项。 在左窗格中单击 **TCP/IP** 以在详细信息窗格中显示单个 IP 地址配置。  
   
  必须重新启动 Microsoft SQL Server，更改才会生效。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **已启用**  
  可能的值为“是”和“否”。  
   

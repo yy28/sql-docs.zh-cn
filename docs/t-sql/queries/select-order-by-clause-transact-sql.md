@@ -1,7 +1,7 @@
 ---
 title: "ORDER BY 子句 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -44,11 +44,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT-ORDER BY 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,9 +61,12 @@ ms.lasthandoff: 11/17/2017
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  在选择 / 到不支持按顺序或中的创建表 AS SELECT (CTAS) 语句[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
+
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -131,7 +134,7 @@ ORDER BY order_by_expression
  在查询执行计划的偏移量的行计数值显示在**行**或**顶部**TOP 查询运算符的属性。  
   
 ## <a name="best-practices"></a>最佳实践  
- 避免将 ORDER BY 子句中的整数指定为选择列表中的列位置表示形式 例如，虽然 `SELECT ProductID, Name FROM Production.Production ORDER BY 2` 等语句是有效的，但与指定实际列名相比，其他人并不容易理解该语句。 此外，对选择列表的更改（如更改列顺序或添加新列）需要修改 ORDER BY 子句，以避免出现意外的结果。  
+ 避免将 ORDER BY 子句中的整数指定为选择列表中的列位置表示形式 例如，虽然 `SELECT ProductID, Name FROM Production.Production ORDER BY 2` 等语句是有效的，但与指定实际列名相比，其他人并不容易理解该语句。 此外，对选择列表中，如更改列顺序更改或添加新列，则需要修改 ORDER BY 子句，以避免意外的结果。  
   
  在选择前 (*N*) 语句，始终使用 ORDER BY 子句。 这是以可预知的方式指明哪些行受 TOP 影响的唯一方法。 有关详细信息，请参阅[顶部 &#40;Transact SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +162,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- 此外，当语句包含 UNION、EXCEPT 或 INTERSECT 运算符时，必须在第一个（左侧）查询的选择列表中指定列名或列别名。  
+ 此外，当语句中包含联合，除外，也 INTERSECT 运算符、 列名称或列别名必须指定第一个 （左侧） 查询选择列表中。  
   
- 在使用 UNION、EXCEPT 或 INTERSECT 运算符的查询中，只允许在语句末尾使用 ORDER BY。 只有在顶级查询而不是子查询中指定了 UNION、EXCEPT 和 INTERSECT 时，此限制才适用。 请参阅后面的“示例”一节。  
+ 在使用 UNION、EXCEPT 或 INTERSECT 运算符的查询中，只允许在语句末尾使用 ORDER BY。 此限制仅适用于你指定两个联合，除外、 时和 INTERSECT 顶级查询中，不能在子查询。 请参阅后面的“示例”一节。  
   
  除非还指定了 TOP 子句或 OFFSET 和 FETCH 子句，否则，视图、内联函数、派生表和子查询中的 ORDER BY 子句无效。 在这些对象中使用 ORDER BY 时，该子句仅用于确定由 TOP 子句或 OFFSET 和 FETCH 子句返回的行。 ORDER BY 不保证在查询这些构造时得到有序结果，除非在查询本身中也指定了 ORDER BY。  
   
@@ -267,8 +270,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. 指定升序  
- 以下示例按 `Name` 列升序对结果集进行排序。 请注意，字符按字母顺序排序，而不是数值顺序。 也就是说，10 排在 2 之前。  
+#### <a name="b-specifying-an-ascending-order"></a>B. 指定按升序进行排序  
+ 以下示例按 `Name` 列升序对结果集进行排序。 字符进行排序，按字母顺序、 不按数字顺序。 也就是说，10 排在 2 之前。  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +316,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>指定条件的顺序  
- 以下示例在 ORDER BY 子句中使用 CASE 表达式，以根据给定的列值有条件地确定行的排序顺序。 在第一个示例中，会计算 `SalariedFlag` 表中 `HumanResources.Employee` 列的值。 `SalariedFlag` 设置为 1 的员工将按 `BusinessEntityID` 以降序顺序返回。 `SalariedFlag` 设置为 0 的员工将按 `BusinessEntityID` 以升序顺序返回。 在第二个示例中，当 `TerritoryName` 列等于“United States”时，结果集会按 `CountryRegionName` 列排序，对于所有其他行则按 `CountryRegionName` 排序。  
+ 下面的示例在 ORDER BY 子句中使用 CASE 表达式，来有条件地确定基于给定的列的值的行的排序顺序。 在第一个示例中，会计算 `SalariedFlag` 表中 `HumanResources.Employee` 列的值。 `SalariedFlag` 设置为 1 的员工将按 `BusinessEntityID` 以降序顺序返回。 `SalariedFlag` 设置为 0 的员工将按 `BusinessEntityID` 以升序顺序返回。 在第二个示例中，当 `TerritoryName` 列等于“United States”时，结果集会按 `CountryRegionName` 列排序，对于所有其他行则按 `CountryRegionName` 排序。  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

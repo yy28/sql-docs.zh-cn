@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e6de8f9b9a1ed36135915e5985312a02c02fba6d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] （通配符-到匹配项个字符） (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 ### <a name="a-simple-example"></a>答： 简单的示例   
 下面的示例返回的字母开头的名称`m`。 `[n-z]`指定，使用某处范围内必须是第二个字母`n`到`z`。 百分号通配符`%`允许使用 3 字符开头的任何或任何字符。 `model`和`msdb`数据库满足此条件。 `master`数据库不并且不包括在结果集。
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +59,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B： 更复杂示例   
  以下示例使用 [] 运算符查找其地址中有四位邮政编码的所有 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 雇员的 ID 和姓名。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  

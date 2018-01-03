@@ -3,7 +3,7 @@ title: "设置工具选项和布局 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>课程 1-2-设置工具选项和布局
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以设置配置数据库引擎优化顾问图形用户界面 (GUI) 显示在启动时，它使用的字体的选项和其他工具功能，以便最好地支持你如何使用它。 通过本页的练习将让您熟悉可设置的各选项及其设置方式。  

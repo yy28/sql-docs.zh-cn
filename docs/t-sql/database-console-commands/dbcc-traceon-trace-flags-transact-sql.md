@@ -1,7 +1,7 @@
 ---
 title: "跟踪标志 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-跟踪标志 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/28/2017
 |**1204**|返回参与死锁的锁的资源和类型，以及受影响的当前命令。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/832524)。<br /><br />**作用域：**全局仅|  
 |**1211**|基于内存不足或基于锁数禁用锁升级。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]不会将行锁或页锁升级到表锁。<br /><br />使用此跟踪标志可生成过多的锁数目。 这样会降低[!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能，或因为内存不足而导致 1204 错误（无法分配锁资源）。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**作用域**： 全局或会话|  
 |**1222**|以不符合任何 XSD 架构的 XML 格式，返回参与死锁的锁的资源和类型，以及受影响的当前命令。<br /><br />**作用域**： 全局仅|  
-|**1224**|基于锁数禁用锁升级。 但是，内存不足仍可激活锁升级。 如果锁对象使用的内存量超出下列条件之一，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将行锁或页锁升级为表（或分区）锁：<br /><br />-40%的内存的使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 这是适用时，才**锁**sp_configure 参数设置为 0。<br />的通过使用配置的锁定内存 40%**锁**的 sp_configure 的参数。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**注意：**锁升级到 HoBT 级别粒度的表级别还可通过使用的 LOCK_ESCALATION 选项控制[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)语句。<br /><br />**作用域：**全局或会话|
+|**1224**|基于锁数禁用锁升级。 但是，内存不足仍可激活锁升级。 如果锁对象使用的内存量超出下列条件之一，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将行锁或页锁升级为表（或分区）锁：<br /><br />-40%的内存的使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 这是适用时，才**锁**sp_configure 参数设置为 0。<br />的通过使用配置的锁定内存 40%**锁**的 sp_configure 的参数。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**注意：**锁升级到 HoBT 级别粒度的表级别还可通过使用的 LOCK_ESCALATION 选项控制[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)语句。<br /><br />**作用域：**全局或会话|
 |**1236**|使数据库锁分区。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2926217)。<br /><br />**注意：**开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP3 和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP1 由引擎和跟踪标志 1236年控制此行为不起作用。<br /><br />**作用域**： 全局仅|
 |**1237**|允许的 ALTER PARTITION FUNCTION 语句授予当前用户定义的会话死锁优先级，而不是默认情况下可能的死锁牺牲品。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/help/4025261)。<br /><br />**注意：**开头[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]和数据库[兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)140 这是默认行为和跟踪标志 1237年不起作用。<br /><br />**作用域**： 全局或会话或查询|
 |**1260**|禁用计划程序监视器转储。<br /><br />**作用域**： 全局仅|   
@@ -82,12 +82,13 @@ ms.lasthandoff: 11/28/2017
 |**2371**|固定的自动更新统计信息阈值更改为动态的自动更新统计信息的阈值。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]并在列表视图[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130 上，此行为由引擎控制和跟踪标志 2371年不起作用。<br /><br />**作用域**： 全局仅|
 |**2389**|启用自动生成升序键 （直方图修正） 的快速统计的信息。 如果设置跟踪标志 2389年，并且起始的统计信息列标记为升序排序，然后在查询编译时用于估计基数直方图进行调整。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 改为使用跟踪标志 4139。<br /><br />**作用域**： 全局或会话或查询|
 |**2390**|启用自动生成升序或未知键 （直方图修正） 的快速统计的信息。 如果设置了跟踪标志 2390年，并且起始的统计信息列标记为升序或未知，则将在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 改为使用跟踪标志 4139。<br /><br />**作用域**： 全局或会话或查询|
+|**2430**|启用备用锁类清理。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2754301)。<br /><br />**作用域**： 全局仅| 
 |**2453**|允许表变量的行的数量不足发生更改时触发重新编译。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**作用域**： 全局或会话或查询|
 |**2528**|禁用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 执行的对象并行检查。 默认情况下，并行度由查询处理器自动确定。 最大并行度的配置就像并行查询的最大并行度一样。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：**并行 DBCC 检查通常应该是启用 （默认值）。 查询处理器重新评估，并自动调整每个表或批处理的 DBCC checkdb 检查表的并行。<br /><br />系统管理员知道该服务器负载会增加才能 DBCC CHECKDB 完成，因此选择手动或降低禁用并行度，为了提高与其他用户工作负荷的并发性时的典型使用方案。 但是，禁用在 DBCC CHECKDB 的并行检查会导致它执行长时间才能完成。<br /><br />**注意：**如果使用 TABLOCK 选项执行 DBCC CHECKDB 和并行下为禁用，表可能被锁定的时间更长时间。<br /><br />**注意：**开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，MAXDOP 选项可覆盖 max degree of parallelism 配置选项的 sp_configure 语句。<br /><br />**作用域**： 全局或会话|
 |**2549**|运行 DBCC CHECKDB 命令假定每个数据库文件唯一的磁盘驱动器上。 DBCC CHECKDB 命令生成的所有数据库文件中读取每个唯一的磁盘驱动器的页数的内部列表。 此逻辑确定基于每个文件的物理文件名称的驱动器号的磁盘驱动器的唯一性。<br /><br />**注意：**不使用此跟踪标志，除非你知道，唯一的物理磁盘上基于每个文件。<br /><br />**注意：**尽管此跟踪标志提高的性能 DBCC CHECKDB PHYSICAL_ONLY 选项为其目标使用的命令，但有些用户可能看不到任何性能改善。 尽管此跟踪标志改进了磁盘 I/O 资源使用情况，磁盘资源的基础性能可能会限制 DBCC CHECKDB 命令的整体性能。 有关详细信息，请参阅[Microsoft 支持文章](http://support.microsoft.com/kb/2634571)。<br /><br />**作用域**： 全局仅| 
 |**2562**|运行 DBCC CHECKDB 命令在单个"批处理"而不考虑数据库中的索引数。 默认情况下，DBCC CHECKDB 命令尝试 tempdb 资源通过限制的索引或通过使用"批处理"概念，它生成的"事实"的数量降至最低。 此跟踪标志强制所有处理到一个批次。<br /><br />使用此跟踪标志的影响之一是 tempdb 空间要求可能会增加。 Tempdb 可能增长到多达 5%或更多的 DBCC CHECKDB 命令正在处理的用户数据库。<br /><br />**注意：**尽管此跟踪标志提高的性能 DBCC CHECKDB PHYSICAL_ONLY 选项为其目标使用的命令，但有些用户可能看不到任何性能改善。 尽管此跟踪标志改进了磁盘 I/O 资源使用情况，磁盘资源的基础性能可能会限制 DBCC CHECKDB 命令的整体性能。 有关详细信息，请参阅[Microsoft 支持文章](http://support.microsoft.com/kb/2634571)。<br /><br />**作用域**： 全局仅|
 |**2566**|除非指定 DATA_PURITY 选项，请运行 DBCC CHECKDB 命令而无需数据纯度检查。<br /><br />**注意：**列值完整性检查默认情况下启用，并且不需要 DATA_PURITY 选项。 为升级从早期版本的 SQL Server 数据库，列值检查不会启用默认情况下，直到 DBCC CHECKDB 与 DATA_PURITY 已可用的错误上运行数据库至少一次。 然后，DBCC CHECKDB 将默认检查列值完整性。 有关详细信息，请参阅[Microsoft 支持文章](http://support.microsoft.com/kb/945770)。<br /><br />**作用域**： 全局仅|
-|**3023**|启用为 BACKUP 命令的默认值的校验和选项。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2656988)。<br /><br />**注意：**开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过设置控制此行为**备份校验和默认值**配置选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。<br /><br />**作用域**： 全局和会话|
+|**3023**|启用为 BACKUP 命令的默认值的校验和选项。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2656988)。<br /><br />**注意：**开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过设置控制此行为**备份校验和默认值**配置选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。<br /><br />**作用域**： 全局和会话|
 |**3042**|绕过默认的备份压缩预先分配算法，以便允许备份文件仅根据需要增长以达到其最终大小。 如果您需要仅分配压缩的备份所需的实际大小以便节约空间，则此跟踪标志将很有用。 使用此跟踪标志可能会导致轻微的性能损失（在备份操作期间损失可能会增加）。 有关预先分配算法的详细信息，请参阅[备份压缩 &#40;SQL server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br />**作用域**： 全局仅|
 |**3051**|启用 SQL Server 备份到 URL 登录到特定的错误日志文件。 有关详细信息，请参阅[SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。<br /><br />**作用域**： 全局仅|  
 |**3205**|默认情况下，如果磁带机支持硬件压缩，则 DUMP 或 BACKUP 语句会使用该功能。 利用此跟踪标志，可以禁用磁带机的硬件压缩。 此选项在您需要与不支持压缩的其他站点或磁带机交换磁带时很有用。<br /><br />**作用域**： 全局或会话|  
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/28/2017
 |**10316**|在可以创建其他索引[内部内存优化临时临时表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，默认旁边。 如果你有包含不受默认索引的列的特定查询模式可能希望添加其他的。<br /><br />**注意：**系统版本控制临时表的内存优化表旨在提供高事务吞吐量。 请注意，创建附加索引可能会引入的更新或删除当前表中的行的 DML 操作的开销。 与其他索引应旨在右之间找到平衡点临时查询的性能和其他 DML 开销。<br /><br />**作用域**： 全局或会话|
 |**11023**|禁用其中一个的采样率未显式指定作为的一部分的所有后续的统计信息更新的最后一个持久的采样率，用于[更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)语句。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4039284)。<br /><br />**作用域**： 全局| 
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有三种类型的跟踪标志： 查询、 会话和全局。 查询跟踪标志处于活动状态的特定查询的上下文。 会话跟踪标志处于活动状态的连接，并且仅对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 某些标志只能作为全局标志启用，而某些标志在全局或会话作用域都可以启用。  
   
  下列规则适用：  
@@ -165,13 +166,13 @@ ms.lasthandoff: 11/28/2017
 ## <a name="examples"></a>示例  
  下面的示例设置跟踪标志 3205 上的所有会话在服务器级别使用 DBCC TRACEON。  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 你可以启用所有计划影响修补程序由跟踪标志 4199 和特定查询的 4137 控制。
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

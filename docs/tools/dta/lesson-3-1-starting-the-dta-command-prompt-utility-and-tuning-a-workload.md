@@ -3,7 +3,7 @@ title: "启动命令提示符实用工具 dta 和优化工作负荷 |Microsoft �
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 615ce013af8c88bc748f1fc150e47fea182e7a06
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 70cb8fd744c0f169d151d076606740ad53fa404e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lesson 3-1-启动命令提示符实用工具 dta 和优化工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此任务将引导您完成启动**dta**实用程序，查看其帮助，然后使用它来优化的工作负荷从命令提示符。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 和 [查看优化报告](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)中执行的方式相同。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>“摘要”  
 你已使用 **dta** 实用工具在命令提示符下完成了对一个简单工作负荷的优化。 该工具还提供了其他许多优化选项。 有关详细信息，请参阅工具帮助 (**dta -?**) 和参考主题 [dta 实用工具](../../tools/dta/dta-utility.md) 。  
   
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  

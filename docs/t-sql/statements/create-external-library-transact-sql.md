@@ -3,7 +3,7 @@ title: "创建外部库 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf4807943521308cb2907adab8cfc6e701325b8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-external-library-transact-sql"></a>创建外部库 (Transact SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 将 R 包上载到数据库中，从指定的字节流或文件路径。
 
@@ -89,7 +89,7 @@ WITH ( LANGUAGE = 'R' )
 
 指定内容库的平台。 值默认为在其运行 SQL Server 的主机平台。 因此，用户不具有指定值。 它是必需的以防其中支持多个平台，或用户需要指定一个不同的平台。 Windows 是唯一受支持的平台。
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 对于 R 语言中，使用的文件时，包必须准备与压缩的存档文件的形式。适用于 Windows 的 ZIP 扩展。 目前，支持仅 Windows 平台
 
@@ -99,7 +99,7 @@ WITH ( LANGUAGE = 'R' )
 
 SQL Server 2017 版本中的数据源中不能用作 blob。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要`CREATE ANY EXTERNAL LIBRARY`权限。
 

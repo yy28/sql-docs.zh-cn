@@ -3,7 +3,7 @@ title: "重播要求 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -22,13 +22,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5fdf69fad3a8b7aaa337715ac2e32f92cb22e93a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d76f9ac6450ffd473b91831416a26f6f313ccad7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replay-requirements"></a>重播要求
+# <a name="replay-requirements"></a>Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要重播跟踪数据与[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或分布式重播实用工具，一组特定的事件类和列则必须在跟踪中捕获。 如果使用 **TSQL_Replay** 跟踪模板配置稍后用于重播的跟踪，则会默认启用这些设置。 本主题介绍这些设置以及其他重播要求。  
   
 > [!NOTE]  

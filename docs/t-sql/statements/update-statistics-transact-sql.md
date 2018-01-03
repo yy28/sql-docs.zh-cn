@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ PERSIST_SAMPLE_PERCENT = {ON |关闭}
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="when-to-use-update-statistics"></a>何时使用 UPDATE STATISTICS  
  有关何时使用更新统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
@@ -181,7 +181,7 @@ PERSIST_SAMPLE_PERCENT = {ON |关闭}
 ## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
  有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,27 +191,27 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL 数据仓库  
  下面的语法不受 PDW / SQL 数据仓库  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -219,7 +219,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>A. 更新表的所有统计信息  
  下面的示例更新上的所有索引的统计信息`SalesOrderDetail`表。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +229,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 更新索引的统计信息  
  以下示例更新 `AK_SalesOrderDetail_rowguid` 表的 `SalesOrderDetail` 索引的统计信息。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +239,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 通过使用 50% 抽样更新统计信息  
  以下示例将创建并更新 `Name` 表中的 `ProductNumber` 和 `Product` 列的统计信息。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +253,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. 通过使用 FULLSCAN 和 NORECOMPUTE 更新统计信息  
  以下示例更新 `Products` 表中的 `Product` 统计信息，强制对 `Product` 表中的所有行进行完全扫描，并关闭 `Products` 统计信息的自动统计信息功能。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,21 +266,21 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>E. 表中更新统计信息  
  下面的示例更新`CustomerStats1`统计信息`Customer`表。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 通过使用完全扫描更新统计信息  
  下面的示例更新`CustomerStats1`基于扫描的所有行中的统计信息`Customer`表。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. 更新表的所有统计信息  
  下面的示例将更新所有统计信息上`Customer`表。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -293,7 +293,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

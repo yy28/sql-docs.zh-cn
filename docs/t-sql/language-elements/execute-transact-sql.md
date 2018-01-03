@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -329,7 +329,7 @@ Execute a character string
   
  执行期间返回的实际结果集在以下方面可能不同于使用 WITH RESULT SETS 子句定义的结果：结果集数、列数、列名、为 Null 性以及数据类型。 如果结果集数不同，则会发生错误并中止批处理。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以通过使用提供参数*值*或通过使用*parameter_name*=*值。* 来提供参数。参数不是事务的一部分；因此，如果在以后回退的事务中更改了参数，则此参数的值不会恢复为以前的值。 返回给调用方的值总是模块返回时的值。  
   
  当一个模块调用其他模块或通过引用公共语言运行时 (CLR) 模块、用户定义类型或聚合执行托管代码时，将出现嵌套。 当开始执行调用模块或托管代码引用时，嵌套级别将增加，而当调用模块或托管代码引用完成时，嵌套级别将减少。 嵌套级别最高为 32 级，超过 32 级时，会导致整个调用链失败。 当前的嵌套级别存储在 @@NESTLEVEL系统函数。  
@@ -356,7 +356,7 @@ Execute a character string
   
  数据库上下文的更改只在 EXECUTE 语句结束前有效。 例如，运行下面这条语句中的 `EXEC` 之后，数据库上下文将为 master。  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>最佳实践  
  指定具有执行语句或模块中定义的操作所需的最低权限的登录名或用户。 例如，如果只需数据库级别权限，则不要指定拥有服务器级别权限的登录名；如果不需要相应权限，也不要指定数据库所有者帐户。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  运行 EXECUTE 语句无需权限。 但是，需要对 EXECUTE 字符串内引用的安全对象具有权限。 例如，如果字符串包含 INSERT 语句，则 EXECUTE 语句的调用方对目标表必须具有 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。  
   
  模块的 EXECUTE 权限默认授予该模块的所有者，该所有者可以将此权限转让给其他用户。 当运行一个执行字符串的模块时，系统会在执行该模块的用户上下文中而不是在创建该模块的用户上下文中检查权限。 但是，如果同一用户拥有调用模块和被调用模块，则不对后者执行 EXECUTE 权限检查。  
@@ -467,7 +467,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. 使用带存储过程变量的 EXECUTE 语句  
  以下示例创建一个代表存储过程名称的变量。  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  

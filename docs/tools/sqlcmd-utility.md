@@ -3,7 +3,7 @@ title: "sqlcmd 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -386,7 +386,7 @@ sqlcmd
   
 -   **ntext**  
   
--   **image**  
+-   **图像**  
   
 > [!NOTE]  
 >  根据实现，UDT 可以使用固定的长度。 如果此固定长度 UDT 的长度比 *display_width*短，则返回的 UDT 值将不受影响。 但是，如果此长度比 *display_width*长，则输出会被截断。  
@@ -476,7 +476,7 @@ sqlcmd
  **-?**  
  显示 **sqlcmd** 的版本和 **sqlcmd** 选项的语法摘要。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  不必按语法部分所示的顺序使用选项。  
   
  在返回多个结果时， **sqlcmd** 在批处理中的每个结果集之间输出一个空行。 此外，如果没有应用于已执行的语句，则不会出现 `<x> rows affected` 消息。  
@@ -505,7 +505,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
   
-|变量|相关开关|R/W|默认|  
+|变量|相关开关|R/W|，则“默认”|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  

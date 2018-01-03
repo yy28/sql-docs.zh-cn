@@ -1,7 +1,7 @@
 ---
 title: "创建索引 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -59,21 +59,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 16335773aba9cc005911434d5090223e7e6f8209
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  对表或视图创建关系索引。 也称为行存储索引，因为它是要么是一个群集或非聚集 btree 索引。 表中数据之前，你可以创建行存储索引。 使用行存储索引来提高查询性能，尤其是在查询从特定的列中选择，或需要值来以特定顺序排序。  
-  
+对表或视图创建关系索引。 也称为行存储索引，因为它是任一非聚集索引或非聚集 B 树索引。 表中数据之前，你可以创建行存储索引。 使用行存储索引来提高查询性能，尤其是在查询从特定的列中选择，或需要值来以特定顺序排序。  
   
 > [!NOTE]  
->  Azure SQL 数据仓库和并行数据仓库当前不支持的唯一约束。 任何引用 Unique 约束的示例是只适用于 SQL Server 和 Azure SQL 数据库    
-  
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]目前不支持的唯一约束。 任何引用 Unique 约束的示例是只适用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。    
+
+> [!TIP]
+> 有关索引设计指南的信息，请参阅[SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)。
+
  **简单示例：**  
   
 ```  
@@ -95,17 +97,15 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
   
  **重要的方案：**  
   
--   在 SQL Server 2016 和 Azure SQL 数据库中，使用非聚集索引对列存储索引来提高数据仓库查询性能。 请参阅[列存储索引的数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+-   从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，使用列存储索引的非聚集索引以提高数据仓库查询性能。 有关详细信息，请参阅[列存储索引的数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。  
   
- **需要创建不同类型的索引？**  
+**需要创建不同类型的索引？**  
   
 -   [创建 XML 索引 &#40;Transact SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)  
-  
 -   [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)  
+-   [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)     
   
--   [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-  
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -206,17 +206,16 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
         ( { column [ ASC | DESC ] } [ ,...n ] )  
     WITH ( DROP_EXISTING = { ON | OFF } )  
 [;]  
-  
 ```  
   
 ## <a name="arguments"></a>参数  
- UNIQUE  
- 为表或视图创建唯一索引。 唯一索引不允许两行具有相同的索引键值。 视图的聚集索引必须唯一。  
+UNIQUE  
+为表或视图创建唯一索引。 唯一索引不允许两行具有相同的索引键值。 视图的聚集索引必须唯一。  
   
  无论 IGNORE_DUP_KEY 是否设置为 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)]都不允许为已包含重复值的列创建唯一索引。 否则，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会显示错误消息。 必须先删除重复值，然后才能为一列或多列创建唯一索引。 唯一索引中使用的列应设置为 NOT NULL，因为在创建唯一索引时，会将多个 Null 值视为重复值。  
   
- CLUSTERED  
- 创建索引时，键值的逻辑顺序决定表中对应行的物理顺序。 聚集索引的底层（或称叶级别）包含该表的实际数据行。 一个表或视图只允许同时有一个聚集索引。  
+CLUSTERED  
+创建索引时，键值的逻辑顺序决定表中对应行的物理顺序。 聚集索引的底层（或称叶级别）包含该表的实际数据行。 一个表或视图只允许同时有一个聚集索引。  
   
  具有唯一聚集索引的视图称为索引视图。 为一个视图创建唯一聚集索引会在物理上具体化该视图。 必须先为视图创建唯一聚集索引，然后才能为该视图定义其他索引。 有关详细信息，请参阅 [创建索引视图](../../relational-databases/views/create-indexed-views.md)。  
   
@@ -225,18 +224,18 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  如果没有指定 CLUSTERED，则创建非聚集索引。  
   
 > [!NOTE]  
->  聚集的索引和数据页的叶级别都定义相同的因为创建聚集的索引和使用 ON *partition_scheme_name*或亮*filegroup_name*子句有效地将表从在其创建表的文件组移动到新的分区方案或文件组。 对特定的文件组创建表或索引之前，应确认哪些文件组可用并且有足够的空间供索引使用。  
+> 聚集的索引和数据页的叶级别都定义相同的因为创建聚集的索引和使用 ON *partition_scheme_name*或亮*filegroup_name*子句有效地将表从在其创建表的文件组移动到新的分区方案或文件组。 对特定的文件组创建表或索引之前，应确认哪些文件组可用并且有足够的空间供索引使用。  
   
  在某些情况下，创建聚集索引可以启用以前禁用的索引。 有关详细信息，请参阅[Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)和[禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
   
- **非聚集**  
- 创建一个指定表的逻辑排序的索引。 对于非聚集索引，数据行的物理排序独立于索引排序。  
+**非聚集**  
+创建一个指定表的逻辑排序的索引。 对于非聚集索引，数据行的物理排序独立于索引排序。  
   
  无论是使用 PRIMARY KEY 和 UNIQUE 约束隐式创建索引，还是使用 CREATE INDEX 显式创建索引，每个表都最多可包含 999 个非聚集索引。  
   
  对于索引视图，只能为已定义唯一聚集索引的视图创建非聚集索引。  
   
- 默认值为 NONCLUSTERED。  
+ 如果未另行指定，默认索引类型将为 NONCLUSTERED。  
   
  *index_name*  
  索引的名称。 索引名称在表或视图中必须唯一，但在数据库中不必唯一。 索引名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
@@ -278,18 +277,18 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  筛选索引不适用于 XML 索引和全文检索。 对于 UNIQUE 索引，仅选定的行必须具有唯一的索引值。 筛选索引不允许有 IGNORE_DUP_KEY 选项。  
   
- ON *partition_scheme_name***(***column_name***)**  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ON *partition_scheme_name* **( *column_name* )**  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定分区方案，该方案定义要将分区索引的分区映射到的文件组。 分区方案必须通过执行任何一个数据库中不存在[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)或[ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)。 *column_name*指定将对其分区已分区的索引的列。 此列必须与匹配的数据类型，长度，并且分区的自变量的精度函数*partition_scheme_name*正在使用。 *column_name*不限于索引定义中的列。 可以指定基表中的任何列，除时分区唯一索引， *column_name*必须选择从那些作为唯一键。 通过此限制，[!INCLUDE[ssDE](../../includes/ssde-md.md)]可验证单个分区中的键值唯一性。  
   
 > [!NOTE]  
->  在对非唯一的聚集索引进行分区时，如果尚未指定分区依据列，则默认情况下[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在聚集索引键列表中添加分区依据列。 在对非唯一的非聚集索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引的非键（包含）列。  
+> 在对非唯一的聚集索引进行分区时，如果尚未指定分区依据列，则默认情况下[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在聚集索引键列表中添加分区依据列。 在对非唯一的非聚集索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引的非键（包含）列。  
   
  如果*partition_scheme_name*或*文件组*未指定和表分区、 检索均被放置在相同的分区方案中，使用相同的分区依据列，与基础表。  
   
 > [!NOTE]  
->  您不能对 XML 索引指定分区方案。 如果基表已分区，则 XML 索引与该表使用相同的分区方案。  
+> 您不能对 XML 索引指定分区方案。 如果基表已分区，则 XML 索引与该表使用相同的分区方案。  
   
  有关分区索引， [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
@@ -366,7 +365,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  FILLFACTOR 设置仅在创建或重新生成索引时应用。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]并不会在页中动态保持指定的可用空间百分比。 若要查看的填充因子设置，请使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  
   
 > [!IMPORTANT]  
->  使用低于 100 的 FILLFACTOR 值创建聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会重新分布数据。  
+> 使用低于 100 的 FILLFACTOR 值创建聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会重新分布数据。  
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
@@ -412,12 +411,12 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  若要恢复统计信息自动更新，请将 STATISTICS_NORECOMPUTE 设置为 OFF，或执行 UPDATE STATISTICS 但不包含 NORECOMPUTE 子句。  
   
 > [!IMPORTANT]  
->  如果禁用分布统计的自动重新计算，可能会妨碍查询优化器为涉及该表的查询选取最佳执行计划。  
+> 如果禁用分布统计的自动重新计算，可能会妨碍查询优化器为涉及该表的查询选取最佳执行计划。  
   
  在向后兼容的语法中，WITH STATISTICS_NORECOMPUTE 等效于 WITH STATISTICS_NORECOMPUTE = ON。  
   
- STATISTICS_INCREMENTAL = {ON |**OFF** }  
- 当**ON**，创建的统计信息是每个分区统计信息。 当**OFF**，删除统计信息树和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新计算统计信息。 默认值是**OFF**。  
+STATISTICS_INCREMENTAL = {ON |**OFF** }  
+当**ON**，创建的统计信息是每个分区统计信息。 当**OFF**，删除统计信息树和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新计算统计信息。 默认值是**OFF**。  
   
  如果不支持每个分区统计信息，将忽略该选项并生成警告。 对于以下统计信息类型，不支持增量统计信息：  
   
@@ -429,8 +428,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   对内部表创建的统计信息。  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
- DROP_EXISTING = {ON |**OFF** }  
- 是一个选项以删除和重新生成现有的群集或非聚集索引使用已修改的列规范，并保持索引相同的名称。 默认为 OFF。  
+DROP_EXISTING = {ON |**OFF** }  
+是一个选项以删除和重新生成现有的群集或非聚集索引使用已修改的列规范，并保持索引相同的名称。 默认为 OFF。  
   
  ON  
  指定要除去并重新生成现有索引，其必须具有相同名称作为参数*index_name*。  
@@ -438,23 +437,22 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  指定不删除和重新生成现有的索引。 如果指定的索引名称已经存在，SQL Server 将显示一个错误。  
   
- 使用 DROP_EXISTING，您可以更改：  
+使用 DROP_EXISTING，您可以更改：  
   
 -   聚集行存储索引的非聚集行存储索引。  
   
- 使用 DROP_EXISTING，则无法更改。  
+使用 DROP_EXISTING，则无法更改。  
   
 -   非聚集行存储索引的聚集行存储索引。  
-  
 -   任何类型的行存储索引的聚集列存储索引。  
   
- 在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
+在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
   
- ONLINE = {ON |**OFF** }  
- 指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
+ONLINE = {ON |**OFF** }  
+指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ON  
  在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这使得能够继续对基础表和索引进行查询或更新。 操作开始时，在很短的时间内对源对象持有共享 (S) 锁。 操作结束时，如果创建非聚集索引，将在短期内获取对源的 S（共享）锁；当联机创建或删除聚集索引时，以及重新生成聚集或非聚集索引时，将在短期内获取 SCH-M（架构修改）锁。 对本地临时表创建索引时，ONLINE 不能设置为 ON。  
@@ -473,10 +471,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   如果基础表包含 LOB 数据类型的聚集的索引：**映像**， **ntext**，**文本**，和空间类型。  
 -   **varchar （max)**和**varbinary （max)**列不能为索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) 并在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，当表包含**varchar （max)**或**varbinary （max)**列，包含其他列的聚集索引可以是生成或重新生成使用**联机**选项。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允许**联机**选项时基表包含**varchar （max)**或**varbinary （max)**列。  
   
- 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
+有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
- ALLOW_ROW_LOCKS = { **ON** |关闭}  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ALLOW_ROW_LOCKS = { **ON** |关闭}  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定是否允许行锁。 默认值为 ON。  
   
@@ -486,8 +484,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  不使用行锁。  
   
- ALLOW_PAGE_LOCKS = { **ON** |关闭}  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ALLOW_PAGE_LOCKS = { **ON** |关闭}  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定是否允许使用页锁。 默认值为 ON。  
   
@@ -497,14 +495,14 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  不使用页锁。  
   
- MAXDOP = *max_degree_of_parallelism*  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+MAXDOP = *max_degree_of_parallelism*  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
  *max_degree_of_parallelism*可以是：  
   
- 1  
+ @shouldalert  
  取消生成并行计划。  
   
  \>1  
@@ -516,7 +514,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  并行索引操作不可用的每个版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 并行索引操作不可用的每个版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  DATA_COMPRESSION  
  为指定的索引、分区号或分区范围指定数据压缩选项。 这些选项如下：  
@@ -532,22 +530,21 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
- 在分区上**(** { \<partition_number_expression > |\<范围 >}[ **,**... *n*  ] **)** **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+在分区上**(** { \<partition_number_expression > |\<范围 >}[ **,**...*n* ] **)**      
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定对其应用 DATA_COMPRESSION 设置的分区。 如果索引未分区，则 ON PARTITIONS 参数将产生错误。 如果不提供 ON PARTITIONS 子句，则 DATA_COMPRESSION 选项将应用于分区索引的所有分区。  
   
  \<partition_number_expression > 可以通过以下方式指定：  
   
 -   提供一个分区号，例如：ON PARTITIONS (2)。  
-  
 -   提供若干单独分区的分区号并用逗号将它们隔开，例如：ON PARTITIONS (1, 5)。  
-  
 -   同时提供范围和单个分区，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
  \<范围 > 可以指定为分区号分隔逐字，例如： ON PARTITIONS (6 TO 8)。  
   
  若要为不同分区设置不同的数据压缩类型，请多次指定 DATA_COMPRESSION 选项，例如：  
-  
+ 
 ```  
 REBUILD WITH   
 (  
@@ -557,7 +554,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查询处理器可以选择扫描另一个索引，而不是执行表扫描。 在某些情况下，可不必执行排序操作。 在多处理器计算机上，CREATE INDEX 可按照与其他查询相同的方式，使用多个处理器执行与创建索引相关的扫描和排序操作。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
  如果数据库恢复模型被设置为大容量日志模型或简单模型，则可以记录最少的创建索引操作。  
@@ -585,7 +582,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  如果要对已分区表创建索引，并且不指定用于放置该索引的文件组，则会按照与基础表相同的方式为该索引分区。 这是因为在默认情况下，索引与其基础表放在同一文件组中，并且对应使用相同分区依据列的相同分区方案中的已分区表。 当索引的表使用的同一个分区方案和分区依据列时，索引是*对齐*与表。  
   
 > [!WARNING]  
->  对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。 我们建议当分区数超过 1000 时，仅使用对齐索引。  
+> 对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。 我们建议当分区数超过 1000 时，仅使用对齐索引。  
   
  在对非唯一的聚集索引分区时，如果尚未指定分区依据列，则默认情况下[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在聚集索引键列表中添加任意分区依据列。  
   
@@ -600,12 +597,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  如果下列任何条件成立，则需要“必需的值”列中的 SET 选项：  
   
 -   创建筛选索引。  
-  
 -   INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。  
-  
 -   查询优化器使用筛选的索引来生成查询计划。  
   
-    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
+    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -620,9 +615,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  如果 SET 选项不正确，则可能会出现以下情况：  
   
 -   不会创建筛选索引。  
-  
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]生成错误并回滚对索引中的数据进行更改的 INSERT、UPDATE、DELETE 或 MERGE 语句。  
-  
 -   查询优化器不考虑任何 Transact-SQL 语句的执行计划中的索引。  
   
  有关筛选索引的详细信息，请参阅[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
@@ -639,7 +632,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  非聚集索引可以在索引的叶级别包含非键列。 不考虑这些列[!INCLUDE[ssDE](../../includes/ssde-md.md)]时计算索引键大小。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
 > [!NOTE]  
->  在对表进行分区时，如果分区键列尚未出现在非唯一聚集索引中时，它们将由[!INCLUDE[ssDE](../../includes/ssde-md.md)]添加到索引中。 索引列的合并后的大小（不将包含列计算在内）加上任何添加的分区列在非唯一聚集索引中不能超过 1800 字节。  
+> 在对表进行分区时，如果分区键列尚未出现在非唯一聚集索引中时，它们将由[!INCLUDE[ssDE](../../includes/ssde-md.md)]添加到索引中。 索引列的合并后的大小（不将包含列计算在内）加上任何添加的分区列在非唯一聚集索引中不能超过 1800 字节。  
   
 ## <a name="computed-columns"></a>计算列  
  可以对计算列创建索引。 此外，计算列可以具有 PERSISTED 属性。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对列创建了索引并且该索引由某查询引用，则会使用这些持久值。  
@@ -647,7 +640,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  若要对计算列建立索引则该计算列必须具有确定性并精确。 但是，使用 PERSISTED 属性会将可建立索引的计算列类型扩展为包含以下类型：  
   
 -   基于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR 函数以及由用户标记为确定性的 CLR 用户定义类型方法的计算列。  
-  
 -   基于[!INCLUDE[ssDE](../../includes/ssde-md.md)]定义为确定性但不精确的表达式的计算列。  
   
  持久化计算列需要将以下 SET 选项设置为在上一部分“索引视图所需的 SET 选项”中显示的内容。  
@@ -658,14 +650,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  对计算列创建索引可能导致之前正常运行的插入或更新操作失败。 当计算列导致算术错误时可能产生这样的失败。 例如，虽然下表中的计算列 `c` 将导致算术错误，但是 `INSERT` 语句仍有效。  
   
-```  
+```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
 INSERT INTO t1 VALUES (1, 0);  
 ```  
   
  相反，如果创建表之后对计算列 `c` 创建索引，则上述 `INSERT` 语句将失败。  
   
-```  
+```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
 CREATE UNIQUE CLUSTERED INDEX Idx1 ON t1(c);  
 INSERT INTO t1 VALUES (1, 0);  
@@ -677,13 +669,11 @@ INSERT INTO t1 VALUES (1, 0);
  可以将非键列（称为包含列）添加到非聚集索引的叶级别，从而通过涵盖查询来提高查询性能。 也就是说，查询中引用的所有列都作为键列或非键列包含在索引中。 这样，查询优化器可以通过索引扫描找到所需的全部信息，而无需访问表或聚集索引数据。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
 ## <a name="specifying-index-options"></a>指定索引选项  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了新的索引选项，还修改了指定选项的方式。 在向后兼容语法中，WITH *option_name*等效于 WITH **(** \<option_name >  **=**  ON **)**. 在设置索引选项时，下列规则适用： 
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了新的索引选项，还修改了指定选项的方式。 在向后兼容语法中，WITH *option_name*等效于 WITH **(** \<option_name > **= ON)**。 在设置索引选项时，下列规则适用： 
   
--   新的索引选项仅可通过使用 WITH 指定**(***option_name*  **=**  ON |关闭**)**。  
-  
--   指定选项时不能在同一语句中同时使用向后兼容语法和新语法。 例如，指定 WITH **(**DROP_EXISTING**，**联机 **=**  ON**)**导致语句失败。  
-  
--   在创建 XML 索引时，必须通过使用 WITH 指定的选项**(***option_name*  **=**  ON |关闭**)**。  
+-   新的索引选项只能指定通过使用 WITH (***option_name* = ON |关闭**)。  
+-   指定选项时不能在同一语句中同时使用向后兼容语法和新语法。 例如，指定 WITH (**DROP_EXISTING、 ONLINE = ON**) 会导致语句失败。  
+-   在创建 XML 索引时，必须通过使用 WITH 指定的选项 (***option_name*= ON |关闭**)。  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 子句  
  可使用 DROP_EXISTING 子句重新生成索引、添加或删除列、修改选项、修改列排序顺序或更改分区方案或文件组。  
@@ -702,9 +692,7 @@ INSERT INTO t1 VALUES (1, 0);
  下列指南适用于联机执行索引操作：  
   
 -   不能在执行联机索引操作的过程中更改、截断或删除基础表。  
-  
 -   索引操作期间需要额外的临时磁盘空间。  
-  
 -   可以对分区索引以及包含持久性计算列或包含列的索引执行联机操作。  
   
  有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
@@ -721,45 +709,39 @@ INSERT INTO t1 VALUES (1, 0);
  主题中介绍数据压缩[数据压缩](../../relational-databases/data-compression/data-compression.md)。 以下是要考虑的关键点：  
   
 -   通过压缩可将更多的行存储在页上，但不能更改最大行大小。  
-  
 -   对索引的非叶页不会进行页压缩，但可进行行压缩。  
-  
 -   每个非聚集索引都有单独的压缩设置，并且不会继承基础表的压缩设置。  
-  
 -   对堆创建聚集索引时，聚集索引会继承该堆的压缩状态，除非指定了另一压缩状态。  
   
  以下限制适用于已分区索引：  
   
 -   如果表具有非对齐索引，则无法更改单个分区的压缩设置。  
-  
 -   ALTER INDEX\<索引 >...REBUILD PARTITION ... 语法可重新生成索引的指定分区。  
-  
 -   ALTER INDEX\<索引 >...REBUILD WITH ... 语法可重新生成索引的所有分区。  
   
  若要评估更改压缩状态将对表、索引或分区有何影响，请使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 存储过程。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，无法创建：  
   
--   数据仓库表已存在列存储索引时聚集或非聚集行存储索引。 此行为是不同于 SMP 这样行存储和列存储索引，以便共存于同一个表上的 SQL Server。  
-  
+-   数据仓库表已存在列存储索引时聚集或非聚集行存储索引。 此行为是不同于 SMP[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]这样行存储和列存储索引，以便在同一个表上共存。  
 -   无法对视图创建索引。  
   
 ## <a name="metadata"></a>元数据  
  若要查看现有索引的信息，请可以查询[sys.indexes &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  
   
 ## <a name="version-notes"></a>版本说明  
- SQL 数据库不支持文件组和 filestream 选项。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不支持文件组和 filestream 选项。  
   
 ## <a name="examples-all-versions-uses-the-adventureworks-database"></a>示例： 所有版本。 使用 AdventureWorks 数据库。  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. 创建简单的非聚集行存储索引  
  下面的示例在创建非聚集索引`VendorID`列`Purchasing.ProductVendor`表。  
   
-```  
+```sql  
 CREATE INDEX IX_VendorID ON ProductVendor (VendorID);  
 CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address DESC);  
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);  
@@ -768,21 +750,21 @@ CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. 创建一个简单的非聚集行存储复合索引  
  下面的示例创建非聚集复合索引`SalesQuota`和`SalesYTD`列`Sales.SalesPerson`表。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerson (SalesQuota, SalesYTD);  
 ```  
   
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. 在另一个数据库中表上创建索引  
  下面的示例创建非聚集索引`VendorID`列`ProductVendor`表中`Purchasing`数据库。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);   
 ```  
   
 ### <a name="d-add-a-column-to-an-index"></a>D. 将列添加到索引  
  下面的示例使用两个列从 dbo 创建索引 IX_FF。FactFinance 表。  下一个语句重新生成与一个多个列的索引，并使现有的名称。  
   
-```  
+```sql  
 CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey ASC, DateKey ASC );  
   
 --Rebuild and add the OrganizationKey  
@@ -795,14 +777,14 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 创建唯一非聚集索引  
  以下示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Name` 表的 `Production.UnitMeasure` 列创建唯一非聚集索引。 该索引将强制插入 `Name` 列中的数据具有唯一性。  
   
-```  
+```sql  
 CREATE UNIQUE INDEX AK_UnitMeasure_Name   
     ON Production.UnitMeasure(Name);  
 ```  
   
  以下查询通过尝试插入与现有行包含相同值的一行来测试唯一性约束。  
   
-```  
+```sql  
 --Verify the existing value.  
 SELECT Name FROM Production.UnitMeasure WHERE Name = N'Ounces';  
 GO  
@@ -820,7 +802,7 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 ### <a name="f-use-the-ignoredupkey-option"></a>F. 使用 IGNORE_DUP_KEY 选项  
  以下示例首先在该选项设置为 `IGNORE_DUP_KEY` 时在临时表中插入多行，然后在该选项设置为 `ON` 时执行相同操作，以演示 `OFF` 选项的影响。 单个行被插入 `#Test` 表，在执行第二个多行 `INSERT` 语句时将导致出现重复值。 表中的行计数会返回插入的行数。  
   
-```  
+```sql  
 CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);  
 GO  
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)  
@@ -849,7 +831,7 @@ Number of rows
   
  将再次执行相同语句，但将 `IGNORE_DUP_KEY` 设置为 `OFF`。  
   
-```  
+```sql  
 CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);  
 GO  
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)  
@@ -881,20 +863,19 @@ Number of rows
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. 使用 DROP_EXISTING 删除和重新创建索引  
  以下示例使用 `ProductID` 选项在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上删除并重新创建现有索引。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID  
     ON Production.WorkOrder(ProductID)  
     WITH (FILLFACTOR = 80,  
         PAD_INDEX = ON,  
         DROP_EXISTING = ON);  
 GO  
-  
 ```  
   
 ### <a name="h-create-an-index-on-a-view"></a>H. 对视图创建索引  
  以下示例将创建一个视图并为该视图创建索引。 包含两个使用该索引视图的查询。  
   
-```  
+```sql  
 --Set the options to support indexed views.  
 SET NUMERIC_ROUNDABORT OFF;  
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,  
@@ -937,13 +918,12 @@ FROM Sales.SalesOrderDetail AS od
 GROUP BY OrderDate  
 ORDER BY OrderDate ASC;  
 GO  
-  
 ```  
   
 ### <a name="i-create-an-index-with-included-non-key-columns"></a>I. 创建带有包含性 （非键） 列的索引  
  以下示例创建具有一个键列 (`PostalCode`) 和四个非键列（`AddressLine1`、`AddressLine2`、`City`、`StateProvinceID`）的非聚集索引。 然后执行该索引覆盖的查询。 若要显示的索引上的所选查询优化器，**查询**菜单中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择**显示实际的执行计划**之前执行查询。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_Address_PostalCode  
     ON Person.Address (PostalCode)  
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
@@ -959,7 +939,7 @@ GO
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID  
     ON Production.TransactionHistory (ReferenceOrderID)  
     ON TransactionsPS1 (TransactionDate);  
@@ -969,7 +949,7 @@ GO
 ### <a name="k-creating-a-filtered-index"></a>K. 创建筛选索引  
  下面的示例将对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 Production.BillOfMaterials 表创建筛选索引。 筛选谓词可包含那些不是筛选索引中的键列的列。 本示例中的谓词将仅选择其中的 EndDate 为非 NULL 的行。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
@@ -978,7 +958,7 @@ CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"
 ### <a name="l-create-a-compressed-index"></a>L. 创建压缩的索引  
  下面的示例将使用行压缩对无分区表创建索引。  
   
-```  
+```sql  
 CREATE NONCLUSTERED INDEX IX_INDEX_1   
     ON T1 (C2)  
 WITH ( DATA_COMPRESSION = ROW ) ;   
@@ -987,7 +967,7 @@ GO
   
  下面的示例将通过对索引的所有分区使用行压缩来创建对已分区表的索引。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_PartTab2Col1  
 ON PartitionTable1 (Col1)  
 WITH ( DATA_COMPRESSION = ROW ) ;  
@@ -996,7 +976,7 @@ GO
   
  下面的示例将通过对索引的分区 `1` 使用页压缩并对索引的分区 `2` 至 `4` 使用行压缩来创建对已分区表的索引。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_PartTab2Col1  
 ON PartitionTable1 (Col1)  
 WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),  
@@ -1008,7 +988,7 @@ GO
   
 ### <a name="m-basic-syntax"></a>M. 基本语法  
   
-```  
+```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
 CREATE INDEX IX_VendorID   
@@ -1020,7 +1000,7 @@ CREATE INDEX IX_VendorID
 ### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. 在当前数据库中表上创建非聚集索引  
  下面的示例创建非聚集索引`VendorID`列`ProductVendor`表。  
   
-```  
+```sql  
 CREATE INDEX IX_ProductVendor_VendorID   
     ON ProductVendor (VendorID);   
 ```  
@@ -1028,12 +1008,14 @@ CREATE INDEX IX_ProductVendor_VendorID
 ### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O. 另一个数据库中的表创建聚集的索引  
  下面的示例创建非聚集索引`VendorID`列`ProductVendor`表中`Purchasing`数据库。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
 ## <a name="see-also"></a>另请参阅  
+ [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
+ [索引和 ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   

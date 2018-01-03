@@ -3,7 +3,7 @@ title: "sqlmaint 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**实用程序执行一组指定的一个或多个数据库上的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
@@ -149,7 +149,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  指定在 **-D** 指定的数据库中运行带 NOINDEX 选项的 DBCC CHECKALLOC 语句。 有关详细信息，请参阅 [DBCC CHECKALLOC (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
   
  **-CkCat**  
- 指定在 **-D**指定的数据库中运行 DBCC CHECKCATALOG (Transact-SQL) 语句。 有关详细信息，请参阅 [DBCC CHECKCATALOG (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。  
+ 指定在 **-D** 指定的数据库中运行 DBCC CHECKCATALOG (Transact-SQL) 语句。 有关详细信息，请参阅 [DBCC CHECKCATALOG (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。  
   
  **-UpdOptiStats** *sample_percent*  
  指定对数据库中的每个表运行下列语句：  
@@ -233,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  如果仅指定 *number* ，则默认日期部分为 **weeks**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sqlmaint** 实用工具可对一个或多个数据库执行维护操作。 如果指定 **-D** ，则在剩余的命令开关中指定的操作仅对指定数据库执行。 如果指定 **-PlanName** 或 **-PlanID** ，则 **sqlmaint** 只从指定的维护计划中检索数据库列表信息。 在其余的 **sqlmaint** 参数中指定的所有操作都会应用于从计划获取的列表中的每个数据库。 **sqlmaint** 实用工具不会应用在计划本身中定义的任何维护活动。  
   
  如果成功运行，则 **sqlmaint** 实用工具将返回 0，如果失败则返回 1。 在下列情况下将报告失败：  

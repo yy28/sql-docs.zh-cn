@@ -42,11 +42,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL) 的表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -383,7 +383,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  指定采用排他锁并保持到事务完成。 如果同时指定了 ROWLOCK, PAGLOCK 或 TABLOCK，则排他锁将应用于相应的粒度级别。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果查询计划不访问表，则将忽略表提示。 这可能是由于优化器选择了完全不访问该表，也可能是因为改成了访问索引视图。 在后一种情况中，使用 OPTION (EXPAND VIEWS) 查询提示可阻止访问索引视图。  
   
  所有锁提示将传播到查询计划访问的所有表和视图，其中包括在视图中引用的表和视图。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将执行对应的锁一致性检查。  
@@ -442,7 +442,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
  *表提示*还可以指定通过使用 OPTION (TABLE HINT) 子句为查询提示。 我们建议作为查询提示的上下文中仅使用表提示[计划指南](../../relational-databases/performance/plan-guides.md)。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -450,7 +450,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. 使用 TABLOCK 提示指定锁定方法  
  下面的示例指定对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Production.Product` 表采用共享锁，并保持到 UPDATE 语句结束。  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +474,7 @@ GO
   
  以下示例使用指定索引的 FORCESEEK 提示强制查询优化器对指定的索引和索引列执行索引查找操作。  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +489,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. 使用 FORCESCAN 提示指定索引扫描操作  
  以下示例使用 FORCESCAN 提示强制查询优化器对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Sales.SalesOrderDetail` 表执行扫描操作。  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   

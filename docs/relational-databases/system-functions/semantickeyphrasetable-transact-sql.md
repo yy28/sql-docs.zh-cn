@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 484ad4e6f82bff235fd1a9a3cad5752fb4ce08a2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 SEMANTICKEYPHRASETABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICKEYPHRASETABLE
   
  此名称可由 1 到 4 个部分组成，但不允许使用远程服务器名称。  
   
- **列**  
+ column  
  应为其返回结果的索引列的名称。 列必须启用语义索引。  
   
  **column_list**  
@@ -88,9 +88,9 @@ SEMANTICKEYPHRASETABLE
   
 -   [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
@@ -98,7 +98,7 @@ SEMANTICKEYPHRASETABLE
 ###  <a name="HowToTopPhrases"></a>示例 1： 查找特定文档中的最重要关键短语  
  以下示例从通过 @DocumentId 变量指定的文档中检索前 10 个关键短语，该变量位于 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中。 @DocumentId 变量表示全文检索的键列的一个值。 **SEMANTICKEYPHRASETABLE** 函数使用索引查找替代表扫描高效检索这些结果。 此示例假定列已配置为进行全文和语义索引。  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -113,7 +113,7 @@ ORDER BY KEYP_TBL.score DESC;
 ###  <a name="HowToTopDocuments"></a>示例 2： 查找包含特定关键短语顶级文档  
  以下示例从 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中检索包含关键短语“Bracket”的前 25 个文档。 此示例假定列已配置为进行全文和语义索引。  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

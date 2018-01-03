@@ -3,7 +3,7 @@ title: "SQL 全文筛选器后台程序启动器 （服务选项卡） |Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,18 +17,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58adfe0ee2c9133c357079766ad01e2a7847b83d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ed0ccaed0106d331812d56f3aa5c29e0d70c4d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 全文筛选器后台程序启动器（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，SQL 全文筛选器后台程序启动器 (FDHOST Launcher) 服务由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文本。 如果使用全文搜索，则必须运行此服务。 有关筛选器后台程序主机进程的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“全文搜索体系结构”。  
   
  使用“SQL 全文筛选器后台程序启动器属性”的“属性”对话框上的“服务”选项卡，可以查看或指定以下选项。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **二进制路径**  
  列出此服务所使用的程序文件的位置。  
   

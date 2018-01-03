@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,12 +83,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|批处理的 SQL 句柄。|  
 |merge_action_type|**int**|用作 MERGE 语句结果的触发器执行计划的类型。<br /><br /> 0 表示非触发器计划，或者不会作为 MERGE 语句结果来执行的触发器计划，或者作为仅指定 DELETE 操作的 MERGE 语句结果执行的触发器计划。<br /><br /> 1 表示作为 MERGE 语句结果运行的 INSERT 触发器计划。<br /><br /> 2 表示作为 MERGE 语句结果运行的 UPDATE 触发器计划。<br /><br /> 3 表示一个作为包含对应的 INSERT 或 UPDATE 操作的 MERGE 语句结果运行的 DELETE 触发器计划。<br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的 MERGE 语句的操作。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="set-options"></a>Set 选项  
  相同的编译计划的副本可能只是中的值不同**set_options**列。 这说明不同的连接为相同的查询使用不同的 SET 选项集。 通常不希望使用不同的选项集，因为这可能导致额外的编译工作、减少计划重用并由于缓存中的多个计划副本而导致计划缓存膨胀。  
@@ -96,9 +96,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>计算 Set 选项  
  转换中返回的值**set_options**到编译计划所用的选项，将值相减从**set_options**值，最大可能值，直到你从开始达到 0。 所减去的每个值对应于查询计划中所用的一个选项。 例如，如果中的值**set_options** 251，编译计划所使用的选项是 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 并行 Plan(2)和 ANSI_PADDING (1)。  
   
-|选项|值|  
+|选项|ReplTest1|  
 |------------|-----------|  
-|ANSI_PADDING|1|  
+|ANSI_PADDING|@shouldalert|  
 |Parallel Plan|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -124,10 +124,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>计算游标选项  
  转换中返回的值**required_cursor_options**和**acceptable_cursor_options**到编译计划所用的选项，减去从列的值，开头的值最大可能值，直到达到 0。 所减去的每个值对应于查询计划中所用的一个游标选项。  
   
-|选项|值|  
+|选项|ReplTest1|  
 |------------|-----------|  
-|无|0|  
-|INSENSITIVE|1|  
+|InclusionThresholdSetting|0|  
+|INSENSITIVE|@shouldalert|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -148,7 +148,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 返回特定计划的属性  
  下例将返回指定计划的所有计划属性。 将首先查询 `sys.dm_exec_cached_plans` 动态管理视图以获得指定计划的计划句柄。 在第二次查询中，用第一次查询中的计划句柄值替换 `<plan_handle>`。  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. 返回编译计划的 SET 选项和缓存计划的 SQL 句柄  
  下例将返回代表编译每个计划时所用选项的值。 此外，还将返回所有缓存计划的 SQL 句柄。  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

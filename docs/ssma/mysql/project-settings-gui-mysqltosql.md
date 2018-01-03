@@ -1,7 +1,7 @@
 ---
 title: "项目设置 (GUI) (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dff457f225799ce121729d7247e7927eef882d61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3631366693d295e11b740a5ae1a27850d07cc365
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui--mysqltosql"></a>项目设置 (GUI) (MySQLToSQL)
 GUI 项目设置允许你配置数据上的显示方式**数据**选项卡; 如果要包括的评估报表的数据报表。  
@@ -35,7 +35,7 @@ GUI 窗格位于**项目设置**和**默认项目设置**对话框。
   
 -   使用**默认项目设置**对话框可设置的所有项目的用户界面选项。 若要访问的完全安装设置中，在**工具**菜单上，选择**默认项目设置**，然后单击**GUI**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **源的最大行数**  
 配置上显示数据的行数**数据**的所选的源表选项卡。  
   

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4dfc548cdc7c2ece756e86f753a8bc21513f158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7e0e14e96c3581b7a66fad23e21ac7a15808a1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |log_space_in_bytes_since_last_backup |**bigint** |自上次日志备份后使用的空间量 <br />**适用于：** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]通过[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要`VIEW SERVER STATE`服务器上的权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. 确定量的可用 tempdb 中日志空间   
 下面的查询返回兆字节 (MB) 可用 tempdb 中总的可用日志空间。
 
-```tsql
+```sql
 USE tempdb;  
 GO  
 

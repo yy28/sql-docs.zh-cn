@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -261,7 +261,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何使用的示例**sqlcmd**若要连接到 SQL Server，并创建一个数据库，请参阅以下快速之一启动教程：
+有关如何使用的示例**sqlcmd**若要连接到 SQL Server，并创建一个数据库，请参阅以下快速入门之一：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)

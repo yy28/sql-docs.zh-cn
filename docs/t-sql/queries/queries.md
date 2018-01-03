@@ -3,7 +3,7 @@ title: "查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
@@ -18,15 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1281c4a6accf5083cf6b023b4dc19b31ff432d25
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d7e4bf6357fe56f3c9b6a1e67e9e6aeb3675930
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queries"></a>查询
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  数据操作语言 (DML) 是用于检索和使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的数据的词汇。 使用这些语句可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库添加、修改、查询或删除数据。  
+  数据操作语言 (DML) 是用于检索和使用中的数据的词汇[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 SQL 数据库。 另一次即可在 SQL 数据仓库和 PDW （查看每个单独的语句，有关详细信息）。 使用这些语句可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库添加、修改、查询或删除数据。  
   
 ## <a name="in-this-section"></a>本节内容  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 DML 语句。  

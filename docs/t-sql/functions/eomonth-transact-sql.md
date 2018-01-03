@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6f8ad563435528ae81d7328e4d5708e019f2b032
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: af048d17aadfece5e1deecf8a5aa4b008f1bd0fd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -53,7 +53,7 @@ EOMONTH ( start_date [, month_to_add ] )
 ## <a name="return-type"></a>返回类型  
  **date**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数可以在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本的服务器上远程执行。 它不能在其版本低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器上远程执行。  
   
 ## <a name="examples"></a>示例  
@@ -96,7 +96,7 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. 具有和不具有 month_to_add 参数的 EOMONTH  
   
-```tsql  
+```sql  
 DECLARE @date DATETIME = GETDATE();  
 SELECT EOMONTH ( @date ) AS 'This Month';  
 SELECT EOMONTH ( @date, 1 ) AS 'Next Month';  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01e7104b90f1d2b03455a5d56ebf0e0de2b8d91a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5e046e203e7ebd5243cdfc6f10948dfd353b2dd3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -60,7 +60,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="return-types"></a>返回类型  
  **时间 (** *精度* **)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  TIMEROMPARTS 返回完全初始化的时间值。 如果参数无效，则引发错误。 如果任何参数都为 null，则返回 null。 但是，如果*精度*自变量为 null，则引发错误。  
   
  *分数 （竖式)*取决于自变量*精度*自变量。 例如，如果*精度*为 7，则每个部分表示 100 纳秒; 如果*精度*为 3，则每个部分表示以毫秒为单位。 如果值*精度*为零，则值*分数 （竖式)*还必须为零; 否则，将引发错误。  
@@ -94,7 +94,7 @@ Result
   
 3.  当*分数 （竖式)*的值为 500 和*精度*具有值 3，然后将值*分数 （竖式)*表示 500/1000 的第二个。  
   
-```tsql  
+```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  

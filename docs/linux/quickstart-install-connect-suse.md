@@ -1,6 +1,6 @@
 ---
 title: "要开始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft 文档"
-description: "此快速入门教程演示如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
+description: "本快速入门演示如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: decf9cf88ef38264900c129c2626761718065739
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: b92036d4b706b5e76165708438d350c1883db912
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>安装 SQL Server 和 SUSE Linux Enterprise Server 上创建数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在此快速入门教程中，你首先将安装 SQL Server 2017 SUSE Linux 企业服务器 (SLES) v12 SP2。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在本快速入门教程，你首先安装 SQL Server 2017 在 SUSE Linux 企业服务器 (SLES) v12 SP2。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 你必须具有的 SLES v12 SP2 机**至少 2 GB**的内存。 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 
@@ -116,6 +116,11 @@ ms.lasthandoff: 12/01/2017
    ```
 
 > [!TIP]
-> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括：
+>
+> * [SQL Server 操作 Studio （预览版）](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> * [mssql cli （预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

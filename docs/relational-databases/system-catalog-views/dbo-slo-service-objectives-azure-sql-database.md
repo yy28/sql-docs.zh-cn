@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_service_objectives （Azure SQL 数据库） |Microsoft 文档"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,15 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5330bc8977c0e043f27cb5f035510c5da007e0c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f91dccf478821047e4c3a25ea19d35d1a2774fd
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloserviceobjectives-azure-sql-database"></a>dbo.slo_service_objectives （Azure SQL 数据库）
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  此功能处于预览状态，并且未弃用[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V12。 请不要依赖于此功能的特定实现，因为此功能在将来的版本中可能更改或删除。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |objective_id|**uniqueidentifier**|服务级别目标的 ID。|  
-|name|**sysname**|服务级别目标的名称。|  
+|NAME|**sysname**|服务级别目标的名称。|  
 |description|**nvarchar**|服务级别目标的说明。|  
 |create_date|**datetimeoffset(7)**|服务器上服务级别目标的创建日期。|  
 |is_system|**bit**|1 = 系统服务级别目标|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 11/09/2017
 |state_desc|**nvarchar**|服务级别目标的说明。|  
 |metadata_version|**decimal**|服务级别目标的版本。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可供所有用户角色有权连接到虚拟**master**数据库。  
   
 ## <a name="see-also"></a>另请参阅  

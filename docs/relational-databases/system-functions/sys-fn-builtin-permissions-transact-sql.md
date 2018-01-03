@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|服务器的排序规则|安全对象类的说明。|  
 |permission_name|**nvarchar(60)**|服务器的排序规则|权限名称。|  
-|类型|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
+|type|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
 |covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为该类的权限名称（隐含该类的其他权限）。|  
 |parent_class_desc|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为包含当前类的父类的名称。|  
 |parent_covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为父类的权限名称（隐含该类的所有其他权限）。|  
@@ -224,9 +224,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **适用于**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|删除|DATABASE|  
+|DL|删除|OBJECT|  
+|DL|删除|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
 |EX|在运行 CREATE 语句前执行|DATABASE|  
 |EX|在运行 CREATE 语句前执行|OBJECT|  
@@ -326,7 +326,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  `sys.fn_builtin_permissions` 是一个表值函数，它可以产生预定义权限层次结构的副本。 此层次结构包含涵盖权限。 `DEFAULT`结果集描述的权限层次结构，其中的根是定向、 非循环图形 (类 = SERVER，权限 = CONTROL SERVER)。  
   
  `sys.fn_builtin_permissions` 不接受相关参数。  
@@ -341,27 +341,27 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 > 作为本主题的一部分，海报太小了，因此无法查看。 请从 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)下载数据库引擎权限海报。  
    
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 列出所有内置权限   
 使用`DEFAULT`或一个空字符串，以返回所有权限。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 列出可针对对称密钥设置的权限   
 指定一个类以返回为该类的所有可能的权限。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. 列出对其拥有 SELECT 权限的类   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

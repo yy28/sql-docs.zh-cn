@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25675b2dc83e5251b381bf95af353deb647d563a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
@@ -59,20 +59,20 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|当程序连接到 Windows Azure 存储帐户时的连接错误数。|  
-|number_of_sql_errors|int|当程序连接到 SQL Server Engine 时返回的错误数。|  
-|number_of_invalid_credential_errors|int|当程序尝试使用 SQL 凭据进行身份验证时返回的错误数。|  
-|number_of_other_errors|int|连接、SQL 或凭据以外其他类别中的错误数。|  
-|number_of_corrupted_or_deleted_backups|int|删除或损坏的备份文件数。|  
-|number_of_backup_loops|int|备份代理扫描所有配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库的次数。|  
-|number_of_retention_loops|int|扫描数据库以评估所设置的保持期的次数。|  
+|number_of_storage_connectivity_errors|ssNoversion|当程序连接到 Windows Azure 存储帐户时的连接错误数。|  
+|number_of_sql_errors|ssNoversion|当程序连接到 SQL Server Engine 时返回的错误数。|  
+|number_of_invalid_credential_errors|ssNoversion|当程序尝试使用 SQL 凭据进行身份验证时返回的错误数。|  
+|number_of_other_errors|ssNoversion|连接、SQL 或凭据以外其他类别中的错误数。|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|删除或损坏的备份文件数。|  
+|number_of_backup_loops|ssNoversion|备份代理扫描所有配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的数据库的次数。|  
+|number_of_retention_loops|ssNoversion|扫描数据库以评估所设置的保持期的次数。|  
   
 ## <a name="best-practices"></a>最佳实践  
  这些聚合的计数可用于监视系统运行状况。 例如，如果 number_of_retention_loops 列在 30 分钟内为 0，则保持管理可能占用较长时间，甚至没有正常工作。 非零错误列可能表示有问题，应检查扩展事件日志以了解任何问题。 或者，使用存储的过程**managed_backup.sp_get_backup_diagnostics**若要获取的扩展事件，以查找错误的详细信息列表。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要**选择**对函数的权限。  
   
 ## <a name="examples"></a>示例  

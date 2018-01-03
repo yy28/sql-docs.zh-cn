@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6133cef4500d7066f38a51f5a5f124d1e879e01
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 444dc643385d2bf26cbc95984473f0b68519c92a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -53,18 +53,18 @@ sp_databases
 |**DATABASE_SIZE**|**int**|数据库的大小（以 KB 计）。|  
 |**备注**|**varchar(254)**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  所返回的数据库名称可以作为 USE 语句的参数，用来更改当前数据库上下文。  
   
  **sp_databases**具有开放式数据库连接 (ODBC) 的无等效项。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CREATE DATABASE 或 ALTER ANY DATABASE 或 VIEW ANY DEFINITION 权限，并且必须有该数据库的访问权。 不能是被拒绝的 VIEW ANY DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何执行 `sp_databases`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_databases;  

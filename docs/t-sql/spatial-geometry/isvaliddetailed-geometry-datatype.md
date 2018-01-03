@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55b67a0a3db22697b9f320f3c8861b08e09a2475
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55ede35d26ce9f7de1655e076f1aeaad40642218
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  CLR 返回类型：**字符串**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表包含可能的返回值：  
   
 |返回值|Description|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>示例  
  无效的空间对象的下面的示例演示如何**IsValidDetailed()**方法的行为。  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  

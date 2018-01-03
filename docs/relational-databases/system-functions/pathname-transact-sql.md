@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *column_name*  
+ column_name  
  是列的名称的**varbinary （max)** FILESTREAM 列。 *column_name*必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
  请求的任何其他数据类型或有关的列的路径名**varbinary （max)** columnthat 没有 FILESTREAM 存储属性将导致查询编译时错误。  
@@ -51,10 +51,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，它定义应如何格式化路径的服务器组件。 *@option*可以是以下值之一。 默认值为 0。  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|@shouldalert|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|返回完整的服务器路径，例如：`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
@@ -64,11 +64,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  如果数据库属于 Alwayson 可用性组，然后的值*use_replica_computer_name*会产生以下影响上的输出**路径名**函数：  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  
-|1|函数返回路径中的计算机名称。|  
+|@shouldalert|函数返回路径中的计算机名称。|  
   
 ## <a name="return-type"></a>返回类型  
  **nvarchar(max)**  
@@ -76,7 +76,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>返回值  
  返回的值是 BLOB 的完全限定逻辑路径或 NETBIOS 路径。 PathName 不返回 IP 地址。 尚未创建 FILESTREAM BLOB 时返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ROWGUID 列必须在任何调用 PathName 的查询中可见。  
   
  只能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来创建 FILESTREAM BLOB。  
@@ -86,7 +86,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. 读取 FILESTREAM BLOB 的路径  
  下例将 `PathName` 赋给一个 `nvarchar(max)` 类型的变量。  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +98,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. 在表中显示 FILESTREAM BLOB 的路径  
  下面的示例创建并显示三个 FILESTREAM BLOB 的路径。  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

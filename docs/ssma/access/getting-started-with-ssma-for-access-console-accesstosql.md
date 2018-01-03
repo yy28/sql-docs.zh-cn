@@ -1,7 +1,7 @@
 ---
 title: "用于访问控制台 (AccessToSQL) 入门 SSMA |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c8fff49c85afde0b576f6d4469bde5ce426171e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc7b11e4317eb6f982a31bdd1fee17b9c54cbe04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>用于访问控制台 (AccessToSQL) 入门 SSMA
 本部分介绍的过程启动并开始使用访问控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口。  

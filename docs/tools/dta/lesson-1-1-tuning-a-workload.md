@@ -3,7 +3,7 @@ title: "优化工作负荷 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 56041b15a6fa78bc88d62c409f0df958d0dd862a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 534f4ab58ee49d3bfce6899bf3858404fb7b3fd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>课程 1-1-优化工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库引擎优化顾问可以用于查找的数据库和你选择进行优化的表的查询性能的最佳物理数据库设计。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  分析完成之后，在“操作”菜单中，单击“保存建议”，将建议保存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 在“另存为”对话框中，导航到要保存建议脚本的目录，然后键入文件名 **MyRecommendations**。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>“摘要”  
 您已完成对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的简单 SELECT 语句工作负荷的优化。 数据库引擎优化顾问还可将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件和表作为优化工作负荷。 下一个任务将向您展示如何查看和解释进行优化后所收到的优化建议。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  

@@ -20,16 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 86547cd78253d17ccacebe1d9b0db9e3cdda0c8a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d66238df770dfd647c3013441024409f15fdef9b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="clr-integration---enabling"></a>CLR 集成-启用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]公共语言运行时 (CLR) 集成功能默认情况下，处于关闭状态，并且必须启用才能使用通过 CLR 集成实现的对象。 若要启用 CLR 集成，请使用**启用 clr**选项**sp_configure**存储中的过程[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
-```tsql  
+```sql  
   
 sp_configure 'show advanced options', 1;  
 GO  
@@ -57,6 +57,6 @@ GO
  [clr enabled 服务器配置选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)  
+ [服务器级角色](../../relational-databases/security/authentication-access/server-level-roles.md)  
   
   

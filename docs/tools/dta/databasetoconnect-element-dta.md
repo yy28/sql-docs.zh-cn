@@ -3,7 +3,7 @@ title: "DatabaseToConnect 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d487b07c39a0203da364345423c03da581709074
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77eeb9f0b3077b057e060da76c2f3a83abff295a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定数据库引擎优化顾问将优化工作负荷时连接到的第一个数据库。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**string**，长度没有限制。|  
 |**默认值**|无。|  
@@ -50,9 +50,9 @@ ms.lasthandoff: 12/05/2017
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|无|  
+|**子元素**|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 **DatabaseToConnect** ，可以指定希望数据库引擎优化顾问在启动优化会话时连接到的第一个数据库的名称。 此元素只能指定一个数据库。 如果指定了多个数据库名称，数据库引擎优化顾问将返回错误。  
   
 ## <a name="example"></a>示例  

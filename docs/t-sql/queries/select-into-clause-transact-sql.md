@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT-INTO 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="logging-behavior"></a>日志记录行为  
  SELECT...INTO 的日志记录量取决于数据库的有效恢复模式。 在简单恢复模式或大容量日志恢复模式下，大容量操作是最小日志记录操作。 与最小日志记录，使用 SELECT... INTO 语句可以是比创建表，然后填充具有 INSERT 语句的表更高效。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  在目标数据库中要求 CREATE TABLE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 通过指定来自多个源的列，创建一个表  
  下面的示例通过从与雇员或地址有关的各个表中选择七列创建 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `dbo.EmployeeAddresses` 表。  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. 使用最小日志记录插入行  
  下面的示例创建 `dbo.NewProducts` 表并从 `Production.Product` 表插入行。 此示例假定 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的恢复模式设置为 FULL。 若要确保最小方式记录，应在插入行之前将 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的恢复模式设置为 BULK_LOGGED，并在 SELECT...INTO 语句后重置为 FULL。 此过程确保 SELECT...INTO 语句在事务日志中占用最少的空间并且高效执行。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. 使用 IDENTITY 函数创建标识列  
  下面的示例使用 IDENTITY 函数在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的新表 `Person.USAddress` 中创建一个标识列。 这是必需的，因为定义该表的 SELECT 语句包含一个联接，而该联接导致 IDENTITY 属性不转移到新表。 请注意，在 IDENTITY 函数中指定的种子和增量值不同于源表 `AddressID` 的 `Person.Address` 列中的种子和增量值。  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **适用于：** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ ORDER BY YearlyIncome
 
  **适用于：**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

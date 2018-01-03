@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sys.dm_exec_text_query_plan
 |**加密**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
 |**query_plan**|**nvarchar(max)**|包含与指定的查询执行计划的编译时显示计划表示*plan_handle*。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在以下情况下不显示计划输出中返回**计划**返回的表的列**sys.dm_exec_text_query_plan**:  
   
 -   通过使用指定的查询计划，如果*plan_handle*已从计划缓存中逐出**query_plan**列返回的表为 null。 例如，可能发生此问题，如果没有时捕获计划句柄并将其用于使用之间的时间延迟**sys.dm_exec_text_query_plan**。  
@@ -105,7 +105,7 @@ sys.dm_exec_text_query_plan
   
 当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)或[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)、 **query_plan**列将包含仅语句文本，而不是实际查询计划。 若要返回查询计划，请调用**sys.dm_exec_text_query_plan**的已准备的参数化查询的计划句柄。 你可以确定查询是否已通过引用参数化**sql**列[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)视图或文本列[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行**sys.dm_exec_text_query_plan**，用户必须是属于**sysadmin**固定服务器角色或服务器上具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -118,7 +118,7 @@ sys.dm_exec_text_query_plan
   
  首先，使用 `sp_who` 存储过程检索正在执行查询或批查询的进程的服务器进程 ID (SPID)。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +127,7 @@ GO
   
  由 `sp_who` 返回的结果集指示 SPID 为 `54`。 可以在 `sys.dm_exec_requests` 动态管理视图中使用该 SPID，以便使用以下查询来检索计划句柄：  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +137,7 @@ GO
   
  通过返回的表**sys.dm_exec_requests**指示运行速度缓慢的查询或批处理的计划句柄是`0x06000100A27E7C1FA821B10600`。 以下示例返回指定计划句柄的查询计划，并使用默认值 0 和 -1 返回查询或批处理中的所有语句。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +148,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 从计划缓存中检索每个查询计划  
  若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 显示计划输出中的每个计划缓存中的当前计划个`query_plan`返回的表的列。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +160,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. 检索服务器从计划缓存中收集了查询统计信息的每个查询计划  
  若要检索服务器已收集了其当前驻留在计划缓存中的统计信息的所有查询计划的快照，请通过查询 `sys.dm_exec_query_stats` 动态管理视图来检索缓存中这些计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_query_stats` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 每个计划的显示计划输出位于返回的表的 `query_plan` 列中。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +171,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 检索有关前五个查询按平均 CPU 时间的信息  
  以下示例返回前五个查询的查询计划和平均 CPU 时间。 **Sys.dm_exec_text_query_plan**函数指定的默认值 0 和-1 以返回批处理中的所有语句，查询计划中。  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  

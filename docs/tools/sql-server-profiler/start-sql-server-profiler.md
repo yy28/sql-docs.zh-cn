@@ -3,7 +3,7 @@ title: "运行 SQL Server 事件探查器 |Microsoft 文档"
 ms.custom: 
 ms.date: 7/7/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f9327a1cdb70be829701fa0710f5833545f8a0d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6bcf4356a7531fc681cbcf3559cab79e01e4ad2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-sql-server-profiler"></a>运行 SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以运行[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]几种不同方式，以支持收集跟踪输出中的各种方案。 你可以开始[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]从使用 Windows 10**启动**菜单上，从**工具**菜单中的[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问，并从多个位置[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  

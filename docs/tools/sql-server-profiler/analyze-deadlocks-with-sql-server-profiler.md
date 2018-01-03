@@ -3,7 +3,7 @@ title: "使用 SQL Server Profiler 分析死锁 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2940a94d2893fb58886506fa5db07402b86280d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]以确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |所有者 ID|正在使用事务并且当前正在等待锁的进程的事务 ID。|  
 |事务描述符|指向描述事务状态的事务描述符的指针。|  
 |输入缓冲区|当前进程的输入缓冲区。定义了事件的类型和正在执行的语句。 可能的值包括：<br /><br /> **语言**<br /><br /> **RPC**<br /><br /> **无**|  
-|声明专用纸|语句类型。 可能的值有：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **Insert**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|。|语句类型。 可能的值有：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **Insert**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>死锁资源节点  
  在死锁中，两个进程都在等待对方占用的资源。 在死锁图形中，资源显示为资源节点。  

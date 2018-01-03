@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   分区函数  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -116,7 +116,7 @@ sys.dm_sql_referenced_entities (
   
  无法解析列依赖关系时，返回错误 2020。 此错误不会阻止查询返回对象级依赖关系。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以在任何数据库的上下文中执行此函数以返回引用服务器级 DDL 触发器的实体。  
   
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
@@ -124,7 +124,7 @@ sys.dm_sql_referenced_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|视图|是|是|  
+|“查看”|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
@@ -144,7 +144,7 @@ sys.dm_sql_referenced_entities (
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对 sys.dm_sql_referenced_entities 拥有 SELECT 权限并对引用实体拥有 VIEW DEFINITION 权限。 默认情况下，SELECT 权限授予 public。 要求对数据库拥有 VIEW DEFINITION 权限或 ALTER DATABASE DDL TRIGGER 权限（当引用实体为数据库级 DDL 触发器时）。 当引用实体为服务器级 DDL 触发器时，要求对服务器拥有 VIEW ANY DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 返回数据库级 DDL 触发器引用的实体  
  下面的示例返回数据库级 DDL 触发器 `ddlDatabaseTriggerLog` 引用的实体（表和列）。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. 返回对象引用的实体  
  下面的示例返回用户定义函数 `dbo.ufnGetContactInformation` 引用的实体。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. 返回列依赖关系  
  下面的示例创建具有定义为列 `Table1` 与 `c` 之和的计算列 `a` 的表 `b`。 然后 `sys.dm_sql_referenced_entities` 视图被调用。 该视图返回两行，每行针对计算列中定义的一列。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 返回非绑定到架构的列依赖关系  
  下面的示例删除 `Table1` 并创建 `Table2` 和存储过程 `Proc1`。 该过程引用 `Table2` 以及不存在的表 `Table1`。 视图 `sys.dm_sql_referenced_entities` 和指定为引用实体的存储过程一起运行。 结果集对于 `Table1` 显示一行，对于 `Table2` 显示 3 行。 因为 `Table1` 不存在，所以列依赖关系无法解析，并返回错误 2020。 `is_all_columns_found` 列为 `Table1` 返回 0，指示存在无法发现的列。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. 演示动态依赖关系维护  
  下面的示例扩展了示例 D，以显示依赖关系的动态维护。 该示例首先重新创建在示例 D 中删除的 `Table1`。然后 `sys.dm_sql_referenced_entities` 与指定为引用实体的存储过程一起再次运行。 结果集显示返回了两个表及其各自在存储过程中定义的列。 此外，`is_all_columns_found` 列为所有对象和列返回 1。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

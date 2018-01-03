@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (TRANSACT-SQL) 的查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -308,7 +308,7 @@ ms.lasthandoff: 11/17/2017
 > [!CAUTION] 
 > 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致在更多情况下出现“无法生成计划”错误。 在未来的版本中，对优化器进行内部修改后可允许考虑更多计划。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只有在 INSERT 语句中使用了 SELECT 子句时，才能在该语句中指定查询提示。  
   
  只能在顶级查询中指定查询提示，不能在子查询指定。 在顶级查询中或在子查询; 当表提示指定为查询提示时，可以指定提示但是，为指定的值*exposed_object_name*子句必须完全中查询或子查询的公开的名称匹配中表提示。  
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. 使用 MAXRECURSION  
  可以使用 MAXRECURSION 来防止不合理的递归公用表表达式进入无限循环。 下面的示例特意创建一个无限循环，并使用 MAXRECURSION 提示以限制为两个递归级别数。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  

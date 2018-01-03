@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d7567235212388b477abcbfddca8049f2ada735
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84955e0805abf954d23159cbd0bd1e5b32d1f508
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_backup_master_switch   
                      [@state = ] { 0 | 1}  
 ```  
@@ -57,10 +57,10 @@ EXEC managed_backup.sp_backup_master_switch
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  介绍与语句相关的安全问题。包括“权限”小节（H3 标题）。 在适当时考虑包括其他“所有权链接”和“审核”小节。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求的成员身份**db_backupoperator**与数据库角色， **ALTER ANY CREDENTIAL**权限，和**执行**权限**sp_delete_backuphistory**存储过程。  
   
 ## <a name="examples"></a>示例  

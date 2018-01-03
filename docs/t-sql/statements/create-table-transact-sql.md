@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -365,7 +365,7 @@ column_name <data_type>
  
  将新表创建为 FileTable。 您无需指定列，因为 FileTable 具有固定架构。 有关 Filetable 的详细信息，请参阅[Filetable &#40;SQL server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
- *column_name*  
+ column_name  
  *computed_column_expression*  
  定义计算列的值的表达式。 计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 该列由同一表中的其他列通过表达式计算得到。 例如，计算的列可以定义：**成本**AS**价格** \* **qty**。表达式可以是非计算列的名称、常量、函数、变量以及通过一个或多个运算符连接的上述元素的任意组合。 表达式不能是子查询，也不能包含别名数据类型。  
   
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *logical_expression*  
  返回 TRUE 或 FALSE 的逻辑表达式。 别名数据类型不能作为表达式的一部分。  
   
- *列*  
+ column  
  用括号括起来的一列或多列，在表约束中表示这些列用在约束定义中。  
   
  [ **ASC** |DESC]  
@@ -763,7 +763,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  DATA_COMPRESSION  
  为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：  
   
- NONE  
+ 无  
  不压缩表或指定的分区。  
   
  ROW  
@@ -901,7 +901,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **为表启用 Stretch Database**  
   
- 如果你启用 Stretch 的表通过指定`ON`，你可以选择指定`MIGRATION_STATE = OUTBOUND`开始将数据迁移立即或`MIGRATION_STATE = PAUSED`以推迟数据迁移。 默认值是`MIGRATION_STATE = OUTBOUND`。 有关启用 Stretch 的表的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
+ 如果你启用 Stretch 的表通过指定`ON`，你可以选择指定`MIGRATION_STATE = OUTBOUND`开始将数据迁移立即或`MIGRATION_STATE = PAUSED`以推迟数据迁移。 默认值是 `MIGRATION_STATE = OUTBOUND`。 有关启用 Stretch 的表的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
  **先决条件**。 为表启用 Stretch 之前，必须在服务器和数据库上启用 Stretch。 有关详细信息，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   
@@ -980,7 +980,7 @@ CREATE TABLE 语句的一部分，可以指定列和表的索引。 有关添加
   
  只有内存优化表支持哈希索引。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  允许的表、 列、 约束和索引的数量有关的信息，请参阅[Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)。  
   
  通常情况下，为表和索引分配空间时，每次以一个区为增量单位。 当设置 MIXED_PAGE_ALLOCATION 选项的 ALTER DATABASE 设置为 TRUE，或始终之前[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、 创建表或索引后，它从混合区分配页，直到它具有足够的页填满统一扩展盘区。 当足够的页填满统一区后，每当当前分配的区填满时，将再为其分配另一个区。 有关所占用的空间分配和使用的表报表，请仅为执行**sp_spaceused**。  
@@ -1075,7 +1075,7 @@ Azure SQL Database 支持全局临时表还 tempdb 中存储和作用于数据�
 
 有关疑难解答的 tempdb，请参阅[tempdb 中的故障排除足够的磁盘空间](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396)。 若要访问 Azure SQL 数据库中的故障排除 Dmv，你必须是服务器管理员联系。
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
 
  任何用户可以创建全局临时对象。 用户只能访问自己的对象，除非他们获得更多的权限。 实例时都提供 SQL Server 登录名。  
   
@@ -1083,7 +1083,7 @@ Azure SQL Database 支持全局临时表还 tempdb 中存储和作用于数据�
 
 - 会话 A 中 Azure SQL 数据库 testdb1 创建一个全局临时表 ##test 并添加的第 1 行
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - 会话 B 连接到 Azure SQL 数据库 testdb1 并可以访问表 ##test 由会话的创建
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - 会话 C 连接到 Azure SQL 数据库 testdb2 中的另一个数据库，并且想要访问 ##test 在 testdb1 中创建。 此，请选择失败由于全局临时表的数据库作用域 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - 从当前用户数据库 testdb1 寻址 Azure SQL 数据库 tempdb 中的系统对象
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1255,7 +1255,7 @@ SELECT * FROM tempdb.sys.database_files
   
  若要评估更改压缩状态将对表、索引或分区有何影响，请使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 存储过程。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。  
   
  如果 CREATE TABLE 语句中的任何列定义为 CLR 用户定义类型，则所需类型的所有权或 REFERENCES 权限。  
@@ -1405,7 +1405,7 @@ GO
   
 |文件组|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**分区**|1|2|3|4|  
+|**分区**|@shouldalert|2|3|4|  
 |**值**|第 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1000|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. 在列中使用 uniqueidentifier 数据类型  

@@ -3,7 +3,7 @@ title: "配置 (DTA) 的服务器元素 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98d5e308830cf8ba07553b4abb3c1ffa1de37d84
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c0095ab65cec1fd56b26cc42c29ae4e77a61bae1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="server-element-for-configuration-dta"></a>配置的服务器元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含的数据库引擎优化顾问来评估其假设配置的服务器的标识信息 (通过指定**配置**元素)。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 |**父元素**|[配置元素 (DTA)](../../tools/dta/configuration-element-dta.md)|  
 |**子元素**|[服务器的名称元素 (DTA)](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [配置的数据库元素 (DTA)](../../tools/dta/database-element-for-configuration-dta.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只能为 **Server** 元素指定一个 **Configuration** 元素。 在 **数据库引擎优化顾问 XML 架构** 中，此元素的名称为 [ServerTypecomplexType](http://go.microsoft.com/fwlink/?linkid=43100)。 请不要将此 **Server** 元素与 **DTAInput** 元素的子元素混淆。 有关详细信息，请参阅[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)。  
   
 ## <a name="example"></a>示例  

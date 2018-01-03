@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6108de273aedd3808a1941da5c152c6c774e5804
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.lasthandoff: 11/17/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|在数据库中启用但并非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都支持的功能的外部名称。 必须先删除此功能，然后才能将数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有可用版本。|  
-|feature_id|**int**|与功能关联的功能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
+|feature_id|**int**|与功能关联的功能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]的用户。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果没有可能会限制由特定版本的功能由数据库，视图会返回任何行。  
   
  sys.dm_db_persisted_sku_features 可能列表限制到特定数据库更改了以下功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本：  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 
  若要确定数据库是否使用仅限于特定版本的任何功能，请对数据库执行下面的语句：  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  

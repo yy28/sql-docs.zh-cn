@@ -1,7 +1,7 @@
 ---
 title: "加载转换到 SQL Server (DB2ToSQL) 数据库对象 |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a53fc54c474944739a839230ed9523aeeff9853c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>加载转换到 SQL Server (DB2ToSQL) 数据库对象
 转换到 DB2 架构后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以将生成数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以让 SSMA 创建对象，或可以编写对象脚本时，还可以自行运行脚本。 此外，SSMA 使你可以更新目标元数据的实际内容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  

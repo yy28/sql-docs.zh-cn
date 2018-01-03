@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475c76c68198719de312a6a7ca9485097596d624
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d784eb9aa4447a60006a5b14d1b525337cb5b87c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option*可以具有以下值之一：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -72,7 +72,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="best-practices"></a>最佳实践  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，获得的完整路径的文件在运行时通过使用**FileTableRootPath**和**GetFileNamespacePath**函数组合，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
   
 @root varchar(100)  
@@ -84,9 +84,9 @@ FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  **FileTableRootPath**函数需要：  
   
 -   拥有 FileTable 的 SELECT 权限以获取特定 FileTable 的根路径。  

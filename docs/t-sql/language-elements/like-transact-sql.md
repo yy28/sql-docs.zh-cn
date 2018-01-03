@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,12 +86,12 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>结果值  
  如果，则如返回 TRUE *match_expression*匹配所指定*模式*。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果使用 LIKE 执行字符串比较，则模式字符串中的所有字符都有意义。 这包括前导或尾随空格。 如果查询中的比较要返回包含 "abc "（abc 后有一个空格）的所有行，则不会返回包含 "abc"（abc 后没有空格）的列所在行。 但是可以忽略模式所要匹配的表达式中的尾随空格。 如果查询中的比较要返回包含 "abc"（abc 后没有空格）的所有行，则返回以 "abc" 开始并且具有零个或多个尾随空格的所有行。  
   
  使用包含的模式的字符串比较**char**和**varchar**数据可能无法通过 LIKE 比较由于存储数据的方式。 您应当了解每种数据类型的存储方式以及导致 LIKE 比较失败的原因。 下面的示例传入本地**char**到存储的过程，然后使用模式匹配来找到所有员工具有一组指定的字符其最后一个名称开头的变量。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  但是，下面的示例会成功，因为尾随空格不会添加到**varchar**变量。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  下面的一系列示例显示 ASCII LIKE 模式匹配与 Unicode LIKE 模式匹配所返回的行之间的差异。  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  例如，以下查询显示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的所有动态管理视图，因为它们全部以字母 `dm` 开始。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. 使用带 % 通配符的 LIKE  
  以下示例在 `415` 表中查找区号为 `PersonPhone` 的所有电话号码。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. 使用带 % 通配符的 NOT LIKE  
  以下示例在 `PersonPhone` 表中查找区号不是 `415` 的所有电话号码。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
  以下示例使用 `ESCAPE` 子句和转义符在 `10-15%` 表的列 `c1` 中查找精确字符串 `mytbl2`。  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. 使用 [ ] 通配符  
  下面的示例查找员工上`Person`的第一个同名的表`Cheryl`或`Sheryl`。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  以下示例查找 `Person` 表中姓氏为 `Zheng` 或 `Zhang` 的员工所对应的行。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. 使用带 % 通配符的 LIKE  
  下面的示例查找中的所有员工`DimEmployee`开头的电话号码具有表`612`。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用带 % 通配符的 NOT LIKE  
  下面的示例查找中的所有电话号码`DimEmployee`表不会启动与`612`。  实例时都提供 SQL Server 登录名。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用如 _ 通配符字符  
  下面的示例查找所有具有区域代码开头的电话号码`6`和以`2`中`DimEmployee`表。 请注意，%通配符字符也包括在搜索模式的末尾由于区号是电话号码的第一部分，其他字符中的列值后存在。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

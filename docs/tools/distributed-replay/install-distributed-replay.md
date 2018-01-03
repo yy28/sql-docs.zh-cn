@@ -3,7 +3,7 @@ title: "安装 Distributed 的 Replay |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad107252ba6c6dc86e6720a7a07dfa87d82b2a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以在三种方式之一安装 Distributed Replay:  
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/05/2017
 |组件|参数|  
 |---------------|---------------|  
 |“Distributed Replay 控制器”|**DREPLAY_CTLR**|  
-|“Distributed Replay 客户端”|**DREPLAY_CLT**|  
+|Distributed Replay 客户端|**DREPLAY_CLT**|  
 |管理工具|**工具**|  
   
 > [!IMPORTANT]  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/05/2017
   
  使用下表中的参数可开发用于安装的命令行脚本。  
   
-|参数|说明|支持的值|  
+|参数|Description|支持的值|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **可选**|Distributed Replay 控制器服务的服务帐户。|检查帐户和密码|  
 |/CTLRSVCPASSWORD<br /><br /> **可选**|Distributed Replay 控制器服务帐户的密码。|检查帐户和密码|  

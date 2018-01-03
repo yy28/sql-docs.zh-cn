@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>数据层应用程序表-sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,20 +55,20 @@ ms.lasthandoff: 11/17/2017
 |**date_created**|**datetime**|该条目的创建日期和时间。|  
 |**date_modified**|**datetime**|最后修改该条目的日期和时间。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  DAC 管理操作（例如部署或删除 DAC）会产生多个步骤。 为每个操作都分配一个操作标识符。 每个步骤的序列号和中的行分配**sysdac_history_internal**，其中记录步骤的状态。 在该操作步骤开始时创建每一行，并且根据需要进行更新以便反映该操作的状态。 例如，无法分配部署 DAC 操作**action_id** 12 和 get 四个行中**sysdac_history_internal**:  
   
 |||||  
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|创建|dacpac|  
-|12|1|创建|login|  
-|12|2|创建|database|  
-|12|3|重命名|database|  
+|12|@shouldalert|创建|login|  
+|12|2|创建|“数据库”|  
+|12|3|重命名|“数据库”|  
   
  DAC 操作，例如删除，请不要删除中的行**sysdac_history_internal**。 使用以下查询可以手动删除在[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例上不再部署的 DAC 行：  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -80,7 +80,7 @@ WHERE instance_id NOT IN
 > [!NOTE]  
 >  目前，没有任何机制可删除**sysdac_history_internal**行上[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色的成员身份。 可供有权连接到 master 数据库的所有用户对此视图的只读访问。  
   
 ## <a name="see-also"></a>另请参阅  

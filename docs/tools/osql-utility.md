@@ -3,7 +3,7 @@ title: "osql 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>osql 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**实用工具可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
@@ -197,7 +197,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  使用 **-n**、 **-O** 和 **-D** 选项不再受 **osql**的未来版本中将删除此功能。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
  如果启动 **osql**时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 **osqluser=(***user***)** 或 **osqlserver=(***server***)**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **中的**语句外，还可以使用以下命令。  
   
-|Command|说明|  
+|Command|Description|  
 |-------------|-----------------|  
 |GO|执行上一个 GO 命令之后输入的所有语句。|  
 |RESET|清除已输入的所有语句。|  

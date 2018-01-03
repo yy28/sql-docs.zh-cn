@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce87847a891e04548a3da30c2f07238d27e7aa24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6bae454caa630025bb4470dc69da7fa4a97f6307
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +55,16 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
    
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果远程 Azure 表中存在已启用延伸的 SQL Server 表中不复存在的列，这些额外的列不会阻止 Stretch Database 正常运行。 你可以选择手动删除额外列。  
   
 ## <a name="example"></a>示例  
  若要对帐的列在远程 Azure 表中，运行以下语句。  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

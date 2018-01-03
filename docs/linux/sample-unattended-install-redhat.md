@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: a66c65ea0eae4d3f1704f5bbeafb78ff657ab9ed
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例： 无人参与的 SQL Server 安装脚本以 Red Hat Enterprise Linux
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 此示例 Bash 脚本安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 而无需交互式输入。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
 
 > [!TIP]
-> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[Red Hat 的快速入门教程](quickstart-install-connect-red-hat.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
+> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[Red Hat 的快速入门](quickstart-install-connect-red-hat.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 你需要至少 2 GB 的内存来运行在 Linux 上的 SQL Server。
 - 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/09/2017
 保存到文件的示例脚本，然后要自定义它，可替换该脚本中的变量值。 你可以设置的任何脚本变量作为环境变量，只要删除从脚本文件。
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

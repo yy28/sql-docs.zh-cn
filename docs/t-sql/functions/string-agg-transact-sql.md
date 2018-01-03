@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |int、 bigint、 smallint、 tinyint、 numeric、 float、 real、 位、 小数、 smallmoney、 money、 datetime、 datetime2， |NVARCHAR （4000) |
 
 
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  
 `STRING_AGG`聚合采用行中的所有表达式，并将它们连接到单个字符串。 表达式值已隐式转换为字符串类型，然后串联。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅[CAST 和 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
@@ -90,7 +90,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 生成名称的列表中新行分隔 
 下面的示例生成的名称在一个结果单元格，以回车分隔的列表。
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成的名称与不包含 NULL 值的以逗号分隔的列表   
 下面的示例使用 n/A 替换 null 值，并返回名称以单个结果单元格中的逗号分隔。  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. 生成逗号分隔值 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 返回包含相关标记的新闻文章 
 
 文章和标记分为不同的表。 开发人员想要返回每个与所有关联的标记每个项目的一行。 使用以下查询： 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成每个城镇电子的邮件列表
 
 下面的查询查找员工的电子邮件地址，并按市分别有对其进行分组： 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ GROUP BY town;
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 生成的每个市分别有电子邮件已排序的列表   
    
 与前面的示例类似，下面的查询查找员工的电子邮件地址、 按镇，对其进行分组并按字母顺序排序电子邮件：   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 

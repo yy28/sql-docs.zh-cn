@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80ac067f956383e7df57d072431b17f90ae3d293
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cd569f74e53d5b556f7ec8a4c1f3c02b7d574742
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   
@@ -59,9 +59,9 @@ smart_admin.fn_get_current_xevent_settings ()
 |is_configurable|NVARCHAR(128)|此值设置为**True**如果事件是可配置，否则它设置为**False**。|  
 |is_enabled|NVARCHAR(128)|如果启用了事件，则此项设置为 True；否则设置为 False。 使用 smart_admin.sp_set_parameter 启用调试事件。|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要**选择**对函数的权限。  
   
 ## <a name="examples"></a>示例  

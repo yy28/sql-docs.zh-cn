@@ -3,7 +3,7 @@ title: "保存跟踪和跟踪模板 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3e447a1b51919fcece9560a0d37cb5f526a615a3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>保存跟踪和跟踪模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]请务必区分保存跟踪文件和保存跟踪模板。 保存跟踪文件是指将捕获的事件数据保存到指定位置。 保存跟踪模板是指保存跟踪定义，例如指定的数据列、事件类或筛选器。  

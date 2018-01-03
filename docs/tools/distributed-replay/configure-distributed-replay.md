@@ -3,7 +3,7 @@ title: "配置分布式的重播 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0eb4502675fb2bd9e9978b5443882a44f867e39c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc41572e269bda127f8d725960944d40acacdfae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="configure-distributed-replay"></a>配置分布式重播
+# <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器、 客户端，XML 文件中指定分布式重播配置详细信息和安装管理工具的位置。 这些文件包括下面的文件：  
   
 -   [控制器配置文件](#DReplayController)  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  控制器配置文件指定的日志记录级别包括：  
   
-|设置|XML 元素|说明|允许的值|必需|  
+|设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |日志记录级别|`<LoggingLevel>`|为控制器服务指定日志记录级别。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|否。 默认情况下，该值为 `CRITICAL`。|  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
  客户端配置文件指定的设置包括：  
   
-|设置|XML 元素|说明|允许的值|必需|  
+|设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |控制器|`<Controller>`|指定控制器的计算机名称。 客户端将尝试通过联系控制器在分布式重播环境中注册。|可以用“`localhost`”或“`.`”指代本地计算机。|否。 默认情况下，客户端会尝试向在本地运行的控制器实例 (“`.`”)（如果存在）注册。|  
 |客户端工作目录|`<WorkingDirectory>`|客户端上用于保存调度文件的本地路径。<br /><br /> 此目录中的文件在下一次重播时会被覆盖。|以驱动器号开头的完整目录名称。|否。 如果未指定任何值，则调度文件将与默认客户端配置文件保存在同一位置。 如果指定一个值，而该文件夹在客户端上不存在，则客户端服务不会启动。|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/05/2017
 ```  
   
 ##  <a name="PreprocessConfig"></a> 预处理配置文件：DReplay.exe.preprocess.config  
- 当您使用管理工具启动预处理阶段时，管理工具将从预处理配置文件 `DReplay.exe.preprocess.config`加载预处理设置。  
+ 当您使用管理工具启动预处理阶段时，管理工具将从预处理配置文件 `DReplay.exe.preprocess.config` 加载预处理设置。  
   
  使用默认配置文件或使用管理工具的 **-c** 参数来指定修改过的预处理配置文件的位置。 有关使用管理工具的预处理选项的详细信息，请参阅[预处理选项（分布式重播管理工具）](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/05/2017
   
  预处理配置设置在预处理配置文件的 `<PreprocessModifiers>` 元素的子级 XML 元素中指定。 这些设置包括：  
   
-|设置|XML 元素|说明|允许的值|必需|  
+|设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |包括系统会话活动|`<IncSystemSession>`|指示重播期间是否包括捕获过程中的系统会话活动。|`Yes` &#124; `No`|否。 默认情况下，该值为 `No`。|  
 |最长空闲时间|`<MaxIdleTime>`|将空闲时间的上限设为某个绝对值（以秒为单位）。|>= -1 的整数。<br /><br /> `-1` 表示原始跟踪文件中的原始值没有变化。<br /><br /> `0` 表示在任意给定时间点有某个活动正在进行。|否。 默认情况下，该值为 `-1`。|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 12/05/2017
 ```  
   
 ##  <a name="ReplayConfig"></a> 重播配置文件：DReplay.exe.replay.config  
- 当您使用管理工具启动事件重播阶段时，管理工具将从重播配置文件 `DReplay.exe.replay.config`加载重播设置。  
+ 当您使用管理工具启动事件重播阶段时，管理工具将从重播配置文件 `DReplay.exe.replay.config` 加载重播设置。  
   
  使用默认配置文件或使用管理工具的 **-c** 参数来指定修改过的重播配置文件的位置。 有关使用管理工具的重播选项的详细信息，请参阅[重播选项（分布式重播管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="replayoptions-element"></a>\<ReplayOptions > 元素  
  重播配置文件在 `<ReplayOptions>` 元素中指定的设置包括：  
   
-|设置|XML 元素|说明|允许的值|必需|  
+|设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标实例（测试服务器）|`<Server>`|指定要连接的服务器名和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名。|*server_name*[\\*instance_name*]<br /><br /> 不能使用“`localhost`”或“`.`”来表示本地主机。|否，如果已通过使用管理工具的 **-s** *target server* 参数和“重播”选项指定服务器名称。|  
 |顺序模式|`<SequencingMode>`|指定用于事件计划的模式。|`synchronization` &#124; `stress`|否。 默认情况下，该值为 `stress`。|  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="outputoptions-element"></a>\<OutputOptions > 元素  
  重播配置文件在 `<OutputOptions>` 元素中指定的设置包括：  
   
-|设置|XML 元素|说明|允许的值|必需|  
+|设置|XML 元素|Description|允许的值|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |记录行计数|`<RecordRowCount>`|指示是否应记录每个结果集的行计数。|`Yes` &#124; `No`|否。 默认情况下，该值为 `Yes`。|  
 |记录结果集|`<RecordResultSet>`|指示是否应记录所有结果集的内容。|`Yes` &#124; `No`|否。 默认情况下，该值为 `No`。|  

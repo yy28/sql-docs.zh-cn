@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec4c1036182df1ab4a9c21dff494a0a17a1bca73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 32a064570e66de5e2bde0bb539221c04366d5a73
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空间类型的几何图形 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. 显示如何添加和查询几何图形数据  
  以下两个示例显示了如何添加和查询几何图形数据。 第一个示例创建包含一个标识列和一个 `geometry` 列 `GeomCol1` 的表。 第三列将 `geometry` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geometry`实例，一行包含 `Polygon` 实例。  
   
-```tsql 
+```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -67,7 +67,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>B. 返回两个几何图形实例的交集  
  第二个示例使用 `STIntersection()` 方法返回此前插入的两个 `geometry` 实例相交的点。  
   
-```tsql  
+```sql  
 DECLARE @geom1 geometry;  
 DECLARE @geom2 geometry;  
 DECLARE @result geometry;  
@@ -81,7 +81,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. 在计算列中使用几何图形数据  
  下面的示例创建一个表与持久化计算的列使用**几何图形**类型。  
   
-```tsql  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  

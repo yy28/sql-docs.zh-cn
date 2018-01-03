@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b1b92761aa72e4d001ddfb2845c593c3d99f79a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -286,8 +286,8 @@ BOUNDING_BOX = ( {
  只能对 geography 数据类型的列指定。  这是此数据类型的默认设置，无需指定。  
   
 ### <a name="with-options"></a>WITH 选项  
- BOUNDING_BOX  
- 指定定义边界框四个坐标的一个数值四元组：左下角的最小 x 坐标和最小 y 坐标，以及右上角的最大 x 坐标和最大 y 坐标。  
+BOUNDING_BOX  
+指定定义边界框四个坐标的一个数值四元组：左下角的最小 x 坐标和最小 y 坐标，以及右上角的最大 x 坐标和最大 y 坐标。  
   
  *xmin*  
  指定边界框左下角的 x 坐标。  
@@ -313,13 +313,14 @@ BOUNDING_BOX = ( {
  YMAX =*ymax*  
  指定边界框右上角 y 坐标的属性名称和值。  
   
- 边界框坐标只在 USING GEOMETRY_GRID 子句内应用。  
-  
- *xmax*必须大于*xmin*和*ymax*必须大于*ymin*。 你可以指定任何有效[float](../../t-sql/data-types/float-and-real-transact-sql.md)值表示形式，前提假定： *xmax* > *xmin*和*ymax*  >  *ymin*。 否则，将引发相应错误。  
-  
- 这里没有默认值。  
-  
- 边界框属性名称不区分大小写，而不管数据库排序规则如何。  
+ > [!NOTE]
+ > 边界框坐标只在 USING GEOMETRY_GRID 子句内应用。  
+ >
+ > *xmax*必须大于*xmin*和*ymax*必须大于*ymin*。 你可以指定任何有效[float](../../t-sql/data-types/float-and-real-transact-sql.md)值表示形式，前提假定： *xmax* > *xmin*和*ymax*  >  *ymin*。 否则，将引发相应错误。  
+ > 
+ > 这里没有默认值。  
+ >
+ > 边界框属性名称不区分大小写，而不管数据库排序规则如何。  
   
  若要指定属性名称，必须且只能指定每个属性名称一次。 可以按任意顺序指定它们。 例如，以下子句是等效的：  
   
@@ -327,8 +328,8 @@ BOUNDING_BOX = ( {
   
 -   BOUNDING_BOX = (XMIN =*xmin*，XMAX =*xmax*，YMIN =*ymin*，YMAX =*ymax*)  
   
- GRIDS  
- 定义分割方案中每一级别的网格密度。 当选择 GEOMETRY_AUTO_GRID 和 GEOGRAPHY_AUTO_GRID 时，此选项被禁用。  
+GRIDS  
+定义分割方案中每一级别的网格密度。 当选择 GEOMETRY_AUTO_GRID 和 GEOGRAPHY_AUTO_GRID 时，此选项被禁用。  
   
  有关分割的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
@@ -355,12 +356,14 @@ BOUNDING_BOX = ( {
  HIGH  
  为给定级别的网格指定可能的最高网格密度。 HIGH 等于 256 个单元（16x16 网格）。  
   
- 使用级别名称可以按任意顺序指定级别，并且可以省略级别。 如果为级别使用名称，则必须为所指定的任何其他级别也使用名称。 如果省略某个级别，则其密度将默认为 MEDIUM。  
+> [!NOTE] 
+> 使用级别名称可以按任意顺序指定级别，并且可以省略级别。 如果为级别使用名称，则必须为所指定的任何其他级别也使用名称。 如果省略某个级别，则其密度将默认为 MEDIUM。  
   
- 如果指定的密度无效，则会引发错误。  
+> [!WARNING] 
+> 如果指定的密度无效，则会引发错误。  
   
- CELLS_PER_OBJECT =*n*  
- 指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 *n*可以是介于 1 和 8192 (含) 之间的任何整数。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
+CELLS_PER_OBJECT =*n*  
+指定可由分割进程用于在索引中单个空间对象的每个对象的分割单元格数。 *n*可以是介于 1 和 8192 (含) 之间的任何整数。 如果传递的数字无效或者该数字大于指定分割的最大单元格数，则会引发错误。  
   
  CELLS_PER_OBJECT 的默认值如下：  
   
@@ -375,8 +378,8 @@ BOUNDING_BOX = ( {
   
  “每个对象的单元格数”分割规则使用 CELLS_PER_OBJECT 值。 有关这些分割规则的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
- PAD_INDEX = {ON |**OFF** }  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+PAD_INDEX = {ON |**OFF** }  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定索引填充。 默认为 OFF。  
   
@@ -388,7 +391,7 @@ BOUNDING_BOX = ( {
   
  PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 将中间级索引页上的行数为永远不会小于 2，而不考虑如何低值*fillfactor*。  
   
- 填充因子 =*填充因子*  
+填充因子 =*填充因子*  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 *填充因子*必须是介于 1 到 100 的整数值。 默认值为 0。 如果*fillfactor*为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]与完全填充叶级页创建索引。  
@@ -399,12 +402,12 @@ BOUNDING_BOX = ( {
  FILLFACTOR 设置仅在创建或重新生成索引时应用。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]并不会在页中动态保持指定的可用空间百分比。 若要查看的填充因子设置，请使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  
   
 > [!IMPORTANT]  
->  使用低于 100 的 FILLFACTOR 值创建聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会重新分布数据。  
+> 使用低于 100 的 FILLFACTOR 值创建聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会重新分布数据。  
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
- SORT_IN_TEMPDB = {ON |**OFF** }  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+SORT_IN_TEMPDB = {ON |**OFF** }  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定是否在 tempdb 中存储临时排序结果。 默认为 OFF。  
   
@@ -416,11 +419,11 @@ BOUNDING_BOX = ( {
   
  除在用户数据库中创建索引所需的空间外，tempdb 还必须有大约相同的额外空间来存储中间排序结果。 有关详细信息，请参阅[SORT_IN_TEMPDB 选项为索引](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
- IGNORE_DUP_KEY =**OFF**  
- 对空间索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
+IGNORE_DUP_KEY =**OFF**  
+对空间索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
   
- STATISTICS_NORECOMPUTE = {ON |**OFF**}  
- 指定是否重新计算分布统计信息。 默认为 OFF。  
+STATISTICS_NORECOMPUTE = {ON |**OFF**}  
+指定是否重新计算分布统计信息。 默认为 OFF。  
   
  ON  
  不会自动重新计算过时的统计信息。  
@@ -431,10 +434,10 @@ BOUNDING_BOX = ( {
  若要恢复统计信息自动更新，请将 STATISTICS_NORECOMPUTE 设置为 OFF，或执行 UPDATE STATISTICS 但不包含 NORECOMPUTE 子句。  
   
 > [!IMPORTANT]  
->  如果禁用分布统计的自动重新计算，可能会妨碍查询优化器为涉及该表的查询选取最佳执行计划。  
+> 如果禁用分布统计的自动重新计算，可能会妨碍查询优化器为涉及该表的查询选取最佳执行计划。  
   
- DROP_EXISTING = {ON |**OFF** }  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+DROP_EXISTING = {ON |**OFF** }  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定应删除并重新生成已命名的先前存在的空间索引。 默认为 OFF。  
   
@@ -446,16 +449,16 @@ BOUNDING_BOX = ( {
   
  使用 DROP_EXISTING 不能更改索引类型。  
   
- ONLINE =**OFF**  
- 指定在索引操作期间基础表和关联的索引不可用于查询和数据修改操作。 在此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，空间索引不支持联机索引生成操作。 如果针对某个空间索引将此选项设置为 ON，则会引发错误。 请省略 ONLINE 选项或将 ONLINE 设为 OFF。  
+ONLINE =**OFF**  
+指定在索引操作期间基础表和关联的索引不可用于查询和数据修改操作。 在此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，空间索引不支持联机索引生成操作。 如果针对某个空间索引将此选项设置为 ON，则会引发错误。 请省略 ONLINE 选项或将 ONLINE 设为 OFF。  
   
  创建、重新生成或删除空间索引的脱机索引操作将获取表的架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ALLOW_ROW_LOCKS = { **ON** |关闭}  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ALLOW_ROW_LOCKS = { **ON** |关闭}  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定是否允许行锁。 默认值为 ON。  
   
@@ -465,8 +468,8 @@ BOUNDING_BOX = ( {
  OFF  
  不使用行锁。  
   
- ALLOW_PAGE_LOCKS = { **ON** |关闭}  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ALLOW_PAGE_LOCKS = { **ON** |关闭}  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定是否允许使用页锁。 默认值为 ON。  
   
@@ -476,17 +479,17 @@ BOUNDING_BOX = ( {
  OFF  
  不使用页锁。  
   
- MAXDOP =*max_degree_of_parallelism*  
- **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+MAXDOP =*max_degree_of_parallelism*  
+**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  只在索引操作期间覆盖 `max degree of parallelism` 配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]  
->  虽然从语法上讲支持 MAXDOP 选项，但当前 CREATE SPATIAL INDEX 始终只使用一个处理器。  
+> 虽然从语法上讲支持 MAXDOP 选项，但当前 CREATE SPATIAL INDEX 始终只使用一个处理器。  
   
  *max_degree_of_parallelism*可以是：  
   
- 1  
+ @shouldalert  
  取消生成并行计划。  
   
  \>1  
@@ -498,10 +501,10 @@ BOUNDING_BOX = ( {
  有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  并行索引操作不可用的每个版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 并行索引操作不可用的每个版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- DATA_COMPRESSION = {NONE | ROW | PAGE}  
- **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+DATA_COMPRESSION = {NONE | ROW | PAGE}  
+**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  确定索引所使用的数据压缩级别。  
   
@@ -514,13 +517,13 @@ BOUNDING_BOX = ( {
  PAGE  
  对索引所使用的数据使用页压缩  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  每个选项在每个 CREATE SPATIAL INDEX 语句中只能指定一次。 重复指定任何选项都将引发错误。  
   
  对于表中的每个空间列，最多可以创建 249 个空间索引。 对特定空间列创建多个空间索引可能很有用，例如，在要对单个列中的不同分割参数进行索引时。  
   
 > [!IMPORTANT]  
->  创建空间索引还有许多其他限制。 有关详细信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
+> 创建空间索引还有许多其他限制。 有关详细信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
  索引的生成过程无法利用可用的进程并行机制。  
   
@@ -548,10 +551,10 @@ BOUNDING_BOX = ( {
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  表示每个空间索引的分割方案和参数的相关信息。  
   
-## <a name="additional-remarks-about-creating-indexes"></a>有关创建索引的其他备注  
+## <a name="additional-remarks-about-creating-indexes"></a>有关创建索引的其他说明  
  有关创建索引的详细信息，请参阅中的"备注"部分[CREATE INDEX &#40;Transact SQL &#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须具有 ALTER 权限表或视图，或者是 sysadmin 固定的服务器角色或 db_ddladmin 和 db_owner 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -559,7 +562,7 @@ BOUNDING_BOX = ( {
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 对 geometry 列创建空间索引  
  下面的示例创建名为的表`SpatialTable`包含**几何图形**类型列`geometry_col`。 然后，该示例将对 `SIndx_SpatialTable_geometry_col1` 创建一个空间索引 `geometry_col`。 该示例使用默认分割方案并指定边界框。  
   
-```  
+```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
    ON SpatialTable(geometry_col)  
@@ -569,7 +572,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. 对 geometry 列创建空间索引  
  下例对 `SIndx_SpatialTable_geometry_col2` 表中的 `geometry_col` 列创建第二个空间索引 `SpatialTable`。 该示例指定 `GEOMETRY_GRID` 作为分割方案。 它还指定了边界框和不同网格级别上的不同密度，并指定每个对象有 64 个单元格。 该示例还将索引填充设为 `ON`。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
    ON SpatialTable(geometry_col)  
    USING GEOMETRY_GRID  
@@ -583,7 +586,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 对 geometry 列创建空间索引  
  下面的示例创建第三个空间索引，`SIndx_SpatialTable_geometry_col3`上`geometry_col`中`SpatialTable`表。 该示例使用默认分割方案。 该示例指定了边界框，并为第三和第四级网格使用不同的单元格密度，同时指定每个对象采用默认单元格数。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
    ON SpatialTable(geometry_col)  
    WITH (  
@@ -594,7 +597,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 更改特定于空间索引的选项  
  下面的示例通过指定新的 `SIndx_SpatialTable_geography_col3` 密度并指定 DROP_EXISTING = ON，来重新生成在上例中创建的空间索引 `LEVEL_3`。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable(geography_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),  
@@ -605,7 +608,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 对 geography 列创建空间索引  
  下面的示例创建名为的表`SpatialTable2`包含**geography**类型列`geography_col`。 然后，该示例将对 `SIndx_SpatialTable_geography_col1` 创建一个空间索引 `geography_col`。 该示例使用 GEOGRAPHY_AUTO_GRID 分割方案的默认参数值。  
   
-```  
+```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
    ON SpatialTable2(object);  
@@ -617,7 +620,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. 对 geography 列创建空间索引  
  下例对 `SIndx_SpatialTable_geography_col2` 表中的 `geography_col` 列创建第二个空间索引 `SpatialTable2`。 该示例指定 `GEOGRAPHY_GRID` 作为分割方案。 它还为不同网格级别指定了不同的网格密度，并指定每个对象有 64 个单元格。 该示例还将索引填充设为 `ON`。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
    ON SpatialTable2(object)  
    USING GEOGRAPHY_GRID  
@@ -630,7 +633,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. 对 geography 列创建空间索引  
  下例对 `SIndx_SpatialTable_geography_col3` 表中的 `geography_col` 列创建第三个空间索引 `SpatialTable2`。 该示例使用默认分割方案 GEOGRAPHY_GRID 和默认 CELLS_PER_OBJECT 值 (16)。  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable2(object)  
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  

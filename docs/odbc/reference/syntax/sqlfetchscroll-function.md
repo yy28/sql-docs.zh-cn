@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll Function（SQLFetchScroll 函数）
 **一致性**  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|*开始之前*|1|  
+|*开始之前*|@shouldalert|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*在结束后*|  
 |*在结束后*|*在结束后*|  
@@ -289,9 +289,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |插入行 21 到 22 之间的行|PRIOR|0|11 到 20|  
 |插入行 20 和 21 之间的行|PRIOR|0|12 到 20 插入的行|  
 |删除第 21 行|RELATIVE|0|22 到 31<sup>[2]</sup>|  
-|删除第 21 行|RELATIVE|1|22 到 31|  
+|删除第 21 行|RELATIVE|@shouldalert|22 到 31|  
 |插入行 21 到 22 之间的行|RELATIVE|0|21，插入的行，22 到 29 个|  
-|插入行 21 到 22 之间的行|RELATIVE|1|22 到 31|  
+|插入行 21 到 22 之间的行|RELATIVE|@shouldalert|22 到 31|  
 |删除第 21 行|ABSOLUTE|21|22 到 31<sup>[2]</sup>|  
 |删除行 22|ABSOLUTE|21|21，23 到 31|  
 |插入行 21 到 22 之间的行|ABSOLUTE|22|插入的行，22 到 29 个|  
@@ -333,7 +333,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驱动程序  
  在应用程序调用**SQLFetchScroll** ODBC 2.x 驱动程序，在驱动程序管理器将映射到此调用**SQLExtendedFetch**。 它将传递的自变量的以下值**SQLExtendedFetch**。  
   
-|SQLExtendedFetch 自变量|值|  
+|SQLExtendedFetch 自变量|ReplTest1|  
 |-------------------------------|-----------|  
 |StatementHandle|中的 StatementHandle **SQLFetchScroll**。|  
 |FetchOrientation|中的 FetchOrientation **SQLFetchScroll**。|  

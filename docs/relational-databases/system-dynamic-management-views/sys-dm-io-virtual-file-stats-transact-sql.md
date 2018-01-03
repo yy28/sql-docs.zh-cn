@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: deec9ee56fe129b77e130276c22b24c415ddc473
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -96,7 +96,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**pdw_node_id**|**int**|**适用于：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分发节点的标识符。
  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。 有关详细信息，请参阅[动态管理视图和函数 &#40;Transact SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>示例  
@@ -107,7 +107,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  以下示例将返回有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的日志文件的统计信息。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
 ```  
@@ -116,7 +116,7 @@ GO
 
 **适用于：** Azure SQL 数据仓库
 
-```tsql
+```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
 WHERE database_name = ‘tempdb’ AND file_id = 2;
 

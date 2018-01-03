@@ -27,13 +27,13 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b0165fefcc715becfb9c59644ed0ddd96cca9c07
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
+# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 返回组中的项数。 COUNT_BIG 的用法与 COUNT 函数类似。 两个函数唯一的差别是它们的返回值。 始终返回 COUNT_BIG **bigint**数据类型值。 COUNT 始终返回**int**数据类型值。
@@ -87,7 +87,7 @@ DISTINCT
 ## <a name="return-types"></a>返回类型
 **bigint**
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 COUNT_BIG(*) 返回组中的项数。 包括 NULL 值和重复项。
   
 COUNT_BIG (所有*表达式*) 的计算结果*表达式*组中每一行，并返回非 null 值的数目。

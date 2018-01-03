@@ -1,7 +1,7 @@
 ---
 title: "项目设置 （类型映射） (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 60a996ce7e67c418e511e88306224818286541c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置 （类型映射） (OracleToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 若要指定设置的当前对象或对象的类，使用**类型映射**主 SSMA 窗口选项卡。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 下表显示**类型映射**选项卡上选项：  
   
 **源类型**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 请参阅下一部分对于 Oracle 类型映射的默认 SSMA 中的表。  
   
-**添加**  
+**“添加”**  
 单击此项可将数据类型添加到映射列表。  
   
 **编辑**  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -76,13 +76,13 @@ ms.lasthandoff: 12/05/2017
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日期|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |双精度|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|float [53]|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
 |长时间原始 [\*...8000]<sup>*</sup>|varbinary [*]|  
@@ -92,22 +92,22 @@ ms.lasthandoff: 12/05/2017
 |国家/地区字符|nvarchar(max)|  
 |不同的国家/地区字符<sup>**</sup>|nvarchar(max)|  
 |不同的国家/地区字符<sup>*</sup>|nvarchar(max)|  
-|nchar|nvarchar(max)|  
+|NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
 |Xml 类型|xml|  
@@ -132,19 +132,19 @@ ms.lasthandoff: 12/05/2017
 |不同的字符 [*...\*]|varchar [*]|  
 |字符 [*...\*]|char [*]|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日期|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |dec [*...\*]|dec [*] [0]|  
 |dec [*...\*][\*..\*]|dec[*][\*]|  
-|decimal|小数 [38] [0]|  
+|Decimal|小数 [38] [0]|  
 |十进制 [*...\*]|小数 [*] [0]|  
 |十进制 [*...\*][\*..\*]|小数 [*] [\*]|  
 |双精度|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*...53]|float [*]|  
 |float [54..*]|float [53]|  
-|int|int|  
-|integer|int|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
 |长时间原始 [*...8000]|varbinary [*]|  
@@ -152,34 +152,34 @@ ms.lasthandoff: 12/05/2017
 |long varchar|varchar(max)|  
 |长 [*...8000]|varchar [*]|  
 |长 [8001..*]|varchar(max)|  
-|国家/地区 char|nchar|  
+|国家/地区 char|NCHAR|  
 |不同的国家/地区 char [*...\*]|nvarchar [*]|  
 |国家/地区 char [*...\*]|nchar [*]|  
-|国家/地区字符|nchar|  
+|国家/地区字符|NCHAR|  
 |不同的国家/地区字符 [*...\*]|nvarchar [*]|  
 |国家/地区字符 [*...\*]|nchar [*]|  
-|nchar|nchar|  
+|NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数字 [*...\*]|数字 [*]|  
 |数字 [*...\*][\*..\*]|数字 [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |数字 [*...\*]|数字 [*]|  
 |数字 [*...\*][\*..\*]|数字 [*] [\*]|  
 |nvarchar2 [*...\*]|nvarchar [*]|  
 |原始 [*...\*]|varbinary [*]|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |与本地时区的时间戳 [*...\*]|datetimeoffset [*]|  
 |时区的时间戳|datetimeoffset|  
 |时区的时间戳 [*...\*]|datetimeoffset [*]|  
 |时间戳 [*...\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*...\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*...\*]|UNIQUEIDENTIFIER|  
 |varchar [*...\*]|varchar [*]|  
 |varchar2 [*...\*]|varchar [*]|  
 |Xml 类型|xml|  
@@ -192,7 +192,7 @@ ms.lasthandoff: 12/05/2017
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
@@ -206,35 +206,35 @@ ms.lasthandoff: 12/05/2017
 |字符 [*...8000]|char [*]|  
 |字符 [8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2 [0]|  
+|日期|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |dec [*...\*]|dec [*] [0]|  
 |dec [*...\*][\*..\*]|dec[*][\*]|  
-|decimal|小数 [38] [0]|  
+|Decimal|小数 [38] [0]|  
 |十进制 [*...\*]|小数 [*] [0]|  
 |十进制 [*...\*][\*..\*]|小数 [*] [\*]|  
 |双精度|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*...53]|float [*]|  
 |float [54..*]|float [53]|  
-|int|int|  
-|Integer|int|  
+|smallint|ssNoversion|  
+|Integer|ssNoversion|  
 |整数 [*...\*]|数字 [*] [0]|  
 |Long|varchar(max)|  
 |长时间原始|varbinary(max)|  
 |长时间原始 [*...8000]|varbinary [*]|  
 |长时间原始 [8001..*]|varbinary(max)|  
-|国家/地区 char|nchar|  
+|国家/地区 char|NCHAR|  
 |不同的国家/地区 char [*...4000]|nvarchar [*]|  
 |不同的国家/地区 char [4001..*]|nvarchar(max)|  
 |国家/地区 char [*...4000]|nchar [*]|  
 |国家/地区 char [4001..*]|nvarchar(max)|  
-|国家/地区字符|nchar|  
+|国家/地区字符|NCHAR|  
 |国家/地区字符 [*...4000]|nvarchar [*]|  
 |国家/地区字符 [4001..*]|nvarchar(max)|  
 |不同的国家/地区字符 [*...4000]|nvarchar [*]|  
 |不同的国家/地区字符 [4001..*]|nvarchar(max)|  
-|Nchar|nchar|  
+|Nchar|NCHAR|  
 |nchar [*...4000]|nchar [*]|  
 |nchar [4001..*]|nvarchar(max)|  
 |不同的 nchar [*...4000]|nvarchar [*]|  
@@ -248,23 +248,23 @@ ms.lasthandoff: 12/05/2017
 |数字 [*...\*][\*..\*]|数字 [*] [\*]|  
 |nvarchar2 [*...4000]|nvarchar [*]|  
 |nvarchar2 [4001..*]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |原始 [*...8000]|varbinary [*]|  
 |原始 [8001..*]|varbinary(max)|  
 |Real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |字符串 [*...8000]|varchar [*]|  
 |字符串 [8001..*]|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
 |与本地时区的时间戳 [*...\*]|datetimeoffset [*]|  
 |时区的时间戳 [*...\*]|datetimeoffset [*]|  
 |时间戳 [*...\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*...\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*...\*]|UNIQUEIDENTIFIER|  
 |varchar [*...8000]|varchar [*]|  
 |varchar [8001..*]|varchar(max)|  
 |varchar2 [*...8000]|varchar [*]|  

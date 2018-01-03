@@ -3,7 +3,7 @@ title: "转换 Sybase ASE 数据库对象 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67806cc9609d6fb0c6fae16c3f73161d91259f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 38cd19ee1684b52aa7e98d4e9cd30897098e3b4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>转换 SAP ASE 数据库对象 (SybaseToSQL)
 你已连接到 SAP 自适应 Server Enterprise (ASE) 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 和组项目模板和数据映射选项，你可以将转换到 SAP 自适应 Server Enterprise (ASE) 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库对象。  

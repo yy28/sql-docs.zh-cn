@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23952b00480291dc5e73b1e729af36ebb2912747
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ SHUTDOWN
  进行谓词比较所需的 ANSI 字符串或 Unicode 字符串。 不为谓词比较函数执行隐式字符串类型转换。 传递错误类型会导致出错。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  调用 ALTER AUDIT 时，必须指定至少一个 TO、WITH 或 MODIFY NAME 子句。  
   
  为了更改审核，必须将审核的状态设置为 OFF 选项。 如果启用审核后状态以外的其他任何选项与 ALTER AUDIT 运行 = OFF，你收到 MSG_NEED_AUDIT_DISABLED 错误消息。  
@@ -145,7 +145,7 @@ SHUTDOWN
   
  创建审核后无法更改审核的 GUID。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建、更改或删除服务器审核主体，必须具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -191,7 +191,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. 更改服务器审核 WHERE 子句  
  下面的示例修改 where 子句中的示例 C 创建[CREATE SERVER AUDIT &#40;Transact SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md). 如果 27 的情况下，新的 WHERE 子句筛选用户定义的事件的状态。  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -204,7 +204,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>D. 删除 WHERE 子句  
  下面的示例将删除 WHERE 子句谓词表达式。  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -217,7 +217,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>E. 重命名服务器审核  
  下面的示例将服务器审核名称从 `FilterForSensitiveData` 更改为 `AuditDataAccess`。  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  

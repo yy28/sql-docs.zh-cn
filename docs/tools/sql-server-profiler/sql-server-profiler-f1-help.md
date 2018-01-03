@@ -3,7 +3,7 @@ title: "SQL Server 事件探查器对话框 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -48,11 +48,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e27d4133d4115d3313dcb7b9f0e9e834b60645d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server 事件探查器对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是一个工具，捕获[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器中的事件。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 以下是命令和的对话框中可用的设置[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
@@ -198,16 +198,16 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 |项|Description
 |---|---
 |**SQL Server**|指定当前连接的 SQL Server 的实例。 此字段将自动填充，并且无法更新。  
-|**数据库**|指定跟踪表所在的数据库。  
-|**所有者**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
-|**Table**|指定将从中读取跟踪的跟踪表的名称。  
+|**“数据库”**|指定跟踪表所在的数据库。  
+|**“所有者”**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
+|**表**|指定将从中读取跟踪的跟踪表的名称。  
 ## <a name="destination-table"></a>目的表
 使用 **“目标表”** 对话框可以指定要用于存储跟踪的表。  
 |项|Description
 |---|---
 |**SQL Server**|指定当前连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此字段将自动填充，并且无法更新。 若要更改服务器，请单击 **“取消”** ，然后连接到要用于存储跟踪表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
-|**数据库**|指定要用于存储跟踪表的数据库。  
-|**所有者**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
+|**“数据库”**|指定要用于存储跟踪表的数据库。  
+|**“所有者”**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
 |**Table**|指定要用于存储跟踪的表的名称。  
 ## <a name="replay-configuration"></a>重播配置
 ### <a name="basic-replay-options"></a>基本重播选项
@@ -262,7 +262,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 
 |项|Description
 |---|---
-|**列**|列出可移动到“组”中的数据列。 单击“列”左侧的加号 (**+**) 可展开列表。  
+|**“列”**|列出可移动到“组”中的数据列。 单击“列”左侧的加号 (**+**) 可展开列表。  
 |**向上**|选择数据列之后，单击“向上”可将数据列移动到“组”中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
 |**向下**|选择数据列之后，单击“向下”可将数据列从“组”中移出。 您也可以单击 **“向下”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
 ## <a name="edit-filter"></a>编辑筛选器
@@ -278,7 +278,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 |**模板名称**|键入新的模板名称，或者从列表中选择一个模板名称。 如果要导出模板，则只能从列表中选择一个模板名称。 
 
 ## <a name="see-also"></a>另请参阅 
-[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+[SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [服务器性能和活动监视](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

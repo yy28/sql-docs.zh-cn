@@ -1,7 +1,7 @@
 ---
 title: "执行 SSMA 控制台 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39b41addf566e326174a004a210a2ba2b1cdf311
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。  
@@ -295,7 +295,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -369,7 +369,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -429,7 +429,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -517,7 +517,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +526,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
   object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -582,7 +582,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +591,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -641,7 +641,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  
@@ -717,7 +717,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 </convert-sql-statement>  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +742,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 />  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  

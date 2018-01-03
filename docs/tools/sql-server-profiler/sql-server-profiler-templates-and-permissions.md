@@ -3,7 +3,7 @@ title: "SQL Server Profiler 模板和权限 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bca0afc8ddbf301b1ffc5760a01e232010ffaae4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8fcf7a6edeeedc09f6b83a2db354256f116633b0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 模板和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]演示如何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部解析查询。 这就使管理员能够准确查看提交到服务器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或多维表达式，以及服务器是如何访问数据库或多维数据集以返回结果集的。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[SQL Server Profiler 模板](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|介绍 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]附带的预定义跟踪模板。|  
 |[运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|介绍运行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时所需的权限。|  

@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ce5718a35f8411a5333a200d6ea75f2326c79e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>结果集  
  返回中的第一个 SQL 语句的结果集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 `ALTER ANY EXTERNAL DATA SOURCE` 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  `sp_execute_remote`必须按特定顺序输入参数，如上面的语法一节中所述。 如果这些参数的输入顺序不正确，则会显示一条错误消息。  
   
  `sp_execute_remote`具有相同的行为[执行 &#40;Transact SQL &#41;](../../t-sql/language-elements/execute-transact-sql.md)方面批处理和作用域的名称。 TRANSACT-SQL 语句或批处理中 sp_execute_remote  *@stmt* 参数未编译之前执行 sp_execute_remote 语句。  
@@ -92,7 +92,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ### <a name="simple-example"></a>简单示例  
  下面的示例创建并在远程数据库上执行简单的 SELECT 语句。  
   
-```tsql  
+```sql  
 EXEC sp_execute_remote  
     N'MyExtSrc',  
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   

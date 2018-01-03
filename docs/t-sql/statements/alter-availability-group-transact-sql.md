@@ -1,7 +1,7 @@
 ---
 title: "ALTER AVAILABILITY GROUP (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  指定新可用性组的名称。 *group_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符，和它必须是唯一的 WSFC 群集中的所有可用性组。  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {主 |SECONDARY_ONLY |辅助 |无}  
- 指定在选择执行备份的位置时有关备份作业应该如何评估主副本的首选项。 您可以编写给定备份作业的脚本，以便纳入自动备份首选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会强制执行首选项，因此它对即席备份没有影响，了解这一点很重要。  
+ 指定在选择执行备份的位置时有关备份作业应该如何评估主副本的首选项。 您可以编写给定备份作业的脚本，以便纳入自动备份首选项。 务必了解首选项不会强制执行由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，因此它对即席备份没有任何影响。  
   
  仅在主副本上受支持。  
   
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
 > [!IMPORTANT]  
->  不会强制实施 AUTOMATED_BACKUP_PREFERENCE 设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅[可用性副本 &#40; 上配置备份SQL server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  不会强制实施 AUTOMATED_BACKUP_PREFERENCE 设置。 对此首选项的解释依赖于您为给定可用性组中的数据库撰写作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有任何影响。 有关详细信息，请参阅[可用性副本 &#40; 上配置备份SQL server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  若要查看现有可用性组的自动备份首选项，请选择**automated_backup_preference**或**automated_backup_preference_desc**列[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目录视图。 此外， [sys.fn_hadr_backup_is_preferred_replica &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)可以用于确定为首选备份副本。  此函数始终对至少一个副本返回 1（即使 `AUTOMATED_BACKUP_PREFERENCE = NONE`）。  
@@ -197,9 +197,9 @@ ALTER AVAILABILITY GROUP group_name
   
  失败条件级别的范围 (1–5) 是从最少限制的级别 1 到最多限制的级别 5。 给定的条件级别包含限制较少的级别的所有。 因此，最严格的条件级别 5 包含四个限制较少的级别 (1-4)，级别 4 包含级别 1-3，依此类推。 下表描述对应于每个级别的失败条件。  
   
-|Level|失败条件|  
+|级别|失败条件|  
 |-----------|-----------------------|  
-|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
+|@shouldalert|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> 可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 这是默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
@@ -302,7 +302,7 @@ ALTER AVAILABILITY GROUP group_name
 
    有关详细信息，请参阅[配置唯一副本](../../linux/sql-server-linux-availability-group-ha.md)。
     
- AVAILABILITY_MODE 在 ADD REPLICA ON 子句中是必需的，在 MODIFY REPLICA ON 子句中是可选的。 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
+ AVAILABILITY_MODE 在 ADD REPLICA ON 子句中是必需的，在 MODIFY REPLICA ON 子句中是可选的。 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
  FAILOVER_MODE  **=**  {自动 |手动}  
  指定您要定义的可用性副本的故障转移模式。  
@@ -599,10 +599,10 @@ ALTER AVAILABILITY GROUP group_name
   
  有关限制上的可用性组 TRANSACT-SQL 语句的信息，请参阅[概述的 TRANSACT-SQL 语句的 Alwayson 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
+ 对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  此外需要 ALTER ANY DATABASE 权限。   
   
 ## <a name="examples"></a>示例  
   

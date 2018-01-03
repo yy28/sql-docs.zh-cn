@@ -1,7 +1,7 @@
 ---
 title: "连接到 MySQL (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7e56b60fb754c34dafda5c08953bf50d01f478f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 使用**连接到 MySQL**对话框以连接到你想要迁移的 MySQL 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 MySQL**。 如果你以前连接，则命令是**重新连接到 MySQL**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **提供程序**  
   
 可用的 MySQL 提供程序是 MySQL ODBC 5.1 驱动程序 （受信任）。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 输入服务器端口。 默认服务器端口为 3306。 这是标准模式选项。  
   
-**用户名**  
+**User name**  
   
 输入 SSMA 将用于连接到 MySQL 数据库的用户名称。  
   

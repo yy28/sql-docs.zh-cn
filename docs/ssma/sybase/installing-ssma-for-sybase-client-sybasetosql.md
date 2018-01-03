@@ -3,7 +3,7 @@ title: "Sybase 客户端 (SybaseToSQL) 安装 SSMA |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7fe5ff03fd5f16700480bdb11b3fd8f45a51ccc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6448e7788759a78ec41dfaeccede1d768857fda8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>安装 SSMA for Sybase 客户端 (SybaseToSQL)
 SSMA 客户端包含用于连接到 Sybase 自适应 Server Enterprise (ASE) 数据库服务器和实例的程序文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，将转换到的 ASE 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 语法，将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，然后将数据迁移到和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQLDB。  
   
 本主题提供安装先决条件以及安装 SSMA 的说明。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 SSMA 设计成可使用 ASE 11.9.2 或更高版本和所有版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 在安装 SSMA 之前，请确保计算机满足以下要求：  

@@ -3,7 +3,7 @@ title: "重播 TRANSACT-SQL 脚本 （SQL Server 事件探查器） |Microsoft �
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b9de32b90da72311b4d239d9b734bd97f8b60c5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 337569e89216611f972b0ac2305b42cc5c519826
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>重播 Transact-SQL 脚本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当测试性能问题的可能解决方案时，使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本，并比较性能之前和之后所做的更改。  

@@ -3,7 +3,7 @@ title: "索引元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13ff4535227d924b5da7bc27a36f5ecf082ba60f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含有关索引想要创建或删除一个用户指定的配置信息。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>元素属性  
   
-|索引属性|数据类型|说明|  
+|索引属性|数据类型|Description|  
 |---------------------|---------------|-----------------|  
 |**群集**|**boolean**|可选。 指定一个聚集索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
 |**唯一**|**boolean**|可选。 指定唯一索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

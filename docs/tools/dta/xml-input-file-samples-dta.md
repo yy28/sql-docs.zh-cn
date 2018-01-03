@@ -3,7 +3,7 @@ title: "XML 输入文件示例 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d152397ce3dd0000d6086030b5b4c8e7142c92d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af23e30458051ee42f961d76f8ff74149d458a27
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 输入文件示例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本部分包含 XML 输入的文件示例，你可以使用**dta**命令行工具。 此工具是数据库引擎优化顾问的用户界面之一，数据库引擎优化顾问是一种可用于优化数据库以改进查询性能的工具。 数据库引擎优化顾问可分析工作负荷对一个数据库或多个数据库的影响。 工作负荷是一组针对要优化的数据库执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 在完成工作负荷影响的分析后，数据库引擎优化顾问将创建关于添加索引、索引视图或分区策略（将提高数据库查询性能）的建议。  

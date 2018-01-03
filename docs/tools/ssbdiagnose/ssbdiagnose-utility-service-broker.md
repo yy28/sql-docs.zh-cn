@@ -3,7 +3,7 @@ title: "ssbdiagnose 实用工具 (Service Broker) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Ssbdiagnose**实用工具将报告中的问题[!INCLUDE[ssSB](../../includes/sssb-md.md)]会话或配置[!INCLUDE[ssSB](../../includes/sssb-md.md)]服务。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -260,7 +260,7 @@ WHERE database_id = DB_ID();
  **-?**  
  显示命令行帮助。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 **ssbdiagnose** 可以执行下列操作：  
   
 -   确认在新配置的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序中没有配置错误。  

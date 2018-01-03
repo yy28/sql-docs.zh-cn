@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5cd98a22d086fac88ad523fb2fdded5bc38d9d70
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 200bf01ba1127281d5ff25b9c69f3616c4cf64bd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
   
 sp_recompile [ @objname = ] 'object'  
 ```  
@@ -49,7 +49,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  sp_recompile 只在当前数据库中寻找对象。  
   
  存储过程或触发器和用户定义函数使用的查询仅在编译时优化。 对数据库进行了索引或其他会影响数据库统计的更改后，已编译的存储过程、触发器和用户定义函数可能会失去效率。 通过对作用于表上的存储过程和触发器进行重新编译，可以重新优化查询。  
@@ -57,7 +57,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在便利时自动对存储过程、触发器和用户定义函数进行重新编译。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有对指定对象的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

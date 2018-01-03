@@ -3,7 +3,7 @@ title: "查看和分析使用 SQL Server 事件探查器跟踪 |Microsoft 文档
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b0a6ecac72a8f200d5ec104b4cd8774328db190e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e75f8ec80a1564b788cefdd226b2f7b7338a7734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 查看和分析跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]查看跟踪中捕获的事件数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示基于定义的跟踪属性的数据。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的一种方式是将数据复制到其他程序中，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问可以使用跟踪文件包含 SQL 批处理和远程过程调用 (RPC) 事件，如果**文本**跟踪中包括数据列。 为了确保捕获正确的事件和列以便与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问一起使用，请使用随 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]一起提供的预定义优化模板。  
@@ -75,7 +75,7 @@ AND     CPU < (Duration * 1000)
   
 2.  查找目标事件。  
   
-    -   打开跟踪文件或表，并展开所需事件类的节点，例如， **Deadlock Chain**。 有关详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或[打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)。  
+    -   打开跟踪文件或表，并展开所需事件类的节点，例如， **Deadlock Chain**。 有关详细信息，请参阅 [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)一起提供的预定义优化模板。  
   
     -   在跟踪数据中搜索直到找到所需的事件（使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“编辑”菜单上的“查找”命令帮助查找跟踪中的值）。 记录所跟踪事件的“ClientProcessID”和“开始时间”数据列中的值。  
   

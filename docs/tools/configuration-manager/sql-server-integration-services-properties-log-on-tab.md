@@ -3,7 +3,7 @@ title: "SQL Server Integration Services 属性 （选项卡上的日志） |Micr
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eaab42d630f5952bf93835d8c3bcd568552a468
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d1809315d710225bca806053d97583d76fa8c604
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 属性（“登录”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用**Log On**选项卡[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**属性**对话框可以指定使用的帐户[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务，和启动和停止该服务。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **本地系统帐户**  
  指定一个不要求输入密码的本地系统帐户。 不过，本地系统帐户可能会限制该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  
   

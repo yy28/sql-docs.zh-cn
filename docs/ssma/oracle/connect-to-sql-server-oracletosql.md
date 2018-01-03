@@ -1,7 +1,7 @@
 ---
 title: "连接到 SQL Server (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,16 +17,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: ee72004a627a7fd99f347677575b82fd1d9fd7b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a5632152d76ea821022dd2915396d69efe722a8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>连接到 SQL Server (OracleToSQL)
 使用**连接到 SQL Server**对话框中，连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单上，单击**连接到 SQL Server**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **服务器名称**  
 输入或选择要连接到的 SQL Server 实例。 默认情况下，显示最近连接到的实例。  
   
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/05/2017
 **服务器端口**  
 如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]未配置为接受默认值上的连接端口 (1433)，输入端口号。 否则，将此值留空。  
   
-**数据库**  
+**“数据库”**  
 指定要迁移对象和数据迁移到的数据库。 此选项不可用，当重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 **身份验证**  
 选择用于连接到的身份验证方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 若要使用您当前的 Windows 帐户，选择 Windows 身份验证。 若要指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登录名和密码，选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证。  
   
-**用户名**  
+**User name**  
 如果你使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证，该实例的输入的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果使用 Windows 身份验证，则此选项不可用。  
   
 **密码**  

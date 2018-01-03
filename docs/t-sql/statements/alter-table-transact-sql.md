@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
  如果正在修改列已加密使用加密，你可以更改该数据类型为 （如整型转换为 BIGINT） 兼容的数据类型，但不是能更改任何加密设置。  
   
- *column_name*  
+ column_name  
  要更改、添加或删除的列的名称。 *column_name*最多 128 个字符。 为新的列， *column_name*可以为列创建的省略**时间戳**数据类型。 名称**时间戳**如果没有，则使用*column_name*为指定**时间戳**数据类型列。  
   
  [ *type_schema_name***。** ]*类型 _ 名称*  
@@ -543,7 +543,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism*可以是以下值之一：  
   
- 1  
+ @shouldalert  
  取消生成并行计划。  
   
  \>1  
@@ -703,7 +703,7 @@ TABLE
   
  为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：  
   
- NONE  
+ 无  
  不压缩表或指定的分区。 这不适用于列存储表。  
   
  ROW  
@@ -765,7 +765,7 @@ TABLE
   
  **为表启用 Stretch Database**  
   
- 如果你启用 Stretch 的表通过指定`ON`，你还必须指定`MIGRATION_STATE = OUTBOUND`开始将数据迁移立即或`MIGRATION_STATE = PAUSED`以推迟数据迁移。 默认值是`MIGRATION_STATE = OUTBOUND`。 有关启用 Stretch 的表的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
+ 如果你启用 Stretch 的表通过指定`ON`，你还必须指定`MIGRATION_STATE = OUTBOUND`开始将数据迁移立即或`MIGRATION_STATE = PAUSED`以推迟数据迁移。 默认值是 `MIGRATION_STATE = OUTBOUND`。 有关启用 Stretch 的表的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
  **先决条件**。 为表启用 Stretch 之前，必须在服务器和数据库上启用 Stretch。 有关详细信息，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   
@@ -777,7 +777,7 @@ TABLE
   
 -   要禁用表的拉伸或将表中的远程数据从 Azure 复制回 SQL Server，请运行以下命令。 此命令不能取消。  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   要禁用表的“拉伸”并放弃远程数据，请运行以下命令。  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -849,7 +849,7 @@ WAIT_AT_LOW_PRIORITY
   
  有条件地删除列或约束，仅当它已存在。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要添加新的数据行，使用[插入](../../t-sql/statements/insert-transact-sql.md)。 若要删除的数据行，使用[删除](../../t-sql/statements/delete-transact-sql.md)或[TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 若要更改现有行中的值，使用[更新](../../t-sql/queries/update-transact-sql.md)。  
   
  如果过程高速缓存中存在引用表的执行计划，ALTER TABLE 会将这些执行计划标记为下次执行时重新编译。  
@@ -943,7 +943,7 @@ WAIT_AT_LOW_PRIORITY
   
  要解决此问题，请不要使用 4 部分的前缀。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对表的 ALTER 权限。  
   
  ALTER TABLE 权限适用于 ALTER TABLE SWITCH 语句涉及的两个表。 任何已切换的数据都将继承目标表的安全性。  
@@ -1648,7 +1648,7 @@ ORDER BY p.partition_number;
 ```  
   
 ### <a name="g-determining-the-partition-column-for-a-partitioned-table"></a>G. 确定已分区表的分区列  
- 以下查询返回表的分区列的名称。 `FactResellerSales`。  
+ 以下查询返回表的分区列的名称。 `FactResellerSales`的用户。  
   
 ```  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 
@@ -1764,7 +1764,7 @@ WITH
   
 |分区|具有数据？|边界范围|  
 |---------------|---------------|--------------------|  
-|1|是|订购日期 < 2004年-01-01|  
+|@shouldalert|是|订购日期 < 2004年-01-01|  
 |2|是|2004年-01-01 < = OrderDate < 2005年-01-01|  
 |3|是|2005年-01-01 < = OrderDate < 2006年-01-01|  
 |4|是|2006年-01-01 < = OrderDate < ' 2007年-01-01|  

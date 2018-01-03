@@ -3,7 +3,7 @@ title: "SQL Server Profiler 模板 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e8426d5f71d74a703270bd27e61730122afa9aa7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7c9214cc22fa5b5368b817e663169cbc97d64103
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]来创建模板，定义要包含在跟踪中的事件和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  

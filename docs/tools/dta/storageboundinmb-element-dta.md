@@ -3,7 +3,7 @@ title: "StorageBoundInMB 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7377acefc270c6e497a1a8890ab6bea41a92fd1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定的最大空间中可供数据库引擎优化顾问优化建议 （索引和分区集） 的兆字节。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**unsignedInt**，长度没有限制。|  
 |**默认值**|无。|  
@@ -51,9 +51,9 @@ ms.lasthandoff: 12/05/2017
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|无|  
+|**子元素**|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  优化多个数据库时，建议对所有数据库都进行空间计算。 默认情况下，数据库引擎优化顾问会使用以下存储空间中较小的一个：  
   
 -   当前原始数据大小的三倍，原始数据包含堆大小和表的聚集索引大小的总和。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="example"></a>示例  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>Description  
  以下代码示例说明如何将优化建议可以消耗的最大磁盘空间设置为 1500 MB：  
   
 ## <a name="code"></a>代码  

@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f83721eacaed868a60b5035bd9342aaafabc04d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8adf2de1a4a28675164e08e825a027e9889dea1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'database_name'  
 ```  
   
@@ -64,7 +64,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 ## <a name="example"></a>示例  
  以下代码将数据库 Hekaton_DB 从它所绑定到的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 资源池解除绑定。  如果 Hekaton_DB 当前未绑定到 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 资源池，则会显示一条消息。 必须重新启动该数据库，取消绑定才会生效。  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   

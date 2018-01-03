@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a509d7e6297081816cfdd146ea10afc90be7e60
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d0c250cae7bce041e858b71b21f0f0a140560604
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.lasthandoff: 11/17/2017
   
  CLR 返回类型：**对**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOMETRY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

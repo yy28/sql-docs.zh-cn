@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2de361a20f4369cb79b856c265f732dc4dc8018c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4451ba929c34137f285aadb615a1b286fd38e28e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,19 +79,19 @@ ms.lasthandoff: 11/17/2017
 |processor_group|**int**|存储分配给此线程的处理器组 ID。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果工作线程的状态是 RUNNING 并且工作线程正在以非抢先方式运行，则工作线程地址将与 sys.dm_os_schedulers 中的 active_worker_address 进行匹配。  
   
  当等待事件的工作线程得到信号时，工作线程将被放在可运行队列的开头。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许这种情况在行中发生一千次，在此之后工作线程将被放在队列的末尾。 将工作线程移动到队列末尾会对性能有某些潜在影响。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
   
 ## <a name="examples"></a>示例  
  您可以使用下面的查询找出工作线程已在 SUSPENDED 或 RUNNABLE 状态下运行的时间。  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

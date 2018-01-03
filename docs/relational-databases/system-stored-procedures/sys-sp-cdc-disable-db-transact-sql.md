@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6bde9363f4778f4aee337d11067b28fefc9895c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf0fefa010665821d13153072e35214080385566
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 sys.sp_cdc_disable_db  
 ```  
   
@@ -52,21 +52,21 @@ sys.sp_cdc_disable_db
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sys.sp_cdc_disable_db**禁用变更数据捕获当前已启用的数据库中的所有表。 与变更数据捕获相关的所有系统对象（如更改表、作业、存储过程和函数）都将被删除。 **Is_cdc_enabled**列中的数据库条目[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图设置为 0。  
   
 > [!NOTE]  
 >  如果在禁用变更数据捕获时为数据库定义了很多捕获实例，则长时间运行事务可能导致 sys.sp_cdc_disable_db 的执行失败。 通过在运行 sys.sp_cdc_disable_db 之前使用 sys.sp_cdc_disable_table 禁用单个捕获实例，可以避免此问题。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下例对 `AdventureWorks2012` 数据库禁用变更数据捕获。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE sys.sp_cdc_disable_db;  

@@ -1,7 +1,7 @@
 ---
 title: "创建脚本文件 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6b9582df990148a248dc79a83f0730398f561f17
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-oracletosql"></a>创建脚本文件 (OracleToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  

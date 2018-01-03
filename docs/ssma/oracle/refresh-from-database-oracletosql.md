@@ -1,7 +1,7 @@
 ---
 title: "刷新从数据库 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: e7e5adccc23ad12ea2550f7c2f217c097fa27cbe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-oracletosql"></a>刷新从数据库 (OracleToSQL)
 **从数据库刷新**对话框中，可以选择要从 Oracle 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 访问**从数据库刷新**对话框中，右键单击对象 Oracle 元数据资源管理器中单击**从数据库刷新**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **折叠 （-）**  
 折叠所有对象组，以隐藏的单个对象。  
   

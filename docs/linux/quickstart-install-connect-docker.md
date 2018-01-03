@@ -1,6 +1,6 @@
 ---
 title: "要开始使用 Docker 上的 SQL Server 2017 |Microsoft 文档"
-description: "此快速入门教程演示如何使用 Docker 运行 SQL Server 2017 容器映像。 然后创建并查询使用 sqlcmd 数据库。"
+description: "本快速入门演示如何使用 Docker 运行 SQL Server 2017 容器映像。 然后创建并查询使用 sqlcmd 数据库。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>使用 Docker 运行 SQL Server 2017 容器映像
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/04/2017
 > [!NOTE]
 > 本快速入门专门重点介绍使用 mssql-服务器-**linux**映像。 未涵盖的 Windows 映像，但你可以了解有关它在[mssql server 的 windows 开发人员 Docker Hub 页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
 
-## <a id="requirements"></a> 先决条件
+## <a id="requirements"></a> Prerequisites
 
 - 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅[安装 Docker](https://docs.docker.com/engine/installation/)。
 - 至少 2 GB 的磁盘空间
@@ -240,6 +240,8 @@ SELECT @@SERVERNAME,
 
 - [Visual Studio 代码](sql-server-linux-develop-use-vscode.md)
 - [在 Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server 操作 Studio （预览版）](../sql-operations-studio/what-is.md)
+- [mssql cli （预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>删除容器
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > 停止并永久删除容器中删除容器中的任何 SQL Server 数据。 如果你需要以保留数据，[创建并复制出的容器的备份文件](tutorial-restore-backup-in-sql-server-container.md)或使用[容器数据持久性技术](sql-server-linux-configure-docker.md#persist)。
+
+## <a name="docker-demo"></a>Docker 演示
+
+你尝试对 Docker 使用 SQL Server 容器映像后，你可能想要知道如何使用 Docker 来提高开发和测试。 下面的视频演示如何在持续集成和部署方案中使用 Docker。
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>后续步骤
 

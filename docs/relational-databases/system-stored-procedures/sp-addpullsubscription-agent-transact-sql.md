@@ -22,15 +22,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e13ce0bc7be6b2e21a30f13a3cf7cc299d00295
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+ 
   向事务发布添加用于同步请求订阅的新计划的代理作业。 此存储过程在订阅服务器的订阅数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,8 +40,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 sp_addpullsubscription_agent [ @publisher = ] 'publisher'  
-    [ , [ @publisher_db = ] 'publisher_db' ]  
-        , [ @publication = ] 'publication'  
+    [ , [ @publisher_db = ] 'publisher_db' ]          , [ @publication = ] 'publication'  
     [ , [ @subscriber = ] 'subscriber' ]  
     [ , [ @subscriber_db = ] 'subscriber_db' ]  
     [ , [ @subscriber_security_mode = ] subscriber_security_mode ]  
@@ -57,7 +56,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
     [ , [ @frequency_interval = ] frequency_interval ]  
     [ , [ @frequency_relative_interval = ] frequency_relative_interval ]  
     [ , [ @frequency_recurrence_factor = ] frequency_recurrence_factor ]  
-    [ , [ @frequency_subda y= ] frequency_subday ]  
+    [ , [ @frequency_subday = ] frequency_subday ]  
     [ , [ @frequency_subday_interval = ] frequency_subday_interval ]  
     [ , [ @active_start_time_of_day = ] active_start_time_of_day ]  
     [ , [ @active_end_time_of_day = ] active_end_time_of_day ]  
@@ -152,7 +151,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *frequency_type*  
  安排分发代理计划的频率。 *frequency_type*是**int**，和可以是以下值之一。  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2** （默认值）|按需|  
@@ -172,7 +171,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  分发代理的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，和可以是以下值之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|第二个|  
@@ -186,7 +185,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_subday=**] *frequency_subday*  
  在指定期内重新安排计划的频率。 *frequency_subday*是**int**，和可以是以下值之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|一次|  
 |**2**|第二个|  
@@ -279,18 +278,18 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_addpullsubscription_agent**快照复制和事务复制中使用。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addpullsubscription_agent**。  
   
 ## <a name="see-also"></a>另请参阅  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

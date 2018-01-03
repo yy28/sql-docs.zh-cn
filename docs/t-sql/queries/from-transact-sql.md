@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -290,7 +290,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<search_condition >  
  指定联接所基于的条件。 虽然常常使用列运算符和比较运算符，但该条件可指定任何谓词，例如：  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -383,7 +383,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  从当前表和历史记录表中的所有行中返回的值的表。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  FROM 子句支持用于联接表和派生表的 SQL-92-SQL 语法。 SQL-92 语法提供 INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER 和 CROSS 联接运算符。  
   
  视图、派生表和子查询中均支持 FROM 子句内的 UNION 和 JOIN。  
@@ -427,7 +427,7 @@ ON (p.ProductID = v.ProductID);
   
  有关透视和逆透视包括示例的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 DELETE、SELECT 或 UPDATE 语句的权限。  
   
 ## <a name="examples"></a>示例  
@@ -435,7 +435,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. 使用简单 FROM 子句  
  下面的示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库中的 `TerritoryID` 表中检索 `Name` 和 `SalesTerritory` 列。  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +462,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. 使用 TABLOCK 和 HOLDLOCK 优化器提示  
  下面的部分事务说明了如何在 `Employee` 上放置一个显式共享表锁，以及如何读取索引。 该锁将在整个事务中被持有。  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. 使用 SQL-92 FULL OUTER JOIN 语法  
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中产品名称以及 `SalesOrderDetail` 表中任何对应的销售订单。 该示例还将返回在 `Product` 表中没有列出产品的任何销售订单，以及销售订单不同于在 `Product` 表中列出的销售订单的任何产品。  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. 使用 SQL-92 LEFT OUTER JOIN 语法  
  下面的示例基于 `ProductID` 联接两个表，并保留左表中不匹配的行。 `Product` 表与每个表中的 `SalesOrderDetail` 列上的 `ProductID` 表相匹配。 所有产品，无论是否已订购，都将在结果集中显示。  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +504,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. 使用 SQL-92 INNER JOIN 语法  
  下面的示例返回所有产品名称和销售订单 ID。  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. 使用 SQL-92 RIGHT OUTER JOIN 语法  
  下面的示例基于 `TerritoryID` 联接两个表，并保留右表中不匹配的行。 `SalesTerritory`与匹配表`SalesPerson`表上`TerritoryID`每个表中的列。 不论是否分配了区域，所有销售人员均在结果集中显示。  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +530,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  指定了联接提示后，要执行 INNER JOIN 时，INNER 关键字不再为可选，而必须显式说明。  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +543,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>I. 使用派生表  
  下面的示例使用派生表（`SELECT` 子句后的 `FROM` 语句）返回所有员工的名字和姓氏及其居住的城市。  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +559,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. 使用 TABLESAMPLE 从表中的行样本中读取数据  
  下面的示例在 `TABLESAMPLE` 子句中使用 `FROM`，大约返回 `10` 表中所有行的 `Customer`%。  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +577,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  该示例使用 `APPLY` 返回所有部门和部门中的所有员工。 如果某个部门没有任何员工，则将不返回该部门的任何行。  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  如果您希望查询为那些没有员工的部门生成行（这将为 `EmpID`、`EmpLastName` 和 `EmpSalary` 列生成 Null 值），请改用 `OUTER APPLY`。  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>L. 使用 CROSS APPLY  
  以下示例将检索驻留在计划缓存中的所有查询计划的快照，方法是通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 然后，指定 `CROSS APPLY` 运算符以将计划句柄传递给 `sys.dm_exec_query_plan`。 当前在计划缓存中的每个计划的 XML 显示计划输出位于返回的表的 `query_plan` 列中。  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +607,7 @@ GO
   
  下面的示例使用的 SYSTEM_TIME AS OF date_time_literal_or_variable 参数可返回自 2014 年 1 月 1 日起已实际 （当前版） 的表行。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +619,7 @@ WHERE ManagerID = 5;
   
  下面的示例使用到 date_time_literal_or_variable 自变量的 SYSTEM_TIME 从 date_time_literal_or_variable 返回定义为从 2013 年 1 月 1 日开始，2014 年 1 月 1 日，期间处于活动状态的所有行以外的上限。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +631,7 @@ WHERE ManagerID = 5;
   
  下面的示例使用的 SYSTEM_TIME 之间 date_time_literal_or_variable 和 date_time_literal_or_variable 参数来返回所有行，定义为从 2013 年 1 月 1 日开始，2014 年 1 月 1 日，期间处于活动状态非独占的上限。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +643,7 @@ WHERE ManagerID = 5;
   
  下面的示例使用 FOR SYSTEM_TIME CONTAINED IN （date_time_literal_or_variable，date_time_literal_or_variable） 参数可返回已打开和关闭期间定义以及从 2013 年 1 月 1 日开始、 结束的时间段的所有行2014 年 1 月 1日日。  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +655,7 @@ WHERE ManagerID = 5;
   
  下面的示例使用变量，而不是文本的查询提供日期边界值。  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +673,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>N. 使用 INNER JOIN 语法  
  下面的示例返回`SalesOrderNumber`， `ProductKey`，和`EnglishProductName`中的列`FactInternetSales`和`DimProduct`表 where 联接键`ProductKey`，在这两个表中匹配项。 `SalesOrderNumber`和`EnglishProductName`每个列存在于其中一个表，因此不需要使用这些列中，指定表别名，如所示; 这些别名可供可读性。 Word **AS**之前别名名称不是必需的但建议以提高可读性并使其符合 ANSI 标准。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
   
  由于`INNER`关键字不需要对内部联接，此相同的查询可以写成：  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +695,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  A`WHERE`子句可能还用于与此查询来限制结果。 此示例将结果限制为`SalesOrderNumber`高于 SO5000 的值：  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. 使用左外部联接和 RIGHT OUTER JOIN 语法  
  以下示例联接`FactInternetSales`和`DimProduct`表上`ProductKey`列。 左外部联接语法保留从左侧不匹配的行 (`FactInternetSales`) 表。 由于`FactInternetSales`表不包含任何`ProductKey`不匹配的值`DimProduct`表，此查询将返回第一个内部联接上面的示例中为相同的行。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +722,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  在右外部联接中，保留右表不匹配的行。 下面的示例返回与左外部联接示例上述相同的行。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  下面的查询使用`DimSalesTerritory`与左外部联接中的左表的表。 它检索`SalesOrderNumber`值从`FactInternetSales`表。 如果没有为特定未下的订单`SalesTerritoryKey`，查询将返回 NULL`SalesOrderNumber`该行。 按此查询进行排序`SalesOrderNumber`列中，以便此列中的任何 Null 将出现在结果的顶部。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +745,7 @@ ORDER BY fis.SalesOrderNumber;
   
  此查询无法改写为右外部联接检索相同的结果：  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. 使用 FULL OUTER JOIN 语法  
  下面的示例演示完全外部联接，它返回所有行从这两个联接的表，但另一个表不匹配的值都返回 NULL。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +770,7 @@ ORDER BY fis.SalesOrderNumber;
   
  此外可以编写而无需为此查询`OUTER`关键字。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>Q. 使用 CROSS JOIN 语法  
  下面的示例返回的叉积`FactInternetSales`和`DimSalesTerritory`表。 所有可能组合列表`SalesOrderNumber`和`SalesTerritoryKey`返回。 注意到缺少`ON`交叉联接查询中的子句。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>R. 使用派生表  
  下面的示例使用派生的表 (`SELECT`后的语句`FROM`子句) 返回`CustomerKey`和`LastName`列中的所有客户`DimCustomer`表与`BirthDate`晚于 1 月 1 日值1970 和姓氏 Smith。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +809,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S. 减少联接提示示例  
  下面的示例使用`REDUCE`联接提示，更改在查询内派生表中的处理。 使用时`REDUCE`在此查询中，联接提示`fis.ProductKey`投影、 复制和进行不同的并且然后加入`DimProduct`期间的随机排布`DimProduct`上`ProductKey`。 在分布式生成派生的表`fis.ProductKey`。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +825,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T. 复制联接提示示例  
  下一个示例演示与前面的示例，但同样的查询`REPLICATE`联接提示使用而不是`REDUCE`联接提示。 利用`REPLICATE`提示会导致中的值`ProductKey`（联接） 列从`FactInternetSales`表复制到所有节点。 `DimProduct`表联接到这些值的复制版本。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +843,7 @@ ORDER BY SalesOrderNumber;
   
  在下面的示例中，REDISTRIBUTE 提示强制 FactInternetSales 表上的随机排布移动，因为 ProductKey 是 DimProduct，分布列，而不是 FactInternetSales 分布列。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  
