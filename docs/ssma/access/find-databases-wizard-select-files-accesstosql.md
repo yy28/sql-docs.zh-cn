@@ -1,7 +1,7 @@
 ---
 title: "查找数据库向导 （选择文件） (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 84759a9bee3439f0a561176a6d8583149770f02d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>查找数据库向导 （选择文件） (AccessToSQL)
 找到数据库向导的选择文件页列出在搜索过程找到的文件。 若要选择要添加到 SSMA 文件，选择包含的文件名称的行。 在完成选择文件，请单击**下一步**若要查看确认选择页。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 若要选择要添加到 SSMA 文件，选择的文件名称旁边的复选框。 在完成选择文件，请单击**下一步**若要查看完成页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **全选**  
 选择此复选框可选择列表中的所有数据库。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 **文件路径**  
 显示的 Access 数据库文件的路径。  
   
-**Size**  
+**大小**  
 数据库，以字节为单位的大小。  
   
 **创建时间**  

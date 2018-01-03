@@ -1,7 +1,7 @@
 ---
 title: "转换访问数据库对象 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -40,11 +40,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 273aa5bf31ffddc9665531297cbca9b8dbfbbd5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换访问数据库对象 (AccessToSQL)
 在已添加访问数据库并连接到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 用于访问显示元数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。 你可以现在选择访问数据库对象，然后将转换到的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 架构。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
 |访问对象|生成的 SQL Server 对象|  
 |-----------------|-------------------------------|  
-|table|table|  
+|表|表|  
 |column|column|  
 |索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  

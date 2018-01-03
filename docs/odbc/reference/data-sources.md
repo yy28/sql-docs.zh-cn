@@ -1,11 +1,11 @@
 ---
-title: "数据源 |Microsoft 文档"
+title: "数据源 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,13 +19,13 @@ caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>数据源
+# <a name="data-sources"></a>“数据源”
 A*数据源*是只需数据源。 它可以是文件，DBMS 或甚至实时数据源上的特定数据库。 数据可能位于与该程序，在同一计算机上，也可以在网络上的某个位置的另一台计算机上。 例如，数据源可能是由 Novell® Netware; 访问 OS/2® 操作系统系统上运行 Oracle DBMS访问通过网关; IBM DB2 DBMS中的服务器目录中; Xbase 文件的集合或本地的 Microsoft® Access 数据库文件。  
   
  数据源的用途是收集所有所需访问数据的技术信息 — 驱动程序名称、 网络地址、 网络软件等-到单个放置和隐藏用户。 用户应能够查看包含工资单、 清单和人员的列表，从列表中，选择工资单并将所有这些操作都无需知道工资单数据所在的位置，或如何应用程序是怎样到达它连接到的工资单数据，该应用程序。  

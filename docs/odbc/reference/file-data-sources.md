@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53621c73a5a5504287ff959f54aa27131f4c26c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-data-sources"></a>文件数据源
 *文件数据源*存储在文件中并允许重复使用单个用户或在多个用户之间共享连接信息。 当使用文件数据源时，驱动程序管理器使到使用.dsn 文件中的信息的数据源的连接。 此文件可以像任何其他文件一样操作。 文件数据源没有数据源名称，不机器数据源，以及未注册到任何一个用户或计算机。  

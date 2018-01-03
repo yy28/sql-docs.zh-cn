@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31b297b5d1932c6e3a9c8b7e128973d36fbd93cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 290caddfe0a26067ed5807372a5a405a7cf389d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checking-feature-support-and-variability"></a>检查支持的功能和变化参数
 若要检查支持的功能和变化，应用程序通常调用**SQLGetInfo**， **SQLGetFunctions**，和**SQLGetTypeInfo**。 良好的起点是驱动程序的 API 和 SQL 语法一致性级别。 这些过程描述广泛级别的功能支持。 然后，应用程序可以调用**SQLGetInfo**与其他选项来确定的支持的功能需要可变性**SQLGetFunctions**以确定是否在超出返回需要函数它支持一致性级别，和**SQLGetTypeInfo**以确定支持哪些 SQL 数据类型。  

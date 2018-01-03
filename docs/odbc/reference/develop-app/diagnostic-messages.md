@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-messages"></a>诊断消息
 诊断消息将返回每个 SQLSTATE 带。 使用大量不同的消息通常返回相同的 SQLSTATE。 例如，为 SQL 语法中的大多数错误返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误很可能可以通过不同的消息进行描述。  

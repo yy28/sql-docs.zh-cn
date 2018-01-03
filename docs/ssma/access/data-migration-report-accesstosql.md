@@ -1,7 +1,7 @@
 ---
 title: "数据迁移报告 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca5f142a3aed5c618558c3fd6502af59f7fda185
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7711df7c7bfa26e548068f21a8ad8b77c888db7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-report-accesstosql"></a>数据迁移报告 (AccessToSQL)
 **数据迁移报告**对话框中将显示在您迁移到的数据后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>选项  
-**状态**  
+## <a name="options"></a>“常规”  
+**“状态”**  
 显示从迁移数据源到目标数据库的状态。  
   
 **From**  

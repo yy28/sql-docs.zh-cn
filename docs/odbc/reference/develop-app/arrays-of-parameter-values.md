@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 814d148b6e542e94254ddd13eebfc7974c4a3ac2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c5f81e6b84f53da297f806ff2d63ea0b6e29b708
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-of-parameter-values"></a>参数值的数组
 通常很有用的应用程序传递的参数数组。 例如，使用参数和参数化的数组**插入**语句，应用程序可以在一次插入的行数。 有以下几个使用数组优点。 首先，网络流量减少，因为 （如果数据源以本机方式支持参数数组），以单个数据包发送很多语句的数据。 其次，某些数据源可以执行使用数组快于执行相同数量的单独的 SQL 语句的 SQL 语句。 最后，在数据存储在数组中，因为通常是屏幕数据这种情况，应用程序绑定的所有行进行单个调用特定列中**SQLBindParameter**并通过执行单个语句对其进行更新。  

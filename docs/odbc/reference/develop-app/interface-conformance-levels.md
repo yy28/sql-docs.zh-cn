@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2af6dc705ad13c12a28203f6dd114afa10f3a31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface-conformance-levels"></a>界面一致性级别
 调配的目的是通知应用程序哪些功能可用于向其驱动程序中。 基于函数的均衡方案不足够实现此目标。 在 ODBC 3。*x*，驱动程序是否已分类基于它们具有的功能。 支持该功能可以包括支持函数;它还包括支持通过返回的信息类型描述符字段、 语句属性、"Y"值**SQLGetInfo**，依次类推。  

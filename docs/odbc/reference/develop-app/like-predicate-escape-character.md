@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f807bd12056f3c6a8e7a38efee56f0a6b6727066
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3946b81210ce439579464fa7e10e8fad63bfd225
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="like-predicate-escape-character"></a>如谓词转义字符
 在**如**谓词，百分号 （%） 匹配零个或多个任意字符和下划线 (_) 匹配的任何一个字符。 可匹配使用实际的百分比符号或下划线中**如**谓词，转义符必须出现在之前的百分比符号或下划线。 转义序列，用于定义**如**谓词转义符是：  

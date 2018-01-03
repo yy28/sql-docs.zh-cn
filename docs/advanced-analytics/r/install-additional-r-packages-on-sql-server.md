@@ -1,11 +1,11 @@
 ---
 title: "在 SQL Server 上安装其他 R 包 |Microsoft 文档"
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 996b69b08973805648da329a328e712d5de45660
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>在 SQL Server 上安装其他 R 包
 
@@ -297,7 +297,7 @@ R 包经常依赖于多个其他包，其中一些可能不可用的实例所使
 
 如果你需要安装多个包，或想要确保你的组织中的每个人都获得正确的包类型和版本，我们建议使用 miniCRAN 包来创建可以在多个用户或计算机之间共享的本地存储库。 有关详细信息，请参阅[创建本地包存储库使用 miniCRAN](create-a-local-package-repository-using-minicran.md)。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 如果你是经验丰富的 R 用户，你可能会习惯于从命令行无需特殊权限，或不带提前进行下载安装包。 但是，大多数服务器没有 internet 连接。 此外，访问文件共享或存储可能受到限制。
 

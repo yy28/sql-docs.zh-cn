@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4bb79a21b65c2284f373bd224191f4a7c1264da3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bbdc4f11714d13ed9ddcede30c1b6c6feda69550
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="literals-in-odbc"></a>ODBC 中的文本
 下列各节中的语法用于间隔和 ODBC 中的数值。 提供此语法此处驱动程序编写器时从字符字符串类型为数值或间隔的类型，或为字符字符串类型的数值或间隔类型不会进行转换的帮助。 有关详细信息，请参阅[间隔文本](../../../odbc/reference/appendixes/interval-literals.md)和[数值](../../../odbc/reference/appendixes/numeric-literals.md)附录 d： 数据类型中。  

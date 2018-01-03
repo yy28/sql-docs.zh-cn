@@ -1,7 +1,7 @@
 ---
 title: "使用示例控制台脚本文件 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55680f5d8eb697683bc4f57dc714aad1a717e130
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8647293328bd0da43c095ddebb4844917afdc580
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用示例控制台脚本文件 (MySQLToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
     生成报表的详细信息，请参阅[生成报表 &#40;MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **注意：**  
+    **说明：**  
   
     -   确保变量值文件命令行自变量传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
   

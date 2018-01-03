@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3941b8cdc2a53cb0f9fe3ad2b94f2ef972ad3775
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccd4cdd57771d32a6a09bf1c1030ba173ee18486
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes"></a>行为更改
 行为的更改是，这些更改*语法*接口的保持不变，但*语义*已更改。 有关这些更改后，在 ODBC 2 中使用的功能。*x*不同 ODBC 3 中的相同功能的行为。*x*。  

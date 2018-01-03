@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 069de2f8e780ef40b1e1de492b31ce07b9c3325f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 45d53845cdbda6ab7cec5e17fdeedf3c6d6cd832
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="number-of-rows-fetched-and-status"></a>提取的行数和状态
 如果已经设置了 SQL_ATTR_ROWS_FETCHED_PTR 语句特性，它指定返回通过调用提取的行数的缓冲区**SQLFetch**或**SQLFetchScroll**，和错误行。 （此数字是没有状态 SQL_ROW_NO_ROWS 的所有行的计数。）调用了**SQLBulkOperations**或**SQLSetPos**，该缓冲区包含受函数中执行的大容量操作的行数。 如果已经设置了 SQL_ATTR_ROW_STATUS_PTR 语句特性， **SQLFetch**或**SQLFetchScroll**返回*行状态数组*该属性提供的每个状态返回的行。 这两个指向这些字段的缓冲区分配由应用程序和驱动程序填充。 应用程序必须确保这些指针保持有效，直到关闭光标。  

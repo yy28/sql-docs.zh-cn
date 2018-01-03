@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eb6158d8d70aae635b00bcd78d844f4d1443b75
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fac9b3c3000809797c63981133234d7b2d7b4ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns （Access 驱动程序）
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  应用程序开发人员应查找驱动程序定义的列从结果集末尾处开始和向后继续。  
   
-|列|注释|  
+|“列”|注释|  
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT 或 SQL_RESULT_COL|  
 |序号|这是特定于驱动程序返回列中的结果集末尾。 列的 SQL 类型是一个整数。|

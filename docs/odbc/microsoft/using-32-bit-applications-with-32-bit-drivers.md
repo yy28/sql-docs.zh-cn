@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b04226eeab2adde4a36f93fb5630f3097741a6d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>使用 32 位驱动程序的 32 位应用程序
 你可以使用 32 位驱动程序运行 32 位应用程序。 32 位应用程序和 32 位驱动程序使用 Win32® API。  
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="administration"></a>管理  
  你可以通过使用 ODBC 数据源管理器管理 32 位驱动程序的数据源。 若要打开 ODBC 管理器在运行 Windows 2000 的计算机上，打开 Windows 控制面板中，双击**管理工具**，然后双击**数据源 (ODBC)**。 运行以前版本的 Microsoft Windows 计算机上，名为图标**32 位 ODBC**或只需**ODBC**。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>组件  
  ODBC 组件包括以下文件运行 32 位驱动程序的 32 位应用程序。 这些组件是 \Redist 目录中。  
   
-|文件名|Description|  
+|File name|Description|  
 |---------------|-----------------|  
 |所用的 Odbc32.dll|32 位驱动程序管理器|  
 |Odbccp32.dll|32 位安装程序 DLL|  

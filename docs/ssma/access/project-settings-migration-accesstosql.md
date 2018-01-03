@@ -1,7 +1,7 @@
 ---
 title: "项目设置 （迁移） (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7fcf9092c57fd07601171003381812de2ed6b12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-accesstosql"></a>项目设置 （迁移） (AccessToSQL)
 迁移项目设置允许你配置如何将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 -   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的迁移设置中，在**工具**菜单上，选择**默认项目设置**，选择项目类型中的**迁移目标版本**你想要访问设置，请单击其中的组合框**常规**中左窗格中，然后单击底部**迁移**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **检查约束**  
 指定是否将数据添加到表时，SSMA 应检查约束。  
   

@@ -1,7 +1,7 @@
 ---
 title: "SSMA 控制台 (MySQLToSQL) 中的命令行选项 |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7ccde141a639de663ee33a7643fb89b72699680
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa2e0210a3d59e41b9adf9d44b593e3bc83e9aef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 控制台 (MySQLToSQL) 中的命令行选项
 Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选项。 接下来的部分详细介绍相同。  

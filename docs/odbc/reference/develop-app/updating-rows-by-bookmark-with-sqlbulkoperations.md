@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新书签的行
 书签，在更新某一行时**SQLBulkOperations**使更新的表的一个或多个行的数据源。 由绑定的书签列中的书签标识行。 使用数据的应用程序缓冲区 （除非列的长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE） 每个绑定列中的更新行。 未绑定的列将不会更新。  

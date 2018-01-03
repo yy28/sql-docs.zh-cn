@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKDB (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  若要修复错误，建议您通过备份进行还原。 修复操作不会考虑表本身或表之间可能存在的任何约束。 如果指定的表与一个或多个约束有关，建议您在修复操作后运行 DBCC CHECKCONSTRAINTS。 如果必须使用 REPAIR，则运行不带有修复选项的 DBCC CHECKDB 来查找要使用的修复级别。 如果使用 REPAIR_ALLOW_DATA_LOSS 级别，则建议您在运行带有此选项的 DBCC CHECKDB 之前备份数据库。    
     
  ALL_ERRORMSGS  
- 显示针对每个对象报告的所有错误。 默认情况下显示所有错误消息。 指定或省略此选项都不起作用。 错误消息按对象 ID，但从生成这些消息除外[tempdb 数据库](../../relational-databases/databases/tempdb-database.md)。  
-    
-> [!NOTE] 
-> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，返回的最大错误消息数为 1000。 当指定 ALL_ERRORMSGS 时，我们建议你通过使用运行 DBCC 命令[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)或通过计划[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业以运行命令并将输出定向到一个文件。 这两种方法中的任一种都可以确保执行该命令一次即可报告所有错误消息。    
+ 显示针对每个对象报告的所有错误。 默认情况下显示所有错误消息。 指定或省略此选项都不起作用。 错误消息按对象 ID，但从生成这些消息除外[tempdb 数据库](../../relational-databases/databases/tempdb-database.md)。     
 
  EXTENDED_LOGICAL_CHECKS  
  如果兼容性级别为 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，则对索引视图、XML 索引和空间索引（如果存在）执行逻辑一致性检查。  
@@ -182,7 +179,7 @@ DBCC CHECKDB
 > [!WARNING] 
 > 如果 MAXDOP 设置为零则 SQL Server 将选择最大并行度，以使用度。    
 
-## <a name="remarks"></a>注释    
+## <a name="remarks"></a>Remarks    
 DBCC CHECKDB 不检查禁用的索引。 已禁用的索引有关的详细信息，请参阅[禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。
 如果用户定义类型标记为按字节排序，则该用户定义类型必须只有一个序列化。 在 DBCC CHECKDB 运行期间，如果按字节排序的用户定义类型没有一致的序列化，则会导致错误 2537。 有关详细信息，请参阅[用户定义类型要求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。
 因为[资源数据库](../../relational-databases/databases/resource-database.md)仅在单用户模式下，命令不能是直接在其上运行 DBCC CHECKDB 可修改。 但是，DBCC CHECKDB 执行针对[master 数据库](../../relational-databases/databases/master-database.md)，第二个 CHECKDB 也内部运行针对资源数据库。 这意味着 DBCC CHECKDB 可能会返回额外的结果。 如果未设置任何选项，或者设置了 PHYSICAL_ONLY 或 ESTIMATEONLY 选项，则命令返回额外的结果集。
@@ -227,7 +224,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 |State|Description|    
 |-----------|-----------------|    
 |0|出现错误号 8930。 这表示元数据中存在的损坏终止了 DBCC 命令。|    
-|1|出现错误号 8967。 存在一个内部 DBCC 错误。|    
+|@shouldalert|出现错误号 8967。 存在一个内部 DBCC 错误。|    
 |2|在紧急模式数据库修复过程中出错。|    
 |3|这表示元数据中存在的损坏终止了 DBCC 命令。|    
 |4|检测到断定或访问违规。|    
@@ -373,7 +370,7 @@ DBCC CHECKDB 返回以下结果集。 这些值可能有所不同，除非指定
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>权限    
 要求 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。
     
 ## <a name="examples"></a>示例    

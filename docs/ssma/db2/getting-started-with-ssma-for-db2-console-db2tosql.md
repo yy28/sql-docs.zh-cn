@@ -1,7 +1,7 @@
 ---
 title: "用于 DB2 控制台 (DB2ToSQL) 入门 SSMA |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9389ddf6ebe677463e0a11f53b50060b8c78ce9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Getting Started with SSMA DB2 控制台 (DB2ToSQL)
 本部分介绍的过程启动并开始使用 DB2 控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口。  

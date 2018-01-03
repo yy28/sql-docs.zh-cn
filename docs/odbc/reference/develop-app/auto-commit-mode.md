@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e2127d5b33c5ea4bf2a0c96c5e020322aec39db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-commit-mode"></a>自动提交模式
 *在自动提交模式下，*每个数据库操作是执行时提交的事务。 此模式适合于很多包含单个 SQL 语句的实际事务。 它是不必要分隔或指定这些事务完成。 在数据库中没有事务支持，自动提交模式是唯一支持的模式。 在此类数据库中，语句时，将提交，它们将执行，并且没有无法回滚它们;它们是因此始终在自动提交模式下。  

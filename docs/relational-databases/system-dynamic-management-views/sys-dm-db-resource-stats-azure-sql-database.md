@@ -26,24 +26,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   返回有关 CPU、 I/O 和内存消耗[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]数据库。 每隔 15 秒会显示一行，即使该数据库中没有任何活动也是如此。 历史数据将保留一小时。  
   
-|列|数据类型|Description|  
+|“列”|数据类型|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 时间用于指示当前报告间隔的结束时间。|  
 |avg_cpu_percent|**十进制 (5,2)**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**十进制 (5,2)**|平均数据输入/输出利用的服务层限制的百分比度量。|  
 |avg_log_write_percent|**十进制 (5,2)**|平均写入资源使用率（以服务层限制的百分比表示）。|  
-|avg_memory_percent|**十进制 (5,2)**|平均内存使用率（以服务层限制的百分比表示）。<br /><br /> 这包括用于内存中 OLTP 对象的存储的内存。|  
+|avg_memory_usage_percent|**十进制 (5,2)**|平均内存使用率（以服务层限制的百分比表示）。<br /><br /> 这包括用于内存中 OLTP 对象的存储的内存。|  
 |xtp_storage_percent|**十进制 (5,2)**|存储使用率内存中 OLTP 中的服务层限制的百分比 （报告间隔末尾）。 这包括用于存储以下内存中 OLTP 对象的内存： 内存优化表、 索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果在数据库中未使用内存中 OLTP，则返回 0。|  
 |max_worker_percent|**十进制 (5,2)**|最大并发辅助进程 （请求） 中的数据库的服务层限制百分比表示。|  
 |max_session_percent|**十进制 (5,2)**|中的数据库的服务层限制百分比表示的最大并发会话。|  
@@ -52,10 +52,10 @@ ms.lasthandoff: 11/17/2017
 > [!TIP]  
 >  有关这些限制和服务层的更多上下文，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)和[服务层功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  返回的数据**sys.dm_db_resource_stats**允许你运行的基本、 标准和高级数据库的服务层/性能级别的 DTU 限制的最大的百分比表示。 对于 Web 层和业务层，这些数字表示 Standard S2 性能层限制的百分比。 例如，针对 Web 数据库或业务数据库执行操作时，如果 avg_cpu_percent 返回 70%，则表示 S2 层限制的 70%。 此外，对于 Web 层和业务层，这些百分比可能会反映大于 100% 的数字，这类数字同样基于 S2 层限制。  
   
  如果已在最后 60 分钟内将数据库故障转移到另一台服务器，该视图将仅返回主数据库故障转移后此时间段内的数据。  

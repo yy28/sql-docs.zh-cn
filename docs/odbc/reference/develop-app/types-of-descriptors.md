@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5d5caf63abd6b9800ee6e65b7f6c30de108703
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-descriptors"></a>类型的描述符
 描述符用于描述以下项之一：  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  下表概述了描述符类型。  
   
-|缓冲区类型|行|动态参数|  
+|缓冲区类型|“行”|动态参数|  
 |-----------------|----------|------------------------|  
 |**应用程序缓冲区**|应用程序行描述符 (ARD)|应用程序参数描述符 (APD)|  
 |**实现缓冲区**|实现行描述符 (IRD)|实现参数描述符 (IPD)|  

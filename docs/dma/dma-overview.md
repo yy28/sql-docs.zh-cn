@@ -5,7 +5,7 @@ ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc543e392818c2fa8ceea1c55e7a065df603b02d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手的概述
 
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/20/2017
 
 - 发现数据库可以受益于升级后的目标 SQL Server 平台中的新增功能。 这些被称为功能建议和分为以下类别：
 
-  - 性能
+  - “性能”
 
-  - 安全性
+  - Security
 
   - 存储器
 

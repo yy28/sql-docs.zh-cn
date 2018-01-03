@@ -1,7 +1,7 @@
 ---
 title: "连接到 SQL Server (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -32,11 +32,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd14f32d796098393d7869f717f45f424504f7d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7f2c52a7af7fc3f9a35585678b222d6a29e5787
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL)
 若要访问将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你必须连接到的目标实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 连接时，获取有关中的实例的数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]并显示在数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 SSMA 存储的哪个实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你连接到，但不会存储密码。  
@@ -129,7 +129,7 @@ ms.lasthandoff: 12/05/2017
   
 重新连接到的过程[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]建立的连接的过程相同。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 如果你想要自定义数据库源和目标数据库之间的映射，请参阅[映射源和目标数据库](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)否则下, 一步是将转换到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法使用[转换数据库对象](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>另请参阅  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函数
 **一致性**  
@@ -78,7 +78,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>环境句柄分配错误  
  环境分配，均会发生在驱动程序管理器中每个驱动程序。 返回的错误**SQLAllocHandle**与*HandleType*的 SQL_HANDLE_ENV 取决于发生了错误的级别。  
   
- 如果驱动程序管理器无法分配内存 *\*OutputHandlePtr*时**SQLAllocHandle**与*HandleType* SQL_HANDLE_ENV 称为，或应用程序提供了 null 指针*OutputHandlePtr*， **SQLAllocHandle**返回 SQL_ERROR。 驱动程序管理器设置 **OutputHandlePtr*到 SQL_NULL_HENV （除非应用程序提供 null 指针，它返回 SQL_ERROR）。 与之关联的其他诊断信息没有句柄。  
+ 如果驱动程序管理器无法分配内存* \*OutputHandlePtr*时**SQLAllocHandle**与*HandleType* SQL_HANDLE_ENV 称为，或应用程序提供了 null 指针*OutputHandlePtr*， **SQLAllocHandle**返回 SQL_ERROR。 驱动程序管理器设置 **OutputHandlePtr*到 SQL_NULL_HENV （除非应用程序提供 null 指针，它返回 SQL_ERROR）。 与之关联的其他诊断信息没有句柄。  
   
  驱动程序管理器不会调用之前应用程序调用的驱动程序级别环境句柄分配函数**SQLConnect**， **SQLBrowseConnect**，或**SQLDriverConnect**. 如果错误发生在驱动程序级别**SQLAllocHandle**函数，则驱动程序管理器 – 级别**SQLConnect**， **SQLBrowseConnect**，或**SQLDriverConnect**函数返回 SQL_ERROR。 诊断数据结构包含 SQLSTATE IM004 (驱动程序的**SQLAllocHandle**失败)。 在连接句柄上返回的错误。  
   
@@ -108,10 +108,10 @@ SQLRETURN SQLAllocHandle(
   
  如果驱动程序支持多个分配，则可以将多个环境、 连接或语句的句柄分配一次应用程序。 ODBC，在没有限制定义的环境、 连接、 语句或可以在任何一次分配的描述符句柄数。 驱动程序可能会对施加某种类型的一次; 可以分配的句柄的数量限制有关详细信息，请参阅驱动程序文档。  
   
- 如果应用程序调用**SQLAllocHandle**与 *\*OutputHandlePtr*设置为环境、 连接、 语句或已存在的描述符句柄，该驱动程序覆盖与关联的信息*处理*，除非应用程序使用连接池 （请参阅"分配环境属性的连接池"本部分中更高版本）。 驱动程序管理器不会检查以查看是否*处理*进入 *\*OutputHandlePtr*已被使用，也不会覆盖这些之前检查以前的句柄的内容.  
+ 如果应用程序调用**SQLAllocHandle**与* \*OutputHandlePtr*设置为环境、 连接、 语句或已存在的描述符句柄，该驱动程序覆盖与关联的信息*处理*，除非应用程序使用连接池 （请参阅"分配环境属性的连接池"本部分中更高版本）。 驱动程序管理器不会检查以查看是否*处理*进入* \*OutputHandlePtr*已被使用，也不会覆盖这些之前检查以前的句柄的内容.  
   
 > [!NOTE]  
->  它是不正确的 ODBC 应用程序编程调用**SQLAllocHandle**两次，并为定义相同的应用程序变量 *\*OutputHandlePtr*而不调用**SQLFreeHandle**重新分配它之前释放句柄。 覆盖 ODBC 以此方式的句柄可能导致不一致的行为或部分 ODBC 驱动程序的错误。  
+>  它是不正确的 ODBC 应用程序编程调用**SQLAllocHandle**两次，并为定义相同的应用程序变量* \*OutputHandlePtr*而不调用**SQLFreeHandle**重新分配它之前释放句柄。 覆盖 ODBC 以此方式的句柄可能导致不一致的行为或部分 ODBC 驱动程序的错误。  
   
  支持多个线程的操作系统，请在应用程序可以在不同的线程使用相同的环境、 连接、 语句或描述符句柄。 因此，驱动程序必须支持此信息; 安全、 多线程访问一种方法来实现此目的，例如，是通过使用临界区或信号量。 关于线程处理的详细信息，请参阅[多线程处理](../../../odbc/reference/develop-app/multithreading.md)。  
   
@@ -128,7 +128,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>分配环境句柄  
  环境句柄提供如有效的连接句柄和活动连接句柄的全局信息的访问权限。 有关环境句柄的常规信息，请参阅[环境句柄](../../../odbc/reference/develop-app/environment-handles.md)。  
   
- 若要请求的环境句柄，应用程序调用**SQLAllocHandle**与*HandleType*的 SQL_HANDLE_ENV 和*InputHandle* SQL_NULL_HANDLE。 该驱动程序的环境信息和传递关联的句柄的值重新分配内存 *\*OutputHandlePtr*自变量。 应用程序传递 *\*OutputHandle*在需要的环境句柄自变量的所有后续调用中的值。 有关详细信息，请参阅[分配环境处理](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
+ 若要请求的环境句柄，应用程序调用**SQLAllocHandle**与*HandleType*的 SQL_HANDLE_ENV 和*InputHandle* SQL_NULL_HANDLE。 该驱动程序的环境信息和传递关联的句柄的值重新分配内存* \*OutputHandlePtr*自变量。 应用程序传递* \*OutputHandle*在需要的环境句柄自变量的所有后续调用中的值。 有关详细信息，请参阅[分配环境处理](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
   
  在驱动程序管理器的环境句柄，如果已存在驱动程序的环境句柄，然后**SQLAllocHandle**与*HandleType*中该驱动程序未调用的 SQL_HANDLE_ENV 时建立连接，仅**SQLAllocHandle**与*HandleType* SQL_HANDLE_DBC。 如果下驱动程序管理器的环境句柄，驱动程序的环境句柄不存在，驱动程序中调用使用 SQL_HANDLE_ENV HandleType SQLAllocHandle 和与 SQL_HANDLE_DBC HandleType SQLAllocHandle 时第一个连接句柄的环境连接到该驱动程序。  
   
@@ -148,7 +148,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>分配连接句柄  
  连接句柄可以访问信息，例如有效的语句和描述符句柄连接和事务的目前是否打开。 有关连接句柄的常规信息，请参阅[连接句柄](../../../odbc/reference/develop-app/connection-handles.md)。  
   
- 若要请求连接句柄，应用程序调用**SQLAllocHandle**与*HandleType* SQL_HANDLE_DBC。 *InputHandle*参数设置为通过调用返回的环境句柄**SQLAllocHandle**分配该句柄。 该驱动程序的连接信息和传递关联的句柄的值重新分配内存 *\*OutputHandlePtr*。 应用程序传递 *\*OutputHandlePtr*在需要连接句柄的所有后续调用中的值。 有关详细信息，请参阅[分配连接处理](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)。  
+ 若要请求连接句柄，应用程序调用**SQLAllocHandle**与*HandleType* SQL_HANDLE_DBC。 *InputHandle*参数设置为通过调用返回的环境句柄**SQLAllocHandle**分配该句柄。 该驱动程序的连接信息和传递关联的句柄的值重新分配内存* \*OutputHandlePtr*。 应用程序传递* \*OutputHandlePtr*在需要连接句柄的所有后续调用中的值。 有关详细信息，请参阅[分配连接处理](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)。  
   
  驱动程序管理器处理**SQLAllocHandle**函数并调用驱动程序的**SQLAllocHandle**函数时在应用程序调用**SQLConnect**， **SQLBrowseConnect**，或**SQLDriverConnect**。 (有关详细信息，请参阅[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)。)  
   
@@ -161,7 +161,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>分配的语句句柄  
  语句句柄提供语句的信息，如错误消息、 游标名称和状态信息的 SQL 语句处理的访问。 有关语句句柄的常规信息，请参阅[语句句柄](../../../odbc/reference/develop-app/statement-handles.md)。  
   
- 若要请求的语句句柄，应用程序连接到数据源，然后调用**SQLAllocHandle**提交 SQL 语句之前。 在此调用中， *HandleType*应设置为 SQL_HANDLE_STMT 和*InputHandle*应设置为通过调用返回的连接句柄**SQLAllocHandle**分配该句柄。 驱动程序的语句信息分配内存，将语句句柄与指定的连接，并将传递回关联的句柄的值相关联 *\*OutputHandlePtr*。 应用程序传递 *\*OutputHandlePtr*在需要语句句柄的所有后续调用中的值。 有关详细信息，请参阅[分配语句处理](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)。  
+ 若要请求的语句句柄，应用程序连接到数据源，然后调用**SQLAllocHandle**提交 SQL 语句之前。 在此调用中， *HandleType*应设置为 SQL_HANDLE_STMT 和*InputHandle*应设置为通过调用返回的连接句柄**SQLAllocHandle**分配该句柄。 驱动程序的语句信息分配内存，将语句句柄与指定的连接，并将传递回关联的句柄的值相关联* \*OutputHandlePtr*。 应用程序传递* \*OutputHandlePtr*在需要语句句柄的所有后续调用中的值。 有关详细信息，请参阅[分配语句处理](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)。  
   
  该驱动程序分配语句句柄后，自动分配的四个描述符一组并将这些描述符句柄赋给 SQL_ATTR_APP_ROW_DESC、 SQL_ATTR_APP_PARAM_DESC、 SQL_ATTR_IMP_ROW_DESC 和 SQL_ATTR_IMP_PARAM_DESC语句属性。 这些被称为*隐式*分配描述符。 若要显式分配应用程序描述符，请参阅以下部分中，"分配的描述符句柄"。  
   

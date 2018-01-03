@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 655868b77b482a11145e8947e1ea81d34270ca65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1deb0723864a0ed27f639a5060cc17afe886b9e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-data-types"></a>参数数据类型
 即使每个参数指定与**SQLBindParameter**是定义使用 SQL 数据类型，SQL 语句中的参数具有任何内部函数的数据类型。 因此，参数标记可以包含在 SQL 语句才可以从语句中的另一个操作数推断其数据类型。 例如，在如算术表达式？ + 可以从 COLUMN1 所表示的指定列的数据类型推断出 COLUMN1，参数的数据类型。 如果无法确定的数据类型，应用程序无法使用参数标记。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bda744eb99da9f199954c6ddeb94fc9b347265b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9f2c2d3e8b60d0a73d1beba4f68148cd956431b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函数
 **一致性**  
@@ -86,7 +86,7 @@ SQLRETURN SQLConnect(
 |08004|服务器拒绝连接|数据源实现定义的原因拒绝建立连接。|  
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已尝试连接到数据源之间的通信链接。|  
 |28000|无效的授权说明|为参数指定的值*用户名*或指定自变量的值*身份验证*违反数据源定义的限制。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|(DM) 驱动程序管理器无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*ConnectionHandle*。 **SQLConnect**调用函数，并且它之前完成执行， [SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*，然后**SQLConnect**函数上调用了再次*ConnectionHandle*。<br /><br /> 或者， **SQLConnect**调用函数，并且它之前完成执行， **SQLCancelHandle**上调用了*ConnectionHandle*来自中的不同线程多线程应用程序。|  
 |HY010|函数序列错误|(DM) 以异步方式执行的函数 （而不是此的一个） 曾为*ConnectionHandle*和仍在执行时调用此函数。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLConnect(
 |IM005|驱动程序的 SQLAllocHandle SQL_HANDLE_DBC 上失败|(DM) 期间**SQLConnect**，驱动程序管理器调用驱动程序的**SQLAllocHandle**起作用*HandleType*的 SQL_HANDLE_DBC 和驱动程序返回了一个错误。|  
 |IM006|驱动程序的 SQLSetConnectAttr 失败|期间**SQLConnect**，驱动程序管理器调用驱动程序的**SQLSetConnectAttr**函数和驱动程序返回了一个错误。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |IM009|无法连接到转换 DLL|该驱动程序无法连接到转换为数据源指定的 DLL。|  
-|IM010|数据源名称太长|(DM)  *\*ServerName*已超过 SQL_MAX_DSN_LENGTH 个字符。|  
+|IM010|数据源名称太长|(DM) * \*ServerName*已超过 SQL_MAX_DSN_LENGTH 个字符。|  
 |IM014|指定的 DSN 包含的驱动程序和应用程序体系结构不匹配|(DM) 32 位应用程序使用连接到 64 位驱动程序; DSN反之亦然。|  
 |IM015|驱动程序的 SQLConnect SQL_HANDLE_DBC_INFO_HANDLE 上失败|如果驱动程序返回 SQL_ERROR，驱动程序管理器将返回 SQL_ERROR 到应用程序，则连接将失败。<br /><br /> 有关 SQL_HANDLE_DBC_INFO_TOKEN 的详细信息，请参阅[开发中使用 ODBC 驱动程序的连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。|  
 |IM017|在异步通知模式中禁用轮询|使用通知模型，则每当轮询处于禁用状态。|  

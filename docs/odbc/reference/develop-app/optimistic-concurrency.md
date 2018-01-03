@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimistic-concurrency"></a>开放式并发
 *开放式并发*从开放式假设派生其名称，将很少发生事务之间的冲突; 冲突称为已发生另一个事务更新或删除读取它的时间之间的数据行时按当前事务和时间更新或删除。 它截然相反*保守式并发，*或锁定，在该应用程序开发人员认为此类冲突是司空见惯。  

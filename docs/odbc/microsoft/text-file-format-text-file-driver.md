@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0451bf3965e35353d3465cd5bd873954638f2fd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b7d111fee1ae82fc3dbb1fff3eec2dd9dff53465
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-format-text-file-driver"></a>文本文件格式 （文本文件驱动程序）
 ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件由可选的标头行和零个或多个文本行组成。  
@@ -43,7 +43,7 @@ ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 �
   
  以下语法，为程序员，编写定义可由 ODBC 文本驱动程序读取的文本文件的格式：  
   
-|格式|表示|  
+|“格式”|表示|  
 |------------|--------------------|  
 |非斜体|必须按所示方式输入的字符|  
 |*斜体*|在语法中其他位置定义的自变量|  

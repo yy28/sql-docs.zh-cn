@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0a57a4fca26e40a5c83d79f4a952e1c9ccbfa1cc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面数据库驱动程序
 ODBC 是作为数据库访问语言中使用结构化查询语言 (SQL) 的 API。 可以使用直接合并到应用程序源代码的相同 ODBC 源代码来访问各种数据库管理系统 (Dbms)。 Microsoft ODBC 桌面数据库驱动程序中，ODBC 启用应用程序的用户可以打开查询，并通过 ODBC 接口的桌面数据库进行更新。  
@@ -43,7 +43,7 @@ ODBC 是作为数据库访问语言中使用结构化查询语言 (SQL) 的 API�
   
 -   dBASE  
   
--   Text  
+-   文本  
   
  请参阅[Visual FoxPro ODBC 驱动程序](../../odbc/microsoft/visual-foxpro-odbc-driver.md)for Microsoft Visual FoxPro® ODBC 驱动程序有关的详细文档。  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a2b77875c442720d452b8520e5c8fe03b122e2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池可让应用程序使用的不需要为每种使用重新建立的连接池中的连接。 创建并放在池中的连接后，应用程序可以重复使用该连接，而不执行完整的连接过程。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  驱动程序必须高效地实施此选项，或它将会影响连接池性能。 具体而言，若要获取此连接属性的调用应不会导致到服务器的往返行程。 相反，驱动程序应只返回连接的最后一个已知的状态。 连接状态死如果最后一个行程到服务器失败，且不死如果最后一个行程成功。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果连接已丢失 （通过 SQL_ATTR_CONNECTION_DEAD 报告），ODBC 驱动程序管理器将通过驱动程序中调用 SQLDisconnect 销毁该连接。 新的连接请求可能无法找到在池中可用的连接。 最终驱动程序管理器可能会使新的连接，假设该池为空。  
   
  若要使用的连接池，应用程序，请执行以下步骤：  

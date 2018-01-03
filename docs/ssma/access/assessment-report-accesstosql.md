@@ -1,7 +1,7 @@
 ---
 title: "评估报表 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,18 +23,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3dcc3a4b1af7a6bbd815a95086e819f5c3c6fc6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3a171fdf7f717ba5af9e0ecf73f5aca17923e155
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessment-report-accesstosql"></a>评估报表 (AccessToSQL)
 评估报表窗口中显示的数据库的对象添加到转换的结果[!INCLUDE[tsql](../../includes/tsql_md.md)]语法，并且还可以帮助您评估的复杂性和成本的迁移项目。  
   
 若要创建评估报表，选择对象要转换的源元数据资源管理器，右键单击**数据库**，然后选择**创建报表**。 你还可以显示此报表自动转换架构之后。 但是，报表名称将转换报表。 有关详细信息，请参阅[项目设置 (GUI) （SSMA 常见）](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **资源管理器窗格**  
 包含在评估报表中的对象的层次结构。 展开文件夹以查看单个对象和子组件。 当你单击类别或对象时，该类别或对象的转换统计信息显示在细节窗格中。  
   

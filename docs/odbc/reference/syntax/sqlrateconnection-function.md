@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87657a0c0444c6de869cc30e5bcd98db5551be95
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 22f7e5c4181a0b36a862ab0e0b819891a3dee9fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函数
 **一致性**  
@@ -64,7 +64,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="diagnostics"></a>诊断  
  驱动程序管理器将不处理此函数返回的诊断信息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **SQLRateConnection**生成介于 0 和 100 （含），该值指示一个现有的连接与请求匹配的程度之间的分数。  
   
 |分数|含义 （如果返回 SQL_SUCCESS）|  

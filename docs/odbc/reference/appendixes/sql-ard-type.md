@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c789c560adbb01d4c9c0bd2700dd3d1b0757f04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 88260a7a9fa9c576e20938dadb3a042ad50cf97f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 类型标识符用于指示缓冲区中的数据将在 ARD SQL_DESC_CONCISE_TYPE 字段中指定的类型。 在中输入 SQL_ARD_TYPE *TargetType*对的调用的自变量**SQLGetData**而不是特定的数据类型和允许应用程序更改的数据类型的缓冲区通过更改描述符字段。 此值相关联的数据类型 *\*TargetValuePtr*描述符字段的缓冲区。 (对的调用中未输入 SQL_ARD_TYPE **SQLBindCol**或**SQLBindParameter**因为绑定缓冲区的类型已绑定到 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 字段，并可以更改任何时候通过更改这些字段之一。）  

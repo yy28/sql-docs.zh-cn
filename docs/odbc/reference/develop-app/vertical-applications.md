@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce78adb6af76ff17b6df0e0ecc910f1266bf7dea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81f0b9b75a1431b071e20425ba7f0386fe7a1b00
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vertical-applications"></a>垂直应用程序
 垂直应用程序通常执行针对单个 DBMS 明确定义的任务。 例如，一个顺序输入应用程序跟踪在一家公司的订单。 这些类型的应用程序具有的共同点是通过应用程序开发人员通常设计数据库架构，并当应用程序可能会使用大量的不同 Dbms，它适用于单个 DBMS 单个客户。  

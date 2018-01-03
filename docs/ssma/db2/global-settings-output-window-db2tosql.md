@@ -1,7 +1,7 @@
 ---
 title: "全局设置 （输出窗口中） (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea89e36362923083f3275092a6bba2ecd0939da3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 71cd07bb7a2e249193dfd0337d3d0aa055493e04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window-db2tosql"></a>全局设置 （输出窗口中） (DB2ToSQL)
 使用**全局设置**对话框中，以指定的 SSMA 设置。  
   
 若要访问在输出窗口设置**工具**菜单上，选择**全局设置**，单击**GUI**底部的左窗格中，，然后选择**输出窗口**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **显示错误列表窗格**  
 选择**True**如果你想 SSMA 时有消息显示错误列表窗格。  
   

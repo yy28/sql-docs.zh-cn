@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b58f344839a0f8e74fa46c5e788b7835d3eadc2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7eb679c8d7182dd0edd3a96caafa824a8722962
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trace-dll"></a>跟踪 DLL
 执行跟踪的 DLL 是 ODBC 核心组件之一。 以前，的跟踪 DLL 作为 Windows SDK 的 ODBC 组件中的示例 DLL 当前提供，已包括 Microsoft 数据访问组件 (MDAC) SDK。 因此，注册表项、 接口和跟踪 DLL 的示例代码将可用。 可以由跟踪由 ODBC 用户或第三方供应商的 DLL 替换此 DLL。 自定义跟踪 DLL 应不同于原始示例跟踪 DLL 的名称。 跟踪 Dll 必须安装在系统目录中，否则它们将无法加载。 连接字符串将不会传递到跟踪 DLL 的驱动程序管理器。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f470fe00f7e0d39d2ea474558f21584a75bb42f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 函数
 **一致性**  
@@ -72,7 +72,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="diagnostics"></a>诊断  
  与相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，只不过驱动程序管理器将使用**HandleType**的 SQL_HANDLE_DBC_INFO_TOKEN 和**处理**的*hDbcInfoToken*.  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **SQLSetConnectAttrForDbcInfo**相同**SQLSetConnectAttr**，但它将该属性设置连接信息令牌，而不是连接句柄。 例如，如果**SQLSetConnectAttr**无法识别的属性， **SQLSetConnectAttrForDbcInfo**还应该使 SQL_ERROR 返回该属性。  
   
  每当驱动程序返回 SQL_ERROR 或 SQL_INVALID_HANDLE，驱动程序应忽略此属性来计算池 id。 此外，驱动程序管理器将获取诊断信息从*hDbcInfoToken*，并返回到中的应用程序的 SQL_SUCCESS_WITH_INFO [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). 因此，应用程序可以检索有关无法设置某些属性的原因的详细信息。  

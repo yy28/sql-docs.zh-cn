@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2295462d7ec6e2e11f9eb43ada5617660bf955ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5440d7cb38dfeef678a9b665397b789bf506be72
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>对于桌面数据库驱动程序的诊断
 由驱动程序处理所有错误和警告不检查或部分选中的驱动程序管理器。 该驱动程序还会将映射本机错误或由数据源中，向 SQLSTATEs 返回的错误。 中列出每个函数*ODBC 程序员参考*包含指定条件和消息的"诊断"部分。  

@@ -2,12 +2,14 @@
 title: "数据库中 Python 分析 SQL 开发人员 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1f6a1279268668062c83a151b6e7235b5c873325
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6e59f8e3e1b59b9225a95dbe787698dd5bf4f9e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 开发人员的数据库中 Python 分析
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="requirements"></a>要求
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 + 使用机器学习服务和启用的 Python 安装 SQL Server 2017 的实例。 有关详细信息，请参阅[设置 SQL Server 计算机学习 Services 与 Python 一起](../python/setup-python-machine-learning-services.md)。
 + 本演练中使用的登录名必须有权创建数据库和其他对象，有权上载数据、选择数据和运行存储过程。

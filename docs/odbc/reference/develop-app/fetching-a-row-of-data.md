@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-a-row-of-data"></a>提取数据的行
 若要提取的数据行，应用程序调用**SQLFetch**。 **SQLFetch**可以调用与任何类型的游标，但它仅会移动行集只进的方向。 **SQLFetch**将光标前进到下一行，并返回的数据绑定通过调用任何列**SQLBindCol**。 设置光标在到达结果的末尾， **SQLFetch**返回 SQL_NO_DATA。 有关调用的示例**SQLFetch**，请参阅[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  

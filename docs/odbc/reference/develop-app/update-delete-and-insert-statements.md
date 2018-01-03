@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bfdd769bdea98e21cec4031bf140ca6ee8bdd3d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、 DELETE 和 INSERT 语句
 基于 SQL 的应用程序通过执行对表进行更改**更新**，**删除**，和**插入**语句。 这些语句是最小 SQL 语法一致性级别的一部分，并且必须支持的所有驱动程序和数据源。  
   
  这些语句的语法是：  
   
- **更新***表名称*   
+ **更新***表名称  *  
   
- **设置***列标识符*  **=**  {*表达式*&#124;**NULL**}  
+ **设置***列标识符* ** = ** {*表达式*& #124;**NULL**}  
   
- [**，** *列标识符*  **=**  {*表达式*&#124;**NULL**}]...  
+ [**，** *列标识符* ** = ** {*表达式*& #124;**NULL**}]...  
   
  [**其中***搜索条件*]  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
  **INSERT INTO** *表名*[**(***列标识符*[**，** *列标识符*]...**)**]  
   
- {*查询规范*&#124;**值 (***插入值*[**，** *插入值*]...**)**}  
+ {*查询规范*& #124;**值 (***插入值*[**，** *插入值*]...**)**}  
   
  请注意，*查询规范*元素是仅在核心和扩展 SQL 语法中，且中有效*表达式*和*搜索条件*元素变得更核心和扩展 SQL 语法中的复杂。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39532ba3a94d99ef4df7479d851348b6b179328a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驱动程序中的连接弹性
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/18/2017
   
  如果应用程序建立与 SQL_DRIVER_COMPLETE_REQUIRED 的连接，并稍后尝试通过断开的连接执行语句，ODBC 驱动程序将不再显示该对话框。 此外，在恢复正在进行期间，  
   
--   在恢复期间，任何调用到**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**，必须返回**SQL_CD_TRUE**。  
+-   在恢复期间，任何调用到**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**，必须返回**SQL_CD_FALSE**。  
   
--   如果恢复失败，对任何调用**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**，必须返回**SQL_CD_FALSE**。  
+-   如果恢复失败，对任何调用**SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**，必须返回**SQL_CD_TRUE**。  
   
  在服务器上执行命令的任何函数都会返回以下状态代码：  
   

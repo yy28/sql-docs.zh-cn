@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b8d2ee5be47e77fe639299da0851029494d88c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5675d39ff68b3ddd9231a90a54fd19793bd829be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函数自变量
 ODBC 3.5 （或更高版本） 驱动程序管理器支持 ANSI 和 Unicode 版本的所有接受指向字符字符串或 SQLPOINTER 在自变量的指针的函数。 Unicode 函数作为函数来实现 (为后缀*W*)，而不是宏。 ANSI 函数 (其可以调用使用或不是由后缀为*A*) 是等于当前的 ODBC API 函数。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  作为计数的字符传递 Unicode 函数，始终返回或将字符串或长度参数。 对于返回的服务器数据的长度信息的函数，显示大小和精度所述的字符数。 当无法引用字符串或非字符串数据的长度 （传输的数据大小） 时，长度是八位字节长度中所述。 例如， **SQLGetInfoW**操作仍将需要用作计数的字节长度但**SQLExecDirectW**将使用的字符的计数。  
   
  计数的字符是指的字节数 （八进制） ANSI 函数和 UNICODE 函数 WCHAR （16 位字） 的数目。 具体而言，双字节字符序列 (DBCS) 或多字节字符序列 (MBCS) 可能包括多个字节。 可以由多个 WCHARs 组成 utf-16 Unicode 字符序列。  

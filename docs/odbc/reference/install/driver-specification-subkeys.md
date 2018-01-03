@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a2bbfe9608fabef11b4208597f550e32e2a816d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specification-subkeys"></a>驱动程序规范子项
 中的 ODBC 驱动程序子项列出每个驱动程序都有自己的子项。 此子项具有同名的 ODBC 驱动程序子项下的相应值。 此子项下的值列表的驱动程序和驱动程序安装程序 Dll，返回的驱动程序关键字的值的完整路径**SQLDrivers**，和使用情况计数。 值的格式为下表中所示。  
   
-|Name|数据类型|data|  
+|“属性”|数据类型|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  

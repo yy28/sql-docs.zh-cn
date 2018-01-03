@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21f261147d5ba814721dc2cdb6de7ca4ef748a7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd862492513daceda364205d965b1d00e6cb649f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 函数
 **一致性**  
@@ -66,7 +66,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>诊断  
  类似于[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)任何进行输入验证错误时，只不过驱动程序管理器将使用**HandleType**的 SQL_HANDLE_DBC_INFO_TOKEN 和**处理**的*hDbcInfoToken*。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  驱动程序管理器可保证 HENV 处理的父*hDbc*和*hDbcInfoToken*相同。  
   
  与不同[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)，没有任何*DriverCompletion*参数，以提示用户输入连接信息。 一个提示对话框不允许在池的方案。  

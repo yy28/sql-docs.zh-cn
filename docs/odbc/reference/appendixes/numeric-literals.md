@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11fa70b4ebbb46745590d17ae7188b88f59a28b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b0e86350d2f2182e257456192d1e2c18c31f061
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-literals"></a>数值
 数值数据值存储在字符串时，将使用数值。 对于为 SQL_C_CHAR 字符串，数值 SQL 数据的转换或转换的数字的 C 数据为 SQL_CHAR 或 SQL_VARCHAR 字符串，数值的文本语法用于指定目标中存储的内容。 对于数字存储为 SQL_C_CHAR 字符串到数值 SQL 数据或存储为 SQL_CHAR 字符串到数值 C 数据数值的转换，此语法用于验证在源中存储的内容。  

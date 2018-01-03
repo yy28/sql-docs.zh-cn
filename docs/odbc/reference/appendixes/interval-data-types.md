@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -32,11 +32,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-data-types"></a>Interval 数据类型
 一个时间间隔被指两个日期和时间之间的差异。 按两种不同方式之一表示的时间间隔。 其中一个是*年-月*表示年和月八进制整数方面的时间间隔的间隔。 另一种是*一天时间*表示按天、 分钟和秒的间隔的间隔。 这两种类型的间隔不同，并且不能混合，因为月份可以具有不同的天数。  

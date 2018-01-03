@@ -1,7 +1,7 @@
 ---
 title: "项目设置 （转换） (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ce9b6bec50de99ba85561ec3a1679692ccb9bf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec31bf02ccdeedd4356d0a85c85d7d33041d5bde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-accesstosql"></a>项目设置 （转换） (AccessToSQL)
 转换项目设置允许你配置如何将对象转换到的访问数据库对象从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
 -   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的转换设置中，在**工具**菜单上，选择**默认项目设置**，选择为其设置所需查看 / 更改，不再是迁移项目类型**迁移目标版本**下拉列表中，单击**常规**底部的左窗格中，，然后选择**转换**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **添加主键**  
 创建中的新主键[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 表，如果访问表没有主键或唯一索引。  
   

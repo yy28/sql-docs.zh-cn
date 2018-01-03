@@ -3,10 +3,10 @@ title: "工作负荷管理 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/12/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: "11"
-ms.openlocfilehash: 596fba5031e3183a9278e20384d51852cea0f2b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="workload-management"></a>工作负荷管理
 SQL Server PDW 工作负荷管理功能允许用户和管理员将分配请求用来预设置的内存和并发的配置。 使用工作负荷管理来提高指定工作负荷性能，一致或混合，允许进行合适的资源，不能始终使任何请求的请求。  
@@ -65,7 +65,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |资源类|请求重要性|最大内存使用情况 *|并发槽 (最大 = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|默认值|Medium|400 MB|1|默认情况下，每个登录名被允许的少量内存和其请求的并发资源。<br /><br />当登录名添加到资源类时，新类将优先。 从所有资源类将被删除登录名，该登录名将恢复到默认资源分配。|  
+|默认值|Medium|400 MB|@shouldalert|默认情况下，每个登录名被允许的少量内存和其请求的并发资源。<br /><br />当登录名添加到资源类时，新类将优先。 从所有资源类将被删除登录名，该登录名将恢复到默认资源分配。|  
 |MediumRC|Medium|1200 MB|3|可能需要的中等规模的资源类的请求的示例：<br /><br />CTAS 操作具有大型哈希联接。<br /><br />选择需要更多内存，以避免缓存到磁盘的操作。<br /><br />数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织较小具有 10-15 列的表的聚集列存储索引。|  
 |largerc|High|2.8 GB|7|可能需要较大的资源类的请求的示例：<br /><br />非常大 CTAS 操作具有极大哈希联接，或包含大型聚合，例如大型的 ORDER BY 或 GROUP BY 子句。<br /><br />选择需要的内存量非常大进行操作，如哈希联接或聚合如 ORDER BY 或 GROUP BY 子句的操作<br /><br />数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织较小具有 10-15 列的表的聚集列存储索引。|  
 |xlargerc|High|8.4 GB|22|超大型资源类是用于请求可能需要在运行时的额外较大的资源消耗。|  
@@ -136,7 +136,7 @@ SQL 语句，并由资源类控制的操作：
   
 -   UPDATE  
   
--   DELETE  
+-   删除  
   
 -   还原到设备，但有更多计算节点还原时的数据库。  
   

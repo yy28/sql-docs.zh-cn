@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3d2ed7d39772237f522320f227c49c773d12801
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3141bf0b16c6be579bf76a77b13e240ad5befef4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC 数据源子项
 ODBC 数据源子项下的值列表的数据源。 下表中所示，将为这些值的格式。  
   
-|Name|数据类型|data|  
+|“属性”|数据类型|data|  
 |----------|---------------|----------|  
 |*数据源名称*|REG_SZ|*驱动程序说明*|  
   

@@ -1,7 +1,7 @@
 ---
 title: "项目 （加载对象） 的设置 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27c4ebc7a1a796f951bf06c06dc1fdb42a958ba7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>项目 （加载对象） 的设置 (AccessToSQL)
 加载对象项目设置允许你配置访问数据库对象都在与 SQL Server 数据库对象进行同步。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，单击**项目设置**，然后单击**加载对象**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ##### <a name="misc"></a>杂项  
   

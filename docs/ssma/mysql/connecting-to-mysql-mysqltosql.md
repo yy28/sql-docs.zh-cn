@@ -1,7 +1,7 @@
 ---
 title: "连接到 MySQL (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a0ecb0ea00a9ae5438657943e65d3bfcea635872
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，你必须连接到你想要迁移的 MySQL 数据库。 连接时，SSMA 获取有关所有 MySQL 架构，元数据，然后在 MySQL 元数据资源管理器窗格中显示内容。 SSMA 存储有关数据库服务器的信息，但不会存储密码。  
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/05/2017
   
     -   若要查看的颜色编码定义，请单击**图例**按钮。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 ## <a name="next-step"></a>下一步  
 迁移过程的下一步是[连接到 SQL Server &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

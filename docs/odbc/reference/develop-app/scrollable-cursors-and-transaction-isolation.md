@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>可滚动游标，事务隔离
 下表列出的因素控制的可见性更改。  
@@ -46,17 +46,17 @@ ms.lasthandoff: 11/20/2017
 |光标 type\action|自己|拥有<br /><br /> Txn|其他<br /><br /> Txn<br /><br /> (RU[a])|其他<br /><br /> Txn<br /><br /> (RC[a])|其他<br /><br /> Txn<br /><br /> (RR[a])|其他<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |静态|||||||  
-|Insert|Maybe [b]|是|“否”|“否”|“否”|是|  
-|Update|Maybe [b]|是|“否”|“否”|“否”|是|  
-|DELETE|Maybe [b]|是|“否”|“否”|“否”|是|  
+|Insert|Maybe [b]|是|是|是|是|是|  
+|Update|Maybe [b]|是|是|是|是|是|  
+|DELETE|Maybe [b]|是|是|是|是|是|  
 |键集驱动|||||||  
-|Insert|Maybe [b]|是|“否”|“否”|“否”|是|  
-|Update|是|是|是|是|“否”|是|  
-|DELETE|Maybe [b]|是|是|是|“否”|是|  
+|Insert|Maybe [b]|是|是|是|是|是|  
+|Update|是|是|是|是|是|是|  
+|DELETE|Maybe [b]|是|是|是|是|是|  
 |Dynamic|||||||  
 |Insert|是|是|是|是|是|是|  
-|Update|是|是|是|是|“否”|是|  
-|DELETE|是|是|是|是|“否”|是|  
+|Update|是|是|是|是|是|是|  
+|DELETE|是|是|是|是|是|是|  
   
  [a] 中括号的字母指示包含游标的事务的隔离级别（在其中进行了更改） 另一个事务的隔离级别是不相关。  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-data-sources"></a>管理数据源
 从驱动程序的安装程序安装 ODBC 驱动程序后，你可以为它定义一个或多个数据源。 数据源名称 (DSN) 应提供数据; 的唯一的说明例如，*工资单*或*Accounts Payable*。 为所有当前安装的驱动程序定义的用户和系统数据源中列出**用户 DSN**或**系统 DSN**选项卡**ODBC 数据源管理器**对话框。 中列出给定目录中的文件数据源**文件 DSN**选项卡中输入要显示的目录**查找**框中**文件 DSN**选项卡。  

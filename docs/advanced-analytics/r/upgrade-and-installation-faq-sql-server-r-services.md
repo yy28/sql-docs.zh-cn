@@ -1,9 +1,11 @@
 ---
 title: "对 SQL Server 机器学习的升级和安装常见问题解答 |Microsoft 文档"
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f0c6aac38001506b51ff7d14307f23b461334eb7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 137889dae328d3f780082ca5837717017b66867d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>对 SQL Server 机器学习的升级和安装常见问题解答
 

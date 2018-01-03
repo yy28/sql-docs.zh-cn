@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d900ac7b21b75a5cecbb92f41a95dc9cbb836423
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d3270b142cb857876a558122b670bb329e08c93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C 到 SQL 数据转换示例
 以下示例阐释如何驱动程序将 C 数据转换为 SQL 数据：  
   
-|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|列<br /><br /> 长度|SQL 数据<br /><br /> 值|SQLSTATE|  
+|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|“列”<br /><br /> 长度|SQL 数据<br /><br /> 值|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|不适用|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  

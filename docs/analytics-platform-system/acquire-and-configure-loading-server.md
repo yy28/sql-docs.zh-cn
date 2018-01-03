@@ -3,10 +3,10 @@ title: "获取和配置加载服务器 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
 caps.latest.revision: "19"
-ms.openlocfilehash: 05747889f905e1f827a87cc0ad53ace62a911922
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>获取和配置加载服务器
 本主题介绍如何获取和将加载服务器配置为非设备 Windows 系统用于提交数据加载到 SQL Server 并行数据仓库 (PDW)。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  [负载概述](load-overview.md)  
   
-## <a name="performance"></a>性能  
+## <a name="performance"></a>“性能”  
 加载性能上 Windows Server 2012 和更高版本的最佳，开启即时文件初始化，以便数据覆盖时，操作系统将不会覆盖现有数据用零。 如果这是安全风险，因为以前的数据仍存在于磁盘上，然后务必关闭即时文件初始化。  
   
 ## <a name="Security"></a>安全声明  

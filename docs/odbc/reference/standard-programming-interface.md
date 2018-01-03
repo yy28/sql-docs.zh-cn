@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c1f3cccc67bb9c2223ee98f30a1fb6781a12fd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-programming-interface"></a>标准编程接口
 编程接口可能是标准化的最明显候选。 事实上，当开发 ODBC 时，ANSI 和 ISO 已提供标准嵌入 SQL 和 SQL 的模块。 虽然没有标准存在数据库 CLI，使用 SQL 访问组-数据库供应商行业联合会-已考虑是否要创建一个;更高版本的 ODBC 部分垃圾回收其工作的基础。  

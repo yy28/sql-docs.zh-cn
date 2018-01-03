@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4b219fe2f008c6e7f0e289211665a1dcf6f1bd1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f6b8bf58c2d8db8cf394e6017a9e817c1f20096e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-position"></a>目录位置
 中的位置的目录名称标识符以及它与标识符的其余部分分隔的方式从数据源到数据源而异。 例如，Xbase 数据源中的目录名称目录，并且，在 Microsoft® Windows®，分隔的表名称 （这是文件名称） 从反斜杠 (\\)。 下图演示了这种情况。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc0e46ed0050300a1310bec9d83b1c0321a634a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dcb836649993ddb644006986f284f0c0a362ed81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-exact-command"></a>SET 确切命令
 指定用于比较两个不同长度的字符串的规则。  
@@ -41,7 +41,7 @@ SET EXACT ON | OFF
  OFF  
  （默认值。）指定，为等效，表达式必须匹配的字符直到到达右侧表达式的末尾。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果两个字符串长度相同，则完全设置的设置无效。  
   
 ## <a name="string-comparisons"></a>字符串比较  

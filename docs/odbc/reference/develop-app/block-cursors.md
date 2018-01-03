@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="block-cursors"></a>块状游标
 许多应用程序花费大量时间将跨网络的数据。 这一次的一部分花费实际跨网络，使数据以及它的部分是在上所花费网络开销，例如，为请求的数据行所做的驱动程序调用。 如果应用程序能够高效地使用可以降低后一种时间*块，*或*fat、* *光标、*可一次返回多个行。  

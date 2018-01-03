@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b80fdf874fe7ddb7306824ac4aedb7332cf3d6c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fa5322870c92ee8c48d9d4dc49fbc5a50b6b3e7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列大小、 十进制数，再传输八位字节长度和显示大小-ODBC
 数据类型的特征是其列 （或参数） 的大小、 小数位数、 长度、 和显示大小。 以下的 ODBC 函数返回数据源上的这些属性中的 SQL 语句的参数或 SQL 数据类型。 每个 ODBC 函数返回一组不同的这些属性，如下所示：  

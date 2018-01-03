@@ -1,7 +1,7 @@
 ---
 title: "全局设置 （测试人员） (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8f539352279a21b6f736616c5425b4f24856cb03
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>全局设置 （测试人员） (OracleToSQL)
 使用的测试人员页**全局设置**对话框中指定的 SSMA 测试人员的设置。  
   
 若要访问的测试人员设置中，在**工具**菜单上，选择**全局设置**，然后单击**测试人员**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **可测试的对象的分析**  
 此设置指定是否执行可测试的对象的分析。 选择**是**如果希望 SSMA 测试来分析和自动检查依赖对象。 默认选项集是**是**。  
   

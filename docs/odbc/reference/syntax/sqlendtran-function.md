@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c85e1102eb259f9ab1df342ab2ca0402fd68fa73
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函数
 **一致性**  
@@ -76,7 +76,7 @@ SQLRETURN SQLEndTran(
 |25S03|事务回滚|该驱动程序无法保证无法以原子方式，完成全局事务中的所有工作，都适用于中的活动事务*处理*已回滚。|  
 |40001|序列化失败|事务已回滚，因为资源死锁与另一个事务。|  
 |40002|完整性约束冲突|*CompletionType* SQL_COMMIT，并引起完整性约束冲突的更改的承诺。 因此，事务已回滚。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*szMessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*szMessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*ConnectionHandle*。 已调用函数，和之前完成执行[SQLCancelHandle 函数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上调用了*ConnectionHandle*。 然后在再次调用该函数*ConnectionHandle*。<br /><br /> 已调用函数，和之前完成执行**SQLCancelHandle**上调用了*ConnectionHandle*从多线程应用程序中的不同线程。|  
 |HY010|函数序列错误|(DM) 为与关联的语句句柄调用以异步方式执行的函数*ConnectionHandle*和仍在执行时**SQLEndTran**调用。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*ConnectionHandle*和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**调用了与语句句柄关联*ConnectionHandle*并返回 SQL_NEED_DATA。 数据已发送的所有数据在执行参数或列之前调用此函数。<br /><br /> (DM) 以异步方式执行的函数 （而不是此的一个） 曾为*处理*与*HandleType*设置为 SQL_HANDLE_DBC 和仍在执行时调用此函数。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**与关联的语句句柄之一调用*处理*和返回的 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。|  

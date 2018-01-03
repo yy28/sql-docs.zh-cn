@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a073881ff2e298276fe2c9213bbf593106697f57
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dab32294edbe982817a03cc81c33d6623ff973ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo dBASE 的返回值
 下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  

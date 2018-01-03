@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>将 C 中的数据转换为 SQL 数据类型
 在应用程序调用**SQLExecute**或**SQLExecDirect**，驱动程序检索数据的任何参数绑定与**SQLBindParameter**从存储位置中应用程序。 在应用程序调用**SQLSetPos**，驱动程序检索更新的数据，或者从与绑定的列添加操作**SQLBindCol**。 对于数据在执行参数，应用程序发送具有的参数数据**SQLPutData**。 如果有必要，该驱动程序将数据从指定的数据类型*ValueType*中的参数**SQLBindParameter**到由指定的数据类型*ParameterType*中的参数**SQLBindParameter**，然后将数据发送到数据源。  

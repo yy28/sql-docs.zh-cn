@@ -3,23 +3,23 @@ title: "dwloader 并行数据仓库的命令行加载程序"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * * 是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。"
+description: "**dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。"
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 命令行加载程序
 **dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。 当加载行时，可以将所有行都添加到表的末尾 (*追加模式*或*fastappend 模式*)、 追加新行和更新现有行 (*upsert 模式*)，或删除所有现有的行之前加载，然后将所有行都插入空表 (*重新加载模式*)。  
@@ -226,7 +226,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-t** *field_delimiter*  
 每个字段 （列） 中的行分隔符。 字段分隔符为一个或多个这些 ASCII 转义字符或十六进制 ASCII 值...  
   
-|Name|转义字符|十六进制字符|  
+|“属性”|转义字符|十六进制字符|  
 |--------|--------------------|-----------------|  
 |选项卡|\t|为 0x09|  
 |回车符 (CR)|\r|0x0d|  
@@ -402,7 +402,7 @@ dym
 fastappend  
 加载程序将行插入直接，而无需使用临时表，到目标表中的现有行的末尾。 fastappend 要求多事务 (– m) 选项。 使用 fastappend 时，不能指定一个临时数据库。 没有与 fastappend，这意味着从失败或已中止负载恢复必须由你自己的加载过程回滚。  
   
-upsert **-K***merge_column* [，...*n* ]    
+upsert **-K***merge_column* [，...*n* ]  
 加载程序将使用 SQL Server 合并语句以更新现有行和插入新行。  
   
 -K 选项指定的列或列要合并基础。 这些列构成合并键，它应表示唯一行。 如果合并密钥存在目标表中，更新行。 如果合并密钥不存在目标表中，追加行。  
@@ -502,7 +502,7 @@ if %errorlevel%==0 echo Success
   
 使用 PowerShell 时，使用`$LastExitCode`。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要负载权限和对目标表的适用权限 (INSERT、 UPDATE、 DELETE)。 将在临时数据库要求 （用于创建临时表） 的创建权限。 如果未使用临时数据库，然后在目标数据库上，则必须创建权限。 
 
 <!-- MISSING LINK
@@ -556,11 +556,11 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 |表类型|多事务<br />模式 (-m)|表为空|支持的并发|日志记录|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |堆|是|是|是|最小|  
-|堆|是|“否”|是|最小|  
 |堆|是|是|是|最小|  
-|堆|是|“否”|是|最小|  
+|堆|是|是|是|最小|  
+|堆|是|是|是|最小|  
 |Cl|是|是|是|最小|  
-|Cl|是|“否”|是|完全|  
+|Cl|是|是|是|完全|  
 |Cl|是|是|是|最小|  
 |Cl|是|是|是|完全|  
   

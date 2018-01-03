@@ -3,10 +3,10 @@ title: "配置分析平台系统 (AP) 的无线带宽技术网络适配器"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>为分析平台系统配置无线带宽技术网络适配器
 描述如何在要连接到控制节点上 SQL Server 并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 基本连接性和高可用性，以便加载、 备份、 和其他进程将自动连接到活动的 InfiniBand 网络内容，请使用这些说明。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 你需要有权配置的网络适配器的客户端服务器上的 Windows 帐户。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 这些说明假定客户端服务器已架装并连接好电缆，到设备 InfiniBand 网络。 有关安装和电缆连接说明，请参阅[获取和配置加载服务器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般备注  

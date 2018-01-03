@@ -1,7 +1,7 @@
 ---
 title: "转换、 加载和迁移 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89e343044e82f00a2d5d7978c2571bd32fa6d09b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44683ae2b0650a86c04c5a184417f17e5b3acbef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>转换、 加载和迁移 (AccessToSQL)
 **转换、 加载和迁移**当你使用的转换、 加载和迁移按钮或迁移向导时，对话框中将报告迁移状态。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 **迁移所选对象的数据**页部分还包含**报表**按钮。 你可以单击此按钮以查看数据迁移报告。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **报告**  
 显示关联的转换或迁移报表。  
   

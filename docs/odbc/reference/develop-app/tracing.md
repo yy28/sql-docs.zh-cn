@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 808eab22673e0ca69671a8209b48bd283a2cb476
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 780cbed9bb417c32b6a7ed33f68e4671c612ca6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tracing"></a>跟踪
 ODBC 驱动程序管理器具有所允许的 ODBC 应用程序，以记录和转录到日志文件进行的函数调用序列的跟踪功能。 将跟踪捕获应用程序和驱动程序管理器中，驱动程序管理器和驱动程序之间以及之间的调用的 DLL 执行跟踪。 此方法跟踪替换由 ODBC 2 执行跟踪*.x* ODBC 2 执行驱动程序管理器和跟踪*.x*通过 ODBC Spy。  

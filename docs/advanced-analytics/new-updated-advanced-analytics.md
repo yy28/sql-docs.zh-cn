@@ -7,23 +7,24 @@ author: MightyPen
 manager: jhubbard
 editor: 
 ms.service: 
-ms.component: advanced-analytics
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.reviewer: 
 ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
+ms.technology: r-services
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
+ms.topic: article
 ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
 ms.author: genemi
-ms.workload: advanced-analytics
-ms.openlocfilehash: 840e34eee090d9fba2ec25e10375a8b0c375fea4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.workload: 
+ms.openlocfilehash: c73c6295f7b6e2a23c947ab65160032ce83264e1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新的和最近的更新： SQL Server 的高级分析
 
@@ -51,7 +52,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [作为数据库用户添加 SQLRUserGroup](r/add-sqlrusergroup-to-database.md)
+1. [将 SQLRUserGroup 添加为数据库用户](r/add-sqlrusergroup-to-database.md)
 2. [如何使用 RevoScaleR 函数来查找或在 SQL Server 上安装 R 包](r/use-revoscaler-to-manage-r-packages.md)
 3. [在 Azure SQL Database 中使用 R](r/using-r-in-azure-sql-database.md)
 
@@ -455,7 +456,7 @@ SQL Server 提供功能，可帮助你管理多个包版本，并对其授予用
 
 
 
-|Name| 注释|
+|“属性”| 注释|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |在 Windows 上的 SQL Server 2016 SP1 Enterprise|集成的高级分析的 R Services。|
@@ -653,7 +654,7 @@ RevoScaleR 操作中的示例，请参阅下列博客：
 
 
    + 数据库引擎服务
-   + R Services (数据库中)
+   + R Services（数据库内）
 
 7. 安装完成后，重新启动计算机。
 

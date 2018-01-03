@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2777ca00cf9535e1c3ddb41eee11f0c5ba6eb5f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a7222a9dcbbf7c979dd46ff554fab5988bcfada4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="was-a-result-set-created"></a>是一个结果集，创建？
 在大多数情况下，应用程序程序员知道他们的应用程序执行的语句是否将创建一个结果集。 如果应用程序使用硬编码 SQL 语句将程序员编写的这种情况。 它通常是这种情况，当应用程序在运行时构造 SQL 语句时： 程序员可以轻松地将标记的代码是否**选择**语句或**插入**正在语句构造。 在少数情况下，程序员可能无法知道是否语句将创建一个结果集。 这是如果应用程序为提供一种用户输入并执行的 SQL 语句为 true。 此外，当应用程序构造在运行时执行过程的语句时对它也是如此。  

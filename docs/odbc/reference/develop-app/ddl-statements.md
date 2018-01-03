@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12ad45516f14b33dcd9ae506bbf4e86c71c9a8cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69fedff83875bf08625ee97ecab93a02a856cc21
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ddl-statements"></a>DDL 语句
 数据定义语言 (DDL) 语句在 Dbms 之间有很大差异。 ODBC SQL 定义语句的最常见的数据定义操作： 创建和删除表、 索引和视图。更改表;授予，并撤消权限。 所有其他 DDL 语句是数据源 – 特定。 因此，可互操作的应用程序无法执行某些数据定义操作。 一般情况下，这不是问题，因为此类操作往往是高度特定于 DBMS，并且最佳从左到专用的数据库管理软件附带大多数 Dbms 或安装程序附带的驱动程序。  

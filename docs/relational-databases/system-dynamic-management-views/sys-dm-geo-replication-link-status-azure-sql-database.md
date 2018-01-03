@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |角色 (role)|**tinyint**|地域复制角色，之一：<br /><br /> 0 = 主。 Database_id 指异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助数据库。  Database_id 指异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助数据库类型，之一：<br /><br /> 0 = 不能直接允许连接到辅助数据库并且数据库不是可用于读访问。<br /><br /> 2 = 所有允许连接到辅助 repl; 中的数据库进行只读访问 ication。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|是<br /><br /> 全部|  
-|last_commit|**datetimeoffset**|提交到数据库的最后一个事务的时间。 如果检索辅助数据库上的复制链接的主出现故障时，它指示直到辅助的哪一阶段已捕捉到正在。|
+|secondary_allow_connections_desc|**nvarchar(256)**|是<br /><br /> All|  
+|last_commit|**datetimeoffset**|提交到数据库的最后一个事务的时间。 如果检索主数据库上，它指示在主数据库上的最后一个提交时间。 如果检索辅助数据库上，它指示在辅助数据库上的最后一个提交时间。 如果检索辅助数据库上的复制链接的主出现故障时，它指示直到辅助的哪一阶段已捕捉到正在。|
   
 > [!NOTE]  
 >  如果通过删除辅助数据库 （部分 4.2） 中，在该数据库所在的行终止复制关系**sys.dm_geo_replication_link_status**视图中消失。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具备 view_database_state 权限的任何帐户可以查询**sys.dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>示例  

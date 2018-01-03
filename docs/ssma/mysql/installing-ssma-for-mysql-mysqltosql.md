@@ -1,7 +1,7 @@
 ---
 title: "安装适用于 MySQL (MySqlToSql) SSMA |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2bbfc5f19ca051eacaaa32e55717c469eee88a4a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b8984aaeb9240c8c3b309925e151e79688bc7be3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>安装适用于 MySQL (MySqlToSql) SSMA
 SQL Server 迁移助手 (SSMA) mysql 包含的客户端应用程序将用于执行到 MySQL 迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 它还包含已迁移数据库中支持数据迁移和 MySQL 系统函数的使用的扩展包。  

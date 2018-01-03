@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13dbdcb97bb56f665d6688b981dfc472349b54bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df08adfc15a2ad80bac007a65ce4ed9304194f20
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-records"></a>诊断记录
 与每个环境关联，连接、 语句和的描述符句柄是*诊断记录*。 这些记录包含有关使用特定的句柄的最后一个函数调用的诊断信息。 记录将替换仅当另一个函数调用时使用该句柄。 对可以在任何时候存储的诊断记录的数量没有限制。  

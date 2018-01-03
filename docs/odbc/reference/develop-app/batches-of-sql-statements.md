@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batches-of-sql-statements"></a>SQL 语句的批处理
 SQL 语句的批处理是一组两个或多个 SQL 语句或具有相同的效果的一组两个或多个 SQL 语句的单个 SQL 语句。 在某些实现中，可使用任何结果之前执行整个批处理语句。 这通常会更高效比单独，提交语句，因为通常可以减少网络流量和数据源有时可以优化的一批 SQL 语句的执行。 在其他实现中，调用**SQLMoreResults**触发的批次中的下一个语句执行。 ODBC 支持以下类型的批处理：  

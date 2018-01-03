@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fcc0221bcf4a3555052c9562dca830e6e48f84a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c527c2e89ab9acd0218a1b7f88112a81d537b780
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>用于块状游标绑定列
 由于块状游标返回多个行，使用它们的应用程序必须将数组变量绑定到每个列而不是单个变量。 这些阵列统称为*行集缓冲区*。 以下是绑定的两种样式:  

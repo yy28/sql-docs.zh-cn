@@ -2,12 +2,14 @@
 title: "R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
@@ -17,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04a227a72d18f1cf2338bae384afe74c4529225d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 41219f87c47b970f8b8063db64f81032ab826ee0
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R)
 
@@ -197,10 +199,10 @@ EXECUTE sp_execute_external_script
     
 |*Col2*|*Col3*|
 |----|----|
-|1|1|
+|@shouldalert|@shouldalert|
 |10|2|
 |100|3|
-|1|4|
+|@shouldalert|4|
 |10|5|
 |100|6|
 
@@ -263,7 +265,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
 + "ProductSeries"已被标识为文本列**因素**，这意味着分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>“摘要”
 
 从即使这些简短的示例中，你可以看到需要时将传递 SQL 查询中用作输入，请检查数据转换的效果。 因为某些 SQL Server 数据类型不受 R，请考虑这些方法，从而避免错误：
 

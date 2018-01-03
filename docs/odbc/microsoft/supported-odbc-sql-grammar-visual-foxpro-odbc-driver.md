@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e5e1755f8c622efceac581e66168666fea9eb86
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 877a358d9cd4d9e1863320d4444212c82fed644a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>支持的 ODBC SQL 语法 （Visual FoxPro ODBC 驱动程序）
 Microsoft Visual FoxPro ODBC 驱动程序支持以下功能：  
@@ -40,7 +40,7 @@ Microsoft Visual FoxPro ODBC 驱动程序支持以下功能：
   
  下表列出了驱动程序，通过 ODBC SQL 语法级别支持的项目。  
   
-|Level|元素|项|  
+|级别|元素|项|  
 |-----------|--------------|----------|  
 |最低要求|数据定义语言 (DDL)|CREATE TABLE 和 DROP TABLE|  
 ||数据操作语言 (DML)|选择、 插入、 更新和删除|  

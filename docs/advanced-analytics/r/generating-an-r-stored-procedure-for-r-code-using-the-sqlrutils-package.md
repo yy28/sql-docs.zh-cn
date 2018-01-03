@@ -2,9 +2,11 @@
 title: "使用 sqlrutils 包为 R 代码生成 R 存储过程 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 805d533d140512754ecd6393654c67fa70f93340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 05cd57e3d4e4b266eb3570da253e9417646d91f4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>使用 sqlrutils 包为 R 代码生成 R 存储过程
 **sqlrutils** 包为 R 用户提供一种机制，将他们的 R 脚本置于 T-SQL 存储过程中、向数据库注册该存储过程并从 R 开发环境运行存储过程。 

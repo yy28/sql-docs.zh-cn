@@ -1,7 +1,7 @@
 ---
 title: "生成报表 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4fd0b5cf06541178cc334bd557dbb1e9aded9a20
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aaadc1f77e9fb7e0179f46f4a2186322aa2ad656
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-oracletosql"></a>生成报表 (OracleToSQL)
 使用命令执行特定活动的报告中在对象树级别的 SSMA 控制台中生成。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**Command**|**报表标题**|  
-    |1|生成评估报表|AssessmentReport&lt;n&gt;。XML|  
+    |@shouldalert|生成评估报表|AssessmentReport&lt;n&gt;。XML|  
     |2|转换架构|SchemaConversionReport&lt;n&gt;。XML|  
     |3|迁移数据|DataMigrationReport&lt;n&gt;。XML|  
     |4|转换 sql 语句|ConvertSQLReport&lt;n&gt;。XML|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|详细 ="false"|生成的活动汇总的报告。|  
+    |@shouldalert|详细 ="false"|生成的活动汇总的报告。|  
     |2|详细 ="true"|生成每个活动的摘要和详细状态报表。|  
   
     > [!NOTE]  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
+    |@shouldalert|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
     |2|报告错误 ="true"|详细的错误 / 警告 / 信息消息。|  
   
     > [!NOTE]  

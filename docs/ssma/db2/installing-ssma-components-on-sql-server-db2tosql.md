@@ -1,7 +1,7 @@
 ---
 title: "在 SQL Server (DB2ToSQL) 上安装 SSMA 组件 |Microsoft 文档"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 988d4404c915ed62dc1e2b9c1171a35df0536448
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 160be4a7704b159a9445fc5a1f48ed2a6c9d8e84
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>在 SQL Server (DB2ToSQL) 上安装 SSMA 组件
 在此版本的 SSMA 就无需单独安装上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]支持数据迁移和 DB2 提供程序启用服务器到服务器的连接的 SSMA 扩展包。  

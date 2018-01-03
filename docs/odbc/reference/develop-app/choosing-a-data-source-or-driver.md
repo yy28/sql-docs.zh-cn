@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>选择数据源或驱动程序
 此数据源或应用程序使用的驱动程序，有时应用程序中硬编码。 例如，编写由 MIS 部门要传输到另一个数据源的数据将包含这些数据源的名称的自定义应用程序-应用程序只需将不起作用的任何其他数据源。 另一个示例是垂直的应用程序，例如另一个用于订单条目。 此类应用程序始终使用同一数据源，已由应用程序已知的预定义的架构。  

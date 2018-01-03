@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a878a9ff6c0d1a00f5e551b1810ab3d6f20d44a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-population-of-the-ipd"></a>自动填充的 IPD
 某些驱动程序都能准备好参数化的查询之后设置 IPD 的字段。 描述符字段自动填充有关参数，包括数据类型、 精度、 小数位数和其他特征的信息。 这相当于支持**SQLDescribeParam**。 它还没有发现它，例如当应用程序不知道的参数以进行即席查询时的其他方法时，此信息可能特别有价值的应用程序。  

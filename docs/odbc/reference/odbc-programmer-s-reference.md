@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程序员 &#39; s 引用
 *ODBC 程序员参考*包含以下各节。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  将使用以下排字约定。  
   
-|格式|用于|  
+|“格式”|用于|  
 |------------|--------------|  
 |选择 * 从|大写字母指示 SQL 语句、 宏名称和在操作系统命令级别使用的术语。|  
 |`RETCODE SQLFetch(hdbc)`|等宽字体用于示例命令行和程序代码。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |**SQLEndTran**|粗体类型指示必须严格按所示，包括函数名称键入语法。|  
 |&#124;|竖线分隔的语法行中的两个互相排斥的选项。|  
 |...|省略号表示自变量可以重复多次。|  
-|实例时都提供 SQL Server 登录名。 。 实例时都提供 SQL Server 登录名。|三个点的一列指示延续前面的代码行。|  
+|实例时都提供 SQL Server 登录名。 实例时都提供 SQL Server 登录名。 实例时都提供 SQL Server 登录名。|三个点的一列指示延续前面的代码行。|  
   
 ## <a name="about-the-code-examples"></a>有关代码示例  
  本指南中的代码示例旨在仅用于说明目的。 因为它们编写主要是为了演示 ODBC 原则，效率有时在一旁为了清楚起见。 此外，代码的整个部分有时省略了为清楚起见。 其中包括非 ODBC 函数 （其名称不会启动与"SQL"这些函数） 和大多数的错误处理的定义。  

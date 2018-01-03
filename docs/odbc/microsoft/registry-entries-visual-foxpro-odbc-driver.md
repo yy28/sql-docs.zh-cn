@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项 （Visual FoxPro ODBC 驱动程序）
 在安装 Visual FoxPro ODBC 驱动程序时，安装程序将更新你的系统注册表中，注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，添加新项称为 Microsoft Visual FoxPro 驱动程序中。 在该注册表项，添加以下表中描述的值。  
   
-|值名称|值类型|值|  
+|值名称|值类型|ReplTest1|  
 |----------------|----------------|-----------|  
 |APILevel|REG_SZ|"1"|  
 |ConnectFunctions|REG_SZ|"YYN"|  
@@ -44,13 +44,13 @@ ms.lasthandoff: 11/20/2017
   
  安装程序还将添加"Visual FoxPro 文件"，表示默认 Visual FoxPro 驱动程序，对你的系统 HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini 密钥的密钥。 此项下的安装程序将添加下表中描述的值。  
   
-|值名称|值类型|值|  
+|值名称|值类型|ReplTest1|  
 |----------------|----------------|-----------|  
 |驱动程序|REG_SZ|Vfpodbc.dll 文件系统路径|  
   
  将 Visual FoxPro ODBC 数据源添加到您的 ODBC 配置，每次添加新的密钥对该数据源名称。 数据源值对应于在中设置的值**ODBC Visual FoxPro 安装**对话框中下, 表中列出。  
   
-|值名称 （关键字）|值类型|值|  
+|值名称 （关键字）|值类型|ReplTest1|  
 |----------------------------|----------------|-----------|  
 |逐份打印|REG_SQ|任何受支持的排序规则序列|  
 |Description|REG_SZ|数据源的用户说明|  

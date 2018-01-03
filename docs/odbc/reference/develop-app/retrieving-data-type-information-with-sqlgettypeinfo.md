@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3ae7606967ce0f77fea638a69a8b44f0e175a48
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>检索 SQLGetTypeInfo 的数据类型信息
 ODBC 基础 SQL 数据类型从到 ODBC 类型标识符的映射是近似值，因为提供函数 (**SQLGetTypeInfo**) 通过该驱动程序可以完全描述了每个数据源中的 SQL 数据类型。 此函数将返回一个结果集，其中每个行所说明的一种数据类型，例如名称、 类型标识符、 精度、 小数位数和可为 null 的特征。  

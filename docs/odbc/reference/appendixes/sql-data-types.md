@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>SQL 数据类型
 每个 DBMS 定义其自己的 SQL 类型。 每个 ODBC 驱动程序公开仅关联的 DBMS 定义这些 SQL 数据类型。 有关如何将驱动程序映射信息 DBMS SQL 类型到 ODBC 定义的 SQL 类型标识符和驱动程序将 DBMS SQL 类型映射到其自己的特定于驱动程序的 SQL 类型标识符如何通过调用返回**SQLGetTypeInfo**。 驱动程序也会返回 SQL 数据类型变为描述列和通过对的调用的参数的数据类型时**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NUMERIC|数字 (*p*，*s*)|有符号的确切数字，其精度*p*和小数位数*s* (1 < = *p* < = 15;*s* <= *p*)。 [4]|  
 |SQL_SMALLINT|SMALLINT|确切数字值，该值精度为 5，小数位数为 0 (签名:-32768 < =  *n*  < = 32,767，未签名： 0 < =  *n*  < = 65535) [3]。|  
 _INTEGER|整数|确切数字值，该值精度为 10，小数位数为 0 (签名:-2 [31] < =  *n*  < = 2 [31] – 1，未签名： 0 < =  *n*  < = 2 [32] – 1) [3]。|  
-|SQL_REAL|REAL|已签名，其二进制精度为 24 的近似的数字值 （0 或绝对值 10 [–38] 到 10[38])。|  
+|SQL_REAL|real|已签名，其二进制精度为 24 的近似的数字值 （0 或绝对值 10 [–38] 到 10[38])。|  
 |SQL_FLOAT|FLOAT (*p*)|有符号，近似数值二进制精度为至少*p*。 （最大精度是驱动程序定义的。）[5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|有符号的近似数值，其二进制精度 53 （零或绝对值 10 [–308] 到 10[308])。|  
 |SQL_BIT|BIT|一个位的二进制数据。[8]|  

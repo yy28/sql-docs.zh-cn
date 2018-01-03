@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>字符串函数
 下表列出的字符串操作函数。 应用程序可以确定由驱动程序支持哪些字符串函数，应调用**SQLGetInfo**与*信息类型*SQL_STRING_FUNCTIONS。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  自变量表示为*string_exp*可以是某一列的名称*字符字符串文本*，或另一个标量函数，其中基础数据类型可以表示为 SQL_CHAR，SQL_ 的结果VARCHAR、 或 SQL_LONGVARCHAR。  
   
  自变量表示为*character_exp*是长度可变字符字符串。  
