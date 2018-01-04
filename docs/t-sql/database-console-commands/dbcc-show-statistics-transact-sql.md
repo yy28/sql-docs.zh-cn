@@ -1,7 +1,7 @@
 ---
 title: "DBCC SHOW_STATISTICS (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -38,11 +38,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6b82cb2c44d049f44378cd86955373004bb0cb5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,9 +100,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |列名|Description|  
 |-----------------|-----------------|  
-|Name|统计信息对象的名称。|  
-|Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函数是另一种方法检索此信息。|  
-|行|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
+|“属性”|统计信息对象的名称。|  
+|Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函数是另一种方法检索此信息。 有关详细信息，请参阅[备注](#Remarks)在此页中的部分。|  
+|“行”|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Rows Sampled|用于统计信息计算的抽样总行数。 如果 Rows Sampled < Rows，显示的直方图和密度结果则是根据抽样行估计的。|  
 |步骤|直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。|  
 |Density|计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本实现向后兼容。|  
@@ -118,7 +118,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |-----------------|-----------------|  
 |All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
 |Average Length|存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。|  
-|列|为其显示 All density 和 Average length 的前缀中的列的名称。|  
+|“列”|为其显示 All density 和 Average length 的前缀中的列的名称。|  
   
 下表对指定 HISTOGRAM 选项时结果集中所返回的列进行了说明。
   
@@ -130,7 +130,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |DISTINCT_RANGE_ROWS|非重复列值位于直方图梯级内（不包括上限）的行的估算数目。|  
 |AVG_RANGE_ROWS|重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。| 
   
-## <a name="remarks"></a>注释  
+## <a name="Remarks"></a> 注释 
+
+统计信息更新日期存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)连同[直方图](#histogram)和[密度向量](#density)，而不是在元数据。 不读取任何数据以生成统计信息数据时, 未创建统计信息 blob，日期不可用，和*更新*列为 NULL。 这种情况的谓词不返回任何行，或为新的空表的筛选统计信息。
   
 ## <a name="histogram"></a>直方图  
 直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
@@ -148,8 +150,8 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 查询优化器按照直方图梯级的统计重要性来定义直方图梯级。 它使用最大差异算法使直方图中的梯级减至最少，并同时最大化边界值之间的差异。 最大梯级数为 200。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 例如，具有 100 个非重复值的列所具有的直方图的边界点可以少于 100。
   
-## <a name="density-vector"></a>密度向量  
-查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 例如，如果统计信息对象有键列`CustomerId`，`ItemId`和`Price`，密度计算上每个以下的列前缀。
+## <a name="density"></a>密度向量  
+查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 例如，如果统计信息对象包含键列 `CustomerId`、`ItemId` 和 `Price`，则根据以下每个列前缀计算密度。
   
 |列前缀|计算密度所基于的对象|  
 |---|---|
@@ -185,7 +187,7 @@ DBCC SHOW_STATISTICS 显示控件节点级别上的 Shell 数据库中存储的�
 ### <a name="a-returning-all-statistics-information"></a>A. 返回所有统计信息  
 下面的示例显示所有统计信息对于`AK_Address_rowguid`索引`Person.Address`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +195,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. 指定 HISTOGRAM 选项  
 这就限制了显示 Customer_LastName 直方图数据的统计信息。
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +204,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 显示一个统计信息对象的内容  
  下面的示例显示上 DimCustomer 表 Customer_LastName 统计信息的内容。  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
