@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  文件组或变量的逻辑名称，其值等于要包含在备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。  
   
 > [!NOTE]  
->  如果数据库的大小和性能要求使得进行数据库备份不切实际，则应考虑使用文件备份。  
+>  如果数据库的大小和性能要求使得进行数据库备份不切实际，则应考虑使用文件备份。 NUL 设备可以用于测试的性能的备份，但不是应在生产环境中使用。
   
  *n*  
  一个占位符，表示可以在逗号分隔的列表中指定多个文件和文件组。 数量不受限制。 
@@ -227,8 +227,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { *logical_device_name* | **@***logical_device_name_var* }  
  要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果为变量提供 (@*logical_device_name_var*)，备份设备名称可以是指定为字符串常量 (@*logical_device_name_var*  **=** 逻辑备份设备名称) 或为除任何字符字符串数据类型的变量的**ntext**或**文本**数据类型。  
   
- {磁盘 |磁带 |URL}  **=**  { *physical_device_name*  |   **@** *physical_device_name_var* }  
- 指定磁盘文件或磁带设备，或者 Windows Azure 存储服务。 该 URL 的格式用于创建备份到 Windows Azure 存储服务。 有关详细信息和示例，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 本教程，请参阅[教程： SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
+ {磁盘 |磁带 |URL}  **=**  { *physical_device_name*  |   **@** *physical_device_name_var* |NUL}  
+ 指定磁盘文件或磁带设备，或者 Windows Azure 存储服务。 该 URL 的格式用于创建备份到 Windows Azure 存储服务。 有关详细信息和示例，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 本教程，请参阅[教程： SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
+
+[!NOTE] 
+ NUL 磁盘设备将放弃发送给它的所有信息，并仅应该用于测试。 这不是供生产之用。
   
 > [!IMPORTANT]  
 >  与[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]直到 SP1 CU2 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，你可以对单个设备仅备份，备份到 URL 时。 若要备份到 URL 时，备份到多个设备，你必须使用[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]并且你必须使用共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅[SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)和[简化使用 powershell 的 Azure 存储空间上的共享访问签名 (SAS) 令牌创建 SQL 凭据](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
@@ -236,6 +239,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 **URL 适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过 SP1 CU2 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  如果某一磁盘设备不存在，也可以在 BACKUP 语句中指定它。 如果存在物理设备且 BACKUP 语句中未指定 INIT 选项，则备份将追加到该设备。  
+ 
+ 但是，备份将仍会标记所有页，为备份，NUL 设备将放弃所有输入发送到此文件。
   
  有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
@@ -346,7 +351,7 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 {EXPIREDATE **=***日期*|RETAINDAYS  **=**  *天*}  
 指定允许覆盖该备份的备份集的日期。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。  
   
-如果两个选项指定，到期日期将由**mediaretention**配置设置。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
+如果两个选项指定，到期日期将由**mediaretention**配置设置。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
 > [!IMPORTANT]  
 >  这些选项仅仅阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆盖文件。 用其他方法仍可擦除磁带，而通过操作系统也可以删除磁盘文件。 有关过期验证的详细信息，请参阅本主题中的 SKIP 和 FORMAT。  
@@ -649,7 +654,7 @@ GO
 |镜像|介质簇 1|介质簇 2|介质簇 3|  
 |------------|--------------------|--------------------|--------------------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  介质簇必须总是备份到特定镜像中的同一个设备。 因此，每次使用现有介质集时，请按照创建介质集时指定的相同顺序列出各个镜像的设备。  
   
@@ -714,10 +719,10 @@ GO
   
 执行还原时，如果备份集不已记录在**msdb**数据库，可能修改表的备份历史记录。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、**密码**和**MEDIAPASSWORD**选项不再可用于创建备份。 就仍可以还原使用密码创建的备份。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
@@ -878,7 +883,7 @@ WITH STATS = 5;
  [结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [DBCC SQLPERF &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   

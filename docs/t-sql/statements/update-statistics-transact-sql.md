@@ -1,7 +1,7 @@
 ---
 title: "更新统计信息 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -156,28 +157,42 @@ PERSIST_SAMPLE_PERCENT = {ON |关闭}
  如果不支持每个分区统计信息，将生成错误。 对于以下统计信息类型，不支持增量统计信息：  
   
 -   使用未与基表的分区对齐的索引创建的统计信息。  
-  
 -   对 Always On 可读辅助数据库创建的统计信息。  
-  
 -   对只读数据库创建的统计信息。  
-  
 -   对筛选的索引创建的统计信息。  
-  
 -   对视图创建的统计信息。  
-  
 -   对内部表创建的统计信息。  
-  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
 **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 重写**最大并行度**统计信息操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+  
+ *max_degree_of_parallelism*可以是：  
+  
+ @shouldalert  
+ 取消生成并行计划。  
+  
+ \>1  
+ 限制最大并行统计信息操作为指定的数或更少基于当前的系统工作负荷中使用的处理器数。  
+  
+ 0（默认值）  
+ 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="when-to-use-update-statistics"></a>何时使用 UPDATE STATISTICS  
  有关何时使用更新统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
-  
+
+## <a name="limitations-and-restrictions"></a>限制和局限  
+* 外部表不支持更新统计信息。 若要更新对外部表的统计信息，请除去并重新创建统计信息。  
+* MAXDOP 选项不兼容与 STATS_STREAM、 行计数和 PAGECOUNT 选项。
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
  有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  
   

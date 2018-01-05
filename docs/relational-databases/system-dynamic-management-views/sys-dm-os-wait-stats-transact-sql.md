@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/29/2017
 |signal_wait_time_ms|**bigint**|正在等待的线程从收到信号通知到其开始运行之间的时差。|  
 |pdw_node_id|**int**|此分布的节点标识符。 <br/> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
   
@@ -90,7 +90,7 @@ GO
   
  下表列出各任务所遇到的等待类型。  
 
-|类型 |Description| 
+|type |Description| 
 |-------------------------- |--------------------------| 
 |ABR |标识为仅供参考。 不提供支持。 不保证以后的兼容性。| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -169,7 +169,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |COUNTRECOVERYMGR |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CREATE_DATINISERVICE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|CXPACKET |当同步查询处理器交换迭代器，并生成和使用行时出现并行查询计划。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。| 
+|CXCONSUMER |当使用者线程等待制造者线程，以将行发送时出现并行查询计划。 这是执行的并行查询的常见现象。 <br /> **适用于**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |当同步查询处理器交换迭代器，并生成和使用行时出现并行查询计划。 如果等待太久，无法通过优化查询（如添加索引）来减少等待时间，请考虑调整并行度的开销阈值或降低并行度。<br /> **注意：**中[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 仅是指同步查询处理器交换迭代器，以及的生成使用者线程的行。 CXCONSUMER 等待类型分别进行跟踪使用者线程。| 
 |CXROWSET_SYNC |在并行范围扫描期间出现。| 
 |DAC_INIT |当正在初始化专用管理员连接时出现。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 

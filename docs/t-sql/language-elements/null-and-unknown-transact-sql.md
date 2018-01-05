@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL 和未知 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/17/2017
   
 -   作为将表中的一个行与在表中，如主键，或者用于分发行，例如分发键的信息的另一个行区分开来所需的信息不能使用 null 值。  
   
- 如果数据中出现空值，则逻辑运算符和比较运算符有可能返回 TRUE 或 FALSE 以外的第三种结果 UNKNOWN。 这种对三值逻辑的需要是导致许多应用程序出错的根源。 下面这些表概括了引入空值比较的效果。  
+ 如果数据中出现空值，则逻辑运算符和比较运算符有可能返回 TRUE 或 FALSE 以外的第三种结果 UNKNOWN。 这种对三值逻辑的需要是导致许多应用程序出错的根源。 除非运算符的结果不依赖于未知的表达式，包括未知情况的布尔表达式中的逻辑运算符将返回未知。 这些表提供了此行为的示例。  
   
- 下表显示应用于两个布尔操作数和运算符的结果，其中一个操作数，则返回 NULL。  
+ 下表显示了其中一个表达式返回未知将 AND 运算符应用于两个布尔表达式的结果。  
   
-|操作数 1|操作数 2|结果|  
+|表达式 1|Expression 2|结果|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- 下表显示应用于两个布尔操作数或运算符的结果，其中一个操作数，则返回 NULL。  
+ 下表显示了其中一个表达式返回未知将 OR 运算符应用于两个布尔表达式的结果。  
   
-|操作数 1|操作数 2|结果|  
+|表达式 1|Expression 2|结果|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>另请参阅  
  [和 &#40;Transact SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
