@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_stats (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/21/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89f3fe5797170f85aeb1eff6eae506a5458999f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,16 +107,24 @@ ms.lasthandoff: 11/17/2017
 |**last_used_threads**|**bigint**|在执行此计划的最后一次时使用的并行线程数。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**min_used_threads**|**bigint**|使用此计划曾经使用一次执行中的并行线程中最小的数。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**max_used_threads**|**bigint**|使用一次执行中曾经使用此计划的并行线程的最大数目。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|此分布的节点标识符。<br /><br /> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|读取查询的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_reads**|**bigint**|列存储段读取上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**total_columnstore_segment_skips**|**bigint**|查询已跳过的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_skips**|**bigint**|列存储段跳过上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
   
 > [!NOTE]
-> <sup>1</sup>对于本机编译存储过程启用统计信息收集后，工作线程时间收集以毫秒为单位。 如果查询执行不到 1 毫秒，则该值将为 0。  
+> <sup>1</sup>对于本机编译存储过程启用统计信息收集后，工作线程时间收集以毫秒为单位。 如果查询执行小于一毫秒，值将为 0。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  查询完成后，将更新该视图中的统计信息。  
   
 ## <a name="examples"></a>示例  
@@ -124,7 +132,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-finding-the-top-n-queries"></a>A. 查找 TOP N 查询  
  以下示例按平均 CPU 时间返回排名前五个的查询的相关信息。 此示例将根据查询的查询哈希对查询进行聚合，以便按照查询的累积资源消耗来分组在逻辑上等效的查询。  
   
-``` t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
@@ -141,13 +149,12 @@ FROM
      CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) as ST) as query_stats  
 GROUP BY query_stats.query_hash  
 ORDER BY 2 DESC;  
-  
 ```  
   
 ### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. 对查询返回行计数聚合  
  以下示例返回查询的行计数聚合信息（总行数、最小行数、最大行数和上一次行数）。  
   
-``` t-sql  
+```sql  
 SELECT qs.execution_count,  
     SUBSTRING(qt.text,qs.statement_start_offset/2 +1,   
                  (CASE WHEN qs.statement_end_offset = -1   

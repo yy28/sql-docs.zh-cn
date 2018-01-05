@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d5c466e35f8e37d7f2559e6766886b5ef80e390e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-跟踪标志 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,7 @@ ms.lasthandoff: 01/02/2018
 |**2371**|固定的自动更新统计信息阈值更改为动态的自动更新统计信息的阈值。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2754171)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]并在列表视图[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)130 上，此行为由引擎控制和跟踪标志 2371年不起作用。<br /><br />**作用域**： 全局仅|
 |**2389**|启用自动生成升序键 （直方图修正） 的快速统计的信息。 如果设置跟踪标志 2389年，并且起始的统计信息列标记为升序排序，然后在查询编译时用于估计基数直方图进行调整。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 改为使用跟踪标志 4139。<br /><br />**作用域**： 全局或会话或查询|
 |**2390**|启用自动生成升序或未知键 （直方图修正） 的快速统计的信息。 如果设置了跟踪标志 2390年，并且起始的统计信息列标记为升序或未知，则将在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**注意：**此跟踪标志不适用于 CE 版本 120 或更高版本。 改为使用跟踪标志 4139。<br /><br />**作用域**： 全局或会话或查询|
+|**2422**|使[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求时超出了资源调控器 REQUEST_MAX_CPU_TIME_SEC 配置设置的最大时间。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/help/4038419)。<br /><br />**注意：**此跟踪标志适用于[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 和更高版本的生成。<br /><br />**作用域**： 全局|
 |**2430**|启用备用锁类清理。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2754301)。<br /><br />**作用域**： 全局仅| 
 |**2453**|允许表变量的行的数量不足发生更改时触发重新编译。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：**请确保先进行全面测试此选项，然后将它应用到生产环境。<br /><br />**作用域**： 全局或会话或查询|
 |**2528**|禁用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 执行的对象并行检查。 默认情况下，并行度由查询处理器自动确定。 最大并行度的配置就像并行查询的最大并行度一样。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：**并行 DBCC 检查通常应该是启用 （默认值）。 查询处理器重新评估，并自动调整每个表或批处理的 DBCC checkdb 检查表的并行。<br /><br />系统管理员知道该服务器负载会增加才能 DBCC CHECKDB 完成，因此选择手动或降低禁用并行度，为了提高与其他用户工作负荷的并发性时的典型使用方案。 但是，禁用在 DBCC CHECKDB 的并行检查会导致它执行长时间才能完成。<br /><br />**注意：**如果使用 TABLOCK 选项执行 DBCC CHECKDB 和并行下为禁用，表可能被锁定的时间更长时间。<br /><br />**注意：**开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，MAXDOP 选项可覆盖 max degree of parallelism 配置选项的 sp_configure 语句。<br /><br />**作用域**： 全局或会话|

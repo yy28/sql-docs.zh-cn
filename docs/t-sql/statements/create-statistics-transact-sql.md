@@ -1,7 +1,7 @@
 ---
 title: "创建统计信息 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +65,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +85,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +144,11 @@ CREATE STATISTICS statistics_name
   
  下面是 Production.BillOfMaterials 表的筛选谓词的一些示例：  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  有关筛选器谓词的详细信息，请参阅[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
@@ -184,28 +190,38 @@ CREATE STATISTICS statistics_name
  如果不支持每个分区统计信息，将生成错误。 对于以下统计信息类型，不支持增量统计信息：  
   
 -   使用未与基表的分区对齐的索引创建的统计信息。  
-  
 -   对 Always On 可读辅助数据库创建的统计信息。  
-  
 -   对只读数据库创建的统计信息。  
-  
 -   对筛选的索引创建的统计信息。  
-  
 -   对视图创建的统计信息。  
-  
 -   对内部表创建的统计信息。  
-  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
+MAXDOP = *max_degree_of_parallelism*  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 重写**最大并行度**统计信息操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+  
+ *max_degree_of_parallelism*可以是：  
+  
+ @shouldalert  
+ 取消生成并行计划。  
+  
+ \>1  
+ 限制最大并行统计信息操作为指定的数或更少基于当前的系统工作负荷中使用的处理器数。  
+  
+ 0（默认值）  
+ 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>权限  
  需要下列权限之一：  
   
 -   ALTER TABLE  
-  
 -   用户是表所有者  
-  
 -   中的成员身份**db_ddladmin**固定的数据库角色  
   
 ## <a name="general-remarks"></a>一般备注  
@@ -224,8 +240,9 @@ CREATE STATISTICS statistics_name
  [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)目录视图跟踪作为引用的依赖关系的筛选的统计信息谓词中每一列。 由于您无法删除、重命名或修改在筛选统计信息谓词中定义的表列的定义，因此在创建筛选统计信息之前应考虑清楚要对表列执行哪些操作。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
-*  外部表不支持更新统计信息。 若要更新对外部表的统计信息，请除去并重新创建统计信息。  
-*  你可以列出每个统计信息对象的最多为 64 列。
+* 外部表不支持更新统计信息。 若要更新对外部表的统计信息，请除去并重新创建统计信息。  
+* 你可以列出每个统计信息对象的最多为 64 列。
+* MAXDOP 选项不兼容与 STATS_STREAM、 行计数和 PAGECOUNT 选项。
   
 ## <a name="examples"></a>示例  
 

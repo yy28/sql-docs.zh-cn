@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 收缩指定数据库中的数据文件和日志文件的大小。
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  数据库收缩后的数据库文件中所需的剩余可用空间百分比。  
   
  NOTRUNCATE  
- 通过将已分配的页从文件末尾移动到文件前面的未分配页来压缩数据文件中的数据。 *target_percent*是可选的。  
+ 通过将已分配的页从文件末尾移动到文件前面的未分配页来压缩数据文件中的数据。 *target_percent*是可选的。 与 Azure SQL 数据仓库不支持此选项。 
   
  文件末尾的可用空间不会返回给操作系统，文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，数据库看起来未收缩。  
   
  NOTRUNCATE 只适用于数据文件。 日志文件不受影响。  
   
  TRUNCATEONLY  
- 将文件末尾的所有可用空间释放给操作系统，但不在文件内部执行任何页移动。 数据文件只收缩到最后分配的区。 *target_percent*如果使用 TRUNCATEONLY 指定将被忽略。  
+ 将文件末尾的所有可用空间释放给操作系统，但不在文件内部执行任何页移动。 数据文件只收缩到最后分配的区。 *target_percent*如果使用 TRUNCATEONLY 指定将被忽略。 与 Azure SQL 数据仓库不支持此选项。
   
  TRUNCATEONLY 将影响日志文件。 若要仅截断数据文件，请使用 DBCC SHRINKFILE。  
   
@@ -94,7 +94,7 @@ DBCC SHRINKDATABASE
 >[!NOTE]
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]不显示未收缩的文件的行。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 若要收缩特定数据库的所有数据和日志文件，请执行 DBCC SHRINKDATABASE 命令。 若要收缩一个数据或同时为特定数据库日志文件，执行[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)命令。
   
 若要查看数据库中的当前可用 （未分配） 空间量，运行[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)。
@@ -108,6 +108,9 @@ DBCC SHRINKDATABASE
 要收缩的数据库不必在单用户模式下；其他的用户仍可以在数据库收缩时对其进行工作。 这也包括系统数据库。
   
 不能在备份数据库时收缩数据库。 反之，也不能在数据库执行收缩操作时备份数据库。
+
+>[!NOTE]
+> 目前，Azure SQL 数据仓库不支持与启用 TDE 的 DBCC SHRINKDATABASE。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 的工作原理  
 DBCC SHRINKDATABASE 以每个文件为单位对数据文件进行收缩。然而，DBCC SHRINKDATABASE 在对日志文件进行收缩时，它将视为所有的日志文件都存在于一个连续的日志池中。 文件始终从末尾开始收缩。
@@ -147,7 +150,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   终止收缩操作。 将保留任何已完成的工作。  
 -   不执行任何操作，并允许收缩操作等到阻塞事务完成。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  

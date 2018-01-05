@@ -1,7 +1,7 @@
 ---
 title: "创建工作负荷组 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  指定工作负荷组中某个请求的相对重要性。 重要性为下列值之一，默认值为 MEDIUM：  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM（默认值）    
 -   HIGH  
   
 > [!NOTE]  
->  在内部，每个重要性设置都存储为用于计算的一个数字。  
+> 在内部，每个重要性设置都存储为用于计算的一个数字。  
   
  IMPORTANCE 对资源池而言是局部性的；同一资源池内重要性不同的工作负荷组会相互影响，但不会影响其他资源池中的工作负荷组。  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  指定单个请求可以从池中获取的最大内存量。 此百分比是相对于 MAX_MEMORY_PERCENT 指定的资源池大小而言的。  
   
 > [!NOTE]  
->  指定的量指的只是查询执行授予内存。  
+> 指定的量指的只是查询执行授予内存。  
   
  *值*必须为 0 或一个正整数。 所允许的范围*值*是从 0 到 100 之间。 默认设置*值*为 25。  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  指定请求可以使用的最长 CPU 时间，以秒为单位。 *值*必须为 0 或一个正整数。 默认设置*值*为 0，这意味着无限制。  
   
 > [!NOTE]  
->  如果超过最长时间，资源调控器并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅[CPU 阈值超出 Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
+> 默认情况下，资源调控器不会阻止请求继续如果超出最大时间。 但会生成一个事件。 有关详细信息，请参阅[CPU 阈值超出 Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
+
+> [!IMPORTANT]
+> 从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3，并使用[跟踪标志 2422年](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，资源调控器将中止请求时超出最大时间。 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*值*  
  指定的最长时间，以秒为单位，查询可以等待内存授予 （工作缓冲区内存） 变得可用。  
@@ -145,14 +145,14 @@ CREATE WORKLOAD GROUP group_name
   
 -   外部进程外部资源池。 有关详细信息，请参阅[sp_execute_external_script &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  REQUEST_MEMORY_GRANT_PERCENT：允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的资源调控器支持这种特殊的处理方法。 然而，最初授予及任何其他内存授予都受资源池和工作负荷组设置的限制。  
   
  **已分区表创建索引**  
   
  针对非对齐已分区表创建索引占用的内存是涉及的分区数成正比。 如果所需的内存总量超过资源调控器工作负荷组设置为每个查询设定的限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，则可能无法执行这种索引创建。 由于“default”工作负荷组允许查询超过每个查询的限制，并在开始时使用所需的最低内存，因此，如果“default”资源池配置了足够多的内存总量以运行此类查询，则用户或许能够在“default”工作负荷组中执行相同的索引创建。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ REORGANIZE 是在线执行的。
 -   在其中 10%或更多的行已被逻辑删除的行组，SQL Server 将尝试与一个或多个行组组合此行组。    例如，具有 500,000 行压缩行组 1 和与 1,048,576 行的最大压缩行组 21。  行组 21 具有的删除的行数的 60%，这会为 409,830 行。 SQL Server 优先组合这些行来压缩已 909,830 行新行组的两个组。  
   
 与重新组织 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2016年开始） 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
+
 -   ON 到列存储，而不考虑大小和状态 （关闭或打开） 强制所有行组。  
   
 -   关闭到列存储强制所有已关闭行组。  
@@ -393,17 +394,11 @@ PAD_INDEX = { ON | OFF }
  如果不支持每个分区统计信息，将忽略该选项并生成警告。 对于以下统计信息类型，不支持增量统计信息：  
   
 -   使用未与基表的分区对齐的索引创建的统计信息。  
-  
 -   对 Always On 可读辅助数据库创建的统计信息。  
-  
 -   对只读数据库创建的统计信息。  
-  
 -   对筛选的索引创建的统计信息。  
-  
 -   对视图创建的统计信息。  
-  
 -   对内部表创建的统计信息。  
-  
 -   使用空间索引或 XML 索引创建的统计信息。  
  
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -414,7 +409,7 @@ PAD_INDEX = { ON | OFF }
  对于 XML 索引或空间索引，仅支持 ONLINE = OFF。如果 ONLINE 设置为 ON，则会引发错误。  
   
 > [!NOTE]
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[版本和的支持的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[版本和的支持的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和[版本和 SQL Server 自 2017 年的支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  ON  
  在索引操作期间不持有长期表锁。 在索引操作的主要阶段，源表上只使用意向共享 (IS) 锁。 这样，即可继续对基础表和索引进行查询或更新。 操作开始时，将对源对象保持极短时间的共享 (S) 锁。 操作结束时，如果创建非聚集索引，将对源持有极短时间的 S 锁；当联机创建或删除聚集索引时，或者重新生成聚集或非聚集索引时，将获取 SCH-M（架构修改）锁。 对本地临时表创建索引时，ONLINE 不能设置为 ON。  

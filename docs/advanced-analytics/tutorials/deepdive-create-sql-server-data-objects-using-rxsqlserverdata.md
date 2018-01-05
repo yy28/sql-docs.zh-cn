@@ -1,50 +1,56 @@
 ---
-title: "使用 RxSqlServerData 创建 SQL Server 数据对象 | Microsoft Docs"
+title: "创建 SQL Server 数据对象使用 RxSqlServerData （SQL 和 R 深入） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
 caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c6208de7eedf66640ab2b8131a4b73c51e6fbaba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 82522664c8e5ba3d8c8046413abe68133a738828
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-sql-server-data-objects-using-rxsqlserverdata"></a>使用 RxSqlServerData 创建 SQL Server 数据对象
+# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>创建使用 RxSqlServerData （SQL 和 R 深入） 的 SQL Server 数据对象
 
-现在你已创建了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库并具有处理数据所需的权限，你将在 R 中创建使你可以处理数据的对象（同时在服务器和工作站上）。
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+
+到目前为止已创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中，并且具有足够的权限来处理的数据。 在此步骤中，你将创建可以处理的数据的 R 中的一些对象。
 
 ## <a name="create-the-sql-server-data-objects"></a>创建 SQL Server 数据对象
 
-在此步骤中，你将使用 R 创建并填充两个表。 这两个表包含模拟信用卡欺诈数据。 一个表用于定型模型，另一个表用于计分。
+在此步骤中，使用函数从**RevoScaleR**包创建并填充两个表。 一个表用于定型模型，另一个表用于计分。 这两个表包含模拟信用卡欺诈数据。
 
-若要在远程数据库上创建表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机，你将使用**RxSqlServerData**函数中提供**RevoScaleR**包。
+若要在远程数据库上创建表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机，请调用**RxSqlServerData**函数。
 
 > [!TIP]
 > 如果你正在使用 R Tools for Visual Studio，从工具栏选择“R Tools”，然后单击“Windows”以查看用于调试和查看 R 变量的选项。
 
 ### <a name="create-the-training-data-table"></a>创建训练数据表
 
-1. 在一个 R 变量中提供数据库连接字符串。 此处提供了两个适用于 SQL Server 的有效 ODBC 连接字符串的示例：一个使用 SQL 登录名，另一个适用于 Windows 集成身份验证（推荐）。
+1. 将数据库连接字符串保存在 R 变量中。 下面是有效的 SQL Server 的 ODBC 连接字符串的两个示例： 使用 SQL 登录名的一个，一个用于 Windows 集成身份验证。
 
-    **使用 SQL 登录名**
+    **SQL 登录名**
     ```R
     sqlConnString <- "Driver=SQL Server;Server=instance_name; Database=DeepDive;Uid=user_name;Pwd=password"
     ```
 
-    **使用 Windows 身份验证**
+    **Windows 身份验证**
     ```R
     sqlConnString <- "Driver=SQL Server;Server=instance_name;Database=DeepDive;Trusted_Connection=True"
     ```
@@ -65,11 +71,11 @@ ms.lasthandoff: 12/01/2017
     sqlRowsPerRead = 5000
     ```
   
-    虽然此参数是可选的，不过它对于处理内存使用率和高效计算非常重要。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中大多数增强的分析函数处理区块中的数据并累积中间结果，并在读取所有的数据后返回最终的计算。
+    虽然此参数是可选的，不过它对于处理内存使用率和高效计算非常重要。  中的增强分析函数的大多数[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]处理小区块中的数据和存储返回最终计算所有数据的已读取的中间结果。
   
-    如果此参数的值太大，则数据访问可能很慢，因为没有足够的内存来有效地处理如此大型的数据区块。  在某些系统中，如果 rowsPerRead 的值太小，则性能可能会较低。
+    如果此参数的值太大，则数据访问可能很慢，因为没有足够的内存来有效地处理如此大型的数据区块。  在某些系统中，如果 rowsPerRead 的值太小，则性能可能会较低。 因此，我们建议要通过试验使用此设置你的系统上时你正在使用大型数据集。
   
-    对于此演练，你将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例定义的批处理大小控制每个区块中的行数，并将该值保存在变量 sqlRowsPerRead 中。  建议你在使用大型数据集时在系统上试用此设置。
+    对于本演练中，使用所定义的默认批处理过程大小[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例来控制在每个块区中的行数。 将该值保存在变量`sqlRowsPerRead`。
   
 4.  最后，为新的数据源对象，定义一个变量，并传递给 RxSqlServerData 构造函数之前定义的参数。 请注意，这只会创建数据源对象而不会填充它。
   
@@ -81,7 +87,7 @@ ms.lasthandoff: 12/01/2017
 
 #### <a name="to-create-the-scoring-data-table"></a>创建计分数据表
 
-你将使用相同过程创建保存计分数据的表。
+使用相同的步骤，创建包含使用相同的过程的评分的数据的表。
 
 1. 创建一个新的 R 变量 sqlScoreTable，以存储用于计分的表的名称。
   
@@ -96,18 +102,19 @@ ms.lasthandoff: 12/01/2017
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-由于已在 R 工作区中将连接字符串和其他参数定义为变量，因此可方便地为不同表、视图或查询创建新数据源；只需指定不同表名即可。
+由于你已定义的连接字符串和其他参数作为 R 工作区中的变量，它很容易创建不同的表、 视图或查询的新数据源。
 
-在本教程后面部分中，你将学习如何基于 SQL 查询创建数据源对象。
+> [!NOTE]
+> 该函数使用不同的自变量，用于定义整个表比基于查询的数据源所基于的数据源。 这是因为 SQL Server 数据库引擎必须以不同的方式准备查询。 在本教程中，更高版本中，您将学习如何创建基于 SQL 查询的数据源对象。
 
-## <a name="load-data-into-sql-tables-using-r"></a>使用 R 将数据加载到 SQL 表中
+## <a name="load-data-into-sql-tables-using-r"></a>将数据加载到使用 R 的 SQL 表
 
 现在已创建了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，你可以使用相应的 **Rx** 函数将数据加载到这些表中。
 
-**RevoScaleR**包包含支持多个不同的数据源的函数： 对于文本数据，你将使用 RxTextData 来生成数据源对象。 有一些其他函数可用于通过 Hadoop 数据、ODBC 数据等创建数据源对象。
+**RevoScaleR**包包含支持多个不同的数据源的函数： 对于文本数据，使用[RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata)生成数据源对象。 有一些其他函数可用于通过 Hadoop 数据、ODBC 数据等创建数据源对象。
 
 > [!NOTE]
-> 对于此部分，必须对数据库具有“执行 DDL”权限。
+> 对于本部分中，必须具有**执行 DDL**数据库的权限。
 
 ### <a name="load-data-into-the-training-table"></a>将数据加载到培训表
 
@@ -117,9 +124,11 @@ ms.lasthandoff: 12/01/2017
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    请注意实用工具函数 rxGetOption。 此函数在 **RevoScaleR** 包中提供，可帮助设置和管理与本地和远程计算上下文相关的选项，如默认共享目录、要在计算中使用的处理器（核心）数等。此调用很有用，因为它从正确而不考虑运行你的代码库中获取这些示例。 例如，尝试在 SQL Server 和开发计算机上运行该函数，查看路径有何不同。
+    请注意调用**rxGetOption**，这 GET 方法与关联[rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions)中**RevoScaleR**。 此实用程序用于设置和列表选项与本地和远程计算上下文，如默认的共享的目录或要在计算中使用的处理器 （内核） 数。
+    
+    此特定调用从正确库，无论运行你的代码中获取这些示例。 例如，尝试在 SQL Server 和开发计算机上运行该函数，查看路径有何不同。
   
-2. 定义变量来存储新数据，并使用 RxTextData 函数来指定文本数据源。
+2. 定义一个变量来存储新数据，并使用 RxTextData 函数指定文本数据源。
   
     ```R
     inTextData <- RxTextData(file = ccFraudCsv,      colClasses = c(
@@ -134,9 +143,9 @@ ms.lasthandoff: 12/01/2017
   
 3. 此时，你可能想要暂停些时间，并查看你的数据库中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  刷新数据库中表的列表。
   
-    你将看到，尽管 R 数据对象已在本地工作区中创建，但是表尚未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中创建。 此外，任何数据具有已不加载从文本文件到 R 变量。
+    你可以看到，尽管已在本地工作区中创建 R 数据对象，这些表尚未创建中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此外，任何数据具有已不加载从文本文件到 R 变量。
   
-4. 现在，调用函数 rxDataStep 将数据插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。
+4. 现在，调用函数 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 将数据插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -152,7 +161,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="load-data-into-the-scoring-table"></a>将数据加载到评分表
 
-1. 你将按照相同步骤将用于计分的数据集加载到数据库中。
+1. 重复步骤要加载数据集用于评分到数据库。
   
     首先提供源文件的路径。
   
@@ -160,7 +169,7 @@ ms.lasthandoff: 12/01/2017
     ccScoreCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudScoreSmall.csv")
     ```
   
-2. 使用 RxTextData 函数来获取数据并将其保存在变量中， *inTextData*。
+2. 使用 RxTextData 函数获取数据并将其保存在变量 inTextData 中。
   
     ```R
     inTextData <- RxTextData(file = ccScoreCsv,      colClasses = c(
@@ -170,7 +179,7 @@ ms.lasthandoff: 12/01/2017
         "numIntlTrans" = "integer", "creditLine" = "integer"))
     ```
   
-3.  调用 rxDataStep 函数，可使用新的架构和数据覆盖当前的表。
+3.  调用 rxDataStep 函数以使用新架构和数据覆盖当前表。
   
     ```R
     rxDataStep(inData = inTextData, sqlScoreDS, overwrite = TRUE)
@@ -180,7 +189,7 @@ ms.lasthandoff: 12/01/2017
   
     - outFile 参数指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中要用于保存数据的表。
   
-    - 如果该表已存在并且你未使用 overwrite 选项，则结果会在无截断的情况下插入。
+    - 如果该表已存在并且不使用*覆盖*选项，而不发生截断插入结果。
   
 同样，如果连接成功，你将看到一条消息，表明完成以及将数据写入到表中所需的时间：
 
@@ -190,9 +199,9 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="more-about-rxdatastep"></a>有关 rxDataStep 的详细信息
 
-**RxDataStep**是一个功能强大的函数，可以执行多个转换的 R 数据框架，将数据转换为目标所需的表示。 在此例中，目标是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)是功能强大的函数，可以在 R 数据框架上执行多个转换。 此外可以使用 rxDataStep 将数据转换为所需的目标表示形式： 在这种情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-通过 rxDataStep 的自变量中使用 R 函数，还可以指定转换的数据。 你将看到更高版本的这些操作的示例。
+或者，你可以指定转换的数据，通过将 R 函数的自变量**rxDataStep**。 本教程中稍后提供这些操作的示例。
 
 ## <a name="next-step"></a>下一步
 
@@ -201,4 +210,3 @@ ms.lasthandoff: 12/01/2017
 ## <a name="previous-step"></a>上一步
 
 [使用 SQL Server 数据使用 R](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
-

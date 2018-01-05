@@ -1,40 +1,44 @@
 ---
-title: "SQL Server 和 XDF 文件之间移动数据 |Microsoft 文档"
+title: "SQL Server 和 XDF 文件 （SQL 和 R 深入） 之间移动数据 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a140cc358afab1f1ff324e0a47ed67501ee75e23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 65fb70927d799a77c00ec1d361f66ebf23f88136
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="move-data-between-sql-server-and-xdf-file"></a>在 SQL Server 和 XDF 文件之间移动数据
+# <a name="move-data-between-sql-server-and-xdf-file-sql-and-r-deep-dive"></a>SQL Server 和 XDF 文件 （SQL 和 R 深入） 之间移动数据
 
-当你使用在本地计算上下文中时，你可以访问这两个本地数据文件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（定义为 RxSqlServerData 数据源） 的数据库。
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-本部分将介绍如何获取数据并将其存储到本地计算机上的文件中，以便对数据执行转换。 完成后，你将使用数据文件中创建一个新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中的，通过使用 rxDataStep。
+在此步骤中，你了解如何使用 XDF 文件来远程和本地计算上下文之间传输数据。 将数据存储在 XDF 文件，可对数据执行转换。
+
+完成后，你使用数据文件中创建一个新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 该函数[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)可以对数据应用转换，并执行数据帧和.xdf 文件之间的转换。
   
-## <a name="create-a-sql-server-table-from-an-xdf-file"></a>从 XDF 文件创建一个 SQL Server 表
+## <a name="create-a-sql-server-table-from-an-xdf-file"></a>从 XDF 文件创建的 SQL Server 表
 
-RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 文件。 如果想要对存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据进行多种不同的分析，并且避免反复运行相同的查询，使用本地文件会非常方便。
+对于本练习中，你的信用卡欺诈数据再次使用。 在此方案中，要求对加利福尼亚州、俄勒冈州和华盛顿州的用户执行一些额外分析。 要更好高效，您已决定将仅这些状态的数据存储在本地计算机，和使用变量性别、 持卡人、 状态和平衡。
 
-在本练习中，会再次使用信用卡欺诈数据。 在此方案中，要求对加利福尼亚州、俄勒冈州和华盛顿州的用户执行一些额外分析。 为了提高效率，决定在本地计算机上只存储这些州的数据并只处理 gender、ardholder、state 和 balance 这几个变量。
-
-1. 再次使用之前创建的 stateAbb 向量确定要包括的级别，然后将新变量 statesToKeep 打印到控制台。
+1. 重复使用`stateAbb`之前以标识要包括，并将它们写入一个新变量的级别创建的变量`statesToKeep`。
   
     ```R
     statesToKeep <- sapply(c("CA", "OR", "WA"), grep, stateAbb)
@@ -46,7 +50,7 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
     ----|----|----
     5|38|48
     
-2. 现在，你将使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询定义想要从 SQL Server 带来的数据。  稍后，此变量将用作 rxImport 的 inData 参数。
+2. 定义你想要通过带从 SQL Server 的数据使用[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。  以后，你使用此变量作为*inData*参数**rxImport**。
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -54,7 +58,7 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
   
     确保没有隐藏字符，如换行符或查询中的选项卡。
   
-3. 接下来，你将定义要使用。 中的数据时使用的列例如，在较小的数据集，你需要仅三个因素级别，因为该查询将返回仅三种状态的数据。  可以再次使用 statesToKeep 变量确定要包括的正确级别。
+3. 接下来，定义要使用。 中的数据时使用的列例如，在较小的数据集，你需要仅三个因素级别，因为查询可以返回仅三种状态的数据。  应用`statesToKeep`来标识要包括的正确级别的变量。
   
     ```R
     importColInfo <- list(
@@ -69,8 +73,10 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
     ```R
     rxSetComputeContext("local")
     ```
-  
-5. 通过传递您刚为 RxSqlServerData 的变量定义的所有变量时，创建数据源对象。
+    
+    [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)函数可以将数据从任何支持的数据源到本地 XDF 文件。 当你想要进行许多不同的分析数据，但想要避免反复运行相同的查询，将方便使用数据的本地副本。
+
+5. 通过传递作为自变量到以前定义的变量中创建数据源对象**RxSqlServerData**。
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -79,7 +85,7 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
         colInfo = importColInfo)
     ```
   
-6. 然后，调用**rxImport**若要将数据写入到名为的文件`ccFraudSub.xdf`，当前工作目录中。
+6. 调用**rxImport**若要将数据写入到名为的文件`ccFraudSub.xdf`，当前工作目录中。
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -87,9 +93,9 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
         overwrite = TRUE)
     ```
   
-    *LocalDs* rxImport 函数返回的对象是表示本地存储在磁盘上的 ccFraud.xdf 数据文件的轻量 RxXdfData 数据源对象。
+    `localDs`返回对象**rxImport**函数是轻量**RxXdfData**表示的数据源对象`ccFraud.xdf`本地存储在磁盘上的数据文件。
   
-7. 调用 rxGetVarInfo XDF 文件以验证数据架构相同。
+7. 对 XDF 文件调用 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 以验证数据架构是否相同。
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -107,21 +113,21 @@ RxImport 函数可以从任何支持的数据源的数据导入到本地的 XDF 
 
     *Var 4：状态，类型：因素，没有可用的因素级别*
   
-8. 现在，可以调用各种不同的 R 函数分析 localDs 对象，正如对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的源数据执行的操作一样。 例如：
+8. 现在，可以调用各种不同的 R 函数分析 `localDs` 对象，正如对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的源数据执行的操作一样。 例如，你可能按性别汇总：
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-掌握了计算上下文的使用以及各种数据源的处理后，便可以进行一些有趣的尝试。 在下一课和最后一课中，将使用自定义 R 函数创建简单的模拟并在远程服务器上运行它。
+掌握了计算上下文的使用以及各种数据源的处理后，便可以进行一些有趣的尝试。 在下一步，也是最后课中，你创建的远程服务器运行自定义 R 函数的简单模拟。
 
 ## <a name="next-step"></a>下一步
 
-[创建简单的模拟](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
+[创建简单模拟](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
 
 ## <a name="previous-step"></a>上一步
 
-[分析本地计算上下文中的数据](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
+[在本地计算上下文中分析数据](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 
 
