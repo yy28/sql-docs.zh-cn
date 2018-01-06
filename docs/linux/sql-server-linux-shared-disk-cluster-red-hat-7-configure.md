@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
@@ -335,7 +335,6 @@ NFS 服务器上执行以下操作：
 2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 你将需要以下信息：
 
    - **SQL Server 资源名称**： 群集的 SQL Server 资源的名称。 
-   - **超时值**： 超时值是群集等待的时间量时将资源联机。 对于 SQL Server，这是希望 SQL Server 以使所需的时间`master`数据库联机。  
    - **浮动 IP 资源名称**： 虚拟 IP 地址资源的名称。
    - **IP 地址**： 客户端将用于连接到 SQL Server 的群集实例的 IP 地址。 
    - **文件系统资源名称**： 文件系统资源的名称。
@@ -347,7 +346,7 @@ NFS 服务器上执行以下操作：
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -359,7 +358,7 @@ NFS 服务器上执行以下操作：
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
