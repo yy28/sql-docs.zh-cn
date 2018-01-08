@@ -1,7 +1,7 @@
 ---
 title: "具有内存优化表的事务 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 808602a0671f64daaf313af49ef4974d6e754061
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d3cbfc5f72207d546649621190ac7ad61e6d9be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ALTER DATABASE CURRENT
   
 下表按照从低到高的顺序列出了可能的事务隔离级别。 有关可能发生的冲突以及用于处理这些冲突的重试逻辑的详细信息，请参阅 [冲突检测和重试逻辑](#confdetretry34ni)。 
   
-| 隔离级别 | 说明 |   
+| 隔离级别 | Description |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 不可用：无法在 Read Uncommitted 隔离下访问内存优化表。 如果通过使用 WITH (SNAPSHOT) 表提示，或通过将数据库设置 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设为 ON，将会话级别 TRANSACTION ISOLATION LEVEL 设置为 READ UNCOMMITTED，则仍有可能在 SNAPSHOT 隔离下访问内存优化表。 | 
 | READ COMMITTED | 仅当自动提交模式生效时，内存优化表才支持此隔离级别。 如果通过使用 WITH (SNAPSHOT) 表提示，或通过将数据库设置 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设为 ON，将会话级别 TRANSACTION ISOLATION LEVEL 设置为 READ COMMITTED，则仍有可能在 SNAPSHOT 隔离下访问内存优化表。<br/><br/>如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，则不允许使用相同的语句在 READ COMMITTED 隔离下访问内存优化表和基于磁盘的表。 |  
@@ -164,13 +164,13 @@ ALTER DATABASE CURRENT
 
 下面是当事务访问内存优化表时可能导致事务失败的错误条件。
 
-| 错误代码 | 说明 | 原因 |
+| 错误代码 | Description | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 尝试更新自从启动现有事务以来，已在其他事务中更新的行。 | 如果两个并发事务试图同时更新或删除同一行，则会发生此错误条件。 其中一个事务会收到此错误消息，并需要重试。 <br/><br/>  | 
 | **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的 [这篇博客文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
 | **41325** | 可序列化验证失败。 将新行插入到了现有事务之前已扫描的区域。 我们将此称为虚拟行。 | 如果使用 SERIALIZABLE 隔离，并且某个并发事务的操作导致主键约束、唯一约束或外键约束冲突，则会发生此错误。 <br/><br/> 这种并发的约束冲突很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误，这一点与可重复读验证失败相似。 |  
 | **41301** | 依赖项失败：依赖另一个事务，但该事务随后无法提交。 | 此事务 (Tx1) 在另一个事务 (Tx2) 处于其验证或提交处理阶段时，通过读取该事务 (Tx2) 写入的数据依赖于 Tx2。 Tx2 随后无法提交。 Tx2 无法提交最常见的原因是可重复读 (41305) 和可序列化 (41325) 验证失败；不太常见的原因是日志 IO 失败。 |
-| **41839** | 事务超出了最大提交依赖项数目。 | 给定事务 (Tx1) 可以依赖的事务数具有限制。 这些事务是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制。 这些事务是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，则可能缺少索引。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 使用跟踪标志 **9926**可解除提交依赖项数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
+| **41839** | 事务超出了最大提交依赖项数目。 |**适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 更高版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]没有提交依赖关系数量限制。<br/><br/> 给定事务 (Tx1) 可以依赖的事务数具有限制。 这些事务是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制。 这些事务是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，则可能缺少索引。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 可以使用跟踪标志 9926 解除提交依赖关系数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
  
   
 ### <a name="retry-logic"></a>重试逻辑 

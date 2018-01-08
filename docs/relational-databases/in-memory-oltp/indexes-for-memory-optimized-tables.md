@@ -1,7 +1,7 @@
 ---
 title: "内存优化表的索引 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/6/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
@@ -17,218 +17,208 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="indexes-for-memory-optimized-tables"></a>内存优化表的索引
+# <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
+所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 内存优化索引中的索引与基于磁盘的表中的传统索引在以下几个方面不同：  
+
+- 由于数据行并未存储在页面上，因此既没有页面或盘区集合，也没有为了获取表的所有页面可以引用的分区或分配单元。 虽然可用索引类型之一存在索引页的概念，但它们的存储方式不同于本地表的索引。 它们不会在页面内累积典型的碎片类型，因而不具有填充因子。
+- 在数据控制期间对内存优化表的索引所做的更改绝不会写入磁盘， 只会将数据行和对数据做出的更改写入事务日志。 
+- 当数据库重新联机时，将重新生成内存优化索引。 
+
+内存优化表的所有索引都是以数据库恢复期间的索引定义为依据进行创建。
+
+索引必须是以下类型之一：  
   
-本文介绍可用于内存优化表的索引类型。 本文内容：  
+- 哈希索引  
+- 内存优化表的非聚集索引（即 B 树的默认内部结构） 
   
-- 提供简短代码示例来演示 Transact-SQL 语法。  
-- 描述内存优化索引与传统的基于磁盘的索引有何不同。  
-- 解释每种类型的内存优化索引的最佳使用场合。  
+[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)更深入地介绍了哈希索引。
+[内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)更深入地介绍了非聚集索引。  
+*另一篇文章* 介绍了 [Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)索引。  
+
+## <a name="syntax-for-memory-optimized-indexes"></a>内存优化索引的语法  
   
+内存优化表的每个 CREATE TABLE 语句都必须包含索引，可以通过 INDEX 显式添加，也可以通过 PRIMAY KEY 或 UNIQUE 约束隐式添加。
   
-一篇内容与哈希索引*密切相关的文章* 中对 [哈希](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)索引进行了更详尽地探讨和介绍。  
-  
-  
-*另一篇文章* 介绍了 [Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)索引。  
-  
-  
-## <a name="a-syntax-for-memory-optimized-indexes"></a>A. 内存优化索引的语法  
-  
-内存优化表的每个 CREATE TABLE 语句必须包括索引，可通过 INDEX 显式包括或通过 PRIMAY KEY 或 UNIQUE 约束隐式包括。 索引必须是以下类型之一：  
-  
-- 哈希索引。  
-- 非聚集索引（表示 btree的默认内部结构）。  
-  
-  
-要使用默认 DURABILITY=SCHEMA_AND_DATA 进行声明，内存优化表必须具有主键。 以下 CREATE TABLE 语句中的 PRIMARY KEY NONCLUSTERED 子句满足两个要求：  
+内存优化表必须包含主键，才能使用默认 DURABILITY = SCHEMA\_AND_DATA 进行声明。 以下 CREATE TABLE 语句中的 PRIMARY KEY NONCLUSTERED 子句满足两个要求：  
   
 - 提供一个索引以满足 CREATE TABLE 语句中至少需要一个索引的最低要求。  
-- 提供 SCHEMA_AND_DATA 子句所需的主键。  
-  
-  
-  
+- 提供 SCHEMA\_AND_DATA 子句所要求的主键。  
+
+    ```sql
     CREATE TABLE SupportEvent  
     (  
-        SupportEventId int NOT NULL  
+        SupportEventId   int NOT NULL  
             PRIMARY KEY NONCLUSTERED,  
         ...  
-    “应用程序适配器” 区域）  
+    )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA_AND_DATA);  
+            DURABILITY = SCHEMA\_AND_DATA);  
+    ```
 > [!NOTE]  
->  对于每个内存优化表或表类型，[!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的索引数限制为 8 个。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，不再存在特定于内存优化表和表类型的索引个数限制。
-
+> 对于每个内存优化表或表类型，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的索引数限制为 8 个。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中不再有内存优化表和表类型专属的索引数量限制。
   
-  
-### <a name="a1-code-sample-for-syntax"></a>A.1 语法的代码示例  
+### <a name="code-sample-for-syntax"></a>语法代码示例  
   
 本小节包含一个 Transact-SQL 代码块，用于演示在内存优化表中创建各种索引时使用的语法。 代码将演示以下操作：  
-  
   
 1. 创建内存优化表。  
 2. 使用 ALTER TABLE 语句添加两条索引：  
 3. 插入几行数据。  
-  
-  
-  
-    DROP TABLE IF EXISTS SupportEvent；  
+   
+    ```sql
+    DROP TABLE IF EXISTS SupportEvent;  
     go  
-  
+
     CREATE TABLE SupportEvent  
     (  
-      SupportEventId   int               not null   identity(1,1)  
+        SupportEventId   int               not null   identity(1,1)  
         PRIMARY KEY NONCLUSTERED,  
-  
-      StartDateTime        datetime2     not null,  
-      CustomerName         nvarchar(16)  not null,  
-      SupportEngineerName  nvarchar(16)      null,  
-      Priority             int               null,  
-      Description          nvarchar(64)      null  
-    “应用程序适配器” 区域）  
-      WITH (  
+
+        StartDateTime        datetime2     not null,  
+        CustomerName         nvarchar(16)  not null,  
+        SupportEngineerName  nvarchar(16)      null,  
+        Priority             int               null,  
+        Description          nvarchar(64)      null  
+    )  
+        WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA_AND_DATA);  
+        DURABILITY = SCHEMA\_AND_DATA);  
     go  
-      
+        
         --------------------  
-      
+        
     ALTER TABLE SupportEvent  
-      ADD CONSTRAINT constraintUnique_SDT_CN  
-        UNIQUE NONCLUSTERED (StartDateTime DESC、CustomerName)  
+        ADD CONSTRAINT constraintUnique_SDT_CN  
+        UNIQUE NONCLUSTERED (StartDateTime DESC, CustomerName);  
     go  
-  
+
     ALTER TABLE SupportEvent  
-      ADD INDEX idx_hash_SupportEngineerName  
+        ADD INDEX idx_hash_SupportEngineerName  
         HASH (SupportEngineerName) WITH (BUCKET_COUNT = 64);  -- Nonunique.  
     go  
-      
+        
         --------------------  
-      
+        
     INSERT INTO SupportEvent  
-        (StartDateTime、CustomerName、SupportEngineerName、Priority、Description)  
-      VALUES  
-        ('2016-02-25 13:40:41:123', 'Abby', 'Zeke', 2, 'Display problem.'     ），  
-        ('2016-02-25 13:40:41:323', 'Ben' , null  , 1, 'Cannot find help.'    ），  
-        ('2016-02-25 13:40:41:523', 'Carl', 'Liz' , 2, 'Button is gray.'      ），  
-        ('2016-02-25 13:40:41:723', 'Dave', 'Zeke', 2, 'Cannot unhide column.');  
-    go  
+        (StartDateTime, CustomerName, SupportEngineerName, Priority, Description)  
+        VALUES  
+        ('2016-02-23 13:40:41:123', 'Abby', 'Zeke', 2, 'Display problem.'     ),  
+        ('2016-02-24 13:40:41:323', 'Ben' , null  , 1, 'Cannot find help.'    ),  
+        ('2016-02-25 13:40:41:523', 'Carl', 'Liz' , 2, 'Button is gray.'      ),  
+        ('2016-02-26 13:40:41:723', 'Dave', 'Zeke', 2, 'Cannot unhide column.');  
+    go 
+    ``` 
   
-  
-  
-## <a name="b-nature-of-memory-optimized-indexes"></a>B. 内存优化索引的性质  
-  
-在内存优化表中，每个索引也经过内存优化。 内存优化索引中的索引与基于磁盘的表中的传统索引在以下几个方面不同。  
-  
-每个内存优化索引只存在于活动内存中。 索引在磁盘上没有任何表示形式。  
-  
-- 当数据库重新联机时，将重新生成内存优化索引。  
-  
-  
-当 SQL UPDATE 语句修改内存优化表中的数据时，不会在日志中写入对该表的索引所做的相应更改。  
-  
-  
-内存优化索引中的条目包括表中行的直接内存地址。  
-  
-- 相比之下，磁盘上传统的 B 树索引中的条目包括一个键值，系统必须首先使用该键值来来查找关联表行的内存地址。  
-  
-  
-与基于磁盘的索引不同，内存优化索引没有固定的页。  
-  
-- 它们不会在页面内累积典型的碎片类型，因而不具有填充因子。  
-  
-## <a name="c-duplicate-index-key-values"></a>C. 重复的索引键值
+## <a name="duplicate-index-key-values"></a>重复的索引键值
 
-重复的索引键值可能会影响对内存优化表的操作的性能。 大量的重复项（例如，100+）会导致索引维护作业效率低下，因为必须针对大多数索引操作遍历重复链。 其影响可见之于对内存优化表的 INSERT、UPDATE 和 DELETE 操作。 对于哈希索引，此问题更加明显，因为对于哈希索引，每个操作成本更低，加之大型重复链会对哈希冲突链产生干扰。 若要减少索引中的重复，可以使用非聚集索引并将其他列（例如主键中的列）添加到索引键末尾，以减少重复项的数量。
+重复的索引键值可能会影响对内存优化表的操作的性能。 大量的重复项（例如，100+）会导致索引维护作业效率低下，因为必须针对大多数索引操作遍历重复链。 这可能会影响对内存优化表执行的 `INSERT`、`UPDATE` 和 `DELETE` 操作。 
 
-可以试想一个例子，一个 Customers 表，其 CustomerId 上存在主键且 CustomerCategoryID 列上存在索引。 通常，一个给定的类别中会有许多客户，因此 CustomerCategoryID 列上的索引中的给定键会有许多重复值。 在这种情况下，最佳做法是在 (CustomerCategoryID, CustomerId) 上使用非聚集索引。 此索引可用于某些查询，这些查询使用涉及“CustomerCategoryID”的谓词，且索引不含重复内容，因此不会导致索引维护效率低下。
+对于哈希索引，此问题更加明显，这是因为对于哈希索引，每项操作的成本都更低，加之大型重复链会对哈希冲突链产生干扰。 若要减少索引中的重复，可以使用非聚集索引并将其他列（例如主键中的列）添加到索引键末尾，以减少重复项的数量。 若要详细了解哈希冲突，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。
 
-下面的查询显示表 `CustomerCategoryID` 中的 `Sales.Customers`索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)中。
+例如，假设 `Customers` 表的列 `CustomerId` 上有主键，列 `CustomerCategoryID` 上有索引。 通常，一个给定的类别中会有许多客户，因此 CustomerCategoryID 列上的索引中的给定键会有许多重复值。 在此示例中，最佳做法是对 `(CustomerCategoryID, CustomerId)` 使用非聚集索引。 因为此索引可用于使用涉及 `CustomerCategoryID` 的谓词且不含重复内容的查询，所以不会导致索引维护效率低下。
 
-```Transact-SQL
-    SELECT AVG(row_count) FROM
-       (SELECT COUNT(*) AS row_count 
+下面的查询显示表 `CustomerCategoryID` 中的 `Sales.Customers`索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md)中。
+
+```sql
+SELECT AVG(row_count) FROM
+    (SELECT COUNT(*) AS row_count 
         FROM Sales.Customers
         GROUP BY CustomerCategoryID) a
 ```
 
 若要计算自己的表和索引的平均索引键重复项数，请将 `Sales.Customers` 替换为自己的表名，将 `CustomerCategoryID` 替换为索引键列的列表。
 
-## <a name="d-comparing-when-to-use-each-index-type"></a>D. 每个索引类型的使用时机比较  
-  
+## <a name="comparing-when-to-use-each-index-type"></a>每个索引类型的使用时机比较  
   
 特定查询的性质决定了哪种类型的索引是最佳选择。  
 
 在现有应用程序中实现内存优化表时，常规建议是从使用非聚集索引开始，因为其功能更接近于传统聚集索引和基于磁盘的表上的非聚集索引。 
   
-  
-### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 非聚集索引的优势  
-  
+### <a name="recommendations-for-nonclustered-index-use"></a>非聚集索引使用建议  
   
 在以下情况下，非聚集索引比哈希索引更有优势：  
   
-- 查询对索引列使用 ORDER BY 子句。  
+- 查询对索引列使用 `ORDER BY` 子句。  
 - 只测试多列索引第一列的位置的查询。  
-- 查询通过使用 WHERE 语句来测试索引列：  
-  - 不等式：*WHERE StatusCode != 'Done'*  
-  - 值范围：*WHERE Quantity >= 100*  
-  
+- 查询使用 `WHERE` 子句测试索引列：  
+  - 不相等：`WHERE StatusCode != 'Done'`  
+  - 值范围扫描：`WHERE Quantity >= 100`  
   
 在以下所有 SELECT 中，非聚集索引比哈希索引更有优势：  
+
+```sql
+SELECT CustomerName, Priority, Description 
+FROM SupportEvent  
+WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
+    
+SELECT CustomerName, Priority, Description 
+FROM SupportEvent  
+WHERE CustomerName != 'Ben';  
+    
+SELECT StartDateTime, CustomerName  
+FROM SupportEvent  
+ORDER BY StartDateTime;  
+    
+SELECT CustomerName  
+FROM SupportEvent  
+WHERE StartDateTime = '2016-02-26';  
+```
   
+### <a name="recommendations-for-hash-index-use"></a>哈希索引使用建议   
   
+[哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)主要用于点查阅，而不用于范围扫描。
+
+如果使用相等谓词进行查询，且 `WHERE` 子句映射到所有索引键列，那么首选哈希索引，而不是非聚集索引，如下面的示例所示：  
   
-    SELECT col2 FROM TableA  
-        WHERE StartDate > DateAdd(day, -7, GetUtcDate());  
-      
-    SELECT col3 FROM TableB  
-        WHERE ActivityCode != 5;  
-      
-    SELECT StartDate, LastName  
-        FROM TableC  
-        ORDER BY StartDate;  
-      
-    SELECT IndexKeyColumn2  
-        FROM TableD  
-        WHERE IndexKeyColumn1 = 42;  
+```sql
+SELECT CustomerName 
+FROM SupportEvent  
+WHERE SupportEngineerName = 'Liz';
+```  
+
+### <a name="multi-column-index"></a>多列索引  
   
+多列索引可以是非聚集索引，也可以是哈希索引。 假设索引列是 col1 和 col2。 如果使用以下 `SELECT` 语句，只有非聚集索引对查询优化器有用：  
   
+```sql
+SELECT col1, col3  
+FROM MyTable_memop  
+WHERE col1 = 'dn';  
+```
+
+哈希索引需要 `WHERE` 子句为键中的所有列指定相等测试。 否则，哈希索引对查询优化器无用。  
   
-### <a name="d2-strengths-of-hash-indexes"></a>D.2 哈希索引的优势  
+如果 `WHERE` 子句仅指定索引键中的第二列，这两种索引类型都没有用。  
+
+### <a name="summary-table-to-compare-index-use-scenarios"></a>比较索引使用方案的摘要表  
   
-  
-在以下情况下， [哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 比非聚集索引更有优势：  
-  
-- 查询通过对所有索引键列使用完全相同的 WHERE 子句来测试索引列，如下所示：  
-  
-  
-  
-    SELECT col9 FROM TableZ  
-        WHERE Z_Id = 2174;  
-  
-  
-  
-### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 比较索引优势的摘要表  
-  
-  
-下表列出了不同索引类型支持的所有操作。  
-  
+下表列出了不同索引类型支持的所有操作。 “是”表示索引能够有效地满足请求，“否”表示索引无法有效地满足请求。 
   
 | 运算 | 内存优化， <br/> 密切相关的文章 | 内存优化， <br/> 非聚集 | 基于磁盘， <br/> （非）聚集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | 索引扫描，检索所有表行。 | 是 | 是 | 是 |  
 | 采用相等谓词 (=) 的索引查找。 | 是 <br/> （需要完整键。） | 是  | 是 |  
-| 采用不相等和范围谓词 <br/> （>、<、<=、>=、BETWEEN）的索引查找。 | 是 <br/> （索引扫描中的结果。） | 是 | 是 |  
+| 采用不相等和范围谓词 <br/> （>、<、<=、>=、`BETWEEN`）。 | 是 <br/> （索引扫描中的结果。） | 是 <sup>1</sup> | 是 |  
 | 按与索引定义匹配的排序顺序检索行。 | 是 | 是 | 是 |  
 | 按与索引定义相反的排序顺序检索行。 | 是 | 是 | 是 |  
-  
-  
-在表中，“是”表示索引能够有效地为请求提供服务，“否”表示索引无法有效地满足请求。  
+
+<sup>1</sup>对于内存优化表的非聚集索引，不需要完整键，也可以执行索引查找。  
+
+## <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
+
+利用[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
+
+## <a name="Additional_Reading"></a> 另请参阅   
+ [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
+ [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
+ [内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
+ [自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
