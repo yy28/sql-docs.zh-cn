@@ -307,7 +307,7 @@ REORGANIZE 是在线执行的。
 -   在其中 10%或更多的行已被逻辑删除的行组，SQL Server 将尝试与一个或多个行组组合此行组。    例如，具有 500,000 行压缩行组 1 和与 1,048,576 行的最大压缩行组 21。  行组 21 具有的删除的行数的 60%，这会为 409,830 行。 SQL Server 优先组合这些行来压缩已 909,830 行新行组的两个组。  
   
 与重新组织 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
+ 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
 
 -   ON 到列存储，而不考虑大小和状态 （关闭或打开） 强制所有行组。  
   
