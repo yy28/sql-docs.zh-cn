@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ORDER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 37a8d5995737933b38b532899c46ec81787bea75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="order-mdx"></a>Order (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  通常是单元坐标（返回以字符串表示的数字）的有效多维表达式 (MDX) 的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **顺序**函数可以是分层 (所指定的使用**ASC**或**DESC**标志) 或非层次结构 (通过使用指定**BASC**或**BDESC**标志; **B**代表"中断层次结构")。 如果**ASC**或**DESC**指定，则**顺序**函数首先将根据其位置在位于层次结构的成员，然后订单每个级别。 如果**BASC**或**BDESC**指定，则**顺序**函数排列而不考虑层次结构集中的成员。 在任何标志指定如何， **ASC**是默认设置。  
   
  如果**顺序**函数用于处理一组其中两个或多个层次结构是交叉联接，和**DESC**使用标志，则只有组中的最后一个层次结构的成员进行排序。 这与 Analysis Services 2000 不同，后者对集合中的所有层次结构进行排序。  

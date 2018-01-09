@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ed345b4e0562fd61b7995d91bd2db12cad4cd57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]**ReadWriteMode**数据库属性指定数据库是否处于**ReadWrite**模式或**ReadOnly**模式。 只可能有两个属性值。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|ReadWrite|  
@@ -53,15 +51,15 @@ ms.lasthandoff: 12/08/2017
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[数据库](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|子元素|无|  
+|父元素|[“数据库”](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在中创建数据库**ReadWrite**仅限模式。 无法在创建数据库**ReadOnly**模式。  
   
  值**ReadWriteMode**元素被限制为下表中列出的字符串之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*ReadOnly*|不能向数据库应用任何更改或更新。|  
 |*ReadWrite*|可以向数据库应用更改和更新。|  

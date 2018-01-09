@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6effd75e67a69db182ddaf37388d377b644a17da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +66,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *源数据查询*  
  采用提供程序所定义格式的源查询。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果不指定**挖掘模型**或**挖掘结构**，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]搜索依据的名称，该对象类型并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
   
  通过使用第二种语法形式，INSERT INTO*\<对象 >*。COLUMN_VALUES，你可以将数据直接插入模型列而无需训练模型。 该方法以一种简练、有序的方式向模型提供列数据，在处理包含层次结构或有序列的数据集时，该方法很有用。  
@@ -89,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||未处理挖掘结构。|处理挖掘模型和挖掘结构。|  
 ||挖掘结构包含其他挖掘模型。|进程失败。 必须重新处理结构和关联的挖掘模型。|  
 |INSERT INTO 挖掘结构*\<结构 >*|处理或未处理挖掘结构。|处理挖掘结构和关联的挖掘模型。|  
-|插入到挖掘模型*\<模型 >* ，它包含源查询<br /><br /> 或<br /><br /> INSERT INTO 挖掘结构*\<结构 >* ，它包含源查询|结构或模型已包含内容。|进程失败。 通过执行此操作之前，必须清除的对象[删除 &#40; DMX &#41;](../dmx/delete-dmx.md)。|  
+|插入到挖掘模型*\<模型 >* ，它包含源查询<br /><br /> 或多个<br /><br /> INSERT INTO 挖掘结构*\<结构 >* ，它包含源查询|结构或模型已包含内容。|进程失败。 通过执行此操作之前，必须清除的对象[删除 &#40; DMX &#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>映射的模型列  
  通过使用\<映射模型列 > 元素，可以在挖掘模型映射到的列中的数据源的列。 \<映射模型列 > 元素具有以下形式：  
@@ -147,6 +145,6 @@ AS [Models]
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40; DMX &#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40; DMX &#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

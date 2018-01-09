@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Cell Element (MDDataSet)
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c90aca85496cfe59b18a93230cb5157052eaacf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 元素 (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含有关单个单元格包含父信息[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)元素。  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |---------------|-----------------|  
 |CellOrdinal|所需**unsignedInt**属性。 多维数据集中单元的序号位置。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在父级中**根**元素，**轴**元素后跟**CellData**元素的一个集合**单元格**包含的元素在多维数据集中返回每个单元格属性值。 **单元格**元素包含**CellOrdinal**属性，它指明的单元格集中的多维数据集，并为每个单元格属性值的一个元素的从零开始的序号位置与单元格关联。 在每个单元格属性值**单元格**由单独的 XML 元素定义元素。 单元格属性的值是 XML 元素和单元格属性的名称包含的数据中定义**CellInfo**父根元素，元素对应于 XML 元素的名称。  
   
  下列语法对单元属性值进行了说明：  

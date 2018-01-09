@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: COUNT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6d02abf139734cd7769f5f5c591cfd06bdd6fdc5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 41d5ff72346e95985b19812f194d266e8d5db165
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="count-set-mdx"></a>Count（集）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ Set_Expression.Count
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **计数 (Set)**函数包括或排除空单元格，具体取决于所使用的语法。 如果使用标准的语法，则可排除或通过使用包含空单元格**EXCLUDEEMPTY**或**INCLUDEEMPTY**标记，分别。 如果使用备用语法，则函数始终包括空单元。  
   
  若要排除的一组数中的空单元格，请使用标准的语法和可选**EXCLUDEEMPTY**标志。  

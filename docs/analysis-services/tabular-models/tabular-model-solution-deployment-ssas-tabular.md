@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]创作表格模型项目时之后, 你必须将其部署以便用户通过使用报表的客户端应用程序中浏览该模型中。 本主题介绍在您的环境中部署表格模型解决方案时可使用的各种属性和方法。  
@@ -57,28 +54,28 @@ ms.lasthandoff: 12/08/2017
 ### <a name="deployment-options-properties"></a>部署选项属性  
  部署选项属性包括以下项：  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
-|**“处理选项”**|**默认**|此属性指定在部署对对象所做的更改时所需的处理类型。 此属性具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将确定所需的处理类型。 将处理未处理的对象，如果需要，将重新计算属性关系、属性层次结构、用户层次结构和计算列。 此设置通常会导致比使用“完全”处理选项更快的部署时间。<br /><br /> **不处理** – 此设置指定将仅部署元数据。 在部署后，可能需要对已部署的模型运行处理操作，以便更新和重新计算数据。<br /><br /> **完全** – 此设置指定既部署元数据，又执行“处理全部”操作。 这确保已部署的模型对元数据和数据都具有最新更新。|  
+|**“处理选项”**|**Default**|此属性指定在部署对对象所做的更改时所需的处理类型。 此属性具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将确定所需的处理类型。 将处理未处理的对象，如果需要，将重新计算属性关系、属性层次结构、用户层次结构和计算列。 此设置通常会导致比使用“完全”处理选项更快的部署时间。<br /><br /> **不处理** – 此设置指定将仅部署元数据。 在部署后，可能需要对已部署的模型运行处理操作，以便更新和重新计算数据。<br /><br /> **完全** – 此设置指定既部署元数据，又执行“处理全部”操作。 这确保已部署的模型对元数据和数据都具有最新更新。|  
 |**事务性部署**|**False**|此属性指定部署是否为事务性的。 默认情况下，在处理这些已部署的对象时，所有对象或已更改对象的部署并不是事务性部署。 即使在处理失败时，部署也会成功并且一直保留。 您可以将此默认设置更改为在单个事务中合并部署和处理。|  
 |**查询模式**|**内存中**|此属性指定从其返回查询结果的源是在内存中（缓存）模式下运行还是在 DirectQuery 模式下运行。 此属性具有以下选项：<br /><br /> **DirectQuery** – 此设置指定模型的所有查询都应该仅使用关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
   
 ### <a name="deployment-server-properties"></a>部署服务器属性  
  部署服务器属性包括以下项：  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**“服务器”**<br /><br /> 在创建项目时设置。|**localhost**|此属性（在创建项目时设置）按名称指定模型将部署到的 Analysis Services 实例。 默认情况下，模型将部署到本地计算机上 Analysis Services 的默认实例。 但是，您可以更改此设置以便指定本地计算机上的命名实例，或指定您有权创建 Analysis Services 对象的任何远程计算机上的任何实例。|  
-|**版本**|与工作区服务器所在是实例的版本相同。|此属性指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。 默认情况下，该版本将为本地 Analysis Services 服务器。 如果您指定其他 Analysis Services 服务器，例如生产 Analysis Services 服务器，则请确保指定该 Analysis Services 服务器的版本。|  
-|**数据库**|**\<项目名称 >**|此属性指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称也将在报表客户端数据连接或 .bism 数据连接文件中指定。<br /><br /> 您可以在创作模型时随时更改该名称。 如果您在部署了模型后更改该名称，则在部署后进行的更改将不会影响以前已部署的模型。 例如，如果你打开一个名为 **TestDB** 的解决方案并且使用默认的模型数据库名称 Model 部署你的解决方案，然后修改该解决方案并且将模型数据库重命名为 **Sales**，则这些解决方案部署到的 Analysis Services 实例将显示两个单独的数据库，分别命名为 Model 和 Sales。|  
+|**版本(Edition)**|与工作区服务器所在是实例的版本相同。|此属性指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。 默认情况下，该版本将为本地 Analysis Services 服务器。 如果您指定其他 Analysis Services 服务器，例如生产 Analysis Services 服务器，则请确保指定该 Analysis Services 服务器的版本。|  
+|**“数据库”**|**\<项目名称 >**|此属性指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称也将在报表客户端数据连接或 .bism 数据连接文件中指定。<br /><br /> 您可以在创作模型时随时更改该名称。 如果您在部署了模型后更改该名称，则在部署后进行的更改将不会影响以前已部署的模型。 例如，如果你打开一个名为 **TestDB** 的解决方案并且使用默认的模型数据库名称 Model 部署你的解决方案，然后修改该解决方案并且将模型数据库重命名为 **Sales**，则这些解决方案部署到的 Analysis Services 实例将显示两个单独的数据库，分别命名为 Model 和 Sales。|  
 |**多维数据集名称**|**Model**|此属性指定在客户端工具（如 Excel）和 AMO（分析管理对象）中显示的多维数据集名称。|  
   
 ### <a name="directquery-options-properties"></a>DirectQuery 选项属性  
  部署选项属性包括以下项：  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
-|**模拟设置**|**默认**|此设置指定在 DirectQuery 模式下运行的模型连接到数据源时使用的模拟设置。 在查询内存中缓存时，将不使用模拟凭据。 此属性设置具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将使用在通过使用表导入向导创建数据源连接时在模拟信息页上指定的选项。<br /><br /> **ImpersonateCurrentUser** – 此设置指定在连接到所有数据源时当前登录的用户将使用的用户帐户。|  
+|**模拟设置**|**Default**|此设置指定在 DirectQuery 模式下运行的模型连接到数据源时使用的模拟设置。 在查询内存中缓存时，将不使用模拟凭据。 此属性设置具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将使用在通过使用表导入向导创建数据源连接时在模拟信息页上指定的选项。<br /><br /> **ImpersonateCurrentUser** – 此设置指定在连接到所有数据源时当前登录的用户将使用的用户帐户。|  
   
 ##  <a name="bkmk_meth"></a> 部署方法  
  可使用多种方法来部署表格模型项目。 可用于其他 Analysis Services 项目（如多维）的大多数部署方法也可用于部署表格模型项目。  

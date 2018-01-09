@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>提取、 转换和加载使用 SSIS 的 Linux 上的数据
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/09/2017
 
 关于 SSIS 的功能的详细信息，请参阅[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 若要在 Linux 计算机上运行 SSIS 包，你首先需要安装 SQL Server Integration Services。 SSIS 不包括在为 Linux 计算机安装 SQL Server。 有关安装说明，请参阅[安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)。
 
@@ -45,6 +45,34 @@ ms.lasthandoff: 12/09/2017
 2.  运行以下命令：
     ```
     $ dtexec /F \<package name \> /DE <protection password>
+    ```
+
+## <a name="run-an-encrypted-password-protected-package"></a>运行加密 （受密码保护） 包
+有三种方法可以运行使用密码进行加密的 SSIS 包：
+
+1.  设置环境变量的值`SSIS_PACKAGE_DECRYPT`，下面的示例中所示：
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  指定`/de[crypt]`选项输入密码以交互方式，如下面的示例中所示：
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  指定`/de`选项在命令行上提供的密码，如下面的示例中所示。 不推荐使用此方法，因为它将使用命令的解密密码存储中的命令历史记录。
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
 ## <a name="design-packages"></a>设计包

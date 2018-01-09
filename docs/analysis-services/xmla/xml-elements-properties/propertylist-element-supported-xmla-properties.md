@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -25,16 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e29ed3613253db0f93580717f126dbc53a37c108
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList 元素-支持 XMLA 属性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持下表中列出的属性。 使用这些列出的属性中[属性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)元素[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
-|Name|Description|类型|值|  
+|“属性”|Description|类型|值|  
 |----------|-----------------|----------|------------|  
 |AxisFormat|确定在中使用的格式[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)结果集来描述轴的多维数据集。 此属性的值可以为下表中所列出的值。<br /><br /> 此属性可与**执行**方法。|可选的只写**字符串**属性|*ClusterFormat*: **MDDataSet**轴由一个或多个组成[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)元素。<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用*TupleFormat*此设置格式。<br /><br /> *TupleFormat*默认。 **MDDataSet**轴包含一个或多个[元组](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)元素。|  
 |BeginRange|包含一个从零开始的整数值对应于**CellOrdinal**属性值。 ( **CellOrdinal**属性是的一部分[单元格](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)中的元素[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)部分**MDDataSet**。)<br /><br /> 此属性的默认值为-1。<br /><br /> 此属性可与**执行**方法。<br /><br /> 一起使用**EndRange**属性，客户端应用程序可以使用此属性来限制由命令返回到特定范围的单元格的 OLAP 数据集。 如果指定-1，则所有单元格到指定的单元格**EndRange**属性返回。|可选的只写**整数**属性||  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
 |EndRange|指定一个从零开始的整数值对应于**CellOrdinal**属性值。 ( **CellOrdinal**属性是的一部分**单元格**中的元素**CellData**部分**MDDataSet**)。<br /><br /> 一起使用**BeginRange**属性，客户端应用程序可以使用此属性来限制由命令返回到特定范围的单元格的 OLAP 数据集。 如果指定-1，则所有单元格从指定的单元格**BeginRange**属性返回。<br /><br /> 此属性的默认值为-1。<br /><br /> 此属性可与**执行**方法。|可选的只写**整数**属性||  
 |ExecutionMode|保留供将来使用。<br /><br /> 此属性的默认值是*执行*。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**字符串**属性||  
 |ForceCommitTimeout|确定当前正在运行的 XMLA 命令在强制要求先前发出的命令进行回滚前，需要等待的提交阶段的时间（秒）。 提交阶段对应于 XMLA 命令如**语句**或**过程**。<br /><br /> 零值 (0) 指示实例要无限期等待。<br /><br /> 此属性的默认值为零 (0)。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**整数**属性||  
-|格式|确定从返回的结果集的类型**发现**和**执行**方法。<br /><br /> 此属性的默认值是*本机*。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**字符串**属性|此属性可以有下列值：<br /><br /> *表格*： 返回的结果集使用[行集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)数据类型。<br /><br /> *多维*： 返回行集使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)数据类型。<br /><br /> *本机*： 显式指定无格式。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会为命令返回相应的格式。 实际结果类型由结果的命名空间识别。|  
+|“格式”|确定从返回的结果集的类型**发现**和**执行**方法。<br /><br /> 此属性的默认值是*本机*。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**字符串**属性|此属性可以有下列值：<br /><br /> *表格*： 返回的结果集使用[行集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)数据类型。<br /><br /> *多维*： 返回行集使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)数据类型。<br /><br /> *本机*： 显式指定无格式。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会为命令返回相应的格式。 实际结果类型由结果的命名空间识别。|  
 |ImpactAnalysis|保留供将来使用。<br /><br /> 此属性的默认值为零 (0)。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**布尔**属性||  
 |LocaleIdentifier|读取或设置使用的区域设置标识符 (LCID)**发现**或**执行**方法。 有关完整的语言标识符的十六进制列表，请在 MSDN Library 中查找“Language Identifiers”。<br /><br /> 此属性无默认值。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的读/写**整数**属性||  
 |MaximumRows|保留供将来使用。<br /><br /> 此属性无默认值。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**整数**属性||  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/08/2017
 |MdxMissingMemberMode|指示是否在 MDX 语句中忽略缺少的成员。<br /><br /> 此属性与 OLE DB 属性 DBPROP_MDX_MISSING_MEMBER_MODE 等效。<br /><br /> 此属性的默认值是*默认*。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只写**字符串**属性|此属性可以具有下列值之一：<br /><br /> *默认*： 使用生成的值[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。<br /><br /> *错误*： 生成错误。<br /><br /> *忽略*： 始终忽略缺少的成员。|  
 |MDXSupport|指定一个说明 MDX 支持的程度的枚举。<br /><br /> 此属性的默认值是*核心*。<br /><br /> 此属性可与**发现**方法。<br /><br /> 请注意，目前，唯一有效的值为此枚举是*核心*。 其他值可能为将来的此枚举定义。|可选的只读**字符串**属性|此属性可以具有以下值：<br /><br /> *核心*： 支持所有 MDX 选项。|  
 |NonEmptyThreshold|保留供将来使用。<br /><br /> 此属性无默认值。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的读/写**整数**属性||  
-|密码|不再支持此属性。<br /><br /> 为了向后兼容，而不会生成错误一起使用时将忽略了此属性**执行**或**发现**方法。|只写的可选**字符串**属性||  
+|Password|不再支持此属性。<br /><br /> 为了向后兼容，而不会生成错误一起使用时将忽略了此属性**执行**或**发现**方法。|只写的可选**字符串**属性||  
 |ProviderName|此属性与 OLE DB 属性 DBPROP_DBMSNAME 等效。<br /><br /> 此属性的默认值为“OLAP Server”。<br /><br /> 此属性可与**发现**方法。|可选的只读**字符串**属性||  
 |ProviderType|此属性与 OLE DB 属性 DBPROP_DATASOURCE_TYPE 等效。<br /><br /> 此属性的默认值为 6。<br /><br /> 此属性可与**发现**和**执行**方法。|可选的只读**整数**属性||  
 |ProviderVersion|此属性与 OLE DB 属性 DBPROP_DBMSVER 等效。<br /><br /> 此属性的默认值为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的版本。<br /><br /> 此属性可与**发现**方法。|可选的只读**字符串**属性||  

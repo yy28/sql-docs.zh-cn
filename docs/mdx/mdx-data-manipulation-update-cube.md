@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -28,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a006fd31f2a89215387dba48074adcb6a2add509
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 数据操作的更新多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  有效的 MDX（多维表达式）数值表达式，将返回介于 0 到 1 之间的一个十进制值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  您可以更新多维数据集中的指定叶单元或非叶单元的值，并且可以根据需要跨依赖叶单元为指定非叶单元分配值。 元组表达式指定的单元可以是多维空间中的任意有效单元（即该单元不一定是叶单元）。 但是，必须使用聚合单元格[总和](../mdx/sum-mdx.md)聚合函数和不能包含计算的成员的元组中用于标识该单元格。  
   
  可能需要考虑**更新多维数据集**作为将自动生成一系列到叶和非叶单元格将汇总到指定的和的各个单元格写回操作子例程的语句。  

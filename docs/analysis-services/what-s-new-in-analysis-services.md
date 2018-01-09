@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么 &#39; s Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
@@ -130,7 +130,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 
 在数据库级别，CREATE、 ALTER 和 DELETE 命令将在你熟悉的 XMLA 窗口中输出 TMSL 脚本。  还可以在此版本中编写其他命令（例如 Process）的脚本。 将来的版本可能会添加对其他许多操作的脚本支持。    
 
-**可编写脚本的命令** | **描述**
+**可编写脚本的命令** | **Description**
 --------------- | ----------------
 创建|添加数据库、连接或分区。 ASSL 等效项为 CREATE。
 createOrReplace|通过覆盖以前的版本来更新现有的对象定义（数据库、连接或分区）。 ASSL 等效于 AllowOverwrite 设置为 true 并且 ObjectDefinition 设置为 ExpandFull 时的 ALTER。

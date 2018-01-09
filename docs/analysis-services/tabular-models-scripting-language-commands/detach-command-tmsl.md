@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 413b49cb-ea8f-415c-a059-ce692b7771a1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c15abedcdf384fbeb6aee14868570ab9b01eb00
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7930a6c70b7bf9ac1b4802b9014fba9ebf27bca8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="detach-command-tmsl"></a>Detach 命令 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]分离 Analysis Services 数据库从一台服务器。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**属性**|**Default**|**Description**|  
-|database|[必需]|要分离的数据库对象名称。|  
+|“数据库”|[必需]|要分离的数据库对象名称。|  
 |password|Empty|要用于加密分离的数据库中的机密的密码。|  
   
 ## <a name="response"></a>响应  

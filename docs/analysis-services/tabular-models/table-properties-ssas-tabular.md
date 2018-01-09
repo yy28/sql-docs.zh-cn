@@ -4,14 +4,11 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d94c318d63f68b3fe23d903526bad398fff438e5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 864075fb43cd0912a581daa36d996b577c7beaae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="table-properties-ssas-tabular"></a>表属性（SSAS 表格）
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍表格模型表属性。 此处所述的属性不同于“编辑表属性”对话框中的那些属性，后者可以定义从源导入哪些列。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_properties"></a> 表的属性  
  **基本**  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**连接名称**|\<连接名称 >|与表的数据源的连接名称。<br /><br /> 若要编辑连接，请单击该按钮。|  
 |**Hidden**|False|指定是否在报表客户端字段列表中隐藏表。|  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  有关报表属性的详细说明和配置信息，请参阅 [Power View 报表属性（SSAS 表格）](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**默认字段集**|||  
 |表行为|||  

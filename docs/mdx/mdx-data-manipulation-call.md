@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CALL
@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bac7fc523f2519813bdd893c97edb4070fa96991
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6b3e7d095a7957c8d5af8dc497bb7a9d884005b8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 数据操作的调用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ CALL SP_Name
  *Cube_Expression*  
  提供多维数据集名称的有效字符串多维数据集表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **调用**语句运行指定已注册存储的过程，有选择性地包括指定的存储过程的一个或多个自变量。 **调用**语句是返回空白的存储过程仅适用于。 此语句不能在 MDX 表达式中与其他函数或运算符结合使用。 返回值的注册存储过程可以在 MDX 表达式中直接调用，并可以与其他 MDX 函数和运算符结合使用。  
   
  如果未指定多维数据集，该语句将在当前多维数据集上运行存储过程。  

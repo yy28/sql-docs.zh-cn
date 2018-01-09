@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: aggregate functions [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当使用一个维度时进行切片的度量值时，该维度中包含的层次结构被汇总度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 **Sum**。 度量值的值的总和将根据活动的层次结构的级别而异。  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |**Min**|半累加性|检索所有子成员的最低值。|  
 |**Max**|半累加性|检索所有子成员的最高值。|  
 |**DistinctCount**|非累加性|检索所有唯一子成员的计数。 有关详细信息，请参阅下一节中的 [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) 。|  
-|**InclusionThresholdSetting**|非累加性|不执行任何聚合，直接从事实数据表中为包含度量值的度量值组提供维度中叶成员和非叶成员的所有值。 如果从事实数据表中无法为成员读取任何值，则该成员的值设置为空。|  
+|**无**|非累加性|不执行任何聚合，直接从事实数据表中为包含度量值的度量值组提供维度中叶成员和非叶成员的所有值。 如果从事实数据表中无法为成员读取任何值，则该成员的值设置为空。|  
 |**ByAccount**|半累加性|根据为帐户维度中某一成员的帐户类型指定的聚合函数计算聚合。 如果度量值组中不存在任何帐户类型维度，则视为 **None** 聚合函数。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。|  
 |**AverageOfChildren**|半累加性|计算所有非空子成员的平均值。|  
 |**FirstChild**|半累加性|检索第一个子成员的值。|  

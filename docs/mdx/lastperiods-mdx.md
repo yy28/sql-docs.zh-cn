@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LASTPERIODS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7b5f43547cdf6a48a35e2a433dcc7a82cdabe054
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a3a9f0940796ecbc8138447fa8dd4ba59febbe96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定的数量的段为正， **LastPeriods**函数将返回一组的成员以在成员开头*索引*-1 的指定的成员表达式，并以指定的成员结束。 成员函数返回的数目是否等于*索引*。  
   
  如果指定的数量的段为负， **LastPeriods**函数返回一组的成员、 指定的成员启动和结束的潜在顾客的成员 (-*索引*-1) 从指定的成员。 成员函数返回的数目是否等于绝对值的数值的*索引*。  

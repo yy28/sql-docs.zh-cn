@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]角色，在表格模型中，定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
  每个角色都可以定义下列权限之一：  
   
-|Permissions|Description|使用 DAX 进行行筛选|  
+|权限|Description|使用 DAX 进行行筛选|  
 |-----------------|-----------------|----------------------------|  
 |InclusionThresholdSetting|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
@@ -114,7 +111,7 @@ ms.lasthandoff: 12/08/2017
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|企业|  
+|@shouldalert|企业|  
 |2|一般行政和管理|  
 |3|库存管理|  
 |4|生产|  
@@ -125,7 +122,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_testroles"></a> Testing roles  
  在创作模型项目时，可以使用“在 Excel 中分析”功能来测试已定义的角色的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”**时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户名、角色和一个用于连接作为数据源的工作区模型的透视。 若要了解详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
-##  <a name="bkmk_rt"></a> 相关任务  
+##  <a name="bkmk_rt"></a> Related tasks  
   
 |主题|Description|  
 |-----------|-----------------|  

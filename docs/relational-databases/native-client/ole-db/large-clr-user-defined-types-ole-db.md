@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  下表显示了参数和行集中的数据类型映射：  
   
-|SQL Server 数据类型|OLE DB 数据类型|内存布局|值|  
+|SQL Server 数据类型|OLE DB 数据类型|内存布局|ReplTest1|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] （字节数组\)|132 (oledb.h)|  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
   
 |符号|含义|  
 |------------|-------------|  
-|1|如果服务器的类型是其他比以外，dbtype_udt 还指定使用**ICommandWithParameters::SetParameterInfo**和访问器类型是以外，dbtype_udt 还，执行语句时出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
+|@shouldalert|如果服务器的类型是其他比以外，dbtype_udt 还指定使用**ICommandWithParameters::SetParameterInfo**和访问器类型是以外，dbtype_udt 还，执行语句时出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
 |2|数据从十六进制字符串转换为二进制数据。|  
 |3|数据从二进制数据转换为十六进制字符串。|  
 |4|使用时，可能出现验证**CreateAccessor**或**GetNextRows**。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  

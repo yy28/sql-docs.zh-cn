@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c132fc09f18cf35df63e917ddfe1afe92baa9f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4a1bf6dc27e59e0e739a8a8841ac2f19f69ff32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合的调用函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 语句中，你可以调用公共语言运行时 (CLR) 用户定义聚合，需遵循适用于系统聚合函数的所有规则。  
@@ -242,7 +242,7 @@ GROUP BY BookID;
   
 |BookID|Author Names|  
 |------------|------------------|  
-|1|Johnson|  
+|@shouldalert|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   

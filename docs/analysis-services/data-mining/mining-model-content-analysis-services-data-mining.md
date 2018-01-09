@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]设计和处理挖掘模型使用基础挖掘结构中的数据后，挖掘模型已完成，并且包含*挖掘模型内容*。 可以使用此内容来预测或分析您的数据。  
@@ -84,8 +82,8 @@ ms.lasthandoff: 12/08/2017
   
 |NODE_TYPE ID|节点标签|节点内容|  
 |-------------------|----------------|-------------------|  
-|1|Model|元数据和根内容节点。 适用于所有模型类型。|  
-|2|树|分类树的根节点。 适用于决策树模型。|  
+|@shouldalert|“模型”|元数据和根内容节点。 适用于所有模型类型。|  
+|2|trEE|分类树的根节点。 适用于决策树模型。|  
 |3|Interior|树中的内部拆分节点。 适用于决策树模型。|  
 |4|Distribution|树的终端节点。 适用于决策树模型。|  
 |5|分类|算法检测到的分类。 适用于聚类分析模型以及顺序分析和聚类分析模型。|  
@@ -221,12 +219,12 @@ ms.lasthandoff: 12/08/2017
   
 |VALUE_TYPE ID|值标签|值类型名称|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|指示事例数据不包含此属性的值。 **Missing** 状态与具有值的属性是分开计算的。|  
+|@shouldalert|Missing|指示事例数据不包含此属性的值。 **Missing** 状态与具有值的属性是分开计算的。|  
 |2|Existing|指示事例数据包含此属性的值。|  
 |3|连续|指示此属性的值是一个连续数值，因此可以由平均值以及偏差和标准偏差表示。|  
 |4|离散|指示值（数字或文本）被视为离散值。<br /><br /> **注意** 离散值也可能处于缺失状态；不过，在进行计算时，它们的处理方式不同。 有关信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。|  
 |5|离散化|指示该属性包含已离散化的数值。 该值将是一个带格式的字符串，描述离散化存储桶。|  
-|6|Existing|指示属性具有连续数值，并且这些值已经在数据中提供（与缺失或推导的值不同）。|  
+|6|现有|指示属性具有连续数值，并且这些值已经在数据中提供（与缺失或推导的值不同）。|  
 |7|系数|指示一个表示系数的数值。<br /><br /> 系数是一个在计算依赖变量的值时要应用的值。 例如，如果您的模型创建了一个基于年龄预测收入的回归公式，则在将年龄与收入相关联的公式中将使用系数。|  
 |8|得分|指示表示某个属性的得分的数值。|  
 |9|统计信息|指示表示回归量的统计信息的数值。|  
@@ -260,7 +258,7 @@ ms.lasthandoff: 12/08/2017
   
 |节点/属性和值的级别|边际概率|节点概率|  
 |----------------------------------------|--------------------------|----------------------|  
-|模型根<br /><br /> 所有目标客户|1|1|  
+|模型根<br /><br /> 所有目标客户|@shouldalert|@shouldalert|  
 |按性别平分目标客户|.5|.5|  
 |按性别平分目标客户，然后按三种收入级别平分|.33|.5 * .33 = .165|  
   

@@ -109,7 +109,7 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [\!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   

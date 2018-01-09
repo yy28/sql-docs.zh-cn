@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: row Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 31ce205d17095d2a6df40adb7ce0be64f883b5f4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e28026dda3ddb43e1ed43ac427851b8fa4ff773c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含的数据的单个行[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)包含返回的表格数据元素[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)(使用[行集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)数据类型)|  
 |子元素|一个或多个列元素。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  返回每个行**根**包含表格数据元素都有一个相应**行**元素。 每个列中的**根**元素表示由单独的 XML 元素。 为列的值**行**元素是由 XML 元素，包含的数据和列的名称对应于 XML 元素的名称。  
   
  有两种方法可表示行中的列的空值：  

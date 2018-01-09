@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Members
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bed8ef7372528320ff18be737c15218d80983690
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a561739e4a0963b42080e2f27e7ce664d887870d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="members-string-mdx"></a>Members（字符串）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Members(Member_Name)
  *Member_Name*  
  指定成员名称的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **成员 （字符串）**函数返回其名称指定的单个成员。 通常情况下，使用**成员 （字符串）**具有外部函数，提供到函数**成员 （字符串）**函数标识的成员，将字符串与**成员 （字符串）**函数返回的值为指定的成员。  
   
 ## <a name="example"></a>示例  

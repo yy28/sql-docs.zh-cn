@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DimensionAttribute Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 722dc94344e144445f07664f54282ac99f1dcdd7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 97ae213837c4d2614b7e11c4b4f77df61504f578
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute 数据类型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义表示维度中的属性的基元数据类型。  
@@ -80,20 +78,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|无|  
-|派生数据类型|无|  
+|基本数据类型|InclusionThresholdSetting|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)， [AttributeHierarchyDisplayFolder](../../../analysis-services/scripting/properties/attributehierarchydisplayfolder-element-assl.md)， [AttributeHierarchyEnabled](../../../analysis-services/scripting/properties/attributehierarchyenabled-element-assl.md)， [AttributeHierarchyOptimizedState](../../../analysis-services/scripting/properties/attributehierarchyoptimizedstate-element-assl.md)， [AttributeHierarchyOrdered](../../../analysis-services/scripting/properties/attributehierarchyordered-element-assl.md)， [AttributeHierarchyVisible](../../../analysis-services/scripting/properties/attributehierarchyvisible-element-assl.md)， [AttributeRelationships](../../../analysis-services/scripting/collections/attributerelationships-element-assl.md)， [CustomRollupColumn](../../../analysis-services/scripting/objects/customrollupcolumn-element-assl.md)， [CustomRollupPropertiesColumn](../../../analysis-services/scripting/objects/customrolluppropertiescolumn-element-assl.md)， [DefaultMember](../../../analysis-services/scripting/properties/defaultmember-element-assl.md)，[说明](../../../analysis-services/scripting/properties/description-element-assl.md)， [DiscretizationBucketCount](../../../analysis-services/scripting/properties/discretizationbucketcount-element-assl.md)， [DiscretizationMethod](../../../analysis-services/scripting/properties/discretizationmethod-element-assl.md)， [EstimatedCount](../../../analysis-services/scripting/properties/estimatedcount-element-assl.md)， [ID](../../../analysis-services/scripting/properties/id-element-assl.md)，[InstanceSelection](../../../analysis-services/scripting/properties/instanceselection-element-assl.md)， [IsAggregatable](../../../analysis-services/scripting/properties/isaggregatable-element-assl.md)， [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)， [KeyUniquenessGuarantee](../../../analysis-services/scripting/properties/keyuniquenessguarantee-element-assl.md)， [MemberNamesUnique](../../../analysis-services/scripting/properties/membernamesunique-element-assl.md)， [MembersWithData](../../../analysis-services/scripting/properties/memberswithdata-element-assl.md)， [MembersWithDataCaption](../../../analysis-services/scripting/properties/memberswithdatacaption-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)， [NameColumn](../../../analysis-services/scripting/objects/namecolumn-element-assl.md)， [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md)， [NamingTemplateTranslations](../../../analysis-services/scripting/collections/namingtemplatetranslations-element-assl.md)， [OrderBy](../../../analysis-services/scripting/properties/orderby-element-assl.md)， [OrderByAttributeID](../../../analysis-services/scripting/properties/orderbyattributeid-element-assl.md)，[其 RootMemberIf](../../../analysis-services/scripting/properties/rootmemberif-element-assl.md)， [SkippedLevelsColumn](../../../analysis-services/scripting/objects/skippedlevelscolumn-element-assl.md)， [源](../../../analysis-services/scripting/properties/source-element-binding-assl.md)，[翻译](../../../analysis-services/scripting/collections/translations-element-assl.md)，[类型](../../../analysis-services/scripting/properties/type-element-dimensionattribute-assl.md)， [UnaryOperatorColumn](../../../analysis-services/scripting/objects/unaryoperatorcolumn-element-assl.md)，[用法](../../../analysis-services/scripting/properties/usage-element-dimensionattribute-assl.md)， [ValueColumn](../../../analysis-services/scripting/objects/valuecolumn-element-assl.md)|  
 |派生元素|[属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)([属性](../../../analysis-services/scripting/collections/attributes-element-assl.md)集合[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md))|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  以下限制适用 deploymentmode 的情况下配置属性值 1 和 2 中运行服务时 (SharePoint 和表格模式下，用于运行[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]和表格模型数据库):  
   
 -   Usage 元素只接受 KEY 或 REGULAR 值。  

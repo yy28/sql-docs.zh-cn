@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b7ccea7d93562ea9103594e13b078cf9b8ccdf7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df875446bad5b208301a88e38f6fb73416ab8922
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot 最低权限示例-SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题举例说明[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2013 配置具有最低权限。 该配置将不同的帐户用于三个组件中的每个组件，并且每个帐户都具有最低的权限级别。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
  下表总结了在此最低权限配置示例中使用的三个帐户。  
   
-|范围|名称|  
+|范围|“属性”|  
 |-----------|----------|  
 |SharePoint 管理员帐户|**SPAdmin**|  
 |SharePoint 场帐户|**SPFarm**|  

@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [==（等于）（SSIS 表达式）](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [>（大于）（SSIS 表达式）](../../integration-services/expressions/greater-than-ssis-expression.md)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f7fd8ce02b518de663949765ad3dc4ad51c4970
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义-创建 KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  定义 KPI 属性值的有效标量表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  指定当前连接的多维数据集以外的多维数据集将导致错误。 因此，应使用 CURRENTCUBE 来代替多维数据集名称，以表示当前的多维数据集。  
   
 ## <a name="kpi-properties"></a>KPI 属性  
@@ -96,15 +96,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |图形用途|KPI 图形的名称|状态数|  
 |--------------------|-------------------------|----------------------|  
-|状态|形状|3|  
-|状态|交通灯|3|  
-|状态|路标|3|  
-|状态|测量|3|  
-|状态|反向测量|5|  
-|状态|温度计|3|  
-|状态|柱状|3|  
-|状态|面|3|  
-|状态|方差箭头|3|  
+|“登录属性”|形状|3|  
+|“登录属性”|交通灯|3|  
+|“登录属性”|路标|3|  
+|“登录属性”|测量|3|  
+|“登录属性”|反向测量|5|  
+|“登录属性”|温度计|3|  
+|“登录属性”|柱状|3|  
+|“登录属性”|面|3|  
+|“登录属性”|方差箭头|3|  
 |走向|标准箭头|3|  
 |走向|状态箭头|3|  
 |走向|反向状态箭头|5|  

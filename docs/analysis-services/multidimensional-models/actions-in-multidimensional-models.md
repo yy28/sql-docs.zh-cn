@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 078c21b0af6caeed8700861e315aeeefa53c108f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]操作是指最终用户启动的操作在所选多维数据集或其某多维数据集的部分。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
  **附加属性**  
  选择属性。 下表总结了可用的属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> 批处理<br /><br /> 交互<br /><br /> 处于打开状态|  
 |**应用程序**|说明操作的应用程序。|  
@@ -96,7 +93,7 @@ ms.lasthandoff: 12/08/2017
  **报表服务器**  
  下表说明的属性是为报表服务器指定的。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**服务器名称**|运行报表服务器的计算机的名称。|  
 |**服务器路径**|报表服务器所显示的路径。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -28,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a03d07cf4b18155dba1b3ce12029c364ec1b99b1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义-创建全局多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -132,7 +132,7 @@ FROM source_cube_name (<param list>)
  \<级别类型 >  
  该规范仅对于派生维度定义有效。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  本地多维数据集是 definedin 使用条款的度量值和定义它的定义。 有两种类型的维度。  
   
 -   源维度 - 这些维度是一个或多个源多维数据集的一部分  

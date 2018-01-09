@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,16 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures"></a>度量值组
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，度量值是使用中报告的客户端使用的 DAX 公式创建计算。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
   
-##  <a name="bkmk_understanding"></a> 优势  
+##  <a name="bkmk_understanding"></a> 优点  
  度量值可以基于标准聚合函数，如 AVERAGE、COUNT 或 SUM；或者，您可以使用 DAX 定义自己的公式。 除了公式之外，每个度量值都具有属性（由度量值数据类型定义），如“名称”、“表详细信息”、“格式”和“小数位数”。  
   
  在模型中定义度量值后，用户可以将它们添加到报表或数据透视表。 根据透视和角色，度量值将与其关联表一起显示在字段列表中，可供模型的所有用户使用。 度量值通常在事实表中创建，但是可以独立于与之关联的表。  
@@ -79,7 +76,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> 度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**Description**|空白|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
 |**格式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  
@@ -91,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 若要了解详细信息，请参阅[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
   
-##  <a name="bkmk_rel_tasks"></a> 相关任务  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |主题|Description|  
 |-----------|-----------------|  

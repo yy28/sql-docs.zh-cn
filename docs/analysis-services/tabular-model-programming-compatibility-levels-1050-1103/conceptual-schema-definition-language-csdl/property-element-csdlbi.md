@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff62bf4280fb1e01c6df47e2f748038ec92378fd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]CSDLBI 属性元素为提供的 CSDL 属性元素，以支持业务智能数据模型添加的复杂类型。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 CSDLBI 的 Property 元素的元素和属性。  
   
-|Name|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |目录|是|一个字符串，该字符串包含请求的 LCID。|  
 |DefaultAggregationFunction|是|一个字符串，当对属性执行计算且没有指定任何其他函数时，该字符串指定应使用的聚合函数。<br /><br /> 如果未指定，则使用模型的默认聚合，通常是 SUM。|  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  下表列出 GroupingBehavior 简单类型的值。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |GroupOnValue|按属性的值分组。|  
 |GroupOnEntityKey|按实体键分组。|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="stability"></a>稳定性  
  下表列出的值**稳定性**简单类型。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |Stable|属性在刷新操作之间保持不变。|  
 |RowNumber|属性包含行号。|  

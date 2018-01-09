@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.realtime.f1
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1eae96e5152fa9d16dd20cf1333c03bf2160db4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍*DirectQuery 模式下*对 1200年和更高版本的兼容性级别的 Analysis Services 表格模型。 你可以为正在 SSDT 中设计的模型打开 DirectQuery 模式；对于已部署的表格模型，你可以在 SSMS 中更改为 DirectQuery 模式。 在选择 DirectQuery 模式之前，务必先了解其优势和限制。
@@ -66,9 +66,9 @@ DirectQuery 兼容级别 1200年或更高的表格模型是与以下数据源和
 数据源   |版本  |访问接口
 ---------|---------|---------
 Microsoft SQL Server    |  2008 及更高版本      |       SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序  
-Microsoft Azure SQL 数据库    |   全部      |  SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序            
-Microsoft Azure SQL 数据仓库     |   全部     |  用于 SQL 客户端的 .NET Framework 数据访问接口       
-Microsoft SQL 分析平台系统 (APS)     |   全部      |  SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序       
+Microsoft Azure SQL 数据库    |   All      |  SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序            
+Microsoft Azure SQL 数据仓库     |   All     |  用于 SQL 客户端的 .NET Framework 数据访问接口       
+Microsoft SQL 分析平台系统 (APS)     |   All      |  SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序       
 Oracle 关系数据库     |  Oracle 9i 及更高版本       |  Oracle OLE DB 访问接口       
 Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 .NET 数据访问接口        
 

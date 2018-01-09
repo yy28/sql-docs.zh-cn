@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MiningStructure Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c4cb1229f7769942f4961d2495c5fa4f5b561c7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 455d874cf279e44e8381c5183d2d376e40e2a351
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="miningstructure-element-assl"></a>MiningStructure 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义一组的挖掘模型的结构。  
@@ -67,10 +65,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[MiningStructures](../../../analysis-services/scripting/collections/miningstructures-element-assl.md)|  
 |子元素|[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)， [CacheMode](../../../analysis-services/scripting/properties/cachemode-element-assl.md)，[排序规则](../../../analysis-services/scripting/properties/collation-element-assl.md)，[列](../../../analysis-services/scripting/collections/columns-element-assl.md)， [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md)， [说明](../../../analysis-services/scripting/properties/description-element-assl.md)， [ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)，<br /><br /> [HoldoutActualSize](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)，<br /><br /> [HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)，<br /><br /> [HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)，<br /><br /> [HoldoutSeed](../../../analysis-services/scripting/properties/holdoutseed-element.md)，<br /><br /> [ID](../../../analysis-services/scripting/properties/id-element-assl.md)，[语言](../../../analysis-services/scripting/properties/language-element-assl.md)， [LastProcessed](../../../analysis-services/scripting/properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md)， [MiningModels](../../../analysis-services/scripting/collections/miningmodels-element-assl.md)， [添加](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)，[源](../../../analysis-services/scripting/properties/source-element-binding-assl.md)，[状态](../../../analysis-services/scripting/properties/state-element-assl.md)，[翻译](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  挖掘结构定义列和绑定。 在定义挖掘结构之后，可以使用该结构来定义多个挖掘模型。 可以对挖掘结构及其所包含的各个挖掘模型进行单独处理。  
   
 > [!NOTE]  

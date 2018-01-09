@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c6417a0f9f52f4b1fe6974928f534e8fafa04bca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻译支持
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据模型，您可将多个翻译的标题或说明，以便提供基于 LCID 的特定于区域性的字符串。 对于多维模型，你可以为数据库名称、多维数据集对象和数据库维度对象添加翻译。 对于表格模型，你可以为表和列的描述文字和说明添加翻译。  

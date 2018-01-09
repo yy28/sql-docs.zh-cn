@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，你可以使用中的维度向导[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]从现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
@@ -36,37 +34,37 @@ ms.lasthandoff: 12/08/2017
 >  如果您的模型包含多个关系，则关系图视图可以更好地展现表之间的关系和创建新关系。  
   
   
-##  <a name="what"></a> 优势  
+##  <a name="what"></a> 优点  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
-|CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  这种方法可以用，但会存储大量冗余数据，如每个订单的客户电子邮件地址。 存储成本低廉，但如果电子邮件地址发生更改，就必须确保更新该客户的每一行数据。 针对这一问题，一种解决方法是将数据拆分到多个表中，然后在这些表之间定义关系。 这是中使用的方法*关系数据库*如 SQL Server。 例如，导入模型的某个数据库可以使用三个相关表来表示订单数据：  
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|名称|EMail|  
+|[CustomerID]|“属性”|EMail|  
 |--------------------|----------|-----------|  
-|1|Ashton|chris.ashton@contoso.com|  
+|@shouldalert|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|1|.05|  
+|@shouldalert|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1|256|2010-01-07|Compact Digital|11|  
-|1|255|2010-01-03|SLR Camera|15|  
+|@shouldalert|256|2010-01-07|Compact Digital|11|  
+|@shouldalert|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源中导入表，则可以中所述地手动创建关系[创建表之间的关系两个](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)。  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
  下表显示了三个表之间的关系：  
   
-|关系|类型|查找列|列|  
+|关系|类型|查找列|“列”|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一对一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一对多|Customers.CustomerID|Orders.CustomerID|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>连接到现有的 Analysis Services 表格服务器和数据库
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 SQL Server 2016 Analysis Services 管理对象 (AMO) 包括多个无法用于建立服务器连接的命名空间。 此文章介绍了如何建立服务器连接的模型和在 1200年创建的数据库使用的 Microsoft.AnalysisServices.Tabular 命名空间或更高版本的兼容性级别。 

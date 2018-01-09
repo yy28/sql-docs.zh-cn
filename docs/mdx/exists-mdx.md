@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 37b5bc5e1b1e19bbadc53b734b0aee2470488c80
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  指定度量值组名称的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 1.  包含 null 值的度量值的度量值组行贡献**Exists**指定 MeasureGroupName 自变量时。 下面是此形式的 Exists 和 Nonempty 函数之间的差异：如果这些度量值的 NullProcessing 属性设置为 Preserve，则意味着在对该部分的多维数据集运行查询时这些度量值将显示 Null 值；NonEmpty 始终从集中删除具有 Null 度量值的元组，而具有 MeasureGroupName 参数的 Exists 将不筛选具有关联的度量值组行的元组，甚至在度量值为 Null 时也是如此。  
   

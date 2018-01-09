@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 51bfbb7fa3cbfad5c8415fcda1fab0e54643ec62
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="power-pivot-configuration-tools"></a>Power Pivot 配置工具
+# <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]配置、 修复或删除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]与[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]配置工具。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导不会为 SharePoint 安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 配置工具将在未来的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本中提供下载。  
@@ -53,14 +50,14 @@ ms.lasthandoff: 12/08/2017
   
 -   您必须是场的配置数据库的 db_owner。  
   
--   这些配置工具无 TCP/IP 端口要求，因此，无需配置防火墙以适应这些配置工具。 配置工具要求在 SharePoint 平台中提供 Web 应用程序和共享服务。 可能需要针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器配置防火墙。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+-   这些配置工具无 TCP/IP 端口要求，因此，无需配置防火墙以适应这些配置工具。 配置工具要求在 SharePoint 平台中提供 Web 应用程序和共享服务。 可能需要针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器配置防火墙。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ##  <a name="bkmk_twoversions"></a> 配置工具的两个版本  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及用于 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。  
   
  这两个工具仅可用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]实例。 不能使用它们安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
-|名称|支持的 SharePoint 版本|详细配置|  
+|“属性”|支持的 SharePoint 版本|详细配置|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置|SharePoint 2013|[配置或修复 Power Pivot for SharePoint 2013（Power Pivot 配置工具）](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具|SharePoint 2010 和 SharePoint 2010|[配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  

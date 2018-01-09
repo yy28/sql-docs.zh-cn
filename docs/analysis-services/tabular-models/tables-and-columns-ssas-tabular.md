@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91d370b9e71d843aa9a8ef8848b7cd63b38f0880
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>表和列（SSAS 表格）
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]添加表和数据到模型通过使用表导入向导后，你可以开始使用这些表通过添加新的数据列、 创建表之间的关系、 定义的扩展数据，计算和筛选和对数据进行排序便于查看的表。  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/08/2017
  **表元数据**  
  关系、度量值、角色、透视和粘贴的数据全都是在表的上下文内定义对象的元数据。  
   
- **数据**  
+ **Data**  
  在您通过使用表导入向导或通过在计算列中创建新数据来首次导入表时，将数据填充到表列中。 当源中的数据发生更改时，或者在从内存中删除某一模型时，必须运行某一处理操作以便将数据重新填充到表中。  
   
 ##  <a name="bkmk_working"></a> 使用表和列  

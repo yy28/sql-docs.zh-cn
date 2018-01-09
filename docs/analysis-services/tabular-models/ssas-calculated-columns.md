@@ -5,13 +5,10 @@ ms.date: 10/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
@@ -20,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92e082ac88881cb6eaa252975ea865013c753d95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-columns"></a>计算列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]计算的列，在表格模型中，使你能够添加新数据与你的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
  
   
   
-##  <a name="bkmk_understanding"></a> 优势  
+##  <a name="bkmk_understanding"></a> 优点  
  计算列中的公式非常类似于 Excel 中的公式。 但与 Excel 不同，您不能为表中的不同行创建不同的公式；而是 DAX 公式自动应用于整个列。  
   
  在某个列包含公式时，将为每一行都计算值。 在您输入有效公式时，将立即为列计算结果。 在需要时（例如，在刷新基础数据时），将重新计算列值。  

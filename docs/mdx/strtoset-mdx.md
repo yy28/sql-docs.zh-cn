@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: STRTOSET
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8b6b456c53dd0daf34d81240fcb1efa48749d24e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 98095d2d8910a9e69d74712b99e1ccc7954826ae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  直接或间接指定某个集的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **StrToSet**函数返回的字符串表达式中指定的集合。 **StrToSet**函数通常用于与用户定义的函数返回一组规范从外部函数返回到 MDX 语句，或 MDX 查询进行参数化。  
   
 -   如果使用了 CONSTRAINED 标志，则该集规范必须包含限定或非限定成员名称，或包含以括号 {} 括起来的限定或非限定成员名称的一组元组。 此标志通过指定字符串可降低注入攻击的风险。 如果提供的字符串不能直接解析为限定或非限定的成员名称，则会出现下列出错信息：“违反了 STRTOSET 函数中 CONSTRAINED 标志所规定的限制。”  

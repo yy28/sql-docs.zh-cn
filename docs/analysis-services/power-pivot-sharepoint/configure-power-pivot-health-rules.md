@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>配置 Power Pivot 运行状况规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
  **注意：** 将为 SQL Server Analysis Services 实例和 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序单独配置运行状况规则设置。 请按照本主题中的说明配置每个服务的运行状况规则。 对于 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 仅使用服务应用程序。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 对不同版本的 SharePoint 安装不同的运行状况规则集。 请参阅[运行状况规则参考 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md)主题中的“版本”列，或可以运行以下 Windows PowerShell 命令来查看已安装的规则。  
   
@@ -52,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [配置用于评估应用程序稳定性的运行状况规则（Power Pivot 服务应用程序）](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  必须是服务应用程序管理员才能更改 Analysis Services 实例和 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序的配置属性。  
   
 ##  <a name="bkmk_view"></a> 查看 Power Pivot 运行状况规则  
@@ -101,7 +98,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 连接数较高表明应部署更多服务器以处理当前负载”。  
   
      磁盘空间不足（默认值为 5%）  
-     每次请求数据库时，磁盘空间都将用于缓存 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据。 此规则可告知您磁盘空间不足这一情况。 默认情况下，在备份文件夹所在的磁盘驱动器上，如果磁盘空间低于 5%，将触发此运行状况规则。 有关磁盘使用情况的详细信息，请参阅[配置磁盘空间使用情况 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
+     每次请求数据库时，磁盘空间都将用于缓存 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据。 此规则可告知您磁盘空间不足这一情况。 默认情况下，在备份文件夹所在的磁盘驱动器上，如果磁盘空间低于 5%，将触发此运行状况规则。 有关磁盘使用情况的详细信息，请参阅 [配置磁盘空间使用情况 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
      此配置设置对应于“查看问题和解决方法”页上的以下规则定义：“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 在缓存 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据的驱动器上，磁盘空间不足”。  
   

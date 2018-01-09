@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6912b3c73f898335853ff3ffe78021fad75bb357
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize 命令 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**属性**|**Default**|**Description**|  
-|database||要同步的数据库对象的名称。|  
+|“数据库”||要同步的数据库对象的名称。|  
 |源 (source)||要用于连接到源服务器的连接字符串。|  
 |synchronizeSecurity|skipMembership|一个枚举值，指定如何还原安全定义，包括角色和权限。 有效值包括 skipMembership、 copyAll、 ignoreSecurity。|  
 |applyCompression|True|一个布尔值，如果为 true，指示将在同步操作; 期间应用压缩否则为 false。|  

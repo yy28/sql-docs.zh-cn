@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.swb.connecttoserver.options.registeredservers.f1
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 03cfc5aa4dd24dc595984298710c073061bec0b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2fa102ad8d3161d1311978048a4b272253671a3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 |**ApplicationIntent**|连接到服务器时声明应用程序工作负荷类型。 可能的值为**ReadOnly**和**ReadWrite**。 默认值是**ReadWrite**。  例如：<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> 有关详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对 Native Client 支持[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[SQL Server 本机客户端支持对高可用性、 灾难恢复](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|可附加数据库的主文件的名称。 如果使用 C 字符串变量，请包括完整路径，并将所有 \ 字符转义：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 附加此数据库并使其成为连接的默认数据库。 若要使用**AttachDBFileName**还必须指定数据库名称，在[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)数据库参数或 SQL_COPT_CURRENT_CATALOG 连接属性。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它；而是使用已附加的数据库作为连接的默认数据库。|  
 |**AutoTranslate**|如果是“yes”，则客户端和服务器之间发送的 ANSI 字符串将通过 Unicode 进行转换，以使在客户端与服务器的代码页之间匹配扩展字符的问题最小化。<br /><br /> 客户端 SQL_C_CHAR 数据发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**， **varchar**，或**文本**从字符转换为 Unicode 使用客户端的 ANSI 代码页 (ACP)，然后从 Unicode 字符使用服务器的 ACP 转换变量、 参数或列。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**， **varchar**，或**文本**数据发送到客户端 SQL_C_CHAR 变量为从字符转换为 Unicode 使用服务器 ACP，则从 Unicode 字符使用客户端 ACP 转换。<br /><br /> 这些转换由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序在客户端上执行。 这要求在服务器上使用的相同 ANSI 代码页 (ACP) 在客户端上可用。<br /><br /> 这些设置对于为下面这些传输而发生的转换无效：<br /><br /> \*Unicode SQL_C_WCHAR 客户端数据发送到**char**， **varchar**，或**文本**服务器上。<br /><br /> \***char**， **varchar**，或**文本**服务器数据发送到客户端上的 Unicode SQL_C_WCHAR 变量。<br /><br /> \*ANSI SQL_C_CHAR 客户端数据发送到 Unicode **nchar**， **nvarchar**，或**ntext**服务器上。<br /><br /> \*Unicode **nchar**， **nvarchar**，或**ntext**服务器数据发送到客户端上的 ANSI SQL_C_CHAR 变量。<br /><br /> 如果是“no”，则不执行字符转换。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不会转换发送到客户端 ANSI 字符 SQL_C_CHAR 数据**char**， **varchar**，或**文本**变量、 参数或服务器上的列。 不执行任何转换上**char**， **varchar**，或**文本**从服务器发送到客户端上的 SQL_C_CHAR 变量的数据。<br /><br /> 如果客户端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用不同的 ACP，则扩展字符可能被错误解释。|  
-|**数据库**|连接的默认 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。 如果**数据库**未指定，则使用为登录定义的默认数据库。 来自 ODBC 数据源的默认数据库将覆盖为登录定义的默认数据库。 数据库必须是现有数据库，除非**AttachDBFileName**还指定。 如果**AttachDBFileName**同时指定，则它指向的主文件已连接，并提供指定的数据库名称**数据库**。|  
+|**“数据库”**|连接的默认 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。 如果**数据库**未指定，则使用为登录定义的默认数据库。 来自 ODBC 数据源的默认数据库将覆盖为登录定义的默认数据库。 数据库必须是现有数据库，除非**AttachDBFileName**还指定。 如果**AttachDBFileName**同时指定，则它指向的主文件已连接，并提供指定的数据库名称**数据库**。|  
 |**驱动程序**|返回的驱动程序名称[SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的关键字值是“{SQL Server Native Client 11.0}”。 **服务器**关键字是必需的如果**驱动程序**指定和**DriverCompletion**设置为 SQL_DRIVER_NOPROMPT。<br /><br /> 有关驱动程序名称的详细信息，请参阅[使用的 SQL Server 本机客户端标头和库文件](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)。|  
 |**DSN**|现有 ODBC 用户或系统数据源的名称。 此关键字覆盖可能中指定任何值**服务器**，**网络**，和**地址**关键字。|  
 |**加密**|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“yes”和“no”。 默认值为“no”。|  
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/17/2017
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用**AttachDBFileName**，还必须使用提供程序字符串数据库关键字指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“yes”和“no”。|  
-|**数据库**|DBPROP_INIT_CATALOG|数据库名称。|  
+|**“数据库”**|DBPROP_INIT_CATALOG|数据库名称。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|指定要使用的数据类型的处理模式。 对于访问接口数据类型，可识别的值为“0”，对于 SQL Server 2000 数据类型则为“80”。|  
 |**加密**|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“yes”和“no”。 默认值为“no”。|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|用于数据库镜像的故障转移服务器的名称。|  

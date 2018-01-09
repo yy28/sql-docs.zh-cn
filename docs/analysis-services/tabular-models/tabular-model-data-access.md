@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]可以通过相同的客户端、 接口和用于从多维模型中检索数据或元数据的语言的大部分访问 Analysis Services 中的表格模型数据库。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="power-bi"></a>Power BI
 可从 [Power BI](https://powerbi.microsoft.com/)连接到本地 Analysis Services 表格模型数据库。 Power BI 是一套业务分析工具，用于分析数据和共享见解。 
 
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>“导出”  
  您可以从 Excel 连接表格模型数据库，使用 Excel 中的数据可视化和分析功能来处理数据。 若要访问数据，您需要定义 Analysis Services 数据连接，指定以表格服务器模式运行的服务器，然后选择要使用的数据库。 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
   
  Excel 也是推荐用于在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览表格模型的应用程序。 该工具包括一个 **“在 Excel 中分析”** 选项，可用来启动新的 Excel 实例，创建 Excel 工作簿并打开从该工作簿到模型工作区数据库的数据连接。 在 Excel 中浏览表格模型数据时，要注意 Excel 使用 Excel PivotTable 客户端对该模型发出查询。 相应地，Excel 工作簿中的操作会生成将发送到工作区数据库的 MDX 查询而非 DAX 查询。 如果您在使用 SQL Profiler 或其他监视工具来监视查询，则应能在事件探查器跟踪中看到 MDX 而不是 DAX。 有关“在 Excel 中分析”功能的详细信息，请参阅[在 Excel 中分析（SSAS 表格）](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  

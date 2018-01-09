@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心中为 Power Pivot 站点创建受信任位置
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Excel Services 允许你指定哪些位置是在 SharePoint 服务器打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而言，可以考虑为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的站点创建一个受信任位置，以便可以应用最适合进行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置，同时为场的剩余部分保留默认设置。  
   
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  您必须是场或服务管理员才能将某一 URL 指定为受信任位置。  
   
  必须知道包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或用于存储工作簿的其他库的 SharePoint 站点的 URL 地址。 若要获取该地址，请打开包含库的站点，右键单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”，选择“属性”，然后复制包含服务器名称和站点路径的“地址 (URL)”的第一部分。  
@@ -67,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 10. 还在“外部数据”中，对于“刷新时警告”，取消选中 **“启用刷新警告”**的复选框。 取消选中该复选框将允许 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库跳过例行的警告消息，而显示工作簿的预览图像。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [PowerPivot 库](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   

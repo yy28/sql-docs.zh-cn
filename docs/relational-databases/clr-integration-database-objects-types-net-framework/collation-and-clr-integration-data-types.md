@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19ce71cdffe3272a791cf7f9961a4d7757c913ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a169a625d2ee3e55257e1629d3043fbe9851ac8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="collation-and-clr-integration-data-types"></a>排序规则和 CLR 集成数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **compareinfo 一起**对象处理通过排序规则。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]字符串编程接口 (Api) 使用的应用程序**compareinfo 一起**与关联属性**CultureInfo**当前线程来执行字符串比较的对象。 默认设置**CultureInfo**对象基于[!INCLUDE[msCoName](../../includes/msconame-md.md)]的计算机上的 Windows 区域设置[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行。 这将确定默认的比较语义，如果不显式**CultureInfo** ，为指定的比较**System.String**值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会显式更改**compareinfo 一起**到数据库或服务器排序规则的属性。 如果需要，用户必须设置相应**compareinfo 一起**其例程中的属性。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: df64c85fb5aa9034bc9f4c77a3ac54f98e379ecf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4dbed7c8217e5ea7a14d07c2c75a3c3857fd7cb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="usage"></a>用法  
  下表介绍了客户端应用程序可启用安全身份验证的最常见应用场景。  
   
-|应用场景|说明|  
+|应用场景|Description|  
 |--------------|-----------------|  
 |早期应用程序不指定 SPN。|该兼容应用场景可确保不会对针对先前版本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 开发的应用程序的行为进行任何更改。 如果未指定 SPN，则应用程序使用已生成的 SPN，但不能识别使用哪个身份验证方法。|  
 |使用的当前版本的客户端应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端连接字符串作为域用户或计算机帐户、 特定于实例的 SPN，或用户定义的字符串中指定 SPN。|在访问接口、初始化或连接字符串中可使用 **ServerSPN** 关键字进行以下操作：<br /><br /> -指定使用的帐户[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的连接。 这可简化对 Kerberos 身份验证的访问。 如果 Kerberos 密钥发行中心 (KDC) 存在且指定了正确的帐户，则使用 Kerberos 身份验证的可能性大于 NTLM。 KDC 通常与域控制器在同一台计算机上。<br /><br /> -指定要查找的服务帐户 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例。 为每个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，两个默认 Spn，将生成可用于此目的。 但是，不能保证 Active Directory 中存在这些密钥，因此这种情况下无法保证 Kerberos 身份验证。<br /><br /> -指定将用于查找的服务帐户 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例。 此 SPN 可以是任何映射到服务帐户的用户定义字符串。 这种情况下，必须手动在 KDC 中注册密钥，且密钥必须满足用户定义的 SPN 的规则。<br /><br /> **FailoverPartnerSPN** 关键字可用于为故障转移伙伴服务器指定 SPN。 帐户和 Active Directory 键值的范围与您可为主体服务器指定的值相同。|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  以下是 SPN 在连接字符串或连接属性中使用的语法：  
   
-|语法|说明|  
+|语法|Description|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn* 为完全限定的域名。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *port* 为 TCP 端口号。|  

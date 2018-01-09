@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0dbdaee8077ccfeb374f1ef360d397fa194dbfca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd9dfea18c7b201dfcf5838b43d59ae0f5b942a7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measure-element-csdlbi"></a>Measure 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]该度量值元素是基于 CSDL 属性元素的复杂类型。 CSDLBI 注释添加了一些属性，以支持要在商业智能数据模型中使用的复杂公式。  
@@ -32,10 +30,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 Measure 元素的元素和属性，以及适用于 Property 元素的所有属性。  
   
-|名称|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|Kpi|“否”|仅对于用作 KPI 的度量值是必需元素。 并非所有度量值都是 KPI，但所有 KPI 都必须基于度量值的定义。<br /><br /> [KPI 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
-|IsSimpleMeasure|“否”|一个 true/false 值，指示度量值中使用的公式是否为简单聚合（SUM、COUNT、MIN、MAX、AVG、DistinctCount）之一。<br /><br /> 默认为 true。|  
+|Kpi|是|仅对于用作 KPI 的度量值是必需元素。 并非所有度量值都是 KPI，但所有 KPI 都必须基于度量值的定义。<br /><br /> [KPI 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
+|IsSimpleMeasure|是|一个 true/false 值，指示度量值中使用的公式是否为简单聚合（SUM、COUNT、MIN、MAX、AVG、DistinctCount）之一。<br /><br /> 默认为 true。|  
   
 ## <a name="example"></a>示例  
  **表格**  

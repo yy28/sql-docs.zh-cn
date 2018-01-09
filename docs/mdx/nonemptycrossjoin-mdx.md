@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: NONEMPTYCROSSJOIN
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 356f5c7c807645e798527fc29fc5ccb587e3bac4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ffa983a749245022d0815906fe8e17850f9aabdf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *计数*  
  指定返回集的数量的有效数值表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **NonEmptyCrossjoin**函数集，而无需提供的基础事实数据表的数据中排除空元组或元组的形式返回两个或多个集的叉积。 由于如何**NonEmptyCrossjoin**函数工作原理，所有计算成员将自动排除。  
   
  如果*计数*未指定，跨函数联接所有指定的集，并将空成员排除在结果集。 如果指定了集的数量，该函数将从第一个指定的集开始，交叉联接指定数量的集。 **NonEmptyCrossjoin**函数使用任何剩余的集，指定在后续的指定集，但尚未交叉联接来确定哪些成员都被视为在交叉联接集产生非空。 **NonEmptyCrossjoin**函数方面**NON_EMPTY_BEHAVIOR**的计算度量值设置。  

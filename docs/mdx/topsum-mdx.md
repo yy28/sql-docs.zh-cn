@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPSUM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a8535866b0bbf263cd4f9345dd2e8c10b7ae8889
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b6681b8cb16336c077ad4d3d6c54ab8da97c9a58
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *值*  
+ *ReplTest1*  
  指定与每个元组相比较的值的有效数值表达式。  
   
  *Numeric_Expression*  
  返回度量值的有效数值表达式，通常是多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **TopSum**函数计算指定的度量值，计算对指定集，以降序顺序对集进行排序的总和。 然后，该函数返回最大值元素，其指定数值表达式的合计至少为指定值。 此函数返回集的最小子集，其累积合计至少为指定值。 返回的元素按从大到小的顺序排序。  
   
 > [!IMPORTANT]  

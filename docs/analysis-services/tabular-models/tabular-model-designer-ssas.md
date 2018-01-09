@@ -4,14 +4,11 @@ ms.date: 10/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>表格模型设计器 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表格模型设计器属于[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、 与 Microsoft 集成[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，具有专用于开发专业表格模型解决方案的其他项目类型模板。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 作为免费 Web 下载内容安装。 有关详细信息，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
 -   表  
   
--   列  
+-   “列”  
   
 -   度量值  
   
@@ -118,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
  默认情况下，将不显示 **“错误列表”** ，除非返回一个错误。 不过可以随时查看 **“错误列表”** 窗口。 若要查看 **“错误列表”** 窗口，请单击 **“视图”** 菜单，然后单击 **“错误列表”**。  
   
-### <a name="output"></a>输出  
+### <a name="output"></a>“输出”  
  生成和部署信息显示在“输出”窗口中（还显示在模式进度对话框中）。 若要查看 **“输出”** 窗口，请单击 **“视图”** 菜单，然后单击“输出”。  
   
 ### <a name="menu-items"></a>菜单项  

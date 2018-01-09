@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-为报表配置表行为属性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果使用表格模型作为数据模型[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，你可以设置表行为属性公开更高粒度级别的详细信息行。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  ![图表，根据行 ID 分组](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "图表，根据行 ID 分组")  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  在计算模型中的表并对包含详细信息行（这些行应始终显示为单独项）的表设置表行为属性之后，您可以通过其他属性或设置来进一步优化模型。  
   
   

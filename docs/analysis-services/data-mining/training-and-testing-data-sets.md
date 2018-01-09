@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将数据分为定型集和测试集是评估数据挖掘模型的重要组成部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>修改结构属性以创建测试数据集  
  如果您在创建和处理挖掘结构之后又决定取消一个测试数据集，可以修改挖掘结构的属性。 若要更改数据的分区方式，请编辑下列属性：  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|指定要包括在测试集内的最大事例数。|  
 |**HoldoutMaxPercent**|指定测试集内要包括的事例数在整个数据集中所占的百分比。 如果没有数据集，则将指定 0。|  

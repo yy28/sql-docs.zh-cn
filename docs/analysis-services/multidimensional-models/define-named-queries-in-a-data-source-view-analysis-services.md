@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]命名的查询是表示为表的 SQL 表达式。 在命名查询中，可以指定一个 SQL 表达式以选择从一个或多个数据源的一个或多个表返回的行和列。 命名查询基于一个表达式，除此之外，它在行和关系方面都与数据源视图 (DSV) 中的其他表相似。  
@@ -67,7 +64,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     >  查询生成用户界面 (UI) 取决于数据源。 您所得到的不是图形 UI，而是基于文本的一般 UI。 您可以使用这些不同的 UI 来实现同样的功能，但必须以不同的方式来操作。 有关详细信息，请参阅[“创建或编辑命名查询”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941)。  
   
-5.  单击 **“确定”**。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
+5.  单击“确定” 。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b713da243d7c97902ed0810509a18f97dbc0c3aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 数据定义的 ALTER 多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  提供成员名称或成员键的有效字符串表达式。  
   
-### <a name="remarks"></a>注释  
+### <a name="remarks"></a>Remarks  
  如果未使用 WITH DESCENDANTS 子句，则已删除成员的子级将成为已删除成员父级的子级。 如果使用 WITH DESCENDANTS 子句，则还会删除维度表内的所有后代及其对应的行。  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  返回单个成员的有效 MDX 表达式。  
   
-### <a name="remarks"></a>注释  
+### <a name="remarks"></a>Remarks  
  指定的 MDX 表达式可以为静态或动态。  
   
 ## <a name="moving-a-dimension-member"></a>移动维度成员  

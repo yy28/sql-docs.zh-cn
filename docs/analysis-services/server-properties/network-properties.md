@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -42,11 +42,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9566ef27a12b78300ff94e2253ac05393a540be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a315095f7a7f7060964eb22c0c54698f5f68f9a9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="network-properties"></a>网络属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/08/2017
  **IPV4Support**  
  有符号 32 位整数属性，用于定义 IPv4 协议支持。 此属性具有下表所列的值之一：  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*0*|禁用 IPv4；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv4；如果服务器无法侦听 IPv4，则不启动服务器。|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/08/2017
  **IPV6Support**  
  有符号 32 位整数属性，用于定义 IPv6 协议支持。 此属性具有下表所列的值之一：  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*0*|禁用 IPv6；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv6；如果服务器无法侦听 IPv6，则不启动服务器。|  

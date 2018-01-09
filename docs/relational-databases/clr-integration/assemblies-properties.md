@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.swb.assemblies.general.f1
@@ -18,16 +18,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6598c6a24fcf23a9ebcdab0cdc736df9b2f9f39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf08c95a2dad30afb8920f9519791ecf4a3fc51f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assemblies---properties"></a>程序集的属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看或修改的程序集的属性。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **程序集名称**  
  显示程序集的名称，该名称始终与 CLR 程序集的名称相匹配。  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  **对程序集的路径**  
  键入程序集文件的路径。  
   
- **浏览**  
+ **“浏览”**  
  导航到要添加的程序集。 单击**浏览**如果你不想要键入的程序集文件的路径。  
   
 ## <a name="additional-properties-grid"></a>附加属性网格  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  **强名称**  
  显示**True**如果已进行数字签名程序集， **False**如果它尚未进行数字签名。  
   
- **版本**  
+ **版本(Version)**  
  显示程序集的版本号。  
   
 ## <a name="see-also"></a>另请参阅  

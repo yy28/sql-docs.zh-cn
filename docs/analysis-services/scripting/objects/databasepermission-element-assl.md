@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DatabasePermission Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 53c31e44901a7e0978263206b480f229224d44b2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ab2d42d3a93b8d6bf569f535fe70373d59482cce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="databasepermission-element-assl"></a>DatabasePermission 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义中的默认权限[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)的特定元素[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|[权限](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
 |默认值|False|  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[DatabasePermissions](../../../analysis-services/scripting/collections/databasepermissions-element-assl.md)|  
 |子元素|[管理](../../../analysis-services/scripting/properties/administer-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只有数据库拥有的角色才能具有**DatabasePermission** 对象，并且任何角色都只能具有一个 **DatabasePermission** 对象。  
   
  此元素在 DeploymentMode 值 2（表格模型）下具有以下验证。  
