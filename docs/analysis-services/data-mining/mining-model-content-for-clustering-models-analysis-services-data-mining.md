@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8ce27412abf931efcc0b18de246b921afc2e4fe
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -45,11 +43,11 @@ ms.lasthandoff: 12/08/2017
   
  父节点包含有用的统计信息，用于描述所有定型事例的实际分布。 可在嵌套表列 NODE_DISTRIBUTION 中找到这些统计信息。 例如，下表显示了 NODE_DISTRIBUTION 表中的若干行，这些行描述了你在 `TM_Clustering`数据挖掘基础教程 [中创建的聚类分析模型](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)的客户人口统计信息的分布：  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|方差|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|年龄|缺少|0|0|0|1（缺失）|  
-|年龄|44.9016152716593|12939|1|125.663453102554|3（连续）|  
-|性别|缺少|0|0|0|1（缺失）|  
+|年龄|Missing|0|0|0|1（缺失）|  
+|年龄|44.9016152716593|12939|@shouldalert|125.663453102554|3（连续）|  
+|性别|Missing|0|0|0|1（缺失）|  
 |性别|F|6350|0.490764355823479|0|4（离散）|  
 |性别|M|6589|0.509235644176521|0|4（离散）|  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  该方差表示分类的总方差。 如果方差的值较小，则表示列中的大多数值与均值很接近。 若要获取标准偏差，请计算该方差的平方根。  
   
- 请注意，对于每个属性，都有一个 **Missing** 值类型，可告诉您有多少个事例没有该属性的数据。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
+ 请注意，对于每个属性，都有一个 **Missing** 值类型，可告诉您有多少个事例没有该属性的数据。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅 [缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
   
 ## <a name="model-content-for-a-clustering-model"></a>聚类分析模型的模型内容  
  本节仅针对与聚类分析模型有关的挖掘模型内容中的这些列给出详细信息和示例。  
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  **群集节点** 分类的名称。 示例：分类 1。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅 [查询用于创建挖掘模型的参数](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)。  
   
 > [!NOTE]  

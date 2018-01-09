@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data mining [Analysis Services], about data mining
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-ssas"></a>数据挖掘 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]预测分析领导者起已 2000年版本中，通过提供中的数据挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的组合提供了针对预测分析的集成平台，其中包含数据清理和准备、机器学习和报告。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘包括多个标准算法，包括 EM 和 K-Means 群集模型、神经网络、逻辑回归和线性回归、决策树和 naive bayes 分类器。 所有模型具有集成的可视化效果，以帮助开发、优化和评估模型。  将数据挖掘集成到商业智能解决方案可帮助你针对复杂问题做出明智决策。  

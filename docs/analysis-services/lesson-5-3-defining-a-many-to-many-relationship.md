@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c36bae9436786544f9d11ebcea289faac9de5687
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-定义多对多关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在定义维度时，通常每个事实都联接到一个且仅有一个维度成员，而单个维度成员可以与多个不同的事实数据相关联。 例如，每个客户可以具有很多订单，但每个订单只属于一个客户。 在关系数据库术语中，这称为“一对多关系”。 但有时一个事实可联接多个维度成员。 在关系数据库术语中，这称为“多对多关系”。 例如，一个客户进行采购的原因可以有多个，而一个采购原因可以与多个采购相关联。 联接表用于定义与每个采购相关的销售原因。 在由此类关系构建的 Sales Reason 维度中，将有多个成员与一个销售事务相关联。 多对多维度可将维度模型扩展到经典星型架构范围之外，并在维度不直接与事实数据表相关联的情况下支持复杂分析。  
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/08/2017
   
     ![定义关系对话框](../analysis-services/media/l5-many-to-many-3.gif "定义关系对话框中")  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
     您将看到表示“销售原因”维度和“Internet 销售”度量值组之间关系的多对多图标。  
   

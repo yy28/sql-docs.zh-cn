@@ -5,13 +5,10 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 提供用于创建商业智能语义模型的几种方法： 表格、 多维和 Power Pivot for SharePoint。
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 |命名集|是|是| 
 |不规则层次结构|是|是<sup>1</sup>|  
 |父子层次结构|是|是（通过 DAX）|
-|分区|是|是| 
+|“度量值组”|是|是| 
 |透视|是|是|
 |行级安全性|是|是| 
 |对象级安全|是|是<sup>1</sup>|
@@ -145,7 +142,7 @@ ms.lasthandoff: 12/08/2017
  所有数据库都支持 XML/A。 有关详细信息，请参阅[查询和表达式语言参考 (Analysis Services)](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527) 和 [Analysis Services 开发人员文档](../analysis-services/analysis-services-developer-documentation.md)。  
   
 ##  <a name="bkmk_sec"></a>安全功能  
- 可在数据库级别保护所有 Analysis Services 解决方案。 更精细的安全选项会随模式的不同而不同。 如果解决方案需要精细的安全设置，则请查看以下列表以确保要生成的解决方案类型中支持所需的安全级别。  
+ 可在数据库级别保护所有 Analysis Services 解决方案。 更精细的安全选项会随模式的不同而不同。 如果解决方案需要精细的安全设置，则请查看以下列表以确保要生成的解决方案类型中支持所需的安全级别：  
 
   
 -   表格模型数据库可以使用行级安全性，使用基于角色的权限。  

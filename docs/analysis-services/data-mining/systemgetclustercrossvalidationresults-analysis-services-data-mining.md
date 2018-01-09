@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdd5623be105cba70aa9404aba2c4d87cd0574cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]为指定数量的剖面，挖掘结构的分区训练模型为每个分区，然后返回每个分区的准确性度量值。  
@@ -101,10 +101,10 @@ SystemGetClusterCrossValidationResults(
 |PartitionIndex|一个从 1 开始的索引，用于标识结果适用于哪个分区。|  
 |PartitionSize|一个整数，指示每个分区中包含的事例数。|  
 |测试|所执行测试的类型。|  
-|度量值|测试返回的度量值的名称。 每个模型的度量值都取决于可预测值的类型。 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅[交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|“值”|指定的测试度量值的值。|  
+|度量值|测试返回的度量值的名称。 每个模型的度量值都取决于可预测值的类型。 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅 [交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
+|ReplTest1|指定的测试度量值的值。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要为整个数据集返回准确性指标，请使用 [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
   
  此外，如果挖掘模型已分区为若干折叠，可以使用 [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
@@ -129,12 +129,12 @@ CALL SystemGetClusterCrossValidationResults(
   
  示例结果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|“值”|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|ReplTest1|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|群集 1|||1|3025|群集|事例可能性|0.930524511864121|  
+|群集 1|||@shouldalert|3025|群集|事例可能性|0.930524511864121|  
 |群集 1|||2|3025|群集|事例可能性|0.919184178430778|  
-|群集 1|||3|3024|群集|事例可能性|0.929651120490248|  
-|Cluster 2|||1|1289|群集|事例可能性|0.922789726933607|  
+|分类 1|||3|3024|群集|事例可能性|0.929651120490248|  
+|Cluster 2|||@shouldalert|1289|群集|事例可能性|0.922789726933607|  
 |Cluster 2|||2|1288|群集|事例可能性|0.934865535691068|  
 |Cluster 2|||3|1288|群集|事例可能性|0.924724595688798|  
   

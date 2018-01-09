@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建任一内容查询，提供了有关存储在模型中的信息的详细信息，或者可以创建预测查询，使用在模型中的模式来进行基于新数据的预测你提供。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
@@ -97,7 +95,7 @@ AND [PARENT_UNIQUE_NAME] = 0
   
 |NODE_UNIQUE_NAME|Product 1|Sequence Support|Sequence Probability|  
 |------------------------|---------------|----------------------|--------------------------|  
-|1081327|缺少|0|#######|  
+|1081327|Missing|0|#######|  
 |1081327|All-Purpose Bike Stand|17|0.00111|  
 |1081327|Bike Wash|64|0.00418|  
 |1081327|（第 4-36 行省略）|||  
@@ -240,7 +238,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-|1||Cycling Cap|  
+|@shouldalert||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey|  

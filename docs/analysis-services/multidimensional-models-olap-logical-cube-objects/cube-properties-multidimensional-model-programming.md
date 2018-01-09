@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>多维数据集属性的多维模型编程
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集具有多个属性，可设置为会影响多维数据集范围的行为。 下表总结了这些属性。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
  有关如何设置多维数据集属性的详细信息，请参阅[多维数据集设计器 &#40;Analysis Services-多维数据 &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|指定用于聚合名称的通用前缀。|  
 |**排序规则**|指定以下划线分隔的区域设置标识符 (LCID) 和比较标志，例如 Latin1_General_C1_AS。|  

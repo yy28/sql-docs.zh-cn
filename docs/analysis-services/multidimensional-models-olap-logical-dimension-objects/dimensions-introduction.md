@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 726344198c74d36a0d31368980f305c1426f1607
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions---introduction"></a>维度-简介
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是基于从表或视图中的数据源视图的列的属性的组合。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-a-dimension"></a>处理维度  
  创建维度之后，必须先处理维度，然后才能查看该维度中属性和层次结构的成员。 更改了维度的结构，或者更新了该维度基础表中的信息之后，必须再次对维度进行处理，然后才能查看更改。 在发生结构更改后对维度进行处理时，还必须处理任何包括该维度的多维数据集，否则无法查看多维数据集。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  维度的所有从属对象（包括层次结构、级别以及成员）都使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的角色进行保护。 维度安全性可应用于数据库中使用该维度的所有多维数据集，或者只应用于特定的多维数据集。 有关维度安全性的详细信息，请参阅[授予对维度 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
   
 ## <a name="see-also"></a>另请参阅  

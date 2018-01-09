@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lesson 4-1-使用 Analysis Services 教程项目的修改的版本
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本教程中剩下的课程基于的增强版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程前三个课程中完成的项目。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到**  Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="understanding-the-enhancements-to-the-project"></a>了解该项目的增强功能  
 该项目的增强版本与前三节课程中所完成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的版本不同。 下面几节说明了具体的差异。 在继续学习本教程的其余课程之前，请查看此信息。  
   
-### <a name="data-source-view"></a>数据源视图  
+### <a name="data-source-view"></a>“数据源视图”  
 该增强的项目的数据源视图中新增了来自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库的一个事实数据表和四个维度表。  
   
 可以看到该数据源视图包含十个表， <All Tables> 关系图变得很拥挤， 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。 这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/08/2017
 #### <a name="internet-sales-diagram"></a>“Internet 销售”关系图  
 “Internet 销售”关系图包含与直接通过 Internet 向客户销售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 产品相关的表。 该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  
   
--   **Geography**  
+-   **地域**  
   
 -   **Customer**  
   
--   **日期**  
+-   **Date**  
   
 -   **Product**  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
 -   **Geography**  
   
--   **日期**  
+-   **Date**  
   
 -   **Product**  
   

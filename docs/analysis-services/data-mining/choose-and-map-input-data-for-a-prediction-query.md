@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]从挖掘模型创建预测时，你通常执行此操作将新数据传送到模型。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  在“表/视图名称”下，选择包含希望用于测试模型的数据的表。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
      挖掘结构中的列将自动映射到输入表中相同名称的列。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  从外部数据源可用列的列表中选择一个新列。 选择列表中的空白项以删除列映射。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
      设计器中将显示新的列映射。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  单击 **“删除关系”**。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
      这样便可删除事例表和嵌套表之间的关系。  
   

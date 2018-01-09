@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>课程 1-2-定义了一个数据源
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在创建后[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中，您通常工作的项目开始通过定义该项目将使用的一个或多个数据源。 定义数据源时，将定义要用于连接此数据源的连接字符串信息。 有关详细信息，请参阅 [创建数据源（SSAS 多维）](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  

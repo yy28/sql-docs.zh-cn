@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 958927bcd5f55fadfd5753702d7be012da3e882c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f340e182d8867a1560d1bf31945aced7ecfa0f22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-定义和浏览翻译
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]转换是的表示形式的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]特定语言中的对象。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息，请参阅 [维度翻译](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、 [多维数据集翻译](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)和 [Analysis Services 中的翻译支持](../analysis-services/translation-support-in-analysis-services.md)。  
@@ -133,7 +133,7 @@ ms.lasthandoff: 12/08/2017
 [第 10 课：定义管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[维度翻译](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
+[维度转换](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [多维数据集翻译](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Analysis Services 中的翻译支持](../analysis-services/translation-support-in-analysis-services.md)  
   

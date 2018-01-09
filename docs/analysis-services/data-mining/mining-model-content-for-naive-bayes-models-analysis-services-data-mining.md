@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e6fb2186671be3fee4132ee67d39e7ea2c8c824
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea4b76bc06098491a1ef7025b326cc254a5e1cdc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用的模型特有的挖掘模型内容[!INCLUDE[msCoName](../../includes/msconame-md.md)]Naive Bayes 算法。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -265,11 +263,11 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  预期的结果：  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|缺少|0|0|1|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|@shouldalert|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|@shouldalert|4216|0.527065883|4|  
   
  在这些结果中，SUPPORT 列的值显示已购买自行车且具有指定婚姻状况的客户的计数。 PROBABILITY 列包含每个属性值的概率（仅针对该节点计算）。 有关 NODE_DISTRIBUTION 表中所使用术语的常规定义，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
@@ -278,16 +276,16 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|缺少|0|0|0|1|  
+|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
-|婚姻状况|缺少|0|0|0|1|  
+|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
+|婚姻状况|Missing|0|0|0|@shouldalert|  
 |婚姻状况|S|7999|0.457504004|0|4|  
 |婚姻状况|M|9485|0.542495996|0|4|  
-|Total Children|缺少|0|0|0|1|  
+|Total Children|Missing|0|0|0|@shouldalert|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
-|Total Children|1|3406|0.19480668|0|4|  
+|Total Children|@shouldalert|3406|0.19480668|0|4|  
   
  包括 [Bike Buyer] 列的原因在于边际统计信息节点始终包含对可预测属性及其可能值的说明。 列出的所有其他列表示在该模型中使用的输入属性以及值。 值只能为缺少、离散或离散化值。  
   

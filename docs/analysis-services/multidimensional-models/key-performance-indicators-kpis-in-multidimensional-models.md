@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在业务术语中，关键绩效指标 (KPI) 是用于测定业务成功的可量化度量。  
@@ -56,8 +53,8 @@ ms.lasthandoff: 12/08/2017
 |术语|定义|  
 |----------|----------------|  
 |目的|一个返回 KPI 目标值的 MDX 数值表达式或计算。|  
-|“值”|一个返回 KPI 实际值的 MDX 数值表达式。|  
-|状态|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
+|ReplTest1|一个返回 KPI 实际值的 MDX 数值表达式。|  
+|“登录属性”|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
 |走向|一个评估一段时间内 KPI 值的 MDX 表达式。 走向可以是任何基于时间的条件，该条件在特定的业务上下文中很有用。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
 |状态指示器|一个提供 KPI 状态快速指示的可见元素。 该元素的显示内容由评估状态的 MDX 表达式的值确定。|  
 |走向指示器|一个提供 KPI 走向的快速指示的可见元素。 该元素的显示内容由评估走向的 MDX 表达式的值确定。|  

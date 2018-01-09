@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]错误处理时是必需的 XML 有关 Analysis (XMLA)[发现](../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用不会运行、 任务成功运行，但生成错误或警告，或任务成功运行，但返回的结果包含错误。  
@@ -63,9 +61,9 @@ ms.lasthandoff: 12/08/2017
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|指示方法是成功还是失败的返回代码。 必须将十六进制值转换为**UnsignedInt**值。|是|  
 |**WarningCode**|**UnsignedInt**|指示警告条件的返回代码。 必须将十六进制值转换为**UnsignedInt**值。|是|  
-|**Description**|**字符串**|由生成错误的组件返回的错误或警告的文本和说明。|是|  
-|**数据源**|**字符串**|生成错误或警告的组件的名称。|是|  
-|**HelpFile**|**字符串**|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|是|  
+|**Description**|**String**|由生成错误的组件返回的错误或警告的文本和说明。|是|  
+|**数据源**|**String**|生成错误或警告的组件的名称。|是|  
+|**HelpFile**|**String**|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|是|  
   
  <sup>1</sup>指示是否数据是必需的并且必须返回，或是否数据是可选的如果列不适用于允许 null 字符串。  
   

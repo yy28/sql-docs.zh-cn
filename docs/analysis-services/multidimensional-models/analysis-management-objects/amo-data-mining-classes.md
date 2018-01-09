@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO 数据挖掘类
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]数据挖掘类可帮助你创建、 修改、 删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
  <xref:Microsoft.AnalysisServices.MiningStructure> 可使用它自己的处理方法进行处理，也可在父对象使用自己的处理方法进行自身处理时进行处理。  
   
-### <a name="columns"></a>列  
+### <a name="columns"></a>“列”  
  列包含模型的数据，根据用法不同可为不同类型：Key、Input、Predictable 或 InputPredictable。 可预测列是生成挖掘模型的目标。  
   
  单值列在 AMO 中称为 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。 多值列称为 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  

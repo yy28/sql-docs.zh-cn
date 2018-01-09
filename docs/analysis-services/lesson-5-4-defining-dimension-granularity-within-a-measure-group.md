@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>第 5-4-定义度量值组中的维度粒度课
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]针对不同的用途，用户将需要在不同的粒度或特殊性维度事实数据。 例如，分销商或 Internet 销售的销售额数据可以每天记录一次，而销售配额信息则可能按月或按季度级别来记录。 在这些情况下，用户可能需要时间维度针对这些不同的事实数据表具有不同的粒度或详细程度。 尽管可以将新的数据库维度定义为具有这种不同粒度的时间维度，但 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了更简单的方法。  
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/08/2017
   
 9. 验证是否选中了“具体化”复选框。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 单击“销售区域”维度和“销售配额 1”度量值组相交处的单元，然后单击浏览按钮 (**…**)。 将打开“定义关系”对话框。  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/08/2017
   
 16. 验证是否选中了“具体化”复选框。  
   
-17. 单击 **“确定”**。  
+17. 单击“确定” 。  
   
 18. 删除“日期”多维数据集维度。  
   
@@ -194,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  在“创建属性关系”对话框中，“源属性”是“日历季度”。 将“相关属性”设置为“会计季度”。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
     注意此时会出现一条警告消息，指出“日期”维度包含一个或多个冗余属性关系，在将非键属性用作粒度属性时，这些冗余属性关系可能会导致数据无法聚合。  
   

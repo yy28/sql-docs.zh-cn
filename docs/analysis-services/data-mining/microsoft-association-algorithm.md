@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -39,11 +37,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]关联算法是一种算法通常用于推荐引擎。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
-## <a name="performance"></a>性能  
+## <a name="performance"></a>“性能”  
  创建项集和对关联进行计数的过程可能会非常耗时。 尽管 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法使用优化技术来节省空间并使处理更快，你仍然应该了解在如下条件下可能会发生性能问题：  
   
 -   数据集很大，包含许多单个项。  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
  若要尽量缩短处理时间，并降低项集的复杂度，可以在分析数据之前尝试按照类别对关联项进行分组。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

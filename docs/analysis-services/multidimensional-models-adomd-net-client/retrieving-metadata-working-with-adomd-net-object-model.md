@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e4b99f710a79115233d3872db2bb36a5671ee69
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e94ba0d7842e40a1535ae865fd6440f4c16eee68
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>检索元数据-使用 ADOMD.NET 对象模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET 提供用于查看多维数据集和包含的分析数据源的从属对象的对象模型。 但通过对象模型并不能获得给定分析数据源中的所有元数据。 通过对象模型只可访问那些对客户端应用程序的显示而言最有用的信息，以允许用户以交互方式构造命令。 由于要显示的元数据的复杂性较低，因而 ADOMD.NET 对象模型的使用较为简单。  

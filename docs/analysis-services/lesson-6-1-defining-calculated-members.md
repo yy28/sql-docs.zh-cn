@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>课程 6-1-定义计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]计算的成员的维度的成员或定义的度量值组基于多维数据集数据、 算术运算符、 数字和函数的组合。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
     可以将元数据元素从“计算工具”窗格拖到“表达式”框中，然后添加运算符和其他元素，创建多维表达式 (MDX) 表达式。 或者，可以直接在“表达式”框中键入 MDX 表达式。  
   
     > [!NOTE]  
-    > 如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
+    > 如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。  
   
 5.  将“Internet Sales-Sales Amount”从“计算工具”窗格中的“元数据”选项卡拖到“计算表达式”窗格中的“表达式”框中。  
   

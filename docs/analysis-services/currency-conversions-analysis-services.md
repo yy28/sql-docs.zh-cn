@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多维仅  
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="defining-currency-conversions"></a>定义货币换算  
  您可以使用商业智能向导来为多维数据集定义货币换算功能，也可以使用 MDX 脚本来手动定义货币换算。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
  您必须首先定义至少一个货币维度、至少一个时间维度和至少一个比率度量值组，然后才能使用商业智能向导在多维数据集中定义货币换算。 商业智能向导可以从这些对象中检索相应的数据和元数据，以用于构造提供货币换算功能所需的报表货币维度和 MDX 脚本。  
   
 ### <a name="decisions"></a>决策  

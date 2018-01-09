@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e89ab9340c73e1ae09ec66cb360e23cbe28cd9b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 课：定义关键绩效指标 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本课程中，您学习如何定义关键绩效指标 (Kpi) 在你[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目。 KPI 可以为用于定义度量业务的服务器端计算提供框架，并且也可以使结果信息的显示方式标准化。 使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 工具和第三方工具，通过数据访问 API，KPI 可以显示在报表、门户和仪表板中。 KPI 是对常规度量值和其他多维表达式 (MDX) 表达式的元数据包装。 有关详细信息，请参阅 [多维模型中的关键绩效指标 (KPI)](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)。  

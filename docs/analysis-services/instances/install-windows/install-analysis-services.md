@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 是承载表格模型、 多维数据集和可以访问来自报表、 电子表格和仪表板的数据挖掘模型的分析数据库服务器。  
@@ -72,7 +72,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 区分大小写。  所有值必须以大写形式表示。 下表对 **ASSERVERMODE**的有效值进行了说明。  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |TABULAR|这是默认值。 如果你未设置**ASSERVERMODE**，在表格模式下安装了服务器。|
 |MULTIDIMENSIONAL|该值是可选的。|  

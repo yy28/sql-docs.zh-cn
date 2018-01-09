@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分类矩阵（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*分类矩阵*分类到类别，从模型的所有情况下，通过确定预测的值是否匹配的实际值。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” 。  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |预测|0（实际）|1（实际）|2（实际值）|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-|1|2|123|17|  
+|@shouldalert|2|123|17|  
 |2|19|0|20|  
   
  尽管添加更多的列会使报表看起来更复杂，但如果希望评估做出错误预测的累计成本，则这些附加详细信息会非常有帮助。 若要在对角线上求和或者比较不同行组合的结果，可以单击 **“分类矩阵”** 选项卡中提供的 **“复制”** 按钮，然后将该报表粘贴到 Excel 中。 也可使用同时支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的客户端，如 Excel 数据挖掘客户端，直接在包括计数和百分比的 Excel 中创建分类报表。 有关详细信息，请参阅 [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)（SQL Server 数据挖掘）。  

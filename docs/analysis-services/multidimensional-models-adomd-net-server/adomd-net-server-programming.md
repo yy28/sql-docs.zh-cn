@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec1460930df27e1111d17b6c5692f82186348153
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69611501f104519777b263d621fbfc1d74f884c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 服务器编程
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET ADOMD.NET 服务器组件驻留在**Microsoft.AnalysisServices.AdomdServer** （中 msmgdsrv.dll) 命名空间。 这些服务器组件用于创建自定义多维表达式 (MDX) 函数和实例运行的存储的过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 服务器对象可提供查询多维数据集和挖掘模型以及在给定上下文计算表达式的功能。 创建自定义函数和存储过程的优点包括执行速度快、部署集中且可维护性得以改进。  

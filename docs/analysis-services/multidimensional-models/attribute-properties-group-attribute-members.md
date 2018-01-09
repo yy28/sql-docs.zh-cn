@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>属性组属性成员的属性-
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]成员组是连续的维度成员的系统生成的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 |**DiscretizationMethod** 设置|Description|  
 |--------------------------------------|-----------------|  
-|**InclusionThresholdSetting**|显示成员。|  
+|**无**|显示成员。|  
 |**自动**|选择最佳数据表示法： **EqualAreas** 方法或 **Clusters** 方法。|  
 |**EqualAreas**|尝试将属性中的成员分成若干包含相同数量成员的组。|  
 |**Clusters**|尝试通过抽样定型数据、初始化为大量随机点和运行几次期望最大化 (EM) 聚类分析算法的迭代来将属性中的成员分成若干组。<br /><br /> 本方法的好处是适用于任何分布曲线，但就处理时间而言开销较大。|  

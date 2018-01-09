@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6e2dad4e17ebee4497c4e62f15c5706affb62182
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>验证 Power Pivot for SharePoint 安装
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 在 SharePoint 场中安装的实例通过 SharePoint 管理中心进行管理。 至少，你可以检查管理中心和 SharePoint 网站上的页面以便确认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器组件和功能可用。 但是，若要完全验证某一安装，你必须具有可发布到 SharePoint 并从库中访问的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。 出于测试目的，你可以发布已包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  

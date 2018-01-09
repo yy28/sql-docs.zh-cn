@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 向导-向维度中添加帐户智能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将帐户智能增强功能添加到多维数据集或维度中，将标准帐户分类，如收入和支出，分配给某一帐户属性的成员。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用这些分类对一段时间内的帐户进行聚合。  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
     |服务器帐户类型|聚合|Description|  
     |-------------------------|-----------------|-----------------|  
-    |**统计**|**InclusionThresholdSetting**|某事物的计算比率，或者未在某段时间内聚合的某事物的计数。 该帐户类型不会使用换算规则在各种货币之间进行换算。|  
+    |**统计**|**无**|某事物的计算比率，或者未在某段时间内聚合的某事物的计数。 该帐户类型不会使用换算规则在各种货币之间进行换算。|  
     |**负债**|**LastNonEmpty**|在特定时间所拖欠的现金或事物的价值。 该帐户类型不会随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**资产**|**LastNonEmpty**|在特定时间所拥有的现金或事物的价值。 该帐户类型随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**平衡**|**LastNonEmpty**|在特定时间某事物的计数。 该帐户类型随时间而积累，但不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c0a46098b9f1793309ae31417f29f2b23772de0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]时间智能增强功能是添加时间计算 （或时间视图） 的多维数据集增强到所选的层次结构。 此增强功能支持以下计算类别：  
@@ -75,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-the-time-intelligence-enhancement"></a>查看时间智能增强功能  
  在商业智能向导的最后一页中，可以查看将对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行的更改。 对于时间智能增强功能，向导将按下表所述更改所选时间维度、关联的数据源视图以及关联的多维数据集。  
   
-|对象|更改|  
+|Object|更改|  
 |------------|------------|  
 |时间维度|为每个计算（或视图）添加属性。|  
 |数据源视图|在时间表中为时间维度中每个新属性添加计算列。|  

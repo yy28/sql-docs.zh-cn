@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6de32b7f057093f31143ad56e71c492be325cf4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>配置 Analysis Services 和 Kerberos 约束委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos 约束的委派 (KCD) 是一种身份验证协议，你可以使用 Windows 身份验证来委托从客户端凭据配置服务到整个环境的服务。 KCD 需要附加基础结构（例如域控制器）和你环境中的其他配置。 在某些通过 SharePoint 2016 涉及 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的方案中，要求使用 KCD。 在 SharePoint 2016 中，Excel Services 已从 SharePoint 场移出到单独的新服务器，即 **Office Online Server**。 由于 Office Online Server 是独立的服务器，因此在两个典型的跃点方案中更加需要委派客户端凭据的方法。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lesson 3-2-修改客户维度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]有多种不同的方法，可以增加的可用性和多维数据集中的维度的功能。 在本主题的各任务中，您将修改“客户”维度。  
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/08/2017
   
     现在，**City** 和 **StateProvinceName** 列会显示在“键列”列表中。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  若要设置“市县”特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/08/2017
   
     现在，**EnglishCountryRegionName** 和 **StateProvinceName** 列会显示在“键列”列表中。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  若要设置“省/自治区/直辖市”特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -241,7 +241,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  在“关系类型”列表中，将关系类型设置为“刚性”。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 在“文件”  菜单上，单击“全部保存” 。  
   
@@ -250,7 +250,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="to-deploy-the-changes-process-the-objects-and-view-the-changes"></a>部署更改、处理对象以及查看更改  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单中，单击“部署 Analysis Services 教程”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
 2.  在收到“部署成功完成”消息后，单击“客户”维度的维度设计器的“浏览器”选项卡，然后单击设计器工具栏左侧的“重新连接”按钮。  
   

@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]计算的成员是在运行时，表达式中计算其值，并且可以在嵌套 select 语句中使用的维度成员和子多维数据集更精确地定义查询的 cubespace。  
@@ -36,9 +33,9 @@ ms.lasthandoff: 12/08/2017
   
 |||  
 |-|-|  
-|“值”|说明|  
+|ReplTest1|Description|  
 |0|计算成员不允许在嵌套 select 或子多维数据集中使用。<br /><br /> 如果引用计算成员，则在对嵌套 select 或子多维数据集进行计算时，将引发错误。|  
-|1|计算成员允许在嵌套 select 或子多维数据集中使用，但在返回子空间中不引入祖先成员。|  
+|@shouldalert|计算成员允许在嵌套 select 或子多维数据集中使用，但在返回子空间中不引入祖先成员。|  
 |2|计算成员允许在嵌套 select 或子多维数据集中使用，并且在返回子空间中引入祖先成员。 此外，在选择计算成员时允许使用混合粒度。|  
   
  在 SubQueries 属性中使用值 1 或 2 允许计算成员用于筛选嵌套 select 的返回子空间。  
@@ -90,7 +87,7 @@ Where [Measures].[Reseller Sales Amount]
 |||||||  
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
-|All Geographies|(null)|(null)|(null)|(null)|(null)|  
+|所有地域|(null)|(null)|(null)|(null)|(null)|  
 |United States|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
@@ -128,7 +125,7 @@ Where [Measures].[Reseller Sales Amount]
   
  在上面的结果中，[All Geographies]、[United States]、[Oregon] 和 [Washington] 的聚合值来自对 &[Portland]&[OR] 和 &[Spokane]&[WA] 的后代执行的聚合。 没有任何内容来自计算成员。  
   
-### <a name="remarks"></a>注释  
+### <a name="remarks"></a>Remarks  
  在嵌套 select 或子多维数据集表达式中只允许全局或会话计算成员。 在对嵌套 select 或子多维数据集表达式执行计算时，如果在 MDX 表达式中具有查询计算成员，将引发错误。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]处理*缺失值*正确是有效建模的一个重要部分。 本节说明什么是 Missing 值，并介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的、用于处理在生成数据挖掘结构和挖掘模型时的 Missing 值的功能。  
@@ -56,10 +54,10 @@ ms.lasthandoff: 12/08/2017
   
  例如，下表显示了为自行车购买者教程创建的决策树模型中的（所有）节点的值的分布。 在示例方案中，[Bike Buyer] 列为可预测属性，其中，1 表示“是”，0 表示“否”。  
   
-|“值”|事例|  
+|ReplTest1|事例|  
 |-----------|-----------|  
 |0|9296|  
-|1|9098|  
+|@shouldalert|9098|  
 |Missing|0|  
   
  此分布显示大约一半的客户已经购买了自行车，而一半的客户还没有购买自行车。 此特定数据集十分清晰；因此，每个事例的 [Bike Buyer] 列中都有一个值，并且 **Missing** 值的计数为 0。 但是，只要事例的 [Bike Buyer] 字段值为 Null， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就会将该行计为具有 **Missing** 值的事例。  
@@ -72,10 +70,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="adjusting-probability-for-missing-states"></a>调整 Missing 状态的概率  
  除了对值进行计数外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还计算整个数据集中的任何值的概率。 这对于 **Missing** 值同样适用。 例如，下表显示了前面示例中事例的概率：  
   
-|“值”|事例|概率|  
+|ReplTest1|事例|概率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-|1|9098|49.42%|  
+|@shouldalert|9098|49.42%|  
 |Missing|0|0.03%|  
   
  当事例个数为 0 时，计算得出的 **Missing** 值的概率为 0.03%，这好像有些奇怪。 实际上，此行为是设计造成的，目的是通过这种调整使模型可以适当地处理未知值。  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/08/2017
   
  此调整的净效果是保持树的稳定性。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  下列主题提供有关如何处理 Missing 值的详细信息。  
   
 |“任务”|链接|  

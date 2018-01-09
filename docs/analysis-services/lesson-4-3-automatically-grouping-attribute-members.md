@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d787f200287979270ce8ffe818c3375878fc284
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 46154c876e57ea952e0df93294f6d65891fa91c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-自动分组属性成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]浏览多维数据集时，你通常维度通过另一个属性层次结构的成员的一个属性层次结构成员。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，如果由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性层次结构中的成员分布自动创建属性成员分组，将会很有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  在“属性”窗口中，将 **DiscretizationBucketCount** 属性值更改为 **10**。  
   
-3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单中，单击“部署 Analysis Services 教程”。  
+3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
 4.  成功完成部署后，切换回 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集的多维数据集设计器。  
   

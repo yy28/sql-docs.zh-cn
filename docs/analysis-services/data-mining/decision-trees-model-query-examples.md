@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>决策树模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当您创建针对数据挖掘模型的查询时，你可以创建内容查询，提供了有关分析过程中发现的模式的详细信息，也可以创建预测查询，使用在模型中的模式来对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
@@ -87,7 +85,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|全部|12939|5|  
+|TM_DecisionTree|000000001|All|12939|5|  
   
  这些结果是什么意思？ 在决策树模型中，特定节点的基数指明该节点有多少个直属子级。 此节点的基数是 5，这意味着该模型将潜在的自行车购买者的目标总体分成了 5 个子组。  
   
@@ -106,14 +104,14 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  示例结果：  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|Support|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|缺少|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|1|1875|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|缺少|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|@shouldalert|1875|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|Missing|0|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|@shouldalert|473|  
   
  根据这些结果，你可以知道购买了自行车的客户数 ([Bike Buyer] = 1)，1067 个客户拥有 0 辆汽车，473 个客户拥有 3 辆汽车。  
   
@@ -193,7 +191,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
-|1|2540|0.634849242045644|0.013562168281562|0|0|  
+|@shouldalert|2540|0.634849242045644|0.013562168281562|0|0|  
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
@@ -214,7 +212,7 @@ NATURAL PREDICTION JOIN
   
  预期的结果：  
   
-|Model|  
+|“模型”|  
 |-----------|  
 |Mountain-200|  
 |Mountain Tire Tube|  
@@ -233,7 +231,7 @@ NATURAL PREDICTION JOIN
   
  预期的结果：  
   
-|Model|  
+|“模型”|  
 |-----------|  
 |Long-Sleeve Logo Jersey|  
 |Mountain-400-W|  
@@ -254,7 +252,7 @@ WHERE NODE_TYPE = 25
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|缺少|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   

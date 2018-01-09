@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd0525c4b4381cc553f3e6aca9e0bf2522ef87e0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本部分提供有关模型筛选器，以及示例表达式的语法的详细的信息。  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
  *avPredicate*  
  只能应用到标量挖掘结构列的筛选表达式。 *avPredicate* 表达式既可用于模型筛选器中，也可用于嵌套表筛选器中。  
   
- 使用以下任何运算符的表达式只能应用到连续列中。 设置用户帐户 ：  
+ 使用以下任何运算符的表达式只能应用到连续列中。 解码的字符：  
   
 -   **\<** （小于）  
   

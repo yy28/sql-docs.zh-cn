@@ -1,13 +1,13 @@
 ---
 title: "如何使用 RevoScaleR 函数来查找或安装 R 包在 SQL Server 上 |Microsoft 文档"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函数来查找或在 SQL Server 上安装 R 包
 
@@ -38,7 +38,7 @@ Microsoft R Server 版本 9.0.1 引入了支持使用 SQL Server 计算上下文
 
 + 如果您不指定用户名和密码创建计算上下文时，使用运行的 R 代码的用户标识。
 
-+ 使用这些函数从远程 R 客户端时，你必须创建计算上下文对象首先，使用 RxInSQLServer 函数。 此后，你使用的每个包管理函数，通过计算上下文作为自变量。
++ 使用这些函数从远程 R 客户端时，你必须创建计算上下文对象首先，使用[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)函数。 此后，你使用的每个包管理函数，通过计算上下文作为自变量。
 
 + 可以运行包管理功能使用`sp_execute_external_script`。 执行此操作时，使用存储的过程调用方的安全上下文执行函数。
 
@@ -46,22 +46,23 @@ Microsoft R Server 版本 9.0.1 引入了支持使用 SQL Server 计算上下文
 
 有关安装和删除指定的计算上下文中的程序包中 RevoScaleR，提供了以下包管理功能：
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages)： 查找有关指定的计算上下文中安装的程序包的信息。
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages)： 查找有关指定的计算上下文中安装的程序包的信息。
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages)： 安装包复制到以下计算上下文，从指定的存储库，或通过读取本地保存的压缩包。
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages)： 安装包复制到以下计算上下文，从指定的存储库，或通过读取本地保存的压缩包。
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages)： 删除计算上下文从安装包。
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages)： 删除计算上下文从安装包。
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage)： 获取指定的计算上下文中的一个或多个包的路径。
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage)： 获取指定的计算上下文中的一个或多个包的路径。
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages)： 在指定的计算上下文中复制的文件系统和数据库之间的包库。
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages)： 在指定的计算上下文中复制的文件系统和数据库之间的包库。
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 的内部执行时的搜索路径获取包的库树。
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 的内部执行时的搜索路径获取包的库树。
 
-默认情况下，SQL Server 2017 中包括的这些包。 有关这些函数的信息，请参阅 RevoScaleR 函数参考页: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+默认情况下，SQL Server 2017 中包括的这些包。 有关这些函数的信息，请参阅 RevoScaleR 函数参考页: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > 用于程序包管理的 R 函数是与 Microsoft R Server 9.0.1 开始提供。 如果在 RevoScaleR，找不到函数，你可能需要升级到最新版本。 
+
 ## <a name="examples"></a>示例
 
 本部分包含有关如何使用包管理功能与 SQL Server 实例或数据库的示例。 

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建内容查询，提供了有关分析过程中发现的模式的详细信息，也可以创建预测查询，使用在模型中的模式来进行预测，使用新数据。  
@@ -99,12 +97,12 @@ FROM [TM_Logistic Regression].CONTENT
   
 |t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|年龄|缺少|0|0|0|1|  
-|年龄|45.43491192|17484|1|126.9544114|3|  
-|Bike Buyer|缺少|0|0|0|1|  
+|年龄|Missing|0|0|0|@shouldalert|  
+|年龄|45.43491192|17484|@shouldalert|126.9544114|3|  
+|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
-|上下班路程|缺少|0|0|0|1|  
+|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
+|上下班路程|Missing|0|0|0|@shouldalert|  
 |上下班路程|5-10 英里|3033|0.173472889|0|4|  
   
  实际查询会返回多得多的行；但是此示例演示了所提供的有关输入的信息类型。 对于离散输入，每个可能值都列在表中。 对于“年龄”之类的连续值输入，全部列出是不可能的，所以输入被离散化为均值。 有关如何使用边际统计信息节点中的信息的详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  

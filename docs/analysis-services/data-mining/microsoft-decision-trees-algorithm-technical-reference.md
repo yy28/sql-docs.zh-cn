@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是一种混合算法，包含不同的方法，用于创建一个树中，并支持多种分析任务，包括回归、 分类和关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
@@ -157,9 +155,9 @@ ms.lasthandoff: 12/08/2017
  *SCORE_METHOD*  
  确定用于计算拆分分数的方法。 可用选项包括：  
   
-|ID|名称|  
+|ID|“属性”|  
 |--------|----------|  
-|1|Entropy|  
+|@shouldalert|Entropy|  
 |3|Bayesian with K2 Prior|  
 |4|Bayesian Dirichlet Equivalent (BDE) with uniform prior<br /><br /> （默认值）|  
   
@@ -170,9 +168,9 @@ ms.lasthandoff: 12/08/2017
  *SPLIT_METHOD*  
  确定用于拆分节点的方法。 可用选项包括：  
   
-|ID|名称|  
+|ID|“属性”|  
 |--------|----------|  
-|1|**Binary:** 指示无论属性值的实际数量是多少，树都拆分为两个分支。|  
+|@shouldalert|**Binary:** 指示无论属性值的实际数量是多少，树都拆分为两个分支。|  
 |2|**Complete:** 指示树可以创建与属性值数目相同的分叉。|  
 |3|**Both:** 指定 Analysis Services 可确定应使用 binary 还是 complete，以获得最佳结果。|  
   
@@ -201,7 +199,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered 和 Table|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Ordered 和 Table|  

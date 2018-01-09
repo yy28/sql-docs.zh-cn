@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d2bc32eb76882c00b411e7eff81fd3cf5b45b77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 SQL Server 代理服务，你可以计划[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理任务，以你运行的顺序和时间的需要。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  本主题是一个演练，演示了如何使用 SQL Server 代理通过两种方式运行 XMLA 脚本。 第一个示例演示如何计划对单个维度的处理。 第二个示例演示如何将处理任务并入按计划运行的单个脚本。 若要完成此演练，您需要满足下列先决条件。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  必须安装 SQL Server 代理服务。  
   
  默认情况下，作业在服务帐户下运行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server 代理的默认帐户是 NT Service\SQLAgent$\<实例名 >。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅 [向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
 9. 在“命令”中，右键单击并选择“粘贴”。 上一步中生成的 XMLA 脚本应显示在命令窗口中。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 在 **“选择页”**下，单击 **“计划”**，然后单击 **“新建”**。  
   
@@ -214,7 +211,7 @@ ms.lasthandoff: 12/08/2017
   
 10. 在“命令”中，右键单击并选择“粘贴”。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 在 **“计划”** 页上，单击 **“新建”**。  
   

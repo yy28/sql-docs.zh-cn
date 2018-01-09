@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8dd3250558baf193890bee80ca272de30510dc5b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lesson 5-1-定义被引用的关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]本教程中到目前为止，你定义每个多维数据集维度基于直接链接到度量值组的事实数据表了一个主键到外键关系的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/08/2017
   
     注意，已选中“具体化”复选框。 这是 MOLAP 维度的默认设置。 在处理过程中，具体化维度属性链接可在维度的 MOLAP 结构中具体化或存储事实数据表和每行的引用维度之间的链接值。 这样做对处理性能和存储要求的影响不大，但会增强查询性能（有时会很显著）。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
     注意，“地域”多维数据集维度现在已链接到“分销商销售”度量值组。 该图标指示此关系是引用维度关系。  
   

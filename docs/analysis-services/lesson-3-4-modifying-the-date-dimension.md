@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,17 +18,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3d71a404f2b91606ec12ac08689a2c8ebefea85f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lesson 3-4-修改日期维度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本主题中的任务，你创建用户定义的层次结构，并将更改为日期、 月、 日历季度和日历半期属性显示的成员名称。 还将为属性定义组合键，控制维度成员的排序顺序以及定义属性关系。  
   
 ## <a name="adding-a-named-calculation"></a>添加命名计算  
-可以向数据源视图的表中添加命名计算，命名计算是一个表示为计算列的 SQL 表达式。 该表达式的显示形式和工作方式类似于表中的列。 通过命名计算，不必修改基础数据源中的表即可扩展数据源视图中现有表的关系架构。 有关详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+可以向数据源视图的表中添加命名计算，命名计算是一个表示为计算列的 SQL 表达式。 该表达式的显示形式和工作方式类似于表中的列。 通过命名计算，不必修改基础数据源中的表即可扩展数据源视图中现有表的关系架构。 有关详细信息，请参阅 [在数据源视图中定义命名计算 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>添加命名计算  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
     因为各成员之间的关系不会随时间变化，所以此关系类型为“刚性”。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  在关系图中，右键单击“日历季度”属性，然后单击“新建属性关系”。  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  在“关系类型”列表中，将关系类型设置为“刚性”。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 在关系图中，右键单击“日历半期”属性，然后单击“新建属性关系”。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/08/2017
   
 12. 在“关系类型”列表中，将关系类型设置为“刚性”。  
   
-13. 单击 **“确定”**。  
+13. 单击“确定” 。  
   
 14. 在“文件”  菜单上，单击“全部保存” 。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/08/2017
   
     该语句将表中每月的月份和年份连接成一个新列。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 5.  在“表”窗格中，右键单击“日期”，然后单击“新建命名计算”。  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 12/08/2017
   
     该 SQL 脚本将表中每季度的日历季度和年份连接成一个新列。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  在“表”窗格中，右键单击“日期”，然后单击“新建命名计算”。  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  现在，**EnglishMonthName** 和 **CalendarYear** 列会显示在“键列”列表中。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  若要设置 **EnglishMonthName** 特性的 **NameColumn** 属性，请单击“属性”窗口中的 **NameColumn** 字段，然后单击浏览 (**...**) 按钮。  
   
@@ -219,7 +219,7 @@ ms.lasthandoff: 12/08/2017
   
     现在，**CalendarQuarter** 和 **CalendarYear** 列会显示在“键列”列表中。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 5.  若要设置“日历季度”特性的 **NameColumn** 属性，请单击“属性”窗口的 **NameColumn** 字段，然后单击浏览 (**...**) 按钮。  
   
@@ -237,7 +237,7 @@ ms.lasthandoff: 12/08/2017
   
     现在，**CalendarSemester** 和 **CalendarYear** 列会显示在“键列”列表中。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 5.  若要设置“日历半期”特性的 **NameColumn** 属性，请单击“属性”窗口的 **NameColumn** 字段，然后单击浏览 (**...**) 按钮。  
   
@@ -275,23 +275,23 @@ ms.lasthandoff: 12/08/2017
   
 3.  在“属性”窗口中，单击省略号浏览按钮 (**...**)，以更改 **KeyColumns** 属性值。  
   
-4.  在“键列”对话框的“键列”列表中，验证是否选中了 **CalendarSemester**，然后单击向下箭头以反转该组合键成员的顺序。 单击 **“确定”**。  
+4.  在“键列”对话框的“键列”列表中，验证是否选中了 **CalendarSemester**，然后单击向下箭头以反转该组合键成员的顺序。 单击“确定” 。  
   
     现在，属性层次结构成员首先按年份、然后按半期进行排序。  
   
 5.  在“特性”窗格中，选择“日历季度”，然后单击“属性”窗口中 **KeyColumns** 属性的省略号浏览按钮 (**...**)。  
   
-6.  在“键列”对话框的“键列”列表中，验证是否选中了 **CalendarQuarter**，然后单击向下箭头以反转该组合键成员的顺序。 单击 **“确定”**。  
+6.  在“键列”对话框的“键列”列表中，验证是否选中了 **CalendarQuarter**，然后单击向下箭头以反转该组合键成员的顺序。 单击“确定” 。  
   
     现在，属性层次结构成员首先按年份、然后按季度进行排序。  
   
 7.  在“特性”窗格中，选择“英语月份名称”，然后单击“属性”窗口中 **KeyColumns** 属性的省略号按钮 (**...**)。  
   
-8.  在“键列”对话框的“键列”列表中，验证是否选中了 **EnglishMonthName**，然后单击向下箭头以反转该组合键成员的顺序。 单击 **“确定”**。  
+8.  在“键列”对话框的“键列”列表中，验证是否选中了 **EnglishMonthName**，然后单击向下箭头以反转该组合键成员的顺序。 单击“确定” 。  
   
     现在，属性层次结构成员首先按年份、然后按月份进行排序。  
   
-9. 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单中，单击“部署 Analysis Services 教程”。 部署成功完成后，在“日期”维度的维度设计器中单击“浏览器”选项卡。  
+9. 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。 部署成功完成后，在“日期”维度的维度设计器中单击“浏览器”选项卡。  
   
 10. 在“浏览器”项卡的工具栏上，单击“重新连接”按钮。  
   

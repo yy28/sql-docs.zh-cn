@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sample-data-and-projects"></a>安装示例数据和项目 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]使用说明和本主题中提供的链接安装所有 Analysis Services 教程中使用的数据和项目文件。  
@@ -133,7 +133,7 @@ Analysis Services 多维模型使用您从关系数据库管理系统导入的�
   
     -   Lesson 10 Complete  
   
-4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”，然后清除“只读”复选框。 单击 **“确定”**。 将更改应用至此文件夹、子文件夹和文件。  
+4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”，然后清除“只读”复选框。 单击“确定” 。 将更改应用至此文件夹、子文件夹和文件。  
   
 5.  启动 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   

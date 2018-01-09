@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,13 +27,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-clustering-algorithm"></a>Microsoft 聚类分析算法
+# <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法是*分段*或*群集*循环访问数据集将它们分组到包含类似的特征的群集中的用例的算法。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
   
  聚类分析模型标识数据集中可能无法通过随意观察在逻辑上得出的关系。 例如，轻松就能猜想到，骑自行车上下班的人的居住地点通常离其工作地点不远。 但该算法可以找出有关骑自行车上下班人员的其他并不明显的特征。 在下面的关系图中，分类 A 表示有关通常开车上班人员的数据，而分类 B 表示通常骑自行车上班人员的数据。  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/08/2017
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。 有关如何使用针对聚类分析模型的查询的示例，请参阅 [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 -   支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

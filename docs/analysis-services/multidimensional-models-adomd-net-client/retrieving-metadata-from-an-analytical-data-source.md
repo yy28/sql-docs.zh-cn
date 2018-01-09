@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c432c699cd0a924b0624d98b0e7f97323718f3c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1ccc559449edeb5274c22aa892c21a4677f75f61
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>从分析数据源检索元数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]元数据是重要的应用程序检索和使用分析数据。 从关系数据源检索数据时，这些数据的维数是可预测的，即使对嵌套数据集也是如此。 关系数据库的结果集的结构通常是二维的或为标量。 但是，从分析数据源检索的数据的维数是可变的，组织的层次结构可能会很深。  

@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此主题介绍如何部署和配置的中间层增强功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]库、 计划数据刷新、 管理仪表板和数据访问接口。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具以便完成以下任务：  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_run_configuration_tool"></a> 运行 Power Pivot for SharePoint 2013 配置  
  **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装向导将为 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)] 安装两个不同的配置工具。 这两个工具均支持不同版本的 SharePoint。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 配置工具|具有 SharePoint 2010 Service Pack 1 (SP1) 的 SharePoint 2010|  

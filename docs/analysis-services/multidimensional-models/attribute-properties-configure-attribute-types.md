@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>特性属性-配置属性类型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，特性类型可用于分类按业务功能的属性。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  
@@ -155,7 +152,7 @@ ms.lasthandoff: 12/08/2017
 |**ShortCaption**|表示短标题。|  
 |**StateOrProvince**|表示省市自治区。|  
 |**实用工具**|表示效用。|  
-|**版本**|表示版本。|  
+|**版本(Version)**|表示版本。|  
 |**WebHtml**|表示 HTML 内容。|  
 |**WebMailAlias**|表示电子邮件别名。|  
 |**WebUrl**|表示 URL 地址。|  
@@ -192,7 +189,7 @@ ms.lasthandoff: 12/08/2017
   
 |特性类型值|Description|  
 |--------------------------|-----------------|  
-|**日期**|表示日期。 此特性类型通常应用于时间维度或服务器时间维度的键特性。|  
+|**Date**|表示日期。 此特性类型通常应用于时间维度或服务器时间维度的键特性。|  
 |**DayOfHalfYear**|表示每半年的第几天。|  
 |**DayOfMonth**|表示每月的第几天。|  
 |**DayOfQuarter**|表示每个季度的第几天。|  

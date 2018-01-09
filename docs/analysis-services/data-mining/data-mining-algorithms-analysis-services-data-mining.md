@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 43652986e789837299feacf5387cd8b6e6d57a8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*算法*在数据挖掘 （或机器学习） 是从数据创建模型的启发式技术并计算一组。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析在许多次迭代中的结果来查找用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/08/2017
 |**数据挖掘查询**|提供可用于各模型类型的多个查询。 示例包括可让您了解与模型中的模式有关的详细信息的内容查询以及可帮助您基于这些模式生成预测的预测查询。|  
 ||[关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [逻辑回归模型查询示例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes 模型查询示例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |**主题**|**Description**|  
 |---------------|---------------------|  

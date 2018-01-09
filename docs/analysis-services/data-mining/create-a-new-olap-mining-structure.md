@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用中的数据挖掘向导[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]来创建挖掘结构使用多维模型中的数据。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
@@ -50,13 +48,13 @@ ms.lasthandoff: 12/08/2017
   
      例如，如果你正在尝试标识客户分组，则可以选择“客户”维度；如果你正在尝试分析交易中的购买行为，则可以选择“Internet 销售订单详细信息”维度。 您不会被局限为仅使用此维度中的数据，但该维度应该包含要在分析中使用的重要属性。  
   
-     单击 **“下一步”**。  
+     单击“下一步” 。  
   
 6.  在 **“选择事例键”** 页的 **“属性”**下，选择将成为挖掘结构键的属性，然后单击 **“下一步”**。  
   
      通常，您用作挖掘架结构的键的属性也是用于维度的键并且将预先选择。  
   
-7.  在 **“选择事例级别列”** 页的 **“相关属性和度量值”**下，选择包含您要作为事例数据添加到挖掘架构的值的属性和度量值。 单击 **“下一步”**。  
+7.  在 **“选择事例级别列”** 页的 **“相关属性和度量值”**下，选择包含您要作为事例数据添加到挖掘架构的值的属性和度量值。 单击“下一步” 。  
   
 8.  在 **“指定挖掘模型列用法”** 页的 **“挖掘模型结构”**下，首先选择可预测列，然后选择要用作输入的列。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
      请注意，已指定为键的列不能用于输入或预测。  
   
-     单击 **“下一步”**。  
+     单击“下一步” 。  
   
 9. 在 **“指定挖掘模型列用法”** 页上，您还可以使用 **“添加嵌套表”** 和 **“删除嵌套表”**，添加和删除挖掘模型中的嵌套表。  
   
@@ -115,9 +113,9 @@ ms.lasthandoff: 12/08/2017
   
     -   **参数**：忽略此复选框。 此对话框支持多个多维数据集筛选方案，并且此选项不针对生成挖掘结构。  
   
-     单击 **“下一步”**。  
+     单击“下一步” 。  
   
-12. 在 **“将数据拆分为定型集和测试集”** 页上，指定为测试保留的挖掘结构数据的百分比，或者指定最大测试事例数。 单击 **“下一步”**。  
+12. 在 **“将数据拆分为定型集和测试集”** 页上，指定为测试保留的挖掘结构数据的百分比，或者指定最大测试事例数。 单击“下一步” 。  
   
      如果指定两个值，则使用这两个限制值中的最小值。  
   

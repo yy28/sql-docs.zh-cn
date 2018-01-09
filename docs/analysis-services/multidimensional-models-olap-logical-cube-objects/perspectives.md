@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21b3d6af2d4a6248926773e78dbf366b6c6d9ee5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="perspectives"></a>透视
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]透视是允许用户在更简单的方法中看到一个多维数据集的定义。 透视是多维数据集功能的子集。 管理员使用透视可以创建多维数据集的视图，从而帮助用户将注意力集中在与他们关系最为密切的数据上。 透视包含多维数据集所有对象的子集。 但它不能包含父多维数据集中未定义的元素。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  透视是多维数据集的只读视图；无法使用透视来重命名或更改多维数据集中的对象。 同样，也无法使用透视更改多维数据集的行为或功能（如可见总计的用法）。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  透视的用途不是为了作为一种安全机制，而是作为一个可在商业智能应用程序中为用户提供更好体验的工具。 特定透视的所有安全性都从基础多维数据集继承。 例如，透视无法让用户访问该用户尚未拥有访问权的多维数据集中的对象。 必须先解决多维数据集的安全性，然后才能通过透视访问多维数据集中的对象。  
   
   

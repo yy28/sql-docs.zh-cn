@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,21 +21,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72ba77005dbe1470bcf1104ef27bf751104d45ba
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: db94622cfc84d97cb6f8e7578421f4933a63af94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies---level-properties"></a>用户层次结构的级别的属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表列出并介绍用户定义的层次结构中级别的属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |Description|包含对级别的说明。|  
 |HideMemberIf|指示是否应该从客户端应用程序中隐藏某一级别的成员以及何时隐藏。 此属性可以有下列值：<br /><br /> 从不<br /> 从不隐藏成员。 这是默认值。<br /><br /> OnlyChildWithNoName<br /> 当成员是其父级的唯一子级并且成员名称为空时，隐藏该成员。<br /><br /> OnlyChildWithParentName<br /> 当成员是其父级的唯一子级并且成员名称与其父级的名称相同时，隐藏该成员。<br /><br /> NoName<br /> 当成员的名称为空时，隐藏该成员。<br /><br /> ParentName<br /> 当成员的名称与其父级的名称相同时，隐藏该成员。|  
 |ID|包含级别的唯一标识符 (ID)。|  
-|名称|包含级别的友好名称。 默认情况下，级别的名称与源属性的名称相同。|  
+|“属性”|包含级别的友好名称。 默认情况下，级别的名称与源属性的名称相同。|  
 |SourceAttribute|包含级别所基于的源属性的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
