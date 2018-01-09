@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ParentObject Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe70035af63f06bff565daee82cebf9b8a4026ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c52bc6fd7d4ae414f0c20c7921186115e17d1cea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含要在其中创建定义的父对象的父对象的标识符[创建](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)元素。  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[创建](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |子元素|必需的 Analysis Services 脚本语言 (ASSL) 元素。 指定通过列出的对象，并且其上级的 ID 元素 (不包括**服务器**对象。)例如，以下**ParentObject**元素确定分区：<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  标识符的显示顺序并不重要。  
   
 ## <a name="example"></a>示例  

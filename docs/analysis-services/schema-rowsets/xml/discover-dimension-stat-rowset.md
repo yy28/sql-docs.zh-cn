@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有关维度，包括它、 维度名称、 及其属性和每个属性的成员的计数包含的数据库的名称的信息。 在表格模型中，这对应于表中的列和每个列中的值数。  
@@ -36,8 +34,8 @@ ms.lasthandoff: 12/08/2017
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|必需|包含维度的数据库的名称。<br /><br /> 此列在限制列表中是必需的。|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|必需|维度的名称。<br /><br /> 此列在限制列表中是必需的。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Required|包含维度的数据库的名称。<br /><br /> 此列在限制列表中是必需的。|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Required|维度的名称。<br /><br /> 此列在限制列表中是必需的。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||维度中的属性的名称。|  
 |**ATTRIBUTE_COUNT**|**是 DBTYPE_I8**||命名属性中的值的计数。 对于表格模型，该值始终等于表中的行数值。|  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd90-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  

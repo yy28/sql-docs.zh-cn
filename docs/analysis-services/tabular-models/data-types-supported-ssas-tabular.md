@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84cdb30142c75b4bc35d956daff130df3bf62305
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>在表格模型中受支持的数据类型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本文介绍可以在表格模型中使用的数据类型，并讨论了数据类型的隐式转换，计算或数据分析表达式 (DAX) 公式中使用数据时。  
@@ -43,8 +40,8 @@ ms.lasthandoff: 12/08/2017
 |整数|一个 64 位（八字节）整数值*<br /><br /> 注意：<br />         DAX 公式不支持因太小而无法保存说明中列出的最小值的数据类型。|没有小数位的数字。 整数可以是正数或负数，但必须是介于 -9,223,372,036,854,775,808 (-2^63) 和 9,223,372,036,854,775,807 (2^63-1) 之间的整数。|  
 |小数|一个 64 位（八字节）实数*<br /><br /> 注意：<br />         DAX 公式不支持因太小而无法保存说明中列出的最小值的数据类型。|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
 |Boolean|Boolean|True 或 False 值。|  
-|Text|字符串|一个 Unicode 字符数据字符串。 可以是字符串、 数字或以文本格式表示的日期。|  
-|日期|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
+|文本|String|一个 Unicode 字符数据字符串。 可以是字符串、 数字或以文本格式表示的日期。|  
+|date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
 |N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
 ||  
 |-|  
-|“值”|  
+|ReplTest1|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -96,10 +93,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|运算符 (+)|整数|货币|REAL|日期/时间|  
-|整数|整数|货币|REAL|日期/时间|  
-|货币|货币|货币|REAL|日期/时间|  
-|REAL|REAL|REAL|REAL|日期/时间|  
+|运算符 (+)|整数|货币|real|日期/时间|  
+|整数|整数|货币|real|日期/时间|  
+|货币|货币|货币|real|日期/时间|  
+|real|real|real|real|日期/时间|  
 |日期/时间|日期/时间|日期/时间|日期/时间|日期/时间|  
   
  例如，如果某一实数在加法运算中与货币数据结合使用，则两个值都转换为 REAL，并且结果返回为 REAL。  
@@ -109,10 +106,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|运算符 (-)|整数|货币|REAL|日期/时间|  
-|整数|整数|货币|REAL|REAL|  
-|货币|货币|货币|REAL|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
+|运算符 (-)|整数|货币|real|日期/时间|  
+|整数|整数|货币|real|real|  
+|货币|货币|货币|real|real|  
+|real|real|real|real|real|  
 |日期/时间|日期/时间|日期/时间|日期/时间|日期/时间|  
   
  例如，如果某一日期用于采用任何其他数据类型的减法运算中，则两个值都转换为日期，并且返回值也是日期。  
@@ -124,10 +121,10 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|运算符 (*)|整数|货币|REAL|日期/时间|  
-|整数|整数|货币|REAL|整数|  
-|货币|货币|REAL|货币|货币|  
-|REAL|REAL|货币|REAL|REAL|  
+|运算符 (*)|整数|货币|real|日期/时间|  
+|整数|整数|货币|real|整数|  
+|货币|货币|real|货币|货币|  
+|real|real|货币|real|real|  
   
  例如，如果在乘法运算中某一整数与实数结合使用，则两个数字都将转换为实数，并且返回值也是 REAL。  
   
@@ -136,11 +133,11 @@ ms.lasthandoff: 12/08/2017
   
 ||||||  
 |-|-|-|-|-|  
-|运算符 (/)<br /><br /> （行/列）|整数|货币|REAL|日期/时间|  
-|整数|REAL|货币|REAL|REAL|  
-|货币|货币|REAL|货币|REAL|  
-|REAL|REAL|REAL|REAL|REAL|  
-|日期/时间|REAL|REAL|REAL|REAL|  
+|运算符 (/)<br /><br /> （行/列）|整数|货币|real|日期/时间|  
+|整数|real|货币|real|real|  
+|货币|货币|real|货币|real|  
+|real|real|real|real|real|  
+|日期/时间|real|real|real|real|  
   
  例如，如果某一整数在除法运算中与某一货币值一起使用，则两个值都转换为实数，并且结果也是实数。  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|表达式|DAX|Excel|  
+|表达式|DAX|“导出”|  
 |BLANK + BLANK|空白|0（零）|  
 |BLANK +5|5|5|  
 |BLANK * 5|空白|0（零）|  
@@ -164,7 +161,7 @@ ms.lasthandoff: 12/08/2017
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|空白|错误|  
-|BLANK AND BLANK|空白|错误|  
+|BLANK AND BLANK|BLANK|错误|  
   
  有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一节中关于各 DAX 函数的单独主题。  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Roles Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d125df9535303152449ad54ef577995a1da9b6d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 06fe47cbf3a13cc1c816f698b2ee80bec9e09f63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="roles-element-assl"></a>Roles 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的集合[角色](../../../analysis-services/scripting/objects/role-element-assl.md)父元素下定义的元素。  
@@ -49,10 +47,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[Database](../../../analysis-services/scripting/objects/database-element-assl.md)、 [Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |子元素|[角色](../../../analysis-services/scripting/objects/role-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  与 **Roles** 元素关联的 **Server** 元素仅包含一个角色，即命名管理员（表示服务器管理角色）。 服务器管理员角色不可更改或删除，也不可向集合中添加其他角色。  
   
  与 **Roles** 元素关联的 **Database** 元素包含为该数据库定义的角色。  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68e7aa514a63f6bce6ddcff33c1b7a6a2616beed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d30e4644eed3d695db28a246aa9d05cba6e2cecc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>配置最大文件上载大小 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿常常包含大量数据，导致超过允许为 SharePoint 上载的最大文件大小的文件。 尝试上载超过该上限的文件时，SharePoint 会显示以下错误：  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
      您可以指定的最大值是 2 GB（或“管理中心”中指定的 2047 MB）。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>为 SharePoint Web 应用程序配置最大文件大小  
   
@@ -72,6 +69,6 @@ ms.lasthandoff: 12/08/2017
   
 6.  将该属性设置为与 Excel Services 中的“工作簿最大大小”相同或更大的数值。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
   

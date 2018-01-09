@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PredictTimeSeries
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: eba719cb9cc1463b83e6e8aeda8b489d05fba53a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +83,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>返回类型  
  A \<*表表达式*>。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当使用 PREDICTION JOIN 语句添加新数据时，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法不支持历史预测。  
   
  在 PREDICTION JOIN 中，预测过程总是从原始定型系列的末尾之后的时间步长立即开始。 即使您添加新的数据也是如此。 因此，  *n* 参数和*n 开始*参数值必须大于 0 的整数。  
@@ -217,7 +215,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  数量： M200 Europe。 EXTEND_MODEL_CASES:  
   
-|$TIME|数量|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -227,7 +225,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  数量： M200 太平洋。 EXTEND_MODEL_CASES:  
   
-|$TIME|数量|  
+|$TIME|Quantity|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  

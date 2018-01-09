@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MeasureGroupDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a7c98b6be117dbb61579ce6c95c474cb1457cfc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea26210ea35408c1514a5de2a2b08342223c031a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>MeasureGroupDimension 数据类型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义表示维度和度量值组之间的关系的抽象基元数据类型。  
@@ -47,20 +45,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|无|  
+|基本数据类型|InclusionThresholdSetting|  
 |派生数据类型|[DataMiningMeasureGroupDimension](../../../analysis-services/scripting/data-type/dataminingmeasuregroupdimension-data-type-assl.md)， [DegenerateMeasureGroupDimension](../../../analysis-services/scripting/data-type/degeneratemeasuregroupdimension-data-type-assl.md)， [ManyToManyMeasureGroupDimension](../../../analysis-services/scripting/data-type/manytomanymeasuregroupdimension-data-type-assl.md)， [ReferenceMeasureGroupDimension](../../../analysis-services/scripting/data-type/referencemeasuregroupdimension-data-type-assl.md)， [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)， [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md)，[源](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
 |派生元素|[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md)([维度](../../../analysis-services/scripting/collections/dimensions-element-assl.md)集合[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md))|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  每个**MeasureGroupDimension**是对一个维度在多维数据集的引用。 它们定义哪些多维数据集维度应用于度量值组。  
   
  提供的属性集确定度量值组中哪个粒度（范围）的度量值为已知。 例如，表示产品销售额的度量值包含在“销售”度量值组中。 这些度量值的信息将按月，而不是按周或天的粒度存储到基础数据源中。 在这种情况下，仅月属性将不会为列出**MeasureGroupDimension**描述时间维度和 Sales 度量值组之间的关系。 在极少数情况下，粒度可能是以一组属性定义的。 例如，给定属性集 {Day, Week, Month, Year}，其中 Day 隐含 Week 和 Month，但 Week 不隐含 Month，“预测”度量值组中包含的度量值可能对 Month 和 Week 来说为已知，但对 Day 来说为未知。  

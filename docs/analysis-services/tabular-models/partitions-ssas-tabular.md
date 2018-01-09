@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7d4d1ba933a5f927c86908f743d21093e9ded602
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="partitions"></a>分区
+# <a name="partitions"></a>“度量值组”
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]分区将表划分为逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 通过使用 SSDT 中的分区对话框在模型创作期间创建的分区将应用于模型工作区数据库。 部署模型时，在已部署的模型数据库中将复制为模型工作区数据库定义的分区。 你可以进一步创建并管理通过使用 SSMS 中的分区对话框为已部署的模型数据库的分区。  本主题中提供的信息描述使用 SSDT 中的分区管理器对话框模型创作期间创建的分区。 有关创建和管理为部署的模型的分区的信息，请参阅[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
   
 ##  <a name="bkmk_benefits"></a> 优势  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="partitions-in-a-deployed-model-database"></a>已部署的模型数据库中的分区  
  在部署模型时，部署的模型数据库的分区将显示为在 SSMS 中的数据库对象。 可以创建、 编辑、 合并，并使用 SSMS 中的分区对话框删除已部署的模型的分区。 管理为部署的模型，在 SSMS 中的分区不在本主题的范围。 若要了解有关管理在 SSMS 中的分区，请参阅[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |主题|Description|  
 |-----------|-----------------|  

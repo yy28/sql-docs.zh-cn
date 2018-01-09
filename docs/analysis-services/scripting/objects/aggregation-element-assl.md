@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Aggregation Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a792776717a3a333ef25b4a67456d77aa598b544
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e4d6801123ab0a07ff4243d1147673f3baedb07d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregation-element-assl"></a>Aggregation 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义为单个聚合[分区](../../../analysis-services/scripting/objects/partition-element-assl.md)元素。  
@@ -51,10 +49,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[聚合](../../../analysis-services/scripting/collections/aggregations-element-assl.md)|  
 |子元素|[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)，[说明](../../../analysis-services/scripting/properties/description-element-assl.md)，[维度](../../../analysis-services/scripting/collections/dimensions-element-assl.md)， [ID](../../../analysis-services/scripting/properties/id-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Aggregation>。  
   
 ## <a name="see-also"></a>另请参阅  

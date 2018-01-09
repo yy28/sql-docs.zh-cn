@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1adc4b7e60c566ac1c46a4b51c06e2ee505916ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>DISCOVER_TRACE_EVENT_CATEGORIES 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]显示的跟踪提供程序支持的事件类别的列表。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
 |列名|类型指示符|长度|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**数据**|**DBTYPE_WSTR**||包含一个编码的 XML 字符串，该字符串描述了有关跟踪提供程序的事件类别信息，包括类别名称、类型和说明。 类型是指示事件类别的类型的字符串。 枚举值如下：<br /><br /> 0 = 普通<br /><br /> 1 = 重要<br /><br /> 2 = 错误|  
+|**Data**|**DBTYPE_WSTR**||包含一个编码的 XML 字符串，该字符串描述了有关跟踪提供程序的事件类别信息，包括类别名称、类型和说明。 类型是指示事件类别的类型的字符串。 枚举值如下：<br /><br /> 0 = 普通<br /><br /> 1 = 重要<br /><br /> 2 = 错误|  
   
  未对此架构行集进行排序。  
   
@@ -45,10 +43,10 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd19-8148-11d0-87bb-00c04fc33942|  
-|字符串|DISCOVER_TRACE_EVENT_CATEGORIES|  
+|String|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>另请参阅  
  [XML for Analysis 架构行集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

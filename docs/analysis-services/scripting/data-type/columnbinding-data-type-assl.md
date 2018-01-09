@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ColumnBinding Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe72c43754a9df628748cedf31472143ec201b1a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3905d810270f3de78382d9d4b4aaf8c6e7b7fd73
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding 数据类型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义一个派生的数据类型，表示到数据源视图中的列的绑定[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)元素。  
@@ -47,20 +45,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[绑定](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|派生数据类型|无|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[ColumnID](../../../analysis-services/scripting/properties/columnid-element-eventcolumn-assl.md)， [TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
 |派生元素|请参阅[绑定](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要创建有效的 XML 元素名称， [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] **数据集**对象编码表名称为它们序列化到 XML 架构定义 (XSD); 例如，名称"Order Details"变为"Order_x0020_Details"。 同样， **ColumnID**和**TableID**中包含元素**ColumnBinding**元素和数据源视图 (DSV) 中的引用对象还必须进行编码在序列化，以确保名称与在 DSV 中的文本直接匹配过程的名称。 Analysis Services 实例将解码这些名称，就像**数据集**对象模型。  
   
  A **TableDefinitions**元素包含的元素使用**TableBinding**数据类型和引用在 DSV 中的表必须还编码名称为它们序列化为 XSD。 但是，表名中**分区**应未编码的绑定，因为这些名称是只需的数据库中存在，并且没有要在 DSV 中表的名称。 不编码表中的名称**分区**绑定还实现以下：  

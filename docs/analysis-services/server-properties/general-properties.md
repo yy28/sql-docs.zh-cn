@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -45,11 +45,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ef279f10209b9281f3f7497d730e07247d5d9ab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 286999ab145671370f458f0ffb8f5f2db85d0461
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="general-properties"></a>常规属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
@@ -101,10 +101,10 @@ ms.lasthandoff: 12/08/2017
   
  此属性的有效值包括以下项：  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|这是默认值。 它指定多维模式，用于支持使用 MOLAP、HOLAP 和 ROLAP 存储以及数据挖掘模型的多维数据库。|  
-|1|指定 Analysis Services 实例已作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署的一部分安装。 不要更改作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据将不再在该服务器上运行。|  
+|@shouldalert|指定 Analysis Services 实例已作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署的一部分安装。 不要更改作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据将不再在该服务器上运行。|  
 |2|指定用于承载使用内存中存储或 DirectQuery 存储的表格模型数据库的表格模式。|  
   
  每个模式与其他模式都是互斥的。 配置为表格模式的服务器不能运行包含多维数据集和维度的 Analysis Services 数据库。 如果基础计算机硬件能够支持，则您可以在同一台计算机上安装 Analysis Services 的多个实例并且对每个实例进行配置以便使用不同的部署模式。 请记住，Analysis Services 是一种消耗大量资源的应用程序。 仅推荐对于高端服务器，才在同一个系统上部署多个实例。  
@@ -163,7 +163,7 @@ ms.lasthandoff: 12/08/2017
  **端口**  
  一个整数属性，用于定义服务器侦听客户端连接所在的端口号。 如果未设置，服务器将动态查找第一个未使用的端口。  
   
- 此属性的默认值为零 (0)，指示默认侦听端口 2383。 有关端口配置的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 此属性的默认值为零 (0)，指示默认侦听端口 2383。 有关端口配置的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  **ServerTimeout**  
  一个整数，用于定义查询的超时值（秒）。 默认值为 3600 秒（或 60 分钟）。 零 (0) 指定任何查询都不会超时。  

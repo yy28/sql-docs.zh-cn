@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d85d2ce789793c03fa99d51451e1a64d0868962
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>直观合计和非直观合计
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]直观合计是得到的列或行的末尾添加所有列或行中可见的项的总数。 这是大多数表在显示时的默认行为。 但有一些情况，用户想要只显示表中的某些列，但保留针对整个行的合计，包括那些未显示的行。 这称作 **非直观总计**，因为合计来自可见值以及非可见值。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
+||**All Products**|**Accessories**|**Bikes**|服装|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -99,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
+|所有分销商|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  此主题仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅 [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)（群集操作系统滚动升级）  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  开始之前，请仔细阅读以下重要信息：  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -41,7 +41,10 @@ ms.lasthandoff: 11/20/2017
 -   [计划并测试数据库引擎升级计划](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：查看发行说明和已知升级问题、预升级清单，并制定和测试升级计划。  
   
 -   [安装 SQL Server 2016 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
-  
+
+> [!NOTE]  
+>  不支持在同一 AG 内混合使用不同的 SQL Server 版本。 要通过可用性组迁移至新版本，唯一可行方式是使用 SQL Server 2016 Enterprise Edition 或更高版本中的分布式可用性组。
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性组的滚动升级最佳做法  
  在执行服务器升级或更新时应按照以下最佳做法操作，以最大程度减少可用性组的故障时间和数据丢失量：  
   

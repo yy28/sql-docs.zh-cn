@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30c57dde21aa4839cb06d44b77215b6afee7581b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的数据类型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]所有<xref:Microsoft.AnalysisServices.DataItem>对象，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持的下列子集构成的**System.Data.OleDb.OleDbType**。 若要设置或读取的数据类型，使用[DataItem 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 |二进制|二进制数据的流**字节**类型。 **字节**是值类型，表示无符号的整数，其范围从 0 到 255 的值。|  
 |Boolean|此类型的实例具有的值**true**或**false**。|  
 |货币|A*货币*值范围从-922337203685，477.5808 到 + 922337203685，477.5807，精确到货币单位 （四个小数位） 的万分之一。|  
-|日期|以双精度存储的日期和时间数据。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分或一天中的某个时间。|  
+|date|以双精度存储的日期和时间数据。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分或一天中的某个时间。|  
 |双精度|浮点数，范围在 -1.79769313486232E +308 到 1.79769313486232E +308 之间。 Double 值存储精度最高为 15 个小数位的数字信息。|  
 |Integer|32 位有符号整数，表示其值范围在负的 2,147,483,648 到正的 2,147,483,647 之间的有符号整数。|  
 |Single|浮点数，范围在 - 3.4028235E +38 到 3.4028235E +38 之间。 Single 值存储精度最高为 7 个小数位的数字信息。|  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="amo-validations-on-data-types"></a>针对数据类型的 AMO 验证  
  下表列出了分析管理对象 (AMO) 针对特定绑定执行的附加验证：  
   
-|对象|Binding|允许的数据类型|  
+|Object|Binding|允许的数据类型|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|所有（Binary 除外）|  
 ||NameColumn|仅 WChar|  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 ||CustomRollupColumn|仅 WChar|  
 ||CustomRollupPropertiesColumn|仅 WChar|  
 ||UnaryOperatorColumn|仅 WChar|  
-||ValueColumn|全部|  
+||ValueColumn|All|  
 |AttributeTranslation|CaptionColumn|仅 WChar|  
 |ScalarMiningStructureColumn|KeyColumns|所有（Binary 除外）|  
 ||NameColumn|仅 WChar|  

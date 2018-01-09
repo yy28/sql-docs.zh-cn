@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DeleteWithDescendants Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 026e93d341083f56180ea9c6158afff705325bf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9d740654a701ebc4a81e1bf9e2b5084f706dfbbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指示是否属性成员的后代也将被删除由容器的父[删除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
 |默认值|False|  
@@ -61,9 +59,9 @@ ms.lasthandoff: 12/08/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[拖放](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **DeleteWithDescendants**元素确定是否**删除**命令应删除由标识的属性成员[其中](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)元素，但还这些属性成员的后代是以及删除。  
   
 > [!NOTE]  

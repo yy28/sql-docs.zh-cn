@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6725ed37b909b80393a2760df26ba25b6f5148f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-object-tmsl"></a>分区对象 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定义了分区或逻辑分段，表行集。 分区包含，用于导入数据，在建模环境中，或作为传递通过 DirectQuery 的查询执行的完整数据查询的示例数据的 SQL 查询。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definition"></a>对象定义  
  所有对象都有一组通用的属性，包括名称、 类型、 说明、 一个属性集合和批注。 **分区**对象还具有以下属性。  
   
- 类型  
+ type  
  分区的类型。 有效的值是数值，并包括以下各项：  
   
 -   查询 (1) – 此分区中的数据通过对执行查询**数据源**。 **数据源**必须 model.bim 文件中定义的数据源。  

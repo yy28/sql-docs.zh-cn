@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2755e08e3e509723e3c1b511c27f852be157ad3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DefaultDetails 元素表示共同定义"默认字段集"表中的列的属性引用的列表。 每个属性只能引用一个度量值或一列。  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 DefaultDetails 元素的元素和属性。  
   
-|名称|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|DefaultDetailsPosition|“否”|指示在集合中存在与位置的正整数。|  
+|DefaultDetailsPosition|是|指示在集合中存在与位置的正整数。|  
   
 ## <a name="example"></a>示例  
  **表格**  

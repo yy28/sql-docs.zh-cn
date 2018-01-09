@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 71f93fa48d1bc1c8f6649262a8964f0d4ff8546f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f4dc0dc32d94ec793bab4e9912db739c942bb06
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>将列添加到表（SSAS 表格）
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何将列添加到现有表。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 2.  在 **“编辑表属性”** 对话框中，在表预览窗口中选择要添加的源列，然后单击“确定”。 已包含在表定义中的列将被选中。  
   
 ## <a name="add-a-calculated-column"></a>添加计算列  
- 在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅[计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)。  
+ 在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅 [计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)中创建的表格模型项目。  
   
 #### <a name="to-create-a-calculated-column"></a>创建计算列  
   

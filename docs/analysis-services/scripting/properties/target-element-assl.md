@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Target Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b84d58d379a74de7efcce2f10eeb008a57449de
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 948f6a2b21ced3ecbdca2e039464f25a03980de4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="target-element-assl"></a>Target 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]标识的目标[操作](../../../analysis-services/scripting/objects/action-element-assl.md)元素。  
@@ -47,10 +45,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|字符串|  
-|默认值|无|  
+|数据类型和长度|String|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -58,9 +56,9 @@ ms.lasthandoff: 12/08/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[操作](../../../analysis-services/scripting/objects/action-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此元素的预期值取决于值[TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md)的父元素**操作**。 下表说明的预期值**目标**基于值**TargetType**。  
   
 |TargetType 值|预期值|  

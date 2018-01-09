@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1715c22cf3976a3ad888081436bb322b38451308
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用构建和部署会影响某些默认属性定义项目[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="property-description"></a>属性说明  
  下表说明每个项目的属性，列出其默认值，并提供有关更改属性值的信息。  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |生成/部署服务器版本|用于部署项目的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|指定最终要将项目部署到其中的服务器的版本。 当多个开发人员共同处理项目时，这些开发人员需要了解服务器版本，以便知道要将哪些功能合并到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|  
 |生成/部署服务器版本|用于开发项目的版本|指定最终要将项目部署到其中的服务器的版本。|  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |生成/删除密码|True|指定是否从在生成过程中写入到输出目录的连接字符串中删除已知密码。 删除密码可提高安全性。 如果删除密码，则在处理已部署项目时需要提供密码，以便 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以访问源数据。|  
 |调试/启动对象|\<当前处于活动状态的对象 >|确定启动调试时将要启动的对象。|  
 |部署/部署模式|仅部署更改|默认情况下，仅部署对项目对象所做的更改（条件是/前提是没有直接在项目外部对对象进行其他更改）。 您还可以选择在每个部署过程中部署所有项目对象。 为了获得最佳性能，请使用“仅部署更改”。|  
-|部署/处理选项|默认|默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在部署对对象所做的更改时确定所需的处理类型。 这通常会使部署时间最短。 但是，您还可以选择在每个部署过程执行完全处理或不执行处理。|  
+|部署/处理选项|，则“默认”|默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在部署对对象所做的更改时确定所需的处理类型。 这通常会使部署时间最短。 但是，您还可以选择在每个部署过程执行完全处理或不执行处理。|  
 |部署/事务性部署|False|默认情况下，在处理这些已部署的对象时，已更改对象或所有对象的部署并不是事务性部署。 即使在处理失败时，部署也会成功并且一直保留。 您可以将此默认设置更改为在单个事务中合并部署和处理。|  
 |部署/目标服务器|localhost|默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的数据库对象将部署到使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本地计算机上的默认 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 实例。 更改此默认设置以指定本地计算机上的命名实例，或指定您有权创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的任何远程计算机上的任何实例。|  
 |部署/数据库|\<项目名称 >|默认情况下，部署时实例化 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象所在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的名称是定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时该项目的名称。 更改此属性以更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上由“服务器”属性指定的数据库的名称。|  

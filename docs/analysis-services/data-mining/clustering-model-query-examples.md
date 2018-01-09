@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在创建针对数据挖掘模型的查询时，你可以检索有关模型的元数据或创建内容查询，提供有关分析过程中发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|全部|  
+|NODE_DESCRIPTION|All|  
   
  有关这些列在聚类分析模型中的含义的定义，请参阅[聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  
   
@@ -171,17 +169,17 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|1|0.109354156|  
+|001|@shouldalert|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
-|001|缺少|0|  
+|001|Missing|0|  
 |002|0|0.576980023|  
-|002|1|0.406623939|  
+|002|@shouldalert|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
-|002|缺少|0|  
+|002|Missing|0|  
   
  [返回页首](#bkmk_top2)  
   
@@ -283,13 +281,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|表达式|  
 |----------------|----------------|  
-|1|0.592924735740338|  
+|@shouldalert|0.592924735740338|  
   
  用法设置为 **PredictOnly** 且模型重新处理时的结果示例：  
   
 |Bike Buyer|表达式|  
 |----------------|----------------|  
-|1|0.55843544003102|  
+|@shouldalert|0.55843544003102|  
   
  在本示例中，模型中的区别不是很明显。 但是，有时可能必须检测出值的实际分布与模型所预测的情况之间的区别。 在这种情况下 [PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md) 函数很有用，因为它可指出事例适用于模型的可能性。  
   
@@ -364,7 +362,7 @@ NATURAL PREDICTION JOIN
 |分类 7|0.979081275926724|0.0209187240732763|  
 |分类 1|0.999169044818624|0.000830955181376364|  
 |分类 9|0.999831227795894|0.000168772204105754|  
-|分类 8|1|0|  
+|分类 8|@shouldalert|0|  
   
  默认情况下，结果按概率进行排序。 结果指出，尽管分类 2 的概率非常低，分类 2 仍然最适合于新数据点。  
   

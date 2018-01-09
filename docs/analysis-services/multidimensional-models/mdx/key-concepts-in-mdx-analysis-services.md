@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]你可以使用多维表达式 (MDX) 查询多维数据，或者创建多维数据集中的 MDX 表达式之前，它有助于了解多维概念和术语。  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **数据库维度和多维数据集维度**。 可以在模型中定义独立的维度，该维度之后将包含在同一模型中任意数量的多维数据集中。 将维度添加到多维数据集时，该维度被称为多维数据集维度。 作为对象资源管理器中的独立项单独存在于项目中时，该维度被称为数据库维度。 为什么要进行区别？ 因为这样可以单独设置其属性。 在产品维度中，您将看到两个术语都有使用，因此值得了解其各自的含义。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  现在，您已掌握重要的概念和术语，可以继续了解这些进一步阐述 Analysis Services 中的基本概念的附加主题：  
   
 -   [基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  

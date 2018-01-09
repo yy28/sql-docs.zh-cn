@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量规范 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]以下各表指定的最大大小和定义中的各种对象的数字[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在不同的服务器部署模式下的组件。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>多维和数据挖掘 (DeploymentMode = 0)  
  MOLAP 存储模式（既存储数据，也存储元数据）具有针对文件大小的附加物理限制。 字符串存储文件的默认最大大小是 4 GB。 如果您要求更大的文件来用于字符串存储，则可以指定其他字符串存储体系结构。 有关详细信息，请参阅[维度和分区的配置字符串存储区](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
   
-|对象|最大大小/最大数量|  
+|Object|最大大小/最大数量|  
 |------------|----------------------------|  
 |实例中的数据库|2^31-1 = 2,147,483,647|  
 |数据库中的维度|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|对象|最大大小/最大数量|  
+|Object|最大大小/最大数量|  
 |------------|----------------------------|  
 |实例中的数据库|2^31-1 = 2,147,483,647|  
 |数据库中的表|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>表格 (DeploymentMode = 2)  
 以下是理论上的限制。 在较低的数值，将会降低性能。   
 
-|对象|最大大小/最大数量|  
+|Object|最大大小/最大数量|  
 |------------|----------------------------|  
 |实例中的数据库|16,000|  
 |表和数据库中的列的合并的数量|16,000|  

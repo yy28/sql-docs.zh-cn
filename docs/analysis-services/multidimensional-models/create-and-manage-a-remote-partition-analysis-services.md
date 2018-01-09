@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分区的度量值组，你可以辅助数据库上配置远程[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例作为分区存储。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  专用辅助数据库可存储一个（且仅一个）主数据库的远程分区，但主数据库可使用多个辅助数据库，条件是所有辅助数据库都在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的同一个远程实例上。 数据库中专用于远程分区的维度作为链接维度创建。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  在创建远程分区之前，必须满足以下条件：  
   
 -   您必须有第二个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和专用数据库才能存储分区。 辅助数据库只有一个用途：它提供主数据库的远程分区存储。  
@@ -119,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>设置远程分区（在 SSDT 中）  
   
-1.  在主服务器上：在多维数据集设计器中打开多维数据集，然后单击 **“分区”** 选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. 。 .) 按钮编辑现有分区。  
+1.  在主服务器上：在多维数据集设计器中打开多维数据集，然后单击 **“分区”** 选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. 实例时都提供 SQL Server 登录名。 .) 按钮编辑现有分区。  
   
 2.  在分区向导的 **“指定源信息”**中，选择初始数据源视图和事实数据表。  
   

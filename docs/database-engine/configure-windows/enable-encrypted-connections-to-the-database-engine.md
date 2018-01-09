@@ -1,7 +1,7 @@
 ---
 title: "启用数据库引擎的加密连接 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1123fe0698e9b5e38ba77f5ca1aa634904281e3b
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  完成 **“证书导出向导”**，将证书文件存储在方便的位置。  
   
-##  <a name="ConfigureServerConnections"></a> 将服务器配置为接受加密连接  
+##  <a name="ConfigureServerConnections"></a>将服务器配置为强制使用加密连接  
   
 1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”右键单击“\<server instance> 的协议”，然后选择“属性”。  
   
@@ -90,11 +90,18 @@ ms.lasthandoff: 11/20/2017
   
 4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
 
+
+> [!NOTE]
+> 要确保客户端和服务器之间的安全连接，请将客户端配置为请求加密连接。 [本文稍后部分](#client-request-encrypt-connect-23h)将介绍更多详细信息。
+
+
+
 ### <a name="wildcard-certificates"></a>通配符证书  
 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持通配符证书。 其他客户端可能不支持通配符证书。 有关详细信息，请参阅客户端文档。 无法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 选择通配符证书。 要使用通配符证书，必须编辑 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 注册表项，并为“证书”值输入证书的指纹（不留空格）。  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> 将客户端配置为请求加密连接  
   
 1.  将原始证书或导出的证书文件复制到客户端计算机。  

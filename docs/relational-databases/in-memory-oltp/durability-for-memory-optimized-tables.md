@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31182384eaf0b9ae13cca070ac18eba76a14df1e
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/18/2017
 ---
-# <a name="durability-for-memory-optimized-tables"></a>内存优化表的持久性
+# <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 为内存优化表提供完整持续性。 提交更改内存优化表的事务时，假设基础存储可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （就像对基于磁盘的表一样）会保证更改是永久的（数据库重新启动时仍然有效）。 持续性有两个重要方面：事务日志记录和在磁盘存储上持久保存数据更改。  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
  不是具有可用空间的所有 CFP 都符合合并条件。 例如，如果两个相邻的 CFP 为 60% 满，则它们将不符合合并条件，并且其中每个 CFP都将有 40% 的未使用存储空间。 在最差情形下，所有 CFP 都将为 50% 满，存储利用率仅为 50%。 当已删除行可能在存储中存在时，因为 CFP 不符合合并条件，所以，已删除行可能已被内存中垃圾回收从内存中删除。 存储和内存的管理与垃圾回收是独立的。 活动 CFP（不是所有 CFP 都在更新）使用的内存可以最高达到内存中持久表大小的 2 倍。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命周期  
- CPF 首先要经过若干状态，然后才能被释放。 需要生成数据库检查点和日志备份，以通过这些阶段转换这些文件，并最终清理不再需要的文件。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。  
+ CFP 要先经过若干状态才可被释放。 需要生成数据库检查点和日志备份，以通过这些阶段转换这些文件，并最终清理不再需要的文件。 有关这些阶段的说明，请参阅 [sys.dm_db_xtp_checkpoint_files (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。  
   
  你可以在日志备份后手动强制生成检查点，以便加快垃圾回收。 在生产方案中，作为备份策略的一部分进行的自动检查点和日志备份可使 CFP 无缝通过这些阶段，而无需任何手动干预。 垃圾回收进程的影响是，具有内存优化表的数据库与其在内存中的大小相比，可能具有更大的存储大小。 如果生成检查点和日志备份的操作未发生，则检查点文件的磁盘上占用将不断增长。  
   

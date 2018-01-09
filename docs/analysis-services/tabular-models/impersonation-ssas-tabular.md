@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonation"></a>模拟 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题提供了表格模型作者的登录凭据时如何使用的 Analysis services 连接到数据源导入和处理 （刷新） 数据的了解。  
@@ -81,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |**特定 Windows 用户名和密码**|此选项指定模型使用 Windows 用户帐户导入或处理从数据源的数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
-##  <a name="bkmk_impers_sec"></a> 安全性  
+##  <a name="bkmk_impers_sec"></a> Security  
  与模拟一起使用的凭据是持久的内存中由 VertiPaq™ 引擎。 凭据永远不会写入到磁盘。 如果部署模型时，工作区数据库不是内存中，被提示用户输入用于连接到数据源并提取数据的凭据。  
   
 > [!NOTE]  

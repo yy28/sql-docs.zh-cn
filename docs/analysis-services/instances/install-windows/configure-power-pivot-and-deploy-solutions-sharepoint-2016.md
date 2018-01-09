@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此主题介绍如何部署和配置的中间层增强功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]库、 计划数据刷新、 管理仪表板和数据访问接口。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
@@ -135,7 +135,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  选择“确定”。  
   
- 有关解决数据刷新问题的详细信息，请参阅[解决 Power Pivot 数据刷新问题](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关解决数据刷新问题的详细信息，请参阅 [解决 Power Pivot 数据刷新问题](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  有关配置工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

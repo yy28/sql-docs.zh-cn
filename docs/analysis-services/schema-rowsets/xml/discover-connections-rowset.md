@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3dfac6a570588d4fb08d255319bebd834c3512cf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在服务器上提供有关当前打开的连接的资源使用情况和活动信息。  
@@ -60,10 +58,10 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd25-8148-11d0-87bb-00c04fc33942|  
-|ADOMDNAME|Connections|  
+|ADOMDNAME|连接|  
   
 ## <a name="see-also"></a>另请参阅  
  [XML for Analysis 架构行集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

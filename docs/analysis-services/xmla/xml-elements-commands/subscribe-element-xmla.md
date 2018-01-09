@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Subscribe Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bd816ddfd8a7bb667b774286dd744823fbee00a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47425fd75c42d70ad98172eee2070bdcb9b2db45
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="subscribe-element-xmla"></a>Subscribe 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]订阅跟踪，并返回包含来自跟踪事件的行集[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |子元素|[对象](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **订阅**命令订阅和流将从指定的跟踪行集上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 如果在 **Object** 元素中指定对象而非跟踪，则会出错。  
   
  如果**对象**元素未指定，则会话跟踪定义，并会在[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。 会话跟踪可从当前会话返回一组固定的跟踪事件。  

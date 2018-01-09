@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]聚合设计都要确保分区存储聚合时使用相同的结构的特定度量值组分区与关联。 为分区使用相同的存储结构可让你轻松地定义可以使用更高版本合并的分区[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -110,7 +108,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="returning-design-statistics"></a>返回设计统计信息  
  当**DesignAggregations**命令将控件返回到客户端应用程序，该命令将返回包含表示命令的设计统计信息的单个行的行集。 下表列出了该行集包含的列。  
   
-|列|数据类型|Description|  
+|“列”|数据类型|Description|  
 |------------|---------------|-----------------|  
 |步骤|Integer|在将控制权返还给客户端应用程序之前，命令执行的步数。|  
 |Time|Long integer|在将控制权返还给客户端应用程序之前，命令运行的毫秒数。|  

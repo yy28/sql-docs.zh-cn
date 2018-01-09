@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ScalarMiningStructureColumn Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b72991de0262a10700918dcd5205d0d15640b043
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78a0a879953a45ed9246a744df19c6e9820f56ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>ScalarMiningStructureColumn 数据类型 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义一个派生的数据类型，表示[MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)包含标量值，而不是与关联的嵌套表的元素[TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)元素包含嵌套的表。  
@@ -56,20 +54,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)|  
-|派生数据类型|无|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[ClassifiedColumnID](../../../analysis-services/scripting/properties/classifiedcolumnid-element-assl.md)，[内容](../../../analysis-services/scripting/properties/content-element-assl.md)， [DiscretizationBucketCount](../../../analysis-services/scripting/properties/discretizationbucketcount-element-assl.md)， [DiscretizationMethod](../../../analysis-services/scripting/properties/discretizationmethod-element-assl.md)，[分发](../../../analysis-services/scripting/properties/distribution-element-assl.md)， [IsKey](../../../analysis-services/scripting/properties/iskey-element-assl.md)， [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)， [ModelingFlags](../../../analysis-services/scripting/collections/modelingflags-element-assl.md)， [NameColumn](../../../analysis-services/scripting/objects/namecolumn-element-assl.md)，[源](../../../analysis-services/scripting/properties/source-element-binding-assl.md)，[翻译](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
 |派生元素|[列](../../../analysis-services/scripting/objects/column-element-assl.md)([列](../../../analysis-services/scripting/collections/columns-element-assl.md)集合[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md))|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另请参阅  

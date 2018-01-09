@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维模型中，数据源对象表示与数据源，从中你要处理 （或导入） 的连接数据。 一个多维模型必须包含至少一个数据源对象，但您可以添加更多对象以便合并来自若干数据仓库的数据。 使用本主题中的说明可为您的模型创建数据源对象。 有关在此对象上设置属性的详细信息，请参阅[设置数据源属性（SSAS 多维）](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)。  

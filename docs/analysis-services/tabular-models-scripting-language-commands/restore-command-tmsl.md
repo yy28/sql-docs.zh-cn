@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45e4461956c78278d367715e8ef665821d487e3f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>还原命令 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]从备份文件还原 Analysis Services 数据库。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**属性**|**Default**|**Description**|  
-|database|[必需]|要还原的数据库对象的名称。|  
+|“数据库”|[必需]|要还原的数据库对象的名称。|  
 |文件|[必需]|备份文件名称/路径。|  
 |password|Empty|用于解密备份的文件使用的密码。|  
 |allowOverwrite|False|一个布尔值，如果为 true，指示已存在的备份文件将被覆盖;否则为 false。|  

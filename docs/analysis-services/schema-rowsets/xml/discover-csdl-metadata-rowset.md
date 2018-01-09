@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回有关的信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据模型 （表格或多维），提供 CSDLBI 格式 （概念性架构定义语言带 BI 注释） 中的模型的定义。 CSDLBI 基于 CSDL，CSDL 是实体数据框架使用的 XML 架构，用于在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器和 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 客户端之间进行通信。 商业智能 (BI) 注释提供有关表格模型以及其中对象的其他元数据。 有关表格数据模型的详细信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 |**元数据**|**DBTYPE_WSTR**|是|根据 CSDLBI 架构，包含数据源的 XML 定义及其属性的字符串。|  
 |**CUBE_ID**|**DBTYPE_WSTR**|是|字符串标识符。<br /><br /> 此限制对于多维数据库是可选的。 如果多个多维数据集可用并且忽略限制，则返回默认多维数据集。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  DISCOVER_CSDL_METADATA 具有以下要求：  
   
 -   如果数据库未使用 CATALOG_NAME 限制指定，DISCOVER 请求将失败。  
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|3444B255-171E-4cb9-AD98-19E57888A75F|  
 |ADOMDNAME|Csdl|  

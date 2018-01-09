@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ProtocolCapabilities Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bac8f7dccd818128280dc532f276379050c69a77
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 511cca07c0505db7bd1aaa21bed923498137e04f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]使用在 SOAP 请求消息的 SOAP 标头来标识的实例之间的协议功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和客户端应用程序。  
@@ -59,20 +57,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[功能](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ProtocolCapabilities**元素使客户端应用程序可以与协商协议功能，如二进制 XML 或压缩支持[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在任何时候的实例。 协议协商包括以下步骤：  
   
 1.  客户端应用程序通过发送在 SOAP 标头中包含 **ProtocolCapabilities** 元素的 SOAP 请求来标识其协议功能。  

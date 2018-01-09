@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33c9c09cdcfae67f469585fa69fda626696f1856
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ae68ab8b879656940827bf8ebffb5c1f40cfa0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多维模型中的维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据库维度是相关对象，称为特性，可以用于提供有关在一个或多个多维数据集中的事实数据的信息的集合。 例如，产品维度中的典型属性可能是产品名称、产品类别、产品系列、产品规格和产品价格。 这些对象绑定到数据源视图的一个或多个表中的一个或多个列。 默认情况下，这些属性和属性层次结构一样是可见的，可用于了解多维数据集中的事实数据。 可以将属性组织为用户定义层次结构，从而提供导航路径以帮助用户浏览多维数据集中的数据。  

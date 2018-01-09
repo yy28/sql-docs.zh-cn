@@ -1,7 +1,7 @@
 ---
 title: "解决内存不足问题 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cd2c56037edfc85932f8cb9ef0c7dbe8b5251ef4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/27/2017
 |[在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)|在虚拟化环境中使用内存中 OLTP 需要注意的内容。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
- 尝试还原数据库时，你可能会收到错误消息：“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”。这表明服务器没有足够的可用内存来还原数据库。
+ 尝试还原数据库时，你可能会收到错误消息：“由于资源池 '*\<resourcePoolName>*' 内存不足，数据库 '*\<databaseName>*' 的还原操作失败”。这表明服务器没有足够的可用内存来还原数据库。 
    
-将数据库还原到的服务器必须有足够的可用内存用于数据库备份中的内存优化表，否则数据库不会联机。  
+将数据库还原到的服务器必须有足够的可用内存用于数据库备份中的内存优化表，否则数据库不会联机，并且会被标记为可疑。  
   
 如果服务器具有足够的物理内存，但仍然显示此错误，则可能是其他进程正在使用过多内存或配置问题导致没有足够的内存可用于还原。 对于此类问题，请采取以下措施，为还原操作留出更多可用内存： 
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/27/2017
     > 如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 设置为与 MAX_MEMORY_PERCENT 相同的值。   
     > 有关详细信息，请参阅主题 [在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)。  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/27/2017
 >  如果服务器在虚拟机上运行，并且不是专用服务器，请将 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 设置为相同值。   
 > 有关详细信息，请参阅主题 [在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)。  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   

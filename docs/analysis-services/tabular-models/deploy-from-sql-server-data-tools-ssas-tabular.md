@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.deploystatus.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c74177752bf4a880f6857b987abfdc050a2f252
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e6dcb9b823ba550dfc8fcf2175df3e17696060be
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>从 SQL Server Data Tools 进行部署
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使用本主题中的任务在 SSDT 中使用部署命令部署表格模型解决方案。  
@@ -61,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_deploy_status"></a> 部署状态  
  通过 **“部署”** 对话框，您可以监视“部署”操作的进度。 也可以停止部署操作。  
   
- **状态**  
+ **“状态”**  
  指示部署操作成功与否。  
   
  **详细信息**  

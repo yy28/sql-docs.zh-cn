@@ -1,7 +1,7 @@
 ---
 title: "内存优化表的还原和恢复 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,16 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: add6844ed550417478cc44090fd40a4a5b4cf62b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2b1b3fb41bc66dc8c3599870bc4035211768594
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>内存优化表的还原和恢复
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   检索或还原具有内存优化表的数据库的基本机制类似于仅具有基于磁盘的表的数据库。 但与基于磁盘的表不同，必须首先将内存优化表加载到内存中，然后数据库才可用于用户访问。 这会在数据库恢复中添加一个新步骤。  
+  
+  如果服务器没有足够可用内存，数据库恢复会失败，并且数据库会被标记为可疑。 要解决此问题，请参阅[解决内存不足问题](resolve-out-of-memory-issues.md)。 
   
  在恢复或还原操作过程中，内存中 OLTP 引擎读取数据和差异文件以将其载入物理内存。 加载时间由以下因素决定：  
   

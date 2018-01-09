@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>计划数据刷新和数据源-无 Windows 身份验证
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍工作流的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 计划数据刷新，可以使用数据源该执行**不**支持 Windows 身份验证。 例如 Oracle 或 IDM DB2 数据源。 本主题中的图示和步骤引用 Oracle 数据源，但此工作流也适用于其他数据源。  
@@ -39,13 +36,13 @@ ms.lasthandoff: 12/08/2017
   
 -   **(1) PowerPivotDatarefresh：** 此安全存储区目标应用程序 ID 使用 Windows 身份验证进行设置。  
   
--   **(2) OracleAuthentication：** 此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
+-   **(2) OracleAuthentication：**此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
   
 -   **(3)** 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**“无人参与的数据刷新帐户”，将**服务应用程序配置为使用目标应用程序“PowerPivotDataRefresh”。  
   
 -   **(4)** PowerPivot 工作簿使用 Oracle 数据。 工作簿刷新设置指定数据源连接以使用凭据的目标应用程序 **(2)** 。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   存在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  在 **“成员资格设置”** 页上，添加至少一个 **“目标应用程序管理员”** ，然后添加需要目标应用程序的访问权限的成员。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 一个新的目标应用程序 ID 会添加到列表中。 选择目标应用程序 ID，然后单击**设置凭据**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
@@ -117,7 +114,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  在 **“成员资格设置”** 页上，添加至少一个 **“目标应用程序管理员”** ，然后添加需要目标应用程序的访问权限的成员。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 10. 一个新的目标应用程序 ID 会添加到列表中。 选择目标应用程序 ID，然后单击**设置凭据**![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key")。  
   
@@ -159,7 +156,7 @@ ms.lasthandoff: 12/08/2017
   
 10. 在“ID:”  框中，键入 **OracleAuthentication**。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
      如果出现类似以下的错误消息： `The provided Secure Store target application is either incorrectly configured or does not exist`。  
   

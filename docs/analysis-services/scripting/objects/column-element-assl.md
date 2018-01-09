@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Column Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2907b1512b6b5de0fdac8cf3d8858521867ba1be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60a0c8bd38d280d267b85148e3d40f2bac4967cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="column-element-assl"></a>Column 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述与父元素关联的列集合中的列。  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/08/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[列](../../../analysis-services/scripting/collections/columns-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
 ## <a name="see-also"></a>另请参阅  
  [对象 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  

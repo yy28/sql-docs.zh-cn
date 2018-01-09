@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络使用*多层感知器*网络，也称为*Back-Propagated Delta 法则网络*、 组成的神经元，最多三个层或*感知*。 这些层分别是输入层、可选隐藏层和输出层。  
@@ -200,7 +198,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持下表中列出的特定输入列和可预测列。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized 和 Ordered|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d1f0c2dd179e54760eeff4254c19265105e08f3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回分配的服务器的各种对象的 DISCOVER_MEMORYUSAGE 统计信息。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 |**ElementCount**|**DBTYPE_UI4**||对于容器对象，这是该对象包含的对象的数目。|  
 |**收缩**|**DBTYPE_BOOL**|是|一个布尔值，指示内存是否可收缩（可能因内存压力被逐出）。 如果为 true，则表示内存可收缩；如果为 false，则表示内存不可收缩。|  
 |**ObjectParentPath**|**DBTYPE_WSTR**||用于标识此对象的完整路径的字符串。|  
-|**ObjectID**|**DBTYPE_WSTR**||标识对象的字符串。 由字符串表示此对象的完整路径: (ObjectParentPath + '。 ' + ObjectId)。|  
+|**Exchange Spill**|**DBTYPE_WSTR**||标识对象的字符串。 由字符串表示此对象的完整路径: (ObjectParentPath + '。 ' + ObjectId)。|  
   
  未对此架构行集进行排序。  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|A07CCD21-8148-11D0-87BB-00C04FC33942|  
 |ADOMDNAME|MemoryUsage|  

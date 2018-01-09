@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用本主题中的信息来了解如何访问[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用编程方法、 脚本或客户端应用程序包括用于连接到的内置支持的多维数据[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]你网络上的服务器。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  以下 Microsoft 应用程序支持本机连接到多维数据。  
   
-### <a name="excel"></a>Excel  
+### <a name="excel"></a>“导出”  
  Analysis Services 多维数据经常使用数据透视表和数据透视图表控件呈现在 Excel 工作薄中。 数据透视表适用于多维数据，因为模型中的层次结构、聚合和导航构造与数据透视表的数据汇总功能十分吻合。 Excel 安装中包括 Analysis Services OLE DB 数据访问接口，便于更轻松地建立数据连接。 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
   
 ### <a name="reporting-services-reports"></a>Reporting Services 报表  

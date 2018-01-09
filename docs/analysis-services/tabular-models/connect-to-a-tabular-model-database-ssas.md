@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2911c3a191a0cd41832fc37a3f07bff4735ee54
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]生成表格模型并将其部署到 Analysis Services 表格模式服务器后，你需要设置使其可供客户端应用程序的权限。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
   
 > [!NOTE]  
->  默认情况下，在您配置防火墙之前，与 Analysis Services 的远程连接将不可用。 如果您在为客户端连接配置命名实例或默认实例，则请确保您打开了适当的端口。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+>  默认情况下，在您配置防火墙之前，与 Analysis Services 的远程连接将不可用。 如果您在为客户端连接配置命名实例或默认实例，则请确保您打开了适当的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  本主题包含以下各节：  
   
@@ -94,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击 **“下一步”**。  
+4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击“下一步” 。  
   
 5.  选择数据库。 有效选择将为该数据库显示单个 **“模型”** 多维数据集。 单击 **“下一步”** ，然后单击 **“完成”**。  
   

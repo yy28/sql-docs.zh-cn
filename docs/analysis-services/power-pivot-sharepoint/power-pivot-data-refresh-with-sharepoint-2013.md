@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 Power Pivot 数据刷新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]刷新设计[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint 2013 中的数据模型利用 Excel Services 作为主组件，加载和刷新数据模型的实例上[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在 SharePoint 模式下运行。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新”  和“计划数据刷新” 。  
@@ -138,7 +135,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_scheduled_refresh"></a> 计划的数据刷新  
  **计划的数据刷新的关键相关点：**  
   
--   要求部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序。 有关详细信息，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+-   要求部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序。 有关详细信息，请参阅 [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 -   用户为工作簿配置刷新计划。 在计划的时间， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务将一个请求发送到 Excel Services 以便：  
   

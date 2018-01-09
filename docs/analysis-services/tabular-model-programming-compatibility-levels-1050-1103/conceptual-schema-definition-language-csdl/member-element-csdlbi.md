@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 351cd8c622454626b8caa7547a4e8c73c4c49438
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5507e746f2f87abe2c4a08b5bda47a2eab5f61b5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="member-element-csdlbi"></a>Member 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]该成员元素是用作其他元素的基的复杂类型。  
@@ -34,9 +32,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 Member 元素的元素和属性。  
   
-|名称|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|名称||向由 TMember 类型的实现所定义的成员（列、度量值、导航属性、层次结构或级别）提供的名称|  
+|“属性”||向由 TMember 类型的实现所定义的成员（列、度量值、导航属性、层次结构或级别）提供的名称|  
 |Caption|是|成员的显示名称。|  
 |ContextualNameRule|是|用于消除成员混淆情况的命名格式。 此属性的内容由 ContextualNameRule 简单类型定义。|  
 |Hidden||一个布尔值，指示是否对客户端隐藏此成员。<br /><br /> 默认值为 false，表示列在客户端中是可见的。|  
@@ -45,9 +43,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="contextualnamerule-element"></a>ContextualNameRule 元素  
  此简单类型定义用于消除成员混淆情况的命名格式。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|无|使用属性名称。|  
+|InclusionThresholdSetting|使用属性名称。|  
 |Context|使用传入关系名称。|  
 |合并|连接传入的关系名称和属性名称。|  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果正接近饱和关系数据库中具有后台的 Analysis Services 数据库管理，你需要了解的第一件事是，在数据访问方面数据库不是 Analysis Services 中的主要安全对象。  
@@ -80,7 +77,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  单击“确定”  ，完成角色创建。  
   
-## <a name="process-database"></a>处理数据库  
+## <a name="process-database"></a>Process Database  
  定义授予了数据库权限的角色时，你可跳过“完全控制”  ，并只选择“处理数据库” 。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>读取定义  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MiningStructurePermission Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 56d22082d2e948881de36ae0a834ff68be2ad4be
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: aef87c52834015311cc5302c46fd539be89e172d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义的权限的成员[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素具有对单个[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。  
@@ -49,10 +47,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|[权限](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
-|默认值|无|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -60,9 +58,9 @@ ms.lasthandoff: 12/08/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[添加](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.MiningStructurePermission>。  
   
  在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，权限**AllowDrillthrough**已扩展为适用于挖掘结构。 当向角色分配此权限时，任何作为该角色成员的用户均可使用以下语法直接查询挖掘结构：  

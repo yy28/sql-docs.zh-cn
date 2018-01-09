@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ObjectDefinition Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b4a4593fe34e8dab7c41550568c83793500125ab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31127a642891b317118a8ce3995d198fb6426e6e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="objectdefinition-element-xmla"></a>ObjectDefinition 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含一个或多个用于创建或更改对象的实例上的 Analysis Services 脚本语言 (ASSL) 元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)，[创建](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |子元素|必需的 ASSL 元素。 用于定义 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象的一个或多个 ASSL 元素。 ASSL 有关的详细信息，请参阅[属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>示例  
  下面的示例创建名为一个空数据库**测试数据库**上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  

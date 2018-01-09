@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>针对 Analysis Services 实例的 SPN 注册
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]服务主体名称 (SPN) 唯一标识 Active Directory 域中的服务实例时使用 Kerberos 进行相互身份验证客户端和服务标识。 SPN 与服务实例运行所基于的登录帐户相关联。  
   
  对于通过 Kerberos 身份验证连接到 Analysis Services 的客户端应用程序，Analysis Services 客户端库使用来自连接字符串的主机名以及在 Analysis Services 的任何给定发行版中固定的其他已知变量（例如服务类）构建一个 SPN。  

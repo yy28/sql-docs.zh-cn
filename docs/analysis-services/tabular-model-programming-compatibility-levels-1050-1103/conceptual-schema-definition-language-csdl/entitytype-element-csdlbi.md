@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**EntityType**元素是复杂类型，表示高级实体，例如客户或订单，在数据模型的结构。 **Bi: EntityType**元素扩展的定义[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)中使用[实体数据框架](http://msdn.microsoft.com/library/bb399567.aspx)。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出的元素和特性定义**EntityType**元素。 另请参阅适用于属性[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)元素。  
   
-|Name|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |目录|是|一个包含列中可能的数据类型的字符串。 此值从数据模型中 DimensionAttributeTypeEnumType 的值派生。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值为“ExtendedType”，则 Contents 的值从 DimensionAttribute 的 ExtendedType 元素派生。 客户端不需要对这些值进行回应。|  
 |DefaultDetails|是|表示表中一组列的属性引用的列表。<br /><br /> 请参阅[DefaultDetails 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  实体（列）的内容可以是以下任何值：  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |Regular|未定义。|  
 |Time|属性表示时间段（如年、半期、季度、月或天）。|  

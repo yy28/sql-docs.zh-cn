@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>连接到 Azure 上的 SSISDB 目录数据库
 
@@ -26,7 +26,10 @@ ms.lasthandoff: 11/20/2017
 - 数据库名称
 - 登录信息 
 
-## <a name="prerequisites"></a>先决条件
+> [!IMPORTANT]
+> 如果尚未在 Azure 数据工厂版本 2 中创建 Azure-SSIS Integration Runtime，则无法在 Azure SQL 数据库中创建 SSISDB 目录数据库。 这是因为，在 Azure 上运行 SSIS 包的是 Azure-SSIS IR。 有关详细信息和示例 PowerShell 脚本，请参阅[将 SQL Server Integration Services 包部署到 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。 
+
+## <a name="prerequisites"></a>必备条件
 开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>从 Azure 门户获取连接信息
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/20/2017
    | 设置       | 建议的值 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
-   | **服务器名称** | 完全限定服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 |
+   | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 |
    | **身份验证** | SQL Server 身份验证 | 本快速入门使用 SQL 身份验证。 |
    | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/20/2017
 
 4. 然后选择“连接”。
 
-5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”查看 SSIS 目录数据库中的对象。
+5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象。
 
 ## <a name="next-steps"></a>后续步骤
 - 部署包。 有关详细信息，请参阅[使用 SQL Server Management Studio (SSMS) 部署 SSIS 项目](../ssis-quickstart-deploy-ssms.md)。

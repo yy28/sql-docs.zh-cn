@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c309c174deec84526ffb0a85612fe833b0a24d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e0546fe394d34b9a06bed38b0277192ca8f9ff8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  以下行集属性指引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
   
-|属性 ID|值|行集行为|  
+|属性 ID|ReplTest1|行集行为|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集是有顺序的，只支持向前滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
 |DBPROP_CANSCROLLBACKWARDS 或 DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|无法通过行集更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。 行集支持双向滚动和提取。 支持相对行定位。 命令文本可以包含 ORDER BY 子句。|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  若要使用某一类型的游标模型，请找到对应于该游标模型的列，并查找在此列中值为“T”的所有行集属性。 将这些行集属性设置为 VARIANT_TRUE 即可使用特定游标模型。 可以将值为“-”的行集属性设置为 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|行集属性/游标模型|默认<br /><br /> result<br /><br /> 集<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
+|行集属性/游标模型|，则“默认”<br /><br /> result<br /><br /> 集<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

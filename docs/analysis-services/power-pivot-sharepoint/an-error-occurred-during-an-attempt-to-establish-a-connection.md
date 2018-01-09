@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f5cf8de15fdbb9eed6fae4cf4ccd17c3d99e56d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c68d97f72337a141be4f50e7ad775a9dff647f4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>在尝试建立连接的过程时出错
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果你查询，则会发生此错误[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]不具有的服务器上的数据[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 安装。 如果 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服务停止运行，或想要尝试查看旧版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据，则系统也会生成此错误。  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_DATASOURCES
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回 XML for Analysis (XMLA) 提供程序数据源上的服务器或 Web 服务可用的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  

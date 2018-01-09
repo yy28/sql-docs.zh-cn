@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Database Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 89c6170386d75d25abcebab7b1f61de29160b002
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2154ccd56f5b1fac0388b68a45c0649860f23f98
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-element-assl"></a>Database 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
@@ -71,10 +69,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[数据库](../../../analysis-services/scripting/collections/databases-element-assl.md)|  
 |子元素|[帐户](../../../analysis-services/scripting/collections/accounts-element-assl.md)， [AggregationPrefix](../../../analysis-services/scripting/properties/aggregationprefix-element-assl.md)，[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)，[程序集](../../../analysis-services/scripting/collections/assemblies-element-assl.md)，[排序规则](../../../analysis-services/scripting/properties/collation-element-assl.md)， [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md)，[多维数据集](../../../analysis-services/scripting/collections/cubes-element-assl.md)， [DatabasePermissions](../../../analysis-services/scripting/collections/databasepermissions-element-assl.md)，[数据源](../../../analysis-services/scripting/collections/datasources-element-assl.md)， [DataSourceViews](../../../analysis-services/scripting/collections/datasourceviews-element-assl.md)，[说明](../../../analysis-services/scripting/properties/description-element-assl.md)，[维度](../../../analysis-services/scripting/collections/dimensions-element-assl.md)， [EstimatedSize](../../../analysis-services/scripting/properties/estimatedsize-element-assl.md)， [ID](../../../analysis-services/scripting/properties/id-element-assl.md)，[语言](../../../analysis-services/scripting/properties/language-element-assl.md)， [LastProcessed](../../../analysis-services/scripting/properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md)， [LastUpdate](../../../analysis-services/scripting/properties/lastupdate-element-assl.md)， [MasterDatasourceID](../../../analysis-services/scripting/properties/masterdatasourceid-element-assl.md)， [MiningStructures](../../../analysis-services/scripting/collections/miningstructures-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)，[角色](../../../analysis-services/scripting/collections/roles-element-assl.md)，[状态](../../../analysis-services/scripting/properties/state-element-assl.md)，[翻译](../../../analysis-services/scripting/collections/translations-element-assl.md)，[可见](../../../analysis-services/scripting/properties/visible-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Database>。  
   
 ## <a name="see-also"></a>另请参阅  

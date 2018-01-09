@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5ead98887f8773a1bdb26d1b7f6a2f2cb5447bc6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd cmdlet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使数据库管理员能够执行 XMLA 脚本、 多维表达式 (MDX)、 数据挖掘扩展插件 (DMX) 语句或表格模型脚本语言 (TMSL) 脚本。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |输入|PSObject|  
-|输出|字符串|  
+|输出|String|  
   
 ## <a name="example-1-xmla-input-file"></a>示例 1（XMLA 输入文件）  
   

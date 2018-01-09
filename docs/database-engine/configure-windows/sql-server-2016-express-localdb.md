@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
 ## <a name="install-localdb"></a>安装 LocalDB  
  通过安装向导或使用 SqlLocalDB.msi 程序安装 **LocalDB** 。 **LocalDB** 是安装 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 时的一个选项。 
  
-在安装过程中，在“功能选择/共享功能”页上选择 **LocalDB**。 对于每个主要 **版本，只能存在** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二进制文件的一个安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] LocalDB **LocalDB** 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+在安装过程中，在“功能选择/共享功能”页上选择 **LocalDB**。 对于每个主要 **版本，只能存在** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二进制文件的一个安装。 可以启动多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程，并且这些进程都将使用相同的二进制文件。 作为 LocalDB 启动的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例与 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 具有相同的限制。  
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的实例通过 **SqlLocalDB.exe** 实用工具进行托管。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 应该用于代替已弃用的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 用户实例功能。 
   
-## <a name="description"></a>说明  
+## <a name="description"></a>Description  
  **LocalDB** 安装程序使用 SqlLocalDB.msi 程序在计算机上安装所需文件。 安装后， **LocalDB** 是可以创建和打开 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 数据库的系统数据库文件存储于用户本地 AppData 路径中，这个路径通常是隐藏的。 例如 **C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 用户数据库文件存储在用户指定的位置，通常为 **C:\Users\\<user\>\Documents\\** 文件夹中的某个位置。  
   
  有关在应用程序中包含 **LocalDB** 的详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文档[本地数据概述](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)、[演练：创建 SQL Server LocalDB 数据库](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)和[演练：连接到 SQL Server LocalDB 数据库中的数据（Windows 窗体）](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)。  
@@ -109,10 +109,10 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|名称|"LocalDBApp1"|  
+|“属性”|"LocalDBApp1"|  
 |版本|\<当前版本>|  
 |共享名称|""|  
-|所有者|"\<你的 Windows 用户>"|  
+|“所有者”|"\<你的 Windows 用户>"|  
 |自动创建|是|  
 |State|运行|  
 |上次启动时间|\<日期和时间>|  

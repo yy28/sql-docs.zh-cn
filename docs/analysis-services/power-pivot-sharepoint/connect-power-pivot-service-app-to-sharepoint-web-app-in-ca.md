@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eacb900494941994ff38fd01f8b58e8939c1ebf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Power Pivot 服务应用程序连接到 CA 中的 SharePoint Web 应用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序可由任意数量的场中的 SharePoint Web 应用程序。 若要使 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可用，请将其添加到服务关联列表中。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
 3.  选中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（表示为类型名称“PowerPivot 服务应用程序代理”）旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，请只选择一个。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 ##  <a name="custom"></a> 将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序添加到自定义服务关联列表  
  默认组可由自定义列表替换。 自定义列表是专门为单个 SharePoint Web 应用程序创建的。 它覆盖默认组，并且仅使用场管理员或服务管理员指定的服务关联来替换它。 如果你创建了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须使用自定义列表指定要使用的应用程序。 自定义列表不能由其他 Web 应用程序重用。 它仅适用于为其创建的 Web 应用程序。  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  选中您要使用的每个服务应用程序连接旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（表示为“PowerPivot 服务应用程序代理”的类型集），请确保仅选择一个。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [在管理中心中创建和配置 Power Pivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   

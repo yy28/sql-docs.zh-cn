@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81d09a847b9bb405cd028eaa8cd1b4cb9feac9a1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9e6094d7b88ef2c8da50ced24b49c89dc9658885
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 单元属性的使用单元属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]单元属性多维表达式 (MDX) 中包含的内容和格式中的多维数据源，如多维数据集的单元格的信息。  
@@ -56,7 +53,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>支持的内部单元属性  
  下表列出了 `<property>` 值中使用的、支持的内部单元属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：对于在 where 子句中包含集的查询来说，不包含钻取操作。|  
 |**BACK_COLOR**|用于显示 **VALUE** 或 **FORMATTED_VALUE** 属性的背景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。|  

@@ -1,8 +1,11 @@
 ---
-title: "用于报表查看器 Web 部件的 SharePoint 网站设置 | Microsoft Docs"
+title: "用于报表查看器 Web 部件的 SharePoint 网站设置 - SSRS | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: 
 ms.technology: reporting-services-sharepoint
@@ -11,13 +14,13 @@ ms.topic: article
 author: jt000
 ms.author: jasontre
 ms.workload: Inactive
-ms.openlocfilehash: 0be12b3f74dd2cf4e6d07d3ccc70208d5bd099b8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a263e598133491f68590e072dcee2c9ffab75a52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sharepoint-site-settings-for-the-report-viewer-web-part"></a>用于报表查看器 Web 部件的 SharePoint 网站设置
+# <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>用于报表查看器 Web 部件的 SharePoint 网站设置 - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

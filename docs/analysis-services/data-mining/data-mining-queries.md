@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘查询可用于多种用途。 您可以：  
@@ -160,13 +158,13 @@ ms.lasthandoff: 12/08/2017
   
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  使用这些链接了解如何创建和使用数据挖掘查询。  
   
 |“任务”|链接|  
 |-----------|-----------|  
 |查看有关数据挖掘查询的教程和演练|[第 6 课：创建和使用预测（数据挖掘基础教程）](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [时序预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
-|在 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中创建一个 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [将预测函数应用于模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手动编辑预测查询](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|在 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中创建 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [将预测函数应用于模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手动编辑预测查询](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |使用预测查询中使用的外部数据|[为预测查询选择和映射输入数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [为预测查询选择和映射输入数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |使用查询结果|[查看和保存预测查询的结果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |使用 Management Studio 中提供的 DMX 和 XMLA 查询模板|[通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [在 SQL Server Management Studio 中使用 Analysis Services 模板](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  

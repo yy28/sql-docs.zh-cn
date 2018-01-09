@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]大多数数据挖掘模型基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
 7.  **创建测试集**：在此页上，您可以告知向导应留出多少数据以便测试模型。 如果数据将支持多个模型，则最好是创建一个保留数据集，以便能基于同一数据测试所有模型。  
   
-     有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
+     有关详细信息，请参阅 [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)生成数据挖掘项目。  
   
 8.  **完成向导**：在此页上，您可以为新的挖掘结构和关联的挖掘模型提供名称，并保存该结构和模型。  
   
@@ -130,7 +128,7 @@ ms.lasthandoff: 12/08/2017
  为何此功能会很有用？ 假设您查看的是聚类分析模型的结果，并希望查看已放入特定分类的客户。 通过使用钻取功能，您可以查看详细信息（例如，联系人信息）。  
   
 > [!WARNING]  
->  若要使用钻取功能，您必须在创建挖掘结构时启用它。 以后，您可以通过对模型设置属性来对其启用钻取功能，但挖掘结构要求一开始就设置此选项。 有关详细信息，请参阅[钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+>  若要使用钻取功能，您必须在创建挖掘结构时启用它。 以后，您可以通过对模型设置属性来对其启用钻取功能，但挖掘结构要求一开始就设置此选项。 有关详细信息，请参阅 [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)   

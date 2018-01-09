@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Isolation Element
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3b7a699d84367fb1930876163e7d74584198e65b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcfea788dfb2928b9c92037e845613fee873c994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="isolation-element-assl"></a>Isolation 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]该值指示元素派生自的隔离级别[数据源](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)数据类型。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*ReadCommitted*|  
@@ -57,12 +55,12 @@ ms.lasthandoff: 12/08/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[数据源](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此元素的值限定为下表中的字符串之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*ReadCommitted*|指定语句不能读取已由其他事务修改但尚未提交的数据。 这样可以避免脏读。 其他事务可以在当前事务的各个语句之间更改数据。 这将导致不可重复读取和虚拟数据。 此值是 **Isolation** 元素的默认值。|  
 |*快照*|指定事务中任何语句读取的数据都将是在事务开始时便存在的数据的事务性一致版本。 事务只能查看在其开始之前提交的数据修改。 对于正在当前事务中执行的语句，其他事务在当前事务开始后所做的数据修改将不可见。 其效果就好像事务中的语句获得了已提交数据的快照，因为该数据在事务开始时就存在。|  

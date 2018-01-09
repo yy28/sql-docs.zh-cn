@@ -1,7 +1,7 @@
 ---
-title: "安装 Reporting Services SharePoint 模式 | Microsoft Docs"
+title: "在 SharePoint 模式下安装 Reporting Services 2016 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/01/2016
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.service: 
@@ -19,15 +19,15 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 765529a9dc51b6a4c5689ab54ed47ff08754998f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa9031e434e736326d57cecb4bce91b850fc77ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="install-reporting-services-sharepoint-mode"></a>安装 Reporting Services SharePoint 模式
+# <a name="install-reporting-services-2016-in-sharepoint-mode"></a>在 SharePoint 模式下安装 Reporting Services 2016
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -40,7 +40,7 @@ SharePoint 中的 SQL Server Reporting Services（启用文档库中的报表创
 
 安装 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 两个核心 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件：  
 
-|安装|说明|  
+|安装|Description|  
 |------------------|-----------------|  
 |**报表服务器：** 在 SharePoint 模式下安装的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器|该报表服务器处理数据和报表处理和呈现以及订阅和数据警报处理。 SharePoint 模式报表服务器设计并安装为 SharePoint 共享服务。<br /><br /> **如何：** 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质安装报表服务器。|  
 |**外接程序**：用于 SharePoint 产品（rssharepoint.msi）的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。|该外接程序在 SharePoint Web 前端服务器上安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用户界面 (UI) 页和功能。 UI 功能包括 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、SharePoint 管理中心中的管理页、在 SharePoint 文档库内使用的功能页以及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报页。<br /><br /> **方法：**  外接程序可以通过 Web 下载或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质安装。 有关详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。|  

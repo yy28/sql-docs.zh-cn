@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>导入和导出向导的简单示例入门
 通过浏览常见方案 - 从 Excel 电子表中将数据导入 SQL Server 数据库，了解 SQL Server 导入和导出向导中的内容。 即使计划使用其他源和目标，也可通过本主题最大程度地了解所需的向导相关内容。
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
 
 该页会显示提供程序属性列表。 其中许多是不友好名称和不熟悉的设置。 所幸，要连接到任何企业数据库，通常只需要提供三条信息。 可以忽略其他设置的默认值。
 
-|所需信息|用于 SQL Server 的 .NET Framework 数据提供程序属性|
+|必填信息|用于 SQL Server 的 .Net Framework 数据提供程序属性|
 |---|---|
 |服务器名称|**数据源**|
 |身份验证（登录）信息|“集成安全性”或“用户 ID”和“密码”<br/>如果想查看服务器上的数据库的下拉列表，首先必须提供有效的登录信息。|
@@ -153,7 +153,7 @@ ms.lasthandoff: 11/20/2017
 
 ![复制到 SQL Server 2 的数据](../../integration-services/import-export-data/media/data-copied-to-sql-server-2.jpg)
 
-## <a name="learn-more"></a>了解详细信息  
+## <a name="learn-more"></a>了解更多信息  
 了解有关向导工作原理的详细信息。
 -   **了解有关向导的详细信息。** 如果正在寻找有关该向导的概述，请参阅 [使用 SQL Server 导入和导出向导来导入和导出数据](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 

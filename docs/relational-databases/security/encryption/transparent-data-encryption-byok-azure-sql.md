@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的“创建自己的密钥”（预览）支持进行透明数据加密
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-用于[透明数据加密 (TDE)](transparent-data-encryption.md) 的自带密钥 (BYOK) 支持允许用户控制其 TDE 加密密钥并限制访问人员和访问时间。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的基于云的外部密钥管理系统，是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 使用 BYOK 时，数据库加密密钥受存储在 Key Vault 中的非对称密钥保护。 非对称密钥设置为服务器级别，并由该服务器下的所有数据库继承该密钥。 
+用于[透明数据加密 (TDE)](transparent-data-encryption.md) 的自带密钥 (BYOK) 支持允许用户控制其 TDE 加密密钥并限制访问人员和访问时间。 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) 是 Azure 的基于云的外部密钥管理系统，是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 使用 BYOK 时，数据库加密密钥受存储在 Key Vault 中的非对称密钥保护。 非对称密钥设置为服务器级别，并由该服务器下的所有数据库继承该密钥。 此功能目前处于预览状态，不建议在我们声明公开上市之前将其用于生产工作负荷。
 
 通过使用 BYOK 支持，用户现可控制密钥管理任务（包括密钥轮换、密钥保管库权限、删除密钥），并且可以对所有加密密钥启用审核/报告。 Key Vault 提供中心密钥管理，利用严格监控的硬件安全模块 (HSM)，并支持分离密钥和数据管理之间的职责以帮助满足监管符合性。 
 
@@ -57,6 +60,7 @@ ms.lasthandoff: 11/21/2017
 接管应用程序资源的加密密钥管理是一项很重要的职责。 通过 Key Vault 将 BYOK 用于 TDE，以下是假定的密钥管理任务：
 - **密钥轮换：**TDE 保护程序应根据内部策略或符合性要求轮换。 密钥轮换可以通过 TDE 保护程序的密钥保管库完成。  
 - 密钥保管库权限：Key Vault 内跨密钥保管库和服务器级别预配的权限。 密钥保管库的服务器权限可以随时使用密钥保管库的访问策略撤销。
+- **密钥保管库冗余**：由于密钥材料不可能离开 Azure Key Vault，服务器也不能访问密钥保管库以外的任何缓存副本，因此必须配置 Azure Key Vault 异地复制，才能保证某个 Azure Key Vault 区域出现故障时仍然可以访问密钥材料。  如果异地复制数据库依赖于单个 Azure Key Vault，则无法访问其密钥材料。
 - **删除键：**密钥可能从 Key Vault 和 SQL 服务器中删除，以获取更多安全性或满足符合性要求。
 - 审核/报告所有加密密钥：Key Vault 提供了可轻松注入到其他安全信息和事件管理 (SIEM) 工具的日志。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 是一个已集成的示例服务。
 
@@ -91,12 +95,11 @@ ms.lasthandoff: 11/21/2017
 
 ### <a name="high-availability-and-disaster-recovery"></a>高可用性和灾难恢复
   
-可以通过两种方法使用 Key Vault 为服务器配置异地复制： 
+必须为密钥保管库配置异地复制，才能维持 Azure Key Vault 中密钥材料的高可用性：
 
-- 单独的密钥保管库：每个服务器有权访问单独的密钥保管库（理想情况下在各自的 Azure 区域内都有一个）。 这是推荐的配置，因为每个服务器自己具有用于加密异地复制数据库的 TDE 保护程序副本。 如果其中一个服务器的 Azure 区域处于脱机状态，其他服务器可以继续访问异地复制数据库。   
+- **冗余的密钥保管库**：每个异地复制服务器都可以访问单独的密钥保管库，理想情况下共存于同一 Azure 区域。 这是推荐的配置，因为每个服务器自己具有用于加密异地复制数据库的 TDE 保护程序副本。 如果其中一个服务器的 Azure 区域处于脱机状态，其他服务器可以继续访问异地复制数据库。  这需要谨慎配置，确保在某个密钥保管库不可用时，服务器可以访问另一个密钥保管库中 TDE 保护程序的备份。     
 
-- 共享的密钥保管库：所有服务器共享相同的密钥保管库。 此配置更易于设置，但如果密钥保管库所在的 Azure 区域处于脱机状态，所有服务器都无法读取加密异地复制数据库或他们自己的加密数据库。 
- 
+
 开始时，请使用 [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet 将每个服务器的 Key Vault 密钥添加到异地复制链接中的其他服务器。  
 （Key Vault 的 KeyId 示例：*https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*
 

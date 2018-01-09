@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: results Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06fc0651d4475d612bf2821bcca97c93c17d8633
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b68533f174d5502c77d94be70aab4f0ff676071
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="results-element-xmla"></a>results 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含一套[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)返回的元素[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法使用[批处理](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令。  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[返回](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
 |子元素|[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果**批处理**执行的命令**执行**方法，**返回**元素包含一个**结果**元素而不是单个**根**元素。 内容**结果**元素取决于用于运行的设置**批处理**命令。  
   
  为非事务性**批处理**命令，**结果**元素包含一个**根**元素执行的每个命令**批处理**命令，是否在命令完成成功或失败。 为事务**批处理**命令，**结果**元素只包含一个**根**元素，它包含在中失败的命令的错误信息**批处理**命令。  

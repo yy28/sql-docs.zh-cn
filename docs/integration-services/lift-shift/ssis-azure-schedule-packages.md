@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 26160f982982b1a8163662f57cb317e7252ab0e4
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>计划安排 Azure 上的 SSIS 包执行
 可以通过选择以下计划安排选项之一，计划安排存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的包的执行。
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/12/2017
 
 ## <a name="agent"></a> 使用 SQL Server 代理计划安排一个包
 
-### <a name="prerequisite"></a>前提条件
+### <a name="prerequisite"></a>先决条件
 
 必须先将 SQL 数据库服务器添加为链接服务器，才能在本地使用 SQL Server 代理来计划安排存储在 Azure SQL 数据库服务器上的包的执行。 有关详细信息，请参阅[创建链接服务器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[链接服务器](../../relational-databases/linked-servers/linked-servers-database-engine.md)。
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/12/2017
 
 有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理横向扩展的云数据库](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 在可以使用弹性作业来计划存储在 Azure SQL 数据库服务器上 SSISDB 目录数据库中的 SSIS 包之前，必须先完成以下操作：
 
@@ -108,162 +108,11 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a> 使用 Azure 数据工厂 SQL Server 存储过程活动计划安排一个包
 
-> [!IMPORTANT]
-> 将下例中的 JSON 脚本与 Azure 数据工厂版本 1 存储过程活动结合使用。
+要了解如何使用 Azure 数据工厂存储过程活动来安排 SSIS 包，请参阅下列文章：
 
-若要使用 Azure 数据工厂 SQL Server 存储过程活动来计划包，请完成以下操作：
+-   对于数据工厂版本 2：[Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)（在 Azure 数据工厂中使用存储过程活动调用 SSIS 包）
 
-1.  创建数据工厂。
-
-2.  为承载 SSISDB 的 SQL 数据库创建一个链接服务。
-
-3.  创建用于驱动计划的输出数据集。
-
-4.  创建数据工厂管道，该管道使用 SQL Server 存储过程活动来运行 SSIS 包。
-
-本部分概括介绍了这些步骤。 本文不提供完整的数据工厂教程。 如需了解详细信息，请参阅 [SQL Server 存储过程活动](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity)。
-
-如果计划的执行失败，且 ADF 存储过程活动将提供失败执行的执行 ID，请在 SSIS 目录的 SSMS 中检查该 ID 的执行报表。
-
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>创建用于承载 SSISDB 的 SQL 数据库的链接服务
-借助此链接服务，数据工厂可连接到 SSISDB。
-
-```json
-{
-    "name": "AzureSqlLinkedService",
-    "properties": {
-        "description": "",
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-        }
-    }
-}
-```
-
-### <a name="create-an-output-dataset"></a>创建输出数据集
-输出数据集包含计划信息。
-
-```json
-{
-    "name": "sprocsampleout",
-    "properties": {
-        "type": "AzureSqlTable",
-        "linkedServiceName": "AzureSqlLinkedService",
-        "typeProperties": {
-            "tableName": "sampletable"
-        },
-        "availability": {
-            "frequency": "Hour",
-            "interval": 1
-        }
-    }
-}
-```
-### <a name="create-a-data-factory-pipeline"></a>创建数据工厂管道
-管道使用 SQL Server 存储过程活动运行 SSIS 包。
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [{
-            "name": "SprocActivitySample",
-            "type": "SqlServerStoredProcedure",
-            "typeProperties": {
-                "storedProcedureName": "sp_executesql",
-                "storedProcedureParameters": {
-                    "stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-                }
-            },
-            "outputs": [{
-                "name": "sprocsampleout"
-            }],
-            "scheduler": {
-                "frequency": "Hour",
-                "interval": 1
-            }
-        }],
-        "start": "2017-10-01T00:00:00Z",
-        "end": "2017-10-01T05:00:00Z",
-        "isPaused": false
-    }
-}
-```
-
-不必创建新的存储过程来封装创建和启动 SSIS 包执行时所需的 Transact-SQL 命令。 可提供整个脚本，作为前述 JSON 示例中 `stmt` 参数的值。 下面是一个示例脚本：
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-若要提供上述 SQL 脚本作为 `stmt` 参数的值，通常需要在一行上包含整个脚本，如下面的示例中所示。 （[JSON 标准](https://json.org/)不支持控制字符，包括其他语言中用于分隔多行字符串中的行的 `\n` 新行控制字符。）
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [
-            {
-                "type": "SqlServerStoredProcedure",
-                "typeProperties": {
-                    "storedProcedureName": "sp_executesql",
-                    "storedProcedureParameters": {
-                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
-                    }
-                },
-                "outputs": [
-                    {
-                        "name": "sprocsampleout"
-                    }
-                ],
-                "scheduler": {
-                    "frequency": "Minute",
-                    "interval": 15
-                },
-                "name": "SprocActivitySample"
-            }
-        ],
-        "start": "2017-12-06T12:00:00Z",
-        "end": "2017-12-06T12:30:00Z",
-        "isPaused": false,
-        "hubName": "test_hub",
-        "pipelineMode": "Scheduled"
-    }
-}
-```
-
-有关此脚本中代码的详细信息，请参阅[使用存储过程部署和执行 SSIS 包](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures)。
+-   对于数据工厂版本 1：[Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)（在 Azure 数据工厂中使用存储过程活动调用 SSIS 包）
 
 ## <a name="next-steps"></a>后续步骤
 有关 SQL Server 代理的详细信息，请参阅 [包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: sql_variant data type
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6293e5d4885a4c151cfc488bfc62647845e436d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2636d11a4d25a1c53c22a172020f67b90fa0df15
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>sql_variant 对日期和时间类型的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,26 +42,26 @@ ms.lasthandoff: 11/17/2017
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_WCHAR|nvarcar|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_TINYINT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_STINYINT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SHORT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SSHORT|smallint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_USHORT|int|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_LONG|int|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SLONG|int|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_ULONG|bigint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_SBIGINT|bigint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_FLOAT|real|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_DOUBLE|float|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_TINYINT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_STINYINT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SHORT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SSHORT|SMALLINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_USHORT|ssNoversion|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_LONG|ssNoversion|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SLONG|ssNoversion|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_ULONG|BIGINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_SBIGINT|BIGINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_FLOAT|REAL|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_DOUBLE|FLOAT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BIT|bit|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_UTINYINT|tinyint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_UTINYINT|TINYINT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE 未设置。|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> 小数位数设置为 SQL_DESC_PRECISION ( *DecimalDigits*参数**SQLBindParameter**)。|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> 小数位数设置为 SQL_DESC_PRECISION ( *DecimalDigits*参数**SQLBindParameter**)。|  
-|SQL_C_TYPE_DATE|date|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_TYPE_DATE|日期|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_TYPE_TIME|time(0)|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|小数位数设置为 SQL_DESC_PRECISION ( *DecimalDigits*参数**SQLBindParameter**)。|  
-|SQL_C_NUMERIC|decimal|精度设置为 SQL_DESC_PRECISION ( *columnsize 类型*参数**SQLBindParameter**)。<br /><br /> 小数位数设置为 SQL_DESC_SCALE ( *DecimalDigits* SQLBindParameter 参数)。|  
+|SQL_C_NUMERIC|Decimal|精度设置为 SQL_DESC_PRECISION ( *columnsize 类型*参数**SQLBindParameter**)。<br /><br /> 小数位数设置为 SQL_DESC_SCALE ( *DecimalDigits* SQLBindParameter 参数)。|  
 |SQL_C_SS_TIME2|time|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|忽略 SQL_CA_SS_VARIANT_SQL_TYPE|  
   

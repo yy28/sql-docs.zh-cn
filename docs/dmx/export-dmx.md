@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: EXPORT
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 9997c79cba1c9c87d91c3deb53bbdd56bc389353
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cc1b2baa40c0e8b6b40a5dddf2c336a4141b4810
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +52,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *文件名*  
  要作为字符串导出的文件的名称和位置。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果语句指定了挖掘模型，则结果文件也将包含关联的挖掘结构。 如果该语句指定**带有 WITH DEPENDENCIES**，处理 （例如，数据源和数据源视图） 的对象所需的所有对象都包含在.abf 文件。  
   
  你必须是数据库或服务器管理员联系以导出或导入对象从[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。  

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PREDICT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7130d9a4dd3d89e456c53b47c49e14734b670f85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>返回类型  
  \<标量列引用 >  
   
- 或  
+ 或多个  
   
  \<表的列引用 >  
   
@@ -56,7 +54,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 和 INCLUDE_STATISTICS 只适用于表列引用；EXCLUDE_NULL 和 INCLUDE_NULL 只适用于标量列引用。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  选项包括 EXCLUDE_NULL（默认值）、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE（默认值）、INPUT_ONLY 和 INCLUDE_STATISTICS。  
   
 > [!NOTE]  
@@ -64,7 +62,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 参数在结果中返回 $NODEID 列。 NODE_ID 是为特定事例而对其执行预测的内容节点。 使用上表中的列的预测时，此参数是可选的。  
   
- *n* 参数适用于表中的列。 该参数根据预测类型设置返回的行数。 如果基础列是序列，则会调用**PredictSequence**函数。 如果基础列是时序，则会调用**PredictTimeSeries**函数。 对于关联类型的预测，它调用**PredictAssociation**函数。  
+  *n* 参数适用于表中的列。 该参数根据预测类型设置返回的行数。 如果基础列是序列，则会调用**PredictSequence**函数。 如果基础列是时序，则会调用**PredictTimeSeries**函数。 对于关联类型的预测，它调用**PredictAssociation**函数。  
   
  **预测**函数支持多态性。  
   
@@ -92,7 +90,7 @@ FROM     [Association]
   
  虽然此查询返回的单个数据行 `Expression` 仅有一列，但该列包含下面的嵌套表。  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|“模型”|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016331743|0.252695851192499|  
 |Water Bottle|2866|0.192620471805901|0.175205052318795|  

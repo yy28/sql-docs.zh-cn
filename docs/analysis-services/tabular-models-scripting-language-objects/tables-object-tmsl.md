@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables 对象 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定义包含在模型中的表。 在模型中的表也绑定到外部数据库从中导入或查询，数据中的表或从 DAX 表达式构造的计算的表中。 一个或多个表中**分区**对象描述的数据源。  表之间**关系**对象指定的基数、 筛选器方向和关系的其他属性。  

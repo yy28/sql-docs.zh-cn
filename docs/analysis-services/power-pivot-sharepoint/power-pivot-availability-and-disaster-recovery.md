@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
@@ -20,18 +17,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和灾难恢复
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]可用性和灾难恢复计划为[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]主要取决于你的 SharePoint 场、 对于不同的组件，可接受停机时间量和工具和针对 SharePoint 可用性实现的最佳实践的设计。 本主题汇总了各种技术，并包含在为 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署计划可用性和灾难恢复时要考虑的示例拓扑关系图。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
  **本主题内容：**  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
  ![在 2013年的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
   
--   **(1)** Web 前端服务器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 外接程序在每台服务器上安装数据提供程序。 有关详细信息，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+-   **(1)** Web 前端服务器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 外接程序在每台服务器上安装数据提供程序。 有关详细信息，请参阅 [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 -   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共享服务在**每台**应用程序服务器上运行，并允许服务应用程序**跨多台**应用程序服务器运行。 因此，如果单一应用程序服务器处于脱机状态，则 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 应用程序仍将可用。  
   

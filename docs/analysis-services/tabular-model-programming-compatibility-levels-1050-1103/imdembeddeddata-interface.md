@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 接口
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]IMDEmbeddedData 接口是用于管理一个嵌入的公共接口[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据库或表格模型数据库。 接口继承自**IPersistStream**接口。 此接口允许以下操作：  
@@ -107,12 +105,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  在访问流标识符时出现错误。  
   
-#### <a name="remarks"></a>注释  
+#### <a name="remarks"></a>Remarks  
  为了确认当前连接是否包含嵌入数据库，用户应从 OLE DB 连接属性查看 DBPROP_MSMD_EMBEDDED_DATA 属性的值。  
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值包括：  
   
-|Name|值|定义|  
+|“属性”|ReplTest1|定义|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|没有可用的嵌入数据库|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|当前应用程序包含嵌入数据库|  

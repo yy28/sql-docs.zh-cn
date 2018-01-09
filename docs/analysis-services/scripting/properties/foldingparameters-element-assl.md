@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd4618d59aaddf6cb36dabdcdbdd45e66b12172a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定使用的参数[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器执行交叉验证挖掘模型时。  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |子元素|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  这些属性仅用于内部使用，不支持在 DDL 语句中使用。  
   
  有关如何使用交叉验证中[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]，请参阅[交叉验证报表中的度量值](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  

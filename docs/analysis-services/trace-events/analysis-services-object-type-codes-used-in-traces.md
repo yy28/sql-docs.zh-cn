@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>跟踪中使用的 Analysis Services 对象类型代码
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此页列出在 Analysis Services 数据模型中的每个对象的对象类型 （6 位数字）。 这些代码显示在跟踪日志中并用于标识与具体锁定关联的对象的类型。 例如，数据库中的锁定超时将指示对象类型 100002，这是数据库对象类型。  
@@ -33,9 +33,9 @@ ms.lasthandoff: 12/08/2017
   
 |对象类型|对象名称|  
 |-----------------|-----------------|  
-|100000|Server|  
+|100000|“服务器”|  
 |100001|Command|  
-|100002|数据库|  
+|100002|“数据库”|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|角色|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/08/2017
 |100053|Command|  
 |100054|KPI|  
 |100055|DataSourceView|  
-|100056|透视|  
+|100056|Perspective|  
 |100100|CommandCollection|  
 |100101|DatabaseCollection|  
 |100102|DataSourceCollection|  

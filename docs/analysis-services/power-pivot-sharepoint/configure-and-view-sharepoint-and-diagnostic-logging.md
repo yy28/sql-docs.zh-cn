@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>配置和查看 SharePoint 和诊断日志记录
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服务器操作、 事件和消息会记录在 SharePoint 日志文件。 使用此主题中的信息可配置日志记录级别和查看日志文件信息。 您可以控制要将哪些 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务器事件记录到文件中。 还可以控制所记录的消息的严重性。 有关详细信息，请参阅 [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
@@ -73,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  选择 **“详细”** ，可将所有事件记录到跟踪日志中。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> 如何查看 SharePoint 日志文件  
  日志文件是文本文件。 可以在任何文本编辑器中打开它们。 还可以使用第三方日志查看器应用程序。  
@@ -135,7 +132,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Power Pivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

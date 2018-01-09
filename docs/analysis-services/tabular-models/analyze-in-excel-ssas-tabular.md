@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4910c2033fa0ae50cad8b31f90bd023aa18d219f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 13d0f86ae2413e0d54af32a97fb74100284bacd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analyze in Excel 功能，在 SSDT 中，为表格模型作者提供了一种方法可以在开发期间快速分析模型项目。 使用“在 Excel 中分析”功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接以及自动将数据透视表添加到工作表。 工作区数据库对象（表、列和度量值）作为数据透视表字段列表中的字段包含。 然后可以在有效用户或角色的上下文以及透视中查看对象和数据。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  除了有效用户或角色之外，您还可以指定透视。 模型创建者使用透视定义模型对象和数据的特殊业务方案视图。 默认情况下，不使用透视。 要通过在 Excel 中分析的角度来看，透视必须通过使用 SSDT 中的透视对话框上已定义。 如果指定了透视，数据透视表字段列表将只包含在透视中选择的那些对象。 有关详细信息，请参阅[创建和管理透视](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
   
-##  <a name="bkmk_rt"></a> 相关任务  
+##  <a name="bkmk_rt"></a> Related tasks  
   
 |**主题**|**Description**|  
 |---------------|---------------------|  

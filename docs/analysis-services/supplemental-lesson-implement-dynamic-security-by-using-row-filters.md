@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: 
@@ -16,11 +16,11 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 1999153a1ccab371035df399ee0320cc56acb587
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 51ffec7f5fc4d5d6d44ff1dbab0e4a20827f6718
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>补充课程-通过使用行筛选器实现动态安全性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
   
 学完本课的估计时间： **30 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 本补充课程主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>将 dimSalesTerritory 表添加到 AW Internet Sales 表格模型项目中  

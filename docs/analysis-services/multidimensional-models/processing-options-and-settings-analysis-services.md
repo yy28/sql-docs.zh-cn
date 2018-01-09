@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>处理选项和设置 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]中的对象的处理时[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，你可以选择处理选项来控制的每个对象的处理类型。 处理类型因对象而异，并基于自上次处理对象后对象所发生的更改。 如果启用了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-options"></a>处理选项  
  下表介绍了可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用的处理方法，并标识了支持每种方法的对象。  
   
-|模式|适用于|Description|  
+|“模式”|适用于|Description|  
 |----------|----------------|-----------------|  
 |**处理默认值**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|检测数据库对象的处理状态，进行必要的处理，将未处理对象或部分处理的对象转变成为已完全处理的对象。 如果更改数据绑定，“处理默认值”将对受影响的对象执行“处理全部”。|  
 |**处理全部**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象及其包含的所有对象。 对已被处理的对象执行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 如果对对象进行了结构更改（例如，添加、删除或重命名属性层次结构），则需要此类处理。|  

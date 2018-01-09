@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果写启用度量值组，则最终用户可以更改多维数据集数据，在浏览时，在名为写回表，不在多维数据集数据或源数据中的单独表中保存更改。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  可以将分区写回表中的数据转换为分区。 此过程使得写回表成为新分区的事实数据表。  
   
 > [!CAUTION]  
->  不正确地使用分区可导致多维数据集数据不准确。 有关详细信息，请参阅[创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
+>  不正确地使用分区可导致多维数据集数据不准确。 有关详细信息，请参阅 [创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
   
  将写回数据表转换为分区还会对分区禁用写功能。 分区单元的所有无限制读/写策略和读/写权限都将禁用，而且最终用户将无法更改显示的多维数据集数据。 （被禁用无限制读/写策略或读/写权限的最终用户仍然能够浏览多维数据集。）读取权限和有条件读取权限不受影响。  
   

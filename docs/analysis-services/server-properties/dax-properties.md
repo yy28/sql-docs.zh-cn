@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
@@ -17,11 +17,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8a94cb71ab8625a2a546e62f5dc828b605aeaa2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 76ffc0da4e8d56b4bb37b0be5278e458ac6fb043
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dax-properties"></a>DAX 属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Msmdsrv.ini 的 DAX 部分包含用于控制中的某些查询行为的设置[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，例如 DAX 查询结果集中返回的行数的上限。 
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="property-descriptions"></a>属性说明
 
-设置 |“值” |Description
+设置 |ReplTest1 |Description
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | DAX 查询中返回的最大行数。 手动将此条目添加到 msmdsrv.ini 文件中，如果默认值过低，请增加值。 
 PredicateCheckSpoolCardinalityThreshold| 5000 | 这是一项高级属性，除非有 Microsoft 技术支持的指导，否则不应更改此属性。

@@ -18,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>第 4 课：将数据库从 URL 还原到虚拟机
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程中，将 AdventureWorks2014 数据库还原至 Azure 虚拟机中的 SQL Server 2016 实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本课程将 AdventureWorks2014 数据库还原至 Azure 虚拟机中的 SQL Server 2016 实例。
   
 > [!NOTE]  
 > 在本教程中为了简单起见，我们对用于数据库备份的数据和日志文件使用相同的容器。 在生产环境中可能使用多个容器，以及经常使用多个数据文件。 在 SQL Server 2016 中，在备份大型数据库时也可以考虑将备份在多个 blob 上条带化，以便提高备份性能。  

@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad1cff7114e6891af5cdf54cfc29b658213c6bb4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 910a1fc1ddcd7eee478c5a16ed1243801e482203
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]处理是 Analysis Services 查询关系数据源，并将使用该数据的 Analysis Services 对象填充的操作。  
@@ -83,7 +80,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  还可以单击 **“更改设置”** 来修改处理顺序、与特定类型的错误相关的处理行为或其他设置。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
      “处理进度”对话框为每个命令提供当前状态。 如果状态消息被截断，则可以单击 **“查看详细信息”** 来读取完整消息。  
   

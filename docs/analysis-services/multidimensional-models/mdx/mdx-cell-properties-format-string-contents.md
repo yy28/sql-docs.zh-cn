@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 单元格属性-FORMAT_STRING 内容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING**单元格属性格式**值**单元格属性，创建的值**FORMATTED_VALUE**单元属性。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  

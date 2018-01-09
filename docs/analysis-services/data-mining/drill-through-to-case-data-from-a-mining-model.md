@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: drillthrough [Analysis Services]
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c8baf27751f67ee124acc1736dc91cb1724ce7c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9f287437903c54c4eb66da3343bc2c80f18ac5fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果挖掘模型已配置为允许钻取到模型事例，在浏览模型时，你可以检索有关用于创建模型的事例的详细的信息。 此外，如果基础挖掘结构已配置为允许钻取到结构事例，并且您具备相应的权限，则可返回挖掘结构的信息。 其中可以包括挖掘模型中未包含的列。  

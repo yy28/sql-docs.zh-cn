@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb289289301d3837ff2f82848b6fd183354b7e56
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f44a257eb21427252cd611e4bd7cbb052f27df2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用的模型特有的挖掘模型内容[!INCLUDE[msCoName](../../includes/msconame-md.md)]线性回归算法。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
@@ -146,7 +144,7 @@ ms.lasthandoff: 12/08/2017
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建模型时，数据挖掘引擎创建决策树模型的特殊实例，并提供约束树的参数，将树约束为在单个节点中包含所有定型数据。 将标记所有连续输入并将其视为潜在回归量，但仅将适合数据的回归量作为回归量保留在最终模型中。 分析过程要么为每个回归量各生成一个回归公式，要么根本不生成任何回归公式。  
   
  你可以在“挖掘图例”中查看完整的回归公式，方法是在 [Microsoft 树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)中单击“(全部)”节点。  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/08/2017
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|缺少|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |年龄|471.687717702463|0|0|126.969442359327|7|  
 |年龄|234.680904692439|0|0|0|8|  

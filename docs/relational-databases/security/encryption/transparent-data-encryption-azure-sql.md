@@ -2,28 +2,30 @@
 title: "Azure SQL 数据库和数据仓库的 TDE | Microsoft Docs"
 description: "SQL 数据库和数据仓库的透明数据加密的概述。 本文档介绍了其优点和配置选项，包括服务托管的 TDE 和自带密钥。"
 keywords: 
-services: sql-database
-documentationcenter: 
 author: becczhang
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.component: security
+ms.custom: 
 ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a3fee8259aab2901eaf7950d4255d78d1860eeda
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>用于 Azure SQL 数据库和数据仓库的透明数据加密
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 透明数据加密 (TDE) 对数据库、关联的备份和事务日志文件执行实时静态加密和解密，而无需更改应用程序，从而帮助保护 Azure SQL 数据库和数据仓库免受恶意活动的威胁。
 
@@ -85,8 +87,8 @@ TDE 主密钥，也称为 TDE 保护程序，设置为服务器级别。 若要�
 | Cmdlet | Description |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |启用或禁用数据库的 TDE。|
-| [Get-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |获取数据库的 TDE 状态。 |
-| [Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |检查数据库的加密进度。 |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |获取数据库的 TDE 状态。 |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |检查数据库的加密进度。 |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |将 Key Vault 密钥添加到 SQL 服务器。 |
 | [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |获取 SQL 服务器的 Key Vault 密钥。 |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |设置 SQL 服务器的 TDE 保护程序。 |
@@ -102,7 +104,7 @@ TDE 主密钥，也称为 TDE 保护程序，设置为服务器级别。 若要�
 | --- | --- |
 | [ALTER DATABASE（Azure SQL 数据库）](/sql/t-sql/statements/alter-database-azure-sql-database) | 使用 SET ENCRYPTION ON/OFF 加密或解密数据库。 |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |返回与每个数据仓库节点的加密状态及其关联数据库加密密钥有关的信息。 | 
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |返回与每个数据仓库节点的加密状态及其关联数据库加密密钥有关的信息。 | 
 |  | |
 
 不能使用 Transact-SQL 将 TDE 保护程序切换到 Azure Key Vault 的密钥；请使用 PowerShell 或 Azure 门户。

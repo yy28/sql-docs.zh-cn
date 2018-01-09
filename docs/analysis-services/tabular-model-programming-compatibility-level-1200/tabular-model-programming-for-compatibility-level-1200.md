@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表格模型编程的兼容性级别 1200年及更高版本
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]从开始兼容级别 1200年，用于使用表格元数据描述模型结构，作为表格模型对象的描述符替换历史多维元数据。 表、 列和关系的元数据是表、 列中，和关系，而不是多维的等效项 （维度和属性）。  

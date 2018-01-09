@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>将 Power Pivot 解决方案部署到 SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用以下说明手动部署添加的两个解决方案包[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到 SharePoint Server 2010 环境的功能。 部署解决方案是在 SharePoint 2010 服务器上配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所需的步骤。 若要查看所需步骤的完整列表，请参阅 [在管理中心中管理和配置 PowerPivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
@@ -112,7 +112,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 4.  在“部署到？” 中，选择要为其添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支持的 SharePoint Web 应用程序。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  对也支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的其他 SharePoint Web 应用程序重复此过程。  
   

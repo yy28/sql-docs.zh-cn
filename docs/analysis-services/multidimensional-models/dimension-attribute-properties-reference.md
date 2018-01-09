@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>维度特性属性参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，有许多属性可确定如何维度和维度特性函数。 下表列出了这些特性属性并逐一对其进行说明。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|标识向最终用户显示关联的特性层次结构的文件夹。|  
 |**AttributeHierarchyEnabled**|确定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是否为特性生成特性层次结构。 如果未启用特性层次结构，则不能在用户定义的层次结构中使用该特性，也不能在多维表达式 (MDX) 语句中引用该特性层次结构。|  

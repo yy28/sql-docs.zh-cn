@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]序列聚类分析算法是一种结合顺序分析群集的唯一算法。 你可以使用该算法来研究包含可在“顺序”中链接的事件的数据。 该算法可查找最常见的顺序，并且通过执行聚类分析来查找相似的顺序。 下面的示例说明了可以将其作为机器学习的数据捕获的顺序类型，从而提供有关常见问题或业务方案的建议：  
@@ -69,14 +67,14 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-a-sequence-clustering-model"></a>查看顺序分析和聚类分析模型  
  该算法创建的挖掘模型在数据中包含了最常见顺序的说明。 若要浏览该模型，可以使用 **Microsoft 序列分类查看器**。 查看顺序分析和聚类分析模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 显示包含多个转换的分类。 您还可以查看相关的统计信息。 有关详细信息，请参阅 [使用 Microsoft 序列分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
- 如果希望了解更多详细信息，可在 [Microsoft 一般内容树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布情况、每个分类的概率以及有关转换的详细信息。 有关详细信息，请参阅[顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
+ 如果希望了解更多详细信息，可在 [Microsoft 一般内容树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布情况、每个分类的概率以及有关转换的详细信息。 有关详细信息，请参阅 [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  对模型进行定型后，结果将存储为一组模式。 您可以使用数据中最常见顺序的说明来预测新顺序的下一个可能步骤。 但是，因为该算法包括了其他列，所以您可以使用得到的模型来识别顺序数据和非顺序输入之间的关系。 例如，您可以向模型添加客户的人口统计数据，还可以进行针对特定客户群体的预测。 可以自定义预测查询，以便返回数目可变的预测或返回说明性的统计信息。  
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。 有关如何针对顺序分析和聚类分析模型使用查询的示例，请参阅 [顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

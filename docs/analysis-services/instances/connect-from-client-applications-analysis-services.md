@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果你不熟悉 Analysis Services，信息用于本主题中连接到的现有实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用常用工具和应用程序。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
  成功的连接依赖于有效的端口配置和适当的用户权限。 要了解有关各项要求的详细信息，请单击以下链接。  
   
--   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [配置 Windows 防火墙以允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
@@ -132,7 +129,7 @@ ms.lasthandoff: 12/08/2017
   
      若要进行测试，请在远程计算机上使用 Excel 或 SSMS，并且指定 Analysis Services 实例使用的 IP 地址和端口。 如果您可以连接，则防火墙规则对实例是有效的并且实例允许远程连接。  
   
-     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 -   某些工具可以连接，而其他工具却不能？ 该问题可能是客户端库的版本错误导致的。 您可以从 SQL Server 功能包下载页获取客户端库。  
   

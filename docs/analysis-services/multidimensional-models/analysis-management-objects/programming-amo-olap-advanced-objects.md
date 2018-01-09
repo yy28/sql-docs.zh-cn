@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 高级对象的编程
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题说明分析管理对象 (AMO) 编程的 OLAP 的详细信息高级对象。 本主题包含以下各节：  
@@ -235,15 +233,15 @@ static public void CreateActions(Cube cube)
   
 |图像用法|图像名称|状态数|  
 |-----------------|----------------|----------------------|  
-|状态|形状|3|  
-|状态|交通灯|3|  
-|状态|路标|3|  
-|状态|测量|3|  
-|状态|反向测量|5|  
-|状态|温度计|3|  
-|状态|柱状|3|  
-|状态|面|3|  
-|状态|方差箭头|3|  
+|“登录属性”|形状|3|  
+|“登录属性”|交通灯|3|  
+|“登录属性”|路标|3|  
+|“登录属性”|测量|3|  
+|“登录属性”|反向测量|5|  
+|“登录属性”|温度计|3|  
+|“登录属性”|柱状|3|  
+|“登录属性”|面|3|  
+|“登录属性”|方差箭头|3|  
 |走向|标准箭头|3|  
 |走向|状态箭头|3|  
 |走向|反向状态箭头|5|  

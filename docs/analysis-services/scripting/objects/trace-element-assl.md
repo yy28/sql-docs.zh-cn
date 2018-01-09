@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Trace Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 981e9791a4aa6660c55df4deb9d5d41f80ceda59
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4e7b32ad2396eded2ba9f222879121cdca4f2544
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="trace-element-assl"></a>Trace 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义可查询的跟踪。  
@@ -79,10 +77,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[跟踪](../../../analysis-services/scripting/collections/traces-element-assl.md)|  
 |子元素|[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)，[审核](../../../analysis-services/scripting/properties/audit-element-assl.md)， [AutoRestart](../../../analysis-services/scripting/properties/autorestart-element-assl.md)， [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md)，[说明](../../../analysis-services/scripting/properties/description-element-assl.md)，[事件](../../../analysis-services/scripting/collections/events-element-assl.md)，[筛选器](../../../analysis-services/scripting/properties/filter-element-trace-assl.md)， [ID](../../../analysis-services/scripting/properties/id-element-assl.md)， [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md)， [LogFileAppend](../../../analysis-services/scripting/properties/logfileappend-element-assl.md)， [LogFileName](../../../analysis-services/scripting/properties/logfilename-element-assl.md)， [LogFileRollover](../../../analysis-services/scripting/properties/logfilerollover-element-assl.md)， [LogFileSize](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)，[停止时间](../../../analysis-services/scripting/properties/stoptime-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另请参阅  

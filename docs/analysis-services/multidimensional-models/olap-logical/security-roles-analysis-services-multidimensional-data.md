@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全角色（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]中使用角色[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]可管理的安全性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象和数据。 在基本术语中，角色相关联的 Microsoft Windows 用户和具有特定访问权限和权限定义对象的实例由管理组的安全标识符 (Sid) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 中提供了两种类型的角色[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  <xref:Microsoft.AnalysisServices.Permission> 类是一个抽象类。 因此，您必须使用派生类定义相应对象的权限。 对于每个对象，均定义一个权限派生类。  
   
-|对象|类|  
+|Object|类|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  

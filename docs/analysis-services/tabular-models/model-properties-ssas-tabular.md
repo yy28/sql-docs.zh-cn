@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10fc0c4c74dddf6faaa2cfe0b2bff4e24695ec2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 536e56027445e2634ac2b72537c3af9540d76fff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-properties-ssas-tabular"></a>模型属性（SSAS 表格）
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍表格模型属性。 SQL Server 开发工具中的每个表格模型项目都具有模型属性，这些属性影响生成你正创作的模型的方式、备份模型的方式以及存储工作区数据库的方式。 此处所描述的模型属性并不适用于已部署的模型。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_model_properties"></a> 模型属性  
  **高级**  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**生成操作**|编译|此属性指定文件如何与生成和部署过程相关。 此属性设置具有以下选项：<br /><br /> **编译** – 将发生常规的生成操作。 针对模型对象的定义将写入 .asdatabase 文件中。<br /><br /> **无** – 到 .asdatabase 文件的输出将为空。|  
 |**复制到输出目录**|不复制|此属性指定源文件将复制到输出目录。 此属性设置具有以下选项：<br /><br /> **不复制** – 在输出目录中不创建任何副本。<br /><br /> **始终复制** – 始终在输出目录中创建副本。<br /><br /> **如果较新则复制** - 只有在存在对 model.bim 文件的更改时，才在输出目录中创建副本。|  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  在创建新模型项目时，“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改新模型的默认设置。 可以在“属性”窗口中为每个模型设置这些属性以及其他属性。 有关详细信息，请参阅 [配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**排序规则**|用于安装 Visual Studio 的计算机的默认排序规则。|模型的排序规则指示符。|  
 |**兼容级别**|默认值或在创建项目时选择的其他值。|适用于 SQL Server 2012 Analysis Services SP1 或更高版本。 指定可用于此模型的功能和设置。 有关详细信息，请参阅 [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  

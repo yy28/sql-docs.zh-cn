@@ -23,18 +23,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- 始终加密功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。 始终加密确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以静态加密数据并利用 Azure 中的存储，将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。  
+ Always Encrypted 功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号码）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。 始终加密确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以静态加密数据并利用 Azure 中的存储，将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。  
   
  始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序以透明方式对存储在加密数据库列（包含在查询结果中）中的数据进行解密。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  客户在营业地运行本地客户端应用程序。 应用程序操作 Azure 中托管的数据库中存储的敏感数据（Microsoft Azure 上虚拟机中运行的[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ）。 客户使用始终加密功能并在本地托管的受信任密钥存储中存储始终加密密钥，以确保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 云管理员无权访问敏感数据。  
   
 ### <a name="client-and-data-in-azure"></a>客户端和数据都在 Azure 中  
- 客户在 Microsoft Azure 中托管了一个客户端应用程序（例如辅助角色或 Web 角色），该应用程序对在 Azure 中托管的数据库中（在 Microsoft Azure 的虚拟机上运行的 SQL 数据库或 SQL Server）存储的敏感数据进行操作。 由于数据和密钥对托管客户端层的平台的云管理员是公开的，因此“始终加密”功能不提供针对云管理员的完全数据隔离，但是客户仍将从降低安全攻击范围中受益（数据库中的数据始终是加密的）。  
+ 客户在 Microsoft Azure 中托管了一个客户端应用程序（例如辅助角色或 web 角色），该应用程序对在 Azure 中托管的数据库中（在 Microsoft Azure 的虚拟机上运行的 SQL 数据库或 SQL Server）存储的敏感数据进行操作。 由于数据和密钥对托管客户端层的平台的云管理员是公开的，因此“始终加密”功能不提供针对云管理员的完全数据隔离，但是客户仍将从降低安全攻击范围中受益（数据库中的数据始终是加密的）。  
  
 ## <a name="how-it-works"></a>工作方式
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="feature-details"></a>功能详细信息  
   
--   查询可以针对使用确定性加密加密的列执行相等性比较，但不能执行其他操作（例如大于/小于、使用 LIKE 运算符或算术运算的模式匹配）。  
+-   查询可以针对使用确定性加密进行加密的列执行相等性比较，但不能执行其他操作（例如大于/小于、使用 LIKE 运算符或算术运算的模式匹配）。  
   
 -   对使用随机加密加密的列的查询无法对上述任何列执行操作。 不支持对使用随机加密加密的列编制索引。  
 
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/21/2017
 
 -   更改已加密对象的定义之后，需执行 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)，以更新该对象的 Always Encrypted 元数据。
   
-具有以下特征的列不支持始终加密（例如，如果某个列存在以下任何情况，则不能在 *CREATE TABLE/ALTER TABLE* 中针对该列使用 **Encrypted WITH** 子句）：  
+具有以下特征的列不支持 Always Encrypted（例如，如果某个列存在以下任何情况，则不能在 CREATE TABLE/ALTER TABLE 中针对该列使用 Encrypted WITH 子句）：  
   
 -   使用以下任一数据类型的列： **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、别名、用户定义类型。  
 - FILESTREAM 列  

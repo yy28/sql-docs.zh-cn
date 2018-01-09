@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dff0e2f3dda0e4fc568f04787c4056ab27611a18
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>在管理中心中管理和配置 Power Pivot 服务器
+# <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>在管理中心中管理和配置 PowerPivot 服务器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]由 SharePoint 服务应用程序管理员，使用 SharePoint 管理中心执行管理和配置服务器。  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 必须先进行配置，然后才能使用。 使用 SQL Server 安装程序安装 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 后，你可以使用以下任意方法来配置它：  
@@ -54,14 +51,14 @@ ms.lasthandoff: 12/08/2017
   
  [Power Pivot 配置工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |链接|类型|任务说明|  
 |----------|----------|----------------------|  
-|[将 Power Pivot 解决方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|必需|此步骤安装解决方案文件，这些文件将程序文件和应用程序页添加到场和站点集合。|  
-|[在管理中心中创建和配置 Power Pivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|必需|此步骤设置 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 系统服务。|  
-|[在管理中心中针对网站集激活 Power Pivot 功能集成](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|必需|此步骤在站点集合级别启用 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能。|  
-|[将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必需|此步骤将 Analysis Services OLE DB 访问接口添加为 Excel Services 中的受信访问接口。|  
+|[将 Power Pivot 解决方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|Required|此步骤安装解决方案文件，这些文件将程序文件和应用程序页添加到场和站点集合。|  
+|[在管理中心中创建和配置 Power Pivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Required|此步骤设置 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 系统服务。|  
+|[在管理中心中针对网站集激活 Power Pivot 功能集成](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Required|此步骤在站点集合级别启用 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能。|  
+|[将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Required|此步骤将 Analysis Services OLE DB 访问接口添加为 Excel Services 中的受信访问接口。|  
 |[使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|建议|数据刷新是可选的，但建议执行刷新。 它允许你对已发布的 Excel 工作簿中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据计划执行无人参与的更新。|  
 |[配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|建议|此步骤设置特殊目的的帐户，该帐户可用于在服务器上运行数据刷新作业。|  
 |[配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|可选|默认情况下，配置使用情况数据收集。 您可以使用这些步骤修改默认设置。|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQL_SS_TABLE
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 624e3886e5ae82b63fe163b60f6a118540abe523
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a781dd635a0c1c17e67415101536d7af69db60b2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
   对表值参数的支持是通过新的 ODBC SQL 类型 SQL_SS_TABLE 提供的。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  不能将 SQL_SS_TABLE 转换为任何其他 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
  如果作为 C 数据类型中使用 SQL_SS_TABLE *ValueType* SQLBindParameter 或尝试参数对其进行设置 SQL_DESC_TYPE SQL_SS_TABLE 到应用程序参数描述符 (APD) 记录中，返回 SQL_ERROR 和诊断记录将生成带有 SQLSTATE = HY003，"应用程序缓冲区类型无效"。  

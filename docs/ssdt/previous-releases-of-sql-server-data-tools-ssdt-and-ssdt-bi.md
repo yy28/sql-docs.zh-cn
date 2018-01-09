@@ -1,11 +1,11 @@
 ---
 title: "以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）| Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2017
-ms.prod: ssdt
-ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.date: 12/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
 ms.technology: tools-ssdt
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b6362b3ce5bfcde50854fe2fe78273d1adae699
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72f038b58f16dfaebb7ca64569afe76757ff3540
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库、Analysis Services 模型、Reporting Services 报表和 Integration Services 包）提供项目模板和设计图面。  
@@ -39,6 +39,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 
 |发行版本| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| \* 不适用|
 |17.2|[SSDT for VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* 不适用|
 |17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* 不适用|
 |17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* 不适用|

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d4b3c24a3bfe2b9babcc13d9e9263a4457676bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
 -   挖掘结构  
   
--   分区  
+-   “度量值组”  
   
  若要控制处理的对象，**过程**命令具有可以设置的各种属性。 **过程**命令具有控制属性： 将执行多少处理、 将处理哪些对象、 是否使用的外部绑定、 如何处理错误，以及如何管理写回表。  
   

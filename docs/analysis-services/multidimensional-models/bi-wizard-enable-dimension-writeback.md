@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8f2ddac65e4ffbb24118a498f96dad83c2c138d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 69390faf39311c3b7072e06aff2b64fcafd9a62c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>BI 向导-启用维度写回
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将维度写回增强功能添加到多维数据集或维度中，允许用户手动修改维度结构和成员。 对允许写维度的更新直接记录在该维度表中。 此增强功能更改了维度的 **WriteEnabled** 属性设置。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="setting-dimension-writeback-capability"></a>设置维度写回功能  
  在向导的第二个 **“启用维度写回”** 页中，实际设置 **“在维度中启用写回”** 选项。 选择此选项将使维度的 **WriteEnabled** 属性自动设置为 **True**。 清除此选项将使该属性自动设置为 **False**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  创建新成员时，必须包括维度中的所有属性。 您不能插入未指定维度的键属性值的成员。 因此，创建成员时，应服从对维度表定义的任何约束（例如，非空键值）。 您还应该考虑可能由维度属性指定的列，例如在 **CustomRollupColumn**、 **CustomRollupPropertiesColumn** 或 **UnaryOperatorColumn** 维度属性中指定的列。  
   
 > [!WARNING]  

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在多维数据集、 分区或维度对象上的错误配置属性确定在处理期间出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  **针对特定错误的服务器响应**  
   
-|属性|默认|其他值|  
+|“属性”|，则“默认”|其他值|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> 当初始化错误配置时发生。|**IgnoreError** 不对错误进行记录和计数；只要错误计数低于最大限制，处理便会继续。|**ReportAndContinue** 对错误进行记录和计数。<br /><br /> **ReportAndStop** 报告错误并立即停止处理（与错误限制无关）。|  
 |**KeyNotFound**<br /><br /> 当事实数据表中的外键在相关维度表中没有匹配主键时（例如，“销售量”事实数据表的某个记录的产品 ID 在“产品”维度表中不存在）发生。 此错误可能会在分区处理或雪花状维度的维度处理过程中发生。|**ReportAndContinue** 对错误进行记录和计数。|**ReportAndStop** 报告错误并立即停止处理（与错误限制无关）。<br /><br /> **IgnoreError** 不对错误进行记录和计数；只要错误计数低于最大限制，处理便会继续。 触发此错误的记录在默认情况下会转换为未知成员，但是您通过更改 **KeyErrorAction** 属性弃用这些记录。|  

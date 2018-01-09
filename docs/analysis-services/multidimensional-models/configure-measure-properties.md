@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -51,11 +48,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0ff496e40e85387e492fc6cfe355035c0e271ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-properties"></a>配置度量值属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]度量值具有使您能够定义的属性如何度量值的工作，并控制如何向用户显示度量值。  
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="measure-properties"></a>度量值属性  
  度量值从其所属的度量值组中继承某些属性，除非这些属性在度量值级别被覆盖。 度量值属性确定度量值的聚合方式、它的数据类型、对用户的显示名称、度量值将在其中出现的显示文件夹、它的格式字符串、任何度量值表达式、基础源列和它对用户的可见性。  
   
-|属性|定义|  
+|“属性”|定义|  
 |--------------|----------------|  
 |**AggregateFunction**|必需的。 确定度量值的聚合方式。 **Sum** 是默认聚合。 有关详细信息，请参阅针对每个函数说明的 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 。|  
 |**DataType**|必需的。 指定与度量值绑定的基础事实数据表中的列的数据类型。 默认情况下，此值从源列继承。|  

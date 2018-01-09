@@ -1,13 +1,13 @@
 ---
 title: "创建本地包存储库使用 miniCRAN |Microsoft 文档"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f78470d347c96186f0960530a7482d22e4bc4e49
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 066e09747684ede5837d93736f32792736b8985d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>创建本地包存储库使用 miniCRAN
 
@@ -34,7 +34,12 @@ ms.lasthandoff: 12/20/2017
 
 -   [手动下载并将包逐个复制](#bkmk_manual)
 
-本指南介绍了如何创建 R 程序包存储库使用这两种方法，并建议使用的**miniCRAN**包。
+    你可以下载的包的描述文件中找到从属包的列表。 
+    
+    但是，包列入**导入**可能存在第二级依赖关系。 为此，我们建议使用**miniCRAN**方法。
+
+> [!TIP]
+> 你知道你可以使用 miniCRAN 准备包在 Azure 机器学习中使用吗？ 有关详细信息，请参见以下博客： [Azure ML，通过王小兰 Usuelli 中使用 miniCRAN](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="prepare-packages-using-minicran"></a>准备使用 miniCRAN 包
 
@@ -51,6 +56,9 @@ ms.lasthandoff: 12/20/2017
 -   **改进的版本管理**： 在多用户环境中，有很好的理由，为了避免不受限制的安装在服务器上的多个包版本。
 
 创建之后存储库，你可以修改它通过添加新包或现有包的版本升级。
+
+> [!NOTE]
+> MiniCRAN 包本身是依赖于 18 其他 CRAN 包，在其中是 RCurl 包，后者在 curl devel 包上具有系统依赖项。 同样，包 XML libxml2 devel 具有的依赖关系。 因此，我们建议你生成本地存储库最初具有完全的 Internet 访问权限的计算机上，以便你可以轻松地满足所有这些依赖关系。 创建后，你可以移动到其他位置存储库。
 
 ### <a name="step-1-install-the-minicran-package"></a>步骤 1. 安装 miniCRAN 包
 
@@ -71,9 +79,11 @@ ms.lasthandoff: 12/20/2017
     CRAN_mirror \<- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
     ```
 
-2.  指示要在其中存储收集的包的本地文件夹。 您不需要命名文件夹 miniCRAN 中;它可能是更具描述性的名称，例如"GeneticsPackages"或"ClientRPackages1.0.2"。
+2.  键入要在其中存储收集的包的本地文件夹的名称。 
 
-    只需请确保事先创建文件夹。 如果引发错误`local_repo`文件夹不存在时更高版本运行的 R 代码。
+    请确保事先创建文件夹。 如果引发错误`local_repo`文件夹不存在时更高版本运行的 R 代码。
+
+    文件夹应具有的描述性名称。 例如，请避免使用"miniCRAN"，并改为类似"GeneticsPackages"或"TeamRPackages1.0.2"中键入的内容。
 
     ```R
     local_repo <- "~/miniCRAN"
@@ -85,14 +95,14 @@ ms.lasthandoff: 12/20/2017
 
 1.  安装 miniCRAN 后，创建指定你想要下载的其他包的列表。
 
-    向此初始列表; 不会添加任何依赖项**igraph** miniCRAN 所使用的包将为你生成依赖项列表。 有关如何使用此图的详细信息，请参阅[使用 miniCRAN 来标识包的依赖项](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)。
+    向此初始列表; 不会添加任何依赖项**igraph** miniCRAN 所使用的包将为你生成依赖项列表。 有关如何使用生成的依赖项关系图的详细信息，请参阅[使用 miniCRAN 来标识包的依赖项](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)。
 
     下面的 R 脚本演示如何获取目标包、"zoo"和"预测"。
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
     ```
-2. （可选） 绘制依赖项关系图，这会提供有用的信息并查找冷。
+2. 它不需要你绘制依赖项关系图中，但它会提供有用的信息。
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -124,15 +134,15 @@ ms.lasthandoff: 12/20/2017
 
 具体取决于 SQL Server 的版本，有两个选项用于向与 SQL Server 实例关联的 R 库中添加新的包：
 
--   将安装到使用 miniCRAN 存储库和 R 工具的实例库。
+- 将安装到使用 miniCRAN 存储库和 R 工具的实例库。
 
--   将包上载到 SQL 数据库，并借助创建外部库语句为每个数据库分别安装程序包。 请参阅[在 SQL Server 上安装其他 R 包](install-additional-r-packages-on-sql-server.md)。
+- 将包上载到 SQL Server 数据库，并使用创建外部库语句进行安装。 此选项需要 SQL Server 自 2017 年。 请参阅[在 SQL Server 上安装其他 R 包](install-additional-r-packages-on-sql-server.md)。
 
 以下过程描述如何使用安装包 R 工具。
 
-1.  将复制包含 miniCRAN 存储库，其完整，将在其中安装包的服务器到的文件夹。
+1. 将复制包含 miniCRAN 存储库，其完整，到你计划安装这些包的服务器的文件夹。
 
-2.  打开 R 命令提示符使用与实例关联的 R 工具。
+2. 打开 R 命令提示符使用与实例关联的 R 工具。
 
     - 对于 SQL Server 自 2017 年，默认文件夹是`C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`。
 
@@ -142,16 +152,16 @@ ms.lasthandoff: 12/20/2017
 
     -  如果你将 SQL Server 安装到了一个不同的驱动器，或者在安装路径中执行了任何其他更改，请务必同样执行这些更改。
 
-3.  （在情况下你的用户目录中），实例库中获取的路径，并将其添加到的库路径的列表。
+3.  获取实例库的路径，并将其添加到的库路径的列表。
 
     ```R
     .libPaths()[1]  
     lib \<- .libPaths()[1]
     ```
 
-    这应会返回实例路径，"c: / Program 文件/Microsoft SQL Server/MSSQL14。MSSQLSERVER/R_SERVICES/库"
+    在 SQL Server 上，此命令应返回与该实例，如关联的库的路径:"c: / Program 文件/Microsoft SQL Server/MSSQL14。MSSQLSERVER/R_SERVICES/库"
 
-2.  指定在其中复制 mininCRAN 存储库中的服务器上的位置`server_repo`。
+4.  指定在其中复制 mininCRAN 存储库中的服务器上的位置`server_repo`。
 
     在此示例中，我们假设存储库复制到你在服务器上的用户文件夹。
 
@@ -159,29 +169,26 @@ ms.lasthandoff: 12/20/2017
     R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
     ```
 
-3.  由于在服务器上新的 R 工作区中操作，你还必须提供要安装程序包的列表。
+5.  由于在服务器上新的 R 工作区中操作，你还必须提供要安装程序包的列表。
 
     ```R
     tspackages <- c("zoo", "forecast")
     ```
 
-4.  使用安装包，miniCRAN 存储库的本地副本的路径。
+6.  提供 miniCRAN 存储库的本地副本路径的包安装。
 
     ```R
     install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
     ```
 
-5.  现在，查看已安装的软件包。
+7.  从实例库中，你可以查看已安装的软件包使用类似于以下命令：
 
     ```R
     installed.packages()
     ```
 
 > [!NOTE] 
-> 
-> 在 SQL Server 自 2017 年，其他数据库角色和 T-SQL 语句来提供可帮助服务器管理员通过包管理权限。 如果需要的话，请使用 R 或 T-SQL 的数据库管理员可以拥有安装包时，的任务。 但是，DBA 还可以使用角色来使用户能够安装其自己的包。 有关详细信息，请参阅[for SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)。
-> 
-> 在 SQL Server 2016 中，服务器管理员必须包从 miniCRAN 存储库安装到的实例使用的默认库。 若要执行此操作，使用的 R 工具中所述[前面部分](#bkmk_Rtools)。
+> 在 SQL Server，服务器管理员必须包从 miniCRAN 存储库安装到的实例使用的默认库。 
 
 ## <a name="manually-download-single-packages"></a>手动下载单个包
 
@@ -189,11 +196,11 @@ ms.lasthandoff: 12/20/2017
 
 在下载包之后, 从压缩的文件位置安装 R 包。
 
-1.  下载包 zip 文件，并将它们保存在本地文件夹
+1. 下载包 zip 文件，并将它们保存在本地文件夹
 
-2.  将复制到该文件夹[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]计算机。
+2. 将复制到该文件夹[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]计算机。
 
-3.  将包安装到 SQL Server 实例库。
+3. 将包安装到 SQL Server 实例库。
 
 > [!NOTE]
 > 当你使用 R 工具安装包时，它们将安装的实例作为一个整体。 

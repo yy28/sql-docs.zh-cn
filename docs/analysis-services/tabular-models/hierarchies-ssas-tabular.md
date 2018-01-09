@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchies"></a>层次结构
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]层次结构，在表格模型中，是定义表中的两个或多个列之间的关系的元数据。 层次结构可与报表客户端字段列表中的其他列单独出现，使客户端用户可以更方便地在报表中导航和包含数据。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  创建层次结构后，可以使用“在 Excel 中分析”功能来测试其效能。 有关详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |任务|Description|  
 |----------|-----------------|  

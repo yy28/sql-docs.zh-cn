@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet**元素是用于定义关联的复杂类型。 在 CSDLBI 数据模型中，关联是指两个表之间的关系。  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="applicable-attributes"></a>适用的属性  
  下表列出了用于定义 **AssociationSet** 元素的元素和属性。  
   
-|名称|是否必需|Description|  
+|“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |State|是|指示关联是否有效的字符串。 值由 State 元素定义。|  
-|Hidden|“否”|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 **false**，表示所有关系在模型中均可见。|  
+|Hidden|是|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 **false**，表示所有关系在模型中均可见。|  
   
 ## <a name="state-element"></a>State 元素  
  **State** 元素是一种简单类型，说明关联是否处于活动状态，如果处于活动状态，则可用于计算；如果处于非活动状态，则必须在计算中显式引用。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  下表列出了 **State** 元素的值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |在职|关联处于活动状态。|  
 |Inactive|关联处于活动状态。|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f939c078a2b21cfa16a4f36228b46822f2bc8457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>配置使用情况数据收集 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用情况数据收集是场级别 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
@@ -132,7 +129,7 @@ ms.lasthandoff: 12/08/2017
   
      数据实际在发生下一个事件时被数据。 仅当系统处理某一事件时，才检查对使用情况数据历史记录的限制。  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
  有关如何收集和存储使用情况数据的详细信息，请参阅 [PowerPivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
   
@@ -155,7 +152,7 @@ ms.lasthandoff: 12/08/2017
   
      超出此限制的任何请求输入“超出” 类别。 对于“超出” 类别，没有可配置的阈值。 根据您在“长请求上限”中指定的上限推断出该值。 属于“超出”类别的请求的运行时间长于您定义的 SLA 所允许的时间。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="ttr"></a> 指定向使用情况数据收集系统报告查询统计信息的频率  
  生成报告的时间间隔指定向使用情况数据收集系统报告查询统计信息的频率。 查询统计信息在进程中累积，并且定期作为单个事件报告。 您可以调整该时间间隔以便写入日志文件的间隔更长或更短。  
@@ -170,7 +167,7 @@ ms.lasthandoff: 12/08/2017
   
      如果您将该值提高得过多，则在报告之前可能会丢失统计信息。 例如，服务重新启动将导致查询统计信息丢失。 相反，如果内置活动报告中显示数据不足，请考虑减少该时间间隔以便更频繁地获取生成报告事件。  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
 ##  <a name="openconfig"></a> 打开“Power Pivot 服务应用程序”页以访问配置设置  
  您必须是场管理员或服务管理员才能修改服务应用程序设置。 如果在场中定义了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须单独修改每个应用程序。  

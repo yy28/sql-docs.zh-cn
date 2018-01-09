@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 07c2eb15addda49071fa962518eae322c014d8ad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datasources-object-tmsl"></a>数据源对象 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definition"></a>对象定义  
  所有对象都有一组通用的属性，包括名称、 类型、 说明、 一个属性集合和批注。 **数据源**对象还具有以下属性。  
   
- 类型  
+ type  
  DataSource 的类型。 目前，唯一有效的值是提供程序 (1)-标准连接字符串。  
   
  connectionString  

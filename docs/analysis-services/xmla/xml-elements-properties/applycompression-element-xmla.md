@@ -1,5 +1,5 @@
 ---
-title: ApplyCompression Element (XMLA) | Microsoft Docs
+title: "ApplyCompression 元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: analysis-services
@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ApplyCompression Element
@@ -28,16 +26,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cb1618cdbdb3ab857c115803dc873c4666ef972
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98dcbdc9224fe87ff03e0a487c7ed215d2462ebc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="applycompression-element-xmla"></a>ApplyCompression Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)] Determines whether the parent [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) command compresses the backup file.  
+# <a name="applycompression-element-xmla"></a>ApplyCompression 元素 (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]确定是否父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令压缩备份文件。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>语法  
   
 ```xml  
   
@@ -48,24 +46,24 @@ ms.lasthandoff: 12/08/2017
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>Element Characteristics  
+## <a name="element-characteristics"></a>元素特征  
   
-|Characteristic|Description|  
+|特征|Description|  
 |--------------------|-----------------|  
-|Data type and length|Boolean|  
-|Default value|True|  
-|Cardinality|0-1: Optional element that can occur once and only once.|  
+|数据类型和长度|Boolean|  
+|默认值|True|  
+|基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
-## <a name="element-relationships"></a>Element Relationships  
+## <a name="element-relationships"></a>元素关系  
   
-|Relationship|Element|  
+|关系|元素|  
 |------------------|-------------|  
-|Parent elements|[Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|  
-|Child elements|None|  
+|父元素|[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|  
+|子元素|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>See Also  
- [Properties &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另请参阅  
+ [属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

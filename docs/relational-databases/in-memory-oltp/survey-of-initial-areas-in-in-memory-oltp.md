@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31f39703450ba5fdb157a7d3fd88f6459d222c77
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
 稍后你可以查看以下文章，这些文章提供从内存中 OLTP 获取性能的演示：  
   
 - [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
-- [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供了更大规模的演示。  
+- [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  
   
   
   
@@ -253,7 +253,7 @@ CREATE PROCEDURE 语句上的 T-SQL 关键字 NATIVE_COMPILATION 是如何创建
 ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。  
   
 - 不能对内存优化表运行 CREATE INDEX 和 DROP INDEX，但可使用 ALTER TABLE...ADD/DROP INDEX。  
-- 有关详细信息，请参阅[变更内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。  
+- 有关详细信息，请参阅 [变更内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。  
   
   
 #### <a name="plan-your-memory-optimized-tables-and-indexes"></a>规划内存优化表和索引  
@@ -414,30 +414,25 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 - [应用程序级分区](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [用于对内存优化表进行分区的应用程序模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>本机过程的权衡  
   
-  
 - 本机编译的存储过程不能访问基于磁盘的表。 本机过程只能访问内存优化表。  
 - 如果本机过程在服务器或数据库最近一次重新联机后第一次运行，则本机过程必须重新编译一次。 这会导致在本机过程开始运行前出现延迟。  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>内存优化表的高级注意事项  
   
-  
-[内存优化表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 在某些方面与传统的磁盘上表中的索引有所不同。  
-  
-- 仅内存优化表可使用[哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 。  
-  
+[内存优化表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) 在某些方面与传统的磁盘上表中的索引有所不同。 仅内存优化表可使用哈希索引。
+    
+- [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [用于内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 你必须计划以确保有足够的活动内存可用于计划的内存优化表及其索引。 请参阅：  
   
 - [创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 可使用 DURABILITY = SCHEMA_ONLY 声明内存优化表：  
   
@@ -445,17 +440,13 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 - 当数据库重新联机时，将内存优化表重新加载到活动内存中，数据为空。  
 - 当涉及到成千上万个行时，SCHEMA_ONLY 表可作为 tempdb 中 [#temporary 表](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 的上级替代项。  
   
-  
 也可以将表变量声明为内存优化变量。 请参阅：  
   
 - [通过使用内存优化获得更快的临时表和表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>本机编译模块的高级注意事项  
-  
   
 通过 Transact-SQL 提供的本机编译模块的类型包括：  
   
@@ -465,7 +456,6 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
   - 只允许对内存优化表使用本机编译的触发器。  
 - 本机编译的 [表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 本机编译的用户定义函数 (UDF) 比解释型 UDF 运行速度更快。 下面是一些关于 UDF 的注意事项：  
   
@@ -477,15 +467,13 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 有关本机 UDF 性能的测试数据和说明，请参阅：  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [Gail Shaw 编写的好博客文章](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)，发布日期为 2016 年 1 月。  
-  
+  - [本机编译的用户定义函数](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)博客文章，作者 Gail Shaw，发布日期 2016 年 1 月。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>内存优化表的文档指南  
   
-  
-以下是讨论内存优化表的特殊注意事项的其他文章的链接：  
+请参阅讨论内存优化表的特殊注意事项的其他文章：  
   
 - [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
@@ -498,9 +486,7 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 - [对内存中 OLTP 的 Transact-SQL 支持](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - 内存优化表和本机过程支持和不支持的 T-SQL 和数据类型。  
 - [将具有内存优化表的数据库绑定至资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)，它讨论可选的高级注意事项。  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>本机过程的文档指南  
@@ -513,9 +499,8 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
   
 ## <a name="related-links"></a>相关链接  
   
-- 初始文章： [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+- 初始文章：[内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+    
 以下文章介绍了某些代码，演示了通过使用内存中 OLTP 可实现的性能提升：  
   
 - [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  

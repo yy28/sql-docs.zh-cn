@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: ragged hierarchies [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>用户定义的层次结构的不规则层次结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]不规则层次结构是用户定义层次结构，具有不均匀的级别数目。 常见示例包括高级别经理将部门经理人员和非经理人员作为直接下属的组织图或是由“国家-地区-城市”组成的地理层次结构（其中某些城市没有父级“州”或“省”，如“华盛顿特区”、“梵蒂冈城”或“新德里”）。  

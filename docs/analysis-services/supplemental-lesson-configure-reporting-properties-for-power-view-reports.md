@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>补充课-为 Power View 报表配置报表属性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
 学完本课的估计时间： **30 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
 为了完成这一特定的补充课程，您还必须具备以下各项：  
   
@@ -155,19 +155,19 @@ ms.lasthandoff: 12/08/2017
   
     **Customer**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|数据格式|短日期|  
   
-    **日期**  
+    **Date**  
   
     > [!NOTE]  
     > 因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅 SQL Server 联机丛书中的[指定“标记为日期表”以便用于时间智能（SSAS 表格）](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
-    |日期|数据格式|短日期|  
+    |date|数据格式|短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|按列排序|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -182,14 +182,14 @@ ms.lasthandoff: 12/08/2017
   
     **地域**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|默认标签|True|  
@@ -199,7 +199,7 @@ ms.lasthandoff: 12/08/2017
   
     **Internet Sales**  
   
-    |列|属性|“值”|  
+    |“列”|“属性”|ReplTest1|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

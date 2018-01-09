@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>配置磁盘空间使用情况 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用主计算机的磁盘空间到缓存[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]更快地重新加载需要的数据库。 在内存中加载的每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
@@ -99,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  单击 **“确定”** 保存所做的更改。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装提供运行状况规则，以便可以在服务器运行状况、配置或可用性中检测到问题时采取纠正措施。 其中某些规则使用配置设置来确定触发运行状况规则的条件。 如果您在主动优化服务器性能，则最好还要检查这些设置以便确保默认值最适合您的系统。 有关详细信息，请参阅 [配置 PowerPivot 运行状况规则](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
   
 ## <a name="see-also"></a>另请参阅  

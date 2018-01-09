@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DimensionPermissions Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 067ee1bf3c853c6136e3cfac4e9cdd82d036e99b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d4621358267f2741b87b739e671a0f00874d3862
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensionpermissions-element-assl"></a>DimensionPermissions 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的权限适用于集合[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md)元素或[CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md)元素。  
@@ -51,10 +49,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |父元素|[CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md)，[维度](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
 |子元素|[DimensionPermission](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关**CubePermission**元素， **DimensionPermission**此集合中的元素重写中指定的权限**DimensionPermissions**的每个集合显式引用的维度。 如果此集合中未引用维度则**CubePermission**元素继承中指定的权限**DimensionPermissions**维度的集合。  
   
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.DimensionPermissionCollection>。  

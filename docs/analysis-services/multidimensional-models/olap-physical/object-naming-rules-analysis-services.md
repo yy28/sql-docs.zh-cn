@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题介绍对象命名约定，以及保留的字和字符，不能在任何对象名称，在代码中的或在脚本[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/08/2017
   
  下表列出了特定对象的无效字符。  
   
-|对象|无效字符|  
+|Object|无效字符|  
 |------------|------------------------|  
 |**Server**|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 请参阅[命名约定 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx)有关详细信息。|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  

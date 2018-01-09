@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38eb6dae47c01758b3ca3b5c04794014b247b495
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回列表的内部内存配额授予执行的服务器当前运行的作业。 若要查明作业是否在服务器上运行，请使用 `Select * from $System.Discover_Jobs`。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**MEMORY_ID**|**是 DBTYPE_I8**||用于标识内存配额授予的数字。 在单个 DISCOVER_MEMORYGRANT 请求的上下文中是唯一的。|  
-|**SPID**|**DBTYPE_I4**|必需|SPID，可通过运行 `Select * from $System.Discover_Sessions` 获得它。|  
+|**SPID**|**DBTYPE_I4**|Required|SPID，可通过运行 `Select * from $System.Discover_Sessions` 获得它。|  
 |**CreationTime**|**是 DBTYPE_I8 DBTYPE_DBTIMESTAMP**||授予配额的时间。|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||上次修改配额请求的时间。|  
 |**MemoryUsed**|**DBTYPE_I4**||在与配额建立关联时使用的内存量。|  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd23-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|MemoryGrant|  

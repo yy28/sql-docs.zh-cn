@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3e78f2941cd7729576647eb96bf21c717664fcf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多维模型数据库 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库是数据源、 数据源视图、 多维数据集、 维度和角色的集合。 此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库可以选择包含数据挖掘的结构以及一些自定义程序集，通过这些程序集，您可以将用户定义函数添加到数据库。  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通过与源代码管理软件集成来支持多个开发人员同时使用一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的不同对象。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发人员也可以与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库直接进行交互，而不通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，但是这样做的风险是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象可能会与用于其部署的  项目不同步。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署之后，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来管理  数据库。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（例如对分区和角色）进行某些更改，这些更改也可能会导致 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象与用于其部署的  项目不同步。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
  [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

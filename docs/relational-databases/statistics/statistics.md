@@ -1,7 +1,7 @@
 ---
 title: "统计信息 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -30,18 +30,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 44f813225666c0d4259c061488d776318a27ba72
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询优化器使用统计信息来创建可提供查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
   
 ##  <a name="DefinitionQOStatistics"></a> 组件和概念  
 ### <a name="statistics"></a>统计信息  
- 查询优化的统计信息是一些对象，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，根据谓词，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
+ 查询优化的统计信息是二进制大型对象 (BLOB)，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，根据谓词，查询优化器可以使用基数估计选择索引查找运算符而不是耗费更多资源的索引扫描运算符，从而提高查询性能。  
   
  每个统计信息对象都在包含一个或对个表列的列表上创建，并且包括将值的分布显示在第一列的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/27/2017
 
 下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "直方图") 
   
 对于以上每个直方图步骤：
 -   粗线表示上限值 (range_high_key) 和上限值的出现次数 (equal_rows)  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/27/2017
 
 ### <a name="filtered-statistics"></a>筛选的统计信息  
  筛选统计信息可以提高以下从定义完善的数据子集选择数据的查询的查询性能。 筛选统计信息使用筛选器谓词来选择统计信息中包括的数据子集。 与全表统计信息相比，设计完美的筛选统计信息可以改进查询执行计划。 有关筛选器谓词的详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。 有关何时创建筛选的统计信息的详细信息，请参阅本主题中的 [何时创建统计信息](#CreateStatistics) 部分。  
-  
+ 
 ### <a name="statistics-options"></a>统计信息选项  
  可以设置三个选项来影响何时以及如何创建和更新统计信息。 这些选项仅在数据库级别设置。  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/27/2017
   
  查询优化器通过使用 AUTO_CREATE_STATISTICS 选项创建统计信息时，统计信息名称以 `_WA` 开头。 可以使用下面的查询来确定查询优化器是否为查询谓词列创建了统计信息。  
   
-```t-sql  
+```sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -118,8 +118,8 @@ ORDER BY s.name;
 
 * 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 乘以当前的表基数所得结果的平方根。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
 
-  > [!IMPORTANT]
-  > 从 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 开始到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低于 130，且使用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。
+> [!IMPORTANT]
+> 从 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 开始到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低于 130，且使用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。
   
 查询优化器在编译查询和执行缓存查询计划前，检查是否存在过期的统计信息。 在编译某一查询前，查询优化器使用查询谓词中的列、表和索引视图确定哪些统计信息可能过期。 在执行缓存查询计划前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 确认该查询计划引用最新的统计信息。  
   
@@ -143,25 +143,19 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
   
 * 您的应用程序遇到了客户端请求超时，这些超时是由于一个或多个查询正在等待更新后的统计信息所导致的。 在某些情况下，等待同步统计信息可能会导致应用程序因过长超时而失败。  
   
-#### <a name="incremental-stats"></a>INCREMENTAL STATS  
- 为 ON 时，根据分区统计信息创建统计信息。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息。 默认为 OFF。 此设置覆盖数据库级别 INCREMENTAL 属性。  
+#### <a name="incremental"></a>INCREMENTAL  
+ CREATE STATISTICS 的 INCREMENTAL 选项为 ON 时，创建的统计信息为每个分区的统计信息。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息。 默认为 OFF。 此设置覆盖数据库级别 INCREMENTAL 属性。 要深入了解如何创建增量统计信息，请参阅 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。 要深入了解如何自动创建每个分区的统计信息，请参阅[数据库属性（“选项”页）](../../relational-databases/databases/database-properties-options-page.md#automatic)和 [ALTER DATABASE SET 选项 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
   
  在将新分区添加到某个大型表时，应更新统计信息以便包括这些新分区。 但是，浏览整个表（FULLSCAN 或 SAMPLE 选项）所需的时间可能会相当长。 此外，因为可能只需针对新分区的统计信息，所以，扫描整个表不是必需的。 该增量选项将在每个分区的基础上创建和存储统计信息，并且在更新时，只刷新需要新统计信息的那些分区上的统计信息  
   
  如果不支持每个分区统计信息，将忽略该选项并生成警告。 对于以下统计信息类型，不支持增量统计信息：  
   
 * 使用未与基表的分区对齐的索引创建的统计信息。  
-  
 * 对 Always On 可读辅助数据库创建的统计信息。  
-  
 * 对只读数据库创建的统计信息。  
-  
 * 对筛选的索引创建的统计信息。  
-  
 * 对视图创建的统计信息。  
-  
 * 对内部表创建的统计信息。  
-  
 * 使用空间索引或 XML 索引创建的统计信息。  
   
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
@@ -179,12 +173,9 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
   
 在以下任何情况适用时，考虑使用 CREATE STATISTICS 语句创建统计信息：  
 
-* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议创建统计信息。  
-
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问建议创建统计信息。 
 * 查询谓词包含尚不位于相同索引中的多个相关列。  
-
 * 查询从数据的子集中选择数据。  
-
 * 查询缺少统计信息。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查询谓词包含多个相关列  
@@ -196,7 +187,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
   
 为了创建用于基数估计的密度，查询谓词中的列必须匹配统计信息对象定义中列的前缀之一。 例如，以下内容在列 `LastName`、 `MiddleName`和 `FirstName`上创建多列统计信息对象。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -223,7 +214,7 @@ GO
   
 查询优化器可使用 `BikeWeights` 筛选的统计信息来改进下面这个查询的查询计划，此查询选择重量超过 `25` 的所有自行车。  
   
-```t-sql  
+```sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -241,9 +232,7 @@ GO
  如果缺少统计信息，则执行以下步骤：  
   
 * 确认 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 和 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 为 ON。  
-  
 * 请确保数据库不是只读的。 如果数据库是只读的，则无法保存新统计信息对象。  
-  
 * 通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建缺少的统计信息。  
   
 当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
@@ -251,7 +240,6 @@ GO
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
   
 * 使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 语句删除临时统计信息。  
-  
 * 使用 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 和 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
@@ -268,11 +256,9 @@ GO
  在以下情况下考虑更新统计信息：  
   
 * 查询执行时间很长。  
-  
 * 在升序或降序键列上发生插入操作。  
-  
 * 在维护操作后。  
-  
+
 ### <a name="query-execution-times-are-slow"></a>查询执行时间很长  
  如果查询响应时间很长或不可预知，则在执行其他故障排除步骤前，确保查询具有最新的统计信息。  
   
@@ -316,7 +302,7 @@ GO
   
      例如，以下存储过程 `Sales.GetRecentSales` 将在 `@date` 为 NULL 时更改参数 `@date` 的值。  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -335,7 +321,7 @@ GO
   
      如果对存储过程 `Sales.GetRecentSales` 的首次调用为 `@date` 参数传递了 NULL，则查询优化器将使用针对 `@date = NULL` 的基数估计编译存储过程，即使查询谓词不是使用 `@date = NULL`调用的。 此基数估计可能与实际查询结果中的行数差别很大。 因此，查询优化器可能会选择非最佳查询计划。 若要避免此情况发生，您可以按如下所示将存储过程重新编写成两个过程：  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -365,7 +351,7 @@ GO
   
  对于某些应用程序，每次执行查询时都重新编译查询可能会占用过多时间。 `OPTIMIZE FOR` 查询提示可对此给予帮助，即使不使用 `RECOMPILE` 选项。 例如，可以将 `OPTIMIZE FOR` 选项添加到存储过程 Sales.GetRecentSales，以便指定一个特定的日期。 以下示例将 `OPTIMIZE FOR` 选项添加到 Sales.GetRecentSales 过程。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -401,4 +387,5 @@ GO
  [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
- 
+ [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)

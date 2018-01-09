@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db04c042238a82e090e13c795c96114207526e31
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>使用数据源视图设计器中的关系图 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据源视图 (DSV) 关系图是数据源视图中的对象的可视表示。 您可以交互使用该关系图以添加、隐藏、删除或修改特定对象。 还可以对同一 DSV 创建多个关系图以特别关注对象的某个子集。  

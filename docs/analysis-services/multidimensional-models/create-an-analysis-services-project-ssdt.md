@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>创建 Analysis Services 项目 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以定义[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]通过使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目模板或通过使用导入[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库向导可以读取的内容[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 如果 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中当前未加载解决方案，则创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的同时将自动创建一个新的解决方案。 否则，新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目将添加到现有的解决方案中。 针对解决方案开发的最佳做法要求为不同类型的应用程序数据创建单独的项目，并且在项目相关时使用单个解决方案。 例如，您可能具有单个解决方案，该解决方案为 Integration Services 包、Analysis Services 数据库和 Reporting Services 报表包含不同的项目，它们全都由相同的业务应用程序使用。  
@@ -67,11 +64,11 @@ ms.lasthandoff: 12/08/2017
   
 5.  若要将新项目添加到现有解决方案，请在“解决方案”下拉列表中选择“添加到解决方案”。  
   
-     - 或 -  
+     — 或 —  
   
      若要创建新的解决方案，请在“解决方案”下拉列表中选择“创建新解决方案”。 若要为新解决方案创建新的文件夹，请选择 **“创建解决方案的目录”**。 在 **“解决方案名称”**中，键入新解决方案的名称。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ##  <a name="bkmk_NewUsingWizard"></a> 使用现有的 Analysis Services 数据库创建新项目  
  使用导入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库向导可以基于现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象创建项目。 在基于现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，此数据库的元数据将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目中打开。 可以在项目中修改这些对象，而不会影响原始对象，然后可以将这些对象部署到相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（如果部署属性指定该数据库）或部署到新创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以进行比较测试。 直到部署更改之后，所做的更改才会影响现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
@@ -84,7 +81,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  在 **“新建项目”** 对话框的 **“Visual Studio 已安装的模板”** 类别中，选择 **“导入 Analysis Services 数据库”**。  
   
-3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击 **“确定”**。  
+3.  为项目和解决方案输入属性信息，包括文件的名称和位置。 单击“确定” 。  
   
 4.  在 **“欢迎使用导入 Analysis Services 数据库向导”** 页上，单击 **“下一步”**。  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 12/08/2017
   
 |文件夹|Description|  
 |------------|-----------------|  
-|数据源|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据源。 您可以使用数据源向导创建这些对象并可在数据源设计器中对其进行编辑。|  
+|“数据源”|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据源。 您可以使用数据源向导创建这些对象并可在数据源设计器中对其进行编辑。|  
 |数据源视图|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的数据源视图。 您可以使用数据源视图向导创建这些对象并可在数据源视图设计器中对其进行编辑。|  
 |多维数据集|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的多维数据集。 您可以使用多维数据集向导创建这些对象并可在多维数据集设计器中对其进行编辑。|  
 |维度|包含了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的维度。 您可以使用维度向导创建这些对象并可在维度设计器中对其进行编辑。|  

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddde9150e2e748e75cef8fb25f16377c9dcea4b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]利润图显示与使用挖掘模型相关联的估计的利润。 例如，假定您的模型预测在一个业务方案中一个公司应该联系哪些客户。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
      此对话框帮助您指定与目标邮递活动关联的成本和收益。 对于这些示例中所示的图表，我们使用了以下值：  
   
-    |设置|“值”|注释|  
+    |设置|ReplTest1|注释|  
     |-------------|-----------|--------------|  
     |**人口数**|20,000|设置总目标人数的值<br /><br /> 您的数据库可能包含很多客户，但是为了节省邮递开支，您可能选择仅对最有可能回复的前 20,000 个客户发邮件。 您可以通过运行预测查询并且由预测模型按概率输出排序，获得此列表。|  
     |**固定成本**|500|输入为 20,000 人设置目标邮递活动的一次性成本。 这可能包括印刷成本或者设置电子邮件活动的成本。|  

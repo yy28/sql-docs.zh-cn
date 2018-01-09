@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODEL_CONTENT
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0bd29ab1dcd96412710e9d79255119489253bde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 行集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]允许客户端应用程序浏览的数据挖掘模型内容。 客户端应用程序可使用本主题结尾处介绍的特殊树操作限制来浏览挖掘模型的内容。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/08/2017
   
  此限制， **TREE_OPERATION**，不在任何特定的列的**DMSCHEMA_MINING_MODEL_CONTENT**行集; 相反，它指定一个树运算符。 使用者可以指定**NODE_UNIQUE_NAME**限制和树运算符 (**上级**，**子级**，**同级**， **父**，**后代**，**自助**) 以获取请求的成员集。 **自助**运算符包括节点本身的行在列表中返回的行。 下表描述了构成的位图定义的常量**TREE_OPERATION**限制。 可以使用逻辑组合它们**或**运算符。  
   
-|常量|值|  
+|常量|ReplTest1|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0x00000020**|  
 |**DMTREEOP_CHILDREN**|**0x00000001**|  

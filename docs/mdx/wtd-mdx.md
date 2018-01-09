@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: WTD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ae6c37e5d278fba839d3305ee92ba0ddae536030
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Wtd( [ Member_Expression ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果未指定一个成员表达式，默认值是第一个层次结构使用的类型级别的当前成员类型时的第一个维度中的周数 (**Time.CurrentMember**) 度量值组中。  
   
  **Wtd**函数是快捷函数[PeriodsToDate](../mdx/periodstodate-mdx.md)函数其中的级别设置为*周*。 也就是说，`Wtd(Member_Expression)` 等效于 `PeriodsToDate(Week_Level_Expression,Member_Expression)`。  

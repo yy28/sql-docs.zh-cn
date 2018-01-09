@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a32592d58d51c1504f88fb054cee688d657cb93
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>附加命令 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]将 Analysis Services 文件附加到服务器。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 ||||  
 |-|-|-|  
 |**属性**|**Default**|**Description**|  
-|database|[必需]|要附加的数据库对象名称。|  
+|“数据库”|[必需]|要附加的数据库对象名称。|  
 |文件夹|[必需]|包含附加的数据库的文件夹。|  
 |password|Empty|要用于加密附加的数据库中的机密的密码。|  
 |readWriteMode|ReadWrite|一个枚举值，该值指示允许对数据库的访问模式。<br /><br /> **枚举值如下所示：**<br /><br /> 允许 readWrite – 读写访问。<br /><br /> readOnly – 允许只读访问。<br /><br /> 允许 readOnlyExclusive – 只读独占访问。|  
