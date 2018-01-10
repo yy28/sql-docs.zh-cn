@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>创建和配置 Linux 上的 SQL Server 的可用性组
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/04/2018
 > * 创建[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]登录名和 Pacemaker 的权限。
 > * 在 Pacemaker 群集 （仅适用于外部类型） 中创建可用性组资源。
 
-## <a name="prerequisite"></a>先决条件
+## <a name="prerequisite"></a>前提条件
 - 部署 Pacemaker 高可用性群集中所述[为在 Linux 上的 SQL Server 部署 Pacemaker 群集](sql-server-linux-deploy-pacemaker-cluster.md)。
 
 
@@ -357,9 +357,9 @@ sudo systemctl restart mssql-server
 
 11. 如果可读的方案创建了一个侦听器，17.3 或更高版本的 SSMS 将允许只读路由在向导中的创建。 它也可以添加更高版本通过 SSMS 或 TRANSACT-SQL。 若要添加只读路由现在：
 
-    A.  选择只读路由选项卡。
+    a.  选择只读路由选项卡。
 
-    B.  输入只读副本的 Url。 这些 Url 是实例的类似于终结点，，只不过它们使用，不的终结点的端口。
+    b.  输入只读副本的 Url。 这些 Url 是实例的类似于终结点，，只不过它们使用，不的终结点的端口。
 
     c.  选择每个 URL，然后从底部，选择可读副本。 选择多个按下 SHIFT 或单击拖动。
 
@@ -415,7 +415,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -479,7 +479,7 @@ sudo systemctl restart mssql-server
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -551,7 +551,7 @@ Pacemaker 高可用性群集基础[!INCLUDE[ssnoversion-md](../includes/ssnovers
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```

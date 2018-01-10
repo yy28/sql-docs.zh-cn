@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 474bf581a8aec282de1a6bfadc1e716e439f5b47
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安装 SQL Server Integration Services (SSIS)
 
@@ -76,7 +76,7 @@ sudo apt-get install mssql-server-is
 ### <a name="remove-ssis"></a>删除 SSIS
 若要删除`mssql-server-is`，可以运行以下命令：
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="RHEL"></a>在 RHEL 上安装 SSIS

@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 语法约定 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/18/2017
 ||（垂直条）|分隔括号或大括号中的语法项。 只能使用其中一项。|  
 |`[ ]`（方括号）|可选语法项。 不要键入方括号。|  
 |{}（大括号）|必选语法项。 不要键入大括号。|  
-|[**,**...*n*]|指示前面的项可以重复 *n* 次。 各项之间以逗号分隔。|  
-|[...*n*]|指示前面的项可以重复 *n* 次。 每一项由空格分隔。|  
+|[**,**...*n*]|指示上一项可以重复 *n* 次数。 各项之间以逗号分隔。|  
+|[...*n*]|指示上一项可以重复 *n* 次数。 每一项由空格分隔。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符。虽然在此版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中大部分语句不需要分号，但将来的版本需要分号。|  
 |\<标签 >:: =|语法块的名称。 该约定用于对过长语法段或语法单元进行分组和标记，这些语法段或语法单元可在一条语句中的多个位置使用。 可在其中使用语法块的每个位置括在尖括号内的标签指示：\<标签 >。<br /><br /> 一组是集合的表达式，例如\<分组集 >; 列表将集的集合，例如\<复合元素列表 >。|  
   
@@ -118,9 +118,9 @@ ms.lasthandoff: 11/18/2017
  许多代码示例前缀以字母的 Unicode 字符的字符串常量**N**。而无需**N**前缀，该字符串转换为数据库的默认代码页。 此默认代码页可能不识别某些字符。  
   
 ## <a name="applies-to-references"></a>“适用于”引用  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]参考包括与相关的主题[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]。 每个主题的顶部附近是一个指示哪个产品支持本主题要点的部分。 如果省略了某一产品，则主题所述功能在此产品中不可用。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中介绍了可用性组。 **CREATE AVAILABILTY GROUP**主题指出它适用于**SQL Server (SQL Server 2012 至当前版本)**因为它不适用于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]参考包括与相关的文章[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，和[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]。 每篇文章的顶部附近是文章的一个部分指明了哪些产品支持相应主题。 如果省略了某个产品，则不用于该产品文章所述的功能。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中介绍了可用性组。 **CREATE AVAILABILITY GROUP**文章指出它适用于**SQL Server (SQL Server 2012 至当前版本)**因为它不适用于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- 在某些情况下，主题的常规要点可用于某一产品，但所有参数不受支持。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中介绍了包含的数据库用户。 **CREATE USER**语句可在任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品，但是**WITH PASSWORD**语法不能与旧版结合使用。 在此情况下，将其他 **适用于** 部分插入到该主题正文中相应的参数说明中。  
+ 在某些情况下，可以在产品中使用的文章的常规主旨，但并非支持所有自变量。 例如，在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中介绍了包含的数据库用户。 **CREATE USER**语句可在任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品，但是**WITH PASSWORD**语法不能与旧版结合使用。 在此情况下，其他**适用于**部分插入到项目的正文中的相应参数描述。  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)  
