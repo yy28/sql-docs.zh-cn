@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c44e3342fa9c15ecb9924c9fa64a4bc5163a484b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15c30b516ec8d2b19d0f54fb47281c74f7442ec0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
   当随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的控制流和数据流对象不能完全满足你的要求时，可以自己开发各种类型的自定义对象，其中包括：  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/20/2017
 |自定义对象|基类|Attribute|重要方法|  
 |-------------------|----------------|---------------|-----------------------|  
 |任务|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
-|“ODBC 目标编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
+|“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
 |日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>、 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |枚举器|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
 |数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>|<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>、 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/20/2017
 |自定义对象|用户界面的基类|不提自定义供用户界面时的默认编辑行为|  
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
 |任务|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|仅“属性”窗口|  
-|“ODBC 目标编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|仅“属性”窗口|  
+|“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|仅“属性”窗口|  
 |日志提供程序|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> （未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中实现）|“配置”列中的文本框|  
 |枚举器|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|仅“属性”窗口。 编辑器的“枚举器配置”区域为空。|  
 |数据流组件|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|“高级编辑器”|  

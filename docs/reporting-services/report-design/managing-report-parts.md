@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   报表部件可在分页报表中由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  
@@ -57,9 +55,9 @@ ms.lasthandoff: 12/05/2017
   
  (*) 表明它是在此版本中新推出的。  
   
-|属性|Description|报表部件<br /><br /> 库搜索条件|  
+|“属性”|Description|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|名称|这是用户可在报表部件库中搜索的条件之一。|是|  
+|“属性”|这是用户可在报表部件库中搜索的条件之一。|是|  
 |Description|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
 |CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|是|  
 |CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|是|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
   在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁。  
@@ -75,17 +73,17 @@ ms.lasthandoff: 12/05/2017
   
 |接口|Description|实现|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|必需|  
+|IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|Required|  
 |IDbConnectionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件针对安全性和身份验证实现的附加连接属性。|可选|  
-|IDbTransaction|表示本地事务。|必需|  
+|IDbTransaction|表示本地事务。|Required|  
 |IDbTransactionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件实现的附加事务属性。|可选|  
-|IDbCommand|表示在连接到数据源时使用的查询或命令。|必需|  
+|IDbCommand|表示在连接到数据源时使用的查询或命令。|Required|  
 |IDbCommandAnalysis|表示用于分析某一查询并返回在该查询中使用的参数名称列表的附加命令信息。|可选|  
-|IDataParameter|表示传递到命令或查询的参数或名称/值对。|必需|  
-|IDataParameterCollection|表示与某一命令或查询相关的所有参数的集合。|必需|  
-|IDataReader|提供从数据源读取数据的只进、只读流的方法。|必需|  
+|IDataParameter|表示传递到命令或查询的参数或名称/值对。|Required|  
+|IDataParameterCollection|表示与某一命令或查询相关的所有参数的集合。|Required|  
+|IDataReader|提供从数据源读取数据的只进、只读流的方法。|Required|  
 |IDataReaderExtension|提供一种方法来读取一个或多个通过在数据源执行命令所获得的只进结果集流。 此接口为字段聚合提供附加支持。|可选|  
-|IExtension|为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供基类。 还使实现者可为扩展插件包括本地化的名称并将配置设置从配置文件传递到扩展插件。|必需|  
+|IExtension|为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供基类。 还使实现者可为扩展插件包括本地化的名称并将配置设置从配置文件传递到扩展插件。|Required|  
   
  数据处理扩展插件接口将尽可能与 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口、方法和属性的子集完全相同。 有关实现完整 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口的详细信息，请参阅 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 软件开发包 (SDK) 文档中的“实现 .NET Framework 数据访问接口”。  
   

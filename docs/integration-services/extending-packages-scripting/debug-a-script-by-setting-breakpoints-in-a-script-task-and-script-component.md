@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f16bd3fc90efc5c366660f388c5c719ed70185ac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 650db9b84e3a1284c46e923df7771cb079dc9256
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>通过在脚本任务和脚本组件中设置断点来调试脚本
   此过程描述如何在脚本任务和脚本组件所使用的脚本中设置断点。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  在 **“文件”** 菜单中，单击 **“退出”**。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

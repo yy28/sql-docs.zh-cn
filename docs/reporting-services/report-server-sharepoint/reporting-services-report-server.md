@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c595b197cab784eb3ccc1ab34257868ecdc9e87
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
 
@@ -63,16 +61,16 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
 |**配置管理器**|是|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
 |**报表管理器**|是|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。|  
 |**链接报表**|是|否。|  
-|**我的报表**|是|“否”|  
-|**我的订阅** 和批处理方法。|是|“否”|  
-|**数据警报**|“否”|是|  
-|**Power View**|“否”|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**我的报表**|是|是|  
+|**我的订阅** 和批处理方法。|是|是|  
+|**数据警报**|是|是|  
+|**Power View**|是|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 有关浏览器要求的详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**.RDL 报表**|是|是<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
-|**.RDLX 报表**|“否”|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
-|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|“否”|是|  
-|**用于面向 internet 的部署的 AAM 区域**|“否”|是|  
-|**SharePoint 备份和恢复**|“否”|是|  
-|**UL 日志支持**|“否”|是|  
+|**.RDLX 报表**|是|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 Reporting Services 报表服务器上运行。|  
+|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|是|是|  
+|**用于面向 internet 的部署的 AAM 区域**|是|是|  
+|**SharePoint 备份和恢复**|是|是|  
+|**UL 日志支持**|是|是|  
   
 ## <a name="native-mode"></a>本机模式
 
@@ -129,7 +127,7 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
  Reporting Services 提供了默认扩展插件，以便您无需开发自定义组件就可以使用所有服务器功能。 下表说明了有助于提供完整报表服务器实例的默认扩展插件，该实例将提供可供使用的功能：  
   
-|类型|默认|  
+|类型|，则“默认”|  
 |----------|-------------|  
 |身份验证|默认的报表服务器实例支持 Windows 身份验证，包括模拟和委托功能（如果在域中启用了这些功能）。|  
 |数据处理|默认报表服务器实例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion Essbase、SAPBW、OLE DB、并行数据仓库和 ODBC 数据源的数据处理扩展插件。|  

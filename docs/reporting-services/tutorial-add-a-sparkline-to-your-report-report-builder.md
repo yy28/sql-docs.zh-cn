@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2821641b938291ac67fefb08e4e174f8113db033
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. 单击 **“下一步”**。  
+13. 单击“下一步” 。  
   
 ## <a name="Query"></a>2.在表向导中创建查询和表布局  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/05/2017
   
     该查询运行并显示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**字段的结果集。  
   
-5.  单击 **“下一步”**。  
+5.  单击“下一步” 。  
   
 6.  在“排列字段”页上，将 Sales 拖到“值”中。  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
 10. 在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 12. 单击 **“完成”**。  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 12/05/2017
   
      该选项设置在各迷你图中条形相对于其他条形的高度。 
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 5.  右键单击迷你图，然后单击“水平轴属性”。  
   
@@ -252,7 +252,7 @@ ms.lasthandoff: 12/05/2017
   
     该选项设置在各迷你图中条形相对于其他条形的宽度。 如果某些迷你图中的条形比其他迷你图少，则这些迷你图将对于缺失的数据具有空白空间。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  单击“运行”，再次预览报表。  
   
@@ -323,7 +323,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  单击 **“保存”**。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 
 用于创建具有迷你图的表报表的教程到此结束。 有关迷你图的详细信息，请参阅[迷你图和数据条](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   

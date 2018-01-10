@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1df48e67801190ccef4a6e5dce7de92fc5a5bca2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8874b50730037fee6f369c99d5ce860f5f91c95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -174,8 +174,8 @@ public class ScriptMain : UserComponent
   
 |包的功能|访问方法|  
 |---------------------|-------------------|  
-|变量|使用 ComponentWrapper 项目项的 Variables 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Variables 属性公开。<br /><br /> PreExecute 方法仅可访问只读变量。 PreExecute 方法既可以访问只读变量，又可以访问读/写变量。|  
-|Connections|使用 ComponentWrapper 项目项的 Connections 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Connections 属性公开。|  
+|变量|使用 ComponentWrapper 项目项的 Variables 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Variables 属性公开。<br /><br /> PreExecute 方法仅可访问只读变量。 **PostExecute** 方法既可访问只读变量，又可访问读/写变量。|  
+|连接|使用 ComponentWrapper 项目项的 Connections 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 ScriptMain 类的 Connections 属性公开。|  
 |事件|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的 Fire\<X> 方法引发事件。|  
 |日志记录|使用 ScriptMain 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录。|  
   

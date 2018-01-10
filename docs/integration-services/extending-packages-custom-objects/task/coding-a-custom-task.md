@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>编写自定义任务代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
@@ -176,7 +176,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|包含任务可用的变量。 任务通过 VariableDispenser 使用变量，而不直接使用变量。 变量分配器可锁定变量和解除变量锁定，并防止死锁或覆盖。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|包含任务向运行时引擎引发事件而调用的方法。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|包含任务向事件日志写入条目所使用的方法和属性。|  
-|对象|包含容器（如果有）所属的事务对象。 此值作为参数传递给 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法。|  
+|Object|包含容器（如果有）所属的事务对象。 此值作为参数传递给 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法。|  
   
 ### <a name="providing-execution-feedback"></a>提供执行反馈  
  任务将其代码包装到 try/catch 块中，以防止向运行时引擎引发异常。 这样可确保包会完成执行，不会意外停止。 但是，运行时引擎提供了其他机制，可处理任务执行期间可能会出现的错误情况。 这些机制包括发布错误和警告信息、从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 结构返回值、发布消息、返回 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 值以及通过 <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A> 属性提供任务执行结果的信息。  

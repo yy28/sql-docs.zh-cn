@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,13 +25,13 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 464731c279d55f20b725193cde9db1e5f2974bf2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>按规则和分析数据更改多边形、线条和点的显示方式
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  在多边形层、线条层和点层上设置的选项应用于该层上的所有地图元素，无论地图元素是否嵌入到报表定义中。  
   
-2.  为规则设置的选项应用于层上的所有地图元素。 所有数据可视化选项仅应用于与空间数据关联的地图元素。 数据可视化选项要求您指定不同显示方式所基于的数据字段。 必须首先设置分析数据和空间数据的匹配字段，然后才能应用数据可视化规则。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
+2.  为规则设置的选项应用于层上的所有地图元素。 所有数据可视化选项仅应用于与空间数据关联的地图元素。 数据可视化选项要求您指定不同显示方式所基于的数据字段。 必须首先设置分析数据和空间数据的匹配字段，然后才能应用数据可视化规则。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 3.  为所选的嵌入地图元素设置的选项。 请注意，覆盖层选项时，您对报表定义所做的更改是永久性的。 可以更改数据字段值和覆盖显示选项，以自定义层上多边形、线条和点的特定显示方式。  
   

@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e70fc6ee3d65f7618cbccf9fc7bc9f24b65704c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
 
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/05/2017
 
 ![SharePoint 页上的报表查看器 Web 部件](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 * 为了成功加载报表，需要为 Kerberos 约束委派配置 Windows Token Service (C2WTS) 声明。 有关如何配置 C2WTS 的详细信息，请参阅 [Windows Token Service (C2WTS) 和 Reporting Services 声明](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)。
 

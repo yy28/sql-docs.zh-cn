@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7ae2972cdb62c24ed9299b18d3b44de30e17caa8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b1777520453efb9a38b687825249705bf66fd81
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookup-function"></a>报表生成器函数 - Lookup 函数
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  
@@ -54,7 +52,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>返回  
  返回 **Variant**，如果没有匹配项，则返回 **Nothing** 。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 **Lookup** 从指定的数据集中为名称-值对（每对具有 1 对 1 关系）检索值。 例如，对于表中的 ID 字段，可以使用 **Lookup** 从未绑定到该数据区域的数据集检索对应的名称字段。  
   
  **Lookup** 执行下列操作：  

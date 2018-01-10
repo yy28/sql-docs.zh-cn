@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f3fccc743eba7809d368771c5e5d942ea954f25
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
 本教程中将创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，该报表包含一个柱形图，将序列显示为一组按类别分组的垂直条。 
@@ -94,20 +94,20 @@ ms.lasthandoff: 12/05/2017
   
 8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
 ## <a name="ChartType"></a>2.选择图表类型  
 可从几种预定义的图表类型中进行选择，完成向导后可修改图表。  
   
 ### <a name="to-add-a-column-chart"></a>添加柱形图  
   
-1.  在“选择图表类型”页上，柱形图为默认图表类型。 单击 **“下一步”**。  
+1.  在“选择图表类型”页上，柱形图为默认图表类型。 单击“下一步” 。  
   
 2.  在“排列图表字段”页上，将 SalesDate 字段拖到“类别”中。 “类别”显示在水平轴上。  
   
 3.  将 Sales 字段拖到“值”中。 “值”框显示 Sum(Sales)，因为销售总计值之和是对每个日期的合计。 “值”显示在垂直轴上。  
   
-4.  单击 **“下一步”**。  
+4.  单击“下一步” 。  
  
 6.  单击 **“完成”**。  
   
@@ -306,7 +306,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  单击 **“保存”**。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已成功完成“向报表添加柱形图”教程。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  

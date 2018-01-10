@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 643bbac27a2db99f611a164e97da36c6e5204dbf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b3afbb9788926f78a732bb42fb01ea646d9b5147
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细信息。  文件中的信息包括由报表服务器 Web 服务、Web 门户和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息非常有用。 例如，排除订阅问题时。  
@@ -73,8 +71,8 @@ ms.lasthandoff: 12/05/2017
 |设置|Description|值|  
 |-------------|-----------------|------------|  
 |**RStrace**|指定用于错误和跟踪的命名空间。||  
-|**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。|有效值包括：<br /><br /> <br /><br /> 0= 禁用跟踪。 默认情况下，启用 ReportServerService 日志文件。 若要将其关闭，请将跟踪级别设为 0。<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  
-|**FileName**|指定日志文件名的第一部分。 该名称的其余部分由 **Prefix** 指定的值完成。||  
+|**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。|有效值为<br /><br /> <br /><br /> 0= 禁用跟踪。 默认情况下，启用 ReportServerService 日志文件。 若要将其关闭，请将跟踪级别设为 0。<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  
+|**FileName**|指定日志文件名的第一部分。 日志文件名的其余部分由 **Prefix** 指定的值完成。||  
 |**FileSizeLimitMb**|指定跟踪日志大小的上限。 文件大小的单位为 MB。<br /><br /> 可通过设置跟踪级别（0 到 4）来控制要记录的内容的数量，从而控制文件的大小。 还可以指定要跟踪的组件。 如果在尚未达到 14 天过期时间之前日志文件已达到最大大小，将使用较新的项替换较旧的项。|有效值介于 0 到最大整数之间。 默认值为 32。 如果指定 0 或负数，报表服务器会将该值视为 1。|  
 |**KeepFilesForDays**|指定多少天后删除跟踪日志文件。|有效值介于 0 到最大整数之间。 默认值为 14。 如果指定 0 或负数，报表服务器会将该值视为 1。|  
 |**Prefix**|指定一个生成的值，该值可将日志实例彼此区分开。|默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为“appdomain, tid, time”。 请不要修改此设置。|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>报表服务器 ExecutionLog 和 ExecutionLog3 视图
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  在 **“日志记录”** 部分中选择 **“启用执行日志记录”** 。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
  **启用详细日志记录：**  
   
@@ -116,23 +114,23 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。 如果您的环境具有多个报表服务器，则可以对 InstanceName 分布进行分析，以便监视并确定您的网络负载平衡器是否按预期跨多个报表服务器分布请求。|  
 |ItemPath|存储报表或报表项的位置的路径。|  
 |UserName|用户标识符。|  
 |ExecutionID|与请求关联的内部标识符。 同一用户会话的请求共享相同的执行 ID。|  
 |RequestType|可能的值：<br /><br /> 交互<br /><br /> 订阅<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
-|格式|呈现格式。|  
+|“格式”|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
-|ItemAction|可能的值：<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|可能的值：<br /><br /> Render<br /><br /> 排序<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
 |TimeDataRetrieval|用于检索数据的毫秒数。|  
 |TimeProcessing|用于处理报表的毫秒数。|  
 |TimeRendering|用于呈现报表的毫秒数。|  
 |数据源|报表执行的源。 可能的值：<br /><br /> Live<br /><br /> Cache：指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> 快照<br /><br /> 历史记录<br /><br /> AdHoc：指示基于动态生成的报表模型的钻取报表，或在客户端上预览的报表生成器报表（使用报表服务器进行处理和呈现）。<br /><br /> Session：指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> Rdce：指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
-|状态|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
+|“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。 对于每一行，内容可以不同。|  
@@ -331,14 +329,14 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
 |ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath。|  
 |UserName|用户标识符。|  
 |ExecutionID||  
 |RequestType|请求类型（用户或系统）。|  
-|格式|呈现格式。|  
+|“格式”|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
 |ReportAction|可能的值：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
@@ -347,7 +345,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |数据源|报表执行源（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录）。|  
-|状态|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
+|“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
 |AdditionalInfo|包含与执行有关的附加信息的 XML 属性包。|  
@@ -363,13 +361,13 @@ select * from ExecutionLog order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
 |ReportID|报表标识符。|  
 |UserName|用户标识符。|  
 |RequestType|可能的值：<br /><br /> True = 订阅请求<br /><br /> False = 交互请求|  
-|格式|呈现格式。|  
+|“格式”|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
 |TimeStart|指示报表进程的持续时段的开始时间和结束时间。|  
 |TimeEnd||  
@@ -377,7 +375,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |数据源|报表执行的源。 可能的值：（1 = 实时，2 = 缓存，3 = 快照，4 = 历史记录，5 = 特别，6 = 会话，7 = RDCE）。|  
-|状态|可能的值：rsSuccess、rsProcessingAborted 或错误代码。 如果出现多个错误，则只记录第一个错误。|  
+|“登录属性”|可能的值：rsSuccess、rsProcessingAborted 或错误代码。 如果出现多个错误，则只记录第一个错误。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  
   

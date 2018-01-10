@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bf0061fb7a02901f24f75e7627d35f0916a843ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3449aa8547e62e89e3fc40ab893e1eb2fefcfd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
 
@@ -210,15 +208,15 @@ GO
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“数据库”页上，单击 **“更改数据库”**。 单击 **“下一步”**。  
+2.  在“数据库”页上，单击 **“更改数据库”**。 单击“下一步” 。  
   
-3.  单击 **“选择现有报表服务器数据库”**。 单击 **“下一步”**。  
+3.  单击 **“选择现有报表服务器数据库”**。 单击“下一步” 。  
   
-4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”**。 单击 **“下一步”**。  
+4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”**。 单击“下一步” 。  
   
-5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击 **“下一步”**。  
+5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击“下一步” 。  
   
-6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击 **“下一步”**。  
+6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击“下一步” 。  
   
 7.  单击 **“下一步”** ，然后单击 **“完成”**。  
   

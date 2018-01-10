@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f53a752a5c6035bef8450a0eeabcbbf27829226d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 22f4fed54d2f603fd251a43adc35478c834c426f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以编程方式管理包和文件夹
 <a name="top"></a>以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，你可能希望确定个别包或文件夹是否存在，或管理用于存储包的文件夹。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。    
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ##  <a name="managing"></a>管理包和文件夹    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供其他用于管理包和存储包的文件夹的方法。    
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ###  <a name="managing_create"></a>创建文件夹    
  若要以编程方式创建存储文件夹，请调用以下方法之一：    
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/20/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ###  <a name="managing_remfldr"></a>删除文件夹    
  若要以编程方式删除存储文件夹，请调用以下方法之一：    
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ###  <a name="managing_rename"></a>重命名文件夹    
  若要以编程方式重命名存储文件夹，请调用以下方法之一：    
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/20/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ## <a name="see-also"></a>另请参阅    
  [包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)     

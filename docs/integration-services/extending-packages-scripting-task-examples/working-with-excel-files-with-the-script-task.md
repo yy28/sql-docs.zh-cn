@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb50dc174d4a1763416b4ccc313db56f26a5b1b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8793d258c8328c59e6901e38455fd389dca5de1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
     -   键入 ExcelFile。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
     -   键入 ExcelFileExists。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFileExists”变量。  
   
@@ -161,7 +161,7 @@ public class ScriptMain
   
     -   键入用逗号. 分隔的 ExcelTable 和 ExcelFile。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTable”和“ExcelFile”变量。  
   
@@ -169,7 +169,7 @@ public class ScriptMain
   
     -   键入 ExcelTableExists。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选“ExcelTableExists”变量。  
   
@@ -268,7 +268,7 @@ public class ScriptMain
   
     -   键入 ExcelFolder  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFolder 变量。  
   
@@ -276,7 +276,7 @@ public class ScriptMain
   
     -   键入 ExcelFiles。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFiles 变量。  
   
@@ -343,7 +343,7 @@ public class ScriptMain
   
     -   键入 ExcelFile。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelFile 变量。  
   
@@ -351,7 +351,7 @@ public class ScriptMain
   
     -   键入 ExcelTables。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择 ExcelTablesvariable。  
   
@@ -456,7 +456,7 @@ public class ScriptMain
   
     -   键入用逗号分隔的每个变量的名称。  
   
-         - 或 -  
+         -或 -  
   
     -   单击属性字段旁的省略号 (**…**) 按钮，然后在“”选择变量对话框中选择变量。  
   

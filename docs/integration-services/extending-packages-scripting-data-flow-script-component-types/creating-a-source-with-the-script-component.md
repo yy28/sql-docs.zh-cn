@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 397039d98c68bc6828473099091a70b8777f350d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 776a8ac7555128b47175b77739033918f4ed0b5e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的源组件用于从数据源加载数据以传递到下游转换和目标。 通常通过现有连接管理器连接数据源。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
  但是，连接管理器只是一个封装和存储连接特定类型数据源必需信息的便利单元。 您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。  
   
- 有关如何在脚本组件中使用连接管理器的信息，请参阅[在脚本组件中连接数据源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
+ 有关如何在脚本组件中使用连接管理器的常规信息，请参阅[在脚本组件中连接数据源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
  有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
 -   通常，同一 ExclusionGroup 中的多个输出具有相同的输出列。 但是，如果要创建模拟的错误输出，则可能要添加多个列来存储错误信息。 有关数据流引擎如何处理错误行的信息，请参阅[在数据流组件中使用错误输出](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)。 但是，在脚本组件中，必须编写您自己的代码以便使用适当的错误信息填充这些附加列。 有关详细信息，请参阅[模拟脚本组件的错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“输入和输出”页的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="writing-your-custom-code"></a>编写自定义代码  
  为了完成创建自定义源组件，可以在 ScriptMain 类的以下方法中编写脚本。  
   
-1.  重写 AcquireConnections 方法以连接外部数据源。 从连接管理器中提取连接对象或者需要的连接信息。  
+1.  重写 **AcquireConnections** 方法以连接到外部数据源。 从连接管理器中提取连接对象或者需要的连接信息。  
   
 2.  如果可同时加载所有源数据，请重写 PreExecute 方法以加载数据。 例如，可以对连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接执行 SqlCommand，然后同时将所有源数据加载到 SqlDataReader 中。 如果必须每次加载一行源数据（例如，读取文本文件时），则可在 CreateNewOutputRows 中遍历行时加载数据。  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/20/2017
   
  如果要运行此示例代码，必须按照如下方式配置包和组件：  
   
-1.  创建使用 SqlClient 访问接口连接 AdventureWorks 数据库的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。  
+1.  创建使用 **SqlClient** 提供程序连接 **AdventureWorks** 数据库的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。  
   
 2.  向数据流设计器图面添加新的脚本组件并将其配置为源。  
   

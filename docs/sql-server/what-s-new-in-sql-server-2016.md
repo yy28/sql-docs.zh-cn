@@ -23,14 +23,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]通过 SQL Server 2016，可以使用可缩放的混合数据库平台生成任务关键型智能应用程序。此平台内置了需要的所有功能，包括内存中性能、高级安全性和数据库内分析。 SQL Server 2016 版本新增了安全功能、查询功能、Hadoop 和云集成、R 分析等功能，以及许多改进和增强功能。 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ 通过 SQL Server 2016，可以使用可缩放的混合数据库平台生成任务关键型智能应用程序。此平台内置了需要的所有功能，包括内存中性能、高级安全性和数据库内分析。 SQL Server 2016 版本新增了安全功能、查询功能、Hadoop 和云集成、R 分析等功能，以及许多改进和增强功能。 
 
 此页面收录了摘要信息和链接，可方便读者详细了解 SQL Server 2016，以及每个 SQL Server 组件的最近更新。 
 

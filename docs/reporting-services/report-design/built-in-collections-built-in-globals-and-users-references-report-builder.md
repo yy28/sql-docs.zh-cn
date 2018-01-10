@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 048cf935a981c0c86c1d11ec90c4064abea03ac9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0d92d44a11aad84fe249649ef921123f78aa0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合 - 内置的全局和用户引用（报表生成器）
   内置字段集合包含 **Globals** 和 **User** 集合，表示处理报表时由 Reporting Services 提供的全局值。 **Globals** 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 **User** 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  
@@ -38,11 +36,11 @@ ms.lasthandoff: 12/05/2017
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|报表开始运行的日期和时间。|  
 |PageNumber|**Integer**|相对于重置页码的分页符的当前页码。 在报表处理开始时，初始值设置为 1。 对于每个呈现的页，该页码将增 1。<br /><br /> 若要为矩形、数据区域、数据区域组或地图在分页符内对页面进行编号，请在“PageBreak”属性上，将“ResetPageNumber”属性设置为“True”。 不支持 Tablix 列层次结构组。<br /><br /> PageNumber 只能用于页眉或页脚中的表达式中。|  
-|ReportFolder|**字符串**|包含该报表的文件夹的完整路径。 它不包括报表服务器 URL。|  
-|ReportName|**字符串**|报表存储在报表服务器数据库中的名称。|  
-|ReportServerUrl|**字符串**|正在运行该报表的报表服务器的 URL。|  
+|ReportFolder|**String**|包含该报表的文件夹的完整路径。 它不包括报表服务器 URL。|  
+|ReportName|**String**|报表存储在报表服务器数据库中的名称。|  
+|ReportServerUrl|**String**|正在运行该报表的报表服务器的 URL。|  
 |TotalPages|**Integer**|相对于重置 PageNumber 的分页符的总页数。 如果未设置分页符，则该值与 OverallTotalPages 相同。<br /><br /> TotalPages 只能用于页眉或页脚中的表达式中。|  
-|PageName|**字符串**|页的名称。 开始处理报表时，从 InitialPageName（这是一个报表属性）设置初始值。 处理每个报表项时，该值将被来自矩形、数据区域、数据区域组或地图的 PageName 的相应值替换。 不支持 Tablix 列层次结构组。<br /><br /> PageName 只能用于页眉或页脚中的表达式中。|  
+|PageName|**String**|页的名称。 开始处理报表时，从 InitialPageName（这是一个报表属性）设置初始值。 处理每个报表项时，该值将被来自矩形、数据区域、数据区域组或地图的 PageName 的相应值替换。 不支持 Tablix 列层次结构组。<br /><br /> PageName 只能用于页眉或页脚中的表达式中。|  
 |OverallPageNumber|**Integer**|针对整个报表的当前页的页码。 此值不受 ResetPageNumber 影响。<br /><br /> OverallPageNumber 只能用于页眉或页脚中的表达式中。|  
 |OverallTotalPages|**Integer**|整个报表的总页数。 此值不受 ResetPageNumber 影响。<br /><br /> OverallTotalPages 只能用于页眉或页脚中的表达式中。|  
 |RenderFormat|**RenderFormat**|与当前呈现请求有关的信息。<br /><br /> 有关详细信息，请参阅下一节中的“RenderFormat”。|  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 |成员|类型|Description|  
 |------------|----------|-----------------|  
-|名称|**字符串**|呈现器的名称注册在 RSReportServer 配置文件中。<br /><br /> 在报表处理/呈现周期的特定环节可用。|  
+|“属性”|**String**|呈现器的名称注册在 RSReportServer 配置文件中。<br /><br /> 在报表处理/呈现周期的特定环节可用。|  
 |IsInteractive|**Boolean**|当前呈现请求是否使用交互式呈现格式。|  
 |DeviceInfo|只读名称/值集合|当前呈现请求的 deviceinfo 参数的键/值对。<br /><br /> 可以通过使用集合中的键或索引指定字符串值。|  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |**成员**|**类型**|**Description**|  
 |----------------|--------------|---------------------|  
 |**语言**|**字符串**|运行报表的用户的语言。 例如， `en-US`。|  
-|**UserID**|**字符串**|运行报表的用户的 ID。 如果您使用的是 Windows 身份验证，则此值为当前用户的域帐户。 此值由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全扩展插件确定，此插件可以使用 Windows 身份验证，也可以使用自定义身份验证。|  
+|**UserID**|**String**|运行报表的用户的 ID。 如果您使用的是 Windows 身份验证，则此值为当前用户的域帐户。 此值由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全扩展插件确定，此插件可以使用 Windows 身份验证，也可以使用自定义身份验证。|  
   
  有关在报表中支持多种语言的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [中的](http://go.microsoft.com/fwlink/?LinkId=120955)文档中的“多语言或全局部署的解决方案设计注意事项”。  
   

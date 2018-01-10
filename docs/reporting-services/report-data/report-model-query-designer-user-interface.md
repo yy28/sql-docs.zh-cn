@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f02abfbd27673219495569994f5d0fafc4e87a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ec879b55af66aa8044327ab88a1ea65e92ec844
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
 |----------|--------------|  
 |“资源管理器”窗格|显示模型中的实体和实体字段的图形化表示形式。 使用此窗格可以浏览实体、实体之间的关系以及字段。|  
 |设计区域|显示模型中的字段列表。 使用此窗格可以排列所选字段的布局。|  
-|“结果”窗格|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”窗格（![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")）按钮。|  
+|Results pane|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”窗格（![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "Run the query")）按钮。|  
   
  若在“资源管理器”和“设计区域”窗格中更改信息，则单击 **“运行”**时将会影响到“结果”窗格中的内容。  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 04ec945b59d77ad8b885d5c8403f833ab4c73ab2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54455fd8ab820d9f32525308220c5dd427470d07
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookupset-function"></a>报表生成器函数 - LookupSet 函数
   从包含名称/值对的数据集返回指定名称的一组匹配值。  
@@ -54,7 +52,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>返回  
  返回 **VariantArray**，如果没有匹配项，则返回 **Nothing** 。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 **LookupSet** 从名称/值对（每对具有 1 对多的关系）的指定数据集中检索一组值。 例如，对于表中的客户标识符，可以使用 **LookupSet** 从未绑定到该数据区域的数据集检索该客户的所有相关电话号码。  
   
  **LookupSet** 执行下列操作：  

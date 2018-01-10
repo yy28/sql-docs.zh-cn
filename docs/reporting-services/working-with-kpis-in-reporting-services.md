@@ -8,20 +8,20 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 815c9eee34a0104f08958a9bbdf01407ac601e3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a565e8722385438bddf7b4f01d93ca0be05986f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -61,9 +61,9 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 |字段|Description|  
 |---|---|  
 |值格式|  用于更改要显示的值的格式。|   
-|“值”|要显示的 KPI 的值。|  
+|ReplTest1|要显示的 KPI 的值。|  
 |目的|用作数值比较并显示为一个百分比差值。|  
-|状态|用于确定 KPI 磁贴颜色的数值。 有效值为 1（绿色）、0（琥珀色）和 -1（红色）。|  
+|“登录属性”|用于确定 KPI 磁贴颜色的数值。 有效值为 1（绿色）、0（琥珀色）和 -1（红色）。|  
 |趋势集|用于图表可视化的逗号分隔的数值。 也可以将其设置为具有表示走向的值的数据集列。|  
   
 > **警告**：虽然可以在设计时使用用于“状态”  字段的单词，如果要刷新数据集，还是应当使用数值。 如果使用单词刷新数据集，而不是使用数值，则可能会损坏服务器上的 KPI。  

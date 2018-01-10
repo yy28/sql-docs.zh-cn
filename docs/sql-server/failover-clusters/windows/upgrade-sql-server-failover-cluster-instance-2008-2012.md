@@ -1,7 +1,10 @@
 ---
 title: "升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例 | Microsoft Docs"
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例
 
@@ -127,7 +130,7 @@ ms.lasthandoff: 12/19/2017
 
 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序未使用任何独立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 实例，仅使用至少包含在一个可用性组中的 SQL FCI，则可以使用类似于“无可用性组，无独立实例”应用场景的方法将其迁移到新的群集。 在将系统表复制到目标 FCI 共享磁盘之前，必须在原始环境中删除所有可用性组。 将所有数据库迁移到目标计算机后，使用相同的架构和侦听程序名称重新创建可用性组。 通过执行此操作，可在目标群集上正确组成和管理 Windows Server 故障转移群集资源。 在迁移之前，必须在目标环境中每台计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 配置管理器中启用 Always On。
 
-###  <a name="to-perform-the-upgrade"></a>执行升级
+### <a name="to-perform-the-upgrade"></a>执行升级
 
 1.  停止通向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 的流量。
 

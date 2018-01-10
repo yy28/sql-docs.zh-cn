@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 197954e502e00b4402243f89ba1549aae75293f8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a94fabf2c89005a3125cc73c54b55d537dc2458b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/05/2017
   
     这将返回“选择数据源的连接”页，且在此页中选择了新数据源。  
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
 ## <a name="Query"></a>1b. 在表向导中创建查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在这一报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -139,7 +139,7 @@ ms.lasthandoff: 12/05/2017
   
     在结果集中，列标题基于查询中的名称。 在数据集中，列标题会成为字段名称并保存在报表中。 完成向导后，可以使用“报表数据”窗格查看数据集字段集合。  
   
-4.  单击 **“下一步”**。  
+4.  单击“下一步” 。  
   
 ## <a name="Groups"></a>1c. 在表向导中将数据组织到组中  
 在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
@@ -166,7 +166,7 @@ ms.lasthandoff: 12/05/2017
   
     步骤 4 和 5 首先按日期组织字段的值，然后按照该日期的产品子类别组织字段的值。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 ## <a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
@@ -359,7 +359,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 2.  验证工作簿选项卡的名称是否为 **Product Sales Excel**。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 到此为止，我们结束了有关如何创建基本表格报表的演练。 有关表的详细信息，请参阅[表、矩阵和列表（报表生成器和 SSRS）](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  

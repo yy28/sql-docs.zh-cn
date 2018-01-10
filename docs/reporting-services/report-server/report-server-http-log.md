@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 |||  
 |-|-|  
-|文件名|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
+|File name|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
 |文件位置|该文件位于 \Microsoft SQL Server\\\<SQL Server Instance>\Reporting Services\LogFiles 中。|  
 |文件格式|该文件是 EN-US 格式。 它是 ASCII 文本文件。|  
 |创建和保留文件|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果您配置了相应的设置但并未看到日志文件，请打开报表或启动报表服务器应用程序（如报表管理器）以生成 HTTP 请求从而创建日志文件。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
@@ -66,24 +64,24 @@ ms.lasthandoff: 12/05/2017
 |字段|Description|，则“默认”|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
-|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|“否”|  
-|日期|活动发生的日期。|“否”|  
-|Time|活动发生的时间。|“否”|  
+|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|是|  
+|date|活动发生的日期。|是|  
+|Time|活动发生的时间。|是|  
 |ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
-|UserName|访问报表服务器的用户的名称。|“否”|  
-|ServerPort|连接使用的端口号。|“否”|  
-|主机|主机标头的内容。|“否”|  
+|UserName|访问报表服务器的用户的名称。|是|  
+|ServerPort|连接使用的端口号。|是|  
+|主机|主机标头的内容。|是|  
 |方法|从客户端调用的操作或 SOAP 方法。|是|  
 |UriStem|访问的资源。|是|  
-|UriQuery|用于访问资源的查询。|“否”|  
+|UriQuery|用于访问资源的查询。|是|  
 |ProtocolStatus|HTTP 状态代码。|是|  
-|BytesReceived|服务器接收的字节数。|“否”|  
-|TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|“否”|  
-|ProtocolVersion|客户端使用的协议版本。|“否”|  
-|UserAgent|客户端使用的浏览器类型。|“否”|  
-|CookieReceived|服务器接收的 cookie 的内容。|“否”|  
-|CookieSent|服务器发送的 cookie 的内容。|“否”|  
-|Referrer|客户端以前访问过的站点。|“否”|  
+|BytesReceived|服务器接收的字节数。|是|  
+|TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|是|  
+|ProtocolVersion|客户端使用的协议版本。|是|  
+|UserAgent|客户端使用的浏览器类型。|是|  
+|CookieReceived|服务器接收的 cookie 的内容。|是|  
+|CookieSent|服务器发送的 cookie 的内容。|是|  
+|Referrer|客户端以前访问过的站点。|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   

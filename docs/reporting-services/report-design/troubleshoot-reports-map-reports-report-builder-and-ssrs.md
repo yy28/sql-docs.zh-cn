@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c628663612344187a25757fd42a1aeb8bb86dde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b75a964c2f4e62d477c9e195c77e81a14109bd61
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -175,7 +173,7 @@ ms.lasthandoff: 12/05/2017
   
 -   匹配字段问题。 通过匹配字段，可以在地图元素与分析数据之间实现数据绑定。 与匹配字段对应的空间数据字段和分析数据字段必须具有相同的数据类型和相同的格式。 如果匹配字段与空间数据以及分析数据并不完全匹配，则规则不起任何作用。 例如，如果空间数据的匹配字段与分析数据的匹配字段相比，前者具有多余空格或多余标点符号，则不会发生匹配。  
   
--   有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+-   有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="what-is-the-value-nan-on-the-color-scale"></a>对于色阶，值 NaN 是什么含义？  
  **NaN** 表示“非数字”。 色阶值应为数字值。 对于与色阶关联的规则，检查分布设置和图例文本值。 如果您创建了自定义分布范围，请验证您对第一个范围指定了下限，而对最后范围指定了上限。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
 本教程将使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的向导，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中创建条形图。 然后添加筛选器，并优化图表。 
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
 ## <a name="ChartType"></a>2.创建条形图  
  
@@ -110,7 +110,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  将 SalesYear2014 拖动到 SalesYear2015 下的“值”窗格。 SalesYear2014 表示每个销售人员在 2014 年的销售总额。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 7.  单击 **“完成”**。  
   
@@ -302,7 +302,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  单击 **“保存”**。   
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已成功完成“向报表添加条形图”教程的学习。 若要了解有关图表的详细信息，请参阅 [图表](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和 [条形图](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  

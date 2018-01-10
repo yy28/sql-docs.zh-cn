@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3a1e2dc58250da1a2d0d8e0a3a1e78374ba2cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b6eb94e8511be6d1e2f5ccf2cc12eea7ced9198
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>交互功能 - 不同报表呈现扩展插件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了在运行时与分页报表进行交互的功能。 并非所有的报表呈现格式都支持整套交互功能。 使用下表了解每项交互功能在处理特定格式时的工作原理。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|交互式文档结构图提供了一个包含层次结构链接的导航窗格，可使用此窗格导航到报表的不同区域。|  
 |PDF|PDF 将文档结构图呈现为“书签”窗格。 文档结构图中的所有项都将在该窗格中依次向下列出。 它包含一个链接层次结构。 如果指定了页面范围，则只有那些已呈现的书签才会存在于该层次结构中。|  
-|Excel|Excel 将文档结构图呈现为工作簿中的第一个工作表。 它包含一个链接层次结构。 如果单击文档结构图中的链接，则会打开各自工作表中的相应目标单元格。|  
+|“导出”|Excel 将文档结构图呈现为工作簿中的第一个工作表。 它包含一个链接层次结构。 如果单击文档结构图中的链接，则会打开各自工作表中的相应目标单元格。|  
 |Word|Word 将文档结构图呈现为目录标签。|  
 |其他（例如，TIFF、XML 和 CSV）|无法以 MHTML、XML、CSV 或图像格式实现。|  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|用户单击报表中的数据值便可查看其他报表中的相关数据。|  
 |PDF|钻取链接在 PDF 中不可用。 对于链接到其他页的 PDF 报表，请考虑使用超链接。|  
-|Excel|钻取链接以 Excel 呈现。<br /><br /> 链接转换为指向钻取链接所引用报表的超链接。 单击链接时便会在浏览器窗口中打开一个报表。|  
+|“导出”|钻取链接以 Excel 呈现。<br /><br /> 链接转换为指向钻取链接所引用报表的超链接。 单击链接时便会在浏览器窗口中打开一个报表。|  
 |Word|钻取链接以 Word 呈现。<br /><br /> 链接转换为指向钻取链接所引用报表的超链接。 单击链接时便会在浏览器窗口中打开一个报表。|  
 |其他|无法以 XML、CSV 或图像格式实现。|  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|用户单击展开和折叠图标便可查看报表的区域。|  
 |PDF|报表服务器将当前处于显示或隐藏状态的报表导出为 PDF。 不支持交互式切换|  
-|Excel|可切换的钻取链接和项在 Excel 中呈现为可折叠大纲。 您可以在 Excel 中展开和折叠报表的区域。 有关 Excel 强制限制的详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
+|“导出”|可切换的钻取链接和项在 Excel 中呈现为可折叠大纲。 您可以在 Excel 中展开和折叠报表的区域。 有关 Excel 强制限制的详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
 |Word|报表服务器将当前处于显示或隐藏状态的报表导出为 PDF。 不支持交互式切换|  
 |其他|无法以 MHTML、XML 或 CSV 格式实现。 如果导出为图像格式，则报表服务器会将当前处于显示或隐藏状态的报表导出为 PDF。 不支持交互式切换。|  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|对于表格报表，用户单击列中的排序箭头便可更改数据的排序方式。|  
 |PDF|无法在 PDF 中实现。|  
-|Excel|无法在 Excel 中实现。|  
+|“导出”|无法在 Excel 中实现。|  
 |Word|无法在 Word 中实现。|  
 |其他|无法以 MHTML、XML、CSV 或图像格式实现。|  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|用户单击链接便可导航到同一报表的其他区域。|  
 |PDF|无法在 PDF 中实现。|  
-|Excel|书签在 Excel 中呈现。<br /><br /> 书签转换为指向报表项的名称的超链接。|  
+|“导出”|书签在 Excel 中呈现。<br /><br /> 书签转换为指向报表项的名称的超链接。|  
 |Word|书签在 Word 中呈现。<br /><br /> 书签转换为指向有书签的报表项的超链接。 导出报表时，仅可转换 40 个字符的书签名称或定位点名称，这可能导致书签名称或定位点名称重复。 空格转换为下划线 (_)。|  
 |其他|无法以 XML、CSV 或图像格式实现。|  
   
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|参数输入区域在报表的顶部显示。 此区域是用于在浏览器中显示报表的 HTML 查看器的一部分。|  
 |PDF|报表服务器使用当前对报表有效的参数值将报表导出为 PDF。|  
-|Excel|报表服务器使用当前对报表有效的参数值将报表导出为 Excel。|  
+|“导出”|报表服务器使用当前对报表有效的参数值将报表导出为 Excel。|  
 |Word|报表服务器使用当前对报表有效的参数值将报表导出为 Word。|  
 |其他|报表服务器使用当前对报表有效的参数值将报表导出为其他格式。|  
   
@@ -112,7 +110,7 @@ ms.lasthandoff: 12/05/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|在运行时向用户显示经过筛选的数据。|  
 |PDF|报表服务器使用当前报表中的已筛选数据将报表导出为 PDF。|  
-|Excel|报表服务器使用当前报表中的已筛选数据将报表导出为 Excel。|  
+|“导出”|报表服务器使用当前报表中的已筛选数据将报表导出为 Excel。|  
 |Word|报表服务器使用当前报表中的已筛选数据将报表导出为 Word。|  
 |其他|报表服务器使用当前报表中的已筛选数据将报表导出为其他格式。|  
   
@@ -121,6 +119,6 @@ ms.lasthandoff: 12/05/2017
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [图表&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

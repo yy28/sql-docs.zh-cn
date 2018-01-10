@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85b1c63c9b6ab18018b9d31143ab53503ad64ae1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
 本教程教授如何创建两种 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/05/2017
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 单击 **“下一步”**。  
+14. 单击“下一步” 。  
   
 ## <a name="DMDXQuery"></a>1b. 创建 MDX 查询  
 在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -172,7 +172,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  在查询设计器工具栏中，单击“运行(!)”。  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 ## <a name="DLayout"></a>1c. 将数据组织到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 12/05/2017
   
     步骤 4 和 5 指定要在矩阵中显示的数据。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 ## <a name="DTotals"></a>1d. 添加小计和总计  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 还可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
@@ -209,7 +209,7 @@ ms.lasthandoff: 12/05/2017
   
     向导的“预览”窗格将显示包含四行的矩阵。  
   
-2.  单击 **“下一步”**。  
+2.  单击“下一步” 。  
   
 2.  单击 **“完成”**。  
   
@@ -394,7 +394,7 @@ ms.lasthandoff: 12/05/2017
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 单击 **“下一步”**。  
+14. 单击“下一步” 。  
   
 ## <a name="MMDXQuery"></a>1b. 创建 MDX 查询  
 接下来将创建嵌入数据集。 为此，您将使用查询设计器来创建筛选器、参数和计算成员以及数据集本身。  
@@ -492,7 +492,7 @@ ms.lasthandoff: 12/05/2017
   
     查看查询结果集。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 ## <a name="MLayout"></a>1c. 将数据组织到组中  
 在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
@@ -522,7 +522,7 @@ ms.lasthandoff: 12/05/2017
   
     向导的“预览”窗格将显示包含四行的矩阵。  运行报表时，将通过以下方式显示每个行：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），第四行包含总计。  
   
-2.  单击 **“下一步”**。  
+2.  单击“下一步” 。  
   
 3.  单击 **“完成”**。  
   

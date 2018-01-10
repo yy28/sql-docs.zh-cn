@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
 在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程中，向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表添加关键绩效指标 (KPI)。  
@@ -58,11 +58,11 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 4.  在“选择数据集”页上，单击“创建数据集”。  
   
-5.  单击 **“下一步”**。  
+5.  单击“下一步” 。  
   
 6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在“设计查询”页上，单击“编辑为文本”。  
   
@@ -106,7 +106,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 10. 在查询设计器工具栏中，单击“运行”(**!**)。
 
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 ## <a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
 表或矩阵向导提供一个初始设计以在其中显示数据。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
@@ -129,7 +129,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
     步骤 4 和 5 首先按日期组织字段的值，然后按照该日期的所有销售组织字段的值。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
     当您运行报表时，表将显示每个日期、每个日期的所有订单以及每个订单的所有产品、数量和销售额总计。  
   
@@ -141,7 +141,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
     在本教程中，创建的报表不会使用明细功能（用户可通过此功能来展开父组层次结构）来显示子组行和详细信息行。  
   
-10. 单击 **“下一步”**。  
+10. 单击“下一步” 。  
   
 11. 单击 **“完成”**。  
   
@@ -238,7 +238,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 10. 在“线性指针属性”对话框中，依次单击“指针选项”选项卡、“指针类型”，请确保“栏”处于选中状态。 
  
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 右键单击仪表中的刻度，然后单击“刻度属性”。  
   
@@ -249,7 +249,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 14. 在“标签”选项卡上，勾选“隐藏刻度标签”。
 
-15. 单击 **“确定”**。
+15. 单击“确定” 。
   
 14. 将表内的仪表拖到 Linear KPI 列中的第二个空单元格，在显示 `Subcategory` 字段的销售额小计的行中，此字段旁可添加背景色公式。  
   
@@ -291,7 +291,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
     在该报表中，还可以更改放在子类别小计单元中的指示器的作用域，以在 SalesDate 字段内同步。  
   
-11. 单击 **“确定”**。
+11. 单击“确定” 。
 
 11. 单击 **“运行”** 以预览报表。  
 
@@ -344,7 +344,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 2.  单击 **“保存”**。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已成功完成“向报表添加 KPI”教程的学习。 有关详细信息，请参阅：
 *  [仪表](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [指示器](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

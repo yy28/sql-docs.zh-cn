@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +16,14 @@ helpviewer_keywords:
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 2972097a7cc52ee5c73ec05d684de19b56cd1fd6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="rswindowsbasic-reference"></a>RSWindowsBasic 引用  
  配置基本身份验证时，可以指定以下元素。  
   
-|元素|必需|有效值|  
+|元素|Required|有效值|  
 |-------------|--------------|------------------|  
 |LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|**2** = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> **3** = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：   不 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]支持值 0（针对交互登录）和 1（针对批处理登录）。|  
 |领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  

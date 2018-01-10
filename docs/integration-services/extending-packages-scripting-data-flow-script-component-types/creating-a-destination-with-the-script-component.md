@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 743519a2f80f4cc2a490bcb5b513431d73d13478
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d9037d604503ba2a0d5443e94f11638035369ce3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。  
@@ -69,12 +69,12 @@ ms.lasthandoff: 11/20/2017
   
  “脚本转换编辑器”的“输入和输出”页显示单一输入，可以将其重命名。 通过使用在自动生成的代码中创建的取值函数属性，在脚本中将通过输入的名称来引用输入。  
   
- 有关“脚本转换编辑器”的“输入和输出”页的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
- 如果要在脚本中使用现有变量，可以在“脚本转换编辑器”的“脚本”页上的 **ReadOnlyVariables** 和 **ReadWriteVariables** 属性字段中添加这些变量。  
+ 如果要在脚本中使用现有的变量，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。  
   
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 还可以选择多个变量，方法是单击 **ReadOnlyVariables** 和 **ReadWriteVariables** 属性字段旁的省略号 (**…**) 按钮，然后在“选择变量”对话框中选择变量。  
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 还可以选择多个变量，方法是单击 ReadOnlyVariables 和 ReadWriteVariables 属性字段旁的省略号 (...) 按钮，然后在“选择变量”对话框中选择变量。  
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
   
  如果在 VSTA 中打开“项目资源管理器”窗口，可以看到脚本组件还生成了只读的 **BufferWrapper** 和 **ComponentWrapper** 项目项。 **ScriptMain** 类继承自 **ComponentWrapper** 项目项中的 **UserComponent** 类。  
   
- 在运行时，数据流引擎调用 **UserComponent** 类中的 **ProcessInput** 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 **ProcessInput** 方法遍历输入缓冲区中的所有行并为每一行调用一次 **ProcessInputRow** 方法。  
+ 在运行时，数据流引擎调用 **UserComponent** 类中的 **ProcessInput** 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput 方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow 方法。  
   
 ### <a name="writing-your-custom-code"></a>编写自定义代码  
  若要完成自定义目标组件的创建，可能需要在 **ScriptMain** 类的以下方法中编写脚本。  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，其中至少包含 **AddressID** 和 **City** 列。  
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供 AdventureWorks 示例数据库的 Person.Address 表中的数据，其中至少包含 AddressID 和 City 列。  
   
 5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 输入列。  
   

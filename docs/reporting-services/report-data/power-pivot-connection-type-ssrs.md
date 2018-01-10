@@ -8,29 +8,27 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 488bdc3d56427922095ba1ed35e73cb82c88c41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据。  
   
  使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源必须发布在 SharePoint 站点上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。  
   
  为了支持从报表生成器到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的连接，工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一起安装，但如果你在使用不具有此应用程序的计算机，则必须从 [SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)下载和安装 ADOMD.NET。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="parameters"></a>Parameters  
  在“筛选器”窗格中，针对某个筛选器选择 **“参数”** 选项，以便自动使用与所选筛选器对应的可用值创建报表参数。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿打开报表生成器，则不会在报表中重新创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据透视表、数据透视图、切片器以及其他布局和分析功能。 而是生成一个空报表，其中包含一个预配置的数据源，该数据源指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据。 基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿设计报表可能很费时费力，具体取决于要在报表中重新创建的切片器、筛选器以及表或图表的数量。 一个更好的方法是独立于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 设计构思你要包含在报表中的数据的显示格式。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据经过高度压缩；而从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中为报表检索的数据未经压缩。 使用查询设计器可指定筛选器和参数，以便将数据限制为仅是报表中所需的数据。  

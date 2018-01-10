@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dfb7020fe79961b4b52a5a6b36919e7abdbb7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
 
@@ -50,10 +48,10 @@ ms.lasthandoff: 12/05/2017
   
 |类别|级别|Description|  
 |--------------|-----------|-----------------|  
-|数据库|“详细”|记录涉及数据库访问的事件。|  
+|“数据库”|“详细”|记录涉及数据库访问的事件。|  
 |常规|“详细”|记录涉及访问以下各项的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 网页<br /><br /> 报表查看器 HTTP 处理程序<br /><br /> 报表访问（.rdl 文件）<br /><br /> 数据源（.rsds 文件）<br /><br /> SharePoint 网站上的 URL（.smdl 文件）|  
 |Office Server 常规|异常|记录登录失败。|  
-|拓扑|“详细”|记录当前用户信息。|  
+|拓扑|Verbose|记录当前用户信息。|  
 |Web 部件|“详细”|记录涉及访问报表查看器 Web 部件的事件。|  
   
 ##  <a name="bkmk_turnon"></a> 在 Reporting Services 类别中打开和关闭 Reporting Services 事件  

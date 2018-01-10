@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，将使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户数据驱动订阅页来连接到订阅数据源，生成一个检索订阅数据的查询，然后将结果集映射到报表和传递选项。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 1.  在说明中键入 **销售订单传递** 。
 ## <a name="type"></a>类型
 1.  单击“数据驱动订阅”。  
-## <a name="schedule"></a>计划
+## <a name="schedule"></a>“计划”
 1. 在“计划”部分中，单击“报表特定计划”。
 2. 单击“编辑计划”。
 3.  在 **“计划详细信息”**中，单击 **“一次”**。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
  3.  在 **“用户名”** 和 **“密码”**中，键入您的域用户名和密码。 请在指定 **“用户名”**时同时包括域和用户帐户。
      > [!NOTE]  
     > 用于连接到订阅服务器数据源的凭据不会传递回 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果以后修改了该订阅，则必须重新键入连接到该数据源所用的密码。
-## <a name="query"></a>Query      
+## <a name="query"></a>查询      
 1.  在查询框中，键入以下查询：  
   
     ```  
@@ -85,17 +85,17 @@ ms.lasthandoff: 12/05/2017
 ---------|---------|---------
 **文件名**     |从数据集获取值 | 订单     
 **路径**     | 输入值  | 在“值”中，键入拥有写入权限的公共文件共享的名称（例如， `\\mycomputer\public\myreports`）。 
-**呈现格式** | 从数据集获取值 | 格式
+**呈现格式** | 从数据集获取值 | “格式”
 **写入模式**| 输入值| 自动增加    
 **文件扩展名** |输入值 |True
 **“用户名”** | 输入值 | 键入您的域用户帐户。 按以下格式输入：\<domain>\\\<account>。 用户帐户需要对配置的路径具有权限。 
-**“密码”** | 输入值 | 键入密码
+**密码** | 输入值 | 键入密码
 
 ## <a name="report-parameters"></a>报表参数
  1. 在“OrderNumber”字段中，选择“从数据集获取值”。 在“值”中，选择 **Order**。 
  2. 单击“创建订阅”。
    
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 订阅运行时，将有四个报表文件（分别属于 *Subscribers* 数据源中的各订单）发送到指定的文件共享中。 每个发送的报表在数据（数据应当是订单特定的）、呈现格式和文件格式方面都将是唯一的。 可以打开共享文件夹中的每一个报表以验证是否每个版本都是根据您定义的订阅选项来自定义的。  
   
 ![按订阅创建的文件列表](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription")  

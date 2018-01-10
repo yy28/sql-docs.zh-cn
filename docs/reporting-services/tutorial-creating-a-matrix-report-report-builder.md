@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
 本教程教你如何使用嵌套行组和列组中的示例销售数据的矩阵组件创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -56,11 +56,11 @@ ms.lasthandoff: 12/05/2017
   
 4.  在“选择数据集”页上，单击“创建数据集”。  
   
-5.  单击 **“下一步”**。  
+5.  单击“下一步” 。  
   
 6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入数据源的信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在“设计查询”页上，单击“编辑为文本”。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/05/2017
   
 10. （可选）单击运行图标 (!) 以运行查询并查看数据。
 
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 ## <a name="Groups"></a>2.使用新的表或矩阵向导组织数据并选择布局  
 使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成矩阵设计之前展现对数据进行分组的结果。  
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 12/05/2017
   
 10. 确认选择了“展开/折叠组”选项。  
   
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 13. 单击 **“完成”**。  
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 12/05/2017
 不再显示矩阵左上角的单元格。 
   
 ## <a name="HeaderTitle"></a>7.添加报表表头和报表标题  
-报表标题将出现在报表的顶部。 您可以将报表标题放在表头中，或者如果报表不使用表头，也可以将其放在表体顶部的文本框中。 在本教程中，您将删除报表顶部的文本框，并向表头中添加主题。  
+报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将删除报表顶部的文本框，并向表头中添加主题。  
   
 ### <a name="to-add-a-report-header-and-report-title"></a>添加报表表头和报表标题  
   
@@ -361,7 +361,7 @@ ms.lasthandoff: 12/05/2017
   
 地区名称垂直书写，从下到上。 Territory 行组的高度由地区名称的长度决定。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 有关如何创建矩阵报表的教程到此结束。 有关矩阵报表的详细信息，请参阅： 
 -    [表、矩阵和列表](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [创建矩阵](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

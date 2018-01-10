@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24f37e9db3b2e20cba50ad3fa303694b6d23d74e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21fab04c319d2d407a1a228b908cccb6ffd73266
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换可能要等收到所有输入行之后才完成其处理，也可能在收到所有输入行之前输出某些行。 本主题讨论异步转换。 如果你的处理需要同步转换，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
  脚本组件及其生成的基础结构代码可以简化自定义数据流组件的开发过程。 但是，若要了解脚本组件的工作方式，通读以下步骤很有帮助，这些步骤是在[开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)部分，特别是在[开发具有同步输出的自定义转换组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)部分开发自定义数据流组件必须遵循的。  
   
 ## <a name="getting-started-with-an-asynchronous-transformation-component"></a>开始一个异步转换组件  
- 向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“数据流”选项卡添加脚本组件时，“选择脚本组件类型”对话框会出现，提示用户将组件预配置为源、转换或目标。 在此对话框中选择“转换”。  
+ 向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“数据流”选项卡添加脚本组件时，“选择脚本组件类型”对话框会出现，提示用户将组件预配置为源、转换或目标。 在此对话框中，选择“转换”。  
   
 ## <a name="configuring-an-asynchronous-transformation-component-in-metadata-design-mode"></a>在元数据设计模式下配置异步转换组件  
  选择创建转换组件的选项后，可使用“脚本转换编辑器”配置该组件。 有关详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -71,12 +71,12 @@ ms.lasthandoff: 11/20/2017
   
 -   您可以添加更多列来包含其他信息。 您必须编写自己的代码来向这些附加列填充数据。 有关重现标准错误输出行为的信息，请参阅[模拟脚本组件的错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“输入和输出”页的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
  如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。  
   
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 还可以选择多个变量，方法是单击 **ReadOnlyVariables** 和 **ReadWriteVariables** 属性字段旁的省略号 (**…**) 按钮，然后在“选择变量”对话框中选择变量。  
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 还可以选择多个变量，方法是单击 ReadOnlyVariables 和 ReadWriteVariables 属性字段旁的省略号 (...) 按钮，然后在“选择变量”对话框中选择变量。  
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  此示例演示在 ScriptMain 类中创建异步转换组件所需的自定义代码。  
   
 > [!NOTE]  
->  这些示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表并在数据流中传递它的第一列和第四列，即 **intAddressID** 和 **nvarchar(30)City** 列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
+>  这些示例使用 AdventureWorks 示例数据库中的 Person.Address 表并在数据流中传递它的第一列和第四列，即 intAddressID 和 nvarchar(30)City 列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
   
  此示例演示具有两个输出的异步转换组件。 此转换将 **AddressID** 和 **City** 列传递给一个输出，同时它对位于特定城市 (Redmond, Washington, U.S.A.) 中的地址进行计数，然后将结果值输出到另一个输出。  
   
@@ -120,9 +120,9 @@ ms.lasthandoff: 11/20/2017
   
 1.  向数据流设计器图面添加新的脚本组件并将其配置为转换。  
   
-2.  在设计器中将源或另一转换的输出连接到新转换组件。 此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，其中至少包含 **AddressID** 和 **City** 列。  
+2.  在设计器中将源或另一转换的输出连接到新转换组件。 此输出应提供 AdventureWorks 示例数据库的 Person.Address 表中的数据，其中至少包含 AddressID 和 City 列。  
   
-3.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 列。  
+3.  打开“脚本转换编辑器”。 在“输入列”页中，选择 AddressID 和 City 列。  
   
 4.  在“输入和输出”页中，向第一个输出添加 **AddressID** 和 **City** 输出列并进行配置。 添加另一个输出，然后向第二个输出添加汇总值的输出列。 将第一个输出的 SynchronousInputID 属性设置为 0，因为此示例显式将每个输入行复制到第一个输出中。 新创建的输出的 SynchronousInputID 属性已经设置为 0。  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
   
-7.  为需要 **AddressID** 和 **City** 列的第一个输出创建和配置一个目标组件，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标或[使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将该转换的第一个输出，即 **MyAddressOutput**，连接到目标组件。 可以在 **AdventureWorks** 数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以创建目标表：  
+7.  为需要 **AddressID** 和 **City** 列的第一个输出创建和配置一个目标组件，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标或[使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将该转换的第一个输出，即 **MyAddressOutput**，连接到目标组件。 在 AdventureWorks 数据库中运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以创建目标表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

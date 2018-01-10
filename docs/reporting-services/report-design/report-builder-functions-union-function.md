@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4abee11e2e258561f3b5db40af11b057b8061588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 64ca7e19f9f9246bf5b5fd130244fe8b29715d19
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---union-function"></a>报表生成器函数 - Union 函数
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的联合。  
@@ -51,7 +49,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>返回  
  返回一个空间对象 **SqlGeometry** 或 **SqlGeography**，具体取决于表达式类型。 有关 **SqlGeometry** 和 **SqlGeography** 空间数据类型的详细信息，请参阅 [空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  表达式中指定的数据集必须具有相同的数据类型。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 不支持数据集作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  

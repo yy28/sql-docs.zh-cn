@@ -22,11 +22,11 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 198d9e8f67003e23a6c94094b7e559249a2d3fad
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 不能阻止可用性组中数据库的分布式事务 - 即使不为分布式事务配置可用性组也是如此。 但是，如果不为分布式事务配置可用性组，在某些情况下故障转移可能不会成功。 具体而言，新主要副本 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例可能无法从 DTC 获取事务结果。 若要启用 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例，以在故障转移后从 DTC 获取未决事务的结果，请为分布式事务配置可用性组。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 将可用性组配置为支持分布式事务前，必须满足以下先决条件：
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 有关解决未决事务的详细信息，请参阅[手动解决事务](http://technet.microsoft.com/library/cc754134.aspx)。
 
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 
 [分布式事务](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

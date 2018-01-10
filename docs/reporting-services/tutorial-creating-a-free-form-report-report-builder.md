@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33d2dfa08fcc9b3cbf41a80642e9d67bab8d2b3f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  单击 **“凭据”**，然后输入连接至 SQL Server 数据库引擎实例所需的凭据。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ### <a name="to-create-a-new-dataset"></a>新建数据集  
   
@@ -304,13 +304,13 @@ ms.lasthandoff: 12/05/2017
   
 5.  对“SalesDate”、“Quantity”和“Sales”重复步骤 3。 将 SalesDate 放置于 Product 之下，将 Quantity 放置于 SalesDate 之下，并且将 Sales 放置于 SalesDate 之下。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 7.  在 **“选择布局”** 页上，查看表的布局。  
   
     这个表很简单：只有五列，没有行或列组。 因为它不具有组，所以与组相关的布局选项不可用。 您将手动更新该表以便包括本教程后面部分中的总计。  
   
-8.  单击 **“下一步”**。  
+8.  单击“下一步” 。  
   
 9. 单击 **“完成”**。  
   
@@ -506,7 +506,7 @@ ms.lasthandoff: 12/05/2017
   
 
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 有关如何创建自由格式报表的教程到此结束。  
   
 有关列表的详细信息，请参阅： 
