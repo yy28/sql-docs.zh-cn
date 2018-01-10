@@ -28,8 +28,8 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="wizardMapping"></a> 向导如何在源和目标之间映射数据类型？
 向导使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装的映射文件将数据类型从一个数据库系统或版本映射到另一个数据库系统或版本。 例如，它可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型映射到 Oracle 数据类型。 默认情况下，XML 格式的映射文件安装在以下文件夹中。
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\*（针对 64 位）*
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\*（针对 32 位）*。  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** （针对 64 位）
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** （针对 32 位）。  
   
  如果编辑现有映射文件，或者向文件夹中添加新的映射文件，则必须关闭并重新打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，以便加载新的或更改过的映射文件。  
  

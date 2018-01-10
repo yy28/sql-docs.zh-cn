@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -21,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>用 OPENJSON (SQL Server) 将 JSON 数据转换为行和列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,8 +61,8 @@ FROM OPENJSON(@json);
   
 |Key|值|type|  
 |---------|-----------|----------|  
-|name|John|1|  
-|姓氏|Doe|1|  
+|NAME|John|@shouldalert|  
+|姓氏|Doe|@shouldalert|  
 |年龄|45|2|  
 |技能|["SQL","C#","MVC"]|4|
 
@@ -121,9 +120,9 @@ WITH (
   
 **结果**  
   
-|Number|日期|Customer|数量|  
+|Number|date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|  
+|SO43659|2011-05-31T00:00:00|AW29825|@shouldalert|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 此函数返回 JSON 数组的元素并将其格式化。  

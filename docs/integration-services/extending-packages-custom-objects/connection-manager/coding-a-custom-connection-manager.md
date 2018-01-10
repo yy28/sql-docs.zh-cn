@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab9cc5d32606564b4b79ac5270217fd849e97fd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5098cdd2f0cfb3f0c9b6d7b63c87ef9cb6f79bb6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-connection-manager"></a>编写自定义连接管理器代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  

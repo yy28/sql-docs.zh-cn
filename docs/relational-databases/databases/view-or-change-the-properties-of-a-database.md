@@ -1,7 +1,7 @@
 ---
 title: "查看或更改数据库的属性 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2016
+ms.date: 01/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2c3595bd32156fd1a88b343820e46a88d0f2c6a6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6859e361ef42515f13aefc3d648647585d160376
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,8 +135,8 @@ ms.lasthandoff: 01/02/2018
   
 3.  复制以下示例并将其粘贴到查询窗口中。 下面的示例将辅助数据库的 MAXDOP 设置为主数据库的值。  
   
-    ```  
-    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
+    ```sql  
+    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
 ## <a name="see-also"></a>另请参阅  

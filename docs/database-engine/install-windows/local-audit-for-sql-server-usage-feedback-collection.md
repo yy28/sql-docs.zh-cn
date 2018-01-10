@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Local Audit
@@ -20,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2d1dba346ae2e2cb5f68ff93613a2f3c12729780
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用反馈收集的本地审核
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集关�
 
 从 SQL Server 2016 CU2 开始，本地审核可在实例级别针对 SQL Server 数据库引擎和 Analysis Services (SSAS) 进行配置。 在 SQL Server 2016 CU4 和 SQL Server 2016 SP1 中，也为 SQL Server Integration Services (SSIS) 启用了本地审核功能。 在安装过程中安装的其他 SQL Server 组件以及在安装之后下载或安装的 SQL Server Tools 没有使用反馈收集的本地审核功能。 
 
-## <a name="prerequisites"></a>先决条件 
+## <a name="prerequisites"></a>必备条件 
 
 以下是在每个 SQL Server 实例上启用本地审核的先决条件： 
 
@@ -183,14 +181,14 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集关�
 | 计算机 | hostname、domainHash、sqmID、operatingSystem 
 | 实例 | instanceName、correlationID、clientVersion 
 | Session | sessionID、traceName 
-| Query | sequence、querySetVersion、queryIdentifier、query、queryTimeInTicks 
+| 查询 | sequence、querySetVersion、queryIdentifier、query、queryTimeInTicks 
 | data |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名称/值对定义和示例 
 
 下面列出的列表示本地审核文件输出的顺序。 采用 SHA 256 的单向哈希常常是下面一些列的匿名值。  
 
-| 名称 | Description | 示例值
+| “属性” | Description | 示例值
 |-------|--------| ----------|
 |hostname | 安装 SQL Server 的匿名计算机名称| de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 
 |domainHash| 承载 SQL Server 实例的计算机的匿名域哈希 | de3b3769a63970b63981ab7a956401388962c986bfd39d371f5870d800627d11 

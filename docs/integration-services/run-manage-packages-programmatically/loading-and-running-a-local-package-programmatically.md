@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a017f2d0b04df41b25e093bdeccd53036aa5710
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d55e5842ec6a9e62ec75095c68e59d4df86eec36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以编程方式加载和运行本地包
   可以使用[运行包](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)中介绍的方法，根据需要或在预定时间运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  启动 Visual Studio 开发环境，以您首选的开发语言创建新的应用程序。 本示例使用的是控制台应用程序；但您也可以从 Windows 窗体应用程序、ASP.NET Web 窗体或 Web 服务或者 Windows 服务运行包。  
   
-2.  在“项目”菜单上，单击“添加引用”，向 Microsoft.SqlServer.ManagedDTS.dll 添加一个引用。 单击 **“确定”**。  
+2.  在“项目”菜单上，单击“添加引用”，向 Microsoft.SqlServer.ManagedDTS.dll 添加一个引用。 单击“确定” 。  
   
 3.  使用 Visual Basic Imports 语句或 C# using 语句来导入 Microsoft.SqlServer.Dts.Runtime 命名空间。  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
   变量提供一种在包、容器、任务和事件处理程序中动态设置值和控制进程的方式。 优先约束还可使用变量来控制数据流流向不同任务的方向。 变量具有多种用途：  
@@ -169,7 +169,7 @@ End Module
   
  可用的系统变量互有差异，具体取决于容器类型。 有关包、容器、任务和事件处理器可用的系统变量的列表，请参阅[系统变量](../../integration-services/system-variables.md)。  
   
-## <a name="value"></a>值  
+## <a name="value"></a>ReplTest1  
  自定义变量的值可以是文字或表达式：  
   
 -   如果希望变量包含文字值，请设置其 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 属性的值。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>报表生成器函数 - Multilookup 函数
   从包含名称/值对的数据集返回指定名称集的一组第一个匹配值。  
@@ -54,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>返回  
  返回 **VariantArray**，如果没有匹配项，则返回 **Nothing** 。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 **Multilookup** 从名称-值对（每对具有 1 对 1 的关系）的数据集中检索一组值。 **MultiLookup** 等同于对一组名称或键调用 **Lookup** 。 例如，对于基于主键标识符的多值参数，可以在表中使用文本框表达式中的 **Multilookup** 来检索未绑定到该参数或该表的数据集中的相关值。  
   
  **Multilookup** 执行下列操作：  
@@ -98,12 +96,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  数据集 CategoryNames 包含类别标识符和类别名称，如下表中所示：  
   
-|ID|名称|  
+|ID|“属性”|  
 |--------|----------|  
-|1|Accessories|  
+|@shouldalert|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|组件|  
   
  若要查找与标识符列表对应的名称，请使用 **Multilookup**。 必须首先将该列表拆分为字符串数组，调用 **Multilookup** 以检索类别名称，然后将结果连接成字符串。  
   
@@ -120,7 +118,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|Color|  
 |-------------|-----------|  
-|1|Red|  
+|@shouldalert|Red|  
 |2|蓝色|  
 |3|绿色|  
   

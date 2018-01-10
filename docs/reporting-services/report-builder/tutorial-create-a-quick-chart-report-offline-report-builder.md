@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
  ![报表生成器快速饼图](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  无论你是使用 XML 数据还是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，都需要有权访问报表生成器。 你可以从本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 报表服务器上启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，也可以从 Microsoft 下载中心下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 用于完成本教程的两种方法  
@@ -119,7 +117,7 @@ ms.lasthandoff: 12/05/2017
   
      ![报表生成器设计查询](../../reporting-services/report-builder/media/rb-designquery.png "Report Builder Design Query")  
   
-12. 单击 **“下一步”**。  
+12. 单击“下一步” 。  
   
 13. 在 **“选择图表类型”** 页中，单击 **“饼图”**，然后单击 **“下一步”**。  
   
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
 10. 在 **“选择图表类型”** 页中，单击 **“饼图”**，然后单击 **“下一步”**。  
   
@@ -225,7 +223,7 @@ ms.lasthandoff: 12/05/2017
 
 5. 在“ **字体** ”选项卡上，选择“ **粗体** ”并将“ **颜色** ”更改为“ **白色**”。
 
-6. 单击 **“确定”**。     
+6. 单击“确定” 。     
   
  有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   

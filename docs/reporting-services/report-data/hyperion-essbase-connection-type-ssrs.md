@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  
@@ -91,10 +89,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**Value**|**对象**|指定字段的数据值。<br /><br /> 对于维度属性，它映射到 MEMBER_CAPTION。 对于度量值，它映射到数据值。|  
 |**IsMissing**|**Boolean**|指示是否在结果数据集中找到了该字段。|  
-|**FormattedValue**|**字符串**|返回关键数字的格式值。<br /><br /> 映射自 MDX 表达式中的 FORMATTED_VALUE。|  
-|**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。<br /><br /> 映射自 MDX 表达式中的 BACK_COLOR。|  
-|**Color**|**字符串**|返回数据库中为该项定义的前景色。<br /><br /> 映射自 MDX 表达式中的 FORE_COLOR。|  
-|**UniqueName**|**字符串**|返回级别的完全限定名称。<br /><br /> 映射自 MDX 表达式中的 MEMBER_UNIQUE_NAME。|  
+|**FormattedValue**|**String**|返回关键数字的格式值。<br /><br /> 映射自 MDX 表达式中的 FORMATTED_VALUE。|  
+|**BackgroundColor**|**String**|返回数据库中为该字段定义的背景颜色。<br /><br /> 映射自 MDX 表达式中的 BACK_COLOR。|  
+|**Color**|**String**|返回数据库中为该项定义的前景色。<br /><br /> 映射自 MDX 表达式中的 FORE_COLOR。|  
+|**UniqueName**|**String**|返回级别的完全限定名称。<br /><br /> 映射自 MDX 表达式中的 MEMBER_UNIQUE_NAME。|  
   
  有关如何在表达式中使用字段和字段属性的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -110,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**属性**|**类型**|**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**字符串**|针对度量值定义，是可作为 String 类型的 **FormattedValue** 。|  
+|**FORMAT_STRING**|**String**|针对度量值定义，是可作为 String 类型的 **FormattedValue** 。|  
   
   
 ##  <a name="Remarks"></a> 注释  

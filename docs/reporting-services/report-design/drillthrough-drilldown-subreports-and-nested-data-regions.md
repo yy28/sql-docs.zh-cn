@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4e87d6484f1a04e61907939bd2fa69d93dff426
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79bb5cfbe014006c6400ec54d56b69ce435910fb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>钻取、深化、子报表和嵌套数据区域
   可以通过多种方法组织数据，以显示一般信息与详细信息之间的关系。  您可以将所有数据都放在报表中，但将这些数据设置为在用户单击以显示详细信息之前处于隐藏状态，这就是“深化”  操作。 可以在“嵌套”  在其他数据区域（例如表或矩阵）内的一个数据区域（例如表或图表）内显示数据。 还可以在完全包含在主报表内的“子报表”  中显示数据。 或者，可以将详细信息数据放在“钻取”  报表中，钻取报表是在用户单击链接时显示的单独报表。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 |检索数据|与主报表同时检索数据|通过一个钻取报表一次性检索数据|始终与主报表同时检索数据|  
 |处理和呈现方式|与主报表一起|单击链接时|与主报表一起。|  
 |执行速度|较慢（但与主报表一起检索所有数据）|较快（但不与主报表一起检索所有数据）|较快（且与主报表一起检索所有数据）|  
-|是否使用参数|是|是|“否”|  
+|是否使用参数|是|是|是|  
 |可以重复使用|作为其他报表中的报表、子报表或钻取报表|作为其他报表中的报表、子报表或钻取报表|不能重复使用。|  
 |位置|位于主报表外部，与主报表位于相同或不同的报表服务器|位于主报表外部，与主报表位于相同的报表服务器|位于主报表内部|  
 |显示位置|主报表中|其他报表中|主报表中|  

@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 052113c5e6f18381a26d9a3a7f1703659a40a88e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76108d1b6c4004d85456b0f412874012b8d71228
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>在脚本任务中连接数据源
   连接管理器提供对已在包中配置的数据源的访问。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
@@ -44,64 +44,52 @@ ms.lasthandoff: 11/20/2017
  调用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法时，如果连接管理器尚未连接数据源，则进行连接，然后返回供您在脚本任务代码中使用的相应连接或连接信息。  
   
 > [!NOTE]  
->  在调用 **AcquireConnection** 之前，必须了解连接管理器返回的连接的类型。 由于脚本任务启用了 **Option Strict**，因此在使用连接之前，必须先将连接（返回类型为 **Object**）转换为适当的连接类型。  
+>  在调用 **AcquireConnection** 之前，必须了解连接管理器返回的连接的类型。 由于脚本任务启用了 Option Strict，因此在使用连接之前，必须先将连接（返回类型为 Object）转换为适当的连接类型。  
   
  在代码中使用连接之前，可以使用 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> 属性返回的 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 集合的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 方法查找现有连接。  
   
 > [!IMPORTANT]  
 >  在脚本任务的托管代码中，不能调用返回非托管对象的连接管理器（如 OLE DB 连接管理器和 Excel 连接管理器）的 AcquireConnection 方法。 但是，可以读取这些连接管理器的 ConnectionString 属性，并通过将 **System.Data.OleDb** 命名空间的 **OledbConnection** 与连接字符串结合使用，在代码中直接连接数据源。  
 >   
->  如果必须调用返回非托管对象的连接管理器的 AcquireConnection 方法，可使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器。 配置 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器为使用 OLE DB 访问接口时，该连接管理器使用用于 OLE DB 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口进行连接。 在这种情况下，AcquireConnection 方法返回 **System.Data.OleDb.OleDbConnection** 而不是非托管对象。 若要将 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器配置为用于 Excel 数据源，请选择 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet，指定 Excel 文件，然后在“连接管理器”对话框的“全部”页上输入 `Excel 8.0`（对于 Excel 97 及更高版本）作为“扩展属性”的值。  
+>  如果必须调用返回非托管对象的连接管理器的 AcquireConnection 方法，可使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器。 配置 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器为使用 OLE DB 访问接口时，该连接管理器使用用于 OLE DB 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据访问接口进行连接。 在这种情况下，AcquireConnection 方法返回 System.Data.OleDb.OleDbConnection 而不是非托管对象。 若要将 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器配置为用于 Excel 数据源，请选择 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet，指定 Excel 文件，然后在“连接管理器”对话框的“全部”页上输入 `Excel 8.0`（对于 Excel 97 及更高版本）作为“扩展属性”的值。  
   
 ## <a name="connections-example"></a>连接示例  
  下面的示例演示如何从脚本任务内部访问连接管理器。 该示例假设已创建和配置了名为 **Test ADO.NET Connection** 的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器，以及名为 **Test Flat File Connection** 的平面文件连接管理器。 请注意，[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 连接管理器返回可立即用于连接数据源的 **SqlConnection** 对象， 而平面文件连接管理器则只返回包含路径和文件名的字符串。 必须使用 **System.IO** 命名空间中的方法来打开和使用该平面文件。  
   
 ```vb  
-Public Sub Main()  
-  
-    Dim myADONETConnection As SqlClient.SqlConnection  
-    myADONETConnection = _  
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction), _  
-        SqlClient.SqlConnection)  
-    MsgBox(myADONETConnection.ConnectionString, _  
-        MsgBoxStyle.Information, "ADO.NET Connection")  
-  
-    Dim myFlatFileConnection As String  
-    myFlatFileConnection = _  
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _  
-        String)  
-    MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")  
-  
-    Dts.TaskResult = ScriptResults.Success  
-  
-End Sub  
+    Public Sub Main()
+
+        Dim myADONETConnection As SqlClient.SqlConnection =
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
+        MsgBox(myADONETConnection.ConnectionString,
+            MsgBoxStyle.Information, "ADO.NET Connection")
+
+        Dim myFlatFileConnection As String =
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
+        MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
+
+        Dts.TaskResult = ScriptResults.Success
+
+    End Sub
 ```  
   
 ```csharp  
-using System;  
-using System.Data.SqlClient;  
-using Microsoft.SqlServer.Dts.Runtime;  
-using System.Windows.Forms;  
-  
-public class ScriptMain  
-{  
-  
-        public void Main()  
-        {  
-            SqlConnection myADONETConnection = new SqlConnection();  
-            myADONETConnection = (SqlConnection)(Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)as SqlConnection);  
-            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");  
-  
-            string myFlatFileConnection;  
-            myFlatFileConnection = (string)(Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);  
-            MessageBox.Show(myFlatFileConnection, "Flat File Connection");  
-  
-            Dts.TaskResult = (int)ScriptResults.Success;  
-  
-        }  
-  
-}  
-  
+        public void Main()
+        {
+            SqlConnection myADONETConnection = 
+                Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)
+                as SqlConnection;
+            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");
+
+            string myFlatFileConnection = 
+                Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) 
+                as string;
+            MessageBox.Show(myFlatFileConnection, "Flat File Connection");
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
 ```  
   
 ## <a name="see-also"></a>另请参阅  

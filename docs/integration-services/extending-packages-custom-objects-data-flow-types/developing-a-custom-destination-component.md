@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a95f24318503d8f76604bbcf683bc9ed79bd1ce0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 144f74f77fa6c03258608a654434db05136ce833
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
   开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  
@@ -210,7 +210,7 @@ Private Sub AddExternalMetaDataColumn(ByVal input As IDTSInput100, ByVal inputCo
 End Sub  
 ```  
   
-## <a name="run-time"></a>运行时间  
+## <a name="run-time"></a>运行时  
  在执行过程中，每次上游组件中有了完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 时，目标组件都会收到对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的调用。 此方法会被重复调用，直到再没有缓冲区可用且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性为“true”。 在此方法中，目标组件读取缓冲区中的列和行，并将其添加到外部数据源。  
   
 ### <a name="locating-columns-in-the-buffer"></a>在缓冲区中查找列  

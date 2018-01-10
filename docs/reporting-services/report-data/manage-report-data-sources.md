@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c38232b3e2f201cc392d39cde0b5ffcb31ddf0db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 443b1f6a2249fd836555bb7cb6822d3dbbae199d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-report-data-sources"></a>管理报表数据源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表、报表模型以及数据驱动订阅都从外部数据源检索数据。 若要连接到外部数据源，报表服务器可以使用报表、模型或订阅中定义的或从中引用的数据源连接信息。 数据源连接属性始终在创建报表或模型时通过该报表或模型进行定义，但是可以在将报表或模型发布到报表服务器后对这些属性进行单独管理。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>托管属性：数据源类型、连接字符串和凭据  
  可以在报表服务器上管理的数据源属性为：  
   
-|属性|Description|管理方式|  
+|“属性”|Description|管理方式|  
 |--------------|-----------------|----------------------|  
 |数据源类型|确定要对外部数据使用的报表服务器数据处理扩展插件。 数据处理器的示例包括 SQL Server、Analysis Services 和 Oracle。|数据源类型是托管属性，因为它是可配置的。 但是，如果要创建新的共享数据源，则应仅配置数据源类型。<br /><br /> 请不要在已发布报表或模型的属性页中更改数据源类型，这样做几乎可以肯定会使连接无效。 不同数据平台上的报表或模型所需的数据结构不太可能相同。|  
 |连接字符串|建立到外部数据源的初始连接。 报表可以使用静态或动态连接字符串。<br /><br /> “静态连接字符串”  是报表在每次运行时始终用于连接到同一数据源的一组值。<br /><br /> “动态连接字符串”  是允许用户选择将要在运行时使用的数据源的报表内置表达式。 在报表设计器中创建报表时，必须将该表达式和数据源选择列表置入该报表中。|更改连接字符串在以下情况中非常有用：将数据源移到另一个计算机中，或如果您使用测试数据创建了报表，但是希望根据生产数据库部署该报表。<br /><br /> 可以通过将原始字符串替换为另一个字符串来管理静态连接字符串。<br /><br /> 若要在报表管理器或 SharePoint 站点中管理动态连接字符串，只能将原始字符串替换为静态字符串。 您不能编辑表达式本身，也不能更改数据源选择列表。 若要更改表达式或有效值列表，必须编辑报表定义并将它重新发布到报表服务器。 有关详细信息，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  

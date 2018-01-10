@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f7ede2f08bd7f09eb4a3dd0be273225dc5ba6b8d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b733d6f858f3d631c25b7861cc7f7b5546482ee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥 - 存储加密的报表服务器数据
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
  在多个报表服务器实例共享同一个报表服务器数据库的报表服务器扩展部署中，所有报表服务器节点都使用一个对称密钥。 每个节点必须具有一个共享对称密钥的副本。 配置扩展部署时，将为每个节点自动创建一个对称密钥副本。 每个节点都使用 Windows 服务帐户专有密钥对的公钥来加密对称密钥的副本。 若要详细了解如何为单个实例和扩展部署创建对称密钥，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 > [!NOTE]  
->  如果更改 Report Server Windows 服务帐户，则非对称密钥将变为无效，从而中断服务器操作。 为了避免此类故障，请始终使用 Reporting Services 配置工具来修改服务帐户设置。 使用配置工具时，密钥会自动更新。 有关详细信息，请参阅[配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+>  如果更改 Report Server Windows 服务帐户，则非对称密钥将变为无效，从而中断服务器操作。 为了避免此类故障，请始终使用 Reporting Services 配置工具来修改服务帐户设置。 使用配置工具时，密钥会自动更新。 有关详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 ## <a name="other-sources-of-confidential-data"></a>其他机密数据源  
  报表服务器中还存储有其他可能包含需保护的敏感信息的未加密数据。 具体来说，报表历史记录快照和报表执行快照包含的查询结果可能包括仅供授权用户使用的数据。 因此，对包含机密数据的报表使用快照功能时，需要注意，有权打开报表服务器数据库中的表的用户也能通过检查表的内容来查看所存储报表的部分内容。  
