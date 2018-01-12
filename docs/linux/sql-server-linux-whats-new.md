@@ -28,7 +28,7 @@ ms.lasthandoff: 11/29/2017
 本文介绍在 Linux 上运行的 SQL Server 2017 的主要功能和可用服务。
 
 > [!NOTE]
-> 除了这些功能在本文中，累积更新定期发布后 GA 版。 这些累积更新提供了许多改进和修补程序。 有关最新 CU 版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
+> 除了本文中的这些功能外, 在 GA 发布之后, 还会定期发布累积更新。这些累积更新提供了许多改进和修补程序。有关最新CU版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。有关包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/29/2017
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-有关 SQL Server 在 Linux 上其他信息，请参阅[概述](sql-server-linux-overview.md)。 包下载和不支持的功能和已知的问题的列表，请参阅[发行说明](sql-server-linux-release-notes.md)。
+有关 Linux 上的 SQL Server 的其他信息，请参阅[概述](sql-server-linux-overview.md)。有关包下载以及不支持的功能和已知问题的列表，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 若要查看在 SQL Server 2017 中引入的其他改进，请参阅[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
 
