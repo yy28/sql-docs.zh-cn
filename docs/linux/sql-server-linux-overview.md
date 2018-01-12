@@ -27,7 +27,7 @@ SQL Server 2017 现在在 Linux 上运行。 它属于相同的 SQL Server 数�
 
 ## <a name="install"></a>Install
 
-若要开始，请在使用以下快速入门教程之一的 Linux 上安装 SQL Server:
+若要开始，请使用以下快速入门教程之一在Linux 上安装 SQL Server:
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
@@ -36,11 +36,11 @@ SQL Server 2017 现在在 Linux 上运行。 它属于相同的 SQL Server 数�
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> 在运行 docker 本身在多个平台上，这意味着，你可以在 Linux、 Mac 和 Windows 上运行的 Docker 映像。
+> Docker 本身在多个平台上运行，这意味着，可以在 Linux、Mac 和 Windows 上运行 Docker 映像。
 
 ## <a name="connect"></a>连接
 
-安装完成后，连接到你的 Linux 计算机上的 SQL Server 实例。 你可以连接本地或远程和各种工具和驱动程序。 快速入门教程演示如何使用[sqlcmd](sql-server-linux-setup-tools.md)命令行工具。 其他工具包括：
+安装完成后，请连接到 Linux 计算机上的 SQL Server 实例。可以使用各种工具和驱动程序进行本地或远程连接。快速入门教程演示如何使用 [sqlcmd](sql-server-linux-setup-tools.md) 命令行工具。 其他工具包括：
 
 | 工具 | 教程 |
 |-----|-----|
