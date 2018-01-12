@@ -23,7 +23,7 @@ ms.lasthandoff: 11/29/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
-以下发行说明适用于 Linux 上运行的 SQL Server 2017。 以下主题会拆分为每个版本的部分。 GA 版具有详细可支持性并被称之为列出的问题。 每个累积更新 (CU) 版本提供到描述 CU 更改以及指向包下载的 Linux 支持主题的链接。
+以下发行说明适用于 Linux 上运行的 SQL Server 2017。以下主题会拆分为每个版本的部分。GA 版具有详细可支持性和已知问题列表。每个累积更新 (CU) 版本提供描述各自 CU 更改的支持主题链接，以及用于下载 Linux 包的链接。
 
 ## <a name="supported-platforms"></a>支持的平台
 
