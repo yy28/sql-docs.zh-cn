@@ -1,7 +1,7 @@
 # [概述](json-data-sql-server.md)  
 # [在 SQL Server 中存储 JSON 文档](store-json-documents-in-sql-tables.md)
-# [将 JSON 文档导入 SQL Server](import-json-documents-into-sql-server.md)  
 # [对 JSON 数据编制索引](index-json-data.md)  
+# [将 JSON 文档导入 SQL Server](import-json-documents-into-sql-server.md)  
 # [借助 FOR JSON 将查询结构的格式设置为 JSON (SQL Server)](format-query-results-as-json-with-for-json-sql-server.md)  
 ## [在 PATH 模式下格式化嵌套 JSON 输出](format-nested-json-output-with-path-mode-sql-server.md)  
 ## [在 AUTO 模式下自动格式化 JSON 输出](format-json-output-automatically-with-auto-mode-sql-server.md)  
