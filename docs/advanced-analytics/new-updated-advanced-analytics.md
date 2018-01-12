@@ -12,7 +12,7 @@ ms.prod_service: machine-learning-services
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
@@ -20,21 +20,21 @@ ms.topic: article
 ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: 
-ms.openlocfilehash: c73c6295f7b6e2a23c947ab65160032ce83264e1
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 65bdb7f8f8547644d6c8b32606e17c18983aa717
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新的和最近的更新： SQL Server 的高级分析
 
 
 
-Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文档网站上的一些现有文章。 本文显示从最近更新的文章中摘录的内容。 可能还会列出新文章的链接。
+几乎每日 Microsoft 及其现有的文章的一些上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文档网站。 这篇文章显示摘录最近已更新的文章。 可能还会列出链接到新的文章。
 
-本文由定期重新运行的程序生成。 摘录内容偶尔会有格式问题，还可能以源文的 markdown 格式显示。 此处不会显示任何图像。
+定期重新运行程序生成这篇文章。 有时摘录可使用不完善格式，或出现 markdown 源文章中的说明。 此处永远不会显示图像。
 
-最新的更新报告涵盖以下日期范围和主题：
+报告的以下日期范围和主题的新的更新：
 
 
 
@@ -47,7 +47,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>最近创建的新文章
+## <a name="new-articles-created-recently"></a>最近创建的新项目
 
 单击以下链接可跳转到最近添加的新文章。
 
@@ -60,13 +60,13 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
+## <a name="updated-articles-with-excerpts"></a>与摘录更新的文章
 
 此部分摘录了最近大幅更新的文章中的更新内容。
 
-此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
+此处显示的摘自其正确的语义上下文的来自分隔。 此外，有时摘录分开环绕在实际的文章中的重要的 markdown 语法。 因此这些摘录适用于一般性指导原则。 摘录仅使你能够知道您的兴趣是否值得花些时间后，单击，访问实际的文章。
 
-鉴于以上原因及其他原因，请不要复制这些摘录中的代码，也不要将摘录当作确切事实。 请转而访问实际文章。
+有关这些和其他原因，不从这些摘录中，复制代码并不会为确切真实任何文本摘录。 相反，请访问实际的文章。
 
 
 
@@ -76,7 +76,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
+### <a name="compact-list-of-articles-updated-recently"></a>Compact 的最近更新的文章的列表
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
@@ -456,7 +456,7 @@ SQL Server 提供功能，可帮助你管理多个包版本，并对其授予用
 
 
 
-|“属性”| 注释|
+|名称| 注释|
 |----|----|----|
 | **SQL Server 2016**| ***  |
 |在 Windows 上的 SQL Server 2016 SP1 Enterprise|集成的高级分析的 R Services。|
@@ -667,7 +667,7 @@ RevoScaleR 操作中的示例，请参阅下列博客：
 > * 所需安装后步骤： 启用机器学习中，并重新启动
 > * 可选的安装后步骤： 添加防火墙规则、 添加用户、 更改或配置服务帐户设置远程数据科学客户端。
 
-**入门**
+**要开始**
 
 1. 运行..！包括 NotShown-ssNoVersion.../../includes/ssnoversion-md.md)] 安装程序。
 
@@ -784,7 +784,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 
 
 
-## <a name="similar-articles"></a>类似文章
+## <a name="similar-articles"></a>类似的文章
 
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
@@ -794,10 +794,10 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域它们具有新的或最近已更新的文章
 
 - [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (1 + 0): **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
 - [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
 - [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
@@ -808,22 +808,22 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 - [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
 - [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)**文档](../ssdt/new-updated-ssdt.md)
 - [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
 - [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>主题区域的任何新的或最近已更新的文章
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
-- [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
-- [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
+- [新 + 更新 (0 + 0): **ActiveX 数据对象 (ADO) sql**文档](../ado/new-updated-ado.md)
+- [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
+- [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
-- [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
-- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
+- [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
+- [新 + 更新 (0 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
-- [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
+- [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
 
 

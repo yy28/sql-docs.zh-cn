@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升级 SQL Server 实例中的机器学习组件
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 
 升级机器学习组件的过程中被称为**绑定**，因为它将更改要使用新的现代软件生命周期策略的 SQL Server 计算机学习组件支持模型。 
 
-一般情况下，切换到新的授权模型可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
+一般情况下，切换到新的维护模式可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
 
 > [!NOTE]
 > 升级不会更改 SQL Server 数据库的支持模型，并不会更改 SQL Server 的版本。
@@ -189,7 +189,7 @@ ms.lasthandoff: 01/08/2018
 
 ### <a name="parameters"></a>Parameters
 
-|“属性”|Description|
+|名称|Description|
 |------|------|
 |*list*| 显示当前计算机上所有 SQL 数据库实例 ID 的列表|
 |*bind*| 将指定的 SQL 数据库实例升级至 R Server 最新版本，并确保实例会自动获取 R Server 的未来升级|

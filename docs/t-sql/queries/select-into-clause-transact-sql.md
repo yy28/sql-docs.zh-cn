@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT-INTO 子句 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 若要查看完整的选择语法，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/02/2018
  当选择列表中包含计算列时，新表中的相应列并不是计算列。 新列中的值是在执行 SELECT...INTO 时计算的。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
- SELECT...INTO 的日志记录量取决于数据库的有效恢复模式。 在简单恢复模式或大容量日志恢复模式下，大容量操作是最小日志记录操作。 与最小日志记录，使用 SELECT... INTO 语句可以是比创建表，然后填充具有 INSERT 语句的表更高效。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ SELECT...INTO 的日志记录量取决于数据库的有效恢复模式。 在简单恢复模式或大容量日志恢复模式下，大容量操作是最小日志记录操作。 与最小日志记录，使用 SELECT... INTO 语句可以是比创建表，然后填充具有 INSERT 语句的表更高效。 有关详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
  在目标数据库中要求 CREATE TABLE 权限。  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 作为另一个表的副本创建新表并将其加载指定的文件组
-以下示例 demostrates 作为另一个表的副本创建新表并将其加载到指定的文件组不同于用户的默认文件组。
+下面的示例演示作为另一个表的副本创建新表并将其加载到指定的文件组不同于用户的默认文件组。
 
  **适用于：**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
