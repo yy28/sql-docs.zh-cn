@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>内置集合 - 参数集合引用（报表生成器）
   报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |`=Parameters!` \<ParameterName> `.Count`|返回整数值 1。 对于单值参数，该计数始终为 1。|  
 |`=Parameters!` \<ParameterName> `.Label`|返回参数标签，该参数标签通常用作可用值下拉列表中的显示名称。|  
 |`=Parameters!` \<ParameterName> `.Value`|返回参数值。 如果尚未设置 Label 属性，则此值会显示在可用值的下拉列表中。|  
-|`=CStr(Parameters!` \<ParameterName> `.Value)`|返回该参数值作为字符串。|  
+|`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|返回该参数值作为字符串。|  
 |`=Fields(Parameters!` \<ParameterName> `.Value).Value`|返回与参数同名的字段的值。|  
   
  有关在筛选器中使用参数的详细信息，请参阅[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be67496825da165dca22ed5074e0e1ee67a32a56
-ms.sourcegitcommit: d8d602898e80797e330aab54e53ee7dde8282e21
+ms.openlocfilehash: b26a0a774c6f1f6dcb7dd9b01c732be336f76b94
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="configure-distributed-availability-group"></a>配置分布式可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/06/2017
 
 有关分布式可用性组的技术概述，请参阅[分布式可用性组](distributed-availability-groups.md)。   
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>设置终结点侦听程序以侦听所有 IP 地址
 
@@ -220,7 +220,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
 此时仅支持手动故障转移。 以下 Transact-SQL 语句将故障转移名为 `distributedag` 的分布式可用性组：  
 
 
-1. 将次要可用性组的可用性模式设置为同步提交。 
+1. 将两个可用性组的可用性模式均设置为同步提交。 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -229,7 +229,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 

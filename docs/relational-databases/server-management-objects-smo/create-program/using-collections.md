@@ -17,18 +17,20 @@ helpviewer_keywords:
 - collections [SMO]
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f35839db630e0066568360b2372451abd37b01a9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac05072224f6b6cc4e84b2144d827b6059b226d2
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-collections"></a>使用集合
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]集合是从相同的对象类构造的并共享同一父对象的对象的列表。 集合对象始终包含对象类型的名称并具有 Collection 后缀。 例如，若要访问指定表中的列，请使用 <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection> 对象类型。 它包含所有属于同一 <xref:Microsoft.SqlServer.Management.Smo.Column> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  集合是指从相同对象类构造的并共享同一父对象的对象列表。 集合对象始终包含对象类型的名称并具有 Collection 后缀。 例如，若要访问指定表中的列，请使用 <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection> 对象类型。 它包含所有属于同一 <xref:Microsoft.SqlServer.Management.Smo.Column> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象。  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **为...每个**语句或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**语句可用于循环访问集合的每个成员。  
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [安装 SQL Server 2016 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
 
 > [!NOTE]  
->  不支持在同一 AG 内混合使用不同的 SQL Server 版本。 要通过可用性组迁移至新版本，唯一可行方式是使用 SQL Server 2016 Enterprise Edition 或更高版本中的分布式可用性组。
+>  在就地升级副本的滚动升级外不支持在同一 AG 中混合使用不同版本的 SQL Server。 这意味着更高版本的 SQL Server 不能作为新副本添加到现有 AG。 例如，SQL Server 2017 副本不能添加到现有 SQL Server 2016 AG。 要通过可用性组迁移至 SQL Server 新版本，唯一可行方式是使用 SQL Server 2016 Enterprise Edition 或更高版本中的分布式可用性组。
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>AlwaysOn 可用性组的滚动升级最佳做法  
  在执行服务器升级或更新时应按照以下最佳做法操作，以最大程度减少可用性组的故障时间和数据丢失量：  

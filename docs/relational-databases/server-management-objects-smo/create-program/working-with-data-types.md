@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16d7cc6bac67972516efb5bc916eefacd91eafc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 575e2b0553bd37ca095c1864cc775547ace36a76
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="working-with-data-types"></a>使用数据类型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据来自在许多类型和大小，如具有定义的长度、 具有特定准确性的数字或是具有自己的规则集的另一个对象的用户定义数据类型的字符串。 <xref:Microsoft.SqlServer.Management.Smo.DataType>对象对的数据类型进行分类，以便其可以正确地处理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 <xref:Microsoft.SqlServer.Management.Smo.DataType> 对象与接受数据的对象关联。 以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 对象接受必须由定义的数据<xref:Microsoft.SqlServer.Management.Smo.DataType>对象属性：  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  数据具有很多类型和不同的大小，例如具有定义长度的字符串、具有特定精度的数字或者作为具有其自身规则集的其他对象的用户定义数据类型。 <xref:Microsoft.SqlServer.Management.Smo.DataType>对象对的数据类型进行分类，以便其可以正确地处理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 <xref:Microsoft.SqlServer.Management.Smo.DataType> 对象与接受数据的对象关联。 以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 对象接受必须由定义的数据<xref:Microsoft.SqlServer.Management.Smo.DataType>对象属性：  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-basic"></a>使用 Visual Basic 中构造函数的规范构造 DataType 对象  
- 此代码示例演示如何使用此构造函数创建基于不同的数据类型的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。  
+ 该代码示例显示如何使用构造函数创建基于不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的数据类型实例。  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 和 XML 类型全都需要名称值以标识对象。  
@@ -81,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-c"></a>使用 Visual C# 中构造函数的规范构造 DataType 对象  
- 此代码示例演示如何使用此构造函数创建基于不同的数据类型的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。  
+ 该代码示例显示如何使用构造函数创建基于不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的数据类型实例。  
   
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>、<xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> 和 XML 类型全都需要名称值以标识对象。  
@@ -96,7 +98,7 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ```  
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>使用 Visual Basic 中的默认构造函数构造 DataType 对象  
- 此代码示例演示如何使用默认构造函数来创建基于不同的数据类型的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。 然后使用这些属性指定数据类型。  
+ 该代码示例显示如何使用默认构造函数创建基于不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的数据类型实例。 然后使用这些属性指定数据类型。  
   
  **请注意** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>， <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>，和 XML 类型全都需要名称值以确定的对象。  
   
@@ -111,7 +113,7 @@ dt.MaximumLength = 100
 ```
   
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>使用 Visual C# 中的默认构造函数构造 DataType 对象  
- 此代码示例演示如何使用默认构造函数来创建基于不同的数据类型的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。 然后使用这些属性指定数据类型。  
+ 该代码示例显示如何使用默认构造函数创建基于不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的数据类型实例。 然后使用这些属性指定数据类型。  
   
  **请注意** <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>， <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>，和 XML 类型全都需要名称值以确定的对象。  
   

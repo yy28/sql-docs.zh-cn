@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e712f4cacb6a1d7e795a75e1af6a47b758e21a3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fc1849a9bd38af6cbca6d9ebcbea6a571af8816c
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-triggers"></a>创建、更改和删除触发器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 SMO 中，触发器表示通过使用<xref:Microsoft.SqlServer.Management.Smo.Trigger>对象。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]时激发的触发器将由运行代码<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>在触发器对象的属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象的其他属性（如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 属性）可以设置触发器的类型。 这是用于指定是否由激发触发器的布尔属性**更新**父表上的记录。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]在 SMO 中，触发器表示通过使用<xref:Microsoft.SqlServer.Management.Smo.Trigger>对象。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]时激发的触发器将由运行代码<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>在触发器对象的属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象的其他属性（如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 属性）可以设置触发器的类型。 这是用于指定是否由激发触发器的布尔属性**更新**父表上的记录。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象表示传统的数据操作语言 (DML) 触发器。 在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更改版本中，也同样支持数据定义语言 (DDL) 触发器。 DDL 触发器由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> 对象和 <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> 对象表示。  
   

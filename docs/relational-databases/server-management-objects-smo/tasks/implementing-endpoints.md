@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76a3dee0b7df584ae5bf08923f6b0b8c88289e59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1d8ce479654f80d54c1a5aef6fb63138e13dbc6
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="implementing-endpoints"></a>实现端点
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]终结点是一种服务，可以本机方式侦听请求。 SMO 通过使用支持各种类型的终结点<xref:Microsoft.SqlServer.Management.Smo.Endpoint>对象。 您可以创建用于处理特定类型负载且使用特定协议的端点服务，方法是创建一个 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象的实例并设置其属性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  端点是一种可以本机方式侦听请求的服务。 SMO 通过使用支持各种类型的终结点<xref:Microsoft.SqlServer.Management.Smo.Endpoint>对象。 您可以创建用于处理特定类型负载且使用特定协议的端点服务，方法是创建一个 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象的实例并设置其属性。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A>属性<xref:Microsoft.SqlServer.Management.Smo.Endpoint>对象可以用于指定下列负载类型：  
   

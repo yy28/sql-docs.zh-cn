@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44f813225666c0d4259c061488d776318a27ba72
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询优化器使用统计信息来创建可提供查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在一些情况下，需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/02/2018
 ### <a name="statistics-options"></a>统计信息选项  
  可以设置三个选项来影响何时以及如何创建和更新统计信息。 这些选项仅在数据库级别设置。  
   
-#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS 选项  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 选项  
  在自动创建统计信息选项 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有[直方图](#histogram)的列上创建。 AUTO_CREATE_STATISTICS 选项不确定是否为索引创建了统计信息。 此选项也不生成筛选统计信息。 它严格应用于全表的单列统计信息。  
   
  查询优化器通过使用 AUTO_CREATE_STATISTICS 选项创建统计信息时，统计信息名称以 `_WA` 开头。 可以使用下面的查询来确定查询优化器是否为查询谓词列创建了统计信息。  

@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3abcab5e233c45e1fda0bf5fb53499ac9ca21732
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea11babb95bfd727d4171f78f819b66eafc682b1
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ ms.lasthandoff: 11/17/2017
      **“所有者”**  
      提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
   
-     **状态**  
+     **“状态”**  
      显示下表中相应的数据库状态。  
   
-    |图标|状态文本|说明|  
+    |图标|状态文本|Description|  
     |----------|-----------------|-----------------|  
     |（无图标）|（无文本）|此对象的附加操作尚未启动或者可能挂起。 这是打开该对话框时的默认值。|  
     |绿色的右向三角形|正在进行|已启动附加操作，但是该操作未完成。|  
@@ -131,13 +131,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-attach-a-database"></a>附加数据库  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  使用关闭 FOR ATTACH 的 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
-     将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
+     将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
   
     ```  
     CREATE DATABASE MyAdventureWorks   

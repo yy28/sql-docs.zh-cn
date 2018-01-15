@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf86a8be5f18bd64cb6f632e22a246317927e3e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 015a01acc3316e4eccc1c4b93ec77388d0b057ab
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>创建、更改和删除外键
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO)，由表示外键<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，外键由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象表示。  
   
  若要在 SMO 中创建外键，必须指定在其的外键定义的构造函数中的表<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。 在该表中，必须至少选择一个列作为外键。 为此，请创建一个 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 对象变量并指定作为外键的列的名称。 然后指定被引用表和被引用列。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法以向其中添加栏**列**对象属性。  
   

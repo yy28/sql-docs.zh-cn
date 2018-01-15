@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae63f120997ba5018b131f8a946b0f9ae9e384d0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 变量
   变量存储 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其容器、任务和事件处理程序在运行时可以使用的值。 脚本任务和脚本组件中的脚本也可以使用变量。 将任务和容器按顺序组织为工作流的优先约束在其约束定义包含表达式时可以使用变量。  
@@ -133,7 +133,17 @@ ms.lasthandoff: 12/21/2017
  在系统将 **“IncludeInDebugDump”** 选项重置为 **false**时，该设置可能会覆盖用户选择的值。  
   
 **“值”**    
- 用户定义变量的值可以是文字或表达式。 变量包含设置变量值和值的数据类型的选项。 这两种属性必须兼容：例如，字符串值不能与整数数据类型一起使用。  
+用户定义变量的值可以是文字或表达式。 变量值不能为 null。 变量具有以下默认值：
+
+| 数据类型 | 默认值 |
+|---|---|
+| Boolean | False |
+| 数字和二进制数据类型 | 0（零） |
+| 字符型和字符串数据类型 | (空字符串) |
+| Object | System.Object |
+| | |
+
+变量包含设置变量值和值的数据类型的选项。 这两种属性必须兼容：例如，字符串值不能与整数数据类型一起使用。  
   
  如果将变量配置为作为表达式进行计算，则必须提供表达式。 在运行时计算表达式，而该变量将设置为计算结果。 例如，如果变量使用表达式 `DATEPART("month", GETDATE())` ，则变量的值与当前日期月份部分的数字相同。 表达式必须是使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 表达式语法的有效表达式。 表达式和变量一起使用时，表达式可以使用文字以及表达式语法所提供的运算符和函数，但表达式不能引用包中数据流的列。 表达式的最大长度为 4000 个字符。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   

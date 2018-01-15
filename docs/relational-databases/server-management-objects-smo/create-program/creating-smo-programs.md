@@ -19,23 +19,25 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31ccc70a7e9d51b329c39a920f1c80703195164f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c43d14622b63ef9046be7317448c4ea3abe65eb1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-smo-programs"></a>创建 SMO 程序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]常规的编程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 对象中涉及的所有对象都共享，如运行方法，设置属性和操作集合常见方面。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象的常规编程包括了所有对象共享的共有领域，例如运行方法、设置属性和操作集合。  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[连接到 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
-|[断开与 SQL Server 实例的连接](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  
+|[连接到的 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
+|[断开的 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  
 |[调用方法](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|本节介绍调用方法的常见途径。 演示如何使用参数以及如何处理在 <xref:System.Data.DataTable> 对象中返回的数据的表。 此外包括如何调用对象构造函数和如何调用的示例**克隆**方法。|  
 |[设置属性 - SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|本节介绍如何设置不同类型的属性。 演示如何设置和获取对象属性。 此外还包括一些示例，演示如何在创建对象时设置对象属性，以及如何遍历对象的所有属性。|  
 |[使用集合](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|各种讨论用于对象集合的方法的程序。 演示如何使用集合引用对象。 此外还包括一个示例，演示如何遍历集合成员。|  

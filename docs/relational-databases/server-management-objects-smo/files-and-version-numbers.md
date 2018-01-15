@@ -19,18 +19,20 @@ helpviewer_keywords:
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a81f6f2228ac9f91dbc5fd401fcda16fb249989d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a23f5abd57fdf723382671b82d6078cbb2c7b8d5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="files-and-version-numbers"></a>文件和版本号
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]所有必需 Microsoft.SqlServer.SqlManagementObjects NuGet 包中包含 SQL Server 管理对象 (SMO) 组件。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  所有必需 Microsoft.SqlServer.SqlManagementObjects NuGet 包中包含 SQL Server 管理对象 (SMO) 组件。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  
 
 >>[!Important]
 SMO 程序集的文件版本显示为主要。**0**。Build.Revision。 但嵌入程序集版本为主要。**100**。Build.Revision。 这样做是为了分开 SMO 在每个应用程序中使用的版本，因此对其中一个更新不会影响任何其他。

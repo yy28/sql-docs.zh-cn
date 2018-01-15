@@ -18,18 +18,20 @@ helpviewer_keywords:
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad257fc7f6c68ff08beaa223d57e3c83519644c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93a6600e5b47354caabefef2afae8eda8b31eeae
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>断开与 SQL Server 实例的连接
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]手动关闭和断开[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 对象不是必需的。 系统会根据需要打开和关闭连接。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  不需要手动关闭和断开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象。 系统会根据需要打开和关闭连接。  
   
 ## <a name="connection-pooling"></a>连接池  
  当[连接](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)方法调用，该连接不会被自动释放。 [断开连接](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)方法必须显式调用，以发布到连接池连接。 您还可以请求不加入连接池的连接。 执行此操作通过设置[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)属性<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>属性，引用[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象。  

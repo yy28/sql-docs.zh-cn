@@ -16,18 +16,20 @@ helpviewer_keywords:
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4746c91a18a593bc911bb4f2f000635c5cfdd042
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f64bb51a733898d89f4c1cd67c2615fce6266a69
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中配置 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Information>对象，<xref:Microsoft.SqlServer.Management.Smo.Settings>对象，<xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象，与<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象包含的实例的设置和信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Information>对象，<xref:Microsoft.SqlServer.Management.Smo.Settings>对象，<xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象，与<xref:Microsoft.SqlServer.Management.Smo.Configuration>对象包含的实例的设置和信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有许多描述已安装的实例的行为的属性。 这些属性描述了启动选项、服务器默认值、文件和目录、系统和处理器信息、产品和版本、连接信息、内存选项、语言和排序规则选择以及身份验证模式。  
   

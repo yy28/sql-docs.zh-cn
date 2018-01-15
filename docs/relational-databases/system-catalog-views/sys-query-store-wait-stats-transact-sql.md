@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**bigint**|外键。 将联接到[sys.query_store_plan &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|外键。 将联接到[sys.query_store_runtime_stats_interval &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|等待类型分为使用下，表，然后等待时间聚合跨这些等待类别。 不同的等待类别需要不同的后续分析才能解决此问题，但相同类别的等待类型可引起非常相似的故障排除体验，并假定基于等待的受影响的查询会成为用于成功完成此类调查的大部分内容的缺少的部分。|
-|**wait_category_desc**|**nvarchar （128)**|有关等待类别字段的文本说明，请查看下表。|
+|**wait_category_desc**|**nvarchar(128)**|有关等待类别字段的文本说明，请查看下表。|
 |**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0 – 常规执行 （成功完成）<br /><br /> 3 – 启动的客户端已中止执行<br /><br /> 4-异常已中止执行|  
-|**execution_type_desc**|**nvarchar （128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3 – 中止<br /><br /> 4-异常|  
-|**total_query_wait_time_ms**|**bigint**|总 CPU 等待聚合间隔内的查询计划的时间，并等待类别排列 （以微秒为单位报告）。|
+|**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3 – 中止<br /><br /> 4-异常|  
+|**total_query_wait_time_ms**|**bigint**|总 CPU 等待聚合间隔内的查询计划的时间，并等待类别排列 （以毫秒为单位报告）。|
 |**avg_query_wait_time_ms**|**float**|平均等待每次执行聚合间隔和等待类别 （以毫秒为单位报告） 中的查询计划的持续时间。|
 |**last_query_wait_time_ms**|**bigint**|上次在聚合时间间隔内的查询计划的等待时间，并等待类别排列 （以毫秒为单位报告）。|
 |**min_query_wait_time_ms**|**bigint**|最小 CPU 等待聚合间隔内的查询计划的时间和等待类别排列 （以毫秒为单位报告）。|
@@ -86,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ***编译**等待类别当前不支持。 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW DATABASE STATE**权限。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -96,7 +94,7 @@ ms.lasthandoff: 11/17/2017
  [sys.query_store_query &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats_interval &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询存储存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

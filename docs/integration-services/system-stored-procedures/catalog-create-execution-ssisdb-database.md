@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] runinscaleout  
  指示执行是否在 Scale Out 中进行。使用值 1 在 Scale Out 中执行包。使用值 0 执行包，而无需 Scale Out。此参数可选。 如果未指定，其值在 [SSISDB].[catalog].[catalog_properties] 中设置为 DEFAULT_EXECUTION_MODE。 runinscaleout 为 bit。 
  
- [@useanyworker =] useanyworker  
-  指示是否允许任何 Scale Out Worker 执行相应操作。 借助任何 Scale Out Worker 使用值 1 执行包。 使用值 0 指示并非允许所有 Scale Out Workers 执行包。 此参数可选。 如果未指定，其值设置为 1。 useanyworker 为 bit。 
+[@useanyworker =] useanyworker  
+指示是否允许任何 Scale Out Worker 执行相应操作。
+
+-   借助任何 Scale Out Worker 使用值 1 执行包。 将 `@useanyworker` 设为 true 时，尚未达到最大任务数（如辅助角色配置文件中所示）的任何辅助角色都可用于运行包。
+
+-   使用值 0 指示并非允许所有 Scale Out Workers 执行包。 将 `@useanyworker` 设为 false 时，必须指定通过使用 Scale Out Manager 或调用存储过程 `[catalog].[add_execution_worker]` 允许运行包的辅助角色。
+
+此参数可选。 如果未指定，其值设置为 1。 useanyworker 为 bit。 
   
  [@execution_id =] execution_id  
  返回执行实例的唯一标识符。 execution_id 为 bigint。  
 
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用执行来指定参数值，包在单个包执行实例中将使用这些参数值。  
   
  如果使用 reference_id 参数指定某个环境引用，则该存储过程将使用对应环境变量中的文本值或引用值填充项目和包参数。 如果指定了环境引用，则在包执行过程中将使用默认参数值。 若要精确确定将哪些值用于特定执行实例的值，应使用此存储过程中的 execution_id 输出参数值，并查询 [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) 视图。  
@@ -97,9 +103,9 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 EXECUTE 权限，如果适用，则需要针对引用环境的 READ 权限  
@@ -112,7 +118,7 @@ GO
  
 -   ssis_admin 数据库角色的成员资格
 
--   ssis_cluster_executor 数据库角色的成员资格
+-   **ssis_cluster_executor** 数据库角色的成员资格
 
 -   sysadmin 服务器角色的成员资格
   

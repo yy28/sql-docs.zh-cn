@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各个版本支持的 Integration Services 功能
  本主题提供有关不同版本的 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]所支持的 SQL Server Integration Services (SSIS) 功能的详细信息。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |内置数据源连接器|是|是|||| 
 |内置任务和转换|是|是||||  
-|Attunity 提供的 ODBC 源和目标|是|是|||| 
+|ODBC 源和目标 |是|是|||| 
 |Azure 数据源连接器和任务|是|是||||  
 |Hadoop/HDFS 连接器和任务|是|是||||  
 |基本数据探查工具|是|是|||| 

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ ms.lasthandoff: 01/05/2018
 |**last_used_threads**|**bigint**|在执行此计划的最后一次时使用的并行线程数。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**min_used_threads**|**bigint**|使用此计划曾经使用一次执行中的并行线程中最小的数。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**max_used_threads**|**bigint**|使用一次执行中曾经使用此计划的并行线程的最大数目。 它将始终为 0 表示查询的内存优化表。<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**pdw_node_id**|**int**|此分布的节点标识符。<br /><br /> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_columnstore_segment_reads**|**bigint**|读取查询的列存储段的总和。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**last_columnstore_segment_reads**|**bigint**|列存储段读取上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**min_columnstore_segment_reads**|**bigint**|读过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
@@ -116,7 +115,12 @@ ms.lasthandoff: 01/05/2018
 |**last_columnstore_segment_skips**|**bigint**|列存储段跳过上一次执行的查询数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**min_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最小的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
 |**max_columnstore_segment_skips**|**bigint**|曾经通过跳过查询一次执行中的列存储段中最大的数。 不可为 null。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
-  
+|**total_spills**|**bigint**|自编译后，通过执行此查询溢出的页的总数。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|总页数溢出的上次执行查询时。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|此查询在单个执行期间曾溢出的页中最小的数。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|最大页数单次执行期间曾溢出此查询。<br /><br /> **适用于**： 开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**pdw_node_id**|**int**|此分布的节点标识符。<br /><br /> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+
 > [!NOTE]
 > <sup>1</sup>对于本机编译存储过程启用统计信息收集后，工作线程时间收集以毫秒为单位。 如果查询执行小于一毫秒，值将为 0。  
   
@@ -124,7 +128,7 @@ ms.lasthandoff: 01/05/2018
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  查询完成后，将更新该视图中的统计信息。  
   
 ## <a name="examples"></a>示例  
@@ -133,8 +137,6 @@ ms.lasthandoff: 01/05/2018
  以下示例按平均 CPU 时间返回排名前五个的查询的相关信息。 此示例将根据查询的查询哈希对查询进行聚合，以便按照查询的累积资源消耗来分组在逻辑上等效的查询。  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
     SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
     MIN(query_stats.statement_text) AS "Statement Text"  
@@ -172,11 +174,12 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- 
- [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
+[执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_procedure_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_trigger_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

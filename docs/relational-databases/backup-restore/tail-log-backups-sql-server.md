@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的备份和恢复相关。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 |BACKUP LOG 选项|注释|  
 |-----------------------|--------------|  
-|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **\*\* 重要提示 \*\*** 除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
+|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **重要提示：**除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
 |CONTINUE_AFTER_ERROR|仅当您要备份受损数据库的尾部时，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 对受损数据库备份日志尾部时，日志备份中正常捕获的部分元数据可能不可用。 有关详细信息，请参阅本主题中的 [包含不完整备份元数据的结尾日志备份](#IncompleteMetadata)。|  
   
 ##  <a name="IncompleteMetadata"></a> 包含不完整备份元数据的结尾日志备份  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  如果结尾日志备份中的元数据不完整，则 [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) 表在结尾日志备份时将丢失文件组的大多数相关信息。 大多数 **backupfilegroup** 表列为 NULL；只有以下几列有意义：  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **type**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -79,10 +75,10 @@ ms.lasthandoff: 11/17/2017
     
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

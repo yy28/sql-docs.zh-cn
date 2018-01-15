@@ -1,7 +1,7 @@
 ---
 title: "数据库文件和文件组 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库至少具有两个操作系统文件：一个数据文件和一个日志文件。 数据文件包含数据和对象，例如表、索引、存储过程和视图。 日志文件包含恢复数据库中的所有事务所需的信息。 为了便于分配和管理，可以将数据文件集合起来，放到文件组中。  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  默认情况下，数据和事务日志被放在同一个驱动器上的同一个路径下。 这是为处理单磁盘系统而采用的方法。 但是，在生产环境中，这可能不是最佳的方法。 建议将数据和日志文件放在不同的磁盘上。  
 
 ### <a name="logical-and-physical-file-names"></a>逻辑和物理文件名称
-SQL Server 文件有两个名称： 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件具有两种文件名类型： 
 
-**logical_file_name:**  logical_file_name 是在所有 Transact-SQL 语句中引用物理文件时所使用的名称。 逻辑文件名必须符合 SQL Server 标识符规则，而且在数据库中的逻辑文件名中必须唯一。
+**logical_file_name:**  logical_file_name 是在所有 Transact-SQL 语句中引用物理文件时所使用的名称。 逻辑文件名必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则，而且在数据库中的逻辑文件名中必须是唯一的。 这是由 `ALTER DATABASE` 的 `NAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-**os_file_name:** os_file_name 是包括目录路径的物理文件的名称。 它必须符合操作系统文件命名规则。
+**os_file_name:** os_file_name 是包括目录路径的物理文件的名称。 它必须符合操作系统文件命名规则。 这是由 `ALTER DATABASE` 的 `FILENAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-SQL Server 数据和日志文件可保存在 FAT 或 NTFS 文件系统中。 由于 NTFS 在安全方面具有优势，因此，我们建议您使用 NTFS 文件系统。 可读/写数据文件组和日志文件不能保存在 NTFS 压缩文件系统中。 只有只读数据库和只读次要文件组可以保存在 NTFS 压缩文件系统中。
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据和日志文件可以保存在 FAT 或 NTFS 文件系统中。 由于 NTFS 在安全方面具有优势，因此，建议在 Windows 系统上使用 NTFS 文件系统。 
 
-如果单台计算机上运行多个 SQL Server 实例，每个实例会接收不同的默认目录来保存在该实例中创建的数据库文件。 有关详细信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
+> [!WARNING]
+> 可读/写数据文件组和日志文件不能保存在 NTFS 压缩文件系统中。 只有只读数据库和只读次要文件组可以保存在 NTFS 压缩文件系统中。
+> 为了节省空间，强烈建议使用[数据压缩](../../relational-databases/data-compression/data-compression.md)而不是文件系统压缩。
+
+如果多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在一台计算机上运行，则每个实例都会接收到不同的默认目录来保存在该实例中创建的数据库文件。 有关详细信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
 
 ### <a name="data-file-pages"></a>数据文件页
-SQL Server 数据文件中的页面按顺序编号，文件的首页以零 (0) 开头。 数据库中的每个文件都有一个唯一的文件 ID 号。 若要唯一标识数据库中的页，需要同时使用文件 ID 和页码。 下例显示了包含 4-MB 主数据文件和 1-MB 次要数据文件的数据库中的页码。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件中的页按顺序编号，文件的首页以 0 开始。 数据库中的每个文件都有一个唯一的文件 ID 号。 若要唯一标识数据库中的页，需要同时使用文件 ID 和页码。 下例显示了包含 4-MB 主数据文件和 1-MB 次要数据文件的数据库中的页码。
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-每个文件的第一页是一个包含有关文件属性信息的文件的页首页。 在文件开始处的其他几页也包含系统信息（例如分配映射）。 有一个存储在主数据文件和第一个日志文件中的系统页是包含数据库属性信息的数据库引导页。 有关页和页类型的详细信息，请参阅“了解页面和范围”。
+每个文件的第一页是一个包含有关文件属性信息的文件的页首页。 在文件开始处的其他几页也包含系统信息（例如分配映射）。 有一个存储在主数据文件和第一个日志文件中的系统页是包含数据库属性信息的数据库引导页。 有关页和页类型的详细信息，请参阅[页和盘区体系结构指南](../..//relational-databases/pages-and-extents-architecture-guide.md)。
 
 ### <a name="file-size"></a>文件大小
-SQL Server 文件可从其最初指定的大小开始自动增长。 在定义文件时，您可以指定一个特定的增量。 每次填充文件时，其大小均按此增量来增长。 如果文件组中有多个文件，则它们在所有文件被填满之前不会自动增长。 填满后，这些文件会循环增长。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件可以从它们最初指定的大小开始自动增长。 在定义文件时，您可以指定一个特定的增量。 每次填充文件时，其大小均按此增量来增长。 如果文件组中有多个文件，则它们在所有文件被填满之前不会自动增长。 填满后，这些文件会使用[比例填充](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)循环增长。
 
-每个文件还可以指定一个最大大小。 如果没有指定最大大小，文件可以一直增长到用完磁盘上的所有可用空间。 如果 SQL Server 作为数据库嵌入某应用程序，而该程序的用户无法迅速与系统管理员联系，此功能会特别有用。 用户可以使文件根据需要自动增长，以减轻监视数据库中的可用空间和手动分配额外空间的管理负担。 
+每个文件还可以指定一个最大大小。 如果没有指定最大大小，文件可以一直增长到用完磁盘上的所有可用空间。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为数据库嵌入某应用程序，而该应用程序的用户无法迅速与系统管理员联系，则此功能就特别有用。 用户可以使文件根据需要自动增长，以减轻监视数据库中的可用空间和手动分配额外空间的管理负担。  
+
+如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用 [即时文件初始化 (IFI)](../../relational-databases/databases/database-instant-file-initialization.md)则为数据文件分配新空间时会产生最小开销。
+
+有关事务日志文件管理的详细信息，请参阅[管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 
 ## <a name="database-snapshot-files"></a>数据库快照文件
 数据库快照存储其“写入时复制”数据时所用的文件格式取决于快照是由用户创建，还是在内部使用：
@@ -174,21 +183,22 @@ GO
 - 一个文件只能是一个文件组的成员。
 - 事务日志文件不能属于任何文件组。
 
-## <a name="recommendations"></a>建议
+## <a name="Recommendations"></a> 建议
 下面是使用文件和文件组时的一些一般建议： 
 - 大多数数据库在只有单个数据文件和单个事务日志文件的情况下性能良好。
-- 如果使用多个文件，请为附加文件创建第二个文件组，并将其设置为默认文件组。 这样，主文件将只包含系统表和对象。
+- 如果使用多个数据文件，请为附加文件创建第二个文件组，并将其设置为默认文件组。 这样，主文件将只包含系统表和对象。
 - 若要使性能最大化，请在尽可能多的不同可用磁盘上创建文件或文件组。 将争夺空间最激烈的对象置于不同的文件组中。
 - 使用文件组将对象放置在特定的物理磁盘上。
 - 将在同一联接查询中使用的不同表置于不同的文件组中。 由于采用并行磁盘 I/O 对联接数据进行搜索，所以性能将得以改善。
 - 将最常访问的表和属于这些表的非聚集索引置于不同的文件组中。 如果文件位于不同的物理磁盘上，由于采用并行 I/O，所以性能将得以改善。
 - 请勿将事务日志文件置于已有其他文件和文件组的同一物理磁盘上。
 
+有关事务日志文件管理建议的详细信息，请参阅[管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
+
 ## <a name="related-content"></a>相关内容  
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [页和区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24426c82299598fbf80b31b8d2a1ee24b6142d9a
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/15/2017
 |`CREATE TABLE` 和 `ALTER TABLE` 中的列存储索引的压缩延迟选项|||是|是|是|是|
 |列存储索引具有一个非持久化计算列||||是|||   
   
- <sup>1</sup> 要创建可读取的非聚集列存储索引，请将索引存储在只读文件组内。  
+ <sup>1</sup> 要创建只读非聚集列存储索引，请将索引存储在只读文件组内。  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 将添加这些新功能。

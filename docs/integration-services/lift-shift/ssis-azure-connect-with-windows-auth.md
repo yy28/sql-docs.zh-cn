@@ -1,5 +1,5 @@
 ---
-title: "使用 Windows 身份验证连接到本地数据源和 Azure 文件共享 | Microsoft Docs"
+title: "使用 Windows 身份验证连接到数据源和文件共享 | Microsoft Docs"
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 身份验证连接到本地数据源和 Azure 文件共享
 本文介绍如何将 Azure SQL 数据库上的 SSIS 目录配置为运行以下包：使用 Windows 身份验证连接到本地数据源和 Azure 文件共享的包。 可以使用 Windows 身份验证连接到本地和 Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime 位于同一虚拟网络的数据源。
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/12/2017
 
 3.  从 SSMS 中，检查能否连接到要使用的本地 SQL Server。
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 若要从 Azure 上运行的包连接到本地 SQL Server，必须启用以下先决条件：
 
 1.  在 SQL Server 配置管理器中，启用 TCP/IP 协议。

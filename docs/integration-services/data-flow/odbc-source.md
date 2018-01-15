@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>ODBC 源
   ODBC 源通过使用数据库表、视图或 SQL 语句，从支持 ODBC 的数据库中提取数据。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)。  
   
 ## <a name="data-type-support"></a>数据类型支持  
- 有关 ODBC 源支持的数据类型的信息，请参阅 Connector for Open Database Connectivity (ODBC) by Attunity。  
+ 有关 ODBC 源支持的数据类型的信息，请参阅开放式数据库连接 (ODBC) 连接器。  
   
 ## <a name="extract-options"></a>提取选项  
  ODBC 源在“批处理”或“逐行”模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  有关 **FetchMethod** 属性的详细信息，请参阅 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)。  
   
-## <a name="parallelism"></a>并行  
+## <a name="parallelism"></a>Parallelism  
  对于可对同一台计算机或不同计算机（并非一般的全局会话限制）上的相同表或不同表并行运行的 ODBC 源组件的数目没有限制。  
   
  但是，要使用的 ODBC 访问接口的限制可能会限制通过该访问接口的同时连接的数目。 这些限制将会限制 ODBC 源可能支持的并行实例的数目。 SSIS 开发人员必须知道要使用的任何 ODBC 访问接口的限制并且在生成 SSIS 包时将这些限制元素考虑进去。  
@@ -101,12 +101,12 @@ ms.lasthandoff: 11/20/2017
   
 -   在“数据流”选项卡上，双击 ODBC 源。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
   
 #### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击 **“新建”** 创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
-#### <a name="new"></a>新建  
+#### <a name="new"></a>新版  
  单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的 ODBC 连接管理器。  
   
 #### <a name="data-access-mode"></a>数据访问模式  
@@ -137,14 +137,14 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“ODBC 源编辑器”**中，单击 **“列”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
   
 #### <a name="available-external-columns"></a>可用外部列  
  数据源中的可用外部列的列表。 无法使用此表添加或删除列。 从源中选择要使用的列。 所选列将按照选择它们时的顺序添加到 **“外部列”** 列表中。  
   
  选中 **“全选”** 复选框可以选择所有列。  
   
-#### <a name="external-column"></a>“外部列”  
+#### <a name="external-column"></a>外部列  
  外部（源）列的视图，该视图按照您在配置使用 ODBC 源中数据的组件时所看到的列顺序显示。  
   
 #### <a name="output-column"></a>输出列  
@@ -162,12 +162,12 @@ ms.lasthandoff: 11/20/2017
   
 -   在 **“ODBC 源编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
   
 #### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  
   
-#### <a name="column"></a>列  
+#### <a name="column"></a>“列”  
  未使用。  
   
 #### <a name="error"></a>错误  

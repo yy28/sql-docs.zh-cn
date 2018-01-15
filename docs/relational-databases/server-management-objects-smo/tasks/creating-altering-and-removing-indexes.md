@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2175136e512a6c1e4c4759f073445f5ca5234a0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d20eca4b6c27aee5f19b2b15cf51c374874d4415
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO) 层次结构，由表示索引<xref:Microsoft.SqlServer.Management.Smo.Index>对象。 索引列由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 对象的集合表示，而该对象由 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 属性表示。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 层次结构中，索引由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象表示。 索引列由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 对象的集合表示，而该对象由 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 属性表示。  
   
  可以通过指定 <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Index> 属性对 XML 列创建索引。  
   

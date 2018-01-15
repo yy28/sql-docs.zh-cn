@@ -18,11 +18,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: a3fee8259aab2901eaf7950d4255d78d1860eeda
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>用于 Azure SQL 数据库和数据仓库的透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ Microsoft 也可无缝移动和管理异地复制和还原所需的密钥。
 > 默认情况下使用服务托管 TDE 加密所有新创建的 SQL 数据库。 默认情况下不加密 2017 年 5 月之前的现有数据库和通过还原、异地复制和数据库副本创建的数据库。
 >
 
-## <a name="bring-your-own-key"></a>自带密钥
+## <a name="bring-your-own-key-preview"></a>自带密钥（预览）
 
-通过自带密钥 (BYOK) 支持，用户能够控制其 TDE 加密密钥以及访问人员和访问时间。 Azure Key Vault (AKV) 是 Azure 的基于云的外部密钥管理系统，是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 使用 BYOK 时，数据库加密密钥受存储在 AKV 中的非对称密钥保护。 非对称密钥绝不会离开 Key Vault；一旦服务器拥有密钥保管库权限，服务器会通过 Key Vault 服务向它发送基本的密钥操作请求。 非对称密钥设置为服务器级别，并由该服务器下的所有数据库继承该密钥。 通过使用 BYOK 支持，用户现可控制密钥管理任务（包括密钥轮换、密钥保管库权限、删除密钥），并且可以对所有加密密钥启用审核/报告。 Key Vault 提供中心密钥管理，利用严格监控的硬件安全模块 (HSM)，并促进分离密钥和数据的管理以帮助满足监管符合性。 若要了解有关 Key Vault 的详细信息，请访问[Key Vault 文档页](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
+通过自带密钥 (BYOK)（预览）支持，用户能够控制其 TDE 加密密钥以及访问人员和访问时间。 Azure Key Vault (AKV) 是 Azure 的基于云的外部密钥管理系统，是第一个 TDE 将其与 BYOK 支持集成的密钥管理服务。 使用 BYOK 时，数据库加密密钥受存储在 AKV 中的非对称密钥保护。 非对称密钥绝不会离开 Key Vault；一旦服务器拥有密钥保管库权限，服务器会通过 Key Vault 服务向它发送基本的密钥操作请求。 非对称密钥设置为服务器级别，并由该服务器下的所有数据库继承该密钥。 通过使用 BYOK 支持，用户现可控制密钥管理任务（包括密钥轮换、密钥保管库权限、删除密钥），并且可以对所有加密密钥启用审核/报告。 Key Vault 提供中心密钥管理，利用严格监控的硬件安全模块 (HSM)，并促进分离密钥和数据的管理以帮助满足监管符合性。 若要了解有关 Key Vault 的详细信息，请访问[Key Vault 文档页](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
 
 若要了解有关使用 Azure SQL 数据库和数据仓库的 BYOK 支持进行 TDE 的详细信息，请参阅[使用自带秘钥支持进行透明数据加密](transparent-data-encryption-byok-azure-sql.md)。
 

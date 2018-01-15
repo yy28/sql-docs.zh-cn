@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 现在，可将 SQL Server Integration Services (SSIS) 包和工作负荷移到 Azure 云。
@@ -54,7 +54,7 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 
 数据工厂还支持其他类型的 Integration Runtime。 若要了解关于 SSIS IR 和其他类型 Integration Runtime 的详细信息，请参阅 [Azure 数据工厂中的 Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 本文中介绍的功能不需要 SQL Server 2017 或 SQL Server 2016。
 
 这些功能需要以下版本的 SQL Server Data Tools (SSDT)：
@@ -68,7 +68,7 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 
 ## <a name="ssis-features-on-azure"></a>Azure 上的 SSIS 功能
 
-如果要设置 SQL 数据库实例来承载 SSISDB，还需安装用于 SSIS 的 Azure 功能包和 Access 可再发行组件。 除提供与内置组件支持的数据源的连接外，这些组件还提供与 Excel 和 Access 文件和各种 Azure 数据源的连接。 暂时无法安装用于 SSIS 的第三方组件（包括 Attunity 和 SAP BI 等 Microsoft 提供的第三方组件）。
+如果要设置 SQL 数据库实例来承载 SSISDB，还需安装用于 SSIS 的 Azure 功能包和 Access 可再发行组件。 除提供与内置组件支持的数据源的连接外，这些组件还提供与 Excel 和 Access 文件和各种 Azure 数据源的连接。 现在暂时无法安装用于 SSIS 的第三方组件（包括 Microsoft 提供的第三方组件，例如 Attunity 的 Oracle 和 Teradata 组件以及 SAP BI 组件）。
 
 承载 SSISDB 的 SQL 数据库的名称（`<sql_database_name>.database.windows.net`）将成为四部分名称的第一部分，从 SSDT 和 SSMS 中部署和管理包时会使用到该名称。
 

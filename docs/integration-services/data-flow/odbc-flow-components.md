@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 514818fce9654a720dac0a0721697b30bdcab787
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC 流组件
   本主题介绍使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Connector for Open Database Connectivity (ODBC) by Attunity for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可帮助 SSIS 开发人员轻松地创建从支持 ODBC 的数据库加载和卸载数据的包。  
+ 适用于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的开放式数据库连接 (ODBC) 连接器有助于 SSIS 开发人员轻松创建从支持 ODBC 的数据库加载和卸载数据的包。  
   
  ODBC 连接器设计为在将数据加载到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的上下文中支持 ODBC 的数据库中或者从支持 ODBC 的数据库卸载数据时获得最佳性能。  
   

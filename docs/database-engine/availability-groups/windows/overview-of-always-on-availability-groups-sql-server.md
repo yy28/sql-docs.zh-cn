@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6e7fe6186be8bbf546f44d881528181a5e4b4979
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d485487e2256a8bfab98a30f179d749bfb583529
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ ms.lasthandoff: 11/20/2017
   
  下图显示的是一个包含一个主要副本和四个次要副本的可用性组。 支持最多八个辅助副本，包括一个主副本和两个同步提交辅助副本。  
   
- ![具有五个副本的可用性组](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "具有五个副本的可用性组")  
+ ![具有五个副本的可用性组](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availability group with five replicas")  
   
 ##  <a name="AvDbs"></a> 可用性数据库  
- 若要将数据库添加到可用性组，该数据库必须是联机的读写数据库，它位于承载主副本的服务器实例上。 当您添加一个数据库时，它将作为主数据库加入可用性组，同时保持可用于客户端。 除非新的主数据库的备份还原到承载辅助副本（使用 RESTORE WITH NORECOVERY）的服务器实例，否则不存在对应的辅助数据库。 新的辅助数据库处于 RESTORING 状态，直至其加入可用性组。 有关详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+ 若要将数据库添加到可用性组，该数据库必须是联机的读写数据库，它位于承载主副本的服务器实例上。 当您添加一个数据库时，它将作为主数据库加入可用性组，同时保持可用于客户端。 除非新的主数据库的备份还原到承载辅助副本（使用 RESTORE WITH NORECOVERY）的服务器实例，否则不存在对应的辅助数据库。 新的辅助数据库处于 RESTORING 状态，直至其加入可用性组。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
  加入后，辅助数据库将进入 ONLINE 状态，并启动与对应主数据库之间的数据同步。 “数据同步” 是在辅助数据库上重新生成对主数据库的更改的过程。 数据同步涉及主数据库将事务日志记录发送到辅助数据库。  
   

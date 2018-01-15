@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb90ebd600a17efc71c1195ed070091ca826fc4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f32f9db12d027561ef64f405118c0a5a00da5188
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-views"></a>创建、更改和删除视图
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]视图由<xref:Microsoft.SqlServer.Management.Smo.View>对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]视图由<xref:Microsoft.SqlServer.Management.Smo.View>对象。  
   
  <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.View> 属性可定义视图。 它等同于[!INCLUDE[tsql](../../../includes/tsql-md.md)]SELECT 语句，以创建视图。  
   

@@ -18,18 +18,20 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5b30ad5cab9d7e9ceb34103e64b7a782367b1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 820ef3737125c82296655db5cfba1a4265223796
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据可以存储通过使用提供的存储算法[Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)。 分区可以使大型表和索引更易于管理并且更灵活。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  数据可以存储通过使用提供的存储算法[Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)。 分区可以使大型表和索引更易于管理并且更灵活。  
   
 ## <a name="index-and-table-partitioning"></a>索引和表分区  
  通过该功能可以将索引和表数据分散到各个分区中的多个文件组。 分区函数定义如何根据某些列（称为分区依据列）中的值将表或索引的行映射到一组分区。 分区方案将分区函数指定的每个分区映射到一个文件组。 这样，您便可以制定相应存档策略，用以将表扩展到多个文件组，因而也可扩展到多个物理设备。  
