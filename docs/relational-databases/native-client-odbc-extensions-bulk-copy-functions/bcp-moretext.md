@@ -1,5 +1,5 @@
 ---
-title: "bcp_moretext |Microsoft 文档"
+title: bcp_moretext | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f41069ec5254bec0ad40b250a3a9361190ba9b5
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ RETCODE bcp_moretext (
 ## <a name="remarks"></a>注释  
  此函数可以结合使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)要长，长度可变的数据将值复制到大量的较小区块中的 SQL Server。 **bcp_moretext**可以与具有以下 SQL Server 数据类型的列使用：**文本**， **ntext**，**映像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**，用户定义类型 (UDT) 和 XML。 **bcp_moretext**不支持数据转换，提供的数据必须与目标列的数据类型匹配。  
   
- 如果**bcp_bind**调用带非 Null *pData*参数的数据类型的支持**bcp_moretext**， **bcp_sendrow**发送整个数据值，而不考虑长度。 如果是，但是， **bcp_bind**具有 NULL *pData*支持的数据类型的参数**bcp_moretext**可以用于将数据复制从成功返回后立即**bcp_sendrow** ，该值指示尚未处理与数据存在的任何绑定的列。  
+ 如果**bcp_bind**调用带非 NULL *pData*参数的数据类型的支持**bcp_moretext**， **bcp_sendrow**发送整个数据值，而不考虑长度。 如果是，但是， **bcp_bind**具有 NULL *pData*支持的数据类型的参数**bcp_moretext**可以用于将数据复制从成功返回后立即**bcp_sendrow** ，该值指示尚未处理与数据存在的任何绑定的列。  
   
  如果你使用**bcp_moretext**若要在一行中发送一个受支持的数据类型列，你必须还将其用于发送所有其他受支持的数据类型列的行中。 不可以跳过任何列。 支持的数据类型为 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果列分别为 varchar(max)、nvarchar(max) 或 varbinary(max)，则 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也属于此类别。  
   

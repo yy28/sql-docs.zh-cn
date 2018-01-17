@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与 **USER WITH PASSWORD** 身份验证过程相关，该过程会将身份验证的范围从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 级别转到数据库级别。  
   

@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>使用始终加密的 ODBC 驱动程序适用于 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -277,7 +277,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要缓解此问题，请使用`SQL_COLUMN_IGNORE`标志来忽略将不会更新作为的一部分的列`SQLBulkOperations`以及何时使用`SQLSetPos`对于游标基于更新。  应忽略不会被直接修改应用程序的所有列，这两种性能，并且若要避免所绑定到的缓冲区的列的截断*较小*比其实际 (DB) 大小。 有关详细信息，请参阅[SQLSetPos 函数引用](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)。
 
-#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 和 SQLDescribeCol
+#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults & SQLDescribeCol
 
 应用程序可以调用[SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)已准备的语句中返回有关列元数据。  启用始终加密后，调用`SQLMoreResults`*之前*调用`SQLDescribeCol`导致[sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)调用，这不正确返回纯文本加密列的元数据。 若要避免此问题，请调用`SQLDescribeCol`已准备的语句上*之前*调用`SQLMoreResults`。
 
@@ -371,7 +371,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 
 |凭据类型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|用户名/密码| `KeyVaultPassword`|用户主体名称|密码|
+|Username/password| `KeyVaultPassword`|用户主体名称|密码|
 |客户端 ID/密钥| `KeyVaultClientSecret`|客户端 ID|机密|
 
 #### <a name="example-connection-strings"></a>连接字符串示例
@@ -384,7 +384,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**用户名/密码**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -526,7 +526,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 虽然 ODBC 驱动程序将允许使用[异步操作](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)使用始终加密，对性能有影响上没有操作时启用始终加密。 调用`sys.sp_describe_parameter_encryption`为该语句阻止和将导致驱动程序等待服务器在返回之前返回元数据确定加密元数据`SQL_STILL_EXECUTING`。
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>检索使用 SQLGetData 部件中的数据
-对于 SQL Server，ODBC 驱动程序 17 加密之前字符和二进制列无法检索在使用 SQLGetData 部件中。 只有一个针对 SQLGetData 可以进行调用，使用具有足够的长度以包含整个列的数据缓冲区。
+对于 SQL Server，ODBC 驱动程序 17 加密之前字符和二进制列无法检索在使用 SQLGetData 部件中。 只有一个针对 SQLGetData 可以进行调用，使用具有足够的长度以包含整个列的数据缓冲区。 在 SQL Server 的 ODBC 驱动程序 17，加密**varbinary （max)**不能在具有 SQLGetData 和 SQL_C_BINARY C 类型的部件中检索到列。
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>在使用 SQLPutData 部件中发送数据
 插入或比较的数据不在使用 SQLPutData 部件中发送。 只有一个针对 SQLPutData 可以进行调用，使用包含整个数据的缓冲区。 用于插入到加密列的长整型数据，使用大容量复制 API，与输入的数据文件中下一节中所述。

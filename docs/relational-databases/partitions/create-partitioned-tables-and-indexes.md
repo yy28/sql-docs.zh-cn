@@ -3,7 +3,7 @@ title: "创建已分区表和已分区索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -35,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 416bba81433e35e34c053aafc5412cca3875b4ae
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>创建已分区表和已分区索引
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建已分区表或索引。 已分区表和索引中的数据水平划分到可分散到数据库的多个文件组的单元中。 分区可以使大型表和索引更易于管理并且更灵活。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建已分区表或索引。 已分区表和索引中的数据水平划分到可分散到数据库的多个文件组的单元中。 分区可以使大型表和索引更易于管理并且更灵活。  
   
  创建已分区表或索引通常包含四个操作：  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **创建已分区表或索引，使用：**  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  创建已分区表需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。 创建已分区索引需要对要创建索引的表或视图具有 ALTER 权限。 创建已分区表或索引需要以下附加权限之一：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -239,7 +239,7 @@ ms.lasthandoff: 11/17/2017
      **操作**  
      指定每个操作的类型和名称。  
   
-     **状态**  
+     **“状态”**  
      指示向导操作作为一个整体返回的值是“成功”还是“失败”。  
   
      **消息**  
@@ -268,11 +268,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-partitioned-table"></a>创建已分区表  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例将创建新的文件组、分区函数和分区方案。 将创建一个新表，该表具有指定为存储位置的分区方案。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建新的文件组、分区函数和分区方案。 将创建一个新表，该表具有指定为存储位置的分区方案。  
   
     ```  
     USE AdventureWorks2012;  

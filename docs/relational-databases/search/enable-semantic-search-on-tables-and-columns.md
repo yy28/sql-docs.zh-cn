@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
   
  统计语义搜索使用全文搜索创建的索引并创建其他索引。 作为全文搜索上的此依赖关系的结果，您可在定义新的全文索引或更改现有全文索引时创建一个新的语义索引。 可以按本主题中所述使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的全文索引向导和其他对话框创建新的语义索引。  
   

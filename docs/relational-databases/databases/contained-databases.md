@@ -22,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c39632f5d9580b652f57cec05000649af7591fc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0569381edb5d6ff8142818fb5d1382f28e7ad09
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-databases"></a>包含的数据库
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   “包含数据库”  是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一种数据库。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以 4 种方法帮助用户使其数据库独立于实例。  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [经过修改的功能（包含的数据库）](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
+ [包含数据库的排序规则](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  

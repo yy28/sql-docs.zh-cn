@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e86cd34a6a4a2f51b86a84bd6eaa1f123fb6ea8
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
  排序规则不仅适用于用户表中存储的数据，还适用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理的所有文本，包括元数据、临时对象、变量名称等。在这些内容的处理方面，包含数据库和非包含数据库采用不同的方式。 此更改不会影响很多用户，而且有助于提供独立而统一的实例。 但是，此更改也可能导致某些混淆，并可能使同时访问包含数据库和非包含数据库的会话出现问题。  
   

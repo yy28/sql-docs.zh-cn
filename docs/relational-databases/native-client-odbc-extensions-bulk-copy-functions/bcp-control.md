@@ -1,5 +1,5 @@
 ---
-title: "bcp_control |Microsoft 文档"
+title: bcp_control | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  是的批量复制操作出现故障之前允许的错误数。 默认值为 10;小于 1 的值将此选项重置为其默认值。 大容量复制将最大错误数限制为 65,535 个。 如果尝试将该选项设置为大于 65,535 的值，将导致该选项设置为 65,535。  
   
  BCPODBC  
- 为 TRUE 时，指定**datetime**和**smalldatetime**以字符格式保存的值将使用 ODBC 时间戳转义序列前缀和后缀。 BCPODBC 选项仅适用于 BCP_OUT。  
+ 为 TRUE 时，指定**datetime**和**smalldatetime**以字符格式保存的值将使用 ODBC 时间戳转义序列前缀和后缀。 BCPODBC 选项仅适用于将。  
   
  为 FALSE 时， **datetime**表示 1997 年 1 月 1 日的值转换为字符字符串： 1997年-01-01 00:00:00.000。 当 TRUE 时，相同**datetime**值表示为: {ts 1997年-01-01 00:00:00.000}。  
   

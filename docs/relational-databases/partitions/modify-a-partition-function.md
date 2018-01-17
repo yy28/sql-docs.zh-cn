@@ -3,7 +3,7 @@ title: "修改分区函数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -17,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e6951b2a5363c78238c38956fa90d0cfd107f919
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4e8ba40ef0b4c224620a1d01f27bd712403c118
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可改变 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中表或索引的分区方式，方法是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在已分区的表或索引的分区函数中增加或减少指定分区的数量（增量为 1）。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]可改变 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中表或索引的分区方式，方法是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在已分区的表或索引的分区函数中增加或减少指定分区的数量（增量为 1）。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
   
 > [!CAUTION]  
 >  多个表或索引可以使用同一分区函数。 在修改分区函数时，将影响单个事务中的所有表或索引。 在修改分区函数之前，先检查其依赖关系。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要修改分区函数，可使用：**  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  可以使用以下任意权限执行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -94,11 +94,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>将一个分区拆分为两个分区  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
@@ -119,11 +119,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>将两个分区合并为一个分区  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  

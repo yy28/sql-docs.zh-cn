@@ -3,7 +3,7 @@ title: "已分区表和已分区索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -22,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7202f88e1a77a36148eca8bd90861afe53fbb4fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17eebdb3bfb3acdbdf7371ef5884f553e51dd19a
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持表和索引分区。 已分区表和已分区索引的数据划分为分布于一个数据库中多个文件组的单元。 数据是按水平方式分区的，因此多组行映射到单个的分区。 单个索引或表的所有分区都必须位于同一个数据库中。 对数据进行查询或更新时，表或索引将被视为单个逻辑实体。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供已分区的表和索引。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在默认情况下支持多达 15,000 个分区。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前的版本中，分区数默认限制为 1000。在基于 x86 的系统上，可以创建分区数超过 1000 的表或索引，但不受支持。  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>已分区索引操作期间统计信息计算中的行为更改  
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，当创建或重新生成已分区索引时，将通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 在升级具有已分区索引的数据库后，您可以在直方图数据中注意到针对这些索引的差异。 此行为更改可能不会影响查询性能。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 CREATE STATISTICS 或 UPDATE STATISTICS 以及 FULLSCAN 子句。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

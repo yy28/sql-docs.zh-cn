@@ -22,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6bd21c1c3be6109431165eb0c7c17ad1cb88a1c6
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="semantic-search-sql-server"></a>语义搜索 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]统计语义搜索通过提取统计上相关的“关键短语”并对其进行索引，提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的非结构化文档的更深层次剖析。 然后，它使用这些关键短语标识“相似或相关文档”并对其进行索引。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]统计语义搜索通过提取统计上相关的“关键短语”并对其进行索引，提供对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的非结构化文档的更深层次剖析。 然后，它使用这些关键短语标识“相似或相关文档”并对其进行索引。  
   
 ##  <a name="whatcanido"></a> 使用语义搜索可以做什么？  
  语义搜索以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中现有的全文搜索功能为基础，但允许超出关键字搜索范畴的新方案。 全文搜索允许你查询文档中的“词”，语义搜索则允许你查询文档的“含义”。 现有的可能解决方案包括自动标记提取、相关内容发现以及相似内容中层次结构导航。 例如，您可以查询关键短语的索引来建立一个组织或文档集的分类索引。 或者，您可以查询文档相似性索引来标识匹配某一工作描述的简历。  

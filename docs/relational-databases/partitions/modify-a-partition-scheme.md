@@ -3,7 +3,7 @@ title: "修改分区方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -17,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef0b8ce7c9ba0c23da4d689b37a01cff34f3f0ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb7b93313a278db10ecffa7efd61e971b418868d
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  
   
  **本主题内容**  
   
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **创建已分区表或索引，使用：**  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  以下权限可用于执行 ALTER PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -77,11 +77,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-modify-a-partition-scheme"></a>修改分区方案  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

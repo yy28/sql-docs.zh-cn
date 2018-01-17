@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 44464415177cffc2e09c5218ecd9440801be7d96
+ms.sourcegitcommit: 0c6d858a507bd38b9b06eb7676736de5d38a1c87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 > [!NOTE]
 > Sqlcmd 实用工具的最新版本可作为 Web 版本从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取。 你需要版本 13.1 或更高版本以支持始终加密 (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
+
+你可以尝试从 Azure 云 Shell sqlcmd 实用工具，因为默认情况下预安装： [![启动云 Shell](https://shell.azure.com/images/launchcloudshell.png "启动云 Shell")](https://shell.azure.com)
 
   若要在 SSMS 中运行 sqlcmd 语句，请从顶部导航栏上的“查询菜单”下拉列表中选择“SQLCMD 模式”。  
   
@@ -117,7 +119,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令行选项  
  **登录相关选项**  
   **-A**  
- 到与专用的管理员连接 (DAC) 的 SQL Server 中的日志。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 时连接到 SQL 数据库使用-A，你必须是 SQL server 管理员联系。 DAC 不可用的 Azure Active Directory 管理员。
+ 到与专用的管理员连接 (DAC) 的 SQL Server 中的日志。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅[用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 时连接到 SQL 数据库使用-A，你必须是 SQL server 管理员联系。 DAC 不可用的 Azure Active Directory 管理员。
   
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
@@ -217,11 +219,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要连接到 SQL Server 的实例。 它设置 **sqlcmd** 脚本变量 SQLCMDSERVER。  
   
- 指定*server_name*连接到 SQL Server 在该服务器计算机上的默认实例。 指定*server_name* [  **\\**  *instance_name* ] 若要连接到该服务器计算机上的 SQL Server 的命名实例。 如果指定服务器的计算机，则**sqlcmd**连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
+ 指定*server_name*连接到 SQL Server 在该服务器计算机上的默认实例。 指定*server_name* [**\\* * * instance_name* ] 若要连接到该服务器计算机上的 SQL Server 的命名实例。 如果指定服务器的计算机，则**sqlcmd**连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。  
   
- 如果不指定*server_name* [  **\\**  *instance_name* ] 当启动**sqlcmd**，SQL Server 检查并使用 SQLCMDSERVER 环境变量。  
+ 如果不指定*server_name* [**\\* * * instance_name* ] 当启动**sqlcmd**，SQL Server 检查并使用 SQLCMDSERVER 环境变量。  
   
 > [!NOTE]  
 >  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量；也就是说 **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰，并且旧式脚本可以继续使用。  
@@ -262,7 +264,7 @@ sqlcmd
   
  在命令提示符处输入 **chcp** 以验证 Cmd.exe 的代码页。  
   
- **-i** *input_file*[**、***input_file2*...]  
+ **-i** *input_file*[**,***input_file2*...]  
  标识包含一批 SQL 语句或存储过程的文件。 可以指定要按顺序读取和处理的多个文件。 文件名之间不要使用任何空格。 **sqlcmd** 将首先检查所有指定的文件是否都存在。 如果有一个或多个文件不存在， **sqlcmd** 将退出。 -i 和 -Q/-q 选项是互斥的。  
   
  路径示例：  
@@ -275,7 +277,7 @@ sqlcmd
   
  包含空格的文件路径必须用引号引起来。  
   
- 此选项可以使用多次： **-i***input_file* **-I***I input_file.*  
+ 可能会多次使用此选项: **-i * * * input_file* **-我 * * * 我 input_file。*  
   
  **-o** *output_file*  
  标识从 **sqlcmd**接收输出的文件。  
@@ -338,13 +340,13 @@ sqlcmd
  如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 **-b** 将在本主题后面部分进行介绍。  
   
  **-t** *query_timeout*  
- 指定命令（或 SQL 语句）超时的时间。此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。*query**time_out* 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
+ 指定命令（或 SQL 语句）超时的时间。此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。*查询 * * time_out*必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
   
 > [!NOTE]  
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- 创建可在 **sqlcmd**脚本中使用的 **sqlcmd** 脚本变量。 如果该值包含空格，则将其用引号引起来。 可以指定多个 ***var***=**"***values***"** 值。 如果指定的任何值中有错误， **sqlcmd** 会生成错误消息，然后退出。  
+ 创建可在 **sqlcmd**脚本中使用的 **sqlcmd** 脚本变量。 如果该值包含空格，则将其用引号引起来。 你可以指定多个***var***=**"***值***"**值。 如果指定的任何值中有错误， **sqlcmd** 会生成错误消息，然后退出。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -386,7 +388,7 @@ sqlcmd
   
 -   **ntext**  
   
--   **图像**  
+-   **image**  
   
 > [!NOTE]  
 >  根据实现，UDT 可以使用固定的长度。 如果此固定长度 UDT 的长度比 *display_width*短，则返回的 UDT 值将不受影响。 但是，如果此长度比 *display_width*长，则输出会被截断。  
@@ -476,7 +478,7 @@ sqlcmd
  **-?**  
  显示 **sqlcmd** 的版本和 **sqlcmd** 选项的语法摘要。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  不必按语法部分所示的顺序使用选项。  
   
  在返回多个结果时， **sqlcmd** 在批处理中的每个结果集之间输出一个空行。 此外，如果没有应用于已执行的语句，则不会出现 `<x> rows affected` 消息。  
@@ -505,7 +507,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
   
-|变量|相关开关|R/W|，则“默认”|  
+|变量|相关开关|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -687,7 +689,7 @@ sqlcmd
   
  **其他命令**  
   **:r \<** *filename***>**  
- 分析其他 TRANSACT-SQL 语句和**sqlcmd**从指定的文件的命令 **\<**  *filename***>**到语句缓存。  
+ 分析其他 TRANSACT-SQL 语句和**sqlcmd**从指定的文件的命令 **\< ***filename***>**到语句中缓存。  
   
  如果该文件包含不跟的 TRANSACT-SQL 语句**转**，必须输入**转**后面的行上**: r**。  
   
@@ -745,7 +747,7 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 文件名  
  可以使用**sqlcmd** 选项或 **sqlcmd** 命令指定 **sqlcmd** 输入文件。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
   
--   **:Error**、 **:Out** 和 **:Perftrace** 应使用不同的 **\<***filename***>**。 如果使用了相同的 **\<***filename***>** ，这些命令的输入可能会混杂在一起。  
+-   **： 错误**， **： 出**和**: Perftrace**应使用单独 **\< ***filename***>**。 如果相同 **\< ***filename*** >** 是使用，就可能混合来自命令的输入。  
   
 -   如果从本地计算机的 **sqlcmd** 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
   
