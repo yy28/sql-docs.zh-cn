@@ -28,15 +28,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Ssbdiagnose**实用工具将报告中的问题[!INCLUDE[ssSB](../../includes/sssb-md.md)]会话或配置[!INCLUDE[ssSB](../../includes/sssb-md.md)]服务。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -122,7 +122,7 @@ ssbdiagnose
  **-IGNORE** *error_id*  
  指定不在报告中包含具有指定 *error_id* 的错误或消息。 可以多次指定 **-IGNORE** 来禁止显示多个消息 ID。  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  指定在特定子句中未包含连接选项时 **ssbdiagnose** 所使用的基本连接信息。 特定子句中给定的连接信息将覆盖 **baseconnectionoption** 信息。 各参数分别执行此选项。 例如，如果 **baseconnetionoptions** 中指定了 **-S** 和 **-d**，而 **toconnetionoptions** 中仅指定了 **-d**，则 **ssbdiagnose** 使用 **baseconnetionoptions** 中的 -S 和 **toconnetionoptions**中的 -d。  
   
  **CONFIGURATION**  
@@ -131,7 +131,7 @@ ssbdiagnose
  **FROM SERVICE** *service_name*  
  指定启动会话的服务。  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  指定连接到承载发起方服务的数据库所需的信息。 如果未指定 **fromconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions** 中的连接信息来连接到发起方数据库。 如果指定了 **fromconnectionoptions** ，则它必须包括含有发起方服务的数据库。 如果未指定 **fromconnectionoptions** ，则 **baseconnectionoptions** 必须指定发起方数据库。  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -147,13 +147,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  指定连接承载目标服务的数据库所需的信息。 如果未指定 **toconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions** 中的连接信息来连接到目标数据库。  
   
  **MIRROR**  
  指定关联的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务驻留在镜像数据库中。 **ssbdiagnose** 验证到该服务的路由是否为镜像路由，其中 MIRROR_ADDRESS 已在 CREATE ROUTE 中指定。  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  指定连接到镜像数据库所需的信息。 如果未指定 **mirrorconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions** 中的连接信息来连接到镜像数据库。  
   
  **ON CONTRACT** *contract_name*  
@@ -208,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *timeout_interval*  
  指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 使用 ctrl + C 退出**ssbdiagnose**如果**超时**未指定或早于时间结束运行时报告**-**超时间隔到期。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  指定数据库的连接信息，该数据库包含与受监视的会话元素关联的服务。 如果所有服务都位于同一数据库中，则只需指定一个 **CONNECT TO** 子句。 如果各服务位于不同的数据库中，必须为每个数据库提供一个 **CONNECT TO** 子句。 如果未指定 **runtimeconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions**中的连接信息。  
   
  **–E**  
@@ -249,7 +249,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  指定承载要分析的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例。  
   
- 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 *命名实例的***\\***server_name* instance_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
+ 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定*server_name***\\***instance_name*连接到的命名实例[!INCLUDE[ssDE](../../includes/ssde-md.md)]在该服务器上。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
   
  **-S** *database_name*  
  指定承载要分析的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的数据库。 如果该数据库不存在，将生成错误消息。 如果未指定 **-d** ，则默认为登录帐户的默认数据库属性中指定的数据库。  
@@ -260,7 +260,7 @@ WHERE database_id = DB_ID();
  **-?**  
  显示命令行帮助。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用 **ssbdiagnose** 可以执行下列操作：  
   
 -   确认在新配置的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序中没有配置错误。  
@@ -465,8 +465,8 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE ROUTE (Transact SQL)](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE (Transact SQL)](../../t-sql/statements/create-service-transact-sql.md)   
  [接收 &#40;Transact SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 创建群集。 
 
    >[!WARNING]
-   >由于出现一个已知问题（群集服务供应商正在对其进行调查），启动群集（“pcs cluster start”）将失败，并出现以下错误。 这是因为 /etc/corosync/corosync.conf 中配置的日志文件出现错误。 若要解决此问题，请将日志文件更改为 /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
+   >由于出现一个已知问题（群集服务供应商正在对其进行调查），启动群集（“pcs cluster start”）将失败，并出现以下错误。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，请将日志文件更改为 /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]后[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分布式重播功能完成一个分布式的重播，可以捕获每个客户端的重播活动，并将其保存在每个客户端上结果跟踪文件。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
@@ -62,9 +62,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="column-descriptions-for-result-trace"></a>跟踪结果的列说明  
  下表说明了结果跟踪数据的各列。  
   
-|数据列名称|数据类型|Description|列 ID|  
+|数据列名称|数据类型|说明|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|事件类的名称。|@shouldalert|  
+|EventClass|**nvarchar**|事件类的名称。|1|  
 |EventSequence|**bigint**|对于提供程序错误、内部错误和警告，这是对应于错误或警告的捕获事件序列。<br /><br /> 对于所有其他事件类，这是原始跟踪数据中的事件序列。|2|  
 |ReplaySequence|**bigint**|对于提供程序错误、内部错误和警告，这是对应于错误或警告的重播事件序列。<br /><br /> 对于所有其他事件类，这是在重播期间分配的事件的序列。|3|  
 |TextData|**ntext**|TextData 的内容取决于 EventClass。<br /><br /> 对于审核登录和 ExistingConnection，这是用于连接的设置选项。<br /><br /> 对于 SQL:BatchStarting，这是批处理请求的正文。<br /><br /> 对于 RPC:Starting，这是调用的存储过程。<br /><br /> 对于重播设置事件，此列包含在重播配置文件中定义的设置。<br /><br /> 对于重播统计信息事件，这包含以下信息：<br /><br /> -重播目标 SQL Server<br /><br /> -可重播事件的总数<br /><br /> -提供程序错误的数量<br /><br /> -内部错误的数量<br /><br /> -内部警告<br /><br /> -总错误数<br /><br /> -整体通过率<br /><br /> -重播时间 (HH:MM:SS:MMM)<br /><br /> 对于重播结果集事件，这将显示返回结果列标题的列表。<br /><br /> 对于重播结果行事件，这将显示该行所有列的返回值。<br /><br /> 对于重播内部警告和重播提供程序错误，此列包含提供程序警告或错误。|4|  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/21/2017
 |ApplicationName|**nvarchar**|在捕获期间创建了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接的客户端应用程序的名称。|17|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

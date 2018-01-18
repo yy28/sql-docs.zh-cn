@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**实用程序执行一组指定的一个或多个数据库上的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
@@ -86,7 +86,7 @@ number[minutes | hours | days | weeks | months]
  指定返回 **sqlmaint** 的语法关系图。 此参数必须单独使用。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定要连接到该服务器上 *命名实例的***\\***server_name* instance_name [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定*server_name***\\***instance_name*连接到的命名实例[!INCLUDE[ssDE](../includes/ssde-md.md)]在该服务器上。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
   
  **-U** *login_ID*  
  指定连接服务器时使用的登录 ID。 如果未提供， **sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
@@ -233,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  如果仅指定 *number* ，则默认日期部分为 **weeks**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **sqlmaint** 实用工具可对一个或多个数据库执行维护操作。 如果指定 **-D** ，则在剩余的命令开关中指定的操作仅对指定数据库执行。 如果指定 **-PlanName** 或 **-PlanID** ，则 **sqlmaint** 只从指定的维护计划中检索数据库列表信息。 在其余的 **sqlmaint** 参数中指定的所有操作都会应用于从计划获取的列表中的每个数据库。 **sqlmaint** 实用工具不会应用在计划本身中定义的任何维护活动。  
   
  如果成功运行，则 **sqlmaint** 实用工具将返回 0，如果失败则返回 1。 在下列情况下将报告失败：  

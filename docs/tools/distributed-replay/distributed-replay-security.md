@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]安装和使用之前[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能，你应查看本主题中的重要安全信息。 本主题介绍了您使用分布式重播之前所需的安装后安全配置步骤。 本主题还介绍了与数据保护相关的重要注意事项和重要删除步骤。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="user-and-service-accounts"></a>用户帐户和服务帐户  
  下表介绍了用于分布式重播的帐户。 在安装分布式重播功能后，您必须分配控制器和客户端服务帐户将运行为的安全主体。 因此，建议您先配置适当的域用户帐户，然后再安装分布式重播功能。  
   
-|用户帐户|要求|  
+|用户帐户|需求|  
 |------------------|------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播控制器服务帐户|可以是域用户帐户或本地用户帐户。 如果使用本地用户帐户，则管理工具、控制器和客户端都必须在同一台计算机上运行。<br /><br /> **\*\* 安全说明 \*\*** 建议不要将该帐户设置为 Windows 本地管理员组的成员。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端服务帐户|可以是域用户帐户或本地用户帐户。 如果使用本地用户帐户，则控制器、客户端和目标 SQL Server 都必须在同一台计算机上运行。<br /><br /> **\*\* 安全说明 \*\*** 建议不要将该帐户设置为 Windows 本地管理员组的成员。|  
@@ -135,7 +135,7 @@ ms.lasthandoff: 12/21/2017
 -   删除用于测试的任何跟踪数据库文件、中间数据库文件、调度数据库文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件。 中间文件和调度文件分别存储在控制器上的工作目录和客户端上的工作目录中。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [安装 Distributed Replay - 概述](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

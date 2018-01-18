@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
  回滚操作也记录在日志中。 每个事务都在事务日志中保留空间，以确保存在足够的日志空间来支持由显式回滚语句或遇到错误引起的回滚。 保留的空间量取决于在事务中执行的操作，但通常等于用于记录每个操作的空间量。 事务完成后将释放此保留空间。  
   
-<a name="minlsn"></a> 日志文件中从必须存在以确保数据库范围内成功回滚的第一条日志记录到最后写入的日志记录之间的部分称为日志的活动部分，即“活动日志”。 这是进行数据库完整恢复所需的日志部分。 永远不能截断活动日志的任何部分。 此第一条日志记录的[日志序列号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)，称为最小恢复 LSN (MinLSN)**。  
+<a name="minlsn"></a> 日志文件中从必须存在以确保数据库范围内成功回滚的第一条日志记录到最后写入的日志记录之间的部分称为日志的活动部分，即“活动日志”。 这是进行数据库完整恢复所需的日志部分。 永远不能截断活动日志的任何部分。 此第一条日志记录的[日志序列号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)，称为最小恢复 LSN (MinLSN)。  
   
 ##  <a name="physical_arch"></a> 事务日志物理体系结构  
 数据库中的事务日志映射在一个或多个物理文件上。 从概念上讲，日志文件是一系列日志记录。 从物理上讲，日志记录序列被有效地存储在实现事务日志的物理文件集中。 每个数据库必须至少有一个日志文件。  
@@ -77,9 +80,10 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 > 虚拟日志文件 (VLF) 的创建遵循此方法：
 > - 如果下一次增长少于当前日志物理大小的 1/8，则创建 1 个 VLF，补偿此增长大小（从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 开始）
-> - 如果增长少于 64 MB，创建 4 个 VLF，补偿此增长大小（如增长 1 MB，创建四个 256KB 的 VLF）
-> - 如果增长在 64 MB 到 1GB 之间，创建 8 个 VLF，补偿此增长大小（如增长 512 MB，创建八个 64MB 的 VLF）
-> - 如果增长大于 1GB，创建 16 个 VLF，补偿此增长大小（如增长 8 GB，创建十六个 512MB VLF）
+> - 如果下一次增长超过当前日志大小的 1/8，则使用 pre-2014 方法：
+>    -  如果增长少于 64 MB，创建 4 个 VLF，补偿此增长大小（如增长 1 MB，创建四个 256KB 的 VLF）
+>    -  如果增长在 64 MB 到 1GB 之间，创建 8 个 VLF，补偿此增长大小（如增长 512 MB，创建八个 64MB 的 VLF）
+>    -  如果增长大于 1GB，创建 16 个 VLF，补偿此增长大小（如增长 8 GB，创建十六个 512MB VLF）
 
 如果这些日志文件由于许多微小增量而增长到很大，则它们将具有很多虚拟日志文件。 这会降低数据库启动以及日志备份和还原操作的速度。 建议你为日志文件分配一个接近于最终所需大小的 size 值，并且还要分配一个相对较大的 growth_increment 值。 请参考以下提示，确定当前事务日志大小的最佳 VLF 分发。
  - `ALTER DATABASE` 的 `SIZE` 参数设置的 size 值是指日志文件的初始大小。

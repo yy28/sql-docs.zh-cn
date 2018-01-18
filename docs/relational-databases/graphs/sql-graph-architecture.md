@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -104,20 +104,20 @@ ms.lasthandoff: 11/17/2017
 节点表中的隐式列  
 |列名    |数据类型  |is_hidden  |注释  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |内部 graph_id 列  |
-|$node_id_\<hex_string > |NVARCHAR   |0  |外部节点 id 列  |
+|graph_id_\<hex_string> |bigint |1  |内部 graph_id 列  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |外部节点 id 列  |
 
 边缘表中的隐式列  
 |列名    |数据类型  |is_hidden  |注释  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |内部 graph_id 列  |
-|$edge_id_\<hex_string > |NVARCHAR   |0  |外部边缘 id 列  |
-|from_obj_id_\<hex_string >  |INT    |1  |内部从节点对象 id  |
-|from_id_\<hex_string >  |bigint |1  |从节点 graph_id 内部  |
-|$from_id_\<hex_string > |NVARCHAR   |0  |外部从节点 id  |
-|to_obj_id_\<hex_string >    |INT    |1  |内部节点对象 id  |
-|to_id_\<hex_string >    |bigint |1  |内部节点 graph_id  |
-|$to_id_\<hex_string >   |NVARCHAR   |0  |外部的节点 id  |
+|graph_id_\<hex_string> |bigint |1  |内部 graph_id 列  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |外部边缘 id 列  |
+|from_obj_id_\<hex_string>  |INT    |1  |内部从节点对象 id  |
+|from_id_\<hex_string>  |bigint |1  |从节点 graph_id 内部  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |外部从节点 id  |
+|to_obj_id_\<hex_string>    |INT    |1  |内部节点对象 id  |
+|to_id_\<hex_string>    |bigint |1  |内部节点 graph_id  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |外部的节点 id  |
  
 ### <a name="system-functions"></a>系统函数
 添加的下列内置函数。 这些将帮助从生成的列中提取信息的用户。 请注意，这些方法将不会验证用户输入。 如果用户指定了无效`sys.node_id`方法将提取的相应部分，并将其返回。 例如，将占用 OBJECT_ID_FROM_NODE_ID`$node_id`作为输入，并将返回 object_id 此节点所属的表。 
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/17/2017
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `现已扩展来支持创建 AS 节点或 AS 边缘表。 请注意边缘表可能或可能没有任何用户定义属性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|节点和边缘表可以更改关系表，使用的相同方式`ALTER TABLE`。 用户可以添加或修改用户定义的列、 索引或约束。 但是，更改内部 graph 列，就像`$node_id`或`$edge_id`，将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对伪列和用户定义的节点和边缘表的列创建索引。 支持所有索引类型，包括聚集和非聚集列存储索引。  |
-|DROP TABLE |[DROP TABLE & #40;Transact SQL & #41;](../../t-sql/statements/drop-table-transact-sql.md)  |可以删除节点和边缘表的关系表，使用的相同方式`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点，并支持的边缘，在删除节点或节点表时的级联的删除。 建议，如果删除节点表后，则用户将断开任何连接到该节点表手动维护的关系图的完整性中节点的边缘。  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |可以删除节点和边缘表的关系表，使用的相同方式`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点，并支持的边缘，在删除节点或节点表时的级联的删除。 建议，如果删除节点表后，则用户将断开任何连接到该节点表手动维护的关系图的完整性中节点的边缘。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/17/2017
 |任务   |相关的主题  |说明
 |---  |---  |---  |
 |SELECT |[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)|节点和边缘表作为内部存储，因此在的节点和边缘表上支持大多数 SQL Server 或 Azure SQL 数据库中的表上支持的操作  |
-|MATCH  | [匹配 & #40;Transact SQL & #41;](../../t-sql/queries/match-sql-graph.md)|引入了匹配内置来支持模式匹配和遍历关系图。  |
+|MATCH  | [匹配 &#40;Transact SQL &#41;](../../t-sql/queries/match-sql-graph.md)|引入了匹配内置来支持模式匹配和遍历关系图。  |
 
 
 

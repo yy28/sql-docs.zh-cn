@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**实用工具用于比较两个非收敛表中的数据和进行故障排除复制拓扑中的非收敛特别有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
@@ -85,7 +85,7 @@ tablediff
  返回支持参数的列表。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *命名实例的***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*source_server_name***\\***instance_name*对于命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-sourcedatabase** *source_database*  
  源数据库的名称。  
@@ -109,7 +109,7 @@ tablediff
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *命名实例的***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*destination_server_name***\\***instance_name*对于命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-destinationdatabase** *subscription_database*  
  目标数据库的名称。  
@@ -170,13 +170,13 @@ tablediff
   
 ## <a name="return-value"></a>返回值  
   
-|ReplTest1|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|严重错误|  
 |**2**|存在表差异|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 **sql_variant** 数据类型列的表。  
@@ -191,10 +191,10 @@ tablediff
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**图像**|  
+|**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**图像**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  使用 **-strict** 选项可禁止这些映射，并执行严格验证。  
   
@@ -216,7 +216,7 @@ tablediff
   
 -   **ntext**  
   
--   **图像**  
+-   **image**  
   
 ## <a name="permissions"></a>权限  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  

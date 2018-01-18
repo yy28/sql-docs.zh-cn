@@ -16,15 +16,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1869cd0a65ab63d5d579eb8c11b2329a8fbbebe8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**实用工具启动 Windows PowerShell 会话，同时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 提供程序和 cmdlet 加载和注册。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
@@ -75,12 +75,12 @@ sqlps
  指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从*script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用 **"&{***command***}"** 格式。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用格式**"& {***命令***}"**。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
   
  [ **-?** | **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **Sqlps** 实用工具启动 PowerShell 环境 (PowerShell.exe) 并加载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 模块。 该模块也命名为 **sqlps**，它将加载并注册以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f96f2d58bdc3e5bed18e9dd76fbdd7813a24f8a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bba801b3dbeee9c21c371187b4a82b9d9a77f617
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]以分钟为单位指定优化会话的最大长度。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|**unsignedInt**，长度没有限制。|  
 |**默认值**|480 分钟（8 小时）。|  
@@ -50,12 +50,12 @@ ms.lasthandoff: 12/21/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|InclusionThresholdSetting|  
+|**父元素**|[TuningOptions 元素 &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**子元素**|无|  
   
 ## <a name="example"></a>示例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>说明  
  以下代码示例显示如何将 12 个小时设置为最长优化时间：  
   
 ## <a name="code"></a>代码  

@@ -4,7 +4,7 @@
 ## [发行说明](download-sql-server-management-studio-ssms.md#release-notes)
 ## [安装非英语版 SSMS](install-other-languages.md)
 ## [新的和已更新的项目](new-updated-ssms.md)
-# [下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)
+# [安装 SQL Server PowerShell 模块](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json)
 
 # [SQL Server 代理 +](../ssms/agent/sql-server-agent.md)
 # [F1 帮助 +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)

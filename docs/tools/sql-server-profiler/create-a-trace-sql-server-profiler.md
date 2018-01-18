@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec32b39644d4e01ca5d7b168b5d0909f6d9a6f7c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b40c4ab9616ec4d7a1271c5e3b5c1a0a36be2e7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建跟踪。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
-     此时，将显示 **“跟踪属性”** 对话框。  
+     此时，将显示“跟踪属性”  对话框。  
   
     > **注意：**如果选中“建立连接后立即开始跟踪”，就不会显示“跟踪属性”对话框，而是直接开始跟踪。 若要关闭此设置，在 **工具** 菜单上，单击**选项**，然后清除建立连接复选框后立即开始跟踪。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 7.  单击 **“运行”** 以启动跟踪。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
+ [运行 SQL Server 事件探查器所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  

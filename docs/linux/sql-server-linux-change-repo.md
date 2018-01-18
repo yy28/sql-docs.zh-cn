@@ -1,5 +1,5 @@
 ---
-title: "注册在 Linux 上的 SQL Server 的常规可用性存储库 |Microsoft 文档"
+title: "在 Linux 上的 SQL Server 的注册正式版存储库 |Microsoft 文档"
 description: "从预览版 SQL Server 2017 存储库的存储库更改到正式版 (GA) 存储库在 Linux 上 （GA 有时也称为 RTM）。"
 author: annashres
 ms.author: anshrest
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c2c674c90b327cfe4baf2d109fab09d045f890
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f74c74bddf8337bf4555ce4ecdf0b6e2c869e44f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>从预览版存储库的存储库更改到 GA 存储库
 

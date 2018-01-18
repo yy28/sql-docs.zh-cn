@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a652a6e44909984906fcbcbe2b962cc7de374fbb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4eeed88249de7d3d04bee44262d72e113a8e04ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库引擎优化顾问 XML 的根元素输入或输出文件**DTAXML**包含说明的优化输入和优化数据库引擎优化顾问生成的输出的所有元素。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
@@ -58,17 +58,17 @@ ms.lasthandoff: 12/21/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|InclusionThresholdSetting|  
+|**父元素**|无|  
 |**子元素**|[DTAInput 元素 (DTA)](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 元素（有关信息，请参阅[数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/)）|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  有关 XML namespaces 的详细信息，请参阅 [MSDN Library 中的](http://go.microsoft.com/fwlink/?LinkId=7341) Namespaces in an XML Document [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="example"></a>示例  
  有关典型 **DTAXML** 元素的示例，请参阅 [XML 输入文件实例 (DTA)](../../tools/dta/xml-input-file-samples-dta.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [XML 输入的文件引用 &#40; 数据库引擎优化顾问 &#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

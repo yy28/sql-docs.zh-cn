@@ -1,7 +1,7 @@
 ---
 title: "分布式可用性组 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,11 +18,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efa0ea34a2b5432f3c7059d98cee4cbd35fa18ab
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]分布式可用性组是 SQL Server 2016 中引入的一种新功能，作为现有 Always On 可用性组功能的一种变体。 本文阐明了分布式可用性组的某些特性，并对现有 [SQL Server 文档](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)进行了补充。
@@ -147,7 +147,11 @@ ms.lasthandoff: 11/20/2017
 
 在前面两个示例中，三个可用性组中至多可以具有 27 个副本，这些副本可用于只读查询。 
 
-[只读路由]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)当前不适用于分布式可用性组。 使用侦听器进行连接的所有查询都将转到主要副本。 否则，将需要配置每个副本，以允许将所有连接作为次要副本并直接访问它们。 在 SQL Server 2016 的更新或将来的 SQL Server 版本中，此行为可能会发生更改。
+[只读路由]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)并不完全适用于分布式可用性组。 更具体地说，
+
+1. 只读路由可配置，且适用于分布式可用性组的主要可用性组。 
+2. 只读路由可配置，但不用于分布式可用性组的次要可用性组。 如果使用侦听器连接到次要可用性组，则所有查询将转到次要可用性组的主要副本。 否则，将需要配置每个副本，以允许将所有连接作为次要副本并直接访问它们。 但如果故障转移之后，次要可用性组变为主要可用性组，只读路由仍适用。 在 SQL Server 2016 的更新或将来的 SQL Server 版本中，此行为可能会发生更改。
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>初始化分布式可用性组中的次要可用性组
 

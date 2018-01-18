@@ -1,7 +1,7 @@
 ---
-title: "表格建模 （Adventure Works 教程） |Microsoft 文档"
+title: "表格建模 （1200年兼容级别） |Microsoft 文档"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>表格建模（Adventure Works 教程）
+# <a name="tabular-modeling-1200-compatibility-level"></a>表格建模 （1200年兼容级别）
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 本教程提供有关如何创建在 Analysis Services 表格模型的课程[1200年兼容级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)使用[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)，并将您的模型部署到 Analysis Services本地服务器还是在 Azure 中。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 本教程并未提供有关以下内容的课程或信息：通过使用 SQL Server Management Studio 管理已部署的表格模型数据库，或者使用报表客户端应用程序连接到已部署的模型以浏览模型数据。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
 若要完成本教程，你将需要以下先决条件：  
   
 -   最新版本的 [！包括[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md)。
@@ -87,17 +87,17 @@ ms.lasthandoff: 01/08/2018
 |----------|------------------------------|  
 |[第 1 课：创建新的表格模型项目](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 分钟。|  
 |[第 2 课：添加数据](../analysis-services/lesson-2-add-data.md)|20 分钟|  
-|[第 3 课：标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)|3 分钟|  
+|[第 3 课： 将标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)|3 分钟|  
 |[第 4 课： 创建关系](../analysis-services/lesson-4-create-relationships.md)|10 分钟。|  
 |[第 5 课： 创建计算的列](../analysis-services/lesson-5-create-calculated-columns.md)|15 分钟|
 |[第 6 课： 创建度量值](../analysis-services/lesson-6-create-measures.md)|30 分钟|  
-|[第 7 课：创建关键绩效指标](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 分钟|  
+|[第 7 课： 创建关键绩效指标](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 分钟|  
 |[第 8 课： 创建透视](../analysis-services/lesson-8-create-perspectives.md)|5 分钟|  
 |[Lesson 9： 创建层次结构](../analysis-services/lesson-9-create-hierarchies.md)|20 分钟|  
 |[第 10 课： 创建分区](../analysis-services/lesson-10-create-partitions.md)|15 分钟|  
 |[第 11 课： 创建角色](../analysis-services/lesson-11-create-roles.md)|15 分钟|  
-|[第 12 课：在 Excel 中分析](../analysis-services/lesson-12-analyze-in-excel.md)|20 分钟| 
-|[第 13 课：部署](../analysis-services/lesson-13-deploy.md)|5 分钟|  
+|[在 Excel 中分析第 12 课：](../analysis-services/lesson-12-analyze-in-excel.md)|20 分钟| 
+|[课 13： 部署](../analysis-services/lesson-13-deploy.md)|5 分钟|  
   
 ## <a name="supplemental-lessons"></a>补充课程  
 本教程还包括 [补充课程](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e)。 这一节中的主题不是完成本教程所必需的，但对于更好地了解高级表格模型创作功能会很有帮助。  

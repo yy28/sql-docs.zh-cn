@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>用户和工作区设置
 
@@ -47,12 +47,22 @@ ms.lasthandoff: 12/21/2017
 
 根据您的平台，用户设置文件的位置如下：
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 工作区设置文件位于`.[!INCLUDE[name-sos](../includes/name-sos-short.md)]`项目文件夹中的。
 
+## <a name="hot-exit"></a>热退出
+
+当你退出默认情况下 SQL 操作 Studio 将记住文件未保存的更改。 这是与 Visual Studio 代码中的热退出功能相同。
+
+默认情况下，热退出处于关闭状态。 启用作用通过编辑退出`files.hotExit`设置。 有关详细信息，请参阅[（在 Visual Studio Code 文档中） 的热退出](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
+
+
+## <a name="tab-color"></a>选项卡颜色
+
+若要简化标识你正在使用哪些连接，在编辑器中打开的选项卡可以具有它们的设置相匹配的连接所属的服务器组的颜色的颜色。 默认情况下，选项卡颜色默认为关闭的。 启用通过编辑选项卡颜色`sql.tabColorMode`设置。
 
 ## <a name="additional-resources"></a>其他资源
 

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb801e92dfaa141be2b5e942a1c0bd95c19a6cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a830b25f8719953dec13a2ad43d0d7db275ee8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何设置适用于使用的特定实例创建的所有跟踪选项[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **默认重播线程数** ：控制重播期间使用的处理器线程数。 线程数越多，重播越快，但这会导致重播期间服务器的性能降低。 建议将该项设置为 **4**。 下表列出了可用选项：  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
         |**2**|最小值。 使用两个线程重播。|  
         |**4**|默认值。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
     -   “默认 Health Monitor 等待间隔(秒)”设置重播线程可以阻塞其他进程的最长时间（以秒为单位）。 下表说明了这些值。  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
         |**0**|最小值。 设置为 **0** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永远不会停止阻塞进程。|  
         |**3600**|默认值。 允许不超过 **3600** 秒（1 小时）的阻塞进程。|  
@@ -65,14 +65,14 @@ ms.lasthandoff: 12/21/2017
   
     -   “默认 Health Monitor 轮询间隔(秒)”设置阻塞进程的轮询重播线程的频率。 下表说明了这些值。  
   
-        |ReplTest1|Description|  
+        |值|说明|  
         |-----------|-----------------|  
         |**1**|最小值。 设置为 **1** 表示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 每秒针对阻塞进程轮询一次。|  
         |**60**|默认值。 每分钟针对阻塞进程轮询一次。|  
         |**86400**|最大值。 每 **86400** 秒（一天）针对阻塞进程轮询一次。|  
   
 ## <a name="see-also"></a>另请参阅  
- [设置跟踪显示默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [设置跟踪显示默认值 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

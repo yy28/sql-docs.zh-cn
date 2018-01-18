@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>对 JSON 数据编制索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-在 SQL Server 2016 中，JSON 不是内置数据类型，SQL Server 不具有自定义 JSON 索引。 但是，可以使用标准索引优化对 JSON 文档的查询。 
+在 SQL Server 和 SQL 数据库中，JSON 不是内置数据类型，SQL Server 不具有自定义 JSON 索引。 但是，可以使用标准索引优化对 JSON 文档的查询。 
 
 数据库索引可提升筛选和排序操作的性能。 如果没有索引，每次查询数据时，SQL Server 不得不扫描整个表。  
   
@@ -69,7 +69,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 需使用计划在查询中使用的同一表达式来创建计算列，这一点很重要 - 在此示例中该表达式为 `JSON_VALUE(Info, '$.Customer.Name')`。  
   
-无须重新编写查询。 如果使用带有 `JSON_VALUE` 函数的表达式（如上面的示例索引所示），SQL Server 会认为存在具有相同表达式的等效计算列，并会在可能的情况下应用索引。
+无须重新编写查询。 如果使用带有 `JSON_VALUE` 函数的表达式（如前面的示例查询所示），SQL Server 会认为存在具有相同表达式的等效计算列，并会在可能的情况下应用索引。
 
 ### <a name="execution-plan-for-this-example"></a>此示例的执行计划
 下面是此示例中查询的执行计划。  
@@ -79,7 +79,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 SQL Server 在非聚集索引中使用索引查找而非进行全表扫描，由此找到满足指定条件的行。 然后它在 `SalesOrderHeader` 表中使用键查找来提取查询中引用的其他列 - 在此示例中为 `SalesOrderNumber` 和 `OrderDate`。  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>通过包含的列进一步优化索引
-如果在索引中添加所需的列，则可避免在表中进行这一附加查找。 可将这些列作为标准包含列进行添加，如下例中所示，这是对上文所示 `CREATE INDEX` 示例的延伸。  
+如果在索引中添加所需的列，则可避免在表中进行这一附加查找。 可将这些列作为标准包含列添加，如以下示例中所示，这是对前面的 `CREATE INDEX` 示例的延伸。  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-在这种情况下，SQL Server 不必从 `SalesOrderHeader` 表中读取其他数据，因为所需内容已全部包含在非聚集 JSON 索引中。 这是在查询中将 JSON 和列数据相结合以及为工作负载创建最佳索引的一个好方法。  
+在这种情况下，SQL Server 不必从 `SalesOrderHeader` 表中读取其他数据，因为所需内容已全部包含在非聚集 JSON 索引中。 这种索引是在查询中将 JSON 和列数据相结合以及为工作负载创建最佳索引的一个好方法。  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 索引是可识别排序规则的索引  
 索引可识别排序规则，这是针对 JSON 数据的一个重要索引功能。 创建计算列时使用的 `JSON_VALUE` 函数的结果是一个文本值，该值从输入表达式继承其排序规则。 因此，将使用源列中定义的排序规则对索引中的值进行排序。  
   
-为了阐释这一点，下面的示例创建具有主键和 JSON 内容的一个简单集合表。  
+为了阐释索引可识别排序规则，下面的示例创建具有主键和 JSON 内容的一个简单集合表。  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  虽然查询具有 `ORDER BY` 子句，但执行计划不使用 Sort 运算符。 此时已根据塞尔维亚西里尔文规则对 JSON 索引进行了排序。 因此 SQL Server 便可使用其中结果已经过排序的非聚集索引。  
   
- 但是，如果更改 `ORDER BY` 表达式的排序规则 - 例如，如果将 `COLLATE French_100_CI_AS_SC` 放在 `JSON_VALUE` 函数之后 - 会得到不同的查询执行计划。  
+ 但是，如果更改 `ORDER BY` 表达式的排序规则（例如，如果将 `COLLATE French_100_CI_AS_SC` 添加到 `JSON_VALUE` 函数之后），会得到其他查询执行计划。  
   
  ![执行计划](../../relational-databases/json/media/jsonindexblog3.png "执行计划")  
   

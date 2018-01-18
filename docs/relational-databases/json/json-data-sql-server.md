@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 03be01e0efe2a6cf437f448cf952c7949d45026d
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1f6ecf8c1970a3e7fa78dc78b83afce4082f0e63
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="json-data-sql-server"></a>JSON 数据 (SQL Server)
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序�
   
  ![内置的 JSON 支持概述](../../relational-databases/json/media/jsonslides1overview.png "内置的 JSON 支持概述")  
   
-## <a name="key-json-capabilities-of-sql-server"></a>SQL Server 的关键 JSON 功能 
+## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>SQL Server 和 SQL 数据库的关键 JSON 功能
 下面是有关 SQL Server 随其内置 JSON 支持一起提供的主要功能的详细信息。
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>从 JSON 文本中提取值并在查询中使用这些值
@@ -125,11 +125,11 @@ FROM OPENJSON(@json)
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
   
- **OPENJSON** 将 JSON 对象的数组转换为表，其中每个对象表示为一行，键/值对将作为单元返回。 输出遵循下列规则。
+ **OPENJSON** 将 JSON 对象的数组转换为表，其中每个对象表示为一行，键/值对将作为单元返回。 输出遵循下列规则：
 -   **OPENJSON** 将 JSON 值转换为 **WITH** 子句中指定的类型。
 -   **OPENJSON** 可以处理规则的键/值对以及分层组织的对象。
 -   不需要返回 JSON 文本中包含的所有字段。
--   如果 JSON 值不存在，**OPENJSON** 将返回 NULL 值。
+-   如果 JSON 值不存在，OPENJSON 返回 NULL 值。
 -   可以选择在类型规范后指定一个路径，以引用嵌套属性或按不同的名称引用属性。
 -   路径中可选的 **strict** 前缀指定 JSON 文本中必须存在指定属性的值。
 
@@ -178,51 +178,22 @@ JSON 文本通常存储在 varchar 或 nvarchar 列中，并编制了纯文本�
 如果在单纯的 JSON 工作负载中，你想要使用专用于处理 JSON 文档的自定义查询语言，可以考虑 Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)。  
   
  以下用例说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用内置的 JSON 支持。  
+
+## <a name="store-and-index-json-data-in-sql-server"></a>在 SQL Server 中存储 JSON 数据并编制索引
+
+要了解有关在 SQL Server 中存储、索引和优化 JSON 数据的详细信息，请参阅以下文章：
+-   [在 SQL Server 或 SQL 数据库中存储 JSON 文档](store-json-documents-in-sql-tables.md)
+-   [对 JSON 数据编制索引](index-json-data.md)
+-   [使用内存中 OLTP 优化 JSON 处理](optimize-json-processing-with-in-memory-oltp.md)
+
+### <a name="load-json-files-into-sql-server"></a>将 JSON 文件加载到 SQL Server  
+ 文件中存储的信息可格式化为标准 JSON 或行分隔的 JSON。 SQL Server 可以导入 JSON 文件的内容，使用 **OPENJSON** 或 **JSON_VALUE** 函数分析内容，并将其加载到表中。  
   
-## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>从格式化为 JSON 的 SQL Server 表返回数据  
- 如果你的 Web 服务从数据库层提取数据并以 JSON 格式返回数据，或者在接受已格式化为 JSON 的数据的 JavaScript 框架或库中返回数据，则可以直接在 SQL 查询中设置 JSON 输出的格式。 你可以使用 FOR JSON 将 JSON 格式设置委托给 SQL Server，而非编写代码或者包含一个库来转换表格查询结果对象，然后将对象序列化为 JSON 格式。  
+-   如果 JSON 文档存储在可由 SQL Server 访问的本地文件、共享网络驱动器或 Azure 文件存储位置，可以使用批量导入将 JSON 数据加载到 SQL Server。 有关此方案的详细信息，请参阅 [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)（使用 OPENROWSET (BULK) 将 JSON 文件导入 SQL Server）。  
   
- 例如，你可能想要生成符合 OData 规范的 JSON 输出。 Web 服务需要采用以下格式的请求和响应。  
-  
--   请求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
-  
--   响应： `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
-  
- 此 OData URL 代表针对 ID 为 1 的产品的 ProductID 和 ProductName 列的请求。 可以使用 **FOR JSON** 按 SQL Server 中所需的格式设置输出格式。  
-  
-```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
- AS '@odata.context',   
- ProductID, Name as ProductName   
-FROM Production.Product  
-WHERE ProductID = 1  
-FOR JSON AUTO  
-```  
-  
-此查询的输出是完全符合 OData 规范的 JSON 文本。格式设置和转义由 SQL Server 处理。 SQL Server 还可将查询结果的格式设置为任何格式，如 OData JSON 或 GeoJSON - 有关详细信息，请参阅 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)（以 GeoJSON 格式返回空间数据）。  
-  
-## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查询分析 JSON 数据  
- 如果必须筛选或聚合 JSON 数据以用于报告，可以使用 **OPENJSON** 将 JSON 转换为关系格式。 然后，使用标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和内置函数来准备报告。  
-  
-```sql  
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
-FROM   SalesOrderRecord AS Tab  
-          CROSS APPLY  
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
-           WITH (  
-              Number   varchar(200) N'$.Order.Number',   
-              Date     datetime     N'$.Order.Date',  
-              Customer varchar(200) N'$.AccountNumber',   
-              Quantity int          N'$.Item.Quantity'  
-           )  
-  AS SalesOrderJsonData  
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
-```  
-  
- 可以在同一个查询中使用标准表列和来自 JSON 文本的值。 可以在 `JSON_VALUE(Tab.json, '$.Status')` 表达式上添加索引以提高查询的性能。 有关详细信息，请参阅 [对 JSON 数据编制索引](../../relational-databases/json/index-json-data.md)。
-  
-## <a name="import-json-data-into-sql-server-tables"></a>将 JSON 数据导入 SQL Server 表  
+-   如果行分隔的 JSON 文件存储在 Azure Blob 存储或 Hadoop 文件系统中，你可以使用 Polybase 来加载 JSON 文本，在 Transact-SQL 代码中分析文本，然后将其载入表中。  
+
+### <a name="import-json-data-into-sql-server-tables"></a>将 JSON 数据导入 SQL Server 表  
  如果必须将 JSON 数据从外部服务加载到 SQL Server，则可以使用 **OPENJSON** 将数据导入 SQL Server，而非分析应用程序层中的数据。  
   
 ```sql  
@@ -265,20 +236,56 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   AS SalesOrderJsonData;  
 ```  
   
- 外部 REST 服务可以提供 JSON 变量的内容，这些内容将从客户端 JavaScript 框架作为参数发送，或者从外部文件加载。 你可以在 SQL Server 表中轻松插入、更新或合并来自 JSON 文本的结果。 有关此方案的详细信息，请参阅以下博客文章。
+ 外部 REST 服务可以提供 JSON 变量的内容，这些内容将从客户端 JavaScript 框架作为参数发送，或者从外部文件加载。 可以在 SQL Server 表中轻松插入、更新或合并来自 JSON 文本的结果。 有关此方案的详细信息，请参阅以下博客文章：
 -   [Importing JSON data in SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/)
 -   [Upsert JSON documents in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
 -   [Loading GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)。  
+
+## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查询分析 JSON 数据  
+ 如果必须筛选或聚合 JSON 数据以用于报告，可以使用 **OPENJSON** 将 JSON 转换为关系格式。 然后，使用标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和内置函数来准备报告。  
   
-## <a name="load-json-files-into-sql-server"></a>将 JSON 文件加载到 SQL Server  
- 文件中存储的信息可格式化为标准 JSON 或行分隔的 JSON。 SQL Server 可以导入 JSON 文件的内容，使用 **OPENJSON** 或 **JSON_VALUE** 函数分析内容，并将其加载到表中。  
+```sql  
+SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
+FROM   SalesOrderRecord AS Tab  
+          CROSS APPLY  
+     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
+           WITH (  
+              Number   varchar(200) N'$.Order.Number',   
+              Date     datetime     N'$.Order.Date',  
+              Customer varchar(200) N'$.AccountNumber',   
+              Quantity int          N'$.Item.Quantity'  
+           )  
+  AS SalesOrderJsonData  
+WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
+ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
+```  
   
--   如果 JSON 文档存储在可由 SQL Server 访问的本地文件、共享网络驱动器或 Azure 文件存储位置，可以使用批量导入将 JSON 数据加载到 SQL Server。 有关此方案的详细信息，请参阅 [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)（使用 OPENROWSET (BULK) 将 JSON 文件导入 SQL Server）。  
+ 可以在同一个查询中使用标准表列和来自 JSON 文本的值。 可以在 `JSON_VALUE(Tab.json, '$.Status')` 表达式上添加索引以提高查询的性能。 有关详细信息，请参阅 [对 JSON 数据编制索引](../../relational-databases/json/index-json-data.md)。
+ 
+## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>从格式化为 JSON 的 SQL Server 表返回数据  
+ 如果你的 Web 服务从数据库层提取数据并以 JSON 格式返回数据，或者在接受已格式化为 JSON 的数据的 JavaScript 框架或库中返回数据，则可以直接在 SQL 查询中设置 JSON 输出的格式。 你可以使用 FOR JSON 将 JSON 格式设置委托给 SQL Server，而非编写代码或者包含一个库来转换表格查询结果对象，然后将对象序列化为 JSON 格式。  
   
--   如果行分隔的 JSON 文件存储在 Azure Blob 存储或 Hadoop 文件系统中，你可以使用 Polybase 来加载 JSON 文本，在 Transact-SQL 代码中分析文本，然后将其载入表中。  
+ 例如，你可能想要生成符合 OData 规范的 JSON 输出。 Web 服务需要采用以下格式的请求和响应： 
+  
+-   请求： `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+  
+-   响应： `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+  
+ 此 OData URL 代表针对 `id` 为 1 的产品的 ProductID 和 ProductName 列的请求。 可以使用 **FOR JSON** 按 SQL Server 中所需的格式设置输出格式。  
+  
+```sql  
+SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+ AS '@odata.context',   
+ ProductID, Name as ProductName   
+FROM Production.Product  
+WHERE ProductID = 1  
+FOR JSON AUTO  
+```  
+  
+此查询的输出是完全符合 OData 规范的 JSON 文本。格式设置和转义由 SQL Server 处理。 SQL Server 还可将查询结果的格式设置为任何格式，如 OData JSON 或 GeoJSON - 有关详细信息，请参阅 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1)（以 GeoJSON 格式返回空间数据）。  
   
 ## <a name="test-drive-built-in-json-support"></a>测试驱动内置的 JSON 支持  
- **使用 AdventureWorks 示例数据库测试驱动内置 JSON 支持。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，请解压缩示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据运行示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
+ **使用 AdventureWorks 示例数据库测试驱动内置 JSON 支持。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，请解压缩示例文件，然后从 JSON 文件夹中打开“JSON Sample Queries procedures views and indexes.sql”文件。 运行此文件中的脚本，将某些现有数据的格式重新设置为 JSON 数据，对 JSON 数据测试示例查询和报告，为 JSON 数据编制索引，然后导入和导出 JSON。  
   
  下面是你可以对该文件中包含的脚本执行的操作。  
   
@@ -299,25 +306,6 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 6.  清理脚本 – 如果你想要保留步骤 2 和 4 中创建的存储过程与视图，请不要运行此部件。  
   
 ## <a name="learn-more-about-built-in-json-support"></a>了解有关内置 JSON 支持的详细信息  
-  
-### <a name="topics-in-this-section"></a>本部分中的主题  
- [借助 FOR JSON 将查询结果的格式设置为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
- 使用 FOR JSON 子句委托从客户端应用程序到 SQL Server 的 JSON 输出格式。  
-  
- [用 OPENJSON (SQL Server) 将 JSON 数据转换为行和列](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)  
- 使用 OPENJSON 将 JSON 数据导入 SQL Server，或者针对无法直接使用 JSON 的应用或服务（如 SQL Server Integration Services），将 JSON 数据转换为关系格式。  
-  
- [使用内置函数验证、查询和更改 JSON 数据 (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)  
- 使用这些内置函数来验证 JSON 文本，以及提取标量值、对象或数组。  
-  
- [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)  
- 使用路径表达式指定想要使用的 JSON 文本。  
-  
- [对 JSON 数据编制索引](../../relational-databases/json/index-json-data.md)  
- 使用计算列基于 JSON 文档中的属性创建排序规则感知的索引。  
-  
-[解决 SQL Server 中 JSON 的常见问题](../../relational-databases/json/solve-common-issues-with-json-in-sql-server.md)  
- 查找关于 SQL Server 中内置 JSON 支持的常见问题解答。  
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
   

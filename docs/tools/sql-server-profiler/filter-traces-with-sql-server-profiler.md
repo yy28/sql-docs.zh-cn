@@ -20,15 +20,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e678a5fd9886cbe8c529e3732ae08fb1480c22b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac087c079ca461875d148a9c9bedcab77fe7852b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 筛选跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以定义筛选器数据列的[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]跟踪事件，以便只捕获您感兴趣的事件信息。 跟踪筛选器可减小跟踪对系统性能的影响，因为跟踪中捕获的事件减少了。 筛选还使得跟踪结果更容易阅读，因为搜索范围中的事件减少了。  

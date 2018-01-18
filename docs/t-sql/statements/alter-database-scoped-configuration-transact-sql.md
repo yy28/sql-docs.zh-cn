@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This 语句使多个数据库配置设置在**单个数据库**级别。 此语句可用于[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和 SQL Server 从开始按[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 这些设置是：  
+  This 语句使多个数据库配置设置在**单个数据库**级别。 此语句可用于[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]并在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 这些设置是：  
   
 - 清除过程缓存。  
-  
 - 将 MAXDOP 参数设置为任意值 (1，2，...)，主数据库是基于什么最适合于该特定数据库的设置不同的值 (例如 0) 的所有辅助数据库使用 （例如，用于报表查询）。  
-  
 - 设置独立于数据库兼容级别的查询优化器基数估计模型。  
-  
 - 在数据库级别启用或禁用参数探查。
-  
 - 在数据库级别启用或禁用查询优化修补程序。
-
 - 启用或禁用在数据库级别标识缓存。
-
-- 启用或禁用了编译的计划存根，在首次编译批处理时要存储在缓存中。 
+- 启用或禁用了编译的计划存根，在首次编译批处理时要存储在缓存中。    
   
  ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +78,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 指定 （所有辅助数据库必须具有相同的值） 的辅助数据库的设置。  
   
 MAXDOP  **=**  {\<值 > |主}  
-**\<值 >**  
+**\<value>**  
   
 指定 MAXDOP 设置应用于语句的默认。 0 是默认值，该值指示在将改为使用服务器配置。 （除非它已设置为 0），将重写在数据库范围内 MAXDOP**最大并行度**由 sp_configure 设置在服务器级别。 查询提示仍可以重写数据库范围 MAXDOP，以便优化需要不同的设置的特定查询。 所有这些设置的工作负荷组设置 MAXDOP 受限制。   
 
@@ -151,7 +145,7 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }
 
 启用或禁用了编译的计划存根，在首次编译批处理时要存储在缓存中。 默认为 OFF。 第一次编译后的数据库范围的配置为数据库，编译的计划存根启用 OPTIMIZE_FOR_AD_HOC_WORKLOADS 将存储在缓存时一批。 计划存根 （stub） 具有相比完全编译的计划的大小较小的内存需求量。  如果批处理被编译，或再次执行，则将删除编译的计划存根，并将其替换为完全编译的计划。
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  需要更改任何数据库作用域配置   
 对数据库中。 可以通过具有数据库拥有 CONTROL 权限的用户授予此权限。  
   
@@ -163,6 +157,8 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }
  对于 3 部分组成的名称查询，查询当前的数据库连接的设置会认可，以外的其他有关当前数据库上下文中进行编译的 SQL 模块 （如过程、 函数和触发器），并因此而使用的选项它们驻留在其中的数据库。  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION 事件被添加为一个可用于激发 DDL 触发器的 DDL 事件。 这是 ALTER_DATABASE_EVENTS 触发器组的子级。  
+ 
+ 数据库范围的设置，将转入与数据库的配置。 这意味着，给定的数据库还原或附加，现有配置设置会保留。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 **MAXDOP**  

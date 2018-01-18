@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>为在 Linux 上的 SQL Server 中配置 Alwayson 可用性组
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/01/2017
 
 - [创建具有三个同步副本可用性组](#threeSynch)。
 - [创建具有两个同步副本和配置副本可用性组](#configOnly)
-- [创建具有三个同步副本可用性组](#readScale)。
+- [创建具有两个同步副本可用性组](#readScale)。
 
 <a name="threeSynch"></a>
 
