@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d85792c13b7163257e6838a078b876969241b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac0fe5fe3686e60ef16d95899c69ecd72742e850
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令行选项（分布式重播实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， **DReplay.exe**，是命令行工具，用于与分布式的重播控制器进行通信。 可使用此管理工具在控制器上启动、监视和取消操作。  
@@ -48,7 +48,7 @@ Usage:
   dreplay cancel [-m controller] [-q]   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  你可以使用 **DReplay.exe**发出以下命令行选项：  
   
  **preprocess**  
@@ -65,13 +65,13 @@ Usage:
   
  对于包含命令参数和示例的详细语法信息，请参阅下列主题：  
   
--   [预处理选项（分布式重播管理工具）](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [预处理选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [重播选项（分布式重播管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [重播选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [状态选项（分布式重播管理工具）](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [状态选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [取消选项（分布式重播管理工具）](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [取消选项 &#40; 分布式的重播管理工具 &#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 将作为 RPC 而非语言事件进行重播。  
   

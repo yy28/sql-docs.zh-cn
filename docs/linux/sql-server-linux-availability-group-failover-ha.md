@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>对 Linux 上的 SQL Server 运行 HA 可用性组
+# <a name="operate-always-on-availability-groups-on-linux"></a>操作始终在 Linux 上的可用性组
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -195,14 +195,14 @@ ms.lasthandoff: 12/01/2017
    >[!NOTE]
    >如果某一可用性组仅有异步副本-为了避免丢失任何数据更改为同步的一个副本，并等待，直到它已同步。 然后升级此副本。
    
-   b.1。 在承载辅助副本针对升级的节点上停止资源
+   b.1. 在承载辅助副本针对升级的节点上停止资源
    
    在运行升级命令之前停止资源，以便群集将不监视它并不必要地将其故障。 下面的示例添加要停止对资源将导致的节点上的位置约束。 更新`ag_cluster-master`在资源名称和`nodeName1`与承载副本针对升级的节点。
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b.2。 升级辅助副本上的 SQL Server
+   b.2. 升级辅助副本上的 SQL Server
 
    下面的示例将升级`mssql-server`和`mssql-server-ha`包。
 
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/01/2017
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b.3。 删除位置约束
+   b.3. 删除位置约束
 
    在运行升级命令之前停止资源，以便群集将不监视它并不必要地将其故障。 下面的示例添加要停止对资源将导致的节点上的位置约束。 更新`ag_cluster-master`在资源名称和`nodeName1`与承载副本针对升级的节点。
 
