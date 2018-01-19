@@ -32,15 +32,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,14 +137,14 @@ DELETE Sales.ShoppingCartItem
     OUTPUT DELETED.*;  
 ```  
   
- *column_name*  
- 显式列引用。 对正在修改的表的任何引用必须正确由限定插入或已删除前缀根据需要，例如： 插入**。***column_name*。  
+ column_name  
+ 显式列引用。 对正在修改的表的任何引用必须正确由限定插入或已删除前缀根据需要，例如： 插入 **。 * * * column_name*。  
   
  $action  
  仅可用于 MERGE 语句。 指定类型的列**nvarchar(10)**在 OUTPUT 子句在 MERGE 语句中返回每行的三个值之一: 'INSERT'、 'UPDATE' DELETE'，根据执行该行的操作。  
   
 ## <a name="remarks"></a>注释  
- 输出\<dml_select_list > 子句和输出\<dml_select_list > INTO {  **@**  *table_variable*  |  *output_table* } 子句可以在单个插入、 更新、 DELETE 或 MERGE 语句中定义。  
+ 输出\<dml_select_list > 子句和输出\<dml_select_list > INTO {**@ * * * table_variable* | *output_table* } 可以定义子句指定一个 INSERT、 更新、 DELETE 或 MERGE 语句。  
   
 > [!NOTE]  
 >  除非另行指定，否则，对 OUTPUT 子句的引用将同时引用 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -311,7 +311,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  如果您的方案允许多个应用程序从一个表中执行析构性读取，请在 UPDATE 和 DELETE 语句中使用 READPAST 表提示。 这可防止在其他应用程序已经读取表中第一个限定记录的情况下出现锁定问题。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要通过检索到任何列上的选择权限\<dml_select_list > 或中使用\<scalar_expression >。  
   
  需要在中指定的任何表上的 INSERT 权限\<output_table >。  

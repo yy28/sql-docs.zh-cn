@@ -1,7 +1,7 @@
 ---
 title: "sp_rename (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @objname =] '*object_name*  
+ [ @objname = ] '*object_name*'  
  用户对象或数据类型的当前限定或非限定名称。 如果要重命名的对象是在表中，列*object_name*的形式必须为*table.column*或*schema.table.column*。 如果要重命名的对象的索引， *object_name*的形式必须为*table.index*或*schema.table.index*。 如果要重命名的对象是一个约束， *object_name*的形式必须为*schema.constraint*。  
   
  只有在指定了限定对象时才必须使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *object_name*是**nvarchar(776)**，无默认值。  
   
- [ @newname =] '*new_name*  
+ [ @newname = ] '*new_name*'  
  指定对象的新名称。 *new_name*必须是一个部分名称，并且必须遵循标识符规则。 *newname*是**sysname**，无默认值。  
   
 > [!NOTE]  
 >  触发器名称不能以 # 或 ## 开头。  
   
- [ @objtype =] '*object_type*  
+ [ @objtype = ] '*object_type*'  
  要重命名的对象的类型。 *object_type*是**varchar(13)**，默认值为 NULL，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |COLUMN|要重命名的列。|  
 |DATABASE|用户定义数据库。 重命名数据库时需要此对象类型。|  
@@ -84,11 +84,11 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename 可用于重命名主要和次要的 XML 索引。  
   
- 重命名存储的过程、 函数、 视图或触发器不会更改的定义列中相应对象名的名称[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。 因此，我们建议不要使用 sp_rename 重命名这些对象类型。 而是删除对象，然后使用新名称重新创建该对象。  
+ 重命名存储的过程、 函数、 视图或触发器将不更改相应的对象的名称中的定义列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图或使用获取[OBJECT_定义](../../t-sql/functions/object-definition-transact-sql.md)内置函数。 因此，我们建议不要使用 sp_rename 重命名这些对象类型。 而是删除对象，然后使用新名称重新创建该对象。  
   
- 重命名表或列等对象将不会自动重命名对该对象的引用。 您必须手动修改引用已重命名对象的任何对象。 例如，如果您重命名表列，并且触发器中引用了该列，则必须修改触发器以反映新的列名。 使用[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)上对象列表依赖关系之前重命名它。  
+ 重命名表或列等对象将不会自动重命名对该对象的引用。 您必须手动修改引用已重命名对象的任何对象。 例如，如果您重命名表列，并且触发器中引用了该列，则必须修改触发器以反映新的列名。 请使用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 在重命名对象之前列出对象的依赖关系。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要重命名对象、列和索引，则需要对该对象具有 ALTER 权限。 若要重命名用户类型，则需要对该类型具有 CONTROL 权限。 若要重命名数据库，则需要具备 sysadmin 或 dbcreator 固定服务器角色的成员身份  
   
 ## <a name="examples"></a>示例  

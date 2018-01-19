@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 88ba00513a8f76ae560ed717801150aa9b80046e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ string
 ## <a name="return-types"></a>返回类型   
 返回类型为字符串自变量的字符表达式中的空白字符`char(32)`或其他指定的字符会从双方。 返回`NULL`输入的字符串是否`NULL`。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>注释   
 默认情况下`TRIM`函数将移除空白字符`char(32)`从双方。 这等效于 `LTRIM(RTRIM(@string))`。 行为`TRIM `具有对指定字符函数等同于行为`REPLACE`函数其中将从开始或结束处的字符替换为空字符串。
 
 
@@ -77,7 +77,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## <a name="see-also"></a>另请参阅
-[字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[LTRIM (Transact SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
-[RTRIM (Transact SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
-[REPLACE (Transact SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   

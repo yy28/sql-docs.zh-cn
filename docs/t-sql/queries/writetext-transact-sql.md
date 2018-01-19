@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  我们建议不要在基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序中使用 BULK 选项。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中可能会更改或删除该选项。  
   
- *表* **.column**  
+ *table* **.column**  
  是表名称和**文本**， **ntext**，或**映像**列更新。 表和列名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 可以选择是否指定数据库名和所有者名。  
   
  *text_ptr*  
@@ -70,7 +70,7 @@ WRITETEXT [BULK]
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略此参数。 日志记录由数据库的当前恢复模式决定。  
   
- *数据*  
+ *data*  
  是实际**文本**， **ntext**或**映像**要存储数据。 *数据*可以是一个文本值或参数。 可以使用 WRITETEXT 以交互方式插入的文本的最大长度大小约为 120 KB 的**文本**， **ntext**，和**映像**数据。  
   
 ## <a name="remarks"></a>注释  
@@ -91,7 +91,7 @@ WRITETEXT [BULK]
   
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在行文本指向**文本**， **ntext**，或**映像**数据可能存在，但可能不会有效。 有关 text in row 选项的信息，请参阅[sp_tableoption &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). 有关使文本指针无效的信息，请参阅[sp_invalidate_textptr &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对指定表的 UPDATE 权限。 可在转移 UPDATE 权限时转移这些权限。  
   
 ## <a name="examples"></a>示例  

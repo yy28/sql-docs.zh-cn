@@ -22,15 +22,15 @@ helpviewer_keywords:
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bcb57bef390c6aa6e3debd5592ee7030c5c6b645
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9c1a2a3af3ce113573fe743aa2325ae0b49cc18
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
   
  如果指定的订阅 ID 不存在，该语句将生成错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此语句的权限被限制为成员的**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -81,6 +81,6 @@ KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_qn_subscriptions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
+ [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

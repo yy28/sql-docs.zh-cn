@@ -22,15 +22,15 @@ helpviewer_keywords:
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc14512bf2ab1eaa2eaa6b51891361f26189314d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab2d66c986bb5b4b34eaf74b4d65dbcb9fcfdd16
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,12 +87,12 @@ ms.lasthandoff: 11/17/2017
   
 |术语|定义|  
 |----------|----------------|  
-|*常量*|表示单个特定数据值的符号。 有关详细信息，请参阅[常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).|  
+|*constant*|表示单个特定数据值的符号。 有关详细信息，请参阅[常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|是一套[!INCLUDE[tsql](../../includes/tsql-md.md)]提供特定的服务并返回单个值的语法。 *scalar_function*可以是内置标量函数，如 SUM、 GETDATE 或强制转换函数或标量用户定义函数。|  
-|[ *table_name***。** ]|表的名称或别名。|  
-|*列*|是一个列的名称。 表达式中只允许列的名称。|  
-|*变量*|变量或参数的名称。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
-|**(** *表达式***)** |本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
+|[ *table_name***.** ]|表的名称或别名。|  
+|column|是一个列的名称。 表达式中只允许列的名称。|  
+|*variable*|变量或参数的名称。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
+|**(** *expression*  **)**|本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
 |**(** *scalar_subquery* **)**|返回一个值的子查询。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|一元运算符只能用于计算结果数据类型属于数字数据类型类别的表达式。 只有一个数字操作数的运算符：<br /><br /> ＋ 指示正数。<br /><br /> - 指示负数。<br /><br /> ~ 指示一的补数运算符。|  
 |{ *binary_operator* }|用于定义如何组合两个表达式以得到一个结果的运算符。 *binary_operator*可以是算术运算符、 赋值运算符 （=）、 一个按位运算符、 比较运算符，一个逻辑运算符、 字符串串联运算符 （+） 或一个一元运算符。 有关运算符的详细信息，请参阅[运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
@@ -135,16 +135,16 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [将合并 &#40;Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [数据类型优先级 &#40;Transact SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [NULLIF &#40;Transact SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

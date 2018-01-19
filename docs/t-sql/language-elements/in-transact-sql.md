@@ -24,15 +24,15 @@ helpviewer_keywords:
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 487c576ea2323ea7da9726dfb161889e12aff0d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 610c374bb6d935495779362d8dd7f1e0a53931d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ test_expression [ NOT ] IN
  *test_expression*  
  是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *子查询*  
+ *subquery*  
  包含某列结果集的子查询。 此列必须具有相同的数据类型作为*test_expression*。  
   
  *表达式*[ **，**...*n* ]  
@@ -210,12 +210,12 @@ WHERE FirstName IN ('Mike', 'Michael');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [所有 &#40;Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [某些 &#124;任何 &#40;Transact SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   

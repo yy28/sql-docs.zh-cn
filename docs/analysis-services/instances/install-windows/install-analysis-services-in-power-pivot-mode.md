@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7c958feff44c2947c74f51eaec94abcd4ca8e543
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题中的过程将指导你通过单台服务器上安装的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的服务器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]适用于 SharePoint 部署模式。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
@@ -306,11 +306,11 @@ ms.lasthandoff: 01/08/2018
   
  **冗余性和服务器负荷：** 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安装第二个或更多的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器将提供 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器功能的冗余性。 附加的服务器还将在各服务器上分散负荷。 有关详细信息，请参见以下内容：  
   
--   [配置 Analysis Services 以便在 Excel Services (SharePoint 2013) 中处理数据模型](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15))。  
+-   [配置用于处理 Excel Services (SharePoint 2013) 中的数据模型的 Analysis Services](http://technet.microsoft.com/library/jj614437(v=office.15))。  
   
--   [管理 Excel Services 数据模型设置 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))。  
+-   [管理 Excel Services 数据模型设置 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15))。  
   
- ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置") [通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[提交反馈和联系信息，通过 SQL Server 反馈](https://feedback.azure.com/forums/908035-sql-server)。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 Power Pivot 迁移到 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

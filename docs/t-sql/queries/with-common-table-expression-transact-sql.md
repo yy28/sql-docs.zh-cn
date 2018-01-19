@@ -28,15 +28,15 @@ helpviewer_keywords:
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b0f259b51b993c777b27fe8c43c58268ca3dace
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  *expression_name*  
 是公用表表达式的有效标识符。 *expression_name*必须与任何其他公用表表达式在相同 WITH 中定义的名称不同\<common_table_expression > 子句，但*expression_name*可以是相同的名称基表或视图。 任何引用*expression_name*在查询中使用公用表表达式和不是基对象。
   
- *column_name*  
+ column_name  
  在公用表表达式中指定列名。 在一个 CTE 定义中不允许出现重复的名称。 指定的列名称的数量必须与匹配的结果集中的列数*CTE_query_definition*。 只有在查询定义中为所有结果列都提供了不同的名称时，列名列表才是可选的。  
   
  *CTE_query_definition*  
@@ -528,7 +528,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a>K。 在递归 CTE 中使用分析函数  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 在递归 CTE 中使用分析函数  
  以下示例显示在 CTE 的递归部分中使用分析或聚合函数时可能出现的问题。  
   
 ```  

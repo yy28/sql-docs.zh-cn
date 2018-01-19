@@ -30,15 +30,15 @@ helpviewer_keywords:
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 caps.latest.revision: "63"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
-ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
+ms.openlocfilehash: da5481a06a3f1e02ea1f0e1ab3429e2d02c238d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT-INTO 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/10/2018
  *new_table*  
  根据选择列表中的列和从数据源选择的行，指定要创建的新表名。  
  
-  *文件组*
+  *filegroup*
  
  指定将在其中创建新表的文件组的名称。 指定的文件组应数据库中存在其他 SQL Server 引擎将引发错误。 此选项仅支持开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
  

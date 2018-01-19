@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL) 的表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 与**(** \<table_hint > **)** [[**，** ]...*n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
 > [!IMPORTANT]  
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅“备注”。  
   
- 索引**(***index_value* [**，**...*n* ] ) |索引 = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 INDEX = 语法指定单个索引值。 只能为每个表指定一个索引提示。  
   
  如果存在聚集索引，则 INDEX(0) 强制执行聚集索引扫描，INDEX(1) 强制执行聚集索引扫描或查找。 如果不存在聚集索引，则 INDEX(0) 强制执行表扫描，INDEX(1) 被解释为错误。  
@@ -184,7 +184,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  有关在 INSERT ...选择 * FROM openrowset （bulk） 语句，请参阅[保留 Null 或使用默认值在大容量导入 &#40;SQL server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **，**...*n* ] **))** ]  
+ FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  指定查询优化器仅使用索引查找操作作为表或视图中的数据的访问途径。 从 SQL Server 2008 R2 SP1 开始，还可以指定索引参数。 在这种情况下，查询优化器仅考虑通过指定的索引（至少使用指定的索引列）执行索引查找操作。  
   
  *index_value*  
@@ -383,7 +383,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  指定采用排他锁并保持到事务完成。 如果同时指定了 ROWLOCK, PAGLOCK 或 TABLOCK，则排他锁将应用于相应的粒度级别。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果查询计划不访问表，则将忽略表提示。 这可能是由于优化器选择了完全不访问该表，也可能是因为改成了访问索引视图。 在后一种情况中，使用 OPTION (EXPAND VIEWS) 查询提示可阻止访问索引视图。  
   
  所有锁提示将传播到查询计划访问的所有表和视图，其中包括在视图中引用的表和视图。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将执行对应的锁一致性检查。  

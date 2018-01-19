@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPointFromText method
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91f2124fd342da7d29b90a0e993324fdcdda3edd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 05d025c12fdef7c12ade6c84425871cc9f5ff807
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>参数  
  *point_tagged_text*  
- 是的 WKT 表示形式**geographyPoint**您希望返回的实例。 *point_tagged_text*是**nvarchar (max)**表达式。  
+ 是的 WKT 表示形式**geographyPoint**您希望返回的实例。 *point_tagged_text* is an **nvarchar(max)** expression.  
   
  *SRID*  
  是**int**表达式表示空间引用标识符 (SRID) 的**geographyPoint**您希望返回的实例。  

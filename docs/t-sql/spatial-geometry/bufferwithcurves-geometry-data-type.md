@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d68384a06978c598754d96752cfa26449549cc93
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2651ae4e2a4d245f61115438e959a6881ff1935f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- *距离*  
+ *distance*  
  是**float** ，表示点构成缓冲区的最大距离可以来自**几何图形**实例。  
   
 ## <a name="return-types"></a>返回类型  
@@ -67,7 +67,7 @@ SQL Server 返回类型：**几何图形**
 |距离 < 0|0 或 1|空**GeometryCollection**实例|  
 |距离 < 0|2 或更大|A **CurvePolygon**或**GeometryCollection**与负缓冲区的实例。 **注意：**负缓冲区可能创建一个空**GeometryCollection**|  
 |距离 = 0|所有维度|调用的复制**几何图形**实例|  
-|距离 > 0|所有维度|**CurvePolygon**或**GeometryCollection**实例|  
+|distance > 0|所有维度|**CurvePolygon**或**GeometryCollection**实例|  
   
 > [!NOTE]  
 >  由于*距离*是**float**，可以相当非常小的值为零的计算中。 在这种情况然后一份调用**几何图形**返回实例。 请参阅[float 和 real &#40;Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  

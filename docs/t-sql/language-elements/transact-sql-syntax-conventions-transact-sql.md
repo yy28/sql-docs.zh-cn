@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 语法约定 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/09/2018
 |大写|[!INCLUDE[tsql](../../includes/tsql-md.md)]关键字。|  
 |*斜体*|用户提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法的参数。|  
 |**粗体**|数据库名、表名、列名、索引名、存储过程、实用工具、数据类型名以及必须按所显示的原样键入的文本。|  
-|**下划线**|指示当语句中省略了包含带下划线的值的子句时应用的默认值。|  
+|**underline**|指示当语句中省略了包含带下划线的值的子句时应用的默认值。|  
 ||（垂直条）|分隔括号或大括号中的语法项。 只能使用其中一项。|  
 |`[ ]`（方括号）|可选语法项。 不要键入方括号。|  
 |{}（大括号）|必选语法项。 不要键入大括号。|  
@@ -60,13 +60,13 @@ ms.lasthandoff: 01/09/2018
 ## <a name="multipart-names"></a>多部分名称  
  除非另外指定，否则，所有对数据库对象名的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引用将是由四部分组成的名称，格式如下：  
   
- *server_name* **。**[*database_name*]**。**[*schema_name*]**。***object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***。**[*schema_name*]**。***object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***。***object_name*  
+ | *schema_name***.***object_name*  
   
- *|object_name*  
+ *| object_name*  
   
  *server_name*  
  指定链接的服务器名称或远程服务器名称。  
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |对象引用格式|Description|  
 |-----------------------------|-----------------|  
-|*服务器* **。** *数据库* **。** *架构* **。** *对象*|四个部分的名称。|  
-|*服务器* **。** *数据库* **...** *对象*|省略架构名称。|  
-|*服务器* **...** *架构* **。** *对象*|省略数据库名称。|  
-|*服务器* **...** *对象*|省略数据库和架构名称。|  
-|*数据库* **。** *架构* **。** *对象*|省略服务器名。|  
+|*server* **.** *数据库* **。** *schema* **.** *对象*|四个部分的名称。|  
+|*server* **.** *数据库* **...** *对象*|省略架构名称。|  
+|*server* **..** *schema* **.** *对象*|省略数据库名称。|  
+|*server* **...** *object*|省略数据库和架构名称。|  
+|*数据库* **。** *schema* **.** *对象*|省略服务器名。|  
 |*数据库* **...** *对象*|省略服务器和架构名称。|  
-|*架构* **。** *对象*|省略服务器和数据库名称。|  
+|*schema* **.** *对象*|省略服务器和数据库名称。|  
 |*对象*|省略服务器、数据库和架构名称。|  
   
 ## <a name="code-example-conventions"></a>代码示例约定  

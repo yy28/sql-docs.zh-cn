@@ -28,15 +28,15 @@ helpviewer_keywords:
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a434aeca7601637ae5e0231497ad07293d6d83ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 75a3c1d272d39d17fbd35f10a797ce52a9310241
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,13 +62,13 @@ WAITFOR
  DELAY  
  可以继续执行批处理、存储过程或事务之前必须经过的指定时段，最长可为 24 小时。  
   
- *time_to_pass*  
+ '*time_to_pass*'  
  等待的时段。 *time_to_pass*可以中的可接受格式之一指定**datetime**数据，也可以指定为本地变量。 不能指定日期;因此，日期部分的**datetime**不允许值。  
   
  TIME  
  指定的运行批处理、存储过程或事务的时间。  
   
- *time_to_execute*  
+ '*time_to_execute*'  
  WAITFOR 语句完成的时间。 *time_to_execute*可以中的可接受格式之一指定**datetime**数据，也可以指定为本地变量。 不能指定日期;因此，日期部分的**datetime**不允许值。  
   
  *receive_statement*  

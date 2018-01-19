@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
-\<table_source >  
+\<table_source>  
  指定要在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用的表、视图、表变量或派生表源（有无别名均可）。 虽然语句中可用的表源个数的限值根据可用内存和查询中其他表达式的复杂性而有所不同，但一个语句中最多可使用 256 个表源。 单个查询可能不支持最多有 256 个表源。  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ FROM { <table_source> [ ,...n ] }
   
  表或视图是否存在的实例之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l，在窗体中使用由四部分构成的名称*linked_server*。*目录*。*架构*。*对象*。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的数据。 通过使用构造一个由四部分构成名称[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)发挥还可以使用名称的服务器部分以指定远程表源。 当指定 OPENDATASOURCE 时， *database_name*和*schema_name*不一定适用于所有数据源，并受到访问远程对象的 OLE DB 访问接口的功能。  
   
- [一样]*table_alias*  
+ [AS] *table_alias*  
  是的别名*table_source* ，可以使用是为方便起见或用于区分的表或视图中自联接或子查询。 别名往往是一个缩短了的表名，用于在联接中引用表的特定列。 如果联接中的多个表中存在相同的列名，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求使用表名、视图名或别名来限定列名。 如果定义了别名，则不能使用表名。  
   
  使用派生的表、 行集或表值函数或运算符 （如 PIVOT 或 UNPIVOT） 的子句时，所需*table_alias*子句末尾是所有列，包括对列分组，关联的表名称返回。  
@@ -206,7 +206,7 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  指定表值函数。  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
   
  指定返回从指定的临时表和及其链接的系统版本控制历史记录表的数据的特定版本  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT、UPDATE 或 DELETE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
   
 > [!NOTE]  
@@ -252,13 +252,13 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于生成随机数的常量整数表达式。 *repeat_seed*是**bigint**。 如果*repeat_seed*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将随机分配一个值。 对特定*repeat_seed*值，采样结果始终是相同如果不更改已应用于表。 *Repeat_seed*表达式的计算结果必须为大于零的整数。  
   
- \<joined_table >  
+ \<joined_table>  
  由两个或更多表的积构成的结果集。 对于多个联接，请使用圆括号来更改联接的自然顺序。  
   
-\<join_type >  
+\<join_type>  
  指定联接操作的类型。  
   
- **内部**  
+ **INNER**  
  指定返回所有匹配的行对。 放弃两个表中不匹配的行。 如果未指定任何联接类型，此设置为默认设置。  
   
  FULL [ OUTER ]  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  指定在结果集中包括右表中所有不满足联接条件的行，除了由内部联接返回所有的行之外，还将与另外一个表对应的输出列设置为 NULL。  
   
-\<join_hint >  
+\<join_hint>  
  有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查询优化器使用一个联接提示或执行算法，每个查询的 FROM 子句中指定的联接。 有关详细信息，请参阅[联接提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  有关[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，这些联接提示应用于两个分发不兼容的列上的内部联接。 它们可以通过限制在查询处理期间发生的数据移动的量来提高查询性能。 允许联接提示的[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]如下所示：  
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  指示指定的联接操作应在指定的表源或视图之间执行。  
   
- ON \<search_condition >  
+ ON \<search_condition>  
  指定联接所基于的条件。 虽然常常使用列运算符和比较运算符，但该条件可指定任何谓词，例如：  
   
 ```sql
@@ -322,7 +322,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  上一个参数中定义的一个表源。 有关详细信息，请参见“备注”部分。  
   
- *table_source* PIVOT \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  指定*table_source*透视基于*pivot_column*。 *table_source*是表或表表达式。 输出是包含的所有列的表*table_source*除*pivot_column*和*value_column*。 列*table_source*，除*pivot_column*和*value_column*，被称为 pivot 运算符分组列。 有关透视和逆透视的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
  PIVOT 对输入表执行分组列的分组操作，并为每个组返回一行。 此外，输出包含每个值中指定的一个列*column_list*出现在*pivot_column*的*input_table*。  
@@ -337,7 +337,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  PIVOT 运算符的值列。 与逆透视，一起使用时*value_column*不能为现有列中输入名称*table_source*。  
   
- 有关*pivot_column*  
+ FOR *pivot_column*  
  PIVOT 运算符的透视列。 *pivot_column*的隐式或显式转换为类型必须为**nvarchar()**。 此列不能为**映像**或**rowversion**。  
   
  当使用逆透视时， *pivot_column*是将成为从变窄的输出列的名称*table_source*。 不能有中的现有列*table_source*具有该名称。  
@@ -353,21 +353,21 @@ ON (p.ProductID = v.ProductID);
  逆透视\<unpivot_clause >  
  指定的输入的表将变窄从多个列*column_list*到一个单列调用*pivot_column*。 有关透视和逆透视的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
- 在\<date_time >  
+ AS OF \<date_time>  
 
 **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  返回一个表，其中为包含过去指定时间点的实际（当前）值的每个行提供一条记录。 在内部，临时表及其历史记录表之间进行联合，然后对结果进行筛选以返回的值中指定的时间点有效的行 *\<date_time >*参数。 某一行的值被视为有效如果*system_start_time_column_name*值是否小于或等于 *\<date_time >*参数值和*system_end_time_column_name*值是否大于 *\<date_time >*参数值。   
   
- 从\<start_date_time > 收件人\<end_date_time >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
  返回具有的处于活动状态中指定的时间范围，而不管它们是否启动处于活动状态之前的所有记录版本值的表 *\<start_date_time >*发件人的参数值自变量或上限时间停止处于活动状态后 *\<end_date_time >* TO 自变量的参数值。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限的行将包括在内，正好在 TO 终结点所定义的上限的行将不包括在内。  
   
- 之间\<start_date_time > AND \<end_date_time >  
+ BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
@@ -383,7 +383,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  从当前表和历史记录表中的所有行中返回的值的表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  FROM 子句支持用于联接表和派生表的 SQL-92-SQL 语法。 SQL-92 语法提供 INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER 和 CROSS 联接运算符。  
   
  视图、派生表和子查询中均支持 FROM 子句内的 UNION 和 JOIN。  
@@ -862,4 +862,4 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

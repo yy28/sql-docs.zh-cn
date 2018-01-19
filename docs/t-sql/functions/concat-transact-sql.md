@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a924bb7f9eb521e3c9637e69aeb5055c69bfeb11
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,7 +57,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |---|---|
 |如果任何参数为 SQL-CLR 系统类型、SQL-CLR UDT 或 `nvarchar(max)`|**nvarchar(max)**|  
 |否则为如果任何参数为**varbinary （max)**或**varchar （max)**|**varchar （max)**除非其中一个参数是**nvarchar**任何长度。 如果这样，则结果是**nvarchar (max)**。|  
-|否则为如果任何参数为**nvarchar**(< = 4000)|**nvarchar**(< = 4000)|  
+|否则为如果任何参数为**nvarchar**(< = 4000)|**nvarchar**(<= 4000)|  
 |否则，在所有其他情况下|**varchar**(< = 8000) 除非其中一个参数是任意长度的 nvarchar。 如果这样，则结果是**nvarchar (max)**。|  
   
 当自变量为 < = 为 4000 **nvarchar**，或 < = 8000 **varchar**，隐式转换可能会影响结果的长度。 当将其他数据类型隐式转换为字符串时，它们具有不同长度。 例如， **int** (14) 的字符串长度为 12，虽然**float**的长度为 32。 这样，串联两个整数后，结果的长度不小于 24。
@@ -108,8 +108,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT_WS (Transact SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

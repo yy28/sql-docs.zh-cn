@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-non-specified
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/02/2018
 |login_name|**nvarchar(128)**|当前执行的会话所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 有关创建此会话的原始登录名，请参阅 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]经过身份验证登录名或 Windows 身份验证的域用户名。 不可为 null。|  
 |nt_domain|**nvarchar(128)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 客户端的 Windows 域（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
 |nt_user_name|**nvarchar(128)**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 客户端的 Windows 用户名（如果使用 Windows 身份验证或可信连接进行会话）。 对于内部会话和非域用户，该值为 NULL。 可以为 Null。|  
-|status|**nvarchar (30)**|会话的状态。 可能的值：<br /><br /> **运行**-当前正在运行一个或多个请求<br /><br /> **睡眠**-当前没有运行任何请求<br /><br /> **休眠**– 会话因连接池而重置和现在处于登录前状态。<br /><br /> **Preconnect** -会话处于资源调控器分类器。<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|会话的状态。 可能的值：<br /><br /> **运行**-当前正在运行一个或多个请求<br /><br /> **睡眠**-当前没有运行任何请求<br /><br /> **休眠**– 会话因连接池而重置和现在处于登录前状态。<br /><br /> **Preconnect** -会话处于资源调控器分类器。<br /><br /> 不可为 null。|  
 |context_info|**varbinary(128)**|会话的 CONTEXT_INFO 值。 使用由用户设置的上下文信息[设置 CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)语句。 可以为 Null。|  
 |cpu_time|**int**|该会话所占用的 CPU 时间（毫秒）。 不可为 null。|  
 |memory_usage|**int**|该会话所占用的 8 KB 内存页数。 不可为 null。|  
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/02/2018
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**需要`VIEW DATABASE STATE`若要查看当前数据库的所有连接。 `VIEW DATABASE STATE`无法在中授予`master`数据库。 
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  当**启用符合通用准则**启用服务器配置选项，在以下列中显示登录统计信息。  
   
 -   last_successful_logon  
@@ -109,6 +109,10 @@ ms.lasthandoff: 01/02/2018
 -   unsuccessful_logons  
   
  如果未启用此选项，则这些列将返回 Null 值。 有关如何设置此服务器配置选项的详细信息，请参阅[符合通用准则 enabled 服务器配置选项](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)。  
+ 
+ 
+ Azure SQL 数据库上的管理员连接将看到经过验证的会话，每一行，而非管理员连接将仅看到到其数据库的用户会话相关的信息。 
+ 
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 71b8ce296640f1d205335be7d5f58d8c8e22b7c4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,16 +56,16 @@ CHAR ( integer_expression )
 0 到 255 之间的整数。 `NULL`返回整数表达式不是在此范围内。
   
 ## <a name="return-types"></a>返回类型
-**char （1)**
+**char(1)**
   
 ## <a name="remarks"></a>注释  
 `CHAR`可用来将控制字符插入到字符串。 下表显示了一些常用的控制字符。
   
-|控制字符|值|  
+|控制字符|“值”|  
 |---|---|
 |选项卡|**char(9)**|  
-|换行符|**char （10)**|  
-|回车符|**char （13)**|  
+|换行符|**char(10)**|  
+|回车符|**char(13)**|  
   
 ## <a name="examples"></a>示例  
   
@@ -172,8 +172,11 @@ AdventureWorksPDW2012    is currently  ONLINE
 ```
   
 ## <a name="see-also"></a>另请参阅
-[+ &#40;字符串串联 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR &#40;Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ &#40;字符串串联 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

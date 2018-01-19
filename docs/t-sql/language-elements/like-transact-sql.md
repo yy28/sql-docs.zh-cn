@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据类型。  
   
- *模式*  
+ *pattern*  
  是要在中搜索的字符的特定字符串*match_expression*，并且可以包括下列有效的通配符。 *模式*最多为 8000 个字节。  
   
 |通配符|Description|示例|  
@@ -86,7 +86,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>结果值  
  如果，则如返回 TRUE *match_expression*匹配所指定*模式*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果使用 LIKE 执行字符串比较，则模式字符串中的所有字符都有意义。 这包括前导或尾随空格。 如果查询中的比较要返回包含 "abc "（abc 后有一个空格）的所有行，则不会返回包含 "abc"（abc 后没有空格）的列所在行。 但是可以忽略模式所要匹配的表达式中的尾随空格。 如果查询中的比较要返回包含 "abc"（abc 后没有空格）的所有行，则返回以 "abc" 开始并且具有零个或多个尾随空格的所有行。  
   
  使用包含的模式的字符串比较**char**和**varchar**数据可能无法通过 LIKE 比较由于存储数据的方式。 您应当了解每种数据类型的存储方式以及导致 LIKE 比较失败的原因。 下面的示例传入本地**char**到存储的过程，然后使用模式匹配来找到所有员工具有一组指定的字符其最后一个名称开头的变量。  
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用带 % 通配符的 NOT LIKE  
- 下面的示例查找中的所有电话号码`DimEmployee`表不会启动与`612`。  实例时都提供 SQL Server 登录名。  
+ 下面的示例查找中的所有电话号码`DimEmployee`表不会启动与`612`。  。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -360,5 +360,5 @@ ORDER by LastName;
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

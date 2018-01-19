@@ -1,5 +1,5 @@
 ---
-title: "STRING_AGG (Transact SQL) |Microsoft 文档"
+title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -21,13 +21,13 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact SQL)
+# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 连接字符串表达式的值，并将它们之间的分隔符值。 不在字符串的末尾添加分隔符。
@@ -45,19 +45,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>参数 
 
-*分隔符*  
+*separator*  
 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的`NVARCHAR`或`VARCHAR`类型用作分隔符的串联字符串。 它可以是文本或变量。 
 
 *expression*  
 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何类型。 表达式都转换为`NVARCHAR`或`VARCHAR`期间串联的类型。 非字符串类型转换为`NVARCHAR`类型。
 
 
-< order_clause >   
+<order_clause>   
 （可选） 指定使用的串联结果的顺序`WITHIN GROUP`子句：
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   将出现的非常量[表达式](../../t-sql/language-elements/expressions-transact-sql.md)了可以用于对结果进行排序。 只有一个`order_by_expression`允许每个查询。 默认的排序顺序为升序。   
   
@@ -70,14 +70,14 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1...4000) |NVARCHAR （4000) |
-|VARCHAR (1...8000) |VARCHAR （8000) |
-|int、 bigint、 smallint、 tinyint、 numeric、 float、 real、 位、 小数、 smallmoney、 money、 datetime、 datetime2， |NVARCHAR （4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int、 bigint、 smallint、 tinyint、 numeric、 float、 real、 位、 小数、 smallmoney、 money、 datetime、 datetime2， |NVARCHAR(4000) |
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  
-`STRING_AGG`聚合采用行中的所有表达式，并将它们连接到单个字符串。 表达式值已隐式转换为字符串类型，然后串联。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅[CAST 和 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
+`STRING_AGG`是一个聚合函数，它接受从行的所有表达式并将它们连接到单个字符串。 表达式值已隐式转换为字符串类型，然后串联。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅[CAST 和 CONVERT (TRANSACT-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
 如果输入的表达式为类型`VARCHAR`，分隔符不能是类型`NVARCHAR`。 
 
@@ -117,7 +117,7 @@ FROM Person.Person;
 
 |Csv | 
 |--- |
-|John、 n/A、 Mike、 Peter、 n/A、 n/A、 Alice，Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
 ### <a name="c-generate-comma-separated-values"></a>C. 生成逗号分隔值 
@@ -194,6 +194,15 @@ GROUP BY town;
 
 
 ## <a name="see-also"></a>另请参阅  
-
-[字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

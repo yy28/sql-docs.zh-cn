@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_SPLIT ( string , separator )
  *string*  
  是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何字符类型 (即**nvarchar**， **varchar**， **nchar**或**char**)。  
   
- *分隔符*  
+ *separator*  
  是单个字符[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何字符类型 (例如**nvarchar(1)**， **varchar(1)**， **nchar(1)**或**char （1)**) 用作分隔符的串联字符串。  
   
 ## <a name="return-types"></a>返回类型  
@@ -92,7 +92,7 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. 拆分以逗号分隔的列中的值字符串  
  Product 表具有一个列的以下示例所示的标记的逗号单独列表：  
   
-|ProductId|Name|Tags|  
+|ProductId|名称|Tags|  
 |---------------|----------|----------|  
 |1|完整手指手套|服装，道路，touring bike|  
 |2|LL 耳机|自行车|  
@@ -108,7 +108,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|值|  
+|ProductId|名称|值|  
 |---------------|----------|-----------|  
 |1|完整手指手套|服装|  
 |1|完整手指手套|road|  
@@ -171,7 +171,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [子字符串 &#40;Transact SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   

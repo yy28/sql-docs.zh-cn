@@ -1,5 +1,5 @@
 ---
-title: "用例 (Transact SQL) |Microsoft 文档"
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: df29d72722d665e9595105a01a3a89841ec2b4ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,13 +79,13 @@ END
  *input_expression*  
  使用简单 CASE 格式时计算的表达式。 *input_expression*是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 当*when_expression*  
+ WHEN *when_expression*  
  是一个简单的表达式，向其*input_expression*进行比较时使用的简单的大小写格式。 *when_expression*为任何有效表达式。 数据类型的*input_expression*和每个*when_expression*必须相同或必须是隐式转换。  
   
- 然后*result_expression*  
+ THEN *result_expression*  
  返回的表达式时*input_expression*等于*when_expression*计算结果为 TRUE，或*Boolean_expression*计算结果为 TRUE。 *导致表达式*是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 其他*else_result_expression*  
+ ELSE *else_result_expression*  
  比较运算计算结果不为 TRUE 时返回的表达式。 如果忽略此参数且比较运算计算结果不为 TRUE，则 CASE 返回 NULL。 *else_result_expression*为任何有效表达式。 数据类型的*else_result_expression*和任何*result_expression*必须相同或必须是隐式转换。  
   
  当*Boolean_expression*  
@@ -115,7 +115,7 @@ END
   
 -   如果没有*Boolean_expression*计算结果为 TRUE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回*else_result_expression*如果指定了 ELSE 子句，或如果没有 ELSE 子句指定一个 NULL 值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许在 CASE 表达式中嵌套 10 个级别。  
   
  CASE 表达式不能用于控制 Transact-SQL 语句、语句块、用户定义函数以及存储过程的执行流。 控制流方法的列表，请参阅[控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md).  
@@ -359,7 +359,7 @@ WHERE SalariedFlag = 0;
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [将合并 &#40;Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [IIF &#40;Transact SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [选择 &#40;Transact SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

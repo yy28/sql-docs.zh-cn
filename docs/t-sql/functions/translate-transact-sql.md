@@ -1,5 +1,5 @@
 ---
-title: "翻译 (Transact SQL) |Microsoft 文档"
+title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e7ea679043b83d8cee26f431602450d023516647
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="translate-transact-sql"></a>翻译 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ inputString
 ## <a name="return-types"></a>返回类型   
 返回与相同的类型的字符表达式`inputString`其中将从第二个参数的字符替换为从第三个自变量匹配的字符。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>注释   
 
 `TRANSLATE`如果字符和翻译具有不同长度，则函数将返回错误。 `TRANSLATE`如果作为字符或替换自变量提供 null 值，函数应返回不变的输入。 行为`TRANSLATE`函数应等于[替换](../../t-sql/functions/replace-transact-sql.md)函数。   
 
@@ -91,7 +91,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## <a name="see-also"></a>另请参阅
-
-[字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[REPLACE (Transact SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

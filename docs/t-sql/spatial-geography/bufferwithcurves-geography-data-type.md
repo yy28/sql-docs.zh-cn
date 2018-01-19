@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12b9abd82133c7f2c42f43dd436e223b1b0173f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 777f5d7a412cccc8b5757b2bf4f22404d12a9a77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- *距离*  
+ *distance*  
  是**float** ，表示点构成缓冲区的最大距离可以来自地域实例。  
   
 ## <a name="return-types"></a>返回类型  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |距离 < 0|0 或 1|空**GeometryCollection**实例|  
 |距离\<0|2 或更大|A **CurvePolygon**或**GeometryCollection**与负缓冲区的实例。<br /><br /> 注意： 负缓冲区可能创建一个空**GeometryCollection**|
 |距离 = 0|所有维度|调用的复制**geography**实例|  
-|距离 > 0|所有维度|**CurvePolygon**或**GeometryCollection**实例|  
+|distance > 0|所有维度|**CurvePolygon**或**GeometryCollection**实例|  
   
 > [!NOTE]  
 >  由于*距离*是**float**，可以相当非常小的值为零的计算中。  在这种情况，然后调用一份**geography**返回实例。  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2e65fc9cacbcfe868c072713f282c42c95839e48
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  是一个比较运算符。  
   
- *子查询*  
+ *subquery*  
  返回单列结果集的子查询。 返回的列的数据类型必须是相同的数据类型的数据类型作为*scalar_expression*。  
   
  受限的 SELECT 语句，其中不允许使用 ORDER BY 子句和 INTO 关键字。  
@@ -63,7 +63,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 指定比较为 TRUE 后，则返回 TRUE 的所有对 (*scalar_expression***，***x)*，当*x*是中的值单列集;否则返回 FALSE。  
+ 指定比较为 TRUE 后，则返回 TRUE 的所有对 (*scalar_expression***，***x)*，当*x*是单列集合中的值; 否则返回 FALSE。  
   
 ## <a name="remarks"></a>注释  
  需要所有*scalar_expression*要与子查询返回的每个值的明确进行比较。 例如，如果子查询将返回值为 2 和 3， *scalar_expression* < = 所有 （子查询），则计算结果为 TRUE 作为*scalar_expression*为 2。 如果子查询将返回值为 2 和 3， *scalar_expression* = 所有 （子查询），则计算结果为 FALSE，因为某些子查询 （3 的值） 的值将不满足的条件表达式。  
@@ -114,13 +114,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>另请参阅  
- [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40;Transact SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

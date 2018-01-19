@@ -24,15 +24,15 @@ helpviewer_keywords:
 - statistics update jobs [SQL Server]
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abcd6b4ae1d7e6b253214ae7bddee1b382f5900e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2df18cfd1e0803fb937965ecc6c5880614e25df2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ KILL STATS JOB job_id
 ## <a name="remarks"></a>注释  
  job_id 与在其他形式的 KILL 语句中所使用的 session_id 或工作单元无关。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要从 sys.dm_exec_background_job_queue 动态管理视图访问信息，用户必须具有 VIEW SERVER STATE 权限。  
   
  默认情况下，sysadmin 和 processadmin 固定数据库角色的成员具有 KILL STATS JOB 权限，并且该权限不可转移。  
@@ -71,7 +71,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [KILL &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)   
  [终止查询通知订阅 &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
- [sys.dm_exec_background_job_queue &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
+ [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)  
   
   

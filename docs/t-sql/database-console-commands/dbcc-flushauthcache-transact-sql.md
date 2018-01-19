@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords: DBCC FLUSHAUTHCACHE
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18fe9c70a774bce85bfdb8a59b54b57064e6c1ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: da396237660d76c837a3dcadd84253d44ce28479
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
 身份验证缓存创建登录名和服务器防火墙规则存储在 master 中并将它们放在用户数据库中的内存的副本。  由于包含的数据库用户的信息已存储在用户数据库，包含的数据库用户都不是身份验证缓存的一部分。
 连续活动连接[!INCLUDE[ssSDS](../../includes/sssds-md.md)]需要重新授权 (由[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 至少每隔 10 小时。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试重新授权使用最初提交的密码和无用户输入是必需的。 出于性能原因，在重置密码时[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，将不会对连接重新进行身份验证，即使该连接由于连接池而重置。 这是本地行为不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果已更改了密码，因为最初授权连接，必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可以显式终止与连接[!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用[KILL &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)命令。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。
   
 ## <a name="example"></a>示例  

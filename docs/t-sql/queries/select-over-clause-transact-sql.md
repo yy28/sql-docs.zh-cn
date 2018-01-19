@@ -26,15 +26,15 @@ helpviewer_keywords:
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d70183e7c52c4fb9eabed51a8df5acc68625397d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT-OVER 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  COLLATE *collation_name*  
  指定应根据在指定的排序规则执行 ORDER BY 运算*collation_name*。 *collation_name*可以是 Windows 排序规则名称或 SQL 排序规则名称。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 是仅适用于类型的列**char**， **varchar**， **nchar**，和**nvarchar**。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
  ROWS | RANGE  

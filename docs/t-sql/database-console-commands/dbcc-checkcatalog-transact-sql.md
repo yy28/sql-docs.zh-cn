@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -78,27 +77,27 @@ DBCC CHECKCATALOG 在系统元数据表之间执行各种一致性检查。 DBCC
 如果无法创建快照，则 DBCC CHECKCATALOG 将获取一个排他数据库锁以获得要求的一致性。 如果检测到任何不一致，则无法修复这些不一致问题，必须使用备份来还原数据库。
   
 > [!NOTE]  
->  运行 DBCC CHECKCATALOG 针对**tempdb**不执行任何检查。 这是因为，出于性能原因，数据库快照上不可用**tempdb**。 这意味着，无法获得所需的事务一致性。 回收服务器以解决任何**tempdb**元数据问题。  
+> 运行 DBCC CHECKCATALOG 针对**tempdb**不执行任何检查。 这是因为，出于性能原因，数据库快照上不可用**tempdb**。 这意味着，无法获得所需的事务一致性。 回收服务器以解决任何**tempdb**元数据问题。  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
+> DBCC CHECKCATALOG 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
   
 作为的一部分也运行 DBCC CHECKCATALOG [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
   
 ## <a name="result-sets"></a>结果集  
 如果未指定数据库，则 DBCC CHECKCATALOG 返回以下内容：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 如果将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 指定为数据库名，则 DBCC CHECKCATALOG 返回以下内容：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或**db_owner**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

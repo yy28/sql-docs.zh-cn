@@ -40,15 +40,15 @@ helpviewer_keywords:
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT-ORDER BY 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,10 +106,10 @@ ORDER BY order_by_expression
  COLLATE *collation_name*  
  指定应根据在指定的排序规则执行 ORDER BY 运算*collation_name*，并不根据列的表或视图中定义的排序规则。 *collation_name*可以是 Windows 排序规则名称或 SQL 排序规则名称。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 是仅适用于类型的列**char**， **varchar**， **nchar**，和**nvarchar**。  
   
- **ASC** |DESC  
+ **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- 偏移量 { *integer_constant* | *offset_row_count_expression* } {行 |行}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
 **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s 来进行  
@@ -120,7 +120,7 @@ ORDER BY order_by_expression
   
  在查询执行计划的偏移量的行计数值显示在**偏移量**TOP 查询运算符的属性。  
   
- 提取 {第一个 |下一步} { *integer_constant* | *fetch_row_count_expression* } {行 |行} 仅  
+ FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
 **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 7f13bd2886aaf2363cde83461f246bf034c89de5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 220cbbb856bc96aa4e44ea5a3d665fc9ce09da77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transaction-isolation-levels"></a>事务隔离级别
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ ms.lasthandoff: 11/17/2017
   
  下表概述了各种隔离级别下的元数据访问。  
   
-|隔离级别|是否支持|遵守|  
+|隔离级别|Supported|遵守|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|是|不保证|  
+|READ UNCOMMITTED|否|不保证|  
 |READ COMMITTED|是|是|  
-|REPEATABLE READ|是|是|  
-|SNAPSHOT ISOLATION|是|是|  
-|SERIALIZABLE|是|是|  
+|REPEATABLE READ|否|否|  
+|SNAPSHOT ISOLATION|否|否|  
+|SERIALIZABLE|否|否|  
   
   

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4555a892c55ae8ef40e8fd0c3658412e3641d973
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ee91826fe19979d411c10baf2ab4c60f225d0bb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>从-使用数据透视和逆透视
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -210,7 +210,7 @@ VendorID    Employee    Orders
  `Sales.vSalesPersonSalesByFiscalYears`中查看[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]示例数据库使用`PIVOT`要为每个会计年度中返回每个销售人员的总销售额。 若要编写脚本中的视图[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中**对象资源管理器**，找到下的视图**视图**文件夹[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。 右键单击该视图名称，然后选择**视图脚本为**。  
   
 ## <a name="see-also"></a>另请参阅  
- [从 (Transact SQL)](../../t-sql/queries/from-transact-sql.md)   
- [用例 (Transact SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

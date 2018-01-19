@@ -19,15 +19,15 @@ helpviewer_keywords:
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 caps.latest.revision: "53"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f2a3e554a7a3b46242c44c38137609322e6d89f4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留关键字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/18/2017
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|User|  
+|DOUBLE|OPTION|USER|  
 |DROP|或|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -115,85 +115,85 @@ ms.lasthandoff: 11/18/2017
   
 ||||  
 |-|-|-|  
-|**绝对**|**EXEC**|**重叠**|  
+|**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
 |**操作**|**EXECUTE**|**填充**|  
 |**ADA**|**EXISTS**|**部分**|  
-|**添加**|EXTERNAL|**PASCAL**|  
-|**ALL**|**提取**|**位置**|  
-|**分配**|**FALSE**|**精度**|  
+|**ADD**|EXTERNAL|**PASCAL**|  
+|**ALL**|**EXTRACT**|**位置**|  
+|**ALLOCATE**|**FALSE**|**精度**|  
 |**ALTER**|**FETCH**|**准备**|  
-|**AND**|**第一个**|**保留**|  
+|**和**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**是**|**有关**|**之前**|  
+|**ARE**|**有关**|**之前**|  
 |**AS**|**外**|**权限**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**断言**|**找到**|**公共**|  
-|**在**|**FROM**|**读取**|  
+|**断言**|**找到**|**PUBLIC**|  
+|**AT**|**FROM**|**READ**|  
 |**AUTHORIZATION**|**FULL**|**实际**|  
-|**AVG**|**获取**|**引用**|  
-|**BEGIN**|**全局**|**相对**|  
-|**BETWEEN**|**GO**|**限制**|  
-|**位**|**GOTO**|**REVOKE**|  
+|**AVG**|**GET**|**REFERENCES**|  
+|**BEGIN**|**GLOBAL**|**相对**|  
+|**BETWEEN**|**GO**|**RESTRICT**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**同时**|**组**|**回滚**|  
-|**通过**|**无**|**行**|  
-|**级联**|**小时**|**SCHEMA**|  
-|**级联**|**标识**|**滚动**|  
-|**CASE**|**立即**|**第二个**|  
-|**强制转换**|**IN**|**部分**|  
-|**目录**|**包括**|**SELECT**|  
-|**CHAR**|**INDEX**|**会话**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**HAVING**|**ROWS**|  
+|**CASCADE**|**小时**|**SCHEMA**|  
+|**CASCADED**|**IDENTITY**|**SCROLL**|  
+|**CASE**|**IMMEDIATE**|**SECOND**|  
+|**CAST**|**在**|**部分**|  
+|**CATALOG**|**INCLUDE**|**SELECT**|  
+|**CHAR**|**INDEX**|**SESSION**|  
 |**CHAR_LENGTH**|**指示器**|**SESSION_USER**|  
-|**字符**|**最初**|**设置**|  
-|**CHARACTER_LENGTH**|**内部**|**大小**|  
-|**检查**|**输入**|**SMALLINT**|  
-|**CLOSE**|**不区分大小写**|**某些**|  
+|**字符**|**最初**|**SET**|  
+|**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
+|**CHECK**|**输入**|**SMALLINT**|  
+|**CLOSE**|**不区分大小写**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
 |**逐份打印**|**INT**|**SQL**|  
-|**排序规则**|**整数**|**SQLCA**|  
-|**列**|**相交**|**SQLCODE**|  
-|**提交**|**间隔**|**SQLERROR**|  
-|**连接**|**到**|**SQLSTATE**|  
-|**连接**|**IS**|**SQLWARNING**|  
+|**排序规则**|**INTEGER**|**SQLCA**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**INTERVAL**|**SQLERROR**|  
+|**CONNECT**|**到**|**SQLSTATE**|  
+|**连接**|**是**|**SQLWARNING**|  
 |**约束**|**隔离**|**SUBSTRING**|  
-|**约束**|**联接**|**SUM**|  
-|**CONTINUE**|**密钥**|**SYSTEM_USER**|  
-|**将转换**|**LANGUAGE**|**TABLE**|  
-|**相对应**|**最后一个**|**临时**|  
+|**约束**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**CONVERT**|**LANGUAGE**|**TABLE**|  
+|**CORRESPONDING**|**LAST**|**TEMPORARY**|  
 |**COUNT**|**前导**|**然后**|  
-|**创建**|**LEFT**|**时间**|  
-|**跨**|**级别**|**时间戳**|  
+|**CREATE**|**LEFT**|**时间**|  
+|**CROSS**|**LEVEL**|**TIMESTAMP**|  
 |**当前**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**本地**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**LOWER**|**自**|  
+|**CURRENT_TIME**|**LOWER**|TO|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**尾随**|  
 |**CURRENT_USER**|**MAX**|**事务**|  
-|**光标**|**MIN**|**TRANSLATE**|  
-|**日期**|**分钟**|**转换**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
+|**DATE**|**MINUTE**|**转换**|  
 |**DAY**|**模块**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**年 12 月**|**名称**|**联合**|  
-|**十进制**|**国家/地区**|**唯一**|  
-|**声明**|**自然**|**未知**|  
+|**DEC**|**NAMES**|**联合**|  
+|**DECIMAL**|**国家/地区**|**唯一**|  
+|**DECLARE**|**自然**|**UNKNOWN**|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
-|**可以推迟**|**下一步**|**UPPER**|  
-|**延迟**|**不**|**使用情况**|  
+|**DEFERRABLE**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**使用**|  
-|**描述**|**NULL**|**VALUE**|  
-|**描述符**|**NULLIF**|**值**|  
-|**诊断**|**数值**|**VARCHAR**|  
-|**断开连接**|**OCTET_LENGTH**|**不同的**|  
-|**非重复**|**的**|**VIEW**|  
-|**域**|**ON**|**当**|  
-|**双**|**仅**|**每当**|  
-|**拖放**|**OPEN**|**WHERE**|  
-|**其他**|**选项**|**与**|  
-|**END**|**OR**|**工作**|  
-|**结束 EXEC**|**顺序**|**写入**|  
-|**转义**|**外部**|**YEAR**|  
-|**除非**|**输出**|**区域**|  
-|**异常**|||  
+|**DESC**|**不**|**使用**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**描述符**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**数值**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**不同的**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**WHEN**|  
+|**DOUBLE**|**ONLY**|**WHENEVER**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**选项**|**WITH**|  
+|**END**|**或**|**WORK**|  
+|**END-EXEC**|**ORDER**|**WRITE**|  
+|**ESCAPE**|**外部**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ZONE**|  
+|**EXCEPTION**|||  
   
 ## <a name="future-keywords"></a>将来的关键字  
  下列关键字可能会在将来的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中保留使用，作为将来要实现的新功能。 注意，不要使用这些关键字作为标识符。  
@@ -212,7 +212,7 @@ ms.lasthandoff: 11/18/2017
 |ASENSITIVE|INT|SAVEPOINT|  
 |ASSERTION|整数|SCROLL|  
 |ASYMMETRIC|INTERSECTION|SCOPE|  
-|在|INTERVAL|SEARCH|  
+|AT|INTERVAL|SEARCH|  
 |ATOMIC|ISOLATION|SECOND|  
 |BEFORE|ITERATE|SECTION|  
 |BINARY|LANGUAGE|SENSITIVE|  
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/18/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|是|TIMEZONE_MINUTE|  
 |CURRENT_PATH|无|TRAILING|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/18/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|参数|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  

@@ -23,22 +23,22 @@ helpviewer_keywords:
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: df3ed2d88551928b239ff69ecdb86e2a3332f204
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc7daaa6e29ca0f250db83838f29cfda6148cc1c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="predicates"></a>谓词
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   取值为 TRUE、FALSE 或 UNKNOWN 的表达式。 谓词使用的搜索条件中[其中](../../t-sql/queries/where-transact-sql.md)子句和[HAVING](../../t-sql/queries/select-having-transact-sql.md)子句、 的联接条件[FROM](../../t-sql/queries/from-transact-sql.md)子句，并且其中一个布尔值是其他构造必填。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下谓词。  
   
 ||  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/17/2017
 |[是 （& A) #91;不 &#93;NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [之间 &#40;Transact SQL &#41;](../../t-sql/language-elements/between-transact-sql.md)   
+ [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [存在 &#40;Transact SQL &#41;](../../t-sql/language-elements/exists-transact-sql.md)   
- [IN &#40;Transact SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)   
- [如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

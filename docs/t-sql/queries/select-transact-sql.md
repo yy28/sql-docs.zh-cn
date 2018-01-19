@@ -26,32 +26,32 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6dba1b14498cef9e06d9bde5741cb9e37cd31633
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   从数据库中检索行，并启用的一个或多个行或从一个或多个表中的列选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 虽然 SELECT 语句的完整语法较复杂，但其主要子句可归纳如下：  
   
-[使用 {[XMLNAMESPACES，] [ \<common_table_expression >]}]
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
- 选择*select_list* [INTO *new_table* ]  
+ SELECT *select_list* [ INTO *new_table* ]  
   
- [从*table_source* ] [其中*search_condition* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
- [GROUP BY *group_by_expression* ]  
+ [ GROUP BY *group_by_expression* ]  
   
- [无*search_condition* ]  
+ [ HAVING *search_condition* ]  
   
- [ORDER BY *order_expression* [ASC |DESC]]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
  UNION、 EXCEPT 和 INTERSECT 运算符可以用于查询合并或比较其结果为一个结果集之间。  
   
@@ -109,7 +109,7 @@ SELECT <select_criteria>
   
 |||  
 |-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[无](../../t-sql/queries/select-having-transact-sql.md)|  
+|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
 |[SELECT 子句](../../t-sql/queries/select-clause-transact-sql.md)|[联合](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[INTO 子句](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT 和 INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > 例如，假设对视图，具有聚集的索引和视图不包括某些表行，并且该视图的所选列列表使用更改中的数据类型的转换*varchar*到*整数*。 在此情况下，可能在 WHERE 子句执行前执行转换。 常见确实。 通常是一种方法来修改视图以避免不同的序列中，如果它在你的示例很重要。 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  选择数据要求对表或视图具有 **SELECT** 权限，该权限可从更高级别的权限继承，例如针对架构的 **SELECT** 权限或针对表的 **CONTROL** 权限。 要求的成员身份或**db_datareader**或**db_owner**固定数据库角色的成员，或**sysadmin**固定的服务器角色。 创建新表使用**SELECTINTO**还要求同时**CREATETABLE**权限，与**ALTERSCHEMA**拥有新的表的架构的权限。  
   
 ## <a name="examples"></a>示例：   

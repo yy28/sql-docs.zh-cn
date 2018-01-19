@@ -26,15 +26,15 @@ helpviewer_keywords:
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 37e61f88a9b687e335aa7b45f32861abed462580
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4c292f4978becb1d7e31222fe9766db8f398f3e9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ EXISTS ( subquery )
 ```  
   
 ## <a name="arguments"></a>参数  
- *子查询*  
+ *subquery*  
  受限制的 SELECT 语句。 不允许使用 INTO 关键字。 有关详细信息，请参阅有关中的子查询的信息[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>结果类型  
@@ -333,7 +333,7 @@ WHERE NOT EXISTS
 ## <a name="see-also"></a>另请参阅  
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9fc240d76c2939e0ed96d87fdbfee35ec8208ce
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="at-time-zone-transact-sql"></a>在时区 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  是可被解析为一个表达式**smalldatetime**， **datetime**， **datetime2**，或**datetimeoffset**值。  
   
- *时区*  
+ *timezone*  
  目标时区的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]依赖于在 Windows 注册表中存储的时区。 在以下注册表配置单元存储在计算机上安装的所有时区： **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 区域**。 通过公开了已安装的时间区域列表[sys.time_zone_info &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)视图。  
   
 ## <a name="return-types"></a>返回类型  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>声明@local_variable(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DECLARE
   
  有关系统数据类型的详细信息，请参阅[数据类型 &#40;Transact SQL &#41;](../../t-sql/data-types/data-types-transact-sql.md). 有关 CLR 用户定义的类型或别名数据类型的详细信息，请参阅[CREATE TYPE &#40;Transact SQL &#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*值*  
+ =*value*  
  以内联方式为变量赋值。 值可以是常量或表达式，但它必须与变量声明类型匹配，或者可隐式转换为该类型。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 @*cursor_variable_name*  
@@ -115,7 +115,7 @@ CURSOR
  *n*  
  指示可以指定多个变量并对变量赋值的占位符。 声明时**表**变量，**表**变量必须是唯一的变量的 DECLARE 语句中所声明。  
   
- *column_name*  
+ column_name  
  表中的列的名称。  
   
  *scalar_data_type*  
@@ -138,10 +138,10 @@ CURSOR
  IDENTITY  
  指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起用于用作表的唯一行标识符。 标识属性可以分配给**tinyint**， **smallint**， **int**， **decimal(p,0)**，或**numeric(p,0)**列。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
   
- *种子*  
+ *seed*  
  是装入表的第一行所使用的值。  
   
- *增量*  
+ *increment*  
  添加到以前装载的列标识值的增量值。  
   
  ROWGUIDCOL  

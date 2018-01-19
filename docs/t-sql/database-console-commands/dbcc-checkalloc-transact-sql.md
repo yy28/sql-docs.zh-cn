@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09d190a3a27344d60fe3861b87443165f39ac352
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e9fa0db095ce2f18fa622b2f1f6406f3cd73fa6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -107,7 +107,7 @@ DBCC CHECKALLOC 将检查数据库中所有页的分配，而不管其所属的�
 如果未指定 NO_INFOMSGS，则 DBCC CHECKALLOC 将收集有关数据库中所有对象的空间使用情况信息。 找不到任何错误以及打印此信息。
   
 > [!NOTE]  
->DBCC CHECKALLOC 功能包含在[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)和[DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)。 这意味着您不必将 DBCC CHECKALLOC 与这些语句分开运行。   DBCC CHECKALLOC 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
+> DBCC CHECKALLOC 功能包含在[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)和[DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)。 这意味着您不必将 DBCC CHECKALLOC 与这些语句分开运行。   DBCC CHECKALLOC 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
   
 ## <a name="internal-database-snapshot"></a>内部数据库快照  
 DBCC CHECKALLOC 可使用内部数据库快照来提供执行这些检查所需的事务的一致性。 如果无法创建快照，或指定了 TABLOCK，则 DBCC CHECKALLOC 将尝试获取排他 (X) 数据库锁，以获取所需的一致性。
@@ -160,7 +160,7 @@ DBCC CHECKALLOC 还会报告每条索引和每个文件中分区的分配摘要�
   
 DBCC CHECKALLOC 将返回以下结果集（值可能有所不同），指定了 ESTIMATEONLY 或 NO_INFOMSGS 时除外。
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +222,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 如果指定了 ESTIMATEONLY，则 DBCC CHECKALLOC 将返回以下结果集。
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  
@@ -232,7 +232,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  

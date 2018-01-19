@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- *距离*  
+ *distance*  
  是**float**表达式指定的距离**几何图形**围绕其计算的缓冲区的实例。  
   
- *容差*  
+ *tolerance*  
  是**float**表达式指定的缓冲区距离的容差。  
   
  *容差*引用中返回的线性近似的理想的缓冲区距离的最大变体。  
   
  例如，点的理想缓冲区距离为圆圈，但是这必须与多边形近似。 公差越小，多边形具有的点就越多，这将增加结果的复杂度，但可减少错误。  
   
- *相对*  
+ *relative*  
  是**位**指定是否*容差*值是相对或绝对。 如果 'TRUE' 或 1，然后容差是相对的。 而作为计算的产品*容差*参数和直径的实例的边界框。 如果 'FALSE' 或 0，容差是绝对和*容差*值是绝对的最大变体中返回的线性近似的理想的缓冲区距离。  
   
 ## <a name="return-types"></a>返回类型  

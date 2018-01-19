@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,23 +54,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>参数  
 *datepart*  
-是的一部分*日期*到**整数***数*添加。 下表列出所有有效*datepart*自变量。 用户定义的变量等效项是无效的。
+是的一部分*日期*到 **整数 * * * 数*添加。 下表列出所有有效*datepart*自变量。 用户定义的变量等效项是无效的。
   
 |*datepart*|缩写形式|  
 |---|---|
-|**年**|**yy**， **yyyy**|  
-|**季度**|**qq**， **q**|  
-|**月**|**mm**， **m**|  
-|**dayofyear**|**dy**， **y**|  
-|**一天**|**dd**， **d**|  
-|**周**|**wk**， **ww**|  
-|**工作日**|**dw**， **w**|  
-|**小时**|**hh**|  
-|**分钟**|**mi**，**n**|  
-|**第二个**|**ss**， **s**|  
-|**毫秒**|**ms**|  
-|**微秒**|**mcs**|  
-|**纳秒为**|**ns**|  
+|**year**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
+|**月**|**mm**, **m**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
+|**week**|**wk**, **ww**|  
+|**weekday**|**dw**， **w**|  
+|**hour**|**hh**|  
+|**minute**|**mi**，**n**|  
+|**second**|**ss**， **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 是可被解析为一个表达式[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) ，它将添加到*datepart*的*日期*。 用户定义的变量是有效的。  
@@ -93,24 +93,24 @@ DATEADD (datepart , number , date )
 如果*datepart*是**月**和*日期*月有时间超过返回月和*日期*返回月中不存在一天返回月份的最后一天，则返回。 例如，9 月份有 30 天；因此，下面两个语句返回 2006-09-30 00:00:00.000：
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 参数  
 *数*自变量不能超过的范围**int**。以下语句的自变量*数*超出了范围**int** 1。 返回以下错误消息："`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>date 参数  
 *日期*自变量不能可递增到的值超出了其数据类型的范围。 在下面的语句中，*数*值添加到*日期*值超出范围*日期*数据类型。 返回以下错误消息："`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>date 为 smalldatetime 型、datepart 为秒或秒小数部分时的返回值  

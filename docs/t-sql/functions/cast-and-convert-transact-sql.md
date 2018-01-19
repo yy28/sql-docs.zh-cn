@@ -40,11 +40,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *length*  
 指定目标数据类型长度的可选整数。 默认值为 30。
   
-*样式*  
+*style*  
 是一个整数表达式指定如何将转换 CONVERT 函数*表达式*。 如果 style为 NULL，则返回 NULL。 范围由*data_type*。 
   
 ## <a name="return-types"></a>返回类型
@@ -101,7 +101,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |不带世纪 (yy) (<sup>1</sup>)|带世纪数位 (yyyy)|Standard|输入/输出 (<sup>3</sup>)|  
 |---|---|--|---|
-|-|**0**或**100** (<sup>1，</sup><sup>2</sup>)|datetime 和 smalldatetime 的默认值|mon dd yyyy hh:miAM（或 PM）|  
+|-|**0** or **100** (<sup>1,</sup><sup>2</sup>)|datetime 和 smalldatetime 的默认值|mon dd yyyy hh:miAM（或 PM）|  
 |**1**|**101**|美国|1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|英国/法国|3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
@@ -116,8 +116,8 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**12**|**112**|ISO|12 = yymmdd<br /> 112 = yyyymmdd|  
 |-|**13**或**113** (<sup>1，</sup><sup>2</sup>)|欧洲默认格式 + 毫秒|dd mon yyyy hh:mi:ss:mmm(24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
-|-|**20**或**120** (<sup>2</sup>)|ODBC 规范|yyyy-mm-dd hh:mi:ss(24h)|  
-|-|**21**或**121** (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 规范（带毫秒）默认值|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
+|-|**20** or **120** (<sup>2</sup>)|ODBC 规范|yyyy-mm-dd hh:mi:ss(24h)|  
+|-|**21** or **121** (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 规范（带毫秒）默认值|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
 |-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm（无空格）<br /> 注意： 时毫秒的值 (mmm) 为 0，则不显示毫秒值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。|  
 |-|**127**(<sup>6, 7</sup>)|带时区 Z 的 ISO8601。|yyyy-mm-ddThh:mi:ss.mmmZ（无空格）<br /> 注意： 时毫秒的值 (mmm) 为 0，则不显示毫秒值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|回历 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /> 在此样式中，mon 表示完整月份名称的多标记回历 unicode 表示形式。 此值不未正确呈现在默认的 SSMS 美国安装。|  
@@ -147,7 +147,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="float-and-real-styles"></a>float 和 real 样式
 当*表达式*是**float**或**实际**，*样式*可以是下表中显示的值之一。 其他值作为 0 进行处理。
   
-|值|“输出”|  
+|“值”|输出|  
 |---|---|
 |**0** （默认值）|最多包含 6 位。 根据需要使用科学记数法。|  
 |**1**|始终为 8 位值。 始终使用科学记数法。|  
@@ -158,7 +158,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 样式
 当*表达式*是**money**或**smallmoney**，*样式*可以是下表中显示的值之一。 其他值作为 0 进行处理。
   
-|值|“输出”|  
+|“值”|输出|  
 |---|---|
 |**0** （默认值）|小数点左侧每三位数字之间不以逗号分隔，小数点右侧取两位数，例如 4235.98。|  
 |**1**|小数点左侧每三位数字之间以逗号分隔，小数点右侧取两位数，例如 3,510.92。|  
@@ -166,9 +166,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**126**|转换为 char(n) 或 varchar(n) 时，等同于样式 2|  
   
 ## <a name="xml-styles"></a>xml 样式
-当*表达式*是**xml***，样式*可以是下表中显示的值之一。 其他值作为 0 进行处理。
+当*表达式*是 **xml * * *、 样式*可以是下表中显示的值之一。 其他值作为 0 进行处理。
   
-|值|“输出”|  
+|“值”|输出|  
 |---|---|
 |**0** （默认值）|使用默认的分析行为，即放弃无用的空格，且不允许使用内部 DTD 子集。<br /> **注意：**转换为**xml**数据类型，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]无关紧要的空白区域以不同的方式比在中处理 XML 1.0。 有关详细信息，请参阅[创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留无用空格。 此样式设置可设置默认值**xml: space**处理相同的行为就像**xml: space ="preserve"**已改为指定。|  
@@ -178,7 +178,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="binary-styles"></a>二进制样式
 当*表达式*是**binary(n)**， **varbinary （n)**， **char(n)**，或**varchar(n)**， *样式*可以是下表中显示的值之一。 表中没有列出的样式值将返回错误。
   
-|值|“输出”|  
+|“值”|输出|  
 |---|---|
 |**0** （默认值）|将 ASCII 字符转换为二进制字节，或者将二进制字节转换为 ASCII 字符。 每个字符或字节按照 1:1 进行转换。<br /> 如果*data_type*是二进制的类型，0x 添加到的结果的左侧的字符。|  
 |**1**, **2**|如果*data_type*是二进制的类型，表达式必须为字符表达式。 *表达式*必须是组成偶数个十六进制数字 (0、 1、 2、 3、 4、 5、 6、 7、 8、 9、 A、 B、 C、 D、 E、 F、 a、 b、 c、 d、 e、 f)。 如果*样式*是设置为 1 的字符必须是 0 x 的前两个字符表达式中。 如果表达式中包含的字符数为奇数或者包含任何无效的字符，则会引发错误。<br /> 如果转换后的表达式的长度大于的长度*data_type*结果右截断。<br /> 固定长度*data_types*都大于转换后的结果具有零添加到结果的右侧。<br /> 如果 data_type 为字符类型，则表达式必须为二进制表达式。 每个二进制字符均转换为两个十六进制字符。 如果转换后的表达式的长度大于*data_type*长度，将右截断。<br /> 如果*data_type*是修复大小字符类型和转换后的结果的长度小于其长度*data_type*; 空间添加到转换后的表达式的右侧以维护一个偶数十六进制数字个数。<br /> 0x 将添加到的转换结果的左侧的字符*样式*1。|  
@@ -711,8 +711,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-[系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [格式 &#40;Transact SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
+ [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [编写国际化 Transact-SQL 语句](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
