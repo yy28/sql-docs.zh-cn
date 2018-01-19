@@ -15,7 +15,7 @@
 ### [通过命令提示符部署](./ssis-quickstart-deploy-cmdline.md)
 ### [使用 PowerShell 部署](ssis-quickstart-deploy-powershell.md)
 ### [使用 C# 部署](./ssis-quickstart-deploy-dotnet.md) 
-## “运行”
+## 运行
 ### [使用 SSMS 运行](./ssis-quickstart-run-ssms.md)
 ### [使用 Transact-SQL (SSMS) 运行](./ssis-quickstart-run-tsql-ssms.md)
 ### [使用 Transact-SQL (VS Code) 运行](ssis-quickstart-run-tsql-vscode.md)
@@ -75,7 +75,7 @@
 
 # [目录和服务器](catalog/integration-services-ssis-server-and-catalog.md)
 # [服务（旧版）](../integration-services/service/integration-services-service-ssis-service.md)
-# [安全性](../integration-services/security/security-overview-integration-services.md)
+# [Security](../integration-services/security/security-overview-integration-services.md)
 # [“性能”](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [故障排除](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [系统视图](../integration-services/system-views/views-integration-services-catalog.md)
@@ -181,5 +181,5 @@
 ### [MSDN 上的 SSIS 论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Stack Overflow 上的 SSIS 标记](http://stackoverflow.com/questions/tagged/ssis)  
 ## 提供反馈
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server 反馈论坛](https://feedback.azure.com/forums/908035-sql-server)  
 ## [获取电脑上的文档](../sql-server/sql-server-help-installation.md)
