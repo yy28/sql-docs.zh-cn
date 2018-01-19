@@ -49,9 +49,9 @@
 ### [SQL Server 安全性](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## 反馈和帮助
+### [SQL Server 相关建议](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [帮助查看器的本地内容](sql-server-help-installation.md)

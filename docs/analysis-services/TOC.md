@@ -19,7 +19,7 @@
 ## [Analysis Services 示例](analysis-services-samples.md)
 
 # 教程
-## [表格建模（Adventure Works 教程）](tabular-modeling-adventure-works-tutorial.md)  
+## [表格建模（1200 兼容级别）](tabular-modeling-adventure-works-tutorial.md)  
 ### [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)  
 ### [第 2 课：添加数据](lesson-2-add-data.md)  
 ### [第 3 课：标记为日期表](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [补充课程 - 通过使用行筛选器实现动态安全性](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [补充课程 - 为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
+## [多维建模](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [教程方案](analysis-services-tutorial-scenario.md)  
 ### [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)  
 ### [第 1 课：在 Analysis Services 项目中定义数据源视图](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
