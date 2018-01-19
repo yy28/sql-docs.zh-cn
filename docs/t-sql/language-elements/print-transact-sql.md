@@ -24,15 +24,15 @@ helpviewer_keywords:
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 320c54c81b8c4bdb782d4b685816f10150a075e0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,8 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  字符串或 Unicode 字符串常量。 有关详细信息，请参阅[常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- 任何有效的字符数据类型的变量。 **@***local_variable*必须**char**， **nchar**， **varchar**，或**nvarchar**，或它必须能够隐式转换为这些数据类型。  
+ **@** *local_variable*  
+ 任何有效的字符数据类型的变量。 **@ * * * local_variable*必须**char**， **nchar**， **varchar**，或**nvarchar**，或它必须能够隐式转换为这些数据类型。  
   
  *string_expr*  
  返回字符串的表达式。 可包括串联的文字值、函数和变量。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  

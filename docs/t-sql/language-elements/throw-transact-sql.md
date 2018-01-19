@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: bed4670dc0d683eea4920ddd39aec781177f7cc5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -54,7 +54,7 @@ THROW [ { error_number | @local_variable },
  State  
  在 0 到 255 之间的常量或变量，指示与消息关联的状态。 *状态*是**tinyint**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  THROW 语句前的语句必须后跟分号 (;) 语句终止符。  
   
  如果 TRY…CATCH 构造不可用，则会话结束。 设置引发异常的行号和过程。 将严重性设置为 16。  
@@ -155,10 +155,10 @@ THROW 60000, @msg, 1;
  [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)   
- [转到 &#40;Transact SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [开始...结束 &#40;Transact SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40;Transact SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [设置 XACT_ABORT &#40;Transact SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

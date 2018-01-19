@@ -62,7 +62,7 @@ manager: jhubbard
 ms.workload: Active
 ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/17/2018
 ---
@@ -255,7 +255,7 @@ ms.lasthandoff: 01/17/2018
  如果不能使用这样的计划，查询优化器将返回错误而不是延迟对查询执行的错误检测。 行可以包含可变长度列；[!INCLUDE[ssDE](../../includes/ssde-md.md)]允许将行大小定义为超过[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力的最大可能的大小。 通常，应用程序存储实际大小在[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力范围内的行，而不管最大可能大小。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]遇到过长的行，则返回执行错误。  
  
 <a name="use_hint"></a>使用提示 ( *****hint_name***** )  
- **适用于**： 适用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ **适用于**： 适用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  提供了一个或多个查询处理器的提示名称按指定的其他提示**在单引号内**。 
 

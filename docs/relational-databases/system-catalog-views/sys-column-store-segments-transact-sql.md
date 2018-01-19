@@ -1,7 +1,7 @@
 ---
 title: "sys.column_store_segments (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ ms.lasthandoff: 01/02/2018
 |**encoding_type**|**int**|为该片段所使用的编码类型：<br /><br /> 1 = VALUE_BASED-非字符串/二进制与没有字典 （非常类似于 4 个，带有一些内部的变体）<br /><br /> 2 = VALUE_HASH_BASED-与字典中的常见值字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED-与字典中的常见值字符串/二进制列<br /><br /> 4 = STORE_BY_VALUE_BASED-非字符串/二进制与没有字典<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-字符串/二进制没有字典<br /><br /> 所有编码的位装箱和运行长度编码尽可能都利用。|  
 |**row_count**|**int**|行组中的行数。|  
 |**has_nulls**|**int**|1 如果列段具有 Null 值。|  
-|**base_id**|**bigint**|如果编码类型 1 正在使用的基础值 id。  如果编码类型 1 未使用，base_id 设置为 1。|  
-|**量值**|**float**|如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为 1。|  
+|**base_id**|**bigint**|如果编码类型 1 正在使用的基础值 id。  如果编码类型 1 未使用，则将 base_id 设置为-1。|  
+|**magnitude**|**float**|如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为-1。|  
 |**primary_dictionary_id**|**int**|值为 0 表示全局字典。 值-1 指示没有为此列创建没有全局字典。|  
 |**secondary_dictionary_id**|**int**|一个非零值到本地字典中此列将在当前段 （即行组） 的点。 值-1 指示没有为此段没有本地字典。|  
 |**min_data_id**|**bigint**|列段中的最小数据 ID。|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/02/2018
 |**null_value**|**bigint**|用于表示 Null 的值。|  
 |**on_disk_size**|**bigint**|段大小（字节）。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  以下查询返回有关列存储索引各段的信息。  
   
 ```sql  
@@ -80,8 +80,8 @@ GO
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询的 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

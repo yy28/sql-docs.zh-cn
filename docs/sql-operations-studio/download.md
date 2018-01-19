@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>下载并安装 SQL 操作 Studio （预览版）
 
@@ -119,7 +119,8 @@ ms.lasthandoff: 01/17/2018
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-
+## <a name="check-for-updates"></a>检查更新
+若要检查最新的更新，请单击的窗口中，然后单击左下角的齿轮图标**检查更新**
 
 ## <a name="next-steps"></a>后续步骤
 

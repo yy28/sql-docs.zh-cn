@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: b6e34da74f96e8941fff67afe24cdbc271381fa7
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -59,5 +59,5 @@ SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的基�
 - [DBA 堆栈 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提问数据库管理
 - [堆栈溢出](http://stackoverflow.com/questions/tagged/sql-server)： 提出开发问题
 - [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 询问技术问题
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)： 报告 bug 和请求功能
+- [提交反馈](https://feedback.azure.com/forums/908035-sql-server)： 报告 bug 和请求功能
 - [Reddit](https://www.reddit.com/r/SQLServer/)： 讨论 SQL Server

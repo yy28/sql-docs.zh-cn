@@ -24,15 +24,15 @@ helpviewer_keywords:
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 706aeaab949399ab6d235a368fa354c32cc54d98
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>除集运算符的和 INTERSECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- \<*query_specification*> |( \< *query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  查询规范或查询表达式返回与来自另一个查询规范或查询表达式的数据相比较的数据。 在 EXCEPT 或 INTERSECT 运算中，列的定义可以不同，但它们必须在隐式转换后进行比较。 如果数据类型不相同，用于执行比较，并返回确定的结果的类型将基于的规则进行[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
  如果类型相同，但精度、小数位数或长度不同，则根据用于合并表达式的相同规则来确定结果。 有关详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  

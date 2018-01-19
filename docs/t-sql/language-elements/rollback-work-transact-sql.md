@@ -24,15 +24,15 @@ helpviewer_keywords:
 - savepoints [SQL Server]
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ea67c2015519a5d276fec9898258a8f3bf67ced
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 993949e9e8f07d8120d1a9eac95cc55aae0a8f71
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ROLLBACK [ WORK ]
   
  嵌套事务时, 回滚工作始终回滚到的最外面的 BEGIN TRANSACTION 语句和递减 @@TRANCOUNT为 0 的系统函数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，所有有效用户都有权执行 ROLLBACK WORK。  
   
 ## <a name="see-also"></a>另请参阅  
