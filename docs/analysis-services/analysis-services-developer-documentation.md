@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 开发人员文档
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有可供选择的多个方法。  选项包括编写托管代码、 脚本或使用开放标准，如 XMLA 和 MSOLAP，如果你的解决方案要求不使用.NET framework。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有可供选择的多个方法。  选项包括编写托管代码、 脚本或使用开放标准，如 XMLA 和 MSOLAP，如果你的解决方案要求不使用.NET framework。
 
 ## <a name="what-you-can-accomplish-in-code"></a>可以在代码中完成的新增功能
 典型的编程方案包括服务器和数据库部署、 管理、 模型和数据库创建和从你的自定义应用程序和使用 Analysis Services 数据的报表的数据访问。 所有这些情况下是固定体系结构和对象定义层次结构，与跨数据定义、 处理和查询工作负荷的易于理解操作。

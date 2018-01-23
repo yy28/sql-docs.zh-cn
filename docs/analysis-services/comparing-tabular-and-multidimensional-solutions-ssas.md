@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 提供用于创建商业智能语义模型的几种方法： 表格、 多维和 Power Pivot for SharePoint。
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services 提供用于创建商业智能语义模型的几种方法： 表格、 多维和 Power Pivot for SharePoint。
   
  可以使用多种方法来实现针对不同业务和用户需求量身定制的建模体验。 “多维”是建立在开放标准基础之上的成熟技术，已由 BI 软件的众多供应商采用，但难以驾驭。 “表格”提供一种关系建模方法，很多开发人员认为它更加直观。 PowerPivot 更简单，它在 Excel 中提供可视化数据建模，并通过 SharePoint 提供服务器支持。  
   
@@ -57,33 +59,33 @@ ms.lasthandoff: 01/08/2018
 |||| 
 |-|-|-|
 ||多维|表格|
-|操作|是|是|
-|Aggregations|是|是|
-|计算列|是|是|  
+|操作|是|否|
+|Aggregations|是|否|
+|计算列|否|是|  
 |计算度量值|是|是| 
-|计算表|是|是<sup>1</sup>|  
-|自定义程序集|是|是|
-|自定义汇总|是|是| 
-|默认成员|是|是|  
+|计算表|否|是<sup>1</sup>|  
+|自定义程序集|是|否|
+|自定义汇总|是|否| 
+|默认成员|是|否|  
 |显示文件夹|是|是<sup>1</sup>|  
 |Distinct Count|是|是（通过 DAX）|
 |钻取|是|是 （取决于客户端应用程序）|
 |层次结构|是|是|
 |KPI|是|是| 
 |链接对象|是|是（链接表）|
-|M 表达式|是|是<sup>1</sup>|
+|M 表达式|否|是<sup>1</sup>|
 |多对多关系|是|否 (但没有[双向交叉筛选器](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)1200年和更高版本的兼容性级别)| 
-|命名集|是|是| 
+|命名集|是|否| 
 |不规则层次结构|是|是<sup>1</sup>|  
 |父子层次结构|是|是（通过 DAX）|
-|“度量值组”|是|是| 
+|分区|是|是| 
 |透视|是|是|
 |行级安全性|是|是| 
 |对象级安全|是|是<sup>1</sup>|
 |半累加性度量值|是|是| 
 |翻译|[是](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|是| 
 |用户定义的层次结构|是|是|
-|写回|是|是| 
+|写回|是|否| 
   
  <sup>1</sup>请参阅[中 Analysis Services 模型 Compatibility Level for Tabular](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)有关兼容性级别之间的功能差异信息。  
   

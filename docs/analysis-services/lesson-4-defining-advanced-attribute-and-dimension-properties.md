@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 486d4c78c92f9de8f70a8d3cdb70cced525b3e4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级属性和维度属性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本课程中，您将学习如何使用某些特性、 属性层次结构和维度属性的高级属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在本课中，将了解如何使用特性、特性层次结构和维度属性的某些高级属性。  
   
 > [!NOTE]  
 > 本课基于在本教程前面三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 本课的第一个任务是描述在哪里找到适用于该课程的示例项目，以及该项目与前面三课中所创建的项目之间的差异。  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

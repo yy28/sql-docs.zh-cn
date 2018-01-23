@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4bdf8563587ef08dd89634676a56324dc0191edb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>课程 1-3-定义数据源视图
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]定义将在中使用的数据源后[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中下, 一步是通常定义项目的数据源视图。 数据源视图是元数据的单个统一视图，这些元数据来自数据源在项目中定义的指定表和视图。 通过在数据源视图中存储元数据，可以在开发过程中使用元数据，而无需打开与任何基础数据源的连接。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+定义了将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中使用的数据源后，下一步通常是定义项目的数据源视图。 数据源视图是元数据的单个统一视图，这些元数据来自数据源在项目中定义的指定表和视图。 通过在数据源视图中存储元数据，可以在开发过程中使用元数据，而无需打开与任何基础数据源的连接。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
 在以下任务中，定义一个数据源视图，其中包括来自 **AdventureWorksDW2012** 数据源的五个表。  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 3.  已选中“关系数据源”下的 **Adventure Works DW 2012** 数据源。 单击“下一步” 。  
   
     > [!NOTE]  
-    > 若要创建一个基于多个数据源的数据源视图，必须先定义一个基于单一数据源的数据源视图。 此数据源将被称为主数据源。 随后，可以添加来自辅助数据源的表和视图。 在基于多个数据源中的相关表设计包含属性的维度时，可能需要将 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据源定义为主数据源，以使用其分布式查询引擎功能。  
+    > 若要创建一个基于多个数据源的数据源视图，必须先定义一个基于单一数据源的数据源视图。 此数据源将被称为主数据源。 随后，可以添加来自辅助数据源的表和视图。 在设计时包含基于多个数据源中的相关表的属性的维度，你可能需要定义[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]作为要使用其分布式的查询引擎功能的主数据源的数据源。  
   
 4.  在“选择表和视图”页上，可以从选定的数据源提供的对象列表中选择表和视图。 可以筛选此列表，以帮助您选择表和视图。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/08/2018
     现在，即可在“关系图”窗格中查看所有表及其相互关系了。 注意，在 FactInternetSales 表和 DimDate 表之间存在三种关系。 每个销售都具有三个与其关联的日期：订单日期、到期日期和发货日期。 若要查看某种关系的详细信息，可双击“关系图”窗格中的关系箭头。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[修改默认表名](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
+[修改默认表名称](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>在 Analysis Services 中使用的工具和应用程序
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]找到的工具和应用程序都需要为生成 Analysis Services 模型和管理已部署的数据库。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  找到的工具和应用程序都需要为生成 Analysis Services 模型和管理已部署的数据库。  
   
 ## <a name="analysis-services-model-designers"></a>Analysis Services 模型设计器  
  使用项目模板中 SQL Server Data Tools (SSDT)，Visual Studio shell 创作模型。 项目模板提供用于创建包含 Analysis Services 解决方案的数据模型对象的模型设计器。 SSDT 是每月更新一个免费 web 下载。

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-定义多对多关系
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在定义维度时，通常每个事实都联接到一个且仅有一个维度成员，而单个维度成员可以与多个不同的事实数据相关联。 例如，每个客户可以具有很多订单，但每个订单只属于一个客户。 在关系数据库术语中，这称为“一对多关系”。 但有时一个事实可联接多个维度成员。 在关系数据库术语中，这称为“多对多关系”。 例如，一个客户进行采购的原因可以有多个，而一个采购原因可以与多个采购相关联。 联接表用于定义与每个采购相关的销售原因。 在由此类关系构建的 Sales Reason 维度中，将有多个成员与一个销售事务相关联。 多对多维度可将维度模型扩展到经典星型架构范围之外，并在维度不直接与事实数据表相关联的情况下支持复杂分析。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在定义维度时，通常每个事实联接且仅联接到一个维度成员，而一个维度成员可以与许多不同的事实相关联。 例如，每个客户可以具有很多订单，但每个订单只属于一个客户。 在关系数据库术语中，这称为“一对多关系”。 但有时一个事实可联接多个维度成员。 在关系数据库术语中，这称为“多对多关系”。 例如，一个客户进行采购的原因可以有多个，而一个采购原因可以与多个采购相关联。 联接表用于定义与每个采购相关的销售原因。 在由此类关系构建的 Sales Reason 维度中，将有多个成员与一个销售事务相关联。 多对多维度可将维度模型扩展到经典星型架构范围之外，并在维度不直接与事实数据表相关联的情况下支持复杂分析。  
   
 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，通过指定联接到维度表的中间事实数据表，可以定义维度和度量值组之间的多对多关系。 中间事实数据表又与该事实数据表所联接到的中间维度表联接。 中间事实数据表与该关系中的维度表和中间维度之间的多对多关系便创建了主维度的成员与由该关系指定的度量值组中的度量值之间的多对多关系。 为了通过中间度量值组定义维度和度量值组之间的多对多关系，中间度量值组必须与原始度量值组共享一个或多个维度。  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/08/2018
   
     ![定义关系对话框](../analysis-services/media/l5-many-to-many-3.gif "定义关系对话框中")  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
     您将看到表示“销售原因”维度和“Internet 销售”度量值组之间关系的多对多图标。  
   
@@ -180,7 +182,7 @@ ms.lasthandoff: 01/08/2018
 [定义度量值组中的维度粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[使用数据源视图设计器中的关系图 (Analysis Services)](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[使用数据源视图设计器 &#40; 中的关系图Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定义多对多关系和多对多关系属性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

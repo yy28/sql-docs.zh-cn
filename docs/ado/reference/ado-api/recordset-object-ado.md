@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示整个组记录从基表或执行命令的结果。 在任何时候，**记录集**对象是指仅为当前记录集内的单个记录。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  你使用**记录集**对象来操作从提供程序的数据。 使用 ADO 时，操作几乎完全使用数据**记录集**对象。 所有**记录集**对象包含的记录 （行） 和字段 （列）。 根据提供程序，支持的功能某些**记录集**方法或属性可能不可用。  
   
  ADODB。记录集是用于创建的 ProgID**记录集**对象。 引用过时的 ADOR 的现有应用程序。记录集 ProgID 将继续工作无需重新编译，但新的开发应引用 ADODB。记录集。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  你可以使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， **MoveLast**， **MoveNext**，和**MovePrevious**方法;[移动](../../../ado/reference/ado-api/move-method-ado.md)方法;与[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，和[筛选器](../../../ado/reference/ado-api/filter-property.md)属性重新定位假定该提供程序支持相关的当前记录功能。 只进**记录集**对象仅支持[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 当你使用**移动**方法访问每个记录 (或枚举**记录集**)，你可以使用**BOF**和**EOF**属性设置为确定是否您已移动到开头或末尾以外**记录集**。  
   
- 在使用的任何功能之前**记录集**对象，必须调用**支持**上要验证的功能是支持或不可用的对象的方法。 你必须未使用的功能时**支持**方法返回 false。 例如，你可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`返回**True**。 否则，将收到错误，因为**记录集**对象可能已关闭，功能呈现的实例上不可用。 如果不支持你感兴趣的功能，则**支持**也将返回 false。 在这种情况下，应避免调用对应的属性或方法**Recrodset**对象。  
+ 在使用的任何功能之前**记录集**对象，必须调用**支持**上要验证的功能是支持或不可用的对象的方法。 你必须未使用的功能时**支持**方法返回 false。 例如，你可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`返回**True**。 否则，将收到错误，因为**记录集**对象可能已关闭，功能呈现的实例上不可用。 如果不支持你感兴趣的功能，则**支持**也将返回 false。 在这种情况下，应避免调用对应的属性或方法**记录集**对象。  
   
  **记录集**对象可以支持两种类型的更新： 立即和批处理。 在即时更新中，对数据的所有更改都写入立即到基础数据源一旦调用[更新](../../../ado/reference/ado-api/update-method.md)方法。 你还可以通过以下方式传递值的数组作为参数使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和**更新**方法并同时更新记录中的多个字段。  
   

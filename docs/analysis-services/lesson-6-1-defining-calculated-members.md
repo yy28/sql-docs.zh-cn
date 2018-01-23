@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>课程 6-1-定义计算成员
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]计算的成员的维度的成员或定义的度量值组基于多维数据集数据、 算术运算符、 数字和函数的组合。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
   
 若要创建计算成员，请在多维数据集设计器的“计算”选项卡上使用“新建计算成员”命令。 您可以在包括度量值维度在内的任意维度中创建计算成员。 还可以将计算成员放在“计算属性”对话框的显示文件夹内。 有关详细信息，请参阅[计算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、[多维模型中的计算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)和[创建计算成员](../analysis-services/multidimensional-models/create-calculated-members.md)。  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
     可以将元数据元素从“计算工具”窗格拖到“表达式”框中，然后添加运算符和其他元素，创建多维表达式 (MDX) 表达式。 或者，可以直接在“表达式”框中键入 MDX 表达式。  
   
     > [!NOTE]  
-    > 如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。  
+    > 如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
   
 5.  将“Internet Sales-Sales Amount”从“计算工具”窗格中的“元数据”选项卡拖到“计算表达式”窗格中的“表达式”框中。  
   

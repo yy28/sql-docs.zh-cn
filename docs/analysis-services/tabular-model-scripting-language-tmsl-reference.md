@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>表格模型脚本语言 (TMSL) 参考
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]表格模型脚本语言 (TMSL) 是在兼容级别 1200年或更高版本的 Analysis Services 表格模型数据库的命令和对象模型定义语法。 TMSL 与 Analysis Services 通信通过 XMLA 协议，其中[XMLA。执行](../analysis-services/xmla/xml-elements-methods-execute.md)方法同时接受基于 JSON 的**语句**TMSL 以及中的传统的基于 XML 的脚本中的脚本[Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  表格模型脚本语言 (TMSL) 是在兼容级别 1200年或更高版本的 Analysis Services 表格模型数据库的命令和对象模型定义语法。 TMSL 与 Analysis Services 通信通过 XMLA 协议，其中[XMLA。执行](../analysis-services/xmla/xml-elements-methods-execute.md)方法同时接受基于 JSON 的**语句**TMSL 以及中的传统的基于 XML 的脚本中的脚本[Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  TMSL 的要素包括：  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**版本(Version)**|**多维**|**表格 110 x**|**表格 1200**| **表格 1400** |
+|**版本**|**多维**|**表格 110 x**|**表格 1200**| **表格 1400** |
 |Azure Analysis Services|不适用|不适用|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 

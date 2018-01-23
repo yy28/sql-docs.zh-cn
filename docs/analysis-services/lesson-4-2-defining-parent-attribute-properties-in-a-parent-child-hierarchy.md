@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9f8206a854379bd95a41d271d3c5f9dc45bd200c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>父-子层次结构中的课程 4-2-定义父特性属性
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]父-子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”，用于标识每个维度成员。 另一列称为“父列”，用于标识每个维度成员的父项。 父特性的“NamingTemplate”属性决定父子层次结构中的每个级别的名称，而“MembersWithData”属性则决定是否应显示父成员的数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+父子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”，用于标识每个维度成员。 另一列称为“父列”，用于标识每个维度成员的父项。 父特性的“NamingTemplate”属性决定父子层次结构中的每个级别的名称，而“MembersWithData”属性则决定是否应显示父成员的数据。  
   
 有关详细信息，请参阅[父子维度](../analysis-services/multidimensional-models/parent-child-dimension.md)、[父子层次结构中的属性](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
     ![级别命名模板对话框](../analysis-services/media/l4-namingtemplate.gif "级别命名模板对话框中")  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
 6.  在“雇员”特性的“属性”窗口中，选择“MembersWithData”属性单元中的“NonLeafDataHidden”，以便为“雇员”特性更改此值。  
   

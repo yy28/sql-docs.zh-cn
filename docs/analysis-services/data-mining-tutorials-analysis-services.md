@@ -19,15 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>数据挖掘教程 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可以轻松地创建使用向导和集成的可视化效果的数据挖掘解决方案。 特别是如果你刚接触机器学习，则使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具是设计、定型和探索数据挖掘模型的轻松方法。 模型中的数据可以存储在多维数据集、关系数据库或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的任何其他源中。 创建模型之后，可以通过使用多个预测客户端（包括 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 ASP.NET）访问模型以创建预测，来将它投入生产。  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用向导和集成可视化更加方便地创建数据挖掘解决方案。 特别是如果你刚接触机器学习，则使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具是设计、定型和探索数据挖掘模型的轻松方法。 模型中的数据可以存储在多维数据集、关系数据库或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的任何其他源中。 创建模型之后，可以通过使用多个预测客户端（包括 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 ASP.NET）访问模型以创建预测，来将它投入生产。  
   
 > [!NOTE]  
 >此处所述的教程尚未针对 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]进行更新。 可以使用为 SQL Server 2014 创建的教程。 就功能而言，数据挖掘功能对于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]没有任何变化。 这些步骤应是相同的。  

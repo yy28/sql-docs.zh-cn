@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>多维数据集属性的多维模型编程
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集具有多个属性，可设置为会影响多维数据集范围的行为。 下表总结了这些属性。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  有关如何设置多维数据集属性的详细信息，请参阅[多维数据集设计器 &#40;Analysis Services-多维数据 &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**AggregationPrefix**|指定用于聚合名称的通用前缀。|  
 |**排序规则**|指定以下划线分隔的区域设置标识符 (LCID) 和比较标志，例如 Latin1_General_C1_AS。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |**ScriptErrorHandlingMode**|确定错误处理。 选项**IgnoreNone**或**IgnoreAll**|  
 |**数据源**|显示用于多维数据集的数据源视图|  
 |**StorageLocation**|指定多维数据集的文件系统存储位置。 如果未指定任何位置，则从包含多维数据集对象的数据库中继承位置。|  
-|**StorageMode**|指定多维数据集的存储模式。 值为 **MOLAP** ， **ROLAP** ，或 **HOLAP。**|  
+|**StorageMode**|指定多维数据集的存储模式。 值为**MOLAP**， **ROLAP**，或**HOLAP**。|  
 |**Visible**|确定多维数据集的可见性。|  
   
 > [!NOTE]  

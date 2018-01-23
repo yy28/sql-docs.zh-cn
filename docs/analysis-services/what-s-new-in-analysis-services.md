@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么 &#39; s Analysis Services 中的新增功能
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 公布于 2016 SQL PASS 大会的 Analysis Services 现已作为一项 Azure 服务在云中推出。 **Azure Analysis Services**支持 1200年或更高的兼容性级别的表格模型。 可支持 DirectQuery、分区、行级安全性、双向关系和翻译。 若要了解详细信息并免费试用，请参阅 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)。 

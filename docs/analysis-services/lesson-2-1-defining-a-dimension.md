@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>课程 2-1-定义维度
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下面的任务中，你将使用维度向导生成日期维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在以下任务中，将使用维度向导生成“日期”维度。  
   
 > [!NOTE]  
 > 本课要求您已完成课程 1 中的所有课程。  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **Calendar Semester**  
   
-8.  将“完整日期备用键”属性的“属性类型”列的设置从“常规”更改为“日期”。 为此，请单击“属性类型”列中的“常规”。 然后单击箭头展开选项。 接下来，单击“日期” > “日历” > “日期”。 单击“确定” 。 重复这些步骤，更改属性的属性类型，具体如下所示：  
+8.  将“完整日期备用键”属性的“属性类型”列的设置从“常规”更改为“日期”。 为此，请单击“属性类型”列中的“常规”。 然后单击箭头展开选项。 接下来，单击“日期” > “日历” > “日期”。 单击 **“确定”**。 重复这些步骤，更改属性的属性类型，具体如下所示：  
   
     -   “英文月份名称”更改为“月份”  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>课程 6-2-定义命名集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]命名的集是返回一组的维度成员的多维表达式 (MDX) 表达式。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+命名集是一个返回一组维度成员的多维表达式 (MDX)。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。  
   
 命名集简化了 MDX 查询，并为复杂、常用的集表达式提供了有用的别名。 例如，可以定义名为“大型分销商”的命名集，用来包含有最多雇员的“分销商”维度的成员集合。 然后，最终用户可以在查询中使用“大型分销商”命名集，您也可以使用该命名集来定义子多维数据集中的集合。 命名集定义存储于多维数据集中，但它们的值只存在于内存中。 若要创建命名集，请使用多维数据集设计器的 **“计算”** 选项卡上的 **“新建命名集”** 命令。 有关详细信息，请参阅 [计算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、 [创建命名集](../analysis-services/multidimensional-models/create-named-sets.md)。  
   
@@ -114,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>使用新的命名集浏览多维数据集  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单中，单击“部署 Analysis Services 教程”。  
   
 2.  已成功完成部署后，单击“浏览器”选项卡，再单击“重新连接”。  
   
@@ -139,7 +141,7 @@ ms.lasthandoff: 01/08/2018
     ![包含两个名为的筛选器窗格中设置](../analysis-services/media/l6-named-set-05.gif "包含两个名为的筛选器窗格中设置")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 7 课：定义关键绩效指标 (KPI)](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 课： 定义关键绩效指标 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [“新建命名集”](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

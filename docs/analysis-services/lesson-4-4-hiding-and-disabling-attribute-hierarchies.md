@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: acdeb1132fab9ecd8ea141362a2d1a961ba7192a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a880757dcdaa945cbe9fdb100bb1ded80e584227
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lesson 4-4-隐藏和禁用属性层次结构
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]默认情况下，属性层次结构创建的每个属性在维度中，并且每个层次结构可用于标注事实数据。 此层次结构由“全部”级别和包含该层次结构中所有成员的详细级别组成。 正如您已经了解到的，可以将属性组织到用户定义层次结构中，以提供在多维数据集中的导航路径。 在某些环境下，可能需要禁用或隐藏某些属性以及它们的层次结构。 例如，某些属性（如，社会保障号码或身份证号、付费率、出生日期和登录信息）不是用户将要用来维度化多维数据集信息的属性。 而这些信息通常只是作为特定属性成员的详细信息而显示。 您可能需要隐藏这些属性层次结构，使这些属性只在作为特定属性的成员属性时可见。 可能还需要使其他属性的成员（例如，客户名称或邮政编码）只在通过用户层次结构而不是单独通过属性层次结构进行查看时才可见。 这样做的一个理由可能是属性层次结构中不同成员的个数差异太大。 最后，为了改善处理性能，应该禁用用户不用于浏览的属性层次结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+默认情况下，将为维度中的每个属性创建一个属性层次结构，并且每个层次结构均可用于确定事实数据的维度。 此层次结构由“全部”级别和包含该层次结构中所有成员的详细级别组成。 正如您已经了解到的，可以将属性组织到用户定义层次结构中，以提供在多维数据集中的导航路径。 在某些环境下，可能需要禁用或隐藏某些属性以及它们的层次结构。 例如，某些属性（如，社会保障号码或身份证号、付费率、出生日期和登录信息）不是用户将要用来维度化多维数据集信息的属性。 而这些信息通常只是作为特定属性成员的详细信息而显示。 您可能需要隐藏这些属性层次结构，使这些属性只在作为特定属性的成员属性时可见。 可能还需要使其他属性的成员（例如，客户名称或邮政编码）只在通过用户层次结构而不是单独通过属性层次结构进行查看时才可见。 这样做的一个理由可能是属性层次结构中不同成员的个数差异太大。 最后，为了改善处理性能，应该禁用用户不用于浏览的属性层次结构。  
   
 “AttributeHierarchyEnabled”属性的值确定是否创建特性层次结构。 如果此属性设置为“False”，则不会创建特性层次结构，并且无法将特性用作用户层次结构中的一个级别；特性层次结构只作为成员属性存在。 但是，禁用的属性层次结构仍然可以用来对另一个属性的成员进行排序。 如果“AttributeHierarchyEnabled”属性的值设置为“True”，则“AttributeHierarchyVisible”属性的值确定特性层次结构是否可见（与在用户定义层次结构中的用法无关）。  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **AttributeHierarchyOptimizedState**  
   
-    默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理期间为每个已启用的属性层次结构创建索引，以提高查询性能。 如果不打算使用特性层次结构进行浏览，则可以通过将此属性的值设置为“NotOptimized”来提高处理性能。 但是，如果使用隐藏的层次结构作为维度的键属性，则通过创建属性成员的索引仍然能提高性能。  
+    默认情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理期间为每个已启用的属性层次结构创建索引，以提高查询性能。 如果不打算使用特性层次结构进行浏览，则可以通过将此属性的值设置为“NotOptimized”来提高处理性能。 但是，如果使用隐藏的层次结构作为维度的键属性，则通过创建属性成员的索引仍然能提高性能。  
   
 如果禁用了属性层次结构，则不应用这些属性。  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 01/08/2018
     请注意，隐藏的级别“邮政编码”和“全名”在该用户定义层次结构中可见。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[根据辅助属性对属性成员进行排序](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+[排序基于辅助属性的属性成员](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   
   

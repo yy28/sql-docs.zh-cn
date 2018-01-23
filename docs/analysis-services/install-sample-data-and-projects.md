@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609d8f220df38081e5f14b3aa9154eb86350e014
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="install-sample-data-and-projects"></a>安装示例数据和项目 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]使用说明和本主题中提供的链接安装所有 Analysis Services 教程中使用的数据和项目文件。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
   
 ## <a name="step-1-install-sql-server-software"></a>步骤 1：安装 SQL Server 软件  
 本教程中的课程假定您已安装以下软件。 所有以下软件都使用 SQL Server 安装介质进行安装。 为了简化部署，您可以在一台计算机上安装所有功能。 若要安装这些功能，请运行 SQL Server 安装程序并从“功能选择”页中选择它们。 有关详细信息，请参阅 [使用安装向导安装 SQL Server 2016（安装程序）](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
@@ -133,7 +135,7 @@ Analysis Services 多维模型使用您从关系数据库管理系统导入的�
   
     -   Lesson 10 Complete  
   
-4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”，然后清除“只读”复选框。 单击“确定” 。 将更改应用至此文件夹、子文件夹和文件。  
+4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”，然后清除“只读”复选框。 单击 **“确定”**。 将更改应用至此文件夹、子文件夹和文件。  
   
 5.  启动 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   

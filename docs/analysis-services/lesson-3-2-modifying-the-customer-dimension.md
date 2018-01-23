@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lesson 3-2-修改客户维度
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]有多种不同的方法，可以增加的可用性和多维数据集中的维度的功能。 在本主题的各任务中，您将修改“客户”维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+可以使用许多不同的方式提高多维数据集中的维度的可用性和功能。 在本主题的各任务中，您将修改“客户”维度。  
   
 ## <a name="renaming-attributes"></a>重命名属性  
 可以使用维度设计器的“维度结构”选项卡更改属性名称。  
@@ -190,7 +192,7 @@ ms.lasthandoff: 01/08/2018
   
     现在，**City** 和 **StateProvinceName** 列会显示在“键列”列表中。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
 6.  若要设置“市县”特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -210,7 +212,7 @@ ms.lasthandoff: 01/08/2018
   
     现在，**EnglishCountryRegionName** 和 **StateProvinceName** 列会显示在“键列”列表中。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
 6.  若要设置“省/自治区/直辖市”特性的 **NameColumn** 属性，请在“属性”窗口的 **NameColumn** 字段中单击，然后单击浏览 (**...**) 按钮。  
   
@@ -241,7 +243,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  在“关系类型”列表中，将关系类型设置为“刚性”。  
   
-9. 单击“确定” 。  
+9. 单击 **“确定”**。  
   
 10. 在“文件”  菜单上，单击“全部保存” 。  
   

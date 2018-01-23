@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1e7d887c9c25ee62cf9fe37ca16c9538c3c646db
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本课程中，你学习如何定义计算的多维表达式 (MDX) 表达式或脚本。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
   
 在“多维数据集设计器”中定义新的计算时，会将该计算添加到“多维数据集设计器”的“计算”选项卡上的“脚本组织程序”窗格中，并在“计算表达式”窗格中的计算窗体内显示特定计算类型的字段。 计算将按照它们在“脚本组织程序”窗格中列出的顺序执行。 可以重新排列计算，方法是右键单击特定计算，再选择“上移”或“下移”，或者单击特定的计算，再使用“计算”选项卡的工具栏上的“上移”或“下移”图标。  
   
@@ -52,20 +54,20 @@ ms.lasthandoff: 01/08/2018
   
 本课程包含以下任务：  
   
-[定义计算成员](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+[定义计算的成员](../analysis-services/lesson-6-1-defining-calculated-members.md)  
 在此任务中，将了解定义计算成员。  
   
 [定义命名集](../analysis-services/lesson-6-2-defining-named-sets.md)  
 在此任务中，将了解定义命名集。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 7 课：定义关键绩效指标 (KPI)](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 课： 定义关键绩效指标 &#40;Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[创建命名集](../analysis-services/multidimensional-models/create-named-sets.md)  
-[创建计算成员](../analysis-services/multidimensional-models/create-calculated-members.md)  
+[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[创建命名的集](../analysis-services/multidimensional-models/create-named-sets.md)  
+[创建计算的成员](../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   
   

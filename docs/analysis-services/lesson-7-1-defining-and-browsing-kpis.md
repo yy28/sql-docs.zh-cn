@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>课程 7-1-定义和浏览 Kpi
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]若要定义关键绩效指标 (Kpi)，你首先定义一个 KPI 名称和 KPI 所关联到的度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+若要定义关键绩效指标 (KPI)，应该先定义与 KPI 关联的 KPI 名称和度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：  
   
 -   值表达式  
   
@@ -275,5 +277,5 @@ ms.lasthandoff: 01/08/2018
     将显示 2007 财年第 3 季度北美洲分销商自行车销售的毛利润率。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 8 课：定义操作](../analysis-services/lesson-8-defining-actions.md)  
+[第 8 课： 定义操作](../analysis-services/lesson-8-defining-actions.md)  
   

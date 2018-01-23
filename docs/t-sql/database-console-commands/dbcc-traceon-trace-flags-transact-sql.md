@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4dcffcd589d6ff9bd2b32aa618611dc78e98edea
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c58386532c06b5143f7462357d161d2683b1cbbb
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-跟踪标志 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/09/2018
 |**834**|使用 Microsoft Windows 大型页分配的缓冲池。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/3210239)。<br /><br />**注意：**如果你使用的列存储索引功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，我们不建议开启跟踪标志 834。<br /><br />**作用域**： 全局仅|
 |**845**|启用锁定页上的标准 Sku[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时的服务帐户，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存权限启用已锁定页。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/970070)和上的文档页[服务器内存服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)。<br /><br />**注意：**开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]此行为已启用默认情况下标准 Sku，且不能使用跟踪标志 845。<br /><br />**作用域**： 全局仅|
 |**902**|在安装累积更新或 Service Pack 时，会绕过数据库升级脚本的执行。 如果在脚本升级模式期间遇到错误，它被建议更多指导，请与 Microsoft SQL 客户服务和支持 (CSS) 联系。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/2163980)。<br /><br />**警告：**此跟踪标志旨在用于在脚本升级模式下，故障排除失败的更新的和不支持在生产环境中连续运行。 数据库升级脚本需要对于完整安装的累积更新和 Service Pack 成功执行。 不执行此操作可能会导致意外的问题与您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。<br /><br />**作用域**： 全局仅|
-|**1117**|如果文件组中的文件达到了自动增长阈值，增加的文件组中的所有文件。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项控制此行为，因此跟踪标志 1117年已失效。 有关详细信息，请参阅[ALTER DATABASE 文件和文件组选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).<br /><br />**作用域：**全局仅|
+|**1117**|如果文件组中的文件达到了自动增长阈值，增加的文件组中的所有文件。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 选项控制此行为，因此跟踪标志 1117年已失效。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。<br /><br />**作用域：**全局仅|
 |**1118**|删除服务器上的大多数单页分配，以减少 SGAM 页上的争用。 创建一个新的对象后，默认情况下，从不同 （混合扩展盘区） 的扩展盘区分配的前八页。 此后，如果需要更多的页，将从相同的片区（统一区）分配进行分配。 SGAM 页用于跟踪这些混合区，因此发生大量混合页分配时，可能会很快成为瓶颈。 创建新对象时，此跟踪标志从相同的片区分配所有 8 页，以最大限度降低扫描 SGAM 页的需求。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/328551)。<br /><br />**注意：**开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]由 ALTER DATABASE 设置 MIXED_PAGE_ALLOCATION 选项控制此行为，因此跟踪标志 1118年已失效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**作用域：**全局仅|  
 |**1204**|返回参与死锁的锁的资源和类型，以及受影响的当前命令。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/832524)。<br /><br />**作用域：**全局仅|  
 |**1211**|基于内存不足或基于锁数禁用锁升级。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]不会将行锁或页锁升级到表锁。<br /><br />使用此跟踪标志可生成过多的锁数目。 这样会降低[!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能，或因为内存不足而导致 1204 错误（无法分配锁资源）。<br /><br />如果同时设置了跟踪标志 1211 和 1224，则 1211 优先于 1224。 但是，由于在所有情况下（甚至在内存紧张的情况下）跟踪标志 1211 都禁止升级，因此建议使用 1224。 这有助于在使用多个锁时避免“锁不足”错误。<br /><br />**作用域**： 全局或会话|  
@@ -146,8 +146,8 @@ ms.lasthandoff: 01/09/2018
 |**9939**|启用并行计划和内存优化表和表变量中引用内存优化表或表变量的 DML 操作的并行扫描，只要它们不在 DML 操作的目标[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4013877)。<br /><br />**注意：**如果还可以显式启用跟踪标志 4199，则不需要跟踪标志 9939。<br /><br />**作用域**： 全局或会话或查询|   
 |**10204**|禁用合并/重新压缩在列存储索引重组过程。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，当列存储索引进行重组，自动将任何小压缩行组合并为更大压缩行组，以及为重新压缩拥有大量的任何行组已删除行的新功能。<br /><br />**注意：**跟踪标志 10204 不适用于在内存优化表上创建列存储索引。<br /><br />**作用域**： 全局或会话|   
 |**10316**|在可以创建其他索引[内部内存优化临时临时表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，默认旁边。 如果你有包含不受默认索引的列的特定查询模式可能希望添加其他的。<br /><br />**注意：**系统版本控制临时表的内存优化表旨在提供高事务吞吐量。 请注意，创建附加索引可能会引入的更新或删除当前表中的行的 DML 操作的开销。 与其他索引应旨在右之间找到平衡点临时查询的性能和其他 DML 开销。<br /><br />**作用域**： 全局或会话|
-|**11023**|禁用其中一个的采样率未显式指定作为的一部分的所有后续的统计信息更新的最后一个持久的采样率，用于[更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)语句。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4039284)。<br /><br />**作用域**： 全局|    
-|**11024**|允许在任何分区的修改计数超过本地时触发自动更新统计信息[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4041811)。<br /><br />**作用域**： 全局| 
+|**11023**|禁用其中一个的采样率未显式指定作为的一部分的所有后续的统计信息更新的最后一个持久的采样率，用于[更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)语句。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4039284)。<br /><br />**作用域**： 全局或会话|    
+|**11024**|允许在任何分区的修改计数超过本地时触发自动更新统计信息[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4041811)。<br /><br />**作用域**： 全局或会话| 
   
 ## <a name="remarks"></a>注释  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，有三种类型的跟踪标志： 查询、 会话和全局。 查询跟踪标志处于活动状态的特定查询的上下文。 会话跟踪标志处于活动状态的连接，并且仅对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 某些标志只能作为全局标志启用，而某些标志在全局或会话作用域都可以启用。  

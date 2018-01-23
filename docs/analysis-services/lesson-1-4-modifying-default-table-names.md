@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 726cab6d57171e33d30ea61d397e54f7926cf00b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a3e3a80a6792791a601f83d011429203da79272
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>课程 1-4-修改默认表名称
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]您可以更改的值**FriendlyName**以使它们更轻松地发现和使用的数据源视图中的对象的属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+可以在数据源视图中更改 **FriendlyName** 属性的值，以使它们更易于受人关注和使用。  
   
 在下面的任务中，将从数据源视图中的每个表中删除“**Dim**”和“**Fact**”前缀来更改这些表的友好名称。 这会使将在下一课程中定义的多维数据集和维度对象变得更易于受人关注和使用。  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 7.  在“文件”菜单上，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具栏上，单击“全部保存”，以保存截至目前已在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中进行的更改。 您可以根据需要在此处停止教程学习，并在以后继续。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 2 课：定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[第 2 课︰ 定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
-# <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)]多维仅  
+# <a name="currency-conversions-analysis-services"></a>货币换算 （Analysis Services）
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] 多维  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用一组由多维表达式 (MDX) 脚本引导的功能组合，在支持多种货币的多维数据集中提供货币换算支持。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>定义货币换算  
  您可以使用商业智能向导来为多维数据集定义货币换算功能，也可以使用 MDX 脚本来手动定义货币换算。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
  您必须首先定义至少一个货币维度、至少一个时间维度和至少一个比率度量值组，然后才能使用商业智能向导在多维数据集中定义货币换算。 商业智能向导可以从这些对象中检索相应的数据和元数据，以用于构造提供货币换算功能所需的报表货币维度和 MDX 脚本。  
   
 ### <a name="decisions"></a>决策  

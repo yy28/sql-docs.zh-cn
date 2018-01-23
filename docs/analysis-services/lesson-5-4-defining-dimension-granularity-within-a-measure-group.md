@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>第 5-4-定义度量值组中的维度粒度课
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]针对不同的用途，用户将需要在不同的粒度或特殊性维度事实数据。 例如，分销商或 Internet 销售的销售额数据可以每天记录一次，而销售配额信息则可能按月或按季度级别来记录。 在这些情况下，用户可能需要时间维度针对这些不同的事实数据表具有不同的粒度或详细程度。 尽管可以将新的数据库维度定义为具有这种不同粒度的时间维度，但 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了更简单的方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+用户可能需要针对不同目的定义不同粒度或专一性的事实数据表维度。 例如，分销商或 Internet 销售的销售额数据可以每天记录一次，而销售配额信息则可能按月或按季度级别来记录。 在这些情况下，用户可能需要时间维度针对这些不同的事实数据表具有不同的粒度或详细程度。 尽管可以将新的数据库维度定义为具有这种不同粒度的时间维度，但 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了更简单的方法。  
   
 默认情况下，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，当在度量值组中使用维度时，该维度内的数据粒度将基于该维度的键属性。 例如，当度量值组中包括时间维度并且时间维度的默认粒度为每天，则度量值组中该维度的默认粒度也为每天。 多数情况下这样是合适的，例如本教程中的“Internet 销售”和“分销商销售”度量值组便是恰当的示例。 但是，当其他类型的度量值组（例如“销售配额”或“预算”度量值组）中包括此类维度时，则使用每月粒度或每季度粒度更为合适。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 12. 从“销售配额”度量值组中删除“日历季度”度量值组。  
   
-    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 检测出“日历季度”度量值下的列是包含度量值的列。 但是，在本主题后面部分，您将使用该列和 CalendarYear 列包含的值将“销售配额”度量值组链接到“日期”维度。  
+    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 检测出，“日历季度”度量值下的列是包含度量值的列。 但是，在本主题后面部分，您将使用该列和 CalendarYear 列包含的值将“销售配额”度量值组链接到“日期”维度。  
   
 13. 在“度量值”窗格中，右键单击“销售配额”度量值组，然后单击“新建度量值”。  
   
@@ -145,7 +147,7 @@ ms.lasthandoff: 01/08/2018
   
 9. 验证是否选中了“具体化”复选框。  
   
-10. 单击“确定” 。  
+10. 单击 **“确定”**。  
   
 11. 单击“销售区域”维度和“销售配额 1”度量值组相交处的单元，然后单击浏览按钮 (**…**)。 将打开“定义关系”对话框。  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
 16. 验证是否选中了“具体化”复选框。  
   
-17. 单击“确定” 。  
+17. 单击 **“确定”**。  
   
 18. 删除“日期”多维数据集维度。  
   
@@ -194,7 +196,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  在“创建属性关系”对话框中，“源属性”是“日历季度”。 将“相关属性”设置为“会计季度”。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”**。  
   
     注意此时会出现一条警告消息，指出“日期”维度包含一个或多个冗余属性关系，在将非键属性用作粒度属性时，这些冗余属性关系可能会导致数据无法聚合。  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 01/08/2018
     ![销售配额度量值组维度正确](../analysis-services/media/l5-granularity-7.gif "正确进行维度化的销售配额度量值组")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 6 课：定义计算](../analysis-services/lesson-6-defining-calculations.md)  
+[第 6 课： 定义计算](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [维度关系](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

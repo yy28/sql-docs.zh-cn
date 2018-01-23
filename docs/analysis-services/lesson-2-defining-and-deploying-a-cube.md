@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: caa23a04caddbe488111cd2fcb9cf68eb134b59f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8ccb4cd8fc3b9c71b2edec58b57172c4ecb60515
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 课：定义和部署多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在定义中的数据源视图后你[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中，你就可以定义一个初始[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多维数据集。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义数据源视图后，便可以定义一个初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集。  
   
 可以使用多维数据集向导，通过单个步骤定义一个多维数据集及其维度。 也可以先定义一个或多个维度，然后使用多维数据集向导定义一个使用这些维度的多维数据集。 如果要设计一个复杂的解决方案，通常是先定义维度。 有关详细信息，请参阅 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) 或 [多维模型中的多维数据集](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)。  
   
@@ -40,10 +42,10 @@ ms.lasthandoff: 01/08/2018
 [定义多维数据集](../analysis-services/lesson-2-2-defining-a-cube.md)  
 在该任务中，将使用多维数据集向导来定义一个初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集。  
   
-[向维度添加属性](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[将特性添加到维度](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
 在该任务中，将向您创建的维度中添加属性。  
   
-[检查多维数据集和维度属性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[查看多维数据集和维度属性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
 在该任务中，将检查您使用多维数据集向导定义的多维数据集的结构。  
   
 [部署 Analysis Services 项目](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
@@ -53,14 +55,14 @@ ms.lasthandoff: 01/08/2018
 在该任务中，将使用 Excel 或来 MDX 查询设计器来浏览多维数据集和维度数据。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 3 课：修改度量值、属性和层次结构](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+[第 3 课︰ 修改度量值、 属性和层次结构](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [多维模型中的多维数据集](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+[配置 Analysis Services 项目属性 &#40;SSDT &#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
 [生成 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
 [部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4d2a87b4e387d48c6f9537ee402a10a253bf202
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>课程 2-3-添加特性的维度
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]既然你已经定义维度，你可以具有表示维度中的每个数据元素的特性来填充它们。 属性通常基于数据源视图中的字段。 在向维度中添加属性时，您可以在数据源视图中包括来自任何表的字段。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+现在，您已经定义了维度，可以用表示维度中各数据元素的属性填充这些维度。 属性通常基于数据源视图中的字段。 在向维度中添加属性时，您可以在数据源视图中包括来自任何表的字段。  
   
 在此任务中，将使用维度设计器向“客户”和“产品”维度中添加属性。 “客户”维度将包括基于“客户”和“地域”表中的字段的属性。  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **ListPrice**  
   
-    -   **大小**  
+    -   **Size**  
   
     -   **SizeRange**  
   
@@ -125,12 +127,12 @@ ms.lasthandoff: 01/08/2018
   
     -   **EndDate**  
   
-    -   **“状态”**  
+    -   **状态**  
   
 5.  在“文件”菜单上，单击“全部保存”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[检查多维数据集和维度属性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[查看多维数据集和维度属性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [维度特性属性参考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

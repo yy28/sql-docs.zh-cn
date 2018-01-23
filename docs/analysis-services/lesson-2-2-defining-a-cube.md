@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>课程 2-2-定义多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]多维数据集向导将帮助你定义的度量值组和维度的多维数据集。 在下面的任务中，将使用维度向导来构建多维数据集。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+多维数据集向导可以帮助您为多维数据集定义度量值组和维度。 在下面的任务中，将使用维度向导来构建多维数据集。  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>定义多维数据集及其属性  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 15. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[向维度添加属性](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[将特性添加到维度](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [多维模型中的多维数据集](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>使用 Docker 运行 SQL Server 2017 容器映像
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > 本快速入门专门重点介绍使用 mssql-服务器-**linux**映像。 未涵盖的 Windows 映像，但你可以了解有关它在[mssql server 的 windows 开发人员 Docker Hub 页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 先决条件
 
 - 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅[安装 Docker](https://docs.docker.com/engine/installation/)。
 - 至少 2 GB 的磁盘空间
@@ -68,16 +68,19 @@ ms.lasthandoff: 12/23/2017
    ```
 
    > [!NOTE]
+   > 密码应遵循 SQL Server 默认密码策略，否则为该容器不可以安装 SQL server，并将停止工作。 默认情况下，密码必须是至少 8 个字符且包含以下四个集的三类字符： 大写字母、 小写字母，以 10 为基数数字和符号。 你可以通过执行检查错误日志[docker 日志](https://docs.docker.com/engine/reference/commandline/logs/)命令。
+
+   > [!NOTE]
    > 默认情况下，这将创建一个容器的 SQL Server 2017 开发人员版。 在容器中运行生产版本的过程是略有不同。 有关详细信息，请参阅[运行容器映像的生产](sql-server-linux-configure-docker.md#production)。
 
    下表提供了参数在前面的说明`docker run`示例：
 
    | 参数 | Description |
    |-----|-----|
-   | **-e ACCEPT_EULA = Y** |  设置**ACCEPT_EULA**变量为任何值，以确认你接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
-   | **-e MSSQL_SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定你自己的强密码至少 8 个字符并达到[SQL Server 密码要求](../relational-databases/security/password-policy.md)。 SQL Server 映像的必需设置。 |
+   | **-e 'ACCEPT_EULA=Y'** |  设置**ACCEPT_EULA**变量为任何值，以确认你接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定你自己的强密码至少 8 个字符并达到[SQL Server 密码要求](../relational-databases/security/password-policy.md)。 SQL Server 映像的必需设置。 |
    | **-p 1401:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听 TCP 1433 容器中，并且这公开给端口 1401，主机上。 |
-   | **-名称 sql1** | 指定容器，而不是一个随机生成的自定义名称。 如果你运行多个容器，你无法重用此相同的名称。 |
+   | **--name sql1** | 指定容器，而不是一个随机生成的自定义名称。 如果你运行多个容器，你无法重用此相同的名称。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 1. 若要查看你的 Docker 容器，请使用`docker ps`命令。
@@ -241,7 +244,7 @@ SELECT @@SERVERNAME,
 - [Visual Studio 代码](sql-server-linux-develop-use-vscode.md)
 - [在 Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server 操作 Studio （预览版）](../sql-operations-studio/what-is.md)
-- [mssql cli （预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>删除容器
 

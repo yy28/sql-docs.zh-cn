@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>课程 1-1-创建 Analysis Services 项目
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下面的任务中，你使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]创建新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目名为**Analysis Services Tutorial**，具体取决[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目模板。 “  项目”是相关对象的集合。 项目存在于解决方案中，而解决方案包括一个或多个项目。 有关详细信息，请参阅 [创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在以下任务中，将使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 根据 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板创建名为 **Analysis Services Tutorial**的新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目。 “  项目”是相关对象的集合。 项目存在于解决方案中，而解决方案包括一个或多个项目。 有关详细信息，请参阅[创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>创建新的 Analysis Services 项目  
   
@@ -41,11 +43,11 @@ ms.lasthandoff: 01/08/2018
 您已经基于 **“Analysis Services 多维和数据挖掘项目”** 模板，在同样命名为 **Analysis Services Tutorial** 的新解决方案中成功创建了 **Analysis Services Tutorial**项目。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[定义数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
+[定义了一个数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server Data Tools 创建多维模型 (SSDT)](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[创建 Analysis Services 项目 &#40;SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

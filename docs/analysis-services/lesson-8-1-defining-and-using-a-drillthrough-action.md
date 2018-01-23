@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c409654fe8ae5ae504dcf4cad42c552ccb11ca22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>课程 8-1-定义和使用钻取操作
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]不正确筛选可能会导致查询性能低下的查询返回的数据的事实维度标注事实数据。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
   
 在本主题的任务中，将定义钻取操作，以返回通过 Internet 对客户进行销售的订单详细信息。  
   
@@ -150,7 +152,7 @@ ms.lasthandoff: 01/08/2018
     ![Adam Powell 发往订单](../analysis-services/media/l8-action8.gif "到 Adam Powell 已发货的订单")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [操作（Analysis Services - 多维数据）](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

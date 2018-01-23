@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd66b2c32da2194dbfbfd370db8592cd9494cb34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8ddbefdcbc54c076c801e5f4d83e107e48ac5ba9
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>Lesson 3-5-浏览已部署的多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在下面的任务中，你浏览[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程多维数据集。 因为我们的分析将比较多个维度的度量值，所以，您将使用 Excel 数据透视表来浏览您的数据。 使用数据透视表使您可以将客户、日期和产品信息放置于不同的轴上，这样，您可以在查看时看到在特定的时间段、客户人口统计信息和产品系列上 Internet 销售是如何变化的。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在下面的任务中，将浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集。 因为我们的分析将比较多个维度的度量值，所以，您将使用 Excel 数据透视表来浏览您的数据。 使用数据透视表使您可以将客户、日期和产品信息放置于不同的轴上，这样，您可以在查看时看到在特定的时间段、客户人口统计信息和产品系列上 Internet 销售是如何变化的。  
   
 ### <a name="to-browse-the-deployed-cube"></a>浏览部署的多维数据集  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/08/2018
     ![Internet 销售区域和产品线](../analysis-services/media/l3-cube-browser-finish.gif "Internet 销售区域和产品线")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 4 课：定义高级属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+[第 4 课： 定义高级的属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
   

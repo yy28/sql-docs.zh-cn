@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71f92a11e25c8e766871fd682e77220bb9d36b57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>课程 10-授予处理数据库权限
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]安装的实例之后[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的所有成员[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]该实例中的服务器管理员角色具有服务器级权限来执行的实例中的任何任务[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在安装 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例后，该实例中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器管理员角色的所有成员都将具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中执行任何任务的服务器范围权限。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。  
   
 服务器管理员角色的成员可通过使用户成为该角色的成员，在服务器范围的基础上授予用户管理访问权限。 通过在数据库级别授予用户有限或完整的管理或访问权限，服务器管理员角色的成员还可以在更为有限的基础上授予用户访问权限。 有限的管理权限包括在数据库、多维数据集或维度级别处理或读取定义的权限。  
   
@@ -60,10 +62,10 @@ ms.lasthandoff: 01/08/2018
     现在，您已经成功定义和部署了“Process Database Objects”安全角色。 将多维数据集部署到生产环境之后，所部署的多维数据集的管理员可以根据需要向此角色中添加用户，以便将处理责任委派给具体用户。  
   
 > [!NOTE]  
-> 通过下载和安装示例，可以获得第 10 课中使用的完整项目。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../analysis-services/install-sample-data-and-projects.md)。  
+> 通过下载和安装示例，可以获得第 10 课中使用的完整项目。 有关详细信息，请参阅 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[角色和权限 (Analysis Services)](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[角色和权限 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

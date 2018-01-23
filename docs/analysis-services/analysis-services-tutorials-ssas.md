@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教程 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]本部分包含有关 SQL Server Analysis Services 教程。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+本部分包含有关 SQL Server Analysis Services 教程。  
   
 [表格建模（Adventure Works 教程）](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 本教程提供有关如何通过使用 SQL Server Data Tools (SSDT) 来针对虚构公司 Adventure Works 编写基本的 Analysis Services 表格模型的课程。  
   
-[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 本教程教基本技能和背后 SSDT 中的多维建模概念。 完成后，你将拥有基于 Adventure Works 数据，你可以从 Excel、 Reporting Services 或任何其他客户端应用程序连接到 Analysis Services 访问一个多维数据集数据库。  
   
 [数据挖掘](../analysis-services/data-mining-tutorials-analysis-services.md)  

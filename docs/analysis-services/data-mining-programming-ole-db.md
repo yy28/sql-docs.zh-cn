@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fae54870409e11ed94050dd621784e57625eb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6d0c4561b4c913799857774fa19dd35999614d1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming---ole-db"></a>数据挖掘编程的 OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]中的数据挖掘功能[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]符合[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for 在 2000 年 6 月发布的数据挖掘 1.0 规范。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  中的数据挖掘功能[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]符合[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for 在 2000 年 6 月发布的数据挖掘 1.0 规范。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 扩展了该规范，包括添加新的架构行集、在现有架构行集中添加列以及向数据挖掘扩展插件 (DMX) 语言添加用于创建和管理挖掘结构的语法。  
   

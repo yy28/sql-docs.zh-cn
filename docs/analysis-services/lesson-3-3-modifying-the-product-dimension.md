@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lesson 3-3-修改产品维度
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]在本主题中的任务，使用命名的计算以提供的产品系列的更具描述性名称，在产品维度中，定义层次结构并指定层次结构 (All) 成员名称。 还可以按显示文件夹组合各个属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在本主题下的任务中，将使用命名计算为产品系列提供更具说明性的名称，在“产品”维度中定义一个层次结构，并为该层次结构指定“(全部)”成员名称。 还可以按显示文件夹组合各个属性。  
   
 ## <a name="adding-a-named-calculation"></a>添加命名计算  
 您可以向数据源视图内的表中添加命名计算。 在下面的任务中，将创建一个用来显示产品系列完整名称的命名计算。  
@@ -112,7 +114,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **Safety Stock Level**  
   
-    -   **大小**  
+    -   **Size**  
   
     -   **Size Range**  
   
@@ -142,7 +144,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **开始日期**  
   
-    -   **“状态”**  
+    -   **状态**  
   
 6.  在“属性”窗口的“AttributeHierarchyDisplayFolder”属性单元中，键入 **History**。  
   
@@ -169,7 +171,7 @@ ms.lasthandoff: 01/08/2018
   
     因为各成员之间的关系会随时间变化，所以在“关系类型”列表中，将关系类型设置保留为“柔性”。 例如，产品型号可能会最终移动到另一个产品系列中。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”**。  
   
 5.  在“文件”  菜单上，单击“全部保存” 。  
   
@@ -189,7 +191,7 @@ ms.lasthandoff: 01/08/2018
 [修改“日期”维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[在数据源视图中定义命名计算 (Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[在数据源视图 &#40; 中定义命名的计算Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [创建用户定义层次结构](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [配置属性层次结构的“(全部)”级别](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

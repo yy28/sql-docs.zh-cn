@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 62bb3df1044b6acc580daefc75ace88bca441e53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -145,7 +145,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     | SWITCH [ PARTITION source_partition_number_expression ]  
         TO target_table   
         [ PARTITION target_partition_number_expression ]  
-        [ WITH ( <low_lock_priority_wait> ) ]  
+        [ WITH ( <low_priority_lock_wait> ) ]  
     | SET   
         (  
             [ FILESTREAM_ON =   
@@ -318,26 +318,27 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 数据类型**文本**， **ntext**和**映像**列可以更改仅在以下方面：  
   
-    -   **文本**到**varchar （max)**， **nvarchar (max)**，或**xml**  
+-   **文本**到**varchar （max)**， **nvarchar (max)**，或**xml**  
   
-    -   **ntext**到**varchar （max)**， **nvarchar (max)**，或**xml**  
+-   **ntext**到**varchar （max)**， **nvarchar (max)**，或**xml**  
   
-    -   **映像**到**varbinary （max)**  
+-   **image** to **varbinary(max)**  
   
 更改某些数据类型可能导致更改相关数据。 例如，更改**nchar**或**nvarchar**列**char**或**varchar**可能会导致的扩展字符的转换。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 降低列的精度或减少小数位数可能导致数据截断。  
   
-     The data type of a column of a partitioned table cannot be changed.  
+> [!NOTE]
+> 无法更改已分区表的列的数据类型。  
+>  
+> 不能更改索引中包含的列的数据类型，除非该列为**varchar**， **nvarchar**，或**varbinary**数据类型，并且新的大小为等于或更大比旧的大小。  
+>  
+> 无法从更改包含在主键约束，该列**NOT NULL**到**NULL**。  
   
- 不能更改索引中包含的列的数据类型，除非该列为**varchar**， **nvarchar**，或**varbinary**数据类型，并且新的大小为等于或更大比旧的大小。  
-  
- 不能包含在主键约束，将列更改从**NOT NULL**到**NULL**。  
-  
- 如果正在修改列已加密使用加密，你可以更改该数据类型为 （如整型转换为 BIGINT） 兼容的数据类型，但不是能更改任何加密设置。  
+如果正在修改列已加密使用`ENCRYPTED WITH`，可以将该数据类型更改为兼容的数据类型 （如整型转换为 BIGINT），但不能更改任何加密设置。  
   
  column_name  
  要更改、添加或删除的列的名称。 *column_name*最多 128 个字符。 为新的列， *column_name*可以为列创建的省略**时间戳**数据类型。 名称**时间戳**如果没有，则使用*column_name*为指定**时间戳**数据类型列。  
   
- [ *type_schema_name***。** ]*类型 _ 名称*  
+ [ *type_schema_name***.** ] *type_name*  
  更改后的列的新数据类型或添加的列的数据类型。 *类型 _ 名称*不能为现有列的已分区表指定。 *类型 _ 名称*可以是以下任何一个：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。  
@@ -349,19 +350,14 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 以下是条件*type_name*的更改的列：  
   
 -   以前的数据类型必须可以隐式转换为新数据类型。  
-  
 -   *类型 _ 名称*不能为**时间戳**。  
-  
 -   对于 ALTER COLUMN，ANSI_NULL 默认值始终为 ON；如果没有指定，列可为空。  
-  
 -   对于 ALTER COLUMN，ANSI_PADDING 填充始终为 ON。  
-  
 -   如果已修改的列是标识列， *new_data_type*必须支持标识属性是数据类型。  
-  
 -   当前的 SET ARITHABORT 设置将被忽略。 ALTER TABLE 的操作方式与 ARITHABORT 设置为 ON 时相同。  
   
 > [!NOTE]  
->  如果未指定 COLLATE 子句，则更改列的数据类型将导致更改数据库的默认排序规则。  
+> 如果未指定 COLLATE 子句，则更改列的数据类型将导致更改数据库的默认排序规则。  
   
  *精度*  
  指定的数据类型的精度。 有关有效的精度值的详细信息，请参阅[精度、 小数位数和长度 &#40;Transact SQL &#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
@@ -369,7 +365,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
  *小数位数*  
  是指定数据类型的小数位数。 有关有效的缩放值的详细信息，请参阅[精度、 小数位数和长度 &#40;Transact SQL &#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- **最大值**  
+ **max**  
  仅适用于**varchar**， **nvarchar**，和**varbinary**数据类型用于存储 2 ^31-1 个字节的字符，二进制数据和 Unicode 数据。  
   
  *xml_schema_collection*  
@@ -384,12 +380,10 @@ COLLATE \< *collation_name* > 指定更改的列的新排序规则。 如果未�
  如果出现以下一种或多种情况，则 ALTER COLUMN 不能更改排序规则：  
   
 -   CHECK 约束、FOREIGN KEY 约束或计算列引用了更改后的列。  
-  
 -   已为列创建了索引、统计信息或全文检索。 如果更改了列的排序规则，则将删除为更改后的列自动创建的统计信息。  
-  
 -   架构绑定视图或函数引用了列。  
   
- 有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。  
+有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。  
   
 NULL | NOT NULL  
  指定列是否可接受空值。 如果列不允许空值，则只有在指定了默认值或表为空的情况下，才能用 ALTER TABLE 语句添加该列。 只有同时指定了 PERSISTED 时，才能为计算列指定 NOT NULL。 如果新列允许 Null 值，但没有指定默认值，则新列在表中的每一行都包含一个 Null 值。 如果新列允许 Null 值，并且指定了新列的默认值，则可以使用 WITH VALUES 将默认值存储到表中每个现有行的新列中。  
@@ -398,7 +392,7 @@ NULL | NOT NULL
   
  在 ALTER COLUMN 语句中指定 NULL，可以强制 NOT NULL 列允许 Null 值，但 PRIMARY KEY 约束中的列除外。 只有列中不包含空值时，才可以在 ALTER COLUMN 中指定 NOT NULL。 必须将 Null 值更新为某个值后，才允许执行 ALTER COLUMN NOT NULL 语句，例如：  
   
-```  
+```sql  
 UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;  
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
@@ -408,7 +402,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  如果添加具有用户定义的数据类型的列，则建议您将该列定义为与用户定义的数据类型的为 Null 性相同，并为该列指定一个默认值。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。  
   
 > [!NOTE]  
->  如果为 NULL 或不使用 ALTER COLUMN 指定 NULL *new_data_type* [(*精度*[，*缩放*])] 还必须指定。 如果未更改数据类型、精度和小数位数，则指定当前的列值。  
+> 如果为 NULL 或不使用 ALTER COLUMN 指定 NULL *new_data_type* [(*精度*[，*缩放*])] 还必须指定。 如果未更改数据类型、精度和小数位数，则指定当前的列值。  
   
  [ {ADD | DROP} ROWGUIDCOL ]  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -455,11 +449,11 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
 -   当检查约束引用了列，并且更改操作在限制列的精度（数值或日期时间）时，不支持联机更改。  
   
--   **Low_priority_lock_wait**选项不能使用与联机 alter 列。  
+-   `WAIT_AT_LOW_PRIORITY` 选项不能与联机更改列同时使用。  
   
--   ALTER COLUMN … 联机更改列不支持 ADD/DROP PERSISTED。  
+-   `ALTER COLUMN … ADD/DROP PERSISTED`不支持联机 alter 列。  
   
--   ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION 不受联机更改列的影响。  
+-   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION`不受影响的联机 alter 列。  
   
 -   启用了更改跟踪或作为合并复制的发布者时，联机更改列不支持对表进行更改。  
   
@@ -471,7 +465,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
 -   联机更改列不支持同时更改多个列。  
   
--   联机 alter 列不起作用对于系统版本控制的临时表。 无论为 ONLINE 选项指定的值是什么，都不会 联机执行 ALTER 列。  
+-   联机 alter 列不起作用对于系统版本控制的临时表。 无论为 ONLINE 选项指定的值不是执行 ALTER 列。  
   
 联机更改列具有与联机索引重新生成类似的要求、限制和功能。 这包括：  
   
@@ -498,12 +492,12 @@ WITH CHECK | WITH NOCHECK
   
  设置 SYSTEM_VERSIONING 参数结合使用此参数，以便在现有的表的系统版本控制。 有关详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和[Getting Started with Azure SQL 数据库中的临时表](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。  
   
- 在[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]，用户将能够将标记与一个或两个时间段列**HIDDEN**标志来隐式隐藏这些列以便**选择\*FROM**  *\<表 >*不返回这些列的值。 默认情况下，未隐藏时间段列。 为了便于使用隐藏的列必须显式包含在直接引用临时表的所有查询。  
+ 在[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]，用户将能够将标记与一个或两个时间段列**HIDDEN**标志来隐式隐藏这些列以便 **选择\*FROM * * *\<表 >*不返回这些列的值。 默认情况下，未隐藏时间段列。 为了便于使用隐藏的列必须显式包含在直接引用临时表的所有查询。  
   
  DROP  
  指定的一个或多个列定义、 计算的列定义或表约束将被删除，或者若要删除的列，则系统将使用系统版本控制的规范。  
   
- 约束*constraint_name*  
+ CONSTRAINT *constraint_name*  
  指定*constraint_name*从表中删除。 可以列出多个约束。  
   
  约束的用户定义的或系统提供的名称可以通过查询来确定**sys.check_constraint**， **sys.default_constraints**， **sys.key_constraints**，和**sys.foreign_keys**目录视图。  
@@ -531,7 +525,7 @@ WITH CHECK | WITH NOCHECK
   
  将删除系统将使用系统版本控制的列的规范。  
   
- 与\<drop_clustered_constraint_option >  
+ WITH \<drop_clustered_constraint_option>  
  指定设置一个或多个删除聚集约束选项。  
   
  MAXDOP = *max_degree_of_parallelism*  
@@ -543,7 +537,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism*可以是以下值之一：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -573,7 +567,7 @@ WITH CHECK | WITH NOCHECK
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅[版本和 SQL Server 2016 的支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- 将移至 { *partition_scheme_name***(***column_name* [1**，** ... *n* ] **)** | *文件组* | **"**默认**"** }  
+ MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定一个位置以移动聚集索引的叶级别中的当前数据行。 表被移至新位置。 此选项仅适用于创建聚集索引的约束。  
@@ -605,12 +599,12 @@ WITH CHECK | WITH NOCHECK
   
  若要启用更改跟踪，表必须具有一个主键。  
   
- 与**(** TRACK_COLUMNS_UPDATED  **=**  {ON |**OFF** } **)**  
+ WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否跟踪哪些更改跟踪列已更新。 默认值为 OFF。  
   
- 交换机 [分区*source_partition_number_expression* ] TO [ *schema_name***。** ] *target_table* [分区*target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  用下列方式之一切换数据块：  
@@ -639,7 +633,7 @@ WITH CHECK | WITH NOCHECK
   
  为生成的非聚集列存储索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 CTP1，和之前版本 V12 已以只读格式的 SQL 数据库。 可以执行任何分区操作之前，则必须为当前格式 （这是可更新） 重新生成非聚集列存储索引。  
   
- 设置**(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**默认**"** | **"**NULL**"** }**)**  
+ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**default**"** | **"**NULL**"** }**)**  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 |  
   
  指定 FILESTREAM 数据的存储位置。  
@@ -654,7 +648,7 @@ WITH CHECK | WITH NOCHECK
   
  **"**NULL**"**指定将删除对表的 FILESTREAM 文件组的所有引用。 首先必须删除所有 FILESTREAM 列。 你必须使用设置 FILESTREAM_ON**="**NULL**"**中删除所有与表相关联的 FILESTREAM 数据。  
   
- 设置**(** SYSTEM_VERSIONING  **=**  {OFF |ON [(HISTORY_TABLE = schema_name。 history_table_name [，DATA_CONSISTENCY_CHECK = { **ON** |关闭}]）]} **)**  
+ 设置**(** SYSTEM_VERSIONING  **=**  {OFF |ON [(HISTORY_TABLE = schema_name。 history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  禁用表的系统版本控制，或者启用系统版本控制的表。 若要启用系统版本控制的表，系统将验证满足了数据类型、 可为 null 约束和系统版本控制的主键约束要求。 如果未使用 HISTORY_TABLE 参数，系统将生成架构相匹配的当前表，创建两个表之间的链接的一个新的历史记录表，并使系统可以在历史记录表中的当前表中记录每个记录的历史记录。 此历史记录表的名称将`MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果 HISTORY_TABLE 自变量用于创建的链接并使用现有的历史记录表，当前表和指定的表之间创建链接。 创建现有历史记录表的链接时，可以选择执行数据一致性检查。 此数据一致性检查可确保现有记录不重叠。 系统默认执行数据一致性检查。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
@@ -739,7 +733,7 @@ TABLE
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
  **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 列集的名称。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 如果某个表包含稀疏列，则不能向该表添加列集。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。  
+ 列集的名称。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 如果某个表包含稀疏列，则不能向该表添加列集。 有关列集的详细信息，请参阅[使用列集](../../relational-databases/tables/use-column-sets.md)。  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -765,7 +759,7 @@ TABLE
   
  **为表启用 Stretch Database**  
   
- 如果你启用 Stretch 的表通过指定`ON`，你还必须指定`MIGRATION_STATE = OUTBOUND`开始将数据迁移立即或`MIGRATION_STATE = PAUSED`以推迟数据迁移。 默认值是 `MIGRATION_STATE = OUTBOUND`。 有关启用 Stretch 的表的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
+ 如果你启用 Stretch 的表通过指定`ON`，你还必须指定`MIGRATION_STATE = OUTBOUND`开始将数据迁移立即或`MIGRATION_STATE = PAUSED`以推迟数据迁移。 默认值是`MIGRATION_STATE = OUTBOUND`。 有关启用 Stretch 的表的详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
  **先决条件**。 为表启用 Stretch 之前，必须在服务器和数据库上启用 Stretch。 有关详细信息，请参阅 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。  
   
@@ -797,7 +791,7 @@ ALTER TABLE \<table_name>
   
  禁用 Stretch 不会删除远程表。 如要删除远程表，必须使用 Azure 管理门户进行删除。  
   
-[FILTER_PREDICATE = {null |*谓词*}]  
+[ FILTER_PREDICATE = { null | *predicate* } ]  
  **适用于**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  （可选） 指定筛选器谓词以选择要从表包含历史和当前数据迁移的行。 该谓词必须调用的确定性内联表值函数。 有关详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)和[选择要使用筛选器函数 &#40; 迁移的行Stretch Database &#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).   
@@ -823,14 +817,14 @@ ALTER TABLE \<table_name>
 WAIT_AT_LOW_PRIORITY  
  **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于 WA`IT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。  
+ 联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。  
   
- MAX_DURATION =*时间*[**分钟**]  
+ MAX_DURATION = *time* [**MINUTES** ]  
  **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  在等待时间 （以分钟为单位指定的整数值），**交换机**或执行 DDL 命令时，联机索引重新生成锁将等待低优先级。 如果该操作被阻止的**MAX_DURATION**时间、 之一**ABORT_AFTER_WAIT**将执行操作。 **MAX_DURATION**时间始终是以分钟和 word**分钟**可以省略。  
   
- ABORT_AFTER_WAIT = [**NONE** | **自助** | **BLOCKERS** }]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  无  
@@ -849,7 +843,7 @@ WAIT_AT_LOW_PRIORITY
   
  有条件地删除列或约束，仅当它已存在。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  若要添加新的数据行，使用[插入](../../t-sql/statements/insert-transact-sql.md)。 若要删除的数据行，使用[删除](../../t-sql/statements/delete-transact-sql.md)或[TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 若要更改现有行中的值，使用[更新](../../t-sql/queries/update-transact-sql.md)。  
   
  如果过程高速缓存中存在引用表的执行计划，ALTER TABLE 会将这些执行计划标记为下次执行时重新编译。  
@@ -858,10 +852,10 @@ WAIT_AT_LOW_PRIORITY
  可以通过在 ALTER COLUMN 子句中指定列数据类型的新大小来更改列的长度、精度或小数位数。 如果列中存在数据，则新大小不能小于数据的最大大小。 此外，不能将列定义在索引中，除非列是**varchar**， **nvarchar**，或**varbinary**数据类型和索引并不是主键的结果约束。 请参见示例 P。  
   
 ## <a name="locks-and-alter-table"></a>锁和 ALTER TABLE  
- ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 ALTER TABLE…SWITCH 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响在非常大的表中，如删除列，或在某些版本上的所有行的更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，添加具有默认值的 NOT NULL 列，可能需要很长时间才能完成并生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
+ ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在`ALTER TABLE…SWITCH`操作，锁获取对源和目标表。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响在非常大的表中，如删除列，或在某些版本上的所有行的更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，添加具有默认值的 NOT NULL 列，可能需要很长时间才能完成并生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以联机操作的形式添加 NOT NULL 列  
- 从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Enterprise Edition 中，添加具有默认值的 NOT NULL 列一个联机操作的默认值时*运行时常量*。 这意味着不论表中有多少行都几乎可以在瞬间完成该操作。 这是因为表中的现有行在操作期间不更新；相反，默认值仅存储在该表的元数据中，并且按需在访问这些行的查询中查找该值。 这种行为是自动的；无需在 ADD COLUMN 语法之外额外执行其他语法来执行该联机操作。 运行时常量是一个表达式，它可以在运行时为表中的每行生成相同的值，而与其确定性无关。 例如，常量表达式“My temporary data”或系统函数 GETUTCDATETIME() 均为运行时常量。 相反，函数 NEWID() 或 NEWSEQUENTIALID() 就不是运行时常量，因为这些函数为表中每行都生成唯一值。 添加具有非运行时常量的默认值的 NOT NULL 列始终脱机执行，并且在该操作期间需要一个排他 (SCH-M) 锁。  
+ 从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Enterprise Edition 中，添加具有默认值的 NOT NULL 列一个联机操作的默认值时*运行时常量*。 这意味着不论表中有多少行都几乎可以在瞬间完成该操作。 这是因为表中的现有行在操作期间不更新；相反，默认值仅存储在该表的元数据中，并且按需在访问这些行的查询中查找该值。 这种行为是自动的；无需在 ADD COLUMN 语法之外额外执行其他语法来执行该联机操作。 运行时常量是一个表达式，它可以在运行时为表中的每行生成相同的值，而与其确定性无关。 例如，常量表达式“My temporary data”或系统函数 GETUTCDATETIME() 均为运行时常量。 相比之下，函数`NEWID()`或`NEWSEQUENTIALID()`不运行时常量，因为针对表中的每一行生成唯一值。 添加具有非运行时常量的默认值的 NOT NULL 列始终脱机执行，并且在该操作期间需要一个排他 (SCH-M) 锁。  
   
  尽管现有行引用元数据中存储的值，但对于插入的任何新行，默认值存储在该行中，并且不为该列指定其他值。 更新现有行时（即便在 UPDATE 语句中未指定实际列），或是重新生成表或聚集索引时，存储在元数据中的默认值将移至该行。  
   
@@ -886,21 +880,16 @@ WAIT_AT_LOW_PRIORITY
  如果删除了创建聚集索引的约束，则存储在聚集索引叶级别的数据行将存储在非聚集表中。 通过指定 MOVE TO 选项，可以在单个事务中删除聚集索引并将生成的表移动到另一个文件组或分区方案。 MOVE TO 选项有以下限制：  
   
 -   MOVE TO 对索引视图或非聚集索引无效。  
-  
 -   分区方案或文件组必须已经存在。  
-  
 -   如果没有指定 MOVE TO，则表将位于为聚集索引定义的同一分区方案或文件组中。  
   
 当删除聚集的索引时，你可以指定联机 **=** 上选项，以便 DROP INDEX 事务不会阻止查询和修改对基础数据和关联的非聚集的索引。  
   
- 联机 **=** 上具有以下限制：  
-  
+联机 **=** 上具有以下限制：  
+ 
 -   联机 **=**  ON 无效，不能也被禁用的聚集索引。 必须使用联机删除禁用的索引 **=**  OFF。  
-  
 -   一次只能删除一个索引。  
-  
 -   联机 **=**  ON 对索引的视图、 非聚集索引或本地临时表的索引无效。  
-  
 -   联机 **=**  ON 不是有效的列存储索引。  
   
 删除聚集索引时，需要大小等于现有聚集索引的大小的临时磁盘空间。 操作完成后，即可释放此额外空间。  
@@ -919,9 +908,7 @@ WAIT_AT_LOW_PRIORITY
  以下限制适用于已分区表：  
   
 -   如果表具有非对齐索引，则无法更改单个分区的压缩设置。  
-  
 -   ALTER TABLE\<表 > 重新生成分区...语法重新生成指定的分区。  
-  
 -   ALTER TABLE\<表 > REBUILD WITH...语法重新生成所有分区。  
   
 ## <a name="dropping-ntext-columns"></a>删除 NTEXT 列  
@@ -934,14 +921,12 @@ WAIT_AT_LOW_PRIORITY
  ALTER TABLE 语句只允许两部分的表名称 (schema.object)。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用以下格式指定表名称时，在编译时会出现错误 117。  
   
 -   server.database.schema.table  
-  
 -   .database.schema.table  
-  
 -   ..schema.table  
   
 在早期版本中指定格式 server.database.schema.table 会返回错误 4902。 指定格式 .database.schema.table 或 ..schema.table 则会成功。  
   
- 要解决此问题，请不要使用 4 部分的前缀。  
+要解决此问题，请不要使用 4 部分的前缀。  
   
 ## <a name="permissions"></a>权限  
  需要对表的 ALTER 权限。  
@@ -968,18 +953,17 @@ WAIT_AT_LOW_PRIORITY
 #### <a name="a-adding-a-new-column"></a>A. 添加新列  
  以下示例将添加一个允许 Null 值的列，而且没有通过 DEFAULT 定义提供的值。 在该新列中，每一行都将有 `NULL` 值。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exa (column_a INT) ;  
 GO  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;  
 GO  
-  
 ```  
   
 #### <a name="b-adding-a-column-with-a-constraint"></a>B. 添加包含约束的列  
  以下示例将添加一个包含 `UNIQUE` 约束的新列。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exc (column_a INT) ;  
 GO  
 ALTER TABLE dbo.doc_exc ADD column_b VARCHAR(20) NULL   
@@ -994,7 +978,7 @@ GO
 #### <a name="c-adding-an-unverified-check-constraint-to-an-existing-column"></a>C. 在现有列中添加一个未经验证的 CHECK 约束  
  下面的示例将在表中的现有列中添加一个约束。 该列包含一个违反约束的值。 因此，将使用 `WITH NOCHECK` 以避免根据现有行验证该约束，从而允许添加该约束。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exd ( column_a INT) ;  
 GO  
 INSERT INTO dbo.doc_exd VALUES (-1) ;  
@@ -1011,7 +995,7 @@ GO
 #### <a name="d-adding-a-default-constraint-to-an-existing-column"></a>D. 在现有列中添加一个 DEFAULT 约束  
  下面的示例将创建一个包含两列的表，在第一列插入一个值，另一列保持为 NULL。 然后在第二列中添加一个 `DEFAULT` 约束。 验证是否已应用了默认值，另一个值是否已插入第一列以及是否已查询表。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exz ( column_a INT, column_b INT) ;  
 GO  
 INSERT INTO dbo.doc_exz (column_a)VALUES ( 7 ) ;  
@@ -1031,7 +1015,7 @@ GO
 #### <a name="e-adding-several-columns-with-constraints"></a>E. 添加多个包含约束的列  
  以下示例将添加多个包含随新列定义的约束的列。 第一个新列具有 `IDENTITY` 属性。 表中的每一行在标识列中都有新的增量值。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exe ( column_a INT CONSTRAINT column_a_un UNIQUE) ;  
 GO  
 ALTER TABLE dbo.doc_exe ADD   
@@ -1068,8 +1052,7 @@ GO
 #### <a name="f-adding-a-nullable-column-with-default-values"></a>F. 添加包含默认值的可为空的列  
  下面的示例将添加一个包含 `DEFAULT` 定义的可为 Null 的列，并使用 `WITH VALUES` 为表中的各个现有行提供值。 如果没有使用 WITH VALUES，那么每一行的新列中都将包含 NULL 值。  
   
-```  
-  
+```sql  
 CREATE TABLE dbo.doc_exf ( column_a INT) ;  
 GO  
 INSERT INTO dbo.doc_exf VALUES (1) ;  
@@ -1088,7 +1071,7 @@ GO
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TABLE Production.TransactionHistoryArchive WITH NOCHECK   
@@ -1100,7 +1083,7 @@ GO
 #### <a name="h-adding-a-sparse-column"></a>H. 添加稀疏列  
  下面的示例演示如何在表 T1 中添加和修改稀疏列。 创建表 `T1` 的代码如下所示。  
   
-```  
+```sql  
 CREATE TABLE T1  
 (C1 int PRIMARY KEY,  
 C2 varchar(50) SPARSE NULL,  
@@ -1111,7 +1094,7 @@ GO
   
  若要添加另一个稀疏列 `C5`，请执行以下语句。  
   
-```  
+```sql  
 ALTER TABLE T1  
 ADD C5 char(100) SPARSE NULL ;  
 GO  
@@ -1119,7 +1102,7 @@ GO
   
  若要将 `C4` 非稀疏列转换为稀疏列，请执行以下语句。  
   
-```  
+```sql  
 ALTER TABLE T1  
 ALTER COLUMN C4 ADD SPARSE ;  
 GO  
@@ -1127,7 +1110,7 @@ GO
   
  要转换`C4`稀疏列的稀疏列，执行以下语句。  
   
-```  
+```sql  
 ALTER TABLE T1  
 ALTER COLUMN C4 DROP SPARSE;  
 GO  
@@ -1136,7 +1119,7 @@ GO
 #### <a name="i-adding-a-column-set"></a>I. 添加列集  
  下面的示例演示如何向表 `T2` 中添加一列。 如果表已包含稀疏列，则不能向该表添加列集。 创建表 `T2` 的代码如下所示。  
   
-```  
+```sql  
 CREATE TABLE T2  
 (C1 int PRIMARY KEY,  
 C2 varchar(50) NULL,  
@@ -1147,7 +1130,7 @@ GO
   
  下面的三个语句添加名为 `CS` 的列集，然后将列 `C2` 和 `C3` 修改为 `SPARSE`。  
   
-```  
+```sql  
 ALTER TABLE T2  
 ADD CS XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ;  
 GO  
@@ -1164,7 +1147,7 @@ GO
 #### <a name="j-adding-an-encrypted-column"></a>J. 添加加密的列  
  以下语句将添加名为的加密的列`PromotionCode`。  
   
-```  
+```sql  
 ALTER TABLE Customers ADD  
     PromotionCode nvarchar(100)   
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = MyCEK,  
@@ -1178,7 +1161,7 @@ ALTER TABLE Customers ADD
 #### <a name="a-dropping-a-column-or-columns"></a>A. 删除一列或多列  
  第一个示例将修改一个表以删除列。 第二个示例删除多列。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exb   
     (column_a INT  
      ,column_b VARCHAR(20) NULL  
@@ -1190,13 +1173,12 @@ ALTER TABLE dbo.doc_exb DROP COLUMN column_b ;
 GO  
 -- Remove multiple columns.  
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;  
-  
 ```  
   
 #### <a name="b-dropping-constraints-and-columns"></a>B. 删除约束和列  
  第一个示例将从表中删除 `UNIQUE` 约束。 第二个示例将删除两个约束和一列。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exc ( column_a int NOT NULL CONSTRAINT my_constraint UNIQUE) ;  
 GO  
   
@@ -1219,14 +1201,12 @@ ALTER TABLE dbo.doc_exc
   
     DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;  
 GO  
-  
 ```  
   
 #### <a name="c-dropping-a-primary-key-constraint-in-the-online-mode"></a>C. 在 ONLINE 模式下删除 PRIMARY KEY 约束  
  下面的示例在 `ONLINE` 选项设置为 `ON` 的情况下删除 PRIMARY KEY 约束。  
   
-```  
-  
+```sql  
 ALTER TABLE Production.TransactionHistoryArchive  
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID  
 WITH (ONLINE = ON);  
@@ -1236,7 +1216,7 @@ GO
 #### <a name="d-adding-and-dropping-a-foreign-key-constraint"></a>D. 添加和删除 FOREIGN KEY 约束  
  下面的示例将创建 `ContactBackup` 表，然后更改此表。首先添加引用 `FOREIGN KEY` 表的 `Person.Person` 约束，然后再删除 `FOREIGN KEY` 约束。  
   
-```  
+```sql  
 CREATE TABLE Person.ContactBackup  
     (ContactID int) ;  
 GO  
@@ -1260,7 +1240,7 @@ DROP TABLE Person.ContactBackup ;
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. 更改列的数据类型  
  下面的示例将表中列的数据类型由 `INT` 改为 `DECIMAL`。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exy (column_a INT ) ;  
 GO  
 INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  
@@ -1274,7 +1254,7 @@ GO
 #### <a name="b-changing-the-size-of-a-column"></a>B. 更改列的大小  
  下面的示例会增加的大小**varchar**列的精度和小数位数**十进制**列。 因为列包含数据，所以只能增加列的大小。 此外，请注意：`col_a` 是在一个唯一索引中定义的。 大小`col_a`因为数据类型仍可以增加**varchar**和索引不是 PRIMARY KEY 约束的结果。  
   
-```  
+```sql  
 -- Create a two-column table with a unique index on the varchar column.  
 CREATE TABLE dbo.doc_exy ( col_a varchar(5) UNIQUE NOT NULL, col_b decimal (4,2));  
 GO  
@@ -1301,7 +1281,7 @@ FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');
 #### <a name="c-changing-column-collation"></a>C. 更改列排序规则  
  下面的示例说明了如何更改列的排序规则。 首先，我们创建一个表以及默认的用户排序规则：  
   
-```  
+```sql  
 CREATE TABLE T3  
 (C1 int PRIMARY KEY,  
 C2 varchar(50) NULL,  
@@ -1312,13 +1292,11 @@ GO
   
  接着，将列 `C2` 排序规则更改为 Latin1_General_BIN。 请注意，需要数据类型，即使排序规则未更改也不例外。  
   
-```  
+```sql  
 ALTER TABLE T3  
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
-  
 ```  
-
   
 ###  <a name="alter_table"></a>更改表定义  
  本节中的示例说明如何更改表定义。  
@@ -1326,7 +1304,7 @@ GO
 #### <a name="a-modifying-a-table-to-change-the-compression"></a>A. 修改表以更改压缩  
  下面的示例更改未分区表的压缩。 将会重新生成堆或聚集索引。 如果表是一个堆，将重新生成所有非聚集索引。  
   
-```  
+```sql  
 ALTER TABLE T1   
 REBUILD WITH (DATA_COMPRESSION = PAGE);  
 ```  
@@ -1335,7 +1313,7 @@ REBUILD WITH (DATA_COMPRESSION = PAGE);
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  NONE) ;  
 GO  
@@ -1345,7 +1323,7 @@ GO
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = ALL   
 WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;  
@@ -1358,7 +1336,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
   
 **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
 GO  
@@ -1368,7 +1346,7 @@ GO
   
 **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
 GO  
@@ -1377,7 +1355,7 @@ GO
 #### <a name="c-switching-partitions-between-tables"></a>C. 在表之间切换分区  
  以下示例创建一个已分区表，并假定在数据库中已经创建了分区方案 `myRangePS1`。 然后，在 `PARTITION 2` 表的 `PartitionTable` 所在的同一文件组中，创建与已分区表结构相同的未分区的表。 最后，将 `PARTITION 2` 表的 `PartitionTable` 中的数据切换到 `NonPartitionTable` 表中。  
   
-```  
+```sql  
 CREATE TABLE PartitionTable (col1 int, col2 char(10))  
 ON myRangePS1 (col1) ;  
 GO  
@@ -1393,7 +1371,7 @@ GO
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO);  
 GO  
 ```  
@@ -1403,7 +1381,7 @@ GO
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 ALTER TABLE Person.Person  
 ENABLE CHANGE_TRACKING;  
@@ -1413,7 +1391,7 @@ ENABLE CHANGE_TRACKING;
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TABLE Person.Person  
@@ -1425,20 +1403,19 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 Go  
 ALTER TABLE Person.Person  
 DISABLE CHANGE_TRACKING;  
 ```  
 
-  
 ###  <a name="disable_enable"></a>禁用和启用的约束和触发器  
   
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. 禁用和重新启用约束  
  以下示例中禁用了用于限制数据中所接受薪水的约束。 `NOCHECK CONSTRAINT` 与 `ALTER TABLE` 一起使用以禁用该约束，从而允许执行通常会违反约束的插入操作。 `CHECK CONSTRAINT` 重新启用约束。  
   
-```  
+```sql  
 CREATE TABLE dbo.cnst_example   
 (id INT NOT NULL,  
  name VARCHAR(10) NOT NULL,  
@@ -1465,7 +1442,7 @@ INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 #### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. 禁用和重新启用触发器  
  下面的示例将使用 `DISABLE TRIGGER` 的 `ALTER TABLE` 选项来禁用触发器，以允许执行通常会违反此触发器的插入操作。 然后，使用 `ENABLE TRIGGER` 重新启用触发器。  
   
-```  
+```sql  
 CREATE TABLE dbo.trig_example   
 (id INT,   
 name VARCHAR(12),  
@@ -1498,15 +1475,14 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO  
 ```  
  
-  
-### <a name="online-operations"></a>联机操作  
+### <a name="online"></a>联机操作  
   
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 使用低优先级等待选项的联机索引重新生成  
  下面的示例显示如何执行指定低优先级等待选项的联机索引重新生成。  
   
 **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 ALTER TABLE T1   
 REBUILD WITH   
 (  
@@ -1522,7 +1498,7 @@ REBUILD WITH
   
 **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exy (column_a INT ) ;  
 GO  
 INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  
@@ -1535,15 +1511,15 @@ DROP TABLE dbo.doc_exy ;
 GO  
 ```  
   
-##  <a name="system_versioning"></a>系统版本控制  
+###  <a name="system_versioning"></a>系统版本控制  
  下面四个示例将帮助你熟悉使用系统版本控制的语法。 有关其他帮助，请参阅[系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)。  
   
 **适用于**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-### <a name="a-add-system-versioning-to-existing-tables"></a>A. 将系统版本控制添加到现有表  
+#### <a name="a-add-system-versioning-to-existing-tables"></a>A. 将系统版本控制添加到现有表  
  下面的示例演示如何向现有表添加系统版本控制并创建将来的历史记录表。 此示例假定是现有表调用`InsurancePolicy`与定义主键。 此示例将填充新创建的时间段列的开始和结束时间为使用默认值，因为这些值不能为 null 的系统版本控制。 此示例使用 HIDDEN 子句以确保不会影响当前表与之进行交互的现有应用程序。  它还使用可在找到的 HISTORY_RETENTION_PERIOD[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]仅。 
   
-```  
+```sql  
 --Alter non-temporal table to define periods for system versioning  
 ALTER TABLE InsurancePolicy  
 ADD PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime),   
@@ -1556,10 +1532,10 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));  
 ```  
   
-### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. 迁移现有解决方案使用系统版本控制  
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. 迁移现有解决方案使用系统版本控制  
  下面的示例演示如何从使用触发器来模拟临时支持解决方案迁移到系统版本控制。 该示例假定没有现有解决方案使用`ProjectTaskCurrent`表和`ProjectTaskHistory`表及其现有的解决方案，用于更改日期和修订日期列其时间，这些期限列，并不使用 datetime2 数据类型并且`ProjectTaskCurrent`表具有主键定义。  
   
-```  
+```sql  
 -- Drop existing trigger  
 DROP TRIGGER ProjectTaskCurrent_Trigger;  
 -- Adjust the schema for current and history table  
@@ -1579,10 +1555,10 @@ ALTER TABLE ProjectTaskCurrent
 SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))  
 ```  
   
-### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. 禁用并重新启用系统版本控制，若要更改表架构  
+#### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. 禁用并重新启用系统版本控制，若要更改表架构  
  此示例演示如何在上禁用系统版本控制`Department`表、 添加一个列，并重新启用系统版本控制。 禁用系统版本控制则需要修改表架构。 执行这些步骤在事务来更新表架构，它使 DBA 要跳过数据一致性检查时重新启用系统版本控制和获得的性能受益时阻止对这两个表进行更新。 请注意，如创建统计信息、 切入分区或将压缩应用于一个或两个表的任务不需要禁用系统版本控制。  
   
-```  
+```sql  
 BEGIN TRAN  
 /* Takes schema lock on both tables */  
 ALTER TABLE Department  
@@ -1600,10 +1576,10 @@ ALTER TABLE Department
 COMMIT   
 ```  
   
-### <a name="d-removing-system-versioning"></a>D. 删除系统版本控制  
+#### <a name="d-removing-system-versioning"></a>D. 删除系统版本控制  
  此示例演示如何从部门表和 drop 中完全删除系统版本控制`DepartmentHistory`表。 （可选） 你可能也要删除系统用于记录系统版本控制信息的时间段列。 请注意，您不能删除`Department`或`DepartmentHistory`表启用系统版本控制时。  
   
-```  
+```sql  
 ALTER TABLE Department  
     SET (SYSTEM_VERSIONING = OFF);  
 ALTER TABLE Department  
@@ -1612,12 +1588,12 @@ DROP TABLE DepartmentHistory;
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例 A 到 C 使用中的 FactResellerSales 表[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]数据库。  
+ 通过 C 使用下面的示例 A`FactResellerSales`表中[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]数据库。  
   
-### <a name="e-determining-if-a-table-is-partitioned"></a>E. 确定对表进行分区  
+### <a name="a-determining-if-a-table-is-partitioned"></a>A. 确定对表进行分区  
  如果表 `FactResellerSales` 已分区，以下查询将返回一个或多个行。 如果表未分区，则不返回任何行。  
   
-```  
+```sql  
 SELECT * FROM sys.partitions AS p  
 JOIN sys.tables AS t  
     ON  p.object_id = t.object_id  
@@ -1625,10 +1601,10 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';  
 ```  
   
-### <a name="f-determining-boundary-values-for-a-partitioned-table"></a>F. 确定已分区表的边界值  
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. 确定已分区表的边界值  
  以下查询对于 `FactResellerSales` 表中的每个分区返回边界值。  
   
-```  
+```sql  
 SELECT t.name AS TableName, i.name AS IndexName, p.partition_number, 
     p.partition_id, i.data_space_id, f.function_id, f.type_desc, 
     r.boundary_id, r.value AS BoundaryValue   
@@ -1647,10 +1623,10 @@ WHERE t.name = 'FactResellerSales' AND i.type <= 1
 ORDER BY p.partition_number;  
 ```  
   
-### <a name="g-determining-the-partition-column-for-a-partitioned-table"></a>G. 确定已分区表的分区列  
- 以下查询返回表的分区列的名称。 `FactResellerSales`的用户。  
+### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. 确定已分区表的分区列  
+ 以下查询返回表的分区列的名称。 `FactResellerSales`中创建已分区表或索引。  
   
-```  
+```sql  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 
     ic.column_id as PartitioningColumnID, c.name AS PartitioningColumnName   
 FROM sys.tables AS t  
@@ -1668,12 +1644,12 @@ AND i.type <= 1
 AND c.column_id = ic.column_id;  
 ```  
   
-### <a name="h-merging-two-partitions"></a>H. 合并两个分区  
- 下面的示例合并两个分区的表。  
+### <a name="d-merging-two-partitions"></a>D. 合并两个分区  
+下面的示例合并两个分区的表。  
   
- `Customer`表具有以下定义：  
+`Customer`表具有以下定义：  
   
-```  
+```sql  
 CREATE TABLE Customer (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -1687,13 +1663,13 @@ WITH
   
  以下命令将组合的 10 到 25 的分区边界。  
   
-```  
+```sql  
 ALTER TABLE Customer MERGE RANGE (10);  
 ```  
   
  用于表的新 DDL 是：  
   
-```  
+```sql  
 CREATE TABLE Customer (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -1705,12 +1681,12 @@ WITH
     FOR VALUES (1, 5, 25, 50, 100)));  
 ```  
   
-### <a name="i-splitting-a-partition"></a>I. 将分区拆分  
+### <a name="e-splitting-a-partition"></a>E. 将分区拆分  
  下面的示例将拆分表上的分区。  
   
  `Customer`表具有以下 DDL:  
   
-```  
+```sql  
 DROP TABLE Customer;  
   
 CREATE TABLE Customer (  
@@ -1726,13 +1702,13 @@ WITH
   
  以下命令将创建新的分区值 75，50%到 100 之间的绑定。  
   
-```  
+```sql  
 ALTER TABLE Customer SPLIT RANGE (75);  
 ```  
   
  用于表的新 DDL 是：  
   
-```  
+```sql  
 CREATE TABLE Customer (  
    id int NOT NULL,  
    lastName varchar(20),  
@@ -1743,12 +1719,12 @@ CREATE TABLE Customer (
       FOR VALUES (1, 5, 10, 25, 50, 75, 100 )));  
 ```  
   
-### <a name="j-using-switch-to-move-a-partition-to-a-history-table"></a>J. 使用交换机将分区移到历史记录表  
+### <a name="f-using-switch-to-move-a-partition-to-a-history-table"></a>F. 使用交换机将分区移到历史记录表  
  下面的示例将数据移动的分区中`Orders`到分区中的表`OrdersHistory`表。  
   
  `Orders`表具有以下 DDL:  
   
-```  
+```sql  
 CREATE TABLE Orders (  
     id INT,  
     city VARCHAR (25),  
@@ -1764,11 +1740,11 @@ WITH
   
 |分区|具有数据？|边界范围|  
 |---------------|---------------|--------------------|  
-|@shouldalert|是|订购日期 < 2004年-01-01|  
+|1|是|订购日期 < 2004年-01-01|  
 |2|是|2004年-01-01 < = OrderDate < 2005年-01-01|  
 |3|是|2005年-01-01 < = OrderDate < 2006年-01-01|  
 |4|是|2006年-01-01 < = OrderDate < ' 2007年-01-01|  
-|5|是|2007年-01-01 < = 订购日期|  
+|5|是|'2007-01-01' <= OrderDate|  
   
 -   分区 1 （具有数据）： OrderDate < 2004年-01-01  
 -   分区 2 （具有数据）: 2004年-01-01 < = OrderDate < 2005年-01-01  
@@ -1778,7 +1754,7 @@ WITH
   
 `OrdersHistory`表具有以下 DDL，它具有相同的列和列名称作为`Orders`表。 两者都在哈希分布式`id`列。  
   
-```  
+```sql  
 CREATE TABLE OrdersHistory (  
    id INT,  
    city VARCHAR (25),  
@@ -1797,7 +1773,7 @@ WITH
   
 对于以前的两个表，以下命令将所有行都移与`OrderDate < '2004-01-01'`从`Orders`表`OrdersHistory`表。  
   
-```  
+```sql  
 ALTER TABLE Orders SWITCH PARTITION 1 TO OrdersHistory PARTITION 1;  
 ```  
   
@@ -1818,7 +1794,7 @@ ALTER TABLE Orders SWITCH PARTITION 1 TO OrdersHistory PARTITION 1;
   
 若要清理`Orders`表，可以删除空的分区合并分区 1 和 2，如下所示：  
   
-```  
+```sql  
 ALTER TABLE Orders MERGE RANGE ('2004-01-01');  
 ```  
   
@@ -1833,7 +1809,7 @@ ALTER TABLE Orders MERGE RANGE ('2004-01-01');
   
 假设另一年将传递，你就可以存档 2005 年。 你可以将空分区分配为 2005 年在`OrdersHistory`表中的，将拆分空分区，如下所示：  
   
-```  
+```sql  
 ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');  
 ```  
   

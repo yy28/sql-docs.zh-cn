@@ -18,38 +18,40 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：在 Analysis Services 项目中定义数据源视图
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]设计业务智能应用程序中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]开头创建[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中设计商业智能应用程序，请先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  
   
 本课程包含以下任务：  
   
 [创建 Analysis Services 项目](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
 在本任务中，将基于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型模板创建 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目。  
   
-[定义数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
+[定义了一个数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
 在本任务中，将 **AdventureWorksDW2012** 数据库指定为将在后续课程中定义的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 维度和多维数据集的数据源。  
   
 [定义数据源视图](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
 在本任务中，为来自 **AdventureWorksDW2012** 数据库中选定表的元数据定义一个统一视图。  
   
-[修改默认表名](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
+[修改默认表名称](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
 在本任务中，将修改数据源视图中的表名，以使您将要定义的后续 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名更加用户友好。  
   
 将您的结果与为本课程生成的示例项目文件进行比较。 有关下载本教程附随的示例项目的详细信息，请参阅 codeplex 上产品示例页上的 [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) （用于 SQL Server 2012 的 SSAS 多维模型项目）。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 2 课：定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[第 2 课︰ 定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
 [支持的数据源（SSAS 多维）](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

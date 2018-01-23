@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a97816c16eda294e89d1c9f9b21aa854c398846
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7b95813f17802e22e4b9308cc0a3805f65f5ff2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>课程 2-6-浏览多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]部署多维数据集后，多维数据集数据是在上可查看**浏览器**多维数据集设计器中和维度数据的选项卡是在上可查看**浏览器**维度设计器中的选项卡。 浏览多维数据集和维度数据是以增量方式检查您的工作的方式。 您可以在处理对象后，验证对属性、关系和其他对象的细微更改是否具有期望的效果。 在使用“浏览器”选项卡来查看多维数据集和维度数据时，该选项卡将基于您正在浏览的对象提供不同的功能。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+在部署多维数据集后，可以在多维数据集设计器的“浏览器”选项卡中查看多维数据集数据，以及在维度设计器的“浏览器”选项卡中查看维度数据。 浏览多维数据集和维度数据是以增量方式检查您的工作的方式。 您可以在处理对象后，验证对属性、关系和其他对象的细微更改是否具有期望的效果。 在使用“浏览器”选项卡来查看多维数据集和维度数据时，该选项卡将基于您正在浏览的对象提供不同的功能。  
   
 对于维度，“浏览器”选项卡提供一个方法来查看成员或导航层次结构，可一直向下到叶节点。 您可以通过不同语言浏览维度数据，假定您已将翻译添加到您的模型中。  
   
@@ -46,7 +48,7 @@ Excel 通常会提供更好的浏览体验，因为您可以交互方式浏览�
     该设计器的左窗格会显示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象。 在“浏览器”选项卡的右侧有两个窗格：上部窗格是“筛选器”窗格，下部是“数据”窗格。 在接下来的课程中，您将使用多维数据集浏览器进行分析。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 3 课：修改度量值、属性和层次结构](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+[第 3 课︰ 修改度量值、 属性和层次结构](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [MDX 查询编辑器（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00b1110e3deba08207cda1c71c75d6603660c019
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 322abebe579106c03f4855f7b9e2e7573f5d5580
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Lesson 3-1-修改度量值
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]你可以使用**FormatString**属性来定义用于控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+可以使用“FormatString”属性定义控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>修改多维数据集的度量值  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 11. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[修改“客户”维度](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[修改客户维度](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [定义数据库维度](../analysis-services/multidimensional-models/define-database-dimensions.md)  
