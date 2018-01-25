@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制数据库向导可将数据库和某些服务器对象从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例轻松移动或复制到另一个实例，而且无需服务器停机。 使用此向导可执行以下操作： 
@@ -98,11 +98,11 @@ ms.lasthandoff: 11/17/2017
   
 -   为了确保升级后的数据库具有最佳性能，请对升级后的数据库运行 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) （更新统计信息）。  
   
--   将数据库移动或复制到另一个服务器实例时，为了给用户和应用程序提供一致的体验，你可能需要在另一个服务器实例上重新创建该数据库的部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+-   将数据库移动或复制到另一个服务器实例时，为了给用户和应用程序提供一致的体验，你可能需要在另一个服务器实例上重新创建该数据库的部分或全部元数据（例如登录名和作业）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  您必须是源服务器和目标服务器上 **sysadmin** 固定服务器角色的成员。  
   
 ##  <a name="Overview"></a> 复制数据库向导页 
@@ -115,13 +115,13 @@ ms.lasthandoff: 11/17/2017
 -    **源服务器**  
 用于标识想要移动或复制的数据库所在的服务器的名称。  手动输入，或单击省略号以导航到所需的服务器。  该服务器必须至少为 SQL Server 2005。
 
--    **使用 Windows 身份验证**  
+-    **Use Windows Authentication**  
 允许用户通过 Microsoft Windows 用户帐户进行连接。
 
--    **使用 SQL Server 身份验证**  
+-    **Use SQL Server Authentication**  
 允许用户通过提供 SQL Server 身份验证用户名和密码进行连接。
 
-     -    **用户名**  
+     -    **User name**  
 用于输入连接所使用的用户名。 只有在已选择使用 **SQL Server 身份验证**进行连接的情况下，此选项才可用。
 
      -    **密码**  
@@ -135,13 +135,13 @@ ms.lasthandoff: 11/17/2017
 
      >**注意** 可以使用群集服务器作为目标；复制数据库向导将确保你只选择群集目标服务器上的共享驱动器。
 
--    **使用 Windows 身份验证**  
+-    **Use Windows Authentication**  
 允许用户通过 Microsoft Windows 用户帐户进行连接。
 
--    **使用 SQL Server 身份验证**  
+-    **Use SQL Server Authentication**  
 允许用户通过提供 SQL Server 身份验证用户名和密码进行连接。
 
-     -    **用户名**  
+     -    **User name**  
 用于输入连接所使用的用户名。 只有在已选择使用 **SQL Server 身份验证**进行连接的情况下，此选项才可用。
 
      -    **密码**  
@@ -175,10 +175,10 @@ ms.lasthandoff: 11/17/2017
 -    **数据源**  
 显示源服务器上的数据库。
 
--    **状态**  
+-    **“状态”**  
 显示源数据库的各种信息。
 
--    **刷新**  
+-    **“刷新”**  
 刷新数据库列表。
   
 ### <a name="configure-destination-database"></a>配置目标数据库
@@ -201,8 +201,8 @@ ms.lasthandoff: 11/17/2017
      -    **目标文件夹**  
 目标服务器上用于托管目标数据库文件的文件夹，根据需要进行修改。
 
-     -    **状态**  
-状态
+     -    **“状态”**  
+“登录属性”
 
 -    **如果目标数据库已存在:**  
      确定目标数据库已存在时要执行的操作。
@@ -241,7 +241,7 @@ ms.lasthandoff: 11/17/2017
 ###   <a name="location-of-source-database-files"></a>源数据库文件的位置
 只有当源和目标为不同服务器的时候，此页才可用。  指定源服务器上包含数据库文件的文件系统共享。
   
--    **数据库**  
+-    **“数据库”**  
      显示正在移动的每个数据库的名称。  
   
 -    **文件夹位置**  
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/17/2017
 -    **立即运行**  
      SSIS 包将在完成向导后执行。
   
--    **计划**  
+-    **“计划”**  
      SSIS 包将按照计划执行。 
   
      -    **更改计划**   
@@ -293,7 +293,7 @@ ms.lasthandoff: 11/17/2017
 -    **操作**  
  列出要执行的每项操作。
 
--    **状态**  
+-    **“状态”**  
  指示操作总体来说是成功还是失败。
 
 -    **消息**  
@@ -389,7 +389,7 @@ ms.lasthandoff: 11/17/2017
 
   
 ##  <a name="FollowUp"></a> 跟进：在升级数据库之后  
- 使用复制数据库向导将数据库从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+ 使用复制数据库向导将数据库从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
  

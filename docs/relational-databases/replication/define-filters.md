@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.replconflictviewer.definefilters.f1
 helpviewer_keywords: Define Filters dialog box
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ed038bc82b44c55ca7e97beb8f4edee1fb5a32d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8165cea64c9057b30f316cd6fee6117f3de0f97
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-filters"></a>定义筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“定义筛选器”对话框定义筛选器，然后将筛选器应用于数据冲突以在网格中查看冲突的子集。 若要定义筛选器，请从 **“运算符”** 下拉列表框中选择运算符，然后输入值。 例如，若要只显示冲突解决落选方为服务器 **ReplTest1**的那些冲突，请从 **“运算符”** 下拉列表框中选择 **“等于”** ，然后在第一个 **“值”** 列中输入 **ReplTest1** 。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **“运算符”**  
  为筛选器选择一个运算符，例如 **“小于或等于”**。  
   

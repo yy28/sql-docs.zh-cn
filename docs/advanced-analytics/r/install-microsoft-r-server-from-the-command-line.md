@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>从命令行安装机器学习 Server （独立） 或 Microsoft R Server （独立）
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 对于 **静默** 安装，提供相同的参数并添加 **/q** 切换。 不提供任何提示，无需交互即可。 如果省略任何所需的参数，但是，安装程序将失败。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>必要條件
 
 你应知道如何执行 SQL Server 的命令行安装，并熟悉其脚本的自变量。
 
@@ -95,8 +95,8 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 默认情况下，所有 SQL server 安装日志和摘要，并在以下文件夹中创建相关的功能：
 
-+ SQL Server 自 2017 年 1:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 为你安装每项功能创建一个单独的子文件夹。
 

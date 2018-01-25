@@ -22,15 +22,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47790c69d2f3fbfaf2af2d86b5bc6c6d3baf79fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当发布服务器与订阅服务器连接并进行同步时，合并代理将检测是否存在任何冲突。 如果检测到冲突，合并代理将使用冲突解决程序（将项目添加到发布时指定的）来确定接受哪些数据并将其传播到其他站点。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程： [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [创建推送订阅](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程： [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>交互式冲突解决程序  
  复制提供了一个交互式冲突解决程序用户界面，它可以与默认的基于优先级的冲突解决程序或项目冲突解决程序一起使用。 通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器执行按需同步时，交互式冲突解决程序在运行时显示冲突数据，并让用户选择解决冲突的方式。 有关如何启用交互式解决方法并启动交互式冲突解决程序的详细信息，请参阅 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)。  

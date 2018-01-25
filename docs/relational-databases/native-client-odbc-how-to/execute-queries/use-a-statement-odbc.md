@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0122ee0c8436bd2c597fc73e901287154d56bad7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ff3c37923f2b4d6d81f8e7e1e61c39d030b7168
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-statement-odbc"></a>使用语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

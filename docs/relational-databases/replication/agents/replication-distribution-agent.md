@@ -18,15 +18,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制分发代理是一个可执行文件，它能将快照（对于快照复制和事务复制）和保存在分发数据库表中的事务（对于事务复制）移动到订阅服务器上的目标表中。  
@@ -97,13 +97,13 @@ distrib [-?]
  输出所有可用的参数。  
   
  **-Publisher** *server_name*[**\\***i**nstance_name*]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  **-PublisherDB** *publisher_database*  
  发布服务器数据库的名称。  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  **-SubscriberDB** *subscriber_database*  
  订阅服务器数据库的名称。  
@@ -141,7 +141,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  分发代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
   
-|EncryptionLevel 值|说明|  
+|EncryptionLevel 值|Description|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -173,7 +173,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  指定分发操作期间记录的历史信息量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
-|HistoryVerboseLevel 值|说明|  
+|HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
 |**0**|进度消息将写入控制台或输出文件。 不在分发数据库中记录历史记录。|  
 |**1**|默认值。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
@@ -252,7 +252,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定分发代理使用的订阅服务器连接类型。  
   
-|SubscriberType 值|说明|  
+|SubscriberType 值|Description|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC 数据源|  
@@ -277,7 +277,7 @@ distrib [-?]
  指定分发的订阅类型。  值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 请参见前面的 **–MessageInterval**参数。  
+ 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  必须指定为允许数据转换的发布的参数。  
@@ -288,7 +288,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  指定此参数时，可以将二进制大型对象数据作为流进行绑定。 使用 **-OledbStreamThreshold** 指定大小（按字节计），超过此大小时将使用流。 **UseOledbStreaming** 默认为启用状态。 **UseOledbStreaming** 写入到 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 文件夹。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果安装了  代理以在本地系统帐户而非域用户帐户（默认）下运行，则服务只能访问本地计算机。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果将以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理身份运行的分发代理配置为在登录到  实例时使用 Windows 身份验证模式，则分发代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)有关更改安全帐户的详细信息，请参阅。  
@@ -297,7 +297,7 @@ distrib [-?]
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新内容|  
+|更新的内容|  
 |---------------------|  
 | 添加了 -ExtendedEventConfigFile 参数。|  
   

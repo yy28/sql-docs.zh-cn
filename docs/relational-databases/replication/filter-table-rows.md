@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b78b311ea716abd5ca52a1f561f648a29a27199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7917c67c302800a23ed20c974115641f644b513f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-table-rows"></a>筛选表行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在“筛选表行”页中，可以执行以下操作：  
@@ -49,11 +49,11 @@ ms.lasthandoff: 11/17/2017
   
  筛选器不能包含复制所用的 **rowguidcol** 来标识行。 默认情况下，这是您设置合并复制时添加的列，命名为 **rowguid**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **筛选的表**  
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
- **添加**  
+ **“添加”**  
  单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”**、 **“添加联接以扩展所选筛选器”**和 **“自动生成筛选器”**。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
@@ -81,14 +81,14 @@ ms.lasthandoff: 11/17/2017
   
  选择窗格中的快捷方式节点，并单击 **“查找表”**。 窗格随即展开，并突出显示所查找的表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   
- **筛选**  
+ **Filter**  
  包含筛选器窗格中选定筛选器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。  
   
 ## <a name="see-also"></a>另请参阅  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   
- [联接筛选器](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

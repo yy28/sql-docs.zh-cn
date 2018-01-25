@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3bfa37e7f645148daa38f8e79b8c51aaf1613c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 854714fbe12db7e32dc0989a442abbdd23695ef9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server，Query Store 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了 **SQLServer:Query Store**计数器。  
   
-|SQL Server Query Store 计数器|说明|  
+|SQL Server Query Store 计数器|Description|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU 使用率**|指明 Query Store 的 CPU 使用率。|  
 |**Query Store 逻辑读取次数**|指明由 Query Store 执行的逻辑读取次数。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  对象中的每个计数器均包含以下实例：  
   
-|Query Store 实例|说明|  
+|Query Store 实例|Description|  
 |--------------------------|-----------------|  
 |**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 Query Store 信息。|  
 |\<数据库名称>|此数据库的 Query Store 信息。|  

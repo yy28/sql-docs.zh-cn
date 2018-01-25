@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.agentsecurity.articles.f1
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6286d56ca93a397684550b40884f28a799d2df4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29e770bf4a90282f2ba0d5a1cd6ad7662a83c897
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-security-new-publication-wizard"></a>代理安全性（新建发布向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“代理安全性”页指定运行以下代理的帐户，以及连接到复制拓扑中的计算机：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  有关代理要求的权限及复制安全的最佳实践的信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) 和 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **快照代理**  
  所有发布都将显示此选项。 单击 **“安全设置”** ，可以指定 **“快照代理安全性”** 对话框中的安全设置。  
   
@@ -64,6 +64,6 @@ ms.lasthandoff: 11/17/2017
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [管理复制中的登录名和密码](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

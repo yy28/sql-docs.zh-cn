@@ -15,13 +15,13 @@ ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3e1223ded4b8ef7107a0a565b751b31d12ff6f3e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c86b39e8c6c9aad23c9059482f1e33ec7ba3621b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>创建存储过程使用 sqlrutils
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 
 数据帧内的对象以及函数的其他输入参数必须是以下 R 数据类型之一：
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - 逻辑
@@ -89,7 +89,7 @@ R 代码已被清除并可以作为单个函数调用后，你将使用中的函
 
 所有的输入和输出参数准备就绪后，请调用`StoredProcedure`构造函数。
 
-**Usage**
+**用法**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

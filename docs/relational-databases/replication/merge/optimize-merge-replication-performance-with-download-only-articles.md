@@ -17,15 +17,15 @@ helpviewer_keywords:
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9af82e7051c7dae3a16bd420dfe923d88a08cfac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf9009385126a41283ce8044acba2bd35d08867
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用仅下载项目优化合并复制的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]合并复制提供了两种不同的项目类型以满足不同的应用程序需要。 根据应用程序的需要，发布可以包含下列项目类型中的一个或多个：  

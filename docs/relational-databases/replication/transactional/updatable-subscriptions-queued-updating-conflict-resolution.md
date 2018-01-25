@@ -19,15 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>可更新订阅 - 排队更新冲突的解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]由于排队更新订阅允许对多个位置上的相同数据进行修改，因此，在发布服务器中同步数据时可能会发生冲突。 复制在将更改与发布服务器同步时检测冲突，并使用在创建发布时所选择的解决策略来解决那些冲突。 可能会发生下列冲突：  

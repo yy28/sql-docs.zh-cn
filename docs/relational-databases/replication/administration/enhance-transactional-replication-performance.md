@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5c385cfdff8c4c024c02534d8c040534c400ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在考虑[增强常规复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于事务复制的其他几个方面。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   在专用服务器上配置分发服务器。  
   
-     通过配置远程分发服务器可以减少发布服务器的处理开销。 有关详细信息，请参阅[配置分发](../../../relational-databases/replication/configure-distribution.md)。  
+     通过配置远程分发服务器可以减少发布服务器的处理开销。 有关详细信息，请参阅 [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)。  
   
 -   适当调整分发数据库的大小。  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

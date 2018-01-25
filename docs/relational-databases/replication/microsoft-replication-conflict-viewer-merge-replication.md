@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fdedf349961105e1c979b87c0876150acbf04dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: feff3e58f4069175fa2e12b617a40aa92043dcc2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  
@@ -38,14 +38,14 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  包含逻辑记录的冲突不会显示在冲突查看器中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  复制冲突查看器划分为两个部分。 对话框的上半部分显示所选表的冲突列表。 单击冲突列表中的项时，将在对话框的下半部分显示该冲突的详细信息。  
   
  在对话框的下半部分会显示相关信息，描述发生冲突的原因（例如，在发布服务器和订阅服务器上更新了同一行）。 在下半部分中，冲突数据显示在两个相对应的列（**“冲突解决入选方”** 和 **“冲突解决落选方”**）中。 如果冲突发生在更新的数据和删除的数据之间，则对于冲突中删除的一方来说，可能没有可显示的数据。 在这种情况下，复制冲突查看器会在其中一列中显示一条消息，指示在一个位置删除了该行，在另一个位置更新了该行。 此外，它还会指出建议的解决方法。  
   
  不能在复制冲突查看器中编辑的数据（例如， **rowguid** 数据）以只读方式显示（方框带有阴影）。  
   
- **数据库**  
+ **“数据库”**  
  选择包含具有冲突的发布的数据库。  
   
  **发布**  

@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb2c2415a8cbe1af6d1cef51f5d9253171dd7bea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c321ea317846b43f2c69d4a64f4bc3daeff9048c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中为复合域创建跨域规则。 跨域规则测试在复合域中包含的单一域中各值之间的关系。 跨域规则必须在复合域中保持正确，这样才能认为域值是准确的并且符合业务要求。 跨域规则用于验证、更正和标准化域值。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建跨域规则。  
   
 ##  <a name="Create"></a> 创建跨域规则  

@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.validate.options.f1
 helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77e1e620f4adc3fc44a937a12b2ab74dc3302bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f6945e61fb5d5d530a4a147259cbc7347020517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>订阅验证选项（事务订阅）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用“订阅验证选项”对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **验证订阅服务器与发布服务器具有相同的复制数据行数**  
  选择要执行的行计数验证的类型。 对于 Oracle 发布， **“通过直接查询表计算实际的行计数”**是唯一可用的选项。  
   

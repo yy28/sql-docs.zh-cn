@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65a30335d23497b2af1d8a075d84873b565abe79
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 825a0a87683ec6913a6985804c6111af0543dc79
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>在计算列中使用 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]XML 实例可作为计算列的源或计算列的类型出现。 本主题中的示例演示如何将 XML 用于计算列。  
@@ -91,7 +91,7 @@ FROM T
   
 ### <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[使用计算列提升常用的 XML 值](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|介绍如何将属性提升用于计算列和属性表。|  
   

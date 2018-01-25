@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c3aa7d6569f8a4390f249c032641978fb5382313
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4eb0b49bbf52926536293cf26cd47046329abaf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行批量数据导入或导出时，可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -96,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -195,7 +195,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -235,7 +235,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -279,7 +279,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在考虑[增强常规复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于合并复制的其他几个方面。  
@@ -69,11 +69,11 @@ ms.lasthandoff: 11/17/2017
   
 -   通过参数化筛选器使用预计算分区（默认情况下使用此功能）。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
-     预计算分区会对筛选行为施加许多限制。 如果您的应用程序无法遵守这些限制，请将 **keep_partition_changes** 选项设置为 **True**，这样设置对性能有利。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+     预计算分区会对筛选行为施加许多限制。 如果您的应用程序无法遵守这些限制，请将 **keep_partition_changes** 选项设置为 **True**，这样设置对性能有利。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 -   如果数据已经筛选但未在用户之间共享，请使用不重叠的分区。  
   
-     复制可优化未在分区或订阅之间共享的数据的性能。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+     复制可优化未在分区或订阅之间共享的数据的性能。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 -   不要创建复杂的联接筛选器层次结构。  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   考虑提高 **-MakeGenerationInterval** 参数的值，特别是当同步所包含的订阅服务器上载多于订阅服务器下载时。  
   

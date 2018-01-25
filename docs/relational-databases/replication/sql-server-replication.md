@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server]
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a938161a6f9d748e4329485c56257bda097bbadc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e117185264245dc5c3ed2db3a679f60d73cfa994
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制是一组技术，用于在数据库间复制和分发数据和数据库对象，然后在数据库间进行同步操作以维持一致性。 使用复制，可以通过局域网和广域网、拨号连接、无线连接和 Internet 将数据分配到不同位置以及分配给远程或移动用户。  

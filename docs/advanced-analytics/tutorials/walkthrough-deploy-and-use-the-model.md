@@ -16,13 +16,13 @@ ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
 caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2a7234bf2dee6ad601a10c718427b045aa3221e3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 09d5c7243f519a3ddf2cb0380e7a9f9f65c5a350
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，在 SQL 中使用它
 
@@ -200,7 +200,7 @@ ms.lasthandoff: 01/08/2018
     >[!TIP]
     > R 工具的 Visual Studio (RTVS) 提供极好的集成与 SQL Server 和。请参阅此文章，以使用 SQL Server 连接使用 RODBC 更多示例：[使用 SQL Server 和 R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>摘要
 
 现在，你已了解如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据并将保留到训练的 R 模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，它应为你创建基于此数据集的新模型相对简单。 例如，你可以尝试创建这些其他模型：
 

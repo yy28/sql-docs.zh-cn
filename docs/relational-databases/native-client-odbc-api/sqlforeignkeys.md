@@ -1,5 +1,5 @@
 ---
-title: "SQLForeignKeys |Microsoft 文档"
+title: SQLForeignKeys | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLForeignKeys function
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e9c1f3fdbcf7767e2a9838130d620b6986f270d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c8d6259b3d7325d3b0ebfb133a918e6fb64a5d7c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +39,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [SQLForeignKeys 函数](http://go.microsoft.com/fwlink/?LinkId=59344)   
- [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API 实现详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

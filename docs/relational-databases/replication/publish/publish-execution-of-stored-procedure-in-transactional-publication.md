@@ -16,15 +16,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server replication], publishing
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cd29554f7301368b8e58e47e73622365d5f273c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 475af0dd026d8e3f5820e1678f4033856af2b0b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>在事务发布中发布存储过程的执行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以在“项目属性 - \<项目>”对话框中指定应发布存储过程执行情况（而不仅仅是其定义）。 新建发布向导和“发布属性 - \<发布>”对话框中提供了该对话框。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  

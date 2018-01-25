@@ -20,15 +20,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a201328c865edd9c6e644a9944c543d5f4fded09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf8776f00a46f96668d4a776073877cdec73dc32
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-an-article"></a>定义项目
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../../includes/tsql-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中定义项目。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **定义项目，使用：**  
   
@@ -104,13 +104,13 @@ ms.lasthandoff: 11/17/2017
     -   指定发布的名称。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+ 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义项目  
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 **@publication**、 **@article**和 **@source_object**的值分别指定为项目所属发布的名称、项目的名称以及要发布的数据库对象，同时指定任何其他可选参数。 使用 **@source_owner** 指定对象的架构所有权（如果不是 **dbo**。 如果该项目不是基于日志的表项目，可将 **@type** 指定为该项目类型；有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
-2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 来定义筛选子句。 有关详细信息，请参阅 [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
 3.  若要垂直筛选表中的列或查看项目，请使用 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
@@ -157,11 +157,11 @@ ms.lasthandoff: 11/17/2017
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
 ## <a name="see-also"></a>另请参阅  
- [创建发布](../../../relational-databases/replication/publish/create-a-publication.md)   
- [复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)   
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

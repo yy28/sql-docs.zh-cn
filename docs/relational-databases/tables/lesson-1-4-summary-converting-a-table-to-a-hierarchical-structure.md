@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9d4e54cf888e5c8f66d4c47aa41edb532f06f74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 762916fb3cd32ddaa75d505c77291b38bbe84457
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-4---summary---converting-a-table-to-a-hierarchical-structure"></a>第 1-4 课 - 摘要 - 将表转换为层次结构
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]hierarchyid 数据类型可以采用精简格式存储层次结构关系。 正确的索引可以通过层次结构级别、层次结构子树或传统单独查找方式有效地返回数据。  

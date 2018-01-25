@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c7a221f337f54f625840fa724db01545a7af2c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 实用工具的功能和任务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户具有作为一个整体管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的要求，在此版本中通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的应用程序和多服务器管理概念满足了这一要求。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  可基于全局策略定义或者基于单独的策略定义监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个实例和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的数据层应用程序。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  参考以下主题可以开始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。  
   
 |||  

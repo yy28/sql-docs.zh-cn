@@ -23,15 +23,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 645f300a349a9b34533f247dcabebf8f116c3eb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d65ee60ef2e855501bab43f2d1f6d697960b5e3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或使用默认值 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -356,7 +356,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
   

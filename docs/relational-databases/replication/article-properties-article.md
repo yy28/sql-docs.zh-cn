@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可通过新建发布向导和“发布属性”对话框访问“项目属性”对话框。 使用该对话框可以查看和设置所有类型项目的属性。 对于某些属性来说，只有在创建了发布时才能设置；而对于其他属性，只有在发布没有活动订阅时才能设置。 无法设置的属性将显示为只读。  

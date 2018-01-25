@@ -27,15 +27,15 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cd69a363f823d5d5ef197524d2fe5a3f393d438
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]XML 架构定义语言 (XSD) 验证对使用 xml 数据类型的 SQL 列具有某些限制。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|说明规范格式和模式限制。|  
 |[通配符组成部分和内容验证](../../relational-databases/xml/wildcard-components-and-content-validation.md)|介绍了使用通配符、宽松验证和任何带有 XML 架构集合的类型元素的限制。|  

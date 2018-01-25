@@ -14,13 +14,13 @@ ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
 caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d52eb12f7985f4a7ee5561767ecdb6ffb981e1cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14bfba68925f357c39fc192ae7852055a7e91f4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 库和 R 数据类型
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 
 + 中列出的数据类型**其他**SQL 类型系统主题的部分：**光标**，**时间戳**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**表**
 + 所有空间类型
-+ **图像**
++ **image**
 
 ## <a name="data-types-that-might-convert-poorly"></a>转换结果可能不佳的数据类型
 
@@ -155,8 +155,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 注意使用 R 中的 `str` 函数可获取输出数据的架构。 此函数返回以下信息：
 

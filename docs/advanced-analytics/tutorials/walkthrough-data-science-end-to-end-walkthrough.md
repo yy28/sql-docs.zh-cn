@@ -16,12 +16,12 @@ ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5ff7287937e2bddd57d4b155c254bcd29bfc0d68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2fc213534da32bf529acdb85fd5b0288bf686068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端到端数据科学演练
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 + 将包含所有 SQL 和 R 脚本。
 + 你可能需要修改脚本，在你的环境中运行中的字符串。 你可以使用任何代码编辑器，如[Visual Studio Code](https://code.visualstudio.com/Download)。
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>必要條件
 
 + 你必须有权的 SQL Server 2016 实例或 SQL Server 自 2017 年的评估版。
 + 在 SQL Server 计算机上必须至少有一个实例已安装 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。

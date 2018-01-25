@@ -15,12 +15,12 @@ ms.assetid:
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+manager: cgronlund
+ms.openlocfilehash: e10435c2a0cdc5ed181aeab9bdd0bbfefa9a7f25
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函数来查找或在 SQL Server 上安装 R 包
 
@@ -32,7 +32,7 @@ Microsoft R Server 版本 9.0.1 引入了支持使用 SQL Server 计算上下文
 
 本文描述了这些函数，并提供的函数的用法示例。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 + 若要执行这些函数，必须有权在实例上运行 R 命令。
 
@@ -81,7 +81,7 @@ Microsoft R Server 版本 9.0.1 引入了支持使用 SQL Server 计算上下文
 
 如果您有权安装包，运行包之一从 R 客户端的管理功能，并指定要添加或删除的包将其中的计算上下文。  计算上下文可以是本地计算机或 SQL Server 实例上的数据库。 你的凭据确定是否可以在服务器上完成该操作。
 
-**与 TRANSACT-SQL**
+**From Transact-SQL**
 
 若要从存储过程中运行包管理功能，请将它们包装在调用`sp_execute_external_script`。
 

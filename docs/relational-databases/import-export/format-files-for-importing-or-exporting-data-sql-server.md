@@ -17,15 +17,15 @@ helpviewer_keywords:
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c37783bc1baedf61b61553ad46066b0730b2f18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbc0e4d2b87b277479796aa99235dc1f47921db6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>用来导入或导出数据的格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中批量导入数据或从该表中批量导出数据时，可以使用格式化文件存储批量导入数据或批量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。  

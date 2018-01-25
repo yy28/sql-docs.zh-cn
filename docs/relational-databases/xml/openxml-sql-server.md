@@ -26,15 +26,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd801f6a94a10e43432fc650b689ffccf88ced7b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  下表介绍了边缘表的结构。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|文档节点的唯一 ID。<br /><br /> 根元素具有的 ID 值为 0。 保留负的 ID 值。|  
 |**parentid**|**bigint**|标识节点的父节点。 此 ID 标识的父节点不一定是父元素。 但具体情况取决于此 ID 所标识节点的子节点的节点类型。 例如，如果节点为文本节点，则其父节点可能是一个属性节点。<br /><br />  如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  

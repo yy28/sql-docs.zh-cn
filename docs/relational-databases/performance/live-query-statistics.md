@@ -18,15 +18,15 @@ helpviewer_keywords:
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bff144ba100fe72dcc036299138e656362977b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个查询计划操作员到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 配合使用。  
@@ -54,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  必须启用统计信息配置文件基础结构，实时查询统计信息才能捕获查询进度的相关信息。 在 **中指定“包含实时查询统计信息”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以启用当前查询会话的统计信息基础结构。 
  
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可通过另外两种方法启用统计信息基础结构，从而查看其他会话（如活动监视器）中的实时查询统计信息：  
   
 -   在目标会话中执行 `SET STATISTICS XML ON;` 或 `SET STATISTICS PROFILE ON;` 。  
   
- 或  
+ 或多个  
   
 -   启用 **query_post_execution_showplan** 扩展事件。 这是一个服务器级设置，用于启用所有会话中的实时查询统计信息。 若要启用扩展事件，请参阅 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 
 -   使用全局跟踪标志 7412。  
   
- 或  
+ 或多个  
   
 -   启用 **query_thread_profile** 扩展事件。 这是一个服务器级设置，用于启用所有会话中的实时查询统计信息。 若要启用扩展事件，请参阅 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。
   

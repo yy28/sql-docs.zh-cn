@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9c11a4593e3712083513d5edc9374edd392022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以创建新的数据库，也可以查看或修改所选数据库的属性。 对于现有数据库，本主题适用于 **数据库属性（“文件”页）** ；另外，本主题还适用于 **新建数据库（“常规”页）**。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  此字段对于 FILESTREAM 文件（包括内存优化文件组中的文件）无效。  
   
- **添加**  
+ **“添加”**  
  将新文件添加到数据库。  
   
  **删除**  

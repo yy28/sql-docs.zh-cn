@@ -17,15 +17,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a80738c6c9524de4edb33e5ef5596aef8b6085d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a9434ff6b82cb8ba8a6cc87c05df32c35310f85
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-information-and-perform-tasks-for-subscription-agents"></a>查看订阅代理的信息和执行其任务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制监视器提供了两个选项卡，可用于访问与订阅相关联的代理的相关信息：  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb7cb98417cf8eaf78647f4a52fd984be6c338d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b8b2c608c77443858f915cb9e7b3a84c96d2e86
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>SQL Server 资源运行状况故障排除（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 标识的资源运行状况问题可能包括缓解计算机上或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例上使用过度的 CPU，或者缓解数据层应用程序的使用过度的 CPU。 其他问题可能包括解决数据库文件的使用过度的文件空间或者解决存储卷上分配的磁盘空间的使用过度问题。  

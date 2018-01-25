@@ -25,11 +25,11 @@
 
 # [将 SSIS 包直接迁移到 Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [教程 - 在 Azure 上部署、运行和监视包](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [连接到 Azure 上的 SSIS 目录](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [计划在 Azure 上执行包](lift-shift/ssis-azure-schedule-packages.md)
-## [验证部署到 Azure 的包](lift-shift/ssis-azure-validate-packages.md)
 ## [使用 Windows 身份验证连接到数据源](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [连接到文件和文件共享](lift-shift/ssis-azure-files-file-shares.md)
+## [验证部署到 Azure 的包](lift-shift/ssis-azure-validate-packages.md)
+## [连接到 Azure 上的 SSIS 目录](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [计划在 Azure 上执行包](lift-shift/ssis-azure-schedule-packages.md)
 
 # [安装或升级](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [第 3-3 课 - 测试已部署的包](lesson-3-3-testing-the-deployed-packages.md)
 
 # Resources
-## 请关注博客
-### [SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)
-## 获取帮助
-### [MSDN 上的 SSIS 论坛](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Stack Overflow 上的 SSIS 标记](http://stackoverflow.com/questions/tagged/ssis)  
-## 提供反馈
-### [SQL Server 反馈论坛](https://feedback.azure.com/forums/908035-sql-server)  
+## [通过 SSIS 论坛获取帮助](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [通过 Stack Overflow 获取帮助](http://stackoverflow.com/questions/tagged/ssis)  
+## [关注 SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)
+## [报告问题和请求功能](https://feedback.azure.com/forums/908035-sql-server)
 ## [获取电脑上的文档](../sql-server/sql-server-help-installation.md)

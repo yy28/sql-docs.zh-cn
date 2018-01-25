@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>引入 revoscalepy
 
@@ -83,12 +83,12 @@ SQL Server 2017，开头 CTP 2.0 中包含的以下机器学习算法和摘要�
 
 | 函数| Description|说明|
 | ------ | ------ |------ |
-|`rx_btrees` | 适合的随机渐变提升决策树|`rx_btrees_ex`在 CTP 2.0|
-|`rx_dforest` | 适合分类和回归的决策林|`rx_dforest_ex`在 CTP 2.0|
-|`rx_dtree` | 适合的分类和回归树 |`rx_dtree_ex`在 CTP 2.0|
-|`rx_lin_mod` | 创建线性模型|`rx_lin_mod_ex`在 CTP 2.0|
-|`rx_logit` | 创建逻辑回归模型|`rx_logit_ex`在 CTP 2.0|
-|`rx_predict` | 从训练的模型生成预测|`rx_predict_ex`在 CTP 2.0|
+|`rx_btrees` | 适合的随机渐变提升决策树|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | 适合分类和回归的决策林|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | 适合的分类和回归树 |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | 创建线性模型|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | 创建逻辑回归模型|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | 从训练的模型生成预测|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | 生成模型的摘要||
 
 新的机器学习算法还提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
@@ -151,7 +151,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-### <a name="requirements"></a>要求
+### <a name="requirements"></a>需求
 
 若要在 SQL Server 中运行 Python 代码，你必须已安装 SQL Server 2017 与功能结合**机器学习服务**，并启用 Python 的语言。 早期版本的 SQL Server 不支持 Python 集成。
 

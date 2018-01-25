@@ -16,14 +16,14 @@ helpviewer_keywords:
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 69ac660e66f9d997d2b7227d13f9c007dc68d7ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>master 数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] master  数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> “否”<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|是|  
 |ENCRYPTION|OFF|是|  

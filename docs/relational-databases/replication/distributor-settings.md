@@ -15,24 +15,24 @@ f1_keywords: sql13.rep.monitor.DistributorSettings.f1
 helpviewer_keywords: Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70367b69beb543b6d43b28ebbd6e5e15891b074e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29a5ba0a5fa0d731938c8d62fc53e209ab979b95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-settings"></a>分发服务器设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“分发服务器设置”对话框，可以更改已添加到复制监视器左窗格中的分发服务器的设置。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **复制监视器启动时自动连接**  
  选择此选项可以允许复制监视器连接到分发服务器并检索状态信息。  
   
- **连接**  
+ **“连接”**  
  单击此选项可以显示 **“连接到服务器”** 对话框。 通过该对话框可以查看和更改复制监视器用来连接分发服务器的连接属性和凭据。  
   
  **自动刷新此分发服务器及其发布的状态**  

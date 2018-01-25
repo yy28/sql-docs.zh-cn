@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], merge replication options
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68ab30b01e18384622231ba0c0c5e05b06b77efd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ddef0bdc5d08fadc7d232417ffc7579671e8c2c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-options-for-merge-replication"></a>合并复制的项目选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]有许多用于合并表项目的选项，可以使用这些选项自定义复制行为以满足应用程序的需要。 使用合并复制可执行以下操作：  

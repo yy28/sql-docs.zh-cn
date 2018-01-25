@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d8c20752d69b066934d1981025633dffd740318e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 07777ff0752a68e574c5f7f1a0021a8817eb7ea0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>步骤 5： 训练和保存 Python 模型使用 T-SQL
 
@@ -126,12 +126,12 @@ ms.lasthandoff: 01/08/2018
 
     处理的数据和拟合模型可能需要几分钟。 消息将传送到 Python 的**stdout**流将显示在**消息**窗口[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
 
-    *来自外部脚本的 STDOUT 消息：*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 打开表*nyc\_taxi_models*。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -191,12 +191,12 @@ ms.lasthandoff: 01/08/2018
 
     处理的数据和拟合模型可能需要一些时间。 消息将传送到 Python 的**stdout**流将显示在**消息**窗口[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
 
-    *来自外部脚本的 STDOUT 消息：*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 打开表 nyc_taxi_models。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 在下一步的步骤中，你可以使用训练的模型创建预测。
 

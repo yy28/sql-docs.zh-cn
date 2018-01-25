@@ -1,5 +1,5 @@
 ---
-title: "SQLNumResultCols |Microsoft 文档"
+title: SQLNumResultCols | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLNumResultCols function
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b4cfc7416b2e4438cc8462353e5f9bea6e125a7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d7391bc5abb701b2d849913abe31ab7b30a30571
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,6 +37,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [SQLNumResultCols 函数](http://go.microsoft.com/fwlink/?LinkId=59359)   
- [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API 实现详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

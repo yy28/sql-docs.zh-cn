@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ba02d945babd10cca11d07f6aa9e6ac01545661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51b4813c67c7f7346bea533764b13fceef06db12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/20/2017
   
  活动监视可显示在数据范围内执行的每个活动的状态，提供每个活动的数据，并使 DQS 管理员能够控制活动。 有关详细信息，请参阅 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)。  
   
- **配置**  
+ **Configuration**  
   
  配置选项支持您：  
   

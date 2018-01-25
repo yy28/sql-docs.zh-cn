@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eff1229f3dd8cbc2b23558a28736cef0487c17f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8027e697f08d9e31e463015ca929e64f5fa3d182
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[资源调控器属性](#DelWGRGProp)和 [Transact-SQL](#DelWGTSQL)  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   重新启动服务器。 完成重新启动过程后，将不会创建已删除的组，并且已移动的组将使用新分配的资源池。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  删除工作负荷组需要 CONTROL SERVER 权限。  
   
 ##  <a name="DelWGObjEx"></a> 使用对象资源管理器删除工作负荷组  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
