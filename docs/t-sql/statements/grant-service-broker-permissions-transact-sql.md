@@ -22,15 +22,15 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc317c36ae0cc14891be3a4f3a9c17c7a41fc3e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +57,22 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可对 Service Broker 安全对象授予的权限。  如下所列。  
   
- 协定**::***contract_name*  
+ 协定 **:: * * * contract_name*  
  指定将对其授予权限的约定。 作用域限定符"::"是必需的。  
   
- 消息类型**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  指定将对其授予权限的消息类型。 需要使用作用域限定符“::”。  
   
- 远程服务绑定**::***remote_binding_name*  
+ 远程服务绑定 **:: * * * remote_binding_name*  
  指定将对其授予权限的远程服务绑定。 需要使用作用域限定符“::”。  
   
- 路由**::***route_name*  
+ ROUTE **::***route_name*  
  指定将对其授予权限的路由。 需要使用作用域限定符“::”。  
   
- 服务**::***service_name*  
+ SERVICE **::***service_name*  
  指定将对其授予权限的服务。 需要使用作用域限定符“::”。  
   
  *database_principal*  
@@ -171,7 +171,7 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  

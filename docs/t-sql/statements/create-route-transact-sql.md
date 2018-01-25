@@ -28,15 +28,15 @@ helpviewer_keywords:
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b5fd2c6fb873889eafdb4bceafeba7699208d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ WITH
  替换为  
  介绍用于定义要创建的路由的子句。  
   
- SERVICE_NAME = *service_name*  
+ SERVICE_NAME = **'***service_name***'**  
  指定此路由指向的远程服务的名称。 *Service_name*必须完全匹配的名称远程服务使用。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*service_name*。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 如果省略 SERVICE_NAME，则此路由将与任何服务名称匹配，但比指定 SERVICE_NAME 的路由的匹配优先级低。 服务名称的路由**SQL/ServiceBroker/BrokerConfiguration**是到 Broker 配置通知服务的路由。 指向此服务的路由不能指定 Broker 实例。  
   
- BROKER_INSTANCE = *broker_instance_identifier*  
+ BROKER_INSTANCE = *****broker_instance_identifier*****  
  指定承载目标服务的数据库。 *Broker_instance_identifier*参数必须是远程数据库，可以通过在所选数据库中运行以下查询获取的 broker 实例标识符：  
   
 ```  
@@ -84,13 +84,13 @@ WHERE database_id = DB_ID()
   
  如果省略 BROKER_INSTANCE 子句，则此路由将与任何 Broker 实例匹配。 如果会话没有指定 Broker 实例，则匹配任何 Broker 实例的路由的匹配优先级高于具有显式 Broker 实例的路由的匹配优先级。 对于指定了 Broker 实例的会话，具有 Broker 实例的路由的优先级高于匹配任何 Broker 实例的路由的优先级。  
   
- 生存期 **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句， *route_lifetime*为 NULL，而路由永不过期。  
   
- 地址**=***next_hop_address*  
+ ADDRESS **='***next_hop_address***'**  
  指定此路由的网络地址。 *Next_hop_address*采用以下格式指定 TCP/IP 地址：  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
  指定*port_number*必须与匹配的端口号[!INCLUDE[ssSB](../../includes/sssb-md.md)]实例的终结点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定的计算机。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -108,10 +108,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  当路由指定了**'TRANSPORT'**为*next_hop_address*，基于该服务的名称的网络地址确定网络地址。 指定的路由**'TRANSPORT'**可能未指定服务名称或代理实例。  
   
- MIRROR_ADDRESS **=***next_hop_mirror_address*  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  指定与一个在承载镜像的数据库的镜像数据库的网络地址*next_hop_address*。 *Next_hop_mirror_address*采用以下格式指定 TCP/IP 地址：  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定*port_number*必须与匹配的端口号[!INCLUDE[ssSB](../../includes/sssb-md.md)]实例的终结点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定的计算机。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -138,7 +138,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  路由不能是临时对象。 将以开头的名称路由 **#** 可以，但是永久的对象。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  创建一个路由，默认值的成员的权限**db_ddladmin**或**db_owner**固定数据库角色的成员和**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

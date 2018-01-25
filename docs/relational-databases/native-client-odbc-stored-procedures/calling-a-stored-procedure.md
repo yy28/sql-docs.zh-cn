@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06859de8da70eb1357802fdca1e758e1872a7f10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  调用过程的 ODBC CALL 转义序列是：  
   
- {[**？ =**]**调用***procedure_name*[([*参数*] [**，**[*参数*]]...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
   
  其中*procedure_name*指定过程的名称和*参数*指定过程参数。 只有使用 ODBC CALL 转义序列的语句中才支持命名参数。  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
  过程调用的输入和输入/输出参数可以省略。 如果使用括号但不带任何参数调用过程，驱动程序将指示数据源使用第一个参数的默认值。 例如：  
   
- {**调用** *procedure_name***（)**}  
+ {**call** *procedure_name***( )**}  
   
  如果该过程不具有任何参数，则它可能失败。 如果不带括号调用过程，驱动程序将不发送任何参数值。 例如：  
   
- {**调用** *procedure_name*}  
+ {**call** *procedure_name*}  
   
  可以为过程调用中的输入和输入/输出参数指定文字。 例如，过程 InsertOrder 具有五个输入参数。 以下对 InsertOrder 的调用省略了第一个参数，为第二个参数提供文字，为第三、第四、第五个参数使用参数标记。 （按顺序对参数编号，从值 1 开始。）  
   

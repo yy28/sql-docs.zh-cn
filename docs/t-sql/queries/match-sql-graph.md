@@ -1,5 +1,5 @@
 ---
-title: "匹配 （SQL 图形） |Microsoft 文档"
+title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -22,13 +22,13 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8944c6b5ca481e61a1ca18e7c453d2c2035e1acb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="match-transact-sql"></a>匹配 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -152,5 +152,5 @@ AND Person1.name = 'Alice';
 
 ## <a name="see-also"></a>另请参阅  
  [创建 TABLE &#40;SQL Graph &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT （SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [使用 SQL Server 2017 处理的关系图](../../relational-databases/graphs/sql-graph-overview.md)  

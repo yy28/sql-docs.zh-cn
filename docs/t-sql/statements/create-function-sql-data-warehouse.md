@@ -16,13 +16,13 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: "14"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>创建函数 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  为参数数据类型。 有关[!INCLUDE[tsql](../../includes/tsql-md.md)]函数、 中支持的所有标量数据类型[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]允许。 时间戳 (rowversion) 数据类型不是受支持的类型。  
   
- [=*默认*]  
+ [ =*default* ]  
  参数的默认值。 如果*默认*定义值，该函数可以执行而无需指定该参数的值。  
   
  如果函数的参数有默认值，则调用该函数以检索默认值时，必须指定关键字 DEFAULT。 此行为与在存储过程中使用具有默认值的参数不同，在后一种情况下，不提供参数同样意味着使用默认值。  
@@ -107,7 +107,7 @@ RETURNS return_data_type
  *scalar_expression*  
  指定标量函数返回的标量值。  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  指定函数将具有以下一个或多个选项：  
   
@@ -173,7 +173,7 @@ GO
   
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) ： 显示函数所引用的基础对象。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

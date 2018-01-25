@@ -41,15 +41,15 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>还原语句 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -262,11 +262,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   为 Always On 可用性组准备可用性数据库  
   
-     有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
+     有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
 -   为数据库镜像准备镜像数据库  
   
-     有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
+     有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中若干功能的备份和还原注意事项。  
   
 -   联机还原  
   
@@ -396,7 +396,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  有关详细信息，请参阅[数据库恢复到数据库快照](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，可以通过 BACKUP 语句的 FORMAT 选项覆盖受密码保护的介质。  
   
 > [!IMPORTANT]  
@@ -404,7 +404,7 @@ Note: URL is the format used to specify the location and the file name for the W
 >   
 >  特定于 SQL Server 备份和还原与 Windows Azure Blob 存储的信息，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91;示例和 #93; 的顶部](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G。 将事务日志还原到标记  
+###  <a name="restoring_transaction_log_to_mark"></a> G. 将事务日志还原到标记  
  下面的示例将事务日志还原到名为 `ListPriceUpdate`的标记事务中的标记处。  
   
 ```  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91;示例和 #93; 的顶部](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H。 使用 TAPE 语法还原  
+###  <a name="restoring_using_TAPE"></a> H. 使用 TAPE 语法还原  
  下面的示例从 `TAPE` 备份设备还原完整数据库备份。  
   
 ```  
@@ -586,7 +586,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91;示例和 #93; 的顶部](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>我。 使用 FILE 和 FILEGROUP 语法还原  
+###  <a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 和 FILEGROUP 语法还原  
  下面的示例还原名为 `MyDatabase` 的数据库，该数据库有两个文件、一个辅助文件组和一个事务日志。 数据库使用完整恢复模式。  
   
  该数据库备份是名为 `MyDatabaseBackups` 的逻辑备份设备上的介质集中的第九个备份集。 接下来，通过使用 `10` 来还原在 `11` 设备上的后续三个备份集（`12`、`MyDatabaseBackups` 和 `WITH NORECOVERY`）中的三个日志备份。 还原最后一个日志备份之后，应当恢复数据库。  
@@ -628,7 +628,7 @@ GO
   
  [&#91;示例和 #93; 的顶部](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J 编写。 从数据库快照恢复  
+###  <a name="reverting_from_db_snapshot"></a> J. 从数据库快照恢复  
  下面的示例将数据库恢复到数据库快照。 该示例假定该数据库当前仅存在一个快照。 有关如何创建此数据库快照的示例，请参阅[创建数据库快照 &#40;Transact SQL &#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **注意：**恢复到快照将删除所有全文目录。  
@@ -642,10 +642,10 @@ GO
 
  [&#91;示例和 #93; 的顶部](#examples)  
   
-###  <a name="Azure_Blob"></a>K。 从 Microsoft Azure Blob 存储服务还原  
+###  <a name="Azure_Blob"></a> K. 从 Microsoft Azure Blob 存储服务还原  
 下面的三个示例都涉及 Microsoft Azure 存储服务的使用。  存储帐户名称为 `mystorageaccount`。  数据文件的容器称为`myfirstcontainer`。  备份文件的容器称为`mysecondcontainer`。  使用每个容器的读取、 写入、 删除和列表中，权限已创建的存储的访问策略。  使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据。  特定于 SQL Server 备份和还原与 Microsoft Azure Blob 存储的信息，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
 
-**K1。从 Microsoft Azure 存储服务还原完整数据库备份**  
+**K1.从 Microsoft Azure 存储服务还原完整数据库备份**  
 完整数据库备份，位于`mysecondcontainer`的`Sales`将还原到`myfirstcontainer`。  `Sales`当前不存在服务器上。 
 ```
 RESTORE DATABASE Sales
@@ -655,7 +655,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2。从 Microsoft Azure 存储服务的完整数据库备份还原到本地存储**  
+**K2.从 Microsoft Azure 存储服务的完整数据库备份还原到本地存储**  
 完整数据库备份，位于`mysecondcontainer`的`Sales`将还原到本地存储。  `Sales`当前不存在服务器上。
 ```
 RESTORE DATABASE Sales
@@ -665,7 +665,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3。从本地存储的完整数据库备份还原到 Microsoft Azure 存储服务**  
+**K3.从本地存储的完整数据库备份还原到 Microsoft Azure 存储服务**  
 ```
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'

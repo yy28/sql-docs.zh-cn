@@ -15,13 +15,13 @@ ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>还原数据库 （并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ RESTORE HEADERONLY
   
  还原用户数据库将还原完整数据库备份，然后到该设备根据需要还原差异备份。 用户数据库的还原包括还原的数据库用户和数据库角色。  
   
- 从磁盘 =\\\\*UNC_path*\\*backup_directory*  
+ FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
  网络路径和从其目录[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]将还原的备份文件。 例如，从磁盘 =\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup。  
   
  *backup_directory*  
@@ -90,7 +90,7 @@ RESTORE HEADERONLY
   
  RESTORE HEADERONLY 的结果可以实现模式化后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RESTORE HEADERONLY 的结果。 结果有 50 多个列，并非所有使用这些[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 有关中的列的说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]RESTORE HEADERONLY 的结果，请参阅[RESTORE HEADERONLY &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**CREATE ANY DATABASE**权限。  
   
  需要有权访问和读取从备份目录的 Windows 帐户。 你还必须存储的 Windows 帐户名称和密码在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  

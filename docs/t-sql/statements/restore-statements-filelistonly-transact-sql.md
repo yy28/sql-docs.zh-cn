@@ -23,15 +23,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>还原语句的 FILELISTONLY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ FROM <backup_device>
   
 |列名|数据类型|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar （128)**|文件逻辑名称。|  
-|PhysicalName|**nvarchar(260)**|文件的物理名称或操作系统名称。|  
-|类型|**char （1)**|文件的类型，其中包括：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据文件<br /><br /> **F** = 全文目录<br /><br /> **S** = FileStream、 FileTable，或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
-|FileGroupName|**nvarchar （128)**|包含文件的文件组的名称。|  
+|LogicalName|**nvarchar(128)**|文件逻辑名称。|  
+|PhysicalName|nvarchar(260)|文件的物理名称或操作系统名称。|  
+|类型|**char(1)**|文件的类型，其中包括：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据文件<br /><br /> **F** = 全文目录<br /><br /> **S** = FileStream、 FileTable，或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
+|FileGroupName|**nvarchar(128)**|包含文件的文件组的名称。|  
 |Size|**numeric(20,0)**|当前大小（以字节为单位）。|  
 |MaxSize|**numeric(20,0)**|允许的最大大小（以字节为单位）。|  
 |FileID|**bigint**|文件标识符，在数据库中唯一。|  
@@ -111,13 +111,13 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)**|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|对于 Azure 快照 FILE_SNAPSHOT 备份中包含的数据库文件的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码防止未经授权的还原操作，并且未授权的媒体使用的备份集追加[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保护备份的最佳做法是将备份磁带存储在安全的位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，获取有关备份集或备份设备的信息需要具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  

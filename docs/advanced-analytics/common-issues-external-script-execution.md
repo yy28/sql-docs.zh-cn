@@ -14,13 +14,13 @@ ms.topic: article
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ce80d7ca50b9410120bdb61a347d4b8a90c39b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2920cfae6e23845a9ac1643a17d6f133adaaf70d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部脚本执行的常见问题
 
@@ -191,9 +191,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重新启动服务通常可以解决问题，以便计算机学习脚本可以运行。 如果在重新启动操作未修复问题，请注意的路径和中的自变量**二进制路径**属性，并执行以下：
 
-    A. 查看启动器的.config 文件，并确保工作目录无效。
+    a. 查看启动器的.config 文件，并确保工作目录无效。
 
-    B. 确保使用快速启动板的 Windows 组可以连接到 SQL Server 实例中所述[上一节](#bkmk_LaunchpadTS)。
+    b. 确保使用快速启动板的 Windows 组可以连接到 SQL Server 实例中所述[上一节](#bkmk_LaunchpadTS)。
 
     c. 如果你更改任何服务属性，请重新启动快速启动板服务。
 
@@ -317,9 +317,9 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1]"c:\\程序文件\\Microsoft SQL Server\\MSSQL13。SQL2016\\R_SERVICES"*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
-*[1]"c: / Program 文件/Microsoft SQL Server/MSSQL13。SQL2016/R_SERVICES/库"*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 若要解决此问题，你必须重新安装 SQL Server 实例库的程序包。
 

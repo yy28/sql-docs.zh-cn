@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>参数  
- *group_name* |"**默认**"  
+ *group_name* | "**default**"  
  是现有用户定义工作负荷组或资源调控器默认工作负荷组的名称。  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE 对资源池而言是局部性的；同一资源池内重要性不同的工作负荷组会相互影响，但不会影响其他资源池中的工作负荷组。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*值*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  指定单个请求可以从池中获取的最大内存量。 此百分比是相对于 MAX_MEMORY_PERCENT 指定的资源池大小而言的。  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  请注意，如果服务器没有足够的物理内存，则这两种情况都会出现超时错误 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC =*值*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  指定请求可以使用的最长 CPU 时间，以秒为单位。 *值*必须为 0 或一个正整数。 默认设置*值*为 0，这意味着无限制。  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *值*必须是正整数。 默认设置*值*，0，使用基于查询开销的内部计算来确定的最长时间。  
   
- MAX_DOP =*值*  
+ MAX_DOP =*value*  
  指定最大并行度 (DOP 并行请求)。 *值*必须是 0 或正整数，1 到 255。 当*值*为 0，则服务器会选择最大并行度。 这是默认设置，还是推荐设置。  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  配置 DOP 后，只能在授予内存不足时降低它。 工作负荷组重新配置在授予内存队列中等待时不可见。  
   
- GROUP_MAX_REQUESTS =*值*  
+ GROUP_MAX_REQUESTS =*value*  
  指定在工作负荷组中允许执行的同时请求最大数。 *值*必须为 0 或一个正整数。 默认设置*值*，0，允许无限的请求。 当达到最大并发请求数时，该组中的用户可以登录但置于等待状态，直至并发请求数降到指定值之下。  
   
  使用 { *pool_name* |"**默认**"}  
@@ -147,7 +147,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 >  选项 "default" 区分大小写。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  允许对默认组使用 ALTER WORKLOAD GROUP。  
   
  对工作负荷组配置的更改直到执行 ALTER RESOURCE GOVERNOR RECONFIGURE 后才会生效。 在执行 DBCC FREEPROCCACHE 后新设置时更改影响设置的计划，只会在以前缓存的计划生效 (*pool_name*)，其中*pool_name*是资源的名称在其工作负荷组都与关联的调控器资源池。  
@@ -192,7 +192,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   

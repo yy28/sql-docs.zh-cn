@@ -16,20 +16,20 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 caps.latest.revision: "7"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa9dec84a07189eb3b2c6c9c3d9342db4eac1df6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="version---transact-sql-metadata-functions"></a>版本-Transact SQL 元数据函数
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  返回的版本[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)]在设备上运行。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 & #40;Transact SQL & #41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ SELECT VERSION();
 ```  
   
 ## <a name="see-also"></a>另请参阅 
-[SESSION_ID (Transact SQL)](../../t-sql/functions/session-id-transact-sql.md)  
-[DB_NAME &#40;Transact SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
+[SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   

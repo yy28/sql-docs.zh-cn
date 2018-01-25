@@ -16,15 +16,15 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbcc9fd355a75a690fd77914340212362f34766
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
  下表显示了参数和结果集中的数据类型映射：  
   
-|SQL Server 数据类型|SQL 数据类型|ReplTest1|  
+|SQL Server 数据类型|SQL 数据类型|“值”|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 01/08/2018
 |转换的目标和源：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支持 *|  
-|SQL_C_BINARY|是否支持|  
+|SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|支持 *|  
   
  \*二进制数据转换为十六进制字符串。  
@@ -149,7 +149,7 @@ ms.lasthandoff: 01/08/2018
 |转换的目标和源：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支持 *|  
-|SQL_C_BINARY|是否支持|  
+|SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|支持 *|  
   
  \*二进制数据转换为十六进制字符串时发生。  

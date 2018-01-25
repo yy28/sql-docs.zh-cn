@@ -24,13 +24,13 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f81606a64480990a2f511a9820672c2cf1bb5c8
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 094c127434f2339a4a3e977c4455ca6ce904ab01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;（位与）(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ expression & expression
  **tinyint**如果输入的值为**tinyint**或**位**。  
   
 ## <a name="remarks"></a>注释  
-  **&** 按位运算符执行两个表达式，使每个相应位的两个表达式之间的按位逻辑 AND。 当且仅当输入表达式中两个位（正在被解析的当前位）的值都为 1 时，结果中的位才被设置为 1；否则，结果中的位被设置为 0。  
+ **&** 按位运算符执行两个表达式，使每个相应位的两个表达式之间的按位逻辑 AND。 当且仅当输入表达式中两个位（正在被解析的当前位）的值都为 1 时，结果中的位才被设置为 1；否则，结果中的位被设置为 0。  
   
  如果左侧和右侧表达式具有不同的整数数据类型 (例如，左侧*表达式*是**smallint**和右*表达式*是**int**)，较小的数据类型的自变量转换为更大的数据类型。 在这种情况下，**smallint * * * 表达式*转换为**int**。  
   

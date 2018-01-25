@@ -31,13 +31,13 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  指定辅助 XML 索引的类型。  
   
- Value  
+ VALUE  
  为主 XML 索引的键列（节点值和路径）所在的列创建辅助 XML 索引。  
   
  PATH  
@@ -127,7 +127,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  为 PK 为基表主键的主 XML 索引列（PK、路径值和节点值）创建辅助 XML 索引。  
   
- **\<对象 >:: =**  
+ **\<object>::=**  
   
  要为其建立索引的完全限定对象或非完全限定对象。  
   
@@ -140,11 +140,11 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  要索引的表的名称。  
   
- **\<xml_index_option >:: =** 
+ **\<xml_index_option> ::=** 
   
  指定创建索引时要使用的选项。  
   
- PAD_INDEX  **=**  {ON |**OFF** }  
+ PAD_INDEX **=** { ON | **OFF** }  
  指定索引填充。 默认为 OFF。  
   
  ON  
@@ -155,7 +155,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 将中间级索引页上的行数为永远不会小于 2，而不考虑如何低值*fillfactor*。  
   
- 填充因子 **=** *填充因子*  
+ 填充因子 **= * * * 填充因子*  
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 *填充因子*必须是介于 1 到 100 的整数值。 默认值为 0。 如果*fillfactor*为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]与完全填充叶级页创建索引。  
   
 > [!NOTE]  
@@ -168,7 +168,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
- SORT_IN_TEMPDB  **=**  {ON |**OFF** }  
+ SORT_IN_TEMPDB **=** { ON | **OFF** }  
  指定是否存储在临时排序结果**tempdb**。 默认为 OFF。  
   
  ON  
@@ -179,7 +179,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  除了创建索引，在用户数据库中所需的空间**tempdb**必须具有相同数量的额外空间来存储的中间排序结果有关。 有关详细信息，请参阅[SORT_IN_TEMPDB 选项为索引](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
- IGNORE_DUP_KEY **= OFF**  
+ IGNORE_DUP_KEY **=OFF**  
  对 XML 索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
   
  DROP_EXISTING  **=**  {ON |**OFF** }  
@@ -219,7 +219,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用页锁。  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  重写[配置 max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)索引操作的持续时间的配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]  
@@ -227,7 +227,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  *max_degree_of_parallelism*可以是：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -241,7 +241,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]  
 >  并行索引操作不可用的每个版本[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  从派生的计算列**xml**数据类型可以创建索引作为键或包含非键列，只要计算的列数据类型是允许作为索引键列或非键列。 无法对计算创建主 XML 索引**xml**列。  
   
  若要查看有关 XML 索引的信息，请使用[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)目录视图。  
@@ -296,11 +296,11 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40;Transact SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)  
   

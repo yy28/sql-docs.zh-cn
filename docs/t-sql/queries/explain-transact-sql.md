@@ -15,13 +15,13 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="explain-transact-sql"></a>说明 (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)]语句在其上的**说明**将运行。 *SQL_statement*可以是任何这些命令：**选择**，**插入**，**更新**，**删除**， **CREATE TABLE AS SELECT**，**创建远程表**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**SHOWPLAN**权限和执行权限*SQL_statement*。 请参阅[权限： GRANT、 DENY、 REVOKE 和 #40;Azure SQL 数据仓库、 并行数据仓库和 #41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>返回值  
@@ -68,11 +68,11 @@ EXPLAIN SQL_statement
   
 |XML 标记|摘要、 属性和内容|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|顶级级别/文档元素。|
-|\<sql >|回显*SQL_statement*。|  
-|\<params >|这次不使用此标记。|  
-|\<dsql_operations >|总结了和包含的查询步骤中，并包括查询的成本信息。 此外包含的所有`<dsql_operation>`块。 此标记包含整个查询的计数信息：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*是查询后，若要运行，以毫秒为单位的总估计的时间。<br /><br /> *total_number_operations*是查询的操作的总数目。 将并行化和多个节点上运行的操作将计为单个操作。|  
-|\<dsql_operation >|描述查询计划中的单个操作。 \<Dsql_operation > 标记中包含的操作类型作为特性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*是中找到的值之一[查询数据 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)。<br /><br /> 中的内容`\<dsql_operation>`块均依赖于操作类型。<br /><br /> 请参阅下表。|  
+|\<dsql_query>|顶级级别/文档元素。|
+|\<sql>|回显*SQL_statement*。|  
+|\<params>|这次不使用此标记。|  
+|\<dsql_operations>|总结了和包含的查询步骤中，并包括查询的成本信息。 此外包含的所有`<dsql_operation>`块。 此标记包含整个查询的计数信息：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*是查询后，若要运行，以毫秒为单位的总估计的时间。<br /><br /> *total_number_operations*是查询的操作的总数目。 将并行化和多个节点上运行的操作将计为单个操作。|  
+|\<dsql_operation>|描述查询计划中的单个操作。 \<Dsql_operation > 标记中包含的操作类型作为特性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*是中找到的值之一[查询数据 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c)。<br /><br /> 中的内容`\<dsql_operation>`块均依赖于操作类型。<br /><br /> 请参阅下表。|  
   
 |操作类型|内容|示例|  
 |--------------------|-------------|-------------|  

@@ -1,5 +1,5 @@
 ---
-title: "bcp_gettypename |Microsoft 文档"
+title: bcp_gettypename | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>参数  
- *令牌*  
+ *token*  
  指示 BCP 类型标记的值。  
   
- *字段*  
+ field  
  指示请求的标记是否为 max 类型。  
   
 ## <a name="returns"></a>返回  
@@ -57,7 +57,7 @@ RETCODE bcp_gettypename (
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
-|BCP 类型名称|MaxType|“输出”|  
+|BCP 类型名称|MaxType|输出|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|之前或之后|**decimal**|  
 |**SQLNUMERIC**|之前或之后|**numeric**|  
@@ -67,22 +67,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|之前或之后|**money**|  
 |**SQLFLT8**|之前或之后|**float**|  
 |**SQLDATETIME**|之前或之后|**datetime**|  
-|**SQLBITN**|之前或之后|**位 null**|  
+|**SQLBITN**|之前或之后|**bit-null**|  
 |**SQLBIT**|之前或之后|**bit**|  
-|**SQLBIGCHAR**|是|**char**|  
-|**SQLCHARACTER**|是|**char**|  
-|**SQLBIGVARCHAR**|是|**varchar**|  
-|**SQLVARCHAR**|是|**varchar**|  
+|**SQLBIGCHAR**|否|**char**|  
+|**SQLCHARACTER**|否|**char**|  
+|**SQLBIGVARCHAR**|否|**varchar**|  
+|**SQLVARCHAR**|否|**varchar**|  
 |**SQLTEXT**|之前或之后|**text**|  
-|**SQLBIGBINARY**|是|**binary**|  
-|**SQLBINARY**|是|**二进制**|  
-|**SQLBIGVARBINARY**|是|**Varbinary**|  
-|**SQLVARBINARY**|是|**Varbinary**|  
+|**SQLBIGBINARY**|否|**binary**|  
+|**SQLBINARY**|否|**二进制**|  
+|**SQLBIGVARBINARY**|否|**Varbinary**|  
+|**SQLVARBINARY**|否|**Varbinary**|  
 |**SQLIMAGE**|之前或之后|**图像**|  
-|**SQLINTN**|之前或之后|**int null**|  
-|**SQLDATETIMN**|之前或之后|**datetime null**|  
-|**SQLMONEYN**|之前或之后|**money null**|  
-|**SQLFLTN**|之前或之后|**float null**|  
+|**SQLINTN**|之前或之后|**int-null**|  
+|**SQLDATETIMN**|之前或之后|**datetime-null**|  
+|**SQLMONEYN**|之前或之后|**money-null**|  
+|**SQLFLTN**|之前或之后|**float-null**|  
 |**SQLAOPSUM**|之前或之后|**Sum**|  
 |**SQLAOPAVG**|之前或之后|**Avg**|  
 |**SQLAOPCNT**|之前或之后|**Count**|  
@@ -92,8 +92,8 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|之前或之后|**Smallmoney**|  
 |**SQLFLT4**|之前或之后|**实际**|  
 |**SQLUNIQUEID**|之前或之后|**uniqueidentifier**|  
-|**SQLNCHAR**|是|**Nchar**|  
-|**SQLNVARCHAR**|是|**Nvarchar**|  
+|**SQLNCHAR**|否|**Nchar**|  
+|**SQLNVARCHAR**|否|**Nvarchar**|  
 |**SQLNTEXT**|之前或之后|**Ntext**|  
 |**SQLVARIANT**|之前或之后|**sql_variant**|  
 |**SQLINT8**|之前或之后|**Bigint**|  

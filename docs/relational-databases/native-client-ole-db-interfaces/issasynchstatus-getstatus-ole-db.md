@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde94f855b9c5712a576ec246c02670e3e18365f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1a6d91a0224b53a09dd35e1b8adf0f48c77d578
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,17 +54,17 @@ HRESULT GetStatus(
   
  DBASYNCHOP_OPEN – 使用者请求有关异步打开或填充行集或者异步初始化数据源对象的信息。 如果访问接口是支持直接 URL 绑定且与 OLE DB 2.5 兼容的访问接口，使用者则请求有关异步初始化或填充数据源、行集、行或流对象的信息。  
   
- *pulProgress*[out 一个]  
+ *pulProgress*[out]  
  指向内存中用于返回相对于预期的最大异步操作的当前进度的指针所示*pulProgressMax*参数。 有关的含义的详细信息*pulProgress*，请参阅说明*peAsynchPhase*。  
   
  如果*pulProgress*是 null 指针，返回没有取得进展。  
   
- *pulProgressMax*[out 一个]  
+ *pulProgressMax*[out]  
  指向内存中要返回的预期最大值的指针*pulProgress*参数。 此值可以随此方法的每次调用而更改。 有关的含义的详细信息*pulProgressMax*，请参阅说明*peAsynchPhase*。  
   
  如果*pulProgressMax*是 null 指针，不返回任何预期的最大值。  
   
- *peAsynchPhase*[out 一个]  
+ *peAsynchPhase*[out]  
  指向内存的指针，将在此内存中返回有关异步操作的进度的其他信息。 有效值包括：  
   
  DBASYNCHPHASE_INITIALIZATION - 对象处于初始化阶段。 自变量*pulProgress*和*pulProgressMax*指示完成到估计的比率。 对象尚未完全具体化。 尝试调用任何其他接口可能失败，并且可能无法对该对象使用整套接口。 如果异步操作调用的结果**ICommand::Execute**的更新的命令删除，或插入行，如果*cParamSets*大于 1， *pulProgress*和*pulProgressMax*可能表示为一组参数或完整的数组的参数集的进度。  

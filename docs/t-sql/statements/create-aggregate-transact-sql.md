@@ -1,5 +1,5 @@
 ---
-title: "创建聚合 (Transact SQL) |Microsoft 文档"
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 877e72a18d11fbf31a6ea61f6abed515f5b746f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  要创建的聚合函数的名称。  
   
- **@***param_name*  
+ **@** *param_name*  
  用户定义聚合函数中的一个或多个参数。 在执行聚合函数时，用户必须提供参数的值。 通过使用"at"符号指定参数名称 (**@**) 作为第一个字符。 参数名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 该函数的参数是局部参数。  
   
  *system_scalar_type*  
@@ -83,7 +83,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  当前数据库中已创建的 CLR 用户定义类型的名称。 如果*udt_schema_name*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假定该类型属于当前用户的架构。  
   
- *程序集 _ 名称*[ **。***class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  指定与用户定义的聚合函数绑定在一起的程序集以及（可选）该程序集所属的架构名称和该程序集中实现该用户定义聚合函数的类名称。 必须先使用 CREATE ASSEMBLY 语句在数据库中创建了该程序集。 *class_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符和匹配的程序集中存在的类的名称。 *class_name*可能是命名空间限定名称，如果使用编写类的编程语言使用命名空间，如 C#。 如果*class_name*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]假定它是与相同*aggregate_name*。  
   
 ## <a name="remarks"></a>注释  
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  在引用的程序集的类*程序集 _ 名称*，其方法中，应该可满足所有的用户定义的聚合函数的实例中的实现的要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[clr 用户定义聚合](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CREATE AGGREGATE 权限以及对 EXTERNAL NAME 子句中指定的程序集的 REFERENCES 权限。  
   
 ## <a name="examples"></a>示例  
@@ -121,6 +121,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [删除聚合 &#40;Transact SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
+ [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

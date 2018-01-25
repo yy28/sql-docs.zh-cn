@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed7e27232f57c829efcff478805567e812334bdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 91ec3d738f8a718a2af7415a6f204be3c204201a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序是一种低级别的 COM API，用于访问数据。 建议将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口用于开发需要高性能的工具、实用工具或底层组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是直接访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格格式数据流 (TDS) 协议的本机高性能访问接口。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是与 OLE DB 版本 2.0 兼容的访问接口。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [创建 SQL Server Native Client OLE DB 提供程序应用程序](../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [行集](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
--   [存储过程](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+-   [存储的过程](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
--   [BLOB 和 OLE 对象](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+-   [Blob 和 OLE 对象](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [表和索引](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [FILESTREAM 支持 &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [中的](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [事务](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [错误](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   

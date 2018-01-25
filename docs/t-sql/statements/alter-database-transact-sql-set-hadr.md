@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE SET HADR (Transact SQL) |Microsoft 文档"
+title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  在指定的数据库上执行指定的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 命令。  
   
- {可用性组 **=**  *group_name* |关闭}  
+ {可用性组 **= * * * group_name* |关闭}  
  在指定的可用性组中加入或删除可用性数据库，如下所示：  
   
- *组名*  
+ *group_name*  
  在您针对由 group_name 指定的可用性组执行命令的服务器实例所承载的辅助副本上，加入指定的数据库。  
   
  此操作的前提条件如下所示：  
@@ -81,7 +81,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  若要将数据库添加到可用性组中，连接到承载主副本的服务器实例，并使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name*将数据库添加*database_name*语句。  
   
- 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+ 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
  OFF  
  从可用性组中删除指定的辅助数据库。  
@@ -131,7 +131,7 @@ ALTER DATABASE database_name
 ## <a name="restrictions"></a>限制  
  在事务和批处理两者之外执行 ALTER DATABASE 语句。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
  需要对数据库拥有 ALTER 权限。 将数据库联接到可用性组要求的成员身份**db_owner**固定的数据库角色。  
@@ -149,7 +149,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [创建可用性组 &#40;Transact SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 可用性组 &#40; 的概述SQL server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [解决 AlwaysOn 可用性组配置 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

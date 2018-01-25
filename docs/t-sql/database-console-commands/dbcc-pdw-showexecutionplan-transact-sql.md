@@ -1,5 +1,5 @@
 ---
-title: "DBCC PDW_SHOWEXECUTIONPLAN (Transact SQL) |Microsoft 文档"
+title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
@@ -15,13 +15,13 @@ dev_langs: TSQL
 caps.latest.revision: "12"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1429ba18470b0881065bb0a851ff09faecd181c3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: af6b466df18df3df0535a2de8f582f57484255aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *spid*  
  标识符[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行的查询计划的会话。 这是一个整数，不能为 NULL。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  在需要的 CONTROL 权限[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
 需要在设备上的 VIEW SERVER STATE 权限。
@@ -101,4 +101,4 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 
 ## <a name="see-also"></a>另请参阅
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;Transact SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

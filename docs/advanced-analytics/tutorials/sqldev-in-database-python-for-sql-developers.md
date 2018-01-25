@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 970298c59b7b48c5579125ef163785801db676ee
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 开发人员的数据库中 Python 分析
 
@@ -74,9 +74,9 @@ ms.lasthandoff: 01/08/2018
 
     模型已保存到数据库后，调用模型预测使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>必要條件
 
 + 使用机器学习服务和启用的 Python 安装 SQL Server 2017 的实例。 有关详细信息，请参阅[设置 SQL Server 计算机学习 Services 与 Python 一起](../python/setup-python-machine-learning-services.md)。
 + 本演练中使用的登录名必须有权创建数据库和其他对象，有权上载数据、选择数据和运行存储过程。

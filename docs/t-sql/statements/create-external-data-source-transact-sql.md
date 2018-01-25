@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>创建外部数据源 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -138,7 +138,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
  类型 = [HADOOP |于包含 SHARD_MAP_MANAGER |RDBMS |BLOB_STORAGE]  
  指定的数据源类型。 使用 HADOOP，Hadoop 外部数据源时或适用于 Hadoop 的 Azure 存储 blob。 在 Azure SQL 数据库上创建分片的弹性数据库查询的外部数据源时，请使用于包含 SHARD_MAP_MANAGER。 使用 RDBMS 外部数据源的跨数据库查询 Azure SQL 数据库上的弹性数据库查询。  执行大容量操作使用时使用 BLOB_STORAGE[大容量插入](../../t-sql/statements/bulk-insert-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)与[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
   
-位置 = \<location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 对于 HADOOP，指定 Hadoop 群集的统一资源标识符 (URI)。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI： 计算机名称或 IP 地址的 Hadoop 群集 Namenode。  
@@ -156,7 +156,7 @@ account_name: Azure 存储帐户的完全限定的域名 (FQDN)。
 
 
 
-**于包含 SHARD_MAP_MANAGER**   
+**SHARD_MAP_MANAGER**   
  有关于包含 SHARD_MAP_MANAGER，指定承载 Azure SQL 数据库或 Azure 虚拟机上的 SQL Server 数据库中的分片映射管理器的逻辑服务器名称。
  
  ```
@@ -211,7 +211,7 @@ RDBMS 的分步教程，请参阅[跨数据库查询 （垂直分区） 入门](
 
 |Hadoop 连接|默认资源管理器端口|
 |-------------------|-----------------------------|
-|@shouldalert|50300|
+|1|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -259,10 +259,10 @@ RDBMS 的分步教程，请参阅[跨数据库查询 （垂直分区） 入门](
  凭据 = *credential_name*  
  指定对外部数据源进行身份验证的数据库范围凭据。 有关示例，请参阅[C.创建 Azure blob 存储外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md#credential)。 若要创建一个凭据，请参阅[CREATE CREDENTIAL (Transact SQL)](../../t-sql/statements/create-credential-transact-sql.md)。 请注意不允许匿名访问的公共数据集需要凭据。 
   
- DATABASE_NAME = *QueryDatabaseName*  
+ DATABASE_NAME = *'QueryDatabaseName'*  
  （适用于 RDBMS) 充当分片映射管理器 （适用于包含 SHARD_MAP_MANAGER) 的数据库或远程数据库的名称。  
   
- SHARD_MAP_NAME = *ShardMapName*  
+ SHARD_MAP_NAME = *'ShardMapName'*  
  有关于包含 SHARD_MAP_MANAGER 仅。 分片映射的名称。 有关创建分片映射的详细信息，请参阅[弹性数据库查询入门](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)  
   
 ## <a name="polybase-specific-notes"></a>PolyBase 特定说明  
@@ -485,7 +485,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
 [创建外部 TABLE AS SELECT &#40;Transact SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [创建 TABLE AS SELECT &#40;Azure SQL 数据仓库 &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

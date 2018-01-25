@@ -14,13 +14,13 @@ ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9455eef75df9e802d797b67da0454d36e11def2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 265f66c0dfba28e1f3c35fa560098b3a2d13cb0c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-数据优化的性能
 
@@ -168,7 +168,7 @@ RevoScaleR 优化的其他指南，请参阅以下文章：
 
 + 函数的参考[rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>使用 MicrosoftML
+### <a name="use-microsoftml"></a>Use MicrosoftML
 
 我们还建议你查看到新**MicrosoftML**包，其中提供计算上下文和提供的 RevoScaleR 的转换可以使用的可缩放的机器学习算法。
 

@@ -23,13 +23,13 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>创建外部文件格式 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -117,9 +117,9 @@ WITH (
   
  使用 PolyBase 支持两种 SerDe 方法指定 RCFile 示例。
   
--   FORMAT_TYPE = RCFILE，SERDE_METHOD = org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe
+-   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
   
--   FORMAT_TYPE = RCFILE，SERDE_METHOD = org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe
+-   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
   
  DELIMITEDTEXT 指定以文本格式使用列分隔符，也称为字段终止符。
   
@@ -182,36 +182,36 @@ PolyBase 仅用于自定义日期格式将数据导入。 它不将数据写入�
   
 |日期类型|示例|Description|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = yyyy-月-日 HH:mm:ss.fff|除了年、 月和日，此日期格式包括 00-24 小时，00-59 分钟，00-59 秒和毫秒的 3 个数字。|  
+|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了年、 月和日，此日期格式包括 00-24 小时，00-59 分钟，00-59 秒和毫秒的 3 个数字。|  
 |DateTime|DATE_FORMAT = yyyy-月-日 hh:mm:ss.ffftt|除了年、 月和日，此日期格式包括 00-12 小时，00-59 分钟，00-59 秒、 毫秒，和 AM，3 个数字 am，PM 或 pm。 |  
-|SmallDateTime|DATE_FORMAT = yyyy-月-日 hh: mm|除了年、 月和日，此日期格式包括 00-23 小时数，00-59 分钟。|  
+|SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|除了年、 月和日，此日期格式包括 00-23 小时数，00-59 分钟。|  
 |SmallDateTime|DATE_FORMAT = yyyy-月-日 hh:mmtt|除了年、 月和日，此日期格式包括 00-11 时间的操作、 00-59 分钟，没有秒，和 AM、 am、 PM，或 pm。|  
 |日期|DATE_FORMAT = yyyy-月-日|年、 月和日。 时间元素不是包含。|  
 |日期|DATE_FORMAT = yyyy-MMM-'dd '|年、 月和日。 月被指定为 3 分钟，输入的值时，一项或年 1 月、 年 2 月、 日、 Apr、 可能、 六月、 七月、 日，9 月、 年 10 月、 年 11 月或年 12 月的字符串。|  
-|datetime2|DATE_FORMAT = yyyy-月-日 HH:mm:ss.fffffff|除了年、 月和日，此日期格式包括 00-23 小时数，00-59 分钟，00-59 秒和毫秒的 7 位。|  
+|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|除了年、 月和日，此日期格式包括 00-23 小时数，00-59 分钟，00-59 秒和毫秒的 7 位。|  
 |datetime2|DATE_FORMAT = yyyy-月-日 hh:mm:ss.ffffffftt|除了年、 月和日，此日期格式包括 00-11 小时数，00-59 分钟，00-59 秒、 毫秒，和 AM 7 位 am，PM 或 pm。|  
-|DateTimeOffset|DATE_FORMAT = yyyy-月-日 HH:mm:ss.fffffff zzz|除了年、 月和日，此日期格式包括 00-23 小时数，00-59 分钟，00-59 秒和毫秒为单位，和的时区偏移量作为输入文件中放置的 7 位`{+&#124;-}HH:ss`。 例如，而无需夏时制的洛杉矶以来节省了 8 小时后面 UTC，值为-08:00 输入文件中的指定洛杉矶的时区。|  
+|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|除了年、 月和日，此日期格式包括 00-23 小时数，00-59 分钟，00-59 秒和毫秒为单位，和的时区偏移量作为输入文件中放置的 7 位`{+&#124;-}HH:ss`。 例如，而无需夏时制的洛杉矶以来节省了 8 小时后面 UTC，值为-08:00 输入文件中的指定洛杉矶的时区。|  
 |DateTimeOffset|DATE_FORMAT = yyyy-月-日 hh:mm:ss.ffffffftt zzz|除了年、 月和日，此日期格式包括 00-11 小时数，00-59 分钟，00-59 秒、 毫秒、 （上午、 am、 PM，或下午），7 位和时区偏移量。 请参阅前一行中的说明。|  
-|Time|DATE_FORMAT = hh: mm:|没有日期值，仅 00-23 小时数，00-59 分钟和 00-59 秒。|  
+|Time|DATE_FORMAT = 'HH:mm:ss'|没有日期值，仅 00-23 小时数，00-59 分钟和 00-59 秒。|  
   
  所有支持的日期格式：
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]]M-[d] d-[yy] yy hh: mm: [.fff]|[M [M]]M-[d] d-[yy] yy hh: mm [: 00]|[M [M]]M-[d] d-[yy] yy|[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff]|[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff] zzz|  
-|[M [M]]M-[d] d-[yy] yy hh: mm: [.fff] [tt]|[M [M]]M-[d] d-[yy] yy hh: mm [: 00] [tt]||[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt]|[M [M]]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt] zzz|  
-|[M [M]]M-[yy] yy-[d] d hh: mm: [.fff]|[M [M]]M-[yy] yy-[d] d hh: mm [: 00]|[M [M]]M-[yy] yy-[d] d|[M [M]]M-[yy] yy-[d] d hh: mm: [.fffffff]|[M [M]]M-[yy] yy-[d] d hh: mm: [.fffffff] zzz|  
-|[M [M]]M-[yy] yy-[d] d hh: mm: [.fff] [tt]|[M [M]]M-[yy] yy-[d] d hh: mm [: 00] [tt]||[M [M]]M-[yy] yy-[d] d hh: mm: [.fffffff] [tt]|[M [M]]M-[yy] yy-[d] d hh: mm: [.fffffff] [tt] zzz|  
-|[yy] yy-[M [M]] M-[d] d hh: mm: [.fff]|[yy] yy-[M [M]] M-[d] d hh: mm [: 00]|[yy] yy-[M [M]] d M-[d]|[yy] yy-[M [M]] M-[d] d hh: mm: [.fffffff]|[yy] yy-[M [M]] M-[d] d hh: mm: [.fffffff] zzz|  
-|[yy] yy-[M [M]] M-[d] d hh: mm: [.fff] [tt]|[yy] yy-[M [M]] M-[d] d hh: mm [: 00] [tt]||[yy] yy-[M [M]] M-[d] d hh: mm: [.fffffff] [tt]|[yy] yy-[M [M]] M-[d] d hh: mm: [.fffffff] [tt] zzz|  
-|[yy] yy-[d] d-[M [M]] M hh: mm: [.fff]|[yy] yy-[d] d-[M [M]] M hh: mm [: 00]|[yy] yy-d [d]-[M [M]] M|[yy] yy-[d] d-[M [M]] M hh: mm: [.fffffff]|[yy] yy-[d] d-[M [M]] M hh: mm: [.fffffff] zzz|  
-|[yy] yy-[d] d-[M [M]] M hh: mm: [.fff] [tt]|[yy] yy-[d] d-[M [M]] M hh: mm [: 00] [tt]||[yy] yy-[d] d-[M [M]] M hh: mm: [.fffffff] [tt]|[yy] yy-[d] d-[M [M]] M hh: mm: [.fffffff] [tt] zzz|  
-|[d] d-[M [M]] M-[yy] yy hh: mm: [.fff]|[d] d-[M [M]] M-[yy] yy hh: mm [: 00]|[d] d-[M [M]] M-[yy] yy|[d] d-[M [M]] M-[yy] yy hh: mm: [.fffffff]|[d] d-[M [M]] M-[yy] yy hh: mm: [.fffffff] zzz|  
-|[d] d-[M [M]] M-[yy] yy hh: mm: [.fff] [tt]|[d] d-[M [M]] M-[yy] yy hh: mm [: 00] [tt]||[d] d-[M [M]] M-[yy] yy hh: mm: [.fffffff] [tt]|[d] d-[M [M]] M-[yy] yy hh: mm: [.fffffff] [tt] zzz|  
-|[d] d-[yy] yy-[M [M]] M hh: mm: [.fff]|[d] d-[yy] yy-[M [M]] M hh: mm [: 00]|[d] d-[yy] yy-[M [M]] M|[d] d-[yy] yy-[M [M]] M hh: mm: [.fffffff]|[d] d-[yy] yy-[M [M]] M hh: mm: [.fffffff] zzz|  
-|[d] d-[yy] yy-[M [M]] M hh: mm: [.fff] [tt]|[d] d-[yy] yy-[M [M]] M hh: mm [: 00] [tt]||[d] d-[yy] yy-[M [M]] M hh: mm: [.fffffff] [tt]|[d] d-[yy] yy-[M [M]] M hh: mm: [.fffffff] [tt] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[M [M]]M-[yy] yy-[d] d hh: mm [: 00] [tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[yy] yy-[M [M]] M-[d] d hh: mm [: 00] [tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm[:00][tt]||[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
- 详细信息：  
+ 详细信息︰  
   
 -   若要分隔月、 日和年的值，可以使用 –'，'/'，或。 '. 为简单起见，表使用仅 – 分隔符。
   
@@ -244,27 +244,27 @@ PolyBase 仅用于自定义日期格式将数据导入。 它不将数据写入�
  
  DELIMITEDTEXT 格式类型支持这些压缩方法：
   
--   数据压缩 = org.apache.hadoop.io.compress.DefaultCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   数据压缩 = org.apache.hadoop.io.compress.GzipCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
  RCFILE 格式类型支持此压缩方法：
   
--   数据压缩 = org.apache.hadoop.io.compress.DefaultCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
  ORC 文件格式类型支持这些压缩方法：
   
--   数据压缩 = org.apache.hadoop.io.compress.DefaultCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   数据压缩 = org.apache.hadoop.io.compress.SnappyCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
  PARQUET 文件格式类型支持 folliwing 压缩方法：
   
--   数据压缩 = org.apache.hadoop.io.compress.GzipCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
--   数据压缩 = org.apache.hadoop.io.compress.SnappyCodec
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY EXTERNAL FILE FORMAT 权限。
   
 ## <a name="general-remarks"></a>一般备注

@@ -14,12 +14,12 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6777a47d9f2078b662990c2597f84cc41222de63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>设置用于在 Azure 上的机器学习的虚拟机
 
@@ -135,17 +135,17 @@ R Services 数据库中可作为预览功能仅，并具有与 SQL Server 的本
 
 目前，以下虚拟机是可用于机器学习与 SQL Server:
 
-|“属性”| 注释|
+|名称| 注释|
 |----|----|----|
 | **SQL Server 2016**| ***  |
-|在 Windows 上的 SQL Server 2016 SP1 Enterprise|集成的高级分析的 R Services。|
+|SQL Server 2016 SP1 Enterprise on Windows|集成的高级分析的 R Services。|
 |Windows Server 上的 BYOL SQL Server 2016 SP1 Enterprise |集成的高级分析的 R Services。 |
 |Windows Server 2016 上的可用许可证： SQL Server 2016 SP1 开发人员 |集成的高级分析的 R Services。 |
 | 数据科学虚拟机的 Windows 2012|包含用于数据科学，。 包括 Microsoft R Server Developer Edition、 SQL Server 2016 开发人员版、 Anaconda Python 分发，Julia 专业开发人员版和 Jupyter 笔记本的常用工具| 
 | 数据科学虚拟机-Windows 2016|包含 SQL Server 2016 Developer Edition，具有对数据库中 R 分析的支持。|
 |**SQL Server 2017**| ***   |
-|SQL Server 自 2017 年企业 Windows Server 2016| 具有 Python 和 R 语言支持的机器学习服务。|
-|BYOL SQL Server 自 2017 年企业 Windows Server 2016|具有 Python 和 R 语言支持的机器学习服务。|
+|SQL Server 2017 Enterprise Windows Server 2016| 具有 Python 和 R 语言支持的机器学习服务。|
+|BYOL SQL Server 2017 Enterprise Windows Server 2016|具有 Python 和 R 语言支持的机器学习服务。|
 | Windows Server 上可用的 SQL Server 许可证： SQL Server 自 2017 年 Developer|具有 Python 和 R 语言支持的机器学习服务。|
 | **其他**| *** |
 | 机器学习服务器唯一的 SQL Server 自 2017 年 Enterprise|类似于 SQL Server 2016 Enterprise 映像，但包含的机器学习服务器的独立版本，但核心 ScaleR 和操作化功能优化适用于 Windows 环境。|

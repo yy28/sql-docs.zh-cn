@@ -29,15 +29,15 @@ helpviewer_keywords:
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80afa328b185c25a8bae3af127720ccf6d7c529d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6353bd534827ff9066bd7b184a09d67b5867c3cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ CHECKPOINT [ checkpoint_duration ]
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  检查点权限仅默认授予的成员**sysadmin**固定的服务器角色和**db_owner**和**db_backupoperator**固定数据库角色的成员，并不是转让。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [配置恢复间隔服务器配置选项](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   
- [关闭 &#40;Transact SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
+ [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  
   
   

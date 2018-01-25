@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a4efef1269d85483b098e98a03b913306088f68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ LOGSPACE
 > [!IMPORTANT]
 > 有关从开始事务日志空间使用情况信息的详细信息[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，请参阅[备注](#Remarks)本主题中的部分。
   
-**"sys.dm_os_latch_stats"**，清除  
+**"sys.dm_os_latch_stats"**, CLEAR  
 重置闩锁统计信息。 有关详细信息，请参阅[sys.dm_os_latch_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). 此选项在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中不可用。  
   
-**"sys.dm_os_wait_stats"**，清除  
+**"sys.dm_os_wait_stats"**, CLEAR  
 重置等待统计信息。 有关详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 此选项在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中不可用。  
   
 WITH NO_INFOMSGS  
@@ -76,10 +76,10 @@ WITH NO_INFOMSGS
   
 |列名|定义|  
 |---|---|
-|**Database Name**|数据库名称，为该数据库显示日志统计信息。|  
+|**数据库名称**|数据库名称，为该数据库显示日志统计信息。|  
 |**日志大小 (MB)**|分配给日志的当前大小。 该值始终小于最初为日志空间分配的量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]会保留一小部分磁盘空间，用以存放内部标头信息。|  
 |**使用日志空间 （%）**|当前正在使用，以存储事务日志信息的日志文件的百分比。|  
-|**“状态”**|日志文件的状态。 始终为 0。|  
+|**状态**|日志文件的状态。 始终为 0。|  
   
 ## <a name="Remarks"></a> 注释  
 从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，使用[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)而不是 DMV `DBCC SQLPERF(LOGSPACE)`、 可返回的每个数据库的事务日志的空间使用情况信息。    
@@ -122,10 +122,10 @@ DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
-[sys.dm_os_latch_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
-[sys.dm_os_wait_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

@@ -32,13 +32,13 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +123,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX
   
 如果表已具有聚集列存储索引，可以将现有索引，指定相同的名称，或可以使用 DROP EXISTING 选项以指定新名称。  
   
-ON [*database_name*。 [*schema_name* ]。 | *schema_name* 。 ] *table_name*  
+ON [*database_name*。 [*schema_name* ] . | *schema_name* 。 ] *table_name*  
    指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果表是堆或聚集的索引表从行存储转换为列存储。 如果该表已为列存储，此语句将重新生成聚集列存储索引。  
   
 替换为  
@@ -171,7 +171,7 @@ ON
    *filegroup_name*  
    指定用于存储聚集列存储索引的文件组。 如果未指定位置并且表未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。  
 
-   **"**默认**"**  
+   **"**default**"**  
    若要在默认文件组上创建索引，请使用"默认值"或 [默认]。  
   
    如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 QUOTED_IDENTIFIER 默认为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
@@ -182,11 +182,11 @@ ON
 *index_name*  
    指定索引的名称。 *index_name*必须是唯一在该表中，但不需要在数据库中是唯一。 索引名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- **(** *列*[ **，**...*n* ] **)**  
+ **(** *column*  [ **,**...*n* ] **)**  
     指定要存储的列。 非聚集列存储索引被限制为 1024年列。  
    每个列都必须采用列存储索引支持的数据类型。 请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)有关支持的数据类型的列表。  
 
-ON [*database_name*。 [*schema_name* ]。 | *schema_name* 。 ] *table_name*  
+ON [*database_name*。 [*schema_name* ] . | *schema_name* 。 ] *table_name*  
    指定一个、 两个或三部分包含的索引的表名称。  
 
 使用 DROP_EXISTING = [关闭] |ON  
@@ -213,7 +213,7 @@ ONLINE = [ON |关闭]
 
    关闭指定的索引不可供使用时正在生成新的副本。 因为这是仅，非聚集索引的基表保持可用性，只有非聚集列存储索引不用于满足查询的新索引直到完成。 
 
-COMPRESSION_DELAY = **0** | \<延迟 > [分钟]  
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
    在多长时间行应保留在增量行组之前文件迁移到压缩行组上指定下限。 例如，客户可以说，是否某行是不变时间为 120 分钟，使其适合压缩到列存储格式。 对于基于磁盘的表的列存储索引，我们不能跟踪插入或更新，行的时间时，我们使用增量行组关闭作为代理的行改为。 默认持续时间为 0 分钟。 行迁移到列存储后进行增量行组中累积 100 万行，并它已标记为已关闭。  
@@ -255,12 +255,12 @@ ON
 *filegroup_name*  
    指定要对其创建索引的文件组名称。 如果*filegroup_name*未指定和未分区表、 索引与基础表使用同一文件组。 该文件组必须已存在。  
  
-**"**默认**"**  
+**"**default**"**  
 为默认文件组创建指定索引。  
   
 在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符和必须分隔，如下所示 ON **"**默认**"**或亮**[**默认**]**。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="GenRemarks"></a>一般备注  
@@ -275,7 +275,7 @@ ON
 - INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。  
 - 查询优化器使用筛选的索引来生成查询计划。  
   
-    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
+    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -300,29 +300,29 @@ ON
 ##  <a name="LimitRest"></a> 限制和局限  
 
 **列存储索引中的每个列必须是以下常见业务数据类型之一：** 
--   datetimeoffset [(  *n*  )]  
+-   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   日期  
--   时间 [(  *n*  )]  
+-   date  
+-   time [ ( *n* ) ]  
 -   float [(  *n*  )]  
 -   实际 [(  *n*  )]  
 -   十进制 [(*精度*[ *，缩放*] **)** ]
 -   数字 [(*精度*[ *，缩放*] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   ssNoversion  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
+-   varchar [ ( *n* ) ]  
 -   varchar （max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
--   char [(  *n*  )]  
+-   char [ ( *n* ) ]  
 -   varbinary [(  *n*  )] 
 -   varbinary (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
 -   二进制 [(  *n*  )]  
@@ -622,7 +622,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有插入、 更新、 删除或合并的查询将失败并返回一条错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：  
   
--   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如，  
+-   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如：  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession2::BCPSetBulkMode |Microsoft 文档"
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 386d898dd1adb1df7e01beba6c1ce71a214f3329
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b3b66909225f1628376b03fc060523446a492b5
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
   IBCPSession2::BCPSetBulkMode 提供的替代方法[IBCPSession::BCPColFmt &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)用于指定的列格式。 与 IBCPSession::BCPColFmt，设置单独的列格式属性，不同 IBCPSession2::BCPSetBulkMode 设置的所有属性。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -64,13 +64,13 @@ HRESULT BCPSetBulkMode (
   
 |||  
 |-|-|  
-|**则为 S_OK**|方法成功。|  
+|**S_OK**|方法成功。|  
 |**E_FAIL**|提供程序特定错误的发生，有关详细的信息，请使用 ISQLServerErrorInfo 接口。|  
 |**E_UNEXPECTED**|意外调用了该方法。 例如， **IBCPSession2::BCPInit**方法未调用 IBCPSession2::BCPSetBulkMode 之前调用。|  
 |**E_INVALIDARG**|自变量无效。|  
 |**E_OUTOFMEMORY**|内存不足的错误。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>備註  
  IBCPSession2::BCPSetBulkMode 可以用于大容量复制完查询或表。 当 IBCPSession2::BCPSetBulkMode 用于大容量复制从查询语句时，它必须调用，然后再调`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 ICommandPrepare::Prepare 以返回错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  

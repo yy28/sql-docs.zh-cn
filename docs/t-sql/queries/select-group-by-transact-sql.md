@@ -35,13 +35,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>选择的组 BY-TRANSACT-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>参数 
  
-### <a name="column-expression"></a>*列表达式*  
+### <a name="column-expression"></a>*column-expression*  
 在列上指定一列或非聚合计算。 此列可以属于表、 派生的表或视图。 列必须出现在 SELECT 语句的 FROM 子句，但不需要选择列表中显示。 
 
 有关有效表达式，请参阅[表达式](~/t-sql/language-elements/expressions-transact-sql.md)。    
@@ -347,16 +347,16 @@ GROUP BY 子句支持使用以下语法例外的 SQL 2006 标准中包含的所�
 |功能|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 聚合|WITH CUBE 或 WITH ROLLUP 不支持。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP 支持。|与兼容级别 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|用户定义函数**dbo.cube (***arg1***，***...argN***)**或**dbo.rollup (***arg1***，**...*argN***)**在 GROUP BY 子句允许。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|用户定义函数**dbo.cube (***arg1***，**...argN**)**或**dbo.rollup (**arg1**，***...argN***)**在 GROUP BY 子句不允许。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 将返回以下错误消息:"关键字多维数据集 &#124; 附近有语法错误汇总。"<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 下面的示例被允许:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|用户定义函数**dbo.cube (***arg1***，***...argN*) 或**dbo.rollup (** *arg1***，***...argN***)**在 GROUP BY 子句允许<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|不支持|是否支持|是否支持|  
-|CUBE|不支持|是否支持|不支持|  
-|ROLLUP|不支持|是否支持|不支持|  
-|总计，如 GROUP BY ()|不支持|是否支持|是否支持|  
-|GROUPING_ID 函数|不支持|是否支持|是否支持|  
-|GROUPING 函数|是否支持|是否支持|是否支持|  
-|WITH CUBE|是否支持|是否支持|是否支持|  
-|WITH ROLLUP|是否支持|是否支持|是否支持|  
-|WITH CUBE 或 WITH ROLLUP“重复”分组删除|是否支持|是否支持|是否支持| 
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|用户定义函数**dbo.cube (***arg1***，***...argN***)**或**dbo.rollup (***arg1***，**...*argN * * *)** 在 GROUP BY 子句允许。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|用户定义函数**dbo.cube (***arg1***，**...argN**)**或**dbo.rollup (**arg1**，***...argN***)**在 GROUP BY 子句不允许。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 将返回以下错误消息:"关键字多维数据集 &#124; 附近有语法错误汇总。"<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 下面的示例被允许:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|用户定义函数 **dbo.cube (***arg1***，* * *...argN*) 或**dbo.rollup (***arg1***，***...argN***)**在 GROUP BY 子句允许<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|不支持|Supported|Supported|  
+|CUBE|不支持|Supported|不支持|  
+|ROLLUP|不支持|Supported|不支持|  
+|总计，如 GROUP BY ()|不支持|Supported|Supported|  
+|GROUPING_ID 函数|不支持|Supported|Supported|  
+|GROUPING 函数|Supported|Supported|Supported|  
+|WITH CUBE|Supported|Supported|Supported|  
+|WITH ROLLUP|Supported|Supported|Supported|  
+|WITH CUBE 或 WITH ROLLUP“重复”分组删除|Supported|Supported|Supported| 
  
   
 ## <a name="examples"></a>示例  

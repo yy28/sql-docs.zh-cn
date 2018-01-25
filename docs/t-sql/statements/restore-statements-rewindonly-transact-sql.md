@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457ce42346ec53d30cc8a47a6bc4f82a3271d8fc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>还原语句的 REWINDONLY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,13 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- **\<backup_device >:: =** 
+ **\<backup_device> ::=** 
   
  指定要用于还原操作的逻辑或物理备份设备。  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- 是逻辑名称，必须符合规则的标识符，创建的备份设备的**sp_addumpdevice**从还原数据库。 如果为变量提供 (**@***logical_backup_device_name_var*)，备份设备名称可以是指定为字符串常量 ( **@** *logical_backup_device_name_var* = *logical_backup_device_name*) 或作为变量的字符字符串数据类型，除**ntext**或**文本**数据类型。  
+ { *logical_backup_device_name* | **@ * * * logical_backup_device_name_var* } 是逻辑名称，必须遵循标识符的备份设备的规则通过创建**sp_addumpdevice**从还原数据库。如果为变量提供 (**@***logical_backup_device_name_var*)，备份设备名称可以是指定为字符串常量 (**@ * * * logical_backup_device_name_var*  =  *logical_backup_device_name*) 或作为变量的字符字符串数据类型，除**ntext**或**文本**数据类型。  
   
- {磁盘 |磁带}  **=**  { *physical_backup_device_name*  |   **@** *physical_backup_device_name_var* }  
- 允许从指定的磁盘或磁带设备还原备份。 应使用设备的实际名称 （例如，完整路径和文件名称） 指定的磁盘和磁带的设备类型： 磁盘 = C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\。 \TAPE0。 如果指定为一个变量 (**@***physical_backup_device_name_var*)，可以是设备名称指定为字符串常量 ( **@**  *physical_backup_device_name_var* =*physcial_backup_device_name*) 或作为变量的字符字符串数据类型，除**ntext**或**文本**数据类型。  
+ {磁盘 |磁带}  **=**  { *****physical_backup_device_name***** | **@ * * * physical_backup_device_name_var* } 允许从已命名的磁盘或磁带设备还原备份。应使用设备的实际名称 （例如，完整路径和文件名称） 指定的磁盘和磁带的设备类型： 磁盘 = C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\。 \TAPE0。如果指定为一个变量 (**@***physical_backup_device_name_var*)，可以是设备名称指定为字符串常量 (**@ * * * physical_backup_device_name_var* =*physcial_backup_device_name *) 或作为变量的字符字符串数据类型，除**ntext**或**文本**数据类型。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关使用 UNC 名称的详细信息，请参阅[备份设备 &#40;SQL server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -80,7 +78,7 @@ FROM <backup_device> [ ,...n ]
   
  还原顺序是否要求备份设备的数量与创建备份所属的介质集时所用的数量相同，这取决于还原是脱机还原还是联机还原。 脱机还原允许还原所用的设备少于创建备份时所用的设备。 联机还原要求使用备份的所有备份设备。 使用较少的设备进行还原将会失败。  
   
- 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+ 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)实例上执行数据库备份，则此选项是必需的。  
   
 > [!NOTE]  
 >  从镜像介质集中还原备份时，对于每个介质簇，只能指定一个镜像服务器。 但是，在出现错误时，拥有其他镜像服务器可以快速解决某些还原问题。 您可以使用其他镜像服务器中的相应卷替换损坏的介质卷。 请注意，对于脱机还原来说，虽然您可以使用比介质簇少的设备进行还原，但每个簇仅处理一次。  
@@ -98,9 +96,9 @@ FROM <backup_device> [ ,...n ]
 ## <a name="general-remarks"></a>一般备注  
  RESTORE REWINDONLY 是从磁带中还原 LABELONLY 的替代 =\<名称 > 与重绕。 你可以从打开的磁带驱动器的列表[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)动态管理视图。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  任何用户都可以使用 RESTORE REWINDONLY。  
   
 ## <a name="see-also"></a>另请参阅  

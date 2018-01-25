@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d39e391e494e37c63731431579e82900ef3dbeeb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 80b40209f7287a7710a9dcd8022a3dd203aa8305
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步骤 2： 将数据导入到 SQL Server 使用 PowerShell
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
     - 名称或地址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安装与 Python 的机器学习服务实例。
     - 实例上某帐户的用户名和密码。 你使用的帐户必须具有创建数据库、 创建表和存储的过程和大容量加载到表的数据的能力。 
     - 如果未提供的用户名和密码，你的 Windows 标识可用于登录到 SQL Server，并将提升到输入密码。
-    - 刚下载的示例数据文件的路径和文件名。 例如，使用 IPv4 地址 `C:\temp\pysql\nyctaxi1pct.csv`
+    - 刚下载的示例数据文件的路径和文件名。 例如： `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 若要成功加载数据，库 xmlrw.dll 必须是 bcp.exe 所在的文件夹。

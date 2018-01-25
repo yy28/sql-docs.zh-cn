@@ -26,15 +26,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 256536ee8fc56891b0b957498c7c5bcf4881f235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ FOR CONVERSATION
   
  默认值为 ANY。  
   
- REMOTE_SERVICE_NAME = {*RemoteServiceName*|**ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
  *RemoteServiceName*是类型的文字值**nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*RemoteServiceName*字符串。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
- *RemoteServiceName*  
+ '*RemoteServiceName*'  
  指定此会话优先级可以应用于以下各项：  
   
 -   相关联的目标服务名称与匹配任何发起方会话端点*RemoteServiceName*。  
@@ -162,7 +162,7 @@ FOR CONVERSATION
   
 -   所有[!INCLUDE[ssSB](../../includes/sssb-md.md)]数据库中的操作如果已在数据库中不创建任何会话优先级分配默认优先级为 5。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用于创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员。 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -296,7 +296,7 @@ CREATE BROKER PRIORITY BronzePriority
  [删除 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [接收 &#40;Transact SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [发送 &#40;Transact SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

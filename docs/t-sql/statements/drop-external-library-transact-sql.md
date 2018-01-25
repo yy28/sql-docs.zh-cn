@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: DROP EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 23ea7a2d914dd1dd0eabcb411b3636f19a8cd70d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>删除外部库 (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DROP EXTERNAL LIBRARY library_name
 
 如果该语句已成功，则返回一条信息性消息。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
 
 与其他不同`DROP`SQL Server 中的语句，此语句支持指定可选 authorization 子句。 这允许**dbo**或中的用户**db_owner**角色删除包库上载常规用户数据库中。
 
@@ -75,7 +75,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>另请参阅  
-[创建外部库 (Transact SQL)](create-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [ALTER 外部库 (Transact SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

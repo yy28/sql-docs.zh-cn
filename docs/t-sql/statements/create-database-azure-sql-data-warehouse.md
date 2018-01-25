@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>创建数据库 （Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -60,7 +60,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *版本*  
 指定数据库的服务层。 有关[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]使用数据仓库。  
   
-*最大大小*  
+*MAXSIZE*  
 默认值为 10240 GB (10 TB)。  
 
 **适用于：**针对弹性性能层优化
@@ -81,7 +81,7 @@ SERVICE_OBJECTIVE
 
 SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，并且不能更改。 有关更多详细信息，请参阅[与 Azure SQL 数据库中的兼容性级别 130 改进查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 所需的权限：  
   
 -   服务器级别主体登录名，创建由设置过程中，或  

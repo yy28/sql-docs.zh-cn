@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  预定义的工作负荷组和资源池全部使用小写字母的名称，例如"默认"。 对于使用区分大小写排序规则的服务器，应当注意这一点。 使用不区分大小写排序规则的服务器（例如 SQL_Latin1_General_CP1_CI_AS）会将“default”和“Default”视为相同。  
   
- MIN_CPU_PERCENT =*值*  
+ MIN_CPU_PERCENT =*value*  
  指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 *值*是一个整数，它默认设置为 0。 所允许的范围*值*是从 0 到 100 之间。  
   
- MAX_CPU_PERCENT =*值*  
+ MAX_CPU_PERCENT =*value*  
  指定在存在 CPU 争用时资源池中的所有请求将接收的最大平均 CPU 带宽。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
   
- CAP_CPU_PERCENT =*值*  
+ CAP_CPU_PERCENT =*value*  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定资源池中的请求的目标最大 CPU 容量。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
@@ -102,18 +102,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*值*  
+ MIN_MEMORY_PERCENT =*value*  
  指定为此资源池保留的、不能与其他资源池共享的最小内存量。 *值*是一个整数，它默认设置为 0。 所允许的范围*值*是从 0 到 100 之间。  
   
- MAX_MEMORY_PERCENT =*值*  
+ MAX_MEMORY_PERCENT =*value*  
  指定此资源池中的请求可使用的总服务器内存量。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
   
- MIN_IOPS_PER_VOLUME =*值*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 所允许的范围*值*为 0 到 2 ^31-1 (2,147,483,647)。 指定 0 表示池没有最小值阈值。  
   
- MAX_IOPS_PER_VOLUME =*值*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 所允许的范围*值*为 0 到 2 ^31-1 (2,147,483,647)。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
@@ -138,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  清除缓存的计划，从与多个工作负荷组关联的资源池将影响所有工作负荷组与用户定义的资源池由标识*pool_name*。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

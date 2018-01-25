@@ -13,12 +13,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a252feae8b3e3cdb049278d2e60234dda8f14319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 0f728b0e15372f9027dac84c3f58b09438444f95
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="native-scoring"></a>本机评分
 
@@ -77,7 +77,7 @@ _评分_过程分为两步。 首先，你指定一个预先训练的模型，�
 + 部署你的 ML 脚本：[使用 Python 模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
 + 部署你的 ML 脚本：[使用 R 模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 支持的平台是，如下所示：
 

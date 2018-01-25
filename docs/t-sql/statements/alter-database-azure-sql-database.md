@@ -15,13 +15,13 @@ ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: "37"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ALTER DATABASE { database_name }
  CURRENT  
  指定应更改当前使用的数据库。  
   
- 修改名称 **=**  *new_database_name*  
+ MODIFY NAME **=***new_database_name*  
  重命名数据库名称指定为*new_database_name*。 下面的示例更改数据库的名称`db1`到`db2`:   
 
 ```  
@@ -219,10 +219,10 @@ ALTER DATABASE current
 
 如果数据库的 MAXSIZE 属性设置为的值超出了该版本支持的有效范围，版本进行的更改将失败。  
 
- 修改 (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024...4096] GB)  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。 下表列出 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务层支持的 MAXSIZE 值和默认值 (D)。  
   
-|**最大大小**|**基本**|**S0 S2**|**S3 S12**|**P1 P6 和 PRS1 PRS6**|**P11 P15**|  
+|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1 P6 和 PRS1 PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -258,7 +258,7 @@ ALTER DATABASE current
 -   如果 MAXSIZE 和 EDITION 均未指定，则版本设置为标准 (S0)，并最大大小设置为 250 GB。  
  
 
- 修改 (SERVICE_OBJECTIVE =\<服务目标 >)  
+ MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
  指定性能级别。 下面的示例更改服务的高级数据库到目标`P6`:
  
 ```  
@@ -267,7 +267,7 @@ ALTER DATABASE current
 ```  
  服务目标的可用值有： `S0`， `S1`， `S2`， `S3`， `S4`， `S6`， `S7`， `S9`， `S12`， `P1`， `P2`，`P4`， `P6`， `P11`， `P15`， `PRS1`， `PRS2`， `PRS4`，和`PRS6`。 服务目标说明和有关大小、 版本，以及服务目标组合的详细信息，请参阅[Azure SQL 数据库服务层和性能级别](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支持指定的 SERVICE_OBJECTIVE，你将收到错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。  
   
- 修改 (SERVICE_OBJECTIVE = 弹性\_池 (名称 = \<elastic_pool_name >)  
+ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
  若要将现有数据库添加到弹性池，设置数据库的 SERVICE_OBJECTIVE 为 ELASTIC_POOL 并提供弹性池的名称。 你可以使用此选项以将数据库更改到同一服务器内的不同弹性池。 有关详细信息，请参阅[创建和管理 SQL 数据库弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要从弹性池删除数据库，请使用 ALTER DATABASE 设置 SERVICE_OBJECTIVE 到单个数据库的性能级别。  
 
  添加辅助 ON SERVER \<partner_server_name >  
@@ -279,7 +279,7 @@ ALTER DATABASE current
  与 SERVICE_OBJECTIVE {S0 |S1 |S2 |S3"|S4 |S6 |S7 |S9 |S12 |P1 |P2 |P4 |P6 |P11 |P15 |PRS1 |PRS2 |PRS4 |PRS6}  
  如果未指定 SERVICE_OBJECTIVE，在与主数据库相同的服务级别创建辅助数据库。 当指定 SERVICE_OBJECTIVE 时，在指定的级别创建辅助数据库。 此选项支持使用成本较低的服务级别创建异地复制的辅助数据库。 指定 SERVICE_OBJECTIVE 必须位于与源相同的版本。 例如，如果版本是高级无法指定 S0。  
   
- ELASTIC_POOL (名称 = \<elastic_pool_name)  
+ ELASTIC_POOL (name = \<elastic_pool_name)  
  如果未指定 ELASTIC_POOL，在弹性池中不创建辅助数据库。 当指定 ELASTIC_POOL 时，在指定的池中创建辅助数据库。  
   
 > [!IMPORTANT]  
@@ -321,7 +321,7 @@ ALTER DATABASE current
 > [!IMPORTANT]  
 >  执行 FORCE_FAILOVER_ALLOW_DATA_LOSS 命令的用户必须是主服务器和辅助服务器上的 DBManager。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  若要删除数据库，使用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
   
  若要减小数据库大小，使用[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
@@ -401,14 +401,14 @@ ALTER DATABASE db1 FAILOVER
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
  [将事务隔离级别设置 &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
  [sys.data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.filegroups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.master_files &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [系统数据库](../../relational-databases/databases/system-databases.md)  
   
   

@@ -16,13 +16,13 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>创建 TABLE AS SELECT （Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -94,7 +94,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 ### <a name="table-distribution-options"></a>表分发选项
 
-`DISTRIBUTION` = `HASH`( *distribution_column_name* ) |ROUND_ROBIN |复制      
+`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 CTAS 语句需要分发选项，并且没有默认值。 这是不同于具有默认值创建表。 
 
 有关详细信息，以及若要了解如何选择最佳的分布列，请参阅[表分布选项](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions)创建表中的部分。 
@@ -111,15 +111,15 @@ CTAS 语句需要分发选项，并且没有默认值。 这是不同于具有�
 ### <a name="select-options"></a>选择选项
 Select 语句是 CTAS 和创建表之间的基本差异。  
 
- `WITH`*common_table_expression*  
+ `WITH` *common_table_expression*  
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  将填充新的表的结果与 SELECT 语句。 *select_criteria*是确定要将复制到新表的数据的 SELECT 语句的正文。 SELECT 语句有关的信息，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 CTAS 需要`SELECT`中引用的任何对象权限*select_criteria*。
 
 有关创建表的权限，请参阅[权限](https://msdn.microsoft.com/library/mt203953/#Permissions)创建表中。 

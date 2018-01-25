@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>预测 (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ MODEL = @model | model_literal
 
 数据参数用于指定用于评分或预测的数据。 在查询中的表源的形式指定数据。 表源可以是表、 表别名，CTE 别名、 视图或表值函数。
 
-**参数**
+**parameters**
 
 参数参数用于指定用于评分或预测的可选用户定义参数。
 
@@ -73,7 +73,7 @@ MODEL = @model | model_literal
 
 > [注意]此选项中的 SQL Server 自 2017 年的预发行版不支持而且包含仅用于向前兼容性。
 
-**使用 ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 WITH 子句用于指定由返回的输出的架构`PREDICT`函数。
 
@@ -91,7 +91,7 @@ WITH 子句用于指定由返回的输出的架构`PREDICT`函数。
 
 不能查看内部模型结构使用`PREDICT`。 如果你想要了解模型本身的内容，必须加载的模型对象、 反序列化，并使用相应的 R 代码分析模型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
 
 `PREDICT`函数支持在所有版本的 SQL Server，包括 Linux。
 
