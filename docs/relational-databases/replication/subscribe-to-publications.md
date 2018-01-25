@@ -26,15 +26,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4613a7ee6306ba86b5748377f20c1cf48117815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]订阅是对发布中的数据和数据库对象的副本的请求。 订阅定义将接收哪个发布以及接收的时间和位置。 在计划订阅时，请考虑代理处理发生的位置。 所选择的订阅类型将控制代理运行的位置。 对于推送订阅，合并代理或分发代理在分发服务器上运行；对于请求订阅，代理在订阅服务器上运行。 创建订阅后，将无法更改其类型。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="merge-replication-subscription-types"></a>合并复制订阅类型  
  所有复制类型都允许推送订阅和请求订阅。 合并复制使用另外两个术语来区分订阅：客户端订阅和服务器订阅。 客户端订阅和服务器订阅类型都可用于推送订阅和请求订阅。 客户端订阅适合于大多数订阅服务器，而服务器订阅通常用于向其他订阅服务器重新发布数据的订阅服务器。 订阅选择还会影响冲突解决。  
   
-## <a name="non-sql-server-subscribers"></a>非 SQL Server 订阅服务器  
+## <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
  Oracle 和 IBM DB2 可以使用推送订阅来订阅快照和事务发布。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ## <a name="creating-subscriptions"></a>创建订阅  
@@ -96,6 +96,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [保护订阅服务器](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [订阅过期和停用](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

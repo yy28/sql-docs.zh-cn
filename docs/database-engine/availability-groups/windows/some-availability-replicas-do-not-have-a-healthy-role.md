@@ -17,13 +17,13 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12b5859cd2748d9d1c8aa527e6240d8869bcfea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8403618aff372ee20f04114a6bad31e5a9137fa6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>一些可用性副本不具有正常运行的角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**策略名称**|可用性副本角色状态|  
 |**问题**|一些可用性副本不具有正常运行的角色。|  
 |**类别**|**警告**|  
-|**方面**|可用性组|  
+|**方面**|可用性组 (availability group)|  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>Description  
  此策略将汇总所有可用性副本的连接状态，并且检查是否存在未处于正常运行角色的任何可用性副本。 在有可用性副本既不是主副本也不是辅助副本时，此策略处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  

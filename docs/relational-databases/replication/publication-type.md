@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.publicationtype.f1
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 716c64923b3de5d3287ddbf7bc52aa22055d6233
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a347afd82d3251c1bcadac8b77939c6afdc68ed6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-type"></a>发布类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]复制可提供以下类型的发布：  
@@ -35,12 +35,12 @@ ms.lasthandoff: 11/17/2017
   
  为应用程序选择哪种或哪些复制类型取决于物理复制环境、要复制的数据类型和数量以及是否在订阅服务器上更新数据。 物理环境包括复制涉及的计算机数量和位置，以及这些计算机是客户端（工作站、便携式计算机或手持设备）还是服务器。 有关详细信息，请参阅[复制类型](../../relational-databases/replication/types-of-replication.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **Publication type**  
  为此发布选择适当的复制类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [创建发布](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe194806dc60a604bcae54a3d170bf691a1b09a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4a59808877873110ff96bf8f88676aa473d3488
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-4---summary---solutions-and-script-projects"></a>课程 3-4 - 摘要 - 解决方案和脚本项目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的各种开发人员功能，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可提供开发人员进行企业级代码管理所需的功能。 您可以创建自定义模板来支持重复执行的任务，保存和管理协作集中环境中的复杂脚本项目。  

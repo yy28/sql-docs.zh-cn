@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用管理分区向导可以通过分区切换或实现滑动窗口方案来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
@@ -169,7 +169,7 @@ ms.lasthandoff: 11/17/2017
  **Run immediately**  
  当单击“下一步”或“完成”时，令向导完成对分区的修改。  
   
-### <a name="schedule"></a>计划  
+### <a name="schedule"></a>“计划”  
  选中此项可以在计划的日期和时间修改表分区。  
   
  **更改计划**  
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="NewJob"></a> 新建作业计划页  
  使用 **“新建作业计划”** 页可以查看和更改计划的属性。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业选择所需的计划类型。  
   
  **名称**  
@@ -252,7 +252,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="one-time-schedule-types-options"></a>一次性计划类型选项  
  如果计划某个作业运行一次，您必须选择一个将来的日期和时间。  
   
- **日期**  
+ **Date**  
  选择作业的计划运行日期。  
   
  **Time**  
@@ -272,14 +272,14 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Progress"></a> “进度”页  
  使用 **“进度”** 页可以监视有关 **“管理分区向导”**操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **详细信息**  
  提供向导执行的操作所返回的操作、状态和所有消息。  
   
  **操作**  
  指定每个操作的类型和名称。  
   
- **状态**  
+ **“状态”**  
  指示向导操作作为一个整体返回的值是“成功”还是“失败”。  
   
  **消息**  

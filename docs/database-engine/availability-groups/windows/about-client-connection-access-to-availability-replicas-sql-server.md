@@ -22,13 +22,13 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 AlwaysOn 可用性组中，你可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为次要副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 |副本角色|副本上支持的连接访问|连接意向|连接尝试结果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|辅助副本|全部|指定了读意向、读写意向或未指定连接意向|成功|  
+|辅助副本|All|指定了读意向、读写意向或未指定连接意向|成功|  
 |辅助副本|无（这是默认辅助行为。）|指定了读意向、读写意向或未指定连接意向|失败|  
 |辅助副本|仅限读意向|读意向|成功|  
 |辅助副本|仅限读意向|指定了读写意向或未指定连接意向|失败|  
@@ -103,8 +103,8 @@ ms.lasthandoff: 11/20/2017
   
 |副本|提交模式|初始角色|辅助角色的连接访问|主角色的连接访问|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步|主|无|读写|  
-|Replica2|同步|辅助副本|无|读写|  
+|Replica1|同步|主|InclusionThresholdSetting|读写|  
+|Replica2|同步|辅助副本|InclusionThresholdSetting|读写|  
 |Replica3|异步|辅助副本|仅读意向|读写|  
 |Replica4|异步|辅助副本|仅限读意向|读写|  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  
   
   

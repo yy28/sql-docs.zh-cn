@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea47f9f50242003e4aa933da2e5657bb7e2ed5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息：  
@@ -68,12 +68,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="publication-status-values"></a>发布状态值  
  下表按优先级顺序显示了发布状态值及其对应的图标。  
   
-|状态|图标|  
+|“登录属性”|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
-|确定|none|  
+|“确定”|none|  
   
 ## <a name="subscription-status-values"></a>订阅状态值  
  下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令” ；将显示最高优先级状态。  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="transactional-subscriptions"></a>事务订阅  
   
-|状态|图标|  
+|“登录属性”|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="merge-subscriptions"></a>合并订阅  
   
-|状态|图标|  
+|“登录属性”|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
@@ -102,18 +102,18 @@ ms.lasthandoff: 11/17/2017
 |即将过期/已过期|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
 |未初始化的订阅|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
-|同步|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
+|正在同步|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
 |未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
   
 ### <a name="snapshot-subscriptions"></a>快照订阅  
   
-|状态|图标|  
+|“登录属性”|图标|  
 |------------|----------|  
 |错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
 |即将过期/已过期|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
 |未初始化的订阅|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
-|同步|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
+|正在同步|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
 |未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
   
 ## <a name="see-also"></a>另请参阅  

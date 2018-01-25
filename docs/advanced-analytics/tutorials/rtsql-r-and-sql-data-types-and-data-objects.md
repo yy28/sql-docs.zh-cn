@@ -19,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d3773c56310b3d91b20acd05b40fc00ae5003b43
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3c3a23cb44cc33a9257e4522be30cd3a8dd30ca
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R)
 
@@ -75,6 +75,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
         @language = N'R'
       , @script = N' mytextvariable <- c("hello", " ", "world");
+      OutputDataSet <- as.data.frame(mytextvariable);
       str(OutputDataSet);'
       , @input_data_1 = N'  '
 ;
@@ -86,7 +87,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
   @language = N'R', 
   @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
-    str(OutputDataSet)' , 
+    str(OutputDataSet);' , 
   @input_data_1 = N'  ';
 ```
 
@@ -199,10 +200,10 @@ EXECUTE sp_execute_external_script
     
 |*Col2*|*Col3*|
 |----|----|
-|@shouldalert|@shouldalert|
+|1|1|
 |10|2|
 |100|3|
-|@shouldalert|4|
+|1|4|
 |10|5|
 |100|6|
 
@@ -265,7 +266,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
 + "ProductSeries"已被标识为文本列**因素**，这意味着分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
-### <a name="summary"></a>“摘要”
+### <a name="summary"></a>摘要
 
 从即使这些简短的示例中，你可以看到需要时将传递 SQL 查询中用作输入，请检查数据转换的效果。 因为某些 SQL Server 数据类型不受 R，请考虑这些方法，从而避免错误：
 

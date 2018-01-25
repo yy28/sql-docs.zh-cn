@@ -18,13 +18,13 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eef8997bfbe61cf5f56dac6e026559d2b50243f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9faedaacdacf9d2722ca1ae335d8f43af86d455f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>“删除表”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以指定要从中删除记录的表。 当您将查询的类型更改为 DELETE 查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  

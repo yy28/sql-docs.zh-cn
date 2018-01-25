@@ -18,13 +18,13 @@ ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e334ba23daa658900e6977811d1305a1ad0b16e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf344815c90bbabcab08d75880fb2605f6683a36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果数据库镜像端点使用 Windows 身份验证，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 添加或替换见证服务器。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中添加见证服务器还会将运行模式更改为具有自动故障转移功能的高安全性模式。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  展开 **“数据库”**，然后选择要为其添加或替换见证服务器的会话的主体数据库。  
   
-3.  右键单击数据库，选择“任务”，再单击“镜像”。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
+3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这样便可打开 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
 4.  单击 **“配置安全性”**。  
   
@@ -46,15 +46,15 @@ ms.lasthandoff: 11/20/2017
   
 6.  在 **“包括见证服务器”** 对话框中，单击 **“是”**，再单击 **“下一步”**。  
   
-7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击 **“下一步”**。  
+7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步” 。  
   
-8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击 **“下一步”**。  
+8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步” 。  
   
 9. 在 **“见证服务器实例”** 对话框中，单击 **“连接”**。  
   
 10. 在“连接到服务器”对话框的“服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击 **“连接”**。  
   
-11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击 **“下一步”**。  
+11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步” 。  
   
 12. **“服务帐户”** 对话框包含主体服务器实例、镜像服务器实例和见证服务器实例的域服务帐户字段。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
          域名必须大写。  
   
-     单击 **“下一步”**。  
+     单击“下一步” 。  
   
 13. 在 **“完成该向导”** 摘要屏幕中，检查见证服务器配置（可选），再单击 **“完成”**。  
   

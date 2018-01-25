@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 103210e4164a9d4faf014a044a22ee13a28fcee9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>权限    
  使用外键创建新表需要在数据库中具有 CREATE TABLE 权限，并对在其中创建表的架构具有 ALTER 权限。    
     
  在某一现有表中创建外键需要对该表具有 ALTER 权限。    
@@ -96,11 +96,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="create-a-foreign-key-in-a-new-table"></a>在新表中创建外键  
 ####  <a name="using-transact-sql"></a>使用 Transact-SQL   
     
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。    
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。    
     
 2.  在标准菜单栏上，单击 **“新建查询”**。    
     
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此实例创建一个表并定义针对列 `TempID` 的外键约束，该列引用 `SalesReasonID` 表中的列 `Sales.SalesReason` 。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例创建一个表并定义针对列 `TempID` 的外键约束，该列引用 `SalesReasonID` 表中的列 `Sales.SalesReason` 。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
     
     ```    
     USE AdventureWorks2012;    
@@ -118,11 +118,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>在现有表中创建外键 
 #### <a name="using-transasct-sql"></a>使用 Transact-SQL   
     
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。    
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。    
     
 2.  在标准菜单栏上，单击 **“新建查询”**。    
     
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例针对 `TempID` 列创建外键并引用 `SalesReasonID` 表中的 `Sales.SalesReason` 列。    
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例针对 `TempID` 列创建外键并引用 `SalesReasonID` 表中的 `Sales.SalesReason` 列。    
     
     ```    
     USE AdventureWorks2012;    

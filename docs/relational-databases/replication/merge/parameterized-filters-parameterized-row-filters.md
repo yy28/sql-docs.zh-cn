@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  
@@ -130,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>设置“partition options”  
  创建项目时，根据订阅服务器共享已筛选表中的数据的方式，指定 **partition options** 属性的值。 可以使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)和 **“项目属性”** 对话框，将该属性设置为四个值中的一个。 可以使用 **“添加筛选器”** 或 **“编辑筛选器”** 对话框（可以通过新建发布向导和 **“发布属性”** 对话框访问），将该属性设置为两个值中的一个。 下表总结了可用的值：  
   
-|说明|“添加筛选器”和“编辑筛选器”中的值|“项目属性”中的值|存储过程中的值|  
+|Description|“添加筛选器”和“编辑筛选器”中的值|“项目属性”中的值|存储过程中的值|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |分区中的数据重叠，并且订阅服务器可以更新参数化筛选器中引用的列。|**此表中的行将转到多个订阅**|**重叠**|**0**|  
 |分区中的数据重叠，而订阅服务器无法更新参数化筛选器中引用的列。|N/A*|**重叠，不允许分区外的数据更改**|**1**|  

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b910314a3320a242f696876e875025a7f85da5a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2939dbbd505021da7a8623c5671ad7bd3063cc7a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server Broker - DBM Transport 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Broker/DBM Transport 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  
   
-|SQL Server Broker/DBM Transport 计数器|说明|  
+|SQL Server Broker/DBM Transport 计数器|Description|  
 |------------------------------------------------|-----------------|  
 |**Current Bytes for Recv I/O**|此计数器报告当前运行的传输接收操作读取的字节数。|  
 |**Current Bytes for Send I/O**|此计数器报告当前通过网络正被发送的消息片段中的字节数。|  

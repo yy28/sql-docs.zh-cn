@@ -17,15 +17,15 @@ helpviewer_keywords:
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7c21c7ed24c1598ca51e0802d27bfd502d83be0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fce09d60d98c094e3b47440fb900ec7d6523daa6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/20/2017
   
  下表列出了解决有疑问的事务可能出现的结果值。  
   
-|结果值|说明|  
+|结果值|Description|  
 |-------------------|-----------------|  
 |0|没有假设。 如果 MS DTC 无法解决任何有疑问的事务，恢复就会失败。|  
-|1|假设提交。 假设已提交任何 MS DTC 有疑问的事务。|  
+|@shouldalert|假设提交。 假设已提交任何 MS DTC 有疑问的事务。|  
 |2|假设中止。 假设已中止任何 MS DTC 有疑问的事务。|  
   
  若要尽可能减少扩展的停止工作时间，管理员可以选择将此选项配置为假设提交或假设中止，如以下示例所示。  

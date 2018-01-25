@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Buffer Node object
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0816436579ba30ed65c844960b61c70656f09cfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a40f828a1325408cf68058df89c29751f9a0edd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Buffer Node 对象提供了对 Buffer Manager 对象所提供的计数器进行补充的计数器。 通过它，您可以监视每个非一致性内存访问 (NUMA) 节点的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池页分布。 对于正在使用的每个 NUMA 节点，都有一个 **Buffer Node** 对象实例。 在非 NUMA 体系结构上，将存在一个单独的 **Buffer Node** 对象实例。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="buffer-node-performance-objects"></a>缓冲区节点性能对象  
  此表说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 性能对象。  
   
-|SQL Server Buffer Node 计数器|说明|  
+|SQL Server Buffer Node 计数器|Description|  
 |-------------------------------------|-----------------|  
 |**Database pages**|指示此节点的缓冲池中包含数据库内容的页数。|  
 |**Page life expectancy**|指示某页在没有引用的情况下，在此节点的缓冲池中停留的最小时间（秒）。|  

@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.serverproperties.filestream.f1
 helpviewer_keywords: FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 869df1cee5b103b34a66ead657001f02c6364615
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dda63c64fe1bf0acb9cc7c7aaf24c693fda0b025
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---filestream-page"></a>服务器属性 -“文件流”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装启用 FILESTREAM。  

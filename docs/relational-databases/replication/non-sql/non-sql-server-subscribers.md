@@ -23,17 +23,17 @@ helpviewer_keywords:
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70ba5c5a367d32436aeb2a3dabdb57ded2bd08f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104940bffe513813414dff15b2e0bec6343ed2e9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="non-sql-server-subscribers"></a>非 SQL Server 订阅服务器  
+# <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
-|数据库|操作系统|提供程序|  
+|“数据库”|操作系统|提供程序|  
 |--------------|----------------------|--------------|  
 |Oracle|Oracle 支持的所有平台|Oracle OLE DB 访问接口（由 Oracle 提供）|  
 |IBM DB2|MVS、AS400、Unix、Linux、Windows（9.x 版除外）|Microsoft Host Integration Server (HIS) OLE DB 访问接口|  

@@ -29,15 +29,15 @@ helpviewer_keywords:
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e77b2c648517d2d48d3537dd5f180b77bc0e979
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ce5f1474f03cad13c45eefe88202d15e706eb7bc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   *rowpattern* (/ROOT/Customer) 标识要处理的 <`Customer`> 节点。  
   
--   *flags* 参数值设置为 **1**，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中所定义的行集中的列。  
+-   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中所定义的行集中的列。  
   
 -   在 WITH 子句的 *SchemaDeclaration*中所指定的 *ColName* 值与相应的 XML 属性名称相匹配。 因此，在 *SchemaDeclaration* 中不指定 *ColPattern*参数。  
   

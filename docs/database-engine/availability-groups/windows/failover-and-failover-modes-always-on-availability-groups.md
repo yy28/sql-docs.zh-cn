@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 -   [相关内容](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
- 自动故障转移  
+ 自动故障转移 (automatic failover)  
  在丢失主副本时自动发生的故障转移。 仅当当前主副本和一个辅助副本同时配置为使用自动故障转移模式，并且辅助副本当前已同步时，才支持自动故障转移。  如果主副本或辅助副本的故障转移模式设置为手动，则不能发生自动故障转移。  
   
  计划的手动故障转移（无数据丢失）  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
 ||异步提交模式|同步提交模式（手动故障转移模式）|同步提交模式（自动故障转移模式）|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自动故障转移|是|是|是|  
+|自动故障转移 (automatic failover)|是|是|是|  
 |计划的手动故障转移|是|是|是|  
 |强制故障转移|是|是|是**\***|  
   

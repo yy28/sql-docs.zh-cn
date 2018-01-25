@@ -1,7 +1,7 @@
 ---
 title: "步骤 4： 连接到使用 PHP 的 SQL 的弹性 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,26 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c48063d958f714023a96ca0f30e4d3863f3c48f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7f3b9f6615c5adc6a1ec838e690cee8c55b32843
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步骤 4：使用 PHP 实现对 SQL 的弹性连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-演示计划的设计目的的因此尝试连接期间发生暂时性故障导致重试。 但查询命令期间发生暂时性故障会导致程序丢弃连接并创建新的连接，然后重试查询命令。 我们不建议也不反对此设计选择。 演示程序演示了一些可供你的设计灵活性。  
+演示计划的目的是以便暂时性错误 (即任何具有前缀"08"在此列出的错误代码[附录](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 在尝试连接到重试的主管期间。 但查询命令期间发生暂时性故障会导致程序丢弃连接并创建新的连接，然后重试查询命令。 我们不建议也不反对此设计选择。 演示程序演示了一些可供你的设计灵活性。  
   
 此代码示例的长度多半是因为捕获异常的逻辑。   
   
-在 Program.cs 中 Main 方法。 调用堆栈运行，如下所示：  
-* Main 调用 ConnectAndQuery。  
-* ConnectAndQuery 调用 EstablishConnection。  
-* EstablishConnection 调用 IssueQueryCommand。  
-  
-[Sqlsrv_query （)](http://php.net/manual/en/function.sqlsrv-query.php)函数可以用于检索针对 SQL 数据库设置从查询结果。 此函数实际上可接受任何查询和连接对象，并返回可循环访问与使用的结果集[sqlsrv_fetch_array （)](http://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
+[Sqlsrv_query （)](../../connect/php/sqlsrv-query.md)函数可以用于检索针对 SQL 数据库设置从查询结果。 此函数实际上可接受任何查询和连接对象并返回可循环访问与使用的结果集[sqlsrv_fetch_array （)](../../connect/php/sqlsrv-fetch-array.md)。 
   
 ```php
 
@@ -49,80 +44,65 @@ ms.lasthandoff: 11/18/2017
         $serverName = "tcp:yourdatabase.database.windows.net,1433";  
         $connectionOptions = array("Database"=>"AdventureWorks",  
            "Uid"=>"yourusername", "PWD"=>"yourpassword", "LoginTimeout" => $connectionTimeoutSeconds);  
-        $conn;  
-        $errorArr = array();  
-        for ($cc = 1; $cc <= $maxCountTriesConnectAndQuery; $cc++)  
-        {  
-            $errorArr = array();  
-            $ctr = 0;  
+        $conn = null;  
+        $arrayOfTransientErrors = array('08001', '08002', '08003', '08004', '08007', '08S01'); 
+        for ($cc = 1; $cc <= $maxCountTriesConnectAndQuery; $cc++) {  
             // [A.2] Connect, which proceeds to issue a query command.  
             $conn = sqlsrv_connect($serverName, $connectionOptions);    
-            if( $conn == true)  
-            {  
+            if ($conn === true) {  
                 echo "Connection was established";  
                 echo "<br>";  
   
-                $tsql = "SELECT [CompanyName] FROM SalesLT.Customer";  
-                $getProducts = sqlsrv_query($conn, $tsql);  
-                if ($getProducts == FALSE)  
-                    die(FormatErrors(sqlsrv_errors()));  
-                $productCount = 0;  
-                $ctr = 0;  
-                while($row = sqlsrv_fetch_array($getProducts, SQLSRV_FETCH_ASSOC))  
-                {     
-                    $ctr++;  
-                    echo($row['CompanyName']);  
-                    echo("<br/>");  
-                    $productCount++;  
-                    if($ctr>10)  
-                        break;  
-                }  
-                sqlsrv_free_stmt($getProducts);  
-                break;  
-            }  
-            // Adds any the error codes from the SQL Exception to an array.  
-            else {    
-                if( ($errors = sqlsrv_errors() ) != null) {  
-                    foreach( $errors as $error ) {  
-                        $errorArr[$ctr] = $error['code'];  
-                        $ctr = $ctr + 1;  
-                    }  
-                }  
-                $isTransientError = TRUE;  
-                // [A.4] Check whether sqlExc.Number is on the whitelist of transients.  
-                $isTransientError = IsTransientStatic($errorArr);  
-                if ($isTransientError == TRUE)  // Is a static persistent error...  
-                {  
-                    echo("Persistent error suffered, SqlException.Number==". $errorArr[0].". Program Will terminate.");  
+                $tsql = "SELECT Name FROM Production.ProductCategory";  
+                $stmt = sqlsrv_query($conn, $tsql);  
+                if ($stmt === false) {
+                    echo "Error in query execution";  
                     echo "<br>";  
-                    // [A.5] Either the connection attempt or the query command attempt suffered a persistent SqlException.  
+                    die(print_r(sqlsrv_errors(), true));  
+                }
+                while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {     
+                    echo $row['Name'] . "<br/>" ;
+                }  
+                sqlsrv_free_stmt($stmt);  
+                sqlsrv_close( $conn); 
+                break;  
+            } else {    
+                // [A.4] Check whether the error code is on the whitelist of transients.  
+                $isTransientError = false;  
+                $errorCode = '';
+                if (($errors = sqlsrv_errors()) != null) {
+                    foreach ($errors as $error) {  
+                        $errorCode = $error['code'];
+                        $isTransientError = in_array($errorCode, $arrayOfTransientErrors);
+                        if ($isTransientError) {
+                            break;
+                        }
+                    }
+                }  
+                if (!$isTransientError) { 
+                    // it is a static persistent error...
+                    echo("Persistent error suffered with error code = $errorCode. Program will terminate.");  
+                    echo "<br>";  
+                    // [A.5] Either the connection attempt or the query command attempt suffered a persistent error condition.  
                     // Break the loop, let the hopeless program end.  
                     exit(0);  
                 }  
-                // [A.6] The SqlException identified a transient error from an attempt to issue a query command.  
+                // [A.6] It is a transient error from an attempt to issue a query command.  
                 // So let this method reloop and try again. However, we recommend that the new query  
                 // attempt should start at the beginning and establish a new connection.  
-                if ($cc >= $maxCountTriesConnectAndQuery)  
-                {  
-                    echo "Transient errors suffered in too many retries - " . $cc ." Program will terminate.";  
+                if ($cc >= $maxCountTriesConnectAndQuery) {  
+                    echo "Transient errors suffered in too many retries - $cc. Program will terminate.";  
                     echo "<br>";  
                     exit(0);  
                 }  
-                echo("Transient error encountered.  SqlException.Number==". $errorArr[0]. " . Program might retry by itself.");    
+                echo("Transient error encountered with error code = $errorCode. Program might retry by itself.");    
                 echo "<br>";  
-                echo $cc . " Attempts so far. Might retry.";  
+                echo "$cc attempts so far. Might retry.";  
                 echo "<br>";  
-                // A very simple retry strategy, a brief pause before looping. This could be changed to exponential if you want.  
+                // A very simple retry strategy, a brief pause before looping.  
                 sleep(1*$secondsBetweenRetries);  
             }  
             // [A.3] All has gone well, so let the program end.  
-        }  
-        function IsTransientStatic($errorArr) {  
-            $arrayOfTransientErrorNumbers = array(4060, 10928, 10929, 40197, 40501, 40613);  
-            $result = array_intersect($arrayOfTransientErrorNumber, $errorArr);  
-            $count = count($result);  
-            if($count >= 0) //change to > 0 later.  
-                return TRUE;  
         }  
     ?>
 ```

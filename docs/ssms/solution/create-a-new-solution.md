@@ -16,13 +16,13 @@ ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2039725f0db2279c6385a64c68ed661366b4a80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73b2175e4ed0e47c78f957f19123a5b33354d1a3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-solution"></a>新建解决方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  

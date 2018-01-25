@@ -18,13 +18,13 @@ ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07f7625af26f29e94bdca8bbe78466ae32282ccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7743e5c7933a665395e786320faa330033d4bd3e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="arguments-dialog-box"></a>“参数”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“参数”对话框可以为工具指定新参数或现有参数。 如果启动一个外部工具，并且选中了该工具的“外部工具”对话框中的“提示输入参数”选项，则会出现此对话框。  

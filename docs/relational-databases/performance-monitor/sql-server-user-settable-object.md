@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server User Settable 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的“User Settable”对象可以创建自定义计数器实例。 自定义计数器实例用于监视服务器上现有计数器没有监视到的方面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库唯一具有的组件（例如，记录的客户定单数或产品目录）。  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
  下表对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 对象进行了说明。  
   
-|SQL Server User Settable 计数器|说明|  
+|SQL Server User Settable 计数器|Description|  
 |---------------------------------------|-----------------|  
-|**Query**|**User Settable** 对象包含 Query 计数器。 用户对查询对象中的 **用户计数器** 进行配置。|  
+|**“数据集属性”**|**User Settable** 对象包含 Query 计数器。 用户对查询对象中的 **用户计数器** 进行配置。|  
   
  此表列出了 **Query** 计数器的 **实例** 。  
   
-|Query 计数器实例|说明|  
+|Query 计数器实例|Description|  
 |-----------------------------|-----------------|  
 |**用户计数器 1**|使用 **sp_user_counter1**定义。|  
 |**用户计数器 2**|使用 **sp_user_counter2**定义。|  

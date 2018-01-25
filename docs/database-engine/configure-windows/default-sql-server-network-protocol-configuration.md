@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>默认 SQL Server 网络协议配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]为了增强安全性，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将对某些新的安装禁用网络连接。 如果你使用的是 Enterprise Edition、Standard Edition、Evaluation Edition 或 Workgroup Edition，或者存在以前安装的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，则不禁用 TCP/IP 网络连接。 对于所有的安装，将启用 shared memory 协议以允许本地到服务器的连接。 根据安装情况和安装选项， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 浏览器服务可能会停止。

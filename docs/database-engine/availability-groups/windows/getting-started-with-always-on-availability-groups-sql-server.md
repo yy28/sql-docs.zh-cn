@@ -18,13 +18,13 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32004cf90c0e9847b91b144629ab1c093e495bf1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ad3286b87c3b0db9804a64291a4d30b8ab216e6a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Always On 可用性组入门 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|**准备辅助数据库。** 在正在承载辅助副本的每个服务器实例上，使用 RESTORE WITH NORECOVERY 还原主数据库的备份。|[手动准备辅助数据库](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> 提示：“新建可用性组”向导可以为你准备辅助数据库。 有关详细信息，请参阅[选择初始数据同步页 (Always On 可用性组向导)](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) 中的“使用完全初始数据同步的先决条件”。|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|**将辅助数据库联接到可用性组。** 在正在承载辅助副本的每个服务器实例上，将各本地辅助数据库联接到可用性组。 在联接可用性组后，给定辅助数据库将开始与相应的主数据库的数据同步。|[将辅助数据库联接到可用性组](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> 提示：如果每个辅助数据库均存在于各次要副本上，那么“新建可用性组”向导会执行此步骤。|  
 ||**创建可用性组侦听器。**  除非在创建可用性组时已创建了可用性组侦听器，否则此步骤是必需的。|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|**将侦听器的 DNS 主机名提供给应用程序开发人员。**  开发人员需要在连接字符串中指定此 DNS 名称以对可用性组侦听器进行直接连接请求。 有关详细信息，请参阅[可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) 中的“跟进：创建可用组侦听程序之后”|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|**将侦听器的 DNS 主机名提供给应用程序开发人员。**  开发人员需要在连接字符串中指定此 DNS 名称以对可用性组侦听器进行直接连接请求。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) 中的“跟进：创建可用组侦听程序之后”|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|**配置运行备份作业的位置。**  如果要对辅助数据库执行备份，则必须创建一个备份作业脚本，该脚本将会考虑到自动备份首选项。 为承载可用性组的可用性副本的每个服务器实例上可用性组中的每个数据库都创建一个脚本。|[配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) 的“跟进：配置次要副本备份之后”|  
   
 ##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  

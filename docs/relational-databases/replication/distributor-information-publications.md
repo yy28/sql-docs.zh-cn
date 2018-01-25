@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.Publications.f1
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7028cc00bd715609bc9b498c94413dd6299162a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1bfa6d54b5405ef6e8f89c85ad33ebee31b0673
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-publications"></a>分发服务器信息，发布
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“发布”选项卡提供左窗格中所选分发服务器的所有发布的摘要信息。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  显示的有关分发服务器支持的发布信息包括一个列，该列包含发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 否则，发布信息与您在复制监视器的发布服务器视图中查看发布时提供的发布信息相同。 有关 **“发布”** 选项卡中的列的详细信息，请参阅 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)。  
   
 ## <a name="see-also"></a>另请参阅  

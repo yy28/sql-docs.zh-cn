@@ -17,13 +17,13 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c5f5697633b82a6ad5f350a95e0296ea538e82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7f0c9d351f296f581d54defdfe2e7cb58f7ac3a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性组未准备好进行自动故障转移
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**策略名称**|可用性组自动故障转移就绪|  
 |**问题**|可用性组未准备好进行自动故障转移。|  
 |**类别**|**严重**|  
-|**方面**|可用性组|  
+|**方面**|可用性组 (availability group)|  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>Description  
  此策略检查验证可用性组是否至少具有一个故障转移就绪的辅助副本。 当主副本的故障转移模式为自动但是可用性组中没有故障转移就绪的辅助副本时，此策略处于不正常状态并引发警报。  
   
  当至少一个辅助副本的自动故障转移就绪时，此策略处于正常状态。  

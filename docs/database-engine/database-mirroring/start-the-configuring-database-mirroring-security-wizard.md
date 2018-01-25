@@ -18,13 +18,13 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 452b2bc9e11d0f2d1dd06767efe68d48bfdcef8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c958466070df5f51e69e8aa0d665b65177794dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>启动配置数据库镜像安全向导
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]配置数据库镜像安全向导可用于最初配置镜像所涉及的全部或部分服务器实例的安全设置。 此向导与 **“数据库属性”** 对话框的 **“镜像”** 页一起使用。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  展开 **“数据库”**，再选择要镜像的数据库。  
   
-3.  右键单击数据库，选择“任务”，再单击“镜像”。 这样便可打开 [“数据库属性”](../../relational-databases/databases/database-properties-mirroring-page.md) 对话框的 **“镜像”页** 。  
+3.  右键单击数据库，选择 **“任务”**，再单击 **“镜像”**。 这样便可打开 [“数据库属性”](../../relational-databases/databases/database-properties-mirroring-page.md) 对话框的 **“镜像”页** 。  
   
 4.  单击 **“配置安全性”**。  
   

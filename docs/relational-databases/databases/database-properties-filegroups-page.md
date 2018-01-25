@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12c30e38d6f10e519cb4c635a5a23c561dc3ad93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
@@ -45,10 +45,10 @@ ms.lasthandoff: 11/17/2017
  **只读**  
  选中此项可以将文件组设为只读状态。  
   
- **默认**  
+ **Default**  
  选中此项可以将此文件组设为默认文件组。 您可以有一个用于行的默认文件组和一个用于 FILESTREAM 数据的默认文件组。  
   
- **添加**  
+ **“添加”**  
  向列出数据库文件组的网格中添加新的空白行。  
   
  **删除**  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
  **Filestream 文件**  
  显示内存优化数据文件组中文件（容器）的数量。 可以在 **“文件”** 页面添加容器。  
   
- **添加**  
+ **“添加”**  
  向列出数据库文件组的网格中添加新的空白行。  
   
  **删除**  

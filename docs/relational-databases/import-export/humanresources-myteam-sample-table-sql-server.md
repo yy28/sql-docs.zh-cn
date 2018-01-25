@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7c82b62908b8004c9ef93c77b5d980cb65b0787
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d1175f8be3cdd8ebf15227ea46ceca7180a44e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 示例表 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][导入和导出大容量数据](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) 中的许多代码示例都需要一个名为“myTeam”的具有特殊用途的测试表。 您必须在 **数据库的** HumanResources **架构中创建** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表，才能运行这些示例。  
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/17/2017
   
  **myTeam** 表包含以下几列。  
   
-|列|数据类型|可空性|说明|  
+|“列”|数据类型|可空性|Description|  
 |------------|---------------|-----------------|-----------------|  
-|**EmployeeID**|**smallint**|非空|行的主键。 我的工作组中成员的雇员 ID。|  
+|**EmployeeID**|**int**|非空|行的主键。 我的工作组中成员的雇员 ID。|  
 |**名称**|**nvarchar(50)**|非空|我的工作组中成员的名称。|  
 |**标题**|**nvarchar(50)**|可以为 Null|我的工作组中雇员的职位。|  
 |**背景**|**nvarchar(50)**|非空|上次更新行的日期和时间。 （默认值）|  

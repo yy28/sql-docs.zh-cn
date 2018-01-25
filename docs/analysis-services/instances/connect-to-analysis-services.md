@@ -1,7 +1,7 @@
 ---
 title: "连接到 Analysis Services |Microsoft 文档"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a78769062f87671ee510095bf90f1d3680f81954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7dbadb28b56be49197f530e735f68238d13bc101
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="connect-to-analysis-services"></a>连接到 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用本节中的信息，若要了解有关连接字符串属性，用于的连接，Analysis Services，以及如何设置或清除连接，然后使服务器脱机支持的身份验证方法的客户端库。  
+
+若要了解有关连接到 Azure Analysis Services 的信息，请参阅[连接到服务器](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect)。
   
 ## <a name="analysis-services-connections"></a>Analysis Services 连接  
  Analysis Services 使用 TCP 作为网络协议，使用 XML for Analysis (XMLA) 作为通信协议。 在最底层，与 Analysis Services 一起提供的所有客户端库都实现了 XMLA-over-TCP。 尽管可以基于原始 XMLA 生成应用程序，但是大多数应用程序和应用程序开发人员都使用客户端库以利用它们提供的对象模型和代码编写效率。 对于客户端与 Analysis Services 的连接，如果无法跨堆栈使用 TCP，则可以使用 IIS 作为中间连接。 通过 IIS 使用 HTTP 访问的一个优点就是，能够从传递连接字符串上凭据的应用程序连接。  
@@ -36,17 +38,17 @@ ms.lasthandoff: 01/08/2018
   
 |链接|任务说明|  
 |----------|----------------------|  
-|[从客户端应用程序进行连接 (Analysis Services)](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|如果您不熟悉 Analysis Services，请查看本主题以开始了解最常与 Analysis Services 一起使用的工具和应用程序。|  
-|[连接字符串属性 (Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)|Analysis Services 包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库是如何配置的。|  
+|[从客户端应用程序 &#40; 连接Analysis Services &#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|如果您不熟悉 Analysis Services，请查看本主题以开始了解最常与 Analysis Services 一起使用的工具和应用程序。|  
+|[连接字符串属性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|Analysis Services 包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库是如何配置的。|  
 |[Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)|本主题简要介绍了 Analysis Services 使用的身份验证方法。|  
-|[针对 Kerberos 约束委派对 Analysis Services 进行配置](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)|很多商业智能解决方案需要模拟以确保仅将授权的数据返回给每个用户。 在本主题中，您将了解使用模拟的要求。 本主题还介绍配置 Analysis Services 以使用 Kerberos 约束委托的步骤。|  
+|[为 Kerberos 约束委派配置 Analysis Services](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)|很多商业智能解决方案需要模拟以确保仅将授权的数据返回给每个用户。 在本主题中，您将了解使用模拟的要求。 本主题还介绍配置 Analysis Services 以使用 Kerberos 约束委托的步骤。|  
 |[针对 Analysis Services 实例的 SPN 注册](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)|Kerberos 身份验证要求在多服务器解决方案中模拟或委托用户标识的服务具有有效的服务主体名称 (SPN)。 使用本主题中的信息以了解如何进行 Analysis Services 的 SPN 注册。|  
-|[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|基本身份验证或跨域边界是针对 HTTP 访问配置 Analysis Services 的两个重要原因。|  
-|[用于 Analysis Services 连接的数据访问接口](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|Analysis Services 提供用于访问服务器操作或 Analysis Services 数据的三个客户端库。 本主题简要介绍了 ADOMD.NET、Analysis Services 管理对象 (AMO) 和 Analysis Services OLE DB 访问接口 (MSOLAP)。|  
-|[断开 Analysis Services 服务器上用户和会话的连接](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|在使服务器脱机或执行基线性能测试前清除现有连接和会话。|  
+|[在 Internet 信息服务 &#40; IIS &#41; 上配置对 Analysis Services 的 HTTP 访问8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|基本身份验证或跨域边界是针对 HTTP 访问配置 Analysis Services 的两个重要原因。|  
+|[数据提供程序用于 Analysis Services 连接](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|Analysis Services 提供用于访问服务器操作或 Analysis Services 数据的三个客户端库。 本主题简要介绍了 ADOMD.NET、Analysis Services 管理对象 (AMO) 和 Analysis Services OLE DB 访问接口 (MSOLAP)。|  
+|[用户和 Analysis Services 服务器上的会话断开连接](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|在使服务器脱机或执行基线性能测试前清除现有连接和会话。|  
   
 ## <a name="see-also"></a>另请参阅  
- [安装后配置 (Analysis Services)](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
+ [安装后配置 &#40;Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   
   

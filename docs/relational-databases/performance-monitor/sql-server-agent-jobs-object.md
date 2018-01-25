@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077245e1ece089fa0a0b4ef98f2dd1fa6b9ec0d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f372eced96ca17d4fd547a11a56cfefd732394b9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理中的 Jobs 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL Server 代理的 Jobs 性能对象包含的性能计数器可报告有关 SQL Server 代理作业的信息。 下表列出了此对象包含的计数器。  
   
  下表介绍了 **SQLAgent:Jobs** 计数器。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |**Active Jobs**|该计数器报告当前运行的作业数。|  
 |**Failed jobs**|该计数器报告失败退出的作业数。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  对象中的每个计数器均包含以下实例：  
   
-|实例|说明|  
+|实例|Description|  
 |--------------|-----------------|  
 |**_Total**|所有作业的信息。|  
 |**警报**|由警报启动的作业的信息。|  

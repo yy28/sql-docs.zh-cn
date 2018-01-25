@@ -21,13 +21,13 @@ ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 19146185e1f01352f7be33fed099163dfa36667c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d1e2aa0e2e1c3ff69319e4183f6d68352f5937ea
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用数据库关系图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用数据库设计器创建数据库的可视化关系图。 下面的主题介绍了使用设计器处理数据库关系图的基本知识。  

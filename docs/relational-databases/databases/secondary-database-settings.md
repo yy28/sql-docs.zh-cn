@@ -14,29 +14,29 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>辅助数据库设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此对话框可以配置和修改日志传送配置中辅助数据库的属性。  
   
  有关日志传送概念的说明，请参阅 [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **辅助服务器实例**  
  显示日志传送配置中当前配置为辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
  **辅助数据库**  
  显示日志传送配置的辅助数据库名称。 将新的辅助数据库添加到日志传送配置时，可以从列表中选择数据库或在该框中键入新数据库的名称。 如果输入新数据库的名称，则必须在 **“初始化”** 选项卡上选择一个选项，该选项卡可将主数据库的完整数据库备份还原到辅助数据库中。 新数据库将作为还原操作的一部分进行创建。  
   
- **连接**  
+ **“连接”**  
  连接到日志传送配置中用作辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 用于连接的帐户必须是辅助服务器实例上 sysadmin 固定服务器角色的成员。  
   
  **“初始化”选项卡**  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
  **作业名称**  
  显示用于将事务日志备份文件从主服务器复制到辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的名称。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
- **计划**  
+ **“计划”**  
  显示用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理复制作业的当前计划。 通过单击 **“计划...”**可以修改此计划。  
   
  **“计划...”**  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  **作业名称**  
  显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的名称。 首次创建此作业时，可以通过在该框中键入内容来更改名称。  
   
- **计划**  
+ **“计划”**  
  显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的当前计划。 通过单击 **“计划...”**可以修改此选项。  
   
  **“计划...”**  

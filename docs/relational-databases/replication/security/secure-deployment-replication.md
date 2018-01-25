@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0740e86a27b4da29a54b90b45d4264ecf7ba88a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>安全部署（复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本节提供的信息可帮助更好地进行安全复制。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
  [保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  介绍访问快照文件夹所需的权限、定义文件夹位置的最佳方法和通过 FTP 传递快照的注意事项。  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [保护通过 Internet 进行的复制](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  包括有关虚拟专用网络和 Web 同步的信息。  
   
  [SQL Server Compact 复制安全注意事项](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  

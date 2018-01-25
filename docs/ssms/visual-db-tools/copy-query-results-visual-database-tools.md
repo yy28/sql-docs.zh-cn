@@ -16,13 +16,13 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 913fb6061bed6eaa47eff5f92d5d1c3064b1731f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02f030c6336cb90de2d5adf040f9ee170e24187e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-query-results-visual-database-tools"></a>复制查询结果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以从“结果”窗格中以制表符分隔文本的形式复制结果集。 可以复制整个结果集或任意数量的连续或非连续行或单元。  

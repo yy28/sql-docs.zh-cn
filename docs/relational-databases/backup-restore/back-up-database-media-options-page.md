@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36f6bc6f33194ce8bb4cf110fa8bbd44fd870a40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a220cb8eb2218843e460741c016120787b943b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“备份数据库”对话框的“介质选项”页可以查看或修改数据库介质选项。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="overwrite-media"></a>覆盖介质  
  **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在“备份数据库”对话框的“常规”页上选择了 URL（Windows Azure 存储）作为备份目标，则禁用“覆盖介质”部分下的选项。 可使用 **BACKUP TO URL.WITH FORMAT** Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  **备份到现有介质集**  
  将数据库备份到现有介质集。 选择此选项按钮将激活三个选项。  
   
- 选择以下选项之一：  
+ 选择下列选项之一：  
   
  **追加到现有备份集**  
  将备份集追加到现有介质集，并保留以前的所有备份。  

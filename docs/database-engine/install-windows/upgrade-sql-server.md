@@ -16,12 +16,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 406ae798a766e1eb22c51e8c34da1661acd71627
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 63b740d38d52feb7e29b724560c0d6f29023057b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 的实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，请先查看以下有关升级过程和发行说明的主题。  

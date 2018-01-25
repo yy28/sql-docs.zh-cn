@@ -19,13 +19,13 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>升级镜像实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 镜像实例升级到新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本、新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务包或积累更新，或升级到新 Windows 服务包或积累更新时，可以通过执行滚动升级将每个镜像数据库的停机时间降低到仅需一次手动故障转移（如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，然后对镜像数据库进行手动故障转移，升级以前的主体 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例，并恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例上运行的镜像会话的编号和布局。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  有关在迁移过程中使用数据库镜像与日志传送的信息，请下载此 [数据库镜像和日志传送白皮书](https://t.co/RmO6ruCT4J)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  开始之前，请仔细阅读以下重要信息：  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

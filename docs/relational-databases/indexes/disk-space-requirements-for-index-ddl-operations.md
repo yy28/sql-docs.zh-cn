@@ -19,17 +19,17 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5479835a035a5a70a58463c3ed04f5540fdb1554
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="disk-space-requirements-for-index-ddl-operations"></a>索引 DDL 操作的磁盘空间要求
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   磁盘空间是创建、重新生成或删除索引时所需考虑的重要因素。 磁盘空间不足会降低性能，甚至导致索引操作失败。 本主题提供了有助于确定索引数据定义语言 (DDL) 操作所需的磁盘空间量的一般信息。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  联机索引操作使用行版本控制来使索引操作不受其他事务所做的修改的影响。 这就不需要对已经读取的行请求共享锁。 在联机索引操作期间，并发的用户更新和删除操作需要一定的空间以用于 **tempdb**中的版本记录。 有关详细信息，请参阅 [联机索引操作](../../relational-databases/indexes/perform-index-operations-online.md) 。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [索引操作的事务日志磁盘空间](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  

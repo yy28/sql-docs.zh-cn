@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 caps.latest.revision: "7"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ea2379e393deb918330f87fb35be109dddc8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbc82f05c8bd82abf999602a2881a47b435d7a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>将 SQL Server 2014 托管备份设置迁移到 SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].时 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的迁移注意事项。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |**安全性：**|使用 Microsoft Azure 存储帐户和访问密钥的 SQL 凭据。|使用 Microsoft Azure 共享访问签名 (SAS) 令牌的 SQL 凭据。|  
 |**基础存储：**|使用页 blob 的 Microsoft Azure 存储。|使用块 blob 的 Microsoft Azure 存储。|  
   
-## <a name="benefits"></a>优点  
+## <a name="benefits"></a>优势  
  使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中的新功能具有多个好处。  
   
 -   块 blob 的存储成本较少。  

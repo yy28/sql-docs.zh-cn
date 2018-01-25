@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69e6e0cd9c17b7fdd8f47480e5f47f3611b0bc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 **GETDATE()** 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
@@ -64,7 +64,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|招待会|112|2006-10-04|1|  
+|@shouldalert|招待会|112|2006-10-04|@shouldalert|  
 |2|宴会|112|2006-10-10|0|  
 |3|聚会|112|2006-10-11|0|  
 |4|婚礼|112|2006-10-12|0|  
@@ -88,16 +88,16 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|招待会|112|2006-10-04|0|  
-|2|宴会|112|2006-10-10|1|  
-|3|聚会|112|2006-10-11|1|  
-|4|婚礼|112|2006-10-12|1|  
+|@shouldalert|招待会|112|2006-10-04|0|  
+|2|宴会|112|2006-10-10|@shouldalert|  
+|3|聚会|112|2006-10-11|@shouldalert|  
+|4|婚礼|112|2006-10-12|@shouldalert|  
   
  现在，下周的事件被标记为正准备进行复制。 当下次为事件协调器 112 使用的订阅运行合并代理时，将把第 2、3 和 4 行下载到订阅服务器中，并从订阅服务器中删除第 1 行。  
   
 ## <a name="see-also"></a>另请参阅  
  [GETDATE (Transact-SQL)](../../../t-sql/functions/getdate-transact-sql.md)   
  [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

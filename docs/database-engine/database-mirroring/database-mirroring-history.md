@@ -16,13 +16,13 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06fd5ffe8a889b1decb3083f517c5ecae86bc0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>数据库镜像历史记录
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用该对话框可以查看位于指定服务器实例中的镜像数据库的镜像状态历史记录。  
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/20/2017
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **服务器实例**  
  从中报告历史记录的服务器实例的名称。  
   
- **数据库**  
+ **“数据库”**  
  正报告其历史记录的数据库名称。  
   
  **筛选列表依据**  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
 -   所有记录  
   
- **刷新**  
+ **“刷新”**  
  单击它可刷新历史记录列表。  
   
 > [!NOTE]  
@@ -70,11 +70,11 @@ ms.lasthandoff: 11/20/2017
  **历史记录**  
  显示历史记录列表。 单击列标题，可以按该列对网格进行排序。 该列表包含以下列：  
   
-|列名|说明|  
+|列名|Description|  
 |-----------------|-----------------|  
 |**记录时间**|历史记录行的时间戳。|  
 |**角色**|数据库的服务器实例的当前镜像角色，即主体或镜像。|  
-|**镜像状态**|数据库的状态：<br /><br /> 已断开连接<br /><br /> 正在挂起故障转移<br /><br /> 已挂起<br /><br /> 已同步<br /><br /> 同步<br /><br /> Unknown|  
+|**镜像状态**|数据库的状态：<br /><br /> 已断开连接<br /><br /> 正在挂起故障转移<br /><br /> 挂起<br /><br /> 已同步<br /><br /> 正在同步<br /><br /> Unknown|  
 |**见证服务器连接**|见证服务器连接在数据库镜像会话中的状态，即连接或已断开连接。 如果没有见证服务器，则该值为 NULL。|  
 |**未发送日志**|主体服务器实例上的发送队列中的未发送日志的大小（以 KB 计）。|  
 |**发送时间**|主体服务器实例将当前位于发送队列中的日志发送到镜像服务器实例所需的近似时间量（发送速率）。 由于传入事务的速率变化很大，因此发送日志的时间只是一个估计值。 但是，发送速率对于粗略估计手动故障转移所需的时间非常有用。|  

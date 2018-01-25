@@ -15,13 +15,13 @@ ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a5d84fbbb3b0e5cb3bf59bf3dec70f3c4e9db79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6ad1b16694083ff7026de43f8f0119d4e9097511
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>代理节点（SQL Server 代理的 F1 帮助）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中对象资源管理器的“代理”节点的 F1 帮助。  

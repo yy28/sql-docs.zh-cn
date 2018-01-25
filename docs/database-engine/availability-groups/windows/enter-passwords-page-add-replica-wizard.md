@@ -16,13 +16,13 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 774b8f7513cb49f2a4a04393c160df82f4b7962f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b782184c4efe0bfdb632a3473d8a91fb2dfac58
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enter-passwords-page-add-replica-wizard"></a>输入密码页（添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本帮助主题介绍了“输入密码”页中的选项。 本主题适用于 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -35,10 +35,10 @@ ms.lasthandoff: 11/20/2017
  **名称**  
  显示本地用户数据库的名称。  
   
- **Size**  
+ **大小**  
  显示数据库大小（如果在该向导中提供）。  
   
- **状态**  
+ **“状态”**  
  指示具有数据库主密钥的数据库“需要密码”。 在“密码”  列中输入数据库主密钥的密码后，请单击“刷新” 。 如果你正确输入了密码，  “状态”列指示“输入的密码” 。  
   
  如果数据库没有数据库主密钥，  “状态”列指示 “不需要密码”。  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/20/2017
  **密码**  
  如果“状态”列指示“需要密码”，则输入数据库主密钥的密码。  
   
- **刷新**  
+ **“刷新”**  
  单击以刷新该网格。 输入所需的密码后，该操作非常有用。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

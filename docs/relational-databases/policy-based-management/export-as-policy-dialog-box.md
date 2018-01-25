@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b80ac6401aab58168708470e0a93595562c9e3d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d68124fea11952e85baeb531fd36241dbce4e0a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="export-as-policy-dialog-box"></a>“导出为策略”对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此对话框可以将一组基于策略的管理方面属性保存为策略。 可以在 XML 文件中保存策略，也可以将其直接保存到当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **策略定义名称**  
  键入策略的名称。  
   

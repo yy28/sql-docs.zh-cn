@@ -15,12 +15,12 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0d0f68c51cfc99f8ff6b6af2e048fbbb7f951ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 若要查看有关这些选项的更全面分析，请 [单击此处](http://sql05upgrade.azurewebsites.net/)。  
   
-|关系存储选项|优点|要考虑的其他因素|  
+|关系存储选项|优势|要考虑的其他因素|  
 |-------------------------------|--------------|-------------------------------|  
 |**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果你要从 SQL Server 2005 升级，这将是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。<br /><br /> 有关详细信息，请参阅 [SQL Server](https://www.microsoft.com/EN-US/server-cloud/products/sql-server-2017/)。|  
 |**Azure 虚拟机上托管的 SQL Server**<br /><br /> 如果你需要以下内容，请考虑此选项：<br /><br /> 迁移到托管环境的好处。<br /><br /> 对操作环境的控制。<br /><br /> SQL Server 的熟悉功能集。|可以从虚拟机映像库快速进行部署。<br /><br /> 获得完整的 SQL Server 功能集。<br /><br /> 节约硬件和服务器软件的成本。 只需支付每小时的使用费用。|必须配置并管理 SQL Server 和操作系统软件。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Azure 虚拟机上的 SQL Server 概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 有关迁移的详细信息，请参阅 [将数据库迁移到 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="get-sql-server"></a>获取 SQL Server  
  若要下载测评版 SQL Server，请[单击此处](http://www.microsoft.com/evalcenter/evaluate-sql-server-2016)。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  [SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)   
  [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
   

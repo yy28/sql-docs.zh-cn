@@ -15,13 +15,13 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb0f5a1872802fc5f623650902ab7a92fe72c6e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 041279879116916b0d603e8c1f9a81f8ad180f70
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server，列存储对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **列存储** 计数器。  
   
-|列存储计数器|说明|  
+|列存储计数器|Description|  
 |--------------------------|-----------------|  
 |**已关闭增量行组**|关闭的增量行组数。|  
 |**已压缩增量行组**|压缩的增量行组数。|  

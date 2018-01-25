@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0b26714f4f8c95e8e92cec71662ef3f46aff37f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: afd714014d17a3c80e38398fd590d27c0390f150
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>发布属性，FTP 快照和 Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以：  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
 -   设置 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本上合并复制的 Web 同步的属性，Web 同步允许通过 HTTPS（安全超文本传输协议）来同步订阅。 若要使用 Web 同步，则必须配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 服务器。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **通过 FTP 访问快照文件**  
  若要允许订阅服务器使用 FTP 传递快照，请选择 **“允许订阅服务器使用 FTP (文件传输协议)下载快照文件”**，并指定 **“FTP 服务器名称”**、 **“端口号”**、 **“从 FTP 根文件夹开始的路径”**、 **“登录名”**和 **“密码”**。  
   

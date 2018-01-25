@@ -17,13 +17,13 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="advanced-save-options"></a>高级保存选项
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”对话框，在“文件”菜单上，单击“<query name>.sql 另存为”，打开“文件另存为”对话框，再单击“保存”按钮上的向下箭头，然后单击“编码保存”。  

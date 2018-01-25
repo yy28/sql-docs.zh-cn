@@ -19,13 +19,13 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc2edc1718ceac4ba81f1ff45809b70d9e2637cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a6b9e19ea916963acf28a222d5bd463bc5662d4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |-------------|-----------------|------------------|  
 |“Disable-SqlAlwaysOn”|禁用服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|由 **Path**、 **InputObject**或 **Name** 参数指定的服务器实例。 （必须为支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。)|  
 |“Enable-SqlAlwaysOn”|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支持的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |-------------|-----------------|------------------|  
 |**Backup-SqlDatabase**|创建数据或日志备份。|任何联机数据库（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载主副本的服务器实例上的数据库）|  
 |**Restore-SqlDatabase**|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **\*\* 重要说明 \*\*** 当准备辅助数据库时，必须在每个 **Restore-SqlDatabase** 命令中使用 **-NoRecovery** 参数。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityGroup**|创建新的可用性组。|承载主副本的服务器实例|  
 |**Remove-SqlAvailabilityGroup**|删除可用性组。|启用 HADR 的服务器实例|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |------------|-----------------|------------------|  
 |**New-SqlAvailabilityGroupListener**|创建一个新的可用性组侦听器，并将其附加到一个现有可用性组。|承载主副本的服务器实例|  
 |**Set-SqlAvailabilityGroupListener**|修改现有可用性组侦听器的端口设置。|承载主副本的服务器实例|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityReplica**|创建新的可用性副本。 你可以使用 **-AsTemplate** 参数为每个新的可用性副本创建内存中的可用性副本对象。|承载主副本的服务器实例|  
 |**Join-SqlAvailabilityGroup**|将辅助副本联接到该可用性组。|承载辅助副本的服务器实例|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|在主副本上，将数据库添加到可用性组。<br /><br /> 在辅助副本上，将辅助数据库联接到可用性组。|承载可用性副本的任何服务器实例（主副本与辅助副本的行为不同）|  
 |**Remove-SqlAvailabilityDatabase**|在主副本上，从可用性组中删除数据库。<br /><br /> 在辅助副本上，从本地辅助副本中删除本地辅助数据库。|承载可用性副本的任何服务器实例（主副本与辅助副本的行为不同）|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  您必须具有 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 权限才能执行这些 cmdlet。  
   
-|Cmdlet|说明|支持平台|  
+|Cmdlet|Description|支持平台|  
 |------------|-----------------|------------------|  
 |**Test-SqlAvailabilityGroup**|通过评估 SQL Server 基于策略的管理 (PBM) 策略来评估可用性组的运行状况。|承载可用性副本的任何服务器实例。*|  
 |**Test-SqlAvailabilityReplica**|通过评估 SQL Server 基于策略的管理 (PBM) 策略来评估可用性副本的运行状况。|承载可用性副本的任何服务器实例。*|  

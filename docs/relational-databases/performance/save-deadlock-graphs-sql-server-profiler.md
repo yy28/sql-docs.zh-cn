@@ -17,15 +17,15 @@ helpviewer_keywords:
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92eecce1715fa172a17b849711ba6f9cc09cfbb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0aaa9c41b63479eda21bf1f0e862639c50160495
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>保存死锁图形 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 保存死锁图形。 Deadlock Graph 事件以 XML 文件形式保存。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 2. 在 **“跟踪属性”** 对话框内的 **“跟踪名称”** 框中键入跟踪的名称。  
   
-3. 在“使用模板”列表中，选择一个跟踪所基于的跟踪模板。 如果不想使用模板，请选择“空白”。  
+3. 在“使用模板”列表中，选择一个跟踪所基于的跟踪模板。 如果不想使用模板，请选择“无”。  
   
 4. 执行以下操作之一：  
   

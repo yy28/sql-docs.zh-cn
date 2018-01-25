@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c040fa96a905d3b9547163e1b75963b3ac28933
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86fed40dbd12e7124aa837b7e428af711e33ef24
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server Wait Statistics 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“SQLServer:Wait Statistics”性能对象包含报告有关等待状态的性能计数器。  
   
  下表列出了 Wait Statistics 对象包含的计数器。  
   
-|SQL Server Wait Statistics 计数器|说明|  
+|SQL Server Wait Statistics 计数器|Description|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|等待锁的进程的统计信息。|  
 |**Log buffer waits**|等待日志缓冲区可用的进程的统计信息。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  对象中的每个计数器均包含以下实例：  
   
-|项|说明|  
+|项|Description|  
 |----------|-----------------|  
 |**平均等待时间(ms)**|所选类型等待的平均等待时间。|  
 |**每秒的累积等待时间(ms)**|所选类型等待的每秒累积等待时间。|  

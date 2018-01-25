@@ -21,15 +21,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b58f7ba5799384276fb39c8490d933ed4f63469
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e8860ca10da3f28750d62f2fb1a926069cec496c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 **suspect_pages** 表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表位于 [msdb 数据库](../../relational-databases/databases/msdb-database.md)中。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要管理 suspect_pages 表，可使用：**  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
     |错误说明|**event_type** 值|  
     |-----------------------|---------------------------|  
-    |由操作系统 CRC 错误造成的 823 错误，或者校验和错误或页撕裂以外的 824 错误（例如，页 ID 错误）|1|  
+    |由操作系统 CRC 错误造成的 823 错误，或者校验和错误或页撕裂以外的 824 错误（例如，页 ID 错误）|@shouldalert|  
     |错误的校验和|2|  
     |残缺页|3|  
     |已还原（页在标记为错误后已还原）|4|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  任何拥有 **msdb** 访问权限的人员都可以读取 **suspect_pages** 表中的数据。 任何拥有 suspect_pages 表的 UPDATE 权限的人员都可以更新它的记录。 **msdb** 上的 **db_owner** 固定数据库角色或 **sysadmin** 固定服务器角色的成员都可以插入、更新和删除记录。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

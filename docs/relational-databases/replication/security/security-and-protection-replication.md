@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53e3c9e5da3240ec81b4cf64cc89361f0ef67926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>安全性和保护（复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]帮助保护在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中部署的复制方案免遭恶意攻击，并提高数据的安全性。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  [更多信息...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
  ![小文件文件夹图标](../../../analysis-services/media/filefolder-small.png "小文件文件夹图标") **安全开发**  
- [复制代理安全性模式](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   

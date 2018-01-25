@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dba73f7bbfa6cb1ffee7d24a9f283e29e4649b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-source-dialog-box"></a>“选择源”对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此对话框用于选择要运行的策略的源。 若要选择一个或多个包含策略的 XML 文件，请选择 **“文件”**。 若要运行位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的策略，请选择 **“服务器”**。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   在对象资源管理器中，右键单击某个服务器、数据库或数据库对象，然后依次选择“策略”和“评估”。 在“评估策略”对话框的“策略选择”页上单击“浏览”(**...**) 按钮。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **“文件”**  
  选择一个或多个包含策略的 XML 文件。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  
   
- **用户名**  
+ **User name**  
  输入连接所使用的用户名。 仅当已选择使用 Windows 身份验证进行连接时，才能使用此选项。  
   
  **登录**  

@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供一组模板来帮助你快速创建 XMLA 脚本、 DMX 或 MDX 查询，在多维数据集或表格模型、 脚本备份中创建 Kpi 和还原操作，并执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
   
  本主题包括多维模型和表格模型的模板列表，并且提供如何通过使用元数据资源管理器和模板资源管理器生成 MDX 查询和 XMLA 语句的示例。  
   
@@ -214,14 +216,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\管理|“备份”|演示如何使用 XMLA **“备份”** 命令将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到文件。|  
 ||取消|演示如何使用 XMLA **Cancel** 命令取消针对当前会话（用于用户而不是管理员或服务器管理员）、数据库（用于管理员）或实例（用于服务器管理员）运行的所有操作。|  
 ||创建远程分区数据库|演示如何使用 XMLA **Create** 命令和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 数据库元素来创建用于存储远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和数据源。|  
-||DELETE|演示如何使用 XMLA **删除** 命令删除现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
+||删除|演示如何使用 XMLA **删除** 命令删除现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
 ||处理维度|演示如何将 XMLA **Batch** 命令与 **Parallel** 元素和 **Process** 命令组合使用来通过使用并行批处理操作更新维度的属性。|  
 ||处理分区|演示如何将 XMLA **Batch** 命令与 **Parallel** 元素和 **Process** 命令组合使用来通过并行批处理操作完全处理一个分区。|  
 ||还原|演示如何使用 XMLA **还原** 命令从现有备份文件还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
 ||同步|演示如何使用 XMLA **同步** 命令，并针对 SynchronizeSecurity 标记使用 SkipMembership 选项，将另一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库与当前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the 同步Security tag.|  
 |XMLA\架构行集|发现架构行集|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_SCHEMA_ROWSETS 架构行集的内容。|  
 |XMLA\服务器状态|连接|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_CONNECTIONS 架构行集的内容。|  
-||中执行计划的管理任务，即“作业”|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_JOBS 架构行集的内容。|  
+||作业|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_JOBS 架构行集的内容。|  
 ||位置|演示如何使用 XMLA **Discover** 方法并指定位置备份文件的路径来检索 DISCOVER_LOCATIONS 架构行集的内容。|  
 ||锁|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_LOCKS 架构行集的内容。|  
 ||内存授予|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_MEMORYGRANT 架构行集的内容。|  
@@ -232,7 +234,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>另请参阅  
  [多维表达式 (MDX) 参考](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 &#40; DMX &#41;引用](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

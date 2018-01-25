@@ -22,13 +22,13 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: "49"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27a259a48aee0f852e6088bb17e6765ea37c057c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]为了使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 来监视可用性组和副本及关联的数据库，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组目录视图和动态管理视图及服务器属性。 通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 语句，您可以使用这些视图监视可用性组及其副本和数据库。 为给定可用性组返回的信息取决于您连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载的是主副本还是辅助副本。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 目录视图要求具有服务器实例的 VIEW ANY DEFINITION 权限。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 动态管理视图要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ##  <a name="AoAgFeatureOnSI"></a> 监视服务器实例上的 AlwaysOn 可用性组功能  
@@ -286,7 +286,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [SQL Server，可用性副本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)  
   
--   [SQL Server，数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+-   [SQL Server - 数据库副本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
 -   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   

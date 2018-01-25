@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>配置 PolyBase 连接到外部数据
 说明如何在 SQL Server PDW 连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和 SQL Server PDW 的数据的查询。  
@@ -132,7 +132,35 @@ ms.lasthandoff: 12/21/2017
 10. 连接到 WASB 还需要在设备上配置的 DNS 转发。 若要配置 DNS 转发，请参阅[使用 DNS 转发器来解决非设备 DNS 名称 &#40;分析平台系统 &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 外部数据源、 外部文件格式和外部表，现在可以创建授权的用户。 它们可以使用它们来将数据从多个源，包括 Hadoop、 集成 Microsoft Azure blob 存储和 SQL Server PDW。  
+
+## <a name="kerberos-configuration"></a>Kerberos 配置  
+请注意，当 PolyBase 向 Kerberos 保护的群集证明身份时，我们要求将 hadoop.rpc.protection 设置设为身份验证。 这会使 Hadoop 节点间的数据通信保持非加密状态。 
+
+ 连接到 Kerberos 保护的 Hadoop 群集 [使用 MIT KDC]：
+   
   
+1.  在管理节点上的安装路径中查找 Hadoop 配置目录：  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  查找表中列出的配置密钥 Hadoop 端配置值。 （对于 Hadoop 计算机，在 Hadoop 配置目录中查找文件。）  
+  
+3.  将配置值复制到 SQL Server 计算机上对应文件的值属性中。  
+  
+    |**#**|**配置文件**|**配置密钥**|**操作**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主机名。 例如：kerberos.your-realm.com。|  
+    |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 领域。 例如：YOUR-REALM.COM|  
+    |3|core-site.xml|hadoop.security.authentication|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如：KERBEROS<br></br>**安全说明：** KERBEROS 必须采用大写形式。 如果采用小写，则可能不会打开。|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如：10.193.26.174:10020|  
+    |7|yarn-site.xml yarn。|yarn.resourcemanager.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： yarn/_HOST@YOUR-REALM.COM|  
+  
+4.  创建数据库范围内的凭据对象，以指定每个 Hadoop 用户的身份验证信息。 请参阅 [PolyBase T-SQL 对象](../relational-databases/polybase/polybase-t-sql-objects.md)。  
+ 
 ## <a name="see-also"></a>另请参阅  
 [设备配置 &#40;分析平台系统 &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

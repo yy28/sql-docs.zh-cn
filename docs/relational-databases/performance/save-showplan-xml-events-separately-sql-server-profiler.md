@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c213109a08829f1007ac3af8d729b397406b855
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 106a627a50964d482776401bf27db6f2c83ac0ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>单独保存 Showplan XML 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 将在跟踪中捕获到的 Showplan XML 事件分别保存到单独的 .SQLPlan 文件中。 可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 Showplan XML 事件文件，以便查看每个事件以图形表示的执行计划。  
@@ -37,21 +37,21 @@ ms.lasthandoff: 11/17/2017
      此时，将显示 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择“建立连接后立即开始跟踪”，则“跟踪属性”对话框不会出现，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，选择“选项”，再清除“建立连接后立即开始跟踪”复选框。  
+    >  如果选择“建立连接后立即开始跟踪”，则“跟踪属性”对话框不会出现，而是开始跟踪。 要关闭此设置，请在“工具”菜单上选择“选项”，再清除“建立连接后立即开始跟踪”复选框。  
   
 2. 在 **“跟踪属性”** 对话框内的 **“跟踪名称”** 框中键入跟踪的名称。  
   
-3. 从“使用模板”列表中选择一个跟踪模板。 如果不想使用模板，请选择“无”。  
+3. 在“使用模板”列表中，选择一个跟踪所基于的跟踪模板。 如果不想使用模板，请选择“无”。  
   
 4. 执行以下操作之一：  
   
-    -   选中“保存到文件”复选框以将跟踪捕获到文件中。 指定 **“设置最大文件大小”**的值。 
+    -   要将跟踪内容捕获到文件，请选中“保存到文件”复选框。 指定 **“设置最大文件大小”**的值。 
     
         也可以选中 **“启用文件滚动更新”** 复选框和 **“服务器处理跟踪数据”** 复选框。  
   
-    -   选中“保存到表”复选框以将跟踪捕获到数据库表中。 
+    -   要将跟踪内容捕获到数据库表，请选中“保存到表”复选框。 
     
-        根据需要，可以选择“设置最大行数”，并指定值。  
+        也可以选择“设置最大行数”，指定一个值。  
   
 5. 根据需要，可以选中 **“启用跟踪停止时间”** 复选框，再指定停止日期和时间。 
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
      “事件提取设置”选项卡将添加到“跟踪属性”对话框中。  
   
-8. 在“事件提取设置”选项卡上，选择“分别保存 XML 显示计划事件”。  
+8. 在“事件提取设置”选项卡上，选择“单独保存 XML Showplan 事件”。  
   
 9. 在 **“另存为”** 对话框中，输入要在其中存储 **Showplan XML** 事件的文件的名称。  
   

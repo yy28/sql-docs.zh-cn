@@ -23,13 +23,13 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8655f18aec310a10ac133fb79ee2230cc119f712
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>监视日志传送 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]配置日志传送后，就可以监视有关所有日志传送服务器状态的信息。 日志传送操作的历史记录和状态始终由日志传送作业保存在本地。 备份操作的历史记录和状态存储在主服务器上，复制和还原操作的历史记录和状态存储在辅助服务器上。 如果使用了远程监视服务器，此信息还将存储在监视服务器上。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  可以查询这些表，以监视日志传送会话的状态。 例如，了解日志传送的状态，查看备份作业、复制作业和还原作业的状态和历史记录。 通过查询下列监视表，可以查看特定的日志传送历史记录和错误详细信息。  
   
-|表|说明|  
+|表|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储日志传送作业的错误详细信息。 可以查询此表来查看某个代理会话的错误。 还可以按每个错误的记录日期和时间对错误进行排序。 每个错误都记录为一个异常序列，多个错误（序列）可以形成一个代理会话。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>监视日志传送的存储过程  
  监视和历史记录信息存储在 **msdb**的表中，可以通过日志传送存储过程来访问它。 请在下表中指定的服务器上运行下列存储过程。  
   
-|存储过程|说明|运行存储过程的服务器|  
+|存储过程|Description|运行存储过程的服务器|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|从 **log_shipping_monitor_primary** 表中返回指定的主数据库的监视记录。|监视服务器或主服务器|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|从 **log_shipping_monitor_secondary** 表中返回指定的辅助数据库的监视记录。|监视服务器或辅助服务器|  

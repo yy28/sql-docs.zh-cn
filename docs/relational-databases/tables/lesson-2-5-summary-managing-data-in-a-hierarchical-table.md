@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 994ef486992a0541323eed37a3e8054091969680
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5ed59f9911a41b65101115bf821d0b75ec74c51
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>第 2-5 课 - 摘要 - 管理层次结构表中的数据
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]使用 hierarchyid 数据类型可以轻松地创建反映分层数据的表，然后再创建深度优先和广度优先的索引以有效地访问此表。 使用分层方法来查询和操作数据。  

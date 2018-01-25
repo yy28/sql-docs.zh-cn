@@ -18,13 +18,13 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eeb5f355fcf3acec748c09616377d2a0bf9f0c83
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 810cddb24b5f37ff61316e2249a98300e45b40c1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-existing-secondary-replicas-page"></a>连接到现有的次要副本页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]帮助主题介绍“连接到现有的次要副本”页的选项。 本主题由 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的“ [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ”和“ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]”使用。  

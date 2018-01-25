@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7058a9dc394b10c5b938d1a7d827fd2aaa4459d9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要为数据库引擎访问配置 Windows 防火墙，请使用：**  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
-4.  在 **“程序”** 对话框中，选择 **“此程序路径”**。 单击 **“浏览”**，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”**。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击 **“下一步”**。  
+4.  在 **“程序”** 对话框中，选择 **“此程序路径”**。 单击 **“浏览”**，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”**。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步” 。  
   
 5.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
   

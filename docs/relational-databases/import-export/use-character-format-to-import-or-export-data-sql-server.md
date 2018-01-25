@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## 使用字符格式的注意事项<a name="considerations"></a>
 使用字符格式时，请考虑下列事项：  
   
--   默认情况下，[bcp 实用工具](../../tools/bcp-utility.md)使用制表符分隔字符数据字段，并用换行符终止记录。  有关如何指定替换终止符的详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+-   默认情况下， [bcp 实用工具](../../tools/bcp-utility.md) 使用制表符分隔字符数据字段，并用换行符终止记录。  有关如何指定替换终止符的详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
 -   默认情况下，在批量导出或导入字符模式数据之前，将执行下列转换：  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 下列命令选项支持字符格式：  
   
-|Command|选项|说明|  
+|Command|选项|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|让 bcp 实用工具使用字符数据。*|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  

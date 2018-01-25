@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c2b4b54ae1494a72bf86d56f50ace2da6b0a5e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a60816a7220a5d1c2b9f15aeeac98e1a74da21ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-agents"></a>分发服务器信息，代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“代理”选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/17/2017
   
  有关快照代理、日志读取器代理和队列读取器代理的详细信息，请参阅 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)。 请注意，当您查看分发服务器的 **“代理”** 选项卡上的代理信息时，将提供快照代理和日志读取器代理的发布服务器信息。 不过，在分发服务器视图中分发服务器的 **“代理”** 选项卡中，您还可以选择 **“分发服务器代理”** 和 **“合并代理”**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  以下各节说明了此选项卡上为分发服务器代理和合并代理显示的数据。  
   
 ### <a name="distributor-agent"></a>“分发服务器代理”  
- **状态**  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -84,8 +84,8 @@ ms.lasthandoff: 11/17/2017
  **平均命令数**  
  在此代理最近一次运行期间平均每个事务的命令数。  
   
-### <a name="merge-agent"></a>“合并代理”  
- **状态**  
+### <a name="merge-agent"></a>合并代理  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

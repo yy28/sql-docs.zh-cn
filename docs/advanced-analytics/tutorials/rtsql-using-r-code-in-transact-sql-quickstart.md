@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (SQL 快速入门中的 R) 中的 R 代码
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 
 30 分钟，不包括安装
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>必要條件
 
 你必须访问 SQL Server 的实例与已安装下列项之一：
 
@@ -50,7 +50,7 @@ SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚�
 
 若要运行包含 R 脚本的 SQL 查询，可以使用任何其他应用程序可以连接到数据库并运行 T-SQL 代码。 SQL 专业人员可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
 
-对于本教程，以显示运行在 SQL Server，R 是多么容易，我们使用新**mssql 扩展 Visual Studio Code**。 VS Code 是一个免费的开发环境，可以在 Linux、 macOS 或 Windows 上运行。 **Mssql*** 扩展是一个轻型的运行 SLq 查询扩展。 若要安装该开发环境，请参阅以下文章：[使用用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
+对于本教程，以显示运行在 SQL Server，R 是多么容易，我们使用新**mssql 扩展 Visual Studio Code**。 VS Code 是一个免费的开发环境，可以在 Linux、 macOS 或 Windows 上运行。 **Mssql**扩展是一个轻型的运行 T-SQL 查询扩展。 若要安装该开发环境，请参阅以下文章：[使用用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>连接到数据库并运行 Hello World 测试脚本
 

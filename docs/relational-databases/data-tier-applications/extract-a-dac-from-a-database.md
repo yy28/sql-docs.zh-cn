@@ -24,15 +24,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3fe80df8624968a5bf71f3fd7976bc838a0abf4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>从数据库中提取 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“提取数据层应用程序向导”或 Windows PowerShell 脚本可以从现有 SQL Server 数据库提取数据层应用程序 (DAC) 包。 提取过程将创建一个 DAC 包文件，其中包含数据库对象及其相关实例级别元素的定义。 例如，一个 DAC 包文件包含数据库表、存储过程、视图、用户以及映射到数据库用户的登录名。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库中提取 DAC。 如果数据库有 DAC 中不支持的对象或包含的用户，则不能提取 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  提取 DAC 至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 提取 DAC 可由 securityadmin 固定服务器角色的成员（也是从其提取 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以提取 DAC。  
   
 ##  <a name="UsingDACExtractWizard"></a> 使用“提取数据层应用程序向导”  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
  **名称** - 此名称标识 DAC。 它可以不同于 DAC 包文件的名称，并且应描述您的应用程序。 例如，如果数据库用于财务应用程序，则可能要命名为“DAC Finance”。  
   
- **版本（使用 xx.xx.xx.xx，其中 x 是数字）** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，该版本存储于 **msdb** 数据库中，并且以后可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“数据层应用程序”节点下查看。  
+ **版本（使用 xx.xx.xx.xx，其中 x 是数字）** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，该版本存储于 **msdb** 数据库中，并且以后可以在 **中的“数据层应用程序”**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点下查看。  
   
  **说明：** - 可选。 说明该 DAC。 在部署 DAC 时，该描述存储于 **msdb** 数据库中，并且以后可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的“数据层应用程序”节点下查看。  
   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 208c0d03e893fa50c33ae28e5533163af75a3ff9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 54eb5c1750289784ed7a15016b6047287fdb15a9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="device-contents-sql-server"></a>设备内容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此对话框查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **介质**  
  存储备份信息的磁盘或磁带集。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  **名称**  
  显示介质集的名称。  
   
- **说明**  
+ **Description**  
  显示介质集的说明。  
   
  **介质簇计数**  
@@ -64,10 +64,10 @@ ms.lasthandoff: 11/17/2017
 |**类型**|执行的备份类型：完整备份、差异备份或事务日志备份。|  
 |**组件**|已备份的组件：数据库、文件或 *\<blank>*（用于事务日志）。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
-|**数据库**|已备份数据库的名称。|  
+|**“数据库”**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  
-|**日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
-|**Size**|备份集的大小（字节）。|  
+|**Date**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
+|**大小**|备份集的大小（字节）。|  
 |**用户名**|执行备份操作的用户的名称。|  
 |**过期日期**|备份集的过期日期和时间。|  
   

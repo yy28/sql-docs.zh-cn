@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779cd2f34ae30c2e21d632e3359861452c4f652a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如， **int** 数据类型占 4 个字节。 如果指示前缀长度为 0，则 **bcp** 命令会提示输入字段长度、默认字段长度以及字段长度对包含 **char** 数据的数据文件中数据存储的影响。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |**nvarchar**|定义的列长度的两倍|  
 |**Text**|0|  
 |**ntext**|0|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**binary**|定义的列长度的两倍 + 1|  
 |**varbinary**|定义的列长度的两倍 + 1|  
 |**图像**|0|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |**real**|30|  
 |**int**|12|  
 |**bigint**|19|  
-|**smallint**|7|  
+|**int**|7|  
 |**tinyint**|5|  
 |**money**|30|  
 |**smallmoney**|30|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
 |数据类型|默认长度（字符数）|  
 |---------------|-----------------------------------|  
-|**bit**|1|  
+|**bit**|@shouldalert|  
 |**binary**|定义的列长度|  
 |**varbinary**|定义的列长度|  
 |**图像**|0|  
@@ -113,8 +113,8 @@ ms.lasthandoff: 11/17/2017
 |**real**|4|  
 |**int**|4|  
 |**bigint**|8|  
-|**smallint**|2|  
-|**tinyint**|1|  
+|**int**|2|  
+|**tinyint**|@shouldalert|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

@@ -20,13 +20,13 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d514ea136d42bfdf39123028fd20937290a429f2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4aec93b0f1ce7322087205bdbe9f44dabdfdcd58
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="miscellaneous-files"></a>杂项文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 不属于任何项目的文件称为杂项文件。 当您打开解决方案时，可以打开并修改与该项目相关的杂项文件。 如果文件扩展名与项目代码编辑器不关联，则将此文件归类为杂项文件。 例如，在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目中，扩展名为 .txt 或 .mdx 的文件被视为杂项文件。 在 MDX 项目中，扩展名为 .txt 或 .sql 的文件被视为杂项文件。 若要使文件扩展名与代码编辑器相关联，请参阅 [如何将文件扩展名与代码编辑器关联](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)。  

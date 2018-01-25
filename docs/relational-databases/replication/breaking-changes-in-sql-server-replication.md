@@ -16,15 +16,15 @@ helpviewer_keywords:
 - breaking changes [SQL Server replication]
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e256a2b2278ae2bc41b5a5d50c9012bffdcee8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4bc86c4b6ea7a0fdcf7ab6991ac2783e778d3af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 复制中的重大更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  

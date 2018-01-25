@@ -15,13 +15,13 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 caps.latest.revision: "9"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5470d1d28d874404df4506127f38ee8d19b97d15
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-security"></a>临时表安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="security-principles"></a>安全原则  
  下表描述适用于临时表的安全原则：  
   
-|原则|说明|  
+|原则|Description|  
 |---------------|-----------------|  
 |启用/禁用系统版本控制需要有对受影响对象的最高权限|启用和禁用 SYSTEM_VERSIONING 需要有对当前和历史记录表的 CONTROL 权限|  
 |不能直接修改历史记录数据|当 SYSTEM_VERSIONING 为 ON 时，用户不能更改历史记录数据，不管他们对当前和历史记录表的实际权限是什么。 这包括数据和架构修改。|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
  [临时表分区](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
  [临时表注意事项和限制](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
  [管理版本由系统控制的临时表中历史数据的保留期](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
- [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [系统版本控制的临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   

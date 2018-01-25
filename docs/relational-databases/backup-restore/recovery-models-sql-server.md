@@ -31,15 +31,15 @@ helpviewer_keywords:
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 caps.latest.revision: "70"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 577502b82e4a5c3f78cd185a320262b33b646ca2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8a6245577244eed484bdc3d370c0527942a282a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recovery-models-sql-server"></a>恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作发生在数据库的恢复模式的上下文中。 恢复模式旨在控制事务日志维护。 “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="RMov"></a> 恢复模式概述  
  下表概述了这三种恢复模式。  
   
-|恢复模式|说明|工作丢失的风险|能否恢复到时点？|  
+|恢复模式|Description|工作丢失的风险|能否恢复到时点？|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple**|无日志备份。<br /><br /> 自动回收日志空间以减少空间需求，实际上不再需要管理事务日志空间。 有关简单恢复模式下数据库备份的详细信息，请参阅[完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)。<br /><br /> 简单恢复模式不支持要求事务日志备份的操作。 在简单恢复模式中不能使用以下功能：<br /><br /> -日志传送<br /><br /> -AlwaysOn 或数据库镜像<br /><br /> -没有数据丢失的介质恢复<br /><br /> -时点还原|最新备份之后的更改不受保护。 在发生灾难时，这些更改必须重做。|只能恢复到备份的结尾。 有关详细信息，请参阅[完整数据库还原（简单恢复模式）](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)。 <br><br> 有关简单恢复模式的更多深入说明，请参阅由 [SQL Server 简单恢复模式](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) 人员提供的 [SQL Server 简单恢复模式](https://www.mssqltips.com)。|  
 |**Full**|需要日志备份。<br /><br /> 数据文件丢失或损坏不会导致丢失工作。<br /><br /> 可以恢复到任意时点（例如应用程序或用户错误之前）。 有关完整恢复模式下的数据库备份的信息，请参阅 [完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 和[完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|正常情况下没有。<br /><br /> 如果日志尾部损坏，则必须重做自最新日志备份之后所做的更改。|如果备份在接近特定的时点完成，则可以恢复到该时点。 有关使用日志备份还原到故障点的信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。<br /><br /> 注意：如果有两个或更多必须在逻辑上保持一致的完整恢复模式数据库，则最好执行特殊步骤，以确保这些数据库的可恢复性。 有关详细信息，请参阅 [包含标记的事务的相关数据库的恢复](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)。|  

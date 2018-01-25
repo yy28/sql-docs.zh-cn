@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.subscriber.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fe9f215218bc84d3b3f1d5bb5c22d1a2ee980d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0983dafd2e95edbec342c7a885c1182f6dc053a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---subscriber"></a>订阅属性 - 订阅服务器
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用订阅服务器上的“订阅属性”对话框可以查看和设置请求订阅的属性。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
  **使用 Windows 同步管理器**  
  确定是否可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步此订阅。  
   
- **安全性**  
+ **Security**  
  单击 **“代理进程帐户”** 行，再单击属性按钮 (**...**)，可以更改在订阅服务器上运行分发代理或合并代理时所使用的帐户。 与连接有关的安全选项取决于订阅类型：  
   
 -   对于对事务发布的订阅：若要更改分发代理在连接到分发服务器时所使用的帐户，请单击 **“分发服务器连接”**，再单击属性按钮 (**...**)。  

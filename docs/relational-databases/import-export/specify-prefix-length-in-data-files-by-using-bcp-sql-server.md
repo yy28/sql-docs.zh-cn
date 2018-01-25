@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d649216f87a35c21430cd2d9b16bd4a4085b485
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑，bcp 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
@@ -67,21 +67,21 @@ ms.lasthandoff: 11/17/2017
 |**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
-|**smalldatetime**|0|1|0|1|  
-|**decimal**|1|1|1|1|  
-|**numeric**|1|1|1|1|  
-|**float**|0|1|0|1|  
-|**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
-|**bigint**|0|1|0|1|  
-|**smallint**|0|1|0|1|  
-|**tinyint**|0|1|0|1|  
-|**money**|0|1|0|1|  
-|**smallmoney**|0|1|0|1|  
-|**bit**|0|1|0|1|  
-|**uniqueidentifier**|1|1|0|1|  
-|**timestamp**|1|1|1|1|  
+|**datetime**|0|@shouldalert|0|@shouldalert|  
+|**smalldatetime**|0|@shouldalert|0|@shouldalert|  
+|**decimal**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**numeric**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**float**|0|@shouldalert|0|@shouldalert|  
+|**real**|0|@shouldalert|0|@shouldalert|  
+|**int**|0|@shouldalert|0|@shouldalert|  
+|**bigint**|0|@shouldalert|0|@shouldalert|  
+|**int**|0|@shouldalert|0|@shouldalert|  
+|**tinyint**|0|@shouldalert|0|@shouldalert|  
+|**money**|0|@shouldalert|0|@shouldalert|  
+|**smallmoney**|0|@shouldalert|0|@shouldalert|  
+|**bit**|0|@shouldalert|0|@shouldalert|  
+|**uniqueidentifier**|@shouldalert|@shouldalert|0|@shouldalert|  
+|**timestamp**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** （用户定义的数据类型）|8|8|8|8|  

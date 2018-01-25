@@ -24,13 +24,13 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4321216ddefa8ac3a3e6335a2432244f342c12da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 014784893728eb72edd754e270330e287fa8d364
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  可能的数据库镜像状态如下所示：  
   
-|镜像状态|说明|  
+|镜像状态|Description|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|镜像数据库的内容滞后于主体数据库的内容。 主体服务器正在将日志记录发送到镜像服务器（正在将更改应用于镜像数据库以使其前滚）。<br /><br /> 在数据库镜像会话开始时，数据库处于 SYNCHRONIZING 状态。 主体服务器为数据库提供服务，同时镜像服务器尽量与主体服务器保持同步。|  
 |SYNCHRONIZED|当镜像服务器与主体服务器几乎保持同步时，镜像状态将更改为 SYNCHRONIZED。 只要主体服务器继续向镜像服务器发送更改，并且镜像服务器继续将更改应用于镜像数据库，数据库就会保持此状态。<br /><br /> 如果将事务安全性设置为 FULL，则 SYNCHRONIZED 状态同时支持自动故障转移和手动故障转移，并且在故障转移后不会丢失数据。<br /><br /> 如果关闭事务安全性，则即使处于 SYNCHRONIZED 状态，也总可能丢失某些数据。|  

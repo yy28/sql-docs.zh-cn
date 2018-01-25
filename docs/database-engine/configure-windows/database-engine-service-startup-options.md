@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: "80"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b603e31a37884e7c436a184767f8572412e2ec3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]启动选项指定在启动期间所需的某些文件位置，并指定一些服务器范围的条件。 大多数用户不需要指定启动选项，除非您在排除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 故障或者具有不常见问题，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户支持指示使用启动选项。  
@@ -53,14 +53,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="list-of-startup-options"></a>启动选项列表  
 ### <a name="default-startup-options"></a>默认启动选项  
-|选项|Description|  
+|“常规”|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|是 master 数据库文件的完全限定路径（通常为：C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf）。 如果没有提供此选项，则使用现有的注册表参数。|  
 |**-e**  *error_log_path*|是错误日志文件的完全限定路径（通常为 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG）。 如果没有提供此选项，则使用现有的注册表参数。|  
 |**-l**  *master_log_path*|是 master 数据库日志文件的完全限定路径（通常为：C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf）。 如果没有指定此选项，则使用现有的注册表参数。|  
   
 ### <a name="other-startup-options"></a>其他启动选项   
-|选项 |Description|   
+|“常规” |Description|   
 |---------------------------|-----------------|  
 |**-c**|缩短从命令提示符启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的启动时间。 通常， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 通过调用服务控制管理器作为服务启动。 由于在通过命令提示符启动时 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不作为服务启动，因此请使用 **-c** 跳过此步骤。|  
 |**-f**|以最小配置启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。 在最低配置模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 置于单用户模式。 有关详细信息，请参阅下面的 **-m** 说明。|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="compatibility-support"></a>兼容性支持  
  **不支持**  -h [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]参数。 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的 32 位实例使用此参数以便为热添加内存元数据保留虚拟内存地址空间。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
 [配置 scan for startup procs 服务器配置选项](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 [配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

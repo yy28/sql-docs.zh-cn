@@ -14,17 +14,17 @@ ms.topic: article
 helpviewer_keywords: Configure Distribution Wizard
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62555783d1d449ce972bc15b9cb75b1ca2678bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b700916165340f23dfe73e7364ff0bb27f2f984a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="configure-distribution-wizard"></a>配置分发向导
+# <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本部分介绍有关配置分发向导中以下页的信息：  
   
 -   [分发服务器](../../relational-databases/replication/distributor.md)  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 -   [分发服务器密码](../../relational-databases/replication/distributor-password.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [配置分发](../../relational-databases/replication/configure-distribution.md)   
+ [“配置分发”](../../relational-databases/replication/configure-distribution.md)   
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [属性参考（复制）](../../relational-databases/replication/properties-reference-replication.md)  
   

@@ -21,20 +21,20 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e28994db70376a393276ed3bae630fb3dca93f3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85f6f5c81e154bd4fcc6da3f28790ba6dedd6673
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="log-shipping-tables-and-stored-procedures"></a>日志传送表和存储过程
+# <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍与日志传送配置关联的所有表和存储过程。 所有日志传送表都存储在每个服务器的 **msdb** 中。 下表介绍在日志传送配置中，哪些服务器上使用的是哪些表和存储过程。  
   
 ## <a name="primary-server-tables"></a>主服务器表  
   
-|表|说明|  
+|表|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。 仅当尚未配置远程监视服务器时，主服务器上才会使用此表。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储与此主服务器关联的日志传送作业的错误详细信息。|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="primary-server-stored-procedures"></a>主服务器存储过程  
   
-|存储过程|说明|  
+|存储过程|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|设置日志传送配置（包括备份作业、本地监视记录及远程监视记录）的主数据库。|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|向现有的主数据库添加辅助数据库名称。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="secondary-server-tables"></a>辅助服务器表  
   
-|表|说明|  
+|表|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。 仅当尚未配置远程监视服务器时，辅助服务器上才会使用此表。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储与此辅助服务器关联的日志传送作业的错误详细信息。|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="secondary-server-stored-procedures"></a>辅助服务器存储过程  
   
-|存储过程|说明|  
+|存储过程|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|设置用于日志传送的辅助数据库。|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|为指定的主数据库设置主服务器信息，添加本地和远程监视器链接，并在辅助服务器上创建复制作业和还原作业。|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="monitor-server-tables"></a>监视服务器表  
   
-|表|说明|  
+|表|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|存储警报作业 ID。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|存储日志传送作业的错误详细信息。|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="monitor-server-stored-procedures"></a>监视服务器存储过程  
   
-|存储过程|说明|  
+|存储过程|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|如果尚未创建日志传送警报作业，则创建它。|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|如果没有关联的主数据库，则删除日志传送警报作业。|  

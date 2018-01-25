@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26bba253f4e74b7d42f0bf6adf02f981234f7c92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20a65fb532fd8a37402c9ce09e6095907715d1f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---connections-page"></a>服务器属性 -“连接”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看或修改连接选项。  
   
-## <a name="connections"></a>Connections  
+## <a name="connections"></a>连接  
  **最大并发连接数(0 = 无限制)**  
  如果设置为非零值，则将限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许的连接数。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Default connection options**  
  指定默认连接选项，如下表所述：  
   
-|配置选项|说明|  
+|配置选项|Description|  
 |--------------------------|-----------------|  
 |**disable deferred constraint checking**|控制执行期间或延迟的约束检查。|  
 |**隐式事务**|控制在运行一条语句时，是否隐式启动一项事务。|  

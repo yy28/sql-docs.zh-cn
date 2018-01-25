@@ -19,15 +19,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69355e8a2908efc77cba9fd4e12b1156fb5dbea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 46d22fff51904ae27e64def3aaebacfe39bab40f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-identity-columns"></a>管理标识列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理标识列。 在将订阅服务器插入操作复制回发布服务器时，必须对标识列进行管理，以免在订阅服务器和发布服务器上分配相同的标识值。 复制可自动管理标识范围，或者您可以选择手动处理标识范围管理。  有关由复制提供的标识范围管理选项的信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  如果在步骤 4 中选择了 **“自动”** 或 **True** ，请输入下表中列出的选项值。 有关如何使用这些设置的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。  
   
-    |选项|值|说明|  
+    |选项|ReplTest1|Description|  
     |------------|-----------|-----------------|  
     |**发布服务器范围大小**|表示范围大小的整数值（例如 20000）。|请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。|  
     |**订阅服务器范围大小**|表示范围大小的整数值（例如 10000）。|请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。|  
@@ -154,7 +154,7 @@ ms.lasthandoff: 11/17/2017
     -   若要禁用自动标识范围管理，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 **identityrangemanagementoption** 分配新标识范围之前，应将 **@property** ，并将 **@identityrangemanagementoption** 在 **none** 分配新标识范围之前，应将 **@value**中管理标识列。  
   
 ## <a name="see-also"></a>另请参阅  
- [对等事务复制](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.configdistwizard.pubproperties.general.f1
 helpviewer_keywords: Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcaae5273d0dcc631b5788821302afc769e3c376
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45b854fc9546ea5040ae52cfa36954bf5d8e77db
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-properties---publisher-general"></a>发布服务器属性 - 发布服务器，常规
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“发布服务器属性”对话框的“常规”页显示有关发布服务器使用的分发服务器和分发数据库的只读信息。 若要更改发布服务器的分发服务器或分发数据库，请执行以下操作：  

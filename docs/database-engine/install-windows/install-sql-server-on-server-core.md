@@ -15,12 +15,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 701ae800a3f3d91429db8726359032f34c9991e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 23e5a84e7bff05edf16ff232fe18289abc33019e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以在 Server Core 安装上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
@@ -29,7 +29,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
  有关当前支持的操作系统列表，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 |要求|如何安装|  
 |-----------------|--------------------|  
@@ -91,7 +91,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
 ### <a name="feature-parameters"></a>功能参数  
   
-|功能参数|说明|  
+|功能参数|Description|  
 |-----------------------|-----------------|  
 |SQLENGINE|仅安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |Replication|将复制组件与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]一起安装。|  
@@ -104,7 +104,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 
  请参阅以下的功能参数用法示例：  
   
-|参数和值|说明|  
+|参数和值|Description|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|仅安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |/FEATURES=SQLEngine,FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  

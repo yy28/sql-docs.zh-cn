@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af0fc926fff97f6c20331002d92aec47749e9d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da6c5ffe47ed35e4389fef6fe5924d1b0ec1ae25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“代理”选项卡显示与发布服务器关联的代理和维护作业的相关信息：  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  有关这些作业的详细信息，请参阅[复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  以下各节说明了此选项卡上为每个代理或作业显示的数据。  
   
 ### <a name="snapshot-agent"></a>快照代理  
- **状态**  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
  在此代理最近一次运行期间分发数据库中提交的命令数。 一个命令相当于一次数据更改，如一次更新。  
   
 ### <a name="log-reader-agent"></a>日志读取器代理  
- **状态**  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="queue-reader-agent"></a>队列读取器代理  
- **状态**  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
  在此代理最近一次运行期间平均每个事务的命令数。  
   
 ### <a name="maintenance-jobs"></a>维护作业  
- **状态**  
+ **“状态”**  
  每个作业的状态。 下面列出了可能的状态值：  
   
 -   错误  

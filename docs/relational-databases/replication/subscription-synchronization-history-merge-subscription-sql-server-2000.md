@@ -14,26 +14,26 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66c6a085eb2879d9ad9d7ee19036d64af553fea5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0462e11db4e712fb9e0b5b37494dacc0924e60a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>订阅 - 同步历史记录（合并订阅，SQL Server 2000）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“同步历史记录”选项卡显示有关合并代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  从“视图”  菜单中选择要查看的合并代理会话，然后在标记为“合并代理的会话” 的网格中选择特定会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”**的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **视图**  
+ **“视图”**  
  选择要查看的合并代理会话。 合并代理通常连续运行，因此可能只有一个可供查看的会话。  
   
- **状态**  
+ **“状态”**  
  合并代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -69,6 +69,6 @@ ms.lasthandoff: 11/17/2017
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

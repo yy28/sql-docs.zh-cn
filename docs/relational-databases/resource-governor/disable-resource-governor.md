@@ -14,22 +14,22 @@ ms.topic: article
 helpviewer_keywords: Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ff08716168f02736aa5a4ce8eb340fba637bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 892d80202fd32afa4aeb9fb0a0b9f96ad2c4e17d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-resource-governor"></a>禁用资源调控器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 禁用 Resource Governor。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **若要禁用资源调控器，请使用：** [对象资源管理器](#RGOffObjEx)、[资源调控器属性](#RGOffProp)和 [Transact-SQL](#RGOffTSQL)  
+-   **若要禁用资源调控器，请使用：**[对象资源管理器](#RGOffObjEx)、[资源调控器属性](#RGOffProp)和 [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  禁用资源调控器会产生下列结果：  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  在用户事务中时，您不能使用 **ALTER RESOURCE GOVERNOR** 语句禁用资源调控器。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  禁用资源调控器需要 CONTROL SERVER 权限。  
   
 ##  <a name="RGOffObjEx"></a> 使用对象资源管理器禁用资源调控器  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
+2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
   
 3.  单击 **“启用资源调控器”** 复选框，确保未选中该框，然后单击 **“确定”**。  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

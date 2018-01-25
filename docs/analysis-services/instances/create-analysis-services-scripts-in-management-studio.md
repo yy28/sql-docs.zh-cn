@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e424279e5136d8334d37de754f5e3b5a087296b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中创建 Analysis Services 脚本
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]包括脚本生成功能、 模板和可用于脚本 Analysis Services 对象和任务的编辑器。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包括您可以用来对 Analysis Services 对象和任务编写脚本的脚本生成功能、模板和编辑器。  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>在 Management Studio 中编写 Analysis Services 任务的脚本  
  通过单击面向任务的对话框中的某一个脚本选项，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写任务脚本。 用来执行备份或还原数据库、处理对象或设计聚合之类的任务的所有对话框都在顶部包括一个脚本选项。 选择其中一个选项可以根据对话框中的信息和设置生成一个 XMLA 脚本。  

@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从 SQL Server 2016 开始，配置 AlwaysOn 可用性组时可使用数据库级别运行状况检测 (DB_FAILOVER) 选项。 数据库级别运行状况检测可检测到数据库不再处于联机状态以及其他问题，然后将触发可用性组的自动故障转移。 
@@ -102,9 +102,9 @@ select name, db_failover from sys.availability_groups
 
 dmv 输出示例：
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
-| Contoso-ag |  1  |
+| Contoso-ag |  @shouldalert  |
 
 ### <a name="errorlog"></a>ErrorLog 
 当可用性组由于执行数据库级别运行状况检测发生故障转移后，SQL Server 错误日志（或 sp_readerrorlog 中的文本）将显示错误消息 41653。 
@@ -122,7 +122,7 @@ name  |  db_failover
 >
 >2016-04-25 12:20:21.15 spid79      错误: 41653，严重性: 21，状态: 1。
 >
->2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
+>2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。**
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >
@@ -172,7 +172,7 @@ GO
 
 在此示例输出中，fault_type 显示：由于名为 AutoHa-Sample2 的数据库出错（错误类型为 2- 关闭），SQLSERVER-1 副本上的可用性组 Contoso-ag 发生了严重事件。
 
-|字段  | 值
+|字段  | ReplTest1
 |---------|---------
 |availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
 |availability_group_name |  Contoso-ag
@@ -180,7 +180,7 @@ GO
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
+|failover_ready_replicas |  @shouldalert
 |fault_type |   2
 |is_critical    | True
 

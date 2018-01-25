@@ -26,13 +26,13 @@ ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4abc54346419e0ba6281e71d583cf0a4e571caf0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 94b11dc5e05e50c0f0982d2d5c66a61f63594c6c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 SQL 编辑器可以编辑现有的存储过程、函数、触发器和 SQL 脚本。 当您打开上述任何对象时，此窗口将打开。 若要创建要对数据源运行的新 SQL 语句，请使用查询设计器的 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 。  

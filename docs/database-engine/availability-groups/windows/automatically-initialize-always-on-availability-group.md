@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自动初始化 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2016 推出了可用性组的自动种子设定。 创建具有自动
 
 有关背景信息，请参阅[次要副本的自动种子设定](automatic-seeding-secondary-replicas.md)。
  
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 在 SQL Server 2016 中，自动种子设定要求数据和日志文件路径在参与可用性组的每个 SQL Server 实例上均相同。 在 SQL Server 2017 中，你可以使用不同的路径，但是 Microsoft 建议，当所有副本都承载于相同的平台（例如 Windows 或 Linux）时，使用相同的路径。 跨平台可用性组针对副本具有不同的路径。 有关详细信息，请参阅[磁盘布局](automatic-seeding-secondary-replicas.md#disklayout)。
 
@@ -215,7 +215,7 @@ GO
 
 下表列出了与自动种子设定相关的扩展事件： 
 
-| 名称 | 说明|
+| “属性” | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  种子设定请求消息。
 |hadr_physical_seeding_backup_state_change |    物理种子设定备份端状态更改。

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:SQL Statistics 对象提供计数器来监视编译和发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的请求类型。 通过监视查询编译和重新编译的次数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收到的批数，可了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理用户查询的速度，以及查询优化器处理查询的效率。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 计数器。  
   
-|SQL Server SQL Statistics 计数器|说明|  
+|SQL Server SQL Statistics 计数器|Description|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|每秒的自动参数化尝试数。 其总数应为失败的、安全的和不安全的自动参数化尝试之和。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例尝试通过将某些文字替换为参数来参数化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 请求时，就会进行自动参数化，这样可以对多个相似的请求再次使用保存在缓存中的执行计划。 请注意，在更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，自动参数化也称为简单参数化。 此计数器不包括强制参数化。|  
 |**Batch Requests/sec**|每秒收到的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令批数。 这一统计信息受所有约束（如 I/O、用户数、高速缓存大小、请求的复杂程度等）影响。 批处理请求数值高意味着吞吐量很好。|  
