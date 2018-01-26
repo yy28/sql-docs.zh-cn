@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5c2e2459a3cf95090b0ca408eceae505086b6118
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>SQL Server 中支持 R 组件
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
 
 Launchpad 服务只会启动 Microsoft 发布的受信任启动器，或者经 Microsoft 认证满足性能和资源管理要求的启动器。 特定于语言的启动器的命名非常简单：
 
-  + R-RLauncher.dll
+  + R -  RLauncher.dll
   + Python-PythonLauncher.dll
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在其自身的用户帐户下运行。 特定语言运行时的每个附属进程将继承 Launchpad 的用户帐户。 有关配置和快速启动板的安全上下文的详细信息，请参阅[安全概述](../../advanced-analytics/r/security-overview-sql-server-r.md)。
