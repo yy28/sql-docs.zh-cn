@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -250,7 +252,7 @@ PARTITION
   
  要重新生成或重新组织已分区索引的分区数。 *partition_number*是可引用变量的常量表达式。 其中包括用户定义类型变量或函数以及用户定义函数，但不能引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *partition_number*必须存在或该语句将失败。  
   
- 与**(**\<single_partition_rebuild_index_option >**)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -307,13 +309,16 @@ REORGANIZE 是在线执行的。
 -   在其中 10%或更多的行已被逻辑删除的行组，SQL Server 将尝试与一个或多个行组组合此行组。    例如，具有 500,000 行压缩行组 1 和与 1,048,576 行的最大压缩行组 21。  行组 21 具有的删除的行数的 60%，这会为 409,830 行。 SQL Server 优先组合这些行来压缩已 909,830 行新行组的两个组。  
   
 与重新组织 (COMPRESS_ALL_ROW_GROUPS = {ON |**OFF** })  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
+
+ **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS 使您能够打开或已关闭增量行组强制转到列存储。 使用此选项时，不需要重新生成列存储索引，若要在清空增量行组。  此操作，请结合其他删除和合并碎片整理功能使它不再需要重新生成在大多数情况下的索引。    
 
 -   ON 到列存储，而不考虑大小和状态 （关闭或打开） 强制所有行组。  
   
 -   关闭到列存储强制所有已关闭行组。  
   
-设置**(** \<set_index 选项 > [ **，**...*n*] **)**  
+SET **(** \<set_index option> [ **,**... *n*] **)**  
  指定不重新生成或重新组织索引的索引选项。 不能为已禁用的索引指定 SET。  
   
 PAD_INDEX = { ON | OFF }  
@@ -343,7 +348,7 @@ PAD_INDEX = { ON | OFF }
 > [!IMPORTANT]
 >  使用 FILLFACTOR 值创建或更改聚集索引会影响数据占用的存储空间量，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]在创建聚集索引时会再分发数据。  
   
- SORT_IN_TEMPDB = {ON |**OFF** }  
+ SORT_IN_TEMPDB = { ON | **OFF** }  
  
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -483,7 +488,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  *max_degree_of_parallelism*可以是：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -497,7 +502,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
 > [!NOTE]
 > 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关支持的版本的功能的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[版本和的支持的功能[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- COMPRESSION_DELAY  **=**  { **0** |*持续时间 [分钟]* }  
+ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
  此功能是可用的开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
  对于基于磁盘的表，延迟指定的最小必须保持为增量行组处于关闭状态的分钟数增量行组之前中 SQL Server 可以将其压缩到压缩行组。 由于基于磁盘的表不跟踪插入和更新时间在上单个行，SQL Server 应用延迟到处于关闭状态的增量行组。  
@@ -533,7 +538,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
- 在分区上**(** { \<partition_number_expression > |\<范围 >}[**，**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 
   
@@ -578,13 +583,13 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
   
- MAX_DURATION =*时间*[**分钟**]  
+ MAX_DURATION = *time* [**MINUTES**]  
   
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
  联机索引重新生成锁将在执行 DDL 命令时以低优先级等待的等待时间（以分钟为单位指定的整数值）。 如果该操作被阻止的**MAX_DURATION**时间、 之一**ABORT_AFTER_WAIT**将执行操作。 **MAX_DURATION**时间始终是以分钟和 word**分钟**可以省略。  
  
- ABORT_AFTER_WAIT = [**NONE** | **自助** | **BLOCKERS** }]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
 **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
@@ -629,7 +634,7 @@ PAUSE
 
 中止已声明为可恢复的正在运行或暂停索引操作。 您必须显式执行**中止**命令终止可恢复索引重新生成操作。 故障或暂停可恢复的索引操作不会终止其执行;相反，它留在无限期暂停状态的操作。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组。 此语句不能用于修改索引定义，如添加或删除列，或更改列的顺序。 使用带有 DROP_EXISTING 子句的 CREATE INDEX 执行这些操作。  
   
  未显式指定选项时，则应用当前设置。 例如，如果未在 REBUILD 子句中指定 FILLFACTOR 设置，将在重新生成过程中使用系统目录中存储的填充因子值。 若要查看当前的索引选项设置，请使用[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. 所有打开和关闭增量行组压缩到列存储  
- 不适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，你可以重新组织使用运行 (COMPRESS_ALL_ROW_GROUPS = ON) 每个打开和已关闭的增量行组压缩到列存储为压缩行组。 这将清空增量存储，并强制所有行被压缩到列存储。 这是执行许多插入操作，因为这些操作在一个或多个增量存储中存储的行后尤其有用。  
+ 重新组织与命令 (COMPRESS_ALL_ROW_GROUPS = ON) compreses 每个打开和关闭到列存储为压缩行组的增量行组。 这将清空增量存储，并强制所有行被压缩到列存储。 这是执行许多插入操作，因为这些操作在一个或多个增量存储中存储的行后尤其有用。  
   
  REORGANIZE 将合并行组来填充最多的最大行数的行组\<= 1,024,576。 因此，压缩所有打开和已关闭行组时你不会得到与大量在它们中只有少量的行的压缩行组。 你想要为已满尽可能减少的压缩的大小并提高查询性能的行组。  
   
@@ -1167,7 +1172,7 @@ GO
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [创建空间索引 &#40;Transact SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [创建 XML 索引 &#40;Transact SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40;Transact SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)   

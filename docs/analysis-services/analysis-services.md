@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services |Microsoft 文档"
-ms.date: 05/11/2017
+ms.date: 01/26/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: d4bdda48d7518d0560e3b5dff8d0a7139de700ae
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="what-is-analysis-services"></a>什么是 Analysis Services？
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ Analysis Services 现已作为一项 Azure 服务在云中推出。 Azure Analys
 在常规 Azure 文档包含了 Azure Analysis Services 的文档。 而且，SQL Server Analysis Services 的文档包含与 SQL 文档。 但是，至少对于表格模型中，如何创建和部署你的项目是无论你使用何种平台大致相同。  
    
 *  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [什么是 SQL Server Analysis Services 中的新增功能](../analysis-services/what-s-new-in-analysis-services.md)   
+*  [什么是 SQL Server Analysis Services 中的新增功能](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [比较表格和多维解决方案](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [表格模型](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [多维模型](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  

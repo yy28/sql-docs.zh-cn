@@ -8,23 +8,24 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5fd604580eac3afd23bd2f2c43b13dbcc9e2fac0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76210708a7919048470047c3d8634fbdf57cdd88
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>设置登录帐户 - 数据库镜像 AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 >  可以使用计算机帐户（而不是域用户）连接网络服务帐户。 如果使用的是计算机帐户，则必须将其作为用户添加到其他服务器实例上。  
   
 ##  <a name="GrantConnect"></a> 为不同帐户创建登录名  
- 在服务器实例上创建登录帐户后，必须授予登录帐户连接到服务器实例的数据库镜像端点的权限。 系统管理员使用 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句授予连接权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)。  
+ 在服务器实例上创建登录帐户后，必须授予登录帐户连接到服务器实例的数据库镜像端点的权限。 系统管理员使用 GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句授予连接权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

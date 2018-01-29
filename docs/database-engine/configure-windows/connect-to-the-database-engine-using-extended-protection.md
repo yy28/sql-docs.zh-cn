@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 开始支持扩展保护。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
@@ -63,16 +64,16 @@ ms.lasthandoff: 11/20/2017
   
 -   [Microsoft 安全建议 (973811)，针对验证的扩展保护](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
-## <a name="settings"></a>设置  
+## <a name="settings"></a>“设置”  
  三种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接设置可影响服务绑定和渠道绑定。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或使用 WMI 来配置这些设置，并可以使用基于策略的管理的 **服务器协议设置** 方面来查看这些设置。  
   
 -   **强行加密**  
   
-     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 “强行加密” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **扩展保护**  
   
-     可能的值为 **“关闭”**、 **“允许”**和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 “扩展保护” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“关闭”**、 **“允许”**和 **“必需”**。 通过 **扩展保护** 变量，用户可以为每个  实例配置扩展保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别。 **“扩展保护”** 位于配置管理器中的 **“MSSQLSERVER 的协议属性”（“高级”选项卡）**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   当设置为 **“关闭”**时，禁用 **扩展保护** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例将接受来自任何客户端的连接，不管该客户端是否受保护。 **“关闭”** 选项虽与旧的和未打补丁的操作系统兼容，但安全性较差。 当您知道客户端操作系统不支持扩展保护时，请使用此设置。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **接受的 NTLM SPN**  
   
-     当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”**指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 “接受的 NTLM SPN” 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     当多个 SPN 知道一个服务器时，需要 **“接受的 NTLM SPN”** 变量。 当客户端尝试使用服务器不知道的有效 SPN 连接到服务器时，服务绑定将失败。 为避免此问题，用户可以使用 **“接受的 NTLM SPN”**指定表示服务器的多个 SPN。 **“接受的 NTLM SPN”** 是一系列由分号分隔的 SPN。 例如，若要允许 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，请在“接受的 NTLM SPN”  框中键入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 变量的最大长度为 2048 个字符。 **“接受的 NTLM SPN”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“高级”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>为数据库引擎启用扩展保护  
  若要使用 **扩展保护**，服务器和客户端都必须具有支持 **扩展保护**的操作系统，并且必须在操作系统上启用 **扩展保护** 。 有关如何为操作系统启用 **扩展保护** 的详细信息，请参阅 [针对验证的扩展保护](http://support.microsoft.com/kb/968389)。  
