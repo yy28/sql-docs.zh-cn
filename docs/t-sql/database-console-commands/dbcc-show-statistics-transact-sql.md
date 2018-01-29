@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: "75"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c6b82cb2c44d049f44378cd86955373004bb0cb5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +92,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
- STAT_HEADER |DENSITY_VECTOR |直方图 |STATS_STREAM [ **，**  *n*  ]  
+ STAT_HEADER |DENSITY_VECTOR |直方图 |STATS_STREAM [**，* * * n* ]  
  如果指定以上一个或多个选项，将根据指定的选项限制该语句返回的结果集。 如果没有指定任何选项，则返回所有统计信息。  
   
  STATS_STREAM 为 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -100,7 +102,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |列名|Description|  
 |-----------------|-----------------|  
-|“属性”|统计信息对象的名称。|  
+|名称|统计信息对象的名称。|  
 |Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函数是另一种方法检索此信息。 有关详细信息，请参阅[备注](#Remarks)在此页中的部分。|  
 |“行”|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Rows Sampled|用于统计信息计算的抽样总行数。 如果 Rows Sampled < Rows，显示的直方图和密度结果则是根据抽样行估计的。|  
@@ -118,7 +120,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |-----------------|-----------------|  
 |All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值则具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
 |Average Length|存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。|  
-|“列”|为其显示 All density 和 Average length 的前缀中的列的名称。|  
+|列|为其显示 All density 和 Average length 的前缀中的列的名称。|  
   
 下表对指定 HISTOGRAM 选项时结果集中所返回的列进行了说明。
   
@@ -222,10 +224,10 @@ GO
 [统计信息](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)  
-[删除统计信息 &#40;Transact SQL &#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
-[sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
-[sp_createstats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
-[STATS_DATE &#40;Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+[DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
+[sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
+[sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
+[STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
-[sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
-[sys.dm_db_stats_histogram (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

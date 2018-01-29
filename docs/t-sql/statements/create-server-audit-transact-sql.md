@@ -1,14 +1,15 @@
 ---
 title: "创建服务器审核 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - SERVER AUDIT
 - SERVER_AUDIT_TSQL
 - CREATE SERVER AUDIT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server audit [SQL Server]
 - CREATE SERVER AUDIT statement
 - audits [SQL Server], creating
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 436cca29066a1fc9e296dca2c66f1503189102a2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b6e637bec3ddcfd7b24bb4f4adb87011bbbe2471
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,16 +83,16 @@ CREATE SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
  确定审核目标的位置。 选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入到 Windows 安全日志。 有关详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
   
- FILEPATH =*os_file_path*  
+ FILEPATH ='*os_file_path*'  
  审核日志的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE = { *max_size}*  
+ MAXSIZE = { *max_size }*  
  指定审核文件可增大到的最大大小。 *Max_size*值必须跟 MB、 GB、 TB 或无限制的整数。 你可以为指定的最小大小*max_size*为 2 MB，最大值为 2,147,483,647 TB。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 （0 也指示 UNLIMITED。）指定低于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
   
  MAX_ROLLOVER_FILES =*{整数*|不限}  
  指定要保留在文件系统中外加当前文件的最大文件数。 *MAX_ROLLOVER_FILES*值必须是整数或无限制。 默认值为 UNLIMITED。 审核重新启动时，此参数计算 (这可能发生时的实例[!INCLUDE[ssDE](../../includes/ssde-md.md)]重启或审核打开时关闭，然后在再次) 或者时是否需要新的文件，因为已达到最大大小。 当*MAX_ROLLOVER_FILES*计算，如果文件数超过*MAX_ROLLOVER_FILES*设置，删除最旧的文件。 因此，当设置*MAX_ROLLOVER_FILES*为的 0 创建一个新文件每次*MAX_ROLLOVER_FILES*设置进行评估。 只有一个文件是自动时删除*MAX_ROLLOVER_FILES*设置进行评估，因此，在值*MAX_ROLLOVER_FILES*是减少，文件数不收缩除非旧文件手动删除。 可以指定的最大文件数为 2,147,483,647。  
   
- MAX_FILES =*整数*  
+ MAX_FILES =*integer*  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定可创建的审核文件的最大数目。 当达到此限制时，不滚动更新到第一个文件。 当达到 MAX_FILES 限制时，导致附加审核事件生成，任何操作都将失败并出现错误。  
@@ -98,10 +100,10 @@ CREATE SERVER AUDIT audit_name
  RESERVE_DISK_SPACE = { ON | OFF }  
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 它仅适用于最大大小不等于无限制。 默认值为 OFF。  
   
- QUEUE_DELAY =*整数*  
+ QUEUE_DELAY =*integer*  
  确定在强制处理审核操作之前可以经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定数量无效，将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
- ON_FAILURE = {继续 |关闭 |FAIL_OPERATION}  
+ ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION }  
  指示在目标无法写入审核日志时写入目标的实例是应失败、继续还是停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认值为 CONTINUE。  
   
  CONTINUE  
@@ -125,8 +127,18 @@ SHUTDOWN
  event_field_name  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 表示标识谓词源的事件字段的名称。 审核字段描述的[sys.fn_get_audit_file &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). 除 `file_name` 和 `audit_file_offset` 之外的所有字段都可以进行审核。  
-  
+ 表示标识谓词源的事件字段的名称。 审核字段描述的[sys.fn_get_audit_file &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). 所有字段可以都筛选除`file_name`， `audit_file_offset`，和`event_time`。  
+
+> [!NOTE]  
+>  虽然`action_id`和`class_type`字段属于类型**varchar**中 sys.fn_get_audit_file，它们仅可与数字时它们是为进行筛选的谓词源。 若要获取要与一起使用的值列表`class_type`，执行以下查询：  
+> ```sql
+> SELECT spt.[name], spt.[number]
+> FROM   [master].[dbo].[spt_values] spt
+> WHERE  spt.[type] = N'EOD'
+> ORDER BY spt.[name];
+> ```
+
+
  number  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -142,7 +154,7 @@ SHUTDOWN
   
  CREATE SERVER AUDIT 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建、更改或删除服务器审核，主体需要拥有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
  在您将审核信息保存到某一文件时，为了避免被篡改，应限制对文件位置的访问。  
@@ -216,16 +228,16 @@ GO
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [删除数据库审核规范 &#40;Transact SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [创建服务器审核和服务器审核规范](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   
