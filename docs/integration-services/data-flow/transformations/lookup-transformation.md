@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,7 +26,7 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
@@ -136,9 +137,9 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
+-   msdn.microsoft.com 上的视频 [如何在完全缓存模式下实现查找转换](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
   
--   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
+-   blogs.msdn.com 上的博客项 [使用查找转换缓存模式的最佳实践](http://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
 -   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
   
