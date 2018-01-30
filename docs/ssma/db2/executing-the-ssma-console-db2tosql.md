@@ -8,14 +8,15 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
@@ -692,7 +693,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 -   `write-summary-report-to`指定将生成报表的路径。 如果只提到的文件夹路径，然后按名称文件**ConvertSQLReport.XML**创建。 （可选属性）  
   
-    创建具有 viz 进一步子类别的 2 的报表。。，：  
+    创建具有 viz 进一步子类别的 2 的报表..,:  
   
     -   报告错误 （="true/false"，使用默认为"false"（可选属性））。  
   
