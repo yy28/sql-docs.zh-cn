@@ -12,30 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 258bb0a43d8f3e507327594f9db399ef82745754
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 683a00ae0c3c300ee5734b9e9d45b05c9c4b1442
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 最低权限示例-SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题举例说明[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 配置具有最低权限。 该配置将不同的帐户用于三个组件中的每个组件，并且每个帐户都具有最低的权限级别。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ## <a name="summary-of-accounts"></a>帐户摘要  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支持将 Network Service 帐户用于 Analysis Services 服务帐户。 Network Service 帐户不是针对 SharePoint 2010 的支持的方案。 有关服务帐户的详细信息，请参阅 [配置 Windows 服务帐户和权限](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx)。  
   
  下表总结了在此最低权限配置示例中使用的三个帐户。  
   
-|范围|“属性”|  
+|范围|名称|  
 |-----------|----------|  
 |SharePoint 管理员帐户|**SPAdmin**|  
 |SharePoint 场帐户|**SPFarm**|  

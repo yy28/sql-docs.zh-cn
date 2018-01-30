@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b361f84ecf464ee66936c88ff9f6114d4203bf23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc5e6abed8f9d92532e186377b85396b711f290d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 课：创建事务发布的订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个订阅。 本课程要求已完成上一课， [第 1 课：使用事务复制发布数据](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md)。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  在“新建数据库”对话框的“数据库名称”框中输入“ProductReplica”，然后依次单击“确定”和“下一步”。  
   
-8.  在“分发代理安全性”对话框中，单击省略号 (**…**) 按钮，在“进程帐户”框中输入 \<*Machine_Name>***\repl_distribution**，输入此帐户的密码，然后依次单击“确定”和“下一步”。  
+8.  在“分发代理安全性”对话框中，单击省略号（“…”按钮，在“进程帐户”框中输入 \<Machine_Name>\repl_distribution，输入此帐户的密码，然后依次单击“确定”和“下一步”。  
   
 9. 单击“完成”以接受其余页中的默认值并完成向导。  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  如果订阅未在“AdvWorksProductTrans”下出现，请按 F5 刷新列表。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已经成功创建了对事务发布的订阅。 因为此订阅的分发代理持续运行，所以订阅一经创建就进行了初始化。 接下来，您将用跟踪令牌来验证更改是否已复制到订阅服务器并确定滞后时间。 请参阅 [第 3 课：验证订阅和测量滞后时间](../../relational-databases/replication/lesson-3-validating-the-subscription-and-measuring-latency.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: "83"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过**项目属性 - \<***项目***>**对话框和以下存储过程更改对象所有者：**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>”对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   
@@ -224,7 +225,7 @@ ms.lasthandoff: 11/17/2017
   
 -   如果在多个支持排队更新订阅的事务发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |属性|sp_addarticle 中的参数|  
+    |“属性”|sp_addarticle 中的参数|  
     |--------------|---------------------------------|  
     |标识范围管理|**@auto_identity_range** （已弃用）和 **@identityrangemangementoption**|  
     |发布服务器标识范围|**@pub_identity_range**|  
@@ -235,7 +236,7 @@ ms.lasthandoff: 11/17/2017
   
 -   如果在多个合并发布中发布项目，那么对于所有发布中的项目，下列属性必须具有相同值：  
   
-    |属性|sp_addmergearticle 中的参数|  
+    |“属性”|sp_addmergearticle 中的参数|  
     |--------------|--------------------------------------|  
     |列跟踪|**@column_tracking**|  
     |架构选项|**@schema_option**|  
@@ -253,11 +254,11 @@ ms.lasthandoff: 11/17/2017
   
      有关这些参数的详细信息，请参阅 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。  
   
--   事务复制和未筛选的合并复制支持在多个发布中发布表，然后在订阅数据库中的单个表内进行订阅（通常称为“汇总方案”）。 汇总常用于在中央订阅服务器中的一个表中聚合来自多个位置的数据子集。 已筛选的合并发布不支持中央订阅服务器方案。 对于合并复制，通常通过带有参数化行筛选器的单个发布实现汇总。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+-   事务复制和未筛选的合并复制支持在多个发布中发布表，然后在订阅数据库中的单个表内进行订阅（通常称为“汇总方案”）。 汇总常用于在中央订阅服务器中的一个表中聚合来自多个位置的数据子集。 已筛选的合并发布不支持中央订阅服务器方案。 对于合并复制，通常通过带有参数化行筛选器的单个发布实现汇总。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [配置分发](../../../relational-databases/replication/configure-distribution.md)   
+ [“配置分发”](../../../relational-databases/replication/configure-distribution.md)   
  [初始化订阅](../../../relational-databases/replication/initialize-a-subscription.md)   
  [编写复制脚本](../../../relational-databases/replication/scripting-replication.md)   
  [保护发布服务器](../../../relational-databases/replication/security/secure-the-publisher.md)   

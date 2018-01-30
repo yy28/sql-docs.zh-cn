@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: "95"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .NET Framework 数据提供程序。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅[孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 .NET Framework 数据提供程序。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
   
   
 ##  <a name="InitialConnection"></a> 建立到数据库镜像会话的初始连接  
@@ -92,11 +93,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  连接字符串必须包含 **Server** 属性以提供初始伙伴名称，该名称应标识当前主体服务器实例。  
   
- 标识服务器实例的最简单方法是指定其名称 *<server_name>*[**\\***<SQL_Server_instance_name>*]。 例如：  
+ 标识服务器实例的最简单方法是指定其名称 <server_name>[\\<SQL_Server_instance_name>]。 例如：  
   
  `Server=Partner_A;`  
   
- 或  
+ 或多个  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -136,7 +137,7 @@ Server=123.34.45.56,4724;
 |ODBC 驱动程序|**Failover_Partner**|  
 |ActiveX 数据对象 (ADO)|**Failover Partner**|  
   
- 标识服务器实例的最简单方法是指定其名称 *<server_name>*[**\\***<SQL_Server_instance_name>*]。  
+ 标识服务器实例的最简单方法是指定其名称 <server_name>[\\<SQL_Server_instance_name>]。  
   
  另外，也可以在 **Failover Partner** 属性中提供 IP 地址和端口号。 如果首次连接到数据库时初始连接尝试失败，则到故障转移伙伴的连接尝试将不会依赖于 DNS 和 SQL Server Browser。 建立连接后，便会使用故障转移伙伴名称覆盖故障转移伙伴名称，因此，如果发生故障转移，则重定向的连接将需要 DNS 和 SQL Server Browser。  
   
@@ -181,7 +182,7 @@ Server=123.34.45.56,4724;
   
 |舍入|*RetryTime* 计算|每次尝试的重试时间|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(**0.08 **\*** 15**)**|1.2 秒|  
+|@shouldalert|0 **+(**0.08 **\*** 15**)**|1.2 秒|  
 |2|1.2 **+(**0.08 **\*** 15**)**|2.4 秒|  
 |3|2.4 **+(**0.08 **\*** 15**)**|3.6 秒|  
 |4|3.6 **+(**0.08 **\*** 15**)**|4.8 秒|  

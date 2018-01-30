@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 实例管理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services 的实例是一份**msmdsrv.exe**作为操作系统服务运行的可执行文件。 每个实例完全独立于同一服务器上的其他实例，且有自己的配置设置、权限、端口、启动帐户、文件存储和服务器模式属性。  
+
+  Analysis Services 的实例是作为操作系统服务运行的 **msmdsrv.exe** 可执行程序的副本。 每个实例完全独立于同一服务器上的其他实例，且有自己的配置设置、权限、端口、启动帐户、文件存储和服务器模式属性。  
   
  每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都作为 Windows 服务 (Msmdsrv.exe) 在定义的登录帐户的安全上下文中运行。  
   
@@ -48,11 +49,11 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 属于例外情况。 针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署进行服务器管理始终是在 SharePoint 场的上下文中进行的。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 与其他服务器模式的不同之处在于，它始终为单实例模式，且始终通过 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具进行管理。 尽管可以在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但这并不是理想做法。 SharePoint 场包括可同步服务器状态和监视服务器可用性的基础架构。 使用其他工具可能干扰这些操作。 有关 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器管理的详细信息，请参阅 [PowerPivot for SharePoint (SSAS)](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |链接|任务说明|  
 |----------|----------------------|  
-|[安装后配置 (Analysis Services)](../../analysis-services/instances/post-install-configuration-analysis-services.md)|描述完成或修改 Analysis 的安装所必需的任务和可选任务。|  
+|[安装后配置 &#40;Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|描述完成或修改 Analysis 的安装所必需的任务和可选任务。|  
 |[连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|描述用于建立或清除连接的连接字符串属性、客户端库、身份验证方法和步骤。|  
 |[监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|说明用于监视服务器实例的工具和技术，包括如何使用性能监视器和 SQL Server Profiler。|  
 |[高可用性和可伸缩性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|介绍了提高 Analysis Services 数据库可用性和可伸缩性的最常用方法。 |  

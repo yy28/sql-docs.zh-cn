@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2563b8b93e4f3f9d4d0387a6cda8804b2f0453e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33ae2be4dae083d5b404bdcb4cd1b91d5b85feea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]设置数据库镜像会话要求每个服务器实例都有一个服务器网络地址。 服务器实例的服务器网络地址必须通过提供系统地址和实例侦听的端口号来明确标识该实例。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Syntax"></a> 服务器网络地址的语法  
  服务器网络地址的语法格式如下：  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP*://\<system-address>:\<port>  
   
  其中  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
     -   如果各系统都在同一个域中，则可以使用计算机系统的名称；例如， `SYSTEM46`。  
   
-    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：**[***<IPv6_address>***]**。  
+    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：[<IPv6_address>]。  
   
          若要了解系统的 IP 地址，则在 Windows 命令提示符处，输入 **ipconfig** 命令。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
          *computer_name* **。** *domain_segment*[...**.***domain_segment*]  
   
-         其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[...**.***domain_segment*] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
+         其中， computer_name 是运行服务器实例的计算机的网络名称，domain_segment[....domain_segment] 是服务器的其余域信息；例如：`localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 如果您不知道服务器的完全限定域名，请与系统管理员联系。  
   
@@ -92,7 +93,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### <a name="c-using-ipv4"></a>C. 使用 IPv4  
+#### <a name="c-using-ipv4"></a>C. 使用 IPv4   
  以下服务器网络地址指定 IPv4 地址 `10.193.9.134`和端口 `7023`。  
   
 ```  

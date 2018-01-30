@@ -8,37 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b3c2fc5eb3c70f65c8453bd844a61db71464d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]不[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]安装或恢复操作已完成，而无需实体的验证测试通过，其中确认你的服务和数据运行正常。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
   
-|||  
-|-|-|  
-|![与 PowerShell 相关的内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")|本主题下方包含了一个完整的 PowerShell 脚本。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。|  
+![PowerShell 相关内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")完整的 PowerShell 脚本时，包含在该主题的底部。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
-  
- **本主题内容**：下面目录中带字母的项目对应于关系图区域。 关系图说明  
-  
-|||  
-|-|-|  
-|[准备 PowerShell 环境](#bkmk_prerequisites)<br /><br /> [症状和建议操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 服务](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 和 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Power Pivot 服务应用程序和代理](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [“数据库”](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [计时器作业](#bkmk_timer_jobs)<br /><br /> [运行状况规则](#bkmk_health_rules)<br /><br /> **(E)** [Windows 和 ULS 日志](#bkmk_logs)<br /><br /> [MSOLAP 访问接口](#bkmk_msolap)<br /><br /> [ADOMD.Net 客户端库](#bkmk_adomd)<br /><br /> [运行状况数据收集规则](#bkmk_health_collection)<br /><br /> [解决方案](#bkmk_solutions)<br /><br /> [手动验证步骤](#bkmk_manual)<br /><br /> [更多资源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 脚本](#bkmk_full_script)|![powershell 验证 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell 验证 powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> 准备 PowerShell 环境  
  本章节的步骤旨在准备 PowerShell 环境。 这些不一定是必需步骤，具体视脚本环境的当前配置方式而定。  

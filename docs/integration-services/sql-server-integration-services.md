@@ -8,10 +8,12 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: SSIS
+keywords:
+- SSIS
 helpviewer_keywords:
 - SSIS
 - DTS [Integration Services]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - data integration [Integration Services]
 - Data Transformation Services
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f1580e8d59c391b5721fc89ea2b58712ec34364
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cc7137128954a11774bfa99b66ac3ca27621b67c
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,12 +45,9 @@ ms.lasthandoff: 12/21/2017
 - [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 获取帮助
- 
-- [关于 SSIS 的 MSDN 论坛 - 提出问题](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-- [关于 SSDT 和 SSMS 的 MSDN 论坛 - 提出问题](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
-- [Stack Overflow（标记 *ssis*）- 提出问题](http://stackoverflow.com/questions/tagged/ssis)
-- [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - 有关 SSIS 的一般讨论](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)
-- [Microsoft 企业用户支持选项](https://support.microsoft.com/gp/support-options-for-business)
-- [面向企业用户的“联系 Microsoft”选项](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
+##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Resources
+-   [通过 SSIS 论坛获取帮助](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+-   [通过 Stack Overflow 获取帮助](http://stackoverflow.com/questions/tagged/ssis)  
+-   [关注 SSIS 团队博客](https://blogs.msdn.microsoft.com/ssis/)
+-   [报告问题和请求功能](https://feedback.azure.com/forums/908035-sql-server)
+-   [获取电脑上的文档](../sql-server/sql-server-help-installation.md)

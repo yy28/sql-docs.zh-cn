@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b01d8536a45614b8bd17ba93e8a3695229824691
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 969aca3b97e12f5a179c9f2fb4c748d93d89c760
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 课：准备快照文件夹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，可学习如何配置用于创建和存储发布快照的快照文件夹。  
@@ -42,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
 6.  在 **“安全性”** 选项卡上，单击 **“编辑”**。  
   
-7.  在“权限”对话框中，单击“添加”。 在“选择用户、计算机、服务帐户或组”文本框中，键入在第 1 课中创建的快照代理帐户的名称，例如 \<*Machine_Name>***\repl_snapshot**，其中 \<*Machine_Name>* 是发布服务器的名称。 单击“检查名称”，然后单击“确定”。  
+7.  在“权限”对话框中，单击“添加”。 在“选择用户、计算机、服务帐户或组”文本框中，键入在第 1 课中创建的快照代理帐户的名称，例如 \<Machine_Name>\repl_snapshot*，其中 \<Machine_Name>* 是发布服务器的名称。 单击“检查名称”，然后单击“确定”。  
   
-8.  重复上一步为分发代理和合并代理添加权限，其格式分别为 \<*Machine_Name>***\repl_distribution** 和 \<*Machine_Name>***\repl_merge**。  
+8.  重复上一步，为分发代理和合并代理添加权限，其格式分别为 \<Machine_Name>\repl_distribution* 和 \<Machine_Name>\repl_merge*。  
   
 9. 验证是否允许以下权限：  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 10. 单击“确定”关闭“repldata 属性”对话框，并创建 repldata 共享。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已经成功为快照文件夹配置了共享。 接下来，您将配置分发。 请参阅 [第 3 课：配置分发](../../relational-databases/replication/lesson-3-configuring-distribution.md)。  
   
 ## <a name="see-also"></a>另请参阅  

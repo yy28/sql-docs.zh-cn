@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server 故障转移群集与 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Windows Server 故障转移群集 (WSFC) 是一组独立的服务器，它们共同协作以提高应用程序和服务的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服务和功能支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  群集资源 (Cluster resource)  
  节点可以拥有的物理实体或逻辑实体，可联机和脱机、在节点间移动和作为群集对象进行管理。 在任何时间点，群集资源只能为单个节点所拥有。  
   
- 角色 作为单个群集对象管理的群集资源集合，可提供特定功能。 对于 SQL Server，角色为 Always On 可用性组 (AG) 或 Always On 故障转移群集实例 (FCI)。 角色包含 AG 或 FCI 所需的所有群集资源。 故障转移和故障回复始终作用于角色上下文。 对于 FCI，角色包含 IP 地址资源、网络名称资源和 SQL Server 资源。 AG 角色包含 AG 资源，如果已配置侦听程序，则包含网络名称和 IP 资源。 
+ 角色  
+ 作为单个群集对象管理的群集资源集合，可提供特定功能。 对于 SQL Server，角色为 Always On 可用性组 (AG) 或 Always On 故障转移群集实例 (FCI)。 角色包含 AG 或 FCI 所需的所有群集资源。 故障转移和故障回复始终作用于角色上下文。 对于 FCI，角色包含 IP 地址资源、网络名称资源和 SQL Server 资源。 AG 角色包含 AG 资源，如果已配置侦听程序，则包含网络名称和 IP 资源。 
 
  网络名称资源 (Network name resource)  
  作为群集资源进行管理的逻辑服务器名称。 网络名称资源必须与一个 IP 地址资源结合使用。 这些项可能需要 Active Directory 域服务和/或 DNS 中的对象。 

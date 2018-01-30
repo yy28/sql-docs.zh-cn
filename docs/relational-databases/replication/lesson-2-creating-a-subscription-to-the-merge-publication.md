@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c1d145f5fc43ad13cbc5f41faec86974ee736f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 课：创建合并发布订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建订阅。 然后，为订阅数据库设置权限，并手动生成新订阅的筛选数据快照。 本课程要求已完成上一课， [第 1 课：使用合并复制发布数据](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  在“新建数据库”对话框的“数据库名称”框中输入 **SalesOrdersReplica**，然后依次单击“确定”和“下一步”。  
   
-8.  在“合并代理安全性”页上，单击省略号 (**…**) 按钮，在“进程帐户”框中输入 \<*Machine_Name>***\repl_merge**，为此帐户提供密码，依次单击“确定”和“下一步”，然后再次单击“下一步”。  
+8.  在“合并代理安全性”页上，单击省略号（“…”）按钮，在“进程帐户”框中输入 \<Machine_Name>\repl_merge，为此帐户提供密码，然后依次单击“确定”和“下一步”，接着再次单击“下一步”。  
   
 9. 在“初始化订阅”页上，从“初始化时间”列表中选择“首次同步时”，单击“下一步”，然后再次单击“下一步”。  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  连接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的订阅服务器，依次展开“数据库”、“SalesOrdersReplica”和“安全性”，右键单击“用户”，然后选择“新建用户”。  
   
-2.  在“常规”页的“用户名”框中输入 \<*Machine_Name>***\repl_merge**，然后依次单击省略号 (**…**) 按钮和“浏览”，选择 \<*Machine_Name>***\repl_merge**，然后依次单击“确定”、“检查名称”和“确定”。  
+2.  在“常规”页的“用户名”框中输入 \<Machine_Name>\repl_merge，然后依次单击省略号（“…”）按钮和“浏览”，选择“\<Machine_Name>\repl_merge”，然后依次单击“确定”、“检查名称”和“确定”。  
   
 3.  在“数据库角色成员资格”中，选择“db_owner”，然后单击“确定”以创建用户。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  选择新添加的分区，单击“立即生成所选快照”，然后单击“确定”。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已经成功地对合并发布创建了一个订阅，并且为该新订阅的数据分区生成了筛选快照，因此初始化订阅后即可使用此筛选快照。 接下来，您将对订阅数据库的合并代理授予权限，并且运行合并代理来启动订阅的同步和初始化操作。 请参阅 [第 3 课：使订阅与合并发布同步](../../relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另请参阅  

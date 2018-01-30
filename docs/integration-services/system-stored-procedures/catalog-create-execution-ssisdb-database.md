@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] useanyworker  
 指示是否允许任何 Scale Out Worker 执行相应操作。
 
--   借助任何 Scale Out Worker 使用值 1 执行包。 将 `@useanyworker` 设为 true 时，尚未达到最大任务数（如辅助角色配置文件中所示）的任何辅助角色都可用于运行包。
+-   借助任何 Scale Out Worker 使用值 1 执行包。 将 `@useanyworker` 设为 true 时，尚未达到最大任务数（如辅助角色配置文件中所示）的任何辅助角色都可用于运行包。 有关辅助角色配置文件的信息，请参阅 [Integration Services (SSIS) Scale Out 辅助角色](../scale-out/integration-services-ssis-scale-out-worker.md)。
 
--   使用值 0 指示并非允许所有 Scale Out Workers 执行包。 将 `@useanyworker` 设为 false 时，必须指定通过使用 Scale Out Manager 或调用存储过程 `[catalog].[add_execution_worker]` 允许运行包的辅助角色。
+-   使用值 0 指示并非允许所有 Scale Out Workers 执行包。 将 `@useanyworker` 设为 false 时，必须指定通过使用 Scale Out Manager 或调用存储过程 `[catalog].[add_execution_worker]` 允许运行包的辅助角色。 如果指定的辅助角色已在运行另一个包，则该辅助角色会先完成运行当前的包，然后再请求执行另一个。
 
 此参数可选。 如果未指定，其值设置为 1。 useanyworker 为 bit。 
   

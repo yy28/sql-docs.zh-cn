@@ -8,29 +8,57 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 785491c26c65252756c49e7b405d10cdbece831c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a897bca7cfcda1d5b4d5186958f96521ec4c9bf9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > 有关与以前版本的 SQL Server 相关的内容，请参阅[从存储过程中返回数据](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)。
 
-  有两种方法可以将结果集或数据从过程返回给调用程序：输出参数和返回代码。 本主题提供了有关这两种方法的信息。  
+  可通过三种方法将数据从过程返回到调用程序：结果集、输出参数和返回代码。 本主题提供了有关这三种方法的信息。  
+  
+  ## <a name="returning-data-using-result-sets"></a>使用结果集返回数据
+ 如果存储过程的正文中包含 SELECT 语句（而不是 SELECT ...INTO 或 INSERT...SELECT），则 SELECT 语句指定的行将直接发送到客户端。  对于较大的结果集，在将结果集完全发送到客户端之前，存储过程不会继续执行下一个语句。  对于较小的结果集，存储过程将对结果进行后台处理以便返回给客户端，并继续执行。  如果在执行存储过程期间运行多个此类 SELECT 语句，则会将多个结果集发送到客户端。  此行为也适用于嵌套 TSQL 批处理、嵌套存储过程和顶级 TSQL 批处理。
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>使用结果集返回数据的示例 
+  以下示例显示的存储过程将返回所有 SalesPerson 行（也显示在 vEmployee 视图中）的 LastName 和 SalesYTD 值。
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>使用输出参数返回数据  
  如果在过程定义中为参数指定 OUTPUT 关键字，则过程在退出时可将该参数的当前值返回给调用程序。 若要将参数值保存在可在调用程序中使用的变量中，调用程序在执行过程时必须使用 OUTPUT 关键字。 有关可用作输出参数的数据类型的详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
@@ -114,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
  下例创建使用 cursor 数据类型指定输出参数 `@currency_cursor` 的过程。 然后在批处理中调用该过程。  
-  
+ 
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   
 ```  
@@ -161,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- 返回代码通常用在过程内的控制流块中，以便为每种可能的错误情况设置返回代码值。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句后使用 @@ERROR 函数，来检测该语句执行过程中是否有错误发生。  
+ 返回代码通常用在过程内的控制流块中，以便为每种可能的错误情况设置返回代码值。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句后使用 @@ERROR 函数，来检测该语句执行过程中是否有错误发生。  在 TSQL 中引入 TRY/CATCH/THROW 错误处理之前，有时需要通过返回代码来确定存储过程是否成功。  存储过程应始终指示因某错误而失败（如有必要，可使用 THROW/RAISERROR 生成错误），而不依赖于通过返回代码来指示失败。  此外，还应避免使用返回代码来返回应用程序数据。
   
 ### <a name="examples-of-return-codes"></a>返回代码的示例  
  下面的示例显示了带有错误处理设置（为各种错误设置特殊返回代码值）的 `usp_GetSalesYTD` 过程。 下表显示了由过程分配给每个可能错误的整数值，以及每个值的相应含义。  
@@ -169,7 +197,7 @@ EXECUTE @result = my_proc;
 |返回代码值|含义|  
 |-----------------------|-------------|  
 |0|成功执行。|  
-|1|未指定所需参数值。|  
+|@shouldalert|未指定所需参数值。|  
 |2|指定参数值无效。|  
 |3|获取销售额数值时出错。|  
 |4|该销售人员的销售额数值为 NULL。|  

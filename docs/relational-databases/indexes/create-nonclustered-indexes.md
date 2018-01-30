@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 490130b298e35c512a7837f97b696376bf05c4d4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: bc667253caf16c4d4065bf4f472d7b8461ddd92a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/02/2018
   
 8.  单击 **“关闭”**。  
   
-9. 在“文件”菜单上，单击“保存”以保存 *table_name*。  
+9. 在“文件”菜单上，单击“保存table_name”。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>使用对象资源管理器创建非聚集索引  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/02/2018
   
 6.  在 **“索引键列”**下，单击 **“添加…”**。  
   
-7.  在“从 table_name 中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
+7.  在“从table_name中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   

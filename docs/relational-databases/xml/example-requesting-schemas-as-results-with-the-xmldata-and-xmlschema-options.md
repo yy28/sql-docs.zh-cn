@@ -8,23 +8,24 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b00e028bcc0c14b803aad5203f0b5e88aecceea3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 81e6317ad658b478ac1804a2a0c3f96ee8dde79b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]下面的查询返回描述文档结构的 XML-DATA 架构。  
@@ -58,7 +59,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 ****Schema*n* 组成，其中 n 是一个整数。  
+>  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 Schema*n* 组成，其中 n 是一个整数。  
   
  通过指定 `XMLSCHEMA` 选项，您可以针对结果请求 XSD 架构。  
   

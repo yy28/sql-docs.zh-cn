@@ -8,20 +8,21 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题说明在以前创建的工作簿的用户体验[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]环境以及如何升级[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
@@ -29,17 +30,6 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](http://go.microsoft.com/fwlink/?LinkId=238669)。  
   
- 本主题包含以下各节：  
-  
--   [升级工作簿的概述](#bkmk_overview)  
-  
--   [从 2008 R2 工作簿升级到 SQL Server 2012 Service Pack 1 (SP1) 工作簿](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [从通过使用适用于 Excel 的 2012 Power Pivot 外接程序创建的版本升级到 Office 2013 工作簿](#bkmk_to_2012sp1_from_2012)  
-  
--   [从通过使用用于 Excel 2010 的 2008 R2 Power Pivot 外接程序创建的版本升级到 SQL Server 2012 工作簿](#bkmk_to_2012_from_2008R2)  
-  
--   [在较新版本的服务器上运行多个工作簿版本](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> 升级工作簿的概述  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿是包含嵌入的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的 Excel 工作簿。 升级工作簿有两个好处：  

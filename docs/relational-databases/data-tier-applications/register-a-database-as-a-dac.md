@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-tier-applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology:
+- dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,21 +23,21 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f79711d831a0f92805f8a9c59b003aed3fe1c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“注册数据层应用程序向导” 或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序 (DAC) 定义，并在 msdb 系统数据库（[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中为 master中注册 DAC 定义。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)、[PowerShell](#RegisterDACPowerShell)  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  如果数据库有 DAC 中不支持的对象或包含的用户，则不能注册 DAC。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中注册 DAC 至少需要 ALTER ANY LOGIN 和数据库范围 VIEW DEFINITION 权限，对 **sys.sql_expression_dependencies**具有 SELECT 权限，且具备 **dbcreator** 固定服务器角色的成员身份。 **sysadmin** 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以注册 DAC。 注册在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中不包含登录名的 DAC 要求具有 **dbmanager** 或 **serveradmin** 角色的成员身份。 注册在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中包含登录名的 DAC 要求具有 **loginmanager** 或 **serveradmin** 角色的成员身份。  
   
 ##  <a name="UsingRegisterDACWizard"></a> 使用注册数据层应用程序向导  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
  **版本。** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 在部署 DAC 时，该版本存储于 **msdb** 数据库中，并且以后可以在 **中的“数据层应用程序”**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点下查看。  
   
- **说明。** - 可选。 用来说明 DAC 用途的文本。 在部署 DAC 时，该描述存储于 **msdb** 数据库中，并且以后可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的“数据层应用程序”节点下查看。  
+ **说明。** - 可选。 用来说明 DAC 用途的文本。 在部署 DAC 时，该描述存储于 **msdb** 数据库中，并且以后可以在 **中的“数据层应用程序”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]节点下查看。  
   
  “<上一步”- 返回到“简介”页。  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/17/2017
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>验证对象  
- **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 *SchemaName***.***ObjectName* 确定当前正在验证的对象。  
+ **检查**  *SchemaName* **。** *ObjectName* **“注册数据层应用程序向导”。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 SchemaName.ObjectName 确定当前正在验证的对象。  
   
  “<上一步”- 返回到“设置属性”页以便更改条目。  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  [使用注册数据层应用程序向导](#UsingRegisterDACWizard)  
   
-### <a name="summary"></a>摘要  
+### <a name="summary"></a>“摘要”  
  **将使用以下设置注册 DAC。** - 显示将包含在 DAC 中的属性和对象的报表。  
   
   “保存报表”- 选择此按钮可以将验证报表的副本保存到某一 HTML 文件。 默认文件夹是你 Windows 帐户的 Documents 文件夹中的 **SQL Server Management Studio\DAC Packages** 文件夹。  

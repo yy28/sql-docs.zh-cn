@@ -1,27 +1,28 @@
 ---
 title: "SQL Server 备份到 URL 最佳做法和故障排除 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/09/2016
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da150a25a4cdee2527834a3032589333c5920817
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c30075d0380879ce5923af54d653dfaab345eb20
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +42,19 @@ ms.lasthandoff: 11/17/2017
   
 -   创建容器时，建议将访问级别设置为 **“私有”**，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
   
--   对于在 Windows Azure 虚拟机中运行的 SQL Server 实例上的 SQL Server 数据库，请使用虚拟机所在区域中的存储帐户来避免区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
+-   对于在 Windows Azure 虚拟机中运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，请使用与虚拟机相同区域中的存储帐户，以免产生区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
   
 -   失败的备份活动可能导致无效的备份文件。 我们建议定期标识失败的备份和删除 blob 文件。 有关详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
--   在备份期间使用 **WITH COMPRESSION** 选项可以最大程度降低存储成本和存储事务成本。 它也会减少完成备份过程所需的时间。  
+-   在备份期间使用 `WITH COMPRESSION` 选项可以最大程度降低存储成本和存储事务成本。 它也会减少完成备份过程所需的时间。  
+
+- 按照 [SQL Server 备份到 URL](./sql-server-backup-to-url.md) 中的建议，设置 `MAXTRANSFERSIZE` 和 `BLOCKSIZE`参数。
   
 ## <a name="handling-large-files"></a>处理大型文件  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Windows Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 Azure [SLA for Storage](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 限制了 blob 的最大处理时间，你需要考虑这个限制。  
   
--   使用在 **管理备份** 部分中建议的 **WITH COMPRESSION** 选项，在备份大型文件时这一点非常重要。  
+-   使用在[管理备份](##managing-backups)部分中建议的 `WITH COMPRESSION` 选项，在备份大型文件时这一点非常重要。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>备份到 URL 或从 URL 还原故障排除  
  以下内容提供了在备份到 Windows Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
@@ -60,20 +63,19 @@ ms.lasthandoff: 11/17/2017
   
  **身份验证错误：**  
   
--   WITH CREDENTIAL 是一个新选项，在备份到 Windows Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
+-   `WITH CREDENTIAL` 是一个新选项，在备份到 Windows Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
   
      **BACKUP** 或 **RESTORE** 命令中指定的凭据不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
   
-    ```  
+    ```sql  
     IF NOT EXISTS  
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
     ,SECRET = '<storage access key> ;  
-  
     ```  
   
--   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有 **更改任意凭据** 权限的登录帐户。  
+-   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有 ***更改任意凭据*** 权限的登录帐户。  
   
 -   验证存储帐户名称和密钥值。 在凭据中存储的信息必须与您在备份和还原操作中使用的 Windows Azure 存储帐户的属性值匹配。  
   
@@ -85,36 +87,32 @@ ms.lasthandoff: 11/17/2017
   
     -   设置跟踪标志 3051 以启用记录到具有以下格式的特定错误日志：  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log 其中 \<action> 是以下值之一：  
+        `BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` 其中，`\<action>` 为以下值之一：  
   
         -   **DB**  
-  
         -   **FILELISTONLY**  
-  
         -   **LABELONLY**  
-  
         -   **HEADERONLY**  
-  
         -   **VERIFYONLY**  
   
-    -   您还可以查看 Windows 事件日志（位于应用程序日志之下，名为“SQLBackupToUrl”），查找相关信息。  
+    -   还可以查看 Windows 事件日志（位于应用程序日志之下，名为“`SQLBackupToUrl`”），查找相关信息。  
   
 -   从压缩备份中还原时，您可能看到以下错误：  
   
-    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        设备 `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` 上的消息文件标记未对齐**。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5  
+        Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-         要解决此错误，请重新发布指定了 **BLOCKSIZE = 65536** 的 **BACKUP** 语句。  
+        要解决此错误，请重新发布指定了 **BLOCKSIZE = 65536** 的 **BACKUP** 语句。  
   
 -   由于具有活动租约的 blob 导致的备份错误：失败的备份活动可能源自具有活动租约的 blob。  
   
      如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
   
-     **“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(412) 当前 blob 上有租约，但请求中没有指定租约 ID**。  
+     `Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.`  
   
      如果尝试对具有活动租约的备份 blob 文件执行还原语句，则还原操作失败，出现类似于以下的错误：  
   
-     **异常消息：远程服务器返回了错误：(409)。有冲突。**  
+     `Exception Message: The remote server returned an error: (409) Conflict..`  
   
      发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
@@ -123,43 +121,50 @@ ms.lasthandoff: 11/17/2017
   
  **代理服务器限制连接：**  
   
- 代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
+ 代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。 下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
--   无法在“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak”上写入:“备份到 URL”收到来自远程终结点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+```
+Write on "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
+```  
   
--   文件“`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
+```
+A nonrecoverable I/O error occurred on file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
-     消息 3013，级别 16，状态 1，第 2 行  
+Msg 3013, Level 16, State 1, Line 2  
   
-     备份数据库异常终止。  
+BACKUP DATABASE is terminating abnormally.  
+```
+
+```
+BackupIoRequest::ReportIoError: write failure on backup device http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
+```  
   
--   BackupIoRequest::ReportIoError: 无法在备份设备“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak”上写入。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   
- 如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
-  
- HTTP 状态代码 502，HTTP 状态消息代理错误 (每分钟的 HTTP 请求数超出配置限制。 请与 ISA Server 管理员联系。  )  
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
   
  **未选择默认代理设置：**  
   
- 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常*。异常消息：远程服务器返回错误：(407)*“必须进行代理身份验证”。  
+有时候，若不选用默认设置，会导致代理身份验证错误，如下所示：
+ 
+ `A nonrecoverable I/O error occurred on file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (407)* **Proxy Authentication Required.`  
   
- 若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
+若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
   
-1.  使用以下 xml 创建一个名为 BackuptoURL.exe.config 的配置文件：  
+1.  使用以下 xml 内容创建一个名为 `BackuptoURL.exe.config` 的配置文件：  
   
-    ```  
-    \<?xml version ="1.0"?>  
+    ```xml  
+    <?xml version ="1.0"?>  
     <configuration>   
-                    \<system.net>   
+                    <system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    \</system.net>  
+                    </system.net>  
     </configuration>  
-  
     ```  
   
-2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，可将该配置文件置于以下位置：*C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn*。  
+2.  将该配置文件置于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 Binn 文件夹中。 例如，如果我的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装在计算机的 C 驱动器上，可将该配置文件置在 `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn` 中。  
   
 ## <a name="see-also"></a>另请参阅  
  [从 Microsoft Azure 中存储的备份还原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  

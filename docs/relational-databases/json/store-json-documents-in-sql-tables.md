@@ -9,7 +9,8 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,18 +19,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26aed92ee48c2dfd13605a9b830d1b33b4fd7f66
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 现在可在 SQL Server 或 SQL 数据库中存储 JSON 文档并查询 JSON 数据，操作与在 NoSQL 数据库中类似。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
 
 ## <a name="classic-tables"></a>经典表
 
-在 SQL Server 或 SQL 数据库中存储 JSON 文档最简单的方法是创建一个只有两列的简单表，一列为文档 ID，一列为文档内容。 例如：
+在 SQL Server 或 SQL 数据库中存储 JSON 文档最简单的方法是创建一个只有两列的表，一列为文档 ID，一列为文档内容。 例如：
 
 ```sql
 create table WebSite.Logs (
@@ -46,7 +47,7 @@ nvarchar(max) 数据类型可存储最大 2GB 大小的 JSON 文档。 但是，
 
 ```sql
 ALTER TABLE WebSite.Logs
-    ADD CONSTRAINT \[Log record should be formatted as JSON\]
+    ADD CONSTRAINT [Log record should be formatted as JSON]
                    CHECK (ISJSON(log)=1)
 ```
 
@@ -55,7 +56,7 @@ ALTER TABLE WebSite.Logs
 在表中存储 JSON 文档时，可使用标准 Transact-SQL 语言查询文档。 例如：
 
 ```sql
-SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
  FROM WebSite.Logs
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)
@@ -63,9 +64,9 @@ SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,�
  ORDER BY CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
 ```
 
-可使用任意 T-SQL 函数和查询子句来查询 JSON 文档。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数轻松从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
+可使用任意 T-SQL 函数和查询子句来查询 JSON 文档。 SQL Server 和 SQL 数据库不会在可以用来分析 JSON 文档的查询中引入任意约束。 可通过 `JSON_VALUE` 函数从 JSON 文档中提取值，并在查询中使用该值，如同使用任何其他值一样。
 
-这是 SQL Server 和 SQL 数据库与经典 NoSQL 数据库的主要区别 – 在 Transact-SQL 中，可能有需要处理 JSON 数据的任何函数。
+能够使用大量 T-SQL 查询语法是 SQL Server 和 SQL 数据库与经典 NoSQL 数据库的主要区别 – 在 Transact-SQL 中，可能有需要处理 JSON 数据的任何函数。
 
 ## <a name="indexes"></a>索引
 
@@ -91,7 +92,7 @@ FROM Website.Logs
 WHERE JSON_VALUE(log, '$.severity') = 'P4'
 ```
 
-此索引的一个重要特征是，它可用于识别排序规则。 如果原始 NVARCHAR 列包含 COLLATION 属性（例如，区分大小写或日语），则该索引按照与 NVARCHAR 列关联的语言规则或区分大小写规则进行组织。 如果正在开发适用于全球市场的应用程序且在处理 JSON 文档时需要使用自定义语言规则，该功能会非常有用。
+此索引的一个重要特征是，它可用于识别排序规则。 如果原始 NVARCHAR 列包含 COLLATION 属性（例如，区分大小写或日语），则该索引按照与 NVARCHAR 列关联的语言规则或区分大小写规则进行组织。 如果正在开发适用于全球市场的应用程序且在处理 JSON 文档时需要使用自定义语言规则，那么此排序规则感知功能会非常有用。
 
 ## <a name="large-tables--columnstore-format"></a>大型表和列存储格式
 
@@ -108,7 +109,7 @@ create table WebSite.Logs (
 );
 ```
 
-聚集列存储索引提供较高的数据压缩率（高达 25 倍），可以极大地减少存储空间需求、降低存储成本并提高工作负荷的 I/O 性能。 此外，由于聚集列存储索引针对表扫描和 JSON 文档上的分析进行了优化，因此最适合用于日志分析。
+聚集列存储索引提供较高的数据压缩率（高达 25 倍），可以极大地减少存储空间需求、降低存储成本并提高工作负荷的 I/O 性能。 此外，由于聚集列存储索引针对表扫描和 JSON 文档上的分析进行了优化，因此这类索引最适合用于日志分析。
 
 前面的示例使用序列对象向 `_id` 列分配值。 序列和标识均为 ID 列的有效选项。
 
@@ -159,11 +160,11 @@ AS BEGIN
 END
 ```
 
-此本机编译的过程生成查询并创建运行查询的 .DLL 代码。 这是查询和更新数据的一种更快的方法。
+此本机编译的过程生成查询并创建运行查询的 .DLL 代码。 本机编译的过程是查询和更新数据的一种更快的方法。
 
 ## <a name="conclusion"></a>结语
 
-可使用 SQL Server 和 SQL 数据库中的本机 JSON 函数处理 JSON 文档，如在 NoSQL 数据库中一样。 每种数据库（关系型或 NoSQL）在 JSON 数据处理方面都各有优缺点。 在 SQL Server 或 SQL 数据库中存储 JSON 文档的关键优势在于，可以获得完整的 SQL 语言支持。 可以使用丰富的 Transact-SQL 语言处理数据和配置各种存储选项（从列存储索引的高压缩比和快速分析到内存优化表的无锁处理方式）。 同时，还可获取成熟的安全性和国际化功能带来的优势，这些功能可在 NoSQL 方案中重复使用。 鉴于这些理由，建议考虑在 SQL Server 和 SQL 数据库中存储 JSON 文档。
+可使用 SQL Server 和 SQL 数据库中的本机 JSON 函数处理 JSON 文档，如在 NoSQL 数据库中一样。 每种数据库（关系型或 NoSQL）在 JSON 数据处理方面都各有优缺点。 在 SQL Server 或 SQL 数据库中存储 JSON 文档的关键优势在于，可以获得完整的 SQL 语言支持。 可以使用丰富的 Transact-SQL 语言处理数据和配置各种存储选项（从列存储索引的高压缩比和快速分析到内存优化表的无锁处理方式）。 同时，还可获取成熟的安全性和国际化功能带来的优势，这些功能可在 NoSQL 方案中重复使用。 鉴于本文中所述的理由，建议考虑在 SQL Server 和 SQL 数据库中存储 JSON 文档。
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
 若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。

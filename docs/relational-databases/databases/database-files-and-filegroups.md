@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库至少具有两个操作系统文件：一个数据文件和一个日志文件。 数据文件包含数据和对象，例如表、索引、存储过程和视图。 日志文件包含恢复数据库中的所有事务所需的信息。 为了便于分配和管理，可以将数据文件集合起来，放到文件组中。  
@@ -102,19 +103,29 @@ ms.lasthandoff: 01/09/2018
 ## <a name="filegroups"></a>文件组  
  每个数据库有一个主要文件组。 此文件组包含主要数据文件和未放入其他文件组的所有次要文件。 可以创建用户定义的文件组，用于将数据文件集合起来，以便于管理、数据分配和放置。  
   
- 例如，可以分别在三个磁盘驱动器上创建三个文件 Data1.ndf、Data2.ndf 和 Data3.ndf，然后将它们分配给文件组 **fgroup1**。 然后，可以明确地在文件组 **fgroup1**上创建一个表。 对表中数据的查询将分散到三个磁盘上，从而提高了性能。 通过使用在 RAID（独立磁盘冗余阵列）条带集上创建的单个文件也能获得同样的性能提高。 但是，文件和文件组使您能够轻松地在新磁盘上添加新文件。  
+ 例如，可以分别在三个磁盘驱动器上创建三个文件 `Data1.ndf`、`Data2.ndf` 和 `Data3.ndf`，然后将它们分配给文件组 `fgroup1`。 然后，可以明确地在文件组 `fgroup1` 上创建一个表。 对表中数据的查询将分散到三个磁盘上，从而提高了性能。 通过使用在 RAID（独立磁盘冗余阵列）条带集上创建的单个文件也能获得同样的性能提高。 但是，文件和文件组使您能够轻松地在新磁盘上添加新文件。  
   
  下表列出了存储在文件组中的所有数据文件。  
   
 |文件组|Description|  
 |---------------|-----------------|  
 |主|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
+|内存优化数据|内存优化文件组基于 Filestream 文件组|  
+|Filestream||    
 |用户定义|用户首次创建数据库或以后修改数据库时明确创建的任何文件组。|  
   
-### <a name="default-filegroup"></a>默认文件组  
+### <a name="default-primary-filegroup"></a>默认 (Primary) 文件组  
  如果在数据库中创建对象时没有指定对象所属的文件组，对象将被分配给默认文件组。 不管何时，只能将一个文件组指定为默认文件组。 默认文件组中的文件必须足够大，能够容纳未分配给其他文件组的所有新对象。  
   
  PRIMARY 文件组是默认文件组，除非使用 ALTER DATABASE 语句进行了更改。 但系统对象和表仍然分配给 PRIMARY 文件组，而不是新的默认文件组。  
+ 
+### <a name="memory-optimized-data-filegroup"></a>内存优化数据文件组
+
+有关内存优化文件组的详细信息，请参阅[内存优化文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。
+
+### <a name="filestream-filegroup"></a>Filestream 文件组
+
+有关 Filestream 文件组的详细信息，请参阅 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) 和 [创建启用了 FILESTREAM 的数据库](../../relational-databases/blob/create-a-filestream-enabled-database.md)。
 
 ### <a name="file-and-filegroup-example"></a>文件和文件组示例
  以下示例在 SQL Server 实例上创建了一个数据库。 该数据库包括一个主数据文件、一个用户定义文件组和一个日志文件。 主数据文件在主文件组中，而用户定义文件组包含两个次要数据文件。 ALTER DATABASE 语句将用户定义文件组指定为默认文件组。 然后通过指定用户定义文件组来创建表。 （此示例使用通用路径 `c:\Program Files\Microsoft SQL Server\MSSQL.1` 来避免指定 SQL Server 版本。）
@@ -123,7 +134,7 @@ ms.lasthandoff: 01/09/2018
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-下图总结上述示例的结果。
+下图总结了上述示例的结果（Filestream 数据除外）。
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

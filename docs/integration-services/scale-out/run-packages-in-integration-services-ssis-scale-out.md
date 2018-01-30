@@ -9,20 +9,22 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
 manager: craigg
-f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords:
+- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>在 Integration Services (SSIS) Scale Out 中运行包
 将包部署到 Integration Services 服务器后，可使用以下任一方法在 Scale Out 中运行它们：
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/13/2017
 
 1.  创建执行。
 
-    为每个包调用 `[catalog].[create_execution]`。 将参数 @runinscaleout 设置为 `True`。 如果不允许所有的 Scale Out Worker 计算机运行包，请将参数 @useanyworker 设置为 `False`。   
+    为每个包调用 `[catalog].[create_execution]`。 将参数 @runinscaleout 设置为 `True`。 如果不允许所有的 Scale Out Worker 计算机运行包，请将参数 @useanyworker 设置为 `False`。 若要深入了解此存储过程和 @useanyworker 参数，请参阅 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。 
 
 2. 设置执行参数。
 

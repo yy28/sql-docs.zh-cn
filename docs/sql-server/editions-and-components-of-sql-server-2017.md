@@ -8,7 +8,8 @@ ms.service:
 ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: "121"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 583476272c18d111c603dbc2a174c01a8ce0a0d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e9a871ae7e354044fcf0778ae8fa7283a3475d4
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 12/05/2017
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署 - 有助于以最少的 IT 资源获得高效的数据库管理。|  
 |Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
 |开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
-|Express 版本|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是 Express 的一种轻型版本，该版本具备所有可编程性功能，但在用户模式下运行，并且具有快速的零配置安装和必备组件要求较少的特点。|  
+|Express 版本|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是 Express 的一种轻型版本，该版本具备所有可编程性功能，在用户模式下运行，并且具有快速的零配置安装和必备组件要求较少的特点。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 Internet 服务器  
  在 Internet 服务器（如运行 Internet Information Services (IIS) 的服务器）上通常都会安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端工具。 客户端工具包括连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的应用程序所使用的客户端连接组件。  
@@ -150,25 +151,25 @@ ms.lasthandoff: 12/05/2017
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Server Core 支持 <sup>1</sup>|是|是|是|是|是|  
-|日志传送|是|是|是|“否”|是|  
+|日志传送|是|是|是|是|是|  
 |数据库镜像|是|是<br /><br /> 仅完全安全|仅见证服务器|仅见证服务器|仅见证服务器| 
-|备份压缩|是|是|“否”|“否”|是| 
+|备份压缩|是|是|是|是|是| 
 |数据库快照|是|是|是|是|是|
-|AlwaysOn 故障转移群集实例<sup>2</sup>|是|是|“否”|“否”|是|  
-|AlwaysOn 可用性组<sup>3</sup>|是|“否”|“否”|“否”|是|
-|基本可用性组<sup>4</sup>|是|是|“否”|“否”|是|
-|联机页面和文件还原|是|“否”|“否”|“否”|是|
-|联机索引|是|“否”|“否”|“否”|是|
-|可恢复的联机索引重新生成|是|“否”|“否”|“否”|是|
-|联机架构更改|是|“否”|“否”|“否”|是|
-|快速恢复|是|“否”|“否”|“否”|是|
-|镜像备份|是|“否”|“否”|“否”|是|
-|热插拔内存和 CPU|是|“否”|“否”|“否”|是|
+|AlwaysOn 故障转移群集实例<sup>2</sup>|是|是|是|是|是|  
+|AlwaysOn 可用性组<sup>3</sup>|是|是|是|是|是|
+|基本可用性组<sup>4</sup>|是|是|是|是|是|
+|联机页面和文件还原|是|是|是|是|是|
+|联机索引|是|是|是|是|是|
+|可恢复的联机索引重新生成|是|是|是|是|是|
+|联机架构更改|是|是|是|是|是|
+|快速恢复|是|是|是|是|是|
+|镜像备份|是|是|是|是|是|
+|热插拔内存和 CPU|是|是|是|是|是|
 |数据库恢复顾问|是|是|是|是|是|
-|加密备份|是|是|“否”|“否”|是|
-|Microsoft Azure 的混合备份（URL 的备份）|是|是|“否”|“否”|是|
-|无群集的可用性组|是|是|“否”|“否”|“否”|是|
-|最小副本提交可用性组|是|是|是|“否”|“否”|是|
+|加密备份|是|是|是|是|是|
+|Microsoft Azure 的混合备份（URL 的备份）|是|是|是|是|是|
+|无群集的可用性组|是|是|是|是|是|是|
+|最小副本提交可用性组|是|是|是|是|是|是|
   
 
 <sup>1</sup> 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
@@ -186,23 +187,23 @@ ms.lasthandoff: 12/05/2017
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |列存储 <sup>1</sup>|是|是|是|是|是|  
 |聚集列存储索引中的大型对象二进制文件|是|是|是|是|是|  
-|联机非聚集列存储索引重新生成|是|“否”|“否”|“否”|是|
+|联机非聚集列存储索引重新生成|是|是|是|是|是|
 |内存中 OLTP <sup>1</sup>|是|是|是|是，<sup>2</sup>|是|
 |Stretch Database|是|是|是|是|是|
 |永久性主内存|是|是|是|是|是|
 |多实例支持|50|50|50|50|50|
 |表和索引分区|是|是|是|是|是|  
 |数据压缩|是|是|是|是|是|
-|资源调控器|是|“否”|“否”|“否”|是|  
-|已分区表并行度|是|“否”|“否”|“否”|是|
+|资源调控器|是|是|是|是|是|  
+|已分区表并行度|是|是|是|是|是|
 |多个 Filestream 容器|是|是|是|是|是|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|“否”|“否”|“否”|是|
-|缓冲池扩展|是|是|“否”|“否”|是|
-|IO 资源调控|是|“否”|“否”|“否”|是|  
+|NUMA 感知、大型页内存和缓冲区数组分配|是|是|是|是|是|
+|缓冲池扩展|是|是|是|是|是|
+|IO 资源调控|是|是|是|是|是|  
 |延迟持续性|是|是|是|是|是|
-|自动优化|是|“否”|“否”|“否”|是|
-|批处理模式自适应联接|是|“否”|“否”|“否”|是|
-|批处理模式内存授予反馈|是|“否”|“否”|“否”|是|
+|自动优化|是|是|是|是|是|
+|批处理模式自适应联接|是|是|是|是|是|
+|批处理模式内存授予反馈|是|是|是|是|是|
 |多语句表值函数的交错执行|是|是|是|是|是|
 |大容量插入改进|是|是|是|是|是|
 
@@ -220,25 +221,25 @@ ms.lasthandoff: 12/05/2017
 |动态数据屏蔽|是|是|是|是|是|   
 |基本审核|是|是|是|是|是| 
 |精细审核|是|是|是|是|是| 
-|透明数据库加密|是|“否”|“否”|“否”|是|   
-|可扩展的密钥管理|是|“否”|“否”|“否”|是| 
+|透明数据库加密|是|是|是|是|是|   
+|可扩展的密钥管理|是|是|是|是|是| 
 |用户定义的角色|是|是|是|是|是| 
 |包含的数据库|是|是|是|是|是| 
-|备份加密|是|是|“否”|“否”|是|  
+|备份加密|是|是|是|是|是|  
 
-##  <a name="Replication"></a> 复制  
+##  <a name="Replication"></a> Replication  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|异类订阅服务器|是|是|“否”|“否”|是|  
+|异类订阅服务器|是|是|是|是|是|  
 |合并复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
-|Oracle 发布|是|“否”|“否”|“否”|是| 
-|对等事务复制|是|“否”|“否”|“否”|是|   
+|Oracle 发布|是|是|是|是|是| 
+|对等事务复制|是|是|是|是|是|   
 |快照复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
 |SQL Server 变更跟踪|是|是|是|是|是| 
 |事务复制|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|   
-|事务复制到 Azure|是|是|“否”|“否”|是|   
-|事务复制可更新的订阅|是|“否”|“否”|“否”|是|  
+|事务复制到 Azure|是|是|是|是|是|   
+|事务复制可更新的订阅|是|是|是|是|是|  
   
 ##  <a name="SSMS"></a>管理工具  
   
@@ -248,11 +249,11 @@ ms.lasthandoff: 12/05/2017
 |SQL 配置管理器|是|是|是|是|是|   
 |SQL CMD（命令提示工具）|是|是|是|是|是|      
 |Distributed Replay - 管理工具|是|是|是|是|是|  
-|Distributed Replay - 客户端|是|是|是|“否”|是|  
+|Distributed Replay - 客户端|是|是|是|是|是|  
 |分布式重播 - 控制器|支持（最多 16 个客户端）|支持（1 个客户端）|支持（1 个客户端）|是|是|   
 |SQL Profiler|是|是|否 <sup>1</sup>|否 <sup>1</sup>|否 <sup>1</sup>|  
-|SQL Server 代理|是|是|是|“否”|是| 
-|Microsoft System Center Operations Manager 管理包|是|是|是|“否”|是|  
+|SQL Server 代理|是|是|是|是|是| 
+|Microsoft System Center Operations Manager 管理包|是|是|是|是|是|  
 |数据库优化顾问 (DTA)|是|是 <sup>2</sup>|是 <sup>2</sup>|是|是|      
   
  <sup>1</sup> 可以使用 SQL Server Standard 和 SQL Server Enterprise 版本探查 SQL Server Web、SQL Server Express、SQL Server Express with Tools 和 SQL Server Express with Advanced Services。  
@@ -263,25 +264,25 @@ ms.lasthandoff: 12/05/2017
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|用户实例|是|“否”|是|是|是| 
-|LocalDB|是|“否”|是|是|是| 
+|用户实例|是|是|是|是|是| 
+|LocalDB|是|是|是|是|是| 
 |专用管理连接|是|是|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
 |SysPrep 支持 <sup>1</sup>|是|是|是|是|是| 
 |PowerShell 脚本支持<sup>2</sup>|是|是|是|是|是| 
 |支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|是|是|是|是| 
-|策略自动执行（检查计划和更改）|是|是|是|“否”|是|   
-|性能数据收集器|是|是|是|“否”|是| 
-|能够作为多实例管理中的托管实例注册|是|是|是|“否”|是|   
-|标准性能报表|是|是|是|“否”|是| 
-|计划指南和计划指南的计划冻结|是|是|是|“否”|是|   
+|策略自动执行（检查计划和更改）|是|是|是|是|是|   
+|性能数据收集器|是|是|是|是|是| 
+|能够作为多实例管理中的托管实例注册|是|是|是|是|是|   
+|标准性能报表|是|是|是|是|是| 
+|计划指南和计划指南的计划冻结|是|是|是|是|是|   
 |使用 NOEXPAND 提示的索引视图的直接查询|是|是|是|是|是| 
-|自动索引视图维护|是|是|是|“否”|是| 
-|分布式分区视图|是|“否”|“否”|“否”|是| 
-|并行索引操作|是|“否”|“否”|“否”|是|  
-|查询优化器自动使用索引视图|是|“否”|“否”|“否”|是| 
-|并行一致性检查|是|“否”|“否”|“否”|是| 
-|SQL Server 实用工具控制点|是|“否”|“否”|“否”|是|    
-|缓冲池扩展|是|是|“否”|“否”|是| 
+|自动索引视图维护|是|是|是|是|是| 
+|分布式分区视图|是|是|是|是|是| 
+|并行索引操作|是|是|是|是|是|  
+|查询优化器自动使用索引视图|是|是|是|是|是| 
+|并行一致性检查|是|是|是|是|是| 
+|SQL Server 实用工具控制点|是|是|是|是|是|    
+|缓冲池扩展|是|是|是|是|是| 
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
@@ -293,19 +294,19 @@ ms.lasthandoff: 12/05/2017
 |Microsoft Visual Studio 集成|是|是|是|是|是| 
 |Intellisense（Transact-SQL 和 MDX）|是|是|是|是|是| 
 |SQL Server Data Tools (SSDT)|是|是|是|是|是|    
-|MDX 编辑、调试和设计工具|是|是|“否”|“否”|是|   
+|MDX 编辑、调试和设计工具|是|是|是|是|是|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |基本 R 集成|是|是|是|是|是|   
-|高级 R 集成|是|“否”|“否”|“否”|是| 
+|高级 R 集成|是|是|是|是|是| 
 |基本 Python 集成|是|是|是|是|是|
-|高级 Python 集成|是|“否”|“否”|“否”|是| 
-|机器学习服务器（独立）|是|“否”|“否”|“否”|是|   
+|高级 Python 集成|是|是|是|是|是| 
+|机器学习服务器（独立）|是|是|是|是|是|   
 |Polybase 计算节点|是|是 <sup>1</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>,|是 <sup>1</sup>, | 
-|Polybase 头节点|是|“否”|“否”|“否”|是| 
+|Polybase 头节点|是|是|是|是|是| 
 |JSON|是|是|是|是|是|   
 |查询存储|是|是|是|是|是|   
 |临时|是|是|是|是|是|   
@@ -320,7 +321,7 @@ ms.lasthandoff: 12/05/2017
 |全文和语义搜索|是|是|是|是|是| 
 |查询中的语言规范|是|是|是|是|是|   
 |Service Broker（消息传递）|是|是|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|   
-|Transact-SQL 端点|是|是|是|“否”|是| 
+|Transact-SQL 端点|是|是|是|是|是| 
 |图形|是|是|是|是|是|  
 
 
@@ -338,13 +339,13 @@ ms.lasthandoff: 12/05/2017
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|在无需数据库的情况下创建多维数据集|是|是|“否”|“否”|是 |   
-|自动生成临时和数据仓库架构|是|是|“否”|“否”|是| 
-|变更数据捕获|是|是|“否”|“否”|是| 
-|星型联接查询优化|是|“否”|“否”|“否”|是| 
-|可扩展的只读 Analysis Services 配置|是|“否”|“否”|“否”|是| 
-|针对已分区表和索引的并行查询处理|是|“否”|“否”|“否”|是|   
-|全局批处理集成|是|“否”|“否”|“否”|是| 
+|在无需数据库的情况下创建多维数据集|是|是|是|是|是 |   
+|自动生成临时和数据仓库架构|是|是|是|是|是| 
+|变更数据捕获|是|是|是|是|是| 
+|星型联接查询优化|是|是|是|是|是| 
+|可扩展的只读 Analysis Services 配置|是|是|是|是|是| 
+|针对已分区表和索引的并行查询处理|是|是|是|是|是|   
+|全局批处理集成|是|是|是|是|是| 
 
 ##  <a name="SSAS"></a> Analysis Services  
   
@@ -388,14 +389,14 @@ ms.lasthandoff: 12/05/2017
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移助手|是|是|是|是|是|   
-|数据库邮件|是|是|是|“否”|是| 
+|数据库邮件|是|是|是|是|是| 
   
 ##  <a name="Other"></a>其他组件  
   
 |功能名称|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|是|是| 
-|StreamInsight HA|StreamInsight Premium Edition|是|“否”|“否”|是|   
+|StreamInsight HA|StreamInsight Premium Edition|是|是|是|是|   
   
 > [![Download SSMS](../ssms/download-sql-server-management-studio-ssms.md)[下载最新版 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)    
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8bbf78a982b6f0f4742722ec368119c33cbc330d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题提供有关信息以帮助解决设置数据库镜像会话时遇到的问题。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  请确保满足所有 [数据库镜像的先决条件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
-|问题|摘要|  
+|问题|“摘要”|  
 |-----------|-------------|  
 |错误消息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息指示无法到达服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。 |  
 |[帐户](#Accounts)|介绍了正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户的相关要求。|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |[网络访问](#NetworkAccess)|记录了允许每个服务器实例通过 TCP 访问其他一个或多个服务器实例的端口的要求。|  
 |[镜像数据库准备](#MirrorDbPrep)|概述了准备镜像数据库以开始镜像的要求。|  
 |[失败的创建文件操作](#FailedCreateFileOp)|说明如何响应失败的创建文件操作。|  
-|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 语句所需的顺序。|  
+|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE database_name SET PARTNER ='partner_server' 语句所需的顺序。|  
 |[跨数据库事务](#CrossDbTxns)|自动故障转移可能导致自动不正确地解决有疑问的事务。 因此，数据库镜像不支持跨数据库事务。|  
   
 ##  <a name="Accounts"></a> 帐户  
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/20/2017
   
     1.  如果这些帐户在相同的域帐户中运行，则会减少配置错误的几率。  
   
-    2.  如果这些帐户在不同的域中运行或不属于域帐户，则必须在其他计算机的 **master** 中创建一个登录帐户，并且必须授予该登录帐户端点的 CONNECT 权限。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。 这包括网络服务帐户。  
+    2.  如果这些帐户在不同的域中运行或不属于域帐户，则必须在其他计算机的 **master** 中创建一个登录帐户，并且必须授予该登录帐户端点的 CONNECT 权限。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。 这包括网络服务帐户。  
   
-2.  如果使用本地系统帐户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行，则必须使用证书进行身份验证。 有关详细信息，请参阅 [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+2.  如果使用本地系统帐户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行，则必须使用证书进行身份验证。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
 ##  <a name="Endpoints"></a> 端点  
  必须正确配置端点。  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
  如果数据库镜像已经停止，则必须将对主体数据库执行的所有后续日志备份应用到镜像数据库中，然后才可以重新启动镜像。  
   
- 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).的每个版本都提供数据库镜像。  
+ 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  在不影响镜像会话的情况下添加文件要求该文件路径同时存在于两个服务器上。 因此，如果在创建镜像数据库时移动了数据库文件，则随后在镜像数据库上的添加文件操作可能会失败，并可能会导致镜像挂起。  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/20/2017
  有关详细信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)、[使用数据库镜像端点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)，或[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="StartDbm"></a> 使用 Transact-SQL 开始镜像  
- 发出 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 语句的顺序非常关键。  
+ 发出 ALTER DATABASE database_name SET PARTNER ='partner_server' 语句的顺序非常关键。  
   
 1.  第一个语句必须在镜像服务器上运行。 发出此语句时，镜像服务器不会尝试联系任何其他服务器实例。 相反，镜像服务器指示其数据库先进行等待，直到主体服务器与镜像服务器建立联系。  
   

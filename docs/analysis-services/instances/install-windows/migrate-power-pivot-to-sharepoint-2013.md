@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aee364c04f3f9531948a834d555e34f34d838a6b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>将 Power Pivot 迁移到 SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,9 @@ ms.lasthandoff: 01/08/2018
   
  如果您具有与 SharePoint 2010 相集成的 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装，则不能就地升级 SharePoint 服务器。 不过，您可以将内容数据库和服务应用程序数据库从 SharePoint 2010 场迁移到 SharePoint 2013 场。 本主题概要介绍了完成数据库附加升级以及完成与 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]以下内容相关的迁移所需的步骤：  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ### <a name="migration-overview"></a>迁移概述  
   
-|@shouldalert|2|3|4|  
+|1|2|3|4|  
 |-------|-------|-------|-------|  
 |准备 SharePoint 2013 场|备份、复制、还原数据库。|装入内容数据库|迁移 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 计划|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint 管理中心<br /><br /> -Windows PowerShell|-SharePoint 应用程序页<br /><br /> -Windows PowerShell|  

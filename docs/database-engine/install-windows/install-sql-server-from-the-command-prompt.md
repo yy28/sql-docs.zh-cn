@@ -1,14 +1,15 @@
 ---
 title: "从命令提示符安装 SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -86,15 +87,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: "255"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dcb4878399af227359b995d43fbc83b96b168194
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+manager: craigg
+ms.openlocfilehash: 1c275c5f9df33587f18eb791e92012d7aefa13c1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在运行 SQL 安装程序之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
@@ -273,7 +274,7 @@ ms.lasthandoff: 01/16/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|R Services（数据库内）|MRCACHEDIRECTORY|使用此参数指定 Microsoft R Open 和 Microsoft R Server 组件的缓存目录，如 [本节](https://msdn.microsoft.com/library/mt695942.aspx)所述。 从没有 Internet 访问的计算机上的命令行安装 SQL Server R 服务时，通常使用此设置。|  
+|R Services（数据库内）|MRCACHEDIRECTORY|使用此参数指定 Microsoft R Open 和 Microsoft R Server 或 Machine Learning Server 组件的缓存目录，如[本文](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)所述。 从没有 Internet 访问的计算机上的命令行安装 SQL Server 机器学习时，通常使用此设置。|  
   
 ###### <a name="sample-syntax"></a>示例语法：  
  安装新的具有 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制和全文搜索组件的独立实例并启用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的即时文件初始化。 
@@ -542,7 +543,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的功能使用情况报告。<br /><br />支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口将隐藏或关闭。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERDISKS<br /><br /> **可选**|指定要包含在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集资源组中的共享磁盘的列表。<br /><br /> 默认值：第一个驱动器作为所有数据库的默认驱动器使用。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必需**|指定新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的网络名称。 此名称用于在网络中标识新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集实例。|  
 |SQL Server 代理|/AGTSVCACCOUNT<br /><br /> **必需**|为 SQL Server 代理服务指定帐户。|  
 |SQL Server 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQL Server 代理服务帐户的密码。|  
@@ -680,7 +681,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能使用情况报告。<br /><br />支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口隐藏或关闭。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERDISKS<br /><br /> **可选**|指定要包含在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集资源组中的共享磁盘的列表。<br /><br /> 默认值：<br /><br /> 第一个驱动器用作所有数据库的默认驱动器。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必需**|指定新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的网络名称。 此名称用于在网络中标识新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集实例。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIRMIPDEPENDENCYCHANGE|指示对于多子网故障转移群集，同意将 IP 地址资源依赖关系设置为 OR。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。 支持的值：<br /><br /> 0 = False（默认值）<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
@@ -777,7 +778,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/QS<br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口隐藏或关闭。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1<br /><br /> <br /><br /> 有关详细信息，请参阅[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`<br /><br /> <br /><br /> 有关详细信息，请参阅[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **必需**|指示对于多子网故障转移群集，同意将 IP 地址资源依赖关系设置为 OR。 有关详细信息，请参阅[在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集中添加或删除节点（安装程序）](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 支持的值：<br /><br /> 0 = False（默认值）<br /><br /> 1 = True|  
 |SQL Server 代理|/AGTSVCACCOUNT<br /><br /> **必需**|为 SQL Server 代理服务指定帐户。|  
 |SQL Server 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQL Server 代理服务帐户的密码。|  

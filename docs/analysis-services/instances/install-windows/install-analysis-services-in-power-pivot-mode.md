@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题中的过程将指导你通过单台服务器上安装的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的服务器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]适用于 SharePoint 部署模式。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 | SharePoint 2013|  
-  
- **本主题内容：**  
-  
- [背景](#bkmk_background)  
-  
- [先决条件](#bkmk_prereq)  
-  
- [步骤 1：安装 Power Pivot for SharePoint](#InstallSQL)  
-  
- [步骤 2：配置基本 Analysis Services SharePoint 集成](#bkmk_config)  
-  
- [步骤 3：验证集成](#bkmk_verify)  
-  
- [将 Windows 防火墙配置为允许 Analysis Services 访问](#bkmk_firewall)  
-  
- [升级工作簿和计划的数据刷新](#bkmk_upgrade_workbook)  
-  
- [单个服务器安装之外 - Power Pivot for Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> 背景  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 是在 SharePoint 2016 或 SharePoint 2013 场中提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据访问的中间层和后端服务的集合。  

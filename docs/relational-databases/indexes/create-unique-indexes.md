@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 40c852b19c2b2ed8a1f7f8b304c30d6214bcee21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4459bfad325436c9de896e0ad40deb60e2a707a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **创建表的唯一索引，使用：**  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/17/2017
   
 13. 单击 **“关闭”**。  
   
-14. 在“文件”菜单上，单击“保存”以保存 *table_name*。  
+14. 在“文件”菜单上，单击“保存table_name”。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用对象资源管理器创建唯一索引  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  在 **“索引键列”**下，单击 **“添加…”**。  
   
-8.  在“从 table_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+8.  在“从table_name选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
 9. 单击“确定” 。  
   
@@ -160,11 +161,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>创建表的唯一索引  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

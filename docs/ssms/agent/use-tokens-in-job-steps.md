@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="understanding-using-tokens"></a>了解标记用法  
   
 > [!IMPORTANT]  
-> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记已被禁用。 这些标记包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(***property***)**。 请注意，在此版本中，对标记的使用扩展至所有警报。  
+> 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记已被禁用。 这些标记包括：A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI(property)。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
 > 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 12/21/2017
 |**(TIME)**|当前时间（以 HHMMSS 格式表示）。|  
 |**(STRTTM)**|作业开始执行的时间（以 HHMMSS 格式表示）。|  
 |**(STRTDT)**|作业开始执行的日期（以 YYYYMMDD 格式表示）。|  
-|**(WMI(**property**))**|对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
+|(WMI(property))|对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 代理转义宏  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
 |标记语法|启用警报标记替换|禁用警报标记替换|  
 |----------------|------------------------------|-------------------------------|  
-|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记包括 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(***property***)**。 成功替换其他静态标记。|  
+|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记包括 A-DBN、A-SVR、A-ERR、A-SEV、A-MSG 和 WMI(property)。 成功替换其他静态标记。|  
 |不使用转义宏|任何包含标记的作业均失败。|任何包含标记的作业均失败。|  
   
 ## <a name="token-syntax-update-examples"></a>标记语法更新示例  

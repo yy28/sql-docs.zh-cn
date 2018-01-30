@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 - database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5369a4984aa664263911001766046a3eb2a424b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题仅与使用完整恢复模式或大容量日志恢复模式的数据库相关。  
@@ -69,11 +70,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>还原到 LSN 的 Transact-SQL 语法  
  通过使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，可以在 LSN 处或刚好在 LSN 之前停止，如下所示：  
   
--   使用 WITH STOPATMARK **='**lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
+-   使用 WITH STOPATMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 的日志记录是恢复点。  
   
      STOPATMARK 前滚到 LSN，并且前滚中包括该日志记录。  
   
--   使用 WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
+-   使用 WITH STOPBEFOREMARK ='lsn:<lsn_number>' 子句，其中 lsn:\<lsnNumber> 是一个字符串，它指出包含指定 LSN 编号的日志记录之前的日志记录是恢复点。  
   
      STOPBEFOREMARK 前滚到 LSN，并从前滚中排除该日志记录。  
   
@@ -105,6 +106,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

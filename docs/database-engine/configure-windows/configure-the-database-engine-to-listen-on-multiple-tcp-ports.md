@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee0dc1c49fd1bb0b61729614bb4ba87d1683a60c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cde3b735d73b7e7a53948a67e77e7f7ca07da43
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
@@ -80,9 +81,9 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>将 SQL Server 数据库引擎配置为侦听其他 TCP 端口  
   
-1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”，然后单击 *<instance_name>* 的“协议”。  
+1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”，然后单击“<instance_name> 协议”。  
   
-2.  展开 *<instance_name>* 的“协议”，然后单击“TCP/IP”。  
+2.  展开“<instance_name> 协议”，然后单击“TCP/IP”。  
   
 3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”。  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  在左窗格中，单击 **“SQL Server 服务”**。  
   
-7.  在右侧窗格中，右键单击“SQL Server *<instance_name>*”，然后单击“重新启动”。  
+7.  在右侧窗格中，右键单击“SQL Server <instance_name>”，然后单击“重启”。  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]重新启动后，错误日志将列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要侦听的端口。  
   
