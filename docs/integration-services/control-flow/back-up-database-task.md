@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.backupdatabasetask.f1
+f1_keywords:
+- sql13.dts.designer.backupdatabasetask.f1
 helpviewer_keywords:
 - database backups [Integration Services]
 - Back Up Database task [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa514189f6201b9f5126be6e88830dfa7f4c27cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>“备份数据库”任务
   “备份数据库”任务可执行不同类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库备份。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
@@ -38,11 +40,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="supported-recover-models-and-backup-types"></a>支持的恢复模式和备份类型  
  下表列出了“备份数据库”任务支持的恢复模式和备份类型。  
   
-|恢复模式|数据库|数据库差异|事务日志|文件或文件差异|  
+|恢复模式|“数据库”|数据库差异|事务日志|文件或文件差异|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|必需|可选|不支持|不支持|  
-|Full|必需|可选|必需|可选|  
-|大容量日志|必需|可选|必需|可选|  
+|Simple|Required|可选|不支持|不支持|  
+|完全|Required|可选|Required|可选|  
+|大容量日志|Required|可选|Required|可选|  
   
  “备份数据库”任务封装 Transact-SQL BACKUP 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   

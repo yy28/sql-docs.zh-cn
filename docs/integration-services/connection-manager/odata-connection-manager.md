@@ -8,23 +8,24 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: "9"
+caps.latest.revision: 
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38e19fec56bb0392435adb1b6c6313fed59770b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 331cf4ff00eeda4b1c1d22c021138ae67d6d23b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
  使用 OData 连接管理器连接到 OData 数据源。 OData 源组件使用 OData 连接管理器连接到 OData 数据源，并使用来自服务的数据。 有关详细信息，请参阅 [OData Source](../../integration-services/data-flow/odata-source.md)。  
@@ -65,16 +66,16 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|属性|Description|  
+|“属性”|Description|  
 |Url|服务文档的 URL。|  
 |UserName|用于进行身份验证的用户名（如果需要）。|  
-|密码|用于进行身份验证的密码（如果需要）。|  
+|Password|用于进行身份验证的密码（如果需要）。|  
 |ConnectionString|包括连接管理器的其他属性。|  
   
 ## <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
   使用“OData 连接管理器编辑器”对话框可以添加与 OData 数据源的连接或者编辑现有连接。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **连接管理器名称**  
  连接管理器的名称。  
   

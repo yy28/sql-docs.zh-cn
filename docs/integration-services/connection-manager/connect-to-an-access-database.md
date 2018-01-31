@@ -8,23 +8,24 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd98ef05bc8c6de066f72a9aded9243c1636f70
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-database"></a>连接到 Access 数据库
   若要将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包连接到 Microsoft Office Access 数据源，需要使用 OLE DB 连接管理器和数据访问接口。 所使用的数据访问接口取决于创建该数据源的 Access 版本：  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 可能需要下载 Microsoft Office 文件的连接组件（如果尚未安装）。 在 [Microsoft Access 2016 数据库引擎可再发行（程序包）](https://www.microsoft.com/download/details.aspx?id=54920)中为 Access 和 Excel 文件下载最新版本的连接组件。
   
-最新版本的组件可以打开早期版本的 Access 所创建的文件。
+最新版组件可以打开 Access 早期版本创建的文件。
 
 如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，还须确保在 32 位模式下运行程序包。
 

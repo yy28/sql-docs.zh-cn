@@ -8,23 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 967d28f701fc43b35824ea53f493fb9c3043bf45
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fcca1065e07f2f678d300dc0250760b24c6b34f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 任务
 使用 **“Azure HDInsight Pig 任务”** 在 Azure HDInsight 群集上运行 Pig 脚本。
@@ -35,18 +36,18 @@ ms.lasthandoff: 11/20/2017
   
  以下列表介绍了此对话框中的字段。  
   
-1.  对于 HDInsightConnection 字段，请选择现有的 Azure HDInsight 连接管理器或创建一个新的 Azure HDInsight 群集，用于执行该脚本。
+1.  对于 HDInsightConnection 字段，请选择一个现有 Azure HDInsight 连接管理器，或创建一个新的连接管理器，引用用于执行脚本的 Azure HDInsight 群集。
   
-2.  对于 AzureStorageConnection 字段，请选择一个现有的 Azure 存储连接管理器，或者创建一个新的 Azure 存储连接管理器来引用与该集群关联的 Azure 存储帐户。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。
+2.  对于 AzureStorageConnection 字段，请选择一个现有 Azure 存储连接管理器，或创建一个新的连接管理器，引用与群集关联的 Azure 存储帐户。 只有在需要下载脚本执行输出和错误日志时，才需要执行此操作。
  
-3.  对于 BlobContainer 字段，指定与集群关联的存储容器名称。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。
+3.  对于 BlobContainer 字段，指定与群集关联的存储容器名称。 只有在需要下载脚本执行输出和错误日志时，才需要执行此操作。
   
-4.  对于 LocalLogFolder 字段，指定脚本执行输出和错误日志将要下载到的文件夹。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。   
+4.  对于 LocalLogFolder 字段，指定脚本执行输出和错误日志要下载到的文件夹。 只有在需要下载脚本执行输出和错误日志时，此操作才有必要。   
   
 5.  有两种方法可指定要执行的 Pig 脚本：
   
     1.  **内联脚本**：通过在内联键入要在“输入脚本”对话框中执行的脚本来指定脚本字段。
   
-    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，指定 BlobName 字段。 如果该 blob 不在默认存储帐户或与 HDInsight 集群关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
+    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，并指定 BlobName 字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
   
-     如果同时指定两者，则将使用脚本文件并忽略内联脚本。
+     如果同时指定两者，则使用脚本文件并忽略内联脚本。

@@ -8,23 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpcreatecltask.f1
 - sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe1114d05dc9eb31f3cec4c655bc2ae244683877
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ebb5a3dc59784ecf19a16f541539250fd975f75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 创建群集任务
 “Azure HDInsight 创建群集任务”启用一个 SSIS 包来创建指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
 > [!NOTE]  
 > - 新建 HDInsight 群集可能需要花费 10~20 分钟。  
-> - 这里存在与创建和运行 Azure HDInsight 群集相关的成本。 有关详细信息，请参阅 [HDInsight 定价](http://azure.microsoft.com/en-us/pricing/details/hdinsight/)。  
+> - 这里存在与创建和运行 Azure HDInsight 群集相关的成本。 有关详细信息，请参阅 [HDInsight 定价](http://azure.microsoft.com/pricing/details/hdinsight/)。  
   
 若要添加“Azure HDInsight 创建群集任务”，可将其拖放到 SSIS 设计器，然后双击或右键单击，再单击“编辑”以查看以下“Azure HDInsight 创建群集任务编辑器”对话框。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 |ClusterSize|指定要在群集中创建的节点数。|  
 |BlobContainer|指定要与 HDInsight 群集相关联的默认存储容器的名称。|  
 |UserName|指定用于连接到 HDInsight 群集的用户名。|  
-|密码|指定用于连接到 HDInsight 群集的密码。|
+|Password|指定用于连接到 HDInsight 群集的密码。|
 |SshUserName|指定使用 SSH 远程访问 HDInsight 群集时使用的用户名称。|
 |SshPassword|指定使用 SSH 远程访问 HDInsight 群集的密码。|
 |FailIfExists|指定如果群集已存在时任务是否失败。|  

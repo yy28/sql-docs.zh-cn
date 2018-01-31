@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: accMsDes
+f1_keywords:
+- accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73cb730a75ad1707f763dca6a64857837cf35bc8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 036a9457f09587ef93fdd8409643613194d404bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
   您可以从安装了 CDC 设计器控制台的计算机访问该控制台。 有关安装的详细信息，请参阅“安装”。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/20/2017
   
  该登录名必须具有允许访问 MSXCDCDB 数据库的数据库角色。 建议该登录名还具有访问要使用的任何其他数据库的权限，否则，该用户将无法查看这些数据库中的数据。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
  **连接超时值**  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/20/2017
  **高级**  
  单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
- 有关“高级连接属性”对话框的信息，请参阅[高级连接属性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
+ 有关“高级连接属性”对话框的信息，请参阅 [高级连接属性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对 CDC 设计器的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  

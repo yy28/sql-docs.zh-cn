@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 022b2b25d055e25dbfcc62ba494e5e6564dc4cd5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 753aa0f97ccfe8b5c63fff0e117e5f1a541bccb5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何查看 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台查看与您创建的实例有关的信息，以便帮助管理实例操作。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
      与该实例有关的信息将显示在 CDC 设计器控制台的中央部分。 它分为四个选项卡。 所有选项卡均为只读。  
   
-     **状态**  
+     **“状态”**  
      此选项卡显示有关该实例的变更数据捕获的当前状态的信息。 有关此选项卡中显示的内容的信息，请参阅 **Manage a CDC Instance** 中的 [“查看器选项卡”](../../integration-services/change-data-capture/manage-a-cdc-instance.md)部分。  
   
      **Oracle**  

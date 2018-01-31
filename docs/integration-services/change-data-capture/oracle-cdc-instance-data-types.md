@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afbd0a8560667911518d4a751cab89d00ee86b55
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d259e5b3c54db6856cc62b301889036faee6e10
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 实例数据类型
   Oracle CDC 实例支持大多数 Oracle 数据类型。 下面的部分介绍支持的数据类型和不支持的数据类型。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
 |Oracle 数据库数据类型|SQL Server 数据类型|  
 |-------------------------------|--------------------------|  
-|BINARY_FLOAT|REAL|  
+|BINARY_FLOAT|real|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
 |DATE|DATETIME|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|REAL|FLOAT|  
+|real|FLOAT|  
 |TIMESTAMP|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  

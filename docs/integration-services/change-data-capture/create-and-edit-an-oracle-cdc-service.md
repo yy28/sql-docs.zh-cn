@@ -8,28 +8,30 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
   您从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
   
  若要创建新的 Oracle CDC Windows 服务，请从左侧窗格中选择 **“本地 CDC 服务”** ，然后从 **“操作”** 窗格中单击 **“新建服务”** 。 还可以右键单击“本地 CDC 服务”，然后选择“新建服务”。 “新 Oracle CDC Windows 服务”对话框将打开。  
   
- **或**  
+ **OR**  
   
  若要编辑 CDC 服务属性，请选择要编辑其属性的服务，然后从 **“操作”** 窗格中单击 **“属性”** 。 还可以右键单击要使用的服务，然后选择“属性”。 此时将打开“CDC 服务属性”对话框。  
   
