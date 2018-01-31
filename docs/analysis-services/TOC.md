@@ -1,12 +1,13 @@
-# [什么是 Analysis Services？](analysis-services.md)
+# [关于 SQL Server Analysis Services](analysis-services.md)
 
 # 概述
 ## [SQL Server Analysis Services 2016 中的新增功能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 中的新增功能](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [新的和已更新的项目](new-updated-analysis-services.md)
 ## [工具和应用程序](tools-and-applications-used-in-analysis-services.md)   
+## [客户端库（数据提供程序）](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [比较表格和多维解决方案](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [SQL Server 2016 各个版本支持的 Analysis Services 功能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [SQL Server 各个版本支持的 Analysis Services 功能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [向后兼容性（SQL Server 2016 Analysis Services）](analysis-services-backward-compatibility.md)  
 ## [向后兼容性（SQL Server 2017 Analysis Services）](analysis-services-backward-compatibility-sql2017.md)  
 ## [全球化和翻译](globalization-scenarios-for-analysis-services.md)  
@@ -14,9 +15,6 @@
 ### [翻译](translation-support-in-analysis-services.md)  
 ### [货币换算](currency-conversions-analysis-services.md)  
 ### [提示和最佳实践](globalization-tips-and-best-practices-analysis-services.md) 
-
-# 示例
-## [Analysis Services 示例](analysis-services-samples.md)
 
 # 教程
 ## [表格建模（1200 兼容级别）](tabular-modeling-adventure-works-tutorial.md)  
@@ -112,6 +110,8 @@
 ## [架构行集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services 脚本语言 (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# 示例
+## [Analysis Services 示例](analysis-services-samples.md)
 
 # 参考
 ## [MSDN 上的数据分析表达式 (DAX)](https://msdn.microsoft.com/library/gg413422.aspx)
