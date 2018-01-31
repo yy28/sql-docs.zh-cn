@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b127fe80d88d05c3f1f56e7c355d7a24f3abd6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,31 +39,31 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] *execution_id*  
- 执行实例的唯一标识符。 *execution_id* 为 **bigint**。  
+ [ @execution_id = ] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。  
   
  [ @property_path = ] *property_path*  
  指向包中属性的路径。 *property_path* 为 **nvarchar(4000)**。  
   
- [ @property_value = ] *property_value*  
+ [ @property_value = ] property_value  
  要赋给该属性的覆盖值。 *property_value* 为 **nvarchar(max)**。  
   
- [ @sensitive = ] *sensitive*  
+ [ @sensitive = ] sensitive  
  当值为 1 时，属性是敏感的并在存储时加密。 当值为 0 时，属性是不敏感的并以纯文本形式存储值。 *sensitive* 参数为 **bit**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此过程执行的功能与“执行包”对话框上“高级”选项卡中的“属性重写”部分执行的功能相同。 该属性的路径从包任务的“包路径”属性派生。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
   
--   用户不具备适当的权限  
+-   用户没有相应的权限  
   
 -   执行标识符无效  
   

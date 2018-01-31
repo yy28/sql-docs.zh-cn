@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da7c2512b5163153aaa4da37e946bd9a7e550e85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a738859dc30fc1a845b15903a8b3691b431f3d1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |created_time|**datetimeoffset**|创建操作的时间。|  
 |object_type|**int**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
-|object_name|**nvarchar(260)**|对象的名称。|  
+|object_name|nvarchar(260)|对象的名称。|  
 |status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
 |start_time|**datetimeoffset**|开始操作的时间。|  
 |end_time|**datetimeoffsset**|操作结束的时间。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 |server_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定实例的 Windows 服务器和实例信息。|  
 |machine_name|**nvarchar(128)**|运行服务器实例的计算机名称。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的每个操作显示一行。 它允许管理员枚举在服务器上执行的所有逻辑操作，如部署项目或执行包。  
   
  此视图显示以下操作类型，如 **operation_type** 列中所列出：  
@@ -68,14 +69,14 @@ ms.lasthandoff: 11/20/2017
 |`301`|**validate_package**<br /><br /> （存储过程）|项目 ID|包名称|  
 |`1000`|**configure_catalog**<br /><br /> （存储过程）|**NULL**|**NULL**||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  

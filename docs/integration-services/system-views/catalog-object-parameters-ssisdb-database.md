@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27e51e480c01395d69396656b263162d93233440
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c154da24447377cb9f2602a46a116364336e1c1e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +48,14 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
 |last_validation_time|**datetimeoffset(7)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要查看此视图中的行，您必须具有以下权限之一：  
   
 -   针对项目的 READ 权限  
   
 -   ssis_admin 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格。  
+-   sysadmin 服务器角色中的成员资格。  
   
  将实施行级安全性；只显示您有权查看的行。  
   

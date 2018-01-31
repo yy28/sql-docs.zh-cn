@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4b24dfbb66204f7506cac9612f46e04836f70e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
      **包源**：SSIS 目录  
   
-    |选项卡|选项|  
+    |选项卡|“常规”|  
     |---------|-------------|  
     |**“包”**|**Server**<br /><br /> 键入或选择承载 SSISDB 目录的数据库服务器实例的名称。<br /><br /> 如果 **“SSIS 目录”** 为包源，则可以仅使用 Microsoft Windows 用户帐户登录该服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证不可用。|  
     ||**“包”**<br /><br /> 单击省略号按钮并选择一个包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“Integration Services 目录”**节点下的文件夹中选择包。|  
@@ -159,11 +160,11 @@ ms.lasthandoff: 11/20/2017
   
      可以为存储在 SQL Server、SSIS 包存储区或文件系统中的包设置的许多选项都对应于 **dtexec** 命令提示实用工具的命令行选项。 有关该实用工具和命令行选项的详细信息，请参阅 [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)。  
   
-    |选项卡|选项|  
+    |选项卡|“常规”|  
     |---------|-------------|  
     |**“包”**<br /><br /> 这些是存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的包的选项卡选项。|**Server**<br /><br /> 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务键入或选择数据库服务器实例的名称。|  
-    ||**使用 Windows 身份验证**<br /><br /> 选择此选项可以使用 Microsoft Windows 用户帐户登录该服务器。|  
-    ||**使用 SQL Server 身份验证**<br /><br /> 当用户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，来进行身份验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登录帐户，则身份验证会失败，用户将收到错误消息。|  
+    ||**Use Windows Authentication**<br /><br /> 选择此选项可以使用 Microsoft Windows 用户帐户登录该服务器。|  
+    ||**Use SQL Server Authentication**<br /><br /> 当用户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，来进行身份验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登录帐户，则身份验证会失败，用户将收到错误消息。|  
     ||**用户名**|  
     ||**密码**|  
     ||**“包”**<br /><br /> 单击省略号按钮并选择包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“已存储的包”**节点下的文件夹中选择包。|  

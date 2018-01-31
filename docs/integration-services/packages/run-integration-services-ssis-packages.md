@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 296bd4b460f603f6293dd42d3b2ceaa1ca97da02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-integration-services-ssis-packages"></a>运行 Integration Services (SSIS) 包
   要运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，您可以根据包的存储位置使用某个工具。 下表中列出了这些工具。  
@@ -43,15 +44,15 @@ ms.lasthandoff: 11/20/2017
   
 |工具|在 Integration Services 服务器上存储的包|在 SSIS 包存储区或 msdb 数据库中存储的包|在文件系统中存储的包，在属于 SSIS 包存储区的位置之外|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**SQL Server Data Tools**|“否”|“否”<br /><br /> 但是，你可以将现有包从包括 msdb 数据库的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区添加到项目中。 以此方式将现有包添加到项目中将在文件系统中生成该包的本地副本。|是|  
-|**SQL Server Management Studio（连接到托管 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](#execute_package_dialog)|是|“否”<br /><br /> 但是，可以从这些位置将包导入服务器。|“否”<br /><br /> 但是，可以从文件系统将包导入服务器。|
-|**SQL Server Management Studio（连接到托管启用为 Scale Out Master 的 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅[在 Scale Out 中运行包](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|“否”|“否”|
-|**SQL Server Management Studio（连接到管理 SSIS 包存储的 Integration Services 服务时）**|“否”|是|“否”<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
+|**SQL Server Data Tools**|是|是<br /><br /> 但是，你可以将现有包从包括 msdb 数据库的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区添加到项目中。 以此方式将现有包添加到项目中将在文件系统中生成该包的本地副本。|是|  
+|**SQL Server Management Studio（连接到托管 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅 [Execute Package Dialog Box](#execute_package_dialog)|是|是<br /><br /> 但是，可以从这些位置将包导入服务器。|是<br /><br /> 但是，可以从文件系统将包导入服务器。|
+|**SQL Server Management Studio（连接到托管启用为 Scale Out Master 的 Integration Services 服务器的数据库引擎实例时）**<br /><br /> 有关详细信息，请参阅[在 Scale Out 中运行包](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|是|是|
+|**SQL Server Management Studio（连接到管理 SSIS 包存储的 Integration Services 服务时）**|是|是|是<br /><br /> 但是，可以从文件系统将包导入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中。|  
 |**dtexec**<br /><br /> 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。|是|是|是|  
-|**dtexecui**<br /><br /> 有关详细信息，请参阅[执行包实用工具 (DtExecUI) 用户界面参考](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|“否”|是|是|  
+|**dtexecui**<br /><br /> 有关详细信息，请参阅[执行包实用工具 (DtExecUI) 用户界面参考](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|是|是|是|  
 |**SQL Server 代理**<br /><br /> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划运行包。<br /><br /> 有关详细信息，请参阅 [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。|是|是|是|  
-|**内置存储过程**<br /><br /> 有关详细信息，请参阅 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|是|“否”|“否”|  
-|**托管的 API，通过使用** <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员|是|“否”|“否”|  
+|**内置存储过程**<br /><br /> 有关详细信息，请参阅 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|是|是|是|  
+|**托管的 API，通过使用** <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间中的类型和成员|是|是|是|  
 |**托管的 API，通过使用** <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间中的类型和成员|目前不可用|是|是|  
 
 ## <a name="execution-and-logging"></a>执行和日志记录  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  单击 **“确定”** 运行包。  
   
-     - 或 -  
+     -或 -  
   
      使用存储过程来运行包。 单击“脚本”生成创建执行实例并启动执行实例的 Transact-SQL 语句。 该语句包含对 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 存储过程的调用。 有关这些存储过程的详细信息，请参阅 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
 

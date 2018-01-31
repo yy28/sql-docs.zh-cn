@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544436126d299182760f94ef46304c334d448b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 658fee9ba05b4cd0a31099c4dafe303c541bec58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|包的唯一标识符 (ID)。|  
-|name|**nvarchar(256)**|包的唯一名称。|  
+|NAME|**nvarchar(256)**|包的唯一名称。|  
 |package_guid|**uniqueidentifier**|标识包的全局唯一标识符 (GUID)。|  
 |description|**nvarchar(1024)**|包的可选说明。|  
 |package_format_version|**int**|用于开发包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
@@ -48,17 +49,17 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|验证的状态。|  
 |last_validation_time|**datetimeoffset(7)**|最后验证的时间。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图对于目录中的每个包显示一行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对相应项目的 READ 权限  
   
 -   ssis_admin 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格。  
+-   **sysadmin** 服务器角色的成员资格。  
   
 > [!NOTE]  
 >  如果您对项目具有 READ 权限，则也对与该项目关联的所有包和环境引用具有 READ 权限。 将实施行级安全性；只显示您有权查看的行。  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e8082e110053c9ec8405c2ec1bb544c1c91f47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8c5a94903b6cac800063e9c6c437dc1926385976
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |project_lsn|**bigint**|要对照其进行验证的项目版本。|  
 |use32bitruntime|**bit**|指示是否应使用 32 位运行时在 64 位操作系统上运行包。 如果值为 `1`则使用 32 位运行时进行执行。 如果值为 `0`，则使用 64 位运行库来运行执行过程。|  
 |reference_id|**bigint**|项目用来引用环境的项目环境引用的唯一 ID。|  
-|operation_type|**int**|运算类型。 在此视图中显示的操作包括项目验证 (`300`) 和包验证 (`301`)。|  
+|operation_type|**int**|操作的类型。 在此视图中显示的操作包括项目验证 (`300`) 和包验证 (`301`)。|  
 |object_name|**nvarhcar(260)**|对象的名称。|  
 |object_type|**int**|对象的类型。 该对象可能是一个项目 (`20`) 或包 (`30`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
@@ -54,10 +55,10 @@ ms.lasthandoff: 11/20/2017
 |machine_name|**nvarchar(128)**|运行服务器实例的计算机名称。|  
 |dump_id|**uniqueidentifier**|执行转储的 ID。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的每个验证显示一行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对相应操作的 READ 权限  

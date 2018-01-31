@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: "98"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d255bfaa20012bce9104aad8e56611163d1c462a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -230,24 +231,24 @@ ms.lasthandoff: 11/20/2017
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|货币||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
-|DT_DBTIME||||timestamp|time|time|  
+|DT_DBDATE|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)|[date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)||日期|日期|日期|  
+|DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md) (p)|[time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)[smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)[smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
-|DT_DBTIMESTAMP2|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMP2|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
+|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|smallint|  
-|DT_I4|int|int|Long||整数|整数|  
-|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
+|DT_I4|ssNoversion|ssNoversion|Long||整数|整数|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|real|real|Single||real|real|  
-|DT_R8|float|float|双精度|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
+|DT_R4|REAL|REAL|Single||real|real|  
+|DT_R8|float|FLOAT|双精度|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

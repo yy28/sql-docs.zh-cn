@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c143403ba0ebfb429c8d7f646214704c4e692d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd8598e526761f51e361fcc7c3330bbe3c9a470f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +41,8 @@ catalog.move_environment [ @source_folder = ] source_folder
  [ @source_folder = ] *source_folder*  
  此环境在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)**。  
   
- [ @environment_name = ] *environment_name*  
- 要移动的环境的名称。 *environment_name* 为 **nvarchar(128)**。  
+ [ @environment_name = ] environment_name  
+ 要移动的环境的名称。 environment_name 为 nvarchar(128)。  
   
  [ @destination_folder = ] *destination_folder*  
  此环境在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)**。  
@@ -50,16 +51,16 @@ catalog.move_environment [ @source_folder = ] source_folder
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对环境的 READ 和 MODIFY 权限  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
@@ -68,9 +69,9 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   目标文件夹中已存在同名的环境  
   
--   用户不具备适当的权限  
+-   用户没有相应的权限  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在移动过程中，项目中的环境引用未遵循此环境。 必须相应地更新环境引用。 即使通过移动环境损坏了环境引用，此存储过程也会成功。 在此存储过程完成之后，必须更新环境引用。  
   
 > [!NOTE]  

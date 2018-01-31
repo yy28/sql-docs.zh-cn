@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 837a052abb35ae767d313b2dd4241d79d2af6074
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6daf14afa71e4c91907e3212fe9c3f538fed4ec8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>结果集  
  验证步骤的输出结果作为结果集的不同部分返回。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  
@@ -88,9 +89,9 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   项目名称或环境引用 ID 无效  
   
--   用户不具备适当的权限  
+-   用户没有相应的权限  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  验证有助于识别将阻止项目中的包成功运行的问题。 使用 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 或 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图以监视验证状态。  
   
  在验证中只可使用此用户可访问的环境。 验证输出作为结果集发送到客户端。  

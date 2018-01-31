@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: components [Integration Services], properties
+helpviewer_keywords:
+- components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3dc5886a1328d8262a35d01cd5a1301ee3ffd56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
   若要设置数据流组件（包括源、目标和转换）的属性，请使用下列功能之一：  
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  查看或修改属性值。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
 
@@ -128,16 +130,16 @@ ms.lasthandoff: 11/20/2017
   
  下表介绍了数据流中的组件的属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|ComponentClassID|字符串|组件的 CLSID。|  
-|ContactInfo|字符串|组件开发人员的联系信息。|  
-|Description|字符串|对数据流组件的说明。 此属性的默认值是数据流组件的名称。|  
+|ComponentClassID|String|组件的 CLSID。|  
+|ContactInfo|String|组件开发人员的联系信息。|  
+|Description|String|对数据流组件的说明。 此属性的默认值是数据流组件的名称。|  
 |ID|Integer|唯一标识此组件实例的值。|  
-|IdentificationString|字符串|标识组件。|  
+|IdentificationString|String|标识组件。|  
 |IsDefaultLocale|Boolean|指示组件是否使用其所属的数据流任务的区域设置。|  
 |LocaleID|Integer|包运行时数据流组件使用的区域设置。 数据流组件可以使用所有 Windows 区域设置。|  
-|名称|字符串|数据流组件的名称。|  
+|“属性”|String|数据流组件的名称。|  
 |PipelineVersion|Integer|将某组件设计为要在其中执行的数据流任务的版本。|  
 |UsesDispositions|Boolean|指示组件是否有错误输出。|  
 |ValidateExternalMetadata|Boolean|指示外部列的元数据是否经过验证。 此属性的默认值为 **True**。|  
@@ -148,18 +150,18 @@ ms.lasthandoff: 11/20/2017
   
  下表描述了数据流中的组件的输入属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|Description|字符串|输入的说明。|  
-|ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
+|Description|String|输入的说明。|  
+|ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
 |HasSideEffects|Boolean|指示当组件没有附加到下游组件并且 **RunInOptimizedMode** 为 **true**时，是否可以从数据流的执行计划中删除该组件。|  
 |ID|Integer|用于唯一标识输入的值。|  
-|IdentificationString|字符串|用于标识输入的字符串。|  
+|IdentificationString|String|用于标识输入的字符串。|  
 |IsSorted|Boolean|指示输入中的数据是否已排序。|  
-|名称|字符串|输入的名称。|  
+|“属性”|String|输入的名称。|  
 |SourceLocale|Integer|输入数据的区域设置 ID (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 实例时都提供 SQL Server 登录名。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
   
  目标以及某些转换不支持错误输出，这些组件的 ErrorRowDisposition 和 TruncationRowDisposition 属性是只读的。  
   
@@ -168,21 +170,21 @@ ms.lasthandoff: 11/20/2017
   
  下表描述了数据流中的组件的输入列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
-|Description|字符串|对输入列的说明。|  
-|ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
+|Description|String|对输入列的说明。|  
+|ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|分配给输入列的外部元数据列的 ID。|  
 |ID|Integer|用于唯一标识输入列的值。|  
-|IdentificationString|字符串|用于标识输入列的字符串。|  
+|IdentificationString|String|用于标识输入列的字符串。|  
 |LineageID|Integer|上游列的 ID。|  
-|LineageIdentificationString|字符串|标识字符串，包含上游列的名称。|  
-|名称|字符串|输入列的名称。|  
+|LineageIdentificationString|String|标识字符串，包含上游列的名称。|  
+|“属性”|String|输入列的名称。|  
 |SortKeyPosition|Integer|用于指示单个列是否已排序、其排序顺序以及多个列的排序顺序的值。 如何值为 **0** ，则表示未对该列进行排序。  有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
-|UpstreamComponentName|字符串|上游组件的名称。|  
+|UpstreamComponentName|String|上游组件的名称。|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|用于确定组件如何使用输入列的值。|  
   
  输入列还具有“数据类型属性”下描述的数据类型属性。  
@@ -192,19 +194,19 @@ ms.lasthandoff: 11/20/2017
   
  下表描述了数据流中的组件的输出属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
-|Description|字符串|对输出的说明。|  
-|ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
+|Description|String|对输出的说明。|  
+|ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
 |ExclusionGroup|Integer|用于标识一组互斥输出的值。|  
 |HasSideEffects|Boolean|用于指示当组件没有附加到上游组件并且 **RunInOptimizedMode** 为 **true**时是否可以从数据流的执行计划中删除该组件的值。|  
 |ID|Integer|用于唯一标识输出的值。|  
-|IdentificationString|字符串|用于标识输出的字符串。|  
+|IdentificationString|String|用于标识输出的字符串。|  
 |IsErrorOut|Boolean|指示输出是否为错误输出。|  
 |IsSorted|Boolean|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\* 重要提示\*\*** 将 IsSorted 属性的值设置为 True 时，不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
-|名称|字符串|输出的名称。|  
+|“属性”|String|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  
   
@@ -213,18 +215,18 @@ ms.lasthandoff: 11/20/2017
   
  下表描述了数据流中的组件的输出列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
-|Description|字符串|对输出列的说明。|  
-|ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
+|Description|String|对输出列的说明。|  
+|ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。 默认值为 **Fail component**。|  
 |ExternalMetadataColumnID|Integer|分配给输入列的外部元数据列的 ID。|  
 |ID|Integer|用于唯一标识输出列的值。|  
-|IdentificationString|字符串|用于标识输出列的字符串。|  
+|IdentificationString|String|用于标识输出列的字符串。|  
 |LineageID|Integer|输出列的 ID。 下游组件使用此值引用列。|  
-|LineageIdentificationString|字符串|标识字符串，包含列的名称。|  
-|名称|字符串|输出列的名称。|  
+|LineageIdentificationString|String|标识字符串，包含列的名称。|  
+|“属性”|String|输出列的名称。|  
 |SortKeyPosition|Integer|用于指示单个列是否已排序、其排序顺序以及多个列的排序顺序的值。 如何值为 **0** ，则表示未对该列进行排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |SpecialFlags|Integer|包含输出列的特殊标志的值。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。 默认值为 **Fail component**。|  
@@ -236,12 +238,12 @@ ms.lasthandoff: 11/20/2017
   
  下表描述了数据流中的组件的外部元数据列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|Description|字符串|对外部列的说明。|  
+|Description|String|对外部列的说明。|  
 |ID|Integer|用于唯一标识列的值。|  
-|IdentificationString|字符串|用于标识列的字符串。|  
-|名称|字符串|外部列的名称。|  
+|IdentificationString|String|用于标识列的字符串。|  
+|“属性”|String|外部列的名称。|  
   
  外部元数据列还包括一组数据类型属性。  
   
@@ -250,7 +252,7 @@ ms.lasthandoff: 11/20/2017
   
  下表描述了输出列和外部元数据列的数据类型属性。  
   
-|属性|数据类型|Description|  
+|“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|指定非 Unicode 字符串数据的代码页。|  
 |DataType|Integer（枚举）|列的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  

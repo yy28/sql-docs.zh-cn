@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cbf125c6e69af8faac15d0aa0fe5a11afe72e41
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e625abfc3e1defea478c62a024587b4fe126866
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|阶段的唯一标识符 (ID)。|  
 |execution_id|**bigint**|执行实例的唯一 ID。|  
-|package_name|**nvarchar(260)**|在执行过程中启动的第一个包的名称。|  
+|package_name|nvarchar(260)|在执行过程中启动的第一个包的名称。|  
 |task_name|**nvarchar(4000)**|数据流任务的名称。|  
 |subcomponent_name|**nvarchar(4000)**|数据流组件的名称。|  
 |phase|**nvarchar(128)**|执行阶段的名称。|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |end_time|**datetimeoffset(7)**|阶段结束的时间。|  
 |execution_path|**nvarchar(max)**|数据流任务的执行路径。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图显示数据流组件的每个执行阶段（如 Validate、Pre-Execute、Post-Execute、PrimeOutput 和 ProcessInput）对应的行。 每行显示特定执行阶段的开始时间和结束时间。  
   
 ## <a name="example"></a>示例  
@@ -60,14 +61,14 @@ group by package_name, task_name, subcomponent_name, execution_path
 order by package_name, task_name, subcomponent_name, execution_path  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  

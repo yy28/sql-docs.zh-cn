@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/12/2017
   
 -   [项目和包](../../integration-services/catalog/ssis-catalog.md#ProjectsAndPackages)  
   
--   [参数](../../integration-services/catalog/ssis-catalog.md#Parameters)  
+-   [Parameters](../../integration-services/catalog/ssis-catalog.md#Parameters)  
   
 -   [服务器环境、服务器变量和服务器环境引用](../../integration-services/catalog/ssis-catalog.md#ServerEnvironments)  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 12/12/2017
 |每个项目的最大版本数|MAX_PROJECT_VERSIONS|  
 |服务器范围的默认日志记录级别|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a>权限  
  文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署项目、创建和启动执行、验证项目和包以及配置 **SSISDB** 目录。  
   
  有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -379,7 +380,7 @@ ms.lasthandoff: 12/12/2017
   
 ###  <a name="options"></a> 配置选项  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
   
 |属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|Description|  

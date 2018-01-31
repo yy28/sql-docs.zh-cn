@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 198bea7d4f2b566d34185156477179359eaf82bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-task"></a>XML 任务
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/20/2017
 |**XMLOperation**|提供任务所执行的操作的相关信息|  
   
 ## <a name="configuration-of-the-xml-task"></a>XML 任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML 任务编辑器（“常规”页）
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/20/2017
  **OperationType**  
  从列表中选择操作类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**验证**|根据文档类型定义 (DTD) 或 XML 架构定义 (XSD) 架构验证 XML 文档。 选择此选项将在 **Validate**部分中显示动态选项。|  
 |**XSLT**|对 XML 文档执行 XSL 转换。 选择此选项将在 **XSLT**部分中显示动态选项。|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **SourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -199,7 +200,7 @@ ms.lasthandoff: 11/20/2017
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
  **ValidationType**  
  选择验证类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**DTD**|使用文档类型定义 (DTD)。|  
 |**XSD**|使用 XML 架构定义 (XSD) 架构。 选择此选项将在 **ValidationType**部分中显示动态选项。|  
@@ -224,7 +225,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -270,7 +271,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -308,7 +309,7 @@ ms.lasthandoff: 11/20/2017
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -316,7 +317,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -339,7 +340,7 @@ ms.lasthandoff: 11/20/2017
  **XPathOperation**  
  选择 XPath 结果类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Evaluation**|返回 XPath 函数的结果。|  
 |**Node list**|将所选节点返回为 XML 片段。|  
@@ -351,7 +352,7 @@ ms.lasthandoff: 11/20/2017
  **XPathStringSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -388,7 +389,7 @@ ms.lasthandoff: 11/20/2017
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -396,7 +397,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  选择第二个 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -419,7 +420,7 @@ ms.lasthandoff: 11/20/2017
  **DiffAlgorithm**  
  选择在比较文档时要使用的 Diff 算法。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Auto**|由 XML 任务确定是使用快速算法还是使用精确算法。|  
 |**Fast**|使用快速但精确度较低的 Diff 算法。|  
@@ -428,7 +429,7 @@ ms.lasthandoff: 11/20/2017
  **Diff 选项**  
  将 Diff 选项设置为应用于 Diff 运算。 下表中列出了这些选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|指定是否比较 XML 声明。|  
 |**IgnoreDTD**|指定是否忽略文档类型定义 (DTD)。|  
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -471,7 +472,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -509,7 +510,7 @@ ms.lasthandoff: 11/20/2017
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -517,7 +518,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  

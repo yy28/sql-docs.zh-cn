@@ -8,21 +8,23 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [使用维护计划设计图面创建维护计划](#SSMSProcedure)  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  若要创建或管理维护计划，您必须是 **sysadmin** 固定服务器角色的成员。 对象资源管理器只为属于 **sysadmin** 固定服务器角色成员的用户显示 **“维护计划”** 节点。  
   
 ##  <a name="SSMSProcedure"></a> 使用维护计划设计图面  
@@ -91,7 +93,7 @@ ms.lasthandoff: 11/17/2017
      **名称**  
      显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
   
-     **说明**  
+     **Description**  
      查看或指定维护计划的说明。 说明的最大长度为 512 个字符。  
   
      **设计器图面**  
@@ -106,7 +108,7 @@ ms.lasthandoff: 11/17/2017
      **“名称”**  
      子计划的名称。  
   
-     **说明**  
+     **Description**  
      子计划的简短说明。  
   
      **计划**  
@@ -149,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  选择想要显示在 **“工具箱”**中的工具，然后单击 **“确定”**。  
   
-     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”**中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的 [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
+     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”**中。 有关上述各个任务的详细信息，请参阅 [“启动维护计划向导”](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 下的 **使用维护计划向导**。  
   
 8.  定义各任务之间的工作流：  
   
@@ -220,7 +222,7 @@ ms.lasthandoff: 11/17/2017
   
         1.  如果您选择了 **“生成文本文件报告”**，则选择 **“创建新文件”** 或 **“追加到文件”**。  
   
-        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号 **(…)** 并从“定位文件夹 - server_name”  或“定位数据库文件 - server_name”  对话框中选择该文件夹的路径或文件名。  
+        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号（“…”）并从“定位文件夹 - server_name”或“定位数据库文件 - server_name” 对话框中选择该文件夹的路径或文件名。  
   
         3.  如果您选择 **“将报告发送给电子邮件收件人”**，则在 **“代理操作员”** 列表上，选择以电子邮件形式发送的报告的收件人。  
   
@@ -235,7 +237,7 @@ ms.lasthandoff: 11/17/2017
   
 12. 若要在日志文件查看器中查看结果，请在“对象资源管理器” 中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录” 。  
   
-     在  “日志文件查看器 - server_name”对话框中提供以下选项。  
+     “日志文件查看器 - server_name”对话框中提供以下选项。  
   
      **加载日志**  
      打开一个对话框，您可以在其中指定要加载的日志文件。  
@@ -243,7 +245,7 @@ ms.lasthandoff: 11/17/2017
      **导出**  
      打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
   
-     **刷新**  
+     **“刷新”**  
      刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
   
      **筛选**  
@@ -258,7 +260,7 @@ ms.lasthandoff: 11/17/2017
      **日志文件摘要**  
      此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”**。 如果对日志应用了筛选器，你将看到以下文本：**“基于以下条件筛选日志条目:**  \<筛选条件>”。  
   
-     **日期**  
+     **Date**  
      显示事件的日期。  
   
      **数据源**  

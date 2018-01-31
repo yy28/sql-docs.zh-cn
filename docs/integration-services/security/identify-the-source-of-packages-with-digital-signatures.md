@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.digitalsigning.f1
+f1_keywords:
+- sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
   可以使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行签名以标识其来源。 使用数字证书对包进行签名后，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在加载包之前先检查数字签名。 若要让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能够检查签名，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 实用工具 (dtexec.exe) 中设置一个选项，或设置一个可选的注册表值。  
@@ -63,10 +65,10 @@ ms.lasthandoff: 11/20/2017
   
  下表列出了 DWORD 数据的有效值及其相关策略。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|无管理限制。|  
-|1|阻止无效签名。<br /><br /> 该设置不阻止未签名的包。|  
+|@shouldalert|阻止无效签名。<br /><br /> 该设置不阻止未签名的包。|  
 |2|阻止无效签名和不可信签名。<br /><br /> 该设置不阻止未签名的包，但会阻止自我生成的签名。|  
 |3|阻止无效签名、不可信签名以及未签名的包<br /><br /> 该设置也阻止自我生成的签名。|  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 在 **“文件”** 菜单中，单击 **“退出”**。    
 
@@ -143,7 +145,7 @@ ms.lasthandoff: 11/20/2017
   
  有关详细信息，请参阅 [使用数字证书对包签名](#cert)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **签名**  
  单击此项将打开“选择证书”对话框，在其中可选择要使用的证书。  
   

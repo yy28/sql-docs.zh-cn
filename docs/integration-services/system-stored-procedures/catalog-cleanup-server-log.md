@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf0f550930ac73199276dc403763f49ce45b5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +44,14 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 EXECUTE 权限，以及针对引用环境的 READ 权限（如果适用）。  
   
 -   ssis_admin 数据库角色的成员资格。  
   
--   sysadmin 服务器角色的成员资格。  
+-   **sysadmin** 服务器角色的成员资格。  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  在以下情况中，此存储过程引发错误：  
@@ -59,7 +60,7 @@ catalog.cleanup_server_log
   
 -   SSISDB 数据库未处于单用户模式下。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表。 该属性有两个可能值：  
   
 -   PER_EXECUTION (1) - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
@@ -76,7 +77,7 @@ catalog.cleanup_server_log
   
 4.  现在，继续在 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)表中更改 SERVER_OPERATION_ENCRYPTION_LEVEL 属性的值。  
   
-5.  运行存储过程 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md)，清除 SSISDB 数据库中的证书密钥。 从 SSISDB 数据库中删除证书和密钥可能需要很长时间，因此应在非峰值时间定期运行。  
+5.  运行存储过程 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 以从 SSISDB 数据库清理证书密钥。 从 SSISDB 数据库中删除证书和密钥可能需要很长时间，因此应在非峰值时间定期运行。  
   
      可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当删除关联的项目时才会删除密钥和证书。  
   

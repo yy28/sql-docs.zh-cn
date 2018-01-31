@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 644103554b39fde12a2abb150af18799700f7b79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fcb3ffcdd35f2b526f1e84ce36c206919e8eb74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 > [!NOTE]  
 >  以纯文本形式显示文本值。 将显示 NULL 来替代敏感值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  
@@ -84,7 +85,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 -   在指定的文件夹或项目中找不到该包  
   
--   用户不具备适当的权限  
+-   用户没有相应的权限  
   
 -   指定的环境引用不存在  
   

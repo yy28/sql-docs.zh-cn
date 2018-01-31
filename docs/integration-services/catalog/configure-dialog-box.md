@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc0130006a3e8d588776fbe48e5e05572704449
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 77e862cd82fb7eb8afc294871bfcff50e9b49dd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-dialog-box"></a>配置对话框
   使用 **“配置”** 对话框可为包和项目配置参数、连接管理器和对环境的引用。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/12/2017
  **属性名称**  
  列出连接管理器属性的名称。  
   
- **“值”**  
+ **ReplTest1**  
  列出分配给连接管理器属性的值。 单击省略号按钮可更改 **“设置参数值”** 对话框中的值。 您可以输入一个文字值、映射包含您要使用的值的环境变量，或使用包中的默认值。  
   
 ##  <a name="references"></a> 设置“引用”页上的选项  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/12/2017
  **打开**  
  单击可打开“环境属性”对话框。  
   
- **添加**  
+ **“添加”**  
  单击可添加对环境的引用。 在 **“浏览环境”** 对话框中，单击一个环境，然后单击 **“确定”**。  
   
  您可以选择 **“SSISDB”** 节点下的任何项目文件夹中包含的环境。  

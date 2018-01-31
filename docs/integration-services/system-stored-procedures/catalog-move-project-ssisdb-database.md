@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c59650d75d9abc212bedbb8a147592760049674
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 数据库
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +41,8 @@ catalog.move_project [ @source_folder = ] source_folder
  [ @source_folder = ] *source_folder*  
  此项目在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)**。  
   
- [ @project_name = ] *project_name*  
- 要移动的项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [ @project_name = ] project_name  
+ 要移动的项目的名称。 project_name 为 nvarchar(128)。  
   
  [ @destination_folder = ] *destination_folder*  
  此项目在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)**。  
@@ -50,16 +51,16 @@ catalog.move_project [ @source_folder = ] source_folder
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对您想移动的项目的 READ 和 MODIFY 权限，以及针对目标文件夹的 CREATE_OBJECTS 权限  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能导致此存储过程引发错误的情况：  
@@ -70,9 +71,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   目标文件夹不存在，或目标文件夹已包含具有同名的项目  
   
--   用户不具备适当的权限  
+-   用户没有相应的权限  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当将项目从源文件夹移到目标文件夹时，将删除源文件夹中的项目和对应的环境引用。 在目标文件夹中，将创建相同的项目和环境引用。 在移动之后，相对环境引用将解析为不同的文件夹。 移动后，绝对引用将解析为同一文件夹。  
   
 > [!NOTE]  

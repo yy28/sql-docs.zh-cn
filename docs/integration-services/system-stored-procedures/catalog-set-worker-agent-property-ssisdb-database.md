@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1438d3a2cf200450791c085f501c49329d61154d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 89e5893e418de7bdd7041b5ec8e8193479205659
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>参数
 [@WorkerAgentId =] *WorkerAgentId*  
-Scale Out Worker 的 Worker 代理 ID。 *WorkerAgentId* 为 **uniqueidentifier**。
+Scale Out Worker 的 Worker 代理 ID。 WorkerAgentId 为 uniqueidentifier。
 
 [@PropertyName =] *PropertyName*  
 属性的名称。 *PropertyName* 为 **nvarchar(256)**。
@@ -44,26 +45,26 @@ Scale Out Worker 的 Worker 代理 ID。 *WorkerAgentId* 为 **uniqueidentifier*
 [@PropertyValue =] *PropertyValue*  
 属性的值。 *PropertyValue* 为 **nvarchar(max)**。
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 有效的属性名称为 **DisplayName**、**Description**、**Tags**。
 
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格
+-   sysadmin 服务器角色的成员资格
 
 ## <a name="errors-and-warnings"></a>错误和警告
   下面的列表描述了一些可能引发错误或警告的情况：  
   
--   用户不具备适当的权限 
+-   用户没有相应的权限 
 
 -   Worker 代理 ID 无效。
 

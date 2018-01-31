@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
   
  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
-### <a name="columns"></a>列  
+### <a name="columns"></a>“列”  
  输入、输出和错误输出是列的集合。 每一列都可配置，并取决于列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”对话框。  
   
 ## <a name="paths"></a>路径  
@@ -211,11 +212,11 @@ ms.lasthandoff: 11/20/2017
   
 -   在列级，除了组件为列提供的任何自定义属性之外，还可以设置所有列共有的属性。 如果组件支持添加输出列，则可向输出添加列。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，您可以使用为每个元素类型提供的自定义对话框，或者使用“属性”窗口或 **“高级编辑器”** 对话框来设置元素属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，您可以使用为每个元素类型提供的自定义对话框，或者使用“属性”窗口或 **“高级编辑器”** 对话框来设置元素属性。  
   
  有关如何使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在数据流中添加或删除组件](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [连接数据流中的组件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e67ff8d521b46f0f22462b244b6b4aff41c1a6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/20/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|bigint|事件消息的唯一 ID。|  
-|Operation_id|bigint|操作的类型。<br /><br /> 有关操作类型的列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
+|Event_message_ID|BIGINT|事件消息的唯一 ID。|  
+|Operation_id|BIGINT|操作的类型。<br /><br /> 有关操作类型的列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
 |Message_time|datetimeoffset(7)|创建消息的时间。|  
-|Message_type|smallint|所显示的消息的类型。 有关消息类型的详细信息，请参阅 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
-|Message_source_type|smallint|消息的源。|  
+|Message_type|SMALLINT|所显示的消息的类型。 有关消息类型的详细信息，请参阅 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)。|  
+|Message_source_type|SMALLINT|消息的源。|  
 |message|nvarchar(max)|消息的文本。|  
-|Extended_info_id|bigint|与在 [catalog.extended_operation_info（SSISDB 数据库）](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)视图中找到的操作消息相关的附加信息的 ID。|  
+|Extended_info_id|BIGINT|与在 [catalog.extended_operation_info（SSISDB 数据库）](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)视图中找到的操作消息相关的附加信息的 ID。|  
 |Package_name|nvarchar(260)|包文件的名称。|  
 |Event_name|nvarchar(1024)|与消息关联的运行时事件。|  
 |Message_source_name|nvarchar(4000)|作为消息源的包组件。|  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/20/2017
 |Subcomponent_name|nvarchar(4000)|作为消息源的数据流组件。<br /><br /> 当 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 引擎返回消息时，SSIS.Pipeline 将出现在该列中。|  
 |Package_path|nvarchar(max)|包内组件的唯一路径。|  
 |Execution_path|nvarchar(max)|从父包到执行该组件的点的完整路径。<br /><br /> 此路径还捕获组件的迭代。|  
-|threadID|int|将消息记入日志时正在执行的线程的 ID。|  
-|Message_code|int|与此消息关联的代码。|  
+|threadID|ssNoversion|将消息记入日志时正在执行的线程的 ID。|  
+|Message_code|ssNoversion|与此消息关联的代码。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图显示下列消息源类型。  
   
 |**message_source_type**|Description|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |50|控制流容器|  
 |60|数据流任务|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  
