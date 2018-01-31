@@ -29,13 +29,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 316fa73c7acd3e66a21ae285217c8ec917c7afbc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在比较字符串时所用的方式不同。 如果查找转换配置为在查找转换运行之前将引用数据集加载到缓存中，则 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 将在缓存中执行查找比较。 否则，查找操作将使用参数化 SQL 语句并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将执行查找比较。 这意味着，根据缓存类型的不同，查找转换可能会从同一查找表中返回不同数量的匹配项。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关详细信息，请参阅以下主题：  
   
 -   [在不缓存模式或部分缓存模式下实现查找](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
@@ -137,9 +137,9 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的视频 [如何在完全缓存模式下实现查找转换](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
+-   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
   
--   blogs.msdn.com 上的博客项 [使用查找转换缓存模式的最佳实践](http://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
+-   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
 -   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
   可以使用“查找转换编辑器”对话框的 **“常规”** 页，选择缓存模式，选择连接类型以及指定如何处理没有匹配项的行。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **完全缓存**  
  在执行查找转换前，生成引用数据集并将其加载到缓存中。  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/20/2017
  **缓存连接管理器**  
  将查找转换功能配置为使用缓存连接管理器。 只有当选择了“完全缓存”选项时，此选项才可用。  
   
- **OLE DB 连接管理器**  
+ **“无缓存”**  
  将查找转换功能配置为使用 OLE DB 连接管理器。  
   
  **指定如何处理无匹配项的行**  
@@ -179,7 +179,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 和 **“缓存连接管理器”** 时，下列选项可用：  
   
  **“完全缓存”**  
@@ -211,7 +211,7 @@ ms.lasthandoff: 11/20/2017
  **生成查询**  
  通过使用“查询生成器”可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
   
- **浏览**  
+ **“浏览”**  
  使用此选项可以找到保存为文件的预先存在的查询。  
   
  **分析查询**  
@@ -226,7 +226,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-columns-page"></a>查找转换编辑器（“列”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“列”** 页，指定源表与引用表之间的联接以及从引用表中选择查找列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 输入列是所连接源的数据流中的列。 输入列和查找列必须具有相互匹配的数据类型。  
   
@@ -255,7 +255,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-advanced-page"></a>查找转换编辑器（“高级”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“高级”** 页，配置部分缓存以及修改查找转换的 SQL 语句。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **缓存大小(32 位)**  
  调整 32 位计算机的缓存大小 (MB)。 默认值为 5 MB。  
   

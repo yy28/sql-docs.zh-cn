@@ -8,28 +8,30 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016)
+applies_to:
+- SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea00f80ddaa43ee5bcd5d26ddcc515d2f6e849a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持自定义组件中的多目标
  现在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 若要获取用于 Visual Studio 2015 的 SSDT，请参阅[下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
 
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
- ![项目属性对话框中的 TargetServerVersion 属性](../../integration-services/media/targetserverversion2.png "项目属性对话框中的 TargetServerVersion 属性")  
+ ![项目属性对话框中的 TargetServerVersion 属性](../../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
  ## <a name="multiple-version-support-and-multi-targeting-for-custom-components"></a>自定义组件的多版本支持和多目标
  

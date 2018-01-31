@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f7caddb59fc68399b274a71db5ee740d0f21c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b591be99afa39117d61454b0cad2a2124d88ee2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目标自定义属性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标具有自定义属性和所有数据流组件共有的属性。  
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/20/2017
 |BulkInsertKeepNulls|Boolean|一个值，指定大容量插入是否可以保持 Null 值。 此属性的默认值为 **False**。|  
 |BulkInsertLastRow|Integer|一个值，指定要插入的最后一行。 此属性的默认值为 **-1**，表示尚未分配值。|  
 |BulkInsertMaxErrors|Integer|一个值，指定在大容量插入任务停止之前可以发生的错误数。 此属性的默认值为 **–1**，表示尚未分配值。|  
-|BulkInsertOrder|字符串|排序列的名称。 每一列都可以按升序或降序排序。 如果使用了多个排序列，则使用逗号分隔列名称。|  
-|BulkInsertTableName|字符串|向其中复制数据的数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图。|  
+|BulkInsertOrder|String|排序列的名称。 每一列都可以按升序或降序排序。 如果使用了多个排序列，则使用逗号分隔列名称。|  
+|BulkInsertTableName|String|向其中复制数据的数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图。|  
 |BulkInsertTablock|Boolean|一个值，指定大容量插入期间是否锁定表。 此属性的默认值为 **True**。|  
 |DefaultCodePage|Integer|当数据源中的代码页信息不可用时要使用的代码页。|  
 |MaxInsertCommitSize|Integer|一个值，指定一批可以插入的最大行数。 当值为零时，可一批插入所有的行。|  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/20/2017
  有关详细信息，请参阅 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>ADO NET 源
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  ADO NET 源有一个常规输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -141,7 +142,7 @@ ms.lasthandoff: 11/20/2017
  **生成查询**  
  使用“查询生成器”对话框可直观地构造 SQL 查询。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
 ## <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“ADO NET 源编辑器”**中，单击 **“列”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“ADO NET 源编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   

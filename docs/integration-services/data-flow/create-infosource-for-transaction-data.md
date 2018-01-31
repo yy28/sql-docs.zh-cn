@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cfb0db72c6fca86efb2e7fcdb24d602caea90eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>创建事务数据的 InfoSource
   使用 **“创建事务数据的 InfoSource”** 对话框为 SAP Netweaver BW 系统中的事务数据创建一个新的 InfoSource。  
@@ -81,13 +82,13 @@ ms.lasthandoff: 11/20/2017
  **Iobject - 删除**  
  删除 InfoObject 与当前行的数据流列之间的关联。 若要删除此关联，请单击 **“删除”**。  
   
- **“InfoObject”**  
+ **InfoObject**  
  显示与数据流列相关联的 InfoObject 的名称。  
   
  **“类型”**  
  显示与数据流列相关联的 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |CHA|特征|  
 |UNI|单位|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -164,13 +165,13 @@ ms.lasthandoff: 11/20/2017
   
     -   单击要添加到包中的连接管理器类型。  
   
-         - 或 -  
+         — 或 —  
   
     -   如果没有列出您要添加的类型，请单击 **“新建连接”** 打开 **“添加 SSIS 连接管理器”** 对话框，选择某种连接管理器类型，然后单击 **“确定”**。  
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 目标编辑器”|选项|  
+    |“ODBC 源编辑器”|“常规”|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -206,7 +207,7 @@ ms.lasthandoff: 11/20/2017
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 目标编辑器”|选项|  
+    |“ODBC 源编辑器”|“常规”|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -238,11 +239,11 @@ ms.lasthandoff: 11/20/2017
   
  若要了解有关连接管理器的详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **连接管理器类型**  
  选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。  
   
- **添加**  
+ **“添加”**  
  使用与各连接类型相应的编辑器指定连接属性。  
    
 ##  <a name="parameter"></a> 创建连接管理器属性的参数  
@@ -301,7 +302,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在 **“属性”** 窗口中，编辑属性值。 **“属性”** 窗口提供对在连接管理器的标准编辑器中无法配置的一些属性的访问。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -315,7 +316,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
   
-    |“连接管理器”|选项|  
+    |“连接管理器”|“常规”|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3436f0d0c95cdaa73da166db75bd05033bf3baa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2236fea4b5454f79427019e2d90633e98e77e89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="modulo-ssis-expression"></a>（取模）（SSIS 表达式）
   将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。  
@@ -48,7 +49,7 @@ dividend % divisor
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  两个表达式的计算结果必须为有符号或无符号整数数据类型。  
   
  如果任意一个操作数为 Null，则结果为 Null。  

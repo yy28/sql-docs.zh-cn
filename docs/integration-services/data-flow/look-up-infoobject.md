@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f5a7d1211c5b3451b353a579551931e5e3cf538
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9dfd4fa6aecb1769a5e7ed2838cc1fb0b39f04f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
   使用 **“查找 InfoObject”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoObject。 当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后 SAP BW 目标将使用需要的值填充关联的选项。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **Description**  
  输入说明，或输入部分说明加上星号通配符 (*)。 或者，仅使用星号通配符以包括所有 InfoObject（而无论说明是什么）。  
   
- **“查找”**  
+ **查找**  
  查找在 SAP Netweaver BW 系统中定义的匹配 InfoObject。  
   
 ## <a name="lookup-results"></a>查找结果  

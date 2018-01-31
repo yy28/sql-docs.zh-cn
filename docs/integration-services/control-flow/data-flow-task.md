@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataflowtask.f1
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
 - data flow task [Integration Services]
 - performance [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3021aa51460aee1d74acdaa383aeca6ca4edd534
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
@@ -93,12 +95,12 @@ ms.lasthandoff: 11/20/2017
   
  例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  : 1185 : OLE DB 源输出 : 1180 : 排序 : 1181 : 对输入进行排序 : 76”，并解析为列。 该消息由 **OnPipelineRowsSent** 事件在将行从 OLE DB 源发送到排序转换时写入。  
   
-|列|Description|“值”|  
+|“列”|Description|ReplTest1|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 源和排序转换之间的路径中的 **ID** 属性值。|1185|  
 |**PathName**|路径的 **Name** 属性值。|OLE DB 源输出|  
 |**ComponentID**|排序转换的 **ID** 属性值。|1180|  
-|**ComponentName**|排序转换的 **Name** 属性值。|Sort|  
+|**ComponentName**|排序转换的 **Name** 属性值。|排序|  
 |**InputID**|排序转换的输入的 **ID** 属性值。|1181|  
 |**InputName**|排序转换的输入的 **Name** 属性值。|对输入进行排序|  
 |**RowsSent**|向排序转换的输入发送的行数。|76|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [以编程方式添加数据流任务](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>相关内容  

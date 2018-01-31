@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hdfsfilesrc.f1
+f1_keywords:
+- sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51169029f95c084907d614fae60ea6b78acb502
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e2b6ce8222cb4eb1b99d2dc721dacc5f1aa3cfee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hdfs-file-source"></a>HDFS 文件源
   “HDFS 文件源”组件允许 SSIS 包从 HDFS 文件中读取数据。 支持的文件格式有文本和 Avro。 （不支持 ORC 源。）  
@@ -31,12 +33,12 @@ ms.lasthandoff: 11/20/2017
   
  ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  在“Hadoop 文件源编辑器”  对话框的“常规”  选项卡上配置以下选项。  
   
 |字段|Description|  
 |-----------|-----------------|  
-|**Hadoop 连接**|指定一个现有的 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明 HDFS 文件的托管位置。|  
+|**Hadoop 连接**|指定现有的一个 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明 HDFS 文件的托管位置。|  
 |**文件路径**|指定 HDFS 文件的文件名。|  
 |**文件格式**|指定 HDFS 文件的格式。 可用选项为文本和 Avro。 （不支持 ORC 源。）|  
 |**列分隔符字符**|如果你选择文本格式，请指定列分隔符字符。|  

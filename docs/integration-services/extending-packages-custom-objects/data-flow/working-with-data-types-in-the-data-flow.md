@@ -11,22 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom data flow components [Integration Services], mapping data types
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a448bea8dcefd44e625ad910b4d4099b5a3bbb59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 68e220ca88721580a2a96ae7b8f340c36ce2b53f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>在数据流中使用数据类型
   在 Integration Services 中开发自定义数据流组件时，将数据复制到数据流缓冲区和从数据流缓冲区复制数据以及转换值的过程中，需要经常使用数据类型。 本主题中的信息有助于您选择正确的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，以及在使用这些数据类型时选择正确的方法。  

@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
 - sql13.dts.designer.executeprocesstask.general.f1
 - sql13.dts.designer.executeprocesstask.process.f1
-helpviewer_keywords: Execute Process task [Integration Services]
+helpviewer_keywords:
+- Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8beda5fb308ad93d4582bdcf947c1a1a8a9f2f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76ea783edab9673a720d5b95883caffff9d9a4d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |**ExecuteProcessVariableRouting**|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
   
 ## <a name="configuration-of-the-execute-process-task"></a>执行进程任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 主题。  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
   可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为执行进程任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
   可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **RequireFullFileName**  
  指示在指定位置未找到可执行文件时该任务是否应失败。  
   

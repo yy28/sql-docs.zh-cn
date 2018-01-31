@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.advanced.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.advanced.f1
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f668984bd924267d1d7cb98f1fb2db4c021018d5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 18328bf954095ebe86f9f3ae6c38d32910ffb468
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
   使用“SAP BW 源编辑器”的“高级”页指定字符串转换规则和超时时间，还可重置特定请求 ID 的状态。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“SAP BW 源编辑器”**中单击 **“高级”** ，以打开编辑器的 **“高级”** 页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 > [!NOTE]  
 >  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  

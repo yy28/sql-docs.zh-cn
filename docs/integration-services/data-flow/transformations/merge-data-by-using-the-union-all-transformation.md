@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21fe86b697f0790488abc0b7f8b730dbc831f881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e171fc263daa72d8cea4c9e21b05c1ad452817e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>通过使用 Union All 转换来合并数据
   若要添加和配置 Union All 转换，包必须至少已包含一个数据流任务和两个数据源。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  对每个输入中的每一列重复第 5 和第 6 步。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15614fbc56266471ea3e6ee79d07cc965b79eb94
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="error-handling"></a>错误处理  
   
 ## <a name="configuration-of-the-analysis-services-processing-task"></a>配置 Analysis Services 处理任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 处理任务编辑器（“常规”页）
   可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为 Analysis Services 处理任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  对表格模型忽略批处理设置。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **Analysis Services 连接管理器**  
  从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
   
@@ -121,14 +122,14 @@ ms.lasthandoff: 11/20/2017
  **相关主题：**[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
- |属性|Description|  
+ |“属性”|Description|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
 |**类型**|列出指定对象的类型。|  
 |**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**设置**|列出指定对象的处理设置。|  
   
- **添加**  
+ **“添加”**  
  将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象添加到列表中。  
   
  **删除**  
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/20/2017
  **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批设置摘要**  
- |属性|Description|  
+ |“属性”|Description|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  

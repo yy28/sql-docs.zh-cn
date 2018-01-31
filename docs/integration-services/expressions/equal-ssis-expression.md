@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 433cdc535f961e09a7920e5dc8c64a06c0f40d7d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d936922ff3b2978ca446d061ca8ddf3e1c4cbf30
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
   执行比较来确定两个表达式是否相等。 在执行比较前表达式计算器会自动转换多种数据类型。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
@@ -46,7 +47,7 @@ expression1 == expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  
@@ -109,7 +110,7 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [\!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   

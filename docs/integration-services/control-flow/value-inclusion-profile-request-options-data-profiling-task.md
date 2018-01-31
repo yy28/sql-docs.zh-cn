@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“值包含配置文件请求”** 设置选项。 值包含配置文件计算两列或列集之间的值的重叠 因此，它可以确定一个列或列集是否适于用作两个选定表之间的外健。 此配置文件还有助于标识数据中的问题，如值无效。 例如，使用值包含配置文件对 Sales 表中的 ProductID 列进行事件探查。 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  如果使用通配符 **(\*)** 作为 **ColumnName**，则 **CompareOptions** 将变为只读并设置为 **Default** 设置。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Default**|根据源表中列的排序规则对数据进行排序和比较。|  
 |**BinarySort**|根据为每个字符所定义的位模式对数据进行排序和比较。 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，"å" 与 "a" 相同。|  
@@ -126,13 +128,13 @@ ms.lasthandoff: 11/20/2017
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **None**  
  选择阈值设置来优化配置文件的输出。 此属性的默认值为 **Specified**。 有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|不指定阈值。 不管键强度值如何，都会报告键强度。|  
+|**无**|不指定阈值。 不管键强度值如何，都会报告键强度。|  
 |**Specified**|使用 **InclusionStrengthThreshold**中指定的阈值。 只有在包含强度大于阈值时才报告该包含强度。|  
 |**Exact**|不指定阈值。 只有在子集值完全包含在超集值中时才报告包含强度。|  
   
@@ -144,9 +146,9 @@ ms.lasthandoff: 11/20/2017
  **None**  
  指定超集阈值。 此属性的默认值为 **Specified**。 有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|不指定阈值。 报告包含强度时不考虑超集列的键强度。|  
+|**无**|不指定阈值。 报告包含强度时不考虑超集列的键强度。|  
 |**Specified**|使用 **SupersetColumnsKeyThreshold**中指定的阈值。 只有在超集列的键强度大于阈值时才报告包含强度。|  
 |**Exact**|不指定阈值。 只有在超集列为超集表中的确切键时才报告包含强度。|  
   

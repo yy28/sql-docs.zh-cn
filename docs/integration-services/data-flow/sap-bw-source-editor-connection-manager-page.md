@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eba966d7321d44088c197d0f5a8829ff591a9bdd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
@@ -95,7 +97,7 @@ ms.lasthandoff: 11/20/2017
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **“查找”**  
+ **查找**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 #### <a name="process-chain-options"></a>进程链选项  
@@ -104,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **进程链**  
  输入由源触发的进程链的名称。  
   
- **“查找”**  
+ **查找**  
  使用“查找进程链”对话框查找进程链。 有关此对话框的详细信息，请参阅 [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)。  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>执行模式 = W - 等待通知  
@@ -121,7 +123,7 @@ ms.lasthandoff: 11/20/2017
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **“查找”**  
+ **查找**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 ### <a name="execution-mode--e---extract-only"></a>执行模式 = E - 仅提取  

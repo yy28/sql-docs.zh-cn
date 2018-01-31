@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.chooseadatasource.f1
+f1_keywords:
+- sql13.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 90577058fc3501239ac1c3ad72c96e9df2bc5f04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fe6c34e33f62bf5205763b2f2cf22f868ff418e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
   在欢迎页之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“选择数据源” 。 在此页上，需提供有关数据源以及如何连接到它的信息。
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 
 -   如果有用于数据源的 ODBC 驱动程序，则选择用于 ODBC 的 .NET Framework 数据提供程序。 然后输入特定于驱动程序的信息。 ODBC 驱动程序不在数据源的下拉列表中列出。 用于 ODBC 的 .Net Framework 数据提供程序充当 ODBC 驱动程序的包装器。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
--   **可用于数据源的访问接口可能不止一个。** 通常可以选择任何可用于源的提供程序。 例如，可以通过用于 SQL Server 的 .NET Framework 数据提供程序或 SQL Server ODBC 驱动程序连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 （其他提供程序仍在列表中，但不再受支持。） 
+-   **可用于数据源的访问接口可能不止一个。** 通常可以选择任何可用于源的提供程序。 例如，若要连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以使用用于 SQL Server 的 .NET Framework 数据提供程序或 SQL Server ODBC 驱动程序。 （其他提供程序仍在列表中，但不再受支持。） 
 
 ## <a name="my-data-source-isnt-in-the-list"></a>我的数据源不在列表中
 -   你可能需要从 Microsoft 或第三方下载数据提供程序。 “数据源”列表中可用数据提供程序的列表只包括计算机上安装的提供程序。 有关可以使用的数据源的信息，请参阅 [我可以使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)

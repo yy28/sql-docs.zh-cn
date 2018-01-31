@@ -8,25 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b361124960eb0ed7ef7482277ccf35df44443cb6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc3f94a24a0fec6c1672d810e6a5438a5344d385
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比较脚本任务和脚本组件
   脚本任务在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器的“控制流”窗口中，脚本组件在“数据流”窗口中，它们在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的用途非常不同。 任务是一般用途的控制流工具，而组件用作数据流中的源、转换或目标。 尽管它们的用途不同，但是脚本任务和脚本组件在所使用的编码工具和在包中供开发人员使用的对象方面还是有一些相似之处的。 了解它们的相似与不同之处有助于您更有效地使用任务和组件。  

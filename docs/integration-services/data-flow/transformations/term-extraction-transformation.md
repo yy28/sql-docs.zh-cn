@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“字词提取”** 选项卡，指定包含要提取的文本的文本列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  通过使用复选框，选择要用于字词提取的单个文本列。  
   
@@ -202,12 +203,12 @@ ms.lasthandoff: 11/20/2017
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  
- 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[“配置错误输出” ](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>字词提取转换编辑器（“排除”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“排除”** 选项卡，建立与排除表的连接并指定包含排除字词的列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **使用排除字词**  
  指示在字词提取过程中是否通过指定包含排除字词的列来排除特定的字词。 如果选择要排除字词，则必须指定以下源属性：  
   
@@ -224,12 +225,12 @@ ms.lasthandoff: 11/20/2017
  在表或视图中选择包含排除字词的列。  
   
  **配置错误输出**  
- 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[“配置错误输出” ](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名词**  
  指定转换仅提取各个名词。  
   
@@ -255,7 +256,7 @@ ms.lasthandoff: 11/20/2017
  指定是否将提取设置为区分大小写。 默认值为 **False**。  
   
  **配置错误输出**  
- 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用[“配置错误输出” ](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   

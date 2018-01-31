@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82e50a6cb72d5b26810493f656eff82f3b7cdccc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96311a68d7d003889f88ed91987f1d9a2775c72f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -200,7 +201,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [CDC 拆分器](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [根据更改的类型定向 CDC 流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   

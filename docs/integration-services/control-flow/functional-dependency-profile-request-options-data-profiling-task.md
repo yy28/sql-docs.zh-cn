@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0958bc22c6ed4a6790145a430fefbe68312cd634
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f9307c5f2dfb263453c2d61c024092955d05974b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“函数依赖关系配置文件请求”** 设置选项。 函数依赖关系配置文件报告一个列（依赖列）中的值对另一个列或另一个列集（决定列）中的值的依赖程度。 此配置文件还有助于标识数据中的问题，如值无效。 例如，您对邮政编码列与美国的州列之间的依赖关系进行事件探查， 在此配置文件中，同一邮政编码应始终对应相同的州，但配置文件发现依赖关系冲突。  
@@ -89,7 +91,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  如果使用通配符 **(\*)** 作为 **ColumnName**，则 **CompareOptions** 将变为只读并设置为 **Default** 设置。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Default**|根据源表中列的排序规则对数据进行排序和比较。|  
 |**BinarySort**|根据为每个字符所定义的位模式对数据进行排序和比较。 二进制排序顺序既区分大小写，也区分重音。 二进制排序顺序的速度也最快。|  
@@ -97,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
  如果选择 **DictionarySort**，还可以选择下表中列出的任意选项组合。 默认情况下，不会选择这些附加选项中的任何一个。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比较是否区分大小写字母。 如果设置了此选项，字符串比较会忽略大小写。 例如，"ABC" 和 "abc" 没有区别。|  
 |**IgnoreNonSpace**|指定比较是否区分空格字符和标注字符。 如果设置了此选项，则比较会忽略标注字符。 例如，"å" 与 "a" 相同。|  
@@ -108,13 +110,13 @@ ms.lasthandoff: 11/20/2017
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **ThresholdSetting**  
  指定阈值设置。 此属性的默认值为 **Specified**。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
+|**无**|不指定阈值。 不管函数依赖关系强度值如何，都会报告函数依赖关系强度。|  
 |**Specified**|使用 **FDStrengthThreshold**中指定的阈值。 仅当函数依赖关系强度大于阈值时，才会报告函数依赖关系强度。|  
 |**Exact**|不指定阈值。 仅当选定列之间具有完全匹配的函数依赖关系时，才会报告函数依赖关系强度。|  
   

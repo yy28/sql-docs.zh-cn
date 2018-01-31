@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>保存 SSIS 包（SQL Server 导入和导出向导）
   如果在“保存和运行包”页上指定要将设置保存为 SQL Server Integration Services (SSIS) 包，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导显示“保存 SSIS 包”。 在此页上，将指定用于保存由向导创建的包的附加选项。  
@@ -60,13 +62,13 @@ ms.lasthandoff: 11/20/2017
  **服务器名称**  
  键入或选择目标服务器名称。  
    
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
 使用 Windows 集成身份验证连接到服务器。 这是首选的身份验证方法。  
   
  **使用 SQL Server 身份验证**  
 使用 SQL Server 身份验证连接到服务器。  
   
- **用户名**  
+ **User name**  
 如果指定了 SQL Server 身份验证，输入用户名。  
   
  **密码**  
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 >   
 >  请记住包文件的保存位置。  
   
- **浏览**  
+ **“浏览”**  
  （可选）浏览以选择“保存包”对话框中的目标文件的路径。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>关于包保存选项的两个页面  

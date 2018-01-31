@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe2df40e58f7a4164655d4b7970797c697fcff37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
   数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 和 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)。  
@@ -45,11 +46,11 @@ ms.lasthandoff: 11/20/2017
   
  数据挖掘模型定型目标使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到包含挖掘结构以及目标为其定型的挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [数据挖掘模型定型目标自定义属性](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-mining-model-training-editor-connection-tab"></a>数据挖掘模型定型编辑器（“连接”选项卡）
   可以使用 **“数据挖掘模型定型编辑器”** 对话框的 **“连接”** 页选择要定型的挖掘模型。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **“ODBC 目标编辑器”**  
  从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”按钮创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-mining-model-training-editor-columns-tab"></a>数据挖掘模型定型编辑器（“列”选项卡）
   可以使用 **“数据挖掘模型定型编辑器”** 对话框的 **“列”** 页，将输入列映射到挖掘结构中的列。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 拖动输入列可将其映射到挖掘结构列。  
   

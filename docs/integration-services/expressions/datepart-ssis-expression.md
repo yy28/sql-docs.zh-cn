@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bbed2fceaad6052f95b568e13cb894420c1c43dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 728ffb5edba54705bad3863bb442c2e22abfc1f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART（SSIS 表达式）
   返回一个表示日期的日期部分的整数。  
@@ -46,7 +47,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果此参数为空，则 DATEPART 返回的结果为空。  
   
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  

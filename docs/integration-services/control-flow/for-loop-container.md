@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="for-loop-container"></a>For 循环容器
   For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 循环每次重复时，For 循环容器都计算一个表达式并重复运行其工作流，直到表达式计算结果为 **False**。  
@@ -60,13 +61,13 @@ ms.lasthandoff: 11/20/2017
   
  For 循环容器不提供功能，只提供用来生成可重复的控制流的结构。 若要提供容器功能，则 For 循环容器中必须至少包含一个任务。 有关详细信息，请参阅 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
- For 循环容器可包含具有多个任务的控制流，还可包含其他容器。 将任务和容器添加到 For 循环容器的过程与将它们添加到包的过程相似，不同的是将任务和容器拖动到 For 循环容器而不是拖动到包。 如果 For 循环容器包含多个任务或容器，可以使用优先约束连接它们，就像在包中操作一样。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ For 循环容器可包含具有多个任务的控制流，还可包含其他容器。 将任务和容器添加到 For 循环容器的过程与将它们添加到包的过程相似，不同的是将任务和容器拖动到 For 循环容器而不是拖动到包。 如果 For 循环容器包含多个任务或容器，可以使用优先约束连接它们，就像在包中操作一样。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 ## <a name="add-a-for-loop-container-in-a-control-flow"></a>在控制流中添加 For 循环容器  
   
 1.  将 For 循环容器添加到包。 有关详细信息，请参阅[在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
-2.  将任务和容器添加到 For 循环容器。 有关详细信息，请参阅[在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
+2.  将任务和容器添加到 For 循环容器。 有关详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
 3.  使用优先约束连接 For 循环容器中的任务和容器。 有关详细信息，请参阅[使用默认优先约束来连接任务和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  若要了解有关 For 循环容器以及如何在包中使用它的信息，请参阅 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **InitExpression**  
  提供初始化该循环所用值的表达式（可选）。  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a810d72817ebdf5a1078e95315adb755a2d42891
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d3cacac1c13700c1416b6365ec6bb03f650fa31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 |**SendMailTaskInfo**|提供有关任务的说明性信息。|  
   
 ## <a name="configuring-the-send-mail-task"></a>配置发送邮件任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题：  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，单击 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="related-content"></a>相关内容  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="send-mail-task-editor-general-page"></a>发送邮件任务编辑器（“常规”页）
   可以使用 **“发送邮件任务编辑器”** 对话框的 **“常规”** 页，对发送邮件任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为发送邮件任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
   使用 **“发送邮件任务编辑器”** 对话框中的 **“邮件”** 页，可以指定收件人、邮件类型和邮件的优先级。 您还可以在邮件中附加文件。 邮件正文可以是您提供的字符串，也可以是指向包含文本的文件连接，还可以是包含文本的变量的名称。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **SMTPConnection**  
  从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
  **MessageSourceType**  
  选择消息的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为邮件正文。 选择此值将显示动态选项 **MessageSource**。|  
 |**文件连接**|将源设置为包含邮件正文的文件。 选择此值将显示动态选项 **MessageSource**。|  

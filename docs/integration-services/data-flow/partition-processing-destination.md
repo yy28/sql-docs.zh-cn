@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
   分区处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分区。 有关分区的详细信息，请参阅[分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [分区处理目标自定义属性](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **“ODBC 目标编辑器”**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
@@ -82,10 +83,10 @@ ms.lasthandoff: 11/20/2017
  **处理方法**  
  选择处理方法。 此选项的默认值为 **“完全”**。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |添加(增量式)|对分区执行增量处理。|  
-|“完全”|对分区执行完全处理。|  
+|完全|对分区执行完全处理。|  
 |仅限数据|对分区执行更新处理。|  
   
 ## <a name="partition-processing-destination-editor-mappings-page"></a>分区处理目标编辑器（“映射”页）
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -113,14 +114,14 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **使用默认错误配置**  
  指定是否使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认错误处理方式。 默认情况下，此值为 **True**。  
   
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将无法接受的键值转换为 Unknown 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **出错时要执行的操作**  
  如果选择了“出错时停止”，请指定在达到错误阈值时要执行的操作。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **空键转换为未知键**  
  指定在将空键转换为 Unknown 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  

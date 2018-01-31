@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -2082,8 +2083,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|任务无法执行操作“%1”。|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|文件/进程“%1”不在路径中。|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|主题为空。|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|“收件人”行中的地址格式不正确。 地址中缺少 “\@” 符号或地址无效。|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|“发件人”行中的地址格式不正确。 地址中缺少 “\@” 符号或地址无效。|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|“收件人”行中的地址格式不正确。 地址中缺少“@”符号或地址无效。|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|“发件人”行中的地址格式不正确。 地址中缺少“@”符号或地址无效。|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|这两个 XML 文档不相同。|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD 验证将使用 XML 文档中 DOCTYPE 行定义的 DTD 文件。 它将不使用赋予属性“%1”的值。|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|任务无法验证“%1”。|  

@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10b5f2fe1ad7e1a474f960e51027d8675e2d690f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69e498a3c182cb15f1acf53cc16720088af9b65f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="floor-ssis-expression"></a>FLOOR（SSIS 表达式）
   返回小于或等于数值表达式的最大整数。  
@@ -43,7 +44,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  参数表达式的数值数据类型。 结果是与 *numeric_expression*数据类型相同的计算所得值的整数部分。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果该参数为空，则 FLOOR 返回的结果为空。  
   
 ## <a name="expression-examples"></a>表达式示例  

@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dataprofileviewer.f1
+f1_keywords:
+- sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
   数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **打开**  
  单击可查找包含数据事件探查任务输出的已保存文件。  
   
- “配置文件”窗格  
+ **“配置文件”** 窗格  
  展开“配置文件”窗格中的树可以查看输出中包含的配置文件。 选择一个配置文件可以查看该配置文件的结果。  
   
  “消息”窗格  
@@ -171,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  显示表或视图中的行数。  
   
 ##### <a name="detailed-value-distribution-pane"></a>“详细值分布”窗格  
- **“值”**  
+ **ReplTest1**  
  显示在进行事件探查的列中发现的非重复值。  
   
  **Count**  

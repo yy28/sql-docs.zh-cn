@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  在 **“数据流路径编辑器”**中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  使用 **“数据流路径编辑器”** 对话框的 **“常规”** 节点可以对路径进行命名和说明以及指定路径批注选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为路径提供唯一的名称。  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="metadata-page---data-flow-path-editor"></a>“元数据”页 - 数据流路径编辑器
 可以使用 **“数据流路径编辑器”** 对话框的 **“元数据”** 页查看路径列的元数据。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **路径元数据**  
  列出列元数据。 单击列标题可以对列数据进行排序。  
   
@@ -132,14 +133,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-viewers-page---data-flow-path-editor"></a>“数据查看器”页 - 数据流路径编辑器
 可以使用 **“数据流路径编辑器”** 对话框的 **“数据查看器”** 页管理附加到路径的数据查看器。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  列出数据查看器。  
   
  **数据查看器类型**  
  列出数据查看器的类型。  
   
- **添加**  
+ **“添加”**  
  单击此项可使用“配置数据查看器”对话框来添加数据查看器。  
   
  **删除**  

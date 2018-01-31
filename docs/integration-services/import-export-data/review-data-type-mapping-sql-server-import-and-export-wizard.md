@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords:
+- sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
 如果在“列映射”  对话框的“映射”  列表中指定了一个可能无法成功的数据类型映射， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“查看数据类型映射”  页。 在此页上，可查看为了使源数据与目标兼容向导必须执行的数据类型转换的相关详细信息。 此信息包括视觉提示，用于区分应成功的数据类型转换与可能导致错误或截断的转换。 对于每个转换，你都可以决定是否接受向导建议的转换，也可以指定如何处理可能发生的错误。   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
  下表对“表”  列表中的列进行了说明。  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |（源图标）|指示数据类型转换成功的可能性：<br /> - **绿色** 的复选标记图标指示向导认为此表的所有数据类型转换都将成功。<br />- **黄色** 的警告图标指示你应检查向导将执行的个别转换。 若要检查这些转换，可以选择表，然后在 **“数据类型映射”** 列表中检查单个列的转换。<br />- **红色** 的错误图标指示向导不能可靠地执行对此表的某些转换。|  
 |**源**|源表的名称。|  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 
 下表对“数据类型映射”  列表中的列进行了说明。 
 
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |（转换图标）|指示数据类型转换成功的可能性：<br /> - **绿色** 的复选标记图标指示向导认为此列的数据类型转换会成功。<br />- **黄色** 的警告图标指示你应检查向导将执行的转换。 若要查看转换，请双击该列以查看“列转换详细信息”  对话框。 有关详细信息，请参阅 [“列转换详细信息”对话框](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **红色** 的错误图标指示向导不能可靠地执行转换。|  
 |**源列**|源列的名称。|  

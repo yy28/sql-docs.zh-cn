@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 57635218bc2e657b5d6f08076a572fa5caf2a2b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
   表达式语言包含一组用于表达式的函数。 表达式可以使用单个函数。但是，通常一个表达式可以通过运算符将多个函数组合起来，从而使用多个函数。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |[LN（SSIS 表达式）](../../integration-services/expressions/ln-ssis-expression.md)|返回数值表达式的自然对数。|  
 |[LOG（SSIS 表达式）](../../integration-services/expressions/log-ssis-expression.md)|返回数值表达式以 10 为底的对数。|  
 |[POWER（SSIS 表达式）](../../integration-services/expressions/power-ssis-expression.md)|返回对数值表达式进行幂运算的结果。|  
-|[ROUND（SSIS 表达式）](../../integration-services/expressions/round-ssis-expression.md)|返回舍入到指定长度或精度的数值表达式。 。|  
+|[ROUND（SSIS 表达式）](../../integration-services/expressions/round-ssis-expression.md)|返回舍入到指定长度或精度的数值表达式。 实例时都提供 SQL Server 登录名。|  
 |[SIGN（SSIS 表达式）](../../integration-services/expressions/sign-ssis-expression.md)|返回数值表达式的正号 (+)、负号 (-) 或零 (0)。|  
 |[SQUARE（SSIS 表达式）](../../integration-services/expressions/square-ssis-expression.md)|返回数值表达式的平方。|  
 |[SQRT（SSIS 表达式）](../../integration-services/expressions/sqrt-ssis-expression.md)|返回数值表达式的平方根。|  

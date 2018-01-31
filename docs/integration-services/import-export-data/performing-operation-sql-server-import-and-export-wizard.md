@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords:
+- sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69badf6d2ad956ba8379cb4b0b889386f6449ce0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
 查看在向导中所做的选择，并单击“完成向导”页中的“完成”之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“执行操作”。 在此页上，会看到在前页配置的操作的进度和结果。 不必在此页上执行任何操作。
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
  **操作**  
  显示操作的每个步骤。  
   
- **状态**  
+ **“状态”**  
  显示各步骤是成功还是失败。  
   
  **消息**  

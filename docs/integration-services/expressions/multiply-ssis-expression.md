@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06722c27a7e7366b4dca94c9ca52a058ca7c7293
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2576ff7968f18b58343a6d22d6295d17af89e9d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-multiply-ssis-expression"></a>*（乘）（SSIS 表达式）
   将两个数值表达式相乘。  
@@ -44,7 +45,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果任意一个操作数为 Null，则结果为 Null。  
   
 ## <a name="expression-examples"></a>表达式示例  

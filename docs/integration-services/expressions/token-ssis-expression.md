@@ -8,20 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 691d717b5cb5545a86fe9fbefffd0f545f77f934
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 192a91539b35a718556e50707a6f74cb15cfc5b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="token--ssis-expression"></a>TOKEN（SSIS 表达式）
   基于分隔字符串中的标记的指定分隔符以及表示要返回的标记的标记数目，从字符串返回标记（子字符串）。  
@@ -45,7 +46,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数将 <character_expression> 字符串拆分为一组由 <delimiter_string> 中指定的分隔符分隔的标记，然后返回第 N 个标记，其中 N 是 \<occurrence> 参数指定的标记出现的次数。 有关此函数的用法示例，请参阅“示例”部分。  
   
  下面的备注适用于 TOKEN 函数：  

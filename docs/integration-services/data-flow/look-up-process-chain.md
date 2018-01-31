@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caffa747cb67469c96675e10d7c3904ac8e77aa0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-process-chain"></a>查找进程链
   使用 **“查找进程链”** 对话框查找在 SAP Netweaver BW 系统中定义的进程链。 当可用进程链列表显示时，选择您需要的进程链，然后源将使用需要的值填充关联的选项。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
  **Process chain**  
  输入您要查找的进程链的名称，或输入部分名称加上星号通配符 (*)。 或者，仅使用星号通配符，以包括所有进程链。  
   
- **“查找”**  
+ **查找**  
  查找在 SAP Netweaver BW 系统中定义的匹配进程链。  
   
 ## <a name="lookup-results"></a>查找结果  

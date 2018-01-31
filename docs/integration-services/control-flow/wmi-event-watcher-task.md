@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fcd6a9dedff32597209c837d4aa5d9471ff6d37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f30858c543e21989b468c5f4e1cecebba06cc6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
   WMI 事件观察器任务以使用 Management Instrumentation 查询语言 (WQL) 事件查询指定所关注事件的方式来监视 Windows Management Instrumentation (WMI) 事件。 可以将 WMI 事件观察器任务用于下列目的：  
@@ -95,7 +96,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  WMI 事件观察器任务使用 WMI 连接管理器连接到它从中读取 WMI 信息的服务器。 有关详细信息，请参阅 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -115,7 +116,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为 WMI 事件观察器任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -139,7 +140,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **WQLQuerySourceType**  
  选择任务运行的 WQL 查询的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|为 WQL 查询设置源。 选择此值将显示动态选项 **WQLQuerySource**。|  
 |**文件连接**|选择包含 WQL 查询的文件。 选择此值将显示动态选项 **WQLQuerySource**。|  
@@ -177,7 +178,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = 变量  
  **WQLQuerySource**  
- 在列表中选择变量，或单击“\<新建变量...>”，创建一个新变量。  
+ 从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

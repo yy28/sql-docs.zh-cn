@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58486c56db62bf033cc5c700d5ba0798b4df26d2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f139fd9f1d1f5e3cfb3e24ca34d90372ea27efb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-concatenate-ssis-expression"></a>+（连接）（SSIS 表达式）
   将两个表达式连接为一个表达式。  
@@ -45,7 +46,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  表达式可以使用 DT_STR 和 DT_WSTR 数据类型中的任一种或两者都使用。  
   
  DT_STR 和 DT_WSTR 数据类型的连接将返回 DT_WSTR 类型的结果。 字符串的长度是两个原始字符串长度的和（以字符计）。  

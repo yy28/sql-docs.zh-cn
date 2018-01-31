@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72eb11720fe037c3bea74d5343b8b59a39328bd8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 10. 若要配置错误输出，请单击 **“错误输出”**。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

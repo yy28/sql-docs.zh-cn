@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.slowlychangingdimtrans.f1
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8061b07985e3d8d85656ddb85996384b5b6ee257
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
  下表介绍转换输出和这些输出的后续数据流的要求。 这些要求介绍渐变维度向导创建的数据流。  
   
-|输出|Description|数据流要求|  
+|“输出”|Description|数据流要求|  
 |------------|-----------------|----------------------------|  
 |**“变化的属性更新输出”**|查找表中的记录被更新。 此输出用于变化的属性行。|OLE DB 命令转换使用 UPDATE 语句更新记录。|  
 |**“固定的属性输出”**|不得更改的行中的值与查找表中的值不匹配。 此输出用于固定的属性行。|没有创建默认数据流。 如果转换配置为遇到固定的属性列更改时继续，则应创建可捕获这些行的数据流。|  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
 -   加载维度向导，指导您完成配置渐变维度转换以及为转换输出生成数据流的步骤。 若要更改渐变维度的配置，请重新运行加载维度向导。 有关详细信息，请参阅 [使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f6c0a872ae043e8550dc541d3c0e0f706e388a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9efb5b8d8a972cfc60ccb078363bcba055eea01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
   利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用此连接管理器。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 -   使用代理服务器。 也可以将代理服务器配置为使用凭据，并跳过代理服务器而使用本地地址。  
   
 ## <a name="configuration-of-the-http-connection-manager"></a>HTTP 连接管理器的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  若要了解有关 HTTP 连接管理器的详细信息，请参阅 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)。 若要了解有关 HTTP 连接管理器的常见使用方案的详细信息，请参阅 [Web Service Task](../../integration-services/control-flow/web-service-task.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **服务器 URL**  
  键入服务器的 URL。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **使用凭据**  
  指定是否希望 HTTP 连接管理器使用用户安全凭据进行身份验证。  
   
- **用户名**  
+ **User name**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **密码**  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/20/2017
   
  若要了解有关 HTTP 连接管理器的详细信息，请参阅 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)。 若要了解有关 HTTP 连接管理器的常见使用方案的详细信息，请参阅 [Web Service Task](../../integration-services/control-flow/web-service-task.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **使用代理**  
  指定是否希望通过代理服务器连接 HTTP 连接管理器。  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
  **使用凭据**  
  指定是否希望 HTTP 连接管理器对于代理服务器使用安全凭据。  
   
- **用户名**  
+ **User name**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **密码**  
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/20/2017
  **代理跳过列表**  
  要跳过代理服务器的地址的列表。  
   
- **添加**  
+ **“添加”**  
  键入要跳过代理服务器的地址。  
   
  **删除**  

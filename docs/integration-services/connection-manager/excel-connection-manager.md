@@ -8,26 +8,28 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.excelconnection.f1
+f1_keywords:
+- sql13.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - files [Integration Services], connections
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5785a2753b61cde59a5ed157d697b05a93796fc7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dba4d3f0f8cbab8cd683df2541a75a96e66f0f90
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
   Excel 连接管理器使包可以连接到现有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 Excel 源和 Excel 目标使用 Excel 连接管理器。  
@@ -52,11 +54,11 @@ ms.lasthandoff: 11/20/2017
   
  有关 Excel 源和 Excel 目标行为的详细信息，请参阅 [Excel Source](../../integration-services/data-flow/excel-source.md) 和 [Excel Destination](../../integration-services/data-flow/excel-destination.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [Excel 连接管理器编辑器](../../integration-services/connection-manager/excel-connection-manager-editor.md)。  
   
- 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
  有关循环遍历 Excel 文件中的某个组的信息，请参阅 [使用 Foreach 循环容器，循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  若要了解有关 Excel 连接管理器的详细信息，请参阅 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **Excel 文件路径**  
  键入一个现有或新的 Excel 工作簿文件 (.xls) 的路径和文件名。  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/20/2017
 > [!WARNING]  
 >  选择指向新的或不存在的文件的“Excel 连接”然后单击“Excel 工作表的名称”对应的“新建”时，“Excel 目标编辑器”将自动创建 Excel 文件。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框可以导航到 Excel 文件所在的文件夹或要创建新文件的文件夹。  
   
  **Excel 版本**  
@@ -96,9 +98,9 @@ ms.lasthandoff: 11/20/2017
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [使用 Foreach 循环容器，循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 -   [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   

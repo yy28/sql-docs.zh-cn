@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab3783ac708dcf3d8f683af6958ec43087303136
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a7692c229728e97bc830020d6ec2cdc35843af4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>连接到 ODBC 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 ODBC 数据源。
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/20/2017
 
 在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
 
-下面是输入连接字符串后看到的屏幕。
+下面是输入连接字符串后出现的屏幕。
 
 ![之后使用 ODBC 连接到 SQL](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 

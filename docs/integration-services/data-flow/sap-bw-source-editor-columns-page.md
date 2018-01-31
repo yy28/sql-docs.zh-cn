@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.columns.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6bb6d1d1061314752207fce3cdb5123daa57104
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33b0ea8d0c8774aa128ff4698cad163fd08d9645
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
   使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“SAP BW 源编辑器”**中单击 **“列”** ，以打开编辑器的 **“列”** 页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 > [!NOTE]  
 >  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  

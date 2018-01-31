@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfecde5790f25c254428d53ec613b968d7d3efd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>连接到 Access 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 **Microsoft Access** 数据源。
@@ -54,10 +55,10 @@ ms.lasthandoff: 11/20/2017
  >   [!NOTE] 
  > 如果单击“浏览”定位 Access 文件，默认情况下，“打开”对话框会筛选出使用较旧 .MDB 格式和文件扩展名的文件。 不过，该数据提供程序也可以打开使用较新 .ACCDB 格式和文件扩展名的文件。
   
- **浏览**  
+ **“浏览”**  
  通过使用“打开”对话框定位数据库文件。  
   
- **用户名**  
+ **User name**  
 如果工作组信息文件与数据库关联，则提供一个有效的用户名。  
   
  **密码**  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 最新版组件可以打开 Access 早期版本创建的文件。
 
-如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，并且还必须确保在 32 位模式下运行包。
+如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，还须确保在 32 位模式下运行程序包。
 
 如果有 Office 365 订阅，请确保下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。 运行安装程序时，可能会看到一条错误消息，指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
 

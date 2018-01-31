@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86e4fb934f5f583314e5d3bc69a9275d911e5dfe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e5ffcd33369b9dc948ecce36c36085bd383c91d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=（大于或等于）（SSIS 表达式）
   执行比较来确定第一个表达式是否大于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -52,7 +53,7 @@ expression1 >= expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  

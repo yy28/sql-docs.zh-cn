@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58d8e69ae49c56716d8d0f5393fad329bd924b21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>连接到 PostgreSQL 数据源（SQL Server 导入和导出向导）
 本主题向你介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 PostgreSQL 数据源。 
@@ -59,13 +60,13 @@ ODBC 驱动程序不在数据源的下拉列表中列出。 要使用 ODBC 驱�
 **驱动程序**  
 ODBC 驱动程序的名称 - 可以为 PostgreSQL ODBC Driver(UNICODE) 或 PostgreSQL ODBC Driver(ANSI)。
 
-**服务器**  
+**Server**  
 PostgreSQL 服务器的名称。 
 
 **端口**  
 用于连接到 PostgreSQL 服务器的端口。
 
-**数据库**  
+**“数据库”**  
 PostgreSQL 数据库的名称。
 
 Uid 和 Pwd   
@@ -79,7 +80,7 @@ Uid 和 Pwd
     ```
 
 ### <a name="enter-the-connection-string"></a>输入连接字符串
-在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串或在“DSN”字段中输入 DSN 名称。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
+在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串，或在“Dsn”字段中输入 DSN 名称。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
 
 以下示例使用此连接字符串。
 
@@ -87,7 +88,7 @@ Uid 和 Pwd
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
     ```
 
-下面是输入连接字符串后看到的屏幕。
+下面是输入连接字符串后出现的屏幕。
 
 ![使用 ODBC 连接到 PostgreSQL](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
 

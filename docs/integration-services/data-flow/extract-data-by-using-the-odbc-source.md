@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f11c1c0304fe1ac2a6dcba55e409bde1319c706
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83e5422eca9042594ab5234e84d9a9d5da3c2aa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 源提取数据
   本过程说明如何通过使用 ODBC 源来提取数据。 若要添加和配置 ODBC 源，包中必须已经包含至少一个数据流任务。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 9. 若要配置错误输出，请单击 **“错误输出”**。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

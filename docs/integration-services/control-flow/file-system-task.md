@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords: File System task [Integration Services]
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 176f39cf7a5df57fad08a464212815f41affb1a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="file-system-task"></a>文件系统任务
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 |**FileSystemOperation**|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   
 ## <a name="configuring-the-file-system-task"></a>配置文件系统任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一个可下载和上载数据文件以及管理服务器上目录的任务。 有关详细信息，请参阅 [FTP Task](../../integration-services/control-flow/ftp-task.md)。  
   
 ## <a name="file-system-task-editor-general-page"></a>文件系统任务编辑器（“常规”页）
@@ -96,11 +98,11 @@ ms.lasthandoff: 11/20/2017
   
  您可以使用表达式来使用不同的变量  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **DestinationVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationConnection**。|  
@@ -120,7 +122,7 @@ ms.lasthandoff: 11/20/2017
  **运算**  
  选择要执行的文件系统操作。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**复制目录**|复制目录。 选择此值将显示源和目标的动态选项。|  
 |**复制文件**|复制文件。 选择此值将显示源和目标的动态选项。|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **IsSourcePathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|“值”||  
+|ReplTest1||  
 |-----------|-|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **SourceVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationVariable**。|  

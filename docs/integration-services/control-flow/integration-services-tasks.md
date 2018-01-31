@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77947b1eb88d2601770cb7c016998092f3fe3ebd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b33ae44bfdadf24771772fe5a834acb39256b469
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-tasks"></a>Integration Services 任务
   任务是一些控制流元素，它定义包控制流中执行的工作单元。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包由一个或多个任务组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  
@@ -83,11 +84,11 @@ ms.lasthandoff: 11/20/2017
  对于每个任务，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器为每个任务提供的自定义对话框单独配置，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包含的“属性”窗口进行配置。 一个包中可以包含多个相同类型的任务（如六个执行 SQL 任务），对每个任务可进行不同的配置。 有关详细信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="tasks-connections-and-groups"></a>任务连接和组  
- 如果连接和分组任务中包含多个任务，则它们将被按照优先约束在控制流中进行连接和排序。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 如果连接和分组任务中包含多个任务，则它们将被按照优先约束在控制流中进行连接和排序。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  任务可被分组到一起作为一个工作单元执行，也可在循环中重复执行。 有关详细信息，请参阅 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)、 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)和 [Sequence Container](../../integration-services/control-flow/sequence-container.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

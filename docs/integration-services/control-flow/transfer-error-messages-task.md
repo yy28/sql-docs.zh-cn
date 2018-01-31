@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
 - sql13.dts.designer.transfererrormessagestask.general.f1
 - sql13.dts.designer.transfererrormessagestask.errormessages.F1
-helpviewer_keywords: Transfer Error Messages task [Integration Services]
+helpviewer_keywords:
+- Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d64ff71608c6e3bc4a260ab1c0538b7997a288
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cfb05e7b06ceebecca2af1fd363a7d312efc954c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  若要新建错误消息，运行该包的用户必须是目标服务器上 sysadmin 的成员或 serveradmin 服务器角色。  
   
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>配置传输错误消息任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask>  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
 -   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="transfer-error-messages-task-editor-general-page"></a>传输错误消息任务编辑器（“常规”页）
   可以使用 **“传输错误消息任务编辑器”** 对话框的 **“常规”** 页，对传输错误消息任务进行命名和说明。 传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。   
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为传输错误消息任务键入唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -99,12 +101,12 @@ ms.lasthandoff: 11/20/2017
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
   可以使用“传输错误消息任务编辑器”对话框的“消息”页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例。 
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **SourceConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **IfObjectExists**  
  选择在目标服务器上已存在同名的错误消息时，该任务是应该覆盖现有的用户定义错误消息还是跳过现有消息，或是失败。  
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
  此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|复制所有用户定义消息。|  
 |**False**|仅复制指定的用户定义消息。|  

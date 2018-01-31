@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-transformation"></a>聚合转换
   聚合转换将聚合函数（如 Average）应用于列值，并将结果复制到转换输出。 除聚合函数以外，转换还提供 GROUP BY 子句，用于指定所要聚合的组。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |运算|Description|  
 |---------------|-----------------|  
 |Group by|将数据集划分为组。 任何数据类型的列都可用于分组。 有关详细信息，请参阅 [GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
-|Sum|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)。|  
+|SUM|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)。|  
 |平均值|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 [AVG (Transact-SQL)](../../../t-sql/functions/avg-transact-sql.md)。|  
 |Count|返回组中的项数。 有关详细信息，请参阅 [COUNT (Transact-SQL)](../../../t-sql/functions/count-transact-sql.md)。|  
 |Count distinct|返回组中的唯一非空值的数量。|  
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [使用聚合转换来聚合数据集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
 >   
 >  在聚合转换中， **“键”** 和 **“键范围”** 是指期望 **“分组依据”** 操作产生的组数。 **“非重复键计数”** 和 **“非重复键数范围”** 是指期望 **“非重复计数”** 操作产生的非重复值的数量。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **高级/基本**  
  显示或隐藏为多个输出配置多个聚合的选项。 默认情况下，隐藏“高级”选项。  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **键范围**  
  在“高级”显示中，根据需要指定聚合可写入的键的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时设置了 **“键范围”** 和 **“键”** 属性，则 **“键”** 的值优先。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |“未指定”|不使用“键范围”属性。|  
 |Low|聚合可以写入大约 500,000 个键。|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Count Distinct Scale**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定 **CountDistinctScale** 和 **CountDistinctKeys** ，则 **CountDistinctKeys** 优先。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |“未指定”|不使用 **CountDistinctScale** 属性。|  
 |Low|聚合可以写入大约 500,000 个非重复值。|  
@@ -212,11 +213,11 @@ ms.lasthandoff: 11/20/2017
 >   
 >  在聚合转换中， **“键”** 和 **“键范围”** 是指期望 **“分组依据”** 操作产生的组数。 **“非重复键计数”** 和 **“非重复键数范围”** 是指期望 **“非重复计数”** 操作产生的非重复值的数量。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **“键范围”**  
  根据需要，可以指定聚合所需的键的大致数目。 转换将使用此信息优化其初始缓存大小。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |“未指定”|不使用 **“键范围”** 属性。|  
 |Low|聚合可以写入大约 500,000 个键。|  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
  **“非重复键数范围”**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |“未指定”|不使用 CountDistinctScale 属性。|  
 |Low|聚合可以写入大约 500,000 个非重复值。|  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: POWER function
+helpviewer_keywords:
+- POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f505360aa71886a98f0a56f8402507ecef8f4903
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 13a644afb72c603aa8f45999be8c74562cef5164
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="power-ssis-expression"></a>POWER（SSIS 表达式）
   返回对数值表达式进行幂运算的结果。 Power 参数的计算结果必须为整数。  
@@ -44,7 +46,7 @@ POWER(numeric_expression,power)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  执行幂运算前， *numeric_expression* 和 *power* 参数会转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果 *numeric_expression* 的计算结果为零，并且 *power* 为负，则表达式计算器将返回错误，并将返回结果设置为 Null。  

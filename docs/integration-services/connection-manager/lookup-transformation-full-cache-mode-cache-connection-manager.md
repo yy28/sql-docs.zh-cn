@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Lookup transformation [Integration Services]
+helpviewer_keywords:
+- Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5669f4f0a0226599b717c4cce5358f5c9ddd7245
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查找转换完全缓存模式 - 缓存连接管理器
   可以将查找转换配置为使用完全缓存模式和缓存连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  

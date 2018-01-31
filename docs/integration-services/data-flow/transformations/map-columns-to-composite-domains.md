@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03b09844ac392f5f86fad88a29899953831ff82b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8fb2e38ea252928a84dfaa8404d1b29b0bb6f33
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="map-columns-to-composite-domains"></a>将列映射到复合域
   一个复合域包含两个或多个单一域。 您可以将多个列映射到域，也可以将具有分隔值的单个列映射到域。  
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/20/2017
 6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [DQS 清除转换](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [DQS 清理转换](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

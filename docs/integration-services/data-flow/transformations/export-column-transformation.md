@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36acf4ee08879bec3ac12600ea7369b1db3803ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: feb8ed42fe6e9f53db23b3be1586a163bfbad43b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/20/2017
   
 |追加|截断|文件存在|结果|  
 |------------|--------------|-----------------|-------------|  
-|False|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|False|True|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|True|“否”|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|False|False|是|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|False|是|该转换将创建一个新文件并将数据写入到该文件中。|  
+|False|True|是|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
 |False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
 |False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
 |True|False|是|转换将打开文件并将数据写入到文件末尾。|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="export-column-transformation-editor-columns-page"></a>导出列转换编辑器（“列”页）
   可以使用 **“导出列转换编辑器”** 对话框的 **“列”** 页，指定数据流中要提取到文件的列。 可以指定导出列转换是将数据追加到文件还是覆盖现有文件。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **提取列**  
  从包含文本数据或图像数据的输入列的列表中进行选择。 所有行都应包含 **“提取列”** 和 **“文件路径列”**的定义。  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="export-column-transformation-editor-error-output-page"></a>导出列转换编辑器（“错误输出”页）
   可以使用 **“导出列转换编辑器”** 对话框的 **“错误输出”** 页指定错误的处理方式。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看输出的名称。 单击名称可以展开视图以包括列。  
   

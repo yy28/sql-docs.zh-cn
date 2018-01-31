@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f07d092a7b0a583281070fb79063d1432ff81421
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 985f5cd2a2ed1d93df3d164a34bbeb4428b97df9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用聚合转换来聚合数据集中的值
   若要添加并配置聚合转换，则包必须已包含至少一个数据流任务和一个源。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 13. 或者，单击 **“高级”** 选项卡并设置应用于优化聚合转换所执行的所有操作的属性。  
   
-14. 单击 **“确定”**。  
+14. 单击“确定” 。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

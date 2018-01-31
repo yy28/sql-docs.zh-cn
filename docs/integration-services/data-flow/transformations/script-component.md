@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>脚本组件
   脚本组件承载脚本，并使包能够包含和运行自定义的脚本代码。 可以将包中的脚本组件用于下列目的：  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="configuring-the-script-component-programmatically"></a>以编程方式配置脚本组件  
  有关可在 **“属性”** 窗口中或以编程形式设置的属性的详细信息，请单击以下主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  选择 **“源”**、 **“目标”**或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **Connection managers**  
  查看脚本可使用的连接列表。  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/20/2017
  **Description**  
  输入连接的说明。  
   
- **添加**  
+ **“添加”**  
  向“连接管理器”列表中添加另外一个连接。  
   
  **删除**  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入名称**  
  从可用输入的列表中选择。  
   
@@ -178,11 +179,11 @@ ms.lasthandoff: 11/20/2017
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **Inputs and outputs**  
  在左侧选择输入或输出即可在右侧的表中查看其属性。 选择不同的输入或输出，可编辑的属性也有所不同。 显示的许多属性是只读的。 有关各个属性的详细信息，请参阅以下主题：  
   
- [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -203,11 +204,11 @@ ms.lasthandoff: 11/20/2017
   
  要了解有关脚本组件的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **属性**  
  查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Description**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  

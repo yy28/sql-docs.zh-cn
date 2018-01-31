@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89de000e168f3b781c24662cd24928f095aed33a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 28dc10cc407a41e8ba2ec594fdacbe293dbe53a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语法与 C 和 C# 语言使用的语法类似。 表达式可包括多种元素，例如标识符（列和变量）、文字、运算符和函数。 本主题概述了表达式计算器语法在应用于不同的表达式元素时的特殊要求。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
  有关详细信息，请参阅[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>相关内容  

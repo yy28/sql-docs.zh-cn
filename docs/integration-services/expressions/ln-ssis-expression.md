@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b89bf2f76561f997dd8def5522c342095714c74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f13cbf798c6063ea9bd0400ebab8491acc502beb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ln-ssis-expression"></a>LN（SSIS 表达式）
   返回数值表达式的自然对数。  
@@ -43,7 +44,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  计算对数前，数值表达式被转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果 *numeric_expression* 的计算结果为 0 或负值，则返回结果为 Null。  

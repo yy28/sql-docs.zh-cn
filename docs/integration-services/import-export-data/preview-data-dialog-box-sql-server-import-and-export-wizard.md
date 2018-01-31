@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.previewdata.f1
+f1_keywords:
+- sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3800757837068ba6a1608d1138399c79b84cae98
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d0f0772336614e81e1b29c8a4e54fb73d2ed5c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>“预览数据”对话框（SQL Server 导入和导出向导）
   指定要复制的数据后，可以选择单击“预览”  以打开“预览数据”  对话框。 在此页上，最多可以从数据源预览 200 行示例数据。 这会确认向导将复制你想要复制的数据。
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 ![导入和导出向导的“预览数据”页](../../integration-services/import-export-data/media/preview-data.png "Preview data page of the Import and Export Wizard")  
   
 ## <a name="preview-sample-data"></a>预览示例数据  
- **源**  
+ **数据源**  
 显示向导用于从数据源加载数据的查询。
 
 如果选择了要复制的表格，则“源”字段会显示 `SELECT * FROM <table>` 查询，而不是表名称。 

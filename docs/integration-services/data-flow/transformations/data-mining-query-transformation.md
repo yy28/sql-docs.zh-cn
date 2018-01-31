@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a9182fa318301a36198d38191eb64ef403c48bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ddf1b1f53156a44589dfe6eb62f7468a08559769
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
   数据挖掘查询转换针对数据挖掘模型执行预测查询。 此转换包含用于创建数据挖掘扩展 (DMX) 查询的查询生成器。 使用查询生成器可创建自定义语句来使用 DMX 语言针对现有挖掘模型计算转换输入数据。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](../../../dmx/data-mining-extensions-dmx-reference.md)。  
@@ -53,8 +54,8 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>数据挖掘查询转换编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询转换编辑器”** 对话框的 **“挖掘模型”** 选项卡选择数据挖掘结构及其挖掘模型。  
   
-### <a name="options"></a>选项  
- **连接**  
+### <a name="options"></a>“常规”  
+ **“连接”**  
  使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”按钮创建新的连接。  
   
  **新建**  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-mining-query-transformation-editor-query-tab"></a>数据挖掘查询转换编辑器（“查询”选项卡）
   可以使用 **“数据挖掘查询转换编辑器”** 对话框的 **“查询”** 选项卡创建预测查询。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **数据挖掘查询**  
  将数据挖掘扩展插件 (DMX) 查询直接键入文本框中。  
   

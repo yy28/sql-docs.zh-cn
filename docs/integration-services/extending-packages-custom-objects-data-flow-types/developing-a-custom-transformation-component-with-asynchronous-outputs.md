@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7583fa59dc2696a38fc69a76a0b66c27e6b3b919
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a184989c8a8ca4b8ea24b27f8d1bc3d8323cbc56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>开发具有异步输出的自定义转换组件
   如果某个转换直到组件收到其所有输入行后才输出行，或者该转换不是为收到的每个输入行生成一个输出行，则可以使用具有异步输出的组件。 例如，聚合转换只有在它读取所有行之后才能计算各行的总和。 与之相反，如果可以在每个数据行传递给组件时就修改该行，则可以使用具有同步输出的组件。 您可以就地修改每行的数据，或者创建一个或多个新列，其中每一列的值与每个输入行对应。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  

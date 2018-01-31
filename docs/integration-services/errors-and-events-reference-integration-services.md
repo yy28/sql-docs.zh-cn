@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cecb7c7bf6210f1c4c343f168af650f454322d64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
   本节包含与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有关的多个错误和事件的相关信息。 其中包括错误消息的原因和解决方法信息。  

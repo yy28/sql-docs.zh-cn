@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72a38ba6fa45a5b7d6c6003100b27398c60ed522
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
  Foreach 循环容器不提供任何功能，只提供用以生成可重复的控制流、指定枚举器类型以及配置枚举器的结构。 若要提供容器功能，Foreach Loop 循环容器中必须包含至少一个任务。 有关详细信息，请参阅 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
- Foreach 循环容器可包含具有多个任务和其他容器的控制流。 除了要将任务和容器拖动到 Foreach 循环容器而不是拖放到包以外，将任务和容器添加到 Foreach 循环容器的过程与将其添加到包的过程相似。 如果 Foreach 循环容器包含多个任务或容器，可以使用优先约束连接它们，这与在包中的操作一样。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ Foreach 循环容器可包含具有多个任务和其他容器的控制流。 除了要将任务和容器拖动到 Foreach 循环容器而不是拖放到包以外，将任务和容器添加到 Foreach 循环容器的过程与将其添加到包的过程相似。 如果 Foreach 循环容器包含多个任务或容器，可以使用优先约束连接它们，这与在包中的操作一样。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>添加和配置 Foreach 循环容器
   
@@ -178,14 +179,14 @@ ms.lasthandoff: 11/20/2017
   
 8.  也可以单击 **“表达式”** ，然后在 **“表达式”** 页上，为 Foreach 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
 
 ## <a name="general-page---foreach-loop-editor"></a>“常规”页 - Foreach 循环编辑器
 可以使用 **“Foreach 循环编辑器”** 对话框的 **“常规”** 页，对 Foreach 循环容器进行命名和说明，该容器使用指定的枚举器重复集合中每个成员的工作流。  
   
  若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为 Foreach 循环容器提供唯一的名称。 此名称在任务图标和日志中用作标签。  
   
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
  **枚举器**  
  从列表中选择枚举器类型。 此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Foreach 文件枚举器**|枚举文件。 选择此值将显示 **“Foreach 文件枚举器”**部分中的动态选项。|  
 |**Foreach 项枚举器**|枚举项中的值。 选择此值将显示 **“Foreach Item 枚举器”**部分中的动态选项。|  
@@ -238,10 +239,10 @@ ms.lasthandoff: 11/20/2017
  **文件夹**  
  提供要枚举的根文件夹的路径。  
   
- **浏览**  
+ **“浏览”**  
  浏览以定位到根文件夹。  
   
- **文件**  
+ **“文件”**  
  指定要枚举的文件。  
   
 > [!NOTE]  
@@ -283,7 +284,7 @@ ms.lasthandoff: 11/20/2017
  **删除**  
  选择项，再单击 **“删除”** ，即可从列表中删除它。  
   
- **列**  
+ **“列”**  
  单击此项可以配置项中的列的数据类型。  
   
  **相关主题：**[“For Each Item 列”对话框 UI 参考](http://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
@@ -311,7 +312,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 架构行集枚举器  
  您可以使用 Foreach ADO.NET 架构行集枚举器枚举指定数据源的架构。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach ADO.NET 架构行集枚举器枚举架构（例如， **AdventureWorks** 数据库中的列），使用执行 SQL 任务获取架构权限。  
   
- **连接**  
+ **“连接”**  
  从列表中选择 ADO.NET 连接管理器，或单击 **“新建连接...”\<**> 创建新的 ADO.NET 连接管理器。  
   
 > [!IMPORTANT]  
@@ -345,7 +346,7 @@ ms.lasthandoff: 11/20/2017
  **DocumentSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -365,7 +366,7 @@ ms.lasthandoff: 11/20/2017
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 进行枚举。|  
 |**Node**|枚举 XPath 运算返回的节点。|  
@@ -375,7 +376,7 @@ ms.lasthandoff: 11/20/2017
  **OuterXPathStringSourceType**  
  选择 XPath 字符串的源类型。 此属性具有下表所列的选项： 
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -398,7 +399,7 @@ ms.lasthandoff: 11/20/2017
  **InnerXPathStringSourceType**  
  选择内部 XPath 字符串的源类型。 此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -418,7 +419,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 枚举器  
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
   
- **连接**  
+ **“连接”**  
  选择现有 ADO.NET 连接管理器，或单击 **“新建连接...”\<**> 创建新的连接管理器。  
   
  相关主题： [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)、 [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -426,7 +427,7 @@ ms.lasthandoff: 11/20/2017
  **枚举**  
  指定要枚举的 SMO 对象。  
   
- **浏览**  
+ **“浏览”**  
  选择 SMO 枚举。  
   
  **相关主题：**[“选择 SMO 枚举”对话框](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
@@ -499,7 +500,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教程“创建简单 ETL 包教程”包括一节介绍如何添加和配置 Foreach 循环的课程。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **变量**  
  选择现有变量，或单击 **“新建变量...”** 创建新变量。  
   
@@ -520,7 +521,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="schema-restrictions-dialog-box-adonet"></a>“架构限制”对话框 (ADO.NET)
 可以使用 **“架构限制”** 对话框设置要应用于 Foreach ADO.NET 架构行集枚举器的架构限制。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **限制**  
  选择要应用于该架构的约束。  
   
@@ -535,14 +536,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="for-each-item-columns-dialog-box"></a>“For Each Item 列”对话框
 可以使用 **“For Each Item 列”** 对话框定义 Foreach Item 枚举器枚举的项中的列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **列**  
  列出各列。  
   
  **数据类型**  
  选择数据类型。  
   
- **添加**  
+ **“添加”**  
  添加新列。  
   
  **删除**  
@@ -551,7 +552,7 @@ ms.lasthandoff: 11/20/2017
  ## <a name="select-smo-enumeration-dialog-box"></a>“选择 SMO 枚举”对话框
 可以使用“选择 SMO 枚举”对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **枚举**  
  展开服务器，再选择 SMO 对象。  
   

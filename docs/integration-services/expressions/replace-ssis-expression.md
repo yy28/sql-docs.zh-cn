@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 852d3f254a9acd8e2bf501e29edc3151f579208a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 93f62c9307e149e2bfcae74282c1bd6b0e6f9ea4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replace-ssis-expression"></a>REPLACE（SSIS 表达式）
   将表达式中的一个字符串替换为另一个字符串或空字符串后，返回一个字符表达式。  
@@ -52,7 +53,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *searchstring* 的长度一定不能为零。  
   
  *replacementstring* 的长度可以为零。  

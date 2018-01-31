@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: incremental load [Integration Services],determining readiness
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dff547a6882d13763b471185f9ac486facc946b9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d2f30ddb989c9d92d0972f85af33e3b0496ba56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/20/2017
 |返回值|含义|响应|  
 |------------------|-------------|--------------|  
 |0|指示变更数据未准备就绪。<br /><br /> 在所选间隔的结束点之后没有变更数据捕获记录。|执行过程通过实现延迟的组件继续执行。 然后该控件返回 For 循环容器，只要返回值为 0，就会继续检查执行 SQL 任务。|  
-|1|可能指示没有捕获到整个间隔的变更数据，或者变更数据已删除。 这被视为错误情况。<br /><br /> 在所选间隔的起始点之前没有变更数据捕获记录。|执行过程通过记录错误的可选组件继续执行。|  
+|@shouldalert|可能指示没有捕获到整个间隔的变更数据，或者变更数据已删除。 这被视为错误情况。<br /><br /> 在所选间隔的起始点之前没有变更数据捕获记录。|执行过程通过记录错误的可选组件继续执行。|  
 |2|指示数据已准备就绪。<br /><br /> 在所选间隔的起始点之前和结束点之后都存在变更数据捕获记录。|执行将跳出 For 循环容器并且增量加载开始进行。|  
 |3|指示所有可用的变更数据的首次加载。<br /><br /> 条件逻辑从仅用于此目的特殊包变量中获取此值。|执行将跳出 For 循环容器并且增量加载开始进行。|  
 |5|指示已达到 TimeoutCeiling。<br /><br /> 循环已对数据执行了指定次数的测试，数据仍不可用。 如果没有此测试或类似的测试，该包可能会无限期地运行。|执行过程通过记录超时的可选组件继续执行。|  

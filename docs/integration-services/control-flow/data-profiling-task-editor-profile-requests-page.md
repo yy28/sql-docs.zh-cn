@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页，选择和配置需要计算的配置文件。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="requests-pane-options"></a>请求窗格选项  
  请求窗格具有下列选项：  
   
- **视图**  
+ **“视图”**  
  选择查看为该任务配置的所有配置文件，还是仅查看其中的一个配置文件。  
   
  请求窗格中的列会根据选择的 **“视图”** 而发生更改。 有关这些列中各列的详细信息，请参阅下一节“请求窗格列”。  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **“配置文件类型”**  
  从下面的选项选择一个数据配置文件：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**候选键配置文件请求**|计算候选键项配置文件。<br /><br /> 此配置文件报告某个列或列集是选定表的键还是近似键。 此配置文件还可以帮助您识别数据中的问题，如可能的键列中的重复值。|  
 |**列长度分布配置文件请求**|计算列长度分布配置文件。<br /><br /> 列长度分布配置文件报告选定列中字符串值的所有不同长度以及每个长度所表示的表中的行的百分比。 此配置文件可以帮助您识别数据中的问题，例如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。|  

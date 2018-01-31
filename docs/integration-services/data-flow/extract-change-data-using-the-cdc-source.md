@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52bc98b92c34f03f91ebc917ec30c4e4e7360157
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 545f7593878688f8b0d792410e363c738460fd90
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
   若要添加并配置 CDC 源，则包必须已包含至少一个数据流任务和一个 CDC 控制任务。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
   
 14. 可以单击 **“预览”** ，查看最多 200 行 CDC 源所提取的数据。  
   
-15. 单击 **“确定”**。  
+15. 单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   

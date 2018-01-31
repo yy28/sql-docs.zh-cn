@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,18 +18,19 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords: Transfer Database task [Integration Services]
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
   传输数据库任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两个实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 与只通过复制方式传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的其他任务相比，传输数据库任务既可以复制也可以移动数据库。 此任务还可以用来复制同一个服务器上的数据库。  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  在运行时，传输数据库任务使用一个或多个 SMO 连接管理器连接到源服务器和目标服务器。 在同一服务器上创建数据库的副本时，只需要一个 SMO 连接管理器。 SMO 连接管理器与传输数据库任务分开进行配置，然后在传输数据库任务中引用连接管理器。 SMO 连接管理器指定在该任务访问服务器时使用的服务器和身份验证模式。 有关详细信息，请参阅 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="transfer-database-task-editor-general-page"></a>传输数据库任务编辑器（“常规”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“常规”** 页，可以对传输数据库任务进行命名和说明。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。   
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为传输数据库任务键入唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -107,12 +109,12 @@ ms.lasthandoff: 11/20/2017
 ## <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **SourceConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
  此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|覆盖目标服务器数据库。|  
 |**False**|不覆盖目标服务器数据库。|  
@@ -165,7 +167,7 @@ ms.lasthandoff: 11/20/2017
   
  此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  
@@ -175,7 +177,7 @@ ms.lasthandoff: 11/20/2017
   
  若要使用源服务器上数据库文件的名称和位置填充此对话框，请首先在 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页中指定 **SourceConnection** 和 **SourceDatabaseName** 。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **源文件**  
  源服务器上要传输的数据库文件的名称。 **“源文件”** 是只读的。  
   
@@ -194,7 +196,7 @@ ms.lasthandoff: 11/20/2017
   
  若要使用源服务器上数据库文件的名称和位置自动填充此对话框，请首先在 **“传输数据库任务编辑器”**对话框的 **“数据库”**页中指定 **SourceConnection** 、 **SourceDatabaseName** 和 **SourceDatabaseFiles** 。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **目标文件**  
  目标服务器上作为传输目标的数据库文件的名称。  
   

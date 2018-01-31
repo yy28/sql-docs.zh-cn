@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>连接到 MySQL 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 MySQL 数据源。 有多个数据提供程序可用于连接到 MySQL。
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |必填信息|用于 MySQL 的 .NET Framework 数据提供程序属性|
 |---|---|
 |服务器名称|**Server**|
-|数据库名称|**数据库**|
+|数据库名称|**“数据库”**|
 |身份验证（登录）信息|“用户 ID”和“密码”|
 
 无须在列表的“ConnectionString”字段中输入连接字符串。 为 MySQL 服务器名称（“服务器”）输入单独值并输入登录信息后，向导会基于单独的属性及其值组合连接字符串。 
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>使用 MySQL ODBC 驱动程序连接到 MySQL
 ODBC 驱动程序未在数据源的下拉列表中列出。 要使用 ODBC 驱动程序连接，请首先在“选择数据源”页或“选择目标”页上选择“用于ODBC 的 .NET Framework 数据提供程序”作为数据源。 此提供程序充当 ODBC 驱动程序的包装器。
 
-下面是选择用于 ODBC 的 .NET Framework 数据提供程序后可立即看到的通用屏幕。
+下面是选择用于 ODBC 的 .NET Framework 数据提供程序后随即显示的常规屏幕。
 
 ![先使用 ODBC 连接到 SQL](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
@@ -65,7 +66,7 @@ ODBC 驱动程序未在数据源的下拉列表中列出。 要使用 ODBC 驱�
 要使用 MySQL ODBC 驱动程序连接到 MySQL，请组合出一条包含以下设置及其值的连接字符串。 完整连接字符串的格式紧跟在设置列表之后。
 
 > [!TIP]
-> 获取有关组合正确的连接字符串的帮助。 或者，提供现有 DSN（数据源名称）或创建一个新的 DSN，而不是提供连接字符串。 有关这些选项的详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
+> 获取有关组合出正确连接字符串的帮助。 或提供现有 DSN（数据源名称）或新建一个，而不是提供连接字符串。 有关这些选项的详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
 **驱动程序**  
 ODBC 驱动程序的名称。
@@ -73,14 +74,14 @@ ODBC 驱动程序的名称。
 **Server**  
 MySQL 服务器的名称。 
 
-**数据库**  
+**“数据库”**  
 MySQL 数据库的名称。
 
 **UID** 和 **PWD**   
 要连接的用户 ID 和密码。
 
 ### <a name="connection-string-format"></a>连接字符串格式
-以下是典型的连接字符串的格式。
+以下是典型连接字符串的格式。
 
     ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
@@ -100,7 +101,7 @@ MySQL 数据库的名称。
 ![使用 ODBC 连接到 MySQL](../../integration-services/import-export-data/media/connect-to-mysql-with-odbc.png)
 
 ## <a name="other-data-providers-and-more-info"></a>其他数据提供程序和详细信息
-有关如何使用此处未列出的数据提供程序连接到 MySQL 的信息，请参阅 [MySQL connection strings](https://www.connectionstrings.com/mysql/)（MySQL 连接字符串）。 此第三方网站还包含有关此页面上介绍的数据提供者和连接参数的更多信息。
+有关如何使用此处未列出的数据提供程序连接到 MySQL 的信息，请参阅 [MySQL connection strings](https://www.connectionstrings.com/mysql/)（MySQL 连接字符串）。 此第三方网站还包含有关此页介绍的数据提供程序和连接参数的详细信息。
 
 ## <a name="see-also"></a>另请参阅
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

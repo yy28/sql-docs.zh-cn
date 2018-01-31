@@ -8,23 +8,24 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4b1a7480113be51245c8c01a087a65ce616cb2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [关于自上次请求以来的变更数据捕获包示例的自述文件](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   

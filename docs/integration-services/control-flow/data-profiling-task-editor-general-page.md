@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.general.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe778df2be9b176d95ef78d52daf1bd4ef8bd7e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e05a90b25672e835963384ab19ec218a7b2d3480
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
@@ -49,12 +52,12 @@ ms.lasthandoff: 11/20/2017
 ## <a name="destination-options"></a>目标选项  
   
 > [!IMPORTANT]  
->  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
+>  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [对包使用的文件的访问](../../integration-services/security/security-overview-integration-services.md#files)。  
   
  **目标类型**  
  指定将数据配置文件输出保存到文件，还是保存到变量：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”选项中指定要使用的文件连接管理器。 |  
 |**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”选项中指定要使用的包变量。 |  

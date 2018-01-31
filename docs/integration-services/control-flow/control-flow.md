@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 588f1ea0f1c61b6d0d6b793fac41409aa7933964
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="control-flow"></a>控制流
+# <a name="control-flow"></a>“控制流”
   包由一个控制流以及一个或多个数据流（可选）组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了三种不同类型的控制流元素：提供包中结构的容器、提供功能的任务以及将可执行文件、容器和任务连接为已排序控制流的优先约束。  
   
  有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)、 [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)和 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
      将任务或容器添加到 **“控制流”** 选项卡的设计图面后， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器自动将连接线添加到项。 如果包中包含两个或更多项、任务或容器，则可以通过将它们的连接线从一项拖动到其他项而将它们联接成控制流。  
   
-     两个项之间的连接器表示优先约束。 优先约束定义了两个连接项之间的关系。 它指定了运行时任务和容器的执行顺序以及任务和容器的运行条件。 例如，优先约束可以指定某任务必须成功，才能运行控制流中的下一个任务。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+     两个项之间的连接器表示优先约束。 优先约束定义了两个连接项之间的关系。 它指定了运行时任务和容器的执行顺序以及任务和容器的运行条件。 例如，优先约束可以指定某任务必须成功，才能运行控制流中的下一个任务。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 -   添加连接管理器。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也包含多个设计时功能，这些功能可用于管理设计图面以及使控制流自文档化。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

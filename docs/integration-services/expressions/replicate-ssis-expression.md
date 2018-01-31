@@ -8,21 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: REPLICATE function
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 551f512e5094a44255da8f5baf4217909ef70a02
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4826170435f3f70a8530c891d8d797fc4b2691b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE（SSIS 表达式）
   返回多次复制后的字符表达式。 *times* 参数的计算结果必须为整数。  
@@ -47,7 +49,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果 times 为 0，则该函数返回零长度的字符串。  
   
  如果 *times* 为负数，则该函数返回一个错误。  

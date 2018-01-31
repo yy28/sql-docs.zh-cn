@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d9493c57bcfa4285bfadc811d6b24e1485bbb46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bc2455f71ec0aa3f927249d50524cfb98f9b380
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-source"></a>平面文件源
   平面文件源从文本文件中读取数据。 文本文件可以为带分隔符格式、固定宽度格式或混合格式。  
@@ -60,15 +61,15 @@ ms.lasthandoff: 11/20/2017
  此源具有一个输出和一个错误输出。  
   
 ## <a name="configuration-of-the-flat-file-source"></a>平面文件源的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [平面文件自定义属性](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何设置数据流组件属性的详细信息，请参阅 [设置数据流组件属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="flat-file-source-editor-connection-manager-page"></a>平面文件源编辑器（“连接管理器”页）
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 -   如果源是多平面文件并且数据流任务在循环容器（例如 For 循环容器）内，则使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。 有关详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **Flat file connection manager**  
  从列表中选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  平面文件源的 **FileNameColumnName** 属性及其输出列的 **FastParse** 属性未在 **“平面文件源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
   可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   

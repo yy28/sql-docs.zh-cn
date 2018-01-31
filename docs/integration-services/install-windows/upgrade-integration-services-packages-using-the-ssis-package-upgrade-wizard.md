@@ -8,23 +8,24 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed130489c29f923be47677624b350cb5f6a8894a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 27411b3f61efd0474313ce8de98b28fa3ebd51b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 包升级向导升级 Integration Services 包
   您可以将在早期版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中创建的包升级为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导来帮助完成此过程。 由于可以将该向导配置为备份原始包，因此如果您遇到升级困难，可以继续使用这些原始包。  

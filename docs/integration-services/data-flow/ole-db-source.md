@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -102,11 +103,11 @@ ms.lasthandoff: 11/20/2017
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB 自定义属性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [使用 OLE DB 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -175,13 +176,13 @@ ms.lasthandoff: 11/20/2017
  **SQL 命令文本**  
  输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
   
- **参数**  
+ **Parameters**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
  使用“查询生成器”对话框可直观地构造 SQL 查询。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-source-editor-columns-page"></a>OLE DB 源编辑器（“列”页）
   可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 源编辑器（“错误输出”页）
   可以使用 **“OLE DB 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   

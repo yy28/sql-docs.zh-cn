@@ -8,24 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.oledbcommandtrans.f1
+f1_keywords:
+- sql13.dts.designer.oledbcommandtrans.f1
 helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad315b1ac024edc88c7a095a8ac029607391bf4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b759d86a0a501364cdb5f4a1544ac2eb3df8d717
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
   OLE DB 命令转换对数据流中的每一行运行一条 SQL 语句。 例如，您可以运行 SQL 语句以在数据库表中插入、更新或删除行。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="logging"></a>日志记录  
  可以记录 OLE DB 命令转换对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除 OLE DB 命令转换对外部数据源执行的连接和命令中发生的故障。 若要记录 OLE DB 命令转换对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  可通过使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或对象模型配置转换。 有关以编程方式配置此转换的详细信息，请参阅开发人员指南。  
   
 ## <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
@@ -101,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
     -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
   
-14. 单击 **“确定”**。  
+14. 单击“确定” 。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   

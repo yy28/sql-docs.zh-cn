@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 566bdd1b9aebb84fa9d76de5b3cb9a6a55346bb8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 97940e3a6c4d5f0d493eacefc9d99943dd15a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hex-ssis-expression"></a>HEX（SSIS 表达式）
   返回一个表示整数的十六进制值的字符串。  
@@ -43,7 +44,7 @@ HEX(integer_expression)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果 integer_expression 为 Null，则 HEX 返回 Null。  
   
  integer_expression 参数的计算结果必须为整数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.providesourcequery.f1
+f1_keywords:
+- sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11ce97439baf73614bda8b2bd57c412790876189
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
 如果指定要提供查询以选择要复制的数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“提供源查询” 。 在此页上，可编写并测试选择要从数据源复制到目标的数据的 SQL 查询。 还可以粘贴已保存的查询的文本或从文件加载它。
@@ -58,7 +60,7 @@ WHERE CommissionPct > 0.015
 > [!NOTE]
 > 如果检查语句的语法所需的时间超过超时值（30 秒），则将停止分析并引发错误。 在成功完成分析之前，无法跳过向导的这一页。 避免超时的一种解决方案是基于要使用的查询创建数据库视图，然后从向导查询该视图，而不是直接输入查询文本。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框选择包含 SQL 查询的文本的已保存文件。 选择一个文件可以将该文件中的文本复制到“SQL 语句”  文本框中。  
  
 ## <a name="excelQueries"></a> 为 Excel 提供源查询

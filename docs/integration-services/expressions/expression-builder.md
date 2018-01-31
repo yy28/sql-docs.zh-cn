@@ -8,22 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords: Expression Builder dialog box
+f1_keywords:
+- sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords:
+- Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 18364f265be288c9e1cb4be8d97731086c993c4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expression-builder"></a>表达式生成器
   可以使用“表达式生成器”对话框创建和编辑属性表达式，或者编写使用图形用户界面设置变量值的表达式，此类表达式列出不同的变量并提供对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言包含的函数、类型转换和运算符的内置引用。  
@@ -40,13 +43,13 @@ ms.lasthandoff: 11/20/2017
   
  了解有关属性表达式和编写表达式的详细信息，请参阅[在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)和 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 |术语|定义|  
 |----------|----------------|  
 |**变量**|展开 **“变量”** 文件夹，再将变量拖至 **“表达式”** 框。|  
 |**数学函数**<br /><br /> **字符串函数**<br /><br /> **日期/时间函数**<br /><br /> **NULL 函数**<br /><br /> **类型转换**<br /><br /> **运算符**|展开相应的文件夹，再将函数、类型转换和运算符拖至 **“表达式”** 框。|  
-|**“表达式”**|编辑或键入表达式。|  
+|**表达式**|编辑或键入表达式。|  
 |**计算结果值**|列出表达式的计算结果。|  
 |**计算表达式**|单击 **“计算表达式”** 可以查看表达式的计算结果。|  
   

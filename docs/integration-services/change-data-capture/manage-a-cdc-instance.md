@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: manIns
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 实例
   您可以使用 CDC 设计器控制台查看与您创建的实例有关的信息，以及管理实例操作。  
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
  在您查看 CDC 实例的信息时，以下查看器选项卡可用。 这些选项卡中的信息是只读的。  
   
- **状态**  
+ **“状态”**  
  此选项卡提供有关 CDC 实例的当前状态的信息和统计信息。 其中包含以下信息。  
   
 -   **状态**：一个指示 CDC 实例的当前状态的图标。 下面将介绍这些状态。  

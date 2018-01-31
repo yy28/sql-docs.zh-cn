@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/20/2017
   
  **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **连接**  
+ **“连接”**  
  从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“\<新建连接...>”。  
   
  **SQLSourceType**  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/20/2017
   
  此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为某个 Transact-SQL 语句。 选择此值将显示动态选项 **SQLStatement**。|  
 |**文件连接**|选择包含 Transact-SQL 语句的文件。 设置此选项将显示动态选项 **FileConnection**。|  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/20/2017
   
  **相关主题：**[准备好的执行](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框定位包含 SQL 语句的文件。 选择一个文件，将文件内容作为 SQL 语句复制到 **SQLStatement** 属性中。  
   
  **生成查询**  
@@ -205,7 +206,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>“参数映射”页 - 执行 SQL 任务编辑器
 可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **“变量名称”**  
  通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量。  
   
@@ -227,7 +228,7 @@ ms.lasthandoff: 11/20/2017
   
  此设置可确保访问接口为长度可变的参数值分配足够的空间。  
   
- **添加**  
+ **“添加”**  
  单击此项可添加参数映射。  
   
  **删除**  
@@ -236,7 +237,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="result-set-page---execute-sql-task-editor"></a>“结果集”页 - 执行 SQL 任务编辑器
 可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“结果集”** 页，将 SQL 语句的结果映射到新变量或现有变量。 如果将“常规”页上的 **ResultSet** 设置为 **“无”**，将禁用此对话框中的选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **结果名称**  
  通过单击“添加”添加了结果集映射集之后，为结果提供名称。 必须根据结果集类型使用特定的结果名称。  
   
@@ -248,7 +249,7 @@ ms.lasthandoff: 11/20/2017
  **“变量名称”**  
  通过选择变量或单击“\<新建变量...>”使用“添加变量”对话框添加新的变量，将结果集映射到变量。  
   
- **添加**  
+ **“添加”**  
  单击此项可以添加结果集映射。  
   
  **删除**  
@@ -353,7 +354,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> - 或 -<br /><br /> SQL_TIMESTAMP|**datetime**、 **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> -或 -<br /><br /> SQL_TIMESTAMP|**datetime**、 **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  如果数据未存储在相应的输入或输出参数中，包将失败。  
@@ -464,7 +465,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     > [!IMPORTANT]  
     >  参数映射的顺序必须与参数在 SQL 语句中出现的顺序相同。  
   
-14. 单击 **“确定”**。  
+14. 单击“确定” 。  
 
 ##  <a name="Return_codes"></a>获取返回代码的值  
  存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 **ReturnValue** 类型的参数。  
@@ -529,7 +530,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |---------------------|---------------------------|--------------------|  
 |“单行”|与结果集中的类型列兼容的任意类型。|不适用|  
 |“完整结果集”|**对象**|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 ADO **Recordset**。<br /><br /> 如果任务使用托管连接管理器（如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器），则返回的对象为 **System.Data.DataSet**。<br /><br /> 您可以使用脚本任务访问 **System.Data.DataSet** 对象，如下面的示例中所示。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**字符串**|**字符串**|  
+|XML|**String**|**String**|  
 |XML|**对象**|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 **MSXML6.IXMLDOMDocument**。<br /><br /> 如果任务使用托管连接管理器（如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器），则返回的对象为 **System.Xml.XmlDocument**。|  
   
  您可在执行 SQL 任务作用域或包作用域内定义变量。 如果变量的作用域为包，则结果集可用于包中的其他任务和容器，并可用于执行包或执行 DTS 2000 包任务所运行的所有包。  
@@ -565,10 +566,10 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
      通常，可以将列名用作结果集名称，也可以将列列表中的列的序号位置用作结果集名称。 使用列名作为结果集名称的功能将依赖于配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>执行 SQL 任务故障排除  
- 可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 可以记录执行 SQL 任务对外部数据访问接口的调用。 您可以使用这项日志记录功能对执行 SQL 任务运行的 SQL 命令进行故障排除。 若要记录执行 SQL 任务对外部数据访问接口的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅[包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
  有时，SQL 命令或存储过程会返回多个结果集。 这些结果集不仅包含 **SELECT** 查询结果的行集，还包含 **RAISERROR** 或 **PRINT** 语句的错误结果的单个值。 该任务是否忽略第一个结果集之后出现的结果集中的错误，取决于所用的连接管理器类型：  
   

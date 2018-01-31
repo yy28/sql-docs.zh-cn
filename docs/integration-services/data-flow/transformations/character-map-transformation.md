@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34c666dc86e9026c5981a6a45f32fc06759de061
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
   字符映射表转换将字符串函数（如从小写到大写的转换）应用于字符数据。 此转换操作只对字符串数据类型的列数据执行。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
   可以使用“字符映射表转换编辑器”对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  使用该复选框可以选择通过字符串函数转换的列。 您的选择将显示在下表中。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
  **目标**  
  指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |新列|将数据保存在新列中。 在 **“输出别名”**下分配列名。|  
 |就地更改|将已修改的数据保存在现有的列中。|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/20/2017
  **运算**  
  从列表中选择要应用于列数据的字符串函数。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |Lowercase|转换为小写字母。|  
 |大写|转换为大写字母。|  
@@ -127,6 +128,6 @@ ms.lasthandoff: 11/20/2017
  为每个输出列键入一个别名。 默认为 **Copy of** 后接输入列名。不过，你也可以任选一个唯一的描述性名称。  
   
  **配置错误输出**  
- 使用[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为此转换指定错误处理选项。  
+ 使用[“配置错误输出” ](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为此转换指定错误处理选项。  
   
   

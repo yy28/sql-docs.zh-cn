@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.precedenceconstraint.f1
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
@@ -113,11 +115,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="precedence-constraint-editor"></a>优先约束编辑器
 可以使用 **“优先约束编辑器”** 对话框配置优先约束。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **求值运算**  
  指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”**和 **“表达式或约束”**。  
   
- **值**  
+ **ReplTest1**  
  指定约束值：“成功” 、“失败” 或“完成” 。  
   
 > [!NOTE]  
@@ -155,11 +157,11 @@ ms.lasthandoff: 11/20/2017
     |--------------------------|--------------------------|  
     |Description|提供说明。|  
     |EvalOp|选择一个求值运算。 如果选择了 **Expression**、 **ExpressionAndConstant**或 **ExpressionOrConstant** 运算，则可指定一个表达式。|  
-    |“表达式”|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
+    |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|设置 **LogicalAnd** ，以指定当有多个可执行文件优先于并且链接到受约束的可执行文件时，是否将此优先约束与其他优先约束一起计算。|  
-    |名称|更新优先约束的名称。|  
+    |“属性”|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
-    |“值”|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
+    |ReplTest1|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
   
 5.  关闭“属性”窗口。  
   
@@ -178,7 +180,7 @@ ms.lasthandoff: 11/20/2017
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>将表达式添加到优先约束
- 优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 **Success**、 **Failure**或 **Completion**。 **Success** 要求优先可执行文件成功； **Failure** 要求优先可执行文件失败；而 **Completion** 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 **Success**、 **Failure**或 **Completion**。 **Success** 要求优先可执行文件成功； **Failure** 要求优先可执行文件失败；而 **Completion** 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  表达式的值必须为 **True** 或 **False** ，并且此表达式必须为有效的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式。 此表达式可以使用文字、系统变量和自定义变量以及 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表达式语法提供的函数和运算符。 例如，表达式 `@Count == SQRT(144) + 10` 使用了变量 **Count**、SQRT 函数以及等号 (==) 和加号 (+) 运算符。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ## <a name="create-a-default-precedence-constraint"></a>创建默认优先约束  
   

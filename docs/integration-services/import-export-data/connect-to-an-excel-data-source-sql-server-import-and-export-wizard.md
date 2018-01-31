@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2aeb225037970b8a77169db18c204ecf6d4c19d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 16ace15a73d9ef727612c59f8c9329a4d4437312
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>连接到 Excel 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 **Microsoft Excel** 数据源。
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 
 或单击 **“浏览”**。  
   
- **浏览**  
+ **“浏览”**  
  通过使用“打开”对话框定位电子表格。  
 
 > [!NOTE]
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 最新版组件可以打开 Excel 早期版本创建的文件。
 
-如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，并且还必须确保在 32 位模式下运行包。
+如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，还须确保在 32 位模式下运行程序包。
 
 如果有 Office 365 订阅，请确保下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。 运行安装程序时，可能会看到一条错误消息，指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
 

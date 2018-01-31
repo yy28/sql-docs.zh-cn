@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
   本节介绍 Oracle CDC 服务的一些重要概念。 本节中包含的概念是：  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 |项|Description|  
 |----------|-----------------|  
-|timestamp|写入跟踪日志时的准确 UTC 时间戳。|  
+|TIMESTAMP|写入跟踪日志时的准确 UTC 时间戳。|  
 |type|包含以下值之一。<br /><br /> error<br /><br /> INFO<br /><br /> 跟踪|  
 |节点|写入记录的节点的名称。|  
 |status|状态表使用的状态代码。|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |项|Description|  
 |----------|-----------------|  
-|name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中 Oracle 数据库的名称。|  
+|NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中 Oracle 数据库的名称。|  
 |config_version|相应 CDC 数据库 **xdbcdc_config** 表中上次更改的时间戳 (UTC) 或者此表中当前行的时间戳 (UTC)。<br /><br /> UPDATE 触发器将此项的值强制为 GETUTCDATE()。 **config_version** 使 CDC 服务可以标识需要检查是否有配置更改或启用/禁用的 CDC 实例。|  
 |cdc_service_name|此项确定哪一 Oracle CDC 服务处理所选 Oracle 数据库。|  
 |enabled|指示 Oracle CDC 实例是处于活动状态 (1) 还是被禁用 (0)。 在 Oracle CDC 服务启动时，只启动标记有启用 (1) 的实例。<br /><br /> **注意**：Oracle CDC 实例可能会由于无法重试的错误而成为禁用的实例。 在此情况下，必须在解决错误后手动重新启动该实例。|  

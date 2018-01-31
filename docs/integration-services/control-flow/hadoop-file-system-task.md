@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hadoopfiletask.f1
+f1_keywords:
+- sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9cc77b27b5e2b53b8790cdbd99324166f4ca659
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 540e8e939321a81dfcf044516ce81fd0e6b4d6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 文件系统任务
   Hadoop 文件系统任务允许 SSIS 包在 Hadoop 群集之间或内部复制文件。  
@@ -31,12 +33,12 @@ ms.lasthandoff: 11/20/2017
   
  ![Hadoop 文件系统任务编辑器](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Hadoop File System Task Editor")  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  配置“Hadoop 文件系统任务编辑器”对话框  中的下列选项。  
   
 |字段|Description|  
 |-----------|-----------------|  
-|**Hadoop 连接**|指定一个现有的 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明目标文件的托管位置。|  
+|**Hadoop 连接**|指定现有的一个 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明目标文件的托管位置。|  
 |**Hadoop 文件路径**|指定 HDFS 上的文件或目录路径。|  
 |**Hadoop 文件类型**|指定 HDFS 文件系统对象是文件还是目录。|  
 |**覆盖目标**|如果目标文件已经存在，则指定是否将其覆盖。|  

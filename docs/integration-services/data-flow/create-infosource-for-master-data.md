@@ -8,22 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 822116bb998a5a8f42afecaeedbbdf56f4c41a5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4caf4c8fde349f6865792d327965a8dea4161f73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-infosource-for-master-data"></a>创建主数据的 InfoSource
+# <a name="create-infosource-for-master-data"></a>“创建主数据的 InfoSource”
   使用 **“创建主数据的 InfoSource”** 对话框为 SAP Netweaver BW 系统中的主数据创建一个新的 InfoSource。  
   
  从 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页可以打开 **“创建主数据的 InfoSource”**对话框。 若要了解有关 SAP BW 目标的详细信息，请参阅 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  在 **“创建 InfoSource”** 对话框中，选择 **“主数据”**，然后单击 **“确定”**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **InfoObject 名称**  
  输入新 InfoSource 应基于的 InfoObject 的名称。  
   

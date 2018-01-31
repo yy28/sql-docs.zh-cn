@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2090f6eb85b4f89ff71dd1728f668690733a4df5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6bad96e7d130fe0caaa935a5e16d7d6c380cbb83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
   若要添加和配置 XML 源，包中必须已经包含至少一个数据流任务。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
 9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2a93e5d4c038db3620e78a4141ca8235d703263
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50fdbc0168430a4119da86582258c5dff333a1f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>连接到 Oracle 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Oracle 数据源。 有多种数据提供程序可用来连接 Oracle。
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > 无论 Oracle 是源还是目标，此数据提供程序的连接选项都相同。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的。
 
-|所需信息|用于 Oracle 的 .Net Framework 数据提供程序属性|
+|必填信息|用于 Oracle 的 .Net Framework 数据提供程序属性|
 |---|---|
 |服务器名称|**数据源**|
 |身份验证（登录）信息|“用户 ID”和“密码”或“集成安全性”|
@@ -78,9 +79,9 @@ Uid 和 Pwd
     ```
 
 ### <a name="enter-the-connection-string"></a>输入连接字符串
-在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串或在“Dsn”字段中输入 DSN 名称。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
+在“选择数据源”页或“选择目标”页上的“ConnectionString”字段中输入连接字符串，或在“Dsn”字段中输入 DSN 名称。 输入连接字符串后，向导会分析该字符串，并在列表中显示各个属性及其值。
 
-下面是输入连接字符串后看到的屏幕。
+下面是输入连接字符串后出现的屏幕。
 
 ![使用 ODBC 连接到 Oracle](../../integration-services/import-export-data/media/connect-to-oracle-with-odbc.jpg)
 
@@ -89,7 +90,7 @@ Uid 和 Pwd
 
 `SELECT host_name FROM v$instance`
 
-或
+或多个
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

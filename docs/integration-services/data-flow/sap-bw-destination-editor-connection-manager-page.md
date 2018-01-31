@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
   使用 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页，选择 SAP BW 目标要使用的 SAP BW 连接管理器。 在该页中，您还可选择用于向 SAP Netweaver BW 系统加载数据的参数。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  在 **“SAP BW 目标编辑器”**中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 > [!NOTE]  
 >  如果您不知道配置目标所需的所有值，可能需要询问您的 SAP 管理员。  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/20/2017
  **逻辑系统**  
  输入 InfoPackage 关联的逻辑系统的名称。  
   
- **“查找”**  
+ **查找**  
  使用“查找 InfoPackage”对话框查找 InfoPackage。 有关此对话框的详细信息，请参阅 [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)。  
   
 ### <a name="rfc-destination-options"></a>RFC 目标选项  
@@ -91,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **“查找”**  
+ **查找**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 ### <a name="create-sap-bw-objects-options"></a>创建 SAP BW 对象选项  

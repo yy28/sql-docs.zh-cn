@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
   字词查找转换将从转换输入列的文本中提取的字词与引用表中的字词进行匹配， 然后计算出查找表中的字词在输入数据集中出现的次数，并将计数与引用表中的此字词一并写入转换输出的列中。 此转换对于创建基于输入文本并带有词频统计信息的自定义词列表很有用。  
@@ -65,11 +66,11 @@ ms.lasthandoff: 11/20/2017
   
  如果查找项包含的字词与引用集中的字词重叠，即一个子字词出现在多个引用记录中，则字词查找转换仅返回一个查找结果。 下面的示例显示查找项包含重叠子字词时的结果。 在本示例中，重叠的子字词为 *Windows*，它出现在两个引用字词中。 但是，转换并不返回两个结果，而仅返回一个引用字词 *Windows*。 第二个引用字词 *Windows 7 Professional*并未返回。  
   
-|项|“值”|  
+|项|ReplTest1|  
 |----------|-----------|  
 |输入字词|Windows 7 Professional|  
 |引用字词|Windows、Windows 7 Professional|  
-|输出|Windows|  
+|“输出”|Windows|  
   
  字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下：%、@、&、$、#、\*、:、;、.、“、”、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“ 和 ‘。  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>字词查找转换编辑器（“字词查找”选项卡）
   可以使用 **“字词查找转换编辑器”** 对话框的 **“字词查找”** 选项卡，将输入列映射到引用表中的查找列，以及为每个输出列提供别名。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  使用复选框选择要传递给未更改输出的输入列。 将输入列拖动到 **“可用引用列”** 列表可以将其映射到引用表中的查找列。 输入列和查找列必须具有支持的匹配数据类型（DT_NTEXT 或 DT_WSTR）。 选择一个映射行，再右键单击可在 [创建关系](../../../integration-services/data-flow/transformations/create-relationships.md) 对话框中编辑该映射。  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
   可以使用“字词查找转换编辑器”对话框的“引用表”选项卡指定到引用（查找）表的连接。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **“无缓存”**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>字词查找转换编辑器（“高级”选项卡）
   可以使用“字词查找转换编辑器”对话框的“高级”选项卡指定查找是否区分大小写。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **使用区分大小写的字词查找**  
  指示查找是否区分大小写。 默认值为 **False**。  
   

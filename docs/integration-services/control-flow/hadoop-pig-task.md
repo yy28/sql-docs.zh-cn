@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hadooppigtask.f1
+f1_keywords:
+- sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ac7dc9f26ae70afe0e8dc9847e68c7f3b8f857
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ddf9f96b1473b1d329d5f34b210ad0897631d742
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 任务
   使用 Hadoop Pig 任务可以在 Hadoop 群集上运行 Pig 脚本。  
@@ -31,12 +33,12 @@ ms.lasthandoff: 11/20/2017
   
  ![Hadoop Pig 任务编辑器](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop Pig Task Editor")  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  在“Hadoop Pig 任务编辑器”对话框  中配置下列选项。  
   
 |字段|Description|  
 |-----------|-----------------|  
-|**Hadoop 连接**|指定一个现有的 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明 WebHCat 服务的托管位置。|  
+|**Hadoop 连接**|指定现有的一个 Hadoop 连接管理器，或新建一个 Hadoop 连接管理器。 此连接管理器指明 WebHCat 服务的托管位置。|  
 |**SourceType**|指定该查询的源类型。 可用的值为“ScriptFile”  和“DirectInput” 。|  
 |**InlineScript**|当“SourceType”  的值为“DirectInput” 时，指定 Pig 脚本。|  
 |**HadoopScriptFilePath**|当“SourceType”  的值为“ScriptFile” 时，在 Hadoop 上指定脚本文件路径。|  

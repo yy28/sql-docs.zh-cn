@@ -8,7 +8,8 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source"></a>OData 源
 在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。 该组件支持 OData v3 和 v4 协议。  
@@ -42,7 +43,7 @@ OData 源包括对以下数据源的支持：
 ## <a name="odata-format-and-performance"></a>OData 格式和性能
  大多数 OData 服务都可以多种格式返回结果。 可以使用 `$format` 查询选项指定结果集的格式。 JSON 和 JSON 轻型这类格式比 ATOM 或 XML 更高效，并且在传输大量数据时的性能更佳。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换至 JSON 后，性能提高 30-53%，从 ATOM 切换至新的 JSON 轻型格式（WCF Data Services 5.1 中提供）后，性能提高 67%。  
   
-|行|ATOM|JSON|JSON（轻型）|  
+|“行”|ATOM|JSON|JSON（轻型）|  
 |-|-|-|-|  
 |10000|113 秒|74 秒|68 秒|  
 |1000000|1110 秒|853 秒|665 秒|  
@@ -97,7 +98,7 @@ OData 源包括对以下数据源的支持：
 ## <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
   使用“OData 源编辑器”对话框的“列”页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用源列的列表。 使用列表中的复选框可向页底部的表添加或删除列。 所选列会添加到输出中。  
   
@@ -110,7 +111,7 @@ OData 源包括对以下数据源的支持：
 ## <a name="odata-source-editor-error-output-page"></a>OData 源编辑器（“错误输出”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   

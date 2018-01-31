@@ -8,22 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dacb3a2eea675e85b23fc2b05443d14a95983c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfeeaa38de94dfe2f1d716cda8eee0e5e5faf6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="odbc-destination-custom-properties"></a>ODBC 目标自定义属性
+# <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   下表介绍了 ODBC 目标的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  
   
 |属性名称|数据类型|Description|  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Integer|要用于字符串列的代码页。<br /><br /> **注意：**此属性在 **“ODBC 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。|  
 |InsertMethod|Integer（枚举）|用于插入数据的方法。 可能的值为逐行 (0) 和批处理 (1)。 默认值为批处理 (1)。<br /><br /> 有关这些选项的详细信息，请参阅 [ODBC Destination](../../integration-services/data-flow/odbc-destination.md)中的“加载选项”。|  
 |StatementTimeout|Integer|在无错返回应用程序之前等待 SQL 语句执行的秒数。 默认值为 120。|  
-|TableName|字符串|要插入数据的目标表的名称。|  
+|TableName|String|要插入数据的目标表的名称。|  
 |TransactionSize|Integer|单个事务中的插入数。 默认值为 0，这意味着 ODBC 目标在自动提交模式下工作。<br /><br /> 因为 ODBC 连接管理器不支持分布式事务，所以，可以使用 0 以外的其他值来设置此属性。 但是，如果连接管理器的 **RetainSameConnection** 属性设置为 **true** ，则此属性必须设置为 0。<br /><br /> **注意：**此属性在 **“ODBC 目标编辑器”**中不可用，但可以使用 **“高级编辑器”**进行设置。|  
 |LobChunkSize|Integer|针对 LOB 列的块大小分配。|  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba39190db7b5cfefbb7a4624ca20d71673404093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8cf75ff26033b7f6d2dd29af0d226b6b0172c094
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
   DQS 清除转换使用 Data Quality Services (DQS)，通过应用为连接的数据源或类似数据源创建的已批准规则来更正来自连接的数据源的数据。 有关数据更正规则的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)。 有关 DQS 的详细信息，请参阅 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-quality-projects-and-values"></a>数据质量项目和值  
  使用 DQS 清理转换处理数据时，会在数据质量服务器上创建一个清理项目。 使用数据质量客户端管理项目。 此外，您还可以使用数据质量客户端将项目值导入 DQS 知识库域。 只能将值导入配置为使用 DQS 清理转换的域（或链接域）。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [在数据质量客户端中打开 Integration Services 项目](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
