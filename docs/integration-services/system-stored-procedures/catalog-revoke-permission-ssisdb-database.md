@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>参数  
  [ @object_type = ] *object_type*  
- 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint***。*  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`)、项目 (`2`)、环境 (`3`) 和操作 (`4`)。object_type 为 *smallint****。*  
   
  [ @object_id = ] *object_id*  
  安全对象的唯一标识符 (ID)。 *object_id* 为 **bigint**。  
@@ -67,21 +68,21 @@ catalog.revoke_permission [ @object_type = ] object_type
  5（其他错误）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
- 无  
+## <a name="remarks"></a>Remarks  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对对象的 ASSIGN_PERMISSIONS 权限  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格  
+-   sysadmin 服务器角色的成员资格  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定 permission_type，存储过程会删除显式分配给主体的针对对象的权限。 即使不发生此类情况，该过程也将返回成功代码值 (`0`)。 如果忽略 permission_type，存储过程会删除主体针对对象的所有权限。  
   
 > [!NOTE]  

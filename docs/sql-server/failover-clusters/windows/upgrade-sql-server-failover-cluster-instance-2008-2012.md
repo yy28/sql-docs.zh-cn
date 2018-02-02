@@ -1,11 +1,12 @@
 ---
 title: "升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例 | Microsoft Docs"
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例
 
@@ -29,7 +30,6 @@ ms.lasthandoff: 01/09/2018
 ## <a name="prerequisites"></a>必备条件
 
 -   在执行任何迁移策略之前，必须先准备好 Windows Server 2016/2012 R2 的并行 Windows Server 故障转移群集。 所有包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 故障转移群集实例 (FCI) 的节点都必须加入安装了并行 FCI 的 Windows 群集。 任何独立计算机都不得在迁移之前加入 Windows Server 故障转移群集。 迁移之前，应在新环境中同步用户数据库。
-
 -   所有目标实例必须与其在原始坏境中的并行实例在相同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 上运行，并使用相同的实例名称和 ID，安装相同的功能。 目标计算机上的安装路径和目录结构应完全相同。 这不包括 FCI 虚拟网络名称，在迁移之前，该名称不能相同。 目标实例还应启用原始实例所启用的任何功能（Always On、FILESTREAM 等）。
 
 -   迁移前，并行群集不应安装 [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]。
@@ -41,7 +41,6 @@ ms.lasthandoff: 01/09/2018
 -   原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 群集环境中使用的任何网络文件共享和网络映射驱动器都必须仍然存在，并可供与原始实例具有相同权限的目标群集访问。
 
 -   原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 实例侦听的任何 TCP/IP 端口都必须是未使用的，并允许目标计算机上的入站流量。
-
 -   所有与 SQL 相关的服务都应由同一个 Windows 用户安装并运行。
 
 -   必须使用与原始实例相同的区域设置安装目标实例。
@@ -57,8 +56,8 @@ ms.lasthandoff: 01/09/2018
 | **群集使用独立实例** | [应用场景 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [应用场景 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [应用场景 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [应用场景 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \*不包括可用性组侦听程序名称
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>应用场景 1：要迁移的群集使用严格意义的可用性组 (Windows Server 2008 R2 SP1+)
-如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序使用严格意义的可用性组 (AG)，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序，将其迁移到新群集。 此后，可以创建分布式 AG，其中的目标群集为当前生产群集的辅助群集。 这不需要用户升级到 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更高版本。
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>方案 1：采用 SQL Server 可用性组且不使用故障转移群集实例 (FCI) 的 Windows 群集
+如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序使用可用性组 (AG)，且没有故障转移群集实例，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 部署，将其迁移到新群集。 此后，可以创建分布式 AG，其中的目标群集为当前生产群集的辅助群集。 这不需要用户升级到 [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 或更高版本。
 
 ###  <a name="to-perform-the-upgrade"></a>执行升级
 
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/09/2018
 3.  组成一个分布式可用性组，其中的目标群集为辅助可用性组。
 
     >[!NOTE]
-    >对于将 FCI 用作主实例的 AG，创建分布式 AG 查询的 LISTENER\_ URL 参数的行为略有不同。 如果此应用场景针对主 AG 或辅助 AG，则将主 SQL FCI 的 VNN 用作侦听程序 URL，代替侦听程序的网络名称，在任一应用场景中，仍使用数据库镜像终结点的端口。
+    >对于将 SQL FCI 用作主实例的 AG，创建分布式 AG T-SQL 的 LISTENER\_URL 参数的行为有所不同。 如果是针对主 AG 或辅助 AG 的情况，则将主 SQL FCI 的 VNN 用作侦听程序 URL 代替侦听程序的网络名称，且使用数据库镜像终结点端口。
 
 4.  将辅助可用性组联接到分布式 AG。
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 
 6.  截断到主 AG 的所有流量，并允许同步辅助 AG。
 
-7.  将两个可用性组上的提交策略都更改为 SYNCHRONOUS\_COMMIT，并在状态为“已同步”时故障转移到目标群集。
+7.  将两个可用性组上的提交策略都更改为 SYNCHRONOUS_COMMIT，并在状态为“已同步”时故障转移到目标群集。
 
 8.  删除分布式 AG。
 
@@ -93,9 +92,9 @@ ms.lasthandoff: 01/09/2018
 
 11. 恢复通向侦听程序的流量。
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>应用场景 2：要迁移的群集仅包含 SQL FCI 而不包含 AG
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>方案 2：采用 SQL Server 故障转移群集实例 (FCI) 的 Windows 群集
 
-如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序未使用任何独立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 实例（仅使用 SQL FCI），则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序，将其迁移到新群集。 通过“窃取”旧 SQL FCI 的 VNN 并在新群集上获取这些 VNN，迁移到目标群集。 这将导致额外的停机时间，具体取决于 DNS 传播时间。
+如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 环境只包括 SQL FCI 实例，则可通过在 Windows Server 2016/2012 R2 的其他 Windows 群集上创建并行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 环境，将其迁移到新群集。 通过“窃取”旧 SQL FCI 的 VNN 并在新群集上获取这些 VNN，迁移到目标群集。 这将导致额外的停机时间，具体取决于 DNS 传播时间。
 
 ###  <a name="to-perform-the-upgrade"></a>执行升级
 
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/09/2018
 
 12. 随着计算机重启后恢复联机，在故障转移群集管理器中启动每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI 角色。
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>应用场景 3：群集仅包含 SQL FCI，并使用可用性组
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>方案 3：兼具 SQL FCI 和 SQL Server 可用性组的 Windows 群集
 
 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 安装程序未使用任何独立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 实例，仅使用至少包含在一个可用性组中的 SQL FCI，则可以使用类似于“无可用性组，无独立实例”应用场景的方法将其迁移到新的群集。 在将系统表复制到目标 FCI 共享磁盘之前，必须在原始环境中删除所有可用性组。 将所有数据库迁移到目标计算机后，使用相同的架构和侦听程序名称重新创建可用性组。 通过执行此操作，可在目标群集上正确组成和管理 Windows Server 故障转移群集资源。 在迁移之前，必须在目标环境中每台计算机上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 配置管理器中启用 Always On。
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 01/09/2018
 
 16. 在新 AG 中使用原始可用性组侦听程序的名称创建侦听程序。
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>应用场景 4：群集包含一些非 FCI，但未使用可用性组
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>方案 4：采用独立 SQL Server 实例且不使用可用性组的 Windows 群集
 
 迁移包含独立实例的群集的过程与迁移仅包含 FCI 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 群集相似，但是不更改 FCI 网络名称群集资源的 VNN，而是更改原始独立计算机的计算机名称，并在目标计算机上“窃取”旧计算机的名称。 与不包含独立实例的应用场景相比，这确实产生了额外的停机时间，因为在获取旧计算机的网络名称之前，无法将目标独立计算机联接到 WSFC。
 
@@ -200,9 +199,9 @@ ms.lasthandoff: 01/09/2018
 
 15. 随着计算机重启后恢复联机，在故障转移群集管理器中启动每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI 角色。
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>应用场景 5：群集包含一些非 FCI，并使用可用性组
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>方案 5：采用独立 SQL Server 实例以及可用性组的 Windows 群集
 
-对于使用可用性组且包含独立副本的群集，其迁移过程类似于迁移具有严格意义的 FCI 且使用可用性组的群集。 仍然必须删除原始可用性组并在目标集群上重建；但是，由于迁移独立实例带来的额外开销，产生了额外的停机时间。 在迁移之前，必须在目标环境中的每个 FCI 上启用 Always On。
+对于使用可用性组且包含独立副本的群集，其迁移过程类似于迁移具有 FCI 且使用可用性组的群集。 仍然必须删除原始可用性组并在目标集群上重建；但是，由于迁移独立实例带来的额外开销，产生了额外的停机时间。 在迁移之前，必须在目标环境中的每个 FCI 上启用 Always On。
 
 ###  <a name="to-perform-the-upgrade"></a>执行升级
 

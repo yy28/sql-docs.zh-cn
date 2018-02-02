@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>参数  
  [ @object_type = ] *object_type*  
- 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint***。*  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`)、项目 (`2`)、环境 (`3`) 和操作 (`4`)。object_type 为 *smallint****。*  
   
  [ @object_id = ] *object_id*  
  安全对象的唯一标识符 (ID)。 *object_id* 为 **bigint**。  
@@ -67,20 +68,20 @@ catalog.grant_permission [ @object_type = ] object_type
  5（其他错误）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对对象的 ASSIGN_PERMISSIONS 权限  
   
--   **ssis_admin** 数据库角色的成员资格  
+-   ssis_admin 数据库角色的成员资格  
   
--   **sysadmin** 服务器角色的成员资格  
+-   sysadmin 服务器角色的成员资格  
 
 此过程不能由 SQL Server 验证了身份的登录名调用。 它不能由 sa 登录名调用。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通过此存储过程可以授予下表中所示的权限类型：  
   
 |permission_type 值|权限名称|权限说明|适用对象类型|  

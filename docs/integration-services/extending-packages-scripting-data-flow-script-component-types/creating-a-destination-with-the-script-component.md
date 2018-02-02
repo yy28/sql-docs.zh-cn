@@ -11,23 +11,25 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script component [Integration Services], destination components
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9037d604503ba2a0d5443e94f11638035369ce3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf01202003f2fc42f5e6527348d95ec3fe9e4859
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/08/2018
  下面的示例演示在 **ScriptMain** 类中创建目标组件所需的代码。  
   
 > [!NOTE]  
->  这些示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表并在数据流中传递它的第一列和第四列，即 **int*AddressID*** 和 **nvarchar(30)City** 列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
+>  这些示例使用 AdventureWorks 示例数据库中的 Person.Address 表并在数据流中传递它的第一列和第四列，即int*AddressID*和 nvarchar(30)City 列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目标示例  
  本示例演示了使用现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器将数据流中的数据保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的目标组件。  

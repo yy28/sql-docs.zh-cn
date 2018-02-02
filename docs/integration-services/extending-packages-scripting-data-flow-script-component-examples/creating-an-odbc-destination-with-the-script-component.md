@@ -11,23 +11,24 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Script component [Integration Services], destination components
 - ODBC destination [Integration Services]
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f2c69567eedb53dce94134f0381dfca7a21cf28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a40d282b79d5319aa5a7dcbbe5f63a72f42f9af6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用脚本组件创建 ODBC 目标
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标和用于 ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序将数据保存到 ODBC 目标。 当然，还可以创建供单个包使用的即席 ODBC 目标。 若要创建此即席 ODBC 目标，可使用脚本组件，如下面的示例中所示。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **OdbcCommand** 需要位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 （相反，**SqlCommand** 需要命名参数。）  
   
- 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 本示例在数据流中传递该表的第一列和第四列：**int*AddressID*** 和 **nvarchar(30)City** 列。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
+ 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 本示例在数据流中传递该表的第一列和第四列：int*AddressID* 和 nvarchar(30)City 列。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   

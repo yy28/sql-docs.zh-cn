@@ -8,11 +8,14 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: "81"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a3ff34e28c937c83e43860129f8185ae0ed1b1d6
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
   在“脚本任务编辑器”中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  在设计包和调试脚本时，脚本代码将临时写入项目文件。 在文件中存储敏感信息会埋下安全隐患，因此建议您不要在脚本代码中包含敏感信息，如密码。  
   
- 默认情况下，**Option Strict** 在 IDE 中处于禁用状态。  
+ 默认情况下，Option Strict 在 IDE 中处于禁用状态。  
   
 ## <a name="script-task-project-structure"></a>脚本任务项目结构  
  创建或修改包含在脚本任务中的脚本时，VSTA 会打开一个空的新项目或重新打开现有项目。 创建此 VSTA 项目不会影响包的部署，因为项目保存在包文件内；脚本任务不会创建其他文件。  
@@ -209,7 +212,7 @@ To open Help, press F1.
  在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  可以在 VSTA IDE 中的“类视图”或“项目资源管理器”中查看项目引用。 这些窗口都可以从“视图”菜单中打开。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用。  
+>  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用。 这些窗口都可以从“视图”菜单中打开。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>在脚本任务中与包进行交互  
  脚本任务使用全局 **Dts** 对象（<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的一个实例）及其成员与包含包和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时进行交互。  
@@ -236,7 +239,7 @@ To open Help, press F1.
  若要调试脚本任务中的代码，请在代码中设置至少一个断点，然后关闭 VSTA IDE 以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中运行包。 当包执行进入脚本任务时，VSTA IDE 会在只读模式下重新打开并显示您的代码。 包执行到达您的断点后，您可以检查变量值，并单步执行剩余代码。  
   
 > [!WARNING]  
->  可以在 64 位模式下运行包时调试脚本任务。  
+>  在 64 位模式下运行包时不能调试脚本任务。  
   
 > [!NOTE]  
 >  您必须执行包，以调试您的脚本任务。 如果您只执行单个任务，则脚本任务代码中的断点将被忽略。  
@@ -249,7 +252,7 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661)（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）。  
+-   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](http://go.microsoft.com/fwlink/?LinkId=215661)。  
   
 ## <a name="see-also"></a>另请参阅  
  [引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
