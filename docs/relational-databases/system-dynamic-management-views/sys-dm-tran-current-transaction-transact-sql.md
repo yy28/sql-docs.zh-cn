@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_tran_current_transaction (Transact SQL) |Microsoft 文档"
+title: sys.dm_tran_current_transaction (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction_TSQL
 - dm_tran_current_transaction
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_current_transaction dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_current_transaction dynamic management view
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55c0179a2c589a8dad2d178693593a943adba445
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 37deeb2752cc1e96c5c3ddc0719d2f71dce2283a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtrancurrenttransaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +52,15 @@ sys.dm_tran_current_transaction
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**transaction_id 收集**|**bigint**|当前快照的事务 ID。|  
+|**transaction_id**|**bigint**|当前快照的事务 ID。|  
 |**transaction_sequence_num**|**bigint**|生成该记录版本的事务的序列号。|  
 |**transaction_is_snapshot**|**bit**|快照隔离状态。 如果事务在快照隔离状态下启动，则此值为 1。 否则，此值为 0。|  
 |**first_snapshot_sequence_num**|**bigint**|拍摄快照时处于活动状态的事务的最小事务序列号。 当执行快照事务时，它会拍摄当时所有活动事务的快照。 对于非快照事务，此列显示 0。|  
 |**last_transaction_sequence_num**|**bigint**|全局序列号。 此值表示由系统生成的最后一个事务序列号。|  
 |**first_useful_sequence_num**|**bigint**|全局序列号。 此值表示具有行版本（必须在版本存储区中保留）的事务的最早事务序列号。 由以前的事务创建的行版本可以删除。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  

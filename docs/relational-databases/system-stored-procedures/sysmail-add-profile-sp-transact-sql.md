@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
 - sysmail_add_profile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_profile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab45b6b8af6528614a8c5e306bad2cc58eb130d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6295b1f239f136c43e00e047186ce408ab9a4a93
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_name**  =] *profile_name*  
+ [ **@profile_name** = ] **'***profile_name***'**  
  新配置文件的名称。 *profile_name*是**sysname**，无默认值。  
   
- [  **@description**  =] *说明*  
+ [ **@description** = ] **'***description***'**  
  新配置文件的说明（可选）。 *说明*是**nvarchar(256)**，无默认值。  
   
- [  **@profile_id**  =] *new_profile_id***输出**  
+ [ **@profile_id** = ] *new_profile_id***OUTPUT**  
  返回新配置文件的 ID。 *new_profile_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +69,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  存储的过程**sysmail_add_profile_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

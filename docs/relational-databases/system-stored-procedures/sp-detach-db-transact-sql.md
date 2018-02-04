@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +52,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dbname =** ] *database_name*  
+ [ **@dbname =** ] **'***database_name***'**  
  要分离的数据库的名称。 *database_name*是**sysname**具有默认值为 NULL 值。  
   
- [  **@skipchecks =** ] *同时将 skipchecks*  
+ [ **@skipchecks =** ] **'***skipchecks***'**  
  指定跳过还是运行 UPDATE STATISTIC。 *同时将 skipchecks*是**nvarchar(10)**具有默认值为 NULL 值。 若要跳过更新统计信息，请指定**true**。 若要显式运行更新统计信息，请指定**false**。  
   
  默认情况下，执行 UPDATE STATISTICS 可更新有关表和索引中的数据的信息。 对于要移动到只读介质的数据库，执行 UPDATE STATISTICS 非常有用。  
   
- [  **@keepfulltextindexfile=** ] *KeepFulltextIndexFile*  
+ [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*是**nvarchar(10)**默认值为值**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据会被丢弃，除非该数据库是只读的。 如果为 NULL 或**true**，全文索引相关元数据将保留。  
   
 > [!IMPORTANT]  
@@ -68,7 +70,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  分离数据库时，会删除其所有元数据。 如果该数据库是默认数据库的任何登录帐户， **master**将成为其默认数据库。  
@@ -123,7 +125,7 @@ GO
 ## <a name="reattaching-a-database"></a>重新附加数据库  
  可以使用 CREATE DATABASE（带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项）保留并重新附加分离文件。 这些文件可以移动并附加到其他服务器上。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或中的成员身份**db_owner**数据库的角色。  
   
 ## <a name="examples"></a>示例  

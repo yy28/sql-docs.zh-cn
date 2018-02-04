@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 323029d08f890a7013691090f6478b65dc6e3274
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +49,31 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  要删除的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [  **@job_name=** ] *job_name*  
+ [ **@job_name=** ] **'***job_name***'**  
  要删除的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定; 不能同时指定。  
   
- [  **@originating_server=** ] *服务器*  
+ [ **@originating_server=** ] **'***server***'**  
  供内部使用。  
   
- [  **@delete_history=** ] *delete_history*  
+ [ **@delete_history=** ] *delete_history*  
  指定是否删除作业的历史记录。 *delete_history*是**位**，默认值为**1**。 当*delete_history*是**1**，删除该作业的作业历史记录。 当*delete_history*是**0**，作业历史记录不会被删除。  
   
  请注意，将删除的作业，不会删除历史记录时有关作业的历史信息将不显示在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理图形用户界面作业历史记录，但信息将仍驻留在**sysjobhistory**表中**msdb**数据库。  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
  指定是否删除附加到该作业的计划（如果这些计划没有附加到任何其他作业）。 *delete_unused_schedule*是**位**，默认值为**1**。 当*delete_unused_schedule*是**1**，如果没有其他作业引用计划则会删除附加到此作业计划。 当*delete_unused_schedule*是**0**，计划不会被删除。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  **@originating_server** 参数保留供内部使用。  
@@ -81,7 +84,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  此存储过程不能删除维护计划，也不能删除维护计划中包含的作业。 请改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来删除维护计划。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -108,8 +111,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

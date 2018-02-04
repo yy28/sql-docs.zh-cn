@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream 和 FileTable-sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>参数  
- **@dbname** = *database_name*  
+ **@dbname** = *database_name***'**  
  指示要运行垃圾回收器的数据库的名称。  
   
 > [!NOTE]  
@@ -60,15 +62,15 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|值|说明|  
+|“值”|说明|  
 |0|操作成功|  
 |1|操作失败|  
   
 ## <a name="result-sets"></a>结果集  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|*文件名*|指示 FILESTREAM 容器名称|  
+|*file_name*|指示 FILESTREAM 容器名称|  
 |*num_collected_items*|指示此容器中已回收（删除）的 FILESTREAM 项目（文件/目录）数。|  
 |*num_marked_for_collection_items*|指示此容器中已标记为回收（删除）的 FILESTREAM 项目（文件/目录）数。 这些项尚未，尚未删除，但可能有资格获得删除以下垃圾收集阶段。|  
 |*num_unprocessed_items*|指示此 FILESTREAM 容器中符合条件但未进行垃圾回收处理的 FILESTREAM 项目（文件或目录）数。 可能由于各种原因而未处理项目，其中包括：<br /><br /> 由于尚未执行日志备份或检查点操作，需要暂时锁定文件。<br /><br /> 文件处于 FULL 或 BULK_LOGGED 恢复模式。<br /><br /> 有长时间运行的活动事务。<br /><br /> 复制日志读取器作业未运行。 请参阅白皮书[SQL Server 2008 中的 FILESTREAM 存储](http://go.microsoft.com/fwlink/?LinkId=209156)有关详细信息。|  
@@ -87,7 +89,7 @@ sp_filestream_force_garbage_collection
 垃圾回收 (GC) 依赖于日志截断。 因此，如果使用完整恢复模式的数据库上，最近删除了文件，它们是 GC ed 只有在执行这些事务日志部分的日志备份和日志部分标记为不活动后。 在使用简单恢复模式的数据库之后, 将发生日志截断`CHECKPOINT`对数据库发出。  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 数据库角色中的成员身份。  
   
 ## <a name="examples"></a>示例  

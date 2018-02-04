@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_cdc_get_min_lsn (Transact SQL) |Microsoft 文档"
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn_TSQL
 - sys.fn_cdc_get_min_lsn_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b54b199b86c14f4a7b100f231d0b91d0e0a133a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6d77250f4e595d121f89a112366dfbc9ee9600ad
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
-  *capture_instance_name*   
+ **'** *capture_instance_name* **'**  
  是捕获实例的名称。 *capture_instance_name*是**sysname**。  
   
 ## <a name="return-types"></a>返回类型  
@@ -59,7 +62,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
  该函数通常用于标识与某个捕获实例关联的变更数据捕获时间线的低端点。 您也可以在请求更改数据之前，使用该函数来验证某个查询范围的端点是否处于捕获实例时间线内。 执行这种检查是很重要的，因为当对更改表执行清理时，捕获实例的低端点会发生变化。 如果更改数据的两次请求之间相距的时间很长，则即使将上一个更改数据请求的高端点设置为低端点，此低端点也可能处于在当前时间线之外。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -101,7 +104,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_cdc_get_max_lsn &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

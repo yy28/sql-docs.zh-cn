@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - IHextendedSubscriptionView_TSQL
 - IHextendedSubscriptionView
-dev_langs: TSQL
-helpviewer_keywords: IHextendedSubscriptionView view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IHextendedSubscriptionView view
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7aa47e213552b5351c1dc1c7fc685ec96cd4a45
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f938ff6df875bf761b58667b328af223eb3af8ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +47,8 @@ ms.lasthandoff: 11/17/2017
 |**distribution_jobid**|**binary**|标识分发代理作业。|  
 |**publisher_database_id**|**int**|标识发布数据库。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送-订阅服务器上运行分发代理。<br /><br /> **1** = 请求的分发服务器上运行分发代理。|  
-|**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = automatic<br /><br /> **2** = none|  
-|**status**|**tinyint**|订阅的状态：<br /><br /> **0** = 处于非活动状态<br /><br /> **1** = 订阅<br /><br /> **2** = 活动|  
+|**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = automatic<br /><br /> **2** = None|  
+|**status**|**tinyint**|订阅的状态：<br /><br /> **0** = Inactive<br /><br /> **1** = Subscribed<br /><br /> **2** = Active|  
 |**snapshot_seqno_flag**|**bit**|指示是否使用快照序列号。|  
 |**independent_agent**|**bit**|指定是否为此发布一个独立的分发代理。<br /><br /> **0** = 发布使用共享的分发代理，并且每个发布服务器订阅服务器数据库/数据库对具有共享代理。<br /><br /> **1** = 此发布的独立分发代理。|  
 |**subscription_time**|**datetime**|仅限内部使用。|  

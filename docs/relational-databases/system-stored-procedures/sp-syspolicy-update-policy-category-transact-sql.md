@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_TSQL
 - sp_syspolicy_update_policy_category
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_update_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_update_policy_category
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b64fb1140227cb1acf94fdf061118d0988fcbee
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 066af38360505bfb65c328c8f02da3b020d81404
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name=** ] *名称*  
+ [ **@name=** ] **'***name***'**  
  为策略类别的名称。 *名称*是**sysname**，并且如果必须指定*policy_category_id*为 NULL。  
   
- [  **@policy_category_id=** ] *policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  为策略类别的标识符。 *policy_category_id*是**int**，并且如果必须指定*名称*为 NULL。  
   
- [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
+ [ **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
  确定是否为策略类别而托管数据库订阅。 *mandate_database_subscriptions*是**位**值，默认值为 NULL。 您可以使用两个值中的一个：  
   
 -   0 = 不托管  
@@ -65,7 +68,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
   
  必须为指定值*名称*或*policy_category_id*。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
@@ -83,8 +86,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [基于策略的管理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
- [sp_syspolicy_delete_policy_category &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
- [sp_syspolicy_rename_policy_category &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-category-transact-sql.md)  
+ [sp_syspolicy_add_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
+ [sp_syspolicy_rename_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-category-transact-sql.md)  
   
   

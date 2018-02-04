@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_resource_governor_resource_pools (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_resource_governor_resource_pools_TSQL
 - sys.dm_resource_governor_resource_pools
 - dm_resource_governor_resource_pools
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_resource_governor_resource_pools dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d98b1faa8a39ae5b347fd6dbe9a35db1b4ce9097
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a66fe36785d2f54e265144df3b9fa1d454fd305c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -79,20 +82,20 @@ ms.lasthandoff: 11/17/2017
 |write_io_stall_queued_ms|**bigint**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 写 IO 到达和发出之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置为 0。<br /><br /> 这是 IO 资源调控所引入的延迟。|  
 |io_issue_violations_total|**int**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 总 IO 发出违反数。 即 IO 发出率低于保留比率时的次数。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置为 0。|  
 |io_issue_delay_total_ms|**bigint**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 预定发出 IO 和实际发出 IO 之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置为 0。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
 ## <a name="remarks"></a>注释  
  资源调控器工作负荷组和资源调控器资源池具有多对一映射关系。 因此，许多资源池统计信息都是派生自工作负荷组统计信息。  
   
  此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，使用 sys.resource_governor_resource_pools 目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_workload_groups &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "sp_syspolicy_delete_policy_category_subscription (Transact SQL) |Microsoft 文档"
+title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_subscription_TSQL
 - sp_syspolicy_delete_policy_category_subscription
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_delete_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_delete_policy_category_subscription
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79b610cf653f58b89f461f65049fcbdf66cbbb97
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ed35ec758bbdf05594275f47482169db93a1e088
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  策略类别订阅的标识符。 *policy_category_subscription_id*是**int**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -54,7 +57,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
   
  如果某一策略类别订阅被托管，则不能删除该订阅。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程在其当前所有者的上下文中运行。  
   
  若要获取的值*policy_category_subscription_id*，你可以使用以下查询：  
@@ -77,6 +80,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [基于策略的管理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

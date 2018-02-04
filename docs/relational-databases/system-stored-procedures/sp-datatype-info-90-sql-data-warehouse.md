@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d31ffc47781bac881e8d1af0116d3adf0731d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,14 +43,14 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  所指定的数据类型的代码号。 若要获得所有数据类型的列表，请省略此参数。 *data_type*是**int**，默认值为 0。  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  所使用的 ODBC 的版本。 *odbc_version*是**tinyint**，默认值为 2。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -57,9 +59,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|与 DBMS 相关的数据类型。|  
 |DATA_TYPE|**int**|此类型的所有列所映射到的 ODBC 类型代码。|  
 |PRECISION|**int**|数据源中数据类型的最大精度。 数据类型的精度不适用时返回 NULL。 PRECISION 列的返回值以 10 为基数。|  
-|LITERAL_PREFIX|**varchar (**32**)**|常量前使用的一个或多个字符。 例如，一个单引号 () 字符类型和 0x 为二进制文件。|  
-|LITERAL_SUFFIX|**varchar (**32**)**|字符或字符用于终止常量。 例如，一个单引号 () 字符类型和二进制没有引号。|  
-|CREATE_PARAMS|**varchar (**32**)**|此数据类型的创建参数的说明。 例如，**十进制**是"精度和小数位数"， **float**为 NULL，和**varchar**是"max_length"。|  
+|LITERAL_PREFIX|**varchar(**32**)**|常量前使用的一个或多个字符。 例如，一个单引号 () 字符类型和 0x 为二进制文件。|  
+|LITERAL_SUFFIX|**varchar(**32**)**|字符或字符用于终止常量。 例如，一个单引号 () 字符类型和二进制没有引号。|  
+|CREATE_PARAMS|**varchar(**32**)**|此数据类型的创建参数的说明。 例如，**十进制**是"精度和小数位数"， **float**为 NULL，和**varchar**是"max_length"。|  
 |NULLABLE|**int**|指定为 Null 性。<br /><br /> 1 = 允许 Null 值。<br /><br /> 0 = 不允许 Null 值。|  
 |CASE_SENSITIVE|**int**|指定是否区分大小写。<br /><br /> 1 = 此类型的所有列都区分大小写（用于排序规则）。<br /><br /> 0 = 此类型的所有列都不区分大小写。|  
 |SEARCHABLE|**int**|指定列类型的搜索能力：<br /><br /> 1 = 不能搜索。<br /><br /> 2 = 可以使用 LIKE 进行搜索。<br /><br /> 3 = 可以使用 WHERE 进行搜索。<br /><br /> 4 = 可以使用 WHERE 或 LIKE 进行搜索。|  
@@ -78,7 +80,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>注释  
  sp_datatype_info 相当于 SQLGetTypeInfo ODBC 中。 返回的结果按 DATA_TYPE 排序，再按数据类型映射到相应 ODBC SQL 数据类型的紧密程度进行排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

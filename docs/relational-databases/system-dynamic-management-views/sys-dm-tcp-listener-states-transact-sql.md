@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_tcp_listener_states
 - sys.dm_tcp_listener_states_TSQL
 - dm_tcp_listener_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], listeners
 - sys.dm_tcp_listener_states dynamic management view
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d111ae8b610ca54516181fa6cfd6492b45d23211
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ec759f668da3ce03d084469efad795eb55140d5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +46,18 @@ ms.lasthandoff: 11/17/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|侦听器的内部 ID。 不可为 null。<br /><br /> 主键。|  
-|**ip 地址**|**nvarchar48**|处于联机状态且当前正在侦听的侦听器 IP 地址。 同时允许 IPv4 和 IPv6 地址。 如果某个侦听器拥有这两类地址，则分开列出这些地址。 IPv4 通配符显示为“0.0.0.0”。 IPv6 通配符显示为“::”。<br /><br /> 不可为 null。|  
+|**ip_address**|**nvarchar48**|处于联机状态且当前正在侦听的侦听器 IP 地址。 同时允许 IPv4 和 IPv6 地址。 如果某个侦听器拥有这两类地址，则分开列出这些地址。 IPv4 通配符显示为“0.0.0.0”。 IPv6 通配符显示为“::”。<br /><br /> 不可为 null。|  
 |**is_ipv4**|**bit**|IP 地址的类型<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|侦听器正在侦听的端口号。 不可为 null。|  
-|**type**|**tinyint**|侦听器类型，可为下列值之一：<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 数据库镜像<br /><br /> 不可为 null。|  
+|**类型**|**tinyint**|侦听器类型，可为下列值之一：<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 数据库镜像<br /><br /> 不可为 null。|  
 |**type_desc**|**nvarchar(20)**|说明**类型**、 一个的：<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> 不可为 null。|  
 |**状态**|**tinyint**|可用性组侦听器的状态，可为下列值之一：<br /><br /> 1 = 联机。 侦听器正在侦听并处理请求。<br /><br /> 2 = 等待重新启动。 侦听器处于脱机状态，等待重新启动。<br /><br /> 如果可用性组侦听器正在侦听服务器实例所侦听的端口，这两个侦听器始终具有相同状态。<br /><br /> 不可为 null。<br /><br /> 注意： 此列中的值来自于 TSD_listener 对象中。 列不支持脱机状态，因为当 TDS_listener 处于脱机状态，它无法查询状态。|  
 |**state_desc**|**nvarchar(16)**|说明**状态**、 一个的：<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> 不可为 null。|  
 |**start_time**|**datetime**|指示启动侦听器时的时间戳。 不可为 null。|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

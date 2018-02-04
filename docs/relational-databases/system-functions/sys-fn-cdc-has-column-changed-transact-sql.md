@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_has_column_changed_TSQL
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed_TSQL
 - fn_cdc_has_column_changed
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb905bd7dfeb15f65887009e56ee065a356ff3ad
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b2c8918fe44c6534de5829556754a837752b8cfb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   *capture_instance*   
  是捕获实例的名称。 *capture_instance*是**sysname**。  
   
-  *column_name*   
+ **'** *column_name* **'**  
  要报告的指定捕获实例中的已捕获列。 *column_name*是**sysname**。  
   
  *update_mask*  
@@ -65,11 +68,11 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   
  当此信息将返回作为更改数据查询的一部分时，我们建议使用函数[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)和[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)而不是此函数。 在查询更改数据之前，请使用函数 fn_cdc_get_column_ordinal，以便所需的列序号只计算一次。 在查询中使用 fn_cdc_is_bit_set 可以从每个返回行的更新掩码中提取信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [cdc。 &#60; capture_instance &#62; _CT &#40;Transact SQL &#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
- [cdc.captured_columns &#40;Transact SQL &#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
+ [cdc.&#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
+ [cdc.captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
   
   

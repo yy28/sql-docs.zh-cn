@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 171ff3cbd372e80a047127ca249457e0623f1502
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe54c063eb4cdf4bc8f01c054f9d7a1ed04cce2d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="system-trace-functions"></a>系统跟踪函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列系统跟踪函数。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的下列系统跟踪函数。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [fn_trace_geteventinfo](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)  
   
  [fn_trace_getfilterinfo](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  

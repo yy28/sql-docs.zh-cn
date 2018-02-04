@@ -8,27 +8,30 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
 - sp_wait_for_database_copy_sync
-dev_langs: TSQL
-helpviewer_keywords: sp_wait_for_database_copy_sync
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b2d41c9c87b483ab500ad351361a511ca66004
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca693b57fe2178a1b817ca76579ad3e7194f7c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>活动地域复制-sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Active Geo-Replication - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   此过程的范围限定为主数据库与辅助数据库之间的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 关系。 调用**sp_wait_for_database_copy_sync**导致应用程序等待，直到所有提交的事务复制，且将其活动辅助数据库确认。 运行**sp_wait_for_database_copy_sync**仅在主数据库上。  
@@ -45,10 +48,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @target_server =] server_name  
+ [ @target_server = ] 'server_name'  
  承载活动辅助数据库的 SQL Database 服务器的名称。 server_name 为 sysname，无默认值。  
   
- [ @target_database =] 'database_name  
+ [ @target_database = ] 'database_name'  
  活动辅助数据库的名称。 database_name 为 sysname，没有默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -62,7 +65,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   失去互连连接。 **sp_wait_for_database_copy_sync**将连接的超时之后返回。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  主数据库中的任何用户均可调用此系统存储过程。 登录名必须是主数据库和活动辅助数据库中的用户。  
   
 ## <a name="remarks"></a>注释  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.sysjobhistory
 - sysjobhistory
 - sysjobhistory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobhistory system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d4790ab20c01be27868696b989ed8228acec6c6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 70897838b8fa8ce10c83308829cd1f5cba87e40d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ ms.lasthandoff: 01/02/2018
 |**sql_message_id**|**int**|作业失败时返回的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息的 ID。|  
 |**sql_severity**|**int**|任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|  
 |message|**nvarchar(4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的文本（如果有）。|  
-|**run_status**|**int**|作业的执行状态：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 取消|  
+|**run_status**|**int**|作业的执行状态：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = Retry<br /><br /> **3** = 取消|  
 |**run_date**|**int**|日期作业或步骤开始的执行。 对于正在进行中的历史记录，这是写入历史记录的日期/时间。|  
 |**run_time**|**int**|作业或步骤开始的时间。|  
-|**运行时间**|**int**|中的运行作业或中的步骤的执行时间**HHMMSS**格式。|  
+|**run_duration**|**int**|中的运行作业或中的步骤的执行时间**HHMMSS**格式。|  
 |**operator_id_emailed**|**int**|作业完成时通知的操作员的 ID。|  
 |**operator_id_netsent**|**int**|作业完成时用消息通知的操作员的 ID。|  
 |**operator_id_paged**|**int**|作业完成时用寻呼通知的操作员的 ID。|  

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_xtp_gc_stats_TSQL
 - sys.dm_xtp_gc_stats_TSQL
 - sys.dm_xtp_gc_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_gc_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a690854a31bb01d3b998ae70b8f682750416b72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名|类型|说明|  
+|列名|类型|Description|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|自启动服务器以来垃圾回收子系统检查的行数。|  
 |rows_no_sweep_needed|**bigint**|已在未进行灰尘角扫描的情况下删除的行数。|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |sweep_rows_expired|**bigint**|灰尘角处理读取的过期行。|  
 |sweep_rows_expired_removed|**bigint**|灰尘角处理删除的过期行。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对实例具有 VIEW SERVER STATE 权限。  
   
 ## <a name="usage-scenario"></a>使用方案  

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_sessions (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_xe_sessions
 - sys.dm_xe_sessions_TSQL
 - sys.dm_xe_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d16dbc718232a6c3953e391d255986340d4f011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
     
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary （8)**|会话的内存地址。 在本地系统，地址是唯一的。 不可为 null。|  
+|address|**varbinary(8)**|会话的内存地址。 在本地系统，地址是唯一的。 不可为 null。|  
 |name|**nvarchar(256)**|会话的名称。 在本地系统，名称是唯一的。 不可为 null。|  
 |pending_buffers|**int**|正在挂起处理的已满缓冲区的数量。 不可为 null。|  
 |total_regular_buffers|**int**|与会话相关联的常规缓冲区的总数。 不可为 null。<br /><br /> 注意： 正则缓冲区使用大部分时间。 这类缓冲区很大，足以容纳大量事件。 每个会话通常有三个或更多缓冲区。 常规缓冲区的数目由服务器根据通过 MEMORY_PARTITION_MODE 选项设置的内存分区自动确定。 常规缓冲区的大小等于 MAX_MEMORY 选项的值（默认值为 4 MB）除以缓冲区的数目。 有关 MEMORY_PARTITION_MODE 和 MAX_MEMORY 选项的详细信息，请参阅[CREATE EVENT SESSION &#40;Transact SQL &#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |create_time|**datetime**|会话的创建时间。 不可为 null。|  
 |largest_event_dropped_size|**int**|不适合会话缓冲区的最大事件大小。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="change-history"></a>更改历史记录  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
 - sp_help_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 705a2600f0012716a529925f2ec97b2685e2195f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8bb243bd5d35293df828be305dba20cb405ad926
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@secondary_database =** ]*secondary_database*  
+ [ **@secondary_database =** ] '*secondary_database*'  
  辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
- [  **@secondary_id =** ]*secondary_id*  
+ [ **@secondary_id =** ] '*secondary_id*'  
  日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**和不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -75,7 +78,7 @@ sp_help_log_shipping_secondary_database
 |**restore_all**|如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。|  
 |**restore_mode**|辅助数据库的还原模式。<br /><br /> 0 = with NORECOVERY 还原日志。<br /><br /> 1 = 使用 STANDBY 还原日志。|  
 |**disconnect_users**|如果设置为 1，则在执行还原操作时，会断开用户与辅助数据库的连接。 默认值 = 0。|  
-|**块大小**|用作备份设备的块大小（字节）。|  
+|**block_size**|用作备份设备的块大小（字节）。|  
 |**buffer_count**|备份或还原操作使用的缓冲区总数。|  
 |**max_transfer_size**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。|  
 |**restore_threshold**|两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。|  
@@ -95,12 +98,12 @@ sp_help_log_shipping_secondary_database
   
  **sp_help_log_shipping_secondary_database**必须从运行**master**辅助服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_help_log_shipping_secondary_primary &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

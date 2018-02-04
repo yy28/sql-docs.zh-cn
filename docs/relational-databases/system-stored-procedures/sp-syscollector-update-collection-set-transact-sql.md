@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f034f59bc7430e059fb276ec0111a4af2f807c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,19 +62,19 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*是**int**并且必须具有一个值，如果*名称*为 NULL。  
   
- [  **@name =** ]*名称*  
+ [ **@name =** ] '*name*'  
  是的收集组的名称。 *名称*是**sysname**并且必须具有一个值，如果*collection_set_id*为 NULL。  
   
- [  **@new_name =** ]*new_name*  
+ [ **@new_name =** ] '*new_name*'  
  收集组的新名称。 *new_name*是**sysname**，并且如果使用，不能为空字符串。 *new_name*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
   
- [  **@target =** ]*目标*  
+ [ **@target =** ] '*target*'  
  保留供将来使用。  
   
- [  **@collection_mode =** ] *collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  要使用的数据收集的类型。 *collection_mode*是**smallint**和可以具有以下值之一：  
   
  0 - 缓存模式。 数据收集和上载分别位于各自的计划中。 为连续收集指定缓存模式。  
@@ -81,26 +83,26 @@ sp_syscollector_update_collection_set
   
  如果从非缓存模式更改为缓存模式 (0)，你还必须指定*schedule_uid*或*schedule_name*。  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  是的收集的数据保存到管理数据仓库中的天数。 *days_until_expiration*是**smallint**。 *days_until_expiration*必须为 0 或一个正整数。  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的唯一标识符。 *proxy_id*是**int**。  
   
- [  **@proxy_name =** ]*proxy_name*  
+ [ **@proxy_name =** ] '*proxy_name*'  
  代理的名称。 *proxy_name*是**sysname**且可为空。  
   
- [  **@schedule_uid**  =] '*schedule_uid*  
+ [ **@schedule_uid** = ] '*schedule_uid*'  
  指向计划的 GUID。 *schedule_uid*是**uniqueidentifier**。  
   
  若要获取*schedule_uid*，查询 sysschedules 系统表。  
   
  当*collection_mode*设置为 0， *schedule_uid*或*schedule_name*必须指定。 当*collection_mode*设置为 1， *schedule_uid*或*schedule_name*如果指定，则忽略。  
   
- [  **@schedule_name =** ]*schedule_name*  
+ [ **@schedule_name =** ] '*schedule_name*'  
  是计划的名称。 *schedule_name*是**sysname**且可为空。 如果指定， *schedule_uid*必须为 NULL。 若要获取*schedule_name*，查询 sysschedules 系统表。  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  表示日志记录级别。 *logging_level*是**smallint**使用以下值之一：  
   
  0-日志执行信息和[!INCLUDE[ssIS](../../includes/ssis-md.md)]跟踪的事件：  
@@ -117,13 +119,13 @@ sp_syscollector_update_collection_set
   
 -   连续运行收集的进度  
   
--   来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的警告事件  
+-   从的警告事件 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  2 - 级别 1 日志记录和来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的详细事件信息。  
   
  默认值为*logging_level*为 1。  
   
- [  **@description =** ]*说明*  
+ [ **@description =** ] '*description*'  
  收集组的说明。 *说明*是**nvarchar （4000)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -136,7 +138,7 @@ sp_syscollector_update_collection_set
   
  如果正在运行收集组，您只能更新*schedule_uid*和*说明*。 若要停止该收集组，使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 dc_admin 或 dc_operator（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。 尽管 dc_operator 可以运行此存储过程，但是此角色的成员在其属性更改权限方面受到限制。 下列属性只能由 dc_admin 更改：  
   
 -   @new_name  
@@ -198,7 +200,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [dbo.sysschedules &#40;Transact SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_session_event_actions (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_xe_session_event_actions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_session_event_actions_TSQL
 - dm_xe_session_event_actions
 - sys.dm_xe_session_event_actions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_xe_session_event_actions dynamic management view
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 840e7ead2035b45d37ca87ec8acc9a5b1c2461eb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d5e342265fe96a892983af51e6efc119a5bac914
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +41,13 @@ ms.lasthandoff: 11/27/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary （8)**|事件会话的内存地址。 不可为 null。|  
+|event_session_address|**varbinary(8)**|事件会话的内存地址。 不可为 null。|  
 |action_name|**nvarchar(60)**|操作的名称。 不可为 null。|  
 |action_package_guid|**uniqueidentifier**|包含操作的包的 GUID。 不可为 null。|  
 |event_name|**nvarchar(60)**|操作绑定到事件的名称。 不可为 null。|  
 |event_package_guid|**uniqueidentifier**|包含事件的包 GUID。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  

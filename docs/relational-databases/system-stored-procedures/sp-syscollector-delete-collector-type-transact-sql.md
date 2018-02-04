@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9aff09b2400158d36f590422c2ec7883bc24d99
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14bfab3376da20b677414106e293ad21103e52dc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +48,10 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@collector_type_uid =** ] *collector_type_uid*  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**并且必须具有一个值，如果*名称*为 NULL。  
   
- [  **@name =** ] *名称*  
+ [ **@name =** ] **'***name***'**  
  收集器类型的名称。 *名称*是**sysname**并且必须具有一个值，如果*collector_type_uid*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -60,7 +62,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
  如果存在这种收集类型的收集项，此过程将引发错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**dc_admin** （拥有 EXECUTE 权限） 固定的数据库角色来执行此过程。  
   
 ## <a name="example"></a>示例  

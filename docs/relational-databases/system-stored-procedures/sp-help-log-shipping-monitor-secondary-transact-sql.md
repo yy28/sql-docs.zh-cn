@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_secondary
 - sp_help_log_shipping_monitor_secondary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor_secondary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612571cd299a0474b1d405d8d9885487eba70a16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80c3f736037a763b1cda3ee37c92b443ecd07e87
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@secondary_server =** ]*secondary_server*  
+ [ **@secondary_server =** ] '*secondary_server*'  
  辅助服务器的名称。 *secondary_server*是**sysname**，无默认值。  
   
- [  **@secondary_database =** ]*secondary_database*  
+ [ **@secondary_database =** ] '*secondary_database*'  
  辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -78,11 +81,11 @@ sp_help_log_shipping_monitor_secondary
 ## <a name="remarks"></a>注释  
  **sp_help_log_shipping_monitor_secondary**必须从运行**master**监视服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

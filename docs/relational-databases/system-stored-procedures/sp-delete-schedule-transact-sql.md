@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b01f4f3c3487fbd9f68c899e2c9e71dae7efd0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,29 +47,29 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@schedule_id=** ] *schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  要删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
 > **注意：**任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
   
- [  **@schedule_name=** ] *schedule_name*  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > **注意：**任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
   
- [  **@force_delete**  =] *force_delete*  
+ [ **@force_delete** = ] *force_delete*  
  指定当计划附加到作业时此过程是否会失败。 *Force_delete*位，默认值为**0**。 当*force_delete*是**0**，如果计划附加到一个作业，存储的过程将失败。 当*force_delete*是**1**，无论是否计划附加到一个作业删除该计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，指定的值**1**为*force_delete*。 删除计划不会停止当前正在运行的作业。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

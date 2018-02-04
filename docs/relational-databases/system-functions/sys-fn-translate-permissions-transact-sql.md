@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_translate_permissions (Transact SQL) |Microsoft 文档"
+title: sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.fn_translate_permissions_TSQL
 - fn_translate_permissions
 - fn_translate_permissions_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - permissions bitmask [SQL Server]
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed217e60301c2ee877381a3aebc7b9f3d6fcf7bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 042f32252a4e3ade0b7027b2f83204f99007da60
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +50,7 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>参数  
- *级别*  
+ *level*  
  应用该权限的安全对象的种类。 *级别*是**nvarchar(60)**。  
   
  *perms*  
@@ -60,7 +62,7 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="remarks"></a>注释  
  返回的值**权限**SQL 跟踪的列为整数表示形式的一个位屏蔽，由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来计算有效权限。 25 种安全对象中的每一种都有它自己的权限集，并且这些权限具有相应的数字值。 **sys.fn_translate_permissions**会此位掩码将转换为表的权限名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="example"></a>示例  

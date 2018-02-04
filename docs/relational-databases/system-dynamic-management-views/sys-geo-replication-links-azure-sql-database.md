@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ed6e04bacbe8ee1fcf911d0e2e4b73da12fc585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5eb8f74023e90966200aca7603b82f685e0eb9db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Sys.databases 视图中的当前数据库 ID。|  
 |start_date|**datetimeoffset**|在区域 SQL 数据库数据中心启动数据库复制时的 UTC 时间|  
-|modify_date|**datetimeoffset**|在区域 SQL 数据库的数据中心数据库异地复制完成时的 UTC 时间。 新的数据库与主数据库从此时开始同步。 实例时都提供 SQL Server 登录名。|  
+|modify_date|**datetimeoffset**|在区域 SQL 数据库的数据中心数据库异地复制完成时的 UTC 时间。 新的数据库与主数据库从此时开始同步。 。|  
 |link_guid|**uniqueidentifier**|异地复制链接的唯一 ID。|  
 |partner_server|**sysname**|包含异地复制的数据库的逻辑服务器的名称。|  
 |partner_database|**sysname**|链接的逻辑服务器上的异地复制数据库名称。|  
@@ -49,9 +50,9 @@ ms.lasthandoff: 11/17/2017
 |角色 (role)|**tinyint**|地域复制角色，之一：<br /><br /> 0 = 主。 Database_id 指异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助数据库。  Database_id 指异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助数据库类型，之一：<br /><br /> 0 = 否。 故障转移之前，辅助数据库不可访问。<br /><br /> 1 = ReadOnly。 辅助数据库可访问仅向客户端连接使用 ApplicationIntent = ReadOnly。<br /><br /> 2 = 全部。 辅助数据库可访问的任何客户端连接。|  
-|secondary_allow_connections _desc|**nvarchar(256)**|是<br /><br /> 全部<br /><br /> 只读|  
+|secondary_allow_connections _desc|**nvarchar(256)**|否<br /><br /> 全部<br /><br /> 只读|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图选项仅适用于**master**与服务器级别主体登录名的数据库。  
   
 ## <a name="example"></a>示例  

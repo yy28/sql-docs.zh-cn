@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,10 +51,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @data_source_name =] *datasourcename*  
+ [ @data_source_name = ] *datasourcename*  
  标识在其中执行该语句的外部数据源。 请参阅[创建外部数据源 &#40;Transact SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). 外部数据源可以是类型的"RDBMS"或"于包含 SHARD_MAP_MANAGER"。  
   
- [ @stmt=]*语句*  
+ [ @stmt= ] *statement*  
  是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 @stmt必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定的 Unicode 常量，则它必须作为前缀**N**。例如，Unicode 常量**N sp_who**有效，但字符常量**sp_who**不是。 字符串的大小仅受可用数据库服务器内存限制。 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar (max)**。  
   
 > [!NOTE]  
@@ -61,10 +62,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  @stmt 中包含的每个参数在 @params 参数定义列表和参数值列表中必须具有对应的条目。  
   
- [ @params=] N'@*parameter_name**data_type* [，...*n* ] '  
+ [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
  一个字符串，它包含 @stmt 中嵌入的所有参数的定义。字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 每个参数中指定@stmtmust中定义@params。 如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理不包含参数，则不需要使用 @params。 该参数的默认值为 NULL。  
   
- [ @param1=] '*value1*  
+ [ @param1= ] '*value1*'  
  参数字符串中定义的第一个参数的值。 该值可以是 Unicode 常量，也可以是 Unicode 变量。 必须为 @stmt 中包含的每个参数提供参数值。如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理没有参数，则不需要这些值。  
   
  *n*  
@@ -79,7 +80,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>权限  
  需要 `ALTER ANY EXTERNAL DATA SOURCE` 权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  `sp_execute_remote`必须按特定顺序输入参数，如上面的语法一节中所述。 如果这些参数的输入顺序不正确，则会显示一条错误消息。  
   
  `sp_execute_remote`具有相同的行为[执行 &#40;Transact SQL &#41;](../../t-sql/language-elements/execute-transact-sql.md)方面批处理和作用域的名称。 TRANSACT-SQL 语句或批处理中 sp_execute_remote  *@stmt* 参数未编译之前执行 sp_execute_remote 语句。  

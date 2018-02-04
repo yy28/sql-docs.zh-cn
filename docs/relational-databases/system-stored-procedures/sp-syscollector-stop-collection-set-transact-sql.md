@@ -1,5 +1,5 @@
 ---
-title: "sp_syscollector_stop_collection_set (TRANSACT-SQL) |Microsoft 文档"
+title: sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
 - sp_syscollector_stop_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f91cbec86a4799a6172525ba2633be9f34dcdd9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 828d097a749fd1c0db89d24d2079fed5a5fd2ce9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +50,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*是**int**默认值为 NULL。 *collection_set_id*必须具有一个值，如果*名称*为 NULL。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  是的收集组的名称。 *名称*是**sysname**默认值为 NULL。 *名称*必须具有一个值，如果*collection_set_id*为 NULL。  
   
- [ @stop_collection_job =] *stop_collection_job*  
+ [ @stop_collection_job = ] *stop_collection_job*  
  指定应停止收集组的收集作业（如果正在运行）。 *stop_collection_job*是**位**默认值为 1。  
   
  *stop_collection_job*仅适用于收集组与集合模式设置为缓存。 有关详细信息，请参阅[sp_syscollector_create_collection_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
@@ -65,7 +67,7 @@ sp_syscollector_stop_collection_set
 ## <a name="remarks"></a>注释  
  sp_syscollector_create_collection_set 必须在 msdb 系统数据库的上下文中运行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  必须具有 dc_operator（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

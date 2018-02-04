@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30f35803c804b6e895bf5287cb864c9cc979f013
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a82cc5004304310c7c2bc3392ada6bad0acb617f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +42,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- *target_server_name*  
+ '*target_server_name*'  
  指定的目标服务器主机名或 IP 地址。 凭据来访问此服务器将不再从[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 这不会更改或删除由你自己的团队管理的实际目标服务器上的任何权限。  
   
  *target_server_name*定义为 nvarchar(337)。  
@@ -48,7 +50,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**更改服务器状态**权限。  
   
 ## <a name="error-handling"></a>错误处理  

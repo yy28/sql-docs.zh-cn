@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e86380a170009fbfd8ee7fd2f891dc210cab856
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 334c7cbcb3afb00685049aafbb2c0a290ba97a2a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +43,15 @@ ms.lasthandoff: 11/17/2017
 |**media_set_id**|**int**|唯一介质集标识号。 标识，主键。|  
 |**media_uuid**|**uniqueidentifier**|介质集的 UUID。 所有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]媒体集具有 UUID。<br /><br /> 对于早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但是，如果介质集包含仅一个介质簇**media_uuid**列可能为 NULL (**media_family_count**为 1)。|  
 |**media_family_count**|**tinyint**|在介质集中的介质簇数。 可以为 NULL。|  
-|**名称**|**nvarchar （128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME 和 MEDIADESCRIPTION 中的[备份 &#40;Transact SQL &#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**名称**|**nvarchar(128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME 和 MEDIADESCRIPTION 中的[备份 &#40;Transact SQL &#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**说明**|**nvarchar(255)**|介质集的文本化说明。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME 和 MEDIADESCRIPTION 中的[备份 &#40;Transact SQL &#41;](../../t-sql/statements/backup-transact-sql.md).|  
-|**software_name**|**nvarchar （128)**|写入介质标签的备份软件名称。 可以为 NULL。|  
+|**software_name**|**nvarchar(128)**|写入介质标签的备份软件名称。 可以为 NULL。|  
 |**software_vendor_id**|**int**|写入备份介质标签的软件供应商标识号。 可以为 NULL。<br /><br /> 值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是十六进制 0x1200。|  
 |**MTF_major_version**|**tinyint**|用于生成该介质集的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式的主要版本号。 可以为 NULL。|  
 |**mirror_count**|**tinyint**|介质集中的镜像数。|  
 |**is_password_protected**|**bit**|指定介质集是否受到密码保护：<br /><br /> 0 = 未受到保护<br /><br /> 1 = 受到保护|  
 |**is_compressed**|**bit**|备份是否已压缩：<br /><br /> 0 = 未压缩<br /><br /> 1 = 压缩<br /><br /> 期间**msdb**升级，此值设置为 NULL。 表示未压缩的备份。|  
-|**is_encrypted**|**位**|备份是否已加密：<br /><br /> 0 = 未加密<br /><br /> 1 = 加密|  
+|**is_encrypted**|**Bit**|备份是否已加密：<br /><br /> 0 = 未加密<br /><br /> 1 = 加密|  
   
 ## <a name="remarks"></a>注释  
  RESTORE VERIFYONLY 从*backup_device*与 LOADHISTORY 填充的列**backupmediaset**介质集标头中的相应值的表。  

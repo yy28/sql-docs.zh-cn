@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_items_TSQL
 - syscollector_collection_items
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62eb418671f74d34a27d1098b4be908ed1130d57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca9b8aed18c716e235d1848d7130395cf4fe7875
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +43,10 @@ ms.lasthandoff: 11/17/2017
 |**collection_item_id**|**int**|标识收集组中的项。 不可为 null。|  
 |**collector_type_uid**|**uniqueidentifier**|用于标识收集器类型的 GUID。 不可为 null。|  
 |**名称**|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
-|**频率**|**int**|收集项收集数据的频率。 不可为 null。|  
-|**参数**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 此集合项的 XML 架构验证与 XML 架构 (XSD) 存储在**parameter_schema**特定收集器类型。 可以为 Null。 有关详细信息，请参阅[syscollector_collector_types &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
+|**frequency**|**int**|收集项收集数据的频率。 不可为 null。|  
+|**parameters**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 此集合项的 XML 架构验证与 XML 架构 (XSD) 存储在**parameter_schema**特定收集器类型。 可以为 Null。 有关详细信息，请参阅[syscollector_collector_types &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要为选择**dc_operator**， **dc_proxy**。  
   
 ## <a name="see-also"></a>另请参阅  

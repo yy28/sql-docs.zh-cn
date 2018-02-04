@@ -1,5 +1,5 @@
 ---
-title: "sp_rxPredict |Microsoft 文档"
+title: sp_rxPredict | Microsoft Docs
 ms.custom: 
 ms.date: 07/14/2017
 ms.prod: sql-non-specified
@@ -14,17 +14,19 @@ ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
 - sp_rxPredict_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_rxPredict procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_rxPredict procedure
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bf07247f63962e5692325e2e7518a78445f0a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ sp_rxPredict  ( @model, @input )
 
 中受支持的格式的预先训练的模型。 
 
-**输入**
+**input**
 
 有效的 SQL 查询
 
@@ -58,7 +60,7 @@ sp_rxPredict  ( @model, @input )
 返回评分列，以及输入的数据源的任何传递列。
 其他评分列，如置信度间隔，可以如果该算法支持生成此类值返回。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
 
 若要启用的存储过程的使用，必须在实例上启用 SQLCLR。
 

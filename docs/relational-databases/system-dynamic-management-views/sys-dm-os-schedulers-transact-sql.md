@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_schedulers_TSQL
 - sys.dm_os_schedulers
 - dm_os_schedulers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_schedulers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 738494bb7320248fa8616d381b4424fe0b055414
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|scheduler_address|**varbinary （8)**|计划程序的内存地址。 不可为 null。|  
+|scheduler_address|**varbinary(8)**|计划程序的内存地址。 不可为 null。|  
 |parent_node_id|**int**|计划程序所属的节点的 ID，也称为父节点。 它代表非一致性内存访问 (NUMA) 节点。 不可为 null。|  
 |scheduler_id|**int**|计划的 ID。 用来运行定期查询的所有计划程序都有小于 1048576 的 ID 号。 那些 ID 大于或等于 1048576 的计划程序（例如，专用管理员连接计划程序）则供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部使用。 不可为 null。|  
 |cpu_id|**int**|分配给计划程序的 CPU ID。<br /><br /> 不可为 null。<br /><br /> **注意：** 255 不指示无关联，就象在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 请参阅[sys.dm_os_threads &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)为其他相关性信息。|  
-|status|**nvarchar(60)**|指示计划程序的状态。 可以是以下值之一：<br /><br /> 隐藏联机<br />隐藏脱机<br />可见联机<br />可见脱机<br />可见联机 (DAC)<br />-HOT_ADDED<br /><br /> 不可为 null。<br /><br /> HIDDEN 计划程序用于处理[!INCLUDE[ssDE](../../includes/ssde-md.md)]的内部请求。 VISIBLE 计划程序用于处理用户请求。<br /><br /> OFFLINE 计划程序在关联掩码中映射到处于脱机状态的处理器，因此不用于处理任何请求。 ONLINE 计划程序在关联掩码中映射到处于联机状态的处理器，并且可用于处理线程。<br /><br /> DAC 指示计划程序正在专用管理员连接下运行。<br /><br /> HOT ADDED 指示已添加了计划程序以响应一个热添加 CPU 事件。|  
+|status|**nvarchar(60)**|指示计划程序的状态。 可以是以下值之一：<br /><br /> 隐藏联机<br />隐藏脱机<br />可见联机<br />可见脱机<br />可见联机 (DAC)<br />-   HOT_ADDED<br /><br /> 不可为 null。<br /><br /> HIDDEN 计划程序用于处理[!INCLUDE[ssDE](../../includes/ssde-md.md)]的内部请求。 VISIBLE 计划程序用于处理用户请求。<br /><br /> OFFLINE 计划程序在关联掩码中映射到处于脱机状态的处理器，因此不用于处理任何请求。 ONLINE 计划程序在关联掩码中映射到处于联机状态的处理器，并且可用于处理线程。<br /><br /> DAC 指示计划程序正在专用管理员连接下运行。<br /><br /> HOT ADDED 指示已添加了计划程序以响应一个热添加 CPU 事件。|  
 |is_online|**bit**|如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只使用服务器中某些可用的处理器，那么此配置可以表示某些计划程序被映射到不在关联掩码中的处理器。 如果情况是这样，则此列将返回 0。 此值表示此计划程序不会用来处理查询或批。<br /><br /> 不可为 null。|  
 |is_idle|**bit**|1 = 计划程序空闲。 当前未运行工作线程。 不可为 null。|  
 |preemptive_switches_count|**int**|此计划程序的工作线程已切换到抢先模式的次数。<br /><br /> 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。|  
@@ -60,13 +63,13 @@ ms.lasthandoff: 11/17/2017
 |yield_count|**int**|用来指示此计划程序上的进度的内部值。 计划程序监视器使用此值来确定计划程序的工作线程是否正在按时产生其他工作线程。 此值不指示工作线程或任务是否转换到新的工作线程。 不可为 null。|  
 |last_timer_activity|**bigint**|在 CPU 时钟周期中，计划程序上次检查计划程序计时器队列的时间。 不可为 null。|  
 |failed_to_create_worker|**bit**|如果在此计划程序上无法创建新的工作线程，则设置为 1。 通常因为内存约束会发生这种情况。 可以为 Null。|  
-|active_worker_address|**varbinary （8)**|工作线程的内存地址当前是活动的。 可以为 Null。 有关详细信息，请参阅[sys.dm_os_workers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|memory_object_address|**varbinary （8)**|计划程序内存对象的内存地址。 不可为 NULL。|  
-|task_memory_object_address|**varbinary （8)**|任务内存对象的内存地址。 不可为 null。 有关详细信息，请参阅[sys.dm_os_memory_objects &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]公开 SQLOS 使用的计划程序量程。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|active_worker_address|**varbinary(8)**|工作线程的内存地址当前是活动的。 可以为 Null。 有关详细信息，请参阅[sys.dm_os_workers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|计划程序内存对象的内存地址。 不可为 NULL。|  
+|task_memory_object_address|**varbinary(8)**|任务内存对象的内存地址。 不可为 null。 有关详细信息，请参阅[sys.dm_os_memory_objects &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 公开由在 SQLOS 计划程序量程。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   

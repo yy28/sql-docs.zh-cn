@@ -1,5 +1,5 @@
 ---
-title: "GetFileNamespacePath (TRANSACT-SQL) |Microsoft 文档"
+title: GetFileNamespacePath (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
 - GetFileNamespacePath_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetFileNamespacePath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7ba6d9582a0eb3660f206dc68087f4fa4852a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ccab7d6345d49490f936c5080e9e034be7c79855
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/02/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *列名称*  
+ *column-name*  
  Varbinary （max） 列名称**file_stream** FileTable 中的列。  
   
  *列名称*值必须是有效的列名。 它不能是表达式，也不能是从其他数据类型的列转换或强制转换的值。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/02/2018
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path*可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 01/02/2018
  *@option*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option*可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -90,7 +93,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何调用**GetFileNamespacePath**函数可获取文件或目录在 FileTable 中的 UNC 路径。  

@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_update_data_source
 - management data warehouse, data collector stored procedures
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 959c9cc843480a3f1d5d4b5ca414b67ac27807d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +53,10 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_set_uid =] '*collection_set_uid*  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
   
- [ @machine_name =] '*machine_name*  
+ [ @machine_name = ] '*machine_name*'  
  收集组所在的服务器的名称。 *machine_name*是**sysname**无默认值。  
   
  [ @named_instance =] '*named_instance*  
@@ -63,10 +65,10 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 > [!NOTE]  
 >  *named_instance*必须是完全限定的实例名称，其中包含计算机名称和窗体中的实例名称*computername*\\*instancename*。  
   
- [ @days_until_expiration =] *days_until_expiration*  
+ [ @days_until_expiration = ] *days_until_expiration*  
  快照数据保持期剩余天数。 *days_until_expiration*是**smallint**。  
   
- [ @source_id =] *source_id*  
+ [ @source_id = ] *source_id*  
  更新的来源的唯一标识符。 *source_id*是**int**和返回作为输出。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -79,7 +81,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 -   days_until_expiration 的值已更改。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**mdw_writer** （拥有 EXECUTE 权限） 固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

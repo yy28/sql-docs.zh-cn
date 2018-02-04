@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtslog90_TSQL
 - sysdtslog90
-dev_langs: TSQL
-helpviewer_keywords: sysssislog system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssislog system table
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2073eac1ce40cd735b4fde72744e5bc56f24686f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 479c6158f7c26cde133fae66164dda89b9a39888
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +37,10 @@ ms.lasthandoff: 11/17/2017
   包或其任务和容器在运行时生成的每个日志记录条目各占一行。 在安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时，将在 msdb 数据库中创建该表。 如果将日志记录配置为记录到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则会在指定的数据库中创建采用此格式的 sysssislog 表。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]此表中写入日志记录条目**仅**当包使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志提供程序。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 此表中写入日志记录条目**仅**当包使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志提供程序。  
   
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|日志记录项的唯一标识符。|  
 |事件|**sysname**|生成日志记录项的事件的名称。|  
@@ -53,6 +56,6 @@ ms.lasthandoff: 11/17/2017
 |message|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;SSIS &#41;日志记录](../../integration-services/performance/integration-services-ssis-logging.md)   
   
   

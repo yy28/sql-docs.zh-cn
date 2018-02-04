@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
 - sysmail_delete_log_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_log_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5201706b619eea432dbe8e267a80fd2ceec0750c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4887304daf13f925201640ff89a87011f878ad01
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@logged_before**  =] *logged_before*  
+ [ **@logged_before** = ] **'***logged_before***'**  
  删除条目最多的日期和时间指定*logged_before*自变量。 *logged_before*是**datetime**替换为默认值为 NULL。 NULL 指示所有日期。  
   
- [  **@event_type**  =] *event_type*  
+ [ **@event_type** = ] **'***event_type***'**  
  删除日志条目指定为的类型的*event_type*。 *event_type*是**varchar(15)**无默认值。 有效值包括**成功**，**警告**，**错误**，和**条信息性**。 NULL 指示所有事件类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -59,7 +62,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
  删除数据库邮件日志中的项不会从数据库邮件表中删除电子邮件项。 使用[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)从数据库邮件表中删除电子邮件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以访问此过程。  
   
 ## <a name="examples"></a>示例  
@@ -91,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sysmail_event_log &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

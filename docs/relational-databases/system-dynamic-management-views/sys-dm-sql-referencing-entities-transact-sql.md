@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,27 +102,27 @@ sys.dm_sql_referencing_entities (
   
  当指定的被引用的实体是带编号的存储过程时，将返回错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|“查看”|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
-|CLR 存储过程|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
-|CLR 用户定义函数|是|是|  
-|CLR 触发器（DML 和 DDL）|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|是|  
-|扩展存储过程|是|是|  
-|队列|是|是|  
-|同义词|是|是|  
-|类型（别名和 CLR 用户定义类型）|是|是|  
-|XML 架构集合|是|是|  
-|分区函数|是|是|  
+|视图|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程 * *|是|是|  
+|CLR 存储过程|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数 (user-defined function)|是|是|  
+|CLR 用户定义函数|否|是|  
+|CLR 触发器（DML 和 DDL）|否|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器 (DML trigger)|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
   
  \*仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型时或定义中的计算的列、 CHECK 约束或默认约束的 XML 架构集合。  
   

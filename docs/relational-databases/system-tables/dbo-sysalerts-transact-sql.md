@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sysalerts_TSQL
 - dbo.sysalerts_TSQL
 - sysalerts
-dev_langs: TSQL
-helpviewer_keywords: sysalerts system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28a1152ec3dd85c8bee11c4ef9b73ed3928db27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7565ee20e5fdec3a94c413b8204629ce6ee2f48d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个警报在表中各占一行。 警报是为响应事件而发送的消息。 警报可向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境之外转发消息，警报可以是电子邮件或寻呼消息。 警报还可以生成任务。  此表存储在**msdb**数据库。
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|警报 ID。|  
 |**名称**|**sysname**|警报名称。|  
@@ -43,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |**event_category_id**|**int**|保留供将来使用。|  
 |**event_id**|**int**|保留供将来使用。|  
 |**message_id**|**int**|用户定义的消息 ID 或对引用**sysmessages**触发此警报的消息。|  
-|**严重性**|**int**|触发此警报的严重级别。|  
-|**启用**|**tinyint**|警报的状态：<br /><br /> **0** = 已禁用。<br /><br /> **1** = 启用。|  
+|severity|**int**|触发此警报的严重级别。|  
+|**enabled**|**tinyint**|警报的状态：<br /><br /> **0** = 已禁用。<br /><br /> **1** = 启用。|  
 |**delay_between_responses**|**int**|此警报的两个通知间的等待时间（以秒为单位）。|  
 |**last_occurrence_date**|**int**|警报的上次发生（日期）。|  
 |**last_occurrence_time**|**int**|警报的上次发生（时间）。|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |**count_reset_time**|**int**|天计数的时间将重置为**0**。|  
 |**job_id**|**uniqueidentifier**|此警报发生时执行的任务的 ID。|  
 |**has_notification**|**int**|警报发生时接收电子邮件通知的操作员数。|  
-|**标志**|**int**|保留。|  
+|**flags**|**int**|保留。|  
 |**performance_condition**|**nvarchar(512)**|保留。|  
 |**category_id**|**int**|保留。|  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 
 下表显示的 include_event_description 位掩码值。 Dbo.sysalerts 返回的十进制值。 
 
-|decimal | binary | 含义 |
+|decimal | BINARY | 含义 |
 |------|------|------|
 |0 |0000 |任何消息 |
 |1 |0001 |电子邮件 |

@@ -1,5 +1,5 @@
 ---
-title: "sp_syscollector_start_collection_set (TRANSACT-SQL) |Microsoft 文档"
+title: sp_syscollector_start_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
 - sp_syscollector_start_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32ab8a570febc69a91346e39c8f200a36a263aa8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54381b4d9b0baab7d9b726fd209a3cfb598fb8e1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +50,10 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*是**int**默认值为 NULL。 *collection_set_id*必须具有一个值，如果*名称*为 NULL。  
   
- [  **@name =** ]*名称*  
+ [ **@name =** ] '*name*'  
  是的收集组的名称。 *名称*是**sysname**默认值为 NULL。 *名称*必须具有一个值，如果*collection_set_id*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +68,7 @@ sp_syscollector_start_collection_set
   
  如果收集组不包含任何收集项，则此操作不起作用。 将以警告的形式返回错误 14685。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行此过程，需具有 dc_operator 固定数据库角色的成员身份。 如果收集组没有代理帐户，则需要具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupmediafamily
 - backupmediafamily_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e814887bb97d14d165c39ad4a8d634bf84947b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2b2435ce3fe98104aaf3bbb857e89779adb221e4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +39,15 @@ ms.lasthandoff: 11/17/2017
     
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**int**|标识该簇所属介质集的唯一标识号。 引用**backupmediaset(media_set_id)**|  
+|**media_set_id**|**int**|标识该簇所属介质集的唯一标识号。 References **backupmediaset(media_set_id)**|  
 |**family_sequence_number**|**tinyint**|该介质簇在介质集中的位置。|  
 |**media_family_id**|**uniqueidentifier**|标识介质簇的唯一标识号。 可以为 NULL。|  
 |**media_count**|**int**|介质簇中的介质数。 可以为 NULL。|  
-|**logical_device_name**|**nvarchar （128)**|在此备份设备的名称**sys.backup_devices.name**。 如果这是临时的备份设备 (而不是永久的备份设备中存在**sys.backup_devices**) 的值**logical_device_name**为 NULL。|  
-|**physical_device_name**|**nvarchar(260)**|备份设备的物理名称。 可以为 NULL。|  
-|**设备类型**|**tinyint**|备份设备的类型：<br /><br /> 2 = 磁盘<br /><br /> 5 = 磁带<br /><br /> 7 = 虚拟设备<br /><br /> 105 = 永久备份设备。<br /><br /> 可以为 NULL。<br /><br /> 中可以找到所有永久设备的名称和设备号**sys.backup_devices**。|  
+|**logical_device_name**|**nvarchar(128)**|在此备份设备的名称**sys.backup_devices.name**。 如果这是临时的备份设备 (而不是永久的备份设备中存在**sys.backup_devices**) 的值**logical_device_name**为 NULL。|  
+|**physical_device_name**|nvarchar(260)|备份设备的物理名称。 可以为 NULL。|  
+|**device_type**|**tinyint**|备份设备的类型：<br /><br /> 2 = 磁盘<br /><br /> 5 = 磁带<br /><br /> 7 = 虚拟设备<br /><br /> 105 = 永久备份设备。<br /><br /> 可以为 NULL。<br /><br /> 中可以找到所有永久设备的名称和设备号**sys.backup_devices**。|  
 |**physical_block_size**|**int**|用于写入介质簇的物理块大小。 可以为 NULL。|  
-|**镜像**|**tinyint**|镜像服务器号 (0-3)。|  
+|**mirror**|**tinyint**|镜像服务器号 (0-3)。|  
   
 ## <a name="remarks"></a>注释  
  RESTORE VERIFYONLY 从*backup_device*与 LOADHISTORY 填充的列**backupmediaset**介质集标头中的相应值的表。  

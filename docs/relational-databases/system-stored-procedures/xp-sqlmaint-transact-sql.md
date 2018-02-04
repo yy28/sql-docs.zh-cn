@@ -1,5 +1,5 @@
 ---
-title: "xp_sqlmaint (Transact SQL) |Microsoft 文档"
+title: xp_sqlmaint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: xp_sqlmaint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b32c6c32d3af26713713d513fa3c8255cfd3ef9d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b39c93aa08d46dd31b2a063631ce567593319df4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>参数  
-  *switch_string*   
+ **'** *switch_string* **'**  
  一个字符串包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
   
  **-？** 交换机不是有效的**xp_sqlmaint**。  
@@ -55,9 +58,9 @@ xp_sqlmaint 'switch_string'
  无。 如果返回错误**sqlmaint**实用程序将失败。  
   
 ## <a name="remarks"></a>注释  
- 如果在使用 SQL Server 身份验证，登录用户调用此过程时**-U"***login_id***"**和**-P"** *密码***"**开关为前缀*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*且不会更改传递**sqlmaint**。  
+ 如果在使用 SQL Server 身份验证，登录用户调用此过程时**-U"***login_id***"**和**-P"***密码***"**开关为前缀*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*且不会更改传递**sqlmaint**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

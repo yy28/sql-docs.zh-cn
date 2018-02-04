@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXTTABLE_TSQL
 - FREETEXTTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - search conditions [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - ranked results [full-text search]
 - column searches [full-text search]
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32d2f6ab0ec5faf5603504824ec6917f0297ef72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 412de75f061da97a82e8494c442e17ba00b03ab7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  有关支持的全文搜索的窗体信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
-(http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。 |  
+(http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +67,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  *表*不能指定服务器名称和不能用在针对链接服务器查询。  
   
- *column_name*  
+ column_name  
  FROM 子句中指定表的一个或多个全文索引列的名称。 列可以是类型**char**， **varchar**， **nchar**， **nvarchar**，**文本**， **ntext**，**映像**， **xml**， **varbinary**，或**varbinary （max)**。  
   
  *column_list*  
@@ -84,7 +86,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  语言*language_term*  
  特定的语言，查询时，其资源将用于断字、词干分析、同义词库查询以及非索引字删除。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果*language_term*指定，它表示的语言将应用到的搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
   
- 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在查询这样的列时，指定*语言**language_term*可以增加很好的匹配项的概率。  
+ 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在查询这样的列时，指定*语言 * * language_term*可以增加很好的匹配项的概率。  
   
  当指定为一个字符串， *language_term*对应于**别名**中的列值[sys.syslanguages &#40;Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。  在情况下，字符串必须括在单引号中，*language_term*。 如果为一个整数，指定*language_term*是实际标识的语言的 LCID。 当指定为十六进制值， *language_term* 0x 后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
@@ -102,7 +104,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  如 CONTAINSTABLE，返回的表具有名为的列**密钥**和**级别**，该查询以获取相应的行并使用排名值的行内引用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有对指定表或表中所引用的列具有适当的 SELECT 权限的用户才能调用 FREETEXTTABLE。  
   
 ## <a name="examples"></a>示例  
@@ -181,7 +183,7 @@ GO
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
  [行集函数 &#40;Transact SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [“预计算等级”服务器配置选项](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
   
   

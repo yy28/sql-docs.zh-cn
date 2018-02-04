@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobserver
 - sp_delete_jobserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa359901007167afdffa5394ceb9393c60e5cb46
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 04575019d38c28dc541752ecf7c3b2408fb3c180
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +47,25 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  要从中删除指定目标服务器的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [  **@job_name=** ] *job_name*  
+ [ **@job_name=** ] **'***job_name***'**  
  要从中删除指定目标服务器的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定; 不能同时指定。  
   
- [  **@server_name=** ] *服务器*  
+ [ **@server_name=** ] **'***server***'**  
  要从指定作业中删除的目标服务器的名称。 *服务器*是**nvarchar (30)**，无默认值。 *服务器*可以是**（本地）**或远程目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要运行此存储的过程，用户必须是的成员**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -82,8 +85,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_jobserver &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

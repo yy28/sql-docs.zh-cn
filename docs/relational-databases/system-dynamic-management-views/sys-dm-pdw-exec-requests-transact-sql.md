@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_pdw_exec_requests (Transact SQL) |Microsoft 文档"
+title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c342ad591c790e4c0d8167ab78f73436e81610b0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 49511281ee8ce420186ad72b112a319dff8a55ce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
+# <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存有关的所有请求的信息当前或最近中处于活动状态[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 它列出每个请求/查询的一行。  
@@ -47,10 +49,10 @@ ms.lasthandoff: 11/17/2017
   
  有关通过此视图保留最大行数的信息，请参阅"最小值和最大值"中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  sys.dm_pdw_exec_requests 不筛选查询结果根据特定于数据库的权限。 与 VIEW SERVER STATE 权限的登录名可以获取结果的所有数据库的查询结果  
   
 > [!WARNING]  

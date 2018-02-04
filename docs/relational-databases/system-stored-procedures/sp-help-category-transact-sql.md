@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +49,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class=**] *类*  
+ [ **@class=**] **'***class***'**  
  请求其信息的类。 *类*是**varchar(8)**，默认值为**作业**。 *类*可以是下列值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|**作业**|提供有关作业类别的信息。|  
+|**JOB**|提供有关作业类别的信息。|  
 |**警报**|提供有关警报类别的信息。|  
 |**运算符**|提供有关操作员类别的信息。|  
   
- [  **@type=** ] *类型*  
+ [ **@type=** ] **'***type***'**  
  请求其信息的类别的类型。 *类型*是**varchar(12)**，默认值为 NULL，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**本地**|本地作业类别。|  
 |**多的服务器**|多服务器作业类别。|  
 |**NONE**|以外的其他类类别**作业**。|  
   
- [  **@name=** ] *名称*  
+ [ **@name=** ] **'***name***'**  
  请求其信息的类别的名称。 *名称*是**sysname**，默认值为 NULL。  
   
- [  **@suffix=** ]*后缀*  
+ [ **@suffix=** ] *suffix*  
  指定是否**category_type**结果集中的列是 ID 或名称。 *后缀*是**位**，默认值为**0**。 **1**显示**category_type**名称和**0**显示为一个 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -79,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
-|**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = none|  
+|**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = Local<br /><br /> **2** = 多服务器<br /><br /> **3** = None|  
 |**名称**|**sysname**|类别名称|  
   
  当 **@suffix** 是**1**， **sp_help_category**返回以下结果集：  
@@ -95,7 +98,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  如果未指定参数，则结果集将提供有关所有作业类别的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -134,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_category &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

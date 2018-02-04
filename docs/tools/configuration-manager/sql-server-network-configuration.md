@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d504c4bb2fa28350896f57c289a6bbd488245c1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a4e132c7b1ea975d2d4c896531265b09b346ddf6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-network-configuration"></a>SQL Server 网络配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本部分包含的 F1 帮助主题**Server 网络配置**对话框在 SQL Server 配置管理器中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+本节包含了按 F1 后看到的有关 SQL Server 配置管理器中 **“服务器网络配置”** 对话框的帮助主题。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 配置管理器帮助](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  

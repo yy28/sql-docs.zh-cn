@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +119,7 @@ sys.dm_sql_referenced_entities (
   
  无法解析列依赖关系时，返回错误 2020。 此错误不会阻止查询返回对象级依赖关系。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  可以在任何数据库的上下文中执行此函数以返回引用服务器级 DDL 触发器的实体。  
   
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  
@@ -124,21 +127,21 @@ sys.dm_sql_referenced_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|“查看”|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
-|CLR 存储过程|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
-|CLR 用户定义函数|是|是|  
-|CLR 触发器（DML 和 DDL）|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|是|  
-|扩展存储过程|是|是|  
-|队列|是|是|  
-|同义词|是|是|  
-|类型（别名和 CLR 用户定义类型）|是|是|  
-|XML 架构集合|是|是|  
-|分区函数|是|是|  
+|视图|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程 * *|是|是|  
+|CLR 存储过程|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数 (user-defined function)|是|是|  
+|CLR 用户定义函数|否|是|  
+|CLR 触发器（DML 和 DDL）|否|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器 (DML trigger)|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
   
  \*仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型时或定义中的计算的列、 CHECK 约束或默认约束的 XML 架构集合。  
   

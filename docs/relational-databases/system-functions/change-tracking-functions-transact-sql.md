@@ -8,24 +8,26 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - functions [SQL Server], change tracking
 - change tracking [SQL Server], functions
 ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6967dfb85baa59aa563bb054a6de62756e16bf2f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e4c0a1dbb3e0d9efda9d99d58556c03f53da7a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="change-tracking-functions-transact-sql"></a>更改跟踪函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |--------------|-----------------|  
 |[CHANGETABLE (CHANGES)](../../relational-databases/system-functions/changetable-transact-sql.md)|返回自指定版本起对表所做的所有更改的跟踪信息。|  
 |[CHANGETABLE （版本）](../../relational-databases/system-functions/changetable-transact-sql.md)|返回指定行的最新更改跟踪信息。|  
-|[CHANGE_TRACKING_MIN_VALID_VERSION （)](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|返回用于获取更改跟踪信息从指定的表，当你使用有效的最低版本[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函数。|  
+|[CHANGE_TRACKING_MIN_VALID_VERSION()](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)|返回用于获取更改跟踪信息从指定的表，当你使用有效的最低版本[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函数。|  
 |[CHANGE_TRACKING_CURRENT_VERSION](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)|获取与上次提交事务关联的版本。 可以在下次使用 CHANGETABLE 枚举更改时使用此版本。|  
 |[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|用于解释由 CHANGETABLE(CHANGES …) 函数返回的 SYS_CHANGE_COLUMNS 值。|  
 |[WITH CHANGE_TRACKING_CONTEXT](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)|用于在应用程序更改数据时指定更改上下文，例如发起方 ID。|  

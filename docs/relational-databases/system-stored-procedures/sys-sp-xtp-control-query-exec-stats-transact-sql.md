@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_xtp_control_query_exec_stats (Transact SQL) |Microsoft 文档"
+title: sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2015
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
 - sys.sp_xtp_control_query_exec_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_control_query_exec_stats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeae0a552d2df0c911b2a95a4578c3b835192612
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 86ab826d23f50868259edc5ae3b2bffa55359ce2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>参数  
- @new_collection_value=*值*  
+ @new_collection_value = *value*  
  决定打开 (1) 还是关闭 (0) 过程级统计信息收集。  
   
  @new_collection_value设置为零在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动。  
@@ -57,7 +60,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
   
  使用[sys.databases &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.procedures &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;Transact SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)，或[OBJECT_ID &#40;Transact SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)若要获取数据库和存储的过程的 Id。  
   
- @old_collection_value=*值*  
+ @old_collection_value = *value*  
  返回当前状态。  
   
 ## <a name="return-code"></a>返回代码  

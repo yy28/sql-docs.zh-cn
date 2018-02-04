@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
 - sp_change_log_shipping_secondary_primary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_change_log_shipping_secondary_primary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3971444d93a2cb9c57ecce4a278410135a9aaf32
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 26e82dc23da2641019fc0b6215dd633479ae0272
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,39 +54,39 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@primary_server**  =] '*primary_server*  
+ [ **@primary_server** = ] '*primary_server*'  
  主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**和不能为 NULL。  
   
- [  **@primary_database**  =] '*primary_database*  
+ [ **@primary_database** = ] '*primary_database*'  
  主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
   
- [  **@backup_source_directory**  =] '*backup_source_directory*  
+ [ **@backup_source_directory** = ] '*backup_source_directory*'  
  存储主服务器的事务日志备份文件的目录。 *backup_source_directory*是**nvarchar(500)**和不能为 NULL。  
   
- [  **@backup_destination_directory**  =] '*backup_destination_directory*  
+ [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
  备份文件复制到的辅助服务器上的目录。 *backup_destination_directory*是**nvarchar(500)**和不能为 NULL。  
   
- [  **@file_retention_period**  =] '*file_retention_period*  
+ [ **@file_retention_period** = ] '*file_retention_period*'  
  历史记录的保留时间长度（分钟）。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
- [  **@monitor_server_security_mode**  =] '*monitor_server_security_mode*  
+ [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
  用于连接到监视服务器的安全模式。  
   
  1 = Windows 身份验证；  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 *monitor_server_security_mode*是**位**和不能为 NULL。  
   
- [  **@monitor_server_login**  =] '*monitor_server_login*  
+ [ **@monitor_server_login** = ] '*monitor_server_login*'  
  访问监视服务器所用的帐户的用户名。  
   
- [  **@monitor_server_password**  =] '*monitor_server_password*  
+ [ **@monitor_server_password** = ] '*monitor_server_password*'  
  用于访问监视服务器的帐户的密码。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  **sp_change_log_shipping_secondary_primary**必须从运行**master**辅助服务器上的数据库。 此存储过程执行以下操作：  
@@ -92,11 +95,11 @@ sp_change_log_shipping_secondary_primary
   
 2.  如果不同于辅助服务器监视服务器，更改监视中的记录**log_shipping_monitor_secondary**监视器服务器使用提供的变量，如有必要。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
