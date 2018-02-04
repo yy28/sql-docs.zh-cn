@@ -3,7 +3,7 @@ title: "在 Linux 上安装 SQL Server 自 2017 年 1 |Microsoft 文档"
 description: "安装、 更新和卸载 Linux 上的 SQL Server。 本主题介绍联机、 脱机和无人参与的方案。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本主题说明如何安装、 更新和卸载 Linux 上的 SQL Server 2017。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 支持 SQL Server 自 2017 年。 此外，还可以作为可在 Linux 或 Docker 为 Windows/mac。 上的 Docker 引擎运行的 Docker 映像
 
@@ -52,7 +52,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 |||
 |-----|-----|
 | **内存** | 2 GB |
-| **“文件系统”** | **XFS**或**EXT4** (其他文件系统，如**BTRFS**，不支持) |
+| **文件系统** | **XFS**或**EXT4** (其他文件系统，如**BTRFS**，不支持) |
 | **磁盘空间** | 6 GB |
 | **处理器速度** | 2 GHz |
 | **处理器核心** | 2 核 |

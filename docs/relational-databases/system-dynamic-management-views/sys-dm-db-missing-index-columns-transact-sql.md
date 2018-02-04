@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_missing_index_columns (Transact SQL) |Microsoft 文档"
+title: sys.dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_missing_index_columns_TSQL
 - sys.dm_db_missing_index_columns
 - dm_db_missing_index_columns
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f2f358532d43453242fea591ab9ac12024230f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0778fe8698d486d8535eb17fe1d10e6fd812984
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,17 +50,17 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  唯一地标识缺失索引的整数。 它可以从下列动态管理对象中获得：  
   
- [sys.dm_db_missing_index_details &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys.dm_db_missing_index_groups &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>返回的表  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|列的 ID。|  
-|**column_name**|**sysname**|表列的名称。|  
-|**column_usage**|**varchar （20)**|查询使用列的方式。 可能的值以及及其说明是：<br /><br /> 相等性： 列分配给一个谓词，表示相等的窗体： <br />                        *table.column* = *constant_value*<br /><br /> 是否不相等： 列分配给一个谓词，例如，表示不相等，形式的谓词： *table.column* > *constant_value*。 “=”之外的任何比较运算符都表示不相等。<br /><br /> 包括： 列不用于谓词赋值，但用于另一个原因，例如，包含一个查询。|  
+|column_name|**sysname**|表列的名称。|  
+|**column_usage**|**varchar(20)**|查询使用列的方式。 可能的值以及及其说明是：<br /><br /> 相等性： 列分配给一个谓词，表示相等的窗体： <br />                        *table.column* = *constant_value*<br /><br /> 是否不相等： 列分配给一个谓词，例如，表示不相等，形式的谓词： *table.column* > *constant_value*。 “=”之外的任何比较运算符都表示不相等。<br /><br /> 包括： 列不用于谓词赋值，但用于另一个原因，例如，包含一个查询。|  
   
 ## <a name="remarks"></a>注释  
  返回的信息**sys.dm_db_missing_index_columns**时查询查询优化器优化，而且不具有持久性，会更新。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  
@@ -66,7 +68,7 @@ sys.dm_db_missing_index_columns(index_handle)
 ## <a name="transaction-consistency"></a>事务一致性  
  如果事务创建或删除了一个表，则包含有关已删除对象的缺失索引信息的行将从此动态管理对象中删除，以保持事务一致性。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  必须授予用户 VIEW SERVER STATE 权限或任何隐含 VIEW SERVER STATE 权限的权限，以便查询此动态管理函数。  
   
 ## <a name="examples"></a>示例  
@@ -89,8 +91,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_db_missing_index_details &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_distributed_requests (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_REQUESTS
 - DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
 - SYS.DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - sys.dm_exec_distributed_sql_requests management view
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39b16d051c3300599a220f4f2ce21904db208571
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 539bf6f6e4df5860977fdd0703a9bc11a5923d31
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (TRANSACT-SQL)
+# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   有关所有请求的信息包含当前或最近 active PolyBase 查询中。 它列出每个请求/查询的一行。  
@@ -43,8 +45,8 @@ ms.lasthandoff: 11/17/2017
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|此视图的键。 与请求关联的唯一数字 id。|唯一跨系统中的所有请求。|  
-|execution_id|**nvarchar (32**|与在其中运行此查询会话相关联的唯一数字 id。||  
-|status|**nvarchar (32**|请求的当前状态。|挂起，授权，AcquireSystemResources，初始化、 计划，分析，AquireResources，正在运行、 取消，完整，已失败，取消。|  
+|execution_id|**nvarchar(32**|与在其中运行此查询会话相关联的唯一数字 id。||  
+|status|**nvarchar(32**|请求的当前状态。|挂起，授权，AcquireSystemResources，初始化、 计划，分析，AquireResources，正在运行、 取消，完整，已失败，取消。|  
 |error_id|**nvarchar(36)**|如果有与此请求相关联的错误的唯一 id。|如果未发生错误，则设置为 NULL。|  
 |start_time|**datetime**|请求执行开始时间。|0 表示排队请求;否则为有效日期时间小于或等于当前时间。|  
 |end_time|**datetime**|引擎完成编译请求的时间。|对于排队或活动的请求; 为 null否则为有效日期时间小于或等于当前时间。|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_waiting_tasks_TSQL
 - dm_os_waiting_tasks_TSQL
 - sys.dm_os_waiting_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_waiting_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52f867ccc301a710656739bf49ec1a11a50fcee1
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5b3a3122f9f0908e063685941f58bb03281659e0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,30 +43,30 @@ ms.lasthandoff: 01/02/2018
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary （8)**|等待任务的地址。|  
+|**waiting_task_address**|**varbinary(8)**|等待任务的地址。|  
 |**session_id**|**int**|与任务关联的会话的 ID。|  
 |**exec_context_id**|**int**|与任务关联的执行上下文的 ID。|  
 |**wait_duration_ms**|**bigint**|此等待类型的总等待时间（毫秒）。 此时间是包括**signal_wait_time**。|  
 |**wait_type**|**nvarchar(60)**|等待类型的名称。|  
-|**resource_address**|**varbinary （8)**|任务等待的资源的地址。|  
-|**blocking_task_address**|**varbinary （8)**|当前持有此资源的任务。|  
+|**resource_address**|**varbinary(8)**|任务等待的资源的地址。|  
+|**blocking_task_address**|**varbinary(8)**|当前持有此资源的任务。|  
 |**blocking_session_id**|**int**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |**blocking_exec_context_id**|**int**|正在阻塞的任务的执行上下文 ID。|  
 |**resource_description**|**nvarchar(3072)**|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
 ## <a name="resourcedescription-column"></a>resource_description 列  
  Resource_description 列具有以下可能的值。  
   
  **线程池资源所有者：**  
   
--   线程池 id = 计划程序\<十六进制地址 >  
+-   threadpool id=scheduler\<hex-address>  
   
  **并行查询资源所有者：**  
   
--   exchangeEvent id = {端口 |管道}\<十六进制地址 > WaitType =\<exchange 等待类型 > nodeId =\<exchange 节点 id >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
- **Exchange 等待类型：**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 01/02/2018
   
  **锁资源所有者：**  
   
--   \<类型特定说明 > id = 锁\<锁十六进制地址 > 模式 =\<模式 > associatedObjectId =\<关联 obj id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<类型特定说明 > 可以是：**  
   
@@ -113,11 +116,11 @@ ms.lasthandoff: 01/02/2018
   
  **外部资源所有者：**  
   
--   外部 ExternalResource =\<等待类型 >  
+-   External ExternalResource=\<wait-type>  
   
  **通用资源所有者：**  
   
--   TransactionMutex TransactionInfo 工作区 =\<工作区 id >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -131,9 +134,9 @@ ms.lasthandoff: 01/02/2018
   
  **闩锁资源所有者：**  
   
--   \<数据库 id >:\<文件 id >:\<页面中文件 >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID >  
+-   \<GUID>  
   
 -   \<闩锁类 > (\<闩锁地址 >)  
   

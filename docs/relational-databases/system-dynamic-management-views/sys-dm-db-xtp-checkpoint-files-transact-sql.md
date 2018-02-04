@@ -8,7 +8,8 @@ ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_checkpoint_files_TSQL
 - dm_db_xtp_checkpoint_files_TSQL
 - sys.dm_db_xtp_checkpoint_files
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_files dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cad5ae59687c3658ef60e0a984fdc2ce94e24ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fff8a7cff566b555c0cc28ff6e60c67815956738
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  内存优化文件组内部使用的仅追加文件来存储为内存中表的插入的和删除行。 有两种类型的文件。 数据文件包含插入的行，而差异文件包含对已删除的行的引用。 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]与较新版本具有显著差异和更低时在主题中讨论[SQL Server 2014](#bkmk_2014)。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 与较新版本具有显著差异和更低时在主题中讨论[SQL Server 2014](#bkmk_2014)。  
   
  有关详细信息，请参阅[创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |deleted_row_count|**bigint**|差异文件中删除的行数。|  
 |drop_table_deleted_row_count|**bigint**|删除表影响的数据文件中的行数。 当状态列等于 1 时，应用于数据文件。<br /><br /> 显示从已删除表中删除的行计数。 在对已删除表中的行完成内存垃圾回收并且实施了检查点之后，汇总 drop_table_deleted_row_count 统计信息。 如果您在此列中反映删除表统计信息之前重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则统计信息会在恢复过程中更新。 恢复过程不会从已删除表中加载行。 已删除表的统计信息会在加载阶段中进行汇总并在此列中进行报告（恢复完成时）。|  
 |state|**int**|0 – PRECREATED<br /><br /> 1 - UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 4 – MERGED SOURCE<br /><br /> 5 – REQUIRED FOR BACKUP/HA<br /><br /> 6 – IN TRANSITION TO TOMBSTONE<br /><br /> 7 – TOMBSTONE|  
-|state_desc|**nvarchar(60)**|PRECREATED – 一小组数据和差异文件对（也称为检查点文件对 (CFP)）保持预分配状态，以便尽量减少或消除任何等待时间，从而在执行事务时分配新文件。 针对数据文件的预分配 CFP 的完整大小是 128MB，而针对差异文件的预分配 CFP 的完整大小是 8 MB，但不包含任何数据。 CFP 的数目计算为逻辑处理器或计划程序的数目（每个核心一个，无最大值），最小值为 8。 这是具有内存优化表的数据库中的固定存储开销。<br /><br /> UNDER CONSTRUCTION – 存储自上个检查点以来新插入和可能删除的数据行的 CFP 集。<br /><br /> ACTIVE - 这些包含来自以前关闭的检查点的已插入和已删除行。 这些 CFP 包含数据库重新启动时在应用事务日志的活动部分前所需的所有已插入和已删除行。 这些 CFP 的大小大约是内存优化表在内存中的大小的 2 倍（假定合并操作是针对事务工作负荷的当前操作）。<br /><br /> MERGE TARGET – CFP 存储由合并策略标识的 CFP 中的合并数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> MERGED SOURCE – 合并操作已安装之后，源 CFP 标记为 MERGED SOURCE。 请注意，合并策略计算器可能标识多个合并，但是一个 CFP 只能参与一个合并操作。<br /><br /> REQUIRED FOR BACKUP/HA – 合并已安装并且 MERGE TARGET CFP 属于持久检查点之后，合并源 CFP 转换为此状态。 为保证具有内存优化表的数据库的运行正确性，需要处于此状态的 CFP。  例如，用于从持久检查点恢复以便及时返回。 在日志截断点移出其事务范围后，可以将 CFP 标为进行垃圾回收。<br /><br /> IN TRANSITION TO TOMBSTONE – 内存中 OLTP 引擎不需要这些 CFP，可以对它们进行垃圾收集。 此状态指示这些 CFP 在等待后台线程将它们转换为下一个状态（即 TOMBSTONE）。<br /><br /> TOMBSTONE – 这些 CFP 在等待文件流垃圾收集器进行垃圾收集。 ([sp_filestream_force_garbage_collection &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|PRECREATED – 一小组数据和差异文件对（也称为检查点文件对 (CFP)）保持预分配状态，以便尽量减少或消除任何等待时间，从而在执行事务时分配新文件。 针对数据文件的预分配 CFP 的完整大小是 128MB，而针对差异文件的预分配 CFP 的完整大小是 8 MB，但不包含任何数据。 CFP 的数目计算为逻辑处理器或计划程序的数目（每个核心一个，无最大值），最小值为 8。 这是具有内存优化表的数据库中的固定存储开销。<br /><br /> UNDER CONSTRUCTION – 存储自上个检查点以来新插入和可能删除的数据行的 CFP 集。<br /><br /> ACTIVE - 这些包含来自以前关闭的检查点的已插入和已删除行。 这些 CFP 包含数据库重新启动时在应用事务日志的活动部分前所需的所有已插入和已删除行。 这些 CFP 的大小大约是内存优化表在内存中的大小的 2 倍（假定合并操作是针对事务工作负荷的当前操作）。<br /><br /> MERGE TARGET – CFP 存储由合并策略标识的 CFP 中的合并数据行。 合并已安装之后，MERGE TARGET 转换为 ACTIVE 状态。<br /><br /> MERGED SOURCE – 合并操作已安装之后，源 CFP 标记为 MERGED SOURCE。 请注意，合并策略计算器可能标识多个合并，但是一个 CFP 只能参与一个合并操作。<br /><br /> REQUIRED FOR BACKUP/HA – 合并已安装并且 MERGE TARGET CFP 属于持久检查点之后，合并源 CFP 转换为此状态。 为保证具有内存优化表的数据库的运行正确性，需要处于此状态的 CFP。  例如，用于从持久检查点恢复以便及时返回。 在日志截断点移出其事务范围后，可以将 CFP 标为进行垃圾回收。<br /><br /> IN TRANSITION TO TOMBSTONE – 内存中 OLTP 引擎不需要这些 CFP，可以对它们进行垃圾收集。 此状态指示这些 CFP 在等待后台线程将它们转换为下一个状态（即 TOMBSTONE）。<br /><br /> TOMBSTONE – 这些 CFP 在等待文件流垃圾收集器进行垃圾收集。 ([sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|文件中包含事务的下限。 如果状态列不是 2、3 或 4，则为 Null。|  
 |upper_bound_tsn|**bigint**|文件中包含事务的上限。 如果状态列不是 2、3 或 4，则为 Null。|  
 |last_backup_page_count|**int**|上次备份时确定的逻辑页计数。 状态列设置为 2、3、4 或 5 时应用。 如果页计数未知，则为 NULL。|  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/17/2017
 |tombstone_operation_lsn|**nvarchar(23)**|tombstone_operation_lsn 落后于日志截断日志序列号之后，文件将删除。|  
 |logical_deletion_log_block_id|**bigint**|仅适用于状态 5。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="use-cases"></a>用例  

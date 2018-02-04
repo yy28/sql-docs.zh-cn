@@ -16,27 +16,29 @@ f1_keywords:
 - external_library_files_TSQL
 - sys.external_library_files
 - sys.external_library_files_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.external_library_files catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.external_library_files catalog view
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a03a50bdeda18d027fbad56e2cd4b86a261052b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: cf8a1b59827c53bc4ae04f76dbe7084a4ad828d4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (TRANSACT-SQL)  
+# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 列出每个文件组成外部库一行。
 
 |列名 |数据类型 |Description|
 |------|------|-----|
-|external_library_id | ssNoversion |外部库对象的 ID。 |
+|external_library_id | int |外部库对象的 ID。 |
 |content |varbinary(max) |外部库文件项目的内容。 |
-|平台 |TINYINT |在其上安装 SQL Server 的主机平台的 ID。 |
+|平台 |tinyint |在其上安装 SQL Server 的主机平台的 ID。 |
 |platform_desc | nvarchar(60) |主机平台的名称。 有效值为 WINDOWS、 LINUX。 |
 
 ### <a name="see-also"></a>另请参阅  

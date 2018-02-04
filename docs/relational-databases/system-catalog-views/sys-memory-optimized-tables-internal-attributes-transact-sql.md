@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.memory_optimized_tables_internal_attributes_TSQL
 - memory_optimized_tables_internal_attributes
 - memory_optimized_tables_internal_attributes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.memory_optimized_tables_internal_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jodebrui
 ms.author: jodebrui
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab05ef27e9687be506db960e628868cb08184d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,11 +42,11 @@ ms.lasthandoff: 11/17/2017
 | :------ |:----------| :-----|
 |object_id  |**int**|       用户表的 ID。 为支持用户表（如针对 Hk/列存储组合情况的行外存储或已删除行）而存在的内部内存优化表将相同 object_id 作为其父级。 |
 |xtp_object_id  |**bigint**|    与用于支持用户表的内部内存优化表对应的内存中 OLTP 对象 ID。 它在数据库中是唯一的，可以在对象的生存期内更改。 
-|类型|  **int** |   内部表的类型。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type|  **int** |   内部表的类型。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   类型的说明<br/><br/>DELETED_ROWS_TABLE -> 跟踪列存储索引的已删除行的内部表<br/>USER_TABLE -> 包含行内用户数据的表<br/>DICTIONARIES_TABLE -> 列存储索引的字典<br/>SEGMENTS_TABLE -> 列存储索引的压缩段<br/>ROW_GROUPS_INFO_TABLE -> 有关列存储索引的压缩行组的元数据<br/>INTERNAL OFF-ROW DATA TABLE -> 用于行外列存储的内部表。 在这种情况下，minor_id 反映 column_id。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 基于磁盘的历史记录表的热结尾。 插入历史记录中的行会先插入此内部内存优化表中。 有一个后台任务以异步方式将行从此内部表移动到基于磁盘的历史记录表。 |
 |minor_id|  **int**|    0 指示用户或内部表<br/><br/>非 0 指示行外存储的列的 ID。 在 sys.columns 中与 column_id 联接。<br/><br/>每个行外存储的列都在此系统视图中具有对应行。|
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  

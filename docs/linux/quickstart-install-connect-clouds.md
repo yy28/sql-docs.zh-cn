@@ -3,7 +3,7 @@ title: "要开始使用云中的 SQL Server 2017 |Microsoft 文档"
 description: "本快速入门教程演示如何在 Linux 中的所选云上运行 SQL Server 2017。"
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -11,15 +11,15 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>在云中运行 SQL Server 2017
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 在此快速入门教程中，你将 Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 或在所选的云中的 Ubuntu 上安装 SQL Server 自 2017 年。 转到[设置 Linux SQL Server 虚拟机在 Azure 门户](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中的 Linux 上运行 SQL Server。
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/13/2017
 
 ## <a name="amazon-web-services"></a>Amazon Web 服务
 1.  在至少具有 2 GB 的内存来自应用商店创建 Linux AMI 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  连接到与 AMI ssh
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/13/2017
     
 ## <a name="google-cloud-platform"></a>Google 云平台
 1.  在至少具有 2 GB 的内存从云启动器创建 Linux 映像 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  连接到的映像与 ssh

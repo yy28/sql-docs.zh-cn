@@ -1,5 +1,5 @@
 ---
-title: "syscollector_execution_log_full (TRANSACT-SQL) |Microsoft 文档"
+title: syscollector_execution_log_full (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
 - syscollector_execution_log_full_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588e225a87d92f35903564f97c3c6ef17252aa2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 93ff62b9c91fee116679d0fb9ffe7d6b28f61024
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +49,11 @@ ms.lasthandoff: 11/17/2017
 |finish_time|**datetime**|已完成的包和收集组完成运行的时间。 可以为 Null。|  
 |duration|**int**|包或收集组已经运行的时间（以秒为单位）。 可以为 Null。|  
 |failure_message|**nvarchar(2048)**|收集组或包失败时该组件的最新错误消息。 可以为 Null。 若要获取更详细的错误信息，请使用[fn_syscollector_get_execution_details &#40;Transact SQL &#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函数。|  
-|运算符后的表达式|**nvarchar （128)**|标识启动了收集组或包的用户。 可以为 Null。|  
+|运算符后的表达式|**nvarchar(128)**|标识启动了收集组或包的用户。 可以为 Null。|  
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  
 |collection_set_id|**int**|提供指向 msdb 中数据收集配置表的链接。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要为选择**dc_operator**。  
   
 ## <a name="see-also"></a>另请参阅  

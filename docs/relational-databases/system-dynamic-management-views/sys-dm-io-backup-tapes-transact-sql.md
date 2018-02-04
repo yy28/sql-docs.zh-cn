@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_io_backup_tapes_TSQL
 - sys.dm_io_backup_tapes_TSQL
 - dm_io_backup_tapes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_backup_tapes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d2a6365411d66238512fddf23e7f71848acf5de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_type**|**int**|装入请求的类型：<br /><br /> 1 = 特定磁带。 由标识磁带**media_\*** 字段是必需的。<br /><br /> 2 = 下一个介质簇。 请求尚未还原的下一个介质簇。 用于从比介质簇更少的设备进行还原时。<br /><br /> 3 = 延续磁带。 介质簇正在扩展，并且请求延续磁带。<br /><br /> 可以为 Null。|  
 |**mount_request_type_desc**|**nvarchar(120)**|装入请求的类型：<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须对服务器拥有 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

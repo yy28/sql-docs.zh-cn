@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON-跟踪标志 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ ms.lasthandoff: 01/25/2018
 |**9567**|启用压缩数据流的 Alwayson 可用性组的自动种子设定过程。 压缩可以显著减少自动种子设定过程的传输时间，将增加处理器上的负载。 有关详细信息，请参阅[自动初始化 Alwayson 可用性组](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[调整可用性组的压缩](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**作用域**： 全局或会话|
 |**9591**|禁用 Alwayson 可用性组中日志块压缩。 日志块压缩是对包含同步和异步副本中使用的默认行为[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，压缩仅用于异步副本。 <br /><br />**作用域**： 全局或会话|
 |**9592**|启用日志流压缩为同步的可用性组。 默认情况下，同步的可用性组禁用此功能，因为压缩为增加延迟。 有关详细信息，请参阅 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)（调整可用性组的压缩）。<br /><br />**作用域**： 全局或会话| 
+|**9929**|减少内存中检查点文件对 1 MB。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/3147012)。<br /><br />**作用域**： 全局仅|  
 |**9939**|启用并行计划和内存优化表和表变量中引用内存优化表或表变量的 DML 操作的并行扫描，只要它们不在 DML 操作的目标[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 有关详细信息，请参阅此[Microsoft 支持文章](http://support.microsoft.com/kb/4013877)。<br /><br />**注意：**如果还可以显式启用跟踪标志 4199，则不需要跟踪标志 9939。<br /><br />**作用域**： 全局或会话或查询|   
 |**10204**|禁用合并/重新压缩在列存储索引重组过程。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，当列存储索引进行重组，自动将任何小压缩行组合并为更大压缩行组，以及为重新压缩拥有大量的任何行组已删除行的新功能。<br /><br />**注意：**跟踪标志 10204 不适用于在内存优化表上创建列存储索引。<br /><br />**作用域**： 全局或会话|   
 |**10316**|在可以创建其他索引[内部内存优化临时临时表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)，默认旁边。 如果你有包含不受默认索引的列的特定查询模式可能希望添加其他的。<br /><br />**注意：**系统版本控制临时表的内存优化表旨在提供高事务吞吐量。 请注意，创建附加索引可能会引入的更新或删除当前表中的行的 DML 操作的开销。 与其他索引应旨在右之间找到平衡点临时查询的性能和其他 DML 开销。<br /><br />**作用域**： 全局或会话|

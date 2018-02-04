@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_rda_migration_status (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_rda_migration_status_TSQL
 - dm_db_rda_migration_status
 - dm_db_rda_migration_status_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_rda_migration_status dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_rda_migration_status dynamic management view
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088300f865265f330a06e40b7712fa63fd89f02a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3b4687e98a7fb917390e7ca8811c50bf543744c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database-sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**针对 table_id 所**|**int**|从中迁移了行的表的 ID。|  
+|**table_id**|**int**|从中迁移了行的表的 ID。|  
 |**database_id**|**int**|从中迁移了行的数据库 ID。|  
 |**migrated_rows**|**bigint**|在此批次中迁移的行数。|  
 |**start_time_utc**|**datetime**|批处理所开始的 UTC 时间。|  

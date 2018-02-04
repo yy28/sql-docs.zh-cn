@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_memory_cache_entries (Transact SQL) |Microsoft 文档"
+title: sys.dm_os_memory_cache_entries (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_cache_entries
 - dm_os_memory_cache_entries_TSQL
 - sys.dm_os_memory_cache_entries_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_cache_entries dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_cache_entries dynamic management view
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef1e748dd656ec9ae128a6fc26df898cf7d8171
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 81ef9160b643942fc8ce254c172077aea516fcb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,25 +43,25 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary （8)**|缓存的地址。 不可为 null。|  
+|**cache_address**|**varbinary(8)**|缓存的地址。 不可为 null。|  
 |**名称**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|**type**|**varchar(60)**|缓存类型。 不可为 null。|  
-|**entry_address**|**varbinary （8)**|缓存条目的描述符地址。 不可为 null。|  
-|**entry_data_address**|**varbinary （8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
+|**类型**|**varchar(60)**|缓存类型。 不可为 null。|  
+|**entry_address**|**varbinary(8)**|缓存条目的描述符地址。 不可为 null。|  
+|**entry_data_address**|**varbinary(8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
 |**in_use_count**|**int**|同时使用此缓存条目的用户数。 不可为 null。|  
 |**is_dirty**|**bit**|指示是否将此缓存条目标记为待删除。 1 = 标记为待删除。 不可为 null。|  
 |**disk_ios_count**|**int**|创建此条目时引发的 I/O 数。 不可为 null。|  
 |**context_switches_count**|**int**|创建此条目时引发的上下文开关数。 不可为 null。|  
 |**original_cost**|**int**|此条目的原始开销。 此值是引发的 I/O 数、CPU 指令开销以及条目占用的内存量等的近似值。 开销越大，从缓存中删除此条目的机会越小。 不可为 null。|  
 |**current_cost**|**int**|缓存条目的当前开销。 此值将在条目清除过程中更新。 重用条目时，当前开销将重置为原始值。 不可为 null。|  
-|**memory_object_address**|**varbinary （8)**|关联内存对象的地址。 可以为 Null。|  
+|**memory_object_address**|**varbinary(8)**|关联内存对象的地址。 可以为 Null。|  
 |**pages_allocated_count**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 存储此缓存条目的 8 KB 页的数目。 不可为 null。|  
 |**pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此缓存条目使用的内存量 (KB)。  不可为 null。|  
 |**entry_data**|**nvarchar(2048)**|缓存条目的序列化表示形式。 此信息与缓存存储相关。 可以为 Null。|  
 |**pool_id**|**int**|**适用范围**： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与条目关联的资源池 ID。 可以为 Null。<br /><br /> 不是 katmai|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   

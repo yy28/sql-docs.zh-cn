@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_tran_session_transactions (Transact SQL) |Microsoft 文档"
+title: sys.dm_tran_session_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_session_transactions
 - sys.dm_tran_session_transactions_TSQL
 - dm_tran_session_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_session_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_session_transactions dynamic management view
 ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b247ada006579e642a6ce4c9c4b7b17b153e69c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5c2c3d24b3e3282a2f91038b2989d30679be4f1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtransessiontransactions-transact-sql"></a>sys.dm_tran_session_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,16 +45,16 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**int**|正在运行事务的会话的 ID。|  
 |transaction_id|**bigint**|事务 ID。|  
-|transaction_descriptor|**binary （8)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在与客户端驱动程序通信时使用的事务标识符。|  
+|transaction_descriptor|**binary(8)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在与客户端驱动程序通信时使用的事务标识符。|  
 |enlist_count|**int**|正在处理事务的会话中的活动请求数。|  
 |is_user_transaction|**bit**|1 = 事务由用户请求启动。<br /><br /> 0 = 系统事务。|  
 |is_local|**bit**|1 = 本地事务。<br /><br /> 0 = 分布式事务或登记的绑定会话事务。|  
 |is_enlisted|**bit**|1 = 登记的分布式事务。<br /><br /> 0 = 非登记的分布式事务。|  
 |is_bound|**bit**|1 = 事务在通过绑定会话的会话中处于活动状态。<br /><br /> 0 = 事务在通过绑定会话的会话中处于非活动状态。|  
 |open_transaction_count||每个会话的打开的事务数。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
  

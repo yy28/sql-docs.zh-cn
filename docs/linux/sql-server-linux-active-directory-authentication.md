@@ -2,9 +2,9 @@
 title: "在 Linux 上的 SQL 服务器的 active Directory 身份验证 |Microsoft 文档"
 description: "本教程提供有关在 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。"
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,17 +13,18 @@ ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords: Linux, AAD authentication
+helpviewer_keywords:
+- Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的 active Directory 身份验证
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本教程介绍如何配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支持 Active Directory (AD) 身份验证，也称为集成身份验证的 linux 操作系统上。 AD 身份验证使在 Windows 或 Linux 进行身份验证到已加入域的客户端[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用其域凭据和 Kerberos 协议。
 
@@ -43,12 +44,12 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 > * 在 TRANSACT-SQL 中创建基于 AD 的登录名
 > * 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 身份验证
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 在配置 AD 身份验证之前，您需要：
 
 * 设置你的网络上的 AD 域控制器 (Windows)  
-* 安装[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -56,7 +57,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 > [!IMPORTANT]
 > 限制：
 > - 在此期间，数据库镜像终结点支持的唯一身份验证方法是证书。 将在未来版本中启用 WINDOWS 身份验证方法。
-> - 不支持第三方 AD 工具 Centrify、 Powerbroker 等 Vintela 
+> - 第三方 AD 工具类似 Centrify，Powerbroker，和不支持 Vintela 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机到 AD 域
 
@@ -96,7 +97,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
       ```
 
       > [!NOTE]
-      > 网络接口 (eth0) 可能会与不同机不同。 若要了解你使用哪一个，运行 ifconfig，并复制有一个 IP 地址和传输和接收的字节的接口。
+      > 网络接口 (eth0) 可能因不同的计算机而不同。 若要了解你使用哪一个，运行 ifconfig，并复制有一个 IP 地址和传输和接收的字节的接口。
 
       编辑此文件之后, 重新启动网络服务：
 
@@ -104,7 +105,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      现在请检查你`/etc/resolv.conf`文件包含如下所示的行：  
+      现在请检查你`/etc/resolv.conf`文件包含类似下面的示例行：  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -126,7 +127,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
      sudo systemctl restart network
      ```
 
-     现在请检查你`/etc/resolv.conf`文件包含如下所示的行：  
+     现在请检查你`/etc/resolv.conf`文件包含类似下面的示例行：  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -134,7 +135,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 1. 加入域
 
-   一旦你已确认您的 DNS 配置正确，请通过运行以下命令以加入域。 你将需要使用在 AD 将新计算机加入到域中具有足够的权限的 AD 帐户进行身份验证。
+   一旦你已确认您的 DNS 配置正确，请通过运行以下命令加入域。 你必须进行身份验证使用 AD 将新计算机加入到域中具有足够的权限的 AD 帐户。
 
    具体而言，此命令将在 AD 中创建新的计算机帐户、 创建`/etc/krb5.keytab`承载 keytab 文件和配置中的域`/etc/sssd/sssd.conf`:
 
@@ -147,9 +148,9 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    > [!NOTE]
    > 如果你看到的错误，"未安装必需的包，"，然后应安装这些包使用你的 Linux 分发的包管理器在运行前`realm join`试命令。
    >
-   > 如果收到错误，"权限不足，无法加入域，"你将需要与域管理员检查有足够的权限将 Linux 计算机加入到你的域。
+   > 如果收到错误，"权限不足，无法加入域，"，然后需要与域管理员检查有足够的权限将 Linux 计算机加入到你的域。
    
-   > SQL Server 使用 SSSD 和 NSS 用于将用户帐户和组映射到安全标识符 (SID)。 SSSD 必须进行配置并运行 SQL Server 已成功创建 AD 登录名的顺序。 Realmd 将通常自动执行此操作一部分的加入域，但在某些情况下，你将需要单独执行此操作。
+   > SQL Server 使用 SSSD 和 NSS 用于将用户帐户和组映射到安全标识符 (SID)。 SSSD 必须进行配置并运行 SQL Server 已成功创建 AD 登录名的顺序。 Realmd 通常自动执行此操作一部分的加入域，但在某些情况下你必须单独执行此操作。
    >
    > 请查看以下配置[SSSD 手动](https://access.redhat.com/articles/3023951)，和[配置 NSS 用于 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -181,7 +182,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和设置 SPN
 
   > [!NOTE]
-  > 在下一步的步骤中，我们将使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你将需要**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在继续操作之前。
+  > 在下一步的步骤中，我们将使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你必须**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在继续操作之前。
 
 1. 在你的域控制器上运行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令以创建新的 AD 用户使用永不过期的密码。 本示例将命名的帐户"mssql，"但帐户名称可以是您喜欢的任何。 系统将提示您输入的帐户的新密码：
 
@@ -203,13 +204,13 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    > [!NOTE]
    > 如果收到错误，"没有足够的访问权限，"然后你需要检查与域管理员您具有足够的权限，此帐户上设置 SPN。
    >
-   > 如果在将来更改的 TCP 端口，你将需要再次运行 setspn 命令，使用新的端口号。 你还需要将新的 SPN 添加到 SQL Server 服务 keytab，按照下一节中的步骤。
+   > 如果在将来更改的 TCP 端口，然后你需要使用新的端口号再次运行 setspn 命令。 你还需要将新的 SPN 添加到 SQL Server 服务 keytab，按照下一节中的步骤。
 
 3. 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
 
 ## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务 keytab
 
-1. 在上一步中创建 AD 帐户，请检查密钥版本号 (kvno)。 通常，它将是 2，但它可能是另一个整数，如果您多次更改帐户的密码。 上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机计算机，运行以下命令：
+1. 在上一步中创建 AD 帐户，请检查密钥版本号 (kvno)。 它通常为 2，但它可能是另一个整数，如果您多次更改帐户的密码。 上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机计算机，运行以下命令：
 
    ```bash
    kinit user@CONTOSO.COM
@@ -294,7 +295,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
   
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，我们在遍历如何到安装程序使用 SQL Server 的 Active Directory 进行身份验证在 Linux 上。 你应该了解一下如何到：
+在本教程中，我们在遍历如何设置与在 Linux 上的 SQL Server 的 Active Directory 身份验证。 你应该了解一下如何到：
 > [!div class="checklist"]
 > * 加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机到 AD 域
 > * 创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和设置 SPN

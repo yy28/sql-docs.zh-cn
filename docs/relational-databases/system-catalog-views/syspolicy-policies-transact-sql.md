@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_policies_TSQL
 - syspolicy_policies
-dev_langs: TSQL
-helpviewer_keywords: syspolicy_policies view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspolicy_policies view
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8daf45292562d5569212c1a0208ba7c032d8d13e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 620a626b78521b23c015389ca635a95ebfe0cf33
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|策略标识符。|  
-|name|**sysname**|策略的名称。|  
+|name|**sysname**|此原則的名稱。|  
 |condition_id|**int**|此策略强制设定或测试的条件的 ID。|  
 |root_condition_id|**int**|仅限内部使用。|  
 |date_created|**datetime**|策略的创建日期和时间。|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  在解决基于策略的管理时，查询[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)视图以确定是否启用了策略。 此视图还会显示创建或上次更改策略的用户。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  

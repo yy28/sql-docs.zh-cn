@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,20 +42,20 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|事务是否位于使用对等事务复制发布的数据库中。 如果为 true，该值为 1；否则该值为 0。|  
 |**db_ver**|**int**|数据库版本。|  
-|**comp_range_address**|**varbinary （8)**|定义必须跳过的部分回滚范围。|  
-|**textinfo_address**|**varbinary （8)**|缓存的文本信息结构的内存中的地址。|  
-|**fsinfo_address**|**varbinary （8)**|缓存的文件流信息结构的内存中的地址。|  
+|**comp_range_address**|**varbinary(8)**|定义必须跳过的部分回滚范围。|  
+|**textinfo_address**|**varbinary(8)**|缓存的文本信息结构的内存中的地址。|  
+|**fsinfo_address**|**varbinary(8)**|缓存的文件流信息结构的内存中的地址。|  
 |**begin_lsn**|**nvarchar(64)**|事务的开始日志记录的日志序列号 (LSN)。|  
 |**commit_lsn**|**nvarchar(64)**|事务的提交日志记录的 LSN。|  
 |**dbid**|**int**|数据库 ID。|  
-|**行**|**int**|事务中复制的命令的 ID。|  
+|**rows**|**int**|事务中复制的命令的 ID。|  
 |**xdesid**|**nvarchar(64)**|事务 id。|  
-|**artcache_table_address**|**varbinary （8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
-|**服务器**|**nvarchar(514)**|服务器名称。|  
+|**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
+|服务器|**nvarchar(514)**|服务器名称。|  
 |**server_len_in_bytes**|**int**|服务器名称的字符长度（字节）。|  
 |**database**|**nvarchar(514)**|数据库名称。|  
 |**db_len_in_bytes**|**int**|数据库名称的字符长度（字节）。|  
-|**发起方**|**nvarchar(514)**|发起事务的服务器的名称。|  
+|**originator**|**nvarchar(514)**|发起事务的服务器的名称。|  
 |**originator_len_in_bytes**|**int**|发起事务的服务器的字符长度（字节）。|  
 |**orig_db**|**nvarchar(514)**|发起事务的数据库的名称。|  
 |**orig_db_len_in_bytes**|**int**|发起事务的数据库的字符长度（字节）。|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 |**is_known_cdc_tran**|**bit**|指示变更数据捕获所跟踪的事务。<br /><br /> 0 = 事务复制事务。<br /><br /> 1 = 变更数据捕获事务。|  
 |**error_count**|**int**|遇到的错误数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对发布数据库或启用了变更数据捕获的数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>注释  

@@ -3,7 +3,7 @@ title: "在 Kubernetes 中配置 SQL Server 容器，以实现高可用性 |Micr
 description: "本教程演示如何部署具有 Kubernetes Azure 容器服务上的 SQL Server 高可用性解决方案。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1220c85a539cdaed855d6dfd44ea4afffdd927b2
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>在 Kubernetes 中配置 SQL Server 容器，以实现高可用性
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 了解如何使用持久存储以实现高可用性 (HA) Kubernetes 中 Azure 容器服务 (AKS) 上配置的 SQL Server 实例。 解决方案提供复原能力。 如果 SQL Server 实例失败，Kubernetes 自动重新创建它在一个新的组合。 AKS 提供从 Kubernetes 节点故障中的复原。 
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/24/2018
 
 ## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>HA 解决方案，它使用 Kubernetes Azure 容器服务中运行
 
-Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/docs/concepts/storage/storage-classes/)，[持久卷声明](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，和[Azure 磁盘卷驱动程序](http://github.com/Azure/azurefile-dockervolumedriver)。 你可以创建和管理 SQL Server 实例以本机方式在 Kubernetes。 此文章中的示例演示如何创建[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)以实现高可用性配置类似于共享的磁盘故障转移群集实例。 在此配置中，Kubernetes 充当群集 orchestrator 的角色。 当容器中的 SQL Server 实例失败时，orchestrator 将启动另一个实例将附加到的相同的持久存储的容器。
+Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/docs/concepts/storage/storage-classes/)，[持久卷声明](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，和[Azure 磁盘的卷类型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 你可以创建和管理 SQL Server 实例以本机方式在 Kubernetes。 此文章中的示例演示如何创建[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)以实现高可用性配置类似于共享的磁盘故障转移群集实例。 在此配置中，Kubernetes 充当群集 orchestrator 的角色。 当容器中的 SQL Server 实例失败时，orchestrator 将启动另一个实例将附加到的相同的持久存储的容器。
 
 ![Kubernetes SQL Server 群集的图示](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -251,6 +251,8 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
    若要查看的 pod 的状态，请键入`kubectl get pod`。
 
    ![Get pod 命令的屏幕截图](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+
+   状态已在前面的图中，从盒`Running`。 此状态指示容器已准备。 这可能需要几分钟的时间。
 
    >[!NOTE]
    >创建部署后，可能需要几分钟 pod 才会显示。 延迟是因为群集拉取[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)从 Docker hub 映像。 第一次拉取映像后，后续的部署可能更快，如果部署到已在其上缓存的映像的节点。 

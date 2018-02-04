@@ -3,7 +3,7 @@ title: "在 Linux 上配置多子网 Alwayson 可用性组和故障转移群集�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Alwayson 可用性组和故障转移群集实例
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 当始终在可用性组 (AG) 或故障转移群集实例 (FCI) 跨多个站点，每个站点通常都有其自己网络。 这通常意味着每个站点有其自己的 IP 寻址。 例如，站点 A 的地址使用 192.168.1 启动。*x*和站点 B 地址开头 192.168.2。*x*，其中*x*是唯一的服务器的 IP 地址的一部分。 而无需某种形式的路由已到位在网络层，这些服务器将不能相互之间进行通信。 有两种方法来处理这种情况下： 设置的网络的桥接两个不同子网，名为 VLAN，或配置子网之间路由。
 

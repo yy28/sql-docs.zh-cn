@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_requests (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_requests
 - dm_exec_requests_TSQL
 - dm_exec_requests
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6295b01227c2da62599dd594530624f2672d4bdc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |session_id|**int**|与此请求相关的会话的 ID。 不可为 null。|  
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
-|status|**nvarchar (30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />已挂起<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />已挂起<br /><br /> 不可为 null。|  
 |command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />Insert<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
 |sql_handle|**varbinary(64)**|请求的 SQL 文本的哈希映射。 可以为 Null。|  
 |statement_start_offset|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句开始位置的字符数。 可以与 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 动态管理函数一起使用，以便为请求检索当前正在执行的语句。 可以为 Null。|  
@@ -66,12 +69,12 @@ ms.lasthandoff: 11/17/2017
 |cpu_time|**int**|请求所使用的 CPU 时间（毫秒）。 不可为 null。|  
 |total_elapsed_time|**int**|请求到达后经过的总时间（毫秒）。 不可为 null。|  
 |scheduler_id|**int**|正在计划此请求的计划程序的 ID。 不可为 null。|  
-|task_address|**varbinary （8)**|分配给与此请求关联的任务的内存地址。 可以为 Null。|  
+|task_address|**varbinary(8)**|分配给与此请求关联的任务的内存地址。 可以为 Null。|  
 |reads|**bigint**|此请求执行的读取数。 不可为 null。|  
 |Writes|**bigint**|此请求执行的写入数。 不可为 null。|  
 |logical_reads|**bigint**|此请求已经执行的逻辑读取数。 不可为 null。|  
 |text_size|**int**|此请求的 TEXTSIZE 设置。 不可为 null。|  
-|language|**nvarchar （128)**|该请求的语言设置。 可以为 Null。|  
+|language|**nvarchar(128)**|该请求的语言设置。 可以为 Null。|  
 |date_format|**nvarchar(3)**|该请求的 DATEFORMAT 设置。 可以为 Null。|  
 |date_first|**int**|该请求的 DATEFIRST 设置。 不可为 null。|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER 对于该请求是 ON。 否则，则为 0。<br /><br /> 不可为 null。|  
@@ -91,8 +94,8 @@ ms.lasthandoff: 11/17/2017
 |granted_query_memory|**int**|为执行该请求的查询而分配的页数。 不可为 null。|  
 |executing_managed_code|**bit**|指示特定请求当前是否正在执行公共语言运行时对象，例如例程、类型和触发器。 只要某个公共语言运行时对象在堆栈中，就会设置此值，甚至从公共语言运行时中运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 时，也会设置。 不可为 null。|  
 |group_id|**int**|此查询所属工作负荷组的 ID。 不可为 null。|  
-|query_hash|**binary （8)**|对查询计算的二进制哈希值，用于标识具有类似逻辑的查询。 可以使用查询哈希确定仅仅是文字值不同的查询的聚合资源使用情况。|  
-|query_plan_hash|**binary （8)**|对查询执行计划计算的二进制哈希值，用于标识类似的查询执行计划。 可以使用查询计划哈希查找具有类似执行计划的查询的累积成本。|  
+|query_hash|**binary(8)**|对查询计算的二进制哈希值，用于标识具有类似逻辑的查询。 可以使用查询哈希确定仅仅是文字值不同的查询的聚合资源使用情况。|  
+|query_plan_hash|**binary(8)**|对查询执行计划计算的二进制哈希值，用于标识类似的查询执行计划。 可以使用查询计划哈希查找具有类似执行计划的查询的累积成本。|  
 |statement_sql_handle|**varbinary(64)**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 单个查询的 SQL 句柄。 |  
 |statement_context_id|**bigint**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> Sys.query_context_settings 可选外键。 |  
 |dop |**int** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 查询的并行度。 |  
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/17/2017
 |external_script_request_id |**uniqueidentifier** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与当前的请求关联的外部脚本请求 ID。 |  
 |is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否可恢复的索引操作。 |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果用户具有`VIEW SERVER STATE`服务器上的权限，用户将看到执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户将看到的只对当前会话。 `VIEW SERVER STATE`无法在中授予[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]以便`sys.dm_exec_requests`始终被限制为当前连接。 
   
 ## <a name="examples"></a>示例  
@@ -152,8 +155,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

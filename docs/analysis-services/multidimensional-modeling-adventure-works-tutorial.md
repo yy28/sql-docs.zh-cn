@@ -1,7 +1,7 @@
 ---
 title: "多维建模 （Adventure Works 教程） |Microsoft 文档"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,21 +11,22 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e5955c54a3b5e92632cd421294bb85b834374ead
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多维建模（Adventure Works 教程）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/22/2018
   
 -   您必须是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 计算机上本地管理员组的成员或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中的服务器管理角色的成员。  
   
--   您在 **AdventureWorksDW2012** 示例数据库中必须具有读取权限。 此示例数据库对于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本有效。  
+-   您必须具有读取权限**AdventureWorksDW**示例数据库。 此示例数据库对于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本有效。  
   
 ## <a name="lessons"></a>课程  
 本教程包括以下几课。  

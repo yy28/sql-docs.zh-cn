@@ -12,20 +12,20 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍了在 Linux 服务器上的 SQL Server Always On 可用性组的受支持的部署配置。 一个可用性组支持高可用性和数据保护。 自动故障检测、 自动故障转移和故障转移后的透明重新连接提供高可用性。 同步的副本提供数据保护。 
 
@@ -122,7 +122,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 >[!NOTE]
 >承载配置唯一的副本的 SQL Server 的实例还可以托管其他数据库。 此外可以参与作为多个可用性组的配置数据库。 
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 * 可用性组中的配置仅副本的所有副本都必须都是 SQL Server 自 2017 年 CU 1 或更高版本。
 * 任何版本的 SQL Server 可以承载配置仅副本，包括 SQL Server Express。 
@@ -150,7 +150,7 @@ SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_gr
 
 例如，具有三个同步副本的一个主副本和两个同步辅助副本的可用性组。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`为 1;(3 / 2-> 1)。
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
 
 - 所需的响应来预升级操作的副本数为 2;(3-1 = 2)。 
 

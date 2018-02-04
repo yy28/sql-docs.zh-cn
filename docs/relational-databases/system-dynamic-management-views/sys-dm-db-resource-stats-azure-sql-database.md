@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   返回有关 CPU、 I/O 和内存消耗[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]数据库。 每隔 15 秒会显示一行，即使该数据库中没有任何活动也是如此。 历史数据将保留一小时。  
   
-|“列”|数据类型|Description|  
+|列|数据类型|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 时间用于指示当前报告间隔的结束时间。|  
 |avg_cpu_percent|**十进制 (5,2)**|平均计算使用率（以服务层限制的百分比表示）。|  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/14/2017
 ## <a name="permissions"></a>权限  
  此视图需要拥有 VIEW DATABASE STATE 权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  返回的数据**sys.dm_db_resource_stats**允许你运行的基本、 标准和高级数据库的服务层/性能级别的 DTU 限制的最大的百分比表示。 对于 Web 层和业务层，这些数字表示 Standard S2 性能层限制的百分比。 例如，针对 Web 数据库或业务数据库执行操作时，如果 avg_cpu_percent 返回 70%，则表示 S2 层限制的 70%。 此外，对于 Web 层和业务层，这些百分比可能会反映大于 100% 的数字，这类数字同样基于 S2 层限制。  
   
  如果已在最后 60 分钟内将数据库故障转移到另一台服务器，该视图将仅返回主数据库故障转移后此时间段内的数据。  

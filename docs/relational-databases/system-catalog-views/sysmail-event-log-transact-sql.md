@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_event_log database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aadbf36412f02f9a785d078d6fa949fcbeabc5f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dca8c14d7ea9fefbe566d7f0770b395df48bf25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +53,11 @@ ms.lasthandoff: 11/17/2017
   
  如果单个帐户传递尝试失败，则在重试过程中数据库邮件将会包含错误消息，直到邮件项传递成功或者失败为止。 发生 ultimate 成功后，所有用户计划累积的错误记录为单独的警告包括**account_id**。 这样，即使电子邮件已被发送，也会出现警告。 Ultimate 传送失败，发生所有以前的警告获取记录为一个错误消息，而**account_id**，因为所有帐户已都失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须是属于**sysadmin**固定的服务器角色或**DatabaseMailUserRole**数据库角色以访问此视图。 成员**DatabaseMailUserRole**不是成员的**sysadmin**角色，可以仅查看为在提交的电子邮件事件。  
   
 ## <a name="see-also"></a>另请参阅  
- [sysmail_faileditems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [数据库邮件外部程序](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

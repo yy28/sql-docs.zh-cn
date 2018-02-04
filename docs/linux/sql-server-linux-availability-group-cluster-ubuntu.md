@@ -3,8 +3,8 @@ title: "配置 SQL Server 可用性组的 Ubuntu 群集 |Microsoft 文档"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文档说明如何在 Ubuntu 上创建一个三节点群集并将以前创建的可用性组添加为群集中的资源。 在 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，并且 Pacemaker.将该服务作为一个独立实例控制。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 AlwaysOn 动态管理视图查询群集信息，返回空行。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你将需要使用手动注册侦听器名称在 DNS 服务器中用于创建虚拟 IP 资源 （如下所述） 的 IP。
+> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 从在 SQL 中，也没有有关群集的状态不知道、 在中，超出的所有业务流程和服务由 Pacemaker 控制作为独立实例。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 AlwaysOn 动态管理视图查询群集信息，返回空行。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你将需要使用手动注册侦听器名称在 DNS 服务器中用于创建虚拟 IP 资源 （如下所述） 的 IP。
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
 ## <a name="roadmap"></a>路线图
 
-在 Linux 服务器上创建可用性组以获得高可用性的步骤不同于 Windows Server 故障转移群集上的步骤。 下面的列表对高级别步骤进行了说明： 
+在 Linux 服务器上创建可用性组以获得高可用性的步骤不同于 Windows Server 故障转移群集上的步骤。 以下列表描述的高级步骤： 
 
 1. [群集节点上配置 SQL Server](sql-server-linux-setup.md)。
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 创建群集。 
 
    >[!WARNING]
-   >由于出现一个已知问题（群集服务供应商正在对其进行调查），启动群集（“pcs cluster start”）将失败，并出现以下错误。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，请将日志文件更改为 /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
+   >由于出现一个已知问题（群集服务供应商正在对其进行调查），启动群集（“pcs cluster start”）将失败，并出现以下错误。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，更改到的日志文件： /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -139,7 +139,7 @@ sudo systemctl enable pacemaker
 
 Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程序配置隔离设备。 群集资源管理器无法确定节点或节点上资源的状态时，将使用隔离使群集再次处于已知状态。 资源级别隔离主要确保在因配置资源引起服务中断时，不会发生数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，例如不间断电源或服务器的管理接口卡。 有关更多详细信息，请参阅[从头 Pacemaker 群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-因为防御配置的节点级别很大程度取决于你的环境，我们将本教程中 （它可以配置在更高版本时） 来禁用它。 在主节点上运行以下脚本： 
+由于节点级别防御配置很大程度取决于你的环境，我们禁用它本教程中 （它可以配置在更高版本时）。 在主节点上运行以下脚本： 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->自动故障转移后，当`start-failure-is-fatal = true`资源管理器将尝试启动资源。 如果在第一次尝试失败则必须手动运行`pcs resource cleanup <resourceName>`清理资源失败计数和重置配置。
+>自动故障转移后，当`start-failure-is-fatal = true`资源管理器尝试启动该资源。 如果在第一次尝试失败则必须手动运行`pcs resource cleanup <resourceName>`来清理资源失败计数，重置配置。
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>安装 SQL Server 资源代理以与 Pacemaker 集成
 

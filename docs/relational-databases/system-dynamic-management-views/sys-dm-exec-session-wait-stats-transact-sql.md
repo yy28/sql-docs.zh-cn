@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_session_wait_stats (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_session_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/01/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - sys.dm_exec_session_wait_stats_tsql
 - dm_exec_session_wait_stats
 - dm_exec_session_wait_stats_tsql
-helpviewer_keywords: sys.dm_exec_session_wait_stats
+helpviewer_keywords:
+- sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0eb49558894d39d6aaf89332b75656446675ecd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 73dcc552a70ba68d7beff38ed0476b1970feefca
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (TRANSACT-SQL)
+# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   返回有关遇到的每个会话中执行的线程的所有等待的信息。 您可以使用此视图来诊断性能问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会话和也与特定查询和批处理。  此视图返回会话为聚合的相同信息[sys.dm_os_wait_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但提供**session_id**以及数。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  有关的等待类型的信息，请参阅[sys.dm_os_wait_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果用户具有**VIEW SERVER STATE**服务器上的权限，用户将看到执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户将看到的只对当前会话。  
   
 ## <a name="see-also"></a>另请参阅  

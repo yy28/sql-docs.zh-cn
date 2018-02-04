@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/14/2017
 |角色 (role)|**tinyint**|地域复制角色，之一：<br /><br /> 0 = 主。 Database_id 指异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助数据库。  Database_id 指异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助数据库类型，之一：<br /><br /> 0 = 不能直接允许连接到辅助数据库并且数据库不是可用于读访问。<br /><br /> 2 = 所有允许连接到辅助 repl; 中的数据库进行只读访问 ication。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|是<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> 全部|  
 |last_commit|**datetimeoffset**|提交到数据库的最后一个事务的时间。 如果检索主数据库上，它指示在主数据库上的最后一个提交时间。 如果检索辅助数据库上，它指示在辅助数据库上的最后一个提交时间。 如果检索辅助数据库上的复制链接的主出现故障时，它指示直到辅助的哪一阶段已捕捉到正在。|
   
 > [!NOTE]  

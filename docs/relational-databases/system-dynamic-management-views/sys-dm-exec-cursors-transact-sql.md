@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_cursors (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cursors
 - dm_exec_cursors_TSQL
 - sys.dm_exec_cursors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cursors dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2978fe15394ed17d63c5c98b562a332a629866
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +58,10 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|持有此游标的会话 ID。|  
 |**cursor_id**|**int**|游标对象的 ID。|  
 |**名称**|**nvarchar(256)**|用户定义的游标名称。|  
-|**属性**|**nvarchar(256)**|指定游标的属性。 下列属性的值连在一起可构成此列的值：<br />声明接口<br />游标类型 <br />游标并发<br />游标范围<br />游标嵌套级别<br /><br /> 例如，在此列中返回的值可能是"TSQL &#124;动态 &#124;开放式 &#124;全局 (0)"。|  
-|**sql 句柄**|**varbinary(64)**|声明游标的批处理的文本句柄。|  
+|**properties**|**nvarchar(256)**|指定游标的属性。 下列属性的值连在一起可构成此列的值：<br />声明接口<br />游标类型 <br />游标并发<br />游标范围<br />游标嵌套级别<br /><br /> 例如，在此列中返回的值可能是"TSQL &#124;动态 &#124;开放式 &#124;全局 (0)"。|  
+|**sql_handle**|**varbinary(64)**|声明游标的批处理的文本句柄。|  
 |**statement_start_offset**|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句开始位置的字符数。 可以使用连同**sql 句柄**、**语句结束偏移量**，和[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理函数以检索当前执行请求的语句。|  
-|**语句结束偏移量**|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句结束位置的字符数。 可以使用连同**sql 句柄**、 **statement_start_offset**，和**sys.dm_exec_sql_text**动态管理函数以检索当前执行请求的语句。|  
+|**statement_end_offset**|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句结束位置的字符数。 可以使用连同**sql 句柄**、 **statement_start_offset**，和**sys.dm_exec_sql_text**动态管理函数以检索当前执行请求的语句。|  
 |**plan_generation_num**|**bigint**|可用于在重新编译后区分不同计划实例的序列号。|  
 |**creation_time**|**datetime**|创建此游标时的时间戳。|  
 |**is_open**|**bit**|指定游标是否处于打开状态。|  
@@ -69,11 +72,11 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|对于 FAST_FORWARD 和 DYNAMIC 游标，如果游标未打开或被放在第一行之前，则该参数返回 0。 否则，返回 -1。<br /><br /> 对于 STATIC 和 KEYSET 游标，如果游标未打开，则该参数返回 0；如果游标放在最后一行之外，则该参数返回 -1。<br /><br /> 在其他情况下，该参数返回游标所在的行号。|  
 |**ansi_position**|**int**|游标在提取缓冲区中的位置。|  
 |**worker_time**|**bigint**|辅助线程执行此游标所用的时间（毫秒）。|  
-|**读取**|**bigint**|游标所执行的读取次数。|  
-|**写入**|**bigint**|游标所执行的写入次数。|  
+|**reads**|**bigint**|游标所执行的读取次数。|  
+|**writes**|**bigint**|游标所执行的写入次数。|  
 |**dormant_duration**|**bigint**|自上次对此游标启动查询（打开或提取）以来所经过的时间（毫秒）。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="remarks"></a>注释  
@@ -90,7 +93,7 @@ dm_exec_cursors (session_id | 0 )
 |----------|-----------------|  
 |Keyset|将游标声明为键集。|  
 |Dynamic|将游标声明为动态。|  
-|Snapshot|将游标声明为快照或静态。|  
+|快照|将游标声明为快照或静态。|  
 |Fast_Forward|将游标声明为快进。|  
   
  下表提供了有关游标并发的信息，并列出了这些属性列的可能值。  

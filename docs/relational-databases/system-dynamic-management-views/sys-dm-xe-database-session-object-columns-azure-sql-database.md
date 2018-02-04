@@ -8,22 +8,23 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f28c9cf92402fcecfc15eb0d527becbc9c3ddd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0799d00819bade1e0f87fceb916aa649aef150a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns （Azure SQL 数据库）
+# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   显示绑定到会话的对象的配置值。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary （8)**|事件会话的内存地址。 具有 sys.dm_xe_database_sessions.address 多对一关系。 不可为 null。|  
+|event_session_address|**varbinary(8)**|事件会话的内存地址。 具有 sys.dm_xe_database_sessions.address 多对一关系。 不可为 null。|  
 |column_name|**nvarchar(60)**|配置值的名称。 不可为 null。|  
 |column_id|**int**|列的 ID。 在对象中是唯一的。 不可为 null。|  
 |column_value|**nvarchar(2048)**|列的配置值。 可以为 Null。|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |object_name|**nvarchar(60)**|此列所属对象的名称。 不可为 null。|  
 |object_package_guid|**uniqueidentifier**|包含该对象的包的 GUID。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求拥有 VIEW DATABASE STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  

@@ -1,7 +1,7 @@
 ---
 title: "第 1 课： 定义数据源视图中分析服务项目 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 0bd1ef5ce2bd0c10e025e74e39ffde313b0dfc1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：在 Analysis Services 项目中定义数据源视图
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +36,14 @@ ms.lasthandoff: 01/22/2018
 在本任务中，将基于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型模板创建 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目。  
   
 [定义了一个数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)  
-在本任务中，将 **AdventureWorksDW2012** 数据库指定为将在后续课程中定义的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 维度和多维数据集的数据源。  
+在此任务中，你指定**AdventureWorksDW**数据库的数据源作为[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]维度和多维数据集，将在后续课程中定义。  
   
 [定义数据源视图](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
-在本任务中，为来自 **AdventureWorksDW2012** 数据库中选定表的元数据定义一个统一视图。  
+在此任务中，你定义的元数据中的所选表的单个统一的视图**AdventureWorksDW**数据库。  
   
 [修改默认表名称](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
 在本任务中，将修改数据源视图中的表名，以使您将要定义的后续 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名更加用户友好。  
   
-将您的结果与为本课程生成的示例项目文件进行比较。 有关下载本教程附随的示例项目的详细信息，请参阅 codeplex 上产品示例页上的 [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) （用于 SQL Server 2012 的 SSAS 多维模型项目）。  
   
 ## <a name="next-lesson"></a>下一课  
 [第 2 课︰ 定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  

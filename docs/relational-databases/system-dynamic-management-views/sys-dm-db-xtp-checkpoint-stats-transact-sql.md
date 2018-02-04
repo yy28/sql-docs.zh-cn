@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -101,12 +104,12 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|等待新日志所用的累计时间。|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|自上一个内存中 OLTP 检查点以来生成的日志量。|  
 |ms_since_last_checkpoint|**bigint**|自上一个内存中 OLTP 检查点以来的时间量（毫秒）。|  
-|checkpoint_lsn|**数值 (38)**|与上次完成的内存中 OLTP 检查点关联的恢复日志序列号 (LSN)。|  
-|current_lsn|**数值 (38)**|当前正在处理的日志记录的 LSN。|  
-|end_of_log_lsn|**数值 (38)**|日志结尾的 LSN。|  
-|task_address|**varbinary （8)**|SOS_Task 的地址。 联接到 sys.dm_os_tasks 以查找其他信息。|  
+|checkpoint_lsn|**numeric (38)**|与上次完成的内存中 OLTP 检查点关联的恢复日志序列号 (LSN)。|  
+|current_lsn|**numeric (38)**|当前正在处理的日志记录的 LSN。|  
+|end_of_log_lsn|**numeric (38)**|日志结尾的 LSN。|  
+|task_address|**varbinary(8)**|SOS_Task 的地址。 联接到 sys.dm_os_tasks 以查找其他信息。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  

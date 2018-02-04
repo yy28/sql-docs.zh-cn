@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_unsentitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +55,19 @@ ms.lasthandoff: 11/27/2017
 |**收件人**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**主题**|**nvarchar(510)**|消息的主题行。|  
-|**正文**|**varchar(max)**|消息的正文。|  
-|**body_format**|**varchar （20)**|消息正文的格式。 可能的值为**文本**和**HTML**。|  
-|**重要性**|**varchar(6)**|**重要性**消息参数。|  
-|**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
+|**subject**|**nvarchar(510)**|消息的主题行。|  
+|**body**|**varchar(max)**|消息的正文。|  
+|**body_format**|**varchar(20)**|消息正文的格式。 可能的值为**文本**和**HTML**。|  
+|**importance**|**varchar(6)**|**重要性**消息参数。|  
+|**sensitivity**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
-|**attachment_encoding**|**varchar （20)**|邮件附件的类型。|  
-|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
+|**attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
+|**query**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|值为 1 时，查询结果将包含列标题。 0 值时，查询结果未包含列标题。|  
 |**query_result_width**|**int**|**Query_result_width**消息参数。|  
-|**query_result_separator**|**char （1)**|用于分隔查询输出中的各列的字符。|  
+|**query_result_separator**|**char(1)**|用于分隔查询输出中的各列的字符。|  
 |**exclude_query_output**|**bit**|**Exclude_query_output**消息参数。 有关详细信息，请参阅[sp_send_dbmail &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|**Append_query_error**消息参数。 0 指示如果查询中存在错误，则数据库邮件不应发送电子邮件。|  
 |**send_request_date**|**datetime**|将消息放在邮件队列中的日期和时间。|  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="remarks"></a>注释  
  排除数据库邮件故障时，该视图通过向您显示正在等待发送的消息数以及消息已等待的时间，可帮助您确定问题的本质。 如果没有发送任何消息，则数据库邮件外部程序可能未运行，或者可能存在网络问题阻止了数据库邮件与 SMTP 服务器的联系。 如果很多的未发送的消息具有相同**profile_id**，可能会与 SMTP 服务器问题。 请考虑向配置文件中添加其他帐户。 如果正在发送消息，但消息在队列中等待的时间过长，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能需要更多的资源来处理您所需的消息量。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**DatabaseMailUserRole**数据库角色。 由的成员执行时**sysadmin**固定服务器角色，此视图显示所有**未发送**或**重试**消息。 所有其他用户只能看到**未发送**或**重试**它们提交的消息。  
   
   

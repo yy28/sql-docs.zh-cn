@@ -3,7 +3,7 @@ title: "在 Linux 上配置 SQL Server 设置 |Microsoft 文档"
 description: "本主题介绍如何使用 mssql conf 工具在 Linux 上配置 SQL Server 2017 设置。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 9aca5fe7905f06269bd07b7946c3bb6ef4e37492
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 **mssql conf**是将与 SQL Server 2017 为 Red Hat Enterprise Linux、 SUSE Linux 企业服务器和 Ubuntu 安装的配置脚本。 可以使用此实用工具设置以下参数：
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 | [内存限制](#memorylimit) | 设置 SQL Server 的内存限制。 |
 | [TCP 端口](#tcpport) | 更改 SQL Server 侦听的连接的端口。 |
 | [TLS](#tls) | 配置传输级安全。 |
-| [跟踪标志](#traceflags) | 设置服务要使用这些跟踪标志。 |
+| [Traceflags](#traceflags) | 设置服务要使用这些跟踪标志。 |
 
 > [!TIP]
 > 其中某些设置还可以使用环境变量配置。 有关详细信息，请参阅[与环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
@@ -221,10 +221,10 @@ ms.lasthandoff: 12/01/2017
 
     | 类型 | Description |
     |-----|-----|
-    | **迷你** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
+    | **mini** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
     | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将以下的内存区域添加到转储的内部结构：</br></br> -各种全局函数</br> 的所有内存超过 64 TB</br> -All 名为区域中找到**/proc/$ pid/映射**</br> 双向从线程和堆栈的间接内存</br> 线程信息</br> -关联 Teb 的和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
-    | **筛选** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
-    | **完整** | 完整的整个过程转储中包括所有区域位于**/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |
+    | **filtered** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
+    | **full** | 完整的整个过程转储中包括所有区域位于**/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |
 
 ## <a id="dbmail"></a>设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件
 
@@ -401,7 +401,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 请注意，未在此文件中显示的所有设置均使用其默认值。 下一节提供一个示例**mssql.conf**文件。
 
-## <a name="mssqlconf-format"></a>mssql.conf 格式
+## <a name="mssqlconf-format"></a>mssql.conf format
 
 以下**/var/opt/mssql/mssql.conf**文件提供了为每个设置的一个示例。 可以使用此格式可以手动更改到**mssql.conf**文件根据需要。 如果你手动更改此文件，必须重新启动 SQL Server，才能将应用所做的更改。 若要使用**mssql.conf**文件使用 Docker，你必须具有 Docker[保存数据](sql-server-linux-configure-docker.md)。 第一次添加整个**mssql.conf**到你的主机目录文件，然后运行容器。 没有在此示例[客户反馈](sql-server-linux-customer-feedback.md)。
 

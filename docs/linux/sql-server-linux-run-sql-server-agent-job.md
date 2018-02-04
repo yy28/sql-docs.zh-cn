@@ -3,7 +3,7 @@ title: "创建并在 Linux 上运行 SQL Server 作业 |Microsoft 文档"
 description: "本教程演示如何在 Linux 上运行 SQL Server 代理作业。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 526375f9f9f96c9ea0402dcb84f20a2c214fd13f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列。 本教程提供了如何在 Linux 上创建的 SQL Server 代理作业的一个示例使用 Transact SQL 和 SQL Server Management Studio (SSMS)。
 
@@ -35,7 +35,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 
 有关在 Linux 上的 SQL Server 代理使用的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 完成本教程所需的以下先决条件：
 

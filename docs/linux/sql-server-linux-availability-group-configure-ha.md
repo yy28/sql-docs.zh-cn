@@ -3,7 +3,7 @@ title: "配置 SQL Server Always On 可用性组以在 Linux 上实现高可用�
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c510789ccd2c76e2d4e3b7bd8354a46e80e335c2
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: b9aeae97abc2f60a9bb6c9c54f5061f68b61a1c9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍如何在 Linux 上创建 SQL 服务器始终在可用性组 (AG) 以实现高可用性。 有两种配置类型为承载个可用性组。 A*高可用性*配置使用群集管理器提供业务连续性。 此配置还可以包括读取缩放副本。 本文档说明如何创建可用性组以实现高可用性。
 

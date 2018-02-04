@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_properties_TSQL
 - dm_clr_properties_TSQL
 - dm_clr_properties
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_properties dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/27/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar （128)**|属性的名称。|  
-|**值**|**nvarchar （128)**|属性的值。|  
+|**名称**|**nvarchar(128)**|属性的名称。|  
+|**值**|**nvarchar(128)**|属性的值。|  
   
 ## <a name="properties"></a>属性  
  **目录**属性指示.NET Framework 在服务器已安装到的目录。 在服务器上可能存在多个 .NET Framework 安装，该属性的值标识了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用的安装。  
@@ -74,7 +77,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="remarks"></a>注释  
  未来版本中可能会更改的属性和值的此视图[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由于 CLR 集成功能的增强功能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  

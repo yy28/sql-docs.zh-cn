@@ -3,7 +3,7 @@ title: "配置故障转移群集实例的 SQL Server 上 Linux (RHEL) |Microsoft
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: 20fe315ed12d8b510b03a82d2f8b77a08c840607
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例的 SQL Server 上 Linux (RHEL)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 两个节点共享的磁盘故障转移群集实例提供高可用性的服务器级冗余。 在本教程中，您将学习如何在 Linux 上创建 SQL Server 的双节点故障转移群集实例。 你将完成的特定步骤包括：
 
@@ -39,7 +39,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供高可用性
 
 概念信息，请参阅[SQL Server 故障转移群集实例 (FCI) 在 Linux 上](sql-server-linux-shared-disk-cluster-concepts.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 若要完成以下端到端方案需要两台计算机部署两个节点群集和另一个服务器作为存储。 以下步骤概述了如何配置这些服务器。
 

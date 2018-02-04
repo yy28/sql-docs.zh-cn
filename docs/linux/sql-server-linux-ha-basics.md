@@ -3,7 +3,7 @@ title: "SQL Server 可用性 Linux 部署的基础知识 |Microsoft 文档"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server 可用性 Linux 部署的基础知识
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 从开始[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]支持 Linux 和 Windows 上。 像基于 Windows 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]数据库和实例需要在 Linux 下高度可用。 本文介绍如何规划和部署高度可用的技术方面基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]数据库和实例，以及从基于 Windows 的安装的区别。 因为[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 专业人员和 Linux 可能用于的新功能可能新[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]专业人员、 文章有时介绍了可能是为某些所熟悉并且不给其他人熟悉的概念。
 
@@ -90,18 +90,18 @@ Samba，这是服务器消息块 (SMB) 的 Linux 变体，还可以用于创建�
 
 | 端口号 | 类型     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS –`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba （如果使用） – 终结点映射程序                                                                                          |
 | 137         | UDP      | Samba （如果使用） – NetBIOS 名称服务                                                                                      |
 | 138         | UDP      | Samba （如果使用） – NetBIOS 数据报                                                                                          |
 | 139         | TCP      | Samba （如果使用） – NetBIOS 会话                                                                                           |
 | 445         | TCP      | Samba （如果使用） – 通过 TCP 的 SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– 默认端口，则为如果需要，可以更改与`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 默认端口，则为如果需要，可以更改与`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS （如果使用）                                                                                                               |
 | 2224        | TCP      | Pacemaker – 使用通过`pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – 所需是否存在 Pacemaker 远程节点                                                                    |
 | 3260        | TCP      | iSCSI 发起程序 （如果使用） – 可以在修改`/etc/iscsi/iscsid.config`(RHEL)，但应匹配的 iSCSI 目标端口 |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]的默认端口用于可用性组终结点;创建终结点时，可以更改                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的默认端口用于可用性组终结点;创建终结点时，可以更改                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | Pacemaker – 如果使用多播的 UDP，Corosync 所需                                                                     |
 | 5405        | UDP      | Pacemaker – 所需的 Corosync                                                                                            |

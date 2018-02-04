@@ -3,7 +3,7 @@ title: "在 Linux 上的 SQL Server 的部署 Pacemaker 群集 |Microsoft 文档
 description: "本教程演示如何在 Linux 上的 SQL Server 的部署 Pacemaker 群集。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的部署 Pacemaker 群集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本教程介绍部署的 Linux Pacemaker 群集所需的任务[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Always On 可用性组 (AG) 或故障转移群集实例 (FCI)。 与紧密耦合的 Windows Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]堆栈、 Pacemaker 群集创建，以及在 Linux 上的可用性组 (AG) 配置，可以进行的安装之前或之后[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 集成和资源的可用性组或 FCI 部署 Pacemaker 部分配置完成后将该群集配置。
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 > * 创建 Pacemaker 群集。
 > * 安装 SQL Server HA 和 SQL Server 代理包。
  
-## <a name="prerequisite"></a>先决条件
+## <a name="prerequisite"></a>前提条件
 [安装 SQL Server 自 2017 年](sql-server-linux-setup.md)。
 
 ## <a name="install-the-high-availability-add-on"></a>安装高可用性外接程序
