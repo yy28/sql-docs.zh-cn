@@ -3,7 +3,7 @@ title: "Always On 可用性组在 Linux 上的 SQL server |Microsoft 文档"
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性组
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南介绍了在基于 Linux 的 Alwayson 可用性组 （承载个可用性组） 的特征[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]安装。 它还介绍了 Linux 和 Windows Server 故障转移群集 (WSFC) 之间的差异的基于承载个可用性组。 请参阅[基于 Windows 的文档](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的基础知识的承载个可用性组，因为他们处理的相同 Windows 和 Linux WSFC 除外。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 
 群集类型存储在[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]动态管理视图 (DMV) `sys.availability_groups`，列中`cluster_type`和`cluster_type_desc`。
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>所需\_同步\_辅助副本\_到\_提交
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 新手[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是设置，可供承载个可用性组调用`required_synchronized_secondaries_to_commit`。 这将告知可用性组必须与主保持同步的辅助副本的数目。 这使等自动故障转移 （仅在与群集类型为外部 Pacemaker 集成），并控制等的主可用性的行为，如果适当数量的辅助副本是联机还是脱机。 若要了解有关此工作原理的详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是默认设置和维护由 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 你可以手动重写此值。
 
